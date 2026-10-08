@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+\node[card] (n0) {\heading{01}{良いモデルで飯高写像を表す}{Represent the Iitaka fibration on a good model}$X\dashrightarrow V\xrightarrow{f}Z,\quad K_V\ \text{semiample},\quad H^0(X,mK_X)=H^0(V,mK_V).$};
+\node[card,below=2.0cm of n0] (n1) {\heading{02}{底の次元に応じて一様次数を選ぶ}{Choose a degree according to the base dimension}$\dim Z=0:\ L_n;\qquad\dim Z>0:\ D_Z\ \text{big},\quad p\mathbf M\ \text{b-Cartier}.$};
+\flow{n0}{n1}{\Tx{[LA] から得た良いモデル上で、点の場合と big な底を分ける。}{Use the good model from [LA] and split the point and big-base cases.}\\[4pt]\CiteSource{LA}{[LA] Thm. 11.1, p. 73}\quad \CiteSource{U}{Lemma 9.1; proof of Thm. 1.1, p. 41}}
+\node[card,below=2.0cm of n1] (n2) {\heading{03}{完全系の切断比で底の全関数体を得る}{Recover the full base field from complete-system ratios}$H^0(V,mK_V)=\psi^{m/p_0}f^*H^0(Z,\lfloor mD_Z\rfloor),\quad p_0\mid m.$};
+\flow{n1}{n2}{\Tx{固定係数・nef 分母の有効双有理性を底に適用する。}{Apply effective birationality with fixed coefficients and nef denominator.}\\[4pt]\CiteSource{BZ}{[BZ] Thm. 1.3, p. 3}\quad \CiteSource{U}{Cor. 4.4, (4.10), p. 17}}
+\node[result,below=2.0cm of n2] (n3) {\heading{04}{共通倍数と基礎体の降下で閉じる}{Take a common multiple and descend the field}$k(\text{ratios of }|m(n)K_X|)=K(K_X).\quad\textbf{Theorem 1.1}$};
+\flow{n2}{n3}{\Tx{切断比は正の整数倍で保たれ、忠実平坦性で降下する。}{Positive multiples preserve section ratios; faithful flatness gives descent.}\\[4pt]\CiteSource{U}{Sec. 9, pp. 41--42}}
+\end{tikzpicture}

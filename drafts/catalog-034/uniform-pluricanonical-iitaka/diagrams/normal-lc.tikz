@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+\node[card] (n0) {\heading{01}{低次元指数と零境界の指数を入力する}{Input lower-dimensional and zero-boundary indices}$K_n,\ L_j\ (j<n);\quad (X,B)\ \mathrm{lc},\ K_X+B\sim_{\mathbb Q}0.$};
+\node[card,below=2.0cm of n0] (n1) {\heading{02}{正次元の Mori 底上の係数1成分を選ぶ}{Choose a coefficient-one component over a positive-dimensional Mori base}$S\ \text{horizontal},\quad S^\nu\to Y\xrightarrow{h}Z,\quad\deg h\le N(n,1).$};
+\flow{n0}{n1}{\Tx{non-klt の場合に境界を下げて MMP を実行する。点を底とする場合は別に処理する。}{For the non-klt case, lower the boundary and run an MMP. Treat a point base separately.}\\[4pt]\CiteSource{U}{Prop. 3.2, pp. 6--7}}
+\node[card,below=2.0cm of n1] (n2) {\heading{03}{留数の自明化を norm で底へ降ろす}{Descend the residue trivialization by norm}$h^*D=\operatorname{div}(a)\Rightarrow(\deg h)D=\operatorname{div}\operatorname{Nm}(a).$};
+\flow{n1}{n2}{\Tx{adjunction と $L_{<n}$ で留数を自明化し、[SD] を $k(Z)$ 上、$t=1$ で使う。}{Trivialize the residue by adjunction and $L_{<n}$; apply [SD] over $k(Z)$ with $t=1$.}\\[4pt]\CiteSource{U}{(3.3)--(3.4), pp. 7--8}\quad \CiteSource{SD}{[SD] Thm. 1.1, p. 1}}
+\node[result,below=2.0cm of n2] (n3) {\heading{04}{境界の Stein 次数と norm で lc 指数へ}{Use boundary Stein degree and norm for the lc index}$K_n+L_{<n}\Longrightarrow L_n:\quad a(n,\Phi)(K_X+B)\sim0.$};
+\flow{n2}{n3}{\Tx{有限係数集合の場合を合わせ、global ACC で DCC 係数へ戻る。}{Combine the finite-coefficient cases; global ACC restores DCC coefficients.}\\[4pt]\CiteSource{U}{Sec. 2; Sec. 9, pp. 5, 40}}
+\end{tikzpicture}

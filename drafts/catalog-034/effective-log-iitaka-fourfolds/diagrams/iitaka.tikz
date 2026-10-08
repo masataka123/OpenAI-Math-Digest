@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+\node[card] (n0) {\heading{01}{固定有限係数のlc四次元対}{An lc fourfold pair with fixed finite coefficients}$D=K_X+\Delta\ \text{pseudo-effective},\quad\operatorname{coeff}^+(\Delta)\subset\Phi$};
+\node[card,below=2.0cm of n0] (n1) {\heading{02}{全次数の切断を保つ半豊富モデル}{A semiample model preserving sections in every degree}$D'\sim_{\mathbb Q}f^*A,\quad A\text{ ample},\quad\Phi'=\Phi\cup\{1\}$};
+\flow{n0}{n1}{\Tx{LAで定性的非消滅。SLでnefモデルを半豊富にし、極の不等式で全整数次数を比較する。}{LA supplies qualitative nonvanishing; SL makes the nef model semiample, and pole inequalities compare every integer degree.}\\[4pt]\CiteSource{LA}{LA Thm. 11.1, p. 73}\quad \CiteSource{SL}{SL Thm. 1.2, p. 2}\quad \CiteSource{Ufour}{Prop. 2.2, pp. 6--7}}
+\node[card,below=2.0cm of n1] (n2) {\heading{03}{底の次元で一様次数を選択}{Choose uniform degrees by base dimension}$\dim Z>0:\ m_+;\qquad\dim Z=0:\ m_{\mathrm{nklt}},m_{\Delta\ne0},N_4$};
+\flow{n1}{n2}{\Tx{正次元はRDの有効系。点の場合は非klt、境界ありklt、境界なしkltを分離する。}{Use RD for a positive-dimensional base; separate non-klt, klt with boundary, and boundary-free klt over a point.}\\[4pt]\CiteSource{RD}{RD Prop. 6.1, p. 15}\quad \CiteSource{JL}{JL Cor. 1.7, p. 2}\quad \CiteSource{Xu}{Xu Thm. 1.14, p. 3}\quad \CiteSource{Ufour}{Thm. 1.1, p. 1}}
+\node[result,below=2.0cm of n2] (n3) {\heading{04}{元の完全系で飯高体を回復}{Recover the Iitaka field with the original complete system}$\mathbb C\bigl(s_i/s_j:\ s_i,s_j\in H^0(X,\mathcal O_X(\lfloor mD\rfloor))\bigr)=K(D)$};
+\flow{n2}{n3}{\Tx{共通倍数を取り、すべての正倍数での結論と全次数比較を使う。標準代表の変更は比を保つ。}{Take a common multiple and use the every-multiple conclusion and all-degree comparison; canonical representatives preserve ratios.}\\[4pt]\CiteSource{Ufour}{eq. (2.1), p. 6; Sect. 10, pp. 48--49}}
+\end{tikzpicture}

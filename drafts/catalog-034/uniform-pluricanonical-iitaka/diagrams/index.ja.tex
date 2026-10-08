@@ -1,0 +1,73 @@
+\documentclass[border=12pt]{standalone}
+\def\pgfsysdriver{pgfsys-dvisvgm.def}
+\usepackage[dvisvgm]{xcolor}
+\usepackage{xeCJK}
+\setCJKmainfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf]
+\setCJKsansfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf]
+\usepackage{amsmath,amssymb,tikz,lmodern}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
+\renewcommand{\familydefault}{\sfdefault}
+\definecolor{ink}{HTML}{25322F}
+\definecolor{green}{HTML}{246657}
+\definecolor{tint}{HTML}{EEF4F0}
+\definecolor{soft}{HTML}{C6D2CC}
+\definecolor{muted}{HTML}{52615B}
+\newif\ifJapanese
+\newcommand{\Tx}[2]{\ifJapanese #1\else #2\fi}
+\newcommand{\Eff}{\overline{\operatorname{Eff}}}
+\newcommand{\heading}[3]{{\color{green}\bfseries #1\quad\Tx{#2}{#3}}\\[5pt]}
+% A white rectangle makes the complete citation label clickable, including spaces.
+\newcommand{\refurl}[2]{\special{dvisvgm:raw <a xlink:href="#1" target="_blank" rel="noopener noreferrer">}{\setlength{\fboxsep}{0pt}\colorbox{white}{\color{green}\underline{\strut #2}}}\special{dvisvgm:raw </a>}}
+\newcommand{\refedge}[3]{\refurl{\csname source#1\endcsname\string##page=#2}{#3}}
+\newcommand{\SF}[2]{\refedge{sf}{#1}{#2}}
+% GitHub's file preview does not support PDF page fragments.
+\newcommand{\LA}[2]{\refurl{\sourcela}{#2}}
+\newcommand{\Sch}[2]{\refedge{sch}{#1}{#2}}
+\newcommand{\PS}[2]{\refedge{ps}{#1}{#2}}
+\tikzset{
+ card/.style={draw=soft,fill=white,rounded corners=2pt,align=left,text=ink,font=\fontsize{10.5}{14}\selectfont,inner xsep=12pt,inner ysep=10pt,text width=14.4cm},
+ half/.style={card,text width=6.45cm,minimum height=2.05cm},
+ result/.style={card,draw=green,fill=tint,line width=.9pt},
+ reason/.style={align=left,text=muted,font=\fontsize{9}{12}\selectfont,inner sep=0pt,text width=12.7cm},
+ branchreason/.style={reason,text width=5.95cm},
+ edge/.style={-{Stealth[length=2.4mm]},draw=green,line width=1pt},
+ wire/.style={draw=green,line width=1pt},
+}
+% Keep the arrow in a dedicated left gutter; explanations never cover it.
+\newcommand{\flow}[3]{
+ \coordinate (#2-from) at ($(#1.south)+(-6.9,0)$);
+ \coordinate (#2-to) at ($(#2.north)+(-6.9,0)$);
+ \draw[edge] (#2-from)--(#2-to);
+ \node[reason,anchor=west] (#2-reason) at ($(#2-from)!.5!(#2-to)+(.55,0)$) {#3};
+}
+
+
+\newcommand{\CiteSource}[2]{\refurl{\csname source#1\endcsname}{#2}}
+
+\expandafter\def\csname sourceU\endcsname{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-Pluricanonical-Iitaka-Fibrations-October-3-2026/paper.pdf}
+\expandafter\def\csname sourceLA\endcsname{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf}
+\expandafter\def\csname sourceSD\endcsname{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Arithmetic-Stein-degree-bounds-for-log-Calabi-Yau-pairs-September-25-2026/paper.pdf}
+\expandafter\def\csname sourceUfour\endcsname{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-effective-log-Iitaka-fibrations-for-fourfolds-September-26-2026/paper.pdf}
+\expandafter\def\csname sourceR\endcsname{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Relative-denominators-and-effective-systems-for-log-Calabi-Yau-fibrations-September-27-2026/paper.pdf}
+\expandafter\def\csname sourceLog\endcsname{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-log-Iitaka-fibrations-and-bounded-moduli-denominators-October-4-2026/uniform-log-iitaka.pdf}
+\expandafter\def\csname sourceSLC\endcsname{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf}
+\expandafter\def\csname sourceBZ\endcsname{https://arxiv.org/pdf/1410.0938v2}
+
+\Japanesetrue
+\begin{document}
+\begin{tikzpicture}
+\node[card] (n0) {\heading{01}{構造帰着の仮定から局所正値性を得る}{Obtain local positivity after structural reduction}$\operatorname{Bir}(V)\ \text{countable},\quad \varepsilon(L)\ge c,\quad \varepsilon(\pi^*L)\ge cr^{1/n}.$};
+\node[card,below=2.0cm of n0] (n1) {\heading{02}{行列式の矛盾で対角積の上界を得る}{Use the determinant contradiction on diagonal products}$\operatorname{ord}(\det)\ge3R/4\ \text{and}\ <3R/4\quad\Longrightarrow\quad\varepsilon(P_t)\le C_2t^2.$};
+\flow{n0}{n1}{\Tx{scalar 上界と Frobenius 対角の階数低下を比較する。}{Compare scalar upper orders with Frobenius-diagonal rank loss.}\\[4pt]\CiteSource{U}{Props. 6.1, 7.1, pp. 24, 31--37}}
+\node[card,below=2.0cm of n1] (n2) {\heading{03}{有限のサイズを固定して両立する葉を作る}{Fix finitely many sizes and construct compatible leaves}$2\le t\le T,\quad B=C_2T^2+1,\quad P_t^{h_t}\cdot H_t\le(h_tB)^{h_t},\quad W_t=\theta_t(H_t).$};
+\flow{n1}{n2}{\Tx{低次数曲線を群作用・置換・射影で閉じ、鎖の商を取る。}{Close low-cost families under group actions, permutations and projections; form chain quotients.}\\[4pt]\CiteSource{U}{Lemma 6.2; (8.1), pp. 25, 37--38}}
+\node[card,below=2.0cm of n2] (n3) {\heading{04}{各座標への正次元ファイバーを排除する}{Exclude positive-dimensional fibres over a coordinate}$a=h_t-j>0\ \Longrightarrow\ P_t^{h_t}\cdot H_t\ge c^j(cr^{1/n})^a\to\infty.$\\ $\text{Thus}\quad1\le h_t\le n.$};
+\flow{n2}{n3}{\Tx{固定した $T$ で $r$ を増やし、Seshadri 下界と葉の次数上界を衝突させる。}{Fix $T$, increase $r$, and compare fibre positivity with the leaf degree bound.}\\[4pt]\CiteSource{U}{(8.2)--(8.3), p. 38}}
+\node[card,below=2.0cm of n3] (n4) {\heading{05}{多項式の上界で次数1の忘却を得る}{Force degree-one forgetting by a polynomial degree bound}$d_t\le KT^{2n},\quad h_t=h_{t-1}\Rightarrow d_t/d_{t-1}=\deg(W_t\dashrightarrow W_{t-1}).$\\ $\text{Some}\ W_k\dashrightarrow W_{k-1}\ \text{is birational}.$};
+\flow{n3}{n4}{\Tx{次元一定の長い区間で、次数の指数増大を排除する。}{On a long constant-dimensional stretch, rule out exponential degree growth.}\\[4pt]\CiteSource{U}{(8.4)--(8.6), p. 39}}
+\node[card,below=2.0cm of n4] (n5) {\heading{06}{接方向を有理的に移送する}{Transport tangent directions rationally}$R(y,z)R(x,y)=R(x,z),\quad v_1,\ldots,v_h\ \text{rational},\quad h>0.$};
+\flow{n4}{n5}{\Tx{可分性と積変数の関数体の共通部分で、接分布と移送を降ろす。}{Use separability and intersections of product function fields to descend tangent transport.}\\[4pt]\CiteSource{U}{(8.7), p. 39}}
+\node[result,below=2.0cm of n5] (n6) {\heading{07}{局所 flow から可算性との矛盾を得る}{Contradict countability through local flows}$E_z(y)=\operatorname{ev}(E_z(u),\xi(u,y)),\quad E_z\in\operatorname{Bir}(V).$\\ $\text{Uncountably many }E_z\quad\Longrightarrow\quad K_n.$};
+\flow{n5}{n6}{\Tx{生成葉の幾何学的整性で座標を有理回収し、逆 flow にも適用する。}{Geometric integrality gives rational recovery; apply it also to inverse flows.}\\[4pt]\CiteSource{U}{(8.8); Sec. 9, p. 40}}
+\end{tikzpicture}
+\end{document}

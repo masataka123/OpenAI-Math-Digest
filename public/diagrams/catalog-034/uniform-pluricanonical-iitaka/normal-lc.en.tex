@@ -1,0 +1,67 @@
+\documentclass[border=12pt]{standalone}
+\def\pgfsysdriver{pgfsys-dvisvgm.def}
+\usepackage[dvisvgm]{xcolor}
+\usepackage{xeCJK}
+\setCJKmainfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf]
+\setCJKsansfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf]
+\usepackage{amsmath,amssymb,tikz,lmodern}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
+\renewcommand{\familydefault}{\sfdefault}
+\definecolor{ink}{HTML}{25322F}
+\definecolor{green}{HTML}{246657}
+\definecolor{tint}{HTML}{EEF4F0}
+\definecolor{soft}{HTML}{C6D2CC}
+\definecolor{muted}{HTML}{52615B}
+\newif\ifJapanese
+\newcommand{\Tx}[2]{\ifJapanese #1\else #2\fi}
+\newcommand{\Eff}{\overline{\operatorname{Eff}}}
+\newcommand{\heading}[3]{{\color{green}\bfseries #1\quad\Tx{#2}{#3}}\\[5pt]}
+% A white rectangle makes the complete citation label clickable, including spaces.
+\newcommand{\refurl}[2]{\special{dvisvgm:raw <a xlink:href="#1" target="_blank" rel="noopener noreferrer">}{\setlength{\fboxsep}{0pt}\colorbox{white}{\color{green}\underline{\strut #2}}}\special{dvisvgm:raw </a>}}
+\newcommand{\refedge}[3]{\refurl{\csname source#1\endcsname\string##page=#2}{#3}}
+\newcommand{\SF}[2]{\refedge{sf}{#1}{#2}}
+% GitHub's file preview does not support PDF page fragments.
+\newcommand{\LA}[2]{\refurl{\sourcela}{#2}}
+\newcommand{\Sch}[2]{\refedge{sch}{#1}{#2}}
+\newcommand{\PS}[2]{\refedge{ps}{#1}{#2}}
+\tikzset{
+ card/.style={draw=soft,fill=white,rounded corners=2pt,align=left,text=ink,font=\fontsize{10.5}{14}\selectfont,inner xsep=12pt,inner ysep=10pt,text width=14.4cm},
+ half/.style={card,text width=6.45cm,minimum height=2.05cm},
+ result/.style={card,draw=green,fill=tint,line width=.9pt},
+ reason/.style={align=left,text=muted,font=\fontsize{9}{12}\selectfont,inner sep=0pt,text width=12.7cm},
+ branchreason/.style={reason,text width=5.95cm},
+ edge/.style={-{Stealth[length=2.4mm]},draw=green,line width=1pt},
+ wire/.style={draw=green,line width=1pt},
+}
+% Keep the arrow in a dedicated left gutter; explanations never cover it.
+\newcommand{\flow}[3]{
+ \coordinate (#2-from) at ($(#1.south)+(-6.9,0)$);
+ \coordinate (#2-to) at ($(#2.north)+(-6.9,0)$);
+ \draw[edge] (#2-from)--(#2-to);
+ \node[reason,anchor=west] (#2-reason) at ($(#2-from)!.5!(#2-to)+(.55,0)$) {#3};
+}
+
+
+\newcommand{\CiteSource}[2]{\refurl{\csname source#1\endcsname}{#2}}
+
+\expandafter\def\csname sourceU\endcsname{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-Pluricanonical-Iitaka-Fibrations-October-3-2026/paper.pdf}
+\expandafter\def\csname sourceLA\endcsname{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf}
+\expandafter\def\csname sourceSD\endcsname{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Arithmetic-Stein-degree-bounds-for-log-Calabi-Yau-pairs-September-25-2026/paper.pdf}
+\expandafter\def\csname sourceUfour\endcsname{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-effective-log-Iitaka-fibrations-for-fourfolds-September-26-2026/paper.pdf}
+\expandafter\def\csname sourceR\endcsname{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Relative-denominators-and-effective-systems-for-log-Calabi-Yau-fibrations-September-27-2026/paper.pdf}
+\expandafter\def\csname sourceLog\endcsname{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-log-Iitaka-fibrations-and-bounded-moduli-denominators-October-4-2026/uniform-log-iitaka.pdf}
+\expandafter\def\csname sourceSLC\endcsname{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf}
+\expandafter\def\csname sourceBZ\endcsname{https://arxiv.org/pdf/1410.0938v2}
+
+\Japanesefalse
+\begin{document}
+\begin{tikzpicture}
+\node[card] (n0) {\heading{01}{低次元指数と零境界の指数を入力する}{Input lower-dimensional and zero-boundary indices}$K_n,\ L_j\ (j<n);\quad (X,B)\ \mathrm{lc},\ K_X+B\sim_{\mathbb Q}0.$};
+\node[card,below=2.0cm of n0] (n1) {\heading{02}{正次元の Mori 底上の係数1成分を選ぶ}{Choose a coefficient-one component over a positive-dimensional Mori base}$S\ \text{horizontal},\quad S^\nu\to Y\xrightarrow{h}Z,\quad\deg h\le N(n,1).$};
+\flow{n0}{n1}{\Tx{non-klt の場合に境界を下げて MMP を実行する。点を底とする場合は別に処理する。}{For the non-klt case, lower the boundary and run an MMP. Treat a point base separately.}\\[4pt]\CiteSource{U}{Prop. 3.2, pp. 6--7}}
+\node[card,below=2.0cm of n1] (n2) {\heading{03}{留数の自明化を norm で底へ降ろす}{Descend the residue trivialization by norm}$h^*D=\operatorname{div}(a)\Rightarrow(\deg h)D=\operatorname{div}\operatorname{Nm}(a).$};
+\flow{n1}{n2}{\Tx{adjunction と $L_{<n}$ で留数を自明化し、[SD] を $k(Z)$ 上、$t=1$ で使う。}{Trivialize the residue by adjunction and $L_{<n}$; apply [SD] over $k(Z)$ with $t=1$.}\\[4pt]\CiteSource{U}{(3.3)--(3.4), pp. 7--8}\quad \CiteSource{SD}{[SD] Thm. 1.1, p. 1}}
+\node[result,below=2.0cm of n2] (n3) {\heading{04}{境界の Stein 次数と norm で lc 指数へ}{Use boundary Stein degree and norm for the lc index}$K_n+L_{<n}\Longrightarrow L_n:\quad a(n,\Phi)(K_X+B)\sim0.$};
+\flow{n2}{n3}{\Tx{有限係数集合の場合を合わせ、global ACC で DCC 係数へ戻る。}{Combine the finite-coefficient cases; global ACC restores DCC coefficients.}\\[4pt]\CiteSource{U}{Sec. 2; Sec. 9, pp. 5, 40}}
+\end{tikzpicture}
+\end{document}

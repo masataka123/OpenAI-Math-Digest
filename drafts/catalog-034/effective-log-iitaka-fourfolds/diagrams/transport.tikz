@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+\node[card] (n0) {\heading{01}{指数が増大する残余列を仮定}{Assume an unbounded residual index sequence}$r\to\infty,\quad 1\leq L^4\leq2$};
+\node[card,below=2.0cm of n0] (n1) {\heading{02}{被覆上の下界と対角積上の上界}{Lower bounds on covers; upper bounds on diagonal products}$\varepsilon(L)\geq c,\quad\varepsilon(\pi^*L)\geq cr^{1/4},\quad\varepsilon(P_t)\leq Ct^2$};
+\flow{n0}{n1}{\Tx{一般型ファイバー条件からscalar評価。Frobenius対角の階数欠損で二次上界を得る。}{The general-type fibre condition gives scalar estimates; rank deficit on the Frobenius diagonal gives the quadratic bound.}\\[4pt]\CiteSource{Ufour}{Thm. 6.1, p. 23; Prop. 7.1, pp. 33--42}}
+\node[card,below=2.0cm of n1] (n2) {\heading{03}{葉の次数と次数1の忘却}{Leaf degrees force degree-one forgetting}$1\leq h_t\leq4,\quad D_t\leq KT^8,\quad W_k\dashrightarrow W_{k-1}\text{ birational}$};
+\flow{n1}{n2}{\Tx{先に積の個数を固定。鎖の次数を多項式で抑え、忘却次数の指数増大を排除する。}{Fix the number of products first; polynomial degree bounds exclude exponential growth of forgetting degrees.}\\[4pt]\CiteSource{Ufour}{Lem. 5.4, p. 21; Prop. 8.1, pp. 42--45}}
+\node[result,below=2.0cm of n2] (n3) {\heading{04}{有理評価と局所流による矛盾}{Rational evaluation and local flows give a contradiction}$\{E_z\}\subset\operatorname{Bir}(V)\quad\Longrightarrow\quad r\text{ bounded}$};
+\flow{n2}{n3}{\Tx{次数1が有理評価を与える。非可算個の局所流と双自己写像群の可算性が衝突する。}{Degree one gives rational evaluation; uncountably many local flows contradict countability of the birational group.}\\[4pt]\CiteSource{Ufour}{Prop. 8.1 / Lem. 8.2, pp. 45--47}}
+\end{tikzpicture}

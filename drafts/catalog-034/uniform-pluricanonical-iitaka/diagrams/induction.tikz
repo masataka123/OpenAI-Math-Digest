@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+\node[half] (l) at (-4.5,0) {\heading{01a}{低次元の normal lc 指数}{Lower-dimensional normal lc indices}$L_j\quad(j<n)$};
+\node[half] (i) at (4.5,0) {\heading{01b}{低次元の飯高写像}{Lower-dimensional Iitaka maps}$I_j\quad(j<n)$};
+\node[half] (d) at (-4.5,-4.4) {\heading{02a}{相対的な分母と torsion}{Relative denominators and torsion}$p\mathbf M\ \text{b-Cartier}$};
+\node[half] (s) at (4.5,-4.4) {\heading{02b}{小体積と scalar 評価}{Small volumes and scalar estimates}$\gamma(P)\le C_n(P^n)^{1/n}$};
+\node[half] (k) at (4.5,-8.8) {\heading{03}{零境界 klt 指数}{Zero-boundary klt index}$K_n:\quad a_nK_V\sim0$};
+\node[half,draw=green,fill=tint,line width=.9pt] (ln) at (4.5,-13.2) {\heading{04}{normal lc 指数へ戻す}{Return to normal lc indices}$K_n+L_{<n}\Longrightarrow L_n$};
+\node[half,draw=green,fill=tint,line width=.9pt] (in) at (-4.5,-13.2) {\heading{05}{飯高体全体を回収する}{Recover the full Iitaka field}$L_n+\text{denominators}\Longrightarrow I_n$};
+\draw[edge] ($(l.south)+(-3.35,0)$)--($(d.north)+(-3.35,0)$);
+\node[branchreason,fill=white,anchor=west,text width=5.7cm] at (-7.3,-2.2) {\Tx{生成ファイバーと退化成分に $L_{<n}$ を使う。}{Use $L_{<n}$ on generic fibres and degeneration components.}\\\CiteSource{U}{Prop. 4.1, pp. 11--17}};
+\draw[edge] ($(i.south)+(-3.35,0)$)--($(s.north)+(-3.35,0)$);
+\node[branchreason,fill=white,anchor=west,text width=5.7cm] at (1.7,-2.2) {\Tx{小さい飯高ファイバーへ移る。}{Pass to smaller Iitaka fibres.}\\\CiteSource{U}{Prop. 6.1; Lemma 6.4, pp. 24--30}};
+\draw[edge] ($(s.south)+(-3.35,0)$)--($(k.north)+(-3.35,0)$);
+\node[branchreason,fill=white,anchor=west,text width=5.7cm] at (1.7,-6.6) {\Tx{対角積・鎖・局所 flow で高指数を排除する。}{Exclude high indices via diagonals, chains and local flows.}\\\CiteSource{U}{Props. 7.1, 8.1, pp. 31--40}};
+\draw[edge] (d.east)--(0,-4.4)--(0,-8.8)--(k.west);
+\node[branchreason,anchor=west,text width=3.0cm] at (-3.7,-8.0) {\Tx{構造帰着に使用}{Structural reduction}\\\CiteSource{U}{Sec. 5, pp. 20--24}};
+\draw[edge] ($(k.south)+(-3.35,0)$)--($(ln.north)+(-3.35,0)$);
+\node[branchreason,fill=white,anchor=west,text width=5.7cm] at (1.7,-11.0) {\Tx{adjunction と Stein 次数・norm を使う。}{Use adjunction, Stein degree and norm.}\\\CiteSource{U}{Prop. 3.2, pp. 6--8}};
+\draw[edge] ($(d.south)+(-3.35,0)$)--($(in.north)+(-3.35,0)$);
+\node[branchreason,fill=white,anchor=west,text width=5.5cm] at (-7.3,-10.8) {\Tx{分母を再利用し、底に有効双有理性を適用する。}{Reuse denominators for effective birationality on the base.}\\\CiteSource{U}{Cor. 4.4; Sec. 9, pp. 17, 41}};
+\draw[edge] (ln.west)--(in.east);
+\node[reason,text width=4cm,anchor=north] at (0,-14.65) {\Tx{底が点の場合には $L_n$}{Use $L_n$ for a point base}\\\CiteSource{U}{Lemma 9.1; Sec. 9, p. 41}};
+\end{tikzpicture}

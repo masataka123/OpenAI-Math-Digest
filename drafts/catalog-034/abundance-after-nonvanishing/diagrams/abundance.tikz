@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+\node[card] (n0) {\heading{01}{非消滅後のnefな実際のadjoint}{An actual nef adjoint after nonvanishing}$D=K_X+\Delta,\quad\kappa(X,D)\geq0,\quad\dim X=4$};
+\node[card,below=2.0cm of n0] (n1) {\heading{02}{正の飯高次元を処理し、残りで零因子を取る}{Settle positive Iitaka dimension; take a zero divisor in the remainder}$\kappa=0,\quad M=\operatorname{div}(s_0)/m_0;\qquad M\ne0\ \text{assumed}$};
+\flow{n0}{n1}{\Tx{crepantなQ-factorialモデルでHLLを適用し、生成を元の空間へ降ろす。}{Apply HLL on a crepant Q-factorial model and descend generation to the original space.}\\[4pt]\CiteSource{DHP}{DHP Thm. 6.1, p. 43}\quad \CiteSource{HLL}{HLL Thm. 4.1, pp. 17--18}\quad \CiteSource{K4N}{Prop. 5.2, p. 34}}
+\node[card,below=2.0cm of n1] (n2) {\heading{03}{台が消えないsupported nefモデル}{A supported nef model with surviving support}$A=K_V+B\sim_{\mathbb Q}P\ne0,\quad\operatorname{Supp}P=\operatorname{Supp}S,\quad\kappa(A)=0$};
+\flow{n1}{n2}{\Tx{floorに台を合わせるsupported program。元のnefnessと例外negativityで非零台を保つ。}{Run the supported program with exact floor support; original nefness and exceptional negativity preserve nonzero support.}\\[4pt]\CiteSource{DHP}{DHP Thm. 7.2, p. 46}\quad \CiteSource{K4N}{Prop. 5.1, p. 33; pp. 45--46}}
+\node[result,below=2.0cm of n2] (n3) {\heading{04}{境界生成と持ち上げの矛盾}{Boundary generation and lifting give a contradiction}$A|_S\ \text{semiample}\ \Longrightarrow\ \kappa(A)\geq1;\qquad\mathcal O_X(m_0D)\simeq\mathcal O_X$};
+\flow{n2}{n3}{\Tx{特別な解消で全floorを生成し、次に持ち上げる。矛盾から元の零因子はゼロ。}{The special resolution gives generation on the whole floor, then lifting; the contradiction forces the original zero divisor to vanish.}\\[4pt]\CiteSource{K4N}{Thm. 6.1, p. 46; Thm. 1.2, p. 5; Sect. 13, pp. 88--89}}
+\end{tikzpicture}

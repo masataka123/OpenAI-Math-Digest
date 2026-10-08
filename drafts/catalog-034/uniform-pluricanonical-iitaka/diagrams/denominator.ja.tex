@@ -1,0 +1,67 @@
+\documentclass[border=12pt]{standalone}
+\def\pgfsysdriver{pgfsys-dvisvgm.def}
+\usepackage[dvisvgm]{xcolor}
+\usepackage{xeCJK}
+\setCJKmainfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf]
+\setCJKsansfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf]
+\usepackage{amsmath,amssymb,tikz,lmodern}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
+\renewcommand{\familydefault}{\sfdefault}
+\definecolor{ink}{HTML}{25322F}
+\definecolor{green}{HTML}{246657}
+\definecolor{tint}{HTML}{EEF4F0}
+\definecolor{soft}{HTML}{C6D2CC}
+\definecolor{muted}{HTML}{52615B}
+\newif\ifJapanese
+\newcommand{\Tx}[2]{\ifJapanese #1\else #2\fi}
+\newcommand{\Eff}{\overline{\operatorname{Eff}}}
+\newcommand{\heading}[3]{{\color{green}\bfseries #1\quad\Tx{#2}{#3}}\\[5pt]}
+% A white rectangle makes the complete citation label clickable, including spaces.
+\newcommand{\refurl}[2]{\special{dvisvgm:raw <a xlink:href="#1" target="_blank" rel="noopener noreferrer">}{\setlength{\fboxsep}{0pt}\colorbox{white}{\color{green}\underline{\strut #2}}}\special{dvisvgm:raw </a>}}
+\newcommand{\refedge}[3]{\refurl{\csname source#1\endcsname\string##page=#2}{#3}}
+\newcommand{\SF}[2]{\refedge{sf}{#1}{#2}}
+% GitHub's file preview does not support PDF page fragments.
+\newcommand{\LA}[2]{\refurl{\sourcela}{#2}}
+\newcommand{\Sch}[2]{\refedge{sch}{#1}{#2}}
+\newcommand{\PS}[2]{\refedge{ps}{#1}{#2}}
+\tikzset{
+ card/.style={draw=soft,fill=white,rounded corners=2pt,align=left,text=ink,font=\fontsize{10.5}{14}\selectfont,inner xsep=12pt,inner ysep=10pt,text width=14.4cm},
+ half/.style={card,text width=6.45cm,minimum height=2.05cm},
+ result/.style={card,draw=green,fill=tint,line width=.9pt},
+ reason/.style={align=left,text=muted,font=\fontsize{9}{12}\selectfont,inner sep=0pt,text width=12.7cm},
+ branchreason/.style={reason,text width=5.95cm},
+ edge/.style={-{Stealth[length=2.4mm]},draw=green,line width=1pt},
+ wire/.style={draw=green,line width=1pt},
+}
+% Keep the arrow in a dedicated left gutter; explanations never cover it.
+\newcommand{\flow}[3]{
+ \coordinate (#2-from) at ($(#1.south)+(-6.9,0)$);
+ \coordinate (#2-to) at ($(#2.north)+(-6.9,0)$);
+ \draw[edge] (#2-from)--(#2-to);
+ \node[reason,anchor=west] (#2-reason) at ($(#2-from)!.5!(#2-to)+(.55,0)$) {#3};
+}
+
+
+\newcommand{\CiteSource}[2]{\refurl{\csname source#1\endcsname}{#2}}
+
+\expandafter\def\csname sourceU\endcsname{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-Pluricanonical-Iitaka-Fibrations-October-3-2026/paper.pdf}
+\expandafter\def\csname sourceLA\endcsname{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf}
+\expandafter\def\csname sourceSD\endcsname{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Arithmetic-Stein-degree-bounds-for-log-Calabi-Yau-pairs-September-25-2026/paper.pdf}
+\expandafter\def\csname sourceUfour\endcsname{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-effective-log-Iitaka-fibrations-for-fourfolds-September-26-2026/paper.pdf}
+\expandafter\def\csname sourceR\endcsname{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Relative-denominators-and-effective-systems-for-log-Calabi-Yau-fibrations-September-27-2026/paper.pdf}
+\expandafter\def\csname sourceLog\endcsname{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-log-Iitaka-fibrations-and-bounded-moduli-denominators-October-4-2026/uniform-log-iitaka.pdf}
+\expandafter\def\csname sourceSLC\endcsname{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf}
+\expandafter\def\csname sourceBZ\endcsname{https://arxiv.org/pdf/1410.0938v2}
+
+\Japanesetrue
+\begin{document}
+\begin{tikzpicture}
+\node[card] (n0) {\heading{01}{低次元の指数を固定する}{Fix lower-dimensional indices}$L_j\ (j<n),\quad f:X\to Z,\quad X\ \mathrm{klt},\ B_X=0,\ \dim Z>0.$\\ $K_X\sim_{\mathbb Q}f^*D_0.$};
+\node[card,below=2.0cm of n0] (n1) {\heading{02}{実際の因子の標準束公式を作る}{Construct the exact canonical bundle formula}$K_X+p_0^{-1}\operatorname{div}(\psi)=f^*(K_Z+B_Z+M_Z).$};
+\flow{n0}{n1}{\Tx{生成ファイバーの指数と定性的な標準束公式を使う。}{Use the generic-fibre index and qualitative bundle formula.}\\[4pt]\CiteSource{U}{Prop. 4.1, pp. 11--12}}
+\node[card,below=2.0cm of n1] (n2) {\heading{03}{退化指標を成分上の留数で抑える}{Bound degeneration characters using residues}$w_u(\eta_i)=0,\quad \lambda_i^N=1,\quad j=\dim S<n.$};
+\flow{n1}{n2}{\Tx{半安定化後の dlt 成分へ留数を取り、$L_j$ を適用する。}{Take residues on dlt components after semistable reduction; apply $L_j$.}\\[4pt]\CiteSource{U}{Lemmas 3.3, 4.3, pp. 8, 14--17}\quad \CiteSource{LA}{[LA] Thm. 11.1, p. 73}}
+\node[result,below=2.0cm of n2] (n3) {\heading{04}{moduli の Cartier 分母を固定する}{Fix the Cartier denominator of the moduli part}$p=p_0 n!N,\qquad p\mathbf M\ \text{b-Cartier}.\quad\textbf{Proposition 4.1}$};
+\flow{n2}{n3}{\Tx{分岐次数ではなく体積形式の指標を殺し、係数の分母を消す。}{Kill volume-form characters to clear coefficients; ramification need not be bounded.}\\[4pt]\CiteSource{U}{(4.6)--(4.7), p. 14; Sec. 4.4, p. 17}}
+\end{tikzpicture}
+\end{document}
