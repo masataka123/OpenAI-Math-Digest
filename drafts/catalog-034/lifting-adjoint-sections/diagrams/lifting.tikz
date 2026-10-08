@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+\node[card] (n0) {\heading{01}{全被約台の生成性を frame 上へ移す}{Move whole-support generation to the frame bundle}$0\ne G\sim q(K_V+C),\quad S=G_{\rm red},\quad L|_S=f^*\mathcal O(1).$};
+\node[card,below=2.0cm of n0] (n1) {\heading{02}{全障害群を留数で単射に入れる}{Insert the full obstruction group by residues}$R^1g_*\mathcal O_E\hookrightarrow F_0\mathcal N=R^1h_*\omega_R(D_h),\quad\operatorname{wt}(\Omega)=a>0.$};
+\flow{n0}{n1}{\Tx{循環被覆の全成分と、余分な境界上の極を残す。}{Retain every cyclic-cover component and poles over the extra boundary.}\\[4pt]\CiteSource{S}{Lemmas 2.3, 3.1, pp. 9--13}}
+\node[card,below=2.0cm of n1] (n2) {\heading{03}{水平 symbol と実際の Euler 作用を分ける}{Separate horizontal symbol and actual Euler action}$\operatorname{symbol}(v_k)=0,\quad\operatorname{wt}(v_k)=a+k>0,\quad s\varepsilon=-(a+k)s.$};
+\flow{n1}{n2}{\Tx{正の重みが ample な始域を作り、水平部分を消す。}{Positive weight gives an ample source, forcing the horizontal part to vanish.}\\[4pt]\CiteSource{S}{Lemma 3.2; Prop. 4.1, pp. 13--17}\quad \CiteSource{KS}{[KS] Thm. 8.2, pp. 14--15}}
+\node[card,below=2.0cm of n2] (n3) {\heading{04}{任意の境界関数の障害を消す}{Kill the obstruction for every boundary function}$\delta_k(F)=0,\qquad g_*(\mathcal O_Z/I^{k+1})\twoheadrightarrow g_*(\mathcal O_Z/I^k).$};
+\flow{n2}{n3}{\Tx{graph 恒等式に Euler 作用を代入し、任意の $F$ に戻る。}{Use Euler action in the graph identity, then return to arbitrary $F$.}\\[4pt]\CiteSource{S}{(5.5), (5.11)--(5.12), pp. 18--20}}
+\node[result,below=2.0cm of n3] (n4) {\heading{05}{有限層を数えて周囲の切断を増やす}{Count finite layers to obtain ambient section growth}$h^0(V,\mathcal O_V(NG))\to\infty\quad\Longrightarrow\quad\kappa(V,K_V+C)>0.$};
+\flow{n3}{n4}{\Tx{有限群不変部・frame 次数0・正の twist の周期性を使う。}{Use finite invariants, frame degree zero, and periodic positive twists.}\\[4pt]\CiteSource{S}{Lemma 5.2; Prop. 1.5, pp. 21--23}}
+\end{tikzpicture}

@@ -1,0 +1,20 @@
+\begin{tikzpicture}
+\node[card] (start) at (0,0) {\heading{01}{通常のモデルと低次元 abundance を入力する}{Input ordinary models and lower-dimensional abundance}$D\ \text{nef},\quad\kappa(D)\ge0;\quad\text{effective lc models through }d,\ \text{abundance below }d.$};
+\node[half] (zero) at (-4.5,-5) {\heading{02a}{小平次元0}{Kodaira dimension zero}$D\sim_{\mathbb Q}M\ge0,\quad M\ne0$\\\Tx{元の nef 性で台を残す。}{Original nefness preserves the support.}};
+\node[half] (pos) at (4.5,-5) {\heading{02b}{正の小平次元}{Positive Kodaira dimension}$L|_F\ \text{need not be nef}$\\\Tx{ファイバー対の通常のモデルへ移る。}{Pass to an ordinary model of the fibre pair.}};
+\node[half] (zout) at (-4.5,-10) {\heading{03a}{全 floor で生成して持ち上げる}{Generate on the whole floor and lift}$G=qM_*\ne0,\quad\kappa(D)>0$\\\Tx{矛盾より $D\sim_{\mathbb Q}0$。}{Contradiction gives $D\sim_{\mathbb Q}0$.}};
+\node[half] (pout) at (4.5,-10) {\heading{03b}{nef log abundance を得る}{Obtain nef log abundance}$\pi^*D|_F\equiv0,\quad\nu(D)=\kappa(D)$\\\Tx{lc center にも abundance。}{Abundance also holds on lc centers.}};
+\node[result] (out) at (0,-15) {\heading{04}{四次元の入力で Theorem 1.2 を得る}{Insert the fourfold inputs for Theorem 1.2}$D\ \text{semiample};\qquad\kappa(D)=0\Rightarrow D\sim_{\mathbb Q}0.$};
+\draw[edge] ($(start.south)+(-6.9,0)$)--(-6.9,-1.5)--(-7.85,-1.5)--($(zero.north)+(-3.35,0)$);
+\draw[edge] ($(start.south)+(1.15,0)$)--($(pos.north)+(-3.35,0)$);
+\node[branchreason] at (-4.5,-2.5) {\Tx{有効代表元の台を係数1へ上げる。}{Raise support coefficients to one.}\\\CiteSource{S}{Prop. 6.3, pp. 24--25}};
+\node[branchreason] at (4.5,-2.5) {\Tx{飯高ファイバーの有効随伴因子を使う。}{Use the effective fibre adjoint.}\\\CiteSource{S}{Prop. 6.3, pp. 25--26}};
+\draw[edge] ($(zero.south)+(-3.35,0)$)--($(zout.north)+(-3.35,0)$);
+\draw[edge] ($(pos.south)+(-3.35,0)$)--($(pout.north)+(-3.35,0)$);
+\node[branchreason] at (-4.5,-7.5) {\Tx{低次元 abundance と gluing の後、Theorem 1.1 を適用。}{Apply Theorem 1.1 after lower-dimensional abundance and gluing.}\\\CiteSource{FG}{[FG] Thm. 4.3, p. 18}\\\CiteSource{S}{Lemmas 6.1--6.2, pp. 23--24}};
+\node[branchreason] at (4.5,-7.5) {\Tx{比較式と非負交点数から数値次元を同定。}{Identify numerical dimension through comparisons and nonnegative intersections.}\\\CiteSource{S}{(6.4)--(6.7), pp. 25--26}};
+\draw[edge] ($(zout.south)+(-3.35,0)$)--(-7.85,-13.8)--(-6.9,-13.8)--($(out.north)+(-6.9,0)$);
+\draw[edge] ($(pout.south)+(-3.35,0)$)--($(out.north)+(1.15,0)$);
+\node[branchreason] at (-4.5,-12.5) {\Tx{零の場合は既に終了。四次元の通常のモデルは [Bir] が供給。}{The zero case is complete. [Bir] supplies ordinary fourfold models.}\\\CiteSource{Bir}{[Bir] Cor. 1.6, p. 3}};
+\node[branchreason] at (4.5,-12.5) {\Tx{nef log abundant 随伴因子に適用。}{Apply semiampleness for nef log abundant adjoints.}\\\CiteSource{FG}{[FG] Thm. 4.2, p. 18}\\\CiteSource{S}{Sec. 6.3, p. 27}};
+\end{tikzpicture}

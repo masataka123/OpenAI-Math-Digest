@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+\node[card] (n0) {\heading{01}{低次元の指数を固定する}{Fix lower-dimensional indices}$L_j\ (j<n),\quad f:X\to Z,\quad X\ \mathrm{klt},\ B_X=0,\ \dim Z>0.$\\ $K_X\sim_{\mathbb Q}f^*D_0.$};
+\node[card,below=2.0cm of n0] (n1) {\heading{02}{実際の因子の標準束公式を作る}{Construct the exact canonical bundle formula}$K_X+p_0^{-1}\operatorname{div}(\psi)=f^*(K_Z+B_Z+M_Z).$};
+\flow{n0}{n1}{\Tx{生成ファイバーの指数と定性的な標準束公式を使う。}{Use the generic-fibre index and qualitative bundle formula.}\\[4pt]\CiteSource{U}{Prop. 4.1, pp. 11--12}}
+\node[card,below=2.0cm of n1] (n2) {\heading{03}{退化指標を成分上の留数で抑える}{Bound degeneration characters using residues}$w_u(\eta_i)=0,\quad \lambda_i^N=1,\quad j=\dim S<n.$};
+\flow{n1}{n2}{\Tx{半安定化後の dlt 成分へ留数を取り、$L_j$ を適用する。}{Take residues on dlt components after semistable reduction; apply $L_j$.}\\[4pt]\CiteSource{U}{Lemmas 3.3, 4.3, pp. 8, 14--17}\quad \CiteSource{LA}{[LA] Thm. 11.1, p. 73}}
+\node[result,below=2.0cm of n2] (n3) {\heading{04}{moduli の Cartier 分母を固定する}{Fix the Cartier denominator of the moduli part}$p=p_0 n!N,\qquad p\mathbf M\ \text{b-Cartier}.\quad\textbf{Proposition 4.1}$};
+\flow{n2}{n3}{\Tx{分岐次数ではなく体積形式の指標を殺し、係数の分母を消す。}{Kill volume-form characters to clear coefficients; ramification need not be bounded.}\\[4pt]\CiteSource{U}{(4.6)--(4.7), p. 14; Sec. 4.4, p. 17}}
+\end{tikzpicture}

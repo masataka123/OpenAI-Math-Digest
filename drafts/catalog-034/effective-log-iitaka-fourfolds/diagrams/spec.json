@@ -1,0 +1,208 @@
+{
+  "sources": {
+    "RD": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Relative-denominators-and-effective-systems-for-log-Calabi-Yau-fibrations-September-27-2026/paper.pdf",
+    "SL": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Lifting-sections-from-the-reduced-support-of-an-adjoint-September-27-2026/paper.pdf",
+    "LA": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf",
+    "JL": "https://arxiv.org/pdf/2002.11928v1",
+    "Xu": "https://arxiv.org/pdf/1905.00297v2",
+    "CT": "https://arxiv.org/pdf/2011.02236v2",
+    "Ufour": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-effective-log-Iitaka-fibrations-for-fourfolds-September-26-2026/paper.pdf"
+  },
+  "diagrams": [
+    {
+      "id": "reduction",
+      "nodes": [
+        {
+          "ja": "境界なし標準指数",
+          "en": "Boundary-free canonical index",
+          "math": "$K_X\\sim_{\\mathbb Q}0,\\qquad \\dim X=4$"
+        },
+        {
+          "ja": "構造で分離した残余の場合",
+          "en": "Residual structural case",
+          "math": "$V\\text{ terminal},\\quad q(\\widetilde V)=0,\\quad K_V\\sim_{\\mathbb Q}0$"
+        },
+        {
+          "ja": "中間因子があれば指数を制御",
+          "en": "An intermediate divisor bounds the index",
+          "math": "$1\\leq\\kappa(A)\\leq3\\quad\\Longrightarrow\\quad N_{\\mathrm{mov}}K_V\\sim0$"
+        },
+        {
+          "ja": "残余の同変ファイバーは一般型",
+          "en": "Residual equivariant fibres are of general type",
+          "math": "$\\pi:Y\\to V,\\quad r=\\operatorname{ord}(K_V)$"
+        }
+      ],
+      "edges": [
+        {
+          "ja": "積・アーベルの場合と非canonicalの場合を処理。残りをcrepantにterminal化する。",
+          "en": "Handle product, abelian and noncanonical cases; take a crepant terminalization in the remainder.",
+          "refs": [
+            {
+              "key": "Ufour",
+              "label": "Prop. 4.1--Lem. 4.5, pp. 10--15"
+            }
+          ]
+        },
+        {
+          "ja": "小さい境界のMMPで標準指数を保ち、境界ゼロで相対分母を適用。RCな底の指数を抑える。",
+          "en": "Preserve the canonical index along the small-boundary MMP; apply denominators with zero boundary and bound the RC-base index.",
+          "refs": [
+            {
+              "key": "Ufour",
+              "label": "Lem. 4.6, pp. 15--16"
+            },
+            {
+              "key": "RD",
+              "label": "RD Thm. 1.1 / Prop. 7.1, pp. 2, 17"
+            }
+          ]
+        },
+        {
+          "ja": "中間因子のない場合に限定。例外因子のbignessとterminal discrepancyをファイバー上へ制限する。",
+          "en": "Restrict to the case without an intermediate divisor; use big exceptional divisors and terminal discrepancies on fibres.",
+          "refs": [
+            {
+              "key": "Ufour",
+              "label": "Lem. 4.7, pp. 16--17"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "transport",
+      "nodes": [
+        {
+          "ja": "指数が増大する残余列を仮定",
+          "en": "Assume an unbounded residual index sequence",
+          "math": "$r\\to\\infty,\\quad 1\\leq L^4\\leq2$"
+        },
+        {
+          "ja": "被覆上の下界と対角積上の上界",
+          "en": "Lower bounds on covers; upper bounds on diagonal products",
+          "math": "$\\varepsilon(L)\\geq c,\\quad\\varepsilon(\\pi^*L)\\geq cr^{1/4},\\quad\\varepsilon(P_t)\\leq Ct^2$"
+        },
+        {
+          "ja": "葉の次数と次数1の忘却",
+          "en": "Leaf degrees force degree-one forgetting",
+          "math": "$1\\leq h_t\\leq4,\\quad D_t\\leq KT^8,\\quad W_k\\dashrightarrow W_{k-1}\\text{ birational}$"
+        },
+        {
+          "ja": "有理評価と局所流による矛盾",
+          "en": "Rational evaluation and local flows give a contradiction",
+          "math": "$\\{E_z\\}\\subset\\operatorname{Bir}(V)\\quad\\Longrightarrow\\quad r\\text{ bounded}$"
+        }
+      ],
+      "edges": [
+        {
+          "ja": "一般型ファイバー条件からscalar評価。Frobenius対角の階数欠損で二次上界を得る。",
+          "en": "The general-type fibre condition gives scalar estimates; rank deficit on the Frobenius diagonal gives the quadratic bound.",
+          "refs": [
+            {
+              "key": "Ufour",
+              "label": "Thm. 6.1, p. 23; Prop. 7.1, pp. 33--42"
+            }
+          ]
+        },
+        {
+          "ja": "先に積の個数を固定。鎖の次数を多項式で抑え、忘却次数の指数増大を排除する。",
+          "en": "Fix the number of products first; polynomial degree bounds exclude exponential growth of forgetting degrees.",
+          "refs": [
+            {
+              "key": "Ufour",
+              "label": "Lem. 5.4, p. 21; Prop. 8.1, pp. 42--45"
+            }
+          ]
+        },
+        {
+          "ja": "次数1が有理評価を与える。非可算個の局所流と双自己写像群の可算性が衝突する。",
+          "en": "Degree one gives rational evaluation; uncountably many local flows contradict countability of the birational group.",
+          "refs": [
+            {
+              "key": "Ufour",
+              "label": "Prop. 8.1 / Lem. 8.2, pp. 45--47"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iitaka",
+      "nodes": [
+        {
+          "ja": "固定有限係数のlc四次元対",
+          "en": "An lc fourfold pair with fixed finite coefficients",
+          "math": "$D=K_X+\\Delta\\ \\text{pseudo-effective},\\quad\\operatorname{coeff}^+(\\Delta)\\subset\\Phi$"
+        },
+        {
+          "ja": "全次数の切断を保つ半豊富モデル",
+          "en": "A semiample model preserving sections in every degree",
+          "math": "$D'\\sim_{\\mathbb Q}f^*A,\\quad A\\text{ ample},\\quad\\Phi'=\\Phi\\cup\\{1\\}$"
+        },
+        {
+          "ja": "底の次元で一様次数を選択",
+          "en": "Choose uniform degrees by base dimension",
+          "math": "$\\dim Z>0:\\ m_+;\\qquad\\dim Z=0:\\ m_{\\mathrm{nklt}},m_{\\Delta\\ne0},N_4$"
+        },
+        {
+          "ja": "元の完全系で飯高体を回復",
+          "en": "Recover the Iitaka field with the original complete system",
+          "math": "$\\mathbb C\\bigl(s_i/s_j:\\ s_i,s_j\\in H^0(X,\\mathcal O_X(\\lfloor mD\\rfloor))\\bigr)=K(D)$"
+        }
+      ],
+      "edges": [
+        {
+          "ja": "LAで定性的非消滅。SLでnefモデルを半豊富にし、極の不等式で全整数次数を比較する。",
+          "en": "LA supplies qualitative nonvanishing; SL makes the nef model semiample, and pole inequalities compare every integer degree.",
+          "refs": [
+            {
+              "key": "LA",
+              "label": "LA Thm. 11.1, p. 73"
+            },
+            {
+              "key": "SL",
+              "label": "SL Thm. 1.2, p. 2"
+            },
+            {
+              "key": "Ufour",
+              "label": "Prop. 2.2, pp. 6--7"
+            }
+          ]
+        },
+        {
+          "ja": "正次元はRDの有効系。点の場合は非klt、境界ありklt、境界なしkltを分離する。",
+          "en": "Use RD for a positive-dimensional base; separate non-klt, klt with boundary, and boundary-free klt over a point.",
+          "refs": [
+            {
+              "key": "RD",
+              "label": "RD Prop. 6.1, p. 15"
+            },
+            {
+              "key": "JL",
+              "label": "JL Cor. 1.7, p. 2"
+            },
+            {
+              "key": "Xu",
+              "label": "Xu Thm. 1.14, p. 3"
+            },
+            {
+              "key": "Ufour",
+              "label": "Thm. 1.1, p. 1"
+            }
+          ]
+        },
+        {
+          "ja": "共通倍数を取り、すべての正倍数での結論と全次数比較を使う。標準代表の変更は比を保つ。",
+          "en": "Take a common multiple and use the every-multiple conclusion and all-degree comparison; canonical representatives preserve ratios.",
+          "refs": [
+            {
+              "key": "Ufour",
+              "label": "eq. (2.1), p. 6; Sect. 10, pp. 48--49"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

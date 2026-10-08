@@ -1,0 +1,67 @@
+\documentclass[border=12pt]{standalone}
+\def\pgfsysdriver{pgfsys-dvisvgm.def}
+\usepackage[dvisvgm]{xcolor}
+\usepackage{xeCJK}
+\setCJKmainfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf]
+\setCJKsansfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf]
+\usepackage{amsmath,amssymb,tikz,lmodern}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
+\renewcommand{\familydefault}{\sfdefault}
+\definecolor{ink}{HTML}{25322F}
+\definecolor{green}{HTML}{246657}
+\definecolor{tint}{HTML}{EEF4F0}
+\definecolor{soft}{HTML}{C6D2CC}
+\definecolor{muted}{HTML}{52615B}
+\newif\ifJapanese
+\newcommand{\Tx}[2]{\ifJapanese #1\else #2\fi}
+\newcommand{\Eff}{\overline{\operatorname{Eff}}}
+\newcommand{\heading}[3]{{\color{green}\bfseries #1\quad\Tx{#2}{#3}}\\[5pt]}
+% A white rectangle makes the complete citation label clickable, including spaces.
+\newcommand{\refurl}[2]{\special{dvisvgm:raw <a xlink:href="#1" target="_blank" rel="noopener noreferrer">}{\setlength{\fboxsep}{0pt}\colorbox{white}{\color{green}\underline{\strut #2}}}\special{dvisvgm:raw </a>}}
+\newcommand{\refedge}[3]{\refurl{\csname source#1\endcsname\string##page=#2}{#3}}
+\newcommand{\SF}[2]{\refedge{sf}{#1}{#2}}
+% GitHub's file preview does not support PDF page fragments.
+\newcommand{\LA}[2]{\refurl{\sourcela}{#2}}
+\newcommand{\Sch}[2]{\refedge{sch}{#1}{#2}}
+\newcommand{\PS}[2]{\refedge{ps}{#1}{#2}}
+\tikzset{
+ card/.style={draw=soft,fill=white,rounded corners=2pt,align=left,text=ink,font=\fontsize{10.5}{14}\selectfont,inner xsep=12pt,inner ysep=10pt,text width=14.4cm},
+ half/.style={card,text width=6.45cm,minimum height=2.05cm},
+ result/.style={card,draw=green,fill=tint,line width=.9pt},
+ reason/.style={align=left,text=muted,font=\fontsize{9}{12}\selectfont,inner sep=0pt,text width=12.7cm},
+ branchreason/.style={reason,text width=5.95cm},
+ edge/.style={-{Stealth[length=2.4mm]},draw=green,line width=1pt},
+ wire/.style={draw=green,line width=1pt},
+}
+% Keep the arrow in a dedicated left gutter; explanations never cover it.
+\newcommand{\flow}[3]{
+ \coordinate (#2-from) at ($(#1.south)+(-6.9,0)$);
+ \coordinate (#2-to) at ($(#2.north)+(-6.9,0)$);
+ \draw[edge] (#2-from)--(#2-to);
+ \node[reason,anchor=west] (#2-reason) at ($(#2-from)!.5!(#2-to)+(.55,0)$) {#3};
+}
+
+
+\newcommand{\CiteSource}[2]{\refurl{\csname source#1\endcsname}{#2}}
+
+\expandafter\def\csname sourceU\endcsname{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-Pluricanonical-Iitaka-Fibrations-October-3-2026/paper.pdf}
+\expandafter\def\csname sourceLA\endcsname{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf}
+\expandafter\def\csname sourceSD\endcsname{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Arithmetic-Stein-degree-bounds-for-log-Calabi-Yau-pairs-September-25-2026/paper.pdf}
+\expandafter\def\csname sourceUfour\endcsname{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-effective-log-Iitaka-fibrations-for-fourfolds-September-26-2026/paper.pdf}
+\expandafter\def\csname sourceR\endcsname{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Relative-denominators-and-effective-systems-for-log-Calabi-Yau-fibrations-September-27-2026/paper.pdf}
+\expandafter\def\csname sourceLog\endcsname{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-log-Iitaka-fibrations-and-bounded-moduli-denominators-October-4-2026/uniform-log-iitaka.pdf}
+\expandafter\def\csname sourceSLC\endcsname{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf}
+\expandafter\def\csname sourceBZ\endcsname{https://arxiv.org/pdf/1410.0938v2}
+
+\Japanesefalse
+\begin{document}
+\begin{tikzpicture}
+\node[card] (n0) {\heading{01}{良いモデルで飯高写像を表す}{Represent the Iitaka fibration on a good model}$X\dashrightarrow V\xrightarrow{f}Z,\quad K_V\ \text{semiample},\quad H^0(X,mK_X)=H^0(V,mK_V).$};
+\node[card,below=2.0cm of n0] (n1) {\heading{02}{底の次元に応じて一様次数を選ぶ}{Choose a degree according to the base dimension}$\dim Z=0:\ L_n;\qquad\dim Z>0:\ D_Z\ \text{big},\quad p\mathbf M\ \text{b-Cartier}.$};
+\flow{n0}{n1}{\Tx{[LA] から得た良いモデル上で、点の場合と big な底を分ける。}{Use the good model from [LA] and split the point and big-base cases.}\\[4pt]\CiteSource{LA}{[LA] Thm. 11.1, p. 73}\quad \CiteSource{U}{Lemma 9.1; proof of Thm. 1.1, p. 41}}
+\node[card,below=2.0cm of n1] (n2) {\heading{03}{完全系の切断比で底の全関数体を得る}{Recover the full base field from complete-system ratios}$H^0(V,mK_V)=\psi^{m/p_0}f^*H^0(Z,\lfloor mD_Z\rfloor),\quad p_0\mid m.$};
+\flow{n1}{n2}{\Tx{固定係数・nef 分母の有効双有理性を底に適用する。}{Apply effective birationality with fixed coefficients and nef denominator.}\\[4pt]\CiteSource{BZ}{[BZ] Thm. 1.3, p. 3}\quad \CiteSource{U}{Cor. 4.4, (4.10), p. 17}}
+\node[result,below=2.0cm of n2] (n3) {\heading{04}{共通倍数と基礎体の降下で閉じる}{Take a common multiple and descend the field}$k(\text{ratios of }|m(n)K_X|)=K(K_X).\quad\textbf{Theorem 1.1}$};
+\flow{n2}{n3}{\Tx{切断比は正の整数倍で保たれ、忠実平坦性で降下する。}{Positive multiples preserve section ratios; faithful flatness gives descent.}\\[4pt]\CiteSource{U}{Sec. 9, pp. 41--42}}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,309 @@
+{
+  "sources": {
+    "U": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-Pluricanonical-Iitaka-Fibrations-October-3-2026/paper.pdf",
+    "LA": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf",
+    "SD": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Arithmetic-Stein-degree-bounds-for-log-Calabi-Yau-pairs-September-25-2026/paper.pdf",
+    "Ufour": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-effective-log-Iitaka-fibrations-for-fourfolds-September-26-2026/paper.pdf",
+    "R": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Relative-denominators-and-effective-systems-for-log-Calabi-Yau-fibrations-September-27-2026/paper.pdf",
+    "Log": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-log-Iitaka-fibrations-and-bounded-moduli-denominators-October-4-2026/uniform-log-iitaka.pdf",
+    "SLC": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf",
+    "BZ": "https://arxiv.org/pdf/1410.0938v2"
+  },
+  "diagrams": [
+    {
+      "id": "induction",
+      "nodes": [],
+      "edges": [],
+      "tikz": "\\begin{tikzpicture}\n\\node[half] (l) at (-4.5,0) {\\heading{01a}{低次元の normal lc 指数}{Lower-dimensional normal lc indices}$L_j\\quad(j<n)$};\n\\node[half] (i) at (4.5,0) {\\heading{01b}{低次元の飯高写像}{Lower-dimensional Iitaka maps}$I_j\\quad(j<n)$};\n\\node[half] (d) at (-4.5,-4.4) {\\heading{02a}{相対的な分母と torsion}{Relative denominators and torsion}$p\\mathbf M\\ \\text{b-Cartier}$};\n\\node[half] (s) at (4.5,-4.4) {\\heading{02b}{小体積と scalar 評価}{Small volumes and scalar estimates}$\\gamma(P)\\le C_n(P^n)^{1/n}$};\n\\node[half] (k) at (4.5,-8.8) {\\heading{03}{零境界 klt 指数}{Zero-boundary klt index}$K_n:\\quad a_nK_V\\sim0$};\n\\node[half,draw=green,fill=tint,line width=.9pt] (ln) at (4.5,-13.2) {\\heading{04}{normal lc 指数へ戻す}{Return to normal lc indices}$K_n+L_{<n}\\Longrightarrow L_n$};\n\\node[half,draw=green,fill=tint,line width=.9pt] (in) at (-4.5,-13.2) {\\heading{05}{飯高体全体を回収する}{Recover the full Iitaka field}$L_n+\\text{denominators}\\Longrightarrow I_n$};\n\\draw[edge] ($(l.south)+(-3.35,0)$)--($(d.north)+(-3.35,0)$);\n\\node[branchreason,fill=white,anchor=west,text width=5.7cm] at (-7.3,-2.2) {\\Tx{生成ファイバーと退化成分に $L_{<n}$ を使う。}{Use $L_{<n}$ on generic fibres and degeneration components.}\\\\\\CiteSource{U}{Prop. 4.1, pp. 11--17}};\n\\draw[edge] ($(i.south)+(-3.35,0)$)--($(s.north)+(-3.35,0)$);\n\\node[branchreason,fill=white,anchor=west,text width=5.7cm] at (1.7,-2.2) {\\Tx{小さい飯高ファイバーへ移る。}{Pass to smaller Iitaka fibres.}\\\\\\CiteSource{U}{Prop. 6.1; Lemma 6.4, pp. 24--30}};\n\\draw[edge] ($(s.south)+(-3.35,0)$)--($(k.north)+(-3.35,0)$);\n\\node[branchreason,fill=white,anchor=west,text width=5.7cm] at (1.7,-6.6) {\\Tx{対角積・鎖・局所 flow で高指数を排除する。}{Exclude high indices via diagonals, chains and local flows.}\\\\\\CiteSource{U}{Props. 7.1, 8.1, pp. 31--40}};\n\\draw[edge] (d.east)--(0,-4.4)--(0,-8.8)--(k.west);\n\\node[branchreason,anchor=west,text width=3.0cm] at (-3.7,-8.0) {\\Tx{構造帰着に使用}{Structural reduction}\\\\\\CiteSource{U}{Sec. 5, pp. 20--24}};\n\\draw[edge] ($(k.south)+(-3.35,0)$)--($(ln.north)+(-3.35,0)$);\n\\node[branchreason,fill=white,anchor=west,text width=5.7cm] at (1.7,-11.0) {\\Tx{adjunction と Stein 次数・norm を使う。}{Use adjunction, Stein degree and norm.}\\\\\\CiteSource{U}{Prop. 3.2, pp. 6--8}};\n\\draw[edge] ($(d.south)+(-3.35,0)$)--($(in.north)+(-3.35,0)$);\n\\node[branchreason,fill=white,anchor=west,text width=5.5cm] at (-7.3,-10.8) {\\Tx{分母を再利用し、底に有効双有理性を適用する。}{Reuse denominators for effective birationality on the base.}\\\\\\CiteSource{U}{Cor. 4.4; Sec. 9, pp. 17, 41}};\n\\draw[edge] (ln.west)--(in.east);\n\\node[reason,text width=4cm,anchor=north] at (0,-14.65) {\\Tx{底が点の場合には $L_n$}{Use $L_n$ for a point base}\\\\\\CiteSource{U}{Lemma 9.1; Sec. 9, p. 41}};\n\\end{tikzpicture}"
+    },
+    {
+      "id": "denominator",
+      "nodes": [
+        {
+          "ja": "低次元の指数を固定する",
+          "en": "Fix lower-dimensional indices",
+          "math": "$L_j\\ (j<n),\\quad f:X\\to Z,\\quad X\\ \\mathrm{klt},\\ B_X=0,\\ \\dim Z>0.$\\\\ $K_X\\sim_{\\mathbb Q}f^*D_0.$"
+        },
+        {
+          "ja": "実際の因子の標準束公式を作る",
+          "en": "Construct the exact canonical bundle formula",
+          "math": "$K_X+p_0^{-1}\\operatorname{div}(\\psi)=f^*(K_Z+B_Z+M_Z).$"
+        },
+        {
+          "ja": "退化指標を成分上の留数で抑える",
+          "en": "Bound degeneration characters using residues",
+          "math": "$w_u(\\eta_i)=0,\\quad \\lambda_i^N=1,\\quad j=\\dim S<n.$"
+        },
+        {
+          "ja": "moduli の Cartier 分母を固定する",
+          "en": "Fix the Cartier denominator of the moduli part",
+          "math": "$p=p_0 n!N,\\qquad p\\mathbf M\\ \\text{b-Cartier}.\\quad\\textbf{Proposition 4.1}$"
+        }
+      ],
+      "edges": [
+        {
+          "ja": "生成ファイバーの指数と定性的な標準束公式を使う。",
+          "en": "Use the generic-fibre index and qualitative bundle formula.",
+          "refs": [
+            {
+              "key": "U",
+              "label": "Prop. 4.1, pp. 11--12"
+            }
+          ]
+        },
+        {
+          "ja": "半安定化後の dlt 成分へ留数を取り、$L_j$ を適用する。",
+          "en": "Take residues on dlt components after semistable reduction; apply $L_j$.",
+          "refs": [
+            {
+              "key": "U",
+              "label": "Lemmas 3.3, 4.3, pp. 8, 14--17"
+            },
+            {
+              "key": "LA",
+              "label": "[LA] Thm. 11.1, p. 73"
+            }
+          ]
+        },
+        {
+          "ja": "分岐次数ではなく体積形式の指標を殺し、係数の分母を消す。",
+          "en": "Kill volume-form characters to clear coefficients; ramification need not be bounded.",
+          "refs": [
+            {
+              "key": "U",
+              "label": "(4.6)--(4.7), p. 14; Sec. 4.4, p. 17"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "index",
+      "nodes": [
+        {
+          "ja": "構造帰着の仮定から局所正値性を得る",
+          "en": "Obtain local positivity after structural reduction",
+          "math": "$\\operatorname{Bir}(V)\\ \\text{countable},\\quad \\varepsilon(L)\\ge c,\\quad \\varepsilon(\\pi^*L)\\ge cr^{1/n}.$"
+        },
+        {
+          "ja": "行列式の矛盾で対角積の上界を得る",
+          "en": "Use the determinant contradiction on diagonal products",
+          "math": "$\\operatorname{ord}(\\det)\\ge3R/4\\ \\text{and}\\ <3R/4\\quad\\Longrightarrow\\quad\\varepsilon(P_t)\\le C_2t^2.$"
+        },
+        {
+          "ja": "有限のサイズを固定して両立する葉を作る",
+          "en": "Fix finitely many sizes and construct compatible leaves",
+          "math": "$2\\le t\\le T,\\quad B=C_2T^2+1,\\quad P_t^{h_t}\\cdot H_t\\le(h_tB)^{h_t},\\quad W_t=\\theta_t(H_t).$"
+        },
+        {
+          "ja": "各座標への正次元ファイバーを排除する",
+          "en": "Exclude positive-dimensional fibres over a coordinate",
+          "math": "$a=h_t-j>0\\ \\Longrightarrow\\ P_t^{h_t}\\cdot H_t\\ge c^j(cr^{1/n})^a\\to\\infty.$\\\\ $\\text{Thus}\\quad1\\le h_t\\le n.$"
+        },
+        {
+          "ja": "多項式の上界で次数1の忘却を得る",
+          "en": "Force degree-one forgetting by a polynomial degree bound",
+          "math": "$d_t\\le KT^{2n},\\quad h_t=h_{t-1}\\Rightarrow d_t/d_{t-1}=\\deg(W_t\\dashrightarrow W_{t-1}).$\\\\ $\\text{Some}\\ W_k\\dashrightarrow W_{k-1}\\ \\text{is birational}.$"
+        },
+        {
+          "ja": "接方向を有理的に移送する",
+          "en": "Transport tangent directions rationally",
+          "math": "$R(y,z)R(x,y)=R(x,z),\\quad v_1,\\ldots,v_h\\ \\text{rational},\\quad h>0.$"
+        },
+        {
+          "ja": "局所 flow から可算性との矛盾を得る",
+          "en": "Contradict countability through local flows",
+          "math": "$E_z(y)=\\operatorname{ev}(E_z(u),\\xi(u,y)),\\quad E_z\\in\\operatorname{Bir}(V).$\\\\ $\\text{Uncountably many }E_z\\quad\\Longrightarrow\\quad K_n.$"
+        }
+      ],
+      "edges": [
+        {
+          "ja": "scalar 上界と Frobenius 対角の階数低下を比較する。",
+          "en": "Compare scalar upper orders with Frobenius-diagonal rank loss.",
+          "refs": [
+            {
+              "key": "U",
+              "label": "Props. 6.1, 7.1, pp. 24, 31--37"
+            }
+          ]
+        },
+        {
+          "ja": "低次数曲線を群作用・置換・射影で閉じ、鎖の商を取る。",
+          "en": "Close low-cost families under group actions, permutations and projections; form chain quotients.",
+          "refs": [
+            {
+              "key": "U",
+              "label": "Lemma 6.2; (8.1), pp. 25, 37--38"
+            }
+          ]
+        },
+        {
+          "ja": "固定した $T$ で $r$ を増やし、Seshadri 下界と葉の次数上界を衝突させる。",
+          "en": "Fix $T$, increase $r$, and compare fibre positivity with the leaf degree bound.",
+          "refs": [
+            {
+              "key": "U",
+              "label": "(8.2)--(8.3), p. 38"
+            }
+          ]
+        },
+        {
+          "ja": "次元一定の長い区間で、次数の指数増大を排除する。",
+          "en": "On a long constant-dimensional stretch, rule out exponential degree growth.",
+          "refs": [
+            {
+              "key": "U",
+              "label": "(8.4)--(8.6), p. 39"
+            }
+          ]
+        },
+        {
+          "ja": "可分性と積変数の関数体の共通部分で、接分布と移送を降ろす。",
+          "en": "Use separability and intersections of product function fields to descend tangent transport.",
+          "refs": [
+            {
+              "key": "U",
+              "label": "(8.7), p. 39"
+            }
+          ]
+        },
+        {
+          "ja": "生成葉の幾何学的整性で座標を有理回収し、逆 flow にも適用する。",
+          "en": "Geometric integrality gives rational recovery; apply it also to inverse flows.",
+          "refs": [
+            {
+              "key": "U",
+              "label": "(8.8); Sec. 9, p. 40"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "normal-lc",
+      "nodes": [
+        {
+          "ja": "低次元指数と零境界の指数を入力する",
+          "en": "Input lower-dimensional and zero-boundary indices",
+          "math": "$K_n,\\ L_j\\ (j<n);\\quad (X,B)\\ \\mathrm{lc},\\ K_X+B\\sim_{\\mathbb Q}0.$"
+        },
+        {
+          "ja": "正次元の Mori 底上の係数1成分を選ぶ",
+          "en": "Choose a coefficient-one component over a positive-dimensional Mori base",
+          "math": "$S\\ \\text{horizontal},\\quad S^\\nu\\to Y\\xrightarrow{h}Z,\\quad\\deg h\\le N(n,1).$"
+        },
+        {
+          "ja": "留数の自明化を norm で底へ降ろす",
+          "en": "Descend the residue trivialization by norm",
+          "math": "$h^*D=\\operatorname{div}(a)\\Rightarrow(\\deg h)D=\\operatorname{div}\\operatorname{Nm}(a).$"
+        },
+        {
+          "ja": "境界の Stein 次数と norm で lc 指数へ",
+          "en": "Use boundary Stein degree and norm for the lc index",
+          "math": "$K_n+L_{<n}\\Longrightarrow L_n:\\quad a(n,\\Phi)(K_X+B)\\sim0.$"
+        }
+      ],
+      "edges": [
+        {
+          "ja": "non-klt の場合に境界を下げて MMP を実行する。点を底とする場合は別に処理する。",
+          "en": "For the non-klt case, lower the boundary and run an MMP. Treat a point base separately.",
+          "refs": [
+            {
+              "key": "U",
+              "label": "Prop. 3.2, pp. 6--7"
+            }
+          ]
+        },
+        {
+          "ja": "adjunction と $L_{<n}$ で留数を自明化し、[SD] を $k(Z)$ 上、$t=1$ で使う。",
+          "en": "Trivialize the residue by adjunction and $L_{<n}$; apply [SD] over $k(Z)$ with $t=1$.",
+          "refs": [
+            {
+              "key": "U",
+              "label": "(3.3)--(3.4), pp. 7--8"
+            },
+            {
+              "key": "SD",
+              "label": "[SD] Thm. 1.1, p. 1"
+            }
+          ]
+        },
+        {
+          "ja": "有限係数集合の場合を合わせ、global ACC で DCC 係数へ戻る。",
+          "en": "Combine the finite-coefficient cases; global ACC restores DCC coefficients.",
+          "refs": [
+            {
+              "key": "U",
+              "label": "Sec. 2; Sec. 9, pp. 5, 40"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iitaka",
+      "nodes": [
+        {
+          "ja": "良いモデルで飯高写像を表す",
+          "en": "Represent the Iitaka fibration on a good model",
+          "math": "$X\\dashrightarrow V\\xrightarrow{f}Z,\\quad K_V\\ \\text{semiample},\\quad H^0(X,mK_X)=H^0(V,mK_V).$"
+        },
+        {
+          "ja": "底の次元に応じて一様次数を選ぶ",
+          "en": "Choose a degree according to the base dimension",
+          "math": "$\\dim Z=0:\\ L_n;\\qquad\\dim Z>0:\\ D_Z\\ \\text{big},\\quad p\\mathbf M\\ \\text{b-Cartier}.$"
+        },
+        {
+          "ja": "完全系の切断比で底の全関数体を得る",
+          "en": "Recover the full base field from complete-system ratios",
+          "math": "$H^0(V,mK_V)=\\psi^{m/p_0}f^*H^0(Z,\\lfloor mD_Z\\rfloor),\\quad p_0\\mid m.$"
+        },
+        {
+          "ja": "共通倍数と基礎体の降下で閉じる",
+          "en": "Take a common multiple and descend the field",
+          "math": "$k(\\text{ratios of }|m(n)K_X|)=K(K_X).\\quad\\textbf{Theorem 1.1}$"
+        }
+      ],
+      "edges": [
+        {
+          "ja": "[LA] から得た良いモデル上で、点の場合と big な底を分ける。",
+          "en": "Use the good model from [LA] and split the point and big-base cases.",
+          "refs": [
+            {
+              "key": "LA",
+              "label": "[LA] Thm. 11.1, p. 73"
+            },
+            {
+              "key": "U",
+              "label": "Lemma 9.1; proof of Thm. 1.1, p. 41"
+            }
+          ]
+        },
+        {
+          "ja": "固定係数・nef 分母の有効双有理性を底に適用する。",
+          "en": "Apply effective birationality with fixed coefficients and nef denominator.",
+          "refs": [
+            {
+              "key": "BZ",
+              "label": "[BZ] Thm. 1.3, p. 3"
+            },
+            {
+              "key": "U",
+              "label": "Cor. 4.4, (4.10), p. 17"
+            }
+          ]
+        },
+        {
+          "ja": "切断比は正の整数倍で保たれ、忠実平坦性で降下する。",
+          "en": "Positive multiples preserve section ratios; faithful flatness gives descent.",
+          "refs": [
+            {
+              "key": "U",
+              "label": "Sec. 9, pp. 41--42"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
