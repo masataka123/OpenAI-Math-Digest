@@ -49,11 +49,11 @@ const article=id=>base+lang+'/papers/'+id+'/';
   <p class="table-hint">{en?'Page counts include references. On narrow screens, scroll the table sideways.':'ページ数は参考文献を含みます。狭い画面では表を横にスクロールできます。'}</p>
   <div class="digest-table-wrap" role="region" aria-label={en?'Manuscript inventory and roles':'論文一覧と役割'} tabindex="0"><table class="digest-table catalog-inventory">
    <caption>{en?'Catalogue 034 · Pinned source snapshot checked on 8 October 2026':'カタログ034 · 2026年10月8日確認の固定参照版'}</caption>
-   <thead><tr><th scope="col">#</th><th scope="col">{en?'Manuscript and source':'論文・原典'}</th><th scope="col">{en?'Principal claim':'主に何を主張するか'}</th><th scope="col">{en?'Role and available overview':'議論の役割・概説'}</th></tr></thead>
+   <thead><tr><th scope="col">#</th><th scope="col">{en?'Manuscript and overview':'論文・概説'}</th><th scope="col">{en?'Principal claim':'主に何を主張するか'}</th><th scope="col">{en?'Role and available overview':'議論の役割・概説'}</th></tr></thead>
    <tbody>{orderedPapers.map(p=>{const n=notesById[p.id];return <tr id={'paper-'+p.id} class:list={{'featured-row':p.featured}}>
-    <td>{number(p.id)}</td><th scope="row"><a href={paperSource(p)} lang="en">{p.title} ↗</a><span class="table-detail">{en?'Short name':'図中の略称'}: {n.short}</span><span class="table-detail">{p.version} · {p.pages} {en?'pages':'ページ'}</span></th>
+    <td>{number(p.id)}</td><th scope="row"><a class="manuscript-title" href={p.featured?article(p.id):paperSource(p)} lang="en">{p.title}<span aria-hidden="true"> {p.featured?'→':'↗'}</span></a><span class="table-detail">{en?'Short name':'図中の略称'}: {n.short}</span><span class="table-detail">{p.version} · {p.pages} {en?'pages':'ページ'}</span><a class="manuscript-source" href={paperSource(p)}>{en?'Original paper (GitHub)':'原論文（GitHub）'} ↗</a></th>
     <td><p>{n.claim[lang]}</p><a class="claim-source" href={paperSource(p)}>{n.result} ↗</a></td>
-    <td><p>{n.role[lang]}</p>{p.featured?<a class="badge" href={article(p.id)}>{en?'Read the proof overview':'証明概説を読む'} →</a>:<span class="badge">{en?'Summary · No separate article yet':'要点整理・個別記事なし'}</span>}</td>
+    <td><p>{n.role[lang]}</p>{p.featured?<a class="overview-link" href={article(p.id)}>{en?'Read the proof overview':'証明概説を読む'} →</a>:<span class="badge">{en?'Summary · No separate article yet':'要点整理・個別記事なし'}</span>}</td>
    </tr>;})}</tbody>
   </table></div>
  </section>
