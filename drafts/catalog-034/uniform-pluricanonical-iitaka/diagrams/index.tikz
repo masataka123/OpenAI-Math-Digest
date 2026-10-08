@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+\node[card] (n0) {\heading{01}{高指数列に帰着する}{Reduce to a high-index sequence}$r\to\infty,\quad\pi:Y\to V,\quad K_Y\sim0,\quad\operatorname{Bir}(V)\ \text{countable}.$};
+\node[card,below=2.0cm of n0] (n1) {\heading{02}{被覆と対角積に反対向きの評価を得る}{Compare cover and diagonal-product positivity}$\varepsilon(\pi^*L)\ge c_nr^{1/n},\quad Z_t=Y^t/G_{\rm diag},\quad\varepsilon(P_t)\le Ct^2.$};
+\flow{n0}{n1}{\Tx{低次元 $I_j$ の scalar 評価と Frobenius 対角の行列式を使う。}{Use lower-dimensional $I_j$, scalar bounds and the Frobenius-diagonal determinant.}\\[4pt]\CiteSource{U}{Props. 5.1, 6.1, 7.1, pp. 20, 24, 31}}
+\node[card,below=2.0cm of n1] (n2) {\heading{03}{葉の座標を有理的に回収する}{Recover a missing leaf coordinate rationally}$P_t^{h_t}H_t\le(h_tB)^{h_t},\quad W_k\dashrightarrow W_{k-1}\ \text{birational}.$};
+\flow{n1}{n2}{\Tx{鎖の葉の次数を抑え、座標忘却の次数1を強制する。}{Bound chain-leaf degrees and force a degree-one forgetting map.}\\[4pt]\CiteSource{U}{Prop. 8.1, pp. 37--39}\quad \CiteSource{Ufour}{[U4] Lemmas 5.1, 5.4; pp. 18, 21}}
+\node[card,below=2.0cm of n2] (n3) {\heading{04}{可算性との矛盾から零境界指数へ}{Contradict countability and bound the klt index}$\{\text{local flows}\}\subset\operatorname{Bir}(V)\quad\Longrightarrow\quad K_n.$};
+\flow{n2}{n3}{\Tx{有理的な座標回収で局所 flow を双有理写像にする。}{Rational recovery turns local flows into birational self-maps.}\\[4pt]\CiteSource{U}{(8.7)--(8.8), pp. 39--40}}
+\node[result,below=2.0cm of n3] (n4) {\heading{05}{境界の Stein 次数と norm で lc 指数へ}{Use boundary Stein degree and norm for the lc index}$K_n+L_{<n}\Longrightarrow L_n:\quad a(n,\Phi)(K_X+B)\sim0.$};
+\flow{n3}{n4}{\Tx{水平な係数1成分の留数と有界な Stein 次数を使う。}{Use residues on a horizontal coefficient-one component and a bounded Stein degree.}\\[4pt]\CiteSource{U}{Prop. 3.2, pp. 6--8}\quad \CiteSource{SD}{[SD] Thm. 1.1, p. 1}}
+\end{tikzpicture}

@@ -1,0 +1,7 @@
+\begin{tikzpicture}
+\node[card] (n0) {\heading{01}{二つの別の非消滅入力を区別する}{Distinguish two separate nonvanishing inputs}\Tx{条件付き全次元：滑らかな標準非消滅を仮定。}{All dimensions: assume smooth canonical nonvanishing.}\\\Tx{四次元： [NV] Corollary 1.2 を入力する。}{Fourfolds: input [NV] Corollary 1.2.}};
+\node[card,below=2.0cm of n0] (n1) {\heading{02}{それぞれに必要な帰納法・半豊富性を適用する}{Apply the respective induction or semiampleness result}\textbf{Thm. 1.3}: [Hash] + \Tx{有理化}{rational feasibility} + Prop. 6.3.\\ \textbf{Cor. 1.4}: [NV] Cor. 1.2 + Thm. 1.2.};
+\flow{n0}{n1}{\Tx{全次元では通常のモデルを供給。四次元では最初の切断を供給。}{In all dimensions obtain ordinary models; in fourfolds obtain the first section.}\\[4pt]\CiteSource{Hash}{[Hash] Thm. 1.4}\quad \CiteSource{NV}{[NV] Cor. 1.2, p. 2; Lemma 8.1, p. 35}}
+\node[result,below=2.0cm of n1] (n2) {\heading{03}{元の Cartier 倍の生成性を体の間で移す}{Transfer generation of the original Cartier multiple}$H^0(X_0,L_0)\otimes k\simeq H^0(X_k,L_k),\quad\operatorname{coker}(\mathrm{ev})=0.$};
+\flow{n1}{n2}{\Tx{忠実平坦性を使う。$\mathbb Q$-factoriality 自体の降下は不要。}{Use faithful flatness; descent of global $\mathbb Q$-factoriality is unnecessary.}\\[4pt]\CiteSource{S}{Lemma 7.1; Cor. 7.2; proofs, pp. 28--29}}
+\end{tikzpicture}

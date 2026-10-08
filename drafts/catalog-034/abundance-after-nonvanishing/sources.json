@@ -1,0 +1,197 @@
+{
+  "paperId": "abundance-after-nonvanishing",
+  "sourceCommit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "sourceUrl": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Abundance-after-nonvanishing-for-compact-Kahler-fourfolds-September-27-2026/paper.pdf",
+  "sha256": "89b5dd1a939cd7a67bbc90c83fe34ac5398d08f9103aa1cf8351bb3825e09273",
+  "checkedOn": "2026-10-08",
+  "manuscriptDate": "2026-09-27",
+  "pdfPages": 92,
+  "statements": [
+    {
+      "result": "Theorem 1.1: normal connected compact Kähler klt fourfold, actual rational Cartier adjoint, analytic nefness, nonvanishing assumed; no Q-factorial or projective hypothesis",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "result": "Theorem 1.2: arbitrary positive dimension compact Kähler dlt, exact nonzero support equal to whole floor; no nefness/Q-factoriality assumed",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "result": "Theorem 6.1: whole-floor generation under the explicit special-resolution condition",
+      "pages": [
+        46
+      ]
+    }
+  ],
+  "proofPassages": [
+    {
+      "pages": [
+        6,
+        9,
+        24,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        45,
+        46
+      ],
+      "scope": "Actual-line conventions, selected contraction statements and supported-model preparation/survival; entire contraction proof not checked."
+    },
+    {
+      "pages": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65
+      ],
+      "scope": "Strata adjunction, torsion-free obstruction, residue links, common Kähler class, finite isotropy and norm-product generation."
+    },
+    {
+      "pages": [
+        67,
+        68,
+        71,
+        72,
+        73,
+        74,
+        75,
+        78,
+        79,
+        80,
+        81,
+        82
+      ],
+      "scope": "Root setup, finite lifting target, derived split insertion, compact graph and Hodge statements/comparison; full root gluing and filtered comparison not independently reconstructed."
+    },
+    {
+      "pages": [
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89
+      ],
+      "scope": "Graded derivation, adjugate identity statement and application, finite induction, invariant layers and final assembly; full local Čech calculation not checked."
+    }
+  ],
+  "dependencies": [
+    {
+      "abbreviation": "HLL",
+      "sourceUrl": "https://arxiv.org/pdf/2508.14634v2",
+      "result": "Theorem 4.1",
+      "pages": [
+        17,
+        18
+      ],
+      "usedAt": "Proposition 5.2 p.34",
+      "verification": "v2 statement including unconditional <=4 clause compared."
+    },
+    {
+      "abbreviation": "DHP",
+      "sourceUrl": "https://arxiv.org/pdf/2205.12205v3",
+      "result": "Theorems 6.1,7.2",
+      "pages": [
+        43,
+        46
+      ],
+      "usedAt": "Sections 5.1,5.3",
+      "verification": "v3 statements and supported hypothesis compared; complete imported contraction interfaces not verified."
+    },
+    {
+      "abbreviation": "DO",
+      "sourceUrl": "https://arxiv.org/pdf/2306.00671v4",
+      "result": "Corollary 1.3; actual adjoint conventions",
+      "pages": [
+        4,
+        5,
+        6
+      ],
+      "usedAt": "Section 7.1 pp.50–51",
+      "verification": "v4 statement and sheaf/restriction convention compared."
+    },
+    {
+      "abbreviation": "FT",
+      "sourceUrl": "https://arxiv.org/pdf/2205.14801v7",
+      "result": "Theorem 2.9; Proposition 2.11",
+      "pages": [
+        6,
+        7
+      ],
+      "usedAt": "Lemma 7.1 and Proposition 10.4",
+      "verification": "v7 torsion-freeness and local Kähler statement compared."
+    },
+    {
+      "abbreviation": "Sai",
+      "sourceUrl": "https://arxiv.org/pdf/2204.09026v5",
+      "result": "Theorem 1",
+      "pages": [
+        1
+      ],
+      "usedAt": "Section 11 p.78",
+      "verification": "v5 constant-source strictness statement compared; displayed weight sign differs as explicitly noted in K4N p.78."
+    },
+    {
+      "abbreviation": "SS",
+      "sourceUrl": "https://perso.pages.math.cnrs.fr/users/claude.sabbah/MHMProject/mhm_chap16.pdf",
+      "result": "Theorem 16.3.10",
+      "pages": [
+        734
+      ],
+      "usedAt": "Lemma 11.2 pp.80–81",
+      "verification": "Version 2 chapter16 PDF p.16, accessed 2026-10-08; statement compared, not all theory-comparison inputs."
+    },
+    {
+      "abbreviation": "FG",
+      "sourceUrl": "https://www.math.kyoto-u.ac.jp/~fujino/fg-comp-final.pdf",
+      "result": "Theorem 1.1",
+      "pages": [
+        1
+      ],
+      "usedAt": "Section 8.1 p.59",
+      "verification": "Final author statement compared; only projective strata application."
+    }
+  ],
+  "contextOnly": [
+    {
+      "abbreviation": "SL",
+      "sourceUrl": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Lifting-sections-from-the-reduced-support-of-an-adjoint-September-27-2026/paper.pdf",
+      "usedAt": "p.6",
+      "relationship": "Projective background; not a direct input to the two analytic boundary theorems."
+    },
+    {
+      "abbreviation": "LA",
+      "sourceUrl": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf",
+      "usedAt": "p.6",
+      "relationship": "Projective background; not a direct input to the two analytic boundary theorems."
+    }
+  ],
+  "unresolved": [
+    "Complete Sections 3–4 analytic contraction constructions and Claim 5.4 positivity proof not independently checked.",
+    "All external relative MMP, rationality and current descent inputs not cross-checked.",
+    "Full root-neighborhood gluing, functorial resolution and Section 11 filtered comparison not independently reconstructed.",
+    "Full Lemma 12.2 Čech differentiation computation and external proofs not verified.",
+    "Saito v5 printed weight j-n vs K4N p.78 convention correction must remain visible in editorial review.",
+    "SS author chapter PDF is Version 2 on access date, not immutable commit.",
+    "Website screen verification remains for central editor."
+  ]
+}

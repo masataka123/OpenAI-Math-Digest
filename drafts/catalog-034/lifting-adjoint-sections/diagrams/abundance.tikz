@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+\node[card] (n0) {\heading{01}{非消滅と通常のモデルを用意する}{Start from nonvanishing and ordinary minimal models}$D=K_X+\Delta\ \text{nef},\quad D\sim_{\mathbb Q}M\ge0,\quad\dim X\le4.$};
+\node[card,below=2.0cm of n0] (n1) {\heading{02}{小平次元0の非零代表元を排除する}{Exclude a nonzero representative in Kodaira dimension zero}$\kappa(D)=0,\ M\ne0\ \Longrightarrow\ G=qM_*\ne0,\quad\operatorname{Supp}G\subset\lfloor C_*\rfloor.$};
+\flow{n0}{n1}{\Tx{全 floor の gluing 後に図1を適用し、$\kappa=0$ の場合を終える。}{Glue on the whole floor and apply diagram 1 to finish the zero case.}\\[4pt]\CiteSource{S}{Lemmas 6.1--6.2; Prop. 6.3, pp. 23--25}\quad \CiteSource{FG}{[FG] Thm. 4.3, p. 18}}
+\node[card,below=2.0cm of n1] (n2) {\heading{03}{正の小平次元ではファイバーのモデルへ}{For positive Kodaira dimension use fibre minimal models}$\kappa(D)>0:\quad L|_F\ \text{may be non-nef};\quad \pi^*D|_F\equiv0,\quad\nu(D)=\kappa(D).$};
+\flow{n1}{n2}{\Tx{次に正の場合を扱い、低次元モデルと交点数で帰着する。}{Next treat the positive case using lower-dimensional models and intersections.}\\[4pt]\CiteSource{S}{(6.4)--(6.7), pp. 25--26}}
+\node[result,below=2.0cm of n2] (n3) {\heading{04}{lc center 上の abundance も揃え半豊富性へ}{Include abundance on lc centers and conclude semiampleness}$D\ \text{semiample};\qquad\kappa(D)=0\Longrightarrow D\sim_{\mathbb Q}0.\quad\textbf{Thm. 1.2}$};
+\flow{n2}{n3}{\Tx{全 floor の半豊富性と nef log abundance を適用する。}{Use whole-floor semiampleness and nef log abundance.}\\[4pt]\CiteSource{FG}{[FG] Thm. 4.2, p. 18}\quad \CiteSource{S}{Prop. 6.3; Sec. 6.3, pp. 26--27}}
+\end{tikzpicture}

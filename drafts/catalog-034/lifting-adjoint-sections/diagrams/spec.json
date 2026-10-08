@@ -1,0 +1,201 @@
+{
+  "sources": {
+    "S": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Lifting-sections-from-the-reduced-support-of-an-adjoint-September-27-2026/paper.pdf",
+    "NV": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Fourfold-nonvanishing-by-minimal-metrics-and-moving-jets-September-27-2026/paper.pdf",
+    "FG": "https://www.math.kyoto-u.ac.jp/~fujino/fg-comp-final.pdf",
+    "KS": "https://people.math.harvard.edu/~mpopa/papers/oxford.pdf",
+    "Hash": "https://arxiv.org/html/1609.00121v4",
+    "Bir": "https://arxiv.org/pdf/0706.1792",
+    "Saito": "https://doi.org/10.2977/PRIMS/1195171082",
+    "Ufour": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-effective-log-Iitaka-fibrations-for-fourfolds-September-26-2026/paper.pdf"
+  },
+  "diagrams": [
+    {
+      "id": "lifting",
+      "nodes": [
+        {
+          "ja": "全被約台の生成性を frame 上へ移す",
+          "en": "Move whole-support generation to the frame bundle",
+          "math": "$0\\ne G\\sim q(K_V+C),\\quad S=G_{\\rm red},\\quad L|_S=f^*\\mathcal O(1).$"
+        },
+        {
+          "ja": "全障害群を留数で単射に入れる",
+          "en": "Insert the full obstruction group by residues",
+          "math": "$R^1g_*\\mathcal O_E\\hookrightarrow F_0\\mathcal N=R^1h_*\\omega_R(D_h),\\quad\\operatorname{wt}(\\Omega)=a>0.$"
+        },
+        {
+          "ja": "水平 symbol と実際の Euler 作用を分ける",
+          "en": "Separate horizontal symbol and actual Euler action",
+          "math": "$\\operatorname{symbol}(v_k)=0,\\quad\\operatorname{wt}(v_k)=a+k>0,\\quad s\\varepsilon=-(a+k)s.$"
+        },
+        {
+          "ja": "任意の境界関数の障害を消す",
+          "en": "Kill the obstruction for every boundary function",
+          "math": "$\\delta_k(F)=0,\\qquad g_*(\\mathcal O_Z/I^{k+1})\\twoheadrightarrow g_*(\\mathcal O_Z/I^k).$"
+        },
+        {
+          "ja": "有限層を数えて周囲の切断を増やす",
+          "en": "Count finite layers to obtain ambient section growth",
+          "math": "$h^0(V,\\mathcal O_V(NG))\\to\\infty\\quad\\Longrightarrow\\quad\\kappa(V,K_V+C)>0.$"
+        }
+      ],
+      "edges": [
+        {
+          "ja": "循環被覆の全成分と、余分な境界上の極を残す。",
+          "en": "Retain every cyclic-cover component and poles over the extra boundary.",
+          "refs": [
+            {
+              "key": "S",
+              "label": "Lemmas 2.3, 3.1, pp. 9--13"
+            }
+          ]
+        },
+        {
+          "ja": "正の重みが ample な始域を作り、水平部分を消す。",
+          "en": "Positive weight gives an ample source, forcing the horizontal part to vanish.",
+          "refs": [
+            {
+              "key": "S",
+              "label": "Lemma 3.2; Prop. 4.1, pp. 13--17"
+            },
+            {
+              "key": "KS",
+              "label": "[KS] Thm. 8.2, pp. 14--15"
+            }
+          ]
+        },
+        {
+          "ja": "graph 恒等式に Euler 作用を代入し、任意の $F$ に戻る。",
+          "en": "Use Euler action in the graph identity, then return to arbitrary $F$.",
+          "refs": [
+            {
+              "key": "S",
+              "label": "(5.5), (5.11)--(5.12), pp. 18--20"
+            }
+          ]
+        },
+        {
+          "ja": "有限群不変部・frame 次数0・正の twist の周期性を使う。",
+          "en": "Use finite invariants, frame degree zero, and periodic positive twists.",
+          "refs": [
+            {
+              "key": "S",
+              "label": "Lemma 5.2; Prop. 1.5, pp. 21--23"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "abundance",
+      "nodes": [
+        {
+          "ja": "非消滅と通常のモデルを用意する",
+          "en": "Start from nonvanishing and ordinary minimal models",
+          "math": "$D=K_X+\\Delta\\ \\text{nef},\\quad D\\sim_{\\mathbb Q}M\\ge0,\\quad\\dim X\\le4.$"
+        },
+        {
+          "ja": "小平次元0の非零代表元を排除する",
+          "en": "Exclude a nonzero representative in Kodaira dimension zero",
+          "math": "$\\kappa(D)=0,\\ M\\ne0\\ \\Longrightarrow\\ G=qM_*\\ne0,\\quad\\operatorname{Supp}G\\subset\\lfloor C_*\\rfloor.$"
+        },
+        {
+          "ja": "正の小平次元ではファイバーのモデルへ",
+          "en": "For positive Kodaira dimension use fibre minimal models",
+          "math": "$\\kappa(D)>0:\\quad L|_F\\ \\text{may be non-nef};\\quad \\pi^*D|_F\\equiv0,\\quad\\nu(D)=\\kappa(D).$"
+        },
+        {
+          "ja": "lc center 上の abundance も揃え半豊富性へ",
+          "en": "Include abundance on lc centers and conclude semiampleness",
+          "math": "$D\\ \\text{semiample};\\qquad\\kappa(D)=0\\Longrightarrow D\\sim_{\\mathbb Q}0.\\quad\\textbf{Thm. 1.2}$"
+        }
+      ],
+      "edges": [
+        {
+          "ja": "全 floor の gluing 後に図1を適用し、$\\kappa=0$ の場合を終える。",
+          "en": "Glue on the whole floor and apply diagram 1 to finish the zero case.",
+          "refs": [
+            {
+              "key": "S",
+              "label": "Lemmas 6.1--6.2; Prop. 6.3, pp. 23--25"
+            },
+            {
+              "key": "FG",
+              "label": "[FG] Thm. 4.3, p. 18"
+            }
+          ]
+        },
+        {
+          "ja": "次に正の場合を扱い、低次元モデルと交点数で帰着する。",
+          "en": "Next treat the positive case using lower-dimensional models and intersections.",
+          "refs": [
+            {
+              "key": "S",
+              "label": "(6.4)--(6.7), pp. 25--26"
+            }
+          ]
+        },
+        {
+          "ja": "全 floor の半豊富性と nef log abundance を適用する。",
+          "en": "Use whole-floor semiampleness and nef log abundance.",
+          "refs": [
+            {
+              "key": "FG",
+              "label": "[FG] Thm. 4.2, p. 18"
+            },
+            {
+              "key": "S",
+              "label": "Prop. 6.3; Sec. 6.3, pp. 26--27"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "consequences",
+      "nodes": [
+        {
+          "ja": "二つの別の非消滅入力を区別する",
+          "en": "Distinguish two separate nonvanishing inputs",
+          "math": "\\Tx{条件付き全次元：滑らかな標準非消滅を仮定。}{All dimensions: assume smooth canonical nonvanishing.}\\\\\\Tx{四次元： [NV] Corollary 1.2 を入力する。}{Fourfolds: input [NV] Corollary 1.2.}"
+        },
+        {
+          "ja": "それぞれに必要な帰納法・半豊富性を適用する",
+          "en": "Apply the respective induction or semiampleness result",
+          "math": "\\textbf{Thm. 1.3}: [Hash] + \\Tx{有理化}{rational feasibility} + Prop. 6.3.\\\\ \\textbf{Cor. 1.4}: [NV] Cor. 1.2 + Thm. 1.2."
+        },
+        {
+          "ja": "元の Cartier 倍の生成性を体の間で移す",
+          "en": "Transfer generation of the original Cartier multiple",
+          "math": "$H^0(X_0,L_0)\\otimes k\\simeq H^0(X_k,L_k),\\quad\\operatorname{coker}(\\mathrm{ev})=0.$"
+        }
+      ],
+      "edges": [
+        {
+          "ja": "全次元では通常のモデルを供給。四次元では最初の切断を供給。",
+          "en": "In all dimensions obtain ordinary models; in fourfolds obtain the first section.",
+          "refs": [
+            {
+              "key": "Hash",
+              "label": "[Hash] Thm. 1.4"
+            },
+            {
+              "key": "NV",
+              "label": "[NV] Cor. 1.2, p. 2; Lemma 8.1, p. 35"
+            }
+          ]
+        },
+        {
+          "ja": "忠実平坦性を使う。$\\mathbb Q$-factoriality 自体の降下は不要。",
+          "en": "Use faithful flatness; descent of global $\\mathbb Q$-factoriality is unnecessary.",
+          "refs": [
+            {
+              "key": "S",
+              "label": "Lemma 7.1; Cor. 7.2; proofs, pp. 28--29"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

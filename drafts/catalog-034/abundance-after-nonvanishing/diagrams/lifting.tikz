@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+\node[card] (n0) {\heading{01}{生成された全floorからroot近傍へ}{From the generated whole floor to root neighborhoods}$f:S\to\mathbb P^b,\quad E\text{ reduced Cartier},\quad I=\mathcal O_Z(-E)$};
+\node[card,below=2.0cm of n0] (n1) {\heading{02}{障害を失わないsplit residue挿入}{Split residue insertion retains every obstruction}$R^1g_*A_{-a}\ \lhook\joinrel\longrightarrow\ R^1h_*\omega_H=F_0\mathcal M^1$};
+\flow{n0}{n1}{\Tx{第二のcanonical rootと導来retractionが、特殊パラメータに台を持つ第一cohomologyも保つ。}{A second canonical root and derived retraction retain first-cohomology classes supported at special parameters.}\\[4pt]\CiteSource{K4N}{K4N Prop. 10.4, pp. 71--72; Prop. 11.1, p. 75}}
+\node[card,below=2.0cm of n1] (n2) {\heading{03}{ample lineからsymbol kernelへの写像を消す}{Kill the ample-line map into the symbol kernel}$\mathcal O_{\mathbb P^b}(a+k)\longrightarrow\ker\sigma,\qquad\operatorname{Hom}(N,\ker\sigma)=0$};
+\flow{n1}{n2}{\Tx{constant strataのstrict直像とpure商のvanishing。非分岐点を選ぶcompact graph上でadjugateを使う。}{Use strict direct images of constant strata and vanishing on pure quotients; apply the adjugate on a compact graph unbranched at the chosen point.}\\[4pt]\CiteSource{Sai}{Sai Thm. 1, p. 1}\quad \CiteSource{SS}{SS Thm. 16.3.10, p. 734}\quad \CiteSource{K4N}{K4N Cor. 11.3, pp. 81--82}}
+\node[card,below=2.0cm of n2] (n3) {\heading{04}{全整数次数・全有限次数で持ち上げ}{Lift in all integer degrees and finite orders}$\delta_k=0,\qquad g_*(I^j/I^{j+k+1})\twoheadrightarrow g_*(I^j/I^{j+k})$};
+\flow{n2}{n3}{\Tx{任意の指定点へ降下し、局所恒等式とLaurent導分則で残る障害を消す。}{Descend at an arbitrary prescribed point; the local identity and Laurent derivation rule kill the remaining obstruction.}\\[4pt]\CiteSource{K4N}{K4N Lem. 12.2, pp. 84--85; Sect. 12.3, pp. 86--87}}
+\node[result,below=2.0cm of n3] (n4) {\heading{05}{不変層の反復から周囲の切断を増やす}{Recurring invariant layers grow ambient sections}$F_{j-r}=F_j(1),\quad h^0(V,\mathcal O_V(NG))\geq N-C-h^1(V,\mathcal O_V)$};
+\flow{n3}{n4}{\Tx{巡回不変部分のcoherent層商にSerre vanishingを適用。最後の損失は固定の第一cohomology。}{Apply Serre vanishing to coherent invariant layer quotients; the final loss is bounded by fixed first cohomology.}\\[4pt]\CiteSource{K4N}{K4N Sect. 12.4, pp. 87--88}}
+\end{tikzpicture}

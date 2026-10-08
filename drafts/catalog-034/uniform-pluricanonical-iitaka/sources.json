@@ -1,0 +1,160 @@
+{
+  "paperId": "uniform-pluricanonical-iitaka",
+  "sourceCommit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "sourceUrl": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-Pluricanonical-Iitaka-Fibrations-October-3-2026/paper.pdf",
+  "sha256": "88c226e29ee72119478882f48b674d5bd0d4813a331dfa35067fef758e0e4df8",
+  "checkedOn": "2026-10-08",
+  "manuscriptDate": "2026-10-03",
+  "pdfPages": 44,
+  "statements": [
+    {
+      "result": "Theorem 1.1",
+      "pages": [
+        2
+      ],
+      "content": "Uniform full Iitaka section field for smooth integral projective d-folds, kappa>=0, all algebraically closed characteristic-zero fields."
+    },
+    {
+      "result": "Theorem 1.2",
+      "pages": [
+        2
+      ],
+      "content": "Common integral principal multiple for normal integral projective lc rational log CY pairs with a fixed rational DCC set."
+    }
+  ],
+  "proofPassages": [
+    {
+      "result": "Proposition 3.2",
+      "pages": [
+        6,
+        7,
+        8
+      ],
+      "scope": "Read norm and Stein-factor argument."
+    },
+    {
+      "result": "Proposition 4.1, Lemmas 4.2–4.3, Corollary 4.4, Proposition 4.5",
+      "pages": [
+        11,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        19
+      ],
+      "scope": "Read displayed passages on exact equality, weights, residues, component fixing, denominator completion, base birationality and torsion; equivariant construction not independently checked."
+    },
+    {
+      "result": "Proposition 5.1",
+      "pages": [
+        20
+      ],
+      "scope": "Statement and initial reduction, not full proof."
+    },
+    {
+      "result": "Proposition 6.1; Lemmas 6.2–6.4",
+      "pages": [
+        24,
+        25,
+        26,
+        30
+      ],
+      "scope": "Statements, initial small-volume calculation and lower curve-bound argument; intervening flattening estimates not fully read."
+    },
+    {
+      "result": "Proposition 7.1",
+      "pages": [
+        31,
+        37
+      ],
+      "scope": "Statement, determinant strategy and final contradictory estimates; full intermediate calculation unverified."
+    },
+    {
+      "result": "Proposition 8.1; Section 9",
+      "pages": [
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "scope": "Read high-index contradiction, induction closure, all-degree comparison and field descent."
+    }
+  ],
+  "dependencies": [
+    {
+      "sourceUrl": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf",
+      "abbreviation": "LA",
+      "result": "Theorem 11.1",
+      "pages": [
+        73
+      ],
+      "usedAt": "Theorem 2.1; Lemmas 4.3, 9.1",
+      "verification": "Statement and use compared; proof not verified."
+    },
+    {
+      "sourceUrl": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Arithmetic-Stein-degree-bounds-for-log-Calabi-Yau-pairs-September-25-2026/paper.pdf",
+      "abbreviation": "SD",
+      "result": "Theorem 1.1",
+      "pages": [
+        1
+      ],
+      "usedAt": "Proposition 3.2, pp. 7–8",
+      "verification": "Checked arbitrary base field, constants, coefficient threshold 1 and norm degree."
+    },
+    {
+      "sourceUrl": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-effective-log-Iitaka-fibrations-for-fourfolds-September-26-2026/paper.pdf",
+      "abbreviation": "Ufour",
+      "result": "Lemmas 5.1, 5.4; Corollary 5.2; Lemmas 6.3–6.4",
+      "pages": [
+        18,
+        20,
+        21,
+        25,
+        27
+      ],
+      "usedAt": "Lemmas 6.2–6.3; Section 8",
+      "verification": "Statements compared; arbitrary-dimensional scopes confirmed."
+    },
+    {
+      "sourceUrl": "https://arxiv.org/pdf/1410.0938v2",
+      "abbreviation": "BZ",
+      "result": "Theorem 1.3",
+      "pages": [
+        3
+      ],
+      "usedAt": "Corollary 4.4, p. 17",
+      "verification": "arXiv:1410.0938v2 statement read; full proof excluded."
+    }
+  ],
+  "unresolved": [
+    "Full equivariant semistable construction and coherent Lefschetz application in Lemma 4.3 not independently verified.",
+    "Full structural reductions in Section 5, weak positivity/flattening in Section 6, and positive-characteristic calculations in Section 7 not independently verified.",
+    "Xu index induction, Birkar complements/RC boundedness, Ambro formula, global ACC, and weak positivity original statements not all cross-checked.",
+    "No recursive verification of external proofs; outgoing uses beyond recipient input statements remain uninvestigated."
+  ],
+  "outgoingConnections": [
+    {
+      "recipient": "Uniform log Iitaka fibrations and bounded moduli denominators",
+      "result": "Theorem 2.1",
+      "pages": [
+        5
+      ],
+      "suppliedResult": "Theorem 1.2",
+      "checked": "Recipient input statement read; downstream proof not checked."
+    },
+    {
+      "recipient": "Uniform indices for semi-log-canonical log Calabi–Yau pairs",
+      "result": "Theorem 2.2 and following paragraph",
+      "pages": [
+        5,
+        6
+      ],
+      "suppliedResult": "Theorems 1.2 and 1.1",
+      "checked": "Input statement and citation read; downstream proof not checked."
+    }
+  ]
+}

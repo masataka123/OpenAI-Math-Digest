@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+\node[card] (n0) {\heading{01}{境界なし標準指数}{Boundary-free canonical index}$K_X\sim_{\mathbb Q}0,\qquad \dim X=4$};
+\node[card,below=2.0cm of n0] (n1) {\heading{02}{構造で分離した残余の場合}{Residual structural case}$V\text{ terminal},\quad q(\widetilde V)=0,\quad K_V\sim_{\mathbb Q}0$};
+\flow{n0}{n1}{\Tx{積・アーベルの場合と非canonicalの場合を処理。残りをcrepantにterminal化する。}{Handle product, abelian and noncanonical cases; take a crepant terminalization in the remainder.}\\[4pt]\CiteSource{U4}{U4 Prop. 4.1--Lem. 4.5, pp. 10--15}}
+\node[card,below=2.0cm of n1] (n2) {\heading{03}{中間因子があれば指数を制御}{An intermediate divisor bounds the index}$1\leq\kappa(A)\leq3\quad\Longrightarrow\quad N_{\mathrm{mov}}K_V\sim0$};
+\flow{n1}{n2}{\Tx{小さい境界のMMPで標準指数を保ち、境界ゼロで相対分母を適用。RCな底の指数を抑える。}{Preserve the canonical index along the small-boundary MMP; apply denominators with zero boundary and bound the RC-base index.}\\[4pt]\CiteSource{U4}{U4 Lem. 4.6, pp. 15--16}\quad \CiteSource{RD}{RD Thm. 1.1 / Prop. 7.1, pp. 2, 17}}
+\node[result,below=2.0cm of n2] (n3) {\heading{04}{残余の同変ファイバーは一般型}{Residual equivariant fibres are of general type}$\pi:Y\to V,\quad r=\operatorname{ord}(K_V)$};
+\flow{n2}{n3}{\Tx{中間因子のない場合に限定。例外因子のbignessとterminal discrepancyをファイバー上へ制限する。}{Restrict to the case without an intermediate divisor; use big exceptional divisors and terminal discrepancies on fibres.}\\[4pt]\CiteSource{U4}{U4 Lem. 4.7, pp. 16--17}}
+\end{tikzpicture}
