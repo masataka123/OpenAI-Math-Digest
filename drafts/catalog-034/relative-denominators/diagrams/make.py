@@ -27,12 +27,12 @@ diagram('denominators',[
 ])
 diagram('systems',[
 ('bigな底と固定した表示','A big base and a fixed presentation',r'$L=K_X+B,\quad D_Z\sim_{\mathbb Q}D\text{ big},\quad p_0\mid l.$'),
+('完全切断空間を一致させる','Identify the complete section spaces',r'$H^0(X,\lfloor lL\rfloor)=\psi^{l/p_0}f^*H^0(Z,\lfloor lD_Z\rfloor).$'),
 ('底の滑らかなモデルで双有理切断を作る','Produce birational sections on a smooth base model',r'$K_W+A+M_W=q^*D_Z+E_W,\quad E_W\ge0\text{ exceptional}.$\\[3pt] $\operatorname{coeff}A\subset\mathcal B\cup\{1\},\quad pM_W\text{ nef Cartier}.$'),
-('完全切断空間を一致させる','Identify the complete section spaces',r'$H^0(X,\lfloor lL\rfloor)=\psi^{l/p_0}f^*H^0(Z,\lfloor lD_Z\rfloor).$\\[3pt] $m=\operatorname{lcm}(p_0,b_1,\ldots,b_d),\quad l\in m\mathbb Z_{>0}.$'),
-('全関数体を得て飯高写像を特定','Recover the full field and identify the Iitaka map',r'$\mathbb C\bigl(\Tx{\text{全切断比}}{\text{all section ratios}}\bigr)=\mathbb C(Z)\subset\mathbb C(X).$')
+('全関数体を得て飯高写像を特定','Recover the full field and identify the Iitaka map',r'$m=\operatorname{lcm}(p_0,b_1,\ldots,b_d),\quad l\in m\mathbb Z_{>0}.$\\[3pt] $\mathbb C\bigl(\Tx{\text{全切断比}}{\text{all section ratios}}\bigr)=\mathbb C(Z)\subset\mathbb C(X).$')
 ],[
-('負の例外係数を被約例外境界で置換し、有効双有理性を適用。','Replace negative exceptional coefficients; apply effective birationality.',cite('(6.3); p. 16')+r'\quad '+cite('[BZ] Thm. 1.3; p. 3','https://arxiv.org/pdf/1410.0938')),
 ('一般ファイバー上の正則関数は底の関数。付値でeffectivityを降下。','Regular functions on the generic fibre come from the base; valuations descend effectivity.',cite('(6.1)--(6.2); p. 16')),
+('負の例外係数を被約例外境界で置換し、有効双有理性を適用。','Replace negative exceptional coefficients; apply effective birationality.',cite('(6.3); p. 16')+r'\quad '+cite('[BZ] Thm. 1.3; p. 3','https://arxiv.org/pdf/1410.0938')),
 ('例外誤差はpushforwardで消え、共通因子は切断比で消える。','Pushforward removes the exceptional error; section ratios cancel the common factor.',cite('Prop. 6.1, conclusion; p. 17'))
 ])
 diagram('torsion',[
