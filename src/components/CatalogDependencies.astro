@@ -1,0 +1,46 @@
+---
+import {papers} from '../data/site.mjs';
+import {catalogueNotes,notesById,catalogueDependencies,edgeKinds} from '../data/catalog-034.mjs';
+const {lang}=Astro.props,en=lang==='en';
+const number=id=>String(papers.find(p=>p.id===id).order).padStart(2,'0');
+---
+<div class="dependency-explorer" data-language={lang}>
+ <div class="dependency-controls" hidden>
+  <label for="dependency-paper">{en?'Focus manuscript':'着目する論文'}<select id="dependency-paper"><option value="all">{en?'All recorded connections':'記録した接続をすべて表示'}</option>{catalogueNotes.map(n=><option value={n.id} selected={n.id==='uniform-log-iitaka'}>{number(n.id)} · {n.short}</option>)}</select></label>
+  <label for="dependency-direction">{en?'Direction':'見る方向'}<select id="dependency-direction"><option value="incoming">{en?'Results it uses':'この論文が使う結果'}</option><option value="outgoing">{en?'Where it is used':'この論文が使われる先'}</option></select></label>
+ </div>
+ <p class="connection-count" aria-live="polite" aria-atomic="true">{en?`${catalogueDependencies.length} selected connections`:`主な接続 ${catalogueDependencies.length}件`}</p>
+ <p class="connection-empty" hidden>{en?'No connection in this direction has been recorded in this survey. This does not mean there are no dependencies. See the manuscript summary and reading scope below.':'今回の調査では、この方向の接続をまだ記録していません。「依存なし」を意味しません。下の論文一覧と確認範囲を参照してください。'}</p>
+ <ol class="connection-list">
+ {catalogueDependencies.map(d=><li class="connection" data-from={d.fromId} data-to={d.toId}>
+  <div class="connection-node"><span class="connection-node-label">{en?'INPUT':'供給元'} · {number(d.fromId)}</span><h3><a href={'#paper-'+d.fromId}>{notesById[d.fromId].short}</a></h3><a class="connection-citation" href={d.url}>{d.result} ↗</a></div>
+  <div class="connection-arrow"><span class:list={['connection-kind',d.kind]}>{edgeKinds[d.kind][lang]}</span><p>{d.role[lang]}</p><svg viewBox="0 0 200 16" preserveAspectRatio="none" aria-hidden="true"><path d="M0 8 H196 M188 2 L196 8 L188 14"/></svg></div>
+  <div class="connection-node connection-target"><span class="connection-node-label">{en?'USED IN':'利用先'} · {number(d.toId)}</span><h3><a href={'#paper-'+d.toId}>{notesById[d.toId].short}</a></h3><a class="connection-citation" href={d.to.url}>{d.use} ↗</a></div>
+ </li>)}
+ </ol>
+ <p class="table-hint">{en?'Arrows run from the supplied result to its use. Numbers 01–14 are positions within catalogue 034. Citations open the manuscript on GitHub.':'矢印は「結果を供給する論文 → 利用先」。01–14は034内の掲載順で、別のカタログ番号ではありません。引用リンクはGitHub上の原稿を開きます。'}</p>
+</div>
+<script>
+ const explorer=document.querySelector<HTMLElement>('.dependency-explorer');
+ if(explorer){
+  const paper=explorer.querySelector<HTMLSelectElement>('#dependency-paper');
+  const direction=explorer.querySelector<HTMLSelectElement>('#dependency-direction');
+  const controls=explorer.querySelector<HTMLElement>('.dependency-controls');
+  const count=explorer.querySelector<HTMLElement>('.connection-count');
+  const empty=explorer.querySelector<HTMLElement>('.connection-empty');
+  const rows=[...explorer.querySelectorAll<HTMLElement>('.connection')];
+  if(paper&&direction&&controls&&count&&empty){
+   const update=()=>{
+    const all=paper.value==='all',outgoing=direction.value==='outgoing';
+    direction.disabled=all;
+    let visible=0;
+    for(const row of rows){row.hidden=!all&&row.dataset[outgoing?'from':'to']!==paper.value;if(!row.hidden)visible++;}
+    const label=paper.selectedOptions[0].textContent;
+    count.textContent=explorer.dataset.language==='en'?`${label} · ${visible} recorded connection${visible===1?'':'s'}`:`${label} · 記録した接続 ${visible}件`;
+    empty.hidden=visible>0;
+   };
+   controls.hidden=false;
+   paper.addEventListener('change',update);direction.addEventListener('change',update);update();
+  }
+ }
+</script>

@@ -1,37 +1,67 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import DependencyTable from '../../../components/DependencyTable.astro';
-import {catalogs, papers, languages, fieldsForCatalog, paperSource, officialCatalog, officialOverview, sourceCommit} from '../../../data/site.mjs';
-import {dependencies} from '../../../data/schnell.mjs';
+import CatalogDependencies from '../../../components/CatalogDependencies.astro';
+import {catalogs,papers,languages,fieldsForCatalog,paperSource,officialCatalog,officialOverview,sourceCommit} from '../../../data/site.mjs';
+import {catalogueNotes,notesById,catalogueDependencies,themes} from '../../../data/catalog-034.mjs';
 import '../../../styles/paper.css';
+import '../../../styles/catalog.css';
 export function getStaticPaths(){return languages.flatMap(lang=>catalogs.map(catalog=>({params:{lang,id:catalog.id},props:{catalog}})));}
-const {catalog:c}=Astro.props, lang=Astro.params.lang, en=lang==='en', base=import.meta.env.BASE_URL, relatedFields=fieldsForCatalog(c.id);
-const articlePath=base+lang+'/papers/schnell-fiber-spaces/';
+const {catalog:c}=Astro.props,lang=Astro.params.lang,en=lang==='en',base=import.meta.env.BASE_URL,relatedFields=fieldsForCatalog(c.id);
+const orderedPapers=c.paperIds.map(id=>papers.find(p=>p.id===id));
+const number=id=>String(papers.find(p=>p.id===id).order).padStart(2,'0');
+const article=id=>base+lang+'/papers/'+id+'/';
 ---
 <Layout lang={lang} title={c.id+' · '+c.title[lang]} otherPath={(en?'ja':'en')+'/catalog/'+c.id+'/'}>
  <nav class="breadcrumbs" aria-label={en?'Breadcrumb':'現在位置'}><a href={base+lang+'/'}>{en?'Fields':'分野一覧'}</a>{relatedFields.map(f=><><span aria-hidden="true">/</span><a href={base+lang+'/fields/'+f.id+'/'}>{f.title[lang]}</a></>)}<span aria-hidden="true">/</span><span aria-current="page">{c.id}</span></nav>
- <header class="family-header"><p class="eyebrow">CATALOGUE {c.id}</p><h1>{c.title[lang]}</h1>{!en&&<p class="official" lang="en">{c.title.en}</p>}<p class="lede">{c.description[lang]}</p></header>
- <aside class="scope"><strong>{en?'14 manuscripts · Two overviews':'全14篇 · 概説2篇'}</strong><p>{en?'The complete inventory below follows the pinned official catalogue. Overviews now cover Log abundance in characteristic zero and Schnell fiber spaces. Other manuscripts and their proof dependencies remain unexamined.':'以下は参照版の公式カタログ順の全論文一覧です。Log abundance in characteristic zero と Schnell fiber spaces の概説を掲載しています。他の論文の役割・依存関係は未調査です。'}</p></aside>
- <div class="catalog-overviews"><a class="button primary" href={base+lang+'/papers/log-abundance-characteristic-zero/'}>{en?'Read the LA overview':'LAの概説を読む'} →</a> <a class="button" href={articlePath}>{en?'Read the Schnell overview':'Schnellの概説を読む'} →</a></div>
+ <header class="family-header catalog-intro"><p class="eyebrow">CATALOGUE {c.id}</p><h1>{c.title[lang]}</h1>{!en&&<p class="official" lang="en">{c.title.en}</p>}<p class="lede">{en?'From a first section to a good model, and from a good model to a uniform Iitaka degree. Follow the claims of 14 manuscripts and the results their arguments use.':'最初の切断から良いモデルへ、良いモデルから一様な飯高次数へ。14本の論文が主張する結果と、その議論を支える入力をたどります。'}</p></header>
+ <div class="catalog-stats"><span><strong>{orderedPapers.length}</strong>{en?'manuscript summaries':'篇の要点整理'}</span><span><strong>{catalogueDependencies.length}</strong>{en?'selected connections':'件の主な接続'}</span><span><strong>2</strong>{en?'proof overviews':'篇の証明概説'}</span></div>
+ <p class="catalog-reading-note">{en?'This is a reading map of the manuscripts’ claims and uses of cited results. The arrows record selected source-to-use connections; they are not a complete dependency graph or a certification of the proofs.':'原稿の主張と引用の使い方を整理した、読解の見取り図です。矢印は原典の記述と使用箇所を照合した接続を示します。依存関係の網羅や、証明全体の正しさの認定ではありません。'}</p>
+ <nav class="catalog-nav" aria-label={en?'On this page':'このページの内容'}><a href="#overview">{en?'Three strands':'3つの流れ'}</a><a href="#dependencies">{en?'Follow dependencies':'依存関係をたどる'}</a><a href="#manuscripts">{en?'All 14 manuscripts':'全14篇の要点'}</a><a href="#external-inputs">{en?'Inputs outside 034':'034の外からの入力'}</a><a href="#reading-scope">{en?'Reading scope':'確認範囲'}</a></nav>
+ <section id="overview" class="paper-section">
+  <h2>{en?'Three strands of the argument':'議論をつなぐ3つの流れ'}</h2>
+  <p class="article-prose">{en?'These are reading groups for this guide. The numbered manuscript inventory below retains the official catalogue order. Short names used in diagrams are paired with the full titles there.':'ここでは議論の役割で3つに分けます。下の全論文一覧は公式カタログ順を維持しています。図で使う略称と正式タイトルも一覧で対応させています。'}</p>
+  <div class="catalog-themes">{themes.map(theme=><article class="catalog-theme"><h3>{theme.title[lang]}</h3><p class="theme-aim">{theme.question[lang]}</p><p>{theme.body[lang]}</p><ul>{catalogueNotes.filter(n=>n.theme===theme.id).map(n=><li><span>{number(n.id)}</span><a href={'#paper-'+n.id}>{n.short}</a></li>)}</ul></article>)}</div>
+  <div class="catalog-overviews"><a class="button primary" href={article('log-abundance-characteristic-zero')}>{en?'LA proof overview':'LAの証明概説'} →</a> <a class="button" href={article('schnell-fiber-spaces')}>{en?'Schnell proof overview':'Schnellの証明概説'} →</a></div>
+ </section>
  <section id="dependencies" class="paper-section">
-  <h2>{en?'Dependencies within catalogue 034':'034内の依存関係'}</h2>
-  <p class="article-prose">{en?'The recorded edge supplies both the good minimal model used in the main argument and canonical nonvanishing used in the reduction. Checking this connection does not verify the entire source theorem.':'記録した接続は、主定理で使う良い極小モデルと、帰着で使う標準因子の非消滅を供給します。この接続の照合と、入力定理の証明全体の検証は区別しています。'}</p>
-  <DependencyTable lang={lang} entries={dependencies.filter(d=>d.withinCatalog)} caption={en?'Direct input recorded for the Schnell overview':'Schnell概説で記録した直接入力'}/>
-  <p><a href={base+lang+'/papers/log-abundance-characteristic-zero/#connections'}>{en?'Inputs to LA: catalogue 033 and the induction tools':'LAへの入力：カタログ033と帰納法の道具'} →</a></p>
-  <p><a href={articlePath+'#dependencies'}>{en?'External inputs and comparison with earlier work':'カタログ外の入力・先行結果との比較'} →</a></p>
+  <h2>{en?'Follow a result into its application':'どの結果を、どこで使うのか'}</h2>
+  <p class="article-prose">{en?'Choose a manuscript to see the results it uses, or the arguments that use it. The initial view shows the three recorded inputs to Log Iitaka. Each arrow explains what is supplied; citations identify the result and its receiving passage.':'論文を選び、「この論文が使う結果」と「この論文が使われる先」を切り替えられます。最初はLog Iitakaへの3つの入力を表示しています。矢印に供給する内容を、両端に入力結果と利用箇所の引用を付けています。'}</p>
+  <CatalogDependencies lang={lang}/>
+  <p class="catalog-reading-note">{en?'Read dependencies at the level of results: Fourfold nonvanishing uses LA’s independent Frobenius theorem. Its abundance main theorem is not that input. In Supported lifting, fourfold nonvanishing enters Corollary 1.4; Theorem 1.2 already assumes a first section. These distinctions matter when tracing apparent back-and-forth citations.':'依存は結果の単位で読みます。Fourfold nonvanishingが使うLAの入力は独立したFrobenius定理です。また、Supported liftingに四次元非消滅が入るのはCorollary 1.4であり、Theorem 1.2は最初の切断を仮定する段階です。相互の引用をたどるときも、どの結果がどの証明へ入るかを区別します。'}</p>
+  <span id="dependency-canonical-good-model"></span>
+  <details class="catalog-audit"><summary>{en?`View all ${catalogueDependencies.length} recorded connections as a table`:`記録した${catalogueDependencies.length}件の接続を表で見る`}</summary><DependencyTable lang={lang} entries={catalogueDependencies} caption={en?'Selected direct inputs within catalogue 034':'034内で記録した主な直接入力'}/></details>
  </section>
  <section id="manuscripts" class="paper-section">
-  <h2>{en?'All manuscripts, in official order':'全論文一覧（公式順）'}</h2>
-  <p class="table-hint">{en?'Page counts include references. On narrow screens, scroll sideways.':'ページ数は参考文献を含みます。狭い画面では横にスクロールできます。'}</p>
-  <div class="digest-table-wrap" role="region" aria-label={en?'Manuscript inventory':'論文一覧'} tabindex="0"><table class="digest-table inventory-table">
-   <caption>{en?'Catalogue 034 · Source snapshot of 8 October 2026':'カタログ034 · 2026年10月8日確認の参照版'}</caption>
-   <thead><tr><th scope="col">#</th><th scope="col">{en?'Manuscript':'論文'}</th><th scope="col">{en?'Pages':'ページ'}</th><th scope="col">{en?'Role and reading status':'役割・読解状況'}</th></tr></thead>
-   <tbody>{c.paperIds.map(id=>papers.find(p=>p.id===id)).map(p=><tr id={'paper-'+p.id} class:list={{'featured-row':p.featured}}>
-    <td>{String(p.order).padStart(2,'0')}</td>
-    <th scope="row"><a href={p.featured?base+lang+'/papers/'+p.id+'/':paperSource(p)} lang="en">{p.title} {p.featured?'→':'↗'}</a><span class="table-detail">{en?'Manuscript':'原稿版'}: {p.version} {p.featured&&<> · <a href={paperSource(p)}>PDF ↗</a></>}</span></th>
-    <td>{p.pages}</td><td>{p.id==='schnell-fiber-spaces'?<><span class="badge">{en?'Overview · Revised draft':'概説・改訂稿'}</span><p>{en?'Mixed intersections on a good minimal model; reduction to Campana–Peternell and general fibers.':'良い極小モデル上の混合交点数。Campana–Peternell不等式と一般のファイバーへの帰着。'}</p></>:p.id==='log-abundance-characteristic-zero'?<><span class="badge">{en?'Overview · First draft':'概説・初稿'}</span><p>{en?'Dimension induction via signed boundaries and smooth nonvanishing. Supplies good canonical models to Schnell; the full proof is not independently verified.':'符号付き境界と滑らかな非消滅による次元帰納法。Schnellへ良い極小モデルを供給。証明全体の独立検証は未実施。'}</p></>:<><span class="badge">{en?'Not yet examined':'未調査'}</span><p>{en?'Role and proof dependencies have not been examined.':'役割と証明上の依存関係は未調査。'}</p></>}</td>
-   </tr>)}</tbody>
+  <h2>{en?'All 14 manuscripts, in official order':'全14篇の要点（公式カタログ順）'}</h2>
+  <p class="article-prose">{en?'The summaries give the principal scope, not every technical hypothesis. Follow the theorem reference for the full statement. A uniform degree here is an existence statement unless a manuscript explicitly gives a numerical value.':'主結果の範囲を短くまとめています。技術的な仮定をすべて再掲しているわけではないため、正確な定式化は併記した原典の定理を参照してください。一様な次数の存在と、具体的な数値の提示は区別します。'}</p>
+  <p class="table-hint">{en?'Page counts include references. On narrow screens, scroll the table sideways.':'ページ数は参考文献を含みます。狭い画面では表を横にスクロールできます。'}</p>
+  <div class="digest-table-wrap" role="region" aria-label={en?'Manuscript inventory and roles':'論文一覧と役割'} tabindex="0"><table class="digest-table catalog-inventory">
+   <caption>{en?'Catalogue 034 · Pinned source snapshot checked on 8 October 2026':'カタログ034 · 2026年10月8日確認の固定参照版'}</caption>
+   <thead><tr><th scope="col">#</th><th scope="col">{en?'Manuscript and source':'論文・原典'}</th><th scope="col">{en?'Principal claim':'主に何を主張するか'}</th><th scope="col">{en?'Role and available overview':'議論の役割・概説'}</th></tr></thead>
+   <tbody>{orderedPapers.map(p=>{const n=notesById[p.id];return <tr id={'paper-'+p.id} class:list={{'featured-row':p.featured}}>
+    <td>{number(p.id)}</td><th scope="row"><a href={paperSource(p)} lang="en">{p.title} ↗</a><span class="table-detail">{en?'Short name':'図中の略称'}: {n.short}</span><span class="table-detail">{p.version} · {p.pages} {en?'pages':'ページ'}</span></th>
+    <td><p>{n.claim[lang]}</p><a class="claim-source" href={paperSource(p)}>{n.result} ↗</a></td>
+    <td><p>{n.role[lang]}</p>{p.featured?<a class="badge" href={article(p.id)}>{en?'Read the proof overview':'証明概説を読む'} →</a>:<span class="badge">{en?'Summary · No separate article yet':'要点整理・個別記事なし'}</span>}</td>
+   </tr>;})}</tbody>
   </table></div>
+ </section>
+ <section id="external-inputs" class="paper-section">
+  <h2>{en?'Inputs from outside catalogue 034':'034の外から入る結果'}</h2>
+  <div class="catalog-external">
+   <div><h3>{en?'033 → LA: subadditivity':'033 → LA：劣加法性'}</h3><p>{en?'LA’s Lemma 6.1 uses Corollary 6.2 of the orbifold Iitaka manuscript in catalogue 033, in its zero-boundary projective case. The LA overview also explains how the existing Hacon–Popa–Schnell result supplies this particular application.':'LAのLemma 6.1では、033のorbifold飯高原稿のCorollary 6.2を境界0・射影の場合に使います。LA概説では、この適用を既存のHacon–Popa–Schnellの結果で賄えることも説明しています。'}</p><a href={article('log-abundance-characteristic-zero')+'#connections'}>{en?'See the statements and application in LA':'LAでの記述と適用を見る'} →</a></div>
+   <div><h3>{en?'033 / 056 → conditional Kähler models':'033 / 056 → 条件付きKählerモデル'}</h3><p>{en?'The receiving manuscript identifies orbifold subadditivity and the specified Kähler MMP as Assumptions 2.2–2.3. Together with abundance after nonvanishing from 034, they form its three premises. Their full interfaces with the 033 and 056 manuscripts have not been independently checked in this survey.':'利用先の原稿は、orbifold劣加法性と指定されたKähler MMPをAssumptions 2.2–2.3に挙げています。034の非消滅後の豊富性と合わせた3つの前提です。033・056の原稿との適用条件の全照合は、今回の調査では未実施です。'}</p><a href={paperSource(papers.find(p=>p.id==='conditional-kahler-fourfolds'))}>Assumptions 2.2–2.4 · pp. 8–9 ↗</a></div>
+  </div>
+  <p class="catalog-reading-note">{en?'Established inputs such as Hashizume’s reduction, gluing, lower-dimensional abundance, and effective birationality are not exhaustively mapped here. The LA and Schnell overviews identify their selected external inputs separately.':'Hashizumeの帰着、貼り合わせ、低次元の豊富性、有効双有理性など、既存文献からの入力はここでは網羅していません。LA・Schnellの概説では、選んだ外部入力を別に記録しています。'}</p>
+ </section>
+ <section id="reading-scope" class="paper-section catalog-scope">
+  <h2>{en?'What this map checks':'この見取り図の確認範囲'}</h2>
+  <ul>
+   <li>{en?'Read the principal statements of all 14 manuscripts and selected proof passages where results are imported. For the 17 arrows, compared the supplied statement with the receiving connection. This does not verify the complete source or receiving proof.':'全14篇の主要結果と、選んだ入力を使う証明箇所を読みました。17本の矢印について、供給する結果の記述と利用先の接続を照合しました。入力元・利用先の証明全体を検証したことは意味しません。'}</li>
+   <li>{en?'LA and Schnell have separate proof overviews. The other 12 manuscripts have catalogue summaries; their full proofs and unlisted technical connections remain unexamined. No recorded arrow does not mean no dependency.':'LA・Schnellは個別の証明概説を掲載。他の12篇はカタログの要点整理であり、証明全体や未掲載の技術的接続は未調査です。矢印がないことは「依存なし」を意味しません。'}</li>
+   <li>{en?'Background references are kept separate from proof inputs. For example, Kähler after nonvanishing (p. 6) treats projective lifting and LA as background while proving its analytic boundary argument internally. The conditional Kähler manuscript retains its three stated premises.':'背景の引用と証明の入力を分けています。例えばKähler after nonvanishing（p. 6）は、射影的な持ち上げとLAを背景として挙げ、解析的境界の議論は原稿内で行います。条件付きKählerモデルの3仮定も表示から落としていません。'}</li>
+   <li>{en?'All 14 PDF hashes match the recorded source snapshot. This page refers to the commit below, checked on 8 October 2026, and does not incorporate subsequent revisions. Expert review and formal verification have not been performed.':'全14PDFのハッシュが記録済みの参照版と一致することを確認しました。以下のcommitを2026年10月8日に参照しており、その後の改訂は反映していません。専門家査読・形式検証は未実施です。'}</li>
+  </ul>
  </section>
  <p class="source-note"><a href={officialOverview+'#page=5'} target="_blank" rel="noopener noreferrer">OpenAI Research Catalog · 034 · p. 5 ↗</a><br/><a href={officialCatalog}>{en?'Official catalogue at the reference commit':'参照commitの公式カタログ'} ↗</a><br/><span class="small">CONTENTS.md: <span lang="en">{c.contentsTitle}</span></span><br/><span class="small muted">{en?'Source snapshot':'参照版'}: <code>{sourceCommit}</code></span></p>
 </Layout>
