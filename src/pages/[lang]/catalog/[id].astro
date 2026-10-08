@@ -1,0 +1,37 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import DependencyTable from '../../../components/DependencyTable.astro';
+import {catalogs, papers, languages, fieldsForCatalog, paperSource, officialCatalog, officialOverview, sourceCommit} from '../../../data/site.mjs';
+import {dependencies} from '../../../data/schnell.mjs';
+import '../../../styles/paper.css';
+export function getStaticPaths(){return languages.flatMap(lang=>catalogs.map(catalog=>({params:{lang,id:catalog.id},props:{catalog}})));}
+const {catalog:c}=Astro.props, lang=Astro.params.lang, en=lang==='en', base=import.meta.env.BASE_URL, relatedFields=fieldsForCatalog(c.id);
+const articlePath=base+lang+'/papers/schnell-fiber-spaces/';
+---
+<Layout lang={lang} title={c.id+' · '+c.title[lang]} otherPath={(en?'ja':'en')+'/catalog/'+c.id+'/'}>
+ <nav class="breadcrumbs" aria-label={en?'Breadcrumb':'現在位置'}><a href={base+lang+'/'}>{en?'Fields':'分野一覧'}</a>{relatedFields.map(f=><><span aria-hidden="true">/</span><a href={base+lang+'/fields/'+f.id+'/'}>{f.title[lang]}</a></>)}<span aria-hidden="true">/</span><span aria-current="page">{c.id}</span></nav>
+ <header class="family-header"><p class="eyebrow">CATALOGUE {c.id}</p><h1>{c.title[lang]}</h1>{!en&&<p class="official" lang="en">{c.title.en}</p>}<p class="lede">{c.description[lang]}</p></header>
+ <aside class="scope"><strong>{en?'14 manuscripts · Two overviews':'全14篇 · 概説2篇'}</strong><p>{en?'The complete inventory below follows the pinned official catalogue. Overviews now cover Log abundance in characteristic zero and Schnell fiber spaces. Other manuscripts and their proof dependencies remain unexamined.':'以下は参照版の公式カタログ順の全論文一覧です。Log abundance in characteristic zero と Schnell fiber spaces の概説を掲載しています。他の論文の役割・依存関係は未調査です。'}</p></aside>
+ <div class="catalog-overviews"><a class="button primary" href={base+lang+'/papers/log-abundance-characteristic-zero/'}>{en?'Read the LA overview':'LAの概説を読む'} →</a> <a class="button" href={articlePath}>{en?'Read the Schnell overview':'Schnellの概説を読む'} →</a></div>
+ <section id="dependencies" class="paper-section">
+  <h2>{en?'Dependencies within catalogue 034':'034内の依存関係'}</h2>
+  <p class="article-prose">{en?'The recorded edge supplies both the good minimal model used in the main argument and canonical nonvanishing used in the reduction. Checking this connection does not verify the entire source theorem.':'記録した接続は、主定理で使う良い極小モデルと、帰着で使う標準因子の非消滅を供給します。この接続の照合と、入力定理の証明全体の検証は区別しています。'}</p>
+  <DependencyTable lang={lang} entries={dependencies.filter(d=>d.withinCatalog)} caption={en?'Direct input recorded for the Schnell overview':'Schnell概説で記録した直接入力'}/>
+  <p><a href={base+lang+'/papers/log-abundance-characteristic-zero/#connections'}>{en?'Inputs to LA: catalogue 033 and the induction tools':'LAへの入力：カタログ033と帰納法の道具'} →</a></p>
+  <p><a href={articlePath+'#dependencies'}>{en?'External inputs and comparison with earlier work':'カタログ外の入力・先行結果との比較'} →</a></p>
+ </section>
+ <section id="manuscripts" class="paper-section">
+  <h2>{en?'All manuscripts, in official order':'全論文一覧（公式順）'}</h2>
+  <p class="table-hint">{en?'Page counts include references. On narrow screens, scroll sideways.':'ページ数は参考文献を含みます。狭い画面では横にスクロールできます。'}</p>
+  <div class="digest-table-wrap" role="region" aria-label={en?'Manuscript inventory':'論文一覧'} tabindex="0"><table class="digest-table inventory-table">
+   <caption>{en?'Catalogue 034 · Source snapshot of 8 October 2026':'カタログ034 · 2026年10月8日確認の参照版'}</caption>
+   <thead><tr><th scope="col">#</th><th scope="col">{en?'Manuscript':'論文'}</th><th scope="col">{en?'Pages':'ページ'}</th><th scope="col">{en?'Role and reading status':'役割・読解状況'}</th></tr></thead>
+   <tbody>{c.paperIds.map(id=>papers.find(p=>p.id===id)).map(p=><tr id={'paper-'+p.id} class:list={{'featured-row':p.featured}}>
+    <td>{String(p.order).padStart(2,'0')}</td>
+    <th scope="row"><a href={p.featured?base+lang+'/papers/'+p.id+'/':paperSource(p)} lang="en">{p.title} {p.featured?'→':'↗'}</a><span class="table-detail">{en?'Manuscript':'原稿版'}: {p.version} {p.featured&&<> · <a href={paperSource(p)}>PDF ↗</a></>}</span></th>
+    <td>{p.pages}</td><td>{p.id==='schnell-fiber-spaces'?<><span class="badge">{en?'Overview · Revised draft':'概説・改訂稿'}</span><p>{en?'Mixed intersections on a good minimal model; reduction to Campana–Peternell and general fibers.':'良い極小モデル上の混合交点数。Campana–Peternell不等式と一般のファイバーへの帰着。'}</p></>:p.id==='log-abundance-characteristic-zero'?<><span class="badge">{en?'Overview · First draft':'概説・初稿'}</span><p>{en?'Dimension induction via signed boundaries and smooth nonvanishing. Supplies good canonical models to Schnell; the full proof is not independently verified.':'符号付き境界と滑らかな非消滅による次元帰納法。Schnellへ良い極小モデルを供給。証明全体の独立検証は未実施。'}</p></>:<><span class="badge">{en?'Not yet examined':'未調査'}</span><p>{en?'Role and proof dependencies have not been examined.':'役割と証明上の依存関係は未調査。'}</p></>}</td>
+   </tr>)}</tbody>
+  </table></div>
+ </section>
+ <p class="source-note"><a href={officialOverview+'#page=5'} target="_blank" rel="noopener noreferrer">OpenAI Research Catalog · 034 · p. 5 ↗</a><br/><a href={officialCatalog}>{en?'Official catalogue at the reference commit':'参照commitの公式カタログ'} ↗</a><br/><span class="small">CONTENTS.md: <span lang="en">{c.contentsTitle}</span></span><br/><span class="small muted">{en?'Source snapshot':'参照版'}: <code>{sourceCommit}</code></span></p>
+</Layout>

@@ -1,0 +1,83 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProofDiagram from './ProofDiagram.astro';
+import {sourceCommit} from '../data/site.mjs';
+import {laArticle as article,laSource,laReferences as refs} from '../data/la.mjs';
+import '../styles/paper.css';
+const {paper:p,lang}=Astro.props, en=lang==='en', base=import.meta.env.BASE_URL;
+const sections=[['results',en?'Results':'主要結果'],['induction',en?'Induction':'全体図'],['boundary',en?'Boundary geometry':'境界の幾何'],['nonvanishing',en?'Nonvanishing':'非消滅'],['connections',en?'Connections':'論文間の接続'],['sources',en?'Reading scope':'確認範囲']];
+---
+<Layout lang={lang} title={p.title} otherPath={(en?'ja':'en')+'/papers/'+p.id+'/'} description={article.lede[lang]}>
+ <article class="paper-article">
+ <nav class="breadcrumbs" aria-label={en?'Breadcrumb':'現在位置'}><a href={base+lang+'/'}>{en?'Fields':'分野一覧'}</a><span aria-hidden="true">/</span><a href={base+lang+'/catalog/034/'}>{en?'Catalogue':'カタログ'} 034</a><span aria-hidden="true">/</span><span aria-current="page">Log abundance</span></nav>
+ <header class="family-header">
+  <p class="eyebrow">CATALOGUE 034 · PAPER 04 / 14 <span class="badge">{en?'Overview · First draft':'概説・初稿'}</span></p>
+  <h1 lang="en">{p.title}</h1><p class="paper-subtitle">{article.subtitle[lang]}</p><p class="lede">{article.lede[lang]}</p>
+  <p class="paper-byline">{en?'Manuscript author':'原稿の著者'}: OpenAI · {p.version} · {p.pages} {en?'pages, including references':'ページ（参考文献を含む）'}</p>
+  <a class="button primary" href={laSource}>{en?'Read the manuscript on GitHub':'GitHubで原稿を読む'} ↗</a>
+ </header>
+ <nav class="contents" aria-label={en?'Article contents':'記事内の目次'}>{sections.map(([id,label])=><a href={'#'+id}>{label}</a>)}</nav>
+ <section id="results" class="paper-section article-prose">
+  <h2>{en?'1. Main results':'1. 主要結果'}</h2>
+  <p class="statement-note">{en?'The following are the manuscript’s claims, retaining their original numbering, hypotheses, and scope. Theorem 9.6 is the conditional induction step; Theorem 11.1 records the result after induction closes.':'以下は原稿が主張する結果です。原典の番号・仮定・適用範囲を保ちます。Theorem 9.6 は帰納仮定付きのステップ、Theorem 11.1 は帰納法を閉じた後の結論です。'}</p>
+  {article.results.map(result=><section class="theorem-statement" id={result.id}>
+   <h3><a href={laSource}>{result.label}</a><span class="theorem-name">（{result.title[lang]}）</span></h3>
+   {result.paragraphs.map(paragraph=><p>{paragraph[lang]}</p>)}
+   {result.formula&&<div class="math-display">{result.formula}</div>}
+   {result.after&&<p>{result.after[lang]}</p>}
+   <p class="source-line"><a href={laSource}>{result.page} · GitHub ↗</a></p>
+  </section>)}
+ </section>
+ <aside class="figure-key" id="diagram-sources">
+  <strong>{en?'How to read the citations':'図と本文の引用について'}</strong>
+  <p>{en?'Numbers without a prefix refer to this LA manuscript. The arrows state both the cited result and what it supplies. Page numbers refer to the pinned PDF; GitHub opens the file preview.':'略号のない定理・命題・補題番号は、このLA原稿を指します。矢印には引用番号と、そこから使う内容を記しています。ページ番号は参照版PDFのものです。本原稿へのリンクはGitHubのファイル閲覧画面を開きます。'}</p>
+  <ul>
+   <li><a href={refs.hash}>[Hash]</a> Hashizume · <span lang="en">On the non-vanishing conjecture and existence of log minimal models</span> · Theorem 1.4</li>
+   <li><a href={refs.glue+'#page=2'}>[FG14]</a> Fujino–Gongyo · <span lang="en">Log pluricanonical representations and the abundance conjecture</span> · Theorem 1.5</li>
+   <li><a href={refs.rings+'#page=5'}>[FG17]</a> Fujino–Gongyo · <span lang="en">On log canonical rings</span> · Lemma 3.5</li>
+   <li><a href={refs.oi}>[OI]</a> OpenAI · <span lang="en">Orbifold and logarithmic Iitaka subadditivity</span> · Corollary 6.2 · {en?'catalogue':'カタログ'} 033</li>
+  </ul>
+ </aside>
+ {article.proofs.map((proof,index)=><section id={proof.id} class="paper-section proof-section">
+  <h2>{index+2}. {proof.title[lang]}</h2><p class="article-prose">{proof.intro[lang]}</p>
+  {proof.statement&&<aside class="theorem-statement article-prose"><h3><a href={laSource}>{proof.statement.label}</a></h3><p>{proof.statement.body[lang]}</p></aside>}
+  <ProofDiagram proof={proof} lang={lang} collection="la"/>
+  <div class="article-prose proof-explanation">{proof.parts.map((part,i)=><section id={proof.id+'-explanation-'+(i+1)}>
+   <h3>{part.title[lang]}</h3><p>{part.body[lang]}</p>
+   {part.formula&&<div class="math-display">{part.formula}</div>}
+   {part.after&&<p>{part.after[lang]}</p>}
+   <p class="source-line">{part.refs.map((ref,j)=><>{j>0&&<span>·</span>}<a href={ref.url}>{ref.label} ↗</a></>)}</p>
+  </section>)}</div>
+ </section>)}
+ <section id="connections" class="paper-section article-prose">
+  <h2>{en?'5. Where the other papers enter':'5. 他の論文と、どこでつながるか'}</h2>
+  <h3>{en?'Catalogue 033 → LA: subadditivity in one lemma':'カタログ033 → LA：劣加法性を使う1か所'}</h3>
+  <p>{en?'[OI], Corollary 6.2 is stated as LA’s Theorem 1.2. Its only use is Lemma 6.1, with both boundaries zero. If the Albanese image had positive dimension, its resolved Stein base would have nonnegative Kodaira dimension, and the smaller-dimensional fiber would have nonvanishing by induction. Subadditivity would contradict the counterexample.':'[OI] Corollary 6.2 は LA の Theorem 1.2 として記載され、Lemma 6.1 でのみ、両境界が0の場合に使われます。Albanese像が正次元なら、解消したStein底の小平次元は非負で、低次元のファイバーにも帰納法による非消滅があります。劣加法性を適用すると反例の仮定に矛盾します。'}</p>
+  <p>{en?'For this specific base of maximal Albanese dimension, the established Hacon–Popa–Schnell Theorem 1.1 supplies the same required inequality, as the LA introduction also records. This alternative covers the application in Lemma 6.1, not the full logarithmic theorem of [OI].':'この底は maximal Albanese dimension をもつため、既存の Hacon–Popa–Schnell Theorem 1.1 でも必要な不等式を得られます。LAの序論もこの代替を明記しています。これは Lemma 6.1 の適用を賄うもので、[OI] の対数的な主張全体を置き換えるという意味ではありません。'}</p>
+  <p class="source-line"><a href={refs.oi}>[OI] Corollary 6.2 · pp. 40–41 ↗</a><span>·</span><a href={refs.hps+'#page=2'}>Hacon–Popa–Schnell, Theorem 1.1 · p. 2 ↗</a><span>·</span><a href={laSource}>LA §1 / Lemma 6.1 · pp. 6, 30–31 ↗</a></p>
+  <h3>{en?'Within 034: LA → Schnell':'034内：LA → Schnell'}</h3>
+  <p>{en?'For a smooth projective complex variety $X$ with pseudo-effective $K_X$, Theorem 11.1 applied to $(X,0)$, together with the comparison lemma, gives Corollary 11.2: a Q-factorial klt good model V and an effective q-exceptional comparison on a common resolution. This is the input used by Theorem 3.1 of the Schnell manuscript.':'擬有効な $K_X$ をもつ滑らかな複素射影多様体 $X$ に対し、Theorem 11.1 を $(X,0)$ に適用し、比較補題を合わせると Corollary 11.2 を得ます。ここで供給するのは、$\\mathbb Q$-factorial klt な良いモデル $V$ と、共通解消上の有効な $q$-例外因子の比較式です。Schnell原稿の Theorem 3.1 が受け取る入力はこれです。'}</p>
+  <div class="math-display">{String.raw`$$p^*K_X=q^*K_V+E,\qquad E\geq0,\quad q_*E=0,\quad K_V\ \text{semiample}.$$`}</div>
+  <p><a href={base+lang+'/papers/schnell-fiber-spaces/#argument'}>{en?'Continue to the mixed-intersection argument in Schnell':'Schnellの混合交点数の議論へ'} →</a></p>
+  <p class="source-line"><a href={laSource}>Theorem 11.1 / Corollary 11.2 · pp. 73–74 ↗</a><span>·</span><a href={base+lang+'/catalog/034/#dependencies'}>{en?'Catalogue 034 dependency table':'034の依存表'} →</a></p>
+  <h3>{en?'Consequences after the main proof':'主定理を得た後の展開'}</h3>
+  <p>{en?'Sections 11–14 derive rational-linear triviality in Iitaka dimension zero, slc abundance and boundary extension, finite generation of rational lc rings, geometric consequences for rational curves and cotangent tensors, and relative analytic abundance near compact base subsets. These consequences follow after the induction. Section 12 additionally cites the ordinary-pair case of the generalized-minimal-model manuscript in catalogue 036; that companion is not an input to the good-model induction above.':'§§11–14では、小平次元0での有理線形自明性、slc豊富性と境界からの延長、lc環の有限生成、有理曲線・余接束に関する帰結、底のコンパクト部分集合の近傍での相対解析的豊富性へ進みます。これらは帰納法を閉じた後の展開です。§12ではカタログ036の一般化極小モデル原稿の通常対の場合も引用しますが、上記の良い極小モデルの帰納法の入力には使っていません。'}</p>
+  <p class="source-line"><a href={laSource}>§§11–14 · pp. 73–81 ↗</a><span>·</span><a href={refs.gmm}>{en?'Catalogue 036: generalized minimal models · Corollary 1.2':'カタログ036：一般化極小モデル · Corollary 1.2'} ↗</a></p>
+ </section>
+ <section id="sources" class="paper-section article-prose">
+  <h2>{en?'6. Source entry points and reading scope':'6. 原典を読む入口と確認範囲'}</h2>
+  <ul class="reading-list">
+   <li><a href={laSource}>§2 / Proposition 2.5 · pp. 7–12</a> — {en?'The two induction outputs and the zero-Iitaka cases.':'二段階の帰納法と、小平次元0の場合分け。'}</li>
+   <li><a href={laSource}>Theorem 3.1 / §§3–5 · pp. 12–30</a> — {en?'Signed representatives, formal lifting, compact families, and descent.':'符号付き代表元、形式的持ち上げ、完備な族と降下。'}</li>
+   <li><a href={laSource}>Propositions 8.1, 8.3 · pp. 53–61</a> — {en?'The scalar bound and the two-factor jet construction.':'スカラー上界と二因子のジェット構成。'}</li>
+   <li><a href={laSource}>Theorem 9.1 / Theorem 9.6 · pp. 62–72</a> — {en?'The determinant contradiction and construction of its witnesses.':'行列式の矛盾と、その仮定を満たすデータの構成。'}</li>
+  </ul>
+  <aside class="scope"><strong>{en?'Scope of the first draft · 8 October 2026':'初稿の確認範囲 · 2026年10月8日'}</strong>
+   <p>{en?'Read the principal statements, Proposition 2.5, the construction and closing argument of Theorem 3.1, the interfaces of §§6–8, and the proof and application of Theorem 9.1. Compared the external statements of Hashizume Theorem 1.4, Fujino–Gongyo Theorem 1.5 and Lemma 3.5, [OI] Corollary 6.2, and Hacon–Popa–Schnell Theorem 1.1 with their uses.':'主要な定理の記述、Proposition 2.5、Theorem 3.1 の構成と結論への接続、§§6–8の主要命題の役割、Theorem 9.1 の証明と適用を読みました。外部入力のうち、Hashizume Theorem 1.4、Fujino–Gongyo Theorem 1.5 / Lemma 3.5、[OI] Corollary 6.2、Hacon–Popa–Schnell Theorem 1.1 の記述と使用箇所を照合しました。'}</p>
+   <p>{en?'This overview reconstructs the manuscript’s argument. The full Hodge-module lifting calculation, the valuation/current and moving-component estimates in §§6–8, all cited proofs, and the full deductions in §§11–14 have not been independently verified. The catalogue-036 connection records LA’s citation; the companion proof was not checked. No expert review or formal verification is claimed.':'本記事は原稿の論証を再構成する概説です。Hodge加群による持ち上げ計算、§§6–8の付値・カレント・動く基底成分の全評価、引用文献の証明、§§11–14の各帰結の全証明を独立に検証したものではありません。カタログ036との接続はLA本文の引用関係の確認であり、引用先の証明は未検証です。専門家の査読・形式検証は未実施です。'}</p>
+  </aside>
+  <p class="source-note">{en?'Pinned manuscript snapshot':'原稿の参照版'}: <code>{sourceCommit}</code><br/>{en?'The checked PDF matches the SHA-256 recorded in the catalogue inventory. GitHub citation links open the file preview; use the displayed page and theorem numbers to locate the passage.':'原典PDFはカタログ調査時に記録したSHA-256と一致しています。GitHubへの引用リンクはファイル閲覧画面を開きます。該当箇所は表示されたページ・定理番号を目印にお読みください。'}</p>
+  <a class="back" href={base+lang+'/catalog/034/'}>← {en?'Catalogue 034':'カタログ034'}</a>
+ </section>
+ </article>
+</Layout>

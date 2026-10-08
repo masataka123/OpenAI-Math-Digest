@@ -1,0 +1,80 @@
+\documentclass[border=12pt]{standalone}
+\def\pgfsysdriver{pgfsys-dvisvgm.def}
+\usepackage[dvisvgm]{xcolor}
+\usepackage{xeCJK}
+\setCJKmainfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf]
+\setCJKsansfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf]
+\usepackage{amsmath,amssymb,tikz,lmodern}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
+\renewcommand{\familydefault}{\sfdefault}
+\definecolor{ink}{HTML}{25322F}
+\definecolor{green}{HTML}{246657}
+\definecolor{tint}{HTML}{EEF4F0}
+\definecolor{soft}{HTML}{C6D2CC}
+\definecolor{muted}{HTML}{52615B}
+\newif\ifJapanese
+\newcommand{\Tx}[2]{\ifJapanese #1\else #2\fi}
+\newcommand{\Eff}{\overline{\operatorname{Eff}}}
+\newcommand{\heading}[3]{{\color{green}\bfseries #1\quad\Tx{#2}{#3}}\\[5pt]}
+% A white rectangle makes the complete citation label clickable, including spaces.
+\newcommand{\refurl}[2]{\special{dvisvgm:raw <a xlink:href="#1" target="_blank" rel="noopener noreferrer">}{\setlength{\fboxsep}{0pt}\colorbox{white}{\color{green}\underline{\strut #2}}}\special{dvisvgm:raw </a>}}
+\newcommand{\refedge}[3]{\refurl{\csname source#1\endcsname\string##page=#2}{#3}}
+\newcommand{\SF}[2]{\refedge{sf}{#1}{#2}}
+% GitHub's file preview does not support PDF page fragments.
+\newcommand{\LA}[2]{\refurl{\sourcela}{#2}}
+\newcommand{\Sch}[2]{\refedge{sch}{#1}{#2}}
+\newcommand{\PS}[2]{\refedge{ps}{#1}{#2}}
+\tikzset{
+ card/.style={draw=soft,fill=white,rounded corners=2pt,align=left,text=ink,font=\fontsize{10.5}{14}\selectfont,inner xsep=12pt,inner ysep=10pt,text width=14.4cm},
+ half/.style={card,text width=6.45cm,minimum height=2.05cm},
+ result/.style={card,draw=green,fill=tint,line width=.9pt},
+ reason/.style={align=left,text=muted,font=\fontsize{9}{12}\selectfont,inner sep=0pt,text width=12.7cm},
+ branchreason/.style={reason,text width=5.95cm},
+ edge/.style={-{Stealth[length=2.4mm]},draw=green,line width=1pt},
+ wire/.style={draw=green,line width=1pt},
+}
+% Keep the arrow in a dedicated left gutter; explanations never cover it.
+\newcommand{\flow}[3]{
+ \coordinate (#2-from) at ($(#1.south)+(-6.9,0)$);
+ \coordinate (#2-to) at ($(#2.north)+(-6.9,0)$);
+ \draw[edge] (#2-from)--(#2-to);
+ \node[reason,anchor=west] (#2-reason) at ($(#2-from)!.5!(#2-to)+(.55,0)$) {#3};
+}
+
+\Japanesetrue
+\newcommand{\sourcesf}{https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Schnell-fiber-spaces-and-good-canonical-models-September-24-2026/paper.pdf}
+\newcommand{\sourcela}{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf}
+\newcommand{\sourcesch}{https://arxiv.org/pdf/2202.01295v1}
+\newcommand{\sourceps}{https://arxiv.org/pdf/1405.6125v2}
+\begin{document}
+\begin{tikzpicture}
+\node[card] (input) {\heading{START}{有効因子 $D$ を使い、$\kappa(X)$ の下界を得たい}{Seek the lower bound coming from the effective divisor $D$}
+$D\ge0,\quad m_0K_X-D\in\Eff(X),\quad\kappa(D)>0.$};
+\node[card,below=1.65cm of input] (fiber) {\heading{01}{因子の飯高次元を、底の次元へ移す}{Realize the Iitaka dimension as a base dimension}
+$f_0:X_0\to Y_0,\quad \dim Y_0=\kappa(D),\quad X_0\sim_{\mathrm{bir}}X.$\\[3pt]
+$a_0K_{X_0}-f_0^*H_0\in\Eff(X_0),\qquad H_0\text{ ample Cartier}.$};
+\flow{input}{fiber}{\Tx{線形系を解消し、Stein分解と底の解消を行う。\\擬有効性を保ち、底の因子を豊富なCartier因子に取り直す。}{Resolve the linear system, take Stein factorization, and resolve the base.\\Preserve pseudo-effectivity and choose an ample Cartier divisor on the base.}\\[4pt]\Sch{2}{[Sch22] $\S\S4$--6}\quad\SF{9}{$\S4.2$, (4.2)}}
+\node[card,below=1.65cm of fiber] (nonvanishing) {\heading{02}{各段階のファイバーは、小平次元が非負}{The fiber has nonnegative Kodaira dimension at every stage}
+$K_{F_i}\in\Eff(F_i)\quad\Longrightarrow\quad\kappa(F_i)\ge0.$\\[3pt]
+\Tx{$\kappa(F_i)=0$ なら反復は不要。その段階で 05 へ進む。}{If $\kappa(F_i)=0$, skip the iteration and go directly to 05.}};
+\flow{fiber}{nonvanishing}{\Tx{数値的仮定を非常に一般のファイバーへ制限する。\\モデル存在と切断の移送から得た非消滅を適用する。}{Restrict the numerical hypothesis to a very general fiber.\\Apply nonvanishing, supplied by model existence and section transfer.}\\[4pt]\SF{7}{Thm. 3.1}\quad\SF{8}{$\S4.1$, (4.1)}}
+\node[card,below=1.65cm of nonvanishing] (effective) {\heading{03}{反復 A：正の底の捻りを加えて、有効因子を作る}{Iteration A: add a positive base twist to obtain an effective divisor}
+\Tx{$\kappa(F_i)>0$ の間だけ実行する。}{Run this step only while $\kappa(F_i)>0$.}\\[3pt]
+$L_i\ge0,\quad L_i\sim r_iK_{X_i}+f_i^*(b_iH_i).$\\[3pt]
+$\kappa(L_i)=\kappa(F_i)+\dim Y_i.$};
+\flow{nonvanishing}{effective}{\Tx{Schnellの構成から、底の十分な正の捻りにより、\\「ファイバーの小平次元＋底の次元」をもつ有効因子を得る。}{Schnell's construction uses a sufficiently positive base twist to obtain\\an effective divisor of Iitaka dimension $\kappa(F_i)+\dim Y_i$.}\\[4pt]\Sch{3}{[Sch22] Lemma 7.1}\quad\SF{9}{$\S4.2$}}
+\node[card,below=1.95cm of effective] (next) {\heading{04}{反復 B：数値的仮定を保ち、底の次元を増やす}{Iteration B: preserve the hypothesis and increase the base dimension}
+$f_{i+1}:X_{i+1}\to Y_{i+1},\quad a_{i+1}K_{X_{i+1}}-f_{i+1}^*H_{i+1}\in\Eff(X_{i+1}).$\\[3pt]
+$\dim Y_{i+1}=\dim Y_i+\kappa(F_i)>\dim Y_i.$\\[3pt]
+\Tx{$i$ を $i+1$ に更新し、02--04 を繰り返す。}{Replace $i$ by $i+1$ and repeat 02--04.}};
+\flow{effective}{next}{\Tx{次の恒等式で擬有効性を保ち、$L_i$ に 01 の帰着を再適用する。}{The identity preserves pseudo-effectivity; reapply step 01 to $L_i$.}\\[3pt]
+$(a_ib_i+r_i)K_{X_i}-L_i\sim b_i(a_iK_{X_i}-f_i^*H_i).$\\[4pt]\SF{9}{$\S4.2$}\quad\Sch{2}{[Sch22] $\S\S4$--6}}
+\node[card,below=1.5cm of next] (stop) {\heading{05}{有限回で小平次元 $0$ のファイバーに到達する}{Reach a fiber of Kodaira dimension zero after finitely many steps}
+$\kappa(F_j)=0,\qquad \dim Y_j\ge\dim Y_0=\kappa(D).$};
+\flow{next}{stop}{\Tx{増加する整数 $\dim Y_i$ は $\dim X$ 以下。\\従って正の小平次元のまま反復し続けることはできない。}{The strictly increasing integers $\dim Y_i$ are bounded by $\dim X$.\\Thus iteration with positive fiber Kodaira dimension cannot continue forever.}\\[4pt]\SF{9}{$\S4.2$}}
+\node[result,below=1.65cm of stop] (goal) {\heading{END}{主定理を適用し、元の $X$ に戻す}{Apply the main theorem and return to the original $X$}
+$\kappa(X)=\kappa(X_j)=\dim Y_j\ge\kappa(D).$\quad\textbf{Corollary 1.2}};
+\flow{stop}{goal}{\Tx{非常に一般のファイバーと幾何学的生成ファイバーの小平次元は一致。\\Theorem 1.1 と小平次元の双有理不変性を使う。}{Very general and geometric generic fibers have the same Kodaira dimension.\\Apply Theorem 1.1 and birational invariance of Kodaira dimension.}\\[4pt]\SF{8}{$\S4.1$}\quad\SF{1}{Theorem 1.1}\quad\SF{9}{$\S4.2$}}
+\end{tikzpicture}
+
+\end{document}

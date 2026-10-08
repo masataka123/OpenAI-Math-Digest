@@ -1,0 +1,50 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import {families,steps,references,intro,catalog} from '../../../data/atlas.mjs';
+export function getStaticPaths(){return ['ja','en'].flatMap(lang=>families.map(family=>({params:{lang,id:family.id},props:{family}})));}
+const {family:f}=Astro.props,lang=Astro.params.lang,en=lang==='en',base=import.meta.env.BASE_URL;
+const levels=[['disc'],['frame'],['hessian'],['nef','volume'],['intersection'],['ample']];
+const sectionLink=(step)=>intro;
+---
+<Layout lang={lang} title={`${f.id} · ${f.title[lang]}`} otherPath={`${en?'ja':'en'}/families/${f.id}/`}>
+ <a class="back" href={`${base}${lang}/`}>← {en?'Catalogue':'カタログ'}</a>
+ <header class="family-header"><p class="eyebrow">FAMILY {f.id} <span class="badge">{f.state[lang]}</span></p><h1>{f.title[lang]}</h1><p class="official">{f.official}</p></header>
+ <nav class="contents" aria-label={en?'On this page':'ページ内案内'}><a href="#claim">{en?'Main claim':'主定理'}</a>{f.id==='051'&&<><a href="#proof">{en?'Proof table':'証明表'}</a><a href="#map">{en?'Dependency map':'依存関係'}</a><a href="#references">{en?'Other papers':'他の論文'}</a></>}<a href="#manuscripts">{en?'Manuscripts':'原論文'}</a></nav>
+ <section id="claim"><p class="eyebrow">THE CLAIM</p><h2>{en?'What the manuscript claims':'何が主張されているか'}</h2><p class="claim">{f.claim[lang]}</p>{f.id==='051'&&<div class="formula">{String.raw`$$\bigl(\forall f:\mathbb C\to X\text{ holomorphic},\ f\text{ constant}\bigr)\quad\Longrightarrow\quad K_X\text{ ample}.$$`}</div>}</section>
+ <aside class="scope"><strong>{en?'Reading scope':'読解範囲'}</strong><p>{f.caveat[lang]}</p></aside>
+ {f.id==='051'&&<>
+ <section id="proof"><div class="section-head"><h2>{en?'The proof, step by step':'証明を段階ごとに読む'}</h2><span class="muted">7 {en?'steps':'段階'}</span></div><p>{en?'Each row describes a proposed step. Select its number to locate its prerequisites in the map.':'各行は原論文が説明する論証の一段階に対応する。番号を選ぶと、依存図で必要な前段階を確認できる。'}</p><div class="table-wrap"><table class="proof-table"><caption class="sr-only">{en?'Proof overview based on the Introduction':'Introduction に基づく証明見取り図'}</caption><thead><tr><th>{en?'Step':'段階'}</th><th>{en?'What is obtained':'示すこと'}</th><th>{en?'Input / method':'使う結果・方法'}</th><th>{en?'Why the connection matters':'適用条件・接続の要点'}</th><th>{en?'Source':'出典'}</th></tr></thead><tbody>{steps.map((s,i)=><tr data-row={s.id}><th scope="row"><button class="step-button" data-select={s.id}>{String(i+1).padStart(2,'0')}</button><span>{s.label[lang]}</span></th><td>{s.result[lang]}</td><td>{s.input[lang]}</td><td>{s.why[lang]}</td><td><a href={sectionLink(s)}>{s.source}</a><span class="small muted">{en?'Introduction; later proof unchecked':'Introduction／後続証明は未照合'}</span></td></tr>)}</tbody></table></div></section>
+ <section id="map"><div class="section-head"><h2>{en?'Follow the dependencies':'必要な議論だけを辿る'}</h2><span class="muted">{en?'Input → consequence':'入力 → 帰結'}</span></div><p>{en?'Select a node. Its prerequisite steps and cited external inputs appear below. Branches that do not feed the selection fade.':'節点を選ぶと、その段階の前提と引用文献を表示する。選んだ段階に繋がらない枝は薄く表示する。'}</p><div class="map-layout"><div class="graph" id="graph"><svg aria-hidden="true" class="connectors"><defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7Z" fill="currentColor"/></marker></defs><g id="edges"/></svg>{levels.map(level=><div class="graph-level">{level.map(id=>{const s=steps.find(s=>s.id===id);return <button class="node" data-select={id} data-node={id} aria-pressed="false"><span>{String(steps.indexOf(s)+1).padStart(2,'0')}</span>{s.label[lang]}</button>})}</div>)}</div><aside class="selection"><p class="eyebrow">{en?'SELECTED STEP':'選択中の段階'}</p><h3 id="selected-title"/><p id="selected-result"/><h4>{en?'Read in this order':'読む順序'}</h4><ol id="reading-order"/><h4>{en?'Cited inputs for this route':'この経路に登場する文献'}</h4><ul id="selected-refs"/><a id="selected-source" href={intro}>{en?'Locate in the Introduction ↗':'Introduction で確認 ↗'}</a><p class="small muted">{en?'The map records the author’s argument, not independent verification.':'原論文の論証構成を記録した図であり、独立した検証結果ではない。'}</p><p class="sr-only" id="selection-status" aria-live="polite"/></aside></div></section>
+ <section id="references"><h2>{en?'How other papers enter the argument':'他の論文は、どこで登場するか'}</h2><p>{en?'These relations are reported in the manuscript’s Introduction. Original cited texts have not yet been compared. Methodological background is distinguished from a proof input.':'以下は Introduction の説明に基づく。引用文献の原文との照合は今後行う。「手法の背景」と「証明の入力」を区別して記録する。'}</p><div class="reference-list">{references.map(r=><article id={`ref-${r.id}`} class="reference-row"><div><span class="badge">{r.type[lang]}</span><h3>{r.title}</h3><p>{r.role[lang]}</p><a href={intro}>{en?'Citation context in the manuscript':'原論文の引用箇所'}</a></div><div class="reference-targets">{steps.filter(s=>s.refs.includes(r.id)).map(s=><a href={`?step=${s.id}#map`}>{s.label[lang]} ↗</a>)}</div></article>)}</div></section>
+ </>}
+ <section id="manuscripts"><h2>{en?'Manuscripts and conditions':'原論文と仮定の対応'}</h2>{f.id==='034'&&<p>{en?'A selection of four manuscripts, not the complete family. Similar topics do not by themselves establish a logical dependency.':'成果群内の4篇を選んだ比較であり、全件一覧ではない。題材が近いことだけで論理的依存を認定しない。'}</p>}<div class="manuscripts">{f.manuscripts.map(m=><article><h3><a href={`https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/${m.path}`}>{m.name} ↗</a></h3>{m.condition&&<dl><dt>{en?'Hypotheses (overview)':'仮定（概略）'}</dt><dd>{m.condition[lang]}</dd><dt>{en?'Claimed conclusion':'主張される結論'}</dt><dd>{m.result[lang]}</dd><dt>{en?'Proof dependencies':'証明上の依存'}</dt><dd>{en?'Not yet checked against the manuscript.':'本文との照合待ち。'}</dd></dl>}</article>)}</div><p class="small"><a href={catalog}>{en?'Official catalogue':'公式カタログ'}</a> · {en?'Source snapshot':'参照スナップショット'} <code>adc7f1241b42</code>{f.id==='052'&&<> · <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/docs/052.md">{en?'Official Lean notes (unchecked)':'公式 Lean 案内（未検証）'}</a></>}</p></section>
+ <script>
+ import {steps,references,ancestors,intro} from '../../../data/atlas.mjs';
+ const graph=document.getElementById('graph');
+ if(graph){
+ const lang=document.documentElement.lang as 'ja'|'en';let selected=new URLSearchParams(location.search).get('step')||'ample';if(!steps.some(s=>s.id===selected))selected='ample';
+ const set=(id:string,value:string)=>{document.getElementById(id)!.textContent=value;};
+ function redraw(){
+  const rect=graph!.getBoundingClientRect();const g=document.getElementById('edges')!;g.replaceChildren();
+  const route=new Set(ancestors(selected));
+  for(const s of steps)for(const parent of s.parents){const a=document.querySelector(`[data-node="${parent}"]`)!.getBoundingClientRect();const b=document.querySelector(`[data-node="${s.id}"]`)!.getBoundingClientRect();const x1=a.left+a.width/2-rect.left,y1=a.bottom-rect.top+2,x2=b.left+b.width/2-rect.left,y2=b.top-rect.top-5;const p=document.createElementNS('http://www.w3.org/2000/svg','path');p.setAttribute('d',`M${x1},${y1} C${x1},${(y1+y2)/2} ${x2},${(y1+y2)/2} ${x2},${y2}`);p.setAttribute('marker-end','url(#arrow)');p.setAttribute('class',route.has(parent)&&route.has(s.id)?'active-edge':'inactive-edge');g.appendChild(p);}
+ }
+ function select(id:string,update=false){
+  selected=id;const route=ancestors(id),s=steps.find(s=>s.id===id)!;
+  document.querySelectorAll<HTMLElement>('[data-node]').forEach(n=>{n.classList.toggle('dimmed',!route.includes(n.dataset.node!));n.setAttribute('aria-pressed',String(n.dataset.node===id));});
+  document.querySelectorAll<HTMLElement>('[data-row]').forEach(n=>n.classList.toggle('chosen',n.dataset.row===id));
+  set('selected-title',s.label[lang]);set('selected-result',s.result[lang]);
+  const order=document.getElementById('reading-order')!;order.replaceChildren();
+  route.forEach(key=>{const node=steps.find(s=>s.id===key)!;const li=document.createElement('li');const button=document.createElement('button');button.className='text-button';button.textContent=node.label[lang];button.onclick=()=>select(key,true);li.append(button);order.append(li);});
+  const refIds=new Set(route.flatMap(key=>steps.find(s=>s.id===key)!.refs));const list=document.getElementById('selected-refs')!;list.replaceChildren();
+  references.filter(r=>refIds.has(r.id)).forEach(r=>{const li=document.createElement('li');const a=document.createElement('a');a.href=`#ref-${r.id}`;a.textContent=r.title;li.append(a);list.append(li);});
+  (document.getElementById('selected-source') as HTMLAnchorElement).href=intro;
+  set('selection-status',`${s.label[lang]} · ${route.length} ${lang==='ja'?'段階':'steps'}`);
+  if(update){const url=new URL(location.href);url.searchParams.set('step',id);history.replaceState({},'',url);const a=document.getElementById('language') as HTMLAnchorElement;const other=new URL(a.href);other.searchParams.set('step',id);a.href=other.toString();}
+  redraw();
+ }
+ document.querySelectorAll<HTMLElement>('[data-select]').forEach(b=>b.addEventListener('click',()=>{select(b.dataset.select!,true);if(b.classList.contains('step-button'))graph.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});}));
+ new ResizeObserver(redraw).observe(graph);select(selected);document.fonts.ready.then(redraw);
+ }
+ </script>
+</Layout>

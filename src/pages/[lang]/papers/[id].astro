@@ -1,0 +1,8 @@
+---
+import SchnellArticle from '../../../components/SchnellArticle.astro';
+import LogAbundanceArticle from '../../../components/LogAbundanceArticle.astro';
+import {papers,languages} from '../../../data/site.mjs';
+export function getStaticPaths(){return languages.flatMap(lang=>papers.filter(p=>p.featured).map(paper=>({params:{lang,id:paper.id},props:{paper}})));}
+const {paper}=Astro.props, lang=Astro.params.lang;
+---
+{paper.id==='log-abundance-characteristic-zero'?<LogAbundanceArticle paper={paper} lang={lang}/>:<SchnellArticle paper={paper} lang={lang}/>}

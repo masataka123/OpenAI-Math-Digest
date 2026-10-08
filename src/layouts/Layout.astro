@@ -1,0 +1,49 @@
+---
+import '../styles/digest.css';
+import '../styles/atlas.css';
+import '../styles/home.css';
+import ReadingGuide from '../components/ReadingGuide.astro';
+const {lang='ja', title, otherPath='', description} = Astro.props;
+const en=lang==='en', base=import.meta.env.BASE_URL;
+const canonical=new URL(Astro.url.pathname, Astro.site);
+const route=Astro.url.pathname;
+const guideKind=route.includes('/fields/')?'field':route.includes('/catalog/')?'catalog':route.includes('/papers/')?'paper':route.includes('/about/')?'about':'home';
+---
+<!doctype html>
+<html lang={lang}>
+<head>
+ <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+ <meta name="description" content={description || (en?'A bilingual, independent guide to mathematical papers: fields, catalogues, claims, and proofs.':'数学の分野から、カタログ、個別論文へ。主定理と証明の道筋を辿る日英の非公式読解ガイド。')}/>
+ <title>{title} · OpenAI Math Digest</title>
+ <link rel="canonical" href={canonical}/>
+ <link rel="alternate" hreflang={en?'ja':'en'} href={new URL(`${base}${otherPath}`,Astro.site)}/>
+ <script is:inline>
+  window.MathJax={
+   tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']],processEscapes:true},
+   svg:{fontCache:'global'},
+   startup:{pageReady:()=>window.MathJax.startup.defaultPageReady().then(()=>{
+    // Typesetting changes section heights after the browser's initial anchor jump.
+    if(location.hash){let id;try{id=decodeURIComponent(location.hash.slice(1));}catch{return;}
+     document.getElementById(id)?.scrollIntoView();}
+   })}
+  };
+ </script>
+ <script is:inline defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+ <a class="skip" href="#content">{en?'Skip to content':'本文へ'}</a>
+ <div class="site-chrome"><header class="masthead">
+  <a class="brand" href={`${base}${lang}/`}>OpenAI <em>Math Digest</em></a>
+  <nav class="main-nav" aria-label={en?'Site navigation':'サイト案内'}><a href={`${base}${lang}/#fields`}>{en?'Fields':'分野一覧'}</a><a href={`${base}${lang}/about/`}>{en?'Editorial method':'編集方針'}</a></nav>
+  <nav class="language-switch" aria-label="日本語 / English">{['ja','en'].map(code=><a id={code!==lang?'language':undefined} class:list={{active:code===lang}} aria-current={code===lang?'page':undefined} href={code===lang?Astro.url.pathname:`${base}${otherPath}`} lang={code} hreflang={code}>{code==='ja'?'日本語':'English'}</a>)}</nav>
+ </header></div>
+ <div class="ai-notice"><span class="ai-label">{en?'AI-GENERATED GUIDE':'AI生成の解説'}</span><p>{en?'This guide may contain errors or inaccurate explanations. Check important claims and proofs against the original papers.':'このサイトの解説はAIが生成しており、誤りや不正確な説明を含む可能性があります。重要な主張・証明は原論文でご確認ください。'}</p></div>
+ <main id="content">{guideKind!=='home'&&<ReadingGuide lang={lang} kind={guideKind}/>}<slot/></main>
+ <script>
+  const language=document.getElementById('language');
+  if(language instanceof HTMLAnchorElement && location.hash) language.hash=location.hash;
+  window.addEventListener('hashchange',()=>{if(language instanceof HTMLAnchorElement)language.hash=location.hash;});
+ </script>
+ <footer class="footer"><p>OpenAI Math Digest <span>·</span> {en?'An independent, unofficial reading project. Not affiliated with OpenAI.':'独立した非公式の読解プロジェクト。OpenAI とは関係ありません。'}</p><p>{en?'Design adapted from':'デザインの基盤：'} <a href="https://masataka123.github.io/geometry-paper-digest/">Geometry Paper Digest</a> (MIT) · <a href="https://github.com/openai/math">{en?'Original manuscripts':'原論文集'}</a> · <a href="https://github.com/masataka123/OpenAI-Math-Digest">GitHub</a></p></footer>
+</body>
+</html>

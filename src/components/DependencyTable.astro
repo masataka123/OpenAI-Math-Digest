@@ -1,0 +1,15 @@
+---
+const {lang, entries, caption}=Astro.props;
+const en=lang==='en';
+---
+<div class="digest-table-wrap" role="region" aria-label={caption} tabindex="0">
+ <table class="digest-table dependency-table">
+  <caption>{caption}</caption>
+  <thead><tr><th scope="col">{en?'Source result':'供給元の論文・結果'}</th><th scope="col">{en?'Used in':'利用先・箇所'}</th><th scope="col">{en?'Input and role':'供給する内容・用途'}</th><th scope="col">{en?'Editorial check':'確認範囲'}</th></tr></thead>
+  <tbody>{entries.map(d=><tr id={'dependency-'+d.id}>
+   <th scope="row"><a href={d.url}>{d.from}</a><span class="table-detail">{d.result}</span></th>
+   <td><a href={d.to.url}>{d.to.label}</a></td>
+   <td>{d.role[lang]}</td><td>{d.check[lang]}</td>
+  </tr>)}</tbody>
+ </table>
+</div>

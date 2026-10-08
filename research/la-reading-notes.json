@@ -1,0 +1,84 @@
+{
+  "startedAt": "2026-10-08T11:56:23+09:00",
+  "completedAt": "2026-10-08T12:18:24+09:00",
+  "elapsedMinutes": 22,
+  "timeLimitMinutes": 60,
+  "manuscript": {
+    "title": "Log abundance in characteristic zero",
+    "version": "2026-09-24",
+    "commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+    "pages": 85,
+    "sha256": "87b191f75e8c852683847be18fb99e2a226e11e55967624c8d2bbba41c509be0",
+    "localPdf": "/Users/iwai/Documents/Codex/2026-10-08/m/work/schnell/log-abundance.pdf"
+  },
+  "mainRoute": [
+    "GLM in dimensions < n (Assumption 2.1)",
+    "Smooth nonvanishing in dimension n (Theorem 9.6; Theorem 9.1 and §§6–8)",
+    "lc nonvanishing and ordinary minimal models (Hashizume Theorem 1.4)",
+    "Good models via rational polytopes, positive-Iitaka reduction, and zero-Iitaka perturbations (Proposition 2.5)",
+    "Nef comparison and descent to arbitrary algebraically closed characteristic-zero fields (Lemma 2.2, Proposition 10.1)"
+  ],
+  "diagrams": [
+    "induction",
+    "boundary",
+    "nonvanishing"
+  ],
+  "directStatementsCompared": [
+    {
+      "name": "Hashizume, Theorem 1.4",
+      "url": "https://arxiv.org/html/1609.00121v4",
+      "usedIn": "LA Proposition 2.5, p. 9"
+    },
+    {
+      "name": "Fujino–Gongyo, Log pluricanonical representations, Theorem 1.5",
+      "url": "https://www.math.kyoto-u.ac.jp/~fujino/fg-comp-final.pdf",
+      "page": 2,
+      "usedIn": "LA Proposition 2.3, p. 8"
+    },
+    {
+      "name": "Fujino–Gongyo, On log canonical rings, Lemma 3.5",
+      "url": "https://www.math.kyoto-u.ac.jp/~fujino/log-ring-aspm.pdf",
+      "page": 5,
+      "usedIn": "LA Proposition 2.5, p. 10"
+    },
+    {
+      "name": "Orbifold and logarithmic Iitaka subadditivity, Corollary 6.2",
+      "catalogue": "033",
+      "pages": [
+        40,
+        41
+      ],
+      "usedIn": "LA Theorem 1.2 / Lemma 6.1; only the zero-boundary projective case",
+      "sha256": "b143366cc99615e19783fa075caafd8c9565e7bf5a554a612e086657c2aeeb79"
+    },
+    {
+      "name": "Hacon–Popa–Schnell, Theorem 1.1",
+      "url": "https://people.math.harvard.edu/~mpopa/papers/HPS.pdf",
+      "page": 2,
+      "usedIn": "Alternative to the OI input for the maximal-Albanese-dimension base in LA Lemma 6.1"
+    }
+  ],
+  "catalogueConnections": [
+    {
+      "from": "033 / Orbifold and logarithmic Iitaka subadditivity",
+      "to": "034 / LA",
+      "type": "direct proof input, with an established alternative for this application"
+    },
+    {
+      "from": "034 / LA Corollary 11.2",
+      "to": "034 / Schnell Theorem 3.1 and §4.1",
+      "type": "direct proof input"
+    },
+    {
+      "from": "036 / Minimal models and Mori fibre spaces for generalized log canonical Q-pairs, Corollary 1.2",
+      "to": "LA Corollary 12.1(i)",
+      "type": "post-abundance consequence only; citation in LA read, source proof not checked"
+    }
+  ],
+  "limits": [
+    "Reconstruction of the manuscript argument, not an independent correctness certification.",
+    "Detailed Hodge-module lifting, valuation/current estimates and moving-component estimates not fully independently verified.",
+    "Not all external input proofs or §§11–14 consequence proofs checked.",
+    "No additional catalogue-034 edges asserted from unexamined manuscripts."
+  ]
+}

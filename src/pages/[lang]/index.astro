@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ReadingGuide from '../../components/ReadingGuide.astro';
+import {fields, catalogs, languages, officialOverview, overviewTitle} from '../../data/site.mjs';
+export function getStaticPaths(){return languages.map(lang=>({params:{lang}}));}
+const lang=Astro.params.lang, en=lang==='en', base=import.meta.env.BASE_URL;
+const active=fields.filter(field=>field.catalogIds.length);
+---
+<Layout lang={lang} title={en?'Explore mathematics':'数学の分野から読む'} otherPath={`${en?'ja':'en'}/`}>
+ <div class="home-hero">
+  <div class="hero"><p class="eyebrow">MATHEMATICS · CLAIMS · PROOFS</p><h1>{en?<>A way into<br/><em>the mathematics.</em></>:<>数学の主張から、<br/><em>証明の道筋へ。</em></>}</h1><p class="lede">{en?'What does a paper claim, how does its proof unfold, and which results does it use? Explore the OpenAI math collection, one field at a time, in Japanese and English.':'何が主張され、どう証明され、どの結果に支えられているのか。OpenAI math の論文群を、分野ごとに読み解く日英のガイド。'}</p><a class="button primary" href="#fields">{en?'Browse the fields':'分野から探す'} <span aria-hidden="true">↓</span></a>
+   <p class="creator-credit">{en?'Created by ':'制作者：'}<a href={en?'https://masataka123.github.io/blog3_e/':'https://masataka123.github.io/blog3/'} rel="author">{en?'Masataka Iwai':'岩井 雅崇'}</a><span class="creator-affiliation">{en?' · The University of Osaka':'（大阪大学）'}</span></p>
+  </div>
+  <ReadingGuide lang={lang} kind="home"/>
+ </div>
+ <nav class="reading-path" aria-label={en?'Reading path':'読解の順序'}><span>{en?'Fields':'分野一覧'}</span><b aria-hidden="true">→</b><span>{en?'Field guide':'各分野'}</span><b aria-hidden="true">→</b><span>{en?'Catalogue number':'カタログ番号'}</span><b aria-hidden="true">→</b><span>{en?'Individual paper':'個別論文'}</span></nav>
+ <section id="fields" aria-labelledby="fields-heading"><div class="section-head"><div><p class="eyebrow">EXPLORE BY FIELD</p><h2 id="fields-heading">{en?'Follow the catalogue.':'カタログと、一緒に読む。'}</h2></div><span class="small muted">{en?`${active.length} field open · ${catalogs.length} catalogue`:`${active.length}分野で収録開始・${catalogs.length}カタログ`}</span></div><p class="section-intro">{en?'The 17 fields below follow the order and English headings of the official OpenAI Research Catalog. Number ranges refer to the official entries. Our first guide is catalogue 034.':'公式 OpenAI Research Catalog の17分野を、同じ順序・英語表記で掲載しています。番号範囲を目印に、カタログと照らし合わせてお読みください。最初の案内は034です。'}</p><p class="catalog-source"><a href={officialOverview} target="_blank" rel="noopener noreferrer">{overviewTitle} ↗</a><span class="small muted">{en?'6 October 2026 edition · opens in a new tab':'2026年10月6日版・別タブで開きます'}</span></p>
+ <div class="field-grid">{fields.map(field=><article class:list={['field-card', { 'field-active':field.catalogIds.length>0 }]}><div class="field-top"><span class="ordinal">{field.range}</span><span class="badge">{field.catalogIds.length?(en?'Guide available':'案内あり'):(en?'Planned':'今後追加')}</span></div><h3>{field.catalogIds.length?<a href={`${base}${lang}/fields/${field.id}/`}>{field.title[lang]} <span aria-hidden="true">↗</span></a>:field.title[lang]}</h3>{!en&&<p class="field-english" lang="en">{field.subtitle}</p>}<p>{field.catalogIds.length?(en?'Catalogue 034: Log abundance and Schnell fiber spaces.':'034のLog abundanceとSchnell論文の概説を掲載しています。'):(en?'Expositions in this field are in preparation.':'この分野の解説は準備中です。')}</p><div class="field-bottom"><a href={`${officialOverview}#page=${field.page}`} target="_blank" rel="noopener noreferrer">{en?'Official catalogue':'公式カタログ'} · p. {field.page} ↗</a>{field.catalogIds.length>0&&<span>{en?'Guide':'案内'}: {field.catalogIds.join(' / ')}</span>}</div></article>)}</div></section>
+ <section class="editorial-note"><strong>{en?'Read with the sources in view.':'主張と、その根拠を一緒に読む。'}</strong><p>{en?'Each article will record its manuscript version, hypotheses, and reading scope. Proof steps and cited results will be added after comparison with the original texts.':'各記事には原稿の版、仮定、読解・照合の範囲を記録します。証明の各段階と引用先の結果は、原典との照合を進めながら追加します。'}</p><a href={`${base}${lang}/about/`}>{en?'Our editorial method':'編集方針を読む'} →</a></section>
+ <aside id="citation-note" class="citation-note" aria-labelledby="citation-heading">
+  <h2 id="citation-heading">{en?'The research behind the collection':'論文群を支える先行研究'}</h2>
+  <p><a href="https://citedbyagi.com/" target="_blank" rel="noopener noreferrer">Cited by AGI</a>{en?' reports that Osamu Fujino is the most-cited author by bibliography-entry count across the 722 manuscripts in the OpenAI math collection.':' の集計によると、OpenAI math の722本の論文で、参考文献の引用件数が最も多い著者は Osamu Fujino です。'}</p>
+  <p class="small muted">{en?'120 citations across 37 manuscripts, based on the repository as of 6 October 2026. Counts refer to bibliography entries, not repeated mentions within a paper.':'2026年10月6日のリポジトリに基づく集計：37本の論文で120件。文中の言及回数ではなく、参考文献項目を数えています。'}</p>
+ </aside>
+</Layout>

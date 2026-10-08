@@ -1,0 +1,11 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import {fields, languages, catalogsForField, officialOverview} from '../../../data/site.mjs';
+export function getStaticPaths(){return languages.flatMap(lang=>fields.filter(f=>f.catalogIds.length).map(field=>({params:{lang,id:field.id},props:{field}})));}
+const {field}=Astro.props, lang=Astro.params.lang, en=lang==='en', base=import.meta.env.BASE_URL;
+---
+<Layout lang={lang} title={field.title[lang]} otherPath={`${en?'ja':'en'}/fields/${field.id}/`}>
+ <nav class="breadcrumbs" aria-label={en?'Breadcrumb':'現在位置'}><a href={`${base}${lang}/`}>{en?'Fields':'分野一覧'}</a><span aria-hidden="true">/</span><span aria-current="page">{field.title[lang]}</span></nav>
+ <header class="family-header"><p class="eyebrow">FIELD GUIDE</p><h1>{field.title[lang]}</h1><p class="official" lang="en">{field.title.en}</p><p class="lede">{field.description[lang]}</p><a href={`${officialOverview}#page=${field.page}`} target="_blank" rel="noopener noreferrer">{en?'Open the official catalogue':'公式カタログと見比べる'} · p. {field.page} ↗</a></header>
+ <section><div class="section-head"><h2>{en?'Catalogues in this field':'この分野のカタログ'}</h2><span class="small muted">{en?'Official catalogue numbers':'公式カタログ番号'}</span></div>{catalogsForField(field.id).map(c=><article class="catalog-row"><a class="catalog-number" href={`${base}${lang}/catalog/${c.id}/`}>{c.id}</a><div><h3><a href={`${base}${lang}/catalog/${c.id}/`}>{c.title[lang]}</a></h3><p>{c.description[lang]}</p><p class="small">{en?'Overviews: ':'概説：'}<a href={base+lang+'/papers/log-abundance-characteristic-zero/'}>Log abundance</a> · <a href={base+lang+'/papers/schnell-fiber-spaces/'}>Schnell fiber spaces</a></p></div><span class="badge">{en?'Guide available':'案内あり'}</span></article>)}</section>
+</Layout>
