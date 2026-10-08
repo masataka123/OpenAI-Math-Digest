@@ -48,6 +48,8 @@ Unprefixed result numbers refer to this manuscript [SD]. External inputs use [Bi
 
 ## 2. Proof of Theorem 1.1: the first MMP
 
+**Proof route.** The [first MMP](#proof-1) closes by induction over a positive-dimensional base; only a point base leads to the [second MMP](#proof-2). Its exits are the [arithmetic valuation-orbit bound](#proof-3), induction for horizontal components, and [adjunction for vertical components](#proof-4). The [four bounds are combined at the end](#proof-4-step-6).
+
 Induct on dimension, treating all positive coefficient thresholds simultaneously. For $d=1$, $\deg B=2$ gives $tc(S/k)\le2$. Henceforth let $d\ge2$, write $M_{<d}(u)=\max_{1\le r<d}N(r,u)$, and fix a rational $0<b=b(t)<t$. The first MMP preserves $S$ and makes it relatively ample.
 
 ![Figure 1. The first MMP: a positive-dimensional base ends by induction; only a point base proceeds to complements and the second MMP.](diagrams/induction.en.svg)
@@ -88,6 +90,8 @@ If $\dim Z=0$, then $X_3$ is a $1/n$-lc Fano variety. Proposition 3.5 applies wi
 
 [Proposition 3.5; §5.3, (5.7) · pp. 6–7, 12][SD]
 
+This exit uses the [arithmetic proof of Proposition 3.5](#proof-3).
+
 ### 3. Recover the original valuation over a positive-dimensional base
 
 If $\dim Z>0$, choose $\Gamma=(1-\lambda)C_3$ for sufficiently small $\lambda>0$. This is klt with relatively ample anti-log-canonical divisor. Extract only $v_S$ if it is exceptional; otherwise use the divisor already present. On the resulting model $U\to Z$ of relative Fano type, the prime $P$ satisfies $c(P/k)=c(S/k)$ and has coefficient at least $b$. The relation $n(K_U+C_U)\sim0$ is preserved.
@@ -99,6 +103,8 @@ If $\dim Z>0$, choose $\Gamma=(1-\lambda)C_3$ for sufficiently small $\lambda>0$
 If $P$ is horizontal, apply induction with threshold $b$ on the generic fibre of dimension $d-\dim Z<d$, obtaining $c(S/k)\le M_{<d}(b)$. A vertical $P$ disappears on that fibre, so the same induction cannot apply. Section 5 constructs a different horizontal coefficient-one component and transfers the intersection with $P$ to its normalization.
 
 [§5.4, (5.8); §§5.5–5.6 · pp. 12–14][SD]
+
+For the vertical case, continue to [adjunction retaining the same index](#proof-4).
 
 ## 4. Proof of Proposition 3.5: from geometric boundedness to arithmetic orbits
 
@@ -190,6 +196,8 @@ First fix $b=b(t)$, then $n=n(d,b)$; every occurrence of $N$ on the right is alr
 
 ## 6. Which papers supply which steps
 
+**Use in normal lc indices.** [Proposition 3.2 of Uniform Iitaka (pp. 7–8)](https://masataka123.github.io/OpenAI-Math-Digest/en/papers/uniform-pluricanonical-iitaka/#proof-4-step-2) applies Theorem 1.1 over the generic-fibre field $k(Z)$ with threshold $t=1$. The bound on the finite Stein degree enters the norm identity, giving a uniform principal multiple of the original adjoint.
+
 | Input | Use and hypotheses | Checks performed |
 |---|---|---|
 | [Bir19, Theorem 1.7, arXiv p. 4][Bir19] | Lemma 3.1 (p. 4): bounded complements for fixed rational $b$, Fano type, lc singularities, and nef $-(K+bS)$. The full original coefficient set need not be fixed. | Statement and application compared; proof not independently checked. |
@@ -198,7 +206,7 @@ First fix $b=b(t)$, then $n=n(d,b)$; every occurrence of $N$ on the right is alr
 | [Kol10, Definition 122, (122.7)–(122.10), Proposition 123, Lemma 125, pp. 61–64][Kol10] | Lemma 4.4 (pp. 9–10): differents and pluriresidues. | Compared the June 1, 2010 draft's statements and application. Retaining the same index and adding one component are additional arguments in this manuscript; the external proofs are not independently verified. |
 | [BMT11][BMT11] and [KM98][KM98] | Lemma 3.4: resolution over the field of definition; Lemma 4.5: quotient description of klt surface singularities. | Use located in the manuscript; external theorem texts not checked. |
 
-Within Catalog 034, [Uniform log Iitaka][ULI], Theorem 2.3 (p. 5), restates this theorem. Lemma 4.6 (pp. 10–11) applies it over $k=\mathbb C(C)$ with coefficient lower bound one. It bounds the degree of the Stein curve $C_S\to C$ of a horizontal coefficient-one component. After residue, weights change by $w\mapsto ew$; the resulting denominators are cleared using $\operatorname{lcm}(1,\ldots,N(s,1))$. This direct application was compared with the theorem. Other possible connections to norm descent of indices were not investigated; this does not mean that no such dependencies exist. The Birkar–Qu strategy is background, not an input theorem in a dependency arrow here.
+Within Catalog 034, [Uniform log Iitaka][ULI], Theorem 2.3 (p. 5), restates this theorem. Lemma 4.6 (pp. 10–11) applies it over $k=\mathbb C(C)$ with coefficient lower bound one. It bounds the degree of the Stein curve $C_S\to C$ of a horizontal coefficient-one component. After residue, weights change by $w\mapsto ew$; the resulting denominators are cleared using $\operatorname{lcm}(1,\ldots,N(s,1))$. This direct application was compared with the theorem. The norm-descent use in Uniform Iitaka described above was also checked at the level of the input statement and application. The Birkar–Qu strategy is background, not an input theorem in a dependency arrow here.
 
 ## 7. Return to the sources
 

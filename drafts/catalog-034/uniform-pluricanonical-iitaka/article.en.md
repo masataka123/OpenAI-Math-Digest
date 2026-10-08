@@ -34,6 +34,8 @@ Unprefixed references denote results of this manuscript. External references use
 
 ## 2. Organizing the simultaneous induction
 
+**Proof route.** Lower-dimensional indices control [moduli denominators](#proof-2), and lower-dimensional Iitaka maps exclude [high-index sequences](#proof-3). Returning to [normal lc indices](#proof-4) proves Theorem 1.2; [recovery of the full Iitaka field](#proof-5) then proves Theorem 1.1.
+
 Let $I_j$ denote Theorem 1.1 in dimension $j$, and $L_j$ Theorem 1.2 in dimension $j$ for every rational DCC coefficient set. Write $K_n$ for the zero-boundary klt index assertion: one integer makes $a_nK_V\sim0$ for every projective klt $n$-fold with $K_V\sim_{\mathbb Q}0$. Starting in dimension zero, the step assumes $I_j,L_j$ for $j<n$ and proves $K_n,L_n,I_n$ in that order.
 
 ![Two lower-dimensional inputs supply the index and Iitaka assertions in the next dimension](diagrams/induction.en.svg)
@@ -83,6 +85,8 @@ Lemma 4.3 uses LA to obtain a relatively semiample dlt degeneration, and applies
 [Lemma 4.3 and §4.4, pp. 14–17][U]
 
 ## 4. Excluding a high-index sequence
+
+This is the high-index exclusion needed for $K_n$. Read the argument in three groups: [scalar and Frobenius estimates](#proof-3-step-1) (1–2), [chain degrees and degree-one forgetting](#proof-3-step-3) (3–5), and the [rational-flow contradiction](#proof-3-step-6) (6).
 
 After the structural reduction of Proposition 5.1, consider canonical covers $\pi:Y\to V$ with indices $r\to\infty$. Set $G=\mu_r$, $Z_t=Y^t/G_{\mathrm{diag}}$, $\theta_t:Z_t\to V^t$ and $P_t=\theta_t^*(L^{\boxplus t})$. This argument takes place over the complex numbers, as required for its later use of local flows.
 
@@ -137,6 +141,8 @@ For fixed small $z$ the right side is rational in $y$, and the reversed negative
 ## 5. Returning to normal lc indices
 
 Now combine the zero-boundary assertion $K_n$ with $L_{<n}$ to prove $L_n$. The diagram focuses on the non-klt case with positive-dimensional Mori base. The klt reduction and the log Fano case over a point are separate cases in Proposition 3.2.
+
+Two branches close before the residue argument. For klt pairs, the zero-boundary index $K_n$ enters Xu’s klt induction theorem. For a point Mori base, bounded complements give $B^+\geq B$; the effective numerically trivial difference $B^+-B$ vanishes. The diagram treats the remaining non-klt branch with positive-dimensional base. [Proposition 3.2 · pp. 6–8][U]
 
 ![Adjunction to a coefficient-one component and bounded Stein degree permit norm descent](diagrams/normal-lc.en.svg)
 

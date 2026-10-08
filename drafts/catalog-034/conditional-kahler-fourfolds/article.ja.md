@@ -62,6 +62,8 @@ Assumption 2.3では初期modificationを挿入せず、負のrayを切り出す
 
 ## 2. Theorems 1.1–1.2 の証明の帰着
 
+**証明の道筋。** 指定 MMP → Theorem 1.2 の非消滅 → Assumption 2.4 の半豊富性、の順で進む。非消滅の内部は [正の代数次元](#proof-2)と [代数次元零](#proof-4)に分かれ、後者では [全被約境界からの延長](#proof-3)を使う。Assumptions 2.2–2.4 は全体を通して保持する。
+
 まずMMPの終点を取り、その上の非消滅をTheorem 1.2で示す。三つの前提が使われる段階を分け、最後まで同じ随伴線束の切断を追う。
 
 ![三前提から指定したnef終点での大域生成へ](diagrams/main-route.ja.svg)
@@ -138,7 +140,9 @@ A=K_T+G\ {\rm nef},\qquad
 K_T+tG\ {\rm nef\ and\ klt}\quad(t_0\leq t<1)
 \]
 という区間と、射影的crepant dlt modification
-$h:(V,D)\to(T,G)$、$J=K_V+D=h^*A$を与える。4次元dlt停止を仮定へ追加するのではなく、§7のspecial terminationとordinary kltプログラムへの帰着を使う。Lemma 5.1（p.23）のzero-Lelong minimal metricを区間内で適用し、$(1-t)G$を足して$t\to1$とすることで$J$の引戻しにもzero-Lelong metricを得る。
+$h:(V,D)\to(T,G)$、$J=K_V+D=h^*A$を与える。4次元dlt停止を仮定へ追加するのではなく、§7のspecial terminationとordinary kltプログラムへの帰着を使う。
+
+Lemma 5.1（p.23）のzero-Lelong minimal metricを区間内で適用し、$(1-t)G$を足して$t\to1$とすることで$J$の引戻しにもzero-Lelong metricを得る。
 
 Lemma 5.1の解析的証明は§5内にある。体積で正規化したcapacity評価、Monge–Ampère方程式のパラメータ微分、残差を残したBochner評価を組み合わせる。最後は同じsublevel集合上で残余測度を相殺する式(89)と、固定$t$での極限後のLelong上界(90)を、正の下界(93)と衝突させる。[pp.25–33][C] 先のprojective論文MMの定理をそのまま非projectiveの場合へ適用しているのではない。
 
@@ -172,8 +176,12 @@ H^1(V,\mathcal I_D(mJ))
 \hookrightarrow H^1(M,K_M+L_m),\qquad
 L_m\sim_{\mathbb Q}(m-1)L+\{F\}.
 \]
-後者はlow-degree Lerayからの単射であり、高次直接像の消滅は要求しない。zero-Lelong性と$\{F\}$の係数の積分余裕からmultiplier idealは自明となる。[DPSのhard Lefschetz定理][DPS]は
-$H^0(M,\Omega_M^3\otimes L_m)\twoheadrightarrow H^1(M,K_M+L_m)$を与える。左辺をLemma 9.2で消せば、全被約$D$上の非零節の高い冪が$V$へ延長され、反証仮定に矛盾する。[式(176)–(179)、pp.82–83][C]
+後者はlow-degree Lerayからの単射であり、高次直接像の消滅は要求しない。
+
+zero-Lelong性と$\{F\}$の係数の積分余裕からmultiplier idealは自明となる。[DPSのhard Lefschetz定理][DPS]は
+$H^0(M,\Omega_M^3\otimes L_m)\twoheadrightarrow H^1(M,K_M+L_m)$を与える。
+
+左辺をLemma 9.2で消せば、全被約$D$上の非零節の高い冪が$V$へ延長され、反証仮定に矛盾する。[式(176)–(179)、pp.82–83][C]
 
 [Lemmas 9.1–9.2; Proposition 9.3; (176)–(179) · pp. 81–83][C] · [DPS, Theorem 2.1.1 · arXiv PDF p. 8][DPS]
 
@@ -208,6 +216,10 @@ index chartsでboundary meridianのholonomyが有限であることを示し、S
 [Theorem 9.4; (180)–(181) · p. 84][C]
 
 ## 6. どの論文が、どの段階を担うか
+
+<span id="strata-input"></span>
+
+**全次元へ渡す補助結果。** Lemmas 7.16–7.17（pp. 58–60）は、正規化した lc strata 上の実際の随伴線束の同定と、small dlt step に沿う有効な比較・例外 locus 上の厳密な discrepancy 増大を与える。この二補題自体には四次元の制限がなく、[Kähler abundance の Theorem 3.13](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/kahler-log-abundance/#strata-input)で使われる。三前提をもつ本稿の四次元主定理とは別の入力である。 [Lemmas 7.16–7.17 · pp. 58–60][C]
 
 | 結果 | 使用箇所と役割 | 確認範囲 |
 |---|---|---|

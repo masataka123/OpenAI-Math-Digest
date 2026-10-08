@@ -48,6 +48,8 @@ $(X,\Delta)$ を複素射影 lc 対、$\dim X\le4$、$\Delta$ を有効有理境
 
 ## 2. Theorem 1.1 の証明
 
+**証明の道筋。** [Theorem 1.1](#proof-1)の持ち上げを [Theorem 1.2](#proof-2)の非消滅後の半豊富性に使う。[最後の図](#proof-3)は、全次元の仮定付き Theorem 1.3 と、四次元の Corollary 1.4 を別の入力から導く。
+
 全被約台 $S=G_{\mathrm{red}}$ 上の生成性から、周囲の $h^0(V,\mathcal O_V(NG))$ が非有界であることを示す。有限近傍の持ち上げ障害を消す段階では、水平 symbol と垂直な Euler 作用を分けて扱う。
 
 ![frameの正の重みと留数による有限近傍の障害消滅](diagrams/lifting.ja.svg)
@@ -129,6 +131,8 @@ Corollary 1.4 では [NV] Corollary 1.2 が元の normal lc 対の指定 Cartier
 [§7、p. 29；付録A、pp. 30–38][S]
 
 ## 5. どの論文が、どの段階を担うか
+
+**有効飯高への用途。** 本稿 Theorem 1.2 は [Fourfold Iitaka の定性的なモデル構成](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/effective-log-iitaka-fourfolds/#proof-3)で、非消滅を得た後の nef 随伴因子を semiample にする。次数の一様性はその後の別の議論である。
 
 | 入力 | 使用箇所・役割 | 確認範囲 |
 |---|---|---|

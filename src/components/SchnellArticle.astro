@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import DependencyTable from './DependencyTable.astro';
 import ProofDiagram from './ProofDiagram.astro';
-import {catalogsForPaper, sourceCommit} from '../data/site.mjs';
+import {catalogsForPaper, sourceCommit, paperSource} from '../data/site.mjs';
 import {article, dependencies, schnellPdf, abundanceSource, externalSources, source} from '../data/schnell.mjs';
 import '../styles/paper.css';
 const {paper:p,lang}=Astro.props;
@@ -17,12 +17,12 @@ const sections=[
  <article class="paper-article">
  <nav class="breadcrumbs" aria-label={en?'Breadcrumb':'現在位置'}><a href={base+lang+'/'}>{en?'Fields':'分野一覧'}</a>{catalogsForPaper(p.id).map(c=><><span aria-hidden="true">/</span><a href={base+lang+'/catalog/'+c.id+'/'}>{en?'Catalogue':'カタログ'} {c.id}</a></>)}<span aria-hidden="true">/</span><span aria-current="page">Schnell fiber spaces</span></nav>
  <header class="family-header">
-  <p class="eyebrow">CATALOGUE 034 · PAPER 08 / 14 <span class="badge">{en?'Overview · Revised draft':'概説・改訂稿'}</span></p>
+  <p class="eyebrow">CATALOGUE 034 · PAPER 08 / 14 <span class="badge">{en?'Overview':'概説'}</span></p>
   <h1 lang="en">{p.title}</h1>
   <p class="paper-subtitle">{article.subtitle[lang]}</p>
   <p class="lede">{article.lede[lang]}</p>
   <p class="paper-byline">{en?'Manuscript author':'原稿の著者'}: OpenAI · {p.version} · {p.pages} {en?'pages, including references':'ページ（参考文献を含む）'}</p>
-  <a class="button primary" href={schnellPdf}>{en?'Read the manuscript':'原稿PDFを読む'} <span aria-hidden="true">↗</span></a>
+  <a class="button primary" href={paperSource(p)}>{en?'Read the manuscript on GitHub':'GitHubで原稿を読む'} <span aria-hidden="true">↗</span></a>
  </header>
  <nav class="contents" aria-label={en?'Article contents':'記事内の目次'}>{sections.map(([id,label])=><a href={'#'+id}>{label}</a>)}</nav>
 
@@ -43,7 +43,7 @@ const sections=[
   <strong>{en?'References on the arrows':'図の矢印に付した引用'}</strong>
   <p>{en?'Unprefixed theorem, lemma, section, and equation numbers refer to the OpenAI manuscript above. External inputs use the following keys.':'略号のない定理・補題・節・式番号は、このOpenAI原稿を指します。外部入力には以下の略号を付けています。'}</p>
   <ul>
-   <li><a href={abundanceSource}>[LA]</a> <span lang="en">Log abundance in characteristic zero</span> · Corollary 11.2 · pp. 73–74 · GitHub · <a href={base+lang+'/papers/log-abundance-characteristic-zero/'}>{en?'Read the LA overview':'LAの概説'} →</a></li>
+   <li><a href={abundanceSource}>[LA]</a> <span lang="en">Log abundance in characteristic zero</span> · Corollary 11.2 · pp. 73–74 · GitHub · <a href={base+lang+'/papers/log-abundance-characteristic-zero/#corollary-11-2'}>{en?'Read the LA overview':'LAの概説'} →</a></li>
    <li><a href={externalSources.reduction+'#page=2'}>[Sch22]</a> Christian Schnell, <span lang="en">Singular metrics and a conjecture by Campana and Peternell</span> · arXiv v1</li>
    <li><a href={externalSources.criterion+'#page=14'}>[PS14]</a> Popa–Schnell, <span lang="en">On direct images of pluricanonical bundles</span> · Lemma 4.6</li>
   </ul>
@@ -66,7 +66,7 @@ const sections=[
 
  <section id="dependencies" class="paper-section">
   <h2>{en?'5. Which papers supply which steps':'5. どの論文が、どの段階を担うか'}</h2>
-  <p class="article-prose">{en?'One direct input from catalogue 034 is recorded here. The other connections within 034 remain unexamined. The external rows list the principal reduction tools; routine background references are omitted.':'034内の直接入力として、今回記録したのは次の1件です。034の他の関係は未調査です。カタログ外については主要な帰着の道具を挙げ、標準的な背景文献は省いています。'}</p>
+  <p class="article-prose">{en?'This article records the LA input to Schnell. The catalogue summary records the connections among all 14 papers. The external rows list the principal reduction tools; routine background references are omitted.':'本記事では LA から Schnell への直接入力を記録します。14篇全体の接続はカタログ034の総括にまとめています。カタログ外については主要な帰着の道具を挙げ、標準的な背景文献は省いています。'}</p>
   <DependencyTable lang={lang} entries={dependencies.filter(d=>d.withinCatalog)} caption={en?'Within catalogue 034 · Direct proof input':'カタログ034内 · 証明の直接入力'}/>
   <DependencyTable lang={lang} entries={dependencies.filter(d=>!d.withinCatalog)} caption={en?'Outside catalogue 034 · Reduction and effectivity':'カタログ034外 · 帰着と切断の存在'}/>
   <div class="article-prose related-work"><h3>{en?'An earlier conclusion, a different proof route':'先行する結論と、異なる証明経路'}</h3><p>{en?'Zou’s Theorems 1.3 and 5.1 state the same zero-Kodaira conclusion. That proof uses the canonical bundle formula. The feature emphasized here is the mixed-intersection route through a good minimal model of the total space. Zou is a comparison, not a proof input in this argument; only the statements and the beginning of the proof were compared.':'Zou の Theorems 1.3, 5.1 にも、小平次元0の場合の同じ結論が記されています。そちらは標準束公式を使う経路です。本記事で捉える特徴は、全空間の良い極小モデルを通る混合交点数の議論にあります。Zou は比較対象であり、ここでの証明の入力ではありません。今回照合したのは定理の記述と証明冒頭です。'} <a href={externalSources.zou+'#page=4'}>Zou, arXiv:2409.19981v4 · pp. 4, 24–25 ↗</a></p></div>
@@ -81,7 +81,7 @@ const sections=[
   </ul>
   <aside class="scope"><strong>{en?'Scope of this revised draft · 8 October 2026':'改訂稿の確認範囲 · 2026年10月8日'}</strong>
    <p>{en?'Read the main manuscript’s statements and the arguments in §§2–4. Compared the statement and proof paragraph of Log abundance, Corollary 11.2 (pp. 73–74), Schnell’s reduction (§§4–10 in v1), and Popa–Schnell, Lemma 4.6. The dependency table records the specific interfaces checked.':'本原稿の主張と§§2–4の議論を読み、Log abundance の Corollary 11.2（pp. 73–74）の記述・証明段落、Schnell の帰着（v1の§§4–10）、Popa–Schnell の Lemma 4.6 を照合しました。接続ごとの確認内容は依存表に記載しています。'}</p>
-   <p>{en?'The full 85-page Log abundance proof, the proofs behind its inputs, and the remaining catalogue-034 connections are not verified. This is an AI-generated account of the argument, with no expert review or formal verification completed.':'85ページの Log abundance の証明全体、その入力文献の証明、034の残りの依存関係は未検証です。本記事はAIによる論証の概説であり、専門家の査読・形式検証は未実施です。'}</p>
+   <p>{en?'The full 85-page Log abundance proof and the proofs behind its inputs have not been independently verified in preparing this article. This is an AI-generated account of the argument, with no expert review or formal verification completed.':'本記事の作成に際して、85ページの Log abundance の証明全体と、その入力文献の証明を独立に検証したものではありません。本記事はAIによる論証の概説であり、専門家の査読・形式検証は未実施です。'}</p>
   </aside>
   <p class="source-note">{en?'Pinned manuscript snapshot':'原稿の参照版'}: <code>{sourceCommit}</code><br/>{en?'Page numbers refer to the linked PDFs; external arXiv versions are fixed in the dependency table.':'ページ番号はリンク先PDFに対応します。外部文献のarXiv版は依存表で固定しています。'}</p>
   <a class="back" href={base+lang+'/catalog/034/#dependencies'}>← {en?'Catalogue 034: papers and dependencies':'カタログ034：論文一覧と依存関係'}</a>

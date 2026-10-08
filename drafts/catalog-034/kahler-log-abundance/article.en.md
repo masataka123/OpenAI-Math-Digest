@@ -6,6 +6,8 @@ Assuming logarithmic Iitaka subadditivity, the manuscript proves semiampleness o
 
 ## 1. Main results
 
+The statements retain the source order: Assumption 1.1, the final target Theorem 1.2, the induction statement Theorem 2.13, and four tools used in the proof. Each retains its own hypotheses and scope.
+
 ### Assumption 1.1 — Logarithmic Iitaka subadditivity
 
 The paper assumes that for every surjective morphism $f:X\to Y$ with connected fibres between smooth connected complex projective varieties, and reduced effective SNC divisors $D_X,D_Y$, including zero divisors,
@@ -82,6 +84,8 @@ Unprefixed numbers refer to this manuscript [P]. Catalog references [LA], [CGM4]
 
 ## 2. Proofs of Theorems 2.13 and 1.2: the global induction
 
+**Proof route.** Theorem 1.2 is the target and Theorem 2.13 the induction statement. [Generation on the whole boundary](#proof-2) is a shared tool. The [positive-dimensional fibration](#proof-3) and the simple case via [meromorphic nonvanishing](#proof-4) and [signed rigidity](#proof-5) feed back into this diagram.
+
 Assume the lower-dimensional assertions $G_j$ and prove $G_n$. Split by algebraic dimension and simplicity, then descend generation to the original nef lc adjoint.
 
 ![TeX proof diagram descending a good decomposition to the main theorem](diagrams/decomposition.en.svg)
@@ -117,6 +121,10 @@ The final passage to the main theorem is [Proposition 2.7, pp. 9–10][P]. Givin
 [Lemma 2.3; Proposition 2.7 · pp. 8–10][P]
 
 ## 3. The interface of §§3–4: models and whole-boundary generation
+
+<span id="strata-input"></span>
+
+**What is compared on strata.** [CGM4 Lemmas 7.16–7.17](https://masataka123.github.io/OpenAI-Math-Digest/en/papers/conditional-kahler-fourfolds/#strata-input) supply actual adjoint lines and strict comparisons across small dlt steps, entering Theorem 3.13 here. Torsion-freeness from [ANV4 Lemma 7.1](https://masataka123.github.io/OpenAI-Math-Digest/en/papers/abundance-after-nonvanishing/#torsion-free-input) enters Lemma 4.3 to pass from residue compatibility to section extension. This is separate from the later use of ANV4 §§10–12 in the lifting argument of §7. [Theorem 3.13 · pp. 29–30; Lemma 4.3 · p. 74][P]
 
 Separate contraction of a known negative part from gluing sections on the entire boundary. The first preserves the actual nef line; the second uses induction on proper strata and compatible residues.
 
@@ -224,8 +232,7 @@ $$
 
 ## 6. Proofs of Theorem 7.1 and Proposition 2.12: signed boundary and torsion
 
-Exclude intermediate numerical dimension $0<
-u(L)<n$ through compact deformations leaving the boundary. Treat zero and maximal numerical dimension separately, then recover the simple-case induction from torsion.
+Exclude intermediate numerical dimension $0<\nu(L)<n$ through compact deformations leaving the boundary. Treat zero and maximal numerical dimension separately, then recover the simple-case induction from torsion.
 
 ![TeX proof diagram lifting signed boundary fibres to prove torsion](diagrams/signed.en.svg)
 

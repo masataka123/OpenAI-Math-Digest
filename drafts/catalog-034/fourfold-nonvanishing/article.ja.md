@@ -43,6 +43,8 @@ $X$ の $\mathbb Q$-factorial性を仮定せず、結論は元の $X$ 上で成�
 
 ## 2. Theorem 1.1 の証明
 
+**証明の道筋。** 滑らかな四次元の非消滅を本節で示し、[Corollary 1.2](#proof-3)で lc 対へ移す。途中の符号付き台の枝だけを [Proposition 5.1](#proof-2)へ分け、そこで得た結論を二因子 jet の構成へ戻す。
+
 非消滅の反例を仮定し、一因子での小消滅次数と二因子での大きなジェット生成を同時に作る。最後に[LA]の独立したFrobenius道具へ入力する。$A$ は反例モデル上の固定ample因子、$\varepsilon>0$ は後で十分小さく選ぶ。
 
 ![極小反例から二つのジェット評価と行列式矛盾へ](diagrams/nonvanishing.ja.svg)
@@ -84,6 +86,8 @@ D_0-D_\infty\sim e\iota K
 という符号付き代表を作り、次節のProposition 5.1を使う。両射影が優勢でgenerically finiteとなる残りの対応は、Proposition 6.4で処理する。分岐因子が全体を掃くことを先に除いてから、[LA, Lemma 7.5, p. 51][LA]で固定開集合上の有限étale被覆を有限個にする。次数の上界だけで被覆の有限性を結論してはいない。Birational automorphism群の議論で得るアーベル多様体から $Y$ への優勢写像は、再び正の標準曲線次数と矛盾する。
 
 [Propositions 6.3–6.4; Corollary 6.5 · pp. 23–30][FN]
+
+この枝で使う [Proposition 5.1 の証明](#proof-2)では、計量による制限全射と、三次元 semi-dlt abundance による境界上の非零切断を別々に用意する。
 
 ### 4. 標数を動かす前に有限データを固定する
 
@@ -171,6 +175,8 @@ H^1(Z',\mathcal O(mN)\otimes\mathcal I_S)\hookrightarrow H^1(Z',\mathcal O(mN))
 
 [§5, final klt adjoint · pp. 19–20][FN] · [GM, Corollary 5.3 · p. 19][GM]
 
+この矛盾で符号付き台を持つ枝を処理し、[主証明の slice・対応の排除](#proof-1-step-3)へ戻る。その後の二因子 jet と Frobenius の比較が滑らかな非消滅を閉じる。
+
 ## 4. Corollary 1.2 の証明
 
 滑らかなcanonical非消滅をlc対へ移し、得られた実係数の有効代表を有理化する。指定した指数 $r$ を保ったまま元の多様体上で切断を得る。
@@ -190,6 +196,8 @@ Lemma 8.1はこの同値を有限個の主因子と素因子による有理係�
 [Lemma 8.1; Corollary 1.2 proof · pp. 34–35][FN]
 
 ## 5. どの論文が、どの段階を担うか
+
+**Supported lifting への二つの入力。** [Corollary 1.2 → Corollary 1.4](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/lifting-adjoint-sections/#proof-3-step-2) は四次元で最初の切断を供給する。[Lemma 8.1 → Theorem 1.3](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/lifting-adjoint-sections/#proof-3-step-1) は有効な実係数表示の有理化だけを供給し、全次元の滑らかな非消滅の前提を置き換えない。
 
 | 入力 | 使用箇所と供給内容 | 確認範囲 |
 |---|---|---|

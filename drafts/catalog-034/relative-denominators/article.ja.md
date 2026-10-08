@@ -8,6 +8,8 @@
 
 ### Theorem 1.1（[RD] p. 2）
 
+**正確な表示と moduli 分母。**
+
 有限集合 $\Phi\subset[0,1]\cap\mathbb Q$ と整数 $1\le d\le4$ を固定する。$d,\Phi$ のみに依存する正整数 $p_0\mid p$（$p_0$ は $\Phi$ の分母を払う）と有理DCC集合 $\mathcal B\subset[0,1]$ が存在する。複素数体上の射影的lc対 $(X,B)$、$B\ge0$、$\dim X=d$、$\operatorname{coeff}B\subset\Phi$ と、正次元の正規射影的底への縮約 $f:X\to Z$ が
 
 $$
@@ -29,6 +31,8 @@ $$
 
 ### Proposition 6.1（[RD] pp. 15–17）
 
+**big な底の全関数体。**
+
 Theorem 1.1の仮定に加えて $D$ がbigなら、$m=m(d,\Phi)>0$ が存在し、任意の正の倍数 $l\in m\mathbb Z_{>0}$ について
 
 $$
@@ -40,6 +44,8 @@ $$
 [Proposition 6.1 · pp. 15–17][RD]
 
 ### Proposition 7.1（[RD] p. 17、証明 pp. 17–21）
+
+**有理連結な底の主因子倍。**
 
 $1\le e\le4$、有理DCC集合 $I\subset[0,1]$、正整数 $p$ を固定する。正規射影的複素多様体 $Z$、$\dim Z=e$ は有理連結な滑らかな射影的解消を持つとする。$(Z,B+M_Z)$ はgeneralized klt、$B\ge0$ の係数は $I$ に入り、$\mathbf M$ は有理b-nefで $p\mathbf M$ はb-Cartierとする。
 
@@ -71,6 +77,8 @@ $$
 - [Bir, Theorem 1.7 · boundedness][Bir]
 
 ## 2. Theorem 1.1：正確な表示と特殊ファイバーの留数
+
+**証明の道筋。** Theorem 1.1 で正確な表示と moduli 分母を固定する。その後は、[big な底の全関数体](#proof-2)を得る Proposition 6.1 と、[有理連結な底の主因子倍](#proof-3)を得る Proposition 7.1・Corollary 7.2 に分かれる。
 
 一般ファイバーで次数 $p_0$ の正確な表示を固定し、滑らかな底モデル上の各素因子で $pM_W$ の整性を示す。局所的な分母は、曲線上の特殊ファイバー全体の留数が持つ巡回指標として読む。
 
@@ -194,6 +202,10 @@ $$
 [Corollary 7.2, (7.2) · p. 21][RD]
 
 ## 5. どの論文が、どの段階を担うか
+
+<span id="fourfold-applications"></span>
+
+**Fourfold Iitaka での用途を分ける。** [Theorem 1.1](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/relative-denominators/#theorem-1-1) の正確な表示と [Proposition 6.1](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/relative-denominators/#proof-2) の完全線形系は [主定理の有効性の段階](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/effective-log-iitaka-fourfolds/#proof-3)へ入る。[Proposition 7.1](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/relative-denominators/#proof-3) の有理連結な底の主因子倍は、同論文 Lemma 4.6（pp. 15–16）の別の指数評価に使われる。
 
 | 略号・入力 | 使用箇所と役割 | 確認範囲 |
 |---|---|---|

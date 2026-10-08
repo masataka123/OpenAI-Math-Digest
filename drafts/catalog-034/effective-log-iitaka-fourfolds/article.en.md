@@ -37,6 +37,8 @@ Unprefixed references denote this manuscript. External inputs use the following 
 
 ## 2. Proof of Theorem 1.1: structural reduction
 
+**Proof route.** First organize the structural reduction, then exclude the remaining obstruction using [chains, jets and Frobenius estimates](#proof-2). The [closing proof](#proof-3) combines that structure with relative effective systems and aligns coefficient sets, fields and degrees.
+
 Reduce the index problem in Theorem 1.1 to terminal fourfolds with general-type equivariant fibres and countable birational automorphism groups. In the structural cases using relative denominators, the crucial point is to preserve the boundary-free canonical index.
 
 ![Structural reduction of the canonical index](diagrams/reduction.en.svg)
@@ -60,6 +62,10 @@ For the remaining terminal fourfold and its canonical cyclic cover, the relevant
 [Lemma 4.7 · pp. 16–17][Ufour]
 
 ## 3. Proof of Theorem 1.1: excluding the residual high indices
+
+<span id="chain-input"></span>
+
+The chain tools Lemma 5.1, Corollary 5.2 and Lemma 5.4 used here are stated in arbitrary dimension and also enter [high-index exclusion in Uniform Iitaka](https://masataka123.github.io/OpenAI-Math-Digest/en/papers/uniform-pluricanonical-iitaka/#proof-3). They supply covering-family, chain and leaf estimates; this is not an application of the fourfold main theorem in arbitrary dimension.
 
 Assume that the index $r$ is unbounded in the residual case. Compare the Seshadri lower bound on the canonical cover $\pi:Y\to V$ with the upper bound on the diagonal product $Z_t=Y^t/\mu_{r,\mathrm{diag}}$ through projection-compatible chain leaves.
 
@@ -135,7 +141,7 @@ Replacing the canonical divisor by $K_X+\operatorname{Div}(h)$ changes the floor
 
 ## 5. Which papers supply which steps
 
-- **[LA]** Theorem 11.1 (p. 73), Theorem 1.1 (p. 1): qualitative nonvanishing in Ufour §10 (p. 48). The reference to its Frobenius method in §7 is a separate methodological relation.
+- **[LA]** Theorem 11.1 (p. 73), Theorem 1.1 (p. 2): qualitative nonvanishing in Ufour §10 (p. 48). The reference to its Frobenius method in §7 is a separate methodological relation.
 - **[SL]** Theorem 1.2 (p. 2): semiampleness of the nef model in Ufour Theorem 2.1 and Proposition 2.2 (pp. 6–7). The main Fourfold nonvanishing theorem is not added as an input to that proposition.
 - **[RD]** Theorem 1.1, Propositions 6.1, 7.1 (pp. 2, 15, 17): Ufour §3 (pp. 8–9). The first two supply effective systems; the last controls the generalized index over the rationally connected base in Lemma 4.6.
 - **[CT]** Theorem 1.1 (arXiv v2, p. 2): flip termination for pseudo-effective NQC lc generalized fourfold pairs. Proposition 2.2 applies it with zero nef data. Its statement and applicability were compared.

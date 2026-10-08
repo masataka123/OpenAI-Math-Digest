@@ -48,6 +48,8 @@ Unprefixed references denote this manuscript. External inputs use the following 
 
 ## 2. Proof of Theorem 1.1
 
+**Proof route.** Lifting in [Theorem 1.1](#proof-1) enters abundance after nonvanishing in [Theorem 1.2](#proof-2). The [last diagram](#proof-3) separates the conditional all-dimensional Theorem 1.3 from fourfold Corollary 1.4 and their distinct inputs.
+
 Start from generation on the entire reduced support $S=G_{\mathrm{red}}$ and show that $h^0(V,\mathcal O_V(NG))$ is unbounded. To eliminate finite-neighborhood obstructions, treat the horizontal symbol and the vertical Euler action separately.
 
 ![Positive frame weight and residues kill finite-neighborhood obstructions](diagrams/lifting.en.svg)
@@ -131,6 +133,8 @@ For Corollary 1.4, [NV] Corollary 1.2 supplies a nonzero section in a multiple o
 [§7, p. 29; Appendix A, pp. 30–38][S]
 
 ## 5. Which papers supply which steps
+
+**Use in effective Iitaka.** Theorem 1.2 makes a nef adjoint semiample after nonvanishing in [the qualitative model step of Fourfold Iitaka](https://masataka123.github.io/OpenAI-Math-Digest/en/papers/effective-log-iitaka-fourfolds/#proof-3). Uniformity of the degree is a separate subsequent argument.
 
 | Input | Use | Scope checked |
 |---|---|---|

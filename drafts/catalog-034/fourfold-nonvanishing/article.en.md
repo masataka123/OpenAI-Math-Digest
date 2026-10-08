@@ -43,6 +43,8 @@ Unprefixed theorem, lemma, section and equation numbers refer to this manuscript
 
 ## 2. Proof of Theorem 1.1
 
+**Proof route.** This section establishes smooth fourfold nonvanishing; [Corollary 1.2](#proof-3) passes it to lc pairs. The signed-support branch is isolated in [Proposition 5.1](#proof-2), whose conclusion returns to the construction of two-factor jets.
+
 Assume nonvanishing fails and construct both small scalar vanishing orders and large two-factor jets. Feed them into the independent Frobenius tool from [LA]. Here $A$ is a fixed ample divisor on the counterexample model, and $\varepsilon>0$ will be chosen sufficiently small.
 
 ![A minimal counterexample yields incompatible scalar and two-slot jets](diagrams/nonvanishing.en.svg)
@@ -84,6 +86,8 @@ D_0-D_\infty\sim e\iota K,
 and Proposition 5.1 below controls its signed support. Remaining correspondences with both projections dominant and generically finite are excluded by Proposition 6.4. First rule out sweeping branch divisors; then [LA, Lemma 7.5, p. 51][LA] gives finitely many finite étale covers of a fixed open. A degree bound alone is not used to assert finiteness. Birational automorphism groups would then produce a dominant map from an abelian variety to $Y$, again contradicting positive canonical curve degree.
 
 [Propositions 6.3–6.4; Corollary 6.5 · pp. 23–30][FN]
+
+The [proof of Proposition 5.1](#proof-2) separates metric-based surjectivity of restriction from the nonzero boundary section supplied by three-dimensional semi-dlt abundance.
 
 ### 4. Fix the finite data before varying the characteristic
 
@@ -171,6 +175,8 @@ Finally apply [GM, Corollary 5.3, p. 19][GM] to $N/\alpha\sim_{\mathbb Q}K'+(1-s
 
 [§5, final klt adjoint · pp. 19–20][FN] · [GM, Corollary 5.3 · p. 19][GM]
 
+This contradiction handles the signed-support branch. Return to [the exclusion of slices and correspondences](#proof-1-step-3), then to two-factor jets and the Frobenius comparison that closes smooth nonvanishing.
+
 ## 4. Proof of Corollary 1.2
 
 Transfer smooth canonical nonvanishing to the lc pair, then rationalize the effective real representative. The aim is a section on the original variety with the prescribed index $r$ retained.
@@ -190,6 +196,8 @@ Lemma 8.1 writes this as a rational linear system involving finitely many prime 
 [Lemma 8.1; Corollary 1.2 proof · pp. 34–35][FN]
 
 ## 5. Which papers supply which steps
+
+**Two inputs to Supported lifting.** [Corollary 1.2 → Corollary 1.4](https://masataka123.github.io/OpenAI-Math-Digest/en/papers/lifting-adjoint-sections/#proof-3-step-2) supplies the first section in dimension four. [Lemma 8.1 → Theorem 1.3](https://masataka123.github.io/OpenAI-Math-Digest/en/papers/lifting-adjoint-sections/#proof-3-step-1) supplies only rationalization of an effective real presentation; it does not replace the premise of smooth nonvanishing in all dimensions.
 
 | Input | Use and supplied content | Checking scope |
 |---|---|---|

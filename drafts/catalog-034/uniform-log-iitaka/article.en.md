@@ -57,6 +57,8 @@ Unprefixed numbers refer to this manuscript [P]. Direct catalog inputs are [U] f
 
 ## 2. Proof of Theorem 4.2: induction along horizontal boundary
 
+**Proof route.** The [Theorem 1.1 diagram](#proof-4) closes the argument. Normal lc indices on the generic fibre fix an exact presentation. Curve weights use Stein degrees and [klt characters](#proof-2); [moduli denominators and effective systems on the base](#proof-3) then recover the full Iitaka field.
+
 Induct on relative dimension $s$, starting with $q(0,m)=m$. For $s>0$, realize the weight as a divisor identity on a dlt model. A horizontal coefficient-one component permits residue induction; its absence leads to the independent klt bound.
 
 ![TeX proof diagram reducing lc curve weights to the klt case](diagrams/residue.en.svg)

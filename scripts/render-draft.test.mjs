@@ -70,6 +70,17 @@ test('Japanese and English headings share section anchors',async()=>{
  const en=await renderDraft(draft.replace('主要結果','Main results').replace('図の矢印に付した引用','References on the arrows').replace('どの論文が、どの段階を担うか','Which papers supply which steps').replace('原典を読む入口と確認範囲','Return to the sources'),{...options,lang:'en'});
  assert.deepEqual(ja.headings.map(h=>h.slug),['results','diagram-sources','proof-1','proof-2','dependencies','sources']);
  assert.deepEqual(ja.headings.map(h=>h.slug),en.headings.map(h=>h.slug));
+ for(const result of [ja,en]){
+  assert.match(result.html,/id="theorem-1-1"/);
+  assert.match(result.html,/id="proof-1-step-1"/);
+  assert.match(result.html,/id="proof-2-step-1"/);
+  assert.match(result.html,/id="theorem-11"/); // The old Markdown heading remains addressable.
+ }
+});
+
+test('public article links remain local in previews and print editions',async()=>{
+ const {html}=await renderDraft(draft+'\nRead [the result](https://masataka123.github.io/OpenAI-Math-Digest/en/papers/example/#theorem-1-1).',options);
+ assert.match(html,/href="\/OpenAI-Math-Digest\/en\/papers\/example\/#theorem-1-1"/);
 });
 
 test('multiple inline TeX figures have unique IDs and intact citations',async()=>{

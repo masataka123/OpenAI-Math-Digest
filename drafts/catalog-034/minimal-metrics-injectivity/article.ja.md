@@ -46,6 +46,8 @@ $(X,\Delta)$ は複素射影klt四次元対、$\Delta\geq0$ は有理境界、$D
 
 ## 2. Theorem 1.1 の証明
 
+**証明の道筋。** Theorem 1.1 の零 Lelong 数計量と [Theorem 1.2 の内部単射性](#proof-2)は独立した二つの結果である。[Corollary 4.1](#proof-3)では、計量の結果を既存の非消滅・半豊富性の判定へ渡す。
+
 $N=\pi^*(K_H+\Theta)$、$n=\dim V$ とする。正のLelong数を仮定し、固定捻りを持つ極値切断を、同じ点で同じ値を持つが質量の小さい切断に置き換える。
 
 ![固定捻りの極値切断からLelong数消滅へ](diagrams/metric.ja.svg)
@@ -127,6 +129,8 @@ Proposition 3.3の連続写像 $\kappa_k$ は完全形式の閉包を殺す。�
 
 [Lemmas 2.1, 3.2; Proposition 3.3; (3.7)–(3.8) · pp. 5, 13–16][MM]
 
+本段階が与えるのは変動する重みに一様な原始形の評価である。[次の Bochner 評価](#proof-2-step-3)で像のノルムを消し、[固定 Hilbert 空間との比較](#proof-2-step-4)で初めて元の通常のコホモロジー類を消す。
+
 ### 3. Bochner評価と一様な原始形から像のノルムを消す
 
 核の通常の類の滑らかな代表 $\gamma$ を、完全形式の閉包に直交する $u_k$ へ射影する。完備計量のカットオフと曲率比較を使うと、$\|\bar\partial^*_{0,k}(su_k)\|_{0,k}=O(\sqrt{\varepsilon_k})$ となる。原稿はこの形式がHilbert随伴の定義域に入ることもカットオフで扱う。類写像が閉包を殺すため $\kappa_{0,k}(su_k)=0$ であり、前段から $\bar\partial v_k=su_k$、$\sup_k\|v_k\|_{0,k}<\infty$ を得る。従って
@@ -166,6 +170,10 @@ Theorem 1.1の計量を実際の束 $\pi^*\mathcal O_X(rD)$ へテンソル冪�
 [Theorem 4.3; Corollary 4.1 proof · p. 19][MM] · [GM, Corollary 5.3 · printed p. 499 / PDF p. 23][GM]
 
 ## 5. どの論文が、どの段階を担うか
+
+<span id="fourfold-input"></span>
+
+**二定理を合わせる用途。** [Fourfold nonvanishing の Proposition 5.1](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/fourfold-nonvanishing/#proof-2-step-2)は、本稿 Theorem 1.1 の端点計量と Theorem 1.2 の内部単射性を合わせて全 floor への制限全射を得る。境界上の非零切断は、その次の三次元 semi-dlt abundance の段階で別に用意する。
 
 | 入力 | 本稿の使用箇所と役割 | 今回の照合 |
 |---|---|---|

@@ -50,6 +50,8 @@ Unprefixed theorem, lemma, section and equation numbers refer to this manuscript
 
 ## 2. Proof of Theorem 1.1
 
+**Proof route.** The [Hodge-rank bound in Theorem 5.1](#proof-2), together with the factorwise arguments, gives the [character exponent in Theorem 6.1](#proof-3). That exponent kills the residue cycles here; normal lc indices and conductor descent are additional inputs to Theorem 1.1.
+
 First trivialize the normalization components over the complex numbers. The remaining tasks are to kill all conductor residue ratios simultaneously and show that the descended form is an actual Cartier generator.
 
 ![From normalization through conductor cycles to slc trivialization](diagrams/slc-descent.en.svg)
@@ -86,6 +88,8 @@ L=\operatorname{lcm}_{0\leq q\leq d-1}L(q,m),\qquad a=mL,
 so every closed walk satisfies $\prod_e r_e^L=1$. Constants chosen along a spanning tree then satisfy $c_i=c_jr_e^L$ on every edge, and the forms $c_i\theta_i^L$ glue. Loops and multiple edges are included. No factor equal to the length of a cycle enters the exponent. [Equations (7.10)–(7.11), p.38][S]
 
 [(7.10)–(7.11) · p. 38][S]
+
+The uniform character exponent is constructed in the [proof of Theorem 6.1](#proof-3). It allows the following node-gluing step without introducing the cycle length into the exponent.
 
 ### 5. Match generators at nodes and extend by S2
 
@@ -158,6 +162,8 @@ For the RC factor, fixed-index boundedness from [Han–Jiang Theorem 1.2, pp.1�
 For the nonabelian boundary-free factors, [UI Lemma 5.2, pp.21–22][UI] supplies the rational-image property needed in Theorem 5.1. Abelian factors have the cohomology rank bound $\binom{2r}{r}$. The action on an integral polarized Hodge structure constrains a character of order $e$ by $\varphi(e)\leq b(r)$; take the least common multiple of the possible orders. Combining this with the RC bound yields $L(n,m)=n!E(n,m)$. [Lemmas 6.5–6.6, pp.32–34][S]
 
 [Lemma 6.6; Theorem 6.1 proof · pp. 33–34][S]
+
+The uniform rank bound comes from the [proof of Theorem 5.1](#proof-2). Return the resulting character exponent to the [cycle step of Theorem 1.1](#proof-1-step-4).
 
 ## 5. Which papers supply which steps
 

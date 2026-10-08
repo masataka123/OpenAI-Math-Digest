@@ -62,6 +62,8 @@ Unprefixed theorem, lemma, section and equation numbers refer to this manuscript
 
 ## 2. Reduction for Theorems 1.1–1.2
 
+**Proof route.** The specified MMP leads to nonvanishing (Theorem 1.2), then to semiampleness (Assumption 2.4). Nonvanishing splits into [positive algebraic dimension](#proof-2) and [algebraic dimension zero](#proof-4); the latter uses [extension from the whole reduced boundary](#proof-3). All three Assumptions 2.2–2.4 remain in force.
+
 First take the MMP endpoint and prove nonvanishing there using Theorem 1.2. Separate the uses of the three premises and track sections of the same adjoint line to the final step.
 
 ![From the three premises to generation on the specified endpoint](diagrams/main-route.en.svg)
@@ -139,7 +141,9 @@ A=K_T+G\ {\rm nef},\qquad
 K_T+tG\ {\rm nef\ and\ klt}\quad(t_0\leq t<1),
 \]
 and a projective crepant dlt modification
-$h:(V,D)\to(T,G)$ with $J=K_V+D=h^*A$. It uses the special-termination arguments of §7 and reduction to ordinary klt programs; it does not add fourfold dlt termination to the premises. Apply the zero-Lelong minimal-metric Lemma 5.1, p.23, inside this interval, add $(1-t)G$, and let $t\to1$ to obtain a zero-Lelong metric on the pullback of $J$.
+$h:(V,D)\to(T,G)$ with $J=K_V+D=h^*A$. It uses the special-termination arguments of §7 and reduction to ordinary klt programs; it does not add fourfold dlt termination to the premises.
+
+Apply the zero-Lelong minimal-metric Lemma 5.1, p.23, inside this interval, add $(1-t)G$, and let $t\to1$ to obtain a zero-Lelong metric on the pullback of $J$.
 
 Lemma 5.1 is proved analytically in §5. Volume-normalized capacity, differentiation of a Monge–Ampère equation and a Bochner estimate retaining its residual term are combined. Equation (89) cancels the residual measure on the same sublevel set; after taking the limit at fixed $t$, the Lelong upper bound (90) contradicts the positive lower bound (93). [pp.25–33][C] This is not a direct application of the projective MM theorem to a nonprojective space.
 
@@ -173,7 +177,9 @@ H^1(V,\mathcal I_D(mJ))
 \hookrightarrow H^1(M,K_M+L_m),\qquad
 L_m\sim_{\mathbb Q}(m-1)L+\{F\}.
 \]
-The injection is low-degree Leray and needs no higher-direct-image vanishing. Zero Lelong numbers and the integrability margin of $\{F\}$ make the multiplier ideal trivial. [DPS hard Lefschetz][DPS] gives
+The injection is low-degree Leray and needs no higher-direct-image vanishing.
+
+Zero Lelong numbers and the integrability margin of $\{F\}$ make the multiplier ideal trivial. [DPS hard Lefschetz][DPS] gives
 $H^0(M,\Omega_M^3\otimes L_m)\twoheadrightarrow H^1(M,K_M+L_m)$.
 Lemma 9.2 kills the source. High powers of the nonzero section on the whole reduced $D$ therefore extend to $V$, contradicting the assumption. [Equations (176)–(179), pp.82–83][C]
 
@@ -210,6 +216,10 @@ If a meromorphic frame exists, write $K_{T_0}\sim_{\mathbb Q}P-N$, with $P,N\geq
 [Theorem 9.4; (180)–(181) · p. 84][C]
 
 ## 6. Which papers supply which steps
+
+<span id="strata-input"></span>
+
+**Auxiliary input in arbitrary dimension.** Lemmas 7.16–7.17 (pp. 58–60) identify actual adjoint lines on normalized lc strata and give an effective comparison across a small dlt step, with strict discrepancy increase over the exceptional locus. These two lemmas have no fourfold restriction and enter [Theorem 3.13 of Kähler abundance](https://masataka123.github.io/OpenAI-Math-Digest/en/papers/kahler-log-abundance/#strata-input). They are distinct from this paper’s conditional fourfold main theorem. [Lemmas 7.16–7.17 · pp. 58–60][C]
 
 | Result | Use | Check performed |
 |---|---|---|

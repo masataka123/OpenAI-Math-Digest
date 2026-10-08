@@ -42,6 +42,8 @@ $$P\sim_{\mathbb Q}A,\qquad\operatorname{Supp}P=\operatorname{Supp}\lfloor B\rfl
 
 ## 2. Theorem 1.1 の証明
 
+**証明の道筋。** 主定理の零小平次元の枝には、[Theorem 6.1 の境界全体の生成](#proof-2)と [Theorem 1.2 の持ち上げ](#proof-3)を順に使う。両者を [本節の第5段階](#proof-1-step-5)へ戻すことで、元の nef 随伴因子の半豊富性に到達する。
+
 仮定された非消滅から有効代表元を取り、正の飯高次元とゼロの場合を分ける。後者で零因子が非零なら、台を保った supported nef model を作り、境界生成と Theorem 1.2 を適用して矛盾を得る。
 
 ![主定理の境界への帰着](diagrams/abundance.ja.svg)
@@ -60,7 +62,9 @@ $\kappa(X,D)\geq1$ では [DHP, Theorem 6.1, p. 43][DHP] のcrepantなordinary Q
 
 ### 3. 収縮の行先が Kähler であることを確保する
 
-ここで射影的なMMP段階の行先がKählerであることは、元の空間の射影性からは得られない。原稿は [DHP, Theorem 7.2, p. 46][DHP] のsupported constructionに沿い、三次元のfloor収縮（Proposition 3.1, p. 9）とその周囲への延長（Proposition 4.3, p. 24）を用意する。後者ではconormal層の消滅と**有限の解析的thickening**を使う。Claim 5.4（pp. 37–42）は降下したBott–Chern類についてnefness、正のHermitian形式を支配するcurrent、全正次元部分空間上の正の最高次交点を確認し、行先のKähler性へつなぐ。これらの解析的収縮の詳細は初稿で全検証した範囲に含めない。
+ここで射影的なMMP段階の行先がKählerであることは、元の空間の射影性からは得られない。原稿は [DHP, Theorem 7.2, p. 46][DHP] のsupported constructionに沿い、三次元のfloor収縮（Proposition 3.1, p. 9）とその周囲への延長（Proposition 4.3, p. 24）を用意する。後者ではconormal層の消滅と**有限の解析的thickening**を使う。
+
+Claim 5.4（pp. 37–42）は降下したBott–Chern類についてnefness、正のHermitian形式を支配するcurrent、全正次元部分空間上の正の最高次交点を確認し、行先のKähler性へつなぐ。これらの解析的収縮の詳細は初稿で全検証した範囲に含めない。
 
 [Propositions 3.1, 4.3・Claim 5.4 · pp. 9, 24, 37–42][K4N]
 
@@ -77,6 +81,8 @@ Proposition 5.1（p. 33）の出力はordinary Q-factorial Kähler dlt四次元�
 [Lemma 5.6・Theorem 6.1・§13 · pp. 43–46, 88–89][K4N]
 
 ## 3. 境界全体を生成する証明
+
+ここで示す結果は **Theorem 6.1**。strata ごとの生成から被約 floor 全体の生成へ進む部分を取り出して説明する。
 
 ここでは Theorem 6.1 の特別な解消を持つ dlt 四次元モデルを扱う。三次元の abundance が与える成分ごとの切断を、実際の留数同型を通じてすべての交差で整合させることが目標である。
 
@@ -106,6 +112,8 @@ Proposition 9.2（pp. 64–65）は点から三次元strataまで帰納する。
 
 [Lemma 9.1・Proposition 9.2 · pp. 63–65][K4N]
 
+得た全 floor の生成性を [Theorem 1.1 の第5段階](#proof-1-step-5)で使い、[次節の持ち上げ](#proof-3)の仮定を満たす。
+
 ## 4. Theorem 1.2 の証明
 
 Theorem 1.2 では任意次元の標準的な dlt 対に戻る。前節の特別な解消を追加仮定せず、全被約台 $S$ 上の生成性から周囲の切断数が増大することを示す。有限次数ごとの障害を消すため、root 近傍・split residue・射影的パラメータ上の vanishing をつなぐ。
@@ -130,7 +138,9 @@ $$g_*(I^j/I^{j+k+1})\longrightarrow g_*(I^j/I^{j+k})\quad\text{surjective}\qquad
 
 ### 3. 射影的な底で ample line からの写像を消す
 
-[SS, Theorem 16.3.10, 印刷p. 734／章PDF p. 16][SS] のvanishingを実際のfiltered componentへ移す比較がLemma 11.2（pp. 80–81）である。その後、Corollary 11.3（pp. 81–82）は射影的パラメータ空間上で
+[SS, Theorem 16.3.10, 印刷p. 734／章PDF p. 16][SS] のvanishingを実際のfiltered componentへ移す比較がLemma 11.2（pp. 80–81）である。
+
+その後、Corollary 11.3（pp. 81–82）は射影的パラメータ空間上で
 
 $$\operatorname{Hom}(N,\ker\sigma)=0,\qquad\sigma:F_0\mathcal M^1\otimes T_T\longrightarrow\operatorname{gr}^F_1\mathcal M^1$$
 
@@ -140,7 +150,9 @@ $$\operatorname{Hom}(N,\ker\sigma)=0,\qquad\sigma:F_0\mathcal M^1\otimes T_T\lon
 
 ### 4. 任意の指定点で障害を消す
 
-短い次数が持ち上がると仮定すると、現在の接続準同型はLaurent graded algebra上の次数 $k$ の導分 $\delta_k$ になる（Lemma 12.1, pp. 82–83）。Lemma 12.2（pp. 84–85）のadjugate identityは、パラメータ変換のJacobianの**逆行列を取らず**に、導分のbase座標上の値からsymbol kernelへの写像を作る。任意に指定した $t_*$ 上で非分岐となる射影的な座標冪被覆と一つのcompact SNC graphをProposition 10.5（pp. 73–74）で用意する。§12.3（pp. 86–87）ではample lineからkernelへのこの写像をvanishingでゼロにし、$t_*$ で降下する。$t_*$ は任意なので、特殊な台の障害も消える。
+短い次数が持ち上がると仮定すると、現在の接続準同型はLaurent graded algebra上の次数 $k$ の導分 $\delta_k$ になる（Lemma 12.1, pp. 82–83）。Lemma 12.2（pp. 84–85）のadjugate identityは、パラメータ変換のJacobianの**逆行列を取らず**に、導分のbase座標上の値からsymbol kernelへの写像を作る。任意に指定した $t_*$ 上で非分岐となる射影的な座標冪被覆と一つのcompact SNC graphを
+
+Proposition 10.5（pp. 73–74）で用意する。§12.3（pp. 86–87）ではample lineからkernelへのこの写像をvanishingでゼロにし、$t_*$ で降下する。$t_*$ は任意なので、特殊な台の障害も消える。
 
 [Proposition 10.5・Lemmas 12.1–12.2・§12.3 · pp. 73–74, 82–87][K4N]
 
@@ -150,7 +162,13 @@ $$\operatorname{Hom}(N,\ker\sigma)=0,\qquad\sigma:F_0\mathcal M^1\otimes T_T\lon
 
 [§§12.3–12.4 · pp. 87–88][K4N]
 
+持ち上げから得た切断数の増大を [主定理の第5段階](#proof-1-step-5)へ戻し、小平次元0の反証仮定と衝突させる。
+
 ## 5. どの論文が、どの段階を担うか
+
+<span id="torsion-free-input"></span>
+
+**他論文へ渡す二つの結果。** Theorem 1.1 は [Conditional Kähler の Assumption 2.4](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/conditional-kahler-fourfolds/#proof-1-step-3)として非消滅の後に使われる。一方、Lemma 7.1（pp. 51–52）は lc 対が floor の外で klt であり、実際の随伴倍が連結ファイバーをもつ射の底から来る場合の $R^1 f_*\mathcal O_T(-\lfloor G\rfloor)$ の torsion-freeness で、[Kähler abundance の Lemma 4.3](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/kahler-log-abundance/#strata-input)へ渡る。後者は四次元主定理の適用ではない。 [Theorem 1.1 · p. 3; Lemma 7.1 · pp. 51–52][K4N]
 
 - **[HLL]** Theorem 4.1（v2, pp. 17–18）：Q-factorial Kähler klt対の正の飯高次元での半豊富性。四次元以下では無条件。K4N Proposition 5.2（p. 34）で使用。
 - **[DHP]** Theorem 6.1（v3, p. 43）とTheorem 7.2（p. 46）：crepant dltモデルとsupported四次元プログラム。K4N §§5.1, 5.3で使用。後者のfloor収縮・行先のKähler性はK4N §§3–4・Claim 5.4の構成と合わせて説明する。

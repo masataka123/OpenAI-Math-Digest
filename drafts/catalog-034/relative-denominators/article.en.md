@@ -8,6 +8,8 @@ For lc-trivial fibrations with total dimension at most four, the manuscript unif
 
 ### Theorem 1.1 ([RD], p. 2)
 
+**Exact presentation and moduli denominators**
+
 Fix a finite set $\Phi\subset[0,1]\cap\mathbb Q$ and an integer $1\le d\le4$. There are positive integers $p_0\mid p$, with $p_0$ clearing $\Phi$, and a rational DCC set $\mathcal B\subset[0,1]$, depending only on $d,\Phi$. Suppose $(X,B)$ is a projective complex lc pair of dimension $d$ with $B\ge0$ and coefficients in $\Phi$, and $f:X\to Z$ is a contraction onto a positive-dimensional normal projective base, with
 
 $$
@@ -29,6 +31,8 @@ The bound concerns the **chosen exact presentation**, not every rationally linea
 
 ### Proposition 6.1 ([RD], pp. 15–17)
 
+**The full function field of a big base**
+
 If, in addition, $D$ is big, there is $m=m(d,\Phi)>0$ such that for every positive multiple $l\in m\mathbb Z_{>0}$ the complete system
 
 $$
@@ -40,6 +44,8 @@ is nonempty and its section ratios generate exactly $\mathbb C(Z)\subset\mathbb 
 [Proposition 6.1 · pp. 15–17][RD]
 
 ### Proposition 7.1 ([RD], p. 17; proof pp. 17–21)
+
+**Principal multiples over a rationally connected base**
 
 Fix $1\le e\le4$, a rational DCC set $I\subset[0,1]$, and an integer $p>0$. Let $Z$ be a normal projective complex variety of dimension $e$ with a rationally connected smooth projective resolution. Assume $(Z,B+M_Z)$ is generalized klt, $B\ge0$ has coefficients in $I$, and $\mathbf M$ is rational b-nef with $p\mathbf M$ b-Cartier. There is $\ell=\ell(e,I,p)>0$ such that
 
@@ -71,6 +77,8 @@ Unprefixed numbers refer to this manuscript [RD]. The principal external inputs 
 - [Bir, Theorem 1.7 · boundedness][Bir]
 
 ## 2. Theorem 1.1: exact presentation and special-fibre residues
+
+**Proof route.** Theorem 1.1 fixes an exact presentation and moduli denominators. The applications split into Proposition 6.1, recovering the [full function field of a big base](#proof-2), and Proposition 7.1 / Corollary 7.2, giving [principal multiples over a rationally connected base](#proof-3).
 
 Fix an exact presentation in degree $p_0$ on the generic fibre, then prove integrality of $pM_W$ at each prime of a smooth base model. The local denominator is detected by a cyclic character on residues along the whole special fibre.
 
@@ -192,6 +200,10 @@ $$
 [Corollary 7.2, (7.2) · p. 21][RD]
 
 ## 5. Which papers supply which steps
+
+<span id="fourfold-applications"></span>
+
+**Separate the uses in Fourfold Iitaka.** The exact presentation of [Theorem 1.1](https://masataka123.github.io/OpenAI-Math-Digest/en/papers/relative-denominators/#theorem-1-1) and the complete systems of [Proposition 6.1](https://masataka123.github.io/OpenAI-Math-Digest/en/papers/relative-denominators/#proof-2) enter [the final effectivity step](https://masataka123.github.io/OpenAI-Math-Digest/en/papers/effective-log-iitaka-fourfolds/#proof-3). Principal multiples over rationally connected bases from [Proposition 7.1](https://masataka123.github.io/OpenAI-Math-Digest/en/papers/relative-denominators/#proof-3) instead enter the index bound in Lemma 4.6 of that paper (pp. 15–16).
 
 | Input | Use | Verification |
 |---|---|---|

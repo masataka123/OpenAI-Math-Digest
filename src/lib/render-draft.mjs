@@ -31,5 +31,6 @@ export async function renderDraft(source,{lang,paperId,base,diagramSource,sectio
  html=html.replace(/<table>/g,'<div class="digest-table-wrap" tabindex="0"><table class="digest-table">').replace(/<\/table>/g,'</table></div>');
  html=html.replace(/<p>\s*\$\$([\s\S]*?)\$\$\s*<\/p>/g,'<div class="math-display">$$$$$1$$$$</div>');
  html=html.replace(/href="(sources\.json|status\.md)"/g,(_,file)=>`href="https://github.com/masataka123/OpenAI-Math-Digest/blob/main/drafts/catalog-034/${paperId}/${file}"`);
+ html=html.replaceAll('href="https://masataka123.github.io/OpenAI-Math-Digest/',`href="${base}`);
  return articleStructure(html,metadata.headings.filter(h=>h.depth===2),sectionIds);
 }

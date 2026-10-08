@@ -37,6 +37,8 @@ $\mathcal O_X(\lfloor mD\rfloor)$ は階数1反射的因子層であり、$mD$ �
 
 ## 2. Theorem 1.1 の証明：構造的帰着
 
+**証明の道筋。** まず構造帰着の分岐を整理し、残る難所を [鎖・jet・Frobenius の評価](#proof-2)で排除する。[最後の主定理の証明](#proof-3)で、得た構造と相対有効系を合わせ、係数集合・体・次数を揃える。
+
 Theorem 1.1 の指数問題を、一般型の同変ファイバーと可算な双自己写像群を持つ terminal 四次元多様体へ帰着する。構造的な場合分けのうち、相対分母を使う箇所では零境界の標準指数を保つことが要点になる。
 
 ![標準指数の構造的帰着](diagrams/reduction.ja.svg)
@@ -60,6 +62,10 @@ canonicalの場合は指数を変えないcrepant terminalizationを取る。も
 [Lemma 4.7 · pp. 16–17][Ufour]
 
 ## 3. Theorem 1.1 の証明：残る高指数の排除
+
+<span id="chain-input"></span>
+
+本節で使う鎖の補題のうち Lemma 5.1、Corollary 5.2、Lemma 5.4 は任意次元の道具として、[Uniform Iitaka の高指数排除](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/uniform-pluricanonical-iitaka/#proof-3)にも渡る。供給するのは被覆族・鎖・葉の評価であり、本稿の四次元主定理を一般次元へ適用するわけではない。
 
 残余の場合に指数 $r$ が非有界と仮定する。標準被覆 $\pi:Y\to V$ の Seshadri 下界と、対角積 $Z_t=Y^t/\mu_{r,\mathrm{diag}}$ の上界を、射影と両立する鎖の葉を介して比較する。
 
@@ -135,7 +141,7 @@ $Z$ が点なら $D'\sim_{\mathbb Q}0$ である。非kltは [JL, Corollary 1.7,
 
 ## 5. どの論文が、どの段階を担うか
 
-- **[LA]** Theorem 11.1（p. 73）、Theorem 1.1（p. 1）：Ufour §10（p. 48）の定性的非消滅。§7のFrobenius法への参照は別の方法上の関係。
+- **[LA]** Theorem 11.1（p. 73）、Theorem 1.1（p. 2）：Ufour §10（p. 48）の定性的非消滅。§7のFrobenius法への参照は別の方法上の関係。
 - **[SL]** Theorem 1.2（p. 2）：Ufour Theorem 2.1・Proposition 2.2（pp. 6–7）のnefモデルの半豊富性。Fourfold nonvanishingの主定理をこの命題の入力として追加しない。
 - **[RD]** Theorem 1.1、Propositions 6.1, 7.1（pp. 2, 15, 17）：Ufour §3（pp. 8–9）。前二者は有効系、最後はLemma 4.6の有理連結な底上の指数制御。
 - **[CT]** Theorem 1.1（arXiv v2, p. 2）：pseudo-effectiveなNQC lc一般化四次元対のflip停止。Ufour Proposition 2.2ではnefデータゼロとして適用する。定理の記述と適用条件を照合した。

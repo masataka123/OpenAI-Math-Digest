@@ -9,11 +9,14 @@ function headingKind(text) {
  return 'proof';
 }
 
-function wrapSteps(body, className) {
+function wrapSteps(body, className, idForStep=()=>null) {
  const first = body.search(/<h3\b/);
  if (first < 0) return body;
  return body.slice(0,first) + body.slice(first).split(/(?=<h3\b)/).filter(Boolean)
-  .map(step => `<section class="${className}">${step}</section>`).join('\n');
+  .map((step,index) => {
+   const id=idForStep(step,index);
+   return `<section class="${className}"${id?` id="${attribute(id)}"`:''}>${step}</section>`;
+  }).join('\n');
 }
 
 export function articleStructure(html,headingData,sectionIds=[]) {
@@ -42,14 +45,24 @@ export function articleStructure(html,headingData,sectionIds=[]) {
   const aliases=[oldSlug,`section-${index+1}`].filter((id,i,all)=>id!==slug&&all.indexOf(id)===i);
   const anchor=aliases.map(id=>`<span class="legacy-anchor" id="${attribute(id)}" aria-hidden="true"></span>`).join('');
   let body=chunk.slice(match[0].length),className='paper-section';
-  if(kind==='results'){className+=' article-prose';body=wrapSteps(body,'theorem-statement');}
+  if(kind==='results'){
+   className+=' article-prose';
+   body=wrapSteps(body,'theorem-statement',step=>{
+    const heading=step.match(/^<h3\b[^>]*>([\s\S]*?)<\/h3>/)?.[1]??'';
+    const result=plain(heading).match(/^(Theorem|Corollary|Proposition|Lemma|Assumption)\s+(\d+(?:\.\d+)+)\b/i);
+    if(!result)return null;
+    const id=`${result[1].toLowerCase()}-${result[2].replaceAll('.','-')}`;
+    // Preserve existing Markdown IDs, including a heading already using this exact ID.
+    return html.includes(`id="${id}"`)?null:id;
+   });
+  }
   else if(kind==='diagram-sources')className='figure-key';
   else if(kind==='sources')className+=' article-prose';
   else if(kind==='proof'){
    className+=' proof-section';
    const figureEnd=body.lastIndexOf('</figure>');
    const end=figureEnd<0?0:figureEnd+'</figure>'.length;
-   body=body.slice(0,end)+`<div class="article-prose proof-explanation">${wrapSteps(body.slice(end),'proof-step')}</div>`;
+   body=body.slice(0,end)+`<div class="article-prose proof-explanation">${wrapSteps(body.slice(end),'proof-step',(_,i)=>`${slug}-step-${i+1}`)}</div>`;
   }
   headings.push({depth:2,slug,text:plain(title),html:title});
   return `${anchor}<section id="${slug}" class="${className}"><h2>${title}</h2>${body}</section>`;

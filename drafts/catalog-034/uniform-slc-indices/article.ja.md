@@ -50,6 +50,8 @@ f^*\theta=c\theta\quad\Longrightarrow\quad c^{L(n,m)}=1
 
 ## 2. Theorem 1.1 の証明
 
+**証明の道筋。** [Theorem 5.1 の Hodge rank 評価](#proof-2)から、追加の因子別の議論を介して [Theorem 6.1 の指標指数](#proof-3)を得る。その指数を本節の留数の閉路に使い、normal lc 指数・conductor 降下と合わせて Theorem 1.1 を閉じる。
+
 まず複素数体上で正規化成分を自明化する。残る問題は、conductorの枝における留数比を同時に消し、降下した形式が実際のCartier生成元になることを示すことである。
 
 ![正規化からconductorの閉路を経たslc自明化](diagrams/slc-descent.ja.svg)
@@ -89,6 +91,8 @@ a=mL
 とすれば、全閉路について$\prod_e r_e^L=1$である。全域木に沿って定数$c_i$を選ぶと$c_i=c_jr_e^L$がすべての辺で成立し、$c_i\theta_i^L$が貼り合う。自己ループ・多重辺もこの議論に含まれる。閉路長を冪に掛けないため、成分数への依存が生じない。[式(7.10)–(7.11)、p.38][S]
 
 [(7.10)–(7.11) · p. 38][S]
+
+ここで使う一様な指標指数の構成は [Theorem 6.1 の証明](#proof-3)に分ける。これによって、閉路の長さによらず次の node での貼り合わせへ進める。
 
 ### 5. nodeで生成元を合わせ、S2で延長する
 
@@ -163,6 +167,8 @@ RC因子は[Han–Jiang Theorem 1.2、pp.1–2][HJ]のfixed-index有界性を経
 境界なしの非abelian因子では[UI Lemma 5.2、pp.21–22][UI]の有理像の性質を使い、Theorem 5.1を適用する。abelian因子には$\binom{2r}{r}$というcohomology rank上界がある。整係数のpolarized Hodge構造への作用を通じて、固有値の位数$e$に$\varphi(e)\leq b(r)$を課し、可能な$e$の最小公倍数を取る。これをRC因子の指数と合わせると$L(n,m)=n!E(n,m)$が得られる。[Lemmas 6.5–6.6、pp.32–34][S]
 
 [Lemma 6.6; Theorem 6.1 proof · pp. 33–34][S]
+
+この rank の一様上界は [Theorem 5.1 の証明](#proof-2)から来る。得た指標指数を [Theorem 1.1 の閉路の処理](#proof-1-step-4)へ戻す。
 
 ## 5. どの論文が、どの段階を担うか
 

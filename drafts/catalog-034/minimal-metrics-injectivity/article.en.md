@@ -46,6 +46,8 @@ Unprefixed theorem, lemma, section and equation numbers refer to this manuscript
 
 ## 2. Proof of Theorem 1.1
 
+**Proof route.** The zero-Lelong metric theorem and [interior injectivity, Theorem 1.2](#proof-2), are independent results. [Corollary 4.1](#proof-3) uses the metric theorem with existing nonvanishing and semiampleness criteria.
+
 Put $N=\pi^*(K_H+\Theta)$ and $n=\dim V$. Assuming positive Lelong number, replace an extremal section with a fixed twist by a section having the same value at the chosen point but smaller mass.
 
 ![Extremal sections with a fixed twist force zero Lelong numbers](diagrams/metric.en.svg)
@@ -127,6 +129,8 @@ The continuous map $\kappa_k$ of Proposition 3.3 kills the closure of exact form
 
 [Lemmas 2.1, 3.2; Proposition 3.3; (3.7)–(3.8) · pp. 5, 13–16][MM]
 
+This step supplies primitives bounded uniformly for the varying weights. The [Bochner estimate](#proof-2-step-3) kills the image norm; only the [comparison with a fixed Hilbert space](#proof-2-step-4) kills the original ordinary cohomology class.
+
 ### 3. Combine Bochner estimates with the uniform primitive
 
 Project a smooth representative $\gamma$ of an ordinary kernel class onto $u_k$, orthogonal to the closure of exact forms. Complete-metric cutoffs and the curvature comparison give $\|\bar\partial^*_{0,k}(su_k)\|_{0,k}=O(\sqrt{\varepsilon_k})$. The manuscript also uses cutoffs to place the form in the Hilbert-adjoint domain. Since the class map kills the closure, $\kappa_{0,k}(su_k)=0$; the preceding step gives $\bar\partial v_k=su_k$ with $\sup_k\|v_k\|_{0,k}<\infty$. Hence
@@ -166,6 +170,10 @@ For a nef adjoint on a klt fourfold, [GM] gives semiampleness from a zero-Lelong
 [Theorem 4.3; Corollary 4.1 proof · p. 19][MM] · [GM, Corollary 5.3 · printed p. 499 / PDF p. 23][GM]
 
 ## 5. Which papers supply which steps
+
+<span id="fourfold-input"></span>
+
+**An application using both theorems.** [Proposition 5.1 in Fourfold nonvanishing](https://masataka123.github.io/OpenAI-Math-Digest/en/papers/fourfold-nonvanishing/#proof-2-step-2) combines endpoint metrics from Theorem 1.1 with interior injectivity from Theorem 1.2 to obtain surjectivity of restriction to the whole floor. A nonzero boundary section is supplied separately by the following three-dimensional semi-dlt abundance step.
 
 | Input | Use in the paper | Checking scope |
 |---|---|---|

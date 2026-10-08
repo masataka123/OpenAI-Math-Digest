@@ -6,6 +6,8 @@
 
 ## 1. 主要結果
 
+以下は、前提の Assumption 1.1、最終目標の Theorem 1.2、帰納命題の Theorem 2.13、四つの証明用の道具の順に並ぶ。原典の順序と各結果の適用範囲を保つ。
+
 ### Assumption 1.1 — 対数飯高劣加法性
 
 本稿の仮定は、滑らかな連結複素射影多様体間の連結ファイバーを持つ全射 $f:X\to Y$、零因子を許す被約有効SNC因子 $D_X,D_Y$ について
@@ -82,6 +84,8 @@ Assumption 1.1と $G_j$（$j<n$）を仮定する。$X$ は滑らかな連結コ
 
 ## 2. Theorems 2.13・1.2の証明：次元帰納の全体経路
 
+**証明の道筋。** 最終目標は Theorem 1.2、帰納命題は Theorem 2.13 である。[境界全体の生成](#proof-2)を共通の道具として、[正次元のファイブレーション](#proof-3)と、simple な場合の[有理型非消滅](#proof-4)・[符号付き剛性](#proof-5)を全体図に戻す。
+
 下の次元の $G_j$ を仮定して $G_n$ を示す。代数次元とsimplicityで場合分けし、最後にnefな元のlc随伴因子へ切断の生成を降下する。
 
 ![良い分解から主定理へ降下するTeX証明図](diagrams/decomposition.ja.svg)
@@ -117,6 +121,10 @@ simpleで $a(X)=0$ の場合は、Theorem 6.1で符号を許す標準因子を�
 [Lemma 2.3; Proposition 2.7 · pp. 8–10][P]
 
 ## 3. §§3–4の接続：モデルと被約境界全体の生成
+
+<span id="strata-input"></span>
+
+**strata 上で何を比較するか。** [CGM4 Lemmas 7.16–7.17](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/conditional-kahler-fourfolds/#strata-input)は、実際の随伴線束と、small dlt step の両側の厳密比較を与え、本稿 Theorem 3.13 に入る。さらに [ANV4 Lemma 7.1](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/abundance-after-nonvanishing/#torsion-free-input) の torsion-freeness を本稿 Lemma 4.3 で使い、留数の整合から切断の延長へ進む。これは、後の §7 が ANV4 §§10–12 の持ち上げを使う接続とは別である。 [Theorem 3.13 · pp. 29–30; Lemma 4.3 · p. 74][P]
 
 既知の負部分を収縮する操作と、境界全体に切断を貼り合わせる操作を区別する。前者は実際のnef lineを保ち、後者は下位strataの帰納と留数の整合性から生成を得る。
 
@@ -224,9 +232,7 @@ $$
 
 ## 6. Theorem 7.1とProposition 2.12の証明：符号付き境界からtorsionへ
 
-中間の数値次元 $0<
-u(L)<n$ を、境界を離れるコンパクト変形で排除する。$
-u=0$ と最大次元の場合は別に処理し、得たtorsionからsimpleな場合の帰納命題を回収する。
+中間の数値次元 $0<\nu(L)<n$ を、境界を離れるコンパクト変形で排除する。$\nu=0$ と最大次元の場合は別に処理し、得たtorsionからsimpleな場合の帰納命題を回収する。
 
 ![符号付き境界の持ち上げからtorsionを得るTeX証明図](diagrams/signed.ja.svg)
 

@@ -11,7 +11,7 @@ const sections=[['results',en?'Results':'主要結果'],['induction',en?'Inducti
  <article class="paper-article">
  <nav class="breadcrumbs" aria-label={en?'Breadcrumb':'現在位置'}><a href={base+lang+'/'}>{en?'Fields':'分野一覧'}</a><span aria-hidden="true">/</span><a href={base+lang+'/catalog/034/'}>{en?'Catalogue':'カタログ'} 034</a><span aria-hidden="true">/</span><span aria-current="page">Log abundance</span></nav>
  <header class="family-header">
-  <p class="eyebrow">CATALOGUE 034 · PAPER 04 / 14 <span class="badge">{en?'Overview · First draft':'概説・初稿'}</span></p>
+  <p class="eyebrow">CATALOGUE 034 · PAPER 04 / 14 <span class="badge">{en?'Overview':'概説'}</span></p>
   <h1 lang="en">{p.title}</h1><p class="paper-subtitle">{article.subtitle[lang]}</p><p class="lede">{article.lede[lang]}</p>
   <p class="paper-byline">{en?'Manuscript author':'原稿の著者'}: OpenAI · {p.version} · {p.pages} {en?'pages, including references':'ページ（参考文献を含む）'}</p>
   <a class="button primary" href={laSource}>{en?'Read the manuscript on GitHub':'GitHubで原稿を読む'} ↗</a>
@@ -40,14 +40,21 @@ const sections=[['results',en?'Results':'主要結果'],['induction',en?'Inducti
  </aside>
  {article.proofs.map((proof,index)=><section id={proof.id} class="paper-section proof-section">
   <h2>{index+2}. {proof.title[lang]}</h2><p class="article-prose">{proof.intro[lang]}</p>
-  {proof.statement&&<aside class="theorem-statement article-prose"><h3><a href={laSource}>{proof.statement.label}</a></h3><p>{proof.statement.body[lang]}</p></aside>}
+  {proof.id==='induction'&&<p class="article-prose">{en?'The first step uses ':'第1段階で使う '}<a href="#nonvanishing">{en?'nonvanishing, Theorems 9.1 / 9.6':'非消滅（Theorems 9.1・9.6）'}</a>{en?'; the zero-Iitaka branch uses ':'、小平次元0の枝で使う '}<a href="#boundary">{en?'the boundary criterion, Theorem 3.1':'境界の判定（Theorem 3.1）'}</a>{en?'. The next two diagrams expand these inputs to the induction.':'を後の二つの図で詳しく説明します。両者が以下の帰納法のどこに戻るかを対応させて読みます。'}</p>}
+  {proof.id==='nonvanishing'&&<p class="article-prose">{en?'Read this diagram as ':'この図の読み順は、'}<a href="#nonvanishing-explanation-2">{en?'fixed data':'固定するデータ'}</a> → <a href="#nonvanishing-explanation-3">{en?'the determinant lower bound':'行列式の下界'}</a> → <a href="#nonvanishing-explanation-4">{en?'the upper bound and contradiction':'上界と矛盾'}</a>{en?'. Theorem 9.1 is the comparison tool; applying it to the constructed data gives the conditional nonvanishing step, Theorem 9.6.':'です。Theorem 9.1 は比較の道具であり、構成したデータへの適用が帰納仮定付きの Theorem 9.6 を与えます。'}</p>}
+
+  {proof.statement&&<aside id="theorem-3-1" class="theorem-statement article-prose"><h3><a href={laSource}>{proof.statement.label}</a></h3><p>{proof.statement.body[lang]}</p></aside>}
   <ProofDiagram proof={proof} lang={lang} collection="la"/>
   <div class="article-prose proof-explanation">{proof.parts.map((part,i)=><section id={proof.id+'-explanation-'+(i+1)}>
-   <h3>{part.title[lang]}</h3><p>{part.body[lang]}</p>
+   <h3>{part.title[lang]}</h3>{part.body[lang].split('\n\n').map(paragraph=><p>{paragraph}</p>)}
    {part.formula&&<div class="math-display">{part.formula}</div>}
-   {part.after&&<p>{part.after[lang]}</p>}
+   {part.after&&part.after[lang].split('\n\n').map(paragraph=><p>{paragraph}</p>)}
    <p class="source-line">{part.refs.map((ref,j)=><>{j>0&&<span>·</span>}<a href={ref.url}>{ref.label} ↗</a></>)}</p>
+   {proof.id==='induction'&&i===0&&<p><a href="#nonvanishing">{en?'How Theorem 9.6 is proved':'Theorem 9.6 の証明へ'} →</a></p>}
+   {proof.id==='induction'&&i===2&&<p><a href="#boundary">{en?'The boundary criterion used here':'ここで使う境界の判定へ'} →</a></p>}
   </section>)}</div>
+  {proof.id==='boundary'&&<p class="article-prose">{en?'The conclusion is abundance, not yet the final semiampleness statement. Use it in ':'得た結論を使うのは '}<a href="#induction-explanation-3">{en?'the zero-Iitaka branch of the induction':'帰納法の小平次元0の枝'}</a>{en?' and in ':'と、'}<a href="#nonvanishing-explanation-1">{en?'the signed-representative branch of nonvanishing':'非消滅の符号付き代表元の枝'}</a>{en?'.':'です。ここでの結論は abundance であり、各適用先の追加の議論を経て半豊富性へ進みます。'}</p>}
+  {proof.id==='nonvanishing'&&<p class="article-prose">{en?'Return Theorem 9.6 to ':'Theorem 9.6 を '}<a href="#induction-explanation-1">{en?'step 1 of the main diagram':'全体図の第1段階'}</a>{en?'. Hashizume and Proposition 2.5 then produce good models in the same dimension; induction gives Theorem 11.1.':'へ戻します。Hashizume と Proposition 2.5 によって同じ次元の良いモデルを得て、帰納法を閉じた結果が Theorem 11.1 です。'}</p>}
  </section>)}
  <section id="connections" class="paper-section article-prose">
   <h2>{en?'5. Where the other papers enter':'5. 他の論文と、どこでつながるか'}</h2>
@@ -55,7 +62,18 @@ const sections=[['results',en?'Results':'主要結果'],['induction',en?'Inducti
   <p>{en?'[OI], Corollary 6.2 is stated as LA’s Theorem 1.2. Its only use is Lemma 6.1, with both boundaries zero. If the Albanese image had positive dimension, its resolved Stein base would have nonnegative Kodaira dimension, and the smaller-dimensional fiber would have nonvanishing by induction. Subadditivity would contradict the counterexample.':'[OI] Corollary 6.2 は LA の Theorem 1.2 として記載され、Lemma 6.1 でのみ、両境界が0の場合に使われます。Albanese像が正次元なら、解消したStein底の小平次元は非負で、低次元のファイバーにも帰納法による非消滅があります。劣加法性を適用すると反例の仮定に矛盾します。'}</p>
   <p>{en?'For this specific base of maximal Albanese dimension, the established Hacon–Popa–Schnell Theorem 1.1 supplies the same required inequality, as the LA introduction also records. This alternative covers the application in Lemma 6.1, not the full logarithmic theorem of [OI].':'この底は maximal Albanese dimension をもつため、既存の Hacon–Popa–Schnell Theorem 1.1 でも必要な不等式を得られます。LAの序論もこの代替を明記しています。これは Lemma 6.1 の適用を賄うもので、[OI] の対数的な主張全体を置き換えるという意味ではありません。'}</p>
   <p class="source-line"><a href={refs.oi}>[OI] Corollary 6.2 · pp. 40–41 ↗</a><span>·</span><a href={refs.hps+'#page=2'}>Hacon–Popa–Schnell, Theorem 1.1 · p. 2 ↗</a><span>·</span><a href={laSource}>LA §1 / Lemma 6.1 · pp. 6, 30–31 ↗</a></p>
-  <h3>{en?'Within 034: LA → Schnell':'034内：LA → Schnell'}</h3>
+  <h3 id="tool-9-1">{en?'Within 034: the independent nonvanishing tools':'034内：独立した非消滅の道具'}</h3>
+  <p>{en?'Lemmas 7.1–7.5 control centres and moving components; Theorem 9.1 compares determinant orders for fixed witnesses. Fourfold nonvanishing imports these tools in its §§3, 6–7. This use does not invoke the abundance main theorem.':'Lemmas 7.1–7.5 は中心・動く基底成分を制御し、Theorem 9.1 は固定したデータから行列式の消滅次数を比較します。Fourfold nonvanishing は §§3, 6–7 でこれらを取り出して使います。豊富性の主定理を適用する接続ではありません。'} <a href={base+lang+'/papers/fourfold-nonvanishing/#proof-1'}>{en?'The receiving argument':'利用先の証明'} →</a></p>
+  <h3 id="good-model-outputs">{en?'Within 034: the good-model output':'034内：良いモデルの供給先'}</h3>
+  <p>{en?'Theorem 11.1 supplies the qualitative model before effective degrees are studied. Its uses differ: model existence in Uniform Iitaka, the semiample fibration in Log Iitaka, perturbed klt models in the Hodge-rank argument for slc indices, and nonvanishing in Fourfold Iitaka.':'Theorem 11.1 が供給するのは、有効次数を考える前の定性的なモデルです。Uniform Iitaka ではモデルの存在、Log Iitaka では半豊富なファイブレーション、slc indices では Hodge rank 評価の摂動した klt 対、Fourfold Iitaka では非消滅の段階に使います。'}</p>
+  <ul>
+   <li><a href={base+lang+'/papers/uniform-pluricanonical-iitaka/#proof-1'}>Uniform Iitaka · Theorem 2.1</a></li>
+   <li><a href={base+lang+'/papers/uniform-log-iitaka/#proof-4'}>Log Iitaka · Theorem 2.2 / §8</a></li>
+   <li><a href={base+lang+'/papers/uniform-slc-indices/#proof-2'}>slc indices · Theorem 2.3 / Lemma 5.6</a></li>
+   <li><a href={base+lang+'/papers/effective-log-iitaka-fourfolds/#proof-3'}>Fourfold Iitaka · §10</a></li>
+  </ul>
+  <p>{en?'Kähler abundance instead invokes the full projective induction in its Proposition 2.10, while retaining its own subadditivity assumption.':'Kähler abundance の Proposition 2.10 は、自身の劣加法性の仮定を保って射影的な帰納法全体を使います。'} <a href={base+lang+'/papers/kahler-log-abundance/#proof-1'}>{en?'The projective input':'射影的な入力の位置'} →</a></p>
+  <h3 id="corollary-11-2">{en?'Within 034: LA → Schnell':'034内：LA → Schnell'}</h3>
   <p>{en?'For a smooth projective complex variety $X$ with pseudo-effective $K_X$, Theorem 11.1 applied to $(X,0)$, together with the comparison lemma, gives Corollary 11.2: a Q-factorial klt good model V and an effective q-exceptional comparison on a common resolution. This is the input used by Theorem 3.1 of the Schnell manuscript.':'擬有効な $K_X$ をもつ滑らかな複素射影多様体 $X$ に対し、Theorem 11.1 を $(X,0)$ に適用し、比較補題を合わせると Corollary 11.2 を得ます。ここで供給するのは、$\\mathbb Q$-factorial klt な良いモデル $V$ と、共通解消上の有効な $q$-例外因子の比較式です。Schnell原稿の Theorem 3.1 が受け取る入力はこれです。'}</p>
   <div class="math-display">{String.raw`$$p^*K_X=q^*K_V+E,\qquad E\geq0,\quad q_*E=0,\quad K_V\ \text{semiample}.$$`}</div>
   <p><a href={base+lang+'/papers/schnell-fiber-spaces/#argument'}>{en?'Continue to the mixed-intersection argument in Schnell':'Schnellの混合交点数の議論へ'} →</a></p>

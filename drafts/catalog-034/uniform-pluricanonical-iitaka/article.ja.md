@@ -34,6 +34,8 @@ $$a(d,\Phi)(K_X+B)\sim0$$
 
 ## 2. 同時帰納法の組み立て
 
+**証明の道筋。** 下の次元の指数から [moduli 分母](#proof-2)、下の次元の飯高写像から [高指数列の排除](#proof-3)へ進む。これを [normal lc 指数](#proof-4)へ戻して Theorem 1.2 を得てから、[全飯高体の回収](#proof-5)で Theorem 1.1 を得る。
+
 $I_j$ を Theorem 1.1 の次元 $j$ の命題、$L_j$ を Theorem 1.2 の次元 $j$ の全有理 DCC 係数集合に対する命題とする。$K_n$ は $n$ 次元の零境界 klt の指数命題、すなわち $K_V\sim_{\mathbb Q}0$ を満たす射影 klt $V$ に共通の $a_nK_V\sim0$ を与える主張である。次元0を出発点として、$I_j,L_j$（$j<n$）から $K_n,L_n,I_n$ をこの順で証明する。
 
 ![低次元の指数と飯高写像から、同次元の指数・飯高写像を得る二つの経路](diagrams/induction.ja.svg)
@@ -83,6 +85,8 @@ Lemma 4.3 は、LA を用いて退化を相対的に半豊富な dlt モデル�
 [Lemma 4.3、§4.4、pp. 14–17][U]
 
 ## 4. 高指数列を排除する証明
+
+本節は $K_n$ に至る高指数排除の段階である。説明は [scalar・Frobenius 評価](#proof-3-step-1)（1–2）、[鎖の次数と次数1の忘却](#proof-3-step-3)（3–5）、[有理 flow による矛盾](#proof-3-step-6)（6）の三つのまとまりで読む。
 
 Proposition 5.1 の構造帰着後に残る、指数 $r\to\infty$ の標準被覆 $\pi:Y\to V$ を考える。$G=\mu_r$、$Z_t=Y^t/G_{\mathrm{diag}}$、$\theta_t:Z_t\to V^t$、$P_t=\theta_t^*(L^{\boxplus t})$ と置く。以下は複素数体上の議論であり、局所 flow を使う前提でもある。
 
@@ -137,6 +141,8 @@ $$E_z(y)=\mathrm{ev}\bigl(E_z(u),\xi(u,y)\bigr).$$
 ## 5. normal lc 指数へ戻す証明
 
 零境界の $K_n$ が得られたので、$L_{<n}$ と合わせて $L_n$ を証明する。図は non-klt の正次元の Mori 底の場合を中心に示す。klt の帰着と底が点の log Fano の場合は Proposition 3.2 の別の場合分けである。
+
+図に入る前の二つの枝もここで処理する。klt の場合は零境界の指数 $K_n$ から Xu の klt 帰納定理を使う。Mori 底が点なら、有界補完 $B^+\geq B$ を取り、$B^+-B$ の有効性と数値的自明性から差を0にする。以下の留数・norm は残る non-klt・正次元底の枝である。 [Proposition 3.2 · pp. 6–8][U]
 
 ![係数1成分へのadjunctionと有界Stein次数からnormで降ろす](diagrams/normal-lc.ja.svg)
 

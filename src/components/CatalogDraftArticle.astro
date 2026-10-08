@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import {renderDraft} from '../lib/render-draft.mjs';
+import {articleNavigationLabel} from '../data/catalog-034-navigation.mjs';
 import {paperSource} from '../data/site.mjs';
 import '../styles/paper.css';
 import '../styles/draft-article.css';
@@ -20,7 +21,7 @@ const article=await renderDraft(articles[`../../drafts/catalog-034/${paper.id}/a
    <p class="paper-byline">{en?'Manuscript author':'原稿の著者'}: OpenAI · {paper.version} · {paper.pages} {en?'pages, including references':'ページ（参考文献を含む）'}</p>
    <a class="button primary" href={paperSource(paper)}>{en?'Read the manuscript on GitHub':'GitHubで原稿を読む'} <span aria-hidden="true">↗</span></a>
   </header>
-  <nav class="contents" aria-label={en?'Article contents':'記事内の目次'}>{article.headings.map(h=><a href={'#'+h.slug} set:html={h.html}/>)}</nav>
+  <nav class="contents" aria-label={en?'Article contents':'記事内の目次'}>{article.headings.map(h=><a href={'#'+h.slug}>{articleNavigationLabel(paper.id,h,lang)}</a>)}</nav>
   {article.introHtml&&<div class="article-prose draft-intro" set:html={article.introHtml}/>}
   <div class="draft-body"><Fragment set:html={article.html}/></div>
   <p class="source-note"><a href={base+lang+'/catalog/034/#paper-'+paper.id}>{en?'Back to catalogue 034':'カタログ034の一覧へ戻る'} →</a></p>

@@ -42,6 +42,8 @@ Unprefixed references denote this manuscript. External keys and checked versions
 
 ## 2. Proof of Theorem 1.1
 
+**Proof route.** The zero-Kodaira branch uses [generation on the whole boundary, Theorem 6.1](#proof-2), followed by [supported lifting, Theorem 1.2](#proof-3). Both return to [step 5 here](#proof-1-step-5) to give semiampleness of the original nef adjoint.
+
 Use the assumed nonvanishing to choose an effective representative, and separate positive Iitaka dimension from zero. If its zero divisor is nonzero in the latter case, construct a supported nef model with surviving support; boundary generation and Theorem 1.2 then give a contradiction.
 
 ![Reduction of the main theorem to the boundary](diagrams/abundance.en.svg)
@@ -60,7 +62,9 @@ In the remaining case, let $M=\operatorname{div}(s_0)/m_0$ be the normalized zer
 
 ### 3. Ensure that contraction targets remain Kähler
 
-Kählerness of the targets of projective MMP steps cannot be obtained from projectivity of the original space. Following the supported construction of [DHP, Theorem 7.2, p. 46][DHP], the manuscript prepares threefold floor contractions (Proposition 3.1, p. 9) and their extension to the ambient space (Proposition 4.3, p. 24). The latter uses conormal vanishing and **finite analytic thickenings**. Claim 5.4 (pp. 37–42) verifies nefness of the descended Bott–Chern class, a current dominating a positive Hermitian form, and positive top intersections on every positive-dimensional subspace, thereby obtaining a Kähler target. The full analytic contraction constructions are outside the checks completed for this draft.
+Kählerness of the targets of projective MMP steps cannot be obtained from projectivity of the original space. Following the supported construction of [DHP, Theorem 7.2, p. 46][DHP], the manuscript prepares threefold floor contractions (Proposition 3.1, p. 9) and their extension to the ambient space (Proposition 4.3, p. 24). The latter uses conormal vanishing and **finite analytic thickenings**.
+
+Claim 5.4 (pp. 37–42) verifies nefness of the descended Bott–Chern class, a current dominating a positive Hermitian form, and positive top intersections on every positive-dimensional subspace, thereby obtaining a Kähler target. The full analytic contraction constructions are outside the checks completed for this draft.
 
 [Propositions 3.1, 4.3・Claim 5.4 · pp. 9, 24, 37–42][K4N]
 
@@ -77,6 +81,8 @@ Lemma 5.6 also gives a special projective resolution: its strict boundary and ex
 [Lemma 5.6・Theorem 6.1・§13 · pp. 43–46, 88–89][K4N]
 
 ## 3. Generating the entire boundary
+
+The result here is **Theorem 6.1**. This section isolates the passage from generation on strata to generation on the whole reduced floor.
 
 Work with the dlt fourfold model possessing the special resolution in Theorem 6.1. Threefold abundance supplies sections componentwise. The goal is to make them agree on every intersection through actual residue identifications.
 
@@ -106,6 +112,8 @@ Proposition 9.2 (pp. 64–65) proceeds from points to three-dimensional strata. 
 
 [Lemma 9.1・Proposition 9.2 · pp. 63–65][K4N]
 
+Generation on the whole floor enters [step 5 of Theorem 1.1](#proof-1-step-5) and supplies the hypothesis of [the following lifting argument](#proof-3).
+
 ## 4. Proof of Theorem 1.2
 
 For Theorem 1.2 return to a standard dlt pair in arbitrary dimension. No special resolution from the preceding application is added as a hypothesis. Starting from generation on the entire reduced support $S$, prove growth of ambient sections by connecting root neighborhoods, split residues and vanishing over a projective parameter space.
@@ -130,7 +138,9 @@ A second canonical root and residue give a **split injection** from the obstruct
 
 ### 3. Exclude maps from ample lines on the projective base
 
-Lemma 11.2 (pp. 80–81) supplies the filtered comparison needed to transfer vanishing from [SS, Theorem 16.3.10, printed p. 734 / chapter PDF p. 16][SS]. Corollary 11.3 (pp. 81–82) then gives, on the projective parameter space,
+Lemma 11.2 (pp. 80–81) supplies the filtered comparison needed to transfer vanishing from [SS, Theorem 16.3.10, printed p. 734 / chapter PDF p. 16][SS].
+
+Corollary 11.3 (pp. 81–82) then gives, on the projective parameter space,
 
 $$\operatorname{Hom}(N,\ker\sigma)=0,\qquad\sigma:F_0\mathcal M^1\otimes T_T\longrightarrow\operatorname{gr}^F_1\mathcal M^1$$
 
@@ -140,7 +150,9 @@ for every ample $N$, including torsion in the kernel.
 
 ### 4. Kill the obstruction at an arbitrary prescribed point
 
-Assuming shorter lifting orders, the current connecting map becomes a degree-$k$ derivation $\delta_k$ on the Laurent graded algebra (Lemma 12.1, pp. 82–83). The adjugate identity in Lemma 12.2 (pp. 84–85) turns its values on base coordinates into a map to the symbol kernel **without inverting the Jacobian** of the parameter change. Proposition 10.5 (pp. 73–74) supplies a projective coordinate-power cover, unbranched over an arbitrarily prescribed $t_*$, and one compact SNC graph. Section 12.3 (pp. 86–87) kills the resulting ample-line map by vanishing and descends the result at $t_*$. Since that point was arbitrary, special-support obstructions disappear as well.
+Assuming shorter lifting orders, the current connecting map becomes a degree-$k$ derivation $\delta_k$ on the Laurent graded algebra (Lemma 12.1, pp. 82–83). The adjugate identity in Lemma 12.2 (pp. 84–85) turns its values on base coordinates into a map to the symbol kernel **without inverting the Jacobian** of the parameter change.
+
+Proposition 10.5 (pp. 73–74) supplies a projective coordinate-power cover, unbranched over an arbitrarily prescribed $t_*$, and one compact SNC graph. Section 12.3 (pp. 86–87) kills the resulting ample-line map by vanishing and descends the result at $t_*$. Since that point was arbitrary, special-support obstructions disappear as well.
 
 [Proposition 10.5・Lemmas 12.1–12.2・§12.3 · pp. 73–74, 82–87][K4N]
 
@@ -150,7 +162,13 @@ The order-zero part of the same local identity and the split injection then kill
 
 [§§12.3–12.4 · pp. 87–88][K4N]
 
+Return the resulting growth of sections to [step 5 of the main proof](#proof-1-step-5), contradicting the zero-Kodaira counterexample.
+
 ## 5. Which papers supply which steps
+
+<span id="torsion-free-input"></span>
+
+**Two outgoing results.** Theorem 1.1 supplies [Assumption 2.4 in Conditional Kähler](https://masataka123.github.io/OpenAI-Math-Digest/en/papers/conditional-kahler-fourfolds/#proof-1-step-3) after nonvanishing. Separately, Lemma 7.1 (pp. 51–52) gives torsion-freeness of $R^1 f_*\mathcal O_T(-\lfloor G\rfloor)$ for an lc pair klt off its floor when an actual adjoint multiple comes from the base of a map with connected fibres. It enters [Lemma 4.3 of Kähler abundance](https://masataka123.github.io/OpenAI-Math-Digest/en/papers/kahler-log-abundance/#strata-input); this does not apply the fourfold main theorem in arbitrary dimension. [Theorem 1.1 · p. 3; Lemma 7.1 · pp. 51–52][K4N]
 
 - **[HLL]** Theorem 4.1 (v2, pp. 17–18): semiampleness for Q-factorial Kähler klt pairs of positive Iitaka dimension, unconditional through dimension four. Used in K4N Proposition 5.2 (p. 34).
 - **[DHP]** Theorem 6.1 (v3, p. 43), Theorem 7.2 (p. 46): crepant dlt models and the supported fourfold program, used in K4N §§5.1, 5.3. Its floor contraction and Kähler targets are discussed together with K4N §§3–4 and Claim 5.4.
