@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import CatalogDependencies from './CatalogDependencies.astro';
 import {renderDraft} from '../lib/render-draft.mjs';
 import {fieldsForCatalog,papers} from '../data/site.mjs';
-import {overviewSectionIds,dependencyConfig,overviewThemes,overviewStepConnections,connectionSections,records} from '../data/catalog-033.mjs';
+import {overviewSectionIds,dependencyConfig,overviewThemes,overviewStepConnections,connectionSections,records,paperName,readableHtml} from '../data/catalog-033.mjs';
 import pdfEditions from '../data/pdf-editions.json';
 import '../styles/paper.css';
 import '../styles/draft-article.css';
@@ -16,6 +16,8 @@ const article=await renderDraft(articles[`../../drafts/${directory}/article.${la
  lang,paperId:'overview',catalogId:catalog.id,base,sectionIds:overviewSectionIds,
  diagramSource:stem=>figures[`../../public/diagrams/${directory}/${stem}.svg`],
 });
+article.html=readableHtml(article.html);
+article.ledeHtml=readableHtml(article.ledeHtml);
 // Keep the Markdown's content and legacy anchors while arranging catalog sections.
 const starts=[...article.html.matchAll(new RegExp(`(?:<span class="legacy-anchor"[^>]*><\\/span>)*<section id="(${overviewSectionIds.join('|')})"`,'g'))];
 const sections=Object.fromEntries(starts.map((match,index)=>[match[1],article.html.slice(match.index,starts[index+1]?.index??article.html.length).replace(/<h2>\d+\. /,'<h2>')]));
@@ -39,9 +41,9 @@ const strandHtml=id=>sections[id].replace('class="paper-section proof-section"',
   const connection=records.connections.find(c=>c.id===connectionId);
   if(!connection)return whole;
   const [fromSection,toSection]=connectionSections[connectionId];
-  const label=`${connection.source} → ${connection.target} · ${connection.sourceResult}`;
+  const label=`${paperName(connection.source)} → ${paperName(connection.target)} · ${connection.sourceResult}`;
   const links=`<div class="catalog-step-links"><span>${en?'Connection details':'接続の根拠'}:</span><a href="#connection-${connectionId}">${escape(label)}</a></div>`;
-  const reading=`<p class="source-line"><a href="${paperPath(connection.source)}#${fromSection}">${connection.source} · ${en?'Source result in the overview':'入力結果の概説'} →</a><a href="${paperPath(connection.target)}#${toSection}">${connection.target} · ${en?'Application in the overview':'利用段階の概説'} →</a></p>`;
+  const reading=`<p class="source-line"><a href="${paperPath(connection.source)}#${fromSection}">${paperName(connection.source)} · ${en?'Source result in the overview':'入力結果の概説'} →</a><a href="${paperPath(connection.target)}#${toSection}">${paperName(connection.target)} · ${en?'Application in the overview':'利用段階の概説'} →</a></p>`;
   return open+content+links+reading+close;
  });
 
@@ -63,8 +65,8 @@ const strandHtml=id=>sections[id].replace('class="paper-section proof-section"',
    <section id="overview" class="paper-section">
     <h2>{en?'Three strands of the argument':'議論をつなぐ3つの流れ'}</h2>
     <p class="article-prose">{en?'These groups organize the roles of the arguments. The inventory above retains the official catalogue order. Follow each strand to its diagrams and the explanations immediately after them.':'ここでは議論の役割で3つに分けます。上の論文一覧は公式カタログ順を維持しています。各流れから、引用付きの図とその直後の段階別説明へ進めます。'}</p>
-    <div class="catalog-themes">{overviewThemes.map((theme,i)=><article class="catalog-theme"><p class="eyebrow">0{i+1}</p><h3><a href={'#'+theme.id}>{theme.title[lang]} ↓</a></h3><p class="theme-aim">{theme.question[lang]}</p><p>{theme.body[lang]}</p><ul>{theme.papers.map(short=><li><span>{paperNumber(short)}</span><a href={paperPath(short)}>{short}</a></li>)}</ul></article>)}</div>
-    <aside class="catalog-crossings"><strong>{en?'The connection between the strands':'3つの流れの接続点'}</strong><p>{en?'OI supplies different results to different stages in WV, LA, and KA. LA returns a good model to a consequence in WV. PH and BS have their own arguments; shared Hodge-theoretic language does not by itself establish a direct dependency.':'OIはWV・LA・KAの異なる段階へ、それぞれ別の結果を供給します。LAの良いモデルはWVの帰結に戻ります。PH・BSには固有の議論があり、共通のHodge的用語だけで直接依存を作ることはしません。'}</p></aside>
+    <div class="catalog-themes">{overviewThemes.map((theme,i)=><article class="catalog-theme"><p class="eyebrow">0{i+1}</p><h3><a href={'#'+theme.id}>{theme.title[lang]} ↓</a></h3><p class="theme-aim">{theme.question[lang]}</p><p>{theme.body[lang]}</p><ul>{theme.papers.map(short=><li><span>{paperNumber(short)}</span><a href={paperPath(short)}>{paperName(short)}</a></li>)}</ul></article>)}</div>
+    <aside class="catalog-crossings"><strong>{en?'The connection between the strands':'3つの流れの接続点'}</strong><p>{en?'Orbifold Iitaka supplies different results to different stages in Whole-fiber variation, Log Abundance, and Kähler abundance. Log Abundance returns a good model to a consequence in Whole-fiber variation. Projective Hodge lines and Kähler B-semiampleness have their own arguments; shared Hodge-theoretic language does not by itself establish a direct dependency.':'Orbifold IitakaはWhole-fiber variation・Log Abundance・Kähler abundanceの異なる段階へ、それぞれ別の結果を供給します。Log Abundanceの良いモデルはWhole-fiber variationの帰結に戻ります。Projective Hodge lines・Kähler B-semiamplenessには固有の議論があり、共通のHodge的用語だけで直接依存を作ることはしません。'}</p></aside>
    </section>
    <Fragment set:html={sections['diagram-sources']}/>
    {['main-routes','additional-routes','models','kahler'].map(id=><Fragment set:html={strandHtml(id)}/>)}
@@ -72,7 +74,7 @@ const strandHtml=id=>sections[id].replace('class="paper-section proof-section"',
    <section id="dependencies" class="paper-section article-prose">
     <Fragment set:html={connectionIntro}/>
     <span id="connection-explorer" class="legacy-anchor" aria-hidden="true"></span>
-    <p class="article-prose screen-only">{en?'Choose a manuscript and direction to follow a cited result into its use. Each record links to the pinned source and the relevant proof overview. The initial view shows inputs to WV.':'論文と方向を選び、引用された結果から利用箇所をたどれます。各記録から固定版の原典と概説の該当節へ進めます。最初はWVへの入力を表示しています。'}</p>
+    <p class="article-prose screen-only">{en?'Choose a manuscript and direction to follow a cited result into its use. Each record links to the pinned source and the relevant proof overview. The initial view shows inputs to Whole-fiber variation.':'論文と方向を選び、引用された結果から利用箇所をたどれます。各記録から固定版の原典と概説の該当節へ進めます。最初はWhole-fiber variationへの入力を表示しています。'}</p>
     <CatalogDependencies lang={lang} config={dependencyConfig}/>
     <details class="catalog-audit"><summary>{en?'View the 12 recorded inputs as a table':'記録した12件の入力を表で見る'}</summary><Fragment set:html={connectionTable}/></details>
    </section>

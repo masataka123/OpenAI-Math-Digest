@@ -1,17 +1,17 @@
 \begin{tikzpicture}
-\node[card,text width=4.5cm,minimum height=2.3cm,anchor=west] (s0) at (0,0.0) {\heading{OI 引用する結果}{OI cited result}Corollary 6.2\\[5pt]{\small pp. 40--41}};
-\node[result,text width=4.5cm,minimum height=2.3cm,anchor=west] (t0) at (12.0,0.0) {\heading{LA 034との接続}{LA 033 / 034}Theorem 1.2 $\to$ Lemma 6.1\\[5pt]{\small pp. 6, 30--31}};
+\node[card,text width=4.5cm,minimum height=2.3cm,anchor=west] (s0) at (0,0.0) {\heading{Orbifold Iitaka}{Orbifold Iitaka}\Tx{引用する結果}{Cited result}\\[4pt]Corollary 6.2\\[5pt]{\small pp. 40--41}};
+\node[result,text width=4.5cm,minimum height=2.3cm,anchor=west] (t0) at (12.0,0.0) {\heading{Log Abundance}{Log Abundance}\Tx{034との接続}{033 / 034}\\[4pt]Theorem 1.2 $\to$ Lemma 6.1\\[5pt]{\small pp. 6, 30--31}};
 \draw[edge] (s0.east)--(t0.west);
 \node[reason,text width=5.1cm,align=center,anchor=south] at (8.7,0.22) {\Tx{境界0でAlbanese反例を排除}{Exclude the Albanese counterexample; zero boundary}};
-\node[reason,text width=5.1cm,align=center,anchor=north] at (8.7,-0.22) {\R{OI}{[OI] pp. 40--41}\\\R{LA}{[LA] pp. 6, 30--31}};
-\node[card,text width=4.5cm,minimum height=2.3cm,anchor=west] (s1) at (0,-4.1) {\heading{LA 引用する結果}{LA cited result}Corollary 11.2\\[5pt]{\small pp. 73--74}};
-\node[result,text width=4.5cm,minimum height=2.3cm,anchor=west] (t1) at (12.0,-4.1) {\heading{WV 034との接続}{WV 033 / 034}Corollary 1.3 \Tx{証明}{proof}\\[5pt]{\small pp. 5}};
+\node[reason,text width=5.1cm,align=center,anchor=north] at (8.7,-0.22) {\R{OI}{Orbifold Iitaka}\\ pp. 40--41\\[3pt]\R{LA}{Log Abundance}\\ pp. 6, 30--31};
+\node[card,text width=4.5cm,minimum height=2.3cm,anchor=west] (s1) at (0,-4.8) {\heading{Log Abundance}{Log Abundance}\Tx{引用する結果}{Cited result}\\[4pt]Corollary 11.2\\[5pt]{\small pp. 73--74}};
+\node[result,text width=4.5cm,minimum height=2.3cm,anchor=west] (t1) at (12.0,-4.8) {\heading{Whole-fiber variation}{Whole-fiber variation}\Tx{034との接続}{033 / 034}\\[4pt]Corollary 1.3 \Tx{証明}{proof}\\[5pt]{\small pp. 5}};
 \draw[edge] (s1.east)--(t1.west);
-\node[reason,text width=5.1cm,align=center,anchor=south] at (8.7,-3.8799999999999994) {\Tx{good modelからTajiの仮定を満たす}{Good models provide the hypotheses for Taji}};
-\node[reason,text width=5.1cm,align=center,anchor=north] at (8.7,-4.319999999999999) {\R{LA}{[LA] pp. 73--74}\\\R{WV}{[WV] pp. 5}};
-\node[card,text width=4.5cm,minimum height=2.3cm,anchor=west] (s2) at (0,-8.2) {\heading{OI 引用する結果}{OI cited result}Theorem 1.1 and invariant-base convention\\[5pt]{\small pp. 2--3}};
-\node[result,text width=4.5cm,minimum height=2.3cm,anchor=west] (t2) at (12.0,-8.2) {\heading{CK 前提への対応}{CK Stated premise}Assumption 2.2\\[5pt]{\small pp. 7--8}};
+\node[reason,text width=5.1cm,align=center,anchor=south] at (8.7,-4.58) {\Tx{good modelからTajiの仮定を満たす}{Good models provide the hypotheses for Taji}};
+\node[reason,text width=5.1cm,align=center,anchor=north] at (8.7,-5.02) {\R{LA}{Log Abundance}\\ pp. 73--74\\[3pt]\R{WV}{Whole-fiber variation}\\ pp. 5};
+\node[card,text width=4.5cm,minimum height=2.3cm,anchor=west] (s2) at (0,-9.6) {\heading{Orbifold Iitaka}{Orbifold Iitaka}\Tx{引用する結果}{Cited result}\\[4pt]Theorem 1.1 and invariant-base convention\\[5pt]{\small pp. 2--3}};
+\node[result,text width=4.5cm,minimum height=2.3cm,anchor=west] (t2) at (12.0,-9.6) {\heading{Conditional Kähler models}{Conditional Kähler models}\Tx{前提への対応}{Stated premise}\\[4pt]Assumption 2.2\\[5pt]{\small pp. 7--8}};
 \draw[edge,dashed,draw=amber] (s2.east)--(t2.west);
-\node[reason,text width=5.1cm,align=center,anchor=south] at (8.7,-7.9799999999999995) {\Tx{任意次元class Cの明示された前提}{Explicit arbitrary-dimensional class-C premise}};
-\node[reason,text width=5.1cm,align=center,anchor=north] at (8.7,-8.42) {\R{OI}{[OI] pp. 2--3}\\\R{CK}{[CK] pp. 7--8}};
+\node[reason,text width=5.1cm,align=center,anchor=south] at (8.7,-9.379999999999999) {\Tx{任意次元class Cの明示された前提}{Explicit arbitrary-dimensional class-C premise}};
+\node[reason,text width=5.1cm,align=center,anchor=north] at (8.7,-9.82) {\R{OI}{Orbifold Iitaka}\\ pp. 2--3\\[3pt]\R{CK}{Conditional Kähler models}\\ pp. 7--8};
 \end{tikzpicture}

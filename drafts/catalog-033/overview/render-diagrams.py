@@ -5,11 +5,12 @@ Reads connections.json for every catalogue edge. No shared files are written.
 Requires XeLaTeX and dvisvgm; ordinary site builds use the generated SVGs.
 """
 from pathlib import Path
-import json, re, subprocess, tempfile, html, shutil
+import json, re, subprocess, tempfile, html, shutil, sys
 
 ROOT=Path(__file__).resolve().parent
 DATA=json.loads((ROOT/'connections.json').read_text())
 EDGES={e['id']:e for e in DATA['connections']}
+NAMES={key:p['displayName'] for key,p in DATA['papers'].items()}
 PREAMBLE=r'''\documentclass[border=12pt]{standalone}
 \def\pgfsysdriver{pgfsys-dvisvgm.def}
 \usepackage[dvisvgm]{xcolor}
@@ -65,19 +66,19 @@ def tex(s):
 def catalogue(ids):
     out=[r'\begin{tikzpicture}']
     for i,id in enumerate(ids):
-        e=EDGES[id]; y=-i*4.1
+        e=EDGES[id]; y=-i*4.8
         source=tex(e['sourceResult']).replace(' / ',r' /\allowbreak ')
         target=tex(e['usedAt']).replace('; ',r';\allowbreak ')
         for en,ja in [('initial normalized boundary','初期境界の正規化'),('reused in','再使用：'),('interpolation','補間'),('proof','証明')]:
             target=target.replace(en,r'\Tx{'+ja+'}{'+en+'}')
         tag={'main':('主証明','Main proof'),'corollary':('帰結','Corollary'),'additional':('追加結果','Additional result'),'cross-catalog':('034との接続','033 / 034')}[e['scope']]
         if e['kind']=='premise': tag=('前提への対応','Stated premise')
-        out.append(r'\node[card,text width=4.5cm,minimum height=2.3cm,anchor=west] (s'+str(i)+f') at (0,{y}) '+r'{\heading{'+e['source']+' 引用する結果}{'+e['source']+' cited result}'+source+r'\\[5pt]{\small pp. '+tex(e['sourcePages'])+r'}};')
-        out.append(r'\node[result,text width=4.5cm,minimum height=2.3cm,anchor=west] (t'+str(i)+f') at (12.0,{y}) '+r'{\heading{'+e['target']+' '+tag[0]+'}{'+e['target']+' '+tag[1]+'}'+target+r'\\[5pt]{\small pp. '+tex(e['usedAtPages'])+r'}};')
+        out.append(r'\node[card,text width=4.5cm,minimum height=2.3cm,anchor=west] (s'+str(i)+f') at (0,{y}) '+r'{\heading{'+tex(NAMES[e['source']])+'}{'+tex(NAMES[e['source']])+r'}\Tx{引用する結果}{Cited result}\\[4pt]'+source+r'\\[5pt]{\small pp. '+tex(e['sourcePages'])+r'}};')
+        out.append(r'\node[result,text width=4.5cm,minimum height=2.3cm,anchor=west] (t'+str(i)+f') at (12.0,{y}) '+r'{\heading{'+tex(NAMES[e['target']])+'}{'+tex(NAMES[e['target']])+r'}\Tx{'+tag[0]+'}{'+tag[1]+r'}\\[4pt]'+target+r'\\[5pt]{\small pp. '+tex(e['usedAtPages'])+r'}};')
         style='edge,dashed,draw=amber' if e['kind']=='premise' else 'edge'
         out.append(r'\draw['+style+'] (s'+str(i)+'.east)--(t'+str(i)+'.west);')
         out.append(r'\node[reason,text width=5.1cm,align=center,anchor=south] at '+f'(8.7,{y+.22})'+r' {\Tx{'+LABELS[id][0]+'}{'+LABELS[id][1]+r'}};')
-        out.append(r'\node[reason,text width=5.1cm,align=center,anchor=north] at '+f'(8.7,{y-.22})'+r' {\R{'+e['source']+'}{['+e['source']+'] pp. '+tex(e['sourcePages'])+r'}\\\R{'+e['target']+'}{['+e['target']+'] pp. '+tex(e['usedAtPages'])+r'}};')
+        out.append(r'\node[reason,text width=5.1cm,align=center,anchor=north] at '+f'(8.7,{y-.22})'+r' {\R{'+e['source']+'}{'+tex(NAMES[e['source']])+r'}\\ pp. '+tex(e['sourcePages'])+r'\\[3pt]\R{'+e['target']+'}{'+tex(NAMES[e['target']])+r'}\\ pp. '+tex(e['usedAtPages'])+r'};')
     out.append(r'\end{tikzpicture}')
     return '\n'.join(out)
 
@@ -116,11 +117,11 @@ if __name__=='__main__':
         work=Path(tmp)
         for stem,ids,title in [
             ('main',['c01','c02','c03'],('033の主経路と加法性の入力','Main-route and additivity inputs in 033')),
-            ('additional',['c04','c05','c06'],('WVの追加相対飯高構成への入力','Inputs to WV’s additional relative Iitaka construction')),
+            ('additional',['c04','c05','c06'],('Whole-fiber variationの追加相対飯高構成への入力','Inputs to the additional relative Iitaka construction in Whole-fiber variation')),
             ('models',['c07','c12','p01'],('034のモデル存在と033の帰結','Models in 034 and consequences in 033')),
-            ('kahler',['c08','c09','c10','c11'],('KAの具体的な補助結果への入力','Inputs to specific auxiliary results in KA'))]:
+            ('kahler',['c08','c09','c10','c11'],('Kähler abundanceの具体的な補助結果への入力','Inputs to specific auxiliary results in Kähler abundance'))]:
             report+=render(ROOT/'diagrams',stem,catalogue(ids),title,work)
-        for paper,title in [('whole-fiber-variation',('全ファイバーの降下までの全体像','Overview of whole-fiber descent')),('kahler-b-semiampleness',('安定化から半豊富性までの全体像','Overview from stabilization to semiampleness'))]:
+        for paper,title in ([] if '--catalog-only' in sys.argv else [('whole-fiber-variation',('全ファイバーの降下までの全体像','Overview of whole-fiber descent')),('kahler-b-semiampleness',('安定化から半豊富性までの全体像','Overview from stabilization to semiampleness'))]):
             folder=ROOT.parent/paper/'diagrams'
             report+=render(folder,'overview',(folder/'overview.tikz').read_text(),title,work)
-    (ROOT/'diagram-checks.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+    (ROOT/('catalog-label-checks.json' if '--catalog-only' in sys.argv else 'diagram-checks.json')).write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')

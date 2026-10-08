@@ -41,3 +41,9 @@ node drafts/catalog-033/overview/build-preview.mjs
 - 図の配備先は全体本部で決める。各SVGと同名の `.tex` を同時に配備し、拡大／ダウンロードURLを一致させる。
 - WV・BSには全体図の節を追加したため、従来の草稿から証明節番号が1つ増えている。ナビ・アンカーを最終本文から生成する。
 - 共通CSSの追加は今回不要。正式な分野順、日英切替、AI注意書き、原典確認案内、MIT帰属は共通レイアウトで維持する。
+
+## カタログの表示名（2026-10-09）
+
+- `connections.json` の `papers.*.displayName` を、本文・一覧・接続表示・総括図で用いる。OI/WV等は参照キーとして保持し、公開カタログではOrbifold Iitaka / Whole-fiber variation等へ展開する。034のLAはLog Abundance、KA・CKも034の表示名へ揃える。
+- `CatalogDraftOverview.astro` は見出しID・URLを確定した後に文字と代替説明だけを展開し、旧アンカーを保持する。個別記事内の引用キー・数学的内容はこの処理の対象外。
+- 総括の該当図だけを再生成するときは `python3 drafts/catalog-033/overview/render-diagrams.py --catalog-only` を使う。全8枚のSVGと同名TeXを `public/diagrams/catalog-033/overview/` へ配備する。`catalog-label-checks.json` はこの実行の文字あふれ・リンク数検査。
