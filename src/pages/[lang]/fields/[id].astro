@@ -1,11 +1,52 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
-import {fields, languages, catalogsForField, officialOverview} from '../../../data/site.mjs';
+import {fields, languages, catalogsForField, papers, officialOverview} from '../../../data/site.mjs';
 export function getStaticPaths(){return languages.flatMap(lang=>fields.filter(f=>f.catalogIds.length).map(field=>({params:{lang,id:field.id},props:{field}})));}
 const {field}=Astro.props, lang=Astro.params.lang, en=lang==='en', base=import.meta.env.BASE_URL;
 ---
 <Layout lang={lang} title={field.title[lang]} otherPath={`${en?'ja':'en'}/fields/${field.id}/`}>
  <nav class="breadcrumbs" aria-label={en?'Breadcrumb':'現在位置'}><a href={`${base}${lang}/`}>{en?'Fields':'分野一覧'}</a><span aria-hidden="true">/</span><span aria-current="page">{field.title[lang]}</span></nav>
  <header class="family-header"><p class="eyebrow">FIELD GUIDE</p><h1>{field.title[lang]}</h1><p class="official" lang="en">{field.title.en}</p><p class="lede">{field.description[lang]}</p><a href={`${officialOverview}#page=${field.page}`} target="_blank" rel="noopener noreferrer">{en?'Open the official catalogue':'公式カタログと見比べる'} · p. {field.page} ↗</a></header>
- <section><div class="section-head"><h2>{en?'Catalogues in this field':'この分野のカタログ'}</h2><span class="small muted">{en?'Official catalogue numbers':'公式カタログ番号'}</span></div>{catalogsForField(field.id).map(c=><article class="catalog-row"><a class="catalog-number" href={`${base}${lang}/catalog/${c.id}/`}>{c.id}</a><div><h3><a href={`${base}${lang}/catalog/${c.id}/`}>{c.title[lang]}</a></h3><p>{c.description[lang]}</p><p class="small">{en?'Overviews: ':'概説：'}<a href={base+lang+'/papers/log-abundance-characteristic-zero/'}>Log abundance</a> · <a href={base+lang+'/papers/schnell-fiber-spaces/'}>Schnell fiber spaces</a></p></div><span class="badge">{en?'Guide available':'案内あり'}</span></article>)}</section>
+ <section>
+  <div class="section-head"><h2>{en?'Catalogues in this field':'この分野のカタログ'}</h2><span class="small muted">{en?'Official catalogue numbers':'公式カタログ番号'}</span></div>
+  {catalogsForField(field.id).map(c=>{
+   const overviews=c.paperIds.map((id,index)=>({paper:papers.find(p=>p.id===id),position:index+1})).filter(({paper})=>paper?.featured);
+   return <article class="catalog-row field-catalog">
+    <a class="catalog-number" href={`${base}${lang}/catalog/${c.id}/`}>{c.id}</a>
+    <div class="field-catalog-intro">
+     <h3><a href={`${base}${lang}/catalog/${c.id}/`}>{c.title[lang]}</a></h3>
+     <p>{c.description[lang]}</p>
+     <span class="badge">{overviews.length===c.paperIds.length?(en?`All ${overviews.length} overviews available`:`全${overviews.length}篇の概説を掲載`):(en?`${overviews.length} of ${c.paperIds.length} overviews available`:`全${c.paperIds.length}篇中${overviews.length}篇の概説を掲載`)}</span>
+     <p class="field-catalog-summary">{en?'The catalogue synthesis connects the results, proof strategies, and theorems used across these manuscripts.':'総括では、各論文の結果・証明戦略・使用する定理のつながりを図でたどれます。'}</p>
+     <a class="button primary" href={`${base}${lang}/catalog/${c.id}/`}>{en?'Explore the synthesis and connections':'総括・論文間のつながりを見る'}<span aria-hidden="true">→</span></a>
+    </div>
+    <div class="field-catalog-overviews">
+     <div class="field-overview-heading"><h4>{en?'Proof overviews':'各論文の証明概説'}</h4><span class="small muted">{en?'Official catalogue order':'公式カタログ順'}</span></div>
+     <ol class="field-paper-list" role="list">
+      {overviews.map(({paper,position})=><li value={position}><a href={`${base}${lang}/papers/${paper.id}/`}><span class="ordinal" aria-hidden="true">{String(position).padStart(2,'0')}</span><span lang="en">{paper.title}</span><span class="field-paper-arrow" aria-hidden="true">→</span></a></li>)}
+     </ol>
+    </div>
+   </article>;
+  })}
+ </section>
 </Layout>
+
+<style>
+ .field-catalog{grid-template-columns:84px minmax(0,1fr);row-gap:30px}
+ .field-catalog-intro{min-width:0}
+ .field-catalog-intro .badge{margin:12px 0 8px;color:var(--link);border-color:#b7c5b2;background:#edf0e8}
+ .field-catalog-intro .field-catalog-summary{font-size:.95rem;max-width:740px}
+ .field-catalog-intro .button{margin-top:12px}
+ .field-catalog-overviews{grid-column:2;min-width:0}
+ .field-overview-heading{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px 20px;margin-bottom:12px}
+ .field-overview-heading h4{font-size:1.1rem;font-weight:500;margin:0}
+ .field-paper-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:30px;list-style:none;margin:0;padding:0}
+ .field-paper-list li{border-top:1px solid var(--line);min-width:0}
+ .field-paper-list a{display:grid;grid-template-columns:24px minmax(0,1fr) 14px;gap:12px;align-items:baseline;height:100%;padding:17px 0;color:var(--ink);text-decoration:none;font-size:1rem;line-height:1.65;overflow-wrap:anywhere}
+ .field-paper-list a:hover span[lang]{text-decoration:underline;text-underline-offset:4px}
+ .field-paper-list .ordinal{padding:0}
+ .field-paper-arrow{color:var(--link)}
+ @media(max-width:800px){.field-catalog{grid-template-columns:65px minmax(0,1fr)}.field-catalog-overviews{grid-column:1 / -1}}
+ @media(max-width:700px){.field-paper-list{grid-template-columns:1fr}}
+ @media(max-width:520px){.field-catalog{grid-template-columns:52px minmax(0,1fr);row-gap:25px}.field-catalog-intro .button{font-size:13px;padding:13px 16px;gap:14px}.field-paper-list a{font-size:.96rem}}
+</style>
