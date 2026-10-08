@@ -36,12 +36,22 @@
         },
         {
           "title": {
-            "ja": "同じ値を持つ小質量の切断を作る",
-            "en": "Construct a smaller-mass section with the same value"
+            "ja": "固定重みで局所化し誤差を解く",
+            "en": "Localize and solve the error with fixed weights"
           },
           "body": {
-            "ja": "$\\bar\\partial u=\\bar\\partial(\\chi(g_m)s_m),\\quad w_m=\\chi(g_m)s_m-u.$\\\\[3pt]$w_m\\in H^0(V,mN+A),\\quad w_m(p)=s_m(p).$",
-            "en": "$\\bar\\partial u=\\bar\\partial(\\chi(g_m)s_m),\\quad w_m=\\chi(g_m)s_m-u.$\\\\[3pt]$w_m\\in H^0(V,mN+A),\\quad w_m(p)=s_m(p).$"
+            "ja": "$\\bar\\partial u_m=\\bar\\partial(\\chi(g_m)s_m),\\quad w_m=\\chi(g_m)s_m-u_m.$\\\\[3pt]$\\int|u_m|^2e^{-S_m-f(g_m)}\\le C\\varepsilon_m,\\quad C\\text{ は }m\\text{ に依存しない。}$",
+            "en": "$\\bar\\partial u_m=\\bar\\partial(\\chi(g_m)s_m),\\quad w_m=\\chi(g_m)s_m-u_m.$\\\\[3pt]$\\int|u_m|^2e^{-S_m-f(g_m)}\\le C\\varepsilon_m,\\quad C\\text{ independent of }m.$"
+          }
+        },
+        {
+          "title": {
+            "ja": "負の例外成分を降下と延長で越える",
+            "en": "Cross negative exceptional components by descent and extension"
+          },
+          "body": {
+            "ja": "$V\\setminus\\operatorname{Supp}B^-\\ \\longrightarrow\\ H^\\circ\\ \\longrightarrow\\ H\\ \\longrightarrow\\ V.$\\\\[3pt]$w_m\\in H^0(V,mN+A),\\quad w_m(p)=s_m(p).$",
+            "en": "$V\\setminus\\operatorname{Supp}B^-\\ \\longrightarrow\\ H^\\circ\\ \\longrightarrow\\ H\\ \\longrightarrow\\ V.$\\\\[3pt]$w_m\\in H^0(V,mN+A),\\quad w_m(p)=s_m(p).$"
           }
         },
         {
@@ -71,12 +81,26 @@
           ]
         },
         {
-          "ja": "逆曲率評価で局所化。正規な基底への降下とHartogs延長で大域化。",
-          "en": "Localize using inverse curvature; descend to the normal base and extend.",
+          "ja": "固定したカットオフと凸重み。逆曲率積分で定数を一様にする。",
+          "en": "Fix the cutoff and convex weight; inverse curvature gives a uniform bound.",
+          "refs": [
+            [
+              "dem",
+              "[Dem] Thm. 5.1, p. 33"
+            ],
+            [
+              "mm",
+              "Lemmas 2.1, 2.3, pp. 5, 8--9"
+            ]
+          ]
+        },
+        {
+          "ja": "基底のCartier束でHartogs延長。非可積分性が点での値を固定する。",
+          "en": "Hartogs extension in the Cartier bundle downstairs; nonintegrability fixes evaluation.",
           "refs": [
             [
               "mm",
-              "Lemma 2.3, $\\S$2.4, pp. 8--10"
+              "$\\S$2.4, (2.13)--(2.15), pp. 9--10"
             ]
           ]
         },
@@ -111,6 +135,16 @@
         },
         {
           "title": {
+            "ja": "通常の類写像と一様な原始形を準備する",
+            "en": "Prepare the ordinary class map and uniform primitives"
+          },
+          "body": {
+            "ja": "$\\kappa_k:Z^1_{h_k}\\longrightarrow H^1(V,K_V\\otimes F).$\\\\[3pt]$f\\in\\ker\\kappa_k\\ \\Rightarrow\\ \\bar\\partial v=f,\\quad\\|v\\|_k\\le C\\|f\\|_k\\quad(C\\text{ independent of }k).$",
+            "en": "$\\kappa_k:Z^1_{h_k}\\longrightarrow H^1(V,K_V\\otimes F).$\\\\[3pt]$f\\in\\ker\\kappa_k\\ \\Rightarrow\\ \\bar\\partial v=f,\\quad\\|v\\|_k\\le C\\|f\\|_k\\quad(C\\text{ independent of }k).$"
+          }
+        },
+        {
+          "title": {
             "ja": "核の類の調和代表を評価する",
             "en": "Estimate harmonic representatives of a kernel class"
           },
@@ -141,6 +175,16 @@
         }
       ],
       "edges": [
+        {
+          "ja": "有界な局所ポテンシャル、固定被覆のcocycle、指定した一つのseminormを使う。",
+          "en": "Use bounded local potentials, fixed-cover cocycles and one prescribed seminorm.",
+          "refs": [
+            [
+              "mm",
+              "Lemmas 3.1--3.2, Prop. 3.3, pp. 11--16"
+            ]
+          ]
+        },
         {
           "ja": "log-sum重みで縮小性と曲率比較を両立させ、完備計量上でBochnerを使う。",
           "en": "Log-sum weights give contraction and curvature comparison for Bochner.",
