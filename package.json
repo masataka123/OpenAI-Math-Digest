@@ -9,7 +9,8 @@
     "preview": "astro preview",
     "test": "node --test scripts/*.test.mjs",
     "check:links": "node scripts/check-links.mjs",
-    "diagrams": "node scripts/render-proof-diagrams.mjs"
+    "diagrams": "node scripts/render-proof-diagrams.mjs",
+    "diagrams:catalog": "node scripts/render-catalog-diagrams.mjs"
   },
   "dependencies": {
     "astro": "5.13.2",

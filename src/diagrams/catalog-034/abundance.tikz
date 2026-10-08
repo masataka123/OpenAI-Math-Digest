@@ -1,0 +1,32 @@
+\begin{tikzpicture}
+\node[card] (metrics) at (0,0) {\Head{05\quad 計量と内部単射性}{05\quad Metrics and injectivity}
+\Paper{minimal-metrics-injectivity}{Minimal metrics}\\[4pt]
+\Tx{端点の残余束を扱い、境界から延長する。}{Control endpoint residual bundles; extend from the boundary.}};
+\node[card] (tools) at (10,0) {\Head{04\quad 非消滅のための道具}{04\quad Tools for nonvanishing}
+\Paper{log-abundance-characteristic-zero}{LA: Lemmas 7.1--7.5, Thm. 9.1}\\[4pt]
+\Tx{次数・有限被覆・Frobenius比較。}{Degrees, finite covers, Frobenius comparison.}};
+\node[card] (models) at (20,0) {\Head{04\quad 良いモデルの存在}{04\quad Existence of good models}
+\Paper{log-abundance-characteristic-zero}{LA: Corollary 11.2}\\[4pt]
+$p^*K_X=q^*K_V+E,\ E\ge0$.\\
+\Tx{$K_V$ は semiample。}{$K_V$ is semiample.}};
+\node[result] (nv) at (0,-6.4) {\Head{06\quad 四次元の最初の切断}{06\quad A first section (dimension four)}
+\Paper{fourfold-nonvanishing}{Fourfold nonvanishing}\\[4pt]
+\Tx{境界の議論とmoving jetsで非消滅へ。}{Boundary arguments and moving jets give nonvanishing.}};
+\Flow{metrics}{nv}{edge}{\Tx{零Lelong計量・内部単射性\\から制限写像の全射性へ。}{Zero-Lelong metrics and injectivity\\give surjectivity of restriction.}\\[4pt]\Input{metrics-nonvanishing}{Thms. 1.1--1.2}}
+\draw[auxiliary] (tools.south)--(10,-6.4)--(nv.east);
+\node[reason,text width=5.4cm] at (7.15,-3.9) {\Tx{中心・jet・旗を制御し、\\Frobenius比較で矛盾を得る。}{Control centres, jets and flags;\\Frobenius comparison gives a contradiction.}\\[4pt]
+\Input{la-nonvanishing-geometry}{Lemmas 7.1--7.5}\\[3pt]\Input{la-nonvanishing-tool}{Theorem 9.1}};
+\node[result] (schnell) at (20,-6.4) {\Head{08\quad モデル上の交点数へ}{08\quad Intersections on the model}
+\Paper{schnell-fiber-spaces}{Schnell}\\[4pt]
+\Tx{切断の移送と混合交点数で\\$\kappa(X)=\dim Y$ を得る。}{Section transfer and intersections\\give $\kappa(X)=\dim Y$.}};
+\Flow{models}{schnell}{edge}{\Tx{半豊富な標準因子と\\有効例外因子の比較式を供給。}{Supplies semiampleness and\\effective exceptional comparison.}\\[4pt]\Input{la-schnell}{Corollary 11.2}}
+\node[result] (lifting) at (0,-12.8) {\Head{07\quad 四次元の豊富性}{07\quad Fourfold abundance}
+\Paper{lifting-adjoint-sections}{Supported lifting: Corollary 1.4}\\[4pt]
+\Tx{最初の切断と、非消滅後の\\semiamplenessを合わせる。}{Combine a first section with\\semiampleness after nonvanishing.}};
+\Flow{nv}{lifting}{edge}{\Tx{原多様体上で非消滅を供給。}{Supplies nonvanishing on the original variety.}\\[4pt]\Input{nonvanishing-lifting}{Corollary 1.2}}
+\node[card] (after) at (10,-12.8) {\Head{07\quad 非消滅を仮定する段階}{07\quad The nonvanishing premise}
+\Paper{lifting-adjoint-sections}{Supported lifting: Theorem 1.2}\\[4pt]
+\Tx{nefかつ $\kappa\ge0$ の四次元随伴\\$\Longrightarrow$ semiample。}{Fourfold nef adjoint with $\kappa\ge0$\\$\Longrightarrow$ semiample.}};
+\draw[edge] (after.west)--(lifting.east);
+\node[reason,text width=3cm,anchor=south] at (5,-12.5) {\Tx{同じ論文内で合流}{Combine within the same paper}\\[3pt]\Tx{Cor. 1.4, p. 29}{Cor. 1.4, p. 29}};
+\end{tikzpicture}

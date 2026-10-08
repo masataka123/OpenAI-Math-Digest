@@ -1,0 +1,38 @@
+\documentclass[border=12pt]{standalone}
+\def\pgfsysdriver{pgfsys-dvisvgm.def}
+\usepackage[dvisvgm]{xcolor}
+\usepackage{xeCJK}
+\setCJKmainfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf]
+\setCJKsansfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf]
+\usepackage{amsmath,amssymb,tikz,lmodern}
+\usetikzlibrary{arrows.meta,calc}
+\renewcommand{\familydefault}{\sfdefault}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\definecolor{ink}{HTML}{25322F}
+\definecolor{green}{HTML}{246657}
+\definecolor{tint}{HTML}{EEF4F0}
+\definecolor{soft}{HTML}{C6D2CC}
+\definecolor{muted}{HTML}{52615B}
+\definecolor{tool}{HTML}{875832}
+\newif\ifJapanese
+\newcommand{\Tx}[2]{\ifJapanese #1\else #2\fi}
+\newcommand{\Link}[2]{\special{dvisvgm:raw <a xlink:href="#1">}{\setlength{\fboxsep}{0pt}\colorbox{white}{\color{green}\underline{\strut #2}}}\special{dvisvgm:raw </a>}}
+\newcommand{\Paper}[2]{\Link{\csname paper#1\endcsname}{#2}}
+\newcommand{\Input}[2]{\Link{\catalogbase\string##connection-#1}{#2}}
+\newcommand{\Head}[2]{{\color{green}\bfseries\Tx{#1}{#2}}\\[5pt]}
+\tikzset{
+ card/.style={draw=soft,fill=white,rounded corners=2pt,align=left,text=ink,font=\fontsize{11}{15}\selectfont,inner xsep=11pt,inner ysep=10pt,text width=6cm,minimum height=2.4cm},
+ result/.style={card,draw=green,fill=tint,line width=.8pt},
+ reason/.style={align=left,text=muted,font=\fontsize{10}{13}\selectfont,inner sep=0pt,text width=5.2cm},
+ edge/.style={-{Stealth[length=2.4mm]},draw=green,line width=1pt},
+ auxiliary/.style={edge,draw=tool,dashed},
+ premise/.style={edge,densely dotted,line width=1.5pt},
+}
+% Vertical arrows and explanations occupy separate gutters.
+\newcommand{\Flow}[4]{
+ \coordinate (#2start) at ($(#1.south)+(-2.85,0)$);
+ \coordinate (#2end) at ($(#2.north)+(-2.85,0)$);
+ \draw[#3] (#2start)--(#2end);
+ \node[reason,anchor=west] at ($(#2start)!.5!(#2end)+(.55,0)$) {#4};
+}
