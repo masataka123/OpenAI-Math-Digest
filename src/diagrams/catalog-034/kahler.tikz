@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+\node[card,text width=7.7cm] (after) at (0,0) {\Head{14\quad 非消滅後の四次元klt豊富性}{14\quad Fourfold klt abundance after nonvanishing}
+\Paper{abundance-after-nonvanishing}{Kähler after nonvanishing}\\[4pt]
+\Tx{解析的にnef、有効有理境界、$\kappa\ge0$。}{Analytically nef klt adjoint,\\effective rational boundary, $\kappa\ge0$.}\\
+\Tx{射影性・Q-factorialityを仮定しない。}{No projectivity or Q-factoriality assumption.}};
+\node[card,text width=7.7cm] (la) at (16,0) {\Head{04\quad 射影的な良いモデル}{04\quad Projective good models}
+\Paper{log-abundance-characteristic-zero}{LA}\\[4pt]
+\Tx{Prop. 2.5のみでなく、Thm. 9.6と\\$\S10$ までの帰納法全体を使う。}{Uses the full induction through Thm. 9.6\\and $\S10$, not Prop. 2.5 alone.}};
+\node[result,text width=7.7cm,minimum height=3.2cm] (conditional) at (0,-7.8) {\Head{03\quad 条件付き四次元モデル}{03\quad Conditional fourfold models}
+\Paper{conditional-kahler-fourfolds}{Conditional Kähler models}\\[4pt]
+\Tx{strongly $\mathbb Q$-factorial、klt、擬有効随伴。}{Strongly $\mathbb Q$-factorial, klt, pseudo-effective adjoint.}\\
+\textbf{Assumptions 2.2--2.4}\\
+\Tx{劣加法性 + 指定MMP + 非消滅後の豊富性。}{Subadditivity + specified MMP + abundance after NV.}};
+\Flow{after}{conditional}{premise}{\Tx{nef終点で非消滅を得た後に\\semiamplenessを供給。}{Supplies semiampleness after nonvanishing\\has been obtained at the nef endpoint.}\\[4pt]\Input{after-conditional}{Thm. 1.1 $\to$ Assumption 2.4}}
+\node[result,text width=7.7cm,minimum height=3.2cm] (kahler) at (16,-7.8) {\Head{01\quad 全次元の条件付きlc豊富性}{01\quad Conditional lc abundance in all dimensions}
+\Paper{kahler-log-abundance}{Kähler abundance}\\[4pt]
+\Tx{ファイブレーション / simple空間の帰納。}{Induction through fibrations / simple spaces.}\\
+\textbf{Assumption 1.1}\\
+\Tx{対数飯高劣加法性を保持する。}{Logarithmic Iitaka subadditivity is retained.}};
+\Flow{la}{kahler}{edge}{\Tx{射影的な良いモデルと\\有効例外比較を供給。}{Supplies the projective anchor: a good model\\and effective exceptional comparison.}\\[4pt]\Input{la-kahler}{Prop. 2.5 / Thm. 9.6 / \S10}}
+\draw[auxiliary] (conditional.east)--(kahler.west);
+\node[reason,text width=5.8cm,anchor=south] at (8,-7.5) {\Tx{次元制限のない補題だけを使用：\\strata随伴と厳密な比較。}{Uses dimension-free lemmas only:\\strata adjunction and strict comparison.}\\[4pt]\Input{conditional-kahler-strata}{Lemmas 7.16--7.17}};
+\end{tikzpicture}

@@ -34,7 +34,9 @@ npm run check:links
 - `src/components/ReadingGuide.astro`：日英の案内役。画像は `public/images/`。
 - `src/data/site.mjs`：分野、カタログ、論文、参照版の日英共通データ。
 - `src/data/schnell.mjs`：Schnell概説の日英本文・定理記述・依存関係。
-- `src/data/catalog-034.mjs`：全14篇の要点・役割、主な直接接続17件、読解の3分類。
+- `src/data/catalog-034.mjs`：全14篇の要点・役割、主な結果単位の接続23件、読解の3分類。
+- `src/data/catalog-034-synthesis.mjs`：3つの全体図の説明、23件の根拠へのリンク、個別記事の節への導線。
+- `src/diagrams/catalog-034/`：総括用のTikZ図。`npm run diagrams:catalog`で日英6枚のSVG・TeXを生成。
 - `src/components/CatalogDependencies.astro`：同じ接続データから選択式の関係図を表示。JavaScript無効時は全件表示。
 - `research/catalog-034-reading-notes.json`：カタログ整理の出典・確認範囲。
 - `src/data/la.mjs`：LA概説の日英本文・定理記述・外部参照。
@@ -61,7 +63,7 @@ remote: `https://github.com/masataka123/OpenAI-Math-Digest.git`
 
 ## 出典と今後の作業
 
-原稿の参照commit: `adc7f1241b42e322a6451854ab7e4b4c146bf78a`（確認日：2026-10-08）。Schnell本文§§2–4と直接入力の記述・適用箇所を照合しました。LAについては主要結果と核心の証明経路を概説し、選んだ直接入力の記述を照合しました。LAの85ページ全体、外部入力の原証明、034の各証明全体の独立検証は未完了です。全14篇の主結果と選んだ17件の接続を整理しました。専門家の反応を待たず、まずカタログ全体の見取り図を整え、次はUniform pluricanonical Iitaka fibrationsの記事化を優先します。本文は博士院生以上・研究者向けに、証明戦略・帰着・引用付きの図と説明文・論文間の依存表を中心とします。1論文の初稿は最大60分で区切り、下限は設けません。詳細な証明再現は標準要件にしません。詳細は `PROJECT_PLAN.md` と `AGENTS.md` を参照。
+原稿の参照commit: `adc7f1241b42e322a6451854ab7e4b4c146bf78a`（確認日：2026-10-08）。Schnell本文§§2–4と直接入力の記述・適用箇所を照合しました。LAについては主要結果と核心の証明経路を概説し、選んだ直接入力の記述を照合しました。LAの85ページ全体、外部入力の原証明、034の各証明全体の独立検証は未完了です。全14篇の証明概説をSchnellの形式に統一し、034総括ページに3つのTeX全体図と直後の説明、23件の結果単位の接続を整理しました。直接入力・補助結果・帰結・明示仮定を区別しています。今後は読解上の指摘を反映し、この構成を他のカタログにも適用する制作手順を整えます。本文は博士院生以上・研究者向けに、証明戦略・帰着・引用付きの図と説明文・論文間の依存表を中心とします。1論文の初稿は最大60分で区切り、下限は設けません。詳細な証明再現は標準要件にしません。詳細は `PROJECT_PLAN.md` と `AGENTS.md` を参照。
 
 ## Attribution
 

@@ -365,6 +365,39 @@
       "use": "Input 6.3 / Lemma 6.4 · pp. 30–32",
       "kind": "tool",
       "role": "Uses a quasi-étale product cover and stability under further covers to control the character on the volume form factor by factor."
+    },
+    {
+      "id": "nonvanishing-lifting-linear",
+      "from": "fourfold-nonvanishing",
+      "to": "lifting-adjoint-sections",
+      "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Fourfold-nonvanishing-by-minimal-metrics-and-moving-jets-September-27-2026/paper.pdf",
+      "input": "Lemma 8.1 · p. 35",
+      "usedIn": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Lifting-sections-from-the-reduced-support-of-an-adjoint-September-27-2026/paper.pdf",
+      "use": "Theorem 1.3, proof · p. 27",
+      "kind": "tool",
+      "role": "Converts a real effective presentation to a rational one using finite rational linear constraints. This linear-algebra lemma uses no nonvanishing theorem and is distinct from the input to Corollary 1.4."
+    },
+    {
+      "id": "conditional-kahler-strata",
+      "from": "conditional-kahler-fourfolds",
+      "to": "kahler-log-abundance",
+      "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026/paper.pdf",
+      "input": "Lemmas 7.16–7.17 · pp. 58–60",
+      "usedIn": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-4-2026/main.pdf",
+      "use": "Theorem 3.13, proof · pp. 29–30",
+      "kind": "tool",
+      "role": "Supplies actual adjunction on normalized strata and strict discrepancy comparison over the exceptional locus. Both lemmas are dimension-free; the fourfold main theorem is not applied in all dimensions."
+    },
+    {
+      "id": "after-kahler-restriction",
+      "from": "abundance-after-nonvanishing",
+      "to": "kahler-log-abundance",
+      "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Abundance-after-nonvanishing-for-compact-Kahler-fourfolds-September-27-2026/paper.pdf",
+      "input": "Lemma 7.1 · pp. 51–52",
+      "usedIn": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-4-2026/main.pdf",
+      "use": "Lemma 4.3, proof · p. 74",
+      "kind": "tool",
+      "role": "Uses torsion-freeness of the first higher direct image when the pair is klt off its floor and an actual positive adjoint multiple is pulled back from the base, to turn generic-fibre residue matching into extension of restricted sections."
     }
   ],
   "distinctions": [
@@ -375,5 +408,26 @@
     "Conditional Kähler models retains Assumptions 2.2–2.4. The receiving text identifies external inputs from 033 and 056; their complete source-to-use interfaces are not independently checked in this survey.",
     "Unlisted internal and external technical connections remain unexamined; absence of an edge does not mean absence of a dependency."
   ],
-  "nextArticle": "Uniform pluricanonical Iitaka fibrations: its normal lc index theorem supplies two further manuscripts. Maximum 60 minutes for a first overview; no minimum."
+  "nextArticle": "Uniform pluricanonical Iitaka fibrations: its normal lc index theorem supplies two further manuscripts. Maximum 60 minutes for a first overview; no minimum.",
+  "synthesisReview": {
+    "checkedOn": "2026-10-08",
+    "scope": "Integrated the 14 revised overviews. Re-read the source statements and receiving passages for the three newly added connections; not an independent verification of their proofs.",
+    "addedConnections": [
+      "nonvanishing-lifting-linear",
+      "conditional-kahler-strata",
+      "after-kahler-restriction"
+    ],
+    "principalDiagrams": [
+      "abundance",
+      "effective",
+      "kahler"
+    ],
+    "distinctions": [
+      "FN Lemma 8.1 is rational linear algebra, distinct from FN Corollary 1.2 used by Supported lifting Corollary 1.4.",
+      "CGM Lemmas 7.16–7.17 and ANV Lemma 7.1 are dimension-free tools; their fourfold main theorems are not all-dimensional inputs.",
+      "The overview figures select routes; supplementary source-to-use records and prose contain further inputs.",
+      "Relative denominators and ULI share a methodological lineage; this alone is not recorded as a direct theorem input.",
+      "The slc reference in Relative denominators is Jiang–Liu, not the slc index paper in catalogue 034."
+    ]
+  }
 }

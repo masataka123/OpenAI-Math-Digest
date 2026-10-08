@@ -1,8 +1,10 @@
 ---
 import {papers} from '../data/site.mjs';
 import {catalogueNotes,notesById,catalogueDependencies,edgeKinds} from '../data/catalog-034.mjs';
+import {connectionSections} from '../data/catalog-034-synthesis.mjs';
 const {lang}=Astro.props,en=lang==='en';
 const number=id=>String(papers.find(p=>p.id===id).order).padStart(2,'0');
+const article=(id,anchor)=>import.meta.env.BASE_URL+lang+'/papers/'+id+'/#'+anchor;
 ---
 <div class="dependency-explorer" data-language={lang}>
  <div class="dependency-controls" hidden>
@@ -12,10 +14,11 @@ const number=id=>String(papers.find(p=>p.id===id).order).padStart(2,'0');
  <p class="connection-count" aria-live="polite" aria-atomic="true">{en?`${catalogueDependencies.length} selected connections`:`主な接続 ${catalogueDependencies.length}件`}</p>
  <p class="connection-empty" hidden>{en?'No connection in this direction has been recorded in this survey. This does not mean there are no dependencies. See the manuscript summary and reading scope below.':'今回の調査では、この方向の接続をまだ記録していません。「依存なし」を意味しません。下の論文一覧と確認範囲を参照してください。'}</p>
  <ol class="connection-list">
- {catalogueDependencies.map(d=><li class="connection" data-from={d.fromId} data-to={d.toId}>
+ {catalogueDependencies.map(d=><li id={'connection-'+d.id} class="connection" data-from={d.fromId} data-to={d.toId} tabindex="-1">
   <div class="connection-node"><span class="connection-node-label">{en?'INPUT':'供給元'} · {number(d.fromId)}</span><h3><a href={'#paper-'+d.fromId}>{notesById[d.fromId].short}</a></h3><a class="connection-citation" href={d.url}>{d.result} ↗</a></div>
   <div class="connection-arrow"><span class:list={['connection-kind',d.kind]}>{edgeKinds[d.kind][lang]}</span><p>{d.role[lang]}</p><svg viewBox="0 0 200 16" preserveAspectRatio="none" aria-hidden="true"><path d="M0 8 H196 M188 2 L196 8 L188 14"/></svg></div>
   <div class="connection-node connection-target"><span class="connection-node-label">{en?'USED IN':'利用先'} · {number(d.toId)}</span><h3><a href={'#paper-'+d.toId}>{notesById[d.toId].short}</a></h3><a class="connection-citation" href={d.to.url}>{d.use} ↗</a></div>
+  <div class="connection-reading"><a href={article(d.fromId,connectionSections[d.id][0])}>{en?'Source overview':'供給元の概説'} →</a><a href={article(d.toId,connectionSections[d.id][1])}>{en?'Receiving overview':'利用先の概説'} →</a><span>{d.check[lang]}</span><a href={'#connection-'+d.id}>{en?'Link to this connection':'この接続へのリンク'}</a></div>
  </li>)}
  </ol>
  <p class="table-hint">{en?'Arrows run from the supplied result to its use. Numbers 01–14 are positions within catalogue 034. Citations open the manuscript on GitHub.':'矢印は「結果を供給する論文 → 利用先」。01–14は034内の掲載順で、別のカタログ番号ではありません。引用リンクはGitHub上の原稿を開きます。'}</p>
@@ -40,7 +43,22 @@ const number=id=>String(papers.find(p=>p.id===id).order).padStart(2,'0');
     empty.hidden=visible>0;
    };
    controls.hidden=false;
+   const revealHash=()=>{
+    const row=rows.find(row=>'#'+row.id===location.hash);
+    if(!row)return;
+    paper.value=row.dataset.to!;direction.value='incoming';update();
+    requestAnimationFrame(()=>{row.scrollIntoView({block:'start'});row.focus({preventScroll:true});});
+   };
    paper.addEventListener('change',update);direction.addEventListener('change',update);update();
+   window.addEventListener('hashchange',revealHash);revealHash();
+   // A previously followed arrow must still work after changing the filter.
+   document.addEventListener('click',event=>{
+    const anchor=(event.target as Element).closest('a');
+    const href=anchor?.getAttribute('href');
+    if(!href)return;
+    const url=new URL(href,location.href);
+    if(url.origin===location.origin&&url.pathname===location.pathname&&url.hash===location.hash)revealHash();
+   });
   }
  }
 </script>
