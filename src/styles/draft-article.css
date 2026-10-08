@@ -1,1 +1,13 @@
-.draft-body h1{font-size:clamp(1.8rem,4vw,3rem);line-height:1.45;margin:28px 0}.draft-body h2{margin:52px 0 22px;line-height:1.6;scroll-margin-top:110px}.draft-body h3{line-height:1.7;scroll-margin-top:110px}.draft-body>p,.draft-body>blockquote,.draft-body>ul{max-width:900px}.draft-body p{line-height:1.95}.draft-body blockquote{margin:24px 0;padding:10px 22px;border-left:3px solid var(--link);background:#edf0e8;font-size:.9rem}.draft-body blockquote p{margin:4px 0}.draft-body code{font-size:.83em;overflow-wrap:anywhere}.draft-body .digest-table{min-width:850px;table-layout:auto}.draft-body .math-display{padding:8px 0}.draft-body mjx-container[display=true]{overflow-x:auto;overflow-y:hidden;padding:5px 0;max-width:100%}.draft-article .contents{margin:24px 0}.draft-body .proof-figure{margin-left:0;margin-right:0}@media(max-width:700px){.draft-body h2{font-size:1.35rem}.draft-body .proof-diagram svg{min-width:720px}}
+/* Article typography and proof figures share Schnell's paper.css. */
+.draft-body .paper-section>p,.draft-body .paper-section>ul,.draft-body .paper-section>ol{max-width:900px;line-height:1.95}
+.draft-body .paper-section>p{margin:18px 0}
+.draft-body code,.draft-intro code{font-size:.83em;overflow-wrap:anywhere}
+.draft-body .digest-table{min-width:850px;table-layout:auto}
+.draft-body .math-display{max-width:900px}
+.draft-body mjx-container[display=true]{overflow-x:auto;overflow-y:hidden;padding:5px 0;max-width:100%}
+.draft-body blockquote,.draft-intro blockquote{margin:24px 0;padding:14px 22px;border-left:3px solid var(--link);background:#edf0e8;font-size:.9rem;max-width:900px}
+.draft-body blockquote p,.draft-intro blockquote p{margin:4px 0}
+.draft-body .figure-key h2{font:600 14px/1.8 -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif;margin:0 0 12px}
+.draft-body .legacy-anchor{display:block;scroll-margin-top:110px}
+.draft-body .paper-section,.draft-body h3{scroll-margin-top:110px}
+.draft-body .source-line a+a{margin-left:12px}
