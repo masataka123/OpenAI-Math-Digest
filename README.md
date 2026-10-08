@@ -52,7 +52,9 @@ npm run check:links
 
 remote: `https://github.com/masataka123/OpenAI-Math-Digest.git`
 
-`astro.config.mjs` の `site` と `base` はこのremoteに対応しています。Settings → Pages → Source を **GitHub Actions** に設定すると、mainへのpushでテスト・ビルド・内部リンク確認後にデプロイします。この移行作業ではpush・公開は行っていません。
+公開URL: https://masataka123.github.io/OpenAI-Math-Digest/ （日本語トップへ移動。右上で英語に切り替え可能）
+
+2026-10-08に初回公開。`astro.config.mjs` の `site` と `base` はこのremoteに対応しています。Settings → Pages → Source は **GitHub Actions** に設定済みです。mainへのpushでテスト・ビルド・内部リンク確認後にデプロイします。
 
 ## 出典と今後の作業
 
