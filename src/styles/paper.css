@@ -57,12 +57,12 @@
 .figure-key p{margin:8px 0}.figure-key ul{padding-left:20px;margin:10px 0 0}.figure-key li{margin:6px 0}
 .proof-figure{margin:24px 0 34px;max-width:1000px}
 .proof-diagram{overflow-x:auto;border:1px solid var(--line);border-radius:3px;background:#fff;padding:22px}
-.proof-diagram svg{display:block;width:100%;height:auto;min-width:760px}
+.proof-diagram svg{display:block;width:100%;height:auto;min-width:0;max-width:100%}
 .proof-diagram svg a{cursor:pointer}.proof-diagram svg a:focus{outline:2px solid #855337;outline-offset:3px}.proof-diagram svg a:hover{opacity:.65}
 .proof-figure figcaption{font-size:1rem;line-height:1.8;margin:12px 0 8px;color:var(--ink)}
 .diagram-tools{display:flex;flex-wrap:wrap;gap:8px 20px;font:14px/1.8 -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif;color:var(--muted)}
 .diagram-tools span{flex:1 1 460px}
 .proof-explanation>section{margin-top:28px}
-@media(max-width:700px){.theorem-statement{padding:16px 18px}.theorem-statement h3{font-size:1rem}.theorem-name{display:block;font-size:.86rem}.proof-diagram{padding:12px}.proof-diagram svg{min-width:760px}.proof-figure figcaption{font-size:1rem}}
+@media(max-width:700px){.theorem-statement{padding:16px 18px}.theorem-statement h3{font-size:1rem}.theorem-name{display:block;font-size:.86rem}.proof-diagram{padding:12px}.proof-diagram svg{min-width:0;max-width:100%}.proof-figure figcaption{font-size:1rem}}
 
 .catalog-overviews{display:flex;flex-wrap:wrap;gap:14px;margin:24px 0}

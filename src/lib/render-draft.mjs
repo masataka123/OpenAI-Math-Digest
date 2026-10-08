@@ -26,7 +26,7 @@ export async function renderDraft(source,{lang,paperId,base,diagramSource,sectio
    .replace(/((?:xlink:)?href)="#([^"]+)"/g,(_,attr,id)=>`${attr}="#${prefix}${id}"`)
    .replace(/url\(#([^)]+)\)/g,(_,id)=>`url(#${prefix}${id})`);
   const caption=escape(alt),en=lang==='en';
-  return `<figure class="proof-figure"><div class="proof-diagram" tabindex="0" role="region" aria-label="${caption}">${svg}</div><figcaption>${caption}</figcaption><div class="diagram-tools"><span>${en?'Underlined citations open the sources. Scroll sideways on narrow screens.':'図の下線付き引用から原典へ移れます。狭い画面では横にスクロールできます。'}</span><a href="${asset}.svg" target="_blank" rel="noopener noreferrer">${en?'Open figure':'図を拡大'} ↗</a><a href="${asset}.tex" download>${en?'TeX source':'TeXソース'} ↓</a></div></figure>`;
+  return `<figure class="proof-figure"><div class="proof-diagram" tabindex="0" role="region" aria-label="${caption}">${svg}</div><figcaption>${caption}</figcaption><div class="diagram-tools"><span>${en?'Underlined citations open the sources. Tap the figure to enlarge it.':'図の下線付き引用から原典へ移れます。図をタップすると拡大できます。'}</span><a href="${asset}.svg" target="_blank" rel="noopener noreferrer">${en?'Open figure':'図を拡大'} ↗</a><a href="${asset}.tex" download>${en?'TeX source':'TeXソース'} ↓</a></div></figure>`;
  });
  html=html.replace(/<table>/g,'<div class="digest-table-wrap" tabindex="0"><table class="digest-table">').replace(/<\/table>/g,'</table></div>');
  html=html.replace(/<p>\s*\$\$([\s\S]*?)\$\$\s*<\/p>/g,'<div class="math-display">$$$$$1$$$$</div>');

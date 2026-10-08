@@ -4,6 +4,7 @@ import '../styles/atlas.css';
 import '../styles/home.css';
 import '../styles/typography.css';
 import ReadingGuide from '../components/ReadingGuide.astro';
+import DiagramViewer from '../components/DiagramViewer.astro';
 const {lang='ja', title, otherPath='', description} = Astro.props;
 const en=lang==='en', base=import.meta.env.BASE_URL;
 const canonical=new URL(Astro.url.pathname, Astro.site);
@@ -40,6 +41,7 @@ const guideKind=route.includes('/fields/')?'field':route.includes('/catalog/')?'
  </header></div>
  <div class="ai-notice"><span class="ai-label">{en?'AI-GENERATED GUIDE':'AI生成の解説'}</span><p>{en?'This guide may contain errors or inaccurate explanations. Check important claims and proofs against the original papers.':'このサイトの解説はAIが生成しており、誤りや不正確な説明を含む可能性があります。重要な主張・証明は原論文でご確認ください。'}</p></div>
  <main id="content">{guideKind!=='home'&&<ReadingGuide lang={lang} kind={guideKind}/>}<slot/></main>
+ <DiagramViewer lang={lang}/>
  <script>
   const language=document.getElementById('language');
   if(language instanceof HTMLAnchorElement && location.hash) language.hash=location.hash;
