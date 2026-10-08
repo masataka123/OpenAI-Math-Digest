@@ -1,0 +1,82 @@
+@page {
+  size: A4; margin: 18mm 17mm 19mm;
+  @top-left { content: 'OpenAI Math Digest · 034'; font: 8pt 'Hiragino Sans', sans-serif; color: #66746b; }
+  @bottom-left { content: string(chapter); font: 7.5pt 'Hiragino Sans', sans-serif; color: #66746b; }
+  @bottom-right { content: counter(page); font: 9pt Georgia, serif; color: #246657; }
+}
+@page cover { @top-left { content: none; } @bottom-left { content: none; } }
+* { box-sizing: border-box; }
+body { font: 10.5pt/1.8 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif; color: #25322f; }
+a { color: #246657; text-decoration: none; overflow-wrap: anywhere; }
+p { margin: 9pt 0; orphans: 3; widows: 3; }
+h1, h2, h3, h4 { font-weight: 600; line-height: 1.5; break-after: avoid; }
+h1 { font-size: 23pt; margin: 14pt 0 20pt; bookmark-level: 1; }
+h2 { font-size: 16pt; margin: 24pt 0 12pt; bookmark-level: 2; }
+h3 { font-size: 12pt; margin: 16pt 0 8pt; bookmark-level: 3; }
+h4 { font-size: 10.5pt; bookmark-level: none; }
+.cover { page: cover; padding-top: 36mm; break-after: page; }
+.cover .brand { font-size: 20pt; margin-bottom: 25mm; }
+.cover h1 { font-size: 30pt; line-height: 1.55; bookmark-level: none; }
+.cover .cover-subtitle { font-size: 15pt; margin: 12mm 0; }
+.cover .edition { margin-top: 18mm; }
+.cover .notice { margin-top: 10mm; padding: 6mm; background: #edf0e8; border-left: 2pt solid #246657; }
+.toc { break-after: page; }
+.toc h1 { bookmark-level: none; }
+.toc ol { list-style: none; padding: 0; }
+.toc li { margin: 0 0 10pt; padding: 0 14mm 8pt 0; border-bottom: .5pt solid #d8dcd2; position: relative; break-inside: avoid; }
+.toc a::after { content: target-counter(attr(href), page); position: absolute; right: 0; top: 0; }
+.chapter { break-before: page; }
+.chapter-label { string-set: chapter content(); color: #855337; font: 9pt/1.6 'Hiragino Sans', sans-serif; letter-spacing: .05em; margin: 0 0 8pt; }
+.web-link { font-size: 8.5pt; margin: 0 0 20pt; }
+.title-phrase { display: inline-block; }
+.cover .title-phrase:first-child { display: block; }
+.eyebrow, .paper-byline, .source-line, .source-link, .source-note, .table-detail, .small, .catalog-step-links, .connection-reading { font: 8.5pt/1.7 'Hiragino Sans', 'Noto Sans CJK JP', sans-serif; }
+.eyebrow { color: #855337; }
+.source-note { margin-top: 20pt; padding-top: 10pt; border-top: .5pt solid #d8dcd2; }
+.source-note code { overflow-wrap: anywhere; }
+.paper-subtitle { font-size: 14pt; color: #246657; }
+.official, .lede { color: #626b65; }
+.catalog-stats { margin: 12pt 0; }
+.catalog-stats span { margin-right: 15pt; }
+.catalog-stats strong { font-size: 15pt; margin-right: 4pt; }
+.theorem-statement, .input-note, .scope, .result-card, .catalog-crossings, blockquote { border-left: 2pt solid #246657; padding: 10pt 14pt; margin: 14pt 0; background: #f0f2ec; }
+.theorem-statement h3 { margin-top: 0; }
+.theorem-name { font-weight: 400; }
+.theorem-statement p:last-child { margin-bottom: 0; }
+.catalog-theme { border-top: 2pt solid #246657; margin: 15pt 0; padding-top: 5pt; }
+.catalog-theme li span { margin-right: 8pt; }
+li { margin: 5pt 0; }
+.proof-figure { margin: 20pt 0; break-inside: avoid; }
+.proof-diagram { padding: 8pt; border: .5pt solid #d8dcd2; }
+.proof-diagram > svg { display: block; width: 100%; height: auto; max-height: 205mm; }
+figcaption { font: 9pt/1.75 'Hiragino Sans', 'Noto Sans CJK JP', sans-serif; margin-top: 8pt; }
+.diagram-tools { font-size: 8pt; margin-top: 6pt; }
+.diagram-tools a { margin-right: 15pt; }
+.figure-key { padding: 9pt 0; border-block: .5pt solid #d8dcd2; font-size: 9pt; }
+.math-display { text-align: center; margin: 12pt 0; }
+mjx-container { display: inline-block; line-height: 0; text-indent: 0; max-width: 100%; }
+mjx-container[display='true'] { display: block; text-align: center; margin: 12pt 0; }
+mjx-container svg { max-width: 100%; overflow: visible; }
+.print-table { margin: 18pt 0; }
+.print-table > h3 { color: #246657; }
+.print-row { break-inside: avoid; padding: 12pt 0; border-top: .7pt solid #bec8b7; }
+.print-cell { margin: 8pt 0; }
+.print-cell h4 { color: #66746b; margin: 0 0 3pt; font: 8.5pt/1.6 'Hiragino Sans', sans-serif; }
+.print-cell .table-detail { display: block; }
+.manuscript-title { font-size: 12pt; font-weight: 600; }
+.manuscript-source, .claim-source { display: block; margin-top: 6pt; }
+.connection { break-inside: avoid; list-style: none; margin: 16pt 0; border-top: .7pt solid #bec8b7; padding-top: 12pt; }
+.connection-list { padding: 0; }
+.connection-node { background: #f0f2ec; padding: 8pt 12pt; }
+.connection-node h3 { margin: 3pt 0; }
+.connection-node-label, .connection-kind, .connection-citation { font-size: 8.5pt; }
+.connection-arrow { padding: 8pt 12pt; }
+.connection-arrow svg { display: none; }
+.connection-reading a { margin-right: 10pt; }
+.connection-reading span { display: block; margin-top: 4pt; }
+.connection-reading { margin-top: 8pt; }
+.catalog-step-links a, .source-line a { display: inline-block; margin-right: 10pt; }
+.catalog-external > div { margin: 14pt 0; }
+code { font-size: 8.5pt; overflow-wrap: anywhere; }
+pre { white-space: pre-wrap; }
+[hidden] { display: none; }

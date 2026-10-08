@@ -21,6 +21,7 @@ jobs:
       - run: npm test
       - run: npm run build
       - run: npm run check:links
+      - run: npm run check:pdf
       - uses: actions/upload-pages-artifact@v5
         with:
           path: dist

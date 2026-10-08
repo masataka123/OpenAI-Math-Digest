@@ -1,0 +1,32 @@
+/* Shared reading sizes. Keep the same scale on desktop and mobile;
+   rem units respect the reader's browser font preference. */
+:root { --font-body: 1rem; --font-meta: .875rem; }
+body { font-size: var(--font-body); }
+.lede, .paper-article .lede, .prose, .scope,
+.first-reading p, .first-reading > a, .catalog-source > a,
+.source-meta, .button, .guide-speech a {
+  font-size: var(--font-body);
+}
+.small, .badge, .ordinal, .eyebrow, .footer, .breadcrumbs, .source-note,
+.field-bottom, .reading-path, .creator-credit, .ai-notice,
+.ai-label, .guide-speech .eyebrow, .guide-home .guide-speech .eyebrow,
+.masthead .main-nav, .masthead .language-switch,
+.citation-note .small, .first-reading .eyebrow, .first-reading .feature-field,
+.connection-node-label, .connection-kind, .theorem-statement .theorem-name,
+.draft-body code {
+  font-size: var(--font-meta);
+}
+.family-header h1 { overflow-wrap: break-word; }
+/* Explicit phrase boundaries keep Japanese mathematical terms together. */
+.family-header.catalog-intro { max-width: 1200px; }
+.catalog-intro h1:lang(ja) { text-wrap: wrap; }
+.title-phrase { display: inline-block; }
+.catalog-pdf {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px;
+  margin: 12px 0 28px; padding: 20px 24px;
+  border: 1px solid #c3cfbc; background: #edf0e8;
+}
+.catalog-pdf a { font-size: var(--font-body); font-weight: 600; }
+.catalog-pdf p { margin: 0; font-size: var(--font-meta); color: var(--muted); }
+
+.print-only { display: none; }

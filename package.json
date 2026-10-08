@@ -10,10 +10,17 @@
     "test": "node --test scripts/*.test.mjs",
     "check:links": "node scripts/check-links.mjs",
     "diagrams": "node scripts/render-proof-diagrams.mjs",
-    "diagrams:catalog": "node scripts/render-catalog-diagrams.mjs"
+    "diagrams:catalog": "node scripts/render-catalog-diagrams.mjs",
+    "pdf:catalog": "node scripts/build-catalog-pdf.mjs",
+    "check:pdf": "node scripts/build-catalog-pdf.mjs --check"
   },
   "dependencies": {
-    "astro": "5.13.2",
-    "@astrojs/markdown-remark": "6.3.6"
+    "@astrojs/markdown-remark": "6.3.6",
+    "astro": "5.13.2"
+  },
+  "devDependencies": {
+    "hast-util-from-html": "2.0.3",
+    "hast-util-to-html": "9.0.5",
+    "mathjax-full": "3.2.2"
   }
 }

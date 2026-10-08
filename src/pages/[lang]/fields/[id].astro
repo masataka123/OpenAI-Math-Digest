@@ -20,12 +20,12 @@ const {field}=Astro.props, lang=Astro.params.lang, en=lang==='en', base=import.m
      <p class="field-catalog-summary">{en?'The catalogue synthesis connects the results, proof strategies, and theorems used across these manuscripts.':'総括では、各論文の結果・証明戦略・使用する定理のつながりを図でたどれます。'}</p>
      <a class="button primary" href={`${base}${lang}/catalog/${c.id}/`}>{en?'Explore the synthesis and connections':'総括・論文間のつながりを見る'}<span aria-hidden="true">→</span></a>
     </div>
-    <div class="field-catalog-overviews">
-     <div class="field-overview-heading"><h4>{en?'Proof overviews':'各論文の証明概説'}</h4><span class="small muted">{en?'Official catalogue order':'公式カタログ順'}</span></div>
+    <details class="field-catalog-overviews">
+     <summary class="field-overview-heading"><span>{en?`Proof overviews (${overviews.length})`:`各論文の証明概説（${overviews.length}篇）`}</span><span class="small muted">{en?'Official catalogue order':'公式カタログ順'}</span></summary>
      <ol class="field-paper-list" role="list">
       {overviews.map(({paper,position})=><li value={position}><a href={`${base}${lang}/papers/${paper.id}/`}><span class="ordinal" aria-hidden="true">{String(position).padStart(2,'0')}</span><span lang="en">{paper.title}</span><span class="field-paper-arrow" aria-hidden="true">→</span></a></li>)}
      </ol>
-    </div>
+    </details>
    </article>;
   })}
  </section>
@@ -35,11 +35,13 @@ const {field}=Astro.props, lang=Astro.params.lang, en=lang==='en', base=import.m
  .field-catalog{grid-template-columns:84px minmax(0,1fr);row-gap:30px}
  .field-catalog-intro{min-width:0}
  .field-catalog-intro .badge{margin:12px 0 8px;color:var(--link);border-color:#b7c5b2;background:#edf0e8}
- .field-catalog-intro .field-catalog-summary{font-size:.95rem;max-width:740px}
+ .field-catalog-intro .field-catalog-summary{font-size:var(--font-body);max-width:740px}
  .field-catalog-intro .button{margin-top:12px}
  .field-catalog-overviews{grid-column:2;min-width:0}
- .field-overview-heading{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px 20px;margin-bottom:12px}
- .field-overview-heading h4{font-size:1.1rem;font-weight:500;margin:0}
+ .field-overview-heading{cursor:pointer;padding:16px 0;border-block:1px solid var(--line);font-size:var(--font-body);color:var(--link)}
+ .field-overview-heading .small{margin-left:20px}
+ .field-overview-heading:focus-visible{outline:3px solid #b68345;outline-offset:4px}
+ .field-catalog-overviews[open] .field-overview-heading{margin-bottom:12px;border-bottom:0}
  .field-paper-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:30px;list-style:none;margin:0;padding:0}
  .field-paper-list li{border-top:1px solid var(--line);min-width:0}
  .field-paper-list a{display:grid;grid-template-columns:24px minmax(0,1fr) 14px;gap:12px;align-items:baseline;height:100%;padding:17px 0;color:var(--ink);text-decoration:none;font-size:1rem;line-height:1.65;overflow-wrap:anywhere}
@@ -48,5 +50,5 @@ const {field}=Astro.props, lang=Astro.params.lang, en=lang==='en', base=import.m
  .field-paper-arrow{color:var(--link)}
  @media(max-width:800px){.field-catalog{grid-template-columns:65px minmax(0,1fr)}.field-catalog-overviews{grid-column:1 / -1}}
  @media(max-width:700px){.field-paper-list{grid-template-columns:1fr}}
- @media(max-width:520px){.field-catalog{grid-template-columns:52px minmax(0,1fr);row-gap:25px}.field-catalog-intro .button{font-size:13px;padding:13px 16px;gap:14px}.field-paper-list a{font-size:.96rem}}
+ @media(max-width:520px){.field-catalog{grid-template-columns:52px minmax(0,1fr);row-gap:25px}.field-catalog-intro .button{padding:13px 16px;gap:14px}.field-overview-heading .small{display:block;margin:6px 0 0 20px}}
 </style>

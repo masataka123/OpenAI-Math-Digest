@@ -1,7 +1,7 @@
 /* Article typography and proof figures share Schnell's paper.css. */
 .draft-body .paper-section>p,.draft-body .paper-section>ul,.draft-body .paper-section>ol{max-width:900px;line-height:1.95}
 .draft-body .paper-section>p{margin:18px 0}
-.draft-body code,.draft-intro code{font-size:.83em;overflow-wrap:anywhere}
+.draft-body code,.draft-intro code{font-size:var(--font-meta);overflow-wrap:anywhere}
 .draft-body .digest-table{min-width:850px;table-layout:auto}
 .draft-body .math-display{max-width:900px}
 .draft-body mjx-container[display=true]{overflow-x:auto;overflow-y:hidden;padding:5px 0;max-width:100%}

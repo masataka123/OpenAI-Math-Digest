@@ -6,8 +6,8 @@
 
 - 日英トップ：公式概要PDFの17分野を同じ順序・英語名・番号範囲で表示。公式の該当ページを別タブで参照可能。代数幾何学・複素幾何学で収録開始。
 - 右上に常時表示する日英切替、AI生成の注意書き、ユーザー提供のキャラクターによる各ページのガイド。
-- 分野ページ → カタログ034 → LA・Schnell論文の日英概説。
-- 034の全14篇を公式順・正式タイトル・ページ数・主結果・役割付きで掲載。3つの流れと、論文別に入力／利用先を選べる17件の引用付き関係図を用意。未掲載の接続は未調査。
+- 分野ページ → カタログ034 → 全14篇の日英概説。分野ページの論文一覧はクリックで展開。
+- 034の全14篇を公式順・正式タイトル・ページ数・主結果・役割付きで掲載。3つの流れと、論文別に入力／利用先を選べる23件の引用付き関係図を用意。未掲載の接続は未調査。
 - Schnellの概説改訂稿：原典に準拠したTheorem / Corollary、3枚の引用付きTeX証明図と説明文、034内1件・外部2件の直接入力。引用元のモデル存在証明全体は未検証。
 - LAの概説初稿：主定理・非消滅ステップ・実係数の良いモデルを記述し、次元帰納法、境界の幾何、Frobeniusの行列式の3図と説明を掲載。033からの入力とSchnellへの接続を区別。独立した証明全体の検証は未実施。
 - 051/052の試作と証明表・図の実装は `prototype/` に保存し、公開ページからは除外。
@@ -22,11 +22,35 @@ npm test
 npm run dev
 npm run build
 npm run check:links
+npm run check:pdf
 ```
 
 証明図を変更した場合は、XeLaTeX・xeCJK・Harano Ajiフォント・TikZ・standaloneを含むTeX環境とdvisvgmが利用できる状態で `npm run diagrams` を実行します。両論文の日本語版と英語版のSVG・TeXを生成します。`node scripts/render-proof-diagrams.mjs la` または `schnell` で対象を絞れます。生成物は `public/diagrams/` に保存するため、通常のサイトビルドやGitHub ActionsでTeX環境は不要です。
 
 入口は `/OpenAI-Math-Digest/ja/` と `/OpenAI-Math-Digest/en/`。`npm run preview` でビルド結果を確認できます。
+
+## カタログPDF
+
+カタログ冒頭から日英それぞれの `public/pdf/catalog-034-{ja,en}.pdf` を開けます。総括と全14記事を公式順に収録し、目次・しおり・記事間のリンク・原典リンクを保持します。本文はビルド済みのWebページから取り込み、MathJax 3で数式をSVG化してWeasyPrintで組版します。横長の表は項目一覧に変換し、同じ接続を繰り返す監査表と操作用UIは省きます。23件の接続記録は全件収録します。
+
+本文・図・引用を更新したときは、PDFも再生成してください。Python 3.12以上、Pango、Fontconfigと日本語フォント（macOSのヒラギノ、またはNoto Serif/Sans CJK JP）が必要です。PythonとPangoのCPUアーキテクチャを合わせます。初回だけ隔離環境を用意します。
+
+```sh
+python3 -m venv tmp/pdf-venv
+tmp/pdf-venv/bin/pip install -r scripts/pdf/requirements.txt
+npm run build
+PDF_PYTHON="$PWD/tmp/pdf-venv/bin/python" XDG_CACHE_HOME="$PWD/tmp/font-cache" npm run pdf:catalog
+npm run build
+npm run check:pdf
+npm run check:links
+```
+
+- 中間HTMLは `tmp/pdfs/`（Git対象外）。組版設定は `scripts/pdf/booklet.css`。
+- `src/data/pdf-editions.json` に収録日・ページ数・ファイルサイズ・ハッシュを記録。`PDF_EDITION_DATE=YYYY-MM-DD` で収録日を指定可能。
+- `check:pdf` はWebの収録内容と生成設定のハッシュ、およびPDFファイルを照合します。GitHub Actionsでも実行し、PDFが古いままの公開を防ぎます。通常のビルド・照合にはPythonやPangoは不要です。
+- 公開前に `pdftoppm` などでページを画像化し、表紙・目次・数式・図・改ページを確認してください。生成されたPDFと版情報を一緒にコミットします。
+
+共通の本文は16px相当、補足・引用・操作ラベルは14px相当です。見出しは階層に応じて大きくし、モバイルでも本文を縮小しません。共通設定は `src/styles/typography.css` にあります。
 
 ## ページとデータ
 

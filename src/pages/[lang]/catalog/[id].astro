@@ -4,6 +4,7 @@ import DependencyTable from '../../../components/DependencyTable.astro';
 import CatalogDependencies from '../../../components/CatalogDependencies.astro';
 import ProofDiagram from '../../../components/ProofDiagram.astro';
 import {synthesis} from '../../../data/catalog-034-synthesis.mjs';
+import pdfEditions from '../../../data/pdf-editions.json';
 import {catalogs,papers,languages,fieldsForCatalog,paperSource,officialCatalog,officialOverview,sourceCommit} from '../../../data/site.mjs';
 import {catalogueNotes,notesById,catalogueDependencies,themes} from '../../../data/catalog-034.mjs';
 import '../../../styles/paper.css';
@@ -11,12 +12,14 @@ import '../../../styles/catalog.css';
 export function getStaticPaths(){return languages.flatMap(lang=>catalogs.map(catalog=>({params:{lang,id:catalog.id},props:{catalog}})));}
 const {catalog:c}=Astro.props,lang=Astro.params.lang,en=lang==='en',base=import.meta.env.BASE_URL,relatedFields=fieldsForCatalog(c.id);
 const orderedPapers=c.paperIds.map(id=>papers.find(p=>p.id===id));
+const pdf=c.id==='034'?pdfEditions[lang]:null;
 const number=id=>String(papers.find(p=>p.id===id).order).padStart(2,'0');
 const article=id=>base+lang+'/papers/'+id+'/';
 ---
 <Layout lang={lang} title={c.id+' · '+c.title[lang]} otherPath={(en?'ja':'en')+'/catalog/'+c.id+'/'}>
  <nav class="breadcrumbs" aria-label={en?'Breadcrumb':'現在位置'}><a href={base+lang+'/'}>{en?'Fields':'分野一覧'}</a>{relatedFields.map(f=><><span aria-hidden="true">/</span><a href={base+lang+'/fields/'+f.id+'/'}>{f.title[lang]}</a></>)}<span aria-hidden="true">/</span><span aria-current="page">{c.id}</span></nav>
- <header class="family-header catalog-intro"><p class="eyebrow">CATALOGUE {c.id}</p><h1>{c.title[lang]}</h1>{!en&&<p class="official" lang="en">{c.title.en}</p>}<p class="lede">{en?'From a first section to a good model, and from a good model to a uniform Iitaka degree. Follow the claims of 14 manuscripts and the results their arguments use.':'最初の切断から良いモデルへ、良いモデルから一様な飯高次数へ。14本の論文が主張する結果と、その議論を支える入力をたどります。'}</p></header>
+ <header class="family-header catalog-intro"><p class="eyebrow">CATALOGUE {c.id}</p><h1>{c.titlePhrases?.[lang] ? c.titlePhrases[lang].map(phrase=><span class="title-phrase">{phrase}</span>) : c.title[lang]}</h1>{!en&&<p class="official" lang="en">{c.title.en}</p>}<p class="lede">{en?'From a first section to a good model, and from a good model to a uniform Iitaka degree. Follow the claims of 14 manuscripts and the results their arguments use.':'最初の切断から良いモデルへ、良いモデルから一様な飯高次数へ。14本の論文が主張する結果と、その議論を支える入力をたどります。'}</p></header>
+ {pdf&&<aside class="catalog-pdf" aria-label={en?'PDF edition':'PDF版'}><a href={base+'pdf/'+pdf.file} target="_blank" rel="noopener noreferrer">{en?'Read the synthesis + all 14 overviews as a PDF':'総括＋全14篇の解説をPDFで読む'} ↗</a><p>{en?'English':'日本語'} · {pdf.pages}{en?' pages':'ページ'} · {(pdf.bytes/1048576).toFixed(1)} MB · {pdf.date}{en?' edition':'版'}<br/>{en?'Includes a linked contents page, proof diagrams, and source references.':'目次・証明図・原典へのリンク付き。'}</p></aside>}
  <div class="catalog-stats"><span><strong>{orderedPapers.length}</strong>{en?'manuscript summaries':'篇の要点整理'}</span><span><strong>{catalogueDependencies.length}</strong>{en?'selected connections':'件の主な接続'}</span><span><strong>{orderedPapers.filter(p=>p.featured).length}</strong>{en?'proof overviews':'篇の証明概説'}</span></div>
  <p class="catalog-reading-note">{en?'This is a reading map of the manuscripts’ claims and uses of cited results. The arrows record selected source-to-use connections; they are not a complete dependency graph or a certification of the proofs.':'原稿の主張と引用の使い方を整理した、読解の見取り図です。矢印は原典の記述と使用箇所を照合した接続を示します。依存関係の網羅や、証明全体の正しさの認定ではありません。'}</p>
  <nav class="catalog-nav" aria-label={en?'On this page':'このページの内容'}><a href="#overview">{en?'Three strands':'3つの流れ'}</a><a href="#dependencies">{en?'Follow dependencies':'依存関係をたどる'}</a><a href="#manuscripts">{en?'All 14 manuscripts':'全14篇の要点'}</a><a href="#external-inputs">{en?'Inputs outside 034':'034の外からの入力'}</a><a href="#reading-scope">{en?'Reading scope':'確認範囲'}</a></nav>
@@ -37,7 +40,8 @@ const article=id=>base+lang+'/papers/'+id+'/';
  </section>)}
  <section id="dependencies" class="paper-section">
   <h2>{en?'Follow a result into its application':'どの結果を、どこで使うのか'}</h2>
-  <p class="article-prose">{en?'The diagrams select principal routes. This explorer includes the other recorded connections. Choose a manuscript and direction, or follow an arrow above to open its result-level record. The initial view shows the three inputs recorded for Log Iitaka.':'全体図には主要経路を選んで載せています。ここでは図で省略した接続も確認できます。論文と方向を選ぶか、上の矢印から対応する記録を開いてください。最初はLog Iitakaへの3つの入力を表示しています。'}</p>
+  <p class="article-prose screen-only">{en?'The diagrams select principal routes. This explorer includes the other recorded connections. Choose a manuscript and direction, or follow an arrow above to open its result-level record. The initial view shows the three inputs recorded for Log Iitaka.':'全体図には主要経路を選んで載せています。ここでは図で省略した接続も確認できます。論文と方向を選ぶか、上の矢印から対応する記録を開いてください。最初はLog Iitakaへの3つの入力を表示しています。'}</p>
+  <p class="print-only">{en?'The following records include all 23 selected connections. Each gives the supplied result, its use, and the scope of the editorial check.':'以下に記録した23件の接続を収録します。それぞれ供給する結果・利用先・確認範囲を示しています。'}</p>
   <CatalogDependencies lang={lang}/>
   <p class="catalog-reading-note">{en?'Read dependencies at the level of results: Fourfold nonvanishing uses LA’s independent geometric tools and Frobenius theorem. Its abundance main theorem is not that input. In Supported lifting, fourfold nonvanishing enters Corollary 1.4; Theorem 1.2 already assumes a first section. These distinctions matter when tracing apparent back-and-forth citations.':'依存は結果の単位で読みます。Fourfold nonvanishingが使うLAの入力は独立した幾何的補題とFrobenius定理です。また、Supported liftingに四次元非消滅が入るのはCorollary 1.4であり、Theorem 1.2は最初の切断を仮定する段階です。相互の引用をたどるときも、どの結果がどの証明へ入るかを区別します。'}</p>
   <span id="dependency-canonical-good-model"></span>

@@ -125,6 +125,7 @@ export const papers = inventory034.manuscripts.map((entry, index) => {
 });
 export const catalogs = [{
   id: '034', title: text('対数的豊富性と有効飯高ファイブレーション', 'Log abundance and effective Iitaka fibrations'),
+  titlePhrases: {ja: ['対数的豊富性と', '有効飯高', 'ファイブレーション']},
   contentsTitle: 'Log abundance for compact Kähler spaces under logarithmic Iitaka subadditivity',
   description: text('豊富性と良い極小モデルに関する論文群を、仮定と結論、証明の関係から整理する。', 'A guide to manuscripts on abundance and good minimal models, organized by hypotheses, conclusions, and arguments.'),
   paperIds: manuscriptIds034,
