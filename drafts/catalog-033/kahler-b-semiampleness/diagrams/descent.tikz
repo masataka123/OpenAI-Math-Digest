@@ -1,0 +1,22 @@
+
+\begin{tikzpicture}
+\node[card] (a) {\heading{1}{比較同型と逆同型の係数を評価する}{Bound the comparison and its inverse}
+$g:\ r^*\mathcal O_S(NM_S)|_{P^\circ}\ \simeq\ (H_Q\otimes\bigotimes_iH_i)|_{P^\circ}$\\[5pt]
+$|g|,\ |g^{-1}|\ \leq\ C(1+|\log|t||)^b\quad\Tx{\text{横断disk上}}{\text{on transverse disks}}$};
+\node[card,below=2.2cm of a] (b) {\heading{2}{指定した同型を境界全体へ延長する}{Extend the specified isomorphism across the boundary}
+$r^*\mathcal O_S(NM_S)\simeq H_Q\otimes\bigotimes_iH_i\quad\text{on }P$\\[5pt]
+\Tx{右辺は半豊富、境界の捻り・flat twistを残さない}{The right-hand side is semiample; no residual boundary or flat twist remains.}};
+\flow{a}{b}{\Tx{両側の評価で負のLaurent係数を消し、Hartogsで交差点を埋める}{Two-sided bounds kill negative Laurent coefficients; Hartogs handles intersections.}\\
+\Cite{BS}{Lem. 8.1, pp. 34--35; \S9, pp. 36--37}}
+\node[card,below=2.1cm of b] (c) {\heading{3}{Stein分解して有限射のnormを使う}{Use Stein factorization and the finite norm}
+$P\xrightarrow{h}T\xrightarrow{q}S,\qquad h_*\mathcal O_P=\mathcal O_T,\quad\deg q=d$\\[5pt]
+$q^*A^{\otimes n}\ \Tx{\text{大域生成}}{\text{globally generated}}
+\ \Longrightarrow\ A^{\otimes nd}\ \Tx{\text{大域生成}}{\text{globally generated}}$};
+\flow{b}{c}{\Tx{連結ファイバーで切断を降ろし、各有限ファイバーで同時に非零な切断を取る}{Descend sections along connected fibres; choose one section nonzero on a finite fibre.}\\
+\Cite{BS}{Lem. 8.3, pp. 35--36}}
+\node[result,below=1.85cm of c] (d) {\heading{4}{moduli lineの大域生成を得る}{Obtain global generation of the moduli line}
+$A=\mathcal O_S(NM_S),\qquad\boxed{\mathcal O_S(ndN M_S)\ \Tx{\text{大域生成}}{\text{globally generated}}}$\\[4pt]
+\Tx{Theorem 1.1(b)：実際の正則線束の結論}{Theorem 1.1(b): a conclusion about the actual holomorphic line bundle}};
+\flow{c}{d}{\Tx{全点で同じ指数を使う。$P\to S$の一般有限性は不要}{Use one exponent at all points; generic finiteness of $P\to S$ is unnecessary.}\\
+\Cite{BS}{Lem. 8.3; \S9, pp. 35--37}}
+\end{tikzpicture}

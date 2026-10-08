@@ -1,0 +1,22 @@
+\begin{tikzpicture}
+\node[card] (start) {\heading{START}{正次元のmarked quotientから出発する}{Start from a positive-dimensional marked quotient}
+$\dim S>0,\qquad Y\xrightarrow{x}W\xrightarrow{h}S,\qquad u_*=\omega x^*u_W.$};
+\node[card,below=2.2cm of start] (lattice) {\heading{01}{元の底と完全切断空間を一致させる}{Identify complete section spaces with the original base}
+$L_W=K_W+\sum_A t_AA,\qquad t_A=\min_{I\mapsto A}\dfrac{a^{-1}\operatorname{ord}_I\omega+d_I}{m_I}.$\\[5pt]
+$H^0(W,\ell L_W)\simeq H^0(Y_0,\ell L_{Y_0})\quad(\ell\ \Tx{\text{十分割り切れる}}{\text{sufficiently divisible}}),\qquad L_W\ \text{big over }S.$};
+\flow{start}{lattice}{\Tx{generic fiberの生成元で分解し、元のsourceのvaluationを抽出する。\\最小値の条件が全ての極を検出し、切断比を保つ。}{Factor by the generic-fiber generator and extract original source valuations.\\The minimum detects all poles and preserves section ratios.}\\[3pt]\RA{Lem. 6.1--6.2, pp. 37--40}\quad\RA{Prop. 6.3, pp. 40--41}}
+\node[card,below=2.2cm of lattice] (nef) {\heading{02}{lc-trivialな補助subpairからnef部分を得る}{Obtain a nef moduli part from an auxiliary lc-trivial subpair}
+$L_W=K_W+B_W+M_W,\qquad 0\leq B_W\leq1,\quad M_W\ \text{nef}.$};
+\flow{lattice}{nef}{\Tx{負の係数を許す $\Delta$ で、discrepancy sheafの階数1を検証する。}{Allow negative coefficients in $\Delta$ and verify rank one for the discrepancy sheaf.}\\[3pt]\RA{Prop. 6.3, (6.12)--(6.13), pp. 41--42}\\[3pt]\FG{[FG] Def. 3.2, Thm. 3.6, PDF pp. 5, 7}}
+\node[card,below=2.2cm of nef] (period) {\heading{03}{periodとHiggs tailsの正値性を比較する}{Compare positivity from periods and Higgs tails}
+$K_S+bH\ \text{big},\quad P=-\sum_i(i+1)\det G_i\ \text{nef},\quad\widetilde H=\pi^*h^*H.$\\[4pt]
+$\nu(P+\widetilde H)=\nu(P).$};
+\flow{nef}{period}{\Tx{境界でのrank lossで $D_0$ を除き、Higgs tailsの零曲率方向を比較する。}{Remove $D_0$ by boundary rank loss; compare curvature-null directions of the tails.}\\[3pt]\RA{Prop. 5.3, 5.5, pp. 30--34}\quad\RA{Prop. 5.6, pp. 34--36}}
+\node[card,below=2.5cm of period] (compare) {\heading{04}{境界摂動に依存しない比較を得る}{Obtain a comparison uniform under boundary perturbation}
+$Q\pi^*L_W\pe P\quad(Q>0),\qquad L_W-h^*K_S\pe0.$};
+\flow{period}{compare}{\Tx{固定Higgs写像をorbifold余接束へ移す。可動曲線で評価し、\\擬有効閾値を0にする。相対擬有効性も摂動から得る。}{Transfer fixed Higgs maps to orbifold cotangent tensors. Movable-curve estimates\\force threshold zero; perturbation also gives relative pseudoeffectivity.}\\[3pt]\RA{Lem. 7.4--7.6, pp. 46--49}\\[3pt]\CP{[CP] Thm. 1.3, 3.4, pp. 3, 12--14}\quad\BDPP{[BDPP] Thm. 2.2, p. 6}}
+\node[card,result,below=2.2cm of compare] (big) {\heading{05}{periodの捻りを引き去る}{Subtract the period twist}
+$(1+tQ)\pi^*L_W\pe A'+tP-b\widetilde H\ \text{big}\quad(t\gg0).$\\[4pt]
+$L_W\ \text{big}\quad\Longrightarrow\quad\kappa(Y,L_Y)\geq\dim W\geq\dim S>0.$};
+\flow{compare}{big}{\Tx{$L_W+bh^*H$ はbig。nef Morse評価と数値次元の一致で捻りを除き、\\完全切断空間の比較で元の底へ戻す。}{First $L_W+bh^*H$ is big. Nef subtraction removes the twist; the complete\\section-space comparison returns sections to the original base.}\\[3pt]\RA{Prop. 7.2, Lem. 7.3, pp. 44--45}\quad\RA{Prop. 7.7, p. 49}}
+\end{tikzpicture}

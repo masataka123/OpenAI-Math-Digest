@@ -1,0 +1,39 @@
+
+\begin{tikzpicture}
+\node[half,minimum height=2.45cm] (a) at (-4,0) {\heading{1A}{射影的比較族を作る}{Build the projective comparison}
+$(Q,C)\rightsquigarrow Z_Q\to R$\\[4pt]
+\Tx{Hilbert像を射影的モデルへ移す}{Pass from the Hilbert image to a projective model.}\\
+\Tx{generic effective klt、垂直係数は任意}{Generically effective klt; arbitrary vertical coefficients.}};
+\node[half,minimum height=2.45cm] (b) at (4,0) {\heading{1B}{実偏極を移し周期商へ}{Pass to arithmetic periods}
+$T_i\rightsquigarrow Z=\Gamma'\backslash D$\\[4pt]
+\Tx{weight $1$または$2$、同じ格子}{Weight $1$ or $2$, retaining the lattice.}\\
+\Tx{新filtrationは元の変動と実同型}{The new filtration is real-isomorphic to the original variation.}};
+\node[half,minimum height=2.4cm] (c) at (-4,-5.7) {\heading{2A}{moduli lineを引き戻す}{Pull back the moduli line}
+$H_Q\simeq\rho^*\mathcal O_{R'}(cM_{R'}),\quad c>0$\\[4pt]
+\Tx{指定されたlog-volume同型を回復}{Recover the specified log-volume identification.}\\
+\Tx{半豊富な正則線束}{A semiample holomorphic line bundle.}};
+\node[half,minimum height=2.4cm] (d) at (4,-5.7) {\heading{2B}{ample Griffiths延長を引き戻す}{Pull back the Griffiths line}
+$\lambda_{\rm Gr}\sim_{\mathbb Q}\det F^1\quad(w=1)$\\[4pt]
+$\lambda_{\rm Gr}=\det E\otimes\ell^{\otimes2}\quad(w=2)$\\[4pt]
+\Tx{$\det E$は有限位数、$\ell=F^2$}{Here $\det E$ is torsion and $\ell=F^2$.}};
+\draw[edge] ($(a.south)+(-3.35,0)$)--($(c.north)+(-3.35,0)$);
+\node[branchreason,anchor=west] at (-6.85,-2.9) {\Tx{代数的b-semiamplenessを適用}{Apply algebraic b-semiampleness.}\\
+\Cite{BFMT}{[BFMT] Thm. 1.5, p. 4}\\
+\Tx{閾値との同定を再適用}{Reapply the threshold identification.}\\
+\Cite{BS}{Prop. 6.1, pp. 25--28}};
+\draw[edge] ($(b.south)+(-3.35,0)$)--($(d.north)+(-3.35,0)$);
+\node[branchreason,anchor=west] at (1.15,-2.9) {\Tx{解析的延長とample lineの同定}{Analytic extension and the ample-line identification.}\\
+\Cite{BFMT}{[BFMT] Thm. 5.2, 5.5, pp. 30--32}\\
+\Cite{BS}{Lem. 7.1--7.4, pp. 28--32}};
+\node[result] (e) at (0,-11.2) {\heading{3}{最高lineの半豊富な延長に合流する}{Obtain semiample extensions of the highest lines}
+$H_Q,\ H_i\quad\Tx{\text{半豊富}}{\text{semiample}}$\\[5pt]
+$\lambda_i=\det F^1R^1\ \Tx{\text{(torus)}}{\text{(torus)}},\qquad
+\lambda_i=\ell_i^{\otimes k_i}\ \Tx{\text{(symplectic, }\dim=2k_i\text{)}}{\text{(symplectic, }\dim=2k_i\text{)}}$\\[4pt]
+\Tx{指定した開集合上の同型と、frame・双対の両側のノルム評価}{Retain the specified open isomorphisms and norm bounds for frames and duals.}};
+\draw[edge] ($(c.south)+(-3.35,0)$)--($(e.north)+(-7.35,0)$);
+\node[branchreason,anchor=west] at (-6.85,-8.55) {\Tx{共通tensor powerで$H_Q$を固定}{Fix $H_Q$ after a common tensor power.}\\
+\Cite{BS}{Prop. 6.1, pp. 25--28}};
+\draw[edge] ($(d.south)+(-3.35,0)$)--($(e.north)+(.65,0)$);
+\node[branchreason,anchor=west] at (1.15,-8.55) {\Tx{平方・torsionを処理し、cup積で戻す}{Handle the square and torsion; return by cup product.}\\
+\Cite{BS}{(7.5), Prop. 7.5, pp. 32--34}};
+\end{tikzpicture}

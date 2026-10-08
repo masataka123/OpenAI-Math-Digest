@@ -1,0 +1,230 @@
+{
+  "paperId": "projective-hodge-lines",
+  "title": "Projective Hodge lines and ordinary Iitaka subadditivity",
+  "version": "2026-09-27",
+  "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Projective-Hodge-lines-and-ordinary-Iitaka-subadditivity-September-27-2026/paper.pdf",
+  "sha256": "564a98c625b94ef479a6690bed65451fee18c47c69c23e5d9e1f4fd181deca9a",
+  "catalogId": "033",
+  "catalogOrder": 4,
+  "sourceCommit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "checkedOn": "2026-10-08",
+  "pdfPages": 40,
+  "sha256Verified": true,
+  "author": "OpenAI",
+  "scope": "Authors claims and selected proof passages, not a certification of the manuscript.",
+  "statements": [
+    {
+      "result": "Theorem 1.1",
+      "pdfPages": [
+        2
+      ],
+      "checking": "標数0の代数閉体、滑らかな連結射影多様体、連結ファイバー、幾何学的一般ファイバー、結論をPDF画像と照合。"
+    },
+    {
+      "result": "Theorem 1.2",
+      "pdfPages": [
+        2
+      ],
+      "checking": "全最高Hodge filtrationがrank one、rationally polarized integral pure variation、alteration上の延長同定、birational modification、nefnessと十分大きい全整数j、Sが点の場合を照合。"
+    },
+    {
+      "result": "Theorem 8.1 / Lemma 8.4",
+      "pdfPages": [
+        28,
+        29
+      ],
+      "checking": "記述のみ。別証明としてWVとの比較に用いた。証明自体は未読。"
+    }
+  ],
+  "proofPassages": [
+    {
+      "results": "Lemmas 2.1–2.3",
+      "pdfPages": [
+        5,
+        6,
+        7
+      ],
+      "scope": "有理最小部分変動、有理正規部分群、固定点でのflat自己同型からfull period固定への証明を読解。外部fixed-part/normality原典は未照合。"
+    },
+    {
+      "results": "Theorem 3.1, Proposition 3.2, Lemmas 3.4–3.5",
+      "pdfPages": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "scope": "数値次元とline rankの比較、接方向極限の証明を読解。Proposition 3.3は記述・用途を確認、mixed Hodge境界同定は独立検証なし。"
+    },
+    {
+      "results": "Theorem 4.1; Lemmas 5.1–5.2; proof of Theorem 1.2",
+      "pdfPages": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "scope": "nilpotentとfinite inertiaの二分岐、actual imageの関数体、volume estimate、有限商・norm・Stein分解の順序を読解。"
+    },
+    {
+      "results": "Theorem 6.1, Remark 6.2, Lemma 6.3, Proposition 6.4, Lemmas 6.5–6.6",
+      "pdfPages": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "scope": "正規化された残余因子、負のsub-boundary、least-index root cover、全最高line、2種類の切断比較を読解。引用された全モデル存在・延長理論の証明は未検証。"
+    },
+    {
+      "results": "Theorems 7.1–7.2, Lemmas 7.3–7.5, proof of Theorem 1.1",
+      "pdfPages": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "scope": "積写像、形式の収縮、弱正値性からのeffectivity、補間(7.5)–(7.7)、scalar extensionを読解。p.26はPDF画像でも照合。"
+    }
+  ],
+  "dependencies": [
+    {
+      "source": "o-minimal GAGA and a conjecture of Griffiths",
+      "key": "BBT",
+      "version": "arXiv:1811.12230v3 (2022-10-23)",
+      "url": "https://arxiv.org/pdf/1811.12230v3",
+      "result": "Theorem 1.1; Lemma 6.17",
+      "pdfPages": [
+        1,
+        43,
+        44
+      ],
+      "usedAt": "PH §5 pp.13–15; Theorem 3.1 / Proposition 3.2 pp.7–8",
+      "role": "actual period imageの代数化・最高lineのnefnessとbig判定。",
+      "kind": "direct",
+      "checking": "入力の記述と適用箇所を照合",
+      "unresolved": "入力の証明全体は未検証。"
+    },
+    {
+      "source": "Hyperbolicity of varieties supporting a variation of Hodge structure",
+      "key": "BC",
+      "version": "arXiv:1707.01327v1",
+      "url": "https://arxiv.org/pdf/1707.01327v1",
+      "result": "Theorem 1.1",
+      "pdfPages": [
+        1
+      ],
+      "usedAt": "PH §5, (5.3), p.15",
+      "role": "延長後の境界D_NでK_T+D_Nがbig。",
+      "kind": "direct",
+      "checking": "入力の記述と適用箇所を照合",
+      "unresolved": "入力の証明全体は未検証。"
+    },
+    {
+      "source": "A canonical bundle formula",
+      "key": "FM",
+      "version": "JDG 56 (2000), author-hosted journal PDF",
+      "url": "https://www.math.kyoto-u.ac.jp/~fujino/Canonical.pdf",
+      "result": "Theorem 4.5(i)–(v)",
+      "pdfPages": [
+        11,
+        12
+      ],
+      "usedAt": "PH Theorem 6.1 pp.16–18",
+      "role": "残余因子・全次数の直像・元の境界0への適用。",
+      "kind": "direct",
+      "checking": "入力の記述と適用箇所を照合",
+      "unresolved": "PDF pp.11–12 = journal pp.177–178を照合。§4.4モデル構成全体の独立検証は未実施。"
+    },
+    {
+      "source": "Shokurov’s boundary property",
+      "key": "Amb",
+      "version": "arXiv:math/0210271v1 (2002-10-17)",
+      "url": "https://arxiv.org/pdf/math/0210271v1",
+      "result": "Theorem 4.4(1),(3); Lemma 5.2(4)–(5); Proposition 5.5",
+      "pdfPages": [
+        12,
+        13,
+        15,
+        17,
+        18
+      ],
+      "usedAt": "PH Theorem 6.1; (6.4), pp.17–20",
+      "role": "extended canonical eigensheafとmoduli line、generically finite pullback。",
+      "kind": "direct",
+      "checking": "入力の記述と適用箇所を照合",
+      "unresolved": "列挙した記述・Theorem4.4の証明説明を確認。PHが引用するTheorem0.2等の全セットは未照合。"
+    },
+    {
+      "source": "Notes on the weak positivity theorems",
+      "key": "Fuj",
+      "version": "2015-06-30, version 0.54",
+      "url": "https://www.math.kyoto-u.ac.jp/~fujino/weak-posi11.pdf",
+      "result": "Theorem 1.1",
+      "pdfPages": [
+        1,
+        2
+      ],
+      "usedAt": "PH Theorem 7.2 / Lemma 7.4, pp.23–25",
+      "role": "log pluricanonical direct imageの弱正値性。",
+      "kind": "direct",
+      "checking": "入力の記述と適用箇所を照合",
+      "unresolved": "入力の証明全体は未検証。"
+    },
+    {
+      "source": "Log Iitaka conjecture for abundant log canonical fibrations",
+      "key": "Has",
+      "version": "arXiv:1902.10923v2 (2019-05-01)",
+      "url": "https://arxiv.org/pdf/1902.10923v2",
+      "result": "Theorem 2.11",
+      "pdfPages": [
+        5
+      ],
+      "usedAt": "PH Theorem 7.1; Lemma 7.3; §7.3, pp.22–26",
+      "role": "一般型logファイバーの加法性。入力の補助因子に底のcanonical divisorを選ぶ。",
+      "kind": "direct",
+      "checking": "入力の記述と適用箇所を照合",
+      "unresolved": "入力の証明全体は未検証。"
+    }
+  ],
+  "unresolved": [
+    "Proposition 3.3の境界mixed-Hodge同定、交叉境界の多変数延長の独立検証。",
+    "Andréのモノドロミー正規性、Deligne/Schmidのfixed-part・nilpotent-orbit理論およびBFMTの延長補題は、PHでの使用を確認したが外部原典の全記述を今回照合していない。",
+    "Theorem 6.1が列挙するAmbroの全結果・全モデル構成の証明は未検証。負の一般ファイバー境界に有効性を要するabundanceを適用しない。",
+    "§§8–9はTheorem 8.1/Lemma 8.4の記述以外未読。特にtensor replacementとThom形式の別証明は未検証。",
+    "全外部入力の証明の再帰的検証、全カタログ内の関係の網羅、専門家査読、形式検証は未実施。"
+  ],
+  "inheritedPreparation": {
+    "source": "coordination/catalog-033/SOURCE_NOTES.md",
+    "rechecked": [
+      "PH hash,主定理文",
+      "WV Remark 3.17 p.25のalternativeという位置づけ"
+    ],
+    "notRechecked": [
+      "OI本文の別証明比較の詳細"
+    ]
+  },
+  "outgoingComparisons": [
+    {
+      "target": "whole-fiber-variation",
+      "kind": "alternative",
+      "result": "PH Theorem 8.1 / Lemma 8.4",
+      "sourcePages": [
+        28,
+        29
+      ],
+      "usedAt": "WV Remark 3.17, p.25",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf",
+      "checking": "入力記述と比較段落を今回照合。WVは自身のdirect comparisonを主経路で使用すると明記。",
+      "unresolved": "PH §§8–9の別証明自体は未検証。"
+    }
+  ]
+}

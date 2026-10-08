@@ -2,7 +2,7 @@ import {createMarkdownProcessor} from '@astrojs/markdown-remark';
 import {articleStructure} from './article-structure.mjs';
 const processor = createMarkdownProcessor({smartypants:false,syntaxHighlight:false});
 const escape=s=>s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
-export async function renderDraft(source,{lang,paperId,base,diagramSource,sectionIds=[]}){
+export async function renderDraft(source,{lang,paperId,base,diagramSource,sectionIds=[],catalogId='034'}){
  const maths=[],diagrams=[];
  let markdown=source.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/,'');
  markdown=markdown.replace(/!\[([^\]]*)\]\((diagrams\/([^()]+)\.svg)\)/g,(_,alt,file,stem)=>{
@@ -16,7 +16,7 @@ export async function renderDraft(source,{lang,paperId,base,diagramSource,sectio
   const math=maths[+index],delimiter=math.display?'$$':'$';return delimiter+escape(math.text)+delimiter;
  });
  let html=restore(code).replace(/<p>PROOFDIAGRAM(\d+)TOKEN<\/p>/g,(_,index)=>{
-  const {alt,stem}=diagrams[+index],asset=`${base}diagrams/catalog-034/${paperId}/${stem}`;
+  const {alt,stem}=diagrams[+index],asset=`${base}diagrams/catalog-${catalogId}/${paperId}/${stem}`;
   const raw=diagramSource(stem);
   if(!raw)throw new Error(`Missing proof diagram: ${paperId}/${stem}.svg`);
   // TeX glyph IDs must be unique across inline figures on the same page.
@@ -30,7 +30,8 @@ export async function renderDraft(source,{lang,paperId,base,diagramSource,sectio
  });
  html=html.replace(/<table>/g,'<div class="digest-table-wrap" tabindex="0"><table class="digest-table">').replace(/<\/table>/g,'</table></div>');
  html=html.replace(/<p>\s*\$\$([\s\S]*?)\$\$\s*<\/p>/g,'<div class="math-display">$$$$$1$$$$</div>');
- html=html.replace(/href="(sources\.json|status\.md)"/g,(_,file)=>`href="https://github.com/masataka123/OpenAI-Math-Digest/blob/main/drafts/catalog-034/${paperId}/${file}"`);
+ html=html.replace(/href="(sources\.json|status\.md)"/g,(_,file)=>`href="https://github.com/masataka123/OpenAI-Math-Digest/blob/main/drafts/catalog-${catalogId}/${paperId}/${file}"`);
+ html=html.replace(/href="\.\.\/([^/]+)\/article\.(ja|en)\.md(#[^"]*)?"/g,(_,id,language,hash='')=>`href="${base}${language}/${id==='overview'?'catalog/'+catalogId:'papers/'+id}/${hash}"`);
  html=html.replaceAll('href="https://masataka123.github.io/OpenAI-Math-Digest/',`href="${base}`);
  return articleStructure(html,metadata.headings.filter(h=>h.depth===2),sectionIds);
 }

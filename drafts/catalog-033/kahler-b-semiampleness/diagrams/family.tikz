@@ -1,0 +1,26 @@
+
+\begin{tikzpicture}
+\node[card] (a) {\heading{1}{sectionをもつklt log-volume族を取り出す}{Extract a klt log-volume family with a section}
+$\Sigma\longrightarrow S,\qquad m(K_F+D_F)\sim0,\quad (F,D_F)\ \mathrm{klt}$
+\\[4pt]\Tx{最深stratumのStein分解と対角section}{Stein factorization of the deepest stratum and a diagonal section}};
+\node[card,below=2.55cm of a] (b) {\heading{2}{有限étale積分解を族として列挙する}{Enumerate finite étale product decompositions in families}
+$(J,D_J)=(Q,C)\times\prod_iT_i$
+\\[4pt]\Tx{$Q$は射影的、$T_i$はtorusまたは既約symplectic因子}{$Q$ is projective; each $T_i$ is a torus or irreducible symplectic factor.}};
+\flow{a}{b}{\Tx{ファイバーの積分解と、固定指数の部分群の有限性を組み合わせる}{Combine fibrewise splitting with finiteness of subgroups of fixed index.}\\
+\Cite{BS}{Lem. 5.1, 5.3--5.4, pp. 18--21}\\
+\Tx{積分解の入力：}{Splitting input: }\Cite{MWWZ}{[MWWZ] Cor. 1.3, pp. 2--3}}
+\node[card,below=2.8cm of b] (c) {\heading{3}{コンパクトなparameter spaceから支配する成分を選ぶ}{Select a dominating compact parameter space}
+$K=B\times\operatorname{Hilb}\times\prod_i\operatorname{Douady}_i
+\times\operatorname{Douady}_{\rm graph}$
+\\[5pt]$r:P\longrightarrow S\quad\Tx{\text{proper全射}}{\text{proper, surjective}}$
+\\[3pt]\Tx{$P$は滑らかなコンパクト複素多様体}{The auxiliary base $P$ is smooth, compact, and complex.}};
+\flow{b}{c}{\Tx{graph条件・境界の一致を構成可能条件にし、可算個の閉包にBaireを適用}{Impose constructible graph/boundary conditions; apply Baire to countably many closures.}\\
+\Cite{BS}{Lem. 5.5, Prop. 5.6, pp. 22--25}\\
+\Tx{Douady成分のコンパクト性：}{Compact Douady components: }\Cite{Toma}{[Toma] Cor. 5.3, p. 19}}
+\node[result,below=2.05cm of c] (d) {\heading{4}{指定したlineと積ノルムを保持する}{Retain the specified line and product norm}
+$r^*G_m\simeq G_{m,Q}\otimes\bigotimes_i\lambda_i^{\otimes m}\quad\text{on }P^\circ$
+\\[5pt]$\|s\|_{\rm res}=c\,\|s_Q\|_{Q,\rm res}\prod_i\|\omega_i\|_{\rm Hdg}^{m},\quad c>0$
+\\[4pt]\Tx{$P$のKähler性・射影性・一般有限性は仮定しない}{No Kählerness, projectivity, or generic finiteness is assumed for $P$.}};
+\flow{c}{d}{\Tx{族の積分解にlog-volume同型と留数積分の比較を付随させる}{Carry the log-volume isomorphism and residue-integral comparison with the family.}\\
+\Cite{BS}{Prop. 5.6, (5.5)--(5.6), pp. 22--25}}
+\end{tikzpicture}

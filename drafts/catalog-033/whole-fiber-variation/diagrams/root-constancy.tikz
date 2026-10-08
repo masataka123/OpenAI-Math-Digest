@@ -1,0 +1,27 @@
+\begin{tikzpicture}
+\node[card] (root) {\heading{01}{最小指数でroot coverを取る}{Take the root cover at the least index}
+$p=\min\{m>0:H^0(J,mK_J)\ne0\},\quad \eta^{\otimes p}=\pi^*\omega_J.$\\[3pt]
+$h^0(\widetilde J,mK_{\widetilde J})=1\ (m>0):\quad\Tx{\text{最高Hodge成分全体が直線}}{\text{the entire highest Hodge piece is a line}}.$};
+\node[card,below=2cm of root] (bound) {\heading{02}{実際の位数で切断系を比較する}{Compare section systems using actual relative orders}
+$B_P=1-\lambda_P+t_P,\quad M\sim_{\mathbb Q}\sum_P(\lambda_P-1)P,\quad B\ge D_W^0,$\\[3pt]
+$\kappa(W_z,K_{W_z}+B_z+M_z)\le0.$};
+\flow{root}{bound}{\Tx{Hodge normの可積分閾値がparabolic orderを与える。\\相対形式を掛け、固定された $X_{*,z}$ に切断比を移す。}{The Hodge integrability threshold gives the parabolic order.\\Multiply by the relative form and transfer ratios to the fixed $X_{*,z}$.}\\[4pt]
+\R{WV}{Lemma 3.1; Props. 3.3, 3.5, 3.7, pp.14--21}}
+\node[card,below=2.2cm of bound] (trivial) {\heading{03}{制限後の随伴比較を補間する}{Interpolate the adjoint comparison on the restriction}
+$D=K_{W_z}+B_z\sim_{\mathbb Q}D_{\rm eff},\quad M_z\sim_{\mathbb Q}a^*A,$\\[3pt]
+$D+M_z=c^{-1}(D+cM_z)+(1-c^{-1})D,$\\[3pt]
+$\dim R=0\quad\Longrightarrow\quad M_z\sim_{\mathbb Q}0,\quad\kappa(D)=0.$};
+\flow{bound}{trivial}{\Tx{制限したintegral variationに比較を適用。weak positivityから\\$\kappa(D+cM_z)\ge\dim R$ となり、$\dim R>0$ は上界と矛盾する。}{Apply comparison to the restricted integral variation. Weak positivity gives\\$\kappa(D+cM_z)\ge\dim R$, contradicting the upper bound if $\dim R>0$.}\\[4pt]
+\R{OI}{[OI] Thm. 3.1, pp.17--18}\quad\R{Fuj}{[Fuj] Thm. 1.1, pp.1--2}\\[3pt]
+\R{WV}{Props. 3.9, 3.12; Lemma 3.11, pp.21--24}}
+\node[card,below=1.9cm of trivial] (flat) {\heading{04}{最高成分のflatnessと有限指標を得る}{Obtain a flat entire top line with finite character}
+$\deg M_z|_C=0\quad\Longrightarrow\quad \Tx{\text{projective top lineが一定、指標は有限}}{\text{constant projective top line; finite character}}.$};
+\flow{trivial}{flat}{\Tx{曲線上で半正曲率を消し、制限上のrank-one subsystemに有限指標定理を使う。}{Vanishing semipositive curvature on curves gives a line subsystem; apply finite character on the restriction.}\\[4pt]
+\R{WV}{Cors. 3.13--3.16, pp.24--25}\quad\R{Del}{[Del] Cor. 4.2.8(iii)(b), PDF p.44}}
+\node[result,below=2.65cm of flat] (constant) {\heading{05}{極を収縮して最初のconstancyを得る}{Contract poles to obtain the first constancy statement}
+$\sigma_S(K_D)>0\ \Tx{\text{（極の因子）}}{\text{ for pole divisors}},\quad K_D+\varepsilon H\ \text{big klt}.$\\[3pt]
+$J\ \Tx{\text{は }h\text{-fiber方向で幾何学的に双有理一定}}{\text{is geometrically birationally constant along }h\text{-fibers}}.$};
+\flow{flat}{constant}{\Tx{拡張・Bergman weight・先頭係数を固定する最小化で極を固定成分にする。\\big adjoint modelで収縮し、flowを代数化する。巡回作用を保ち商を取る。}{Extension, Bergman weights, and minimization with a prescribed leading term\\make poles fixed. Contract on a big adjoint model, spread flows, and take the equivariant quotient.}\\[4pt]
+\R{DHP}{[DHP] Thm. 4.1, pp.20--21}\quad\R{PT}{[PT] Thm. 4.2.7, p.36}\\[3pt]
+\R{BCHM}{[BCHM] Thm. 1.2(2), p.5}\quad\R{WV}{Thm. 4.1; Prop. 4.10, pp.26--43}}
+\end{tikzpicture}

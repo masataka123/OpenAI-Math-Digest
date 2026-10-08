@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CatalogDependencies from './CatalogDependencies.astro';
+import {renderDraft} from '../lib/render-draft.mjs';
+import {fieldsForCatalog} from '../data/site.mjs';
+import {overviewSectionIds,overviewLabels,dependencyConfig} from '../data/catalog-033.mjs';
+import '../styles/paper.css';
+import '../styles/draft-article.css';
+import '../styles/catalog.css';
+const {catalog,lang}=Astro.props,en=lang==='en',base=import.meta.env.BASE_URL;
+const articles=import.meta.glob('../../drafts/catalog-*/overview/article.*.md',{query:'?raw',import:'default',eager:true});
+const figures=import.meta.glob('../../public/diagrams/catalog-*/overview/*.svg',{query:'?raw',import:'default',eager:true});
+const directory=`catalog-${catalog.id}/overview`;
+const article=await renderDraft(articles[`../../drafts/${directory}/article.${lang}.md`],{
+ lang,paperId:'overview',catalogId:catalog.id,base,sectionIds:overviewSectionIds,
+ diagramSource:stem=>figures[`../../public/diagrams/${directory}/${stem}.svg`],
+});
+// Add paper-row targets without duplicating the official-order inventory.
+const body=article.html.replace(/<tr>\s*<td>(\d{2}) <a /g,(row,order)=>row.replace('<tr>',`<tr id="paper-${catalog.paperIds[Number(order)-1]}">`));
+const split=body.indexOf('<section id="sources"');
+const fields=fieldsForCatalog(catalog.id);
+---
+<Layout lang={lang} title={catalog.id+' · '+catalog.title[lang]} otherPath={(en?'ja':'en')+'/catalog/'+catalog.id+'/'}>
+ <article class="paper-article draft-article catalog-draft-overview">
+  <nav class="breadcrumbs" aria-label={en?'Breadcrumb':'現在位置'}><a href={base+lang+'/'}>{en?'Fields':'分野一覧'}</a>{fields.map(f=><><span>/</span><a href={base+lang+'/fields/'+f.id+'/'}>{f.title[lang]}</a></>)}<span>/</span><span>{catalog.id}</span></nav>
+  <header class="family-header catalog-intro">
+   <p class="eyebrow">CATALOGUE {catalog.id}</p><h1>{catalog.title[lang]}</h1>
+   {!en&&<p class="official" lang="en">{catalog.title.en}</p>}
+   <p class="paper-subtitle" set:html={article.subtitleHtml}/><p class="lede" set:html={article.ledeHtml}/>
+  </header>
+  <div class="catalog-stats"><span><strong>{catalog.paperIds.length}</strong>{en?'proof overviews':'篇の証明概説'}</span><span><strong>12</strong>{en?'selected inputs':'件の主な入力'}</span><span><strong>1</strong>{en?'premise match':'件の前提対応'}</span></div>
+  <nav class="contents" aria-label={en?'On this page':'このページの内容'}>{article.headings.map((h,i)=><a href={'#'+h.slug}>{overviewLabels[i][en?1:0]}</a>)}<a href="#connection-explorer">{en?'Explore a connection':'接続を選んで読む'}</a></nav>
+  {article.introHtml&&<div class="article-prose draft-intro" set:html={article.introHtml}/>}
+  <div class="draft-body">
+   <Fragment set:html={body.slice(0,split)}/>
+   <section class="paper-section" id="connection-explorer"><h2>{en?'From a cited result to its use':'引用した結果から、その利用箇所へ'}</h2>
+    <p class="article-prose">{en?'Select a paper to follow its inputs or uses. Each record links to the pinned source and the relevant proof overview. The scope and unverified passages are recorded in the synthesis and individual articles.':'論文を選び、入力と利用先を切り替えられます。各記録から固定版の原典と概説の該当節へ進めます。照合の範囲と未確認箇所は、この総括と各記事に記録しています。'}</p>
+    <CatalogDependencies lang={lang} config={dependencyConfig}/>
+   </section>
+   <Fragment set:html={body.slice(split)}/>
+  </div>
+  <p class="source-note"><a href={base+lang+'/catalog/034/'}>{en?'Catalogue 034: abundance and effective Iitaka fibrations':'カタログ034：豊富性と有効飯高ファイブレーション'} →</a></p>
+ </article>
+</Layout>
+
+<style>
+ .catalog-draft-overview :global(#articles td:first-child){width:38%}
+ .catalog-draft-overview :global(#articles td:first-child>a:first-child){display:block;font-size:1.25rem;font-weight:600;line-height:1.65;margin:4px 0 8px}
+</style>

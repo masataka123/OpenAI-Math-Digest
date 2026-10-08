@@ -1,0 +1,689 @@
+{
+  "schemaVersion": 1,
+  "catalogId": "033",
+  "catalogOrder": 2,
+  "paperId": "whole-fiber-variation",
+  "sourceKey": "WV",
+  "checkedOn": "2026-10-08",
+  "manuscript": {
+    "title": "Logarithmic Kodaira dimension and whole-fiber variation",
+    "version": "2026-09-26",
+    "pdfPages": 75,
+    "sha256": "9b1b750b309e5c5a37fa1b472836f98c8eeffe69e4e7604452de18128a479e4a",
+    "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf",
+    "sourceCommit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+    "hashRechecked": true
+  },
+  "status": "initial-draft-with-explicit-open-checks",
+  "editorialScope": "主張の紹介、証明本文の主要接続、直接入力の定理文と使用箇所の照合。独立査読・全証明検証・形式検証ではない。",
+  "readingPassages": [
+    {
+      "pages": [
+        1,
+        5
+      ],
+      "results": [
+        "Theorem 1.1",
+        "Corollary 1.2",
+        "Corollary 1.3",
+        "equation (1.1)"
+      ],
+      "scope": "主張の仮定・結論・whole-fiber variationの定義と帰結の証明を読む。"
+    },
+    {
+      "pages": [
+        6,
+        14
+      ],
+      "results": [
+        "Theorem 2.1",
+        "Lemmas 2.6, 2.8, 2.9",
+        "Propositions 2.7, 2.10",
+        "Remark 2.11"
+      ],
+      "scope": "境界を保つモデル、収縮形式、像の族の階数、C(T0)のC(Y)への埋込みを読む。"
+    },
+    {
+      "pages": [
+        14,
+        25
+      ],
+      "results": [
+        "Lemma 3.1",
+        "Propositions 3.3, 3.5, 3.7, 3.9, 3.12",
+        "Lemma 3.11",
+        "Corollaries 3.13–3.16",
+        "Remark 3.17"
+      ],
+      "scope": "最小root cover、actual minimumとall-valuation threshold、制限上の随伴比較・Hodge lineの自明性を読む。Hodge境界理論の外部証明は未検証。"
+    },
+    {
+      "pages": [
+        25,
+        43
+      ],
+      "results": [
+        "Theorem 4.1",
+        "Lemmas 4.4, 4.6, 4.7",
+        "Proposition 4.8",
+        "Corollary 4.9",
+        "Proposition 4.10"
+      ],
+      "scope": "大域形式、極の正の固定次数、big klt modelによる収縮、flowのspreadingという主要論証を読む。正則化・L2見積りの全独立検算は未実施。式(4.21)のp0括弧はPDF画面でも確認。"
+    },
+    {
+      "pages": [
+        43,
+        59
+      ],
+      "results": [
+        "Proposition 5.3",
+        "Proposition 6.2",
+        "Lemma 6.4",
+        "Lemma 7.1",
+        "Propositions 7.2, 7.3",
+        "Section 7.4"
+      ],
+      "scope": "markingによる写像の回復、有限正規化、定数cocycle、動く因子の慣性、有限etale被覆・作用の降下と全関数体の同定を読む。"
+    },
+    {
+      "pages": [
+        59,
+        60
+      ],
+      "results": [
+        "Theorem 8.1"
+      ],
+      "scope": "追加結果の定理文を読む。中間volume・次数評価の証明は未読。"
+    },
+    {
+      "pages": [
+        69,
+        72
+      ],
+      "results": [
+        "end of proof of Theorem 8.1",
+        "Proposition 9.1",
+        "Corollaries 9.2–9.4"
+      ],
+      "scope": "同一モデル上の最終補間と通常の相対飯高への接続を読む。追加OI入力の原文照合は未完了。"
+    },
+    {
+      "pages": [
+        73,
+        75
+      ],
+      "results": [
+        "references"
+      ],
+      "scope": "書誌と引用番号の確認。"
+    }
+  ],
+  "dependencies": [
+    {
+      "sourceKey": "OI",
+      "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf",
+      "result": "Corollary 6.2",
+      "inputPdfPages": [
+        40,
+        41
+      ],
+      "usedAt": "WV Theorem 2.1 p.6; Lemmas 2.8–2.9 pp.10–12",
+      "role": "係数1の逆像境界を持つ対数的劣加法性。主定理の通常の下界と飯高ファイバーの0次元性。",
+      "relationship": "direct",
+      "statementAndApplicationCompared": true,
+      "externalProofIndependentlyVerified": false,
+      "version": "2026-09-26",
+      "sha256": "b143366cc99615e19783fa075caafd8c9565e7bf5a554a612e086657c2aeeb79",
+      "pdfPages": 55,
+      "sourceCommit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "hashOrigin": "coordination/catalog-033/inventory.json",
+      "hashRechecked": true,
+      "kind": "direct",
+      "checking": "入力記述・使用箇所を担当が照合。外部証明全体は未検証。"
+    },
+    {
+      "sourceKey": "OI",
+      "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf",
+      "result": "Theorem 3.1",
+      "inputPdfPages": [
+        17,
+        18
+      ],
+      "usedAt": "WV Theorem 3.8, Proposition 3.9 p.21; Proposition 3.12 p.23",
+      "role": "制限後のintegral ambient variationのcomplex summandとentire highest lineから随伴比較。",
+      "relationship": "direct",
+      "statementAndApplicationCompared": true,
+      "externalProofIndependentlyVerified": false,
+      "limit": "入力定理の証明全体を検証したという意味ではない。",
+      "version": "2026-09-26",
+      "sha256": "b143366cc99615e19783fa075caafd8c9565e7bf5a554a612e086657c2aeeb79",
+      "pdfPages": 55,
+      "sourceCommit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "hashOrigin": "coordination/catalog-033/inventory.json",
+      "hashRechecked": true,
+      "kind": "direct",
+      "checking": "入力記述・使用箇所を担当が照合。外部証明全体は未検証。"
+    },
+    {
+      "sourceKey": "Fuj",
+      "sourceUrl": "https://www.math.kyoto-u.ac.jp/~fujino/weak-posi11.pdf",
+      "result": "Theorem 1.1",
+      "inputPdfPages": [
+        1,
+        2
+      ],
+      "usedAt": "WV Lemma 3.11 pp.22–23",
+      "role": "lc pairの相対多重対数標準直像のweak positivity。Cartier倍・射影的な底の条件を照合。",
+      "relationship": "direct",
+      "statementAndApplicationCompared": true,
+      "externalProofIndependentlyVerified": false,
+      "version": "version 0.54, 2015-06-30",
+      "sha256": "89522b94f3bd15e13039c129d606c06782d87dd6f6426a1c248140fc139d9045",
+      "kind": "direct",
+      "checking": "入力記述・使用箇所を担当が照合。外部証明全体は未検証。"
+    },
+    {
+      "sourceKey": "Del",
+      "sourceUrl": "https://www.numdam.org/item/PMIHES_1971__40__5_0.pdf",
+      "result": "Corollary 4.2.8(iii)(b)",
+      "inputPdfPages": [
+        44,
+        44
+      ],
+      "usedAt": "WV Corollaries 3.14–3.16 pp.24–25",
+      "role": "rank-one subsystemの指標の有限性。",
+      "relationship": "direct",
+      "statementAndApplicationCompared": true,
+      "externalProofIndependentlyVerified": false,
+      "version": "1971, printed p.47 = PDF p.44",
+      "limit": "先行定理の全形式的仮定や証明の再構成はしていない。global invariant cyclesは下記別項目。",
+      "sha256": "748edefb44fded8af67869abfed87062d66977d25b5d12f7d014f1810a063c3f",
+      "kind": "direct",
+      "checking": "入力記述・使用箇所を担当が照合。外部証明全体は未検証。"
+    },
+    {
+      "sourceKey": "Del",
+      "sourceUrl": "https://www.numdam.org/item/PMIHES_1971__40__5_0.pdf",
+      "result": "Theorem 4.1.1(ii), Corollary 4.1.2",
+      "inputPdfPages": null,
+      "usedAt": "WV Section 4.1 p.27",
+      "role": "平坦な最高形式を大域閉形式へ持ち上げる不変サイクル。",
+      "relationship": "direct",
+      "statementAndApplicationCompared": false,
+      "externalProofIndependentlyVerified": false,
+      "version": "1971",
+      "limit": "受け手の引用と使用のみ確認。原典の該当定理文は今回未照合。",
+      "sha256": "748edefb44fded8af67869abfed87062d66977d25b5d12f7d014f1810a063c3f",
+      "kind": "direct",
+      "checking": "担当初稿は受け手のみ確認。入力記述・外部証明の未確認範囲はlimitを参照。"
+    },
+    {
+      "sourceKey": "DHP",
+      "sourceUrl": "https://arxiv.org/pdf/1012.0493v2",
+      "result": "Theorem 4.1",
+      "inputPdfPages": [
+        20,
+        21
+      ],
+      "usedAt": "WV Lemma 4.4 pp.30–31",
+      "role": "零因子上への制限が非零という反対仮定から多重標準切断を拡張。条件(19)–(23)との接続を照合。",
+      "relationship": "direct",
+      "statementAndApplicationCompared": true,
+      "externalProofIndependentlyVerified": false,
+      "version": "arXiv:1012.0493v2",
+      "sha256": "0ff92e2a594866eb1fc59a2ea9df1b133b061ab69f042813b27f8995c9e72df9",
+      "kind": "direct",
+      "checking": "入力記述・使用箇所を担当が照合。外部証明全体は未検証。"
+    },
+    {
+      "sourceKey": "PT",
+      "sourceUrl": "https://arxiv.org/pdf/1409.5504v1",
+      "result": "Theorem 4.2.7; Remark 4.3.1",
+      "inputPdfPages": [
+        36,
+        37
+      ],
+      "usedAt": "WV Lemma 4.6 pp.34–35",
+      "role": "半正曲率のrelative m-Bergman weightと一様上界。",
+      "relationship": "direct",
+      "statementAndApplicationCompared": true,
+      "externalProofIndependentlyVerified": false,
+      "version": "arXiv:1409.5504v1",
+      "limit": "該当定理文と適用箇所を読む。論文全体の技術的準備の独立再証明はしない。",
+      "sha256": "27cd279ce7d28f8a260a17e41e9734be00d5b259c2978a0b4999c507bbabba57",
+      "kind": "direct",
+      "checking": "入力記述・使用箇所を担当が照合。外部証明全体は未検証。"
+    },
+    {
+      "sourceKey": "BCHM",
+      "sourceUrl": "https://arxiv.org/pdf/math/0610203v2",
+      "result": "Theorem 1.2(2)",
+      "inputPdfPages": [
+        5,
+        5
+      ],
+      "usedAt": "WV Section 4.6 p.40; Section 6 p.48",
+      "role": "bigなklt adjoint pairのlog canonical modelの存在。",
+      "relationship": "direct",
+      "statementAndApplicationCompared": true,
+      "externalProofIndependentlyVerified": false,
+      "version": "arXiv:math/0610203v2, 81 pages",
+      "limit": "ample modelのDefinition 3.6.4/3.6.6・Lemma 3.6.5は原文未照合。",
+      "sha256": "5cb857f6c4d4f060f05628e349051a60a9e7b64a2aaced80314c089da78edc34",
+      "kind": "direct",
+      "checking": "入力記述・使用箇所を担当が照合。外部証明全体は未検証。"
+    },
+    {
+      "sourceKey": "KP",
+      "sourceUrl": "https://sites.math.washington.edu/~kovacs/2013/papers/Kovacs_Patakfalvi__Projectivity.pdf",
+      "result": "Theorem 9.9; Definitions 9.1–9.4",
+      "inputPdfPages": [
+        49,
+        50
+      ],
+      "usedAt": "WV Proposition 5.3 p.46; Proposition 6.2 pp.48–50",
+      "role": "M=0としてklt big generic pairのvariationを含む下界を適用。",
+      "relationship": "direct",
+      "statementAndApplicationCompared": true,
+      "externalProofIndependentlyVerified": false,
+      "version": "62-page author manuscript; hash pinned",
+      "limit": "stable-family moduliの全定義と外部証明までは追っていない。",
+      "sha256": "d7d9cac0a0fa7d597aa01233995c6cd723cafa95fc82cb7c4369e20a21365637",
+      "kind": "direct",
+      "checking": "入力記述・使用箇所を担当が照合。外部証明全体は未検証。"
+    },
+    {
+      "sourceKey": "Han",
+      "sourceUrl": "https://doi.org/10.1007/BF01394338",
+      "result": "Theorems 2.1–2.2",
+      "inputPdfPages": null,
+      "usedAt": "WV Lemma 7.1 p.53",
+      "role": "非uniruled多様体の双有理群の恒等成分がabelian varietyであることからcocycleを平均。",
+      "relationship": "direct",
+      "statementAndApplicationCompared": false,
+      "externalProofIndependentlyVerified": false,
+      "version": "1988, DOI 10.1007/BF01394338",
+      "limit": "出版社の書誌は確認できたが原定理文を取得して照合できていない。本文は受け手の論証まで。",
+      "kind": "direct",
+      "checking": "担当初稿は受け手のみ確認。入力記述・外部証明の未確認範囲はlimitを参照。"
+    },
+    {
+      "sourceKey": "SGA1",
+      "sourceUrl": "https://arxiv.org/abs/math/0206203v2",
+      "result": "Exposé X, Théorème 3.1",
+      "inputPdfPages": null,
+      "usedAt": "WV Proposition 7.3 p.57",
+      "role": "regular open上の有限正規化にpurityを適用。",
+      "relationship": "direct",
+      "statementAndApplicationCompared": false,
+      "externalProofIndependentlyVerified": false,
+      "version": "2003 re-edition; arXiv:math/0206203v2",
+      "limit": "arXiv書誌と受け手が示す適用仮定を確認。purityの原典記述は未照合。",
+      "kind": "direct",
+      "checking": "担当初稿は受け手のみ確認。入力記述・外部証明の未確認範囲はlimitを参照。"
+    },
+    {
+      "sourceKey": "Lan",
+      "sourceUrl": "https://arxiv.org/pdf/2005.09690v3",
+      "result": "Theorem 1.1; Remark 1.5",
+      "inputPdfPages": [
+        2,
+        3
+      ],
+      "usedAt": "WV Proposition 7.3 pp.57–58",
+      "role": "標数0でfinite etale coversの圏が代数閉体拡大に不変。fully faithful性で作用と射も降下。",
+      "relationship": "direct",
+      "statementAndApplicationCompared": true,
+      "externalProofIndependentlyVerified": false,
+      "version": "arXiv:2005.09690v3",
+      "sha256": "f01ab4510bc1059af0026ec52dccd5cefe35ea0735e71b73b246ee365a6a55f6",
+      "kind": "direct",
+      "checking": "入力記述・使用箇所を担当が照合。外部証明全体は未検証。"
+    },
+    {
+      "sourceKey": "BDPP",
+      "sourceUrl": "https://arxiv.org/pdf/math/0405285v1",
+      "result": "Corollary 0.3",
+      "inputPdfPages": [
+        2,
+        2
+      ],
+      "usedAt": "WV Corollary 1.3 proof p.5",
+      "role": "non-uniruledな滑らかな射影閉ファイバーのKがpseudo-effective。",
+      "relationship": "consequence",
+      "statementAndApplicationCompared": true,
+      "externalProofIndependentlyVerified": false,
+      "version": "arXiv:math/0405285v1",
+      "sha256": "0a05e3644b784c3821eaf079b3fccd1744183ae67e9793f3d599315c53002b3c",
+      "kind": "consequence",
+      "checking": "入力記述・使用箇所を担当が照合。外部証明全体は未検証。"
+    },
+    {
+      "sourceKey": "LA",
+      "sourceUrl": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf",
+      "result": "Corollary 11.2",
+      "inputPdfPages": [
+        73,
+        74
+      ],
+      "usedAt": "WV Corollary 1.3 proof p.5",
+      "role": "semiample modelと有効な例外差を得てcanonical singularitiesを確認しTajiへ。",
+      "relationship": "consequence",
+      "statementAndApplicationCompared": true,
+      "externalProofIndependentlyVerified": false,
+      "version": "2026-09-24",
+      "limit": "034既存記事と同じ旧固定版。LAの全証明は今回検証していない。",
+      "sourceCommit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+      "sha256": "87b191f75e8c852683847be18fb99e2a226e11e55967624c8d2bbba41c509be0",
+      "pdfPages": 85,
+      "hashRechecked": true,
+      "kind": "consequence",
+      "checking": "入力記述・使用箇所を担当が照合。外部証明全体は未検証。"
+    },
+    {
+      "sourceKey": "Taj",
+      "sourceUrl": "https://arxiv.org/pdf/2005.01025v4",
+      "result": "Theorems 1.1–1.2; variation definition; Definition 3.16",
+      "usedAt": "WV Corollary 1.3 proof p.5",
+      "role": "whole-fiber variationについて底の対数的小平次元による二分岐とspecial-baseのisotriviality。",
+      "relationship": "consequence",
+      "statementAndApplicationCompared": true,
+      "externalProofIndependentlyVerified": false,
+      "version": "arXiv:2005.01025v4",
+      "limit": "主にp.2の定理文・不変量とp.25のadmissibilityを読む。間の全ページは精読していない。",
+      "sha256": "84ee9dd874376767b4ba8057ff3e56640b4cc6a4dd3bc98de7c6ce236ebb5498",
+      "specificPdfPagesRead": [
+        2,
+        25
+      ],
+      "kind": "consequence",
+      "checking": "入力記述・使用箇所を担当が照合。外部証明全体は未検証。"
+    },
+    {
+      "sourceKey": "RA",
+      "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-reverse-logarithmic-Kodaira-inequality-and-additivity-September-26-2026/paper.pdf",
+      "result": "Corollary 1.2",
+      "inputPdfPages": [
+        2,
+        2
+      ],
+      "usedAt": "WV comparison paragraph p.5",
+      "role": "smooth familyかつkappa(F)とlog kappa(V)が非負のとき、加法性とWV Theorem 1.1から同じvariation上界。",
+      "relationship": "alternative",
+      "statementAndApplicationCompared": true,
+      "externalProofIndependentlyVerified": false,
+      "limit": "負の底・全てのspecial baseをこの経路で代替しない。",
+      "version": "2026-09-26",
+      "sha256": "499df173e9f8ba2d88b644514c4ea3a797d5c00de4148bac246f7a4c857094f9",
+      "pdfPages": 51,
+      "sourceCommit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "hashOrigin": "coordination/catalog-033/inventory.json",
+      "hashRechecked": false,
+      "kind": "alternative",
+      "checking": "入力記述・使用箇所を担当が照合。外部証明全体は未検証。"
+    },
+    {
+      "sourceKey": "PH",
+      "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Projective-Hodge-lines-and-ordinary-Iitaka-subadditivity-September-27-2026/paper.pdf",
+      "result": "Lemma 8.4; Theorem 8.1",
+      "inputPdfPages": null,
+      "usedAt": "WV Remark 3.17 p.25",
+      "role": "制限上の随伴比較について受け手が明記する別経路。",
+      "relationship": "alternative",
+      "statementAndApplicationCompared": false,
+      "externalProofIndependentlyVerified": false,
+      "limit": "受け手の引用のみ。入力側の原定理文は未照合。主定理への新たな必須辺は付けない。",
+      "version": "2026-09-27",
+      "sha256": "564a98c625b94ef479a6690bed65451fee18c47c69c23e5d9e1f4fd181deca9a",
+      "pdfPages": 40,
+      "sourceCommit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "hashOrigin": "coordination/catalog-033/inventory.json",
+      "hashRechecked": false,
+      "kind": "alternative",
+      "checking": "担当初稿は受け手のみ確認。入力記述・外部証明の未確認範囲はlimitを参照。",
+      "hqInheritedChecking": {
+        "inputStatement": "compared by worker D",
+        "receivingUse": "compared in synthesis",
+        "inputPages": [
+          28,
+          29
+        ],
+        "connectionId": "a01",
+        "origin": "../projective-hodge-lines/sources.json",
+        "fullInputProofVerified": false,
+        "note": "B初稿の未照合フラグを保存。担当Dの入力記述照合を引き継ぐ総括側の確認記録。"
+      }
+    },
+    {
+      "sourceKey": "OI",
+      "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf",
+      "result": "Proposition 2.7; Lemma 7.1; Corollary 7.2; Lemma 7.4",
+      "inputPdfPages": [
+        10,
+        16,
+        17,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "usedAt": "WV Proposition 9.1 pp.69–70",
+      "role": "追加の通常相対飯高へのsection comparisonとreduced-rootのentire top line。",
+      "relationship": "consequence",
+      "statementAndApplicationCompared": true,
+      "externalProofIndependentlyVerified": false,
+      "limit": "§§2–7の主経路と分離した追加結果への入力。付値比較・モデル変更を含む全証明は独立検証していない。初稿時点の未確認記録はinitialDraftCheckingに保存。",
+      "version": "2026-09-26",
+      "sha256": "b143366cc99615e19783fa075caafd8c9565e7bf5a554a612e086657c2aeeb79",
+      "pdfPages": 55,
+      "sourceCommit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "hashOrigin": "coordination/catalog-033/inventory.json",
+      "hashRechecked": true,
+      "kind": "consequence",
+      "checking": "033本部で入力記述・使用箇所・記事を照合。結果別記録はhqSynthesisChecks c04–c06。",
+      "initialDraftChecking": {
+        "relationship": "direct-additional-result",
+        "statementAndApplicationCompared": false,
+        "limit": "追加結果の受け手を読む。入力原文の照合は保留。§§2–7の主経路と別記。",
+        "checking": "担当初稿は受け手のみ確認。入力記述・外部証明の未確認範囲はlimitを参照。"
+      }
+    }
+  ],
+  "unresolved": [
+    "Hanamura Theorems 2.1–2.2の原典記述",
+    "SGA1 X Théorème 3.1の原典記述",
+    "Deligne global invariant cyclesの原典記述",
+    "境界Hodge成長・extensionの外部結果（BFMT2025 Lemmas 2.16/5.6等）",
+    "§4の正則化・L2解法の全見積りと外部解析補題",
+    "BCHMのample-model補助番号の原文照合",
+    "§8 pp.61–68を中心とする中間volume・有限群次数評価",
+    "§9の追加OI入力定理群",
+    "PHの代替比較の入力側原文"
+  ],
+  "claimPolicy": {
+    "inputStatementCheckIsNotInputProofVerification": true,
+    "unrecordedRelationsAre": "uninvestigated",
+    "mainProofAndAdditionalSectionsSeparated": true,
+    "japaneseEnglishAligned": true
+  },
+  "referenceUrls": {
+    "WV": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf",
+    "OI": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf",
+    "PH": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Projective-Hodge-lines-and-ordinary-Iitaka-subadditivity-September-27-2026/paper.pdf",
+    "RA": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-reverse-logarithmic-Kodaira-inequality-and-additivity-September-26-2026/paper.pdf",
+    "LA": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf",
+    "Fuj": "https://www.math.kyoto-u.ac.jp/~fujino/weak-posi11.pdf",
+    "Del": "https://www.numdam.org/item/PMIHES_1971__40__5_0.pdf",
+    "DHP": "https://arxiv.org/pdf/1012.0493v2",
+    "PT": "https://arxiv.org/pdf/1409.5504v1",
+    "BCHM": "https://arxiv.org/pdf/math/0610203v2",
+    "KP": "https://sites.math.washington.edu/~kovacs/2013/papers/Kovacs_Patakfalvi__Projectivity.pdf",
+    "Han": "https://doi.org/10.1007/BF01394338",
+    "SGA1": "https://arxiv.org/abs/math/0206203v2",
+    "Lan": "https://arxiv.org/pdf/2005.09690v3",
+    "BDPP": "https://arxiv.org/pdf/math/0405285v1",
+    "Taj": "https://arxiv.org/pdf/2005.01025v4"
+  },
+  "title": "Logarithmic Kodaira dimension and whole-fiber variation",
+  "version": "2026-09-26",
+  "sourceCommit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf",
+  "sha256": "9b1b750b309e5c5a37fa1b472836f98c8eeffe69e4e7604452de18128a479e4a",
+  "statements": [
+    {
+      "pages": [
+        1,
+        5
+      ],
+      "results": [
+        "Theorem 1.1",
+        "Corollary 1.2",
+        "Corollary 1.3",
+        "equation (1.1)"
+      ],
+      "scope": "主張の仮定・結論・whole-fiber variationの定義と帰結の証明を読む。"
+    }
+  ],
+  "proofPassages": [
+    {
+      "pages": [
+        6,
+        14
+      ],
+      "results": [
+        "Theorem 2.1",
+        "Lemmas 2.6, 2.8, 2.9",
+        "Propositions 2.7, 2.10",
+        "Remark 2.11"
+      ],
+      "scope": "境界を保つモデル、収縮形式、像の族の階数、C(T0)のC(Y)への埋込みを読む。"
+    },
+    {
+      "pages": [
+        14,
+        25
+      ],
+      "results": [
+        "Lemma 3.1",
+        "Propositions 3.3, 3.5, 3.7, 3.9, 3.12",
+        "Lemma 3.11",
+        "Corollaries 3.13–3.16",
+        "Remark 3.17"
+      ],
+      "scope": "最小root cover、actual minimumとall-valuation threshold、制限上の随伴比較・Hodge lineの自明性を読む。Hodge境界理論の外部証明は未検証。"
+    },
+    {
+      "pages": [
+        25,
+        43
+      ],
+      "results": [
+        "Theorem 4.1",
+        "Lemmas 4.4, 4.6, 4.7",
+        "Proposition 4.8",
+        "Corollary 4.9",
+        "Proposition 4.10"
+      ],
+      "scope": "大域形式、極の正の固定次数、big klt modelによる収縮、flowのspreadingという主要論証を読む。正則化・L2見積りの全独立検算は未実施。式(4.21)のp0括弧はPDF画面でも確認。"
+    },
+    {
+      "pages": [
+        43,
+        59
+      ],
+      "results": [
+        "Proposition 5.3",
+        "Proposition 6.2",
+        "Lemma 6.4",
+        "Lemma 7.1",
+        "Propositions 7.2, 7.3",
+        "Section 7.4"
+      ],
+      "scope": "markingによる写像の回復、有限正規化、定数cocycle、動く因子の慣性、有限etale被覆・作用の降下と全関数体の同定を読む。"
+    },
+    {
+      "pages": [
+        59,
+        60
+      ],
+      "results": [
+        "Theorem 8.1"
+      ],
+      "scope": "追加結果の定理文を読む。中間volume・次数評価の証明は未読。"
+    },
+    {
+      "pages": [
+        69,
+        72
+      ],
+      "results": [
+        "end of proof of Theorem 8.1",
+        "Proposition 9.1",
+        "Corollaries 9.2–9.4"
+      ],
+      "scope": "同一モデル上の最終補間と通常の相対飯高への接続を読む。追加OI入力の原文照合は未完了。"
+    },
+    {
+      "pages": [
+        73,
+        75
+      ],
+      "results": [
+        "references"
+      ],
+      "scope": "書誌と引用番号の確認。"
+    }
+  ],
+  "hqSynthesisChecks": [
+    {
+      "connectionId": "c04",
+      "sourceResult": "Proposition 2.7",
+      "sourcePages": "10, 16–17",
+      "usedAt": "Proposition 9.1(i), (iii)",
+      "usedAtPages": "69–70",
+      "checking": {
+        "inputStatement": "compared",
+        "receivingUse": "compared",
+        "article": "compared",
+        "checkedOn": "2026-10-08",
+        "checkedBy": "catalog-033 HQ synthesis",
+        "fullInputProofVerified": false,
+        "limits": "The full proofs of the input and receiving result were not independently verified."
+      }
+    },
+    {
+      "connectionId": "c05",
+      "sourceResult": "Lemma 7.1 / Corollary 7.2",
+      "sourcePages": "43–46",
+      "usedAt": "Proposition 9.1(iv), (v)",
+      "usedAtPages": "69–70",
+      "checking": {
+        "inputStatement": "compared",
+        "receivingUse": "compared",
+        "article": "compared",
+        "checkedOn": "2026-10-08",
+        "checkedBy": "catalog-033 HQ synthesis",
+        "fullInputProofVerified": false,
+        "limits": "The full proofs of the input and receiving result were not independently verified."
+      }
+    },
+    {
+      "connectionId": "c06",
+      "sourceResult": "Lemma 7.4",
+      "sourcePages": "46–47",
+      "usedAt": "Proposition 9.1: initial normalized boundary",
+      "usedAtPages": "69–70",
+      "checking": {
+        "inputStatement": "compared",
+        "receivingUse": "compared",
+        "article": "compared",
+        "checkedOn": "2026-10-08",
+        "checkedBy": "catalog-033 HQ synthesis",
+        "fullInputProofVerified": false,
+        "limits": "The statement and receiving use were compared in this synthesis; the complete valuation and model-change argument remains unverified."
+      }
+    }
+  ]
+}

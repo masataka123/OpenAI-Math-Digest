@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+\node[card,text width=4.5cm,minimum height=2.3cm,anchor=west] (s0) at (0,0.0) {\heading{OI 引用する結果}{OI cited result}Corollary 6.2\\[5pt]{\small pp. 40--41}};
+\node[result,text width=4.5cm,minimum height=2.3cm,anchor=west] (t0) at (12.0,0.0) {\heading{WV 主証明}{WV Main proof}Theorem 2.1;\allowbreak Lemmas 2.8--2.9\\[5pt]{\small pp. 6, 10--12}};
+\draw[edge] (s0.east)--(t0.west);
+\node[reason,text width=5.1cm,align=center,anchor=south] at (8.7,0.22) {\Tx{対数下界と飯高ファイバー上の消滅}{Lower bound; vanishing of Iitaka dimensions}};
+\node[reason,text width=5.1cm,align=center,anchor=north] at (8.7,-0.22) {\R{OI}{[OI] pp. 40--41}\\\R{WV}{[WV] pp. 6, 10--12}};
+\node[card,text width=4.5cm,minimum height=2.3cm,anchor=west] (s1) at (0,-4.1) {\heading{OI 引用する結果}{OI cited result}Theorem 3.1\\[5pt]{\small pp. 17--18}};
+\node[result,text width=4.5cm,minimum height=2.3cm,anchor=west] (t1) at (12.0,-4.1) {\heading{WV 主証明}{WV Main proof}Theorem 3.8 / Proposition 3.9;\allowbreak Proposition 3.12\\[5pt]{\small pp. 21, 23}};
+\draw[edge] (s1.east)--(t1.west);
+\node[reason,text width=5.1cm,align=center,anchor=south] at (8.7,-3.8799999999999994) {\Tx{制限した最高lineの随伴正値性}{Adjoint positivity for the restricted top line}};
+\node[reason,text width=5.1cm,align=center,anchor=north] at (8.7,-4.319999999999999) {\R{OI}{[OI] pp. 17--18}\\\R{WV}{[WV] pp. 21, 23}};
+\node[card,text width=4.5cm,minimum height=2.3cm,anchor=west] (s2) at (0,-8.2) {\heading{OI 引用する結果}{OI cited result}Corollary 6.2\\[5pt]{\small pp. 40--41}};
+\node[result,text width=4.5cm,minimum height=2.3cm,anchor=west] (t2) at (12.0,-8.2) {\heading{RA 帰結}{RA Corollary}Corollary 1.2;\allowbreak Theorem 7.8 / \S 7.6\\[5pt]{\small pp. 2, 50}};
+\draw[edge] (s2.east)--(t2.west);
+\node[reason,text width=5.1cm,align=center,anchor=south] at (8.7,-7.9799999999999995) {\Tx{独立した上界に同じ対の下界を加える}{Add the lower bound to the independent upper bound}};
+\node[reason,text width=5.1cm,align=center,anchor=north] at (8.7,-8.42) {\R{OI}{[OI] pp. 40--41}\\\R{RA}{[RA] pp. 2, 50}};
+\end{tikzpicture}

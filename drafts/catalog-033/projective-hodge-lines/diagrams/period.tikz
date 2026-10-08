@@ -1,0 +1,26 @@
+\begin{tikzpicture}
+\node[card] (a) {\heading{01}{全最高lineを含む最小の有理変動を取る}{Keep the minimal rational variation containing the top line}
+$\operatorname{rank}F^p=1,\quad F^{p+1}=0,\qquad \tau^*M\sim_{\mathbb Q}cJ_{\widehat Y}.$};
+\node[card,below=1.8cm of a] (b) {\heading{02}{実際の周期像と有限商を作る}{Form the actual period image and its finite quotient}
+$T\dashrightarrow B\ \text{birational},\quad \pi:T\to S_0,\quad L_T\sim_{\mathbb Q}\pi^*L_0,$\\[3pt]
+$r=\nu(L_T)=\operatorname{rank}_{\rm gen}d\ell\leq\dim T,\qquad K_T+D_N\ \text{big}.$};
+\flow{a}{b}{\Tx{neat levelで代数化し、有限指標をtensor powerで消す。\\full period mapのimmersivityを対数一般型性に使う。}{Algebraize at neat level and kill finite characters by a tensor power.\\Use full-period immersivity for log general type.}\\[4pt]\Cite{PH}{Lemma 2.1; $\S5$, pp. 13--15}\quad\Cite{BBT}{[BBT] Thm. 1.1, p. 1}\quad\Cite{BC}{[BC] Thm. 1.1, p. 1}}
+\node[half,below=2.3cm of b.south,anchor=north,xshift=-4cm] (n) {\heading{A}{非零のモノドロミー対数}{Nonzero monodromy logarithm}
+$E\subset D_N,\quad N\ne0$\\[3pt]
+$\nu(L_T|_E)<r.$};
+\node[half,below=2.3cm of b.south,anchor=north,xshift=4cm] (f) {\heading{B}{有限inertiaの固定因子}{Divisor fixed by finite inertia}
+$E\subset R_{\rm div},\quad b\ne1$\\[3pt]
+$\nu(L_T|_E)<r.$};
+\draw[wire] (b.south)--++(0,-.3) coordinate (fork);
+\draw[edge] (fork)-| ($(n.north)+(-3.05,0)$);
+\draw[edge] (fork)-| ($(f.north)+(-3.05,0)$);
+\node[branchreason,anchor=west] at ($(n.north)+(-2.5,1.08)$) {\Tx{階数が同じなら最高lineは$\ker N$内。\\有理最小性から$N=0$となり矛盾。}{Equal rank puts nearby lines in $\ker N$.\\Rational minimality would force $N=0$.}\\[4pt]\Cite{PH}{Lemmas 2.2, 3.4--3.5; Thm. 4.1, pp. 6--11}};
+\node[branchreason,anchor=west] at ($(f.north)+(-2.5,1.08)$) {\Tx{階数が同じなら全周期を固定。\\実際の周期像への有効作用に矛盾。}{Equal rank fixes every full period,\\contradicting the effective image action.}\\[4pt]\Cite{PH}{Lemma 2.3; Thm. 4.1, pp. 6--7, 11--12}};
+\node[result,below=2.7cm of n.south,anchor=north,xshift=4cm] (g) {\heading{03}{次数差で境界と分岐を除き、最後に連結ファイバー化}{Subtract boundary and ramification, then take connected fibres}
+$A=\pi^*K_{S_0}+R_{\rm exc},\quad D=D_N+R_{\rm div},\quad A+D\ \text{big},$\\[3pt]
+$cj^r-O(j^{r-1})>0\quad\Longrightarrow\quad K_S+jL\ \text{big},\quad M\sim_{\mathbb Q}p^*L.$};
+\coordinate (join) at ($(g.north)+(0,2.1)$);
+\draw[wire] (n.south)|-(join);\draw[wire] (f.south)|-(join);
+\draw[edge] (join)-| ($(g.north)+(-6.9,0)$);
+\node[reason,anchor=west] at ($(g.north)+(-6.35,1.05)$) {\Tx{制限切断は次数$r-1$以下。例外成分を除き、bignessを降ろす。\\Stein分解は有限inertiaの矛盾を得た後に行う。}{Restriction sections have degree at most $r-1$; discard exceptional terms and descend.\\Stein factorization follows the finite-inertia argument.}\\[4pt]\Cite{PH}{Lemmas 5.1--5.2; (5.5), pp. 12--16}};
+\end{tikzpicture}

@@ -1,0 +1,25 @@
+
+\begin{tikzpicture}
+\node[card] (a) {\heading{1}{局所rootを取り、全成分を保持する}{Take a local root and retain every sheet}
+$K_{W/S}+D_W\sim_{\mathbb Q}p^*Q_S,\qquad F^d\mathbb V_\chi=\mathcal O\tau$
+\\[4pt]\Tx{全最高空間でなく、指定された指標の固有直線}{The specified character eigenline; not the entire highest space}};
+\node[card,below=2.05cm of a] (b) {\heading{2}{最深stratumへの留数で純粋なlineに移す}{Pass to a pure line by the deepest residue}
+$F^d\operatorname{Gr}^{W}_{d+k}\mathbb V_\chi
+\ \simeq\ \Tx{\text{深さ }k\text{ のklt log-volume line}}{\text{klt log-volume line on a depth-}k\text{ stratum}}$
+\\[4pt]\Tx{局所frame・次数$m$の同定を保持する}{Retain the local frame and its degree-$m$ identification}};
+\flow{a}{b}{\Tx{係数1の水平成分の最大交差数$k$を用い、反復留数を取る}{Use the maximal coefficient-one horizontal intersection and iterated residue.}\\
+\Cite{BS}{Prop. 3.4, Lem. 3.5, pp. 10--12}}
+\node[card,below=2.35cm of b] (c) {\heading{3}{閾値と延長次数を一致させる}{Identify threshold and extension order}
+$\displaystyle t_P=\min_E\frac{1-\delta_E}{a_E},\qquad
+\operatorname{ord}_{\rm Hdg}\tau=t_P-1$
+\\[5pt]$a_E=\operatorname{ord}_E(t),\quad \delta_E=\operatorname{coeff}_E D_W$};
+\flow{b}{c}{\Tx{diskモデルで延長可能性を両方向に判定し、$du$のJacobianを含める}{Test extension in both directions on disk models, including the Jacobian of $du$.}\\
+\Cite{BS}{Lem. 4.2--4.3, Thm. 4.4, pp. 13--16}\\
+\Tx{混合Hodge延長と最高直接像：}{Mixed Hodge extension and highest direct image: }\Cite{FF}{[FF] Thm. 1.1, p. 2}}
+\node[result,below=2.2cm of c] (d) {\heading{4}{境界を補正し、すべての高いモデルへ降ろす}{Correct the boundary and descend to every higher model}
+$-K_{S_1/S}-B_{S_1}+\nu^*B_S=0$\\[5pt]
+$\boxed{M_{S_1}=\nu^*M_S\quad\text{in }\operatorname{Pic}(S_1)_{\mathbb Q}}$
+\\[4pt]\Tx{Theorem 1.1(a)：良い開集合内を中心とする変更も含む}{Theorem 1.1(a), including centres inside the good open set}};
+\flow{c}{d}{\Tx{power chartで次数を消し、相対標準束の変化と閾値を相殺する}{Kill boundary orders on power charts; cancel relative canonical and threshold changes.}\\
+\Cite{BS}{Thm. 4.4, Cor. 4.5, pp. 15--17}}
+\end{tikzpicture}

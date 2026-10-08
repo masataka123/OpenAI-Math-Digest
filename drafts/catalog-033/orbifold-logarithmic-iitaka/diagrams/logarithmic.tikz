@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+\node[card] (a) {\heading{被約境界の支持条件}{Support condition for reduced boundaries}
+ $\operatorname{Supp}(f^*D_Y)\subseteq\operatorname{Supp}(D_X)$\\
+ $f:X\to Y,\quad \Delta=D_X$};
+\node[card,below=1.65cm of a] (b) {\heading{Neatモデルで無限重複度を使う}{Use infinite multiplicities on a neat model}
+ $q:Y'\to Y,\quad E_Y=(q^{-1}\operatorname{Supp}D_Y)_{\mathrm{red}}$\\
+ $B(f',\Delta')\ge E_Y$};
+\flow{a}{b}{\Tx{旧成分と例外成分に係数1を付けて比較する}{Old and exceptional source components have coefficient one}\\\OI{Lem. 6.1, p. 40}}
+\node[card,below=1.85cm of b] (c) {\heading{不変な底項へ移す}{Pass to the invariant base term}
+ $\kappa(f\mid D_X)\ge\kappa(Y,K_Y+D_Y)$};
+\flow{b}{c}{\Tx{対数形式を引き戻し、neatモデル上の等式を使う}{Pull back logarithmic forms and use the neat-model identity}\\\OI{(2.2), p. 5; Lem. 6.1, p. 40}\\\Cam{[Cam] Cor. 4.11, p. 49}}
+\node[result,below=1.65cm of c] (d) {\heading{主定理を対数対に適用する}{Apply the main theorem to the logarithmic pair}
+ $\kappa(X,K_X+D_X)\ge\kappa(F,K_F+D_F)+\kappa(Y,K_Y+D_Y)$};
+\flow{c}{d}{\Tx{$\Delta=D_X$としてorbifold劣加法性へ代入}{Substitute $\Delta=D_X$ into orbifold subadditivity}\\\OI{Thm. 1.1, p. 3; Cor. 6.2, pp. 40--41}}
+\end{tikzpicture}

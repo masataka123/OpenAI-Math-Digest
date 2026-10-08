@@ -1,0 +1,22 @@
+\begin{tikzpicture}
+\node[card] (start) {\heading{START}{同じ対と非常に一般のファイバーを固定する}{Fix the same pairs and the same very general fiber}
+$f:(X,E)\to(Y,D),\quad(F,E_F),\qquad\operatorname{Supp}(f^*D)\subseteq\operatorname{Supp}E.$\\[4pt]
+\Tx{Theorem 1.1の全仮定を満たす。}{All hypotheses of Theorem 1.1 hold.}};
+\node[half,result,below=2.25cm of start.south,anchor=north,xshift=-4.35cm,minimum height=2.1cm] (upper) {\heading{A}{本稿の独立した上界}{The independent upper bound}
+$\kappa_X\leq\kappa_Y+\kappa_F.$};
+\node[half,result,below=2.25cm of start.south,anchor=north,xshift=4.35cm,minimum height=2.1cm] (lower) {\heading{B}{OIによる下界}{The lower bound from OI}
+$\kappa_X\geq\kappa_Y+\kappa_F.$};
+\draw[wire] (start.south)--++(0,-.3) coordinate (fork);
+\draw[edge] (fork)-|($(upper.north)+(-3.45,0)$);
+\draw[edge] (fork)-|($(lower.north)+(-3.45,0)$);
+\node[branchreason,anchor=west] at ($(upper.north)+(-3,1.1)$) {\Tx{元の点を保つ切断構成と飯高帰着。\\OIの下界を用いない。}{Original-point sections and Iitaka reduction.\\This proof does not use the OI lower bound.}\\[3pt]\RA{Thm. 1.1, p. 2}\quad\RA{$\S2$, pp. 5--7}};
+\node[branchreason,anchor=west] at ($(lower.north)+(-3,1.1)$) {\Tx{$D_X=E,\ D_Y=D$ とする。\\下界はstratumの滑らかさを要求しない。}{Set $D_X=E,\ D_Y=D$. The lower bound\\does not require stratum smoothness.}\\[3pt]\OI{[OI] Cor. 6.2, pp. 40--41}\\[2pt]\RA{Thm. 7.8, p. 50}};
+\node[card,result,below=2cm of upper.south,anchor=north,xshift=4.35cm] (end) {\heading{END}{全ての符号の場合で加法性を得る}{Obtain additivity in every sign case}
+$\kappa_X=\kappa_Y+\kappa_F.$\\[4pt]
+\Tx{右辺に $-\infty$ が現れるときの消滅は、上界が与える。}{When a summand is $-\infty$, vanishing is supplied by the upper bound.}};
+\coordinate (join) at ($(end.north)+(0,1.55)$);
+\draw[wire] (upper.south)|-(join);
+\draw[wire] (lower.south)|-(join);
+\draw[edge] (join)--($(end.north)+(0,0)$);
+\node[reason,text width=7cm,anchor=west] at ($(end.north)+(.55,.8)$) {\Tx{$(-\infty)+a=-\infty$ の規約も一致する。}{The convention $(-\infty)+a=-\infty$ agrees.}\\[3pt]\RA{Cor. 1.2, p. 2}\quad\RA{$\S7.6$, p. 50}};
+\end{tikzpicture}

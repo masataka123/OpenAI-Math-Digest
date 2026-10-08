@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+\node[card] (a) {\heading{標数0のデータを有限生成体へ降下}{Descend characteristic-zero data to a finitely generated field}
+ $K\subset k,\quad K/\mathbb Q\ \text{finitely generated},\quad K\hookrightarrow\mathbb C$\\
+ $f_K:(X_K,D_{X_K})\longrightarrow(Y_K,D_{Y_K})$};
+\node[card,below=1.65cm of a] (b) {\heading{複素数上で対数不等式を適用}{Apply logarithmic subadditivity over the complex numbers}
+ $\kappa(X_{\mathbb C},K+D_{X_{\mathbb C}})\ge
+ \kappa(F_{\mathbb C},K+D_{F_{\mathbb C}})+\kappa(Y_{\mathbb C},K+D_{Y_{\mathbb C}})$};
+\flow{a}{b}{\Tx{滑らかさ・境界条件・連結ファイバーを保持}{Retain smoothness, boundary conditions, and connected fibers}\\\OI{Cor. 6.2; proof of Cor. 6.3, p. 41}}
+\node[card,below=1.7cm of b] (c) {\heading{非常に一般のファイバーから幾何学的一般ファイバーへ}{Pass from very general to geometric generic fibers}
+ $\kappa(F_{\mathrm{very\ general}},K+D)
+ =\kappa(F_{\overline\eta},K+D)$};
+\flow{b}{c}{\Tx{各可除次数の基底変換と像の次元、可算個の例外集合を使う}{Use base change, image dimension in each degree, and countably many exceptions}\\\OI{Proof of Cor. 6.3, p. 41}}
+\node[result,below=1.9cm of c] (d) {\heading{切断空間の体拡大不変性で元の体に戻す}{Return to the original field through section-space invariance}
+ $H^0(V,mL)\otimes_KK'\simeq H^0(V_{K'},mL_{K'})$\\
+ $\kappa(X,K_X+D_X)\ge\kappa(F_{\overline\eta},K+D_F)+\kappa(Y,K_Y+D_Y)$\\
+ \Tx{$D_X=D_Y=0$で通常劣加法性}{Set $D_X=D_Y=0$ for ordinary subadditivity.}};
+\flow{c}{d}{\Tx{非消滅と完備線形系の像の次元を保存}{Preserve nonvanishing and complete-linear-system image dimensions}\\\OI{Cor. 6.3, p. 41}}
+\end{tikzpicture}

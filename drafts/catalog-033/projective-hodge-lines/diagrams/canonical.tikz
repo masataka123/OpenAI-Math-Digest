@@ -1,0 +1,16 @@
+\begin{tikzpicture}
+\node[card] (a) {\heading{01}{相対飯高写像を取り、小平次元0のファイバーへ}{Take the relative Iitaka map and its Kodaira-zero fibre}
+$\widetilde X\xrightarrow{g}Y\xrightarrow{q}Z,\quad d=\dim(Y/Z)=\kappa(F),\quad\kappa(C)=0.$};
+\node[card,below=1.65cm of a] (b) {\heading{02}{最小指数のroot coverを族に広げる}{Spread out the least-index root cover}
+$b=\min\{m>0:H^0(C,mK_C)\ne0\},\quad\xi^b=s/\omega^b,$\\[3pt]
+$\kappa(W)=0,\quad h^0(W,K_W)=1,\qquad\mathbb V=R^nh_*\mathbb Q,\quad\operatorname{rank}F^n=1.$};
+\flow{a}{b}{\Tx{最小性が被覆の次数$b$を保証し、最高形式を一意にする。\\character固有空間だけに置き換えず、有理変動全体を保持する。}{Minimality gives a degree-$b$ cover with a unique top form.\\Keep the rational variation rather than only its character eigenspace.}\\[4pt]\Cite{PH}{Lemma 6.3; Prop. 6.4, pp. 19--21}}
+\node[card,below=2.85cm of b] (c) {\heading{03}{境界を含むHodge同定と残余因子を保持する}{Retain the extended Hodge identity and the residual divisor}
+$D=K_Y+B+M,\quad B\geq0,\ (Y,B)\ \text{klt},\quad M\ \text{nef},\quad\tau^*M\sim_{\mathbb Q}aJ,$\\[3pt]
+$K_{\widetilde X}\sim_{\mathbb Q}g^*D+R,\quad g_*\mathcal O(\lfloor kR^+\rfloor)=\mathcal O_Y,\quad R^-\ \text{exceptional over }X.$};
+\flow{b}{c}{\Tx{標準束公式とHodge eigensheafを、共通alterationの延長上で照合。\\補助境界$-\operatorname{div}(s)/b$は負であり得る。}{Compare the bundle formula and Hodge eigensheaf on extended alterations.\\The auxiliary boundary $-\operatorname{div}(s)/b$ can be negative.}\\[4pt]\Cite{PH}{Thm. 6.1; (6.4), pp. 16--20}\\[3pt]\Cite{FM}{[FM] Thm. 4.5, PDF pp. 11--12}\quad\Cite{Amb}{[Amb] Lemma 5.2; Prop. 5.5, pp. 15, 17--18}}
+\node[result,below=1.9cm of c] (d) {\heading{04}{全空間と一般ファイバーで切断を比較する}{Compare sections on the total space and the generic fibre}
+$H^0(Y,mD)\hookrightarrow H^0(X,mK_X),\qquad \kappa(X)\geq\kappa(Y,D),$\\[3pt]
+$d\leq\kappa(Y_{\bar\eta},D|_{Y_{\bar\eta}})\leq\dim Y_{\bar\eta}=d\quad\Longrightarrow\quad D|_{Y_{\bar\eta}}\ \text{big}.$};
+\flow{c}{d}{\Tx{$R^+$の切断を掛け、$R^-$の例外性で$X$へ戻す。\\一般ファイバー上は全次数の直像条件と平坦基底変更を使う。}{Multiply by the section of $R^+$ and use exceptionality of $R^-$.\\On the generic fibre use all-degree direct images and flat base change.}\\[4pt]\Cite{PH}{Lemma 6.5; Lemma 6.6, pp. 21--22}}
+\end{tikzpicture}

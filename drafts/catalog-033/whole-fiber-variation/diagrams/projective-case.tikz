@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+\node[card] (input) {\heading{01}{射影的な設定に空の境界を選ぶ}{Choose empty boundaries in the projective setting}
+$f:X\longrightarrow Y,\quad \kappa(Y)\ge0,\quad D_X=D_Y=0.$\\[3pt]
+$\Tx{\text{滑らかな連結複素射影多様体、全射、連結ファイバー}}{\text{Smooth connected complex projective varieties; surjective; connected fibers}}.$};
+\node[result,below=1.8cm of input] (result) {\heading{02}{同じ全ファイバーのvariationで特殊化する}{Specialize with the same whole-fiber variation}
+$\kappa(X)\ge\kappa(F)+\max\{\kappa(Y),\Var(f)\}.$};
+\flow{input}{result}{\Tx{$\bar\kappa(X)=\kappa(X)$、$\bar\kappa(Y)=\kappa(Y)$。定義体の不変量も同じ。}{Use $\bar\kappa(X)=\kappa(X)$ and $\bar\kappa(Y)=\kappa(Y)$; the field invariant is unchanged.}\\[4pt]
+\R{WV}{Thm. 1.1; Cor. 1.2 and proof, p.2}}
+\end{tikzpicture}

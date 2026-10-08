@@ -1,0 +1,427 @@
+{
+  "catalogId": "033",
+  "catalogOrder": 3,
+  "paperId": "reverse-logarithmic-additivity",
+  "abbreviation": "RA",
+  "title": "The reverse logarithmic Kodaira inequality and additivity",
+  "author": "OpenAI",
+  "version": "2026-09-26",
+  "pdfPages": 51,
+  "sourceCommit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-reverse-logarithmic-Kodaira-inequality-and-additivity-September-26-2026/paper.pdf",
+  "downloadUrl": "https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-reverse-logarithmic-Kodaira-inequality-and-additivity-September-26-2026/paper.pdf",
+  "sha256": "499df173e9f8ba2d88b644514c4ea3a797d5c00de4148bac246f7a4c857094f9",
+  "checkedOn": "2026-10-08",
+  "timeZone": "Asia/Tokyo",
+  "identityCheck": {
+    "method": "SHA-256 and pdfinfo against coordination/catalog-033/inventory.json",
+    "result": "match",
+    "mainStatementPagesVisuallyInspected": [
+      2,
+      3
+    ]
+  },
+  "scope": "著者の主張を紹介する初稿。主要箇所の読解と直接入力の記述・適用照合。全証明の認定、専門家査読、形式検証ではない。",
+  "statements": [
+    {
+      "result": "Theorem 1.1",
+      "pdfPages": [
+        2
+      ],
+      "checking": "滑らかな連結射影的複素多様体、全射・連結ファイバー、reduced SNC境界、support inclusion、元のV上でXと全境界strataが滑らかという仮定を照合。上界・全正次数消滅・−∞規約・点のκ=0を照合。",
+      "claimStatus": "author statement; hypotheses and conclusion compared"
+    },
+    {
+      "result": "Corollary 1.2",
+      "pdfPages": [
+        2
+      ],
+      "checking": "Theorem 1.1と同じ仮定で加法性。OIはこの帰結の下界にのみ入ることをp.50で照合。",
+      "claimStatus": "author statement; external interface compared"
+    },
+    {
+      "result": "Proposition 1.3",
+      "pdfPages": [
+        3
+      ],
+      "checking": "非零sからκ(Y,L_Y)≥0。κ(Y,L_Y)=0かつ元のVのyでs|X_y=0なら、非零τ∈H0(Y,aL_Y), τ(y)=0。補助被覆の小さい開集合の点へ制限しない。",
+      "claimStatus": "author statement; construction passages read"
+    },
+    {
+      "result": "Propositions 4.1, 5.3, 5.5, 5.6",
+      "pdfPages": [
+        14,
+        15,
+        30,
+        33,
+        34
+      ],
+      "checking": "marked quotientの出力、boundary drop、KS+bHのbigness、Higgs tailsのnef性と数値次元等式を記述箇所で確認。"
+    },
+    {
+      "result": "Lemmas 6.1–6.2; Proposition 6.3",
+      "pdfPages": [
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "checking": "相対飯高・次数aの生成元・valuation最小値・十分割り切れる完全切断空間の同型・BW係数範囲・MWのnef性を確認。"
+    },
+    {
+      "result": "Propositions 7.1, 7.2, 7.7; Lemmas 7.3–7.6; Theorem 7.8",
+      "pdfPages": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ],
+      "checking": "点商の係数、数値的除去の三仮定、nef subtraction、orbifold transfer、閾値・相対擬有効性、元の底への復帰、下界を照合。"
+    }
+  ],
+  "proofPassages": [
+    {
+      "passage": "§§2.1–2.4",
+      "pdfPages": [
+        5,
+        6,
+        7
+      ],
+      "reading": "本文を読解。両方の−∞、同一の非常に一般の点を全次数で使う単射性、正のκの飯高帰着、strataの基底変換・境界保持、像の次元評価。"
+    },
+    {
+      "passage": "§3, Proposition 3.1 and Lemmas 3.2–3.3",
+      "pdfPages": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "reading": "係数構成・半安定横断試験・weight射影・外部cotangent frame・元のsource frameのzero testを読解。外部参照全体の証明検証ではない。"
+    },
+    {
+      "passage": "Proposition 4.1; Lemma 4.7; selected beginning of Lemma 4.10",
+      "pdfPages": [
+        14,
+        15,
+        19,
+        20,
+        24,
+        25
+      ],
+      "reading": "商の出力と全Lie periodの代数化・降下を読解。初期随伴bignessの曲率説明を選択的に読解。§4.1–4.2全構成と§4.4全評価は独立検証未完了。"
+    },
+    {
+      "passage": "Lemma 5.1; Proposition 5.3; Lemma 5.4; Propositions 5.5–5.6",
+      "pdfPages": [
+        26,
+        27,
+        28,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36
+      ],
+      "reading": "Lemma 5.1の本文、boundary dropの記述・証明冒頭と終段、Lemma 5.4とProposition 5.5、Proposition 5.6の記述・曲率からkernel inclusionに至る段落を読解。pp31–32の退化計算とLemma 5.7の全表現論計算は未検証。"
+    },
+    {
+      "passage": "§6, especially (6.5)–(6.15)",
+      "pdfPages": [
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "reading": "相対飯高・切断比、固定sourceのcontracted primeの制限valuationの抽出、両方向のpole test、補助subpairと階数1、FG入力とnefモデルを読解。"
+    },
+    {
+      "passage": "§7, especially §§7.1, 7.4–7.6",
+      "pdfPages": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ],
+      "reading": "点商からの実際の切断・zero test、数値的除去、固定Higgs行列式とorbifold係数、εに一様な閾値、relative positivityのgood-model処理、元の底への復帰、OIの下界の追加を読解。"
+    }
+  ],
+  "dependencies": [
+    {
+      "key": "OI",
+      "title": "Orbifold and logarithmic Iitaka subadditivity",
+      "version": "2026-09-26; fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf",
+      "result": "Corollary 6.2",
+      "pdfPages": [
+        40,
+        41
+      ],
+      "usedAt": "Corollary 1.2; Theorem 7.8 and §7.6",
+      "usedAtPdfPages": [
+        2,
+        50
+      ],
+      "supplies": "同じreduced SNC対・support inclusion・非常に一般のファイバーに対する対数的劣加法性の下界。",
+      "kind": "consequence",
+      "checking": "入力記述・短い帰結証明・使用箇所を今回再照合。stratum smoothness不要、負の無限大の規約も照合。",
+      "unresolved": "OI主定理とその全証明は未検証。RA Theorem 1.1の上界の入力として登録しない。",
+      "recheckedInThisDraft": true,
+      "sha256": "b143366cc99615e19783fa075caafd8c9565e7bf5a554a612e086657c2aeeb79",
+      "paperId": "orbifold-logarithmic-iitaka",
+      "catalogId": "033",
+      "sourceCommit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "negativeInfinity": "OIの下界は一方が−∞なら自動的。RAの上界が全正次数での切断消滅を供給する。"
+    },
+    {
+      "key": "FF14",
+      "title": "Variations of mixed Hodge structure and semipositivity theorems",
+      "version": "Author manuscript 2014-03-17, vmhs-sp108.pdf",
+      "sourceUrl": "https://www.math.kyoto-u.ac.jp/~fujino/vmhs-sp108.pdf",
+      "result": "Proposition 3.12; §4.9; Lemma 4.10, Step 1",
+      "pdfPages": [
+        14,
+        15,
+        24,
+        25,
+        28,
+        29,
+        30,
+        31
+      ],
+      "usedAt": "Lemma 3.2, especially (3.14) and the constant-rank residue argument",
+      "usedAtPdfPages": [
+        12,
+        13
+      ],
+      "supplies": "半安定対数的de Rham cohomologyとunipotent canonical extensionの比較、Hodge・weightの局所自由性。",
+      "kind": "direct",
+      "checking": "上記の記述・Step 1前半の局所自由性と本稿のresidue-pageへの適用を照合。2017補足を併読。",
+      "unresolved": "FF全証明、SteenbrinkやDeligneの原典までの再帰的検証は行っていない。",
+      "recheckedInThisDraft": true,
+      "sha256": "05100cbad9d1eee1be0dda72ec8fc892972bb6d31d06f74610a5f5cda86ded5d"
+    },
+    {
+      "key": "FF17",
+      "title": "A short remark on [2]",
+      "version": "2017-07-07",
+      "sourceUrl": "https://www.math.kyoto-u.ac.jp/~fujino/fujino-fujisawa-memo2.pdf",
+      "result": "§1, strictness correction",
+      "pdfPages": [
+        1,
+        2
+      ],
+      "usedAt": "Lemma 3.2",
+      "usedAtPdfPages": [
+        12,
+        13
+      ],
+      "supplies": "FF14の二つのfiltrationに関する議論で必要なE0でのstrictnessを補足する。",
+      "kind": "direct",
+      "checking": "補足2ページの記述とE1局所自由性からの退化の説明、本稿の引用を照合。",
+      "unresolved": "補足が引用するSteenbrink Theorem 2.11の証明は未追跡。",
+      "recheckedInThisDraft": true,
+      "sha256": "f7b0b6cda9f8e3dec3243a2842d3d7c4f80d0871d0ecf913e8e9ac49e1c92423"
+    },
+    {
+      "key": "BBT",
+      "title": "o-minimal GAGA and a conjecture of Griffiths",
+      "version": "arXiv:1811.12230v3, 2022-10-23",
+      "sourceUrl": "https://arxiv.org/pdf/1811.12230v3",
+      "result": "Theorem 1.1",
+      "pdfPages": [
+        1
+      ],
+      "usedAt": "Lemma 4.7: full integral Lie-period image",
+      "usedAtPdfPages": [
+        19,
+        20
+      ],
+      "supplies": "純偏極整係数period写像の代数像と準射影性。",
+      "kind": "direct",
+      "checking": "定理文と本稿の格子を保持した全Lie変動への適用を照合。",
+      "unresolved": "BBTの証明、RAの斉次置換・compact mark・有限monodromy除去全体の独立検証は未完了。",
+      "recheckedInThisDraft": true,
+      "sha256": "1b272fa1ed73b4343a0fe774123c67bbbe945a8a4ee21f30e65578a95ae8cf9c"
+    },
+    {
+      "key": "FG",
+      "title": "On the moduli b-divisors of lc-trivial fibrations",
+      "version": "Annales de l’Institut Fourier 64 (2014), 1721–1735; published PDF with cover",
+      "sourceUrl": "https://www.numdam.org/item/10.5802/aif.2894.pdf",
+      "result": "Definition 3.2; §3.4; Theorem 3.6",
+      "pdfPages": [
+        5,
+        6,
+        7
+      ],
+      "usedAt": "Proposition 6.3, (6.11)–(6.15)",
+      "usedAtPdfPages": [
+        41,
+        42,
+        43
+      ],
+      "supplies": "lc-trivial fibrationのmoduli b-divisorのb-nef性。効果的とは限らないsubpairを許す定義を使う。",
+      "kind": "direct",
+      "checking": "Definition 3.2とTheorem 3.6の定理文を照合。RAのsub-lc、Q-linear pullback、rank-one discrepancy sheaf条件(6.12)–(6.13)を読解。",
+      "unresolved": "FG定理の全証明は未検証。b-semiamplenessを入力にしない。",
+      "recheckedInThisDraft": true,
+      "sha256": "12b078a2b92d3d9004eace3d83075bf5bbf4fc394b7d373fbe5ccb80a2ceec42",
+      "printedPages": [
+        1724,
+        1725,
+        1726
+      ]
+    },
+    {
+      "key": "CP",
+      "title": "Foliations with positive slopes and birational stability of orbifold cotangent bundles",
+      "version": "arXiv:1508.02456v4, 2017-06-14 (RA bibliography cites Publ. Math. IHÉS 129 (2019))",
+      "sourceUrl": "https://arxiv.org/pdf/1508.02456v4",
+      "result": "Theorems 1.3 and 3.4; Remarks 3.3 and 3.6",
+      "pdfPages": [
+        3,
+        12,
+        13,
+        14
+      ],
+      "usedAt": "Lemmas 7.5 and 7.6; (7.9)–(7.11)",
+      "usedAtPdfPages": [
+        47,
+        48,
+        49
+      ],
+      "supplies": "orbifold余接テンソル商の可動曲線次数評価と、good model上の相対対数的因子の擬有効性。",
+      "kind": "direct",
+      "checking": "使用番号が一致するv4で入力の記述とRAの適用を照合。係数[0,1]のSNC摂動対・擬有効随伴・good-model条件・元のWへの押戻しを確認。",
+      "unresolved": "刊行版との全差分照合、CPの入力定理の全証明は未検証。",
+      "recheckedInThisDraft": true,
+      "sha256": "4ebce0951a149e5c65370cf1900086eabd553f54160830e43e07ace056b43a39"
+    },
+    {
+      "key": "BDPP",
+      "title": "The pseudo-effective cone of a compact Kähler manifold and varieties of negative Kodaira dimension",
+      "version": "arXiv:math/0405285v1",
+      "sourceUrl": "https://arxiv.org/pdf/math/0405285v1",
+      "result": "Theorem 2.2",
+      "pdfPages": [
+        6
+      ],
+      "usedAt": "Lemma 7.5, (7.10)",
+      "usedAtPdfPages": [
+        48
+      ],
+      "supplies": "射影的多様体での擬有効因子とstrongly movable曲線の双対性。",
+      "kind": "direct",
+      "checking": "原典定理文と可動曲線の次数不等式から擬有効比較へ移る使用箇所を照合。",
+      "unresolved": "外部証明全体は未検証。Kähler版の類推へ拡張しない。",
+      "recheckedInThisDraft": true,
+      "sha256": "0a05e3644b784c3821eaf079b3fccd1744183ae67e9793f3d599315c53002b3c"
+    },
+    {
+      "key": "AS",
+      "title": "A differential approach to Ax–Schanuel, I",
+      "version": "arXiv:2102.03384v5; submitted 2026-06-01; PDF date 2026-06-02",
+      "sourceUrl": "https://arxiv.org/pdf/2102.03384v5",
+      "result": "Theorem A and semisimple/sparse-group discussion",
+      "pdfPages": [
+        1,
+        2
+      ],
+      "usedAt": "§5.1; Lemma 5.1",
+      "usedAtPdfPages": [
+        26,
+        27,
+        28
+      ],
+      "supplies": "flat principal connectionの水平葉と代数閉包の次元評価を証明する方法。",
+      "kind": "background",
+      "checking": "Theorem Aの記述と本稿の位置付けを比較。本稿に掲載された半単純の場合のconnection-formの議論を読解。",
+      "unresolved": "AS全証明・Theorem 3.6等の証明は未追跡。本稿が必要な議論を再掲するため、ここでは証明方法の背景として区別。",
+      "recheckedInThisDraft": true
+    }
+  ],
+  "labelNormalization": {
+    "policy": "本文と図のラベルは定理が記述された箇所の見出しに合わせた。",
+    "examples": [
+      "Proposition 1.3 is called Theorem 1.3 in §2 and its concluding proof.",
+      "Proposition 3.1 / Lemmas 3.2–3.3 are called Theorem 3.1–3.3 in cross-references.",
+      "Lemmas 6.1–6.2 and Proposition 6.3 are called Theorem in later references.",
+      "Propositions 7.1–7.2 and 7.7; Lemmas 7.4–7.6; Corollary 1.2 have Theorem cross-references in §7."
+    ]
+  },
+  "preparationNotes": {
+    "inheritedFrom": "coordination/catalog-033/SOURCE_NOTES.md and WORKER_C.md",
+    "policy": "準備メモは読解の入口として使用。OIの入力とRAの主結果は今回固定PDFで再照合。準備メモの確認範囲を無条件に加算していない。"
+  },
+  "unresolved": [
+    {
+      "passage": "§4.1–4.2, pp. 15–19",
+      "status": "全構成の独立検証未完了",
+      "detail": "斉次置換、compact flag、finite scalar monodromy除去。後段の出力と使用箇所を紹介。"
+    },
+    {
+      "passage": "§4.4, pp. 20–24",
+      "status": "全計量評価未検証",
+      "detail": "対数的norm比較からnef性・数値次元等式へ至る解析的評価全体。"
+    },
+    {
+      "passage": "§5.2–5.3 and Lemma 5.7, pp. 28–33, 34–37",
+      "status": "全退化・表現論計算未検証",
+      "detail": "boundary dropとHiggs tailsの出力・使用を確認。全境界退化計算、degree-one rootsの証明は独立検証未完了。"
+    },
+    {
+      "passage": "External references",
+      "status": "証明の再帰的検証は初稿対象外",
+      "detail": "OIを含む入力定理の全証明、Steenbrink・Deligne・Schmid等の原典証明全体を追跡していない。CP刊行版とv4の全差分も未照合。"
+    },
+    {
+      "passage": "Other catalogue connections",
+      "status": "未調査・未記録",
+      "detail": "RA→WV等の利用先確認は別担当の対象。引用類似だけで直接依存を追加しない。"
+    },
+    {
+      "passage": "Site integration",
+      "status": "未実施",
+      "detail": "共有コードの変更、サイト全体ビルド・公開導線・スマートフォン表示・Git操作・公開は本部へ引き継ぐ。"
+    }
+  ],
+  "workSession": {
+    "startedAt": "2026-10-08T21:48:14+09:00",
+    "deadline": "2026-10-08T22:48:14+09:00",
+    "endedAt": "2026-10-08T22:15:51+09:00",
+    "elapsedSeconds": 1657,
+    "status": "初稿引渡し・未公開"
+  },
+  "artifactChecks": {
+    "bilingualDisplayFormulas": 15,
+    "sameCitationKeySequence": 46,
+    "svgFigures": 8,
+    "svgClickableCitations": 70,
+    "visualInspection": "all eight final figures inspected in both languages",
+    "texOverfullOrMissingGlyphs": 0,
+    "mathjaxErrors": 0,
+    "sourceUrlsReachable": 9,
+    "siteBuildAndMobileQA": "not performed; HQ integration responsibility"
+  }
+}

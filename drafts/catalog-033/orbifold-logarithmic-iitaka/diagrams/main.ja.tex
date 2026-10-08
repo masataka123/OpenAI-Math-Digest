@@ -1,0 +1,78 @@
+% OpenAI Math Digest; layout adapted from the repository's Schnell diagrams.
+\documentclass[border=12pt]{standalone}
+\def\pgfsysdriver{pgfsys-dvisvgm.def}
+\usepackage[dvisvgm]{xcolor}
+\usepackage{xeCJK}
+\setCJKmainfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf]
+\setCJKsansfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf]
+\usepackage{amsmath,amssymb,tikz,lmodern}
+\usetikzlibrary{arrows.meta,positioning,calc}
+\renewcommand{\familydefault}{\sfdefault}
+\definecolor{ink}{HTML}{25322F}
+\definecolor{green}{HTML}{246657}
+\definecolor{tint}{HTML}{EEF4F0}
+\definecolor{soft}{HTML}{C6D2CC}
+\definecolor{muted}{HTML}{52615B}
+\newif\ifJapanese
+\newcommand{\Tx}[2]{\ifJapanese #1\else #2\fi}
+\newcommand{\heading}[2]{{\color{green}\bfseries\Tx{#1}{#2}}\\[5pt]}
+\newcommand{\refurl}[2]{\special{dvisvgm:raw <a xlink:href="#1" target="_blank" rel="noopener noreferrer">}{\setlength{\fboxsep}{0pt}\colorbox{white}{\color{green}\underline{\strut #2}}}\special{dvisvgm:raw </a>}}
+\newcommand{\OI}[1]{\refurl{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf}{#1}}
+\newcommand{\Fuj}[1]{\refurl{https://www.math.kyoto-u.ac.jp/~fujino/weak-posi11.pdf}{#1}}
+\newcommand{\Cam}[1]{\refurl{https://arxiv.org/pdf/0705.0737v8}{#1}}
+\tikzset{
+ card/.style={draw=soft,fill=white,rounded corners=2pt,align=left,text=ink,font=\fontsize{10.5}{14}\selectfont,inner xsep=12pt,inner ysep=10pt,text width=14.4cm},
+ half/.style={card,text width=6.35cm,minimum height=2.9cm},
+ result/.style={card,draw=green,fill=tint,line width=.9pt},
+ reason/.style={align=left,text=muted,font=\fontsize{9}{12}\selectfont,inner sep=0pt,text width=12.65cm},
+ branchreason/.style={reason,text width=5.65cm},
+ edge/.style={-{Stealth[length=2.4mm]},draw=green,line width=1pt},
+ wire/.style={draw=green,line width=1pt},
+}
+% Every vertical arrow has a dedicated left gutter; all labels sit to its right.
+\newcommand{\flow}[3]{
+ \coordinate (#2-from) at ($(#1.south)+(-6.9,0)$);
+ \coordinate (#2-to) at ($(#2.north)+(-6.9,0)$);
+ \draw[edge] (#2-from)--(#2-to);
+ \node[reason,anchor=west] at ($(#2-from)!.5!(#2-to)+(.55,0)$) {#3};
+}
+
+\Japanesetrue
+\begin{document}
+\begin{tikzpicture}
+\node[card] (a) {\heading{相対飯高帰着と固定した参照空間}{Relative Iitaka reduction with a fixed reference}
+ $X\xrightarrow{g}W\xrightarrow{h}Y,\quad \dim W_y=r,\quad \kappa(G,K_G+\Delta_G)=0$\\
+ $C=B(f,\Delta),\quad \kappa(Y,K_Y+C)\ge b$};
+\node[card,below=2.0cm of a] (b) {\heading{境界の付値を比較し、切断を移す}{Compare boundary orders and transfer sections}
+ $B(g,\Delta)\le T\le1,\quad D_W=K_W+T$\\
+ $H^0(W,q(D_W+M))\simeq H^0(X_0,q(K_{X_0}+\Delta_0))$\\
+ \Tx{$Y$上でも切断の積・比を保持する}{Products and ratios are preserved, also over $Y$.}};
+\flow{a}{b}{\Tx{Kodaira次元0の生成形式からHodge lineと境界を構成}{Construct the Hodge line and boundary from the Kodaira-zero generator}\\
+ \OI{Lem. 2.6, p. 9; Prop. 2.7, pp. 10--17}}
+\node[half,anchor=north east] (l) at ($(b.south)+(-.32,-2.1)$) {\heading{元の底への射を使う}{Use the map to the original base}
+ $h:W\to Y$\\
+ $(D_W+M)|_{W_y}\ \text{big}$\\
+ $B(h,T)\ge C$\\
+ $T_E=1\quad(\operatorname{codim}_Y h(E)\ge2)$};
+\node[half,anchor=north west] (r) at ($(b.south)+(.32,-2.1)$) {\heading{独立なperiod底へ移る}{Pass to the separate period base}
+ $p:W\to S,\quad S\ \text{projective}$\\
+ $M=p^*P,\quad P\ \text{nef}$\\
+ $K_S+a_0P\ \text{big},\quad a_0>0$\\
+ \Tx{$Y$と$S$を結ぶ射は仮定しない}{No map between $Y$ and $S$ is assumed.}};
+\draw[edge] ($(b.south)+(-6.9,0)$)--($(l.north)+(-2.9,0)$);
+\draw[edge] ($(b.south)+(.75,0)$)--($(r.north)+(-2.9,0)$);
+\node[branchreason,anchor=west] at ($(l.north)+(-2.35,1.08)$) {\Tx{相対比較と重複度の合成}{Relative comparison and multiplicities}\\\OI{Prop. 2.7(iv); Lem. 2.12}\\\OI{pp. 10, 17; (6.4)--(6.5), pp. 39--40}};
+\node[branchreason,anchor=west] at ($(r.north)+(-2.35,1.08)$) {\Tx{最高Hodge lineの随伴正値性}{Adjoint positivity of the highest line}\\\OI{Thm. 3.1, pp. 17--18}\\\OI{Prop. 4.5; Lem. 4.7, pp. 25--31}};
+\node[result,anchor=north] (c) at ($(l.south)!.5!(r.south)+(0,-2.1)$) {\heading{二つの入力を合流させる}{Combine the two inputs}
+ $\kappa(W,D_W+M)\ge r+\kappa(Y,K_Y+C)$};
+\draw[wire] ($(l.south)+(-2.9,0)$)--++(0,-.35)-|($(c.north)+(-6.9,.4)$);
+\draw[wire] ($(r.south)+(-2.9,0)$)--++(0,-.35)-|($(c.north)+(-6.9,.4)$);
+\draw[edge] ($(c.north)+(-6.9,.4)$)--($(c.north)+(-6.9,0)$);
+\node[reason,anchor=west] at ($(c.north)+(-6.35,1.0)$) {\Tx{一般型加法性と固定切断によるample捻りの相殺}{General-type addition and cancellation by one fixed section}\\\OI{Prop. 3.4, pp. 19--20; (6.6), p. 40}};
+\node[result,below=1.65cm of c] (d) {\heading{元の対の切断へ戻す}{Return to the original pair}
+ $\kappa(X,K_X+\Delta)\ge r+b$
+ };
+\flow{c}{d}{\Tx{参照空間への降下が比と像の次元を保持}{Descent to the reference preserves ratios and image dimensions}\\\OI{Prop. 2.7; Lem. 2.1, pp. 5--6, 16--17; \S6, p. 40}}
+\end{tikzpicture}
+
+\end{document}

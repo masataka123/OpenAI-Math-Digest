@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+\node[card,text width=4.5cm,minimum height=2.3cm,anchor=west] (s0) at (0,0.0) {\heading{OI 引用する結果}{OI cited result}Proposition 2.7\\[5pt]{\small pp. 10, 16--17}};
+\node[result,text width=4.5cm,minimum height=2.3cm,anchor=west] (t0) at (12.0,0.0) {\heading{WV 追加結果}{WV Additional result}Proposition 9.1(i), (iii)\\[5pt]{\small pp. 69--70}};
+\draw[edge] (s0.east)--(t0.west);
+\node[reason,text width=5.1cm,align=center,anchor=south] at (8.7,0.22) {\Tx{固定参照空間で切断と比を保つ}{Preserve sections and ratios on the fixed reference}};
+\node[reason,text width=5.1cm,align=center,anchor=north] at (8.7,-0.22) {\R{OI}{[OI] pp. 10, 16--17}\\\R{WV}{[WV] pp. 69--70}};
+\node[card,text width=4.5cm,minimum height=2.3cm,anchor=west] (s1) at (0,-4.1) {\heading{OI 引用する結果}{OI cited result}Lemma 7.1 /\allowbreak Corollary 7.2\\[5pt]{\small pp. 43--46}};
+\node[result,text width=4.5cm,minimum height=2.3cm,anchor=west] (t1) at (12.0,-4.1) {\heading{WV 追加結果}{WV Additional result}Proposition 9.1(iv), (v)\\[5pt]{\small pp. 69--70}};
+\draw[edge] (s1.east)--(t1.west);
+\node[reason,text width=5.1cm,align=center,anchor=south] at (8.7,-3.8799999999999994) {\Tx{被約境界で全最高部分をlineにする}{Entire top piece is a line for reduced boundary}};
+\node[reason,text width=5.1cm,align=center,anchor=north] at (8.7,-4.319999999999999) {\R{OI}{[OI] pp. 43--46}\\\R{WV}{[WV] pp. 69--70}};
+\node[card,text width=4.5cm,minimum height=2.3cm,anchor=west] (s2) at (0,-8.2) {\heading{OI 引用する結果}{OI cited result}Lemma 7.4\\[5pt]{\small pp. 46--47}};
+\node[result,text width=4.5cm,minimum height=2.3cm,anchor=west] (t2) at (12.0,-8.2) {\heading{WV 追加結果}{WV Additional result}Proposition 9.1: \Tx{初期境界の正規化}{initial normalized boundary}\\[5pt]{\small pp. 69--70}};
+\draw[edge] (s2.east)--(t2.west);
+\node[reason,text width=5.1cm,align=center,anchor=south] at (8.7,-7.9799999999999995) {\Tx{実際の成分の最小値と全付値の閾値を比較}{Compare actual-component minima with all valuations}};
+\node[reason,text width=5.1cm,align=center,anchor=north] at (8.7,-8.42) {\R{OI}{[OI] pp. 46--47}\\\R{WV}{[WV] pp. 69--70}};
+\end{tikzpicture}

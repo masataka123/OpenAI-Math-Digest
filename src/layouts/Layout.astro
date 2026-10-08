@@ -3,6 +3,7 @@ import '../styles/digest.css';
 import '../styles/atlas.css';
 import '../styles/home.css';
 import '../styles/typography.css';
+import {catalogs} from '../data/site.mjs';
 import ReadingGuide from '../components/ReadingGuide.astro';
 import DiagramViewer from '../components/DiagramViewer.astro';
 const {lang='ja', title, otherPath='', description} = Astro.props;
@@ -40,7 +41,7 @@ const guideKind=route.includes('/fields/')?'field':route.includes('/catalog/')?'
   <nav class="language-switch" aria-label="日本語 / English">{['ja','en'].map(code=><a id={code!==lang?'language':undefined} class:list={{active:code===lang}} aria-current={code===lang?'page':undefined} href={code===lang?Astro.url.pathname:`${base}${otherPath}`} lang={code} hreflang={code}>{code==='ja'?'日本語':'English'}</a>)}</nav>
  </header></div>
  <div class="ai-notice"><span class="ai-label">{en?'AI-GENERATED GUIDE':'AI生成の解説'}</span><p>{en?'This guide may contain errors or inaccurate explanations. Check important claims and proofs against the original papers.':'このサイトの解説はAIが生成しており、誤りや不正確な説明を含む可能性があります。重要な主張・証明は原論文でご確認ください。'}</p></div>
- <main id="content">{guideKind!=='home'&&<ReadingGuide lang={lang} kind={guideKind}/>}<slot/></main>
+ <main id="content">{guideKind!=='home'&&<ReadingGuide lang={lang} kind={guideKind} catalog={catalogs.find(c=>route.includes(`/catalog/${c.id}/`))}/>}<slot/></main>
  <DiagramViewer lang={lang}/>
  <script>
   const language=document.getElementById('language');

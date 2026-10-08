@@ -1,3 +1,4 @@
+import inventory033 from '../../coordination/catalog-033/inventory.json' with { type: 'json' };
 import inventory034 from '../../research/catalog-034-inventory.json' with { type: 'json' };
 import subjectSource from './catalog-subjects.json' with { type: 'json' };
 export const text = (ja, en) => ({ ja, en });
@@ -18,7 +19,7 @@ const fieldTranslations = [
     "id": "algebraic-complex-geometry",
     "ja": "代数幾何学・複素幾何学",
     "catalogIds": [
-      "034"
+      "033", "034"
     ]
   },
   {
@@ -115,22 +116,33 @@ const manuscriptIds034 = [
   'uniform-pluricanonical-iitaka', 'relative-denominators', 'arithmetic-stein-degree',
   'effective-log-iitaka-fourfolds', 'abundance-after-nonvanishing',
 ];
-export const papers = inventory034.manuscripts.map((entry, index) => {
+const papers034 = inventory034.manuscripts.map((entry, index) => {
   const [, month, day, year] = entry.path.match(/(September|October)-(\d+)-(\d{4})/);
   return {
-    id: manuscriptIds034[index], title: entry.title, path: entry.path.replace(/^preprints\//, ''),
+    id: manuscriptIds034[index], catalogId: '034', sourceCommit, title: entry.title, path: entry.path.replace(/^preprints\//, ''),
     version: `${year}-${month === 'September' ? '09' : '10'}-${day.padStart(2, '0')}`,
     pages: entry.pdfPages, order: entry.order, featured: ['schnell-fiber-spaces', 'log-abundance-characteristic-zero', 'arithmetic-stein-degree', 'relative-denominators', 'uniform-log-iitaka', 'kahler-log-abundance', 'minimal-metrics-injectivity', 'fourfold-nonvanishing', 'uniform-slc-indices', 'conditional-kahler-fourfolds', 'uniform-pluricanonical-iitaka', 'lifting-adjoint-sections', 'effective-log-iitaka-fourfolds', 'abundance-after-nonvanishing'].includes(manuscriptIds034[index]),
   };
 });
+export const papers = [...inventory033.manuscripts.map(entry => ({
+ id: entry.paperId, catalogId: '033', sourceCommit: inventory033.sourceCommit,
+ title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
+ pages: entry.pdfPages, order: entry.order, featured: true,
+})), ...papers034];
 export const catalogs = [{
-  id: '034', title: text('対数的豊富性と有効飯高ファイブレーション', 'Log abundance and effective Iitaka fibrations'),
+ id: '033', sourceCommit: inventory033.sourceCommit,
+ title: text('Campanaのorbifold飯高予想と対数的劣加法性', inventory033.overviewTitle),
+ contentsTitle: inventory033.contentsTitle,
+ description: text('劣加法性、全ファイバーの変動、加法性と半豊富性を、5篇の結果と証明の接続から読む。', 'Read the results and proof connections of five manuscripts on subadditivity, whole-fiber variation, additivity, and semiampleness.'),
+ paperIds: inventory033.manuscripts.map(p => p.paperId),
+}, {
+  id: '034', sourceCommit, title: text('対数的豊富性と有効飯高ファイブレーション', 'Log abundance and effective Iitaka fibrations'),
   titlePhrases: {ja: ['対数的豊富性と', '有効飯高', 'ファイブレーション']},
   contentsTitle: 'Log abundance for compact Kähler spaces under logarithmic Iitaka subadditivity',
   description: text('豊富性と良い極小モデルに関する論文群を、仮定と結論、証明の関係から整理する。', 'A guide to manuscripts on abundance and good minimal models, organized by hypotheses, conclusions, and arguments.'),
   paperIds: manuscriptIds034,
 }];
-export const paperSource = paper => `${sourceRoot}/preprints/${paper.path}`;
+export const paperSource = paper => `https://github.com/openai/math/blob/${paper.sourceCommit ?? sourceCommit}/preprints/${paper.path}`;
 export const catalogsForField = id => fields.find(field => field.id === id).catalogIds.map(id => catalogs.find(catalog => catalog.id === id));
 export const fieldsForCatalog = id => fields.filter(field => field.catalogIds.includes(id));
 export const catalogsForPaper = id => catalogs.filter(catalog => catalog.paperIds.includes(id));

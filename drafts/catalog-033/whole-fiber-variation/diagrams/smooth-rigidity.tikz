@@ -1,0 +1,24 @@
+\begin{tikzpicture}
+\node[card] (input) {\heading{01}{すべての閉ファイバーのnon-unirulednessを使う}{Use non-uniruledness of every closed fiber}
+$f:U\longrightarrow V\ \text{smooth projective},\quad F_v\ \text{non-uniruled}\ (v\text{ closed}).$\\[3pt]
+$\Tx{\text{滑らかな連結複素準射影多様体、全射、連結ファイバー}}{\text{Smooth connected complex quasi-projective varieties; surjective; connected fibers}}.$};
+\node[card,below=1.6cm of input] (pe) {\heading{02}{標準因子をpseudo-effectiveにする}{Make the canonical divisor pseudo-effective}
+$K_{F_v}\ \text{pseudo-effective}\qquad(v\text{ closed}).$};
+\flow{input}{pe}{\Tx{射影多様体に対するuniruledness判定の対偶を使う。}{Apply the contrapositive of the projective uniruledness criterion.}\\[4pt]
+\R{BDPP}{[BDPP] Cor. 0.3, p.2}}
+\node[card,below=1.7cm of pe] (good) {\heading{03}{semiampleなモデルと例外項の比較式を得る}{Obtain a semiample model and an exceptional comparison}
+$p^*K_{F_v}=q^*K_{M_v}+E,\quad E\ge0,\quad E\ \text{$q$-exceptional}.$\\[3pt]
+$K_{M_v}\ \text{semiample}.$};
+\flow{pe}{good}{\Tx{smooth canonical good-modelの存在定理を各閉ファイバーへ適用。}{Apply smooth canonical good-model existence to each closed fiber.}\\[4pt]
+\R{LA}{[LA] Cor. 11.2, pp.73--74}\quad\R{WV}{Cor. 1.3 proof, p.5}}
+\node[card,below=1.7cm of good] (canonical) {\heading{04}{Tajiに必要なcanonicalなgood modelを確認する}{Check the canonical good model needed by Taji}
+$a(P,M_v)=a(P,F_v)+\operatorname{coeff}_P E\ge0.$};
+\flow{good}{canonical}{\Tx{任意の $M_v$-exceptional因子を含む共通解消でdiscrepancyを比較。}{Compare discrepancies on a common resolution containing any prime exceptional over $M_v$.}\\[4pt]
+\R{WV}{Cor. 1.3 proof, p.5}}
+\node[result,below=1.85cm of canonical] (bounds) {\heading{05}{同じwhole-fiber variationの上界を得る}{Bound the same whole-fiber variation}
+$\bar\kappa(V)=-\infty\Rightarrow\Var(f)<\dim V,$\\[3pt]
+$\bar\kappa(V)\ge0\Rightarrow\Var(f)\le\bar\kappa(V),$\\[3pt]
+$V\ \text{Campana-special}\Rightarrow\Var(f)=0.$};
+\flow{canonical}{bounds}{\Tx{smooth familyと各ファイバーのgood modelを入力する。\\$\bar\kappa(V)=0$ でもvariationは0。主定理の証明には用いない。}{Use smoothness and good models of the fibers.\\The case $\bar\kappa(V)=0$ also has variation zero. This route is not used in the main proof.}\\[4pt]
+\R{Taj}{[Taj] Thms. 1.1--1.2 and variation, p.2}}
+\end{tikzpicture}

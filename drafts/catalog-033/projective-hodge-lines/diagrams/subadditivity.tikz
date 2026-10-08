@@ -1,0 +1,20 @@
+\begin{tikzpicture}
+\node[card] (a) {\heading{01}{二つの底を分ける}{Keep the two bases distinct}
+$q:Y\to Z,\quad p:Y\to S,\quad D=K_Y+B+M,\quad M\sim_{\mathbb Q}p^*L,$\\[3pt]
+$\kappa(Z)\geq0,\quad D|_{Y_{\bar\eta}}\ \text{big},\quad K_S+jL\ \text{big}\ (j\gg0).$};
+\node[card,below=1.9cm of a] (b) {\heading{02}{積写像を使い、周期ファイバーで非消滅を得る}{Use the product map for nonvanishing on a period fibre}
+$Y\to W\to S\times Z,\qquad\kappa(W_s)\geq0,$\\[3pt]
+$\kappa(Y_s,K_{Y_s}+B|_{Y_s})\geq0.$};
+\flow{a}{b}{\Tx{$Z$の形式を収縮して$W_s$へ移す。$Y_s\to W_s$の一般ファイバーは\\log一般型なので、既知の劣加法性を適用できる。}{Contract forms from $Z$ to $W_s$. The general fibre of $Y_s\to W_s$\\is of log general type, so apply the established addition theorem.}\\[4pt]\Cite{PH}{Lemma 7.3, pp. 23--24}\quad\Cite{Has}{[Has] Thm. 2.11, p. 5}}
+\node[card,below=1.85cm of b] (c) {\heading{03}{弱正値性から有効因子を作る}{Construct an effective divisor using weak positivity}
+$P_0=K_S+jL-H\ \text{big},\qquad E_1=K_Y+B+jM-p^*H\sim_{\mathbb Q}E\geq0.$};
+\flow{b}{c}{\Tx{正のrankの相対log多重標準直像に弱正値性を適用。\\対称冪を掛け合わせ、例外的な極を押し下げる。}{Apply weak positivity to a positive-rank log pluricanonical direct image.\\Multiply symmetric powers and push down exceptional poles.}\\[4pt]\Cite{PH}{Lemma 7.4; (7.6), pp. 24--26}\quad\Cite{Fuj}{[Fuj] Thm. 1.1, pp. 1--2}}
+\node[card,below=1.75cm of c] (d) {\heading{04}{係数を補間し、有効klt対に戻す}{Interpolate coefficients and return to an effective klt pair}
+$0<v<1,\quad\lambda=\dfrac{1-v}{j-v},\quad A_S=vL+\dfrac{\lambda}{1-\lambda}H,$\\[4pt]
+$E_2=K_Y+B+p^*A_S\sim_{\mathbb Q}K_Y+B+\Gamma,\qquad D\sim_{\mathbb Q}\lambda E_1+(1-\lambda)E_2.$};
+\flow{c}{d}{\Tx{big coneの開性で$v$を選び、$A_S$の豊富性から一般の$\Gamma$を取る。\\$q$の一般ファイバーで$E_2$はbig、$(Y,B+\Gamma)$はklt。}{Choose $v$ by openness of bigness and a general $\Gamma$ using ample $A_S$.\\Then $E_2$ is $q$-generically big and $(Y,B+\Gamma)$ is klt.}\\[4pt]\Cite{PH}{(7.5)--(7.7), p. 26}}
+\node[result,below=1.9cm of d] (e) {\heading{END}{劣加法性と切断移送、標数0への変更}{Apply addition, transfer sections, and extend scalars}
+$\kappa(X)\geq\kappa(Y,D)\geq\kappa(Y,E_2)\geq\kappa(F)+\kappa(Z),$\\[3pt]
+$H^0(V,nK_V)\otimes_KK'\simeq H^0(V_{K'},nK_{V_{K'}}).$};
+\flow{d}{e}{\Tx{$q$に劣加法性を適用し、$E_1$の切断を掛ける。\\幾何学的一般ファイバーも含め、小平次元は基礎体変更で不変。}{Apply addition to $q$ and multiply by sections of $E_1$.\\Scalar extension preserves all three Kodaira dimensions.}\\[4pt]\Cite{Has}{[Has] Thm. 2.11, p. 5}\quad\Cite{PH}{$\S7.3$; Lemma 7.5, pp. 26--27}}
+\end{tikzpicture}

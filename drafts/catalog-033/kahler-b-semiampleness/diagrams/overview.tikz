@@ -1,0 +1,26 @@
+\begin{tikzpicture}
+\node[card] (a) {\heading{root eigenlineの延長次数を閾値と比較する}{Compare root-eigenline extension orders with thresholds}
+ $\operatorname{ord}_{\mathrm{Hdg}}\tau=t_P-1,\quad B_S=\sum_P(1-t_P)P$};
+\node[result,below=2.1cm of a] (b) {\heading{実際のmoduli lineを同定し安定化する}{Identify and stabilize the actual moduli line}
+ $M_{S_1}=\nu^*M_S\qquad\text{in }\operatorname{Pic}(S_1)_{\mathbb Q}$\\
+ \Tx{Theorem 1.1(a)と、以後も保持する指定されたline}{Theorem 1.1(a) and the specified line retained below}};
+\flow{a}{b}{\Tx{混合Hodge延長、留数、全高次モデル上の次数比較}{Mixed Hodge extension, residues and orders on higher models}\\
+ \R{BS}{[BS] Thm. 4.4 / Cor. 4.5, pp. 15--17}; \R{FF}{[FF] Thm. 1.1, p. 2}}
+\node[card,below=2.3cm of b] (c) {\heading{点ごとの積分解をコンパクトな補助底上の族にする}{Realize fiberwise products as a family on a compact auxiliary base}
+ $r:P\to S,\quad (J,D_J)=(Q,C)\times\prod_iT_i$\\
+ \Tx{$r$の一般有限性を仮定しない}{The map $r$ need not be generically finite.}};
+\flow{b}{c}{\Tx{有限被覆・Hilbert--Douady・Baireで一つの族を選ぶ}{Choose one family using finite covers, Hilbert--Douady and Baire}\\
+ \R{BS}{[BS] Prop. 5.6, pp. 22--25}; \R{MWWZ}{[MWWZ] Cor. 1.3, pp. 2--3}\\
+ \R{Toma}{[Toma] Cor. 5.3, PDF p. 19}}
+\node[card,below=2.4cm of c] (d) {\heading{因子ごとに半豊富な延長を得る}{Obtain semiample extensions for the separate factors}
+ $H_Q\quad\Tx{\text{射影的比較因子}}{\text{projective comparison factor}},\qquad
+ H_i\quad\Tx{\text{torus・symplectic因子}}{\text{torus / symplectic factors}}$};
+\flow{c}{d}{\Tx{代数的b-semiamplenessと算術periodコンパクト化を分けて使う}{Use algebraic b-semiampleness and arithmetic compactifications separately}\\
+ \R{BS}{[BS] Prop. 6.1 / Prop. 7.5, pp. 25--28, 32--34}\\
+ \R{BFMT}{[BFMT] Thms. 1.5, 5.2, 5.5, pp. 4, 30--32}}
+\node[result,below=2.4cm of d] (e) {\heading{同型を延長し、全点での大域生成を降ろす}{Extend the isomorphism and descend generation at every point}
+ $r^*\mathcal O_S(NM_S)\simeq H_Q\otimes\bigotimes_i H_i$\\
+ $M_S\ \text{semiample}\qquad\text{Theorem 1.1(b)}$};
+\flow{d}{e}{\Tx{両側ノルム評価でflat twistを除き、Stein分解後にnormを取る}{Two-sided norm bounds remove flat twists; take norms after Stein factorization}\\
+ \R{BS}{[BS] Lemmas 8.1, 8.3 / \S9, pp. 34--37}}
+\end{tikzpicture}

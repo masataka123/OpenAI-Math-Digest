@@ -1,0 +1,20 @@
+\begin{tikzpicture}
+\node[card] (start) {\heading{01}{対数的下界と非零の底の形式}{Logarithmic lower bound and a base pluriform}
+$d=\kappa(F)\ge0,\quad \bar\kappa(U)\ge d+\bar\kappa(V),$
+\\[3pt]$0\ne\xi\in H^0(Y,m(K_Y+D_Y)).$};
+\node[card,below=1.9cm of start] (combined) {\heading{02}{絶対飯高写像と元の射を合わせる}{Combine the absolute Iitaka map with the original fibration}
+$X'\xrightarrow{x}W,\quad W\xrightarrow{g}Y,\quad W\xrightarrow{h}Z,\quad q=hx.$
+\\[3pt]$\dim Z=\bar\kappa(U),\quad W\longrightarrow Y\times Z\ \Tx{\text{は像上generically finite}}{\text{is generically finite onto its image}}.$};
+\flow{start}{combined}{\Tx{係数1の逆像境界を保つ。合成体の相対代数閉包で中間体を選ぶ。}{Retain the reduced inverse boundary; take the relative algebraic closure of the compositum.}\\[4pt]
+\R{OI}{[OI] Cor. 6.2, pp.40--41}\quad\R{WV}{Lemma 2.6; Prop. 2.7, pp.8--10}}
+\node[card,below=2cm of combined] (zero) {\heading{03}{飯高ファイバー上の切断を比例させる}{Force proportionality on Iitaka fibers}
+$\kappa(J)=\kappa(J,K_J+D'|_J)=0,$\\[3pt]
+$\kappa(W_z,K_{W_z}+D_W^0|_{W_z})=0,\quad D_W^0=(g^*D_Y)_{\rm red}.$};
+\flow{combined}{zero}{\Tx{$g^*\xi$ を $p_1=\dim Y-\dim W_z$ 個の底方向で収縮する。\\$x_z$ への劣加法性で、非負の二項がともに0となる。}{Contract $g^*\xi$ with $p_1=\dim Y-\dim W_z$ base directions.\\Subadditivity for $x_z$ forces both nonnegative terms to vanish.}\\[4pt]
+\R{WV}{Lemmas 2.8--2.9, pp.10--12}}
+\node[result,below=2cm of zero] (field) {\heading{04}{像の族から、元の底の部分体を得る}{Recover a subfield of the original base from the image family}
+$\C(T_0)\subseteq\C(Y),\qquad\bar\kappa(U)=d+\dim T_0.$\\[3pt]
+$\Tx{\text{残る目標：}}{\text{Remaining goal: }}\quad F\ \Tx{\text{を }b=\overline{\C(T_0)}\text{ 上へ降下}}{\text{descends to }b=\overline{\C(T_0)}}.$};
+\flow{zero}{field}{\Tx{小行列式の比の一定性から像の族の階数を得る。\\$\C(Y)\subseteq\C(S)\subseteq\C(X)$ と相対代数閉性が $\C(S)=\C(Y)$ を与える。}{Constant ratios of minors give the rank of the image family.\\Relative algebraic closedness in $\C(Y)\subseteq\C(S)\subseteq\C(X)$ gives $\C(S)=\C(Y)$.}\\[4pt]
+\R{WV}{Prop. 2.10, (2.10)--(2.12), pp.12--14}}
+\end{tikzpicture}

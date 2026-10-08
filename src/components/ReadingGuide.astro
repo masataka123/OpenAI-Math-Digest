@@ -1,5 +1,5 @@
 ---
-const {lang='ja', kind='home'}=Astro.props;
+const {lang='ja', kind='home', catalog}=Astro.props;
 const en=lang==='en', base=import.meta.env.BASE_URL;
 const messages={
  home: {ja:'こんにちは！ カタログを開いて、一緒に読んでいきましょう。主張・仮定・証明を、順番にたどっていきます。',en:'Hello! Open the catalogue and read along with me. Let’s follow the claim, the hypotheses, and the proof, step by step.'},
@@ -7,7 +7,7 @@ const messages={
  catalog: {ja:'034の14篇を、結果と証明の役割から見渡します。関係図では論文を選び、何を使うか、どこで使われるかをたどれます。',en:'Explore the results and proof roles of the 14 manuscripts in catalogue 034. Select a manuscript in the diagram to see what it uses and where it is used.'},
  paper: {ja:'証明の全体像は各図で、接続の理由はその下の文章でたどれます。矢印に付けた補題・定理の引用から、原典の該当箇所へ進めます。',en:'Each diagram shows the proof structure; the text below explains its connections. Follow the citations on the arrows to the relevant results in the original papers.'},
 };
-const message=messages[kind]||messages.home;
+const message=kind==='catalog'&&catalog?.id!=='034' ? {ja:`${catalog?.id}の${catalog?.paperIds.length}篇を、結果と証明の役割から見渡します。図とその下の説明から、何を使い、どこで使うかをたどりましょう。`,en:`Explore the results and proof roles of the ${catalog?.paperIds.length} manuscripts in catalogue ${catalog?.id}. Follow the diagrams and explanations to see which results are used at each step.`} : messages[kind]||messages.home;
 ---
 <aside class:list={['reading-guide',{'guide-home':kind==='home'}]} aria-label={en?'Reading guide':'案内役からひとこと'}>
  <img src={`${base}images/${kind==='home'?'guide-portrait.png':'guide-pixel.png'}`} width={kind==='home'?446:428} height={kind==='home'?520:224} alt={en?'A green-and-white, large-eared guide reading among books':'本に囲まれた、白と緑の大きな耳の案内役'} loading={kind==='home'?'eager':'lazy'}/>

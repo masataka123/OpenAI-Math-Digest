@@ -1,0 +1,24 @@
+\begin{tikzpicture}
+\node[card] (a) {\heading{対数的飯高系を元の底と比較する}{Compare the logarithmic Iitaka system with the original base}
+ $d=\kappa(F)\ge0,\quad \bar\kappa(V)\ge0,\quad X'\longrightarrow W\longrightarrow Z$};
+\node[card,below=2.2cm of a] (b) {\heading{parameter fieldを底の関数体に埋め込む}{Embed the parameter field into the original base field}
+ $\mathbb C(T_0)\subseteq\mathbb C(Y),\quad\bar\kappa(U)=d+\dim T_0$};
+\flow{a}{b}{\Tx{対数下界と形式の比例性から像の族を測る}{Use the logarithmic lower bound and proportional forms}\\
+ \R{OI}{[OI] Cor. 6.2, pp. 40--41}; \R{WV}{[WV] Prop. 2.10, pp. 12--14}}
+\node[card,below=2.6cm of b] (c) {\heading{飯高ファイバー方向で最初の双有理的constancy}{First birational constancy along the Iitaka fibers}
+ $M|_{W_z}\sim_{\mathbb Q}0\ \Longrightarrow\ \Tx{\text{最高lineは平坦・有限指標}}{\text{flat top line with finite character}}$\\
+ \Tx{root coverのconstancyから$J$のconstancyへ}{From constancy of the root cover to constancy of $J$}};
+\flow{b}{c}{\Tx{制限上の随伴比較、極の収縮、群作用を保つ降下}{Restricted adjoint comparison, contraction of poles and equivariant descent}\\
+ \R{OI}{[OI] Thm. 3.1, pp. 17--18}; \R{WV}{[WV] Prop. 3.12, p. 23}\\
+ \R{WV}{[WV] Cor. 3.16, p. 25; Thm. 4.1 / Prop. 4.10, pp. 26, 42--43}}
+\node[card,below=2.4cm of c] (d) {\heading{飯高底の座標と全関数体を固定する}{Fix the Iitaka-base coordinates and the whole function field}
+ $b=\overline{\mathbb C(T_0)},\quad C_*\to P_0,\quad V'\to P_0$\\
+ \Tx{marking、定数cocycle、動く因子上の非分岐性}{Markings, constant cocycles, and no ramification on moving divisors}};
+\flow{c}{d}{\Tx{$J$のconstancyだけで止めず、座標・作用・被覆を保つ}{Retain coordinates, actions and covers beyond constancy of $J$}\\
+ \R{WV}{[WV] Prop. 6.2, pp. 47--51; Lem. 7.1 / Prop. 7.2, pp. 52--56}}
+\node[result,below=2.3cm of d] (e) {\heading{全ファイバーのvariationを下界へ入れる}{Insert whole-fiber variation into the lower bound}
+ $\operatorname{Var}(f)\le\dim T_0,\qquad
+ \bar\kappa(U)\ge d+\max\{\bar\kappa(V),\operatorname{Var}(f)\}$};
+\flow{d}{e}{\Tx{被覆と群作用を降下し、元の幾何学的一般ファイバーと同定}{Descend the cover and action; identify the original geometric generic fiber}\\
+ \R{WV}{[WV] Prop. 7.3 / \S7.4, pp. 57--59}}
+\end{tikzpicture}
