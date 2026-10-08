@@ -69,11 +69,23 @@ $$
 
 ## 図の矢印に付した引用
 
-略号のない結果番号は本原稿[OI]を指す。外部入力は、[Fuj] Fujinoの弱正値性、[FF] Fujino–Fujisawaの標準延長、[Vil] Villadsenのコンパクト化、[BC] Brunebarbe–Cadorelの対数一般型性、[BT] Bakker–TsimermanのAx–Schanuel、[KP] Kovács–Patakfalviの安定族の正値性、[Cam] Campanaのorbifold基底を表す。外部原典は[Fuj]著者版0.54（2015年6月30日）、[FF]著者版0.55（2025年3月11日）、[Vil]・[BC]・[BT]はarXiv v1、[KP]は62ページの著者版、[Cam]はarXiv v8を参照する。各リンクの表示にページを付す。GitHubのPDF閲覧リンクではページ位置への自動移動を前提としない。
+略号のない結果番号は本原稿[OI]を指す。主要な外部入力には次の略号を使う。
+
+- [Fuj] Fujino：弱正値性。著者版0.54（2015年6月30日）。
+- [FF] Fujino–Fujisawa：標準延長。著者版0.55（2025年3月11日）。
+- [Vil] Villadsen：コンパクト化。arXiv v1。
+- [BC] Brunebarbe–Cadorel：対数一般型性。arXiv v1。
+- [BT] Bakker–Tsimerman：Ax–Schanuel。arXiv v1。
+- [KP] Kovács–Patakfalvi：安定族の正値性。62ページの著者版。
+- [Cam] Campana：orbifold基底。arXiv v8。
+
+各リンクの表示にページを付す。GitHubのPDF閲覧リンクではページ位置への自動移動を前提としない。
 
 ## 2. Theorem 1.1の証明 — 相対飯高底への移送
 
-**目標。** 右辺のいずれかが$-\infty$の場合を除き、$r=\kappa(F,K_F+\Delta_F)\geq0$、$b=\kappa(f\mid\Delta)\geq0$と置く。以下の$X,W,Y$は許された共通モデルを表し、切断を戻す滑らかな参照対を$(X_0,\Delta_0)$とする。$h:W\to Y$は元の底を保持し、$p:W\to S$はperiodに由来する別の射である。
+**証明の道筋。** 主定理では、相対飯高底の切断比較に二つの正値性入力を合わせる。最後の[ample捻りの相殺](#proof-2)を次節で展開し、得た下界から[対数劣加法性](#proof-3)と[標数0への移行](#proof-4)を導く。[WVへの追加結果](#proof-5)は主定理の経路と分けて読む。
+
+右辺のいずれかが$-\infty$の場合を除き、$r=\kappa(F,K_F+\Delta_F)\geq0$、$b=\kappa(f\mid\Delta)\geq0$と置く。以下の$X,W,Y$は許された共通モデルを表し、切断を戻す滑らかな参照対を$(X_0,\Delta_0)$とする。$h:W\to Y$は元の底を保持し、$p:W\to S$はperiodに由来する別の射である。
 
 ![主定理：相対飯高帰着から、境界の保持とHodge lineの正値性を合流させる](diagrams/main.ja.svg)
 
@@ -132,13 +144,13 @@ $$
 
 [Propositions 3.2, 3.4・pp. 18–20; §6・(6.6)・p. 40][OI]
 
-**得られた結果の使い道。** 得た下界を対数的底へ移すのが第4節である。途中のTheorem 3.1はWVの制限上のHodge比較にも渡される。
+得た下界を対数的底へ移すのが[第4節](#proof-3)である。途中のTheorem 3.1はWVの制限上のHodge比較にも渡される。
 
 [OI, §6 · pp. 39–41][OI] · [WV, Theorem 3.8 / Proposition 3.9 · p. 21][WV]
 
 ## 3. Proposition 3.4の核心 — Ample捻りを固定切断で消す
 
-**目標。** $D_W=K_W+T$、$M=p^*P$とする。$h$のファイバー上で$D_W+M$がbigであることから出発する。原稿は$\kappa$の極限連続性を使わず、係数を有理数で固定して二つの線形系を掛け合わせる。
+$D_W=K_W+T$、$M=p^*P$とする。$h$のファイバー上で$D_W+M$がbigであることから出発する。原稿は$\kappa$の極限連続性を使わず、係数を有理数で固定して二つの線形系を掛け合わせる。
 
 ![随伴加法性：正のample捻りの線形系と負の捻りの固定切断を合わせる](diagrams/cancellation.ja.svg)
 
@@ -190,13 +202,13 @@ $$
 
 [Proposition 3.4・(3.8)と直後の乗法・p. 20][OI]
 
-**得られた結果の使い道。** 固定切断による乗法が像の次元を保つため、第2節の二つの正値性入力を主定理の下界へ合流できる。
+固定切断による乗法が像の次元を保つため、[第2節](#proof-1)の二つの正値性入力を主定理の下界へ合流できる。
 
 [OI, Proposition 3.4・§6 · pp. 19–20, 40][OI]
 
 ## 4. Corollary 6.2の証明 — 対数的底との比較
 
-**目標。** 必要なのは$D_Y$を一つのモデルの境界に含めることに加え、その比較を不変量$\kappa(f\mid D_X)$に移すことである。
+必要なのは$D_Y$を一つのモデルの境界に含めることに加え、その比較を不変量$\kappa(f\mid D_X)$に移すことである。
 
 ![対数劣加法性：係数1からorbifold基底の比較を得て主定理を適用する](diagrams/logarithmic.ja.svg)
 
@@ -218,13 +230,13 @@ Theorem 1.1に$\Delta=D_X$を代入する。滑らかな準射影多様体$U\to 
 
 [Corollary 6.2の証明と直後の議論・pp. 40–41][OI]
 
-**得られた結果の使い道。** この下界はWVのparameter field構成と、RAの独立した上界を等号にする帰結で使う。
+この下界はWVのparameter field構成と、RAの独立した上界を等号にする帰結で使う。
 
 [WV, Theorem 2.1 · p. 6][WV] · [RA, Corollary 1.2 / §7.6 · pp. 2, 50][RA]
 
 ## 5. Corollary 6.3の証明 — 幾何学的一般ファイバーと体の変更
 
-**目標。** 複素数上の非常に一般のファイバーで得た不等式を、幾何学的一般ファイバーの切断空間を介して標数0の代数閉体へ移す。
+複素数上の非常に一般のファイバーで得た不等式を、幾何学的一般ファイバーの切断空間を介して標数0の代数閉体へ移す。
 
 ![標数0への移行：次数ごとの基底変換と有限生成体への降下](diagrams/characteristic-zero.ja.svg)
 
@@ -247,7 +259,7 @@ $f$、射影埋込み、境界を$\mathbb Q$上有限生成な部分体$K\subset
 
 [Corollary 6.3の証明・p. 41][OI]
 
-**得られた結果の使い道。** 通常・対数的な劣加法性を標数0の代数閉体上へ適用できる。PHの通常劣加法性とは別証明として比較する。
+通常・対数的な劣加法性を標数0の代数閉体上へ適用できる。PHの通常劣加法性とは別証明として比較する。
 
 [OI, Corollary 6.3 · p. 41][OI] · [PH, Theorem 1.1 · p. 2][PH]
 

@@ -40,11 +40,22 @@ $$
 
 ## 図の矢印に付した引用
 
-略号のない結果番号は本稿[PH]を指す。外部入力は[BBT]＝Bakker–Brunebarbe–Tsimerman、[BC]＝Brunebarbe–Cadorel、[FM]＝Fujino–Mori、[Amb]＝Ambro、[Fuj]＝Fujino、[Has]＝Hashizumeとする。各版・照合範囲は第5節に記す。図の引用先は原典であり、GitHub閲覧URLのページはリンク表示中の番号で参照する。
+略号のない結果番号は本稿[PH]を指す。主要な外部入力には次の略号を使う。
+
+- [BBT] Bakker–Brunebarbe–Tsimerman。
+- [BC] Brunebarbe–Cadorel。
+- [FM] Fujino–Mori。
+- [Amb] Ambro。
+- [Fuj] Fujino。
+- [Has] Hashizume。
+
+各版・照合範囲は[依存する結果の一覧](#dependencies)に記す。図の引用先は原典であり、GitHub閲覧URLのページはリンク表示中の番号で参照する。
 
 ## 2. Theorem 1.2 — 周期像から境界と分岐を除く
 
-**目標。** $T$をneat levelでの実際のfull period imageの滑らかな射影モデルとし、$J$を延長最高line、$L_T=cJ$とする。$D_N$はモノドロミー対数が非零の境界、$R_{\rm div}$は有限商の余次元1の分岐、$R_{\rm exc}$は商の底上で例外的なJacobian成分である。$r=\nu(J)$はhighest-line mapの階数であり、$\dim T$と同じとは限らない。
+**証明の道筋。** Theorem 1.1には二つの準備を合流させる。本節でTheorem 1.2の随伴正値性を示し、[標準束公式による切断比較](#proof-2)を用意してから、[二つの底の比較と補間](#proof-3)で通常の飯高劣加法性を導く。
+
+$T$をneat levelでの実際のfull period imageの滑らかな射影モデルとし、$J$を延長最高line、$L_T=cJ$とする。$D_N$はモノドロミー対数が非零の境界、$R_{\rm div}$は有限商の余次元1の分岐、$R_{\rm exc}$は商の底上で例外的なJacobian成分である。$r=\nu(J)$はhighest-line mapの階数であり、$\dim T$と同じとは限らない。
 
 ![有理最小化と二種類の階数低下から随伴のbignessを得る](diagrams/period.ja.svg)
 
@@ -72,13 +83,13 @@ $$
 
 [Lemmas 5.1–5.2 · pp. 12–13; (5.2)–(5.5) · pp. 15–16][PH] · [BC, Theorem 1.1 · p. 1][BC]
 
-**得られた結果の使い道。** 得た$M=p^*L$と底の随伴bignessを、第4節の弱正値性・補間へ渡す。ここで$M$の半豊富性は結論していない。
+得た$M=p^*L$と底の随伴bignessを、[第4節の弱正値性・補間](#proof-3)へ渡す。ここで$M$の半豊富性は結論していない。
 
 [PH, §7.3 · pp. 25–26][PH]
 
 ## 3. 標準束公式 — 最高lineと切断比較を用意する
 
-**目標。** $d=\kappa(F)\geq0$とし、相対飯高写像を$\widetilde X\xrightarrow{g}Y\xrightarrow{q}Z$と書く。$\dim(Y/Z)=d$で、$g$の幾何学的一般ファイバー$C$は小平次元$0$である。ここでTheorem 1.2に入るlineと、元の多重標準切断との比較を同時に保持する。
+$d=\kappa(F)\geq0$とし、相対飯高写像を$\widetilde X\xrightarrow{g}Y\xrightarrow{q}Z$と書く。$\dim(Y/Z)=d$で、$g$の幾何学的一般ファイバー$C$は小平次元$0$である。ここでTheorem 1.2に入るlineと、元の多重標準切断との比較を同時に保持する。
 
 ![最小指数root coverと残余因子からHodge lineおよび切断比較を得る](diagrams/canonical.ja.svg)
 
@@ -114,13 +125,13 @@ $$
 
 [Proposition 6.4, Lemmas 6.5–6.6 · pp. 20–22][PH]
 
-**得られた結果の使い道。** 第4節では元の底への$q$とperiod底への$p$を同時に使う。切断単射は最後に下界を元の$X$へ戻すために保持する。
+[第4節](#proof-3)では元の底への$q$とperiod底への$p$を同時に使う。切断単射は最後に下界を元の$X$へ戻すために保持する。
 
 [PH, Proposition 6.4・§7.3 · pp. 20–21, 25–26][PH]
 
 ## 4. Theorem 1.1 — 二つの底と補間
 
-**目標。** $\kappa(Z)\geq0$とする。Theorem 1.2で$M=p^*L$と書けても、$p:Y\to S$と$q:Y\to Z$の間に因子化は仮定できない。$S$が点なら一般型ファイバーの劣加法性を$q$に直接適用する。以下は$\dim S>0$の場合である。
+$\kappa(Z)\geq0$とする。Theorem 1.2で$M=p^*L$と書けても、$p:Y\to S$と$q:Y\to Z$の間に因子化は仮定できない。$S$が点なら一般型ファイバーの劣加法性を$q$に直接適用する。以下は$\dim S>0$の場合である。
 
 ![積写像による非消滅、弱正値性、正確な係数補間、基礎体変更](diagrams/subadditivity.ja.svg)
 
@@ -161,7 +172,7 @@ $$
 
 [§7.3, (7.5)–(7.7) · pp. 25–26; Lemma 7.5, §7.4 · p. 27][PH]
 
-**得られた結果の使い道。** 通常劣加法性Theorem 1.1を得る。WVが挙げる代替の随伴比較は§8の別結果であり、この主定理をWVの必須入力に置き換えない。
+通常劣加法性Theorem 1.1を得る。WVが挙げる代替の随伴比較は§8の別結果であり、この主定理をWVの必須入力に置き換えない。
 
 [PH, Theorem 1.1 · p. 2; Theorem 8.1 · p. 28][PH] · [WV, Remark 3.17 · p. 25][WV]
 

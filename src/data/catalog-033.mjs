@@ -22,6 +22,26 @@ const entries=records.connections.filter(c=>['direct','consequence','premise'].i
 export const dependencyConfig={
  notes,entries,sections:connectionSections,defaultPaper:'whole-fiber-variation',
  kinds:{direct:text('直接入力','Direct input'),consequence:text('帰結への入力','Input to a consequence'),additional:text('追加結果への入力','Input to an additional result'),premise:text('前提との対応','Premise match')},
- hint:text('番号はカタログ番号／掲載順。帰結・追加結果の入力は主定理の入力と区別し、前提との対応も明示しています。別経路・類似手法・背景は上の比較節を参照してください。','Numbers give catalogue / paper order. Inputs to consequences and additional results are distinguished from main-proof inputs; premise matches are labelled separately. Alternatives, similar methods, and background are discussed above.'),
+ hint:text('番号はカタログ番号／掲載順。帰結・追加結果の入力は主定理の入力と区別し、前提との対応も明示しています。別経路・類似手法・背景は比較節を参照してください。','Numbers give catalogue / paper order. Inputs to consequences and additional results are distinguished from main-proof inputs; premise matches are labelled separately. Alternatives, similar methods, and background are discussed in the comparison section.'),
 };
 export {records};
+
+// The groups organize the synthesis without turning comparisons into dependencies.
+export const overviewThemes=[
+ {id:'main-routes',title:text('下界・変動・上界','Lower bounds, variation, upper bounds'),
+  question:text('OIのどの結果がWVとRAへ入るか','Which OI results enter WV and RA'),
+  body:text('対数劣加法性とHodge lineの随伴正値性を分け、RAが独立に得る上界と合わせる段階をたどります。','Separate logarithmic subadditivity from adjoint positivity of the Hodge line, then locate the step combining the lower bound with RA’s independent upper bound.'), papers:['OI','WV','RA']},
+ {id:'additional-routes',title:text('相対飯高構成とKähler帰納法','Relative Iitaka constructions and Kähler induction'),
+  question:text('切断・Hodge line・境界を何のために比較するか','Why compare sections, Hodge lines, and boundaries'),
+  body:text('WVの追加経路と034のKAに渡す補助結果を整理します。主定理への入力と追加結果への入力は区別します。','Track auxiliary inputs to WV’s additional route and KA in catalogue 034, distinguishing them from inputs to the main theorem.'),papers:['OI','WV','KA']},
+ {id:'models',title:text('モデル存在との接続と別の経路','Good models and alternative routes'),
+  question:text('034との往復と、PH・BSの位置付け','Connections with 034 and the roles of PH and BS'),
+  body:text('OIからLA・CKへ、LAからWVの帰結へ進みます。PHの別証明とBSの半豊富性は比較節で個別に扱います。','Follow OI into LA and CK, and LA into a consequence in WV. PH’s alternative proof and BS’s semiampleness argument are treated separately in the comparison section.'),papers:['LA','CK','PH','BS']},
+];
+
+export const overviewStepConnections={
+ 'main-routes':['c01','c02','c03'],
+ 'additional-routes':['c04','c05','c06'],
+ models:['c07','c12','p01'],
+ kahler:['c08','c09','c10','c11'],
+};

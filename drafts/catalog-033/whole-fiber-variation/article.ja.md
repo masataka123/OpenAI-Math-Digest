@@ -73,7 +73,9 @@ $$
 
 ## 2. Theorem 1.1の全体像
 
-**目標。** $d=\kappa(F)\geq0$の場合に、切断系から得た体$b=\overline{\mathbb C(T_0)}$を、元の全幾何学的一般ファイバー$F$の双有理的定義体にする。$J$は相対飯高写像の小平次元0のファイバーであり、$F$全体とは区別する。
+**証明の道筋。** 主定理は、[parameter fieldの構成](#proof-2)、[小平次元0のファイバーのconstancy](#proof-3)、[元の全ファイバーの降下](#proof-4)の三段階からなる。[境界を空にする帰結](#proof-5)と、LA・Tajiを使う[smooth familyの帰結](#proof-6)は、主定理の後で分けて扱う。
+
+$d=\kappa(F)\geq0$の場合に、切断系から得た体$b=\overline{\mathbb C(T_0)}$を、元の全幾何学的一般ファイバー$F$の双有理的定義体にする。$J$は相対飯高写像の小平次元0のファイバーであり、$F$全体とは区別する。
 
 ![parameter field、最初のconstancy、markingと有限被覆の降下を結ぶ全体図](diagrams/overview.ja.svg)
 
@@ -95,11 +97,11 @@ markingは飯高底の座標と有限正規化を固定する。定数cocycleと
 
 [Proposition 6.2・Propositions 7.2–7.3・§7.4 · pp.47–59][WV]
 
-**得られた結果の使い道。** この不等式を切断系の次元等式と合わせてTheorem 1.1を得る。Corollary 1.2は境界0の特殊化、Corollary 1.3はLA・Tajiを加える別の帰結である。以下の各図はこの全体図の一段階を展開する。
+この不等式を切断系の次元等式と合わせてTheorem 1.1を得る。Corollary 1.2は境界0の特殊化、Corollary 1.3はLA・Tajiを加える別の帰結である。以下の[parameter field](#proof-2)、[最初のconstancy](#proof-3)、[全ファイバーの降下](#proof-4)の各図で、この三段階を展開する。
 
 ## 3. Theorem 1.1：parameter fieldの構成
 
-**目標。** $d=\kappa(F)\geq0$ とする。まず絶対対数的飯高底 $Z$ と元の底 $Y$ を同じ関数体の中で比較し、$\bar\kappa(U)-d$ 次元の体を $\mathbb C(Y)$ の部分体として得る。この段階ではファイバーのconstancyを使わない。
+$d=\kappa(F)\geq0$ とする。まず絶対対数的飯高底 $Z$ と元の底 $Y$ を同じ関数体の中で比較し、$\bar\kappa(U)-d$ 次元の体を $\mathbb C(Y)$ の部分体として得る。この段階ではファイバーのconstancyを使わない。
 
 ![対数的劣加法性、二つの飯高系、像の族からparameter fieldを得る](diagrams/parameter-field.ja.svg)
 
@@ -142,13 +144,13 @@ $$
 
 [Proposition 2.10、Remark 2.11 · pp.12–14][WV]
 
-**得られた結果の使い道。** 得られた$b=\overline{\mathbb C(T_0)}$を全ファイバーの定義体候補に固定する。次に$J$のconstancyを示し、markingと有限被覆の降下で元の$F$まで戻る。
+得られた$b=\overline{\mathbb C(T_0)}$を全ファイバーの定義体候補に固定する。次に$J$のconstancyを示し、markingと有限被覆の降下で元の$F$まで戻る。
 
 [WV, §§3–7 · pp. 14–59][WV]
 
 ## 4. Theorem 1.1：root coverから最初のconstancyへ
 
-**目標。** $J$ の最小のordinary pluricanonical indexを使うことにより、固有成分だけでなく最高Hodge成分**全体**をrank oneにする。その平坦性から双有理的constancyへ進む箇所が§4の解析的議論である。
+$J$ の最小のordinary pluricanonical indexを使うことにより、固有成分だけでなく最高Hodge成分**全体**をrank oneにする。その平坦性から双有理的constancyへ進む箇所が§4の解析的議論である。
 
 ![最小root cover、制限上のHodge lineの自明性、解析的収縮による最初のconstancy](diagrams/root-constancy.ja.svg)
 
@@ -194,13 +196,13 @@ $$
 
 [Theorem 4.1の証明、Corollary 4.9、Proposition 4.10 · pp.40–43][WV] · [BCHM, Theorem 1.2(2) · p.5][BCHM]
 
-**得られた結果の使い道。** 固定されたのは小平次元0の$J$である。次の降下では、飯高底の座標と群作用を保持して全幾何学的一般ファイバーを固定する。
+固定されたのは小平次元0の$J$である。[次の降下](#proof-4)では、飯高底の座標と群作用を保持して全幾何学的一般ファイバーを固定する。
 
 [WV, §6導入・§7.4 · pp. 46, 58–59][WV]
 
 ## 5. Theorem 1.1：飯高底を残した全ファイバーの降下
 
-**目標。** $b=\overline{\mathbb C(T_0)}$ とし、$W,S,Z$ の $T_0$ 上の幾何学的一般ファイバーを $H_0,I,P_0$ と書く。$p_I:H_0\to I$、$a_0:H_0\to P_0$ を誘導射とする。$H_0\to I\times_bP_0$ はgenerically finite、$\dim P_0=d$ である。目標は $J$ のconstancyを $P_0$ の座標と両立させることである。
+$b=\overline{\mathbb C(T_0)}$ とし、$W,S,Z$ の $T_0$ 上の幾何学的一般ファイバーを $H_0,I,P_0$ と書く。$p_I:H_0\to I$、$a_0:H_0\to P_0$ を誘導射とする。$H_0\to I\times_bP_0$ はgenerically finite、$\dim P_0=d$ である。目標は $J$ のconstancyを $P_0$ の座標と両立させることである。
 
 ![markingによる有限正規化の固定と、動く因子上の非分岐性から全関数体を降下させる](diagrams/whole-fiber-descent.ja.svg)
 
@@ -254,13 +256,13 @@ $$
 
 purityについては利用先の仮定確認までで、[SGA1]の原典記述の再照合は未実施である。
 
-**得られた結果の使い道。** Theorem 1.1のvariationを含む下界が完成する。境界を空にしたCorollary 1.2はこの出力をそのまま使う。
+Theorem 1.1のvariationを含む下界が完成する。境界を空にしたCorollary 1.2はこの出力をそのまま使う。
 
 [WV, Theorem 1.1 / Corollary 1.2 · p. 2; §7.4 · p. 59][WV]
 
 ## 6. Corollary 1.2：境界を空にする
 
-**目標。** 射影的な $X,Y$ には空のコンパクト化境界を用いる。variationを定義する幾何学的一般ファイバーとその定義体は変わらない。
+射影的な $X,Y$ には空のコンパクト化境界を用いる。variationを定義する幾何学的一般ファイバーとその定義体は変わらない。
 
 ![空の境界によって対数的不等式を射影的不等式へ特殊化する](diagrams/projective-case.ja.svg)
 
@@ -270,13 +272,13 @@ $D_X=D_Y=0$ ならば $\bar\kappa(X)=\kappa(X)$、$\bar\kappa(Y)=\kappa(Y)$。�
 
 [Corollary 1.2の証明 · p.2、§7.4 · p.59][WV]
 
-**得られた結果の使い道。** 非負の小平次元の底を持つ射影的族に、通常のIitaka–Viehweg不等式を適用できる。追加の相対飯高経路を主証明の前提にする必要はない。
+非負の小平次元の底を持つ射影的族に、通常のIitaka–Viehweg不等式を適用できる。追加の相対飯高経路を主証明の前提にする必要はない。
 
 [WV, Corollary 1.2 · p. 2; §9導入 · p. 69][WV]
 
 ## 7. Corollary 1.3：good modelを介するsmooth familyの帰結
 
-**目標。** ここではすべての閉ファイバーのnon-unirulednessと、族のsmoothnessを使う。主定理の証明にこの経路を逆向きに組み込まない。
+ここではすべての閉ファイバーのnon-unirulednessと、族のsmoothnessを使う。主定理の証明にこの経路を逆向きに組み込まない。
 
 ![non-uniruledな閉ファイバーからLAのgood modelを得てTajiの定理に接続する](diagrams/smooth-rigidity.ja.svg)
 
@@ -306,7 +308,7 @@ smoothな場合で $\kappa(F)\geq0$、$\bar\kappa(V)\geq0$ に限れば、[RA] C
 
 [比較段落 · p.5][WV] · [RA, Corollary 1.2 · p.2][RA]
 
-**得られた結果の使い道。** 底の対数的小平次元0では双有理的isotrivialityを得る。負の底やspecial baseまで含む主張には、この節のLA・Taji経路の仮定を保持する。
+底の対数的小平次元0では双有理的isotrivialityを得る。負の底やspecial baseまで含む主張には、この節のLA・Taji経路の仮定を保持する。
 
 [WV, Corollary 1.3 · p. 5][WV]
 

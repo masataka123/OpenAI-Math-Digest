@@ -69,11 +69,23 @@ More generally, the logarithmic inequality holds over $k$ under the same boundar
 
 ## References on the arrows
 
-Unprefixed result numbers refer to this manuscript [OI]. External keys denote [Fuj] Fujino's weak positivity, [FF] Fujino–Fujisawa's canonical extensions, [Vil] Villadsen's compactification, [BC] Brunebarbe–Cadorel's logarithmic general type, [BT] Bakker–Tsimerman's Ax–Schanuel theorem, [KP] Kovács–Patakfalvi's stable-family positivity, and [Cam] Campana's orbifold base. The external versions are [Fuj] author version 0.54 (June 30, 2015), [FF] author version 0.55 (March 11, 2025), arXiv v1 for [Vil], [BC], and [BT], the 62-page author manuscript for [KP], and arXiv v8 for [Cam]. Page locators are displayed in the links; GitHub PDF previews are not assumed to navigate to a specified page automatically.
+Unprefixed result numbers refer to this manuscript [OI]. The main external inputs use the following keys.
+
+- [Fuj] Fujino: weak positivity. Author version 0.54 (June 30, 2015).
+- [FF] Fujino–Fujisawa: canonical extensions. Author version 0.55 (March 11, 2025).
+- [Vil] Villadsen: compactification. arXiv v1.
+- [BC] Brunebarbe–Cadorel: logarithmic general type. arXiv v1.
+- [BT] Bakker–Tsimerman: Ax–Schanuel. arXiv v1.
+- [KP] Kovács–Patakfalvi: stable-family positivity. The 62-page author manuscript.
+- [Cam] Campana: the orbifold base. arXiv v8.
+
+Page locators are displayed in the links; GitHub PDF previews are not assumed to navigate to a specified page automatically.
 
 ## 2. Proof of Theorem 1.1 — Transfer to the relative Iitaka base
 
-**Goal.** Exclude the automatic case where either right-hand term is $-\infty$, and put $r=\kappa(F,K_F+\Delta_F)\geq0$ and $b=\kappa(f\mid\Delta)\geq0$. Below, $X,W,Y$ denote allowed common models; $(X_0,\Delta_0)$ is the fixed smooth reference pair to which sections descend. The map $h:W\to Y$ retains the original base, while $p:W\to S$ is a separate map arising from periods.
+**Proof route.** The main proof combines exact section comparison on the relative Iitaka base with two positivity inputs. The next section expands the final [cancellation of the ample twist](#proof-2); the resulting lower bound then yields [logarithmic subadditivity](#proof-3) and the [characteristic-zero statement](#proof-4). The [additional inputs to WV](#proof-5) form a separate part of the article.
+
+Exclude the automatic case where either right-hand term is $-\infty$, and put $r=\kappa(F,K_F+\Delta_F)\geq0$ and $b=\kappa(f\mid\Delta)\geq0$. Below, $X,W,Y$ denote allowed common models; $(X_0,\Delta_0)$ is the fixed smooth reference pair to which sections descend. The map $h:W\to Y$ retains the original base, while $p:W\to S$ is a separate map arising from periods.
 
 ![Main theorem: the relative Iitaka reduction combines boundary control with Hodge-line positivity](diagrams/main.en.svg)
 
@@ -132,13 +144,13 @@ Proposition 2.7 and exceptional descent return these systems to the original $(X
 
 [Propositions 3.2, 3.4 · pp. 18–20; §6 · (6.6) · p. 40][OI]
 
-**Use of the output.** Section 4 transfers this lower bound to a logarithmic base. The intermediate Theorem 3.1 also supplies WV’s restricted Hodge comparison.
+[Section 4](#proof-3) transfers this lower bound to a logarithmic base. The intermediate Theorem 3.1 also supplies WV’s restricted Hodge comparison.
 
 [OI, §6 · pp. 39–41][OI] · [WV, Theorem 3.8 / Proposition 3.9 · p. 21][WV]
 
 ## 3. The core of Proposition 3.4 — Cancel the ample twist with a fixed section
 
-**Goal.** Write $D_W=K_W+T$ and $M=p^*P$. Start from bigness of $D_W+M$ on the fibers of $h$. The argument fixes rational coefficients and multiplies two systems; it makes no limiting-continuity assertion for $\kappa$.
+Write $D_W=K_W+T$ and $M=p^*P$. Start from bigness of $D_W+M$ on the fibers of $h$. The argument fixes rational coefficients and multiplies two systems; it makes no limiting-continuity assertion for $\kappa$.
 
 ![Adjoint addition: combine a positively twisted system with one fixed negatively twisted section](diagrams/cancellation.en.svg)
 
@@ -192,13 +204,13 @@ Away from the zeros of $e$, the common factor cancels from every ratio. The imag
 
 [Proposition 3.4 · (3.8) and the following multiplication · p. 20][OI]
 
-**Use of the output.** Multiplication by a fixed section preserves image dimension, allowing the two positivity inputs in Section 2 to produce the main lower bound.
+Multiplication by a fixed section preserves image dimension, allowing the two positivity inputs in [Section 2](#proof-1) to produce the main lower bound.
 
 [OI, Proposition 3.4・§6 · pp. 19–20, 40][OI]
 
 ## 4. Proof of Corollary 6.2 — Compare with the logarithmic base
 
-**Goal.** One needs both the inclusion of the prescribed boundary on a model and its transfer to the invariant $\kappa(f\mid D_X)$.
+One needs both the inclusion of the prescribed boundary on a model and its transfer to the invariant $\kappa(f\mid D_X)$.
 
 ![Logarithmic subadditivity: coefficient one yields an invariant base comparison, followed by the main theorem](diagrams/logarithmic.en.svg)
 
@@ -218,13 +230,13 @@ Apply Theorem 1.1 with $\Delta=D_X$. For a dominant morphism $U\to V$ of smooth 
 
 [Proof of Corollary 6.2 and the following discussion · pp. 40–41][OI]
 
-**Use of the output.** This lower bound is used in WV’s parameter-field construction and in the corollary turning RA’s independent upper bound into equality.
+This lower bound is used in WV’s parameter-field construction and in the corollary turning RA’s independent upper bound into equality.
 
 [WV, Theorem 2.1 · p. 6][WV] · [RA, Corollary 1.2 / §7.6 · pp. 2, 50][RA]
 
 ## 5. Proof of Corollary 6.3 — Geometric generic fibers and field extension
 
-**Goal.** Section spaces on the geometric generic fiber transfer the inequality from very general complex fibers to algebraically closed fields of characteristic zero.
+Section spaces on the geometric generic fiber transfer the inequality from very general complex fibers to algebraically closed fields of characteristic zero.
 
 ![Passage to characteristic zero: degreewise base change and descent to a finitely generated field](diagrams/characteristic-zero.en.svg)
 
@@ -247,7 +259,7 @@ Descend $f$, its projective embeddings, and boundaries to a subfield $K\subset k
 
 [Proof of Corollary 6.3 · p. 41][OI]
 
-**Use of the output.** Ordinary and logarithmic subadditivity are now available over algebraically closed fields of characteristic zero. PH’s ordinary subadditivity is a separate proof.
+Ordinary and logarithmic subadditivity are now available over algebraically closed fields of characteristic zero. PH’s ordinary subadditivity is a separate proof.
 
 [OI, Corollary 6.3 · p. 41][OI] · [PH, Theorem 1.1 · p. 2][PH]
 

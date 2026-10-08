@@ -67,7 +67,9 @@ Unprefixed numbers refer to [RA]. The diagrams retain the Proposition / Lemma / 
 
 ## 2. Proof of Theorem 1.1 — Reduction by Kodaira dimension
 
-**Goal.** Write $\kappa_X,\kappa_Y,\kappa_F$ for the logarithmic Kodaira dimensions of the respective pairs. Given Proposition 1.3, the upper bound follows from restriction of sections and the logarithmic Iitaka fibration of the base.
+**Proof route.** First derive the upper bound with Proposition 1.3 as input. Its proof is then expanded into [constructing sections from a Hodge vector](#proof-2) and [removing the twist for a positive-dimensional period quotient](#proof-3). OI enters only in the final [additivity corollary](#proof-4).
+
+Write $\kappa_X,\kappa_Y,\kappa_F$ for the logarithmic Kodaira dimensions of the respective pairs. Given Proposition 1.3, the upper bound follows from restriction of sections and the logarithmic Iitaka fibration of the base.
 
 ![Upper bound: the two negative-infinity cases, restriction injectivity over a zero-dimensional Iitaka image, and the positive-base reduction](diagrams/upper.en.svg)
 
@@ -104,13 +106,13 @@ The last upper bound is the image-dimension estimate for a total-space linear sy
 
 [§2.1 and (2.1) · p. 5; §2.4 · pp. 6–7][RA]
 
-**Use of the output.** Section 5 combines this independent upper bound with OI’s logarithmic lower bound. Its key input is Proposition 1.3, developed next.
+[Section 5](#proof-4) combines this independent upper bound with OI’s logarithmic lower bound. Its key input is Proposition 1.3, developed next.
 
 [RA, §2・§7.6 · pp. 5–7, 50][RA]
 
 ## 3. Proof of Proposition 1.3 — From a Hodge vector to a base section
 
-**Goal.** Fix a nonzero section $s$. The constructed Hodge vector need not generate the whole highest Hodge bundle. The argument therefore retains its coefficients and the compact flags determined by its projective direction. Below, $\mathcal E_0$ denotes the highest Hodge bundle, distinct from the boundary $E$.
+Fix a nonzero section $s$. The constructed Hodge vector need not generate the whole highest Hodge bundle. The argument therefore retains its coefficients and the compact flags determined by its projective direction. Below, $\mathcal E_0$ denotes the highest Hodge bundle, distinct from the boundary $E$.
 
 ![Section construction: preserve the original coefficient lattice and zero test, then separate point and positive-dimensional period quotients](diagrams/section-construction.en.svg)
 
@@ -142,13 +144,13 @@ If $S$ is a point, the descended variation is constant. In a constant frame, eac
 
 [Proposition 4.1 · pp. 14–15; Lemma 4.7 · pp. 19–20; §7.1 and Proposition 7.1 · p. 43; §7.5 · pp. 49–50][RA] · [BBT, Theorem 1.1 · p. 1][BBT]
 
-**Use of the output.** A base section vanishing at the specified point makes restriction to one fiber injective in every degree when the base has Kodaira dimension zero. The next section handles the positive-dimensional period quotient.
+A base section vanishing at the specified point makes restriction to one fiber injective in every degree when the base has Kodaira dimension zero. The next section handles the positive-dimensional period quotient.
 
 [RA, §2.3・proof of Proposition 1.3 · pp. 5–6, 50][RA]
 
 ## 4. A positive-dimensional period quotient — Remove the twist and recover sections
 
-**Goal.** Assume $\dim S>0$. Write $Y\xrightarrow{x}W\xrightarrow{h}S$ on suitably prepared models; the section comparison always returns to a fixed original pair. The notation $\geq_{\mathrm{pe}}$ means that the difference is pseudoeffective.
+Assume $\dim S>0$. Write $Y\xrightarrow{x}W\xrightarrow{h}S$ on suitably prepared models; the section comparison always returns to a fixed original pair. The notation $\geq_{\mathrm{pe}}$ means that the difference is pseudoeffective.
 
 ![Positive-dimensional quotient: the exact section lattice, nef moduli and Higgs-tail lines, and numerical removal of the period twist](diagrams/period-removal.en.svg)
 
@@ -226,13 +228,13 @@ In Lemma 7.3, the equality $\nu(P+\widetilde H)=\nu(P)$ makes the loss term in t
 
 [Proposition 7.2 and Lemma 7.3 · pp. 44–45; Proposition 7.7 · p. 49; proof of Proposition 1.3 · p. 50][RA]
 
-**Use of the output.** Positive base Kodaira dimension excludes this branch when the base has Kodaira dimension zero. This completes Proposition 1.3 and returns to the upper-bound argument in Section 2.
+Positive base Kodaira dimension excludes this branch when the base has Kodaira dimension zero. This completes Proposition 1.3 and returns to the [upper-bound argument in Section 2](#proof-1).
 
 [RA, Propositions 7.7, 1.3 · pp. 49–50][RA]
 
 ## 5. Proof of Corollary 1.2 — Add the lower bound
 
-**Goal.** Only here does the other catalogue-033 manuscript [OI] enter. The notation $\kappa_X,\kappa_Y,\kappa_F$ and the $-\infty$ convention are unchanged from Section 2.
+Only here does the other catalogue-033 manuscript [OI] enter. The notation $\kappa_X,\kappa_Y,\kappa_F$ and the $-\infty$ convention are unchanged from Section 2.
 
 ![Additivity: combine the independent upper bound with OI logarithmic subadditivity for the same pairs and the same fiber](diagrams/additivity.en.svg)
 
@@ -248,7 +250,7 @@ When both summands are finite, the two inequalities give equality. If either is 
 
 [Theorem 1.1 · p. 2; §2.2 · p. 5; §7.6 · p. 50][RA] · [OI, proof of Corollary 6.2 · p. 41][OI]
 
-**Use of the output.** For smooth families with nonnegative fiber and base Kodaira dimensions, comparison with WV Theorem 1.1 gives an alternative upper bound on variation.
+For smooth families with nonnegative fiber and base Kodaira dimensions, comparison with WV Theorem 1.1 gives an alternative upper bound on variation.
 
 [WV, comparison after Corollary 1.3 · p. 5][WV]
 

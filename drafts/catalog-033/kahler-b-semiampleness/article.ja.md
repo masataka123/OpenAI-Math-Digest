@@ -44,11 +44,20 @@ $$
 
 ## 図の矢印に付した引用
 
-略号なしの結果番号は本稿[BS]を指す。[FF]＝Fujino–Fujisawa、[MWWZ]＝Matsumura–Wang–Wu–Zhang、[BFMT]＝Bakker–Filipazzi–Mauri–Tsimerman、[Toma]＝Toma。外部入力の照合範囲は第7節に記す。図の引用は原典にリンクし、GitHub閲覧URLのページは表示ラベルで指定する。
+略号のない結果番号は本稿[BS]を指す。主要な外部入力には次の略号を使う。
+
+- [FF] Fujino–Fujisawa。
+- [MWWZ] Matsumura–Wang–Wu–Zhang。
+- [BFMT] Bakker–Filipazzi–Mauri–Tsimerman。
+- [Toma] Toma。
+
+外部入力の照合範囲は[依存する結果の一覧](#dependencies)に記す。図の引用は原典にリンクし、GitHub閲覧URLのページは表示ラベルで指定する。
 
 ## 2. Theorem 1.1の全体像
 
-**目標。** (a)で安定化する実際のmoduli lineを最後まで保持し、(b)の大域生成を全点で得る。閾値計算と、補助底$P$上での積分解・ノルムの比較が二つの主要部分である。
+**証明の道筋。** まず[閾値と延長次数の比較](#proof-2)でTheorem 1.1(a)の安定化を得る。(b)では、[積分解を族にする](#proof-3)、[各因子の半豊富性を得る](#proof-4)、[指定した同型を延長して大域生成を降ろす](#proof-5)という順に進む。
+
+(a)で安定化する実際のmoduli lineを最後まで保持し、(b)の大域生成を全点で得る。閾値計算と、補助底$P$上での積分解・ノルムの比較が二つの主要部分である。
 
 ![閾値による安定化から、積分解、半豊富な因子、同型の延長と降下までの全体図](diagrams/overview.ja.svg)
 
@@ -70,11 +79,11 @@ root eigenlineの延長次数をlctと比較し、任意の高いモデルに対
 
 [Lemmas 8.1, 8.3・§9 · pp.34–37][BS]
 
-**得られた結果の使い道。** (a)と(b)を合わせてTheorem 1.1を得る。以後の詳細図では、安定化、族の構成、因子の半豊富性、同型と切断の降下を順に展開する。
+(a)と(b)を合わせてTheorem 1.1を得る。以後の詳細図では、[安定化](#proof-2)、[族の構成](#proof-3)、[因子の半豊富性](#proof-4)、[同型と切断の降下](#proof-5)を順に展開する。
 
 ## 3. Theorem 1.1(a) — 閾値を延長次数として読む
 
-**目標。** $p:W\to S$をSNC境界をもつモデルとし、$D_W$をcrepant境界、$Q_S=\mu_0^*L-K_S$とする。十分可除な$m$について$\mathcal O_W(m(K_{W/S}+D_W))\simeq p^*\mathcal O_S(mQ_S)$を固定する。局所生成元の$m$乗根から作る被覆は、非連結でもすべての成分を保持する。
+$p:W\to S$をSNC境界をもつモデルとし、$D_W$をcrepant境界、$Q_S=\mu_0^*L-K_S$とする。十分可除な$m$について$\mathcal O_W(m(K_{W/S}+D_W))\simeq p^*\mathcal O_S(mQ_S)$を固定する。局所生成元の$m$乗根から作る被覆は、非連結でもすべての成分を保持する。
 
 ![root eigenline、留数、閾値次数、高いモデルでの安定化](diagrams/threshold.ja.svg)
 
@@ -110,13 +119,13 @@ $$
 
 [Theorem 4.4, Corollary 4.5 · pp. 15–17][BS]
 
-**得られた結果の使い道。** 安定化したmoduli lineと、指定されたlog-volume lineの同定を以後も保持する。次の積分解で比較する対象がこれで固定される。
+安定化したmoduli lineと、指定されたlog-volume lineの同定を以後も保持する。次の積分解で比較する対象がこれで固定される。
 
 [BS, Corollaries 4.5–4.6 · pp. 16–18][BS]
 
 ## 4. Theorem 1.1(b)の準備 — 点ごとの積分解を族にする
 
-**目標。** 前節の深いstratumから、良いファイバーがklt log Calabi–Yauとなる族を取り出す。$G_m$は次数$m$のlog-plurivolume lineである。必要なのは、ファイバーごとの分解に加えて、lineの同定とノルムを保持する一つの族である。
+前節の深いstratumから、良いファイバーがklt log Calabi–Yauとなる族を取り出す。$G_m$は次数$m$のlog-plurivolume lineである。必要なのは、ファイバーごとの分解に加えて、lineの同定とノルムを保持する一つの族である。
 
 ![有限被覆とcompact parameter spaceから積分解の族を構成する](diagrams/family.ja.svg)
 
@@ -145,13 +154,13 @@ $$
 
 [Corollary 4.6 · pp. 17–18; Proposition 5.6, (5.5)–(5.6) · pp. 22–25][BS]
 
-**得られた結果の使い道。** 同じ補助底$P$上の積分解と積ノルムを、射影的因子とtorus・symplectic因子の個別処理へ渡す。
+同じ補助底$P$上の積分解と積ノルムを、射影的因子とtorus・symplectic因子の個別処理へ渡す。
 
 [BS, Proposition 5.6・§§6–7 · pp. 22–34][BS]
 
 ## 5. 各因子から半豊富な延長を得る
 
-**目標。** 射影的な$(Q,C)$と、非射影的でもよい$T_i$には異なる入力を使う。以下では有限被覆・graphの解消・共通tensor powerを取った後の補助底も$P$と書く。
+射影的な$(Q,C)$と、非射影的でもよい$T_i$には異なる入力を使う。以下では有限被覆・graphの解消・共通tensor powerを取った後の補助底も$P$と書く。
 
 ![射影的比較とtorus・symplecticの周期写像を別々に処理する](diagrams/factors.ja.svg)
 
@@ -173,13 +182,13 @@ torusでは$\lambda_i\simeq\det F^1R^1$である。symplectic因子の次元を$
 
 [Lemma 7.3, §7.4, Proposition 7.5, (7.5) · pp. 30, 32–34][BS]
 
-**得られた結果の使い道。** 得た半豊富な延長をテンソル積にし、指定された同型を境界を越えて延長するための両側ノルム評価とともに次節へ渡す。
+得た半豊富な延長をテンソル積にし、指定された同型を境界を越えて延長するための両側ノルム評価とともに次節へ渡す。
 
 [BS, Lemma 8.1・§9 · pp. 34–37][BS]
 
 ## 6. Theorem 1.1(b) — 指定した同型を延長して切断を降ろす
 
-**目標。** 前節までの同型は$P^\circ$上で与えられている。これを境界の捻りを残さずに延長する段階と、proper全射から大域生成を降ろす段階を分ける。
+前節までの同型は$P^\circ$上で与えられている。これを境界の捻りを残さずに延長する段階と、proper全射から大域生成を降ろす段階を分ける。
 
 ![両側のノルム評価による同型の延長とStein分解後のnorm降下](diagrams/descent.ja.svg)
 
@@ -201,7 +210,7 @@ $r$のStein分解を$P\xrightarrow{h}T\xrightarrow{q}S$、$\deg q=d$とする。
 
 [Lemma 8.3 · pp. 35–36; §9 · pp. 36–37][BS]
 
-**得られた結果の使い道。** ある一つの共通倍が$S$の全点で生成され、(a)の引戻し安定性と合わせてmoduli b-lineの半豊富性を得る。他の033稿への直接依存はこの結論から推定しない。
+ある一つの共通倍が$S$の全点で生成され、(a)の引戻し安定性と合わせてmoduli b-lineの半豊富性を得る。他の033稿への直接依存はこの結論から推定しない。
 
 [BS, Theorem 1.1・§9 · pp. 3, 36–37][BS]
 

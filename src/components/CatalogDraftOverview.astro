@@ -2,8 +2,9 @@
 import Layout from '../layouts/Layout.astro';
 import CatalogDependencies from './CatalogDependencies.astro';
 import {renderDraft} from '../lib/render-draft.mjs';
-import {fieldsForCatalog} from '../data/site.mjs';
-import {overviewSectionIds,overviewLabels,dependencyConfig} from '../data/catalog-033.mjs';
+import {fieldsForCatalog,papers} from '../data/site.mjs';
+import {overviewSectionIds,dependencyConfig,overviewThemes,overviewStepConnections,connectionSections,records} from '../data/catalog-033.mjs';
+import pdfEditions from '../data/pdf-editions.json';
 import '../styles/paper.css';
 import '../styles/draft-article.css';
 import '../styles/catalog.css';
@@ -15,35 +16,81 @@ const article=await renderDraft(articles[`../../drafts/${directory}/article.${la
  lang,paperId:'overview',catalogId:catalog.id,base,sectionIds:overviewSectionIds,
  diagramSource:stem=>figures[`../../public/diagrams/${directory}/${stem}.svg`],
 });
-// Add paper-row targets without duplicating the official-order inventory.
-const body=article.html.replace(/<tr>\s*<td>(\d{2}) <a /g,(row,order)=>row.replace('<tr>',`<tr id="paper-${catalog.paperIds[Number(order)-1]}">`));
-const split=body.indexOf('<section id="sources"');
-const fields=fieldsForCatalog(catalog.id);
+// Keep the Markdown's content and legacy anchors while arranging catalog sections.
+const starts=[...article.html.matchAll(new RegExp(`(?:<span class="legacy-anchor"[^>]*><\\/span>)*<section id="(${overviewSectionIds.join('|')})"`,'g'))];
+const sections=Object.fromEntries(starts.map((match,index)=>[match[1],article.html.slice(match.index,starts[index+1]?.index??article.html.length).replace(/<h2>\d+\. /,'<h2>')]));
+if(starts.length!==overviewSectionIds.length)throw new Error(`Catalogue ${catalog.id}: incomplete overview sections`);
+const inventory=sections.articles
+ .replace(/<tr>\s*<td>(\d{2}) <a /g,(row,order)=>row.replace('<tr>',`<tr id="paper-${catalog.paperIds[Number(order)-1]}">`))
+ .replace('<table class="digest-table">','<table class="digest-table catalog-inventory catalog-inventory-033">');
+const connections=sections.dependencies;
+const connectionTable=connections.match(/<div class="digest-table-wrap"[\s\S]*<\/div>/)?.[0];
+if(!connectionTable)throw new Error('Catalogue 033: missing connection table');
+const connectionAnchors=connections.slice(0,connections.indexOf('<section '));
+const connectionIntro=connections.slice(connections.indexOf('>',connections.indexOf('<section '))+1).replace(connectionTable,'').replace(/<h2>[\s\S]*?<\/h2>/,`<h2>${en?'Follow a result into its application':'どの結果を、どこで使うのか'}</h2>`).replace(/<\/section>\s*$/,'');
+const fields=fieldsForCatalog(catalog.id),pdf=pdfEditions[catalog.id]?.[lang];
+const sourceRoot=`https://github.com/openai/math/blob/${catalog.sourceCommit}`;
+const paperPath=short=>base+lang+'/papers/'+records.papers[short].paperId+'/';
+const paperNumber=short=>{const p=papers.find(p=>p.id===records.papers[short].paperId);return p.catalogId===catalog.id?String(p.order).padStart(2,'0'):p.catalogId;};
+const escape=text=>text.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;');
+const strandHtml=id=>sections[id].replace('class="paper-section proof-section"','class="paper-section catalog-strand proof-section"')
+ .replace(/(<section class="proof-step" id="[^"]+-step-(\d+)">)([\s\S]*?)(<\/section>)/g,(whole,open,step,content,close)=>{
+  const connectionId=overviewStepConnections[id]?.[Number(step)-1];
+  const connection=records.connections.find(c=>c.id===connectionId);
+  if(!connection)return whole;
+  const [fromSection,toSection]=connectionSections[connectionId];
+  const label=`${connection.source} → ${connection.target} · ${connection.sourceResult}`;
+  const links=`<div class="catalog-step-links"><span>${en?'Connection details':'接続の根拠'}:</span><a href="#connection-${connectionId}">${escape(label)}</a></div>`;
+  const reading=`<p class="source-line"><a href="${paperPath(connection.source)}#${fromSection}">${connection.source} · ${en?'Source result in the overview':'入力結果の概説'} →</a><a href="${paperPath(connection.target)}#${toSection}">${connection.target} · ${en?'Application in the overview':'利用段階の概説'} →</a></p>`;
+  return open+content+links+reading+close;
+ });
+
 ---
 <Layout lang={lang} title={catalog.id+' · '+catalog.title[lang]} otherPath={(en?'ja':'en')+'/catalog/'+catalog.id+'/'}>
- <article class="paper-article draft-article catalog-draft-overview">
-  <nav class="breadcrumbs" aria-label={en?'Breadcrumb':'現在位置'}><a href={base+lang+'/'}>{en?'Fields':'分野一覧'}</a>{fields.map(f=><><span>/</span><a href={base+lang+'/fields/'+f.id+'/'}>{f.title[lang]}</a></>)}<span>/</span><span>{catalog.id}</span></nav>
+ <div class="catalog-draft-overview">
+  <nav class="breadcrumbs" aria-label={en?'Breadcrumb':'現在位置'}><a href={base+lang+'/'}>{en?'Fields':'分野一覧'}</a>{fields.map(f=><><span aria-hidden="true">/</span><a href={base+lang+'/fields/'+f.id+'/'}>{f.title[lang]}</a></>)}<span aria-hidden="true">/</span><span aria-current="page">{catalog.id}</span></nav>
   <header class="family-header catalog-intro">
    <p class="eyebrow">CATALOGUE {catalog.id}</p><h1>{catalog.title[lang]}</h1>
    {!en&&<p class="official" lang="en">{catalog.title.en}</p>}
-   <p class="paper-subtitle" set:html={article.subtitleHtml}/><p class="lede" set:html={article.ledeHtml}/>
+   <p class="lede" set:html={article.ledeHtml}/>
   </header>
-  <div class="catalog-stats"><span><strong>{catalog.paperIds.length}</strong>{en?'proof overviews':'篇の証明概説'}</span><span><strong>12</strong>{en?'selected inputs':'件の主な入力'}</span><span><strong>1</strong>{en?'premise match':'件の前提対応'}</span></div>
-  <nav class="contents" aria-label={en?'On this page':'このページの内容'}>{article.headings.map((h,i)=><a href={'#'+h.slug}>{overviewLabels[i][en?1:0]}</a>)}<a href="#connection-explorer">{en?'Explore a connection':'接続を選んで読む'}</a></nav>
-  {article.introHtml&&<div class="article-prose draft-intro" set:html={article.introHtml}/>}
+  {pdf&&<aside class="catalog-pdf" aria-label={en?'PDF edition':'PDF版'}><a href={base+'pdf/'+pdf.file} target="_blank" rel="noopener noreferrer">{en?'Read the synthesis + all 5 overviews as a PDF':'総括＋全5篇の解説をPDFで読む'} ↗</a><p>{en?'English':'日本語'} · {pdf.pages}{en?' pages':'ページ'} · {(pdf.bytes/1048576).toFixed(1)} MB · {pdf.date}{en?' edition':'版'}<br/>{en?'Includes a linked contents page, proof diagrams, and source references.':'目次・証明図・原典へのリンク付き。'}</p></aside>}
+  <div class="catalog-stats"><span><strong>{catalog.paperIds.length}</strong>{en?'manuscript summaries':'篇の要点整理'}</span><span><strong>{dependencyConfig.entries.length}</strong>{en?'selected connections':'件の主な接続'}</span><span><strong>{catalog.paperIds.length}</strong>{en?'proof overviews':'篇の証明概説'}</span></div>
+  <p class="catalog-reading-note">{en?'This reading map records 12 inputs and one premise match. Alternatives, similar methods, and background are distinguished from proof dependencies. The arrows are neither a complete dependency graph nor a certification of the proofs.':'12件の入力と1件の前提対応を整理した、読解の見取り図です。別経路・類似手法・背景は証明への入力と区別します。矢印は依存関係の網羅や、証明全体の正しさの認定ではありません。'}</p>
+  <nav class="catalog-nav" aria-label={en?'On this page':'このページの内容'}><a href="#articles">{en?'All 5 manuscripts':'全5篇の要点'}</a><a href="#overview">{en?'Three strands':'3つの流れ'}</a><a href="#dependencies">{en?'Follow dependencies':'依存関係をたどる'}</a><a href="#comparisons">{en?'External inputs and comparisons':'外部入力・比較'}</a><a href="#sources">{en?'Reading scope and sources':'確認範囲・原典'}</a></nav>
   <div class="draft-body">
-   <Fragment set:html={body.slice(0,split)}/>
-   <section class="paper-section" id="connection-explorer"><h2>{en?'From a cited result to its use':'引用した結果から、その利用箇所へ'}</h2>
-    <p class="article-prose">{en?'Select a paper to follow its inputs or uses. Each record links to the pinned source and the relevant proof overview. The scope and unverified passages are recorded in the synthesis and individual articles.':'論文を選び、入力と利用先を切り替えられます。各記録から固定版の原典と概説の該当節へ進めます。照合の範囲と未確認箇所は、この総括と各記事に記録しています。'}</p>
-    <CatalogDependencies lang={lang} config={dependencyConfig}/>
+   <Fragment set:html={inventory}/>
+   <section id="overview" class="paper-section">
+    <h2>{en?'Three strands of the argument':'議論をつなぐ3つの流れ'}</h2>
+    <p class="article-prose">{en?'These groups organize the roles of the arguments. The inventory above retains the official catalogue order. Follow each strand to its diagrams and the explanations immediately after them.':'ここでは議論の役割で3つに分けます。上の論文一覧は公式カタログ順を維持しています。各流れから、引用付きの図とその直後の段階別説明へ進めます。'}</p>
+    <div class="catalog-themes">{overviewThemes.map((theme,i)=><article class="catalog-theme"><p class="eyebrow">0{i+1}</p><h3><a href={'#'+theme.id}>{theme.title[lang]} ↓</a></h3><p class="theme-aim">{theme.question[lang]}</p><p>{theme.body[lang]}</p><ul>{theme.papers.map(short=><li><span>{paperNumber(short)}</span><a href={paperPath(short)}>{short}</a></li>)}</ul></article>)}</div>
+    <aside class="catalog-crossings"><strong>{en?'The connection between the strands':'3つの流れの接続点'}</strong><p>{en?'OI supplies different results to different stages in WV, LA, and KA. LA returns a good model to a consequence in WV. PH and BS have their own arguments; shared Hodge-theoretic language does not by itself establish a direct dependency.':'OIはWV・LA・KAの異なる段階へ、それぞれ別の結果を供給します。LAの良いモデルはWVの帰結に戻ります。PH・BSには固有の議論があり、共通のHodge的用語だけで直接依存を作ることはしません。'}</p></aside>
    </section>
-   <Fragment set:html={body.slice(split)}/>
+   <Fragment set:html={sections['diagram-sources']}/>
+   {['main-routes','additional-routes','models','kahler'].map(id=><Fragment set:html={strandHtml(id)}/>)}
+   <Fragment set:html={connectionAnchors}/>
+   <section id="dependencies" class="paper-section article-prose">
+    <Fragment set:html={connectionIntro}/>
+    <span id="connection-explorer" class="legacy-anchor" aria-hidden="true"></span>
+    <p class="article-prose screen-only">{en?'Choose a manuscript and direction to follow a cited result into its use. Each record links to the pinned source and the relevant proof overview. The initial view shows inputs to WV.':'論文と方向を選び、引用された結果から利用箇所をたどれます。各記録から固定版の原典と概説の該当節へ進めます。最初はWVへの入力を表示しています。'}</p>
+    <CatalogDependencies lang={lang} config={dependencyConfig}/>
+    <details class="catalog-audit"><summary>{en?'View the 12 recorded inputs as a table':'記録した12件の入力を表で見る'}</summary><Fragment set:html={connectionTable}/></details>
+   </section>
+   <Fragment set:html={sections.comparisons.replace('class="paper-section proof-section"','class="paper-section catalog-comparisons proof-section"')}/>
+   <Fragment set:html={sections.sources.replace('class="paper-section article-prose"','class="paper-section catalog-scope article-prose"')}/>
   </div>
-  <p class="source-note"><a href={base+lang+'/catalog/034/'}>{en?'Catalogue 034: abundance and effective Iitaka fibrations':'カタログ034：豊富性と有効飯高ファイブレーション'} →</a></p>
- </article>
+  <p class="source-note"><a href={sourceRoot+'/overview.pdf'} target="_blank" rel="noopener noreferrer">OpenAI Research Catalog · 033 · p. 5 ↗</a><br/><a href={sourceRoot+'/CONTENTS.md'}>{en?'Official catalogue at the reference commit':'参照commitの公式カタログ'} ↗</a><br/><span class="small">CONTENTS.md: <span lang="en">{catalog.contentsTitle}</span></span><br/><span class="small muted">{en?'Source snapshot':'参照版'}: <code>{catalog.sourceCommit}</code></span><br/><a href={base+lang+'/catalog/034/'}>{en?'Catalogue 034: abundance and effective Iitaka fibrations':'カタログ034：豊富性と有効飯高ファイブレーション'} →</a></p>
+ </div>
 </Layout>
 
 <style>
- .catalog-draft-overview :global(#articles td:first-child){width:38%}
- .catalog-draft-overview :global(#articles td:first-child>a:first-child){display:block;font-size:1.25rem;font-weight:600;line-height:1.65;margin:4px 0 8px}
+ .catalog-draft-overview :global(#articles .proof-explanation){max-width:none}
+ .catalog-draft-overview :global(#articles td:first-child){width:42%;white-space:normal}
+ .catalog-draft-overview :global(#articles td:first-child>a:first-child){display:block;font-size:1.25rem;font-weight:600;line-height:1.6;margin:4px 0 8px;text-decoration:none}
+ .catalog-draft-overview :global(#articles td:first-child>a:first-child:hover){text-decoration:underline}
+ .catalog-draft-overview :global(.catalog-inventory-033 th:nth-child(1)){width:42%}
+ .catalog-draft-overview :global(.catalog-inventory-033 th:nth-child(2)){width:22%}
+ .catalog-draft-overview :global(.catalog-inventory-033 th:nth-child(3)){width:36%}
+ .catalog-draft-overview :global(.source-note code){overflow-wrap:anywhere}
+ .catalog-draft-overview :global(#dependencies>p){max-width:940px}
 </style>

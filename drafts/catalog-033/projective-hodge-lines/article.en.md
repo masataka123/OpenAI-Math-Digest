@@ -40,11 +40,22 @@ If $S$ is a point, the conclusion is $M\sim_{\mathbb Q}0$.
 
 ## References on the arrows
 
-Unprefixed result numbers refer to [PH]. External keys are [BBT] for Bakker–Brunebarbe–Tsimerman, [BC] for Brunebarbe–Cadorel, [FM] for Fujino–Mori, [Amb] for Ambro, [Fuj] for Fujino, and [Has] for Hashizume. Section 5 records versions and checking scope. Citations link to the sources; page numbers for GitHub previews are given in the labels.
+Unprefixed result numbers refer to [PH]. The main external inputs use the following keys.
+
+- [BBT] Bakker–Brunebarbe–Tsimerman.
+- [BC] Brunebarbe–Cadorel.
+- [FM] Fujino–Mori.
+- [Amb] Ambro.
+- [Fuj] Fujino.
+- [Has] Hashizume.
+
+The [dependency table](#dependencies) records versions and checking scope. Citations link to the sources; page numbers for GitHub previews are given in the labels.
 
 ## 2. Theorem 1.2 — Removing boundary and ramification from the period image
 
-**Goal.** Let $T$ be a smooth projective model of the actual full period image at neat level, $J$ its extended highest line, and $L_T=cJ$. Write $D_N$ for the boundary with nonzero monodromy logarithm, $R_{\rm div}$ for divisorial ramification over the finite quotient, and $R_{\rm exc}$ for the Jacobian components exceptional over the quotient base. The number $r=\nu(J)$ measures the highest-line map and need not equal $\dim T$.
+**Proof route.** Two preparatory arguments meet in Theorem 1.1. This section establishes the adjoint positivity of Theorem 1.2; the [canonical bundle formula supplies the section comparison](#proof-2). The final [two-base argument and interpolation](#proof-3) combine them to prove ordinary Iitaka subadditivity.
+
+Let $T$ be a smooth projective model of the actual full period image at neat level, $J$ its extended highest line, and $L_T=cJ$. Write $D_N$ for the boundary with nonzero monodromy logarithm, $R_{\rm div}$ for divisorial ramification over the finite quotient, and $R_{\rm exc}$ for the Jacobian components exceptional over the quotient base. The number $r=\nu(J)$ measures the highest-line map and need not equal $\dim T$.
 
 ![Rational minimality and two rank drops yield adjoint bigness](diagrams/period.en.svg)
 
@@ -72,13 +83,13 @@ An ample perturbation yields interior section growth of degree $r$ in $j$, where
 
 [Lemmas 5.1–5.2 · pp. 12–13; (5.2)–(5.5) · pp. 15–16][PH] · [BC, Theorem 1.1 · p. 1][BC]
 
-**Use of the output.** The identity $M=p^*L$ and adjoint bigness on the base enter the weak-positivity and interpolation argument of Section 4. Semiampleness of $M$ is not concluded here.
+The identity $M=p^*L$ and adjoint bigness on the base enter the weak-positivity and interpolation argument of [Section 4](#proof-3). Semiampleness of $M$ is not concluded here.
 
 [PH, §7.3 · pp. 25–26][PH]
 
 ## 3. The canonical bundle formula — Preparing the line and the section comparison
 
-**Goal.** Put $d=\kappa(F)\geq0$ and write the relative Iitaka factorization as $\widetilde X\xrightarrow{g}Y\xrightarrow{q}Z$. Then $\dim(Y/Z)=d$, and the geometric generic fibre $C$ of $g$ has Kodaira dimension $0$. The construction must retain both the line required by Theorem 1.2 and its comparison with the original pluricanonical sections.
+Put $d=\kappa(F)\geq0$ and write the relative Iitaka factorization as $\widetilde X\xrightarrow{g}Y\xrightarrow{q}Z$. Then $\dim(Y/Z)=d$, and the geometric generic fibre $C$ of $g$ has Kodaira dimension $0$. The construction must retain both the line required by Theorem 1.2 and its comparison with the original pluricanonical sections.
 
 ![The least-index root cover and residual divisor supply the line and section comparison](diagrams/canonical.en.svg)
 
@@ -114,13 +125,13 @@ Thus $D|_{Y_{\bar\eta}}$ is big. Subsequent birational modifications use the pos
 
 [Proposition 6.4, Lemmas 6.5–6.6 · pp. 20–22][PH]
 
-**Use of the output.** Section 4 uses both $q$ to the original base and $p$ to the period base. The section injection is retained to transfer the final lower bound back to $X$.
+[Section 4](#proof-3) uses both $q$ to the original base and $p$ to the period base. The section injection is retained to transfer the final lower bound back to $X$.
 
 [PH, Proposition 6.4・§7.3 · pp. 20–21, 25–26][PH]
 
 ## 4. Theorem 1.1 — Two bases and an interpolation identity
 
-**Goal.** Assume $\kappa(Z)\geq0$. The identity $M=p^*L$ from Theorem 1.2 does not supply a factorization between $p:Y\to S$ and $q:Y\to Z$. If $S$ is a point, apply log-general-type-fibre subadditivity directly to $q$. The remaining argument treats $\dim S>0$.
+Assume $\kappa(Z)\geq0$. The identity $M=p^*L$ from Theorem 1.2 does not supply a factorization between $p:Y\to S$ and $q:Y\to Z$. If $S$ is a point, apply log-general-type-fibre subadditivity directly to $q$. The remaining argument treats $\dim S>0$.
 
 ![The product map, weak positivity, exact interpolation, and scalar extension](diagrams/subadditivity.en.svg)
 
@@ -161,7 +172,7 @@ Finally descend the data to a finitely generated field $K/\mathbb Q$ and choose 
 
 [§7.3, (7.5)–(7.7) · pp. 25–26; Lemma 7.5, §7.4 · p. 27][PH]
 
-**Use of the output.** This yields ordinary subadditivity, Theorem 1.1. WV’s alternative adjoint comparison concerns the separate results of §8; this main theorem is not substituted as a required WV input.
+This yields ordinary subadditivity, Theorem 1.1. WV’s alternative adjoint comparison concerns the separate results of §8; this main theorem is not substituted as a required WV input.
 
 [PH, Theorem 1.1 · p. 2; Theorem 8.1 · p. 28][PH] · [WV, Remark 3.17 · p. 25][WV]
 

@@ -67,7 +67,9 @@ $$
 
 ## 2. Theorem 1.1の証明 — 小平次元の符号による帰着
 
-**目標。** $\kappa_X,\kappa_Y,\kappa_F$はそれぞれの対の対数的小平次元を表す。Proposition 1.3を入力とすれば、上界は切断の制限と底の対数的飯高ファイブレーションから得られる。
+**証明の道筋。** まずProposition 1.3を入力として上界を導く。その入力の証明を[Hodgeベクトルから切断を構成する段階](#proof-2)と、[正次元period商の捻りを除く段階](#proof-3)に分けて展開する。OIの下界を使うのは、最後の[加法性の帰結](#proof-4)である。
+
+$\kappa_X,\kappa_Y,\kappa_F$はそれぞれの対の対数的小平次元を表す。Proposition 1.3を入力とすれば、上界は切断の制限と底の対数的飯高ファイブレーションから得られる。
 
 ![上界の証明：負の無限大の二つの場合、底の小平次元0での単射性、正の場合の飯高帰着](diagrams/upper.ja.svg)
 
@@ -104,13 +106,13 @@ $$
 
 [§2.1・(2.1) · p. 5、§2.4 · pp. 6–7][RA]
 
-**得られた結果の使い道。** この独立した上界を、第5節でOIの対数下界と合わせる。上界の核心は次節以降のProposition 1.3である。
+この独立した上界を、[第5節](#proof-4)でOIの対数下界と合わせる。上界の核心は次節以降のProposition 1.3である。
 
 [RA, §2・§7.6 · pp. 5–7, 50][RA]
 
 ## 3. Proposition 1.3の証明 — Hodgeベクトルから元の底の切断へ
 
-**目標。** 非零切断$s$を固定する。構成するHodgeベクトルは最高Hodge束全体を生成するとは限らない。このため、ベクトルの係数と、その射影方向が決めるcompact flagを保持する。以下の$\mathcal E_0$は最高Hodge束であり、境界$E$とは別の記号である。
+非零切断$s$を固定する。構成するHodgeベクトルは最高Hodge束全体を生成するとは限らない。このため、ベクトルの係数と、その射影方向が決めるcompact flagを保持する。以下の$\mathcal E_0$は最高Hodge束であり、境界$E$とは別の記号である。
 
 ![切断構成：元の対数的係数格子と指定点の零点を保持し、period商が点か正次元かで分岐する](diagrams/section-construction.ja.svg)
 
@@ -142,13 +144,13 @@ $S$が点なら降下した変動は定数となる。定数枠での$u_*$の各
 
 [Proposition 4.1 · pp. 14–15、Lemma 4.7 · pp. 19–20、§7.1・Proposition 7.1 · p. 43、§7.5 · pp. 49–50][RA] · [BBT, Theorem 1.1 · p. 1][BBT]
 
-**得られた結果の使い道。** 指定点で消える底切断は、小平次元0の底で同じファイバーへの制限を全次数で単射にする。正次元period商の分岐は次節で処理する。
+指定点で消える底切断は、小平次元0の底で同じファイバーへの制限を全次数で単射にする。正次元period商の分岐は次節で処理する。
 
 [RA, §2.3・Proposition 1.3の証明 · pp. 5–6, 50][RA]
 
 ## 4. 正次元period商 — 捻りを除いて実際の切断へ戻す
 
-**目標。** $\dim S>0$とする。以下では適切なモデル上で$Y\xrightarrow{x}W\xrightarrow{h}S$と書くが、切断の比較先は固定した元の対である。$\geq_{\mathrm{pe}}$は差が擬有効であることを表す。
+$\dim S>0$とする。以下では適切なモデル上で$Y\xrightarrow{x}W\xrightarrow{h}S$と書くが、切断の比較先は固定した元の対である。$\geq_{\mathrm{pe}}$は差が擬有効であることを表す。
 
 ![正次元period商での論証：正確な切断格子、nefなmoduli部分とHiggs tails、数値的な捻りの除去](diagrams/period-removal.ja.svg)
 
@@ -226,13 +228,13 @@ Lemma 7.3では$\nu(P+\widetilde H)=\nu(P)$により、nef Morse不等式の損�
 
 [Proposition 7.2・Lemma 7.3 · pp. 44–45、Proposition 7.7 · p. 49、Proposition 1.3の証明 · p. 50][RA]
 
-**得られた結果の使い道。** 底の正の小平次元が従うため、底の小平次元0の場合には点商だけが残る。これでProposition 1.3を閉じ、第2節の上界へ戻る。
+底の正の小平次元が従うため、底の小平次元0の場合には点商だけが残る。これでProposition 1.3を閉じ、[第2節の上界](#proof-1)へ戻る。
 
 [RA, Propositions 7.7, 1.3 · pp. 49–50][RA]
 
 ## 5. Corollary 1.2の証明 — 上界に下界を加える
 
-**目標。** ここで初めて033内の別稿[OI]を使う。$\kappa_X,\kappa_Y,\kappa_F$の記号と$-\infty$の規約は第2節と同じである。
+ここで初めて033内の別稿[OI]を使う。$\kappa_X,\kappa_Y,\kappa_F$の記号と$-\infty$の規約は第2節と同じである。
 
 ![加法性：本稿の独立した上界とOIの対数的劣加法性を、同じ対・同じファイバーで組み合わせる](diagrams/additivity.ja.svg)
 
@@ -248,7 +250,7 @@ Lemma 7.3では$\nu(P+\widetilde H)=\nu(P)$により、nef Morse不等式の損�
 
 [Theorem 1.1 · p. 2、§2.2 · p. 5、§7.6 · p. 50][RA] · [OI, Corollary 6.2の証明 · p. 41][OI]
 
-**得られた結果の使い道。** smooth族でファイバーと底の小平次元が非負なら、WV Theorem 1.1との比較でvariationの上界を得る別経路になる。
+smooth族でファイバーと底の小平次元が非負なら、WV Theorem 1.1との比較でvariationの上界を得る別経路になる。
 
 [WV, Corollary 1.3後の比較 · p. 5][WV]
 

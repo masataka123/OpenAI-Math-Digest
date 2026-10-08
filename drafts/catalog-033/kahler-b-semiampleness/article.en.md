@@ -44,11 +44,20 @@ The statement includes a point base and relative dimension zero. No projectivity
 
 ## References on the arrows
 
-Unprefixed result numbers refer to [BS]. External keys are [FF] for Fujino–Fujisawa, [MWWZ] for Matsumura–Wang–Wu–Zhang, [BFMT] for Bakker–Filipazzi–Mauri–Tsimerman, and [Toma] for Toma. Article Section 7 records the checks. Diagram citations link to the sources; GitHub PDF page numbers are specified in the labels.
+Unprefixed result numbers refer to [BS]. The main external inputs use the following keys.
+
+- [FF] Fujino–Fujisawa.
+- [MWWZ] Matsumura–Wang–Wu–Zhang.
+- [BFMT] Bakker–Filipazzi–Mauri–Tsimerman.
+- [Toma] Toma.
+
+The [dependency table](#dependencies) records the checks. Diagram citations link to the sources; GitHub PDF page numbers are specified in the labels.
 
 ## 2. Overview of Theorem 1.1
 
-**Goal.** Retain the actual moduli line stabilized in (a) and obtain global generation at every point in (b). The two main parts are the threshold calculation and the product/norm comparison on an auxiliary base $P$.
+**Proof route.** First, [compare thresholds with extension orders](#proof-2) to obtain stabilization in Theorem 1.1(a). Part (b) then [organizes product decompositions into a family](#proof-3), [obtains semiampleness for each factor](#proof-4), and [extends the specified isomorphism before descending global generation](#proof-5).
+
+Retain the actual moduli line stabilized in (a) and obtain global generation at every point in (b). The two main parts are the threshold calculation and the product/norm comparison on an auxiliary base $P$.
 
 ![Overview from threshold stabilization through product factors to extension and descent](diagrams/overview.en.svg)
 
@@ -70,11 +79,11 @@ Two-sided norm bounds remove poles from both the isomorphism and its inverse, le
 
 [Lemmas 8.1, 8.3, §9 · pp.34–37][BS]
 
-**Use of the output.** Together (a) and (b) prove Theorem 1.1. The detailed diagrams below expand stabilization, family construction, semiampleness of the factors, and descent of the isomorphism and sections.
+Together (a) and (b) prove Theorem 1.1. The detailed diagrams below expand [stabilization](#proof-2), [family construction](#proof-3), [semiampleness of the factors](#proof-4), and [descent of the isomorphism and sections](#proof-5).
 
 ## 3. Theorem 1.1(a) — Read thresholds as extension orders
 
-**Goal.** Let $p:W\to S$ be a model with SNC boundary, let $D_W$ be the crepant boundary, and put $Q_S=\mu_0^*L-K_S$. Fix $\mathcal O_W(m(K_{W/S}+D_W))\simeq p^*\mathcal O_S(mQ_S)$ for sufficiently divisible $m$. The cover obtained by taking an $m$th root of a local generator retains every component, even if disconnected.
+Let $p:W\to S$ be a model with SNC boundary, let $D_W$ be the crepant boundary, and put $Q_S=\mu_0^*L-K_S$. Fix $\mathcal O_W(m(K_{W/S}+D_W))\simeq p^*\mathcal O_S(mQ_S)$ for sufficiently divisible $m$. The cover obtained by taking an $m$th root of a local generator retains every component, even if disconnected.
 
 ![The root eigenline, residues, threshold orders, and stabilization on higher models](diagrams/threshold.en.svg)
 
@@ -110,13 +119,13 @@ This includes modifications with centres inside the good open set and proves (a)
 
 [Theorem 4.4, Corollary 4.5 · pp. 15–17][BS]
 
-**Use of the output.** Retain the stabilized moduli line and its specified log-volume identification; this fixes the object compared by the ensuing product decomposition.
+Retain the stabilized moduli line and its specified log-volume identification; this fixes the object compared by the ensuing product decomposition.
 
 [BS, Corollaries 4.5–4.6 · pp. 16–18][BS]
 
 ## 4. Preparing Theorem 1.1(b) — Turn fibrewise decompositions into a family
 
-**Goal.** The deepest stratum supplies a family with klt log Calabi–Yau good fibres. Write $G_m$ for its degree-$m$ log-plurivolume line. Beyond a decomposition of each fibre, the proof needs a single family carrying both a line identification and its norm.
+The deepest stratum supplies a family with klt log Calabi–Yau good fibres. Write $G_m$ for its degree-$m$ log-plurivolume line. Beyond a decomposition of each fibre, the proof needs a single family carrying both a line identification and its norm.
 
 ![Finite covers and compact parameter spaces produce a product family](diagrams/family.en.svg)
 
@@ -145,13 +154,13 @@ where $\lambda_i$ is the highest line of the corresponding factor. The residue-i
 
 [Corollary 4.6 · pp. 17–18; Proposition 5.6, (5.5)–(5.6) · pp. 22–25][BS]
 
-**Use of the output.** The product decomposition and product norm on the same auxiliary base $P$ enter the separate treatments of the projective and torus/symplectic factors.
+The product decomposition and product norm on the same auxiliary base $P$ enter the separate treatments of the projective and torus/symplectic factors.
 
 [BS, Proposition 5.6・§§6–7 · pp. 22–34][BS]
 
 ## 5. Obtain semiample extensions from the factors
 
-**Goal.** Different inputs treat the projective pair $(Q,C)$ and the possibly nonprojective $T_i$. In this section, $P$ also denotes the auxiliary base after finite covers, graph resolutions, and a common tensor power.
+Different inputs treat the projective pair $(Q,C)$ and the possibly nonprojective $T_i$. In this section, $P$ also denotes the auxiliary base after finite covers, graph resolutions, and a common tensor power.
 
 ![Separate projective comparison from the period maps of torus and symplectic factors](diagrams/factors.en.svg)
 
@@ -173,13 +182,13 @@ For a torus, $\lambda_i\simeq\det F^1R^1$. For a symplectic factor of dimension 
 
 [Lemma 7.3, §7.4, Proposition 7.5, (7.5) · pp. 30, 32–34][BS]
 
-**Use of the output.** Tensor the semiample extensions and retain the two-sided norm bounds needed to extend the specified isomorphism across the boundary.
+Tensor the semiample extensions and retain the two-sided norm bounds needed to extend the specified isomorphism across the boundary.
 
 [BS, Lemma 8.1・§9 · pp. 34–37][BS]
 
 ## 6. Theorem 1.1(b) — Extend the specified isomorphism and descend sections
 
-**Goal.** The preceding identifications initially live on $P^\circ$. First extend them without a residual boundary twist; then descend global generation through a proper surjection.
+The preceding identifications initially live on $P^\circ$. First extend them without a residual boundary twist; then descend global generation through a proper surjection.
 
 ![Two-sided norm bounds extend the isomorphism; Stein factorization and norms descend generation](diagrams/descent.en.svg)
 
@@ -201,7 +210,7 @@ Write the Stein factorization as $P\xrightarrow{h}T\xrightarrow{q}S$ with $\deg 
 
 [Lemma 8.3 · pp. 35–36; §9 · pp. 36–37][BS]
 
-**Use of the output.** One common multiple is generated at every point of $S$. Together with pullback stability in (a), this proves semiampleness of the moduli b-line. No direct dependency with another 033 paper is inferred from this conclusion.
+One common multiple is generated at every point of $S$. Together with pullback stability in (a), this proves semiampleness of the moduli b-line. No direct dependency with another 033 paper is inferred from this conclusion.
 
 [BS, Theorem 1.1・§9 · pp. 3, 36–37][BS]
 

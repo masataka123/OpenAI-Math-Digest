@@ -73,7 +73,9 @@ Unprefixed result, equation, and section numbers refer to [WV]. GitHub links ope
 
 ## 2. Overview of Theorem 1.1
 
-**Goal.** For $d=\kappa(F)\geq0$, make the field $b=\overline{\mathbb C(T_0)}$ detected by section systems into a birational definition field of the original whole geometric generic fiber $F$. The Kodaira-zero relative Iitaka fiber $J$ is distinct from $F$.
+**Proof route.** The main theorem has three stages: [construct the parameter field](#proof-2), [establish constancy of the Kodaira-zero fibre](#proof-3), and [descend the original whole fibre](#proof-4). The [empty-boundary corollary](#proof-5) and the [smooth-family consequence using LA and Taji](#proof-6) are treated separately after the main proof.
+
+For $d=\kappa(F)\geq0$, make the field $b=\overline{\mathbb C(T_0)}$ detected by section systems into a birational definition field of the original whole geometric generic fiber $F$. The Kodaira-zero relative Iitaka fiber $J$ is distinct from $F$.
 
 ![Overview linking the parameter field, first constancy, markings and descent of finite covers](diagrams/overview.en.svg)
 
@@ -95,11 +97,11 @@ Markings fix Iitaka-base coordinates and a finite normalization. Constant cocycl
 
 [Proposition 6.2, Propositions 7.2–7.3, §7.4 · pp.47–59][WV]
 
-**Use of the output.** Combine this bound with the section-system dimension identity to obtain Theorem 1.1. Corollary 1.2 sets the boundaries to zero; Corollary 1.3 is a separate consequence using LA and Taji. Each diagram below expands one step of this overview.
+Combine this bound with the section-system dimension identity to obtain Theorem 1.1. Corollary 1.2 sets the boundaries to zero; Corollary 1.3 is a separate consequence using LA and Taji. The diagrams for the [parameter field](#proof-2), [first constancy](#proof-3), and [whole-fibre descent](#proof-4) expand these three stages.
 
 ## 3. Theorem 1.1: constructing the parameter field
 
-**Goal.** Assume $d=\kappa(F)\geq0$. The first task is to compare the absolute logarithmic Iitaka base $Z$ and the original base $Y$ inside the same function field, producing a subfield of $\mathbb C(Y)$ of transcendence degree $\bar\kappa(U)-d$. No constancy assertion is used at this stage.
+Assume $d=\kappa(F)\geq0$. The first task is to compare the absolute logarithmic Iitaka base $Z$ and the original base $Y$ inside the same function field, producing a subfield of $\mathbb C(Y)$ of transcendence degree $\bar\kappa(U)-d$. No constancy assertion is used at this stage.
 
 ![Logarithmic subadditivity and the family of images produce an embedded parameter field](diagrams/parameter-field.en.svg)
 
@@ -142,13 +144,13 @@ It remains to descend the entire fiber to $b=\overline{\mathbb C(T_0)}\subseteq\
 
 [Proposition 2.10, Remark 2.11 · pp.12–14][WV]
 
-**Use of the output.** Fix the resulting $b=\overline{\mathbb C(T_0)}$ as the candidate definition field. Constancy of $J$, followed by markings and descent of finite covers, must still recover the original $F$.
+Fix the resulting $b=\overline{\mathbb C(T_0)}$ as the candidate definition field. Constancy of $J$, followed by markings and descent of finite covers, must still recover the original $F$.
 
 [WV, §§3–7 · pp. 14–59][WV]
 
 ## 4. Theorem 1.1: the root cover and the first constancy statement
 
-**Goal.** The least ordinary pluricanonical index makes the **entire** highest Hodge piece rank one, rather than just an eigenspace. Manuscript Section 4 supplies the analytic passage from its flatness to birational constancy.
+The least ordinary pluricanonical index makes the **entire** highest Hodge piece rank one, rather than just an eigenspace. Manuscript Section 4 supplies the analytic passage from its flatness to birational constancy.
 
 ![The minimal root cover, restricted Hodge-line triviality, and analytic contraction give the first constancy statement](diagrams/root-constancy.en.svg)
 
@@ -194,13 +196,13 @@ Choose one small $\varepsilon>0$ for all the finitely many poles. The big klt ad
 
 [Proof of Theorem 4.1, Corollary 4.9, Proposition 4.10 · pp.40–43][WV] · [BCHM, Theorem 1.2(2) · p.5][BCHM]
 
-**Use of the output.** This fixes the Kodaira-zero fiber $J$. The next descent retains Iitaka-base coordinates and group actions to fix the entire geometric generic fiber.
+This fixes the Kodaira-zero fiber $J$. The [next descent](#proof-4) retains Iitaka-base coordinates and group actions to fix the entire geometric generic fiber.
 
 [WV, §6 introduction・§7.4 · pp. 46, 58–59][WV]
 
 ## 5. Theorem 1.1: descend the whole fiber with its Iitaka-base coordinates
 
-**Goal.** Put $b=\overline{\mathbb C(T_0)}$ and denote the geometric generic fibers of $W,S,Z$ over $T_0$ by $H_0,I,P_0$. Write $p_I:H_0\to I$ and $a_0:H_0\to P_0$ for the induced maps. The map $H_0\to I\times_bP_0$ is generically finite and $\dim P_0=d$. Constancy of $J$ must now be made compatible with the coordinates of $P_0$.
+Put $b=\overline{\mathbb C(T_0)}$ and denote the geometric generic fibers of $W,S,Z$ over $T_0$ by $H_0,I,P_0$. Write $p_I:H_0\to I$ and $a_0:H_0\to P_0$ for the induced maps. The map $H_0\to I\times_bP_0$ is generically finite and $\dim P_0=d$. Constancy of $J$ must now be made compatible with the coordinates of $P_0$.
 
 ![Markings fix a finite normalization, and unramifiedness at moving divisors permits descent of the entire function field](diagrams/whole-fiber-descent.en.svg)
 
@@ -254,13 +256,13 @@ The right side is the function field of the entire original geometric generic fi
 
 For purity, only the receiving argument and its stated hypotheses were checked; the original [SGA1] statement was not rechecked.
 
-**Use of the output.** This completes the lower bound involving variation in Theorem 1.1. Corollary 1.2 uses this output with empty boundaries.
+This completes the lower bound involving variation in Theorem 1.1. Corollary 1.2 uses this output with empty boundaries.
 
 [WV, Theorem 1.1 / Corollary 1.2 · p. 2; §7.4 · p. 59][WV]
 
 ## 6. Corollary 1.2: take empty boundaries
 
-**Goal.** For projective $X,Y$, use empty compactification boundaries. The geometric generic fiber and its field-of-definition invariant are unchanged.
+For projective $X,Y$, use empty compactification boundaries. The geometric generic fiber and its field-of-definition invariant are unchanged.
 
 ![Empty boundaries specialize the logarithmic inequality to the projective inequality](diagrams/projective-case.en.svg)
 
@@ -270,13 +272,13 @@ With $D_X=D_Y=0$, one has $\bar\kappa(X)=\kappa(X)$ and $\bar\kappa(Y)=\kappa(Y)
 
 [Proof of Corollary 1.2 · p.2, Section 7.4 · p.59][WV]
 
-**Use of the output.** The ordinary Iitaka–Viehweg inequality applies to projective fibrations over a base of nonnegative Kodaira dimension. The additional relative-Iitaka route is not a premise of this proof.
+The ordinary Iitaka–Viehweg inequality applies to projective fibrations over a base of nonnegative Kodaira dimension. The additional relative-Iitaka route is not a premise of this proof.
 
 [WV, Corollary 1.2 · p. 2; §9 introduction · p. 69][WV]
 
 ## 7. Corollary 1.3: good models for a smooth family
 
-**Goal.** This route uses smoothness of the family and non-uniruledness of every closed fiber. It does not enter the proof of the main theorem.
+This route uses smoothness of the family and non-uniruledness of every closed fiber. It does not enter the proof of the main theorem.
 
 ![Non-uniruled closed fibers acquire good models from LA, allowing application of Taji](diagrams/smooth-rigidity.en.svg)
 
@@ -308,7 +310,7 @@ For a smooth family with $\kappa(F)\geq0$ and $\bar\kappa(V)\geq0$, comparing [R
 
 [Comparison paragraph · p.5][WV] · [RA, Corollary 1.2 · p.2][RA]
 
-**Use of the output.** A base of logarithmic Kodaira dimension zero gives birational isotriviality. For the negative-base and special-base conclusions, retain the hypotheses of the LA–Taji route.
+A base of logarithmic Kodaira dimension zero gives birational isotriviality. For the negative-base and special-base conclusions, retain the hypotheses of the LA–Taji route.
 
 [WV, Corollary 1.3 · p. 5][WV]
 

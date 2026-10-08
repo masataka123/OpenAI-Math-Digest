@@ -7,7 +7,8 @@ from urllib.parse import urlparse
 from weasyprint import HTML, default_url_fetcher
 from pypdf import PdfReader
 
-source, output = map(Path, sys.argv[1:])
+source, output = map(Path, sys.argv[1:3])
+expected_chapters = int(sys.argv[3])
 # Embedded figures and fonts only: hyperlinks are preserved without fetching them.
 def local_fetch(url, *args, **kwargs):
     if urlparse(url).scheme not in ('file', 'data'):
@@ -31,6 +32,6 @@ if missing:
     raise ValueError(f'Missing PDF anchors: {missing}')
 doc.write_pdf(str(output))
 reader = PdfReader(output)
-if len(reader.pages) < 15 or sum(isinstance(item, dict) for item in reader.outline) != 15:
+if len(reader.pages) < expected_chapters or sum(isinstance(item, dict) for item in reader.outline) != expected_chapters:
     raise ValueError('Missing chapters or PDF bookmarks')
 print(json.dumps({'pages': len(reader.pages), 'anchors': len(anchors)}))
