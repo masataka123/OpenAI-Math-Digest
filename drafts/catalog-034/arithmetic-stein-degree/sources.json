@@ -102,15 +102,17 @@
     },
     {
       "source": "Kollar, Canonical models / Singularities of the MMP",
-      "sourceUrl": "https://doi.org/10.1017/CBO9781139547895",
-      "result": "2010 draft Definition 122 and (122.7)–(122.10), pp.61–62",
+      "sourceUrl": "https://web.math.princeton.edu/~kollar/book/chap2.pdf#page=61",
+      "result": "Definition 122, (122.7)–(122.10); Proposition 123; Lemma 125 (June 1, 2010 draft)",
       "pages": [
         61,
-        62
+        62,
+        63,
+        64
       ],
       "usedAt": "Lemma 4.4, pp.9–10",
       "supplies": "different and pluriresidue",
-      "verification": "application read, external specified passage not compared"
+      "verification": "Revision: specified statements and application compared; external proofs not independently verified; published Kol13 numbering not checked"
     },
     {
       "source": "Bierstone–Milman–Temkin",
@@ -142,9 +144,29 @@
     }
   ],
   "unresolved": [
-    "External adjunction, resolution, quotient-singularity statements not separately compared.",
+    "External resolution and quotient-singularity statements not separately compared; full external adjunction proofs not independently checked.",
     "No independent verification of the bounded-family construction or every MMP step.",
     "Other outgoing edges, including index norm-descent applications, not investigated.",
     "Internal source references frequently say Theorem for a Lemma/Proposition; article uses actual headings."
+  ],
+  "revisionReviews": [
+    {
+      "date": "2026-10-08",
+      "round": "Schnell-style all articles",
+      "manuscriptPassages": [
+        "Theorem 1.1 p.1",
+        "Proposition 3.5 pp.6–7",
+        "Lemmas 4.1–4.5 pp.7–10",
+        "Sections 5.1–5.7 pp.11–14"
+      ],
+      "scope": "MMP branches, b/n dependence, bigness, same-index adjunction, constant-field tower and incidence argument rechecked; not independent proof verification",
+      "externalSource": {
+        "title": "Kollar, Canonical models, June 1, 2010 draft",
+        "url": "https://web.math.princeton.edu/~kollar/book/chap2.pdf",
+        "sha256": "1219c79982d0a5d38d7a81fbfc81933e1880bd5014ae329adaa648d5e8ed13e8",
+        "passages": "Definition 122, (122.7)–(122.10), Proposition 123, Lemma 125; PDF/printed pp.61–64",
+        "checked": "Statements and use in Lemma 4.4 compared. (122.10) has extra Q-Cartier assumptions; the manuscript uses (122.7) at a common multiple to add only beta P. Same-index descent remains the manuscript additional argument."
+      }
+    }
   ]
 }

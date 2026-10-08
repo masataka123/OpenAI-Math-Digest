@@ -40,13 +40,23 @@
 \Japanesefalse
 \begin{document}
 \begin{tikzpicture}
-\node[card] (n0) {\heading{01}{曲線上の形式と付値的重み}{A form over a curve and its valuative weight}$\operatorname{div}_V\phi+mB=0,\quad \Omega=\phi\wedge(dz/z)^{\otimes m}.$\\[3pt] $w_z(\phi)=\inf_E(\operatorname{ord}_E\Omega+m)/(m\operatorname{ord}_Ez).$};
-\node[card,below=1.95cm of n0] (n1) {\heading{02}{特殊ファイバーを被約にして正確な恒等式を得る}{Prepare the reduced special fibre and an exact identity}$(N,T+H)\text{ dlt},\quad T=(f^*c)_{\rm red},\quad H\text{ horizontal}.$\\[3pt] $m^{-1}\operatorname{div}_N\Omega+T+H=w_z(\phi)f^*c.$};
-\flow{n0}{n1}{\Tx{底に十分正な因子を加えたMMPで例外誤差を消す。}{An MMP after adding positivity from the base removes the exceptional error.}\\[4pt]\Cite{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-log-Iitaka-fibrations-and-bounded-moduli-denominators-October-4-2026/uniform-log-iitaka.pdf}{Lemma 3.1; pp. 6--7}\quad \Cite{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-log-Iitaka-fibrations-and-bounded-moduli-denominators-October-4-2026/uniform-log-iitaka.pdf}{Prop. 4.5; pp. 9--10}}
-\node[card,below=1.95cm of n1] (n2) {\heading{03}{係数1の水平成分に留数を取る}{Take residue along a coefficient-one horizontal component}$S\to C_S\xrightarrow{\nu}C,\quad \deg\nu\le D_s,\quad e\le D_s.$\\[3pt] $w_u(\operatorname{res}_S\phi)=e\,w_z(\phi).$};
-\flow{n1}{n2}{\Tx{dlt随伴。算術的Stein次数で留数の定数体拡大を抑える。}{Use dlt adjunction and the arithmetic Stein bound on the residue field extension.}\\[4pt]\Cite{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-log-Iitaka-fibrations-and-bounded-moduli-denominators-October-4-2026/uniform-log-iitaka.pdf}{Lemma 4.6; pp. 10--11}\quad \Cite{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Arithmetic-Stein-degree-bounds-for-log-Calabi-Yau-pairs-September-25-2026/paper.pdf}{[SD] Thm. 1.1; p. 1}}
-\node[result,below=1.95cm of n2] (n3) {\heading{04}{次元帰納とklt評価を合流させる}{Combine dimension induction with the klt bound}$q(s-1,m)\operatorname{lcm}(1,\ldots,D_s)\,w_z(\phi)\in\mathbb Z.$\\[3pt] $H^{=1}=0\ \Longrightarrow\ \Tx{\text{klt評価へ}}{\text{use the klt bound}},\qquad q(0,m)=m.$};
-\flow{n2}{n3}{\Tx{分岐による重みの倍率を公倍数で吸収。水平成分がなければ別経路。}{Absorb ramification by an lcm; use a separate route when no such component exists.}\\[4pt]\Cite{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-log-Iitaka-fibrations-and-bounded-moduli-denominators-October-4-2026/uniform-log-iitaka.pdf}{Lemma 4.3; p. 8}\quad \Cite{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-log-Iitaka-fibrations-and-bounded-moduli-denominators-October-4-2026/uniform-log-iitaka.pdf}{Prop. 6.7; p. 23}}
-\end{tikzpicture}
+\node[card] (weight) {\heading{}{1. 曲線重みをdltモデルに載せる}{1. Realize the curve weight on a dlt model}$\operatorname{div}_V\phi+mB=0,\quad (N,T+H)\text{ dlt}.$\\ $m^{-1}\operatorname{div}_N\Omega+T+H=w_z(\phi)f^*c.$\\[4pt]\Cite{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-log-Iitaka-fibrations-and-bounded-moduli-denominators-October-4-2026/uniform-log-iitaka.pdf}{Lemma 3.1; Prop. 4.5; pp. 6--7, 9--10}};
 
+\node[half,below=3.1cm of weight.south,xshift=-4cm] (lc) {\heading{}{2a. 水平係数1成分がある}{2a. A horizontal coefficient-one component}$S\to C_S\to C,\quad e\le D_s.$\\ $w_u(\operatorname{res}_S\phi)=e\,w_z(\phi).$\\ $q_{\rm res}=q(s-1,m)\operatorname{lcm}(1,\ldots,D_s).$};
+
+\node[half,below=3.1cm of weight.south,xshift=4cm] (klt) {\heading{}{2b. 水平係数1成分がない}{2b. No horizontal coefficient-one component}$H^{=1}=0:\quad (V,B)\text{ klt},\quad K_V\text{ is }\mathbb Q\text{-Cartier}.$\\ $q_{\rm klt}(s,m)w_z(\phi)\in\mathbb Z.$\\ \Tx{独立な指標評価は第2図。}{Independent character bound: Fig. 2.}};
+
+\coordinate (lc-a) at ($(lc.north west)+(.32,0)$);
+\draw[edge] (weight.south) -- ++(0,-.4) -| (lc-a);
+\node[branchreason,anchor=south west] at ($(lc.north west)+(.65,.18)$) {\Tx{Stein次数を抑えて留数へ帰納。}{Bound the Stein degree, then induct by residue.}\\[3pt]\Cite{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-log-Iitaka-fibrations-and-bounded-moduli-denominators-October-4-2026/uniform-log-iitaka.pdf}{Lemma 4.6; pp. 10--11}\\ \Cite{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Arithmetic-Stein-degree-bounds-for-log-Calabi-Yau-pairs-September-25-2026/paper.pdf}{[SD] Thm. 1.1; p. 1}};
+
+\coordinate (klt-a) at ($(klt.north west)+(.32,0)$);
+\draw[edge] (weight.south) -- ++(0,-.4) -| (klt-a);
+\node[branchreason,anchor=south west] at ($(klt.north west)+(.65,.18)$) {\Tx{一般対がkltとなるので指標評価を使う。}{The generic pair is klt; use the character bound.}\\[3pt]\Cite{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-log-Iitaka-fibrations-and-bounded-moduli-denominators-October-4-2026/uniform-log-iitaka.pdf}{Prop. 6.7; p. 23}};
+
+\node[result,below=8cm of weight.south] (end) {\heading{}{3. 二つの枝を合わせる}{3. Combine the two branches}$q(0,m)=m,\quad q(s,m)=\operatorname{lcm}(q_{\rm res},q_{\rm klt}(s,m)).$\\ $q(s,m)w_z(\phi)\in\mathbb Z.$\\[4pt]\Cite{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-log-Iitaka-fibrations-and-bounded-moduli-denominators-October-4-2026/uniform-log-iitaka.pdf}{Proof of Thm. 4.2; p. 11}};
+
+\draw[edge] (lc.south) -- ++(0,-.5) -| ($(end.north)+(-4,0)$);
+\draw[edge] (klt.south) -- ++(0,-.5) -| ($(end.north)+(4,0)$);
+\end{tikzpicture}
 \end{document}

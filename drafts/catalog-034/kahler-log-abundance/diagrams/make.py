@@ -31,12 +31,12 @@ diagram('fibration',[
 ('水平負部分を引いて底へmetricを降ろす','Subtract the horizontal negative part and descend the metric',r'$A^{*,\mathrm{hor}}\le N(J),\qquad H\text{ pseudo-effective}.$'),
 ('底の次元を下げるか、停止する形へ進む','Lower the base dimension or reach a stopping case',r'$a(W)=0:\ H\sim_{\mathbb Q}N(H).$\\[3pt] $W\text{ projective}:\ \Tx{\text{より低次元の底 / nefでbigまたはtorsionな }H_m}{\text{smaller base / nef }H_m\text{ big or torsion}}.$'),
 ('全ての垂直誤差を負部分に同定','Identify every vertical error with the negative part',r'$J\sim_{\mathbb Q}P_0+A,\qquad A=N(J)\ge0.$\\[3pt] $P_0\sim_{\mathbb Q}0\quad\text{or}\quad P_0=b^*H_m\ (H_m\text{ big nef}).$'),
-('境界切断を延長してsemiampleにする','Extend boundary sections to obtain semiampleness',r'$r^*L\sim_{\mathbb Q}f^*H_m,\quad L\text{ nef dlt adjoint}.$\\[3pt] $\mathbf B(L)\cap\lfloor\Delta\rfloor=\varnothing\ \Longrightarrow\ \mathbf B(L)=\varnothing.$')
+('big nefの場合：境界切断を延長する','Big nef case: extend boundary sections',r'$r^*L\sim_{\mathbb Q}f^*H_m,\quad L\text{ nef dlt adjoint}.$\\[3pt] $\mathbf B(L)\cap\lfloor\Delta\rfloor=\varnothing\ \Longrightarrow\ \mathbf B(L)=\varnothing.$')
 ],[
 ('rank-one Hodge lineと係数の最小値0を使い、psh weightを延長。','Use the rank-one Hodge line and a zero minimum coefficient to extend psh weights.',cite('[OILS] Prop. 2.7, Thm. 3.1; pp. 10, 17--18',OILS)+r'\quad '+cite('Lemma 5.3; pp. 94--95')),
 ('下の次元の帰納、または実際のnef lineを保つ条件付き一般化MMP。','Use lower-dimensional induction or a conditional generalized MMP preserving the actual nef line.',cite('Lemmas 5.4--5.7; pp. 95--101')),
 ('交差行列の核と混合Hodge indexで、残る正の垂直部分を排除。','The intersection-matrix kernel and mixed Hodge index exclude residual vertical positivity.',cite('Lemma 5.8; pp. 101--103')),
-('負部分を収縮し、境界生成・injectivity・新しいlc placeでbase locusを消す。','Contract the negative part; boundary generation, injectivity and a new lc place remove the base locus.',cite('Prop. 3.8; pp. 23--24')+r'\quad '+cite('Thm. 4.1; p. 71')+r'\quad '+cite('Prop. 5.9; pp. 103--106'))
+('torsionの枝は終了。big nefの枝では負部分を収縮し、境界切断を延長。','The torsion branch ends. In the big nef branch, contract the negative part and extend sections.',cite('Prop. 3.8; pp. 23--24')+r'\quad '+cite('Thm. 4.1; p. 71')+r'\quad '+cite('Prop. 5.9; pp. 103--106'))
 ])
 diagram('meromorphic',[
 ('有理型標準切断がないと仮定する','Assume there is no meromorphic canonical section',r'$a(X)=0,\ X\text{ simple},\quad L=c_1(K_X)\ge0.$\\[3pt] $A\hookrightarrow\Omega_X^{\otimes k}\ \Longrightarrow\ c_1(A)\le kL.$'),
@@ -59,4 +59,15 @@ diagram('signed',[
 ('分裂留数と残余極の局所化。閉stratumのproper Kähler direct imageを使う。','Use split residue and localization at residual poles, then proper Kähler direct image on closed strata.',cite('Lemma 7.4, Prop. 7.5; pp. 132--136')+r'\quad '+cite('[ANV4] Lemma 11.2; p. 80',ANV)),
 ('adjugate恒等式でJacobianを割らず、ampleな根からsymbol kernelへ送る。','The adjugate identity avoids dividing by the Jacobian and tests the symbol kernel with an ample root.',cite('Prop. 7.6, (7.19)--(7.23); pp. 137--141')),
 ('Douady・Artin近似で変形を実現し、properなcycle族とBaireで被覆する。','Realize deformations by Douady and Artin approximation; use proper cycle families and Baire.',cite('Lemma 7.7; pp. 141--143')+r'\quad '+cite('Thm. 7.1, proof; p. 143'))
+])
+
+diagram('boundary',[
+('下の次元の分解とnefなdlt随伴因子','Lower-dimensional decompositions and a nef dlt adjoint',r'$G_j\ (j<n),\quad J=K_V+B\text{ nef},\quad S=\lfloor B\rfloor.$\\[3pt] $V\text{ globally }\mathbb Q\text{-factorial};\quad\text{Definition 3.1}.$'),
+('stratum上の実際の随伴直線束を比較する','Compare actual adjunction lines on strata',r'$\mathcal O_Z(q(K_Z+B_Z))\simeq\mathcal O_V(qJ)|_Z,\quad q\text{ even and divisible}.$\\[3pt] $\Tx{\text{下位stratumでの生成と留数の整合性。}}{\text{Generation and compatible residues on lower strata.}}$'),
+('有限な比較作用に対して不変tupleを作る','Construct tuples invariant under finite comparison actions',r'$\Tx{\text{有限像に沿う切断の積}}{\text{Products of sections over finite images}}\quad\Longrightarrow\quad\Tx{\text{共通次数の生成tuple}}{\text{generating tuples in one degree}}.$'),
+('被約境界全体へ貼り合わせる','Glue over the entire reduced boundary',r'$H^0(S,\mathcal O_V(qJ)|_S)\otimes\mathcal O_S\twoheadrightarrow\mathcal O_V(qJ)|_S.$\\[3pt] $\Tx{\text{各成分だけでなく、全ての交差上の比較も満たす。}}{\text{Comparisons hold on every intersection, not only componentwise.}}$')
+],[
+('lc strataに適合した解消で留数を運び、低次元の帰納を適用。','Transport residues on the adapted resolution and apply lower-dimensional induction.',cite('Lemma 4.2; pp. 71--73')),
+('下位strataの比較と、垂直strataの自己比較の有限像を同時に処理。','Impose lower-stratum comparisons and finite self-comparisons on vertical strata together.',cite('Prop. 4.11; pp. 88--89')),
+('整合する留数を貼り合わせ、各点で非消滅な切断を残す。','Glue matching residues while retaining a nonvanishing section at each point.',cite('Thm. 4.1, conclusion; p. 89'))
 ])

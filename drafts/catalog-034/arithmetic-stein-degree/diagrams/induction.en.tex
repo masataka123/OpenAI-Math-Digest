@@ -40,15 +40,22 @@
 \Japanesefalse
 \begin{document}
 \begin{tikzpicture}
-\node[card] (n0) {\heading{01}{定数体を保って次元帰納}{Induct while retaining the constant-field condition}$H^0(X,\mathcal O_X)=k,\quad K_X+B\sim_{\mathbb Q}0,\quad b\in\mathbb Q,\ 0<b<t.$};
-\node[card,below=1.95cm of n0] (n1) {\heading{02}{境界成分を相対的に豊富にする}{Make the boundary component relatively ample}$X_1\to Z_1,\quad S_1\text{ relatively ample}.$\\ \Tx{$\dim Z_1>0$：一般ファイバーへ帰納。}{If $\dim Z_1>0$, apply generic-fibre induction.}};
-\flow{n0}{n1}{\Tx{負性補題で $S$ を残すMMP。}{An $S$-positive MMP preserves $S$.}\\[4pt]\Cite{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Arithmetic-Stein-degree-bounds-for-log-Calabi-Yau-pairs-September-25-2026/paper.pdf}{Lemmas 2.1, 4.1--4.2; pp. 2--3, 7--8}}
-\node[card,below=1.95cm of n1] (n2) {\heading{03}{底が点：有界な指数の補完を作る}{Point base: construct a complement of bounded index}$C_1\ge bS_1,\quad n(K_{X_1}+C_1)\sim0,\quad n=n(d,b).$};
-\flow{n1}{n2}{\Tx{固定係数 $b$ に補完を適用し、一般元で $k$ へ降下。}{Apply complements with fixed $b$; descend a general member to $k$.}\\[4pt]\Cite{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Arithmetic-Stein-degree-bounds-for-log-Calabi-Yau-pairs-September-25-2026/paper.pdf}{Lemma 3.1; p. 4}\quad \Cite{https://arxiv.org/pdf/1603.05765v4}{[Bir19] Thm. 1.7; p. 4}}
-\node[card,below=1.95cm of n2] (n3) {\heading{04}{低discrepancyを抽出し、再びMMP}{Extract low discrepancies, then run another MMP}$X_2\dashrightarrow X_3\to Z,\quad X_3\text{ is }1/n\text{-lc},\quad a(v_S,X_3,C_3)<1.$};
-\flow{n2}{n3}{\Tx{指数 $n$ がdiscrepancyを離散化：$a<1/n$ なら補完のlc place。}{Index $n$ discretizes discrepancies: $a<1/n$ forces an lc place.}\\[4pt]\Cite{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Arithmetic-Stein-degree-bounds-for-log-Calabi-Yau-pairs-September-25-2026/paper.pdf}{Cor. 3.3; p. 5}\quad \Cite{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Arithmetic-Stein-degree-bounds-for-log-Calabi-Yau-pairs-September-25-2026/paper.pdf}{$\S5.3$; pp. 11--12}}
-\node[result,below=1.95cm of n3] (n4) {\heading{05}{残る三場合をそれぞれ抑える}{Bound the three remaining cases}\Tx{点の底：Prop. 3.5。水平な $P$：一般ファイバー。\\垂直な $P$：水平係数1成分から随伴（第3図）。}{Point base: Prop. 3.5. Horizontal $P$: generic fibre.\\Vertical $P$: adjunction from a horizontal coefficient-one component (Fig. 3).}};
-\flow{n3}{n4}{\Tx{元の付値を相対Fano typeモデル上の $P$ として回復。}{Recover the original valuation as $P$ on a relative Fano type model.}\\[4pt]\Cite{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Arithmetic-Stein-degree-bounds-for-log-Calabi-Yau-pairs-September-25-2026/paper.pdf}{$\S\S5.4$--$5.7$; pp. 12--14}}
-\end{tikzpicture}
+\node[card] (start) {\heading{}{1. 定数体を保って境界を残す}{1. Preserve constants and the boundary}$H^0(\mathcal O_X)=k,\quad K_X+B\sim_{\mathbb Q}0,\quad 0<b=b(t)<t.$};
 
+\node[card,below=1.8cm of start] (mori) {\heading{}{2. 第1のMoriファイバー空間}{2. The first Mori fibre space}$X_1\to Z_1,\quad S_1\text{ relatively ample},\quad \operatorname{coeff}_{S_1}B_1\ge t.$};
+
+\flow{start}{mori}{\Tx{$S$ に正なMMPで $S$ を保存。}{An $S$-positive MMP preserves $S$.}\\[4pt]\Cite{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Arithmetic-Stein-degree-bounds-for-log-Calabi-Yau-pairs-September-25-2026/paper.pdf}{Lemmas 2.1, 4.1--4.2; pp. 2--3, 7--8}}
+\node[result,text width=6.45cm,below=2.2cm of mori.south,xshift=-4cm] (done) {\heading{}{3a. 正次元の底：終了}{3a. Positive-dimensional base: end}$0<\dim Z_1<d,\quad r=d-\dim Z_1.$\\ $c(S/k)\le N(r,t)\le M_{<d}(t).$};
+
+\node[half,below=2.2cm of mori.south,xshift=4cm] (next) {\heading{}{3b. 点の底：補完を選ぶ}{3b. Point base: choose a complement}$C_1\ge bS_1,\quad n(K_{X_1}+C_1)\sim0.$\\ $n=n(d,b),\quad\epsilon=1/n.$\\ \Tx{第2図へ進む。}{Continue to Figure 2.}};
+
+\coordinate (done-a) at ($(done.north west)+(.32,0)$);
+\draw[edge] (mori.south) -- ++(0,-.4) -| (done-a);
+\node[branchreason,anchor=south west] at ($(done.north west)+(.65,.18)$) {\Tx{水平な $S_1$ を一般ファイバーで帰納。}{Induct for horizontal $S_1$ on the generic fibre.}\\[3pt]\Cite{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Arithmetic-Stein-degree-bounds-for-log-Calabi-Yau-pairs-September-25-2026/paper.pdf}{(5.3); p. 11}};
+
+\coordinate (next-a) at ($(next.north west)+(.32,0)$);
+\draw[edge] (mori.south) -- ++(0,-.4) -| (next-a);
+\node[branchreason,anchor=south west] at ($(next.north west)+(.65,.18)$) {\Tx{Fanoかつ $-(K+bS_1)$ nefに補完を適用。}{Apply complements to the Fano model with $-(K+bS_1)$ nef.}\\[3pt]\Cite{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Arithmetic-Stein-degree-bounds-for-log-Calabi-Yau-pairs-September-25-2026/paper.pdf}{Lemma 3.1; pp. 4, 11}};
+
+\end{tikzpicture}
 \end{document}
