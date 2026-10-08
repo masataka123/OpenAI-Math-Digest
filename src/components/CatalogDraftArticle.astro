@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {renderDraft} from '../lib/render-draft.mjs';
+import '../styles/paper.css';
+import '../styles/draft-article.css';
+const articles=import.meta.glob('../../drafts/catalog-034/*/article.*.md',{query:'?raw',import:'default',eager:true});
+const figures=import.meta.glob('../../public/diagrams/catalog-034/*/*.svg',{query:'?raw',import:'default',eager:true});
+const {paper,lang}=Astro.props, en=lang==='en',base=import.meta.env.BASE_URL;
+const article=await renderDraft(articles[`../../drafts/catalog-034/${paper.id}/article.${lang}.md`],{lang,paperId:paper.id,base,diagramSource:stem=>figures[`../../public/diagrams/catalog-034/${paper.id}/${stem}.svg`]});
+---
+<Layout lang={lang} title={paper.title} otherPath={(en?'ja':'en')+'/papers/'+paper.id+'/'}>
+ <article class="paper-article draft-article">
+  <nav class="breadcrumbs" aria-label={en?'Breadcrumb':'現在位置'}><a href={base+lang+'/'}>{en?'Fields':'分野一覧'}</a><span>/</span><a href={base+lang+'/fields/algebraic-complex-geometry/'}>{en?'Algebraic and Complex Geometry':'代数幾何学・複素幾何学'}</a><span>/</span><a href={base+lang+'/catalog/034/'}>034</a><span>/</span><span>{String(paper.order).padStart(2,'0')}</span></nav>
+  <nav class="contents" aria-label={en?'Article sections':'記事の内容'}>{article.headings.map(h=><a href={'#'+h.slug}>{h.text}</a>)}</nav>
+  <div class="draft-body"><Fragment set:html={article.html}/></div>
+  <p class="source-note"><a href={base+lang+'/catalog/034/#paper-'+paper.id}>{en?'Back to catalogue 034':'カタログ034の一覧へ戻る'} →</a></p>
+ </article>
+</Layout>
