@@ -1,0 +1,278 @@
+{
+  "sources": {
+    "fn": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Fourfold-nonvanishing-by-minimal-metrics-and-moving-jets-September-27-2026/paper.pdf",
+    "mm": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Minimal-metrics-and-interior-injectivity-for-nef-adjoints-September-27-2026/paper.pdf",
+    "la": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf",
+    "lift": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Lifting-sections-from-the-reduced-support-of-an-adjoint-September-27-2026/paper.pdf",
+    "ct": "https://arxiv.org/pdf/2011.02236v2",
+    "fuj": "https://www.math.kyoto-u.ac.jp/~fujino/Abundance.pdf",
+    "gm": "https://arxiv.org/pdf/1406.6132v2",
+    "hash": "https://arxiv.org/pdf/1609.00121v4"
+  },
+  "diagrams": [
+    {
+      "id": "nonvanishing",
+      "title": {
+        "ja": "Theorem 1.1：二つのジェット評価から行列式矛盾へ",
+        "en": "Theorem 1.1: two jet estimates and a determinant contradiction"
+      },
+      "nodes": [
+        {
+          "title": {
+            "ja": "反例を一つの極小モデルに固定する",
+            "en": "Fix one minimal counterexample"
+          },
+          "body": {
+            "ja": "$K=K_Y\\text{ nef},\\quad \\kappa(K)=-\\infty,\\quad K^4=0,\\quad n(K)=4.$\\\\[3pt]$K\\cdot C\\ge1/\\iota$。非常に一般の点を通る真の部分多様体は general type。",
+            "en": "$K=K_Y\\text{ nef},\\quad \\kappa(K)=-\\infty,\\quad K^4=0,\\quad n(K)=4.$\\\\[3pt]$K\\cdot C\\ge1/\\iota$; proper subvarieties through very general points are general type."
+          }
+        },
+        {
+          "title": {
+            "ja": "一因子上の消滅次数を小さく抑える",
+            "en": "Bound scalar orders on one factor"
+          },
+          "body": {
+            "ja": "$L_t=r_t(K+tA),\\quad L_t^4\\to\\varepsilon^4,\\quad r_t\\to\\infty.$\\\\[3pt]$P_s=2r_t(K+2tA),\\quad\\operatorname{ord}_x(s)\\le32k\\varepsilon.$",
+            "en": "$L_t=r_t(K+tA),\\quad L_t^4\\to\\varepsilon^4,\\quad r_t\\to\\infty.$\\\\[3pt]$P_s=2r_t(K+2tA),\\quad\\operatorname{ord}_x(s)\\le32k\\varepsilon.$"
+          }
+        },
+        {
+          "title": {
+            "ja": "二因子の束上で有限個のジェットを生成する",
+            "en": "Generate a finite system of jets on the two-slot bundle"
+          },
+          "body": {
+            "ja": "$Z=\\mathbb P(\\mathcal O(S_0)_1\\oplus\\mathcal O(S_0)_2),\\quad S_0=\\iota K.$\\\\[3pt]$\\epsilon(P;z)>10\\quad\\Rightarrow\\quad 10k_0\\text{ 次ジェット全射。}$",
+            "en": "$Z=\\mathbb P(\\mathcal O(S_0)_1\\oplus\\mathcal O(S_0)_2),\\quad S_0=\\iota K.$\\\\[3pt]$\\epsilon(P;z)>10\\quad\\Rightarrow\\quad\\text{surjection onto jets through order }10k_0.$"
+          }
+        },
+        {
+          "title": {
+            "ja": "解消・旗・曲線を先に固定する",
+            "en": "Fix the resolution, flag and movable curve first"
+          },
+          "body": {
+            "ja": "$\\mu_{\\min}(\\Omega_W^1|_C)\\ge0,\\quad J_x\\gamma>0.$\\\\[3pt]$\\pi_x^*(L+K_W/2+\\lambda S_0)\\gamma\\le40\\varepsilon J_x\\gamma\\quad(0\\le\\lambda\\le q).$",
+            "en": "$\\mu_{\\min}(\\Omega_W^1|_C)\\ge0,\\quad J_x\\gamma>0.$\\\\[3pt]$\\pi_x^*(L+K_W/2+\\lambda S_0)\\gamma\\le40\\varepsilon J_x\\gamma\\quad(0\\le\\lambda\\le q).$"
+          }
+        },
+        {
+          "title": {
+            "ja": "二つの行列式消滅次数を衝突させる",
+            "en": "Compare the incompatible determinant orders"
+          },
+          "body": {
+            "ja": "$R=p^8,\\quad\\operatorname{rk}_{\\rm gen}\\Phi_p=R,\\quad\\operatorname{rk}_{\\Delta}\\Phi_p<R/4.$\\\\[3pt]$3R/4\\le\\operatorname{ord}\\sigma\\le R(80\\varepsilon+O(p^{-1})),\\quad80\\varepsilon<3/4.$",
+            "en": "$R=p^8,\\quad\\operatorname{rk}_{\\rm gen}\\Phi_p=R,\\quad\\operatorname{rk}_{\\Delta}\\Phi_p<R/4.$\\\\[3pt]$3R/4\\le\\operatorname{ord}\\sigma\\le R(80\\varepsilon+O(p^{-1})),\\quad80\\varepsilon<3/4.$"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "ja": "体積は有界、曲線次数は発散。動く中心の次数上界から矛盾を得る。",
+          "en": "Bounded volume and diverging curve degrees exclude moving scalar centers.",
+          "refs": [
+            [
+              "fn",
+              "Props. 2.1--2.2, 3.5, pp. 5--12"
+            ],
+            [
+              "la",
+              "[LA] Lemmas 7.1--7.3, pp. 45--49"
+            ]
+          ]
+        },
+        {
+          "ja": "sliceの中心を除く。非軸multisectionには符号付き台の図を使う。",
+          "en": "Exclude slice centers; use the signed-support diagram for non-axis multisections.",
+          "refs": [
+            [
+              "fn",
+              "Prop. 5.1, $\\S$6.4, Cor. 6.5, pp. 14--30"
+            ]
+          ]
+        },
+        {
+          "ja": "scalar評価から曲線を選び、二因子ジェットと同時に有限データを固定する。",
+          "en": "The scalar bound supplies the curve; retain the finite two-slot jet system.",
+          "refs": [
+            [
+              "fn",
+              "Lemma 7.2, (7.2)--(7.7), pp. 31--33"
+            ]
+          ]
+        },
+        {
+          "ja": "この段階で標数を動かす。入力は独立した有限データ定理である。",
+          "en": "Only now vary the characteristic; the input is the independent finite-data theorem.",
+          "refs": [
+            [
+              "la",
+              "[LA] Thm. 9.1, p. 62"
+            ],
+            [
+              "fn",
+              "$\\S$7.3, pp. 33--34"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "signed-support",
+      "title": {
+        "ja": "Proposition 5.1：全floorの持ち上げを先に行う",
+        "en": "Proposition 5.1: lift from the whole floor before semiampleness"
+      },
+      "nodes": [
+        {
+          "title": {
+            "ja": "符号付き代表の台がbigでないと仮定する",
+            "en": "Assume the signed support is not log big"
+          },
+          "body": {
+            "ja": "$J\\sim_{\\mathbb Q}K_Y,\\quad D_W\\supset\\operatorname{Supp}J_{\\rm strict}\\cup\\operatorname{Exc}(p).$\\\\[3pt]$\\kappa(K_W+D_W)\\le0.$",
+            "en": "$J\\sim_{\\mathbb Q}K_Y,\\quad D_W\\supset\\operatorname{Supp}J_{\\rm strict}\\cup\\operatorname{Exc}(p).$\\\\[3pt]$\\kappa(K_W+D_W)\\le0.$"
+          }
+        },
+        {
+          "title": {
+            "ja": "nef klt区間と非空のfloorを構成する",
+            "en": "Construct a nef klt interval and a nonempty floor"
+          },
+          "body": {
+            "ja": "$M^{\\prime}-uD^{\\prime}\\text{ nef klt adjoint}\\quad(0<u\\le\\delta).$\\\\[3pt]$N=K^{\\prime}+B\\sim_{\\mathbb Q}\\alpha M^{\\prime}-sD^{\\prime},\\quad S=\\lfloor B\\rfloor\\ne0,\\quad\\mathcal J(B)=\\mathcal I_S.$",
+            "en": "$M^{\\prime}-uD^{\\prime}\\text{ nef klt adjoint}\\quad(0<u\\le\\delta).$\\\\[3pt]$N=K^{\\prime}+B\\sim_{\\mathbb Q}\\alpha M^{\\prime}-sD^{\\prime},\\quad S=\\lfloor B\\rfloor\\ne0,\\quad\\mathcal J(B)=\\mathcal I_S.$"
+          }
+        },
+        {
+          "title": {
+            "ja": "端点計量で全floorからの切断を持ち上げる",
+            "en": "Lift whole-floor sections using endpoint metrics"
+          },
+          "body": {
+            "ja": "$L_R-C_i\\sim_{\\mathbb Q}t_i(m)h^*(K^{\\prime}+(1-u_i(m))D^{\\prime})\\quad(i=0,2).$\\\\[3pt]$H^1(\\mathcal O(mN)\\otimes\\mathcal I_S)\\hookrightarrow H^1(\\mathcal O(mN)),\\quad H^0(S,mN|_S)\\ne0.$",
+            "en": "$L_R-C_i\\sim_{\\mathbb Q}t_i(m)h^*(K^{\\prime}+(1-u_i(m))D^{\\prime})\\quad(i=0,2).$\\\\[3pt]$H^1(\\mathcal O(mN)\\otimes\\mathcal I_S)\\hookrightarrow H^1(\\mathcal O(mN)),\\quad H^0(S,mN|_S)\\ne0.$"
+          }
+        },
+        {
+          "title": {
+            "ja": "非消滅後の半豊富性で矛盾を得る",
+            "en": "Apply semiampleness after nonvanishing"
+          },
+          "body": {
+            "ja": "$\\kappa(N)=0,\\quad N/\\alpha\\sim_{\\mathbb Q}K^{\\prime}+(1-s/\\alpha)D^{\\prime}\\text{ semiample}.$\\\\[3pt]$N/\\alpha\\equiv0,\\qquad (K^{\\prime}+(1-s/\\alpha)D^{\\prime})A^3>0.$",
+            "en": "$\\kappa(N)=0,\\quad N/\\alpha\\sim_{\\mathbb Q}K^{\\prime}+(1-s/\\alpha)D^{\\prime}\\text{ semiample}.$\\\\[3pt]$N/\\alpha\\equiv0,\\qquad (K^{\\prime}+(1-s/\\alpha)D^{\\prime})A^3>0.$"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "ja": "dlt MMPとCartier指数を保つcrepant摂動。最大正係数でfloorを作る。",
+          "en": "Use a dlt MMP and a Cartier-index-preserving perturbation; use the maximal coefficient.",
+          "refs": [
+            [
+              "fn",
+              "(5.2)--(5.7), pp. 15--17"
+            ]
+          ]
+        },
+        {
+          "ja": "二端点に [MM] を適用。全floorの非零切断には別途三次元abundanceを使う。",
+          "en": "Apply [MM] to both endpoints; threefold abundance separately gives a floor section.",
+          "refs": [
+            [
+              "mm",
+              "[MM] Thms. 1.1--1.2, pp. 1--2"
+            ],
+            [
+              "fn",
+              "(5.8)--(5.12), pp. 17--19"
+            ]
+          ]
+        },
+        {
+          "ja": "切断を降下・持ち上げた後、klt随伴へ [GM] を適用する。",
+          "en": "After descent and lifting of a section, apply [GM] to the klt adjoint.",
+          "refs": [
+            [
+              "gm",
+              "[GM] Cor. 5.3, p. 19"
+            ],
+            [
+              "fn",
+              "Prop. 5.1, pp. 19--20"
+            ]
+          ]
+        }
+      ],
+      "gap": 2.2
+    },
+    {
+      "id": "lc-descent",
+      "title": {
+        "ja": "Corollary 1.2：元のlc対と指定Cartier指数",
+        "en": "Corollary 1.2: the original lc pair and a prescribed Cartier index"
+      },
+      "nodes": [
+        {
+          "title": {
+            "ja": "滑らかな四次元の非消滅を確立する",
+            "en": "Establish smooth fourfold nonvanishing"
+          },
+          "body": {
+            "ja": "$X\\text{ smooth projective},\\quad\\dim X=4,\\quad K_X\\text{ pseudo-effective}\\Rightarrow\\kappa(X)\\ge0.$",
+            "en": "$X\\text{ smooth projective},\\quad\\dim X=4,\\quad K_X\\text{ pseudo-effective}\\Rightarrow\\kappa(X)\\ge0.$"
+          }
+        },
+        {
+          "title": {
+            "ja": "元のlc対に実係数の有効代表を得る",
+            "en": "Obtain an effective real representative on the original lc pair"
+          },
+          "body": {
+            "ja": "$\\dim X\\le4,\\quad D=K_X+\\Delta\\text{ nef},\\quad D\\sim_{\\mathbb R}G\\ge0.$",
+            "en": "$\\dim X\\le4,\\quad D=K_X+\\Delta\\text{ nef},\\quad D\\sim_{\\mathbb R}G\\ge0.$"
+          }
+        },
+        {
+          "title": {
+            "ja": "台を保って有理化し、指定指数を払う",
+            "en": "Rationalize with the same support and clear the prescribed index"
+          },
+          "body": {
+            "ja": "$D\\sim_{\\mathbb Q}G_{\\mathbb Q}\\ge0,\\quad rD\\text{ Cartier}.$\\\\[3pt]$\\exists m>0:\\ H^0(X,\\mathcal O_X(mrD))\\ne0.$",
+            "en": "$D\\sim_{\\mathbb Q}G_{\\mathbb Q}\\ge0,\\quad rD\\text{ Cartier}.$\\\\[3pt]$\\exists m>0:\\ H^0(X,\\mathcal O_X(mrD))\\ne0.$"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "ja": "滑らかな非消滅から、4次元以下のlc実境界の非消滅へ。",
+          "en": "Smooth nonvanishing implies lc real-boundary nonvanishing through dimension four.",
+          "refs": [
+            [
+              "hash",
+              "[Hash] Thm. 1.4, pp. 1--2"
+            ],
+            [
+              "fn",
+              "$\\S$8, p. 35"
+            ]
+          ]
+        },
+        {
+          "ja": "有限個の主因子による有理線形系。零係数を固定し正係数を保つ。",
+          "en": "Use a finite rational linear system, keeping zero coefficients and preserving positivity.",
+          "refs": [
+            [
+              "fn",
+              "Lemma 8.1, Cor. 1.2 proof, p. 35"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

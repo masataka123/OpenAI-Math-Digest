@@ -1,0 +1,214 @@
+{
+  "paperId": "minimal-metrics-injectivity",
+  "catalog": "034",
+  "officialOrderWithinCatalog": 5,
+  "author": "OpenAI",
+  "version": "September 27, 2026",
+  "pdfPages": 21,
+  "sourceCommit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "sourceUrl": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Minimal-metrics-and-interior-injectivity-for-nef-adjoints-September-27-2026/paper.pdf",
+  "sha256": "b2a7d738f44a3d34e5d22e0a7fb8a8d38e97b6e2858f6c77d70cb9b03193fbd6",
+  "hashMatched": true,
+  "checkedOn": "2026-10-08",
+  "statements": [
+    {
+      "result": "Theorem 1.1",
+      "pages": [
+        1,
+        2
+      ],
+      "scope": "normal connected projective complex klt pair, effective rational boundary, nef Q-Cartier total adjoint; every projective log resolution; actual rational bundle; all minimal semipositive metrics have zero Lelong numbers"
+    },
+    {
+      "result": "Theorem 1.2",
+      "pages": [
+        2
+      ],
+      "scope": "smooth projective complex V, integral L, effective rational C0<=C2 with SNC combined support, both actual endpoint bundles zero-Lelong semipositive, rational 0<lambda<1; ordinary H1 injection"
+    },
+    {
+      "result": "Corollary 2.4",
+      "pages": [
+        10,
+        11
+      ],
+      "scope": "all real t>0; multiplier ideals trivial; normalization independence"
+    },
+    {
+      "result": "Corollary 4.1",
+      "pages": [
+        18,
+        19
+      ],
+      "scope": "projective complex klt fourfold, effective rational boundary, nef adjoint, nonzero holomorphic Euler characteristic; semiample"
+    }
+  ],
+  "proofPassages": [
+    {
+      "section": "2.1–2.4",
+      "pages": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "read": "L2 statement; fixed twist; Claim 2.2; Lemma 2.3; descent across negative exceptional coefficients; extremal contradiction"
+    },
+    {
+      "section": "3.1–3.5",
+      "pages": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "read": "regularization; log-sum weights; complete metric; Proposition 3.3 fixed-cover class map and uniform primitives; Bochner comparison and fixed-Hilbert-space limit"
+    },
+    {
+      "section": "4",
+      "pages": [
+        18,
+        19
+      ],
+      "read": "LP and GM criteria and application to same metric"
+    }
+  ],
+  "dependencies": [
+    {
+      "abbreviation": "Fuj",
+      "sourceUrl": "https://ems.press/content/serial-article-files/41145",
+      "result": "Theorem 3.2",
+      "pdfPages": [
+        8
+      ],
+      "usedAt": "§2.2, p. 6",
+      "supplies": "Nadel vanishing with trivial klt multiplier ideal; ample difference",
+      "checking": "original statement and application compared; proof not checked"
+    },
+    {
+      "abbreviation": "Dem",
+      "sourceUrl": "https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/analmeth_book.pdf",
+      "result": "Theorem 5.1",
+      "pdfPages": [
+        33
+      ],
+      "usedAt": "Lemma 2.1, p. 5; Lemma 2.3; Proposition 3.3",
+      "supplies": "complete Kähler L2 solvability with inverse-curvature integral",
+      "checking": "Original statement and hypotheses compared to Lemma 2.1: complete Kähler metric, smooth Hermitian line bundle, positive curvature operator on (n,1)-forms, closed square-integrable datum and finite inverse-curvature integral. Local background-metric cancellation and singular limits belong to the target paper.",
+      "previousChecking": "target restatement and application read; original unavailable",
+      "sha256": "6f4682f322d6ae0c0ce3feae4964792c473a3d9051fe01288ef9017ca341d009",
+      "retrievedOn": "2026-10-08",
+      "version": "author PDF, July 2011"
+    },
+    {
+      "abbreviation": "Reg",
+      "sourceUrl": "https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/regularization.pdf",
+      "result": "Main Theorem 1.1",
+      "pdfPages": [
+        2
+      ],
+      "usedAt": "Lemma 3.1, pp. 11–12",
+      "supplies": "attenuation of Lelong numbers, smooth approximants and small curvature loss",
+      "checking": "Original Main Theorem 1.1 compared to Lemma 3.1: decreasing potentials, smoothness outside E_c, curvature loss min(lambda_k,c)u+epsilon_k omega, lambda_k continuous decreasing to Lelong numbers. Empty E_c and Dini give uniform small loss; Skoda original remains unchecked.",
+      "previousChecking": "target proof read; original comparison pending",
+      "sha256": "3dbc4cb1d915168cfc00d23da74acf1a53fdc1c0ed4a2d7ede85e2b6d159dc90",
+      "retrievedOn": "2026-10-08",
+      "version": "author-hosted 42-page PDF, retrieved 2026-10-08"
+    },
+    {
+      "abbreviation": "LP",
+      "sourceUrl": "https://arxiv.org/pdf/1809.02500v4",
+      "result": "Corollary D",
+      "pdfPages": [
+        4
+      ],
+      "usedAt": "Theorems 4.2 / Corollary 4.1, p. 19",
+      "supplies": "nonvanishing with nonzero Euler characteristic, N=0 and t=0",
+      "checking": "v4 original statement and application compared; proof excluded"
+    },
+    {
+      "abbreviation": "GM",
+      "sourceUrl": "https://www.numdam.org/item/10.24033/asens.2325.pdf",
+      "result": "Corollary 5.3",
+      "pdfPages": [
+        23
+      ],
+      "usedAt": "Theorems 4.3 / Corollary 4.1, p. 19",
+      "supplies": "zero-Lelong semipositive metric plus nonnegative Iitaka dimension gives fourfold semiampleness",
+      "checking": "published p. 499 (PDF page 23) statement and application compared; proof excluded"
+    }
+  ],
+  "unresolved": [
+    "Original Skoda, Guedj–Zeriahi compactness, DPS envelope, and Castelnuovo–Mumford regularity statements not separately checked.",
+    "All singular limits, operator domains and uniform constants are not independently verified.",
+    "Complete proofs of external inputs and catalog relations other than the recorded FN use are uninvestigated."
+  ],
+  "visualCheck": {
+    "sourcePdfPages": [
+      2
+    ],
+    "diagramSvgs": 6,
+    "tikzCompile": "passed without overfull boxes or missing glyphs",
+    "svgRasterInspection": "all six inspected as three bilingual pairs",
+    "sitePage": "not integrated or inspected"
+  },
+  "outgoingConnections": [
+    {
+      "sourceResults": "Theorems 1.1–1.2",
+      "targetUrl": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Fourfold-nonvanishing-by-minimal-metrics-and-moving-jets-September-27-2026/paper.pdf",
+      "targetResults": "Theorems 4.1–4.2; Proposition 5.1 proof, (5.9)–(5.10), pp. 18–19",
+      "role": "positive rational multiples of nef klt adjoints provide endpoint metrics; ordinary injectivity yields whole reduced non-klt restriction surjectivity",
+      "checking": "endpoint formulas, floor formula and application read; whole-floor nonzero-section construction additional"
+    }
+  ],
+  "schnellStyleRevision": {
+    "date": "2026-10-08",
+    "recordedAt": "2026-10-08T15:21:07+09:00",
+    "referenceStyle": [
+      "SchnellArticle.astro",
+      "schnell.mjs",
+      "SCHNELL_STYLE_ALL_ARTICLES.md"
+    ],
+    "scope": "Bilingual structure and explanations; statement hypotheses and existing unverified limits retained. No recursive verification of external proofs.",
+    "recheckedTargetPassages": [
+      "§§2.1–2.4, pp. 5–10",
+      "§§3.1–3.5, pp. 11–18",
+      "§4, pp. 18–19"
+    ],
+    "retainedPriorChecks": "All other original-source checks are inherited from the initial draft, not newly verified in this style revision.",
+    "validation": "All 8 JA/EN articles: TeX math syntax and reference/image targets checked; all 26 SVGs rebuilt and visually inspected. Browser checks at 1280px and 375px: no MathJax errors or document overflow. 13 renderer tests, 29-page build and 757 internal links/assets passed. External-proof limits retained.",
+    "externalStatementChecksNew": [
+      "Dem Theorem 5.1, PDF/printed p. 33; numbering agrees",
+      "Reg Main Theorem 1.1, PDF/printed p. 2; numbering agrees"
+    ],
+    "validatedAt": "2026-10-08T15:32:21+09:00",
+    "publication": {
+      "completedAt": "2026-10-08T15:38:41+09:00",
+      "contentCommit": "8db520d2089a051241fd38f4713ac045a0468f75",
+      "deployedCommit": "74f736b59e3cd5d813cc9023f1ca8a950601e1a3",
+      "actions": "https://github.com/masataka123/OpenAI-Math-Digest/actions/runs/37738445647",
+      "result": "success",
+      "urls": [
+        "https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/minimal-metrics-injectivity/",
+        "https://masataka123.github.io/OpenAI-Math-Digest/en/papers/minimal-metrics-injectivity/"
+      ],
+      "integrationValidation": {
+        "tests": 13,
+        "pages": 37,
+        "internalReferences": 1011,
+        "publishedHtmlMatchesLocal": true
+      },
+      "recordLocation": "Shared draft; appended after deployment."
+    }
+  },
+  "resolvedInRevision": [
+    "Original Demailly Theorem 5.1 and regularization Main Theorem 1.1 not compared: remote PDF retrieval failed."
+  ]
+}

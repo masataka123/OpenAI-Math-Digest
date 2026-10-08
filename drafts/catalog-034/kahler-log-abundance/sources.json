@@ -1,0 +1,382 @@
+{
+  "paperId": "kahler-log-abundance",
+  "catalog": "034",
+  "catalogPosition": 1,
+  "title": "Log abundance for compact Kähler spaces under logarithmic Iitaka subadditivity",
+  "authors": [
+    "OpenAI"
+  ],
+  "version": "2026-10-04",
+  "sourceCommit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "sourceUrl": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-4-2026/main.pdf",
+  "sha256": "eebdac4f1582b2648a59ae6caf74955f674c0300774a9bba7c8597827d1efa67",
+  "checkedOn": "2026-10-08",
+  "pdfPages": 148,
+  "statements": [
+    {
+      "result": "Assumption 1.1",
+      "pages": [
+        3
+      ],
+      "hypotheses": "Smooth connected complex projective varieties; surjection with connected fibres; reduced effective SNC boundaries, including zero; Supp(f*DY) contained in Supp(DX)",
+      "conclusion": "Logarithmic Iitaka subadditivity for a very general smooth fibre, with the stated minus-infinity convention"
+    },
+    {
+      "result": "Theorem 1.2",
+      "pages": [
+        3
+      ],
+      "hypotheses": "Assumption 1.1; normal irreducible compact Kahler analytic space, effective rational lc boundary, analytically nef Q-Cartier adjoint",
+      "conclusion": "An actual positive Cartier multiple is globally generated in every finite dimension"
+    },
+    {
+      "result": "Definition 2.1 / Theorem 2.13",
+      "pages": [
+        6,
+        13
+      ],
+      "hypotheses": "Assumption 1.1; smooth compact Kahler n-fold, rational SNC boundary, pseudo-effective adjoint",
+      "conclusion": "On a smooth modification, actual rational-line decomposition into semiample part and rational analytic divisorial negative part"
+    },
+    {
+      "result": "Theorem 4.1",
+      "pages": [
+        71
+      ],
+      "hypotheses": "Lower-dimensional G; globally Q-factorial compact Kahler dlt pair, rational effective boundary, nef adjoint, Definition 3.1 resolution property",
+      "conclusion": "Generation of a Cartier multiple on the entire reduced floor"
+    },
+    {
+      "result": "Proposition 5.1",
+      "pages": [
+        90
+      ],
+      "hypotheses": "Assumption 1.1 and lower G; smooth connected compact Kahler n-fold, rational SNC boundary, pseudo-effective adjoint; reduced-exceptional modified boundary; proper connected-fibre map to smooth compact Kahler base of dimension strictly between 0 and n, projective or algebraic dimension zero; very general log fibre has kappa zero",
+      "conclusion": "G_n for the original pair"
+    },
+    {
+      "result": "Theorem 6.1",
+      "pages": [
+        107
+      ],
+      "hypotheses": "Smooth connected simple compact Kahler manifold of algebraic dimension zero",
+      "conclusion": "Some canonical tensor power has a nonzero meromorphic section; independent of Assumption 1.1, not holomorphic nonvanishing"
+    },
+    {
+      "result": "Theorem 7.1",
+      "pages": [
+        125
+      ],
+      "hypotheses": "Normal irreducible globally Q-factorial simple compact Kahler dlt pair (X,D), a(X)=0, reduced D and Definition 3.1 resolution property; nef actual rational adjoint L with signed boundary-supported representative; pullback of L-cD pseudo-effective on a projective resolution with smooth compact Kahler source for real c>0; L restricted to entire reduced D semiample",
+      "conclusion": "Some positive multiple of L is the trivial holomorphic line"
+    }
+  ],
+  "proofPassages": [
+    {
+      "passage": "Section 2",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "scope": "Induction, exceptional translation, norm descent, projective input and reduction to main theorem read"
+    },
+    {
+      "passage": "Selected Section 3 passages",
+      "pages": [
+        14,
+        15,
+        16,
+        23,
+        24,
+        27,
+        29,
+        30,
+        31,
+        32
+      ],
+      "scope": "Restricted model statement, contraction of known negative part, boundary induction and chosen-scaling termination; full Section 3.8 geography not audited"
+    },
+    {
+      "passage": "Theorem 4.1 and final tuple argument",
+      "pages": [
+        70,
+        71,
+        88,
+        89
+      ],
+      "scope": "Whole-boundary statement and invariant tuples/gluing conclusion read; full Sections 4.2–4.4 not read"
+    },
+    {
+      "passage": "Section 5",
+      "pages": [
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "scope": "Rank-one reduction, prepared Hodge line, base pseudo-effectivity, conditional generalized programs, full negative-part lifting and final section extension read"
+    },
+    {
+      "passage": "Selected Section 6 passages",
+      "pages": [
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        116,
+        117,
+        118,
+        119,
+        120,
+        123,
+        124,
+        125
+      ],
+      "scope": "Slope and pole bound, two diagonal constructions, high-rank consequence, determinant statement and final cancellation read; direct-image and local determinant calculations on pp.113–115 and 121–122 not fully read"
+    },
+    {
+      "passage": "Section 7 and final Proposition 2.12",
+      "pages": [
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145
+      ],
+      "scope": "Signed construction, residual-pole local cohomology, symbol-kernel argument, adjugate lifting, Douady deformation and removal of added boundary read; no independent certification of filtered direct-image assertions"
+    },
+    {
+      "passage": "Theorem 7.1",
+      "pages": [
+        125
+      ],
+      "scope": "Rendered PDF page visually compared against extraction"
+    }
+  ],
+  "dependencies": [
+    {
+      "source": "LA",
+      "sourceUrl": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf",
+      "result": "Proposition 2.5; Theorem 9.6; Section 10; Lemma 6.1",
+      "pages": [
+        9,
+        69,
+        72,
+        30,
+        31
+      ],
+      "usedAt": "Proposition 2.10, p.12",
+      "supplies": "Projective good models through a proof using Assumption 1.1 only on a resolved Albanese fibration with both boundaries zero; conditionality retained",
+      "verification": "Original statement and manuscript application compared; input proof outside scope"
+    },
+    {
+      "source": "OILS",
+      "sourceUrl": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf",
+      "result": "Lemma 2.6; Proposition 2.7; Theorem 3.1; Lemma 3.3; Lemma 5.2",
+      "pages": [
+        9,
+        10,
+        17,
+        18,
+        32
+      ],
+      "usedAt": "Section 5.1; Lemma 5.2; Lemma 5.7",
+      "supplies": "Relative Iitaka, rank-one Hodge line as an actual rational line, period positivity, weak effectivity, stable-family comparison",
+      "verification": "Original statement and manuscript application compared; input proof outside scope"
+    },
+    {
+      "source": "CGM4",
+      "sourceUrl": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026/paper.pdf",
+      "result": "Lemmas 7.16–7.17",
+      "pages": [
+        58,
+        59,
+        60
+      ],
+      "usedAt": "Section 3 strata adjunction and strict comparison",
+      "supplies": "Dimension-free lemmas, not the fourfold main theorem",
+      "verification": "Original statement and manuscript application compared; input proof outside scope"
+    },
+    {
+      "source": "ANV4",
+      "sourceUrl": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Abundance-after-nonvanishing-for-compact-Kahler-fourfolds-September-27-2026/paper.pdf",
+      "result": "Lemma 10.1; Proposition 10.4; Proposition 11.1; Lemma 11.2; Lemmas 12.1–12.2",
+      "pages": [
+        66,
+        71,
+        75,
+        80,
+        82,
+        83,
+        84
+      ],
+      "usedAt": "Section 7",
+      "supplies": "Root neighborhoods, split residue, pure direct-image comparison and derivation/adjugate method; extension to residual poles is proved in the present manuscript",
+      "verification": "Statements and uses compared; surrounding auxiliary hypotheses and external proofs not fully audited"
+    },
+    {
+      "source": "HX",
+      "sourceUrl": "https://arxiv.org/pdf/2607.24986v1",
+      "result": "Theorem 1.3",
+      "pages": [
+        2
+      ],
+      "usedAt": "Section 3, p.16",
+      "supplies": "Analytic cone theorem and ray length bound; restricted global model theory proved internally",
+      "verification": "Original statement and manuscript application compared; input proof outside scope"
+    },
+    {
+      "source": "TX",
+      "sourceUrl": "https://arxiv.org/pdf/2301.09186v3",
+      "result": "Theorems A (=4.2), B (=5.4), D (=5.2)",
+      "pages": [
+        2
+      ],
+      "usedAt": "Proposition 5.5 proof, p.97",
+      "supplies": "Relative smooth minimal-model induction from an NQC weak Zariski decomposition, extension to generalized lc pairs, chosen terminating ample-scaling MMP",
+      "verification": "Original statement and manuscript application compared; input proof outside scope"
+    },
+    {
+      "source": "Xie",
+      "sourceUrl": "https://arxiv.org/pdf/2211.10800v1",
+      "result": "Theorem 1.5",
+      "pages": [
+        2,
+        3
+      ],
+      "usedAt": "Proposition 5.5 proof, p.97",
+      "supplies": "Actual line-bundle descent along negative extremal-ray contractions",
+      "verification": "Original statement and manuscript application compared; input proof outside scope"
+    },
+    {
+      "source": "Ou",
+      "sourceUrl": "https://arxiv.org/pdf/2501.18088v1",
+      "result": "Theorems 1.1 and 1.4",
+      "pages": [
+        1,
+        3
+      ],
+      "usedAt": "Lemma 6.2 and p.144",
+      "supplies": "Canonical pseudo-effectivity and foliation criterion",
+      "verification": "Theorems compared; external slope Lemma 4.4 / Proposition 4.5 not separately compared"
+    },
+    {
+      "source": "FM",
+      "sourceUrl": "https://www.math.kyoto-u.ac.jp/~fujino/fm_injectivity_Transaction_AMS_v8.pdf",
+      "result": "Theorem A, author version dated 2021-07-15",
+      "pages": [
+        3
+      ],
+      "usedAt": "Proposition 5.9, p.105",
+      "supplies": "Injectivity with positive curvature domination and the multiplier ideal, used to extend boundary sections",
+      "verification": "Original statement and manuscript application compared; input proof outside scope"
+    },
+    {
+      "source": "Sai",
+      "sourceUrl": "https://arxiv.org/pdf/2204.09026v5",
+      "result": "Theorem 1",
+      "pages": [
+        1
+      ],
+      "usedAt": "Proposition 7.5, p.135",
+      "supplies": "Constant-source proper Kahler direct image on smooth closed strata",
+      "verification": "Statement compared; independent mixed/localized strictness and vanishing bridge left open"
+    },
+    {
+      "source": "Cam",
+      "sourceUrl": "https://arxiv.org/pdf/2605.19713v2",
+      "result": "Lemma 17 and Corollary 18",
+      "pages": [
+        10
+      ],
+      "usedAt": "Theorem 2.13, p.13",
+      "supplies": "Generically finite evaluation of maximal covering family when algebraic dimension is zero",
+      "verification": "Original statement and manuscript application compared; input proof outside scope"
+    }
+  ],
+  "catalogConnections": [
+    {
+      "source": "LA",
+      "direction": "incoming",
+      "relation": "Direct projective input under the explicit subadditivity assumption; also signed-construction precedent",
+      "verification": "Result-level use compared; no unconditional replacement of Theorem 1.2"
+    },
+    {
+      "source": "CGM4",
+      "direction": "incoming",
+      "relation": "Direct dimension-free strata/comparison lemmas",
+      "verification": "Statements compared; not dependence on fourfold main theorem"
+    },
+    {
+      "source": "ANV4",
+      "direction": "incoming",
+      "relation": "Direct auxiliary inputs and adaptation of lifting method to residual poles",
+      "verification": "Statements compared; not dependence on fourfold main theorem"
+    },
+    {
+      "source": "OILS",
+      "direction": "incoming",
+      "relation": "Direct rank-one Hodge and period input outside the current 14-paper inventory",
+      "verification": "Statements and uses compared"
+    }
+  ],
+  "unresolved": [
+    "Full restricted-model induction and finite geography in Section 3.8.",
+    "Complete residue-comparison and finite-image proofs in Sections 4.2–4.4.",
+    "Full direct-image estimate in Section 6.3 and local determinant calculations in Lemma 6.10.",
+    "Independent audit of residual-pole filtered direct images, strictness and the Sabbah–Schnell vanishing bridge in Section 7.3.",
+    "Original hypotheses of Boucksom negative-part theory, mixed Hodge index, Douady/Artin/Fujiki results, and all ancillary analytic MMP results not exhaustively compared.",
+    "External proofs are outside scope; other catalog edges remain uninvestigated. No claim to verification of all 148 pages."
+  ],
+  "styleRevision": {
+    "date": "2026-10-08",
+    "sourcePassagesRecompared": [
+      "Assumption 1.1 / Theorem 1.2 p.3",
+      "Propositions 2.10–2.12 / Theorem 2.13 pp.12–13",
+      "Theorem 4.1 and Lemma 4.2 p.71",
+      "Proposition 5.1 p.90",
+      "Theorem 6.1 / Lemma 6.2 p.107",
+      "Theorem 7.1 p.125",
+      "Proof of Proposition 2.12 pp.144–145"
+    ],
+    "changes": "Separate assumption and seven source-order result cards; five proof sections with introductions, diagrams, numbered explanations and source lines; added whole-boundary diagram and explicit torsion/big-nef distinction.",
+    "externalScopeExpanded": false
+  }
+}

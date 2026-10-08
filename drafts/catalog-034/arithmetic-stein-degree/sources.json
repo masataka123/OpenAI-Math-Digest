@@ -1,0 +1,172 @@
+{
+  "paperId": "arithmetic-stein-degree",
+  "catalog": "034",
+  "catalogPosition": 12,
+  "title": "Arithmetic Stein-degree bounds for log Calabi–Yau pairs",
+  "authors": [
+    "OpenAI"
+  ],
+  "version": "2026-09-25",
+  "sourceCommit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "sourceUrl": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Arithmetic-Stein-degree-bounds-for-log-Calabi-Yau-pairs-September-25-2026/paper.pdf",
+  "sha256": "41101b5f371f3fde9ff08c3bcec93af68dc06ecb2fb74bf01a58b50f28a024e2",
+  "checkedOn": "2026-10-08",
+  "pdfPages": 15,
+  "statements": [
+    {
+      "result": "Theorem 1.1",
+      "pages": [
+        1
+      ],
+      "hypotheses": "d>=1, t>0; char k=0; normal integral projective lc Q-pair, B effective, H0(OX)=k, KX+B~Q0; coeff_S B>=t",
+      "conclusion": "c(S/k)=[k_S:k]<=N(d,t), hence Stein degree also bounded"
+    },
+    {
+      "result": "Proposition 3.5",
+      "pages": [
+        6,
+        7
+      ],
+      "hypotheses": "normal geometrically integral projective epsilon-lc Fano Q/k; effective lc (Q,Lambda); n(KQ+Lambda)~0",
+      "conclusion": "a(v,Q,Lambda)<1 implies c(v/k)<=A(q,epsilon,n)"
+    }
+  ],
+  "proofPassages": [
+    {
+      "passage": "Lemmas 2.1–2.2, Sections 3–5",
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "scope": "proof text read; key reductions traced, not an independent validation of every assertion"
+    },
+    {
+      "passage": "Proposition 3.5; Lemmas 4.3–4.5; Sections 5.5–5.7",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        13,
+        14
+      ],
+      "scope": "core descent, adjunction and incidence arguments read; formula (5.11)–(5.13) visually compared on PDF p.14"
+    }
+  ],
+  "dependencies": [
+    {
+      "source": "Birkar, Anti-pluricanonical systems on Fano varieties",
+      "sourceUrl": "https://arxiv.org/pdf/1603.05765v4",
+      "result": "Theorem 1.7",
+      "pages": [
+        4
+      ],
+      "usedAt": "Lemma 3.1, p.4",
+      "supplies": "bounded complements for fixed rational coefficient b",
+      "verification": "external statement and manuscript application compared; proof not checked"
+    },
+    {
+      "source": "Birkar, Singularities of linear systems and boundedness of Fano varieties",
+      "sourceUrl": "https://arxiv.org/pdf/1609.05543v2",
+      "result": "Theorem 1.1",
+      "pages": [
+        2
+      ],
+      "usedAt": "Proposition 3.5, pp.6–7",
+      "supplies": "geometric boundedness of epsilon-lc Fano varieties",
+      "verification": "external statement and application compared; proof not checked"
+    },
+    {
+      "source": "Lyu–Murayama",
+      "sourceUrl": "https://arxiv.org/pdf/2209.08732v4",
+      "result": "Corollaries 21.9–21.10; Theorem 22.1",
+      "pages": [
+        86,
+        87
+      ],
+      "usedAt": "Lemmas 4.1–4.3; Sections 5.3–5.4",
+      "supplies": "klt MMP termination and extraction",
+      "verification": "statements compared, discrepancy convention reconciled; Theorem 11.1 not separately read"
+    },
+    {
+      "source": "Kollar, Canonical models / Singularities of the MMP",
+      "sourceUrl": "https://web.math.princeton.edu/~kollar/book/chap2.pdf#page=61",
+      "result": "Definition 122, (122.7)–(122.10); Proposition 123; Lemma 125 (June 1, 2010 draft)",
+      "pages": [
+        61,
+        62,
+        63,
+        64
+      ],
+      "usedAt": "Lemma 4.4, pp.9–10",
+      "supplies": "different and pluriresidue",
+      "verification": "Revision: specified statements and application compared; external proofs not independently verified; published Kol13 numbering not checked"
+    },
+    {
+      "source": "Bierstone–Milman–Temkin",
+      "sourceUrl": "https://doi.org/10.4310/AJM.2011.v15.n2.a5",
+      "result": "Theorems 1.3, 6.1 and Addendum",
+      "usedAt": "Lemma 3.4, pp.5–6",
+      "supplies": "resolution over original field",
+      "verification": "manuscript citation located; external theorem text not read"
+    },
+    {
+      "source": "Kollar–Mori",
+      "sourceUrl": "https://doi.org/10.1017/CBO9780511662560",
+      "result": "Proposition 4.18",
+      "usedAt": "Lemma 4.5, p.10",
+      "supplies": "klt surface quotient singularity",
+      "verification": "manuscript citation located; external statement not read"
+    }
+  ],
+  "catalogConnections": [
+    {
+      "direction": "outgoing",
+      "targetPaperId": "uniform-log-iitaka",
+      "targetUrl": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-log-Iitaka-fibrations-and-bounded-moduli-denominators-October-4-2026/uniform-log-iitaka.pdf",
+      "sourceResult": "Theorem 1.1",
+      "targetPassage": "Theorem 2.3 p.5; Lemma 4.6 pp.10–11",
+      "relation": "direct input",
+      "supplies": "bound on the Stein curve degree after coefficient-one residue, threshold=1 over C(C)",
+      "verification": "source statement and target proof application compared"
+    }
+  ],
+  "unresolved": [
+    "External resolution and quotient-singularity statements not separately compared; full external adjunction proofs not independently checked.",
+    "No independent verification of the bounded-family construction or every MMP step.",
+    "Other outgoing edges, including index norm-descent applications, not investigated.",
+    "Internal source references frequently say Theorem for a Lemma/Proposition; article uses actual headings."
+  ],
+  "revisionReviews": [
+    {
+      "date": "2026-10-08",
+      "round": "Schnell-style all articles",
+      "manuscriptPassages": [
+        "Theorem 1.1 p.1",
+        "Proposition 3.5 pp.6–7",
+        "Lemmas 4.1–4.5 pp.7–10",
+        "Sections 5.1–5.7 pp.11–14"
+      ],
+      "scope": "MMP branches, b/n dependence, bigness, same-index adjunction, constant-field tower and incidence argument rechecked; not independent proof verification",
+      "externalSource": {
+        "title": "Kollar, Canonical models, June 1, 2010 draft",
+        "url": "https://web.math.princeton.edu/~kollar/book/chap2.pdf",
+        "sha256": "1219c79982d0a5d38d7a81fbfc81933e1880bd5014ae329adaa648d5e8ed13e8",
+        "passages": "Definition 122, (122.7)–(122.10), Proposition 123, Lemma 125; PDF/printed pp.61–64",
+        "checked": "Statements and use in Lemma 4.4 compared. (122.10) has extra Q-Cartier assumptions; the manuscript uses (122.7) at a common multiple to add only beta P. Same-index descent remains the manuscript additional argument."
+      }
+    }
+  ]
+}

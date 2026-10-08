@@ -1,0 +1,44 @@
+# relative-denominators
+- 担当: B
+- 開始: 2026-10-08 13:43:38 JST
+- 終了: 2026-10-08 13:50:33 JST
+- 状態: 本部確認待ち（一次概説完成、60分以内）
+- 成果物: article.ja.md、article.en.md、sources.json、catalog-changes.md、checks.json、diagrams/（3種類×日英のTikZ・自己完結TeX・SVG・PNGと生成用ファイル）
+- 確認済み: 固定版SHA-256一致。§§2–7（pp.4–21）の証明読解。p.15の巡回指標とProposition6.1をPDF画像で照合。JL/FG/CT/HMX/BZ/Birの指定定理記述と用途を比較。四次元Iitaka原稿§3の3入力の再掲を照合。
+- 確認済み: 図6枚のTeX/SVG生成、overfull・missing glyphなし。6枚を目視確認。SVG XMLと30件の引用URLを検査。日英9表示数式の構造一致（文章部分と句読点を除く）、本文数式250個をTeX処理。画像・参照定義の解決を確認。
+- 未確認・申し送り:
+  - 深さ定理、外部pluriresidue gluing、半代数的自明化、Kummer/Riemann存在の全仮定の独立照合は未実施。
+  - 外部入力の全証明と、利用先原稿の全適用は未検証。
+  - p0とp、正確な表示の選択、b-Cartier性とbasepoint-freenessを区別したまま統合する。
+  - サイト内数式・図中リンク操作・スマートフォン表示・導線は本部で確認。共通コード・公開ページは変更せず、commit/push/公開は未実施。
+
+## 閲覧用プレビューの追加（2026-10-08 14:25 JST）
+
+ユーザーの「記事を見たい」という追加依頼により、初稿完了後にpreview.ja.html / preview.en.htmlを生成。数式はサイトと同じMathJax、証明図はリンク付きSVGをインライン表示し、上部から担当4本と言語を切り替えられる。生成器は担当フォルダーarithmetic-stein-degree/build-preview.mjs。1本目の日本語版をアプリ内ブラウザで開き、本文・数式の表示を確認した。公開サイトへの組込みや公開操作は行っていない。
+
+## 公開完了（2026-10-08 14:37 JST）
+
+ユーザーの追加依頼「とりあえずアップロードしてください」により公開。commit `2d729cd31e2c57b428fa3d08d0fce1f53475c76a` をmainへpushし、GitHub Actions run `37733087193` のbuild/deploy成功を確認。公開URL: https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/relative-denominators/ （英語は/ja/を/en/へ）。日英8ページのHTTP取得、図の存在、カタログからの導線を確認。8テスト・21ページビルド・521内部参照・1280px/375pxでの描画確認が成功。数学的な未確認点は記事内に維持。
+
+公開用の共通コードは隔離worktree `/Users/iwai/.codex/worktrees/catalog-034-worker-b-publish/OpenAI-Math-Digest` で変更した。元の共有checkoutのmainは公開前の位置に保ち、本部・他担当の作業は変更していない。本部で同期する際は、この4フォルダー内の未追跡ファイルと公開コミットで追跡された同名ファイルが競合するため、草稿・プレビューを退避して比較してから取り込む。追加プレビューHTML/PNG等は元のフォルダーに保持されている。
+
+## Schnell書式への統一編集
+
+- 開始：2026-10-08T15:12:58+09:00
+- 正確な引戻し・moduli分母・完全切断空間・torsionの段階を整理。原典pp.2,6–7,10,14–17,20–21を再照合。
+- 編集・局所検査：2026-10-08T15:15:42+09:00。日英本文を統一構成へ更新。3証明節を5/3/4段階に整理し、出典行を追加。systems図を本文・原典の順に変更。本文数式262個をTeX検査、表示式9組一致。図6枚生成済み、systems日英の目視確認済み。残る目視・公開画面は統合時に検査。従来の未確認点を保持。
+
+## 統一編集・公開前検査完了（2026-10-08T15:34:28+09:00）
+
+- 本文数式262箇所のTeX処理、表示式9組の日英一致を確認。日英SVG/TeXは6図。変更図を再表示して分岐・引用・余白を確認。
+- 最新公開 `0d3ae7a`（本部の共通表示 `5190992` と窓口Aを含む）へ担当分だけを統合。共通コード・他担当の記事は変更していない。
+- 13テスト、37ページのビルド、999件の内部リンク・画像・アンカー検査が成功。担当8ページの1280px/375px表示でMathJaxエラー0、ページ全体の横はみ出しなし、右上の言語切替を確認。代表画面と変更図は目視。検査記録は `revision-checks.json`。
+- 既存の未確認点を保持。公開反映結果は下に追記する。初稿時間とは別の統一編集として記録。
+
+## 統一編集版の公開完了（2026-10-08T15:36:40+09:00）
+
+- commit `d32a6f0fadf78190b0f63bfc84ebe853b5b969df` を通常のpushでmainへ反映。GitHub Actions run `37738373432` のbuild/deploy成功を確認。
+- 日本語: https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/relative-denominators/
+- English: https://masataka123.github.io/OpenAI-Math-Digest/en/papers/relative-denominators/
+- 公開8ページすべてHTTP 200。各ページの改訂後の定理カード数・図数・説明段階数と追加図を照合。公開Stein日本語版をブラウザで開き、数式エラー0と新図を再確認。元の未確認点は維持。
+- この配信結果の追記は共有作業場の引継ぎ記録。公開コミットには直前の検査結果が収録されている。

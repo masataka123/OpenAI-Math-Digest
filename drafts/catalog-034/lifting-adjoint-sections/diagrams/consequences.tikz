@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+\node[half] (all) at (-4.5,0) {\heading{01a}{全次元の条件付き命題}{Conditional assertion in all dimensions}\Tx{滑らかな擬有効 $K_W$ の非消滅を仮定する。}{Assume nonvanishing for smooth pseudo-effective $K_W$.}};
+\node[half] (four) at (4.5,0) {\heading{01b}{四次元の帰結}{Fourfold consequence}$\dim X\le4,\quad D\ \text{nef}$\\\Tx{[NV] から最初の切断を得る。}{Obtain the first section from [NV].}};
+\node[half] (allout) at (-4.5,-6) {\heading{02a}{次元帰納法で豊富性へ}{Induct on dimension for abundance}\textbf{Theorem 1.3}\\[3pt]\Tx{lc 非消滅＋通常のモデル＋Prop. 6.3}{lc nonvanishing + ordinary models + Prop. 6.3}};
+\node[half] (fourout) at (4.5,-6) {\heading{02b}{非消滅後の豊富性を適用する}{Apply abundance after nonvanishing}\textbf{Corollary 1.4}\\[3pt]$\kappa(D)\ge0\ \Longrightarrow\ D\ \text{semiample}$};
+\node[result] (base) at (0,-12) {\heading{03}{元の Cartier 倍の生成性を体の間で移す}{Transfer generation of the original Cartier multiple}$H^0(X_0,L_0)\otimes k\simeq H^0(X_k,L_k),\qquad\operatorname{coker}(\mathrm{ev})=0.$};
+\draw[edge] ($(all.south)+(-3.35,0)$)--($(allout.north)+(-3.35,0)$);
+\node[branchreason] at (-4.5,-3) {\Tx{[Hash] の実線形有効性を有理化する。}{Rationalize the real-linear effectivity from [Hash].}\\\CiteSource{Hash}{[Hash] Thm. 1.4}\\\CiteSource{NV}{[NV] Lemma 8.1, p. 35}};
+\draw[edge] ($(four.south)+(-3.35,0)$)--($(fourout.north)+(-3.35,0)$);
+\node[branchreason] at (4.5,-3) {\Tx{指定 Cartier 倍に非零切断を供給。}{Supply a section in a specified Cartier multiple.}\\\CiteSource{NV}{[NV] Cor. 1.2, p. 2}\\\CiteSource{S}{Thm. 1.2, p. 2; Sec. 7, p. 29}};
+\draw[edge] ($(allout.south)+(-3.35,0)$)--(-7.85,-10.7)--(-6.9,-10.7)--($(base.north)+(-6.9,0)$);
+\draw[edge] ($(fourout.south)+(-3.35,0)$)--($(base.north)+(1.15,0)$);
+\node[branchreason] at (-4.5,-9) {\Tx{評価写像の余核を忠実平坦性で降ろす。}{Descend the evaluation cokernel by faithful flatness.}\\\CiteSource{S}{Lemma 7.1, pp. 28--29}};
+\node[branchreason] at (4.5,-9) {\Tx{補助モデルの降下は不要。}{No descent of auxiliary models is needed.}\\\CiteSource{S}{Cor. 7.2; proofs, p. 29}};
+\end{tikzpicture}

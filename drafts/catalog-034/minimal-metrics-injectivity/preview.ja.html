@@ -1,0 +1,227 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Minimal metrics and interior injectivity for nef adjoints · 原稿プレビュー</title><style>:root {
+  color-scheme: light;
+  --paper: #f4f1ea;
+  --ink: #18232d;
+  --muted: #52606b;
+  --accent: #984526;
+  --link: #17617d;
+  --card: #ffffff;
+  --line: #d5cdbf;
+  --soft-line: #c9c1b4;
+  font-family: Georgia, "Times New Roman", "Yu Mincho", "Hiragino Mincho ProN", serif;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); }
+main { width: min(920px, calc(100% - 32px)); margin: 0 auto; padding: 42px 0 56px; }
+a { color: var(--link); text-underline-offset: .18em; }
+
+.site-header { border-bottom: 2px solid var(--ink); margin-bottom: 28px; padding-bottom: 20px; }
+.landing-header { max-width: 790px; }
+h1 { font-size: clamp(2.25rem, 7vw, 4rem); line-height: 1.04; margin: 0 0 14px; letter-spacing: -.02em; }
+h2, h3 { line-height: 1.3; }
+p { line-height: 1.75; }
+.eyebrow, .topic-count {
+  color: var(--accent);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+  font-size: .78rem;
+  font-weight: 750;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.topic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+.topic-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: inherit;
+  display: block;
+  min-height: 250px;
+  padding: 24px;
+  text-decoration: none;
+  transition: border-color 120ms ease, transform 120ms ease, box-shadow 120ms ease;
+}
+.topic-card:hover, .topic-card:focus-visible {
+  border-color: var(--accent);
+  box-shadow: 0 8px 24px rgba(24, 35, 45, .08);
+  transform: translateY(-2px);
+}
+.topic-card h2 { font-size: 1.65rem; margin: 18px 0 2px; }
+.topic-card p { color: var(--muted); margin: 0 0 20px; }
+.topic-card .topic-english { font-style: italic; margin-bottom: 12px; }
+.topic-open { color: var(--link); font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-weight: 700; }
+.heading-subtitle { color: var(--muted); font-style: italic; margin: -6px 0 6px; }
+
+.notice-card {
+  background: rgba(255,255,255,.55);
+  border-top: 1px solid var(--line);
+  margin-top: 34px;
+  padding: 16px 2px 0;
+}
+
+.notice-card h2 {
+  margin: 0 0 4px;
+}
+
+.topic-nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 30px; }
+.topic-nav a {
+  border: 1px solid var(--soft-line);
+  border-radius: 999px;
+  color: #34434e;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+  font-size: .88rem;
+  padding: 7px 12px;
+  text-decoration: none;
+}
+.topic-nav a:hover, .topic-nav a:focus-visible, .topic-nav a[aria-current="page"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+
+.digest-list { max-width: 790px; }
+.digest { background: var(--card); border: 1px solid var(--line); border-radius: 6px; margin: 0 0 18px; padding: 20px 22px; }
+.dates { display: flex; flex-wrap: wrap; gap: 5px 18px; margin: 0 0 6px; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-size: .8rem; }
+.dates div { display: flex; gap: 6px; }
+.dates dt { color: var(--accent); font-weight: 700; letter-spacing: .04em; }
+.dates dd { color: var(--muted); font-variant-numeric: tabular-nums; margin: 0; }
+.digest h2 { font-size: 1.35rem; margin: 5px 0 7px; }
+.title-link { color: var(--ink); text-decoration: none; }
+.title-link:hover { color: var(--link); }
+.authors { color: var(--muted); font-style: italic; }
+.abstracts { max-width: 100%; overflow-wrap: anywhere; word-break: normal; }
+.abstract h3, .paper-header .abstract h2 { font-size: 1rem; margin: 1.25rem 0 .35rem; }
+.abstract p { margin: 0; }
+.abstract-en { line-height: 1.8; }
+.abstract-en p[lang="en"] { line-height: 1.8; overflow-wrap: anywhere; }
+.abstract-source { font-size: .86rem; margin-top: .65rem !important; }
+.abstract-source a { color: var(--muted); }
+.abstract-ja { margin-top: 1.75rem; }
+.links { display: flex; flex-wrap: wrap; gap: 16px; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-weight: 650; }
+.empty { background: var(--card); border: 1px dashed var(--soft-line); border-radius: 6px; color: var(--muted); padding: 22px; }
+
+.paper-page { max-width: 790px; }
+.paper-header { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: clamp(22px, 5vw, 38px); }
+.paper-header h1 { font-size: clamp(2rem, 6vw, 3.25rem); }
+.paper-summary { font-size: 1.08rem; }
+.paper-meta { border-top: 1px solid var(--line); display: grid; gap: 8px; margin: 24px 0 0; padding-top: 18px; }
+.paper-meta div { display: grid; grid-template-columns: minmax(120px, .35fr) 1fr; gap: 16px; }
+.paper-meta dt { color: var(--accent); font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-size: .85rem; font-weight: 700; }
+.paper-meta dd { margin: 0; }
+.paper-links { margin-top: 22px; }
+.paper-content { background: var(--card); border: 1px solid var(--line); border-radius: 8px; margin-top: 18px; padding: clamp(22px, 5vw, 40px); }
+.paper-content h2 { border-bottom: 1px solid var(--line); font-size: 1.55rem; margin: 2.2em 0 .8em; padding-bottom: .35em; }
+.paper-content h2:first-child { margin-top: 0; }
+.paper-content h3 { font-size: 1.2rem; margin-top: 1.7em; }
+.paper-content blockquote { border-left: 4px solid var(--accent); color: #35434e; margin: 1.5em 0; padding: .15em 0 .15em 1.2em; }
+.paper-content code { background: #eee9df; border-radius: 3px; padding: .1em .3em; }
+.paper-content mjx-container[display="true"],
+.paper-content .MathJax { max-width: 100%; overflow-x: auto; overflow-y: hidden; }
+
+.site-footer { border-top: 1px solid var(--line); color: var(--muted); font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-size: .82rem; margin-top: 42px; padding-top: 18px; }
+.site-footer p { line-height: 1.6; }
+
+@media (max-width: 560px) {
+  main { padding-top: 24px; }
+  .topic-card { min-height: 0; }
+  .digest { padding: 17px; }
+  .paper-meta div { grid-template-columns: 1fr; gap: 2px; }
+  .abstract-ja { margin-top: 1.4rem; }
+}
+
+ header{position:sticky;top:0;z-index:20;background:#f4f1eaf5;border-bottom:1px solid #d5cdbf;padding:14px max(16px,calc((100vw - 1060px)/2));display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:system-ui,sans-serif}header .brand{font:20px Georgia,serif}header nav{display:flex;gap:16px;flex-shrink:0}main{width:min(1060px,calc(100% - 36px));padding-top:26px}article{max-width:940px;margin:auto;font-size:17px;line-height:1.95}article h1{font-size:clamp(1.85rem,4vw,2.7rem);line-height:1.4;margin-top:36px}article h2{font-size:1.6rem;margin-top:56px;padding-top:22px;border-top:1px solid #d5cdbf}article h3{margin-top:35px;font-size:1.2rem}article p,article li{line-height:1.95}article a{overflow-wrap:anywhere}.draft-note{padding:12px 18px;border-left:3px solid #984526;background:#eeebe3;font:14px/1.8 system-ui,sans-serif}.paper-nav{display:flex;flex-wrap:wrap;gap:10px 22px;padding:22px 0;border-bottom:1px solid #d5cdbf;font:14px/1.6 system-ui,sans-serif}.paper-nav a[aria-current]{font-weight:700;color:#18232d}blockquote{border-left:3px solid #17617d;margin:25px 0;padding:0 18px;color:#52606b}figure{background:white;margin:26px 0;padding:16px;border:1px solid #d5cdbf;overflow-x:auto}figure img{display:block;min-width:680px;width:100%;height:auto}figcaption{font:12px/1.6 system-ui,sans-serif;color:#52606b;margin-top:10px}.math-block{padding:8px 0;overflow-x:auto;overflow-y:hidden}.table-wrap{overflow-x:auto;margin:24px 0}table{border-collapse:collapse;width:100%;min-width:740px;font:14px/1.85 system-ui,sans-serif}th,td{padding:14px;border:1px solid #d5cdbf;text-align:left;vertical-align:top}th{background:#eeebe3}code{font-size:.85em;overflow-wrap:anywhere}footer{border-top:1px solid #d5cdbf;padding:22px 0;margin-top:55px;font:12px/1.8 system-ui,sans-serif;color:#52606b}mjx-container[display=true]{max-width:100%;overflow-x:auto;overflow-y:hidden}article img{max-width:none}@media(max-width:540px){header .brand{font-size:16px}header nav{font-size:13px}article{font-size:16px}figure{margin-left:0;margin-right:0}article h2{font-size:1.35rem}}
+ </style><script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'},startup:{pageReady:()=>MathJax.startup.defaultPageReady().then(()=>document.documentElement.dataset.mathReady='true')}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script></head><body><header><span class="brand">OpenAI <em>Math Digest</em></span><nav><a href="preview.ja.html" lang="ja">日本語</a><a href="preview.en.html" lang="en">English</a></nav></header><main><div class="draft-note">窓口C · 公開前の原稿プレビュー。AI生成の概説です。重要な主張は原論文で確認してください。</div><nav class="paper-nav" aria-label="担当4記事"><a aria-current="page" href="../minimal-metrics-injectivity/preview.ja.html">05 · 極小計量と単射性</a><a  href="../fourfold-nonvanishing/preview.ja.html">06 · 四次元の非消滅</a><a  href="../uniform-slc-indices/preview.ja.html">02 · slc対の一様指数</a><a  href="../conditional-kahler-fourfolds/preview.ja.html">03 · Kähler四次元の条件付き極小モデル</a></nav><article><h1>Minimal metrics and interior injectivity for nef adjoints</h1>
+<blockquote>
+<p>AI生成の一次概説。以下の定理は原稿著者OpenAIの主張を紹介するもので、編集側による正しさの認定ではない。重要な主張・証明は原論文で確認されたい。</p>
+</blockquote>
+<p>カタログ034内の掲載順05（内部ID <code>minimal-metrics-injectivity</code>）。原稿は2026年9月27日版、全21ページ、参照commitは <code>adc7f1241b42e322a6451854ab7e4b4c146bf78a</code>。<a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Minimal-metrics-and-interior-injectivity-for-nef-adjoints-September-27-2026/paper.pdf">原典PDFの閲覧ページ</a>。</p>
+<p>本稿は二つの解析的入力を供給する。第一はnefなklt随伴束の極小特異計量のLelong数消滅であり、固定したample捻りを持つ極値切断の局所化から導く。第二は零Lelong数の端点計量を仮定する内部境界の通常の <span class="math-inline">\(H^1\)</span> 単射性であり、重み付き調和代表の評価を固定Hilbert空間と通常のコホモロジーへ戻して証明する。第二の証明は第一を用いない。</p>
+<h2>主要結果</h2>
+<h3>Theorem 1.1 — nef klt随伴の極小計量（pp. 1–2）</h3>
+<p><span class="math-inline">\((H,\Theta)\)</span> を正規・連結な複素射影klt対、<span class="math-inline">\(\Theta\geq0\)</span> を有理因子とし、<span class="math-inline">\(D_H=K_H+\Theta\)</span> はnefな <span class="math-inline">\(\mathbb Q\)</span>-Cartier因子とする。任意の射影的対数解消 <span class="math-inline">\(\pi:V\to H\)</span> に対し、実際の有理線束 <span class="math-inline">\(N=\pi^*D_H\)</span> 上に半正曲率を持つ極小特異計量が存在し、そのような計量はすべて各点でLelong数が0となる。<span class="math-inline">\(K_H\)</span> と <span class="math-inline">\(\Theta\)</span> を個別に <span class="math-inline">\(\mathbb Q\)</span>-Cartierと仮定しない。<a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Minimal-metrics-and-interior-injectivity-for-nef-adjoints-September-27-2026/paper.pdf">Theorem 1.1, pp. 1–2</a></p>
+<h3>Theorem 1.2 — 内部境界の単射性（p. 2）</h3>
+<p><span class="math-inline">\(V\)</span> は滑らかな複素射影多様体、<span class="math-inline">\(L\)</span> は整因子、<span class="math-inline">\(0\leq C_0\leq C_2\)</span> は合併した台がSNCとなる有効有理因子とする。<strong>双方の実際の有理線束</strong> <span class="math-inline">\(L-C_0,L-C_2\)</span> が、半正曲率かつ全点で零Lelong数の特異Hermite計量を持つと仮定する。有理数 <span class="math-inline">\(0&lt;\lambda&lt;1\)</span> に対し</p>
+<div class="math-block">\[
+C_1=(1-\lambda)C_0+\lambda C_2,\qquad L_i=L-\lfloor C_i\rfloor\quad(i=0,1)
+\]</div>
+<p>とおけば、自然な包含が誘導する写像</p>
+<div class="math-block">\[
+H^1(V,\mathcal O_V(K_V+L_1))\longrightarrow H^1(V,\mathcal O_V(K_V+L_0))
+\]</div>
+<p>は単射である。<a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Minimal-metrics-and-interior-injectivity-for-nef-adjoints-September-27-2026/paper.pdf">Theorem 1.2, p. 2</a></p>
+<h3>Corollary 2.4 — 乗数イデアル（pp. 10–11）</h3>
+<p>Theorem 1.1の仮定の下で極小重み <span class="math-inline">\(\varphi\)</span> に対し <span class="math-inline">\(\mathcal I(t\varphi)=\mathcal O_V\)</span> がすべての実数 <span class="math-inline">\(t&gt;0\)</span> で成り立つ。極小計量の選択にも、重みを正規化するCartier倍にも依存しない。<a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Minimal-metrics-and-interior-injectivity-for-nef-adjoints-September-27-2026/paper.pdf">Corollary 2.4, pp. 10–11</a></p>
+<h3>Corollary 4.1 — Euler標数が非零の四次元（p. 18）</h3>
+<p><span class="math-inline">\((X,\Delta)\)</span> は複素射影klt四次元対、<span class="math-inline">\(\Delta\geq0\)</span> は有理境界、<span class="math-inline">\(D=K_X+\Delta\)</span> はnefとする。<span class="math-inline">\(\chi(X,\mathcal O_X)\ne0\)</span> ならば <span class="math-inline">\(D\)</span> はsemiampleである。数値次元への制限はなく、Euler標数の仮定は最初の切断を得る段階に用いる。<a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Minimal-metrics-and-interior-injectivity-for-nef-adjoints-September-27-2026/paper.pdf">Corollary 4.1, pp. 18–19</a></p>
+<h2>Theorem 1.1の証明戦略</h2>
+<figure><a class="diagram-link" href="diagrams/metric.ja.svg" target="_blank"><img src="diagrams/metric.ja.svg" alt="固定捻りの極値切断からLelong数消滅へ"></a><figcaption>証明概略図 · クリックして拡大</figcaption></figure>
+<p>解消上では <span class="math-inline">\(N=K_V+B\)</span>、<span class="math-inline">\(B\)</span> の係数はすべて1未満、負の部分は <span class="math-inline">\(\pi\)</span>-例外的である。この負の部分を捨てることはできない。<span class="math-inline">\(b=[B]\)</span> とすると <span class="math-inline">\(e^{-b}\)</span> は可積分であり、固定捻り <span class="math-inline">\(A=\pi^*((n+1)H_0)\)</span> によってすべての許された <span class="math-inline">\(m\)</span> で <span class="math-inline">\(mN+A\)</span> を大域生成にする。ここで「許された」は <span class="math-inline">\(mD_H\)</span> がCartierであることを指す。原稿§2.2はNadel消滅とCastelnuovo–Mumford正則性を使う。</p>
+<p>正のLelong数を持つ点 <span class="math-inline">\(p\)</span> があるとして、</p>
+<div class="math-block">\[
+Q_m(s)=\int_V|s|^{2/m}e^{-a/m-b}=1
+\]</div>
+<p>という正規化の下で <span class="math-inline">\(p\)</span> での値を最大にする <span class="math-inline">\(s_m\)</span> を選ぶ。<span class="math-inline">\(\tau_m=m^{-1}\log|s_m|^2\)</span> の部分列極限と極小性 <span class="math-inline">\(\tau_\infty\leq\varphi+C\)</span> により、<span class="math-inline">\(g_m=\varphi+a/m-\tau_m\)</span> の固定劣位集合 <span class="math-inline">\(\{g_m&lt;-R\}\)</span> 上の随伴質量 <span class="math-inline">\(\varepsilon_m\)</span> は0へ行く（Claim 2.2、式(2.5)）。</p>
+<p>Lemma 2.3はこの小さな質量から、カットオフした切断の <span class="math-inline">\(\bar\partial\)</span> 誤差を <span class="math-inline">\(m\)</span> に依らない定数で解く。正のLelong数を使って重み <span class="math-inline">\(e^{-c\varphi-b}\)</span> を <span class="math-inline">\(p\)</span> で非可積分にしておくと、補正後の正則切断 <span class="math-inline">\(w_m\)</span> は <span class="math-inline">\(w_m(p)=s_m(p)\)</span> を満たす。負の例外成分をまたぐ延長は解消上の局所評価で済ませず、正規な基底 <span class="math-inline">\(H\)</span> 上のCartier束へ降ろし、余次元2のHartogs延長を施してから引き戻す（§2.4, pp. 9–10）。</p>
+<p>最後のHölder評価は <span class="math-inline">\(Q_m(w_m)^m\leq C'\varepsilon_m(1+I)^d\to0\)</span>。ここでは <span class="math-inline">\(I=\int_Ve^{\varphi-b}&lt;\infty\)</span>、<span class="math-inline">\(d\)</span> は固定である。従って <span class="math-inline">\(w_m\)</span> を <span class="math-inline">\(Q_m=1\)</span> に戻すと <span class="math-inline">\(p\)</span> での値が増し、極値性に矛盾する。Corollary 2.4はこの結論にSkoda可積分性を適用する帰結である。局所化補題の特異重みへの極限操作全体は本初稿で独立検証していない。</p>
+<h2>Theorem 1.2の証明戦略</h2>
+<figure><a class="diagram-link" href="diagrams/injectivity.ja.svg" target="_blank"><img src="diagrams/injectivity.ja.svg" alt="端点計量から通常のH1単射性へ"></a><figcaption>証明概略図 · クリックして拡大</figcaption></figure>
+<p>端点計量を正則化して曲率の損失を <span class="math-inline">\(\varepsilon_k\to0\)</span> に抑え、固定指数における指数重みの一様可積分性を残す（Lemma 3.1）。端点の重みにlog-sumを施す式(3.1)–(3.3)により、<span class="math-inline">\(E=\lfloor C_1\rfloor-\lfloor C_0\rfloor\geq0\)</span> の標準切断による <span class="math-inline">\(s:L_1\to L_0\)</span> を縮小写像にし、SNC台の補集合上で</p>
+<div class="math-block">\[
+\theta_{1,k}+\varepsilon_k\omega_c\geq(1-\lambda)(\theta_{0,k}+\varepsilon_k\omega_c)\geq0
+\]</div>
+<p>を得る。<span class="math-inline">\(\lambda&lt;1\)</span> がBochner比較の定数 <span class="math-inline">\(C_\lambda=(1-\lambda)^{-1}\)</span> を有限にするため、端点 <span class="math-inline">\(\lambda=1\)</span> へ拡張した主張ではない。</p>
+<p>核心はProposition 3.3である。固定した有限被覆上の局所 <span class="math-inline">\(L^2\)</span> 原始形の差を正則Čech cocycleにし、SNC因子を越えて延長する。通常の <span class="math-inline">\(H^1(V,K_V\otimes F)\)</span> への連続な類写像 <span class="math-inline">\(\kappa_k\)</span> は完全形式の閉包を殺す。さらにその核に対して、一つの固定Fréchet開写像による分解評価から、<span class="math-inline">\(k\)</span> に依らないノルムで大域原始形を取れる。全Fréchet seminormで同時に有界な持ち上げを主張しているわけではない。</p>
+<p>核の類の調和代表 <span class="math-inline">\(u_k\)</span> にBochner比較を適用すると、<span class="math-inline">\(\|\bar\partial^*_{0,k}(su_k)\|=O(\sqrt{\varepsilon_k})\)</span>。Proposition 3.3の一様有界な <span class="math-inline">\(v_k\)</span>、<span class="math-inline">\(\bar\partial v_k=su_k\)</span>、と対にして <span class="math-inline">\(\|su_k\|_{0,k}\to0\)</span> を得る。ここだけでは元の通常の類を消したことにならない。式(3.15)で全代表を固定Hilbert空間へ入れ、<span class="math-inline">\(u_k\rightharpoonup0\)</span> と連続な固定類写像 <span class="math-inline">\(\kappa_*u_k=[\gamma]\)</span> を両立させて初めて <span class="math-inline">\([\gamma]=0\)</span> とする（§3.5, pp. 17–18）。</p>
+<p>切断持ち上げは別の解析定理を要しない。完全列</p>
+<div class="math-block">\[
+0\to\mathcal O_V(K_V+L_1)\to\mathcal O_V(K_V+L_0)\to\mathcal O_V(K_V+L_0)|_E\to0
+\]</div>
+<p>の接続写像が0なので、<span class="math-inline">\(E\ne0\)</span> なら <span class="math-inline">\(H^0(V,K_V+L_0)\to H^0(E,(K_V+L_0)|_E)\)</span> は全射となる（式(1.1), p. 2）。これは非被約も許す因子スキーム<strong>全体</strong>についての結論である。</p>
+<h2>Corollary 4.1の証明戦略</h2>
+<figure><a class="diagram-link" href="diagrams/euler.ja.svg" target="_blank"><img src="diagrams/euler.ja.svg" alt="非零Euler標数から四次元abundanceへ"></a><figcaption>証明概略図 · クリックして拡大</figcaption></figure>
+<p>Theorem 1.1の計量を実際の束 <span class="math-inline">\(\pi^*\mathcal O_X(rD)\)</span> 上へテンソル冪で移す。同じ計量が<a href="https://arxiv.org/pdf/1809.02500v4">LP, Corollary D, p. 4</a>のgeneralized algebraic singularities条件を因子部分0で満たし、補助nef因子を0、パラメータを0として <span class="math-inline">\(\kappa(D)\geq0\)</span> を得る。次に<a href="https://www.numdam.org/item/10.24033/asens.2325.pdf">GM, Corollary 5.3, p. 499</a>が同じ零Lelong数計量とこの非消滅からsemiamplenessを与える。本稿のTheorem 1.2はこの帰結の入力ではない。</p>
+<h2>外部入力とカタログ内の接続</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>入力</th>
+<th>本稿の使用箇所と役割</th>
+<th>今回の照合</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://ems.press/content/serial-article-files/41145">Fuj, Theorem 3.2, p. 734（PDF p. 8）</a></td>
+<td>§2.2, p. 6。kltなので乗数イデアルは自明。nef随伴とample差から消滅を得て固定捻りを大域生成にする。</td>
+<td>入力の記述・代入を照合。正則性定理自体の原典は未照合。</td>
+</tr>
+<tr>
+<td><a href="https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/analmeth_book.pdf">Dem, Theorem 5.1, p. 33</a></td>
+<td>Lemma 2.1, p. 5 → Lemma 2.3およびProposition 3.3。完備Kähler上の逆曲率積分による解。</td>
+<td>利用先の再記述を読解。外部PDF取得不調のため原定理との照合は保留。</td>
+</tr>
+<tr>
+<td><a href="https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/regularization.pdf">Reg, Main Theorem 1.1</a> とSkoda可積分性</td>
+<td>Lemma 3.1, pp. 11–12。零Lelong数から平滑近似・小曲率損失・固定指数での一様可積分性。</td>
+<td>利用先の証明を読解。原典の正則化定理・Skodaの原定理は未照合。</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/pdf/1809.02500v4">LP, Corollary D, p. 4</a></td>
+<td>Theorem 4.2とCorollary 4.1, p. 19。非零Euler標数から最初の切断。</td>
+<td>2019年5月7日v4の記述と <span class="math-inline">\(N=0,t=0\)</span> の適用を照合。証明自体は対象外。</td>
+</tr>
+<tr>
+<td><a href="https://www.numdam.org/item/10.24033/asens.2325.pdf">GM, Corollary 5.3, p. 499</a></td>
+<td>Theorem 4.3とCorollary 4.1, p. 19。零Lelong数計量と非消滅からsemiampleness。</td>
+<td>2017年刊行版の記述・適用を照合。証明自体は対象外。</td>
+</tr>
+</tbody>
+</table></div>
+<p>034内では<a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Fourfold-nonvanishing-by-minimal-metrics-and-moving-jets-September-27-2026/paper.pdf">Fourfold nonvanishing</a>のTheorems 4.1–4.2が本稿Theorems 1.1–1.2を再記述し、Proposition 5.1の証明、式(5.9)–(5.10), pp. 18–19で使用する。具体的には解消上の端点残余束を<strong>nef klt随伴の正の有理倍</strong>と同定してTheorem 1.1を適用し、Theorem 1.2の通常の <span class="math-inline">\(H^1\)</span> 単射性を乗数イデアルの局所消滅で押し下げる。これが被約非klt locus全体からの制限写像の全射性になる。さらにその上に非零切断を作る三次元semi-dlt abundance・貼り合わせ・降下は<a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Fourfold-nonvanishing-by-minimal-metrics-and-moving-jets-September-27-2026/paper.pdf">FN</a>側の追加論証であり、本稿の解析定理だけで供給されるものではない。</p>
+<h2>原典への入口と確認範囲</h2>
+<ul>
+<li>主張：Theorems 1.1–1.2, pp. 1–2、Corollary 2.4, pp. 10–11、Corollary 4.1, pp. 18–19。</li>
+<li>証明本文：§2.2–2.4, pp. 5–10の固定捻り・局所化・延長・極値矛盾、§3.1–3.5, pp. 11–18の端点比較・類写像・固定空間への移行、§4の二つの外部判定の適用を読んだ。主定理の数式はPDF p. 2の画像でも照合した。</li>
+<li>編集側が確認したのは、ここに示した主張・証明箇所・引用適用の対応である。局所化の全極限操作、調和形式の作用素領域と全一様定数、正則化・可積分性の外部原典、外部定理の証明全体は独立検証していない。カタログ内の他の関係は未調査であり、依存なしを意味しない。</li>
+<li>図のTeX/TikZ原本・日英SVG・確認記録は同梱。公開サイトへの組込みと最終画面確認は本部の作業範囲。</li>
+</ul></article><footer>OpenAI Math Digest · 独立した非公式の読解プロジェクト。<br>デザインの基盤： <a href="https://masataka123.github.io/geometry-paper-digest/">Geometry Paper Digest</a> (MIT). ローカル閲覧用です。公開ページではありません。</footer></main></body></html>

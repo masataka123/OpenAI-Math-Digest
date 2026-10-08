@@ -1,0 +1,46 @@
+# arithmetic-stein-degree
+- 担当: B
+- 開始: 2026-10-08 13:34:57 JST
+- 終了: 2026-10-08 13:43:38 JST
+- 状態: 本部確認待ち（一次概説完成、60分以内）
+- 成果物: article.ja.md、article.en.md、sources.json、catalog-changes.md、checks.json、diagrams/（3種類×日英のTikZ・自己完結TeX・SVG・PNG、preamble.tex、生成スクリプト）
+- 確認済み: 固定版SHA-256一致。本文pp.2–14の証明読解、核心はProp.3.5・Lemmas4.3–4.5・§§5.5–5.7。PDF p.14画像照合。Bir19/Bir21/LM26の指定記述と使用箇所を照合。ULI Lemma4.6の直接適用を照合。
+- 確認済み: TeX図6枚生成、overfull/missing glyphなし。6枚を画像で目視確認。各6件・合計36件のSVG引用URLとXMLを検査。日英7表示数式一致、本文内数式211個をTeXで構文確認。ローカル画像・参照定義の解決を確認。
+- 未確認・申し送り:
+  - 外部の随伴（Kol10/13）、BMT11、KM98の指定定理本文は未照合。原稿の使用箇所のみ確認。Kol10の外部PDF取得は失敗し、未確認URLは記事に残していない。
+  - 解消の族・全MMP技術・外部入力の全証明の独立検証は未実施。
+  - 指数のノルム降下への他の接続は未調査。
+  - 原典内部でLemma/PropositionをTheoremと呼ぶ誤記がある。記事は実際の見出しで引用。
+  - 本部でMarkdownからの数式表示、SVG内リンクの操作、スマートフォン幅、サイト導線を確認する。共通コード・公開ページは変更せず、commit/push/公開は未実施。
+
+## 閲覧用プレビューの追加（2026-10-08 14:25 JST）
+
+ユーザーの「記事を見たい」という追加依頼により、初稿完了後にpreview.ja.html / preview.en.htmlを生成。数式はサイトと同じMathJax、証明図はリンク付きSVGをインライン表示し、上部から担当4本と言語を切り替えられる。生成器は担当フォルダーarithmetic-stein-degree/build-preview.mjs。1本目の日本語版をアプリ内ブラウザで開き、本文・数式の表示を確認した。公開サイトへの組込みや公開操作は行っていない。
+
+## 公開完了（2026-10-08 14:37 JST）
+
+ユーザーの追加依頼「とりあえずアップロードしてください」により公開。commit `2d729cd31e2c57b428fa3d08d0fce1f53475c76a` をmainへpushし、GitHub Actions run `37733087193` のbuild/deploy成功を確認。公開URL: https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/arithmetic-stein-degree/ （英語は/ja/を/en/へ）。日英8ページのHTTP取得、図の存在、カタログからの導線を確認。8テスト・21ページビルド・521内部参照・1280px/375pxでの描画確認が成功。数学的な未確認点は記事内に維持。
+
+公開用の共通コードは隔離worktree `/Users/iwai/.codex/worktrees/catalog-034-worker-b-publish/OpenAI-Math-Digest` で変更した。元の共有checkoutのmainは公開前の位置に保ち、本部・他担当の作業は変更していない。本部で同期する際は、この4フォルダー内の未追跡ファイルと公開コミットで追跡された同名ファイルが競合するため、草稿・プレビューを退避して比較してから取り込む。追加プレビューHTML/PNG等は元のフォルダーに保持されている。
+
+## 改訂第1回
+
+- 改訂開始：2026-10-08 14:52:35 JST
+- 状態：MMPの分岐、垂直の場合の接続、随伴・pluriresidueの入力を再照合中。公開版の本文・図との比較を先に実施。
+
+- 15:24 JST：担当4篇を公開まで行う新指示を反映。日英本文をSchnell構成へ編集。第1・第2 MMPの分岐を独立図とし、垂直の場合を6段階で説明。Kol10指定箇所を今回追加照合、sources.json / revision-review.mdに適用と限界を記録。数式394個のTeX検査、表示式7組一致、図8枚の生成を確認。図目視と公開表示の最終検査は統合時に続ける。
+
+## 統一編集・公開前検査完了（2026-10-08T15:34:28+09:00）
+
+- 本文数式394箇所のTeX処理、表示式7組の日英一致を確認。日英SVG/TeXは8図。変更図を再表示して分岐・引用・余白を確認。
+- 最新公開 `0d3ae7a`（本部の共通表示 `5190992` と窓口Aを含む）へ担当分だけを統合。共通コード・他担当の記事は変更していない。
+- 13テスト、37ページのビルド、999件の内部リンク・画像・アンカー検査が成功。担当8ページの1280px/375px表示でMathJaxエラー0、ページ全体の横はみ出しなし、右上の言語切替を確認。代表画面と変更図は目視。検査記録は `revision-checks.json`。
+- 既存の未確認点を保持。公開反映結果は下に追記する。初稿時間とは別の統一編集として記録。
+
+## 統一編集版の公開完了（2026-10-08T15:36:40+09:00）
+
+- commit `d32a6f0fadf78190b0f63bfc84ebe853b5b969df` を通常のpushでmainへ反映。GitHub Actions run `37738373432` のbuild/deploy成功を確認。
+- 日本語: https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/arithmetic-stein-degree/
+- English: https://masataka123.github.io/OpenAI-Math-Digest/en/papers/arithmetic-stein-degree/
+- 公開8ページすべてHTTP 200。各ページの改訂後の定理カード数・図数・説明段階数と追加図を照合。公開Stein日本語版をブラウザで開き、数式エラー0と新図を再確認。元の未確認点は維持。
+- この配信結果の追記は共有作業場の引継ぎ記録。公開コミットには直前の検査結果が収録されている。

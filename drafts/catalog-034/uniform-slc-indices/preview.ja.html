@@ -1,0 +1,249 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>slc log Calabi–Yau対の一様指数――留数の閉路をklt指標で制御する · 原稿プレビュー</title><style>:root {
+  color-scheme: light;
+  --paper: #f4f1ea;
+  --ink: #18232d;
+  --muted: #52606b;
+  --accent: #984526;
+  --link: #17617d;
+  --card: #ffffff;
+  --line: #d5cdbf;
+  --soft-line: #c9c1b4;
+  font-family: Georgia, "Times New Roman", "Yu Mincho", "Hiragino Mincho ProN", serif;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); }
+main { width: min(920px, calc(100% - 32px)); margin: 0 auto; padding: 42px 0 56px; }
+a { color: var(--link); text-underline-offset: .18em; }
+
+.site-header { border-bottom: 2px solid var(--ink); margin-bottom: 28px; padding-bottom: 20px; }
+.landing-header { max-width: 790px; }
+h1 { font-size: clamp(2.25rem, 7vw, 4rem); line-height: 1.04; margin: 0 0 14px; letter-spacing: -.02em; }
+h2, h3 { line-height: 1.3; }
+p { line-height: 1.75; }
+.eyebrow, .topic-count {
+  color: var(--accent);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+  font-size: .78rem;
+  font-weight: 750;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.topic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+.topic-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: inherit;
+  display: block;
+  min-height: 250px;
+  padding: 24px;
+  text-decoration: none;
+  transition: border-color 120ms ease, transform 120ms ease, box-shadow 120ms ease;
+}
+.topic-card:hover, .topic-card:focus-visible {
+  border-color: var(--accent);
+  box-shadow: 0 8px 24px rgba(24, 35, 45, .08);
+  transform: translateY(-2px);
+}
+.topic-card h2 { font-size: 1.65rem; margin: 18px 0 2px; }
+.topic-card p { color: var(--muted); margin: 0 0 20px; }
+.topic-card .topic-english { font-style: italic; margin-bottom: 12px; }
+.topic-open { color: var(--link); font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-weight: 700; }
+.heading-subtitle { color: var(--muted); font-style: italic; margin: -6px 0 6px; }
+
+.notice-card {
+  background: rgba(255,255,255,.55);
+  border-top: 1px solid var(--line);
+  margin-top: 34px;
+  padding: 16px 2px 0;
+}
+
+.notice-card h2 {
+  margin: 0 0 4px;
+}
+
+.topic-nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 30px; }
+.topic-nav a {
+  border: 1px solid var(--soft-line);
+  border-radius: 999px;
+  color: #34434e;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+  font-size: .88rem;
+  padding: 7px 12px;
+  text-decoration: none;
+}
+.topic-nav a:hover, .topic-nav a:focus-visible, .topic-nav a[aria-current="page"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+
+.digest-list { max-width: 790px; }
+.digest { background: var(--card); border: 1px solid var(--line); border-radius: 6px; margin: 0 0 18px; padding: 20px 22px; }
+.dates { display: flex; flex-wrap: wrap; gap: 5px 18px; margin: 0 0 6px; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-size: .8rem; }
+.dates div { display: flex; gap: 6px; }
+.dates dt { color: var(--accent); font-weight: 700; letter-spacing: .04em; }
+.dates dd { color: var(--muted); font-variant-numeric: tabular-nums; margin: 0; }
+.digest h2 { font-size: 1.35rem; margin: 5px 0 7px; }
+.title-link { color: var(--ink); text-decoration: none; }
+.title-link:hover { color: var(--link); }
+.authors { color: var(--muted); font-style: italic; }
+.abstracts { max-width: 100%; overflow-wrap: anywhere; word-break: normal; }
+.abstract h3, .paper-header .abstract h2 { font-size: 1rem; margin: 1.25rem 0 .35rem; }
+.abstract p { margin: 0; }
+.abstract-en { line-height: 1.8; }
+.abstract-en p[lang="en"] { line-height: 1.8; overflow-wrap: anywhere; }
+.abstract-source { font-size: .86rem; margin-top: .65rem !important; }
+.abstract-source a { color: var(--muted); }
+.abstract-ja { margin-top: 1.75rem; }
+.links { display: flex; flex-wrap: wrap; gap: 16px; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-weight: 650; }
+.empty { background: var(--card); border: 1px dashed var(--soft-line); border-radius: 6px; color: var(--muted); padding: 22px; }
+
+.paper-page { max-width: 790px; }
+.paper-header { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: clamp(22px, 5vw, 38px); }
+.paper-header h1 { font-size: clamp(2rem, 6vw, 3.25rem); }
+.paper-summary { font-size: 1.08rem; }
+.paper-meta { border-top: 1px solid var(--line); display: grid; gap: 8px; margin: 24px 0 0; padding-top: 18px; }
+.paper-meta div { display: grid; grid-template-columns: minmax(120px, .35fr) 1fr; gap: 16px; }
+.paper-meta dt { color: var(--accent); font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-size: .85rem; font-weight: 700; }
+.paper-meta dd { margin: 0; }
+.paper-links { margin-top: 22px; }
+.paper-content { background: var(--card); border: 1px solid var(--line); border-radius: 8px; margin-top: 18px; padding: clamp(22px, 5vw, 40px); }
+.paper-content h2 { border-bottom: 1px solid var(--line); font-size: 1.55rem; margin: 2.2em 0 .8em; padding-bottom: .35em; }
+.paper-content h2:first-child { margin-top: 0; }
+.paper-content h3 { font-size: 1.2rem; margin-top: 1.7em; }
+.paper-content blockquote { border-left: 4px solid var(--accent); color: #35434e; margin: 1.5em 0; padding: .15em 0 .15em 1.2em; }
+.paper-content code { background: #eee9df; border-radius: 3px; padding: .1em .3em; }
+.paper-content mjx-container[display="true"],
+.paper-content .MathJax { max-width: 100%; overflow-x: auto; overflow-y: hidden; }
+
+.site-footer { border-top: 1px solid var(--line); color: var(--muted); font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-size: .82rem; margin-top: 42px; padding-top: 18px; }
+.site-footer p { line-height: 1.6; }
+
+@media (max-width: 560px) {
+  main { padding-top: 24px; }
+  .topic-card { min-height: 0; }
+  .digest { padding: 17px; }
+  .paper-meta div { grid-template-columns: 1fr; gap: 2px; }
+  .abstract-ja { margin-top: 1.4rem; }
+}
+
+ header{position:sticky;top:0;z-index:20;background:#f4f1eaf5;border-bottom:1px solid #d5cdbf;padding:14px max(16px,calc((100vw - 1060px)/2));display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:system-ui,sans-serif}header .brand{font:20px Georgia,serif}header nav{display:flex;gap:16px;flex-shrink:0}main{width:min(1060px,calc(100% - 36px));padding-top:26px}article{max-width:940px;margin:auto;font-size:17px;line-height:1.95}article h1{font-size:clamp(1.85rem,4vw,2.7rem);line-height:1.4;margin-top:36px}article h2{font-size:1.6rem;margin-top:56px;padding-top:22px;border-top:1px solid #d5cdbf}article h3{margin-top:35px;font-size:1.2rem}article p,article li{line-height:1.95}article a{overflow-wrap:anywhere}.draft-note{padding:12px 18px;border-left:3px solid #984526;background:#eeebe3;font:14px/1.8 system-ui,sans-serif}.paper-nav{display:flex;flex-wrap:wrap;gap:10px 22px;padding:22px 0;border-bottom:1px solid #d5cdbf;font:14px/1.6 system-ui,sans-serif}.paper-nav a[aria-current]{font-weight:700;color:#18232d}blockquote{border-left:3px solid #17617d;margin:25px 0;padding:0 18px;color:#52606b}figure{background:white;margin:26px 0;padding:16px;border:1px solid #d5cdbf;overflow-x:auto}figure img{display:block;min-width:680px;width:100%;height:auto}figcaption{font:12px/1.6 system-ui,sans-serif;color:#52606b;margin-top:10px}.math-block{padding:8px 0;overflow-x:auto;overflow-y:hidden}.table-wrap{overflow-x:auto;margin:24px 0}table{border-collapse:collapse;width:100%;min-width:740px;font:14px/1.85 system-ui,sans-serif}th,td{padding:14px;border:1px solid #d5cdbf;text-align:left;vertical-align:top}th{background:#eeebe3}code{font-size:.85em;overflow-wrap:anywhere}footer{border-top:1px solid #d5cdbf;padding:22px 0;margin-top:55px;font:12px/1.8 system-ui,sans-serif;color:#52606b}mjx-container[display=true]{max-width:100%;overflow-x:auto;overflow-y:hidden}article img{max-width:none}@media(max-width:540px){header .brand{font-size:16px}header nav{font-size:13px}article{font-size:16px}figure{margin-left:0;margin-right:0}article h2{font-size:1.35rem}}
+ </style><script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'},startup:{pageReady:()=>MathJax.startup.defaultPageReady().then(()=>document.documentElement.dataset.mathReady='true')}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script></head><body><header><span class="brand">OpenAI <em>Math Digest</em></span><nav><a href="preview.ja.html" lang="ja">日本語</a><a href="preview.en.html" lang="en">English</a></nav></header><main><div class="draft-note">窓口C · 公開前の原稿プレビュー。AI生成の概説です。重要な主張は原論文で確認してください。</div><nav class="paper-nav" aria-label="担当4記事"><a  href="../minimal-metrics-injectivity/preview.ja.html">05 · 極小計量と単射性</a><a  href="../fourfold-nonvanishing/preview.ja.html">06 · 四次元の非消滅</a><a aria-current="page" href="../uniform-slc-indices/preview.ja.html">02 · slc対の一様指数</a><a  href="../conditional-kahler-fourfolds/preview.ja.html">03 · Kähler四次元の条件付き極小モデル</a></nav><article><h1>slc log Calabi–Yau対の一様指数――留数の閉路をklt指標で制御する</h1>
+<p>カタログ034・収録順02 / 内部ID: <code>uniform-slc-indices</code></p>
+<p>原典: OpenAI, <em>Uniform indices for semi-log-canonical log Calabi–Yau pairs</em>, 2026年10月5日版、42頁。<a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf">固定版PDF</a>。以下の頁はPDFの頁番号と一致する。これは原典の主張と証明構成を紹介するAI生成の概説であり、編集側の確認は末尾に限定して記す。数学的判断には原典を参照されたい。</p>
+<h2>Theorem 1.1：成分数によらないCartier自明化</h2>
+<p><span class="math-inline">\(d\geq4\)</span>と有限集合<span class="math-inline">\(\Phi\subset[0,1]\cap\mathbb Q\)</span>を固定する。原典の<a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf">Theorem 1.1、p.2</a>は、これらだけに依存する整数<span class="math-inline">\(a=a(d,\Phi)&gt;0\)</span>が存在し、標数零の任意の代数閉体上の連結・射影的・純<span class="math-inline">\(d\)</span>次元slc対<span class="math-inline">\((X,B)\)</span>で
+<div class="math-block">\[
+K_X+B\sim_{\mathbb Q}0,\qquad
+\{\text{$B$の非零係数}\}\subset\Phi
+\]</div>
+を満たすものに対し、<span class="math-inline">\(a(K_X+B)\)</span>がCartierかつ
+<div class="math-block">\[
+\mathcal O_X\!\left(a(K_X+B)\right)\simeq\mathcal O_X
+\]</div>
+となると主張する。既知の低次元結果と合わせた帰結と、この論文自身の<span class="math-inline">\(d\geq4\)</span>という定理の範囲を区別する。<span class="math-inline">\(a\)</span>は正規化成分・lc strataの個数に依存しない。</p>
+<figure><a class="diagram-link" href="diagrams/slc-descent.ja.svg" target="_blank"><img src="diagrams/slc-descent.ja.svg" alt="正規化からconductorの閉路を経たslc自明化"></a><figcaption>証明概略図 · クリックして拡大</figcaption></figure>
+<p>正規化<span class="math-inline">\(\nu:\coprod X_i\to X\)</span>に対して
+<span class="math-inline">\(K_{X_i}+\Delta_i=\nu^*(K_X+B)|_{X_i}\)</span>と置く。<span class="math-inline">\(\Delta_i\)</span>にはconductorが係数1で加わる。<a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-Pluricanonical-Iitaka-Fibrations-October-3-2026/paper.pdf">UI Theorem 1.2、p.2</a>によるnormal lc指数を用い、<span class="math-inline">\(d,\Phi\)</span>だけで定まる<strong>偶数</strong><span class="math-inline">\(m\)</span>を選んで、各成分上に
+<span class="math-inline">\(\operatorname{div}(\theta_i)=-m\Delta_i\)</span>となる有理<span class="math-inline">\(m\)</span>-canonical形式を取る。これは正規化上の自明化であり、まだ<span class="math-inline">\(X\)</span>上の自明化ではない。</p>
+<p>conductorのgeneric nodeを辺、正規化成分を頂点とする有限グラフを考える。辺<span class="math-inline">\(e:i\to j\)</span>の両枝の留数を<span class="math-inline">\(\theta_S,\theta_T\)</span>と書くと、枝の対応<span class="math-inline">\(\tau\)</span>による比
+<span class="math-inline">\(r_e=\tau^*\theta_T/\theta_S\)</span>が現れる。ここで原典は、もともとの<span class="math-inline">\(\mathbb Q\)</span>-線形自明性から得られる非一様な主因子次数<span class="math-inline">\(M\)</span>（<span class="math-inline">\(m\mid M\)</span>）を一度使い、
+<div class="math-block">\[
+r_e^{M/m}=b_i/b_j
+\]</div>
+を導いて<span class="math-inline">\(r_e\)</span>が定数であることを示す。<span class="math-inline">\(M\)</span>そのものを一様に抑える論法ではない。<a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf">§7.3、pp.37–38</a></p>
+<p>次の接続が一様性の要点である。同一のdlt成分の最小lc strata間では、<a href="https://arxiv.org/pdf/1107.2863v3">Kollár Theorem 10・Proposition 14、pp.6,8–9</a>の<span class="math-inline">\(\mathbb P^1\)</span>-linkが留数を保つ。偶数<span class="math-inline">\(m\)</span>が符号を消す。他方、conductorを渡る写像については本稿Lemma 7.2が、同じ<span class="math-inline">\(r_e\)</span>を保つ最小strata間の<span class="math-inline">\(B\)</span>-双有理写像を作る。これは双有理写像をstratumへ単純に制限する操作ではない。共通SNCモデル上の局所単項式行列の行列式<span class="math-inline">\(\pm1\)</span>と留数体の比較を使う。<a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf">Lemmas 7.1–7.2、pp.35–37</a></p>
+<p>したがって任意の閉路に沿う積<span class="math-inline">\(\prod_e r_e\)</span>は、一つのklt最小stratum上の<span class="math-inline">\(B\)</span>-双有理自己写像の指標になる。後述のTheorem 6.1から
+<div class="math-block">\[
+L=\operatorname{lcm}_{0\leq q\leq d-1}L(q,m),\qquad
+a=mL
+\]</div>
+とすれば、全閉路について<span class="math-inline">\(\prod_e r_e^L=1\)</span>である。全域木に沿って定数<span class="math-inline">\(c_i\)</span>を選ぶと<span class="math-inline">\(c_i=c_jr_e^L\)</span>がすべての辺で成立し、<span class="math-inline">\(c_i\theta_i^L\)</span>が貼り合う。自己ループ・多重辺もこの議論に含まれる。閉路長を冪に掛けないため、成分数への依存が生じない。<a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf">式(7.10)–(7.11)、p.38</a></p>
+<p>最後に節が降りるだけでは足りず、Cartier性を得る必要がある。split node
+<span class="math-inline">\(F[[x,y]]/(xy)\)</span>ではcanonical生成元の二枝が<span class="math-inline">\((dx/x,-dy/y)\)</span>となり、偶数次数で留数の一致が生成元の一致を与える。非split nodeは二次拡大後に照合して降下する。codimension oneで得た生成元を<span class="math-inline">\(S_2\)</span>性で延長して、次数<span class="math-inline">\(a\)</span>の反射的延長そのものを<span class="math-inline">\(\mathcal O_X\)</span>と同一視する。標数零の一般の代数閉体への移行は、有限生成体への降下と忠実平坦な基底変換を用いる。<a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf">§7.2–§7.3、pp.37–39</a></p>
+<h2>Theorem 5.1：体積形式を含むHodge部分構造のrank</h2>
+<p>指標の次数を抑える入力は全Betti数の有界性ではない。滑らかな射影<span class="math-inline">\(n\)</span>-fold <span class="math-inline">\(U\)</span>について、<span class="math-inline">\(T(U)\subset H^n(U,\mathbb Q)\)</span>を<span class="math-inline">\(H^{n,0}(U)\)</span>を含む最小の有理Hodge部分構造、<span class="math-inline">\(r(U)=\dim_{\mathbb Q}T(U)\)</span>とする。<a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf">Theorem 5.1、p.16</a>の仮定は、<span class="math-inline">\(n\geq2\)</span>、<span class="math-inline">\(T\)</span>が複素射影<span class="math-inline">\(\mathbb Q\)</span>-factorial terminal <span class="math-inline">\(n\)</span>-fold、<span class="math-inline">\(K_T\sim0\)</span>、滑らかな解消<span class="math-inline">\(U\)</span>で<span class="math-inline">\(h^1(U,\mathcal O_U)=0\)</span>、かつ<strong><span class="math-inline">\(0&lt;\dim Y&lt;n\)</span>を満たす任意の有理像<span class="math-inline">\(Y\)</span>の滑らかな射影解消がrationally connected</strong>というものである。このとき<span class="math-inline">\(r(T):=r(U)\leq R_n\)</span>と主張する。</p>
+<figure><a class="diagram-link" href="diagrams/hodge-rank.ja.svg" target="_blank"><img src="diagrams/hodge-rank.ja.svg" alt="Hodge rankの反証とLAの使用箇所"></a><figcaption>証明概略図 · クリックして拡大</figcaption></figure>
+<p>Lemma 4.1は、<span class="math-inline">\(K\sim0\)</span>のcanonicalモデルに対する、正規化したample類のSeshadri下界から<span class="math-inline">\(r(T)\)</span>の上界を与える対角線評価である。その前段に、primitive成分に対する定量的Hodge norm差を置く（Lemma 3.2）。rankが無制限なら局所正値性が小さくなり、<a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-Pluricanonical-Iitaka-Fibrations-October-3-2026/paper.pdf">UI Lemmas 6.2–6.4、pp.25–26</a>のtracking・generic chain・Iitaka fibreの小体積評価を通して、完全線形系の消滅次数が小さい<span class="math-inline">\(\kappa=0\)</span>部分多様体の被覆族を得る。<a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf">Lemma 5.5、pp.18–20</a></p>
+<p>原典はこれらのchain fieldを小さいterminalモデル上の射として実現する。movable <span class="math-inline">\(J\)</span>から作る<span class="math-inline">\((T,\epsilon J)\)</span>に<a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf">LA Theorem 11.1、p.73</a>を適用し、MMPの停止とsemiample終点を使う。この箇所はLAの豊富性を実際に入力する。<a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf">Lemma 5.6、pp.20–21</a>。適切なchain quotientの次元を最大化し、有理像の仮定とUIのmoduli分母・有界性入力で底を制御する。さらに底のcodimension <span class="math-inline">\(\geq2\)</span>へ写る因子を処理し、Lemma 5.7でbigな<span class="math-inline">\(D\)</span>と線形汎関数<span class="math-inline">\(\ell_X\)</span>を較正する。<span class="math-inline">\(v=\operatorname{vol}(D)^{1/n}\)</span>、<span class="math-inline">\(b=\dim Y\)</span>、<span class="math-inline">\(s=n-b\)</span>として、その尺度は
+<div class="math-block">\[
+c\delta\leq v\leq C\delta,\qquad
+\ell_X(D)\leq C\delta
+\]</div>
+である。<a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf">pp.21–25</a></p>
+<p>小消滅次数の族は底の超平面との比較から垂直になり、最大性によってchain leafはgeneric fibreを埋める。垂直jet評価でgeneric rankを<span class="math-inline">\(C(m\eta v)^s\)</span>に抑え、底ではdeterminantとcotangentの傾きを用いて
+<div class="math-block">\[
+h^0(X,mD)\leq C(m\eta v)^s(m\delta)^b
+\]</div>
+を得る。十分小さい<span class="math-inline">\(\eta\)</span>について、これは体積による<span class="math-inline">\(m^nv^n/n!\)</span>という主要項と矛盾する。Lemma 5.8の<span class="math-inline">\(\mathbb P^b\)</span>上の切断評価ではrankが係数に一次で現れることが、この比較に必要である。<a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf">§5.5、pp.25–28</a></p>
+<h2>Theorem 6.1：自己写像の位数ではなく、形式への指標を抑える</h2>
+<p><span class="math-inline">\(n\geq0,m\geq1\)</span>に対し<span class="math-inline">\(L(n,m)&gt;0\)</span>が存在し、複素射影的なintegral klt対<span class="math-inline">\((V,\Delta)\)</span>、<span class="math-inline">\(\dim V=n\)</span>、<span class="math-inline">\(\Delta\geq0\)</span>で、<strong><span class="math-inline">\(m(K_V+\Delta)\)</span>が整主因子</strong>となるものを考える。<span class="math-inline">\(\operatorname{div}(\theta)=-m\Delta\)</span>を満たす有理<span class="math-inline">\(m\)</span>-canonical形式と任意の<span class="math-inline">\(B\)</span>-双有理自己写像<span class="math-inline">\(f\)</span>について
+<div class="math-block">\[
+f^*\theta=c\theta\quad\Longrightarrow\quad c^{L(n,m)}=1
+\]</div>
+というのが<a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf">Theorem 6.1、p.29</a>である。<span class="math-inline">\(f\)</span>自身の有限位数は仮定しない。</p>
+<figure><a class="diagram-link" href="diagrams/characters.ja.svg" target="_blank"><img src="diagrams/characters.ja.svg" alt="積被覆による指標の分解と一様指数"></a><figcaption>証明概略図 · クリックして拡大</figcaption></figure>
+<p>crepant terminal化の後、<a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-log-Iitaka-fibrations-and-bounded-moduli-denominators-October-4-2026/uniform-log-iitaka.pdf">ULI Proposition 5.1・Lemmas 5.2–5.3、pp.12–13</a>によるquasi-étale積被覆を用いる。境界を持つrationally connected因子、abelian因子、境界のないCalabi–Yau・symplectic因子に分かれ、境界は最初の因子だけから来る。Lemma 6.4は基本群のcharacteristic subgroupを用いて写像を被覆へ持ち上げ、接方向の分解を<span class="math-inline">\(n!\)</span>乗で固定する。被覆次数は一様でなくてよい。因子形式への倍率<span class="math-inline">\(d_i\)</span>、次数<span class="math-inline">\(p_i\)</span>を用いた比較は
+<div class="math-block">\[
+c^{n!}=\prod_i d_i^{\,m/p_i}
+\]</div>
+であり、被覆次数をこの冪に持ち込まない。<a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf">pp.30–32</a></p>
+<p>RC因子は<a href="https://arxiv.org/pdf/2204.04946v2">Han–Jiang Theorem 1.2、pp.1–2</a>のfixed-index有界性を経て、<a href="https://arxiv.org/pdf/2002.11928">Jiang–Liu Theorem 3.2、p.8</a>の有界族におけるpluricanonical表現の評価に渡す。境界なしの非abelian因子では<a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-Pluricanonical-Iitaka-Fibrations-October-3-2026/paper.pdf">UI Lemma 5.2、pp.21–22</a>の有理像の性質を使い、Theorem 5.1を適用する。abelian因子には<span class="math-inline">\(\binom{2r}{r}\)</span>というcohomology rank上界がある。整係数のpolarized Hodge構造への作用を通じて、固有値の位数<span class="math-inline">\(e\)</span>に<span class="math-inline">\(\varphi(e)\leq b(r)\)</span>を課し、可能な<span class="math-inline">\(e\)</span>の最小公倍数を取る。これをRC因子の指数と合わせると<span class="math-inline">\(L(n,m)=n!E(n,m)\)</span>が得られる。<a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf">Lemmas 6.5–6.6、pp.32–34</a></p>
+<h2>依存する結果と使用箇所</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>入力</th>
+<th>本稿での役割</th>
+<th>今回の照合</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-Pluricanonical-Iitaka-Fibrations-October-3-2026/paper.pdf">UI Thm.1.2、p.2</a></td>
+<td>Thm.2.2、§7.3：normal lc成分の共通次数</td>
+<td>入力の定理文・適用を照合</td>
+</tr>
+<tr>
+<td><a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-Pluricanonical-Iitaka-Fibrations-October-3-2026/paper.pdf">UI Thm.1.1、Prop.4.1,4.5</a></td>
+<td>Prop.2.4：chain quotientの底の有界性</td>
+<td>本稿の入力記述を読解。各証明は対象外</td>
+</tr>
+<tr>
+<td><a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-Pluricanonical-Iitaka-Fibrations-October-3-2026/paper.pdf">UI Lem.6.2–6.4、pp.25–26</a></td>
+<td>Inputs 5.2–5.4、Lemma 5.5：generic chainと小体積</td>
+<td>入力の定理文・使用箇所を照合</td>
+</tr>
+<tr>
+<td><a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf">LA Thm.11.1、p.73</a></td>
+<td>Thm.2.3、Lemma 5.6および§5.4：良いモデルの構成</td>
+<td>入力の定理文・有理境界での適用を照合。証明は対象外</td>
+</tr>
+<tr>
+<td><a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-log-Iitaka-fibrations-and-bounded-moduli-denominators-October-4-2026/uniform-log-iitaka.pdf">ULI Prop.5.1, Lem.5.2–5.3、pp.12–13</a></td>
+<td>Input 6.3・Lemma 6.4：積分解と追加被覆での安定性</td>
+<td>原典の記述・使用箇所を照合</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/pdf/2204.04946v2">HJ Thm.1.2</a> と <a href="https://arxiv.org/pdf/2002.11928">JL Thm.3.2</a></td>
+<td>Lemma 6.5：RC因子の指標</td>
+<td>原典の定理文を照合。bounded varietyからlog bounded pairへの補助論法は本稿のみ</td>
+</tr>
+<tr>
+<td><a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-Pluricanonical-Iitaka-Fibrations-October-3-2026/paper.pdf">UI Lem.5.2、pp.21–22</a></td>
+<td>Lemma 6.6：非abelian因子にThm.5.1を適用</td>
+<td>入力記述と適用を照合。ここにもLA非消滅への間接依存がある</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/pdf/1107.2863v3">K Thm.10, Prop.14</a></td>
+<td>Lemma 7.1：同一成分内の留数を保存する写像</td>
+<td>原典の定理文・偶数次数の符号計算を照合</td>
+</tr>
+</tbody>
+</table></div>
+<p>U4はUIの幾何補題の出所として本稿Inputs 5.2–5.4にも挙げられる。今回U4原典の該当補題は再照合していない。参考文献にあるだけの論文へ依存の矢印を追加しない。</p>
+<h2>原典・確認範囲</h2>
+<p>原稿commitは<code>adc7f1241b42e322a6451854ab7e4b4c146bf78a</code>、SHA-256は<code>588f61707a03040f0265823b76aa32e17f238bfed772f79bdcd8f9867746a126</code>。詳細は<a href="sources.json">機械可読記録</a>と<a href="status.md">作業記録</a>に保存した。</p>
+<p>編集側では主定理、§§2–3、§5のchain quotient・較正の主張・垂直水平jet比較、§6の因子別指標、§7の留数・閉路・node・<span class="math-inline">\(S_2\)</span>降下を読んだ。Lemma 4.1の対角線計算全体、Lemma 5.7の体積較正の全推定、基本群を使う持ち上げと局所valuation議論の完全な検算はしていない。Campana–Păun等の傾き入力、特異Beauville–Bogomolov分解の元論文、UI・LAの入力定理自体の証明は未検証である。これは引用・適用関係を追った初稿であり、定理の正しさの保証ではない。</p></article><footer>OpenAI Math Digest · 独立した非公式の読解プロジェクト。<br>デザインの基盤： <a href="https://masataka123.github.io/geometry-paper-digest/">Geometry Paper Digest</a> (MIT). ローカル閲覧用です。公開ページではありません。</footer></main></body></html>

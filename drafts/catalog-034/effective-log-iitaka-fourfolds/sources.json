@@ -1,0 +1,178 @@
+{
+  "paperId": "effective-log-iitaka-fourfolds",
+  "sourceCommit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "sourceUrl": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-effective-log-Iitaka-fibrations-for-fourfolds-September-26-2026/paper.pdf",
+  "sha256": "8036215575dbf6199927ae50571f50d8e89928b091dc07fa723fec2cbfe5a41e",
+  "checkedOn": "2026-10-08",
+  "manuscriptDate": "2026-09-26",
+  "pdfPages": 52,
+  "statements": [
+    {
+      "result": "Theorem 1.1: boundary-free klt complex fourfold index",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "result": "Theorem 1.2: finite rational coefficients, pseudo-effective lc complex fourfold, full field in rounded degree",
+      "pages": [
+        2
+      ]
+    }
+  ],
+  "proofPassages": [
+    {
+      "pages": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "scope": "All-degree divisorial comparison and three RD inputs."
+    },
+    {
+      "pages": [
+        15,
+        16,
+        17
+      ],
+      "scope": "Noncanonical RC reduction, terminalization, moving-divisor and general-type-fibre reductions; earlier decomposition only selected passages."
+    },
+    {
+      "pages": [
+        18,
+        20,
+        21,
+        23,
+        25,
+        27
+      ],
+      "scope": "Statements of arbitrary-dimensional chain/tracking tools and four-dimensional scalar theorem; not all scalar proof calculations."
+    },
+    {
+      "pages": [
+        33,
+        34,
+        41,
+        42
+      ],
+      "scope": "Frobenius setup and final determinant comparison; intervening technical construction not fully verified."
+    },
+    {
+      "pages": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "scope": "Many-factor leaf degrees, birational forgetting, rational flows, countability, main theorem assembly."
+    }
+  ],
+  "dependencies": [
+    {
+      "abbreviation": "LA",
+      "sourceUrl": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf",
+      "result": "Theorems 1.1, 11.1; Proposition 2.5",
+      "pages": [
+        1,
+        73
+      ],
+      "usedAt": "Section 10 p.48 qualitative nonvanishing",
+      "verification": "Statement and application compared; external proof not recursively verified."
+    },
+    {
+      "abbreviation": "SL",
+      "sourceUrl": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Lifting-sections-from-the-reduced-support-of-an-adjoint-September-27-2026/paper.pdf",
+      "result": "Theorem 1.2",
+      "pages": [
+        2
+      ],
+      "usedAt": "Theorem 2.1 / Proposition 2.2 pp.6–7",
+      "verification": "Statement and application compared; external proof not recursively verified."
+    },
+    {
+      "abbreviation": "RD",
+      "sourceUrl": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Relative-denominators-and-effective-systems-for-log-Calabi-Yau-fibrations-September-27-2026/paper.pdf",
+      "result": "Theorem 1.1; Propositions 6.1,7.1",
+      "pages": [
+        2,
+        15,
+        17
+      ],
+      "usedAt": "Section 3 pp.8–9; Lemma 4.6; Section 10",
+      "verification": "Statement and application compared; external proof not recursively verified."
+    },
+    {
+      "abbreviation": "CT",
+      "sourceUrl": "https://arxiv.org/pdf/2011.02236v2",
+      "result": "Theorem 1.1",
+      "pages": [
+        2
+      ],
+      "usedAt": "Proposition 2.2 p.6 with zero nef data",
+      "verification": "Statement and application compared; external proof not recursively verified."
+    },
+    {
+      "abbreviation": "JL",
+      "sourceUrl": "https://arxiv.org/pdf/2002.11928v1",
+      "result": "Corollary 1.7",
+      "pages": [
+        2
+      ],
+      "usedAt": "Section 10 p.49 non-klt point-base case",
+      "verification": "Statement and application compared; external proof not recursively verified."
+    },
+    {
+      "abbreviation": "Xu",
+      "sourceUrl": "https://arxiv.org/pdf/1905.00297v2",
+      "result": "Conjecture 1.1; Theorem 1.14",
+      "pages": [
+        2,
+        3
+      ],
+      "usedAt": "Section 10 p.49 klt nonzero-boundary point-base case",
+      "verification": "Statement and application compared; external proof not recursively verified."
+    }
+  ],
+  "unresolved": [
+    "Original statements of all structural/holonomy inputs not cross-checked.",
+    "Full Section 6 scalar proof calculations and Section 7 spread/semicontinuity/Frobenius constructions not independently verified.",
+    "Original Matsumura and other external proof checks are outside scope.",
+    "Website integration/rendering remains for central editor."
+  ],
+  "schnellStyleRevision": {
+    "date": "2026-10-08",
+    "startedJST": "15:20",
+    "rechecked": [
+      "Theorems1.1–1.2 pp.1–2",
+      "Theorem3.1 and Proposition3.2 p.8",
+      "Theorem6.1 p.23",
+      "Section10 pp.48–49"
+    ],
+    "record": "revision-review.md",
+    "scope": "Statements and direct applications rechecked; initial unresolved proof details retained."
+  },
+  "renderingChecks": {
+    "date": "2026-10-08",
+    "revision": "Schnell-style",
+    "diagrams": 3,
+    "languageVariants": 6,
+    "TeX": "all compiled; no overfull boxes or missing characters",
+    "displayFormulaParity": "Japanese/English display formulas match",
+    "browserWidths": [
+      1280,
+      375
+    ],
+    "mathErrors": 0,
+    "pageOverflow": false,
+    "sourceLines": "Every theorem and numbered proof step has a source line",
+    "siteTests": 13,
+    "sitePages": 37,
+    "internalReferences": 973,
+    "proofVerification": "Limited source and application checks; unresolved items retained."
+  }
+}

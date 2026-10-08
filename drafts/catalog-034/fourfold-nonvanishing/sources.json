@@ -1,0 +1,246 @@
+{
+  "paperId": "fourfold-nonvanishing",
+  "catalog": "034",
+  "officialOrderWithinCatalog": 6,
+  "author": "OpenAI",
+  "version": "September 27, 2026",
+  "pdfPages": 38,
+  "sourceCommit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "sourceUrl": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Fourfold-nonvanishing-by-minimal-metrics-and-moving-jets-September-27-2026/paper.pdf",
+  "sha256": "1946d50201ab1ae0c02a6ba95143b55528b2525d45673a2985404aee4d8f2cb4",
+  "hashMatched": true,
+  "checkedOn": "2026-10-08",
+  "statements": [
+    {
+      "result": "Theorem 1.1",
+      "pages": [
+        2
+      ],
+      "scope": "smooth connected projective complex fourfold; pseudo-effective canonical divisor; some nonzero pluricanonical section, no uniform degree bound"
+    },
+    {
+      "result": "Corollary 1.2",
+      "pages": [
+        2
+      ],
+      "scope": "normal connected projective complex lc pair, dim<=4, rational effective boundary, nef Q-Cartier adjoint; for every prescribed Cartier index r some mr has section on original X; no Q-factoriality"
+    },
+    {
+      "result": "Proposition 5.1",
+      "pages": [
+        14
+      ],
+      "scope": "terminal Q-factorial fourfold with nef canonical divisor, kappa=-infinity, proper very-general-point subvarieties general type; signed canonical representative gives big log adjoint on resolution of full support"
+    }
+  ],
+  "proofPassages": [
+    {
+      "section": "2",
+      "pages": [
+        5,
+        6,
+        7
+      ],
+      "read": "fixed terminal model and general type of proper subvarieties"
+    },
+    {
+      "section": "3.4–3.5",
+      "pages": [
+        10,
+        11,
+        12
+      ],
+      "read": "bounded-degree curve obstruction and scalar order bound"
+    },
+    {
+      "section": "4–5",
+      "pages": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "read": "analytic statements; signed support; crepant interval; full reduced floor; endpoint comparison; descent and final GM application"
+    },
+    {
+      "section": "6.3–6.5",
+      "pages": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "read": "finite correspondences, branch complement, slice case analysis and one finite jet system"
+    },
+    {
+      "section": "7",
+      "pages": [
+        30,
+        31,
+        32,
+        33,
+        34
+      ],
+      "read": "complete numerical data; fixed flag and curve; determinant orders"
+    },
+    {
+      "section": "8",
+      "pages": [
+        34,
+        35
+      ],
+      "read": "rational feasibility and prescribed Cartier index"
+    }
+  ],
+  "dependencies": [
+    {
+      "abbreviation": "MM",
+      "sourceUrl": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Minimal-metrics-and-interior-injectivity-for-nef-adjoints-September-27-2026/paper.pdf",
+      "result": "Theorems 1.1–1.2",
+      "pdfPages": [
+        1,
+        2
+      ],
+      "usedAt": "Theorems 4.1–4.2; Proposition 5.1, (5.9)–(5.10), pp. 18–20",
+      "supplies": "endpoint metrics and ordinary H1 injectivity",
+      "checking": "statements, endpoint formulas and application compared; analytic proof passages read in first draft; not full proof validation"
+    },
+    {
+      "abbreviation": "LA",
+      "sourceUrl": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf",
+      "result": "Lemmas 7.1–7.5",
+      "pdfPages": [
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52
+      ],
+      "usedAt": "§3 and §§6.3–6.4",
+      "supplies": "generic subadjunction, base-component bounds, moving multiplicity, restriction, finite covers of fixed branch complement",
+      "checking": "all five input statements and main applications read; complete proofs not verified"
+    },
+    {
+      "abbreviation": "LA",
+      "sourceUrl": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf",
+      "result": "Theorem 9.1",
+      "pdfPages": [
+        62
+      ],
+      "usedAt": "Theorem 7.1; §§7.1–7.3, pp. 31–34",
+      "supplies": "incompatibility of fixed flag, finite jets and movable witness with numerical inequalities",
+      "checking": "statement and all numerical hypotheses compared; target determinant passage read; full external proof not checked"
+    },
+    {
+      "abbreviation": "CT",
+      "sourceUrl": "https://arxiv.org/pdf/2011.02236v2",
+      "result": "Theorem 1.1",
+      "pdfPages": [
+        2
+      ],
+      "usedAt": "Proposition 2.1; Proposition 5.1 MMP steps",
+      "supplies": "termination for pseudo-effective NQC lc fourfolds, with nef part zero",
+      "checking": "v2 statement compared; proof not checked"
+    },
+    {
+      "abbreviation": "Fuj",
+      "sourceUrl": "https://www.math.kyoto-u.ac.jp/~fujino/Abundance.pdf",
+      "result": "Corollary 4.10",
+      "pdfPages": null,
+      "usedAt": "Proposition 5.1, p. 19",
+      "supplies": "whole-floor semi-dlt threefold abundance",
+      "checking": "target application read; original specified corollary not retrieved"
+    },
+    {
+      "abbreviation": "GM",
+      "sourceUrl": "https://arxiv.org/pdf/1406.6132v2",
+      "result": "Corollary 5.3",
+      "pdfPages": [
+        19
+      ],
+      "usedAt": "Proposition 5.1, pp. 19–20",
+      "supplies": "klt semiampleness after obtaining nonnegative Iitaka dimension and zero-Lelong metric",
+      "checking": "v2 statement and application compared"
+    },
+    {
+      "abbreviation": "Hash",
+      "sourceUrl": "https://arxiv.org/pdf/1609.00121v4",
+      "result": "Theorem 1.4",
+      "pdfPages": [
+        1,
+        2
+      ],
+      "usedAt": "§8, p. 35",
+      "supplies": "smooth fourfold nonvanishing to real lc nonvanishing in dimensions at most four",
+      "checking": "v4 statement plus Conjectures 1.1–1.3 and application compared"
+    }
+  ],
+  "unresolved": [
+    "Full moving-center ideal calculations and finite-cover/birational-group external proofs not independently verified.",
+    "HMX effective birationality, Ambro nef-reduction criterion, generic semipositivity and Mehta–Ramanathan restriction original statements not compared in this draft.",
+    "Fujino Corollary 4.10 statement remains pending because external PDF retrieval failed.",
+    "Complete Frobenius filtration/slope proof in LA not independently verified."
+  ],
+  "relationshipNotes": [
+    "LA Theorem 9.1 is an independent tool, not the abundance main theorem.",
+    "LA Lemmas 7.1–7.5 also supply independent geometric tools.",
+    "Supported lifting is a downstream abundance consequence, not an input to Theorem 1.1."
+  ],
+  "visualCheck": {
+    "sourcePdfPages": [
+      31
+    ],
+    "diagramSvgs": 6,
+    "tikzCompile": "passed with no overfull boxes or missing glyphs",
+    "svgRasterInspection": "all six inspected as bilingual pairs",
+    "sitePage": "not integrated"
+  },
+  "schnellStyleRevision": {
+    "date": "2026-10-08",
+    "recordedAt": "2026-10-08T15:21:07+09:00",
+    "referenceStyle": [
+      "SchnellArticle.astro",
+      "schnell.mjs",
+      "SCHNELL_STYLE_ALL_ARTICLES.md"
+    ],
+    "scope": "Bilingual structure and explanations; statement hypotheses and existing unverified limits retained. No recursive verification of external proofs.",
+    "recheckedTargetPassages": [
+      "Theorems 1.1 / Corollary 1.2, p. 2",
+      "Proposition 5.1, p. 14",
+      "(5.9)–(5.12), pp. 18–19",
+      "Theorem 7.1, p. 31"
+    ],
+    "retainedPriorChecks": "All other original-source checks are inherited from the initial draft, not newly verified in this style revision.",
+    "validation": "All 8 JA/EN articles: TeX math syntax and reference/image targets checked; all 26 SVGs rebuilt and visually inspected. Browser checks at 1280px and 375px: no MathJax errors or document overflow. 13 renderer tests, 29-page build and 757 internal links/assets passed. External-proof limits retained.",
+    "validatedAt": "2026-10-08T15:32:21+09:00",
+    "publication": {
+      "completedAt": "2026-10-08T15:38:41+09:00",
+      "contentCommit": "8db520d2089a051241fd38f4713ac045a0468f75",
+      "deployedCommit": "74f736b59e3cd5d813cc9023f1ca8a950601e1a3",
+      "actions": "https://github.com/masataka123/OpenAI-Math-Digest/actions/runs/37738445647",
+      "result": "success",
+      "urls": [
+        "https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/fourfold-nonvanishing/",
+        "https://masataka123.github.io/OpenAI-Math-Digest/en/papers/fourfold-nonvanishing/"
+      ],
+      "integrationValidation": {
+        "tests": 13,
+        "pages": 37,
+        "internalReferences": 1011,
+        "publishedHtmlMatchesLocal": true
+      },
+      "recordLocation": "Shared draft; appended after deployment."
+    }
+  }
+}

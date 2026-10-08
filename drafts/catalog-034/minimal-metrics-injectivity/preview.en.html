@@ -1,0 +1,227 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Minimal metrics and interior injectivity for nef adjoints · 原稿プレビュー</title><style>:root {
+  color-scheme: light;
+  --paper: #f4f1ea;
+  --ink: #18232d;
+  --muted: #52606b;
+  --accent: #984526;
+  --link: #17617d;
+  --card: #ffffff;
+  --line: #d5cdbf;
+  --soft-line: #c9c1b4;
+  font-family: Georgia, "Times New Roman", "Yu Mincho", "Hiragino Mincho ProN", serif;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); }
+main { width: min(920px, calc(100% - 32px)); margin: 0 auto; padding: 42px 0 56px; }
+a { color: var(--link); text-underline-offset: .18em; }
+
+.site-header { border-bottom: 2px solid var(--ink); margin-bottom: 28px; padding-bottom: 20px; }
+.landing-header { max-width: 790px; }
+h1 { font-size: clamp(2.25rem, 7vw, 4rem); line-height: 1.04; margin: 0 0 14px; letter-spacing: -.02em; }
+h2, h3 { line-height: 1.3; }
+p { line-height: 1.75; }
+.eyebrow, .topic-count {
+  color: var(--accent);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+  font-size: .78rem;
+  font-weight: 750;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.topic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+.topic-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: inherit;
+  display: block;
+  min-height: 250px;
+  padding: 24px;
+  text-decoration: none;
+  transition: border-color 120ms ease, transform 120ms ease, box-shadow 120ms ease;
+}
+.topic-card:hover, .topic-card:focus-visible {
+  border-color: var(--accent);
+  box-shadow: 0 8px 24px rgba(24, 35, 45, .08);
+  transform: translateY(-2px);
+}
+.topic-card h2 { font-size: 1.65rem; margin: 18px 0 2px; }
+.topic-card p { color: var(--muted); margin: 0 0 20px; }
+.topic-card .topic-english { font-style: italic; margin-bottom: 12px; }
+.topic-open { color: var(--link); font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-weight: 700; }
+.heading-subtitle { color: var(--muted); font-style: italic; margin: -6px 0 6px; }
+
+.notice-card {
+  background: rgba(255,255,255,.55);
+  border-top: 1px solid var(--line);
+  margin-top: 34px;
+  padding: 16px 2px 0;
+}
+
+.notice-card h2 {
+  margin: 0 0 4px;
+}
+
+.topic-nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 30px; }
+.topic-nav a {
+  border: 1px solid var(--soft-line);
+  border-radius: 999px;
+  color: #34434e;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+  font-size: .88rem;
+  padding: 7px 12px;
+  text-decoration: none;
+}
+.topic-nav a:hover, .topic-nav a:focus-visible, .topic-nav a[aria-current="page"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+
+.digest-list { max-width: 790px; }
+.digest { background: var(--card); border: 1px solid var(--line); border-radius: 6px; margin: 0 0 18px; padding: 20px 22px; }
+.dates { display: flex; flex-wrap: wrap; gap: 5px 18px; margin: 0 0 6px; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-size: .8rem; }
+.dates div { display: flex; gap: 6px; }
+.dates dt { color: var(--accent); font-weight: 700; letter-spacing: .04em; }
+.dates dd { color: var(--muted); font-variant-numeric: tabular-nums; margin: 0; }
+.digest h2 { font-size: 1.35rem; margin: 5px 0 7px; }
+.title-link { color: var(--ink); text-decoration: none; }
+.title-link:hover { color: var(--link); }
+.authors { color: var(--muted); font-style: italic; }
+.abstracts { max-width: 100%; overflow-wrap: anywhere; word-break: normal; }
+.abstract h3, .paper-header .abstract h2 { font-size: 1rem; margin: 1.25rem 0 .35rem; }
+.abstract p { margin: 0; }
+.abstract-en { line-height: 1.8; }
+.abstract-en p[lang="en"] { line-height: 1.8; overflow-wrap: anywhere; }
+.abstract-source { font-size: .86rem; margin-top: .65rem !important; }
+.abstract-source a { color: var(--muted); }
+.abstract-ja { margin-top: 1.75rem; }
+.links { display: flex; flex-wrap: wrap; gap: 16px; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-weight: 650; }
+.empty { background: var(--card); border: 1px dashed var(--soft-line); border-radius: 6px; color: var(--muted); padding: 22px; }
+
+.paper-page { max-width: 790px; }
+.paper-header { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: clamp(22px, 5vw, 38px); }
+.paper-header h1 { font-size: clamp(2rem, 6vw, 3.25rem); }
+.paper-summary { font-size: 1.08rem; }
+.paper-meta { border-top: 1px solid var(--line); display: grid; gap: 8px; margin: 24px 0 0; padding-top: 18px; }
+.paper-meta div { display: grid; grid-template-columns: minmax(120px, .35fr) 1fr; gap: 16px; }
+.paper-meta dt { color: var(--accent); font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-size: .85rem; font-weight: 700; }
+.paper-meta dd { margin: 0; }
+.paper-links { margin-top: 22px; }
+.paper-content { background: var(--card); border: 1px solid var(--line); border-radius: 8px; margin-top: 18px; padding: clamp(22px, 5vw, 40px); }
+.paper-content h2 { border-bottom: 1px solid var(--line); font-size: 1.55rem; margin: 2.2em 0 .8em; padding-bottom: .35em; }
+.paper-content h2:first-child { margin-top: 0; }
+.paper-content h3 { font-size: 1.2rem; margin-top: 1.7em; }
+.paper-content blockquote { border-left: 4px solid var(--accent); color: #35434e; margin: 1.5em 0; padding: .15em 0 .15em 1.2em; }
+.paper-content code { background: #eee9df; border-radius: 3px; padding: .1em .3em; }
+.paper-content mjx-container[display="true"],
+.paper-content .MathJax { max-width: 100%; overflow-x: auto; overflow-y: hidden; }
+
+.site-footer { border-top: 1px solid var(--line); color: var(--muted); font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-size: .82rem; margin-top: 42px; padding-top: 18px; }
+.site-footer p { line-height: 1.6; }
+
+@media (max-width: 560px) {
+  main { padding-top: 24px; }
+  .topic-card { min-height: 0; }
+  .digest { padding: 17px; }
+  .paper-meta div { grid-template-columns: 1fr; gap: 2px; }
+  .abstract-ja { margin-top: 1.4rem; }
+}
+
+ header{position:sticky;top:0;z-index:20;background:#f4f1eaf5;border-bottom:1px solid #d5cdbf;padding:14px max(16px,calc((100vw - 1060px)/2));display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:system-ui,sans-serif}header .brand{font:20px Georgia,serif}header nav{display:flex;gap:16px;flex-shrink:0}main{width:min(1060px,calc(100% - 36px));padding-top:26px}article{max-width:940px;margin:auto;font-size:17px;line-height:1.95}article h1{font-size:clamp(1.85rem,4vw,2.7rem);line-height:1.4;margin-top:36px}article h2{font-size:1.6rem;margin-top:56px;padding-top:22px;border-top:1px solid #d5cdbf}article h3{margin-top:35px;font-size:1.2rem}article p,article li{line-height:1.95}article a{overflow-wrap:anywhere}.draft-note{padding:12px 18px;border-left:3px solid #984526;background:#eeebe3;font:14px/1.8 system-ui,sans-serif}.paper-nav{display:flex;flex-wrap:wrap;gap:10px 22px;padding:22px 0;border-bottom:1px solid #d5cdbf;font:14px/1.6 system-ui,sans-serif}.paper-nav a[aria-current]{font-weight:700;color:#18232d}blockquote{border-left:3px solid #17617d;margin:25px 0;padding:0 18px;color:#52606b}figure{background:white;margin:26px 0;padding:16px;border:1px solid #d5cdbf;overflow-x:auto}figure img{display:block;min-width:680px;width:100%;height:auto}figcaption{font:12px/1.6 system-ui,sans-serif;color:#52606b;margin-top:10px}.math-block{padding:8px 0;overflow-x:auto;overflow-y:hidden}.table-wrap{overflow-x:auto;margin:24px 0}table{border-collapse:collapse;width:100%;min-width:740px;font:14px/1.85 system-ui,sans-serif}th,td{padding:14px;border:1px solid #d5cdbf;text-align:left;vertical-align:top}th{background:#eeebe3}code{font-size:.85em;overflow-wrap:anywhere}footer{border-top:1px solid #d5cdbf;padding:22px 0;margin-top:55px;font:12px/1.8 system-ui,sans-serif;color:#52606b}mjx-container[display=true]{max-width:100%;overflow-x:auto;overflow-y:hidden}article img{max-width:none}@media(max-width:540px){header .brand{font-size:16px}header nav{font-size:13px}article{font-size:16px}figure{margin-left:0;margin-right:0}article h2{font-size:1.35rem}}
+ </style><script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'},startup:{pageReady:()=>MathJax.startup.defaultPageReady().then(()=>document.documentElement.dataset.mathReady='true')}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script></head><body><header><span class="brand">OpenAI <em>Math Digest</em></span><nav><a href="preview.ja.html" lang="ja">日本語</a><a href="preview.en.html" lang="en">English</a></nav></header><main><div class="draft-note">Worker C · Local draft preview. AI-generated guide; check important claims against the originals.</div><nav class="paper-nav" aria-label="Four articles"><a aria-current="page" href="../minimal-metrics-injectivity/preview.en.html">05 · Minimal metrics</a><a  href="../fourfold-nonvanishing/preview.en.html">06 · Fourfold nonvanishing</a><a  href="../uniform-slc-indices/preview.en.html">02 · Uniform slc indices</a><a  href="../conditional-kahler-fourfolds/preview.en.html">03 · Conditional Kähler models</a></nav><article><h1>Minimal metrics and interior injectivity for nef adjoints</h1>
+<blockquote>
+<p>AI-generated first-pass exposition. The results below are claims of the manuscript's author, OpenAI; this article does not certify their correctness. Consult the original paper for important statements and proofs.</p>
+</blockquote>
+<p>Official position 05 within catalog 034; internal ID: minimal-metrics-injectivity. We use the September 27, 2026 manuscript, 21 PDF pages, at commit adc7f1241b42e322a6451854ab7e4b4c146bf78a. <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Minimal-metrics-and-interior-injectivity-for-nef-adjoints-September-27-2026/paper.pdf">Source PDF viewer</a>.</p>
+<p>The paper supplies two analytic inputs. It proves vanishing of the Lelong numbers of minimal metrics on nef klt adjoints by localizing extremal sections with one fixed ample twist. Independently, it proves ordinary <span class="math-inline">\(H^1\)</span> injectivity for interior boundaries with zero-Lelong endpoint metrics, returning weighted harmonic estimates to a fixed Hilbert space and ordinary cohomology. The second proof does not use the first theorem.</p>
+<h2>Main results</h2>
+<h3>Theorem 1.1 — Minimal metrics on nef klt adjoints (pp. 1–2)</h3>
+<p>Let <span class="math-inline">\((H,\Theta)\)</span> be a normal connected projective complex klt pair with effective rational divisor <span class="math-inline">\(\Theta\)</span>, and suppose <span class="math-inline">\(D_H=K_H+\Theta\)</span> is nef and <span class="math-inline">\(\mathbb Q\)</span>-Cartier. On every projective log resolution <span class="math-inline">\(\pi:V\to H\)</span>, the actual rational line bundle <span class="math-inline">\(N=\pi^*D_H\)</span> admits a semipositive singular Hermitian metric with minimal singularities, and every such metric has zero Lelong number at every point. Neither <span class="math-inline">\(K_H\)</span> nor <span class="math-inline">\(\Theta\)</span> is separately required to be <span class="math-inline">\(\mathbb Q\)</span>-Cartier. <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Minimal-metrics-and-interior-injectivity-for-nef-adjoints-September-27-2026/paper.pdf">Theorem 1.1, pp. 1–2</a></p>
+<h3>Theorem 1.2 — Interior injectivity (p. 2)</h3>
+<p>Let <span class="math-inline">\(V\)</span> be smooth projective over <span class="math-inline">\(\mathbb C\)</span>, <span class="math-inline">\(L\)</span> an integral divisor, and <span class="math-inline">\(0\leq C_0\leq C_2\)</span> effective rational divisors with combined SNC support. Assume that <strong>both actual rational line bundles</strong> <span class="math-inline">\(L-C_0,L-C_2\)</span> admit semipositive singular Hermitian metrics with zero Lelong numbers everywhere. For rational <span class="math-inline">\(0&lt;\lambda&lt;1\)</span>, put</p>
+<div class="math-block">\[
+C_1=(1-\lambda)C_0+\lambda C_2,\qquad L_i=L-\lfloor C_i\rfloor\quad(i=0,1).
+\]</div>
+<p>The natural inclusion induces an injection</p>
+<div class="math-block">\[
+H^1(V,\mathcal O_V(K_V+L_1))\longrightarrow H^1(V,\mathcal O_V(K_V+L_0)).
+\]</div>
+<p><a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Minimal-metrics-and-interior-injectivity-for-nef-adjoints-September-27-2026/paper.pdf">Theorem 1.2, p. 2</a></p>
+<h3>Corollary 2.4 — Multiplier ideals (pp. 10–11)</h3>
+<p>Under Theorem 1.1, every minimal weight <span class="math-inline">\(\varphi\)</span> satisfies <span class="math-inline">\(\mathcal I(t\varphi)=\mathcal O_V\)</span> for every real <span class="math-inline">\(t&gt;0\)</span>. This is independent of the minimal metric and of the Cartier multiple used to normalize its weights. <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Minimal-metrics-and-interior-injectivity-for-nef-adjoints-September-27-2026/paper.pdf">Corollary 2.4, pp. 10–11</a></p>
+<h3>Corollary 4.1 — Fourfolds with nonzero Euler characteristic (p. 18)</h3>
+<p>Let <span class="math-inline">\((X,\Delta)\)</span> be a projective complex klt fourfold with effective rational boundary and nef <span class="math-inline">\(D=K_X+\Delta\)</span>. If <span class="math-inline">\(\chi(X,\mathcal O_X)\ne0\)</span>, then <span class="math-inline">\(D\)</span> is semiample. No numerical-dimension restriction is imposed; the Euler hypothesis produces the first section. <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Minimal-metrics-and-interior-injectivity-for-nef-adjoints-September-27-2026/paper.pdf">Corollary 4.1, pp. 18–19</a></p>
+<h2>Proof strategy for Theorem 1.1</h2>
+<figure><a class="diagram-link" href="diagrams/metric.en.svg" target="_blank"><img src="diagrams/metric.en.svg" alt="Extremal sections with a fixed twist force zero Lelong numbers"></a><figcaption>Proof diagram · Click to enlarge</figcaption></figure>
+<p>On the resolution, <span class="math-inline">\(N=K_V+B\)</span>, every coefficient of <span class="math-inline">\(B\)</span> is less than one, and its negative part is <span class="math-inline">\(\pi\)</span>-exceptional. This negative part must be retained. The density <span class="math-inline">\(e^{-b}\)</span>, with <span class="math-inline">\(b=[B]\)</span>, is integrable, and <span class="math-inline">\(A=\pi^*((n+1)H_0)\)</span> makes <span class="math-inline">\(mN+A\)</span> globally generated for every allowed <span class="math-inline">\(m\)</span>, meaning that <span class="math-inline">\(mD_H\)</span> is Cartier. Section 2.2 uses Nadel vanishing and Castelnuovo–Mumford regularity.</p>
+<p>Assuming a positive Lelong number at <span class="math-inline">\(p\)</span>, maximize evaluation at <span class="math-inline">\(p\)</span> among sections <span class="math-inline">\(s_m\)</span> normalized by</p>
+<div class="math-block">\[
+Q_m(s)=\int_V|s|^{2/m}e^{-a/m-b}=1.
+\]</div>
+<p>A subsequential limit of <span class="math-inline">\(\tau_m=m^{-1}\log|s_m|^2\)</span>, together with minimality <span class="math-inline">\(\tau_\infty\leq\varphi+C\)</span>, makes the adjoint mass <span class="math-inline">\(\varepsilon_m\)</span> on the fixed sublevel set <span class="math-inline">\(\{g_m&lt;-R\}\)</span> tend to zero, where <span class="math-inline">\(g_m=\varphi+a/m-\tau_m\)</span> (Claim 2.2 and (2.5)).</p>
+<p>Lemma 2.3 corrects the <span class="math-inline">\(\bar\partial\)</span> error of a cutoff section with a constant independent of <span class="math-inline">\(m\)</span>. Choose a weight <span class="math-inline">\(e^{-c\varphi-b}\)</span> that is nonintegrable at <span class="math-inline">\(p\)</span>, using the assumed positive Lelong number. The resulting holomorphic section <span class="math-inline">\(w_m\)</span> must have <span class="math-inline">\(w_m(p)=s_m(p)\)</span>. Extension across negative exceptional components proceeds on the normal base in the actual Cartier bundle, by Hartogs extension over codimension two, followed by pullback; a local estimate across those components is not asserted (§2.4, pp. 9–10).</p>
+<p>The final Hölder estimate is <span class="math-inline">\(Q_m(w_m)^m\leq C'\varepsilon_m(1+I)^d\to0\)</span>, with fixed <span class="math-inline">\(d\)</span> and <span class="math-inline">\(I=\int_Ve^{\varphi-b}&lt;\infty\)</span>. Renormalizing <span class="math-inline">\(w_m\)</span> to gauge one increases evaluation at <span class="math-inline">\(p\)</span>, contradicting extremality. Corollary 2.4 follows by Skoda integrability. This draft does not independently verify all singular-limit operations in the localization lemma.</p>
+<h2>Proof strategy for Theorem 1.2</h2>
+<figure><a class="diagram-link" href="diagrams/injectivity.en.svg" target="_blank"><img src="diagrams/injectivity.en.svg" alt="Endpoint metrics give ordinary H1 injectivity"></a><figcaption>Proof diagram · Click to enlarge</figcaption></figure>
+<p>Regularize both endpoints with curvature loss <span class="math-inline">\(\varepsilon_k\to0\)</span>, retaining uniform exponential integrability for every fixed exponent (Lemma 3.1). The log-sum modification in (3.1)–(3.3) makes multiplication <span class="math-inline">\(s:L_1\to L_0\)</span> by the canonical section of <span class="math-inline">\(E=\lfloor C_1\rfloor-\lfloor C_0\rfloor\geq0\)</span> a contraction. On the complement of the SNC support it gives</p>
+<div class="math-block">\[
+\theta_{1,k}+\varepsilon_k\omega_c\geq(1-\lambda)(\theta_{0,k}+\varepsilon_k\omega_c)\geq0.
+\]</div>
+<p>The strict inequality <span class="math-inline">\(\lambda&lt;1\)</span> keeps the Bochner comparison constant <span class="math-inline">\(C_\lambda=(1-\lambda)^{-1}\)</span> finite. The statement does not extend the argument to the endpoint <span class="math-inline">\(\lambda=1\)</span>.</p>
+<p>Proposition 3.3 is the main bridge. Differences of local <span class="math-inline">\(L^2\)</span> primitives on a fixed finite cover extend across the SNC divisor to holomorphic Čech cocycles. The continuous class map <span class="math-inline">\(\kappa_k\)</span> to ordinary <span class="math-inline">\(H^1(V,K_V\otimes F)\)</span> kills the closure of exact forms. On its kernel, one fixed Fréchet open-mapping argument supplies global primitives with norms uniformly bounded in <span class="math-inline">\(k\)</span>. It does not assert simultaneous bounded lifting for every Fréchet seminorm.</p>
+<p>For harmonic representatives <span class="math-inline">\(u_k\)</span> of a kernel class, the Bochner comparison gives <span class="math-inline">\(\|\bar\partial^*_{0,k}(su_k)\|=O(\sqrt{\varepsilon_k})\)</span>. Pairing with uniformly bounded primitives <span class="math-inline">\(v_k\)</span>, <span class="math-inline">\(\bar\partial v_k=su_k\)</span>, from Proposition 3.3 gives <span class="math-inline">\(\|su_k\|_{0,k}\to0\)</span>. This alone does not dispose of the original ordinary class. Equation (3.15) puts every representative in one fixed Hilbert space; weak convergence <span class="math-inline">\(u_k\rightharpoonup0\)</span> and the continuous fixed class map <span class="math-inline">\(\kappa_*u_k=[\gamma]\)</span> then force <span class="math-inline">\([\gamma]=0\)</span> (§3.5, pp. 17–18).</p>
+<p>The restriction consequence requires only the exact sequence</p>
+<div class="math-block">\[
+0\to\mathcal O_V(K_V+L_1)\to\mathcal O_V(K_V+L_0)\to\mathcal O_V(K_V+L_0)|_E\to0.
+\]</div>
+<p>Its connecting map vanishes, so for <span class="math-inline">\(E\ne0\)</span> restriction <span class="math-inline">\(H^0(V,K_V+L_0)\to H^0(E,(K_V+L_0)|_E)\)</span> is surjective ((1.1), p. 2). This concerns the <strong>entire divisor scheme</strong>, including nonreduced <span class="math-inline">\(E\)</span>.</p>
+<h2>Proof strategy for Corollary 4.1</h2>
+<figure><a class="diagram-link" href="diagrams/euler.en.svg" target="_blank"><img src="diagrams/euler.en.svg" alt="Nonzero Euler characteristic yields fourfold abundance"></a><figcaption>Proof diagram · Click to enlarge</figcaption></figure>
+<p>Take a tensor power of Theorem 1.1's metric on the actual bundle <span class="math-inline">\(\pi^*\mathcal O_X(rD)\)</span>. It satisfies the generalized algebraic singularities condition of <a href="https://arxiv.org/pdf/1809.02500v4">LP, Corollary D, p. 4</a>, with zero divisorial part. Set the auxiliary nef divisor and parameter to zero to obtain <span class="math-inline">\(\kappa(D)\geq0\)</span>. The same zero-Lelong metric and nonvanishing meet <a href="https://www.numdam.org/item/10.24033/asens.2325.pdf">GM, Corollary 5.3, p. 499</a>, giving semiampleness. Theorem 1.2 of this paper is not used here.</p>
+<h2>External inputs and catalog connections</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Use in the paper</th>
+<th>Checking scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://ems.press/content/serial-article-files/41145">Fuj, Theorem 3.2, p. 734 (PDF p. 8)</a></td>
+<td>§2.2, p. 6: the klt multiplier ideal is trivial; the nef adjoint and ample difference give vanishing and, by regularity, the fixed globally generated twist.</td>
+<td>Statement and substitution checked. The original regularity theorem was not checked.</td>
+</tr>
+<tr>
+<td><a href="https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/analmeth_book.pdf">Dem, Theorem 5.1, p. 33</a></td>
+<td>Lemma 2.1, p. 5, then Lemma 2.3 and Proposition 3.3: complete Kähler solvability controlled by the inverse-curvature integral.</td>
+<td>Restatement and use read in the target. External PDF retrieval failed; comparison with the original theorem remains pending.</td>
+</tr>
+<tr>
+<td><a href="https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/regularization.pdf">Reg, Main Theorem 1.1</a>, and Skoda integrability</td>
+<td>Lemma 3.1, pp. 11–12: smooth approximation, small curvature loss, and uniform integrability at fixed exponents.</td>
+<td>Target proof read. Original regularization and integrability statements not compared.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/pdf/1809.02500v4">LP, Corollary D, p. 4</a></td>
+<td>Theorem 4.2 and Corollary 4.1, p. 19: the first section using nonzero Euler characteristic.</td>
+<td>May 7, 2019 v4 statement and the <span class="math-inline">\(N=0,t=0\)</span> specialization checked; proof excluded.</td>
+</tr>
+<tr>
+<td><a href="https://www.numdam.org/item/10.24033/asens.2325.pdf">GM, Corollary 5.3, p. 499</a></td>
+<td>Theorem 4.3 and Corollary 4.1, p. 19: nonvanishing and a zero-Lelong metric imply semiampleness.</td>
+<td>Published 2017 statement and application checked; proof excluded.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Within 034, <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Fourfold-nonvanishing-by-minimal-metrics-and-moving-jets-September-27-2026/paper.pdf">Fourfold nonvanishing</a>, Theorems 4.1–4.2, restates these two theorems and uses them in the proof of Proposition 5.1, (5.9)–(5.10), pp. 18–19. It identifies the endpoint residual bundles on a resolution with <strong>positive rational multiples of nef klt adjoints</strong>, applies Theorem 1.1, and pushes down Theorem 1.2's ordinary <span class="math-inline">\(H^1\)</span> injection using multiplier-ideal local vanishing. This yields restriction surjectivity to the entire reduced non-klt locus. Producing a nonzero section there additionally requires threefold semi-dlt abundance, gluing and descent in <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Fourfold-nonvanishing-by-minimal-metrics-and-moving-jets-September-27-2026/paper.pdf">FN</a>; these are not supplied by the present analytic theorem alone.</p>
+<h2>Source guide and checking scope</h2>
+<ul>
+<li>Statements: Theorems 1.1–1.2, pp. 1–2; Corollary 2.4, pp. 10–11; Corollary 4.1, pp. 18–19.</li>
+<li>Proof passages read: §§2.2–2.4, pp. 5–10, for the fixed twist, localization, extension and extremal contradiction; §§3.1–3.5, pp. 11–18, for endpoint comparison, class maps and the fixed-space limit; §4 for the two external criteria. The main formulas were also compared with the image of PDF p. 2.</li>
+<li>Editorial checking concerns the correspondence between these statements, proof passages and cited applications. All localization limits, operator-domain issues and uniform constants, external regularization/integrability statements, and complete external proofs have not been independently verified. Other catalog relations are uninvestigated, which does not mean absent.</li>
+<li>Bilingual SVGs, TeX/TikZ sources and checking records are included. Site integration and final page inspection belong to the central editor.</li>
+</ul></article><footer>OpenAI Math Digest · Independent, unofficial reading project.<br>Design adapted from <a href="https://masataka123.github.io/geometry-paper-digest/">Geometry Paper Digest</a> (MIT). This is a local preview, not a published page.</footer></main></body></html>

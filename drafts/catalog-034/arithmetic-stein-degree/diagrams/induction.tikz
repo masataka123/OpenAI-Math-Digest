@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+\node[card] (start) {\heading{}{1. 定数体を保って境界を残す}{1. Preserve constants and the boundary}$H^0(\mathcal O_X)=k,\quad K_X+B\sim_{\mathbb Q}0,\quad 0<b=b(t)<t.$};
+
+\node[card,below=1.8cm of start] (mori) {\heading{}{2. 第1のMoriファイバー空間}{2. The first Mori fibre space}$X_1\to Z_1,\quad S_1\text{ relatively ample},\quad \operatorname{coeff}_{S_1}B_1\ge t.$};
+
+\flow{start}{mori}{\Tx{$S$ に正なMMPで $S$ を保存。}{An $S$-positive MMP preserves $S$.}\\[4pt]\Cite{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Arithmetic-Stein-degree-bounds-for-log-Calabi-Yau-pairs-September-25-2026/paper.pdf}{Lemmas 2.1, 4.1--4.2; pp. 2--3, 7--8}}
+\node[result,text width=6.45cm,below=2.2cm of mori.south,xshift=-4cm] (done) {\heading{}{3a. 正次元の底：終了}{3a. Positive-dimensional base: end}$0<\dim Z_1<d,\quad r=d-\dim Z_1.$\\ $c(S/k)\le N(r,t)\le M_{<d}(t).$};
+
+\node[half,below=2.2cm of mori.south,xshift=4cm] (next) {\heading{}{3b. 点の底：補完を選ぶ}{3b. Point base: choose a complement}$C_1\ge bS_1,\quad n(K_{X_1}+C_1)\sim0.$\\ $n=n(d,b),\quad\epsilon=1/n.$\\ \Tx{第2図へ進む。}{Continue to Figure 2.}};
+
+\coordinate (done-a) at ($(done.north west)+(.32,0)$);
+\draw[edge] (mori.south) -- ++(0,-.4) -| (done-a);
+\node[branchreason,anchor=south west] at ($(done.north west)+(.65,.18)$) {\Tx{水平な $S_1$ を一般ファイバーで帰納。}{Induct for horizontal $S_1$ on the generic fibre.}\\[3pt]\Cite{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Arithmetic-Stein-degree-bounds-for-log-Calabi-Yau-pairs-September-25-2026/paper.pdf}{(5.3); p. 11}};
+
+\coordinate (next-a) at ($(next.north west)+(.32,0)$);
+\draw[edge] (mori.south) -- ++(0,-.4) -| (next-a);
+\node[branchreason,anchor=south west] at ($(next.north west)+(.65,.18)$) {\Tx{Fanoかつ $-(K+bS_1)$ nefに補完を適用。}{Apply complements to the Fano model with $-(K+bS_1)$ nef.}\\[3pt]\Cite{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Arithmetic-Stein-degree-bounds-for-log-Calabi-Yau-pairs-September-25-2026/paper.pdf}{Lemma 3.1; pp. 4, 11}};
+
+\end{tikzpicture}

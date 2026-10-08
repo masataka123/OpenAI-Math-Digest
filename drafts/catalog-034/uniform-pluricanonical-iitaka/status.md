@@ -1,0 +1,33 @@
+# uniform-pluricanonical-iitaka
+- 担当: A
+- 開始: 2026-10-08 13:34:32 JST
+- 終了: 2026-10-08 13:43 JST
+- 状態: 本部確認待ち（初稿完了）
+- 上限: 2026-10-08 14:34:32 JST
+
+## 引き渡し記録
+- 終了: 2026-10-08 13:43 JST（約9分、上限60分以内）
+- 状態: 本部確認待ち
+- 成果物: article.ja.md、article.en.md、sources.json、catalog-changes.md、diagrams/ の3種×日英のTikZ/TeX/SVG/PNG、再生成用spec.json・render.py・preamble.tex。
+- 確認済み: 指定PDFのSHA-256一致、主定理p.2の画像確認、sources.json記載の証明箇所と直接入力、日英の主要仮定・結論・節対応、5つの表示数式の一致、本文154数式のXeLaTeX構文確認、6枚の図の生成・目視、図中30リンクとSVG XMLの確認。図は白背景、説明と矢印の専用余白を確保。
+- 未確認: §5の全構造帰着、§6の全弱正値性/flattening、§7の全正標数評価、等変半安定化・coherent Lefschetz、外部入力の全証明。一部の古典的入力は原記述の照合も未完了（sources.json）。
+- 申し送り: 四次元原稿→本稿は任意次元の補題への依存として扱う。出力は原稿・図素材であり、共通サイトへの組込み・ブラウザー画面確認は本部の作業。共通コード・公開ページ・他担当原稿・Gitは変更していない。
+
+## GitHub保存用の受け渡し（2026-10-08）
+- ユーザーの追加指示: 4本をGitHubに原稿として保存し、サイトへの統合・公開は本部が担当する。
+- 保存先ブランチ: `codex/catalog-034-worker-a-drafts`。担当4フォルダのみを対象とする。
+- 追加成果物: `preview.ja.html` / `preview.en.html`（数式と図を表示する閲覧版）。4本の切替と日英切替に対応。
+- 保存前確認: 日英本文の画像参照、出典JSON、8つの閲覧HTMLと各3枚の埋込み図の存在を確認。原典の画像抜粋と目視用の合成画像はアップロード対象外。
+- サイトへの組込み・公開前の本部確認と、上記の数学的な未確認範囲は引き続き必要。
+
+## Schnell形式への全篇改訂
+
+2026-10-08 15:03–15:17 JST：日英本文、引用キー、同時帰納法の分岐図と高指数排除の6段階説明、normal lcの独立図を改訂。5種10枚をTeXコンパイル済み。原典再照合・留保はrevision-review.md。画面・公開確認は全篇統合時に実施。次にLiftingへ進む。
+
+## 公開用検査（2026-10-08）
+
+本部の共通表示commit 51909924を基に独立checkoutで統合。日英の全定理カード・番号付き説明・段落末出典、数式、1280px/375pxでのページはみ出しなし、図内横スクロールを確認。全13テスト・37ページのビルド・973内部リンク/画像/アンカー確認が成功。日英の別行立て数式は一致。詳細はrevision-checks.json。数学的な未確認点はrevision-review.mdとsources.jsonに保持。
+
+2026-10-08 15:33 JST：改訂成果物をmainへpush完了。commit `0d3ae7a1bbfc88215cc467d163d83a97b854196c`。GitHub Actions run 37738220121でPages反映を確認中。共通コードは本部版を保持し、担当4篇の原稿・図・公開フラグのみ反映した。
+
+公開確認完了（2026-10-08T15:35:32+09:00）：GitHub Actions run 37738220121成功。公開URLの日英両方でSchnell形式・図・段階別説明・数式エラー0を確認。日本語 https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/uniform-pluricanonical-iitaka/ 、英語 https://masataka123.github.io/OpenAI-Math-Digest/en/papers/uniform-pluricanonical-iitaka/ 。commit `0d3ae7a1bbfc88215cc467d163d83a97b854196c`。公開結果のローカル追記であり、掲載本文・図はGitHubと一致。

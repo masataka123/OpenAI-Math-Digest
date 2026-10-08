@@ -1,0 +1,288 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Conditional good models for Kähler fourfolds: obtaining a first section on the nef endpoint · 原稿プレビュー</title><style>:root {
+  color-scheme: light;
+  --paper: #f4f1ea;
+  --ink: #18232d;
+  --muted: #52606b;
+  --accent: #984526;
+  --link: #17617d;
+  --card: #ffffff;
+  --line: #d5cdbf;
+  --soft-line: #c9c1b4;
+  font-family: Georgia, "Times New Roman", "Yu Mincho", "Hiragino Mincho ProN", serif;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); }
+main { width: min(920px, calc(100% - 32px)); margin: 0 auto; padding: 42px 0 56px; }
+a { color: var(--link); text-underline-offset: .18em; }
+
+.site-header { border-bottom: 2px solid var(--ink); margin-bottom: 28px; padding-bottom: 20px; }
+.landing-header { max-width: 790px; }
+h1 { font-size: clamp(2.25rem, 7vw, 4rem); line-height: 1.04; margin: 0 0 14px; letter-spacing: -.02em; }
+h2, h3 { line-height: 1.3; }
+p { line-height: 1.75; }
+.eyebrow, .topic-count {
+  color: var(--accent);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+  font-size: .78rem;
+  font-weight: 750;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.topic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+.topic-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: inherit;
+  display: block;
+  min-height: 250px;
+  padding: 24px;
+  text-decoration: none;
+  transition: border-color 120ms ease, transform 120ms ease, box-shadow 120ms ease;
+}
+.topic-card:hover, .topic-card:focus-visible {
+  border-color: var(--accent);
+  box-shadow: 0 8px 24px rgba(24, 35, 45, .08);
+  transform: translateY(-2px);
+}
+.topic-card h2 { font-size: 1.65rem; margin: 18px 0 2px; }
+.topic-card p { color: var(--muted); margin: 0 0 20px; }
+.topic-card .topic-english { font-style: italic; margin-bottom: 12px; }
+.topic-open { color: var(--link); font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-weight: 700; }
+.heading-subtitle { color: var(--muted); font-style: italic; margin: -6px 0 6px; }
+
+.notice-card {
+  background: rgba(255,255,255,.55);
+  border-top: 1px solid var(--line);
+  margin-top: 34px;
+  padding: 16px 2px 0;
+}
+
+.notice-card h2 {
+  margin: 0 0 4px;
+}
+
+.topic-nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 30px; }
+.topic-nav a {
+  border: 1px solid var(--soft-line);
+  border-radius: 999px;
+  color: #34434e;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+  font-size: .88rem;
+  padding: 7px 12px;
+  text-decoration: none;
+}
+.topic-nav a:hover, .topic-nav a:focus-visible, .topic-nav a[aria-current="page"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+
+.digest-list { max-width: 790px; }
+.digest { background: var(--card); border: 1px solid var(--line); border-radius: 6px; margin: 0 0 18px; padding: 20px 22px; }
+.dates { display: flex; flex-wrap: wrap; gap: 5px 18px; margin: 0 0 6px; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-size: .8rem; }
+.dates div { display: flex; gap: 6px; }
+.dates dt { color: var(--accent); font-weight: 700; letter-spacing: .04em; }
+.dates dd { color: var(--muted); font-variant-numeric: tabular-nums; margin: 0; }
+.digest h2 { font-size: 1.35rem; margin: 5px 0 7px; }
+.title-link { color: var(--ink); text-decoration: none; }
+.title-link:hover { color: var(--link); }
+.authors { color: var(--muted); font-style: italic; }
+.abstracts { max-width: 100%; overflow-wrap: anywhere; word-break: normal; }
+.abstract h3, .paper-header .abstract h2 { font-size: 1rem; margin: 1.25rem 0 .35rem; }
+.abstract p { margin: 0; }
+.abstract-en { line-height: 1.8; }
+.abstract-en p[lang="en"] { line-height: 1.8; overflow-wrap: anywhere; }
+.abstract-source { font-size: .86rem; margin-top: .65rem !important; }
+.abstract-source a { color: var(--muted); }
+.abstract-ja { margin-top: 1.75rem; }
+.links { display: flex; flex-wrap: wrap; gap: 16px; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-weight: 650; }
+.empty { background: var(--card); border: 1px dashed var(--soft-line); border-radius: 6px; color: var(--muted); padding: 22px; }
+
+.paper-page { max-width: 790px; }
+.paper-header { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: clamp(22px, 5vw, 38px); }
+.paper-header h1 { font-size: clamp(2rem, 6vw, 3.25rem); }
+.paper-summary { font-size: 1.08rem; }
+.paper-meta { border-top: 1px solid var(--line); display: grid; gap: 8px; margin: 24px 0 0; padding-top: 18px; }
+.paper-meta div { display: grid; grid-template-columns: minmax(120px, .35fr) 1fr; gap: 16px; }
+.paper-meta dt { color: var(--accent); font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-size: .85rem; font-weight: 700; }
+.paper-meta dd { margin: 0; }
+.paper-links { margin-top: 22px; }
+.paper-content { background: var(--card); border: 1px solid var(--line); border-radius: 8px; margin-top: 18px; padding: clamp(22px, 5vw, 40px); }
+.paper-content h2 { border-bottom: 1px solid var(--line); font-size: 1.55rem; margin: 2.2em 0 .8em; padding-bottom: .35em; }
+.paper-content h2:first-child { margin-top: 0; }
+.paper-content h3 { font-size: 1.2rem; margin-top: 1.7em; }
+.paper-content blockquote { border-left: 4px solid var(--accent); color: #35434e; margin: 1.5em 0; padding: .15em 0 .15em 1.2em; }
+.paper-content code { background: #eee9df; border-radius: 3px; padding: .1em .3em; }
+.paper-content mjx-container[display="true"],
+.paper-content .MathJax { max-width: 100%; overflow-x: auto; overflow-y: hidden; }
+
+.site-footer { border-top: 1px solid var(--line); color: var(--muted); font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-size: .82rem; margin-top: 42px; padding-top: 18px; }
+.site-footer p { line-height: 1.6; }
+
+@media (max-width: 560px) {
+  main { padding-top: 24px; }
+  .topic-card { min-height: 0; }
+  .digest { padding: 17px; }
+  .paper-meta div { grid-template-columns: 1fr; gap: 2px; }
+  .abstract-ja { margin-top: 1.4rem; }
+}
+
+ header{position:sticky;top:0;z-index:20;background:#f4f1eaf5;border-bottom:1px solid #d5cdbf;padding:14px max(16px,calc((100vw - 1060px)/2));display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:system-ui,sans-serif}header .brand{font:20px Georgia,serif}header nav{display:flex;gap:16px;flex-shrink:0}main{width:min(1060px,calc(100% - 36px));padding-top:26px}article{max-width:940px;margin:auto;font-size:17px;line-height:1.95}article h1{font-size:clamp(1.85rem,4vw,2.7rem);line-height:1.4;margin-top:36px}article h2{font-size:1.6rem;margin-top:56px;padding-top:22px;border-top:1px solid #d5cdbf}article h3{margin-top:35px;font-size:1.2rem}article p,article li{line-height:1.95}article a{overflow-wrap:anywhere}.draft-note{padding:12px 18px;border-left:3px solid #984526;background:#eeebe3;font:14px/1.8 system-ui,sans-serif}.paper-nav{display:flex;flex-wrap:wrap;gap:10px 22px;padding:22px 0;border-bottom:1px solid #d5cdbf;font:14px/1.6 system-ui,sans-serif}.paper-nav a[aria-current]{font-weight:700;color:#18232d}blockquote{border-left:3px solid #17617d;margin:25px 0;padding:0 18px;color:#52606b}figure{background:white;margin:26px 0;padding:16px;border:1px solid #d5cdbf;overflow-x:auto}figure img{display:block;min-width:680px;width:100%;height:auto}figcaption{font:12px/1.6 system-ui,sans-serif;color:#52606b;margin-top:10px}.math-block{padding:8px 0;overflow-x:auto;overflow-y:hidden}.table-wrap{overflow-x:auto;margin:24px 0}table{border-collapse:collapse;width:100%;min-width:740px;font:14px/1.85 system-ui,sans-serif}th,td{padding:14px;border:1px solid #d5cdbf;text-align:left;vertical-align:top}th{background:#eeebe3}code{font-size:.85em;overflow-wrap:anywhere}footer{border-top:1px solid #d5cdbf;padding:22px 0;margin-top:55px;font:12px/1.8 system-ui,sans-serif;color:#52606b}mjx-container[display=true]{max-width:100%;overflow-x:auto;overflow-y:hidden}article img{max-width:none}@media(max-width:540px){header .brand{font-size:16px}header nav{font-size:13px}article{font-size:16px}figure{margin-left:0;margin-right:0}article h2{font-size:1.35rem}}
+ </style><script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'},startup:{pageReady:()=>MathJax.startup.defaultPageReady().then(()=>document.documentElement.dataset.mathReady='true')}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script></head><body><header><span class="brand">OpenAI <em>Math Digest</em></span><nav><a href="preview.ja.html" lang="ja">日本語</a><a href="preview.en.html" lang="en">English</a></nav></header><main><div class="draft-note">Worker C · Local draft preview. AI-generated guide; check important claims against the originals.</div><nav class="paper-nav" aria-label="Four articles"><a  href="../minimal-metrics-injectivity/preview.en.html">05 · Minimal metrics</a><a  href="../fourfold-nonvanishing/preview.en.html">06 · Fourfold nonvanishing</a><a  href="../uniform-slc-indices/preview.en.html">02 · Uniform slc indices</a><a aria-current="page" href="../conditional-kahler-fourfolds/preview.en.html">03 · Conditional Kähler models</a></nav><article><h1>Conditional good models for Kähler fourfolds: obtaining a first section on the nef endpoint</h1>
+<p>Catalog 034, item 03 / Internal ID: <code>conditional-kahler-fourfolds</code></p>
+<p>Source: OpenAI, <em>Conditional good minimal models for compact Kähler fourfolds</em>, October 5, 2026, 138 pages; <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026/paper.pdf">fixed PDF</a>. Page references agree with PDF pagination. This AI-generated exposition distinguishes the manuscript's conditional assertions from the editorial checks recorded below. Consult the source for mathematical use.</p>
+<h2>Theorems 1.1–1.2: return nonvanishing to the specified nef endpoint</h2>
+<p><strong>Assumptions 2.2, 2.3 and 2.4 are all retained.</strong> <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026/paper.pdf">Theorem 1.1, p.4</a> concerns a normal connected compact Kähler fourfold <span class="math-inline">\(X\)</span> and an effective rational Weil divisor <span class="math-inline">\(B\)</span> such that <span class="math-inline">\((X,B)\)</span> is klt. The space is globally strongly <span class="math-inline">\(\mathbb Q\)</span>-factorial, and the actual adjoint <span class="math-inline">\(D=K_X+B\)</span> is <span class="math-inline">\(\mathbb Q\)</span>-Cartier and analytically pseudo-effective.</p>
+<p>The conclusion is a normal connected globally strongly <span class="math-inline">\(\mathbb Q\)</span>-factorial compact Kähler fourfold <span class="math-inline">\(Y\)</span> and a bimeromorphic map <span class="math-inline">\(\phi:X\dashrightarrow Y\)</span> such that:</p>
+<ol>
+<li><span class="math-inline">\(\phi\)</span> extracts no prime divisor and <span class="math-inline">\(B_Y=\phi_*B\)</span>.</li>
+<li><span class="math-inline">\((Y,B_Y)\)</span> is klt, and the actual <span class="math-inline">\(\mathbb Q\)</span>-Cartier adjoint <span class="math-inline">\(D_Y=K_Y+B_Y\)</span> is analytically nef.</li>
+<li>Every prime divisor over the models satisfies <span class="math-inline">\(a(E;Y,B_Y)\geq a(E;X,B)\)</span>, strictly for primes on <span class="math-inline">\(X\)</span> contracted by <span class="math-inline">\(\phi\)</span>.</li>
+<li>Some <span class="math-inline">\(mD_Y\)</span> is Cartier and <span class="math-inline">\(\mathcal O_Y(mD_Y)\)</span> is globally generated.</li>
+</ol>
+<p>There is no uniform bound on <span class="math-inline">\(m\)</span>. Global strong <span class="math-inline">\(\mathbb Q\)</span>-factoriality in Definition 2.1, p.7, means that <strong>every coherent rank-one reflexive sheaf on the whole space has an invertible positive reflexive power</strong>. It is not replaced by local analytic <span class="math-inline">\(\mathbb Q\)</span>-factoriality. Likewise, <span class="math-inline">\(\sim_{\mathbb Q}\)</span> denotes an actual holomorphic line-bundle isomorphism after taking powers; equality of Bott–Chern classes is insufficient.</p>
+<p>Under the same three premises, <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026/paper.pdf">Theorem 1.2, p.4</a> asserts <span class="math-inline">\(\kappa(Y,J)\geq0\)</span> for an ordinary klt pair <span class="math-inline">\((Y,\Delta)\)</span> on a normal connected globally strongly <span class="math-inline">\(\mathbb Q\)</span>-factorial compact Kähler fourfold, with <span class="math-inline">\(\Delta\)</span> effective and rational and actual <span class="math-inline">\(\mathbb Q\)</span>-Cartier adjoint <span class="math-inline">\(J=K_Y+\Delta\)</span> analytically nef. Apply this theorem to the pair produced by the initial MMP, then apply Assumption 2.4.</p>
+<figure><a class="diagram-link" href="diagrams/main-route.en.svg" target="_blank"><img src="diagrams/main-route.en.svg" alt="From the three premises to generation on the specified endpoint"></a><figcaption>Proof diagram · Click to enlarge</figcaption></figure>
+<p>Assumption 2.3 already gives properties (i)–(iii), but gives no section. Section 3 handles the projective, uniruled and irregular cases, reducing to canonical nonvanishing on a smooth non-uniruled, non-Moishezon fourfold <span class="math-inline">\(W\)</span> with <span class="math-inline">\(q(W)=0\)</span>. Proposition 4.1 treats <span class="math-inline">\(a(W)&gt;0\)</span> and Theorem 9.4 treats <span class="math-inline">\(a(W)=0\)</span>. Push the canonical section from <span class="math-inline">\(W\)</span> to <span class="math-inline">\(Y\)</span> and multiply by the effective boundary section to obtain a section of <strong>the original nef pair's <span class="math-inline">\(J\)</span></strong>. The final semiampleness assertion applies Assumption 2.4 to that same <span class="math-inline">\(J\)</span>. <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026/paper.pdf">Proposition 3.5, pp.13–14; §9.4, p.84</a></p>
+<h2>The three premises that must be retained</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Premise</th>
+<th>Required scope</th>
+<th>Supplier and check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Assumption 2.2, pp.7–8</td>
+<td>Full orbifold Iitaka subadditivity in arbitrary dimensions, Fujiki class <span class="math-inline">\(\mathcal C\)</span>, rational SNC coefficients in <span class="math-inline">\([0,1]\)</span>, holomorphic surjections with connected fibres</td>
+<td>OI, catalog 033, Thm.1.1 p.3 and invariant-base definitions pp.2–3 compared; proof unchecked</td>
+</tr>
+<tr>
+<td>Assumption 2.3, pp.8–9</td>
+<td>A program starting on the specified pseudo-effective ordinary klt fourfold, permitting any negative extremal ray and continuation after every finite prefix, with termination of every such program</td>
+<td>FM, catalog 056, Thm.6.20 p.47; Prop.3.4 pp.12–14; Lem.3.2 p.11 and relevant proof passages compared; full termination proof unchecked</td>
+</tr>
+<tr>
+<td>Assumption 2.4, p.9</td>
+<td>Generation of an actual nef <span class="math-inline">\(\mathbb Q\)</span>-Cartier klt adjoint once <span class="math-inline">\(\kappa\geq0\)</span>; no strong factoriality requirement</td>
+<td>AN, item 14 of catalog 034, Thm.1.1 p.3 compared; a first section is a hypothesis</td>
+</tr>
+</tbody>
+</table></div>
+<p>The inequality in Assumption 2.2 is
+<div class="math-block">\[
+\kappa(Z,K_Z+\Gamma)\geq
+\kappa(F,K_F+\Gamma|_F)+\kappa(g\mid\Gamma).
+\]</div>
+It uses the invariant in equations (2)–(5), rather than the orbifold divisor of an arbitrary base model:
+<span class="math-inline">\(m(g,\Gamma;P)=\min_{E\mapsto P}\{\operatorname{ord}_E(g^*P)/(1-\gamma_E)\}\)</span> and
+<span class="math-inline">\(B(g,\Gamma)=\sum_P(1-1/m(g,\Gamma;P))P\)</span>, followed by the infimum of <span class="math-inline">\(\kappa(K_S+B)\)</span> over the stipulated orbifold-model equivalence class. Coefficient one means infinite multiplicity. Existence of suitable neat models and computation there are included. The fibre powers in §4 require dimensions larger than four. <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026/paper.pdf">pp.7–8,18</a> <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf">OI pp.2–3</a></p>
+<p>Assumption 2.3 inserts no initial modification. It requires a nef supporting class with a Kähler margin, projective bimeromorphic contractions with connected fibres, negative-side relative Bott–Chern dimension one, and, for small contractions, the relative analytic Proj of the actual canonical algebra. It preserves klt singularities, the Kähler and global strong categories, and pseudo-effectivity, with nonextraction and discrepancy comparison. It does not grant all non-pseudo-effective, dlt or generalized-pair programs. Comparing the suppliers' statements does not turn this exposition into an unconditional certification of the three premises.</p>
+<h2>Positive algebraic dimension: construct an actual canonical pullback</h2>
+<p>In the projective branch, Lemma 3.1 derives logarithmic Iitaka subadditivity from Assumption 2.2 and applies the manuscript's Theorem A.2, p.85. Appendices A–I prove that conditional projective abundance statement; it is not another independent premise. The uniruled branch uses the rational quotient, and the irregular branch the Albanese map, with nonvanishing in dimension at most three. <a href="https://arxiv.org/pdf/2501.18088v1">Ou Theorem 1.1, p.1</a> relates non-uniruledness to canonical pseudo-effectivity for smooth compact Kähler manifolds. <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026/paper.pdf">§3, pp.10–14</a></p>
+<figure><a class="diagram-link" href="diagrams/positive-dimension.en.svg" target="_blank"><img src="diagrams/positive-dimension.en.svg" alt="Positive algebraic dimension and nonvanishing on the base"></a><figcaption>Proof diagram · Click to enlarge</figcaption></figure>
+<p>For <span class="math-inline">\(0&lt;a(W)=d&lt;4\)</span>, resolve algebraic reduction and choose a very ample <span class="math-inline">\(H\)</span> on its projective base <span class="math-inline">\(S_0\)</span>. Lower-dimensional fibre nonvanishing and ample twisting first give <span class="math-inline">\(\kappa(K_W+Nb^*H)\geq0\)</span> for every sufficiently large integer <span class="math-inline">\(N\)</span>. At each stage choose <span class="math-inline">\(N&gt;5k_i\)</span>, where <span class="math-inline">\(k_i\)</span> is the current canonical Cartier index. Local rationality forces <span class="math-inline">\(H_i\cdot R_i=0\)</span> for a ray negative for <span class="math-inline">\(K_{V_i}+NH_i\)</span>, so its step also belongs to a single empty-boundary <span class="math-inline">\(K\)</span>-program. Rechoosing <span class="math-inline">\(N\)</span> does not change that program's boundary. Arbitrary termination and Assumption 2.4 make the twist semiample; Stein factorization yields actual line-bundle identities
+<div class="math-block">\[
+K_V\sim_{\mathbb Q}g^*A_T,\qquad
+K_M\sim_{\mathbb Q}f^*A+R,\quad R\geq0.
+\]</div>
+Here <span class="math-inline">\(S\to T\)</span> is a smooth projective resolution, <span class="math-inline">\(A\)</span> is the pullback of <span class="math-inline">\(A_T\)</span>, <span class="math-inline">\(q(S)=0\)</span>, and <span class="math-inline">\(A\)</span> is pseudo-effective. <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026/paper.pdf">Proposition 4.3, pp.15–16</a></p>
+<p>For <span class="math-inline">\(d=1\)</span>, <span class="math-inline">\(S=\mathbb P^1\)</span>. For <span class="math-inline">\(d=2\)</span>, apply Assumption 2.2 to <span class="math-inline">\(r\)</span>-fold fibre powers over a curve. Fix the local form <span class="math-inline">\(t=x^e\)</span> and the exceptional coefficient <span class="math-inline">\(h\)</span> before varying <span class="math-inline">\(r\)</span>; the base coefficient has pole bound <span class="math-inline">\(mrh/e\)</span>. Letting <span class="math-inline">\(r\to\infty\)</span> gives
+<div class="math-block">\[
+\left(A-K_S+\sum_{P\ {\rm exceptional}}c_PP\right)\cdot H'\geq0
+\]</div>
+(Lemma 4.4, pp.17–19). For the Zariski decomposition <span class="math-inline">\(A=P_0+N_0\)</span>, the remaining case <span class="math-inline">\(P_0^2=0\)</span> gives <span class="math-inline">\(K_S\cdot P_0\leq0\)</span>; Riemann–Roch and <span class="math-inline">\(q(S)=0\)</span> then produce sections.</p>
+<p>For <span class="math-inline">\(d=3\)</span>, the generic fibre has genus one. Identify its Hodge line by
+<span class="math-inline">\(\mathcal H^{\otimes m}\simeq\mathcal O_S(m(A-K_S))\)</span>, and use the modular sections <span class="math-inline">\(E_4^{m/4}\)</span> and <span class="math-inline">\(\Delta_{\rm mod}^{m/12}\)</span> with <span class="math-inline">\(12\mid m\)</span>. Their common divisorial order <span class="math-inline">\(\ell_P\)</span> satisfies <span class="math-inline">\(\ell_P/m=1-t_P\)</span>, where
+<div class="math-block">\[
+t_P=\min_{E\mapsto P}\frac{1+\operatorname{coeff}_E R}
+{\operatorname{ord}_E(f^*P)}.
+\]</div>
+The integrability calculation proves this <strong>on every required model, including exceptional base valuations</strong>. A general linear combination supplies an effective <span class="math-inline">\(\Xi\)</span> on the original normal base <span class="math-inline">\(T\)</span> such that <span class="math-inline">\((T,\Xi)\)</span> is klt and <span class="math-inline">\(K_T+\Xi\sim_{\mathbb Q}A_T\)</span>. No separate <span class="math-inline">\(\mathbb Q\)</span>-Cartier hypothesis on <span class="math-inline">\(K_T\)</span> is imposed. Projective threefold nonvanishing supplies the section to pull back. <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026/paper.pdf">Lemma 4.5 and §4.4, pp.19–23</a></p>
+<h2>Algebraic dimension zero: extension from the whole reduced boundary</h2>
+<p>Work on smooth models with <span class="math-inline">\(a=q=0\)</span>. Lemma 9.1, p.81, gives finitely many prime divisors with linearly independent real cohomology classes. If <span class="math-inline">\(\kappa(M,L)=-\infty\)</span>, then every fixed vector bundle <span class="math-inline">\(\mathcal E\)</span> satisfies
+<span class="math-inline">\(H^0(M,\mathcal E\otimes\mathcal O_M(mL))=0\)</span> for all sufficiently large divisible <span class="math-inline">\(m\)</span> (Lemma 9.2, pp.81–82). Take determinants of sections of maximal generic rank and compare their nonnegative integral coefficients on the finite set of primes. No global meromorphic frame is assumed at the start.</p>
+<figure><a class="diagram-link" href="diagrams/boundary-extension.en.svg" target="_blank"><img src="diagrams/boundary-extension.en.svg" alt="A whole-boundary section and extension by vanishing of H1"></a><figcaption>Proof diagram · Click to enlarge</figcaption></figure>
+<p>Proposition 7.20, pp.62–65, takes a reduced-boundary pair <span class="math-inline">\((T_0,G_0)\)</span> to a nonextracting model <span class="math-inline">\((T,G)\)</span> with
+<div class="math-block">\[
+A=K_T+G\ {\rm nef},\qquad
+K_T+tG\ {\rm nef\ and\ klt}\quad(t_0\leq t&lt;1),
+\]</div>
+and a projective crepant dlt modification
+<span class="math-inline">\(h:(V,D)\to(T,G)\)</span> with <span class="math-inline">\(J=K_V+D=h^*A\)</span>. It uses the special-termination arguments of §7 and reduction to ordinary klt programs; it does not add fourfold dlt termination to the premises. Apply the zero-Lelong minimal-metric Lemma 5.1, p.23, inside this interval, add <span class="math-inline">\((1-t)G\)</span>, and let <span class="math-inline">\(t\to1\)</span> to obtain a zero-Lelong metric on the pullback of <span class="math-inline">\(J\)</span>.</p>
+<p>Lemma 5.1 is proved analytically in §5. Volume-normalized capacity, differentiation of a Monge–Ampère equation and a Bochner estimate retaining its residual term are combined. Equation (89) cancels the residual measure on the same sublevel set; after taking the limit at fixed <span class="math-inline">\(t\)</span>, the Lelong upper bound (90) contradicts the positive lower bound (93). <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026/paper.pdf">pp.25–33</a> This is not a direct application of the projective MM theorem to a nonprojective space.</p>
+<p>Proposition 8.1, pp.65–81, gives <span class="math-inline">\(H^0(D,\mathcal O_D(mJ))\ne0\)</span> when <span class="math-inline">\(D\ne0\)</span>. Full differents, including fractional coefficients, are retained on the normalization components. <a href="https://arxiv.org/pdf/2306.00671v4">Das–Ou Corollary 1.3, p.4</a> supplies their semiample systems, but componentwise abundance alone does not glue sections. Choose components with maximal system dimension; match even residues on clusters of dominant conductor branches and arrange vanishing on nondominant branches. Lemma 8.4 multiplies all transported sections under a finite loop action, preserving nonzeroness and the required zeros.</p>
+<p>For a nonprojective torsion cluster, transport <strong>one ambient Kähler class on <span class="math-inline">\(V\)</span></strong> to the relevant surfaces. For the cycle automorphism <span class="math-inline">\(\varphi\)</span> and a class <span class="math-inline">\(v\)</span> of positive square, the construction gives
+<span class="math-inline">\(\varphi^*v-v\in\operatorname{NS}(Q)_{\mathbb R}\)</span>. Hodge index and integral lattice actions make the top-form multiplier a root of unity, permitting matching after a common power. This does not assert finite characters for arbitrary automorphisms of Kähler surfaces. <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026/paper.pdf">Lemma 8.9, pp.73–74</a> Extend by zero on other clusters, and descend to the entire <span class="math-inline">\(D\)</span> by codimension-one matching and <span class="math-inline">\(S_2\)</span>. <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026/paper.pdf">Lemma 8.2 and §8.6, pp.66–67,81</a></p>
+<p>Proposition 9.3 assumes <span class="math-inline">\(\kappa(T,A)=-\infty\)</span> to kill the extension obstruction. On <span class="math-inline">\(p:M\to V\)</span>, write <span class="math-inline">\(K_M+F\sim_{\mathbb Q}L=p^*J\)</span>, where <span class="math-inline">\(F\)</span> has SNC support and coefficients at most one, allowing negative coefficients. The key comparisons are
+<div class="math-block">\[
+p_*\mathcal O_M(mL-\lfloor F\rfloor)
+=\mathcal I_D\otimes\mathcal O_V(mJ),
+\]</div>
+<div class="math-block">\[
+H^1(V,\mathcal I_D(mJ))
+\hookrightarrow H^1(M,K_M+L_m),\qquad
+L_m\sim_{\mathbb Q}(m-1)L+\{F\}.
+\]</div>
+The injection is low-degree Leray and needs no higher-direct-image vanishing. Zero Lelong numbers and the integrability margin of <span class="math-inline">\(\{F\}\)</span> make the multiplier ideal trivial. <a href="https://arxiv.org/pdf/math/0006205v2">DPS hard Lefschetz</a> gives
+<span class="math-inline">\(H^0(M,\Omega_M^3\otimes L_m)\twoheadrightarrow H^1(M,K_M+L_m)\)</span>.
+Lemma 9.2 kills the source. High powers of the nonzero section on the whole reduced <span class="math-inline">\(D\)</span> therefore extend to <span class="math-inline">\(V\)</span>, contradicting the assumption. <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026/paper.pdf">Equations (176)–(179), pp.82–83</a></p>
+<h2>Finish by separating the existence of a canonical frame</h2>
+<p>Theorem 9.4, pp.83–84, separates the existence of a nonzero meromorphic pluricanonical tensor from its absence. In the latter case, include every prime in <span class="math-inline">\(G_0\)</span> and use Proposition 7.20. A nonzero <span class="math-inline">\(G\)</span> would supply a section that, after dividing out divisor factors, gives the prohibited tensor. Thus <span class="math-inline">\(G=0\)</span>, leaving a model with no prime divisors and nef canonical line; Proposition 6.1 excludes it.</p>
+<figure><a class="diagram-link" href="diagrams/empty-divisors.en.svg" target="_blank"><img src="diagrams/empty-divisors.en.svg" alt="The foliation contradiction when no meromorphic canonical frame exists"></a><figcaption>Proof diagram · Click to enlarge</figcaption></figure>
+<p>Proposition 6.1 starts with a zero-Lelong metric and DPS to obtain <span class="math-inline">\(\chi(\mathcal O_M)=0\)</span>, <span class="math-inline">\(h^{2,0}\geq1\)</span> and <span class="math-inline">\(h^{3,0}\geq2\)</span>. Two- and three-forms produce an integrable saturated conormal line. Hodge index for positive currents gives <span class="math-inline">\(\alpha^2=0\)</span> and, under the contradiction hypothesis, zero Lelong numbers for <strong>every</strong> positive current in <span class="math-inline">\(\alpha\)</span>. This permits a continuous self-map of the full compact convex set of positive currents. Its fixed point supplies a transverse spherical structure. <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026/paper.pdf">§§6.1–6.4, pp.34–43</a></p>
+<p>Index charts give finite holonomy for boundary meridians. A Selberg cover and compactification produce a torsion-free <span class="math-inline">\(\operatorname{PU}(2)\)</span> representation. In the Zariski-dense case, the projective Shafarevich base from <a href="https://arxiv.org/pdf/1302.5016v3">Campana–Claudon–Eyssidieux Theorem 1, p.2</a> contradicts <span class="math-inline">\(a=0\)</span>. A proper closure is virtually solvable; <span class="math-inline">\(q=0\)</span> on every finite étale cover makes the image finite and hence trivial. Extending the developing map meromorphically by local charts and trace produces a nonconstant function, again contradicting <span class="math-inline">\(a=0\)</span>. <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026/paper.pdf">§§6.5–6.6, pp.43–47</a></p>
+<p>If a meromorphic frame exists, write <span class="math-inline">\(K_{T_0}\sim_{\mathbb Q}P-N\)</span>, with <span class="math-inline">\(P,N\geq0\)</span> and disjoint supports, and use <span class="math-inline">\(G_0=(\operatorname{Supp}P)_{\rm red}\)</span>. If <span class="math-inline">\(G=0\)</span>, pseudo-effectivity forces <span class="math-inline">\(N_T=0\)</span>. Otherwise the boundary-extension section and uniqueness of its meromorphic divisor when <span class="math-inline">\(a(T)=0\)</span> give the same conclusion. Run the MMP on <span class="math-inline">\((T,0)\)</span> and use Assumption 2.4 to make the canonical line actually torsion. On a resolution, the signed exceptional divisor is effective by the support of a positive current and independence of prime classes. This returns canonical nonvanishing to the smooth model. <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026/paper.pdf">Equations (180)–(181), p.84</a></p>
+<h2>Inputs, sources and scope</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Result</th>
+<th>Use</th>
+<th>Check performed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf">OI Thm.1.1, p.3</a></td>
+<td>Assumption 2.2, §§3–4, Lemmas 6.2 and 8.3: subadditivity with invariant orbifold base</td>
+<td>Statement, base definition and stated uses compared; neat-model theory and input proof unchecked</td>
+</tr>
+<tr>
+<td><a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-5-2026/paper.pdf">FM Thm.6.20, p.47; Prop.3.4, pp.12–14</a></td>
+<td>Assumption 2.3, Props.4.3 and 7.20, §9.4</td>
+<td>Arbitrary-ray termination, canonical algebra and preservation of the global strong condition compared; full termination dependencies outside scope</td>
+</tr>
+<tr>
+<td><a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Abundance-after-nonvanishing-for-compact-Kahler-fourfolds-September-27-2026/paper.pdf">AN Thm.1.1, p.3</a></td>
+<td>Assumption 2.4, Prop.4.3, Thm.9.4 and final step of Thm.1.1</td>
+<td>Applications after obtaining <span class="math-inline">\(\kappa\geq0\)</span> compared; AN proof outside scope</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/pdf/2501.18088v1">Ou Thm.1.1, p.1</a></td>
+<td>Prop.3.5 and §8: smooth Kähler canonical pseudo-effectivity</td>
+<td>Specified v1 statement compared</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/pdf/2306.00671v4">DO Cor.1.3, p.4</a></td>
+<td>Lemma 8.3: semiample systems on normal threefold components</td>
+<td>Specified v4 statement compared; companion dlt-modification theorem not compared</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/pdf/math/0006205v2">DPS hard Lefschetz</a></td>
+<td>Lemma 6.3 and Prop.9.3: twisted forms surject onto cohomology</td>
+<td>Compared in arXiv v2, unnumbered introductory theorem p.2 / Thm.2.1.1 p.8; target cites published Thm.0.1</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/pdf/1302.5016v3">CCE Thm.1, p.2</a></td>
+<td>Lemma 6.13: projective base for semisimple holonomy</td>
+<td>arXiv v3 statement and torsion-free condition compared</td>
+</tr>
+</tbody>
+</table></div>
+<p>Source commit: <code>adc7f1241b42e322a6451854ab7e4b4c146bf78a</code>. SHA-256: <code>ac000b352a0abe8e1a2dfd99bef21dcbf232fae995e2395048a528c02157270c</code>. The <a href="sources.json">source record</a> stores versions, pages and checks; the <a href="status.md">work record</a> records completion.</p>
+<p>Reading covered the main statements, three premises, §3 reductions, §4 pullback and base calculations, principal capacity/residual passages in §5, principal forms/Hodge/fixed-point/holonomy passages in §6, Proposition 7.20, clusters and the ambient class in §8, and all of §9. It did not verify all relative finite-generation, extraction and special-termination arguments in §7, every projective cluster case in §8, or Appendices A–I in full. All metric limit operations, singular-chart extensions, and original inputs such as Fujino's local rationality and relative analytic MMP have not been independently checked. These are unverified steps, not absent dependencies or discharged conditions.</p></article><footer>OpenAI Math Digest · Independent, unofficial reading project.<br>Design adapted from <a href="https://masataka123.github.io/geometry-paper-digest/">Geometry Paper Digest</a> (MIT). This is a local preview, not a published page.</footer></main></body></html>

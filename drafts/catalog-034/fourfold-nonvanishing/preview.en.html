@@ -1,0 +1,264 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Fourfold nonvanishing by minimal metrics and moving jets · 原稿プレビュー</title><style>:root {
+  color-scheme: light;
+  --paper: #f4f1ea;
+  --ink: #18232d;
+  --muted: #52606b;
+  --accent: #984526;
+  --link: #17617d;
+  --card: #ffffff;
+  --line: #d5cdbf;
+  --soft-line: #c9c1b4;
+  font-family: Georgia, "Times New Roman", "Yu Mincho", "Hiragino Mincho ProN", serif;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); }
+main { width: min(920px, calc(100% - 32px)); margin: 0 auto; padding: 42px 0 56px; }
+a { color: var(--link); text-underline-offset: .18em; }
+
+.site-header { border-bottom: 2px solid var(--ink); margin-bottom: 28px; padding-bottom: 20px; }
+.landing-header { max-width: 790px; }
+h1 { font-size: clamp(2.25rem, 7vw, 4rem); line-height: 1.04; margin: 0 0 14px; letter-spacing: -.02em; }
+h2, h3 { line-height: 1.3; }
+p { line-height: 1.75; }
+.eyebrow, .topic-count {
+  color: var(--accent);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+  font-size: .78rem;
+  font-weight: 750;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.topic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+.topic-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: inherit;
+  display: block;
+  min-height: 250px;
+  padding: 24px;
+  text-decoration: none;
+  transition: border-color 120ms ease, transform 120ms ease, box-shadow 120ms ease;
+}
+.topic-card:hover, .topic-card:focus-visible {
+  border-color: var(--accent);
+  box-shadow: 0 8px 24px rgba(24, 35, 45, .08);
+  transform: translateY(-2px);
+}
+.topic-card h2 { font-size: 1.65rem; margin: 18px 0 2px; }
+.topic-card p { color: var(--muted); margin: 0 0 20px; }
+.topic-card .topic-english { font-style: italic; margin-bottom: 12px; }
+.topic-open { color: var(--link); font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-weight: 700; }
+.heading-subtitle { color: var(--muted); font-style: italic; margin: -6px 0 6px; }
+
+.notice-card {
+  background: rgba(255,255,255,.55);
+  border-top: 1px solid var(--line);
+  margin-top: 34px;
+  padding: 16px 2px 0;
+}
+
+.notice-card h2 {
+  margin: 0 0 4px;
+}
+
+.topic-nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 30px; }
+.topic-nav a {
+  border: 1px solid var(--soft-line);
+  border-radius: 999px;
+  color: #34434e;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+  font-size: .88rem;
+  padding: 7px 12px;
+  text-decoration: none;
+}
+.topic-nav a:hover, .topic-nav a:focus-visible, .topic-nav a[aria-current="page"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+
+.digest-list { max-width: 790px; }
+.digest { background: var(--card); border: 1px solid var(--line); border-radius: 6px; margin: 0 0 18px; padding: 20px 22px; }
+.dates { display: flex; flex-wrap: wrap; gap: 5px 18px; margin: 0 0 6px; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-size: .8rem; }
+.dates div { display: flex; gap: 6px; }
+.dates dt { color: var(--accent); font-weight: 700; letter-spacing: .04em; }
+.dates dd { color: var(--muted); font-variant-numeric: tabular-nums; margin: 0; }
+.digest h2 { font-size: 1.35rem; margin: 5px 0 7px; }
+.title-link { color: var(--ink); text-decoration: none; }
+.title-link:hover { color: var(--link); }
+.authors { color: var(--muted); font-style: italic; }
+.abstracts { max-width: 100%; overflow-wrap: anywhere; word-break: normal; }
+.abstract h3, .paper-header .abstract h2 { font-size: 1rem; margin: 1.25rem 0 .35rem; }
+.abstract p { margin: 0; }
+.abstract-en { line-height: 1.8; }
+.abstract-en p[lang="en"] { line-height: 1.8; overflow-wrap: anywhere; }
+.abstract-source { font-size: .86rem; margin-top: .65rem !important; }
+.abstract-source a { color: var(--muted); }
+.abstract-ja { margin-top: 1.75rem; }
+.links { display: flex; flex-wrap: wrap; gap: 16px; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-weight: 650; }
+.empty { background: var(--card); border: 1px dashed var(--soft-line); border-radius: 6px; color: var(--muted); padding: 22px; }
+
+.paper-page { max-width: 790px; }
+.paper-header { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: clamp(22px, 5vw, 38px); }
+.paper-header h1 { font-size: clamp(2rem, 6vw, 3.25rem); }
+.paper-summary { font-size: 1.08rem; }
+.paper-meta { border-top: 1px solid var(--line); display: grid; gap: 8px; margin: 24px 0 0; padding-top: 18px; }
+.paper-meta div { display: grid; grid-template-columns: minmax(120px, .35fr) 1fr; gap: 16px; }
+.paper-meta dt { color: var(--accent); font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-size: .85rem; font-weight: 700; }
+.paper-meta dd { margin: 0; }
+.paper-links { margin-top: 22px; }
+.paper-content { background: var(--card); border: 1px solid var(--line); border-radius: 8px; margin-top: 18px; padding: clamp(22px, 5vw, 40px); }
+.paper-content h2 { border-bottom: 1px solid var(--line); font-size: 1.55rem; margin: 2.2em 0 .8em; padding-bottom: .35em; }
+.paper-content h2:first-child { margin-top: 0; }
+.paper-content h3 { font-size: 1.2rem; margin-top: 1.7em; }
+.paper-content blockquote { border-left: 4px solid var(--accent); color: #35434e; margin: 1.5em 0; padding: .15em 0 .15em 1.2em; }
+.paper-content code { background: #eee9df; border-radius: 3px; padding: .1em .3em; }
+.paper-content mjx-container[display="true"],
+.paper-content .MathJax { max-width: 100%; overflow-x: auto; overflow-y: hidden; }
+
+.site-footer { border-top: 1px solid var(--line); color: var(--muted); font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-size: .82rem; margin-top: 42px; padding-top: 18px; }
+.site-footer p { line-height: 1.6; }
+
+@media (max-width: 560px) {
+  main { padding-top: 24px; }
+  .topic-card { min-height: 0; }
+  .digest { padding: 17px; }
+  .paper-meta div { grid-template-columns: 1fr; gap: 2px; }
+  .abstract-ja { margin-top: 1.4rem; }
+}
+
+ header{position:sticky;top:0;z-index:20;background:#f4f1eaf5;border-bottom:1px solid #d5cdbf;padding:14px max(16px,calc((100vw - 1060px)/2));display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:system-ui,sans-serif}header .brand{font:20px Georgia,serif}header nav{display:flex;gap:16px;flex-shrink:0}main{width:min(1060px,calc(100% - 36px));padding-top:26px}article{max-width:940px;margin:auto;font-size:17px;line-height:1.95}article h1{font-size:clamp(1.85rem,4vw,2.7rem);line-height:1.4;margin-top:36px}article h2{font-size:1.6rem;margin-top:56px;padding-top:22px;border-top:1px solid #d5cdbf}article h3{margin-top:35px;font-size:1.2rem}article p,article li{line-height:1.95}article a{overflow-wrap:anywhere}.draft-note{padding:12px 18px;border-left:3px solid #984526;background:#eeebe3;font:14px/1.8 system-ui,sans-serif}.paper-nav{display:flex;flex-wrap:wrap;gap:10px 22px;padding:22px 0;border-bottom:1px solid #d5cdbf;font:14px/1.6 system-ui,sans-serif}.paper-nav a[aria-current]{font-weight:700;color:#18232d}blockquote{border-left:3px solid #17617d;margin:25px 0;padding:0 18px;color:#52606b}figure{background:white;margin:26px 0;padding:16px;border:1px solid #d5cdbf;overflow-x:auto}figure img{display:block;min-width:680px;width:100%;height:auto}figcaption{font:12px/1.6 system-ui,sans-serif;color:#52606b;margin-top:10px}.math-block{padding:8px 0;overflow-x:auto;overflow-y:hidden}.table-wrap{overflow-x:auto;margin:24px 0}table{border-collapse:collapse;width:100%;min-width:740px;font:14px/1.85 system-ui,sans-serif}th,td{padding:14px;border:1px solid #d5cdbf;text-align:left;vertical-align:top}th{background:#eeebe3}code{font-size:.85em;overflow-wrap:anywhere}footer{border-top:1px solid #d5cdbf;padding:22px 0;margin-top:55px;font:12px/1.8 system-ui,sans-serif;color:#52606b}mjx-container[display=true]{max-width:100%;overflow-x:auto;overflow-y:hidden}article img{max-width:none}@media(max-width:540px){header .brand{font-size:16px}header nav{font-size:13px}article{font-size:16px}figure{margin-left:0;margin-right:0}article h2{font-size:1.35rem}}
+ </style><script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'},startup:{pageReady:()=>MathJax.startup.defaultPageReady().then(()=>document.documentElement.dataset.mathReady='true')}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script></head><body><header><span class="brand">OpenAI <em>Math Digest</em></span><nav><a href="preview.ja.html" lang="ja">日本語</a><a href="preview.en.html" lang="en">English</a></nav></header><main><div class="draft-note">Worker C · Local draft preview. AI-generated guide; check important claims against the originals.</div><nav class="paper-nav" aria-label="Four articles"><a  href="../minimal-metrics-injectivity/preview.en.html">05 · Minimal metrics</a><a aria-current="page" href="../fourfold-nonvanishing/preview.en.html">06 · Fourfold nonvanishing</a><a  href="../uniform-slc-indices/preview.en.html">02 · Uniform slc indices</a><a  href="../conditional-kahler-fourfolds/preview.en.html">03 · Conditional Kähler models</a></nav><article><h1>Fourfold nonvanishing by minimal metrics and moving jets</h1>
+<blockquote>
+<p>AI-generated first-pass exposition of claims and arguments by the manuscript's author, OpenAI. This is not a certification of correctness. Consult the original for important statements and proofs.</p>
+</blockquote>
+<p>Official position 06 within catalog 034; internal ID: fourfold-nonvanishing. We use the September 27, 2026 version, 38 PDF pages, at commit adc7f1241b42e322a6451854ab7e4b4c146bf78a. <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Fourfold-nonvanishing-by-minimal-metrics-and-moving-jets-September-27-2026/paper.pdf">Source PDF</a>.</p>
+<p>A hypothetical minimal fourfold counterexample has positive canonical degree on every curve through a very general point. This gives small scalar vanishing orders, while a projective bundle over two factors has large jet generation. The proof fixes finite witnesses for both and forces incompatible orders on a Frobenius evaluation determinant. Zero-Lelong metrics and interior injectivity enter the intermediate signed-boundary argument.</p>
+<h2>Main results</h2>
+<h3>Theorem 1.1 — Smooth fourfold nonvanishing (p. 2)</h3>
+<p>Let <span class="math-inline">\(X\)</span> be a smooth connected projective complex fourfold. If <span class="math-inline">\(K_X\)</span> is pseudo-effective, then for some positive integer <span class="math-inline">\(m\)</span>,</p>
+<div class="math-block">\[
+H^0(X,mK_X)\ne0.
+\]</div>
+<p>There is no assumption on numerical dimension, irregularity or Euler characteristic. The result does not give a uniform bound on <span class="math-inline">\(m\)</span>. <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Fourfold-nonvanishing-by-minimal-metrics-and-moving-jets-September-27-2026/paper.pdf">Theorem 1.1, p. 2</a></p>
+<h3>Corollary 1.2 — The original lc pair and a prescribed Cartier index (p. 2)</h3>
+<p>Let <span class="math-inline">\((X,\Delta)\)</span> be a connected normal projective complex lc pair, <span class="math-inline">\(\dim X\leq4\)</span>, with effective rational boundary. Suppose <span class="math-inline">\(D=K_X+\Delta\)</span> is nef and <span class="math-inline">\(\mathbb Q\)</span>-Cartier. For <strong>every positive integer <span class="math-inline">\(r\)</span> with <span class="math-inline">\(rD\)</span> Cartier</strong>, some positive integer <span class="math-inline">\(m\)</span> satisfies</p>
+<div class="math-block">\[
+H^0(X,\mathcal O_X(mrD))\ne0.
+\]</div>
+<p>No <span class="math-inline">\(\mathbb Q\)</span>-factoriality is required, and the section is on the original <span class="math-inline">\(X\)</span>. <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Fourfold-nonvanishing-by-minimal-metrics-and-moving-jets-September-27-2026/paper.pdf">Corollary 1.2, p. 2</a></p>
+<h2>Theorem 1.1: counterexample geometry and finite data</h2>
+<figure><a class="diagram-link" href="diagrams/nonvanishing.en.svg" target="_blank"><img src="diagrams/nonvanishing.en.svg" alt="A minimal counterexample yields incompatible scalar and two-slot jets"></a><figcaption>Proof diagram · Click to enlarge</figcaption></figure>
+<p>Proposition 2.1 replaces a counterexample by one fixed projective <span class="math-inline">\(\mathbb Q\)</span>-factorial terminal fourfold <span class="math-inline">\(Y\)</span>, with <span class="math-inline">\(K=K_Y\)</span> nef, <span class="math-inline">\(\kappa(K)=-\infty\)</span>, <span class="math-inline">\(K^4=0\)</span>, <span class="math-inline">\(q(Y)=0\)</span>, and nef dimension <span class="math-inline">\(n(K)=4\)</span>. A fixed Cartier index <span class="math-inline">\(\iota\)</span> gives <span class="math-inline">\(K\cdot C\geq1/\iota\)</span> for every curve through a very general point. Nef dimension here is distinct from numerical dimension <span class="math-inline">\(\nu(K)\)</span>. Using abundance in dimensions at most three, Proposition 2.2 makes every proper positive-dimensional subvariety through that locus of general type on resolution.</p>
+<p>For fixed small <span class="math-inline">\(\varepsilon&gt;0\)</span>, take <span class="math-inline">\(L_t=r_t(K+tA)\)</span> with <span class="math-inline">\(L_t^4\to\varepsilon^4\)</span> and <span class="math-inline">\(r_t\to\infty\)</span>. Curve degrees satisfy <span class="math-inline">\(L_t\cdot C\geq r_t/\iota\to\infty\)</span> although volume stays bounded. Moving high-order sections create base components. The moving-multiplicity input from <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf">LA</a> controls ordinary powers of their ideals for the <strong>entire high-jet kernel</strong>. A general-type center with bounded degree and canonical intersection produces a curve of bounded degree, contradicting the diverging curve degrees. Proposition 3.5 therefore gives, for every allowed Cartier degree,</p>
+<div class="math-block">\[
+P_s=2r_t(K+2tA),\qquad
+\operatorname{ord}_x(s)\leq4k(P_s^4)^{1/4}\leq32k\varepsilon
+\]</div>
+<p>(pp. 10–12).</p>
+<p>For the two-factor argument, set <span class="math-inline">\(S_0=\iota K\)</span> and</p>
+<div class="math-block">\[
+Z=\mathbb P(\mathcal O(S_0)_1\oplus\mathcal O(S_0)_2)\longrightarrow Y\times Y,
+\qquad P=L_{t,1}+L_{t,2}+q\xi.
+\]</div>
+<p>The analytic SNC hypothesis is not imposed directly on this bundle. Restrict moving base components to slices and exclude, in turn, a proper generically finite image, the entire bundle over a proper image, and a non-axis multisection over all of <span class="math-inline">\(Y\)</span> (§6.4, pp. 26–29). In the last case, intersection with the axes gives</p>
+<div class="math-block">\[
+D_0-D_\infty\sim e\iota K,
+\]</div>
+<p>and Proposition 5.1 below controls its signed support. Remaining correspondences with both projections dominant and generically finite are excluded by Proposition 6.4. First rule out sweeping branch divisors; then <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf">LA, Lemma 7.5, p. 51</a> gives finitely many finite étale covers of a fixed open. A degree bound alone is not used to assert finiteness. Birational automorphism groups would then produce a dominant map from an abelian variety to <span class="math-inline">\(Y\)</span>, again contradicting positive canonical curve degree.</p>
+<p>This gives <span class="math-inline">\(\epsilon(P;z)&gt;10\)</span> in Proposition 6.3 and one finite <span class="math-inline">\(10k_0\)</span>-jet surjection in Corollary 6.5. Section 7 now fixes <span class="math-inline">\(t,r_t\)</span>, a resolution <span class="math-inline">\(W\)</span>, an ample perturbation <span class="math-inline">\(H\)</span>, a complete-intersection flag with <span class="math-inline">\(\mu_{\min}(\Omega_W^1|_C)\geq0\)</span>, and a concrete strongly movable curve <span class="math-inline">\(\gamma\)</span> on the blowup of a point. The numerical conditions are</p>
+<div class="math-block">\[
+H^4\leq(2\varepsilon)^4,\quad K_WH^3\leq2H^4/r_t,\quad
+(2L+qS_0)H^3\leq4H^4,\quad
+(14\varepsilon)^4&lt;1/4,\quad80\varepsilon&lt;3/4.
+\]</div>
+<p>They are supplemented by <span class="math-inline">\(J_x\gamma&gt;0\)</span> and</p>
+<div class="math-block">\[
+\pi_x^*(L+K_W/2+\lambda S_0)\gamma\leq40\varepsilon J_x\gamma
+\quad(0\leq\lambda\leq q).
+\]</div>
+<p>The curve is the pushforward of an ample complete intersection on one fixed birational model. This permits testing effective divisors after reduction without assuming specialization of an effective cone.</p>
+<p>Theorem 7.1 restates <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf">LA, Theorem 9.1, p. 62</a>, which rules out coexistence of these fixed data. In §7.3 the characteristic-<span class="math-inline">\(p\)</span> evaluation has generic rank <span class="math-inline">\(R=p^8\)</span> but diagonal rank less than <span class="math-inline">\(R/4\)</span>. Testing the two actual determinant factors with <span class="math-inline">\(\gamma\)</span> gives the conflicting inequalities</p>
+<div class="math-block">\[
+\operatorname{ord}_{(x',x')}\sigma\leq R(80\varepsilon+O(p^{-1})),
+\qquad
+\operatorname{ord}_{(x',x')}\sigma\geq3R/4
+\]</div>
+<p>for a nonzero determinant <span class="math-inline">\(\sigma\)</span>. The jet point <span class="math-inline">\(z_*\)</span> need not lie over the independently chosen point <span class="math-inline">\(x\)</span>. All finite data must be fixed over <span class="math-inline">\(\mathbb C\)</span> before varying <span class="math-inline">\(p\)</span>.</p>
+<h2>Proposition 5.1: signed supports</h2>
+<p>The hypotheses are that <span class="math-inline">\(Y\)</span> is a projective <span class="math-inline">\(\mathbb Q\)</span>-factorial terminal fourfold, <span class="math-inline">\(K_Y\)</span> is nef with <span class="math-inline">\(\kappa(K_Y)=-\infty\)</span>, and every proper positive-dimensional subvariety through a very general locus is of general type on resolution. Let <span class="math-inline">\(J\sim_{\mathbb Q}K_Y\)</span> be a rational Weil divisor with either sign, <span class="math-inline">\(p:W\to Y\)</span> a log resolution, and <span class="math-inline">\(D_W\)</span> a reduced SNC divisor containing the strict support of <span class="math-inline">\(J\)</span> and every exceptional divisor. Then <span class="math-inline">\(K_W+D_W\)</span> is big. <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Fourfold-nonvanishing-by-minimal-metrics-and-moving-jets-September-27-2026/paper.pdf">Proposition 5.1, p. 14</a></p>
+<figure><a class="diagram-link" href="diagrams/signed-support.en.svg" target="_blank"><img src="diagrams/signed-support.en.svg" alt="Signed support, whole-floor lifting, and the final contradiction"></a><figcaption>Proof diagram · Click to enlarge</figcaption></figure>
+<p>Assume it is not big. Positive Iitaka dimension, combined with general-type general fibers, would force bigness, so <span class="math-inline">\(\kappa(K_W+D_W)\leq0\)</span>. A dlt MMP and a small crepant perturbation preserving a Cartier index produce <span class="math-inline">\(M'\sim_{\mathbb Q}G'\)</span>, <span class="math-inline">\(\kappa(M')\leq0\)</span>, and a nef klt interval <span class="math-inline">\(M'-uD'\)</span> for <span class="math-inline">\(0&lt;u\leq\delta\)</span>. The signed divisor <span class="math-inline">\(G'\)</span> is supported on <span class="math-inline">\(D'\)</span>. Its largest positive coefficient <span class="math-inline">\(a\)</span> and small <span class="math-inline">\(s&gt;0\)</span> give</p>
+<div class="math-block">\[
+B=(1-s)D'+(s/a)G',\quad \alpha=1+s/a,\quad
+N=K'+B\sim_{\mathbb Q}\alpha M'-sD',\quad S=\lfloor B\rfloor\ne0.
+\]</div>
+<p>Here <span class="math-inline">\(0\leq B\leq D'\)</span>, <span class="math-inline">\((Z',B)\)</span> is lc, <span class="math-inline">\(N\)</span> is nef, and <span class="math-inline">\(\mathcal J(Z',B)=\mathcal I_S\)</span>.</p>
+<p>Fix <span class="math-inline">\(0&lt;b_0&lt;1&lt;b_2\)</span> and construct effective SNC boundaries <span class="math-inline">\(C_i\)</span> on a resolution. The endpoint residuals in (5.9) satisfy</p>
+<div class="math-block">\[
+L_R-C_i\sim_{\mathbb Q}
+t_i(m)h^*(K'+(1-u_i(m))D'),\qquad
+t_i(m)&gt;0,\quad u_i(m)\to s/\alpha\in(0,\delta).
+\]</div>
+<p><a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Minimal-metrics-and-interior-injectivity-for-nef-adjoints-September-27-2026/paper.pdf">MM, Theorem 1.1</a> supplies zero-Lelong metrics on the actual endpoint bundles. <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Minimal-metrics-and-interior-injectivity-for-nef-adjoints-September-27-2026/paper.pdf">MM, Theorem 1.2</a> and local vanishing then give</p>
+<div class="math-block">\[
+H^1(Z',\mathcal O(mN)\otimes\mathcal I_S)\hookrightarrow H^1(Z',\mathcal O(mN)).
+\]</div>
+<p>Thus <span class="math-inline">\(H^0(Z',mN)\to H^0(S,mN|_S)\)</span> is surjective for sufficiently large divisible <span class="math-inline">\(m\)</span>.</p>
+<p>A nonzero boundary section is constructed separately. Apply adjunction and threefold semi-dlt abundance to the entire floor <span class="math-inline">\(T\)</span> of a dlt blowup. Local vanishing in (5.12), giving <span class="math-inline">\(g_*\mathcal O_T=\mathcal O_S\)</span>, descends a <strong>whole-floor</strong> section, including conductor compatibility, to <span class="math-inline">\(S\)</span> and then lifts it. Only now does <span class="math-inline">\(\kappa(N)=0\)</span> follow. Finally apply <a href="https://arxiv.org/pdf/1406.6132v2">GM, Corollary 5.3, p. 19</a> to <span class="math-inline">\(N/\alpha\sim_{\mathbb Q}K'+(1-s/\alpha)D'\)</span>. Semiampleness and Iitaka dimension zero give numerical triviality, contradicting its positive intersection with an ample cube because <span class="math-inline">\(K'\)</span> is pseudo-effective, <span class="math-inline">\(D'\ne0\)</span>, and <span class="math-inline">\(1-s/\alpha&gt;0\)</span>. The nonvanishing assumption of GM is obtained before its use.</p>
+<h2>Corollary 1.2: return to the lc pair</h2>
+<figure><a class="diagram-link" href="diagrams/lc-descent.en.svg" target="_blank"><img src="diagrams/lc-descent.en.svg" alt="Smooth nonvanishing, rational feasibility, and a prescribed-index section"></a><figcaption>Proof diagram · Click to enlarge</figcaption></figure>
+<p><a href="https://arxiv.org/pdf/1609.00121v4">Hash, Theorem 1.4, p. 2</a> takes smooth fourfold canonical nonvanishing to nonvanishing for projective lc pairs of dimension at most four. Since nef <span class="math-inline">\(D\)</span> is pseudo-effective, it gives <span class="math-inline">\(D\sim_{\mathbb R}G\geq0\)</span> on the original normal variety. Lemma 8.1 writes this as a rational linear system involving finitely many prime and principal divisors. Fixing the zero coefficients and approximating the positive ones by a rational solution gives <span class="math-inline">\(D\sim_{\mathbb Q}G_{\mathbb Q}\geq0\)</span> with the same support. Clearing denominators together with the prescribed <span class="math-inline">\(r\)</span> produces a section of <span class="math-inline">\(mrD\)</span> on <span class="math-inline">\(X\)</span> itself, rather than only on a <span class="math-inline">\(\mathbb Q\)</span>-factorial model.</p>
+<h2>External inputs and catalog connections</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Use and supplied content</th>
+<th>Checking scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Minimal-metrics-and-interior-injectivity-for-nef-adjoints-September-27-2026/paper.pdf">MM, Theorems 1.1–1.2, pp. 1–2</a></td>
+<td>Theorems 4.1–4.2, pp. 13–14, and Proposition 5.1, pp. 18–20: endpoint metrics, ordinary injectivity and the final klt metric.</td>
+<td>Statements, endpoint formulas and application compared; MM proof passages were also read for the preceding draft, without certification of the full analytic proofs.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf">LA, Lemmas 7.1–7.5, pp. 45–52</a></td>
+<td>§3 center/degree estimates and §6 slices and fixed branch complement.</td>
+<td>Input statements and principal uses compared; complete proofs excluded.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf">LA, Theorem 9.1, p. 62</a></td>
+<td>Theorem 7.1 and §§7.1–7.3, pp. 31–34: finite-data Frobenius incompatibility.</td>
+<td>Hypotheses compared; the present flag, curve, jets and determinant comparison read. Full LA proof unverified.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/pdf/2011.02236v2">CT, Theorem 1.1, p. 2</a></td>
+<td>Proposition 2.1 and §5: termination of the MMPs.</td>
+<td>v2 statement and ordinary-pair specialization with zero nef part checked.</td>
+</tr>
+<tr>
+<td><a href="https://www.math.kyoto-u.ac.jp/~fujino/Abundance.pdf">Fuj, Corollary 4.10</a></td>
+<td>§5, p. 19: semi-dlt threefold abundance on the entire reduced floor.</td>
+<td>Target adjunction and descent read. The specified external corollary could not be retrieved and remains pending.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/pdf/1406.6132v2">GM, Corollary 5.3, p. 19</a></td>
+<td>End of Proposition 5.1, pp. 19–20: klt semiampleness after nonvanishing.</td>
+<td>v2 statement and application compared.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/pdf/1609.00121v4">Hash, Theorem 1.4, pp. 1–2</a></td>
+<td>§8, p. 35: smooth nonvanishing implies lc real-boundary nonvanishing.</td>
+<td>v4 statement, Conjectures 1.1–1.3 and application compared.</td>
+</tr>
+</tbody>
+</table></div>
+<p>The abundance main theorem of <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf">LA</a> and logarithmic Iitaka subadditivity are not inputs here. The introduction, p. 3, combines Corollary 1.2 with the results after nonvanishing in <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Lifting-sections-from-the-reduced-support-of-an-adjoint-September-27-2026/paper.pdf">Supported lifting</a> as a <strong>consequence</strong>; this must not become a reverse dependency in the proof of smooth nonvanishing.</p>
+<h2>Source guide and checking scope</h2>
+<p>Passages read: §2, pp. 5–7, fixed counterexample; §§3.4–3.5, pp. 10–12, degree obstruction and scalar orders; §§4–5, pp. 13–20, analytic inputs and signed support; §§6.3–6.5, pp. 23–30, correspondences, case analysis and finite jets; §7, pp. 30–34, finite data and determinant; §8, pp. 34–35, rationalization. All numerical conditions of Theorem 7.1 were also compared with the image of PDF p. 31.</p>
+<p>Outstanding items include the full local ideal calculations for moving centers, external proofs about covers and birational groups, original statements of HMX effective birationality, generic semipositivity and the restriction theorem for the flag, Fujino's specified threefold corollary, and complete Frobenius/slope arguments. Their validity is not certified by this draft. Bilingual formulas and diagrams have been checked; site integration and final page inspection are handed to the central editor.</p></article><footer>OpenAI Math Digest · Independent, unofficial reading project.<br>Design adapted from <a href="https://masataka123.github.io/geometry-paper-digest/">Geometry Paper Digest</a> (MIT). This is a local preview, not a published page.</footer></main></body></html>

@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+\node[card] (n0) {\heading{01}{大きいrankから小さい局所正値性へ}{Large rank forces small local positivity}\Tx{$r(T)\longrightarrow\infty\quad\Rightarrow\quad\varepsilon(h;x)\longrightarrow0$}{$r(T)\longrightarrow\infty\quad\Rightarrow\quad\varepsilon(h;x)\longrightarrow0$}};
+\node[card,below=2.1cm of n0] (n1) {\heading{02}{小消滅次数の族とchain field}{Small-order families and their chain field}\Tx{$\kappa(C)=0,\quad \gamma(P|_C)\leq\eta\,\operatorname{vol}(P)^{1/n}$}{$\kappa(C)=0,\quad \gamma(P|_C)\leq\eta\,\operatorname{vol}(P)^{1/n}$}};
+\flow{n0}{n1}{\Tx{tracking・chain・Iitaka fibreで次元を下げる}{Use tracking, chains and Iitaka fibres}\\[4pt]\Cite{slc}{Lems.\ 4.1, 5.5, pp.\ 9,18--20}\quad \Cite{ui}{UI: Lems.\ 6.2--6.4, pp.\ 25--26}}
+\node[card,below=2.1cm of n1] (n2) {\heading{03}{良いモデルと体積の較正}{Good models and volume calibration}\Tx{$h:X\to Y,\ b=\dim Y,\ s=n-b$\\$v=\operatorname{vol}(D)^{1/n}\asymp\delta,\quad\ell_X(D)\leq C\delta$}{$h:X\to Y,\ b=\dim Y,\ s=n-b$\\$v=\operatorname{vol}(D)^{1/n}\asymp\delta,\quad\ell_X(D)\leq C\delta$}};
+\flow{n1}{n2}{\Tx{LAの停止・semiample終点を実際に使う}{Use LA termination and a semiample endpoint}\\[4pt]\Cite{la}{LA: Thm.\ 11.1, p.\ 73}\quad \Cite{slc}{Lems.\ 5.6--5.7, pp.\ 20--25}}
+\node[result,below=2.1cm of n2] (n3) {\heading{04}{垂直jetと底の傾きから矛盾}{Vertical jets and base slopes contradict volume}\Tx{$h^0(mD)\leq C(m\eta v)^s(m\delta)^b$\\$\displaystyle h^0(mD)\sim \frac{m^nv^n}{n!},\quad \eta\ll1$}{$h^0(mD)\leq C(m\eta v)^s(m\delta)^b$\\$\displaystyle h^0(mD)\sim \frac{m^nv^n}{n!},\quad \eta\ll1$}};
+\flow{n2}{n3}{\Tx{最大chain quotientで族を垂直にする}{Make families vertical on the maximal chain quotient}\\[4pt]\Cite{slc}{\S5.5, Lem.\ 5.8, pp.\ 25--28}}
+\end{tikzpicture}

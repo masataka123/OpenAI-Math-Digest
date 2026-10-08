@@ -1,0 +1,244 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Uniform slc indices: controlling residue cycles by klt characters · 原稿プレビュー</title><style>:root {
+  color-scheme: light;
+  --paper: #f4f1ea;
+  --ink: #18232d;
+  --muted: #52606b;
+  --accent: #984526;
+  --link: #17617d;
+  --card: #ffffff;
+  --line: #d5cdbf;
+  --soft-line: #c9c1b4;
+  font-family: Georgia, "Times New Roman", "Yu Mincho", "Hiragino Mincho ProN", serif;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); }
+main { width: min(920px, calc(100% - 32px)); margin: 0 auto; padding: 42px 0 56px; }
+a { color: var(--link); text-underline-offset: .18em; }
+
+.site-header { border-bottom: 2px solid var(--ink); margin-bottom: 28px; padding-bottom: 20px; }
+.landing-header { max-width: 790px; }
+h1 { font-size: clamp(2.25rem, 7vw, 4rem); line-height: 1.04; margin: 0 0 14px; letter-spacing: -.02em; }
+h2, h3 { line-height: 1.3; }
+p { line-height: 1.75; }
+.eyebrow, .topic-count {
+  color: var(--accent);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+  font-size: .78rem;
+  font-weight: 750;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.topic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+.topic-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: inherit;
+  display: block;
+  min-height: 250px;
+  padding: 24px;
+  text-decoration: none;
+  transition: border-color 120ms ease, transform 120ms ease, box-shadow 120ms ease;
+}
+.topic-card:hover, .topic-card:focus-visible {
+  border-color: var(--accent);
+  box-shadow: 0 8px 24px rgba(24, 35, 45, .08);
+  transform: translateY(-2px);
+}
+.topic-card h2 { font-size: 1.65rem; margin: 18px 0 2px; }
+.topic-card p { color: var(--muted); margin: 0 0 20px; }
+.topic-card .topic-english { font-style: italic; margin-bottom: 12px; }
+.topic-open { color: var(--link); font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-weight: 700; }
+.heading-subtitle { color: var(--muted); font-style: italic; margin: -6px 0 6px; }
+
+.notice-card {
+  background: rgba(255,255,255,.55);
+  border-top: 1px solid var(--line);
+  margin-top: 34px;
+  padding: 16px 2px 0;
+}
+
+.notice-card h2 {
+  margin: 0 0 4px;
+}
+
+.topic-nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 30px; }
+.topic-nav a {
+  border: 1px solid var(--soft-line);
+  border-radius: 999px;
+  color: #34434e;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+  font-size: .88rem;
+  padding: 7px 12px;
+  text-decoration: none;
+}
+.topic-nav a:hover, .topic-nav a:focus-visible, .topic-nav a[aria-current="page"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+
+.digest-list { max-width: 790px; }
+.digest { background: var(--card); border: 1px solid var(--line); border-radius: 6px; margin: 0 0 18px; padding: 20px 22px; }
+.dates { display: flex; flex-wrap: wrap; gap: 5px 18px; margin: 0 0 6px; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-size: .8rem; }
+.dates div { display: flex; gap: 6px; }
+.dates dt { color: var(--accent); font-weight: 700; letter-spacing: .04em; }
+.dates dd { color: var(--muted); font-variant-numeric: tabular-nums; margin: 0; }
+.digest h2 { font-size: 1.35rem; margin: 5px 0 7px; }
+.title-link { color: var(--ink); text-decoration: none; }
+.title-link:hover { color: var(--link); }
+.authors { color: var(--muted); font-style: italic; }
+.abstracts { max-width: 100%; overflow-wrap: anywhere; word-break: normal; }
+.abstract h3, .paper-header .abstract h2 { font-size: 1rem; margin: 1.25rem 0 .35rem; }
+.abstract p { margin: 0; }
+.abstract-en { line-height: 1.8; }
+.abstract-en p[lang="en"] { line-height: 1.8; overflow-wrap: anywhere; }
+.abstract-source { font-size: .86rem; margin-top: .65rem !important; }
+.abstract-source a { color: var(--muted); }
+.abstract-ja { margin-top: 1.75rem; }
+.links { display: flex; flex-wrap: wrap; gap: 16px; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-weight: 650; }
+.empty { background: var(--card); border: 1px dashed var(--soft-line); border-radius: 6px; color: var(--muted); padding: 22px; }
+
+.paper-page { max-width: 790px; }
+.paper-header { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: clamp(22px, 5vw, 38px); }
+.paper-header h1 { font-size: clamp(2rem, 6vw, 3.25rem); }
+.paper-summary { font-size: 1.08rem; }
+.paper-meta { border-top: 1px solid var(--line); display: grid; gap: 8px; margin: 24px 0 0; padding-top: 18px; }
+.paper-meta div { display: grid; grid-template-columns: minmax(120px, .35fr) 1fr; gap: 16px; }
+.paper-meta dt { color: var(--accent); font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-size: .85rem; font-weight: 700; }
+.paper-meta dd { margin: 0; }
+.paper-links { margin-top: 22px; }
+.paper-content { background: var(--card); border: 1px solid var(--line); border-radius: 8px; margin-top: 18px; padding: clamp(22px, 5vw, 40px); }
+.paper-content h2 { border-bottom: 1px solid var(--line); font-size: 1.55rem; margin: 2.2em 0 .8em; padding-bottom: .35em; }
+.paper-content h2:first-child { margin-top: 0; }
+.paper-content h3 { font-size: 1.2rem; margin-top: 1.7em; }
+.paper-content blockquote { border-left: 4px solid var(--accent); color: #35434e; margin: 1.5em 0; padding: .15em 0 .15em 1.2em; }
+.paper-content code { background: #eee9df; border-radius: 3px; padding: .1em .3em; }
+.paper-content mjx-container[display="true"],
+.paper-content .MathJax { max-width: 100%; overflow-x: auto; overflow-y: hidden; }
+
+.site-footer { border-top: 1px solid var(--line); color: var(--muted); font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-size: .82rem; margin-top: 42px; padding-top: 18px; }
+.site-footer p { line-height: 1.6; }
+
+@media (max-width: 560px) {
+  main { padding-top: 24px; }
+  .topic-card { min-height: 0; }
+  .digest { padding: 17px; }
+  .paper-meta div { grid-template-columns: 1fr; gap: 2px; }
+  .abstract-ja { margin-top: 1.4rem; }
+}
+
+ header{position:sticky;top:0;z-index:20;background:#f4f1eaf5;border-bottom:1px solid #d5cdbf;padding:14px max(16px,calc((100vw - 1060px)/2));display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:system-ui,sans-serif}header .brand{font:20px Georgia,serif}header nav{display:flex;gap:16px;flex-shrink:0}main{width:min(1060px,calc(100% - 36px));padding-top:26px}article{max-width:940px;margin:auto;font-size:17px;line-height:1.95}article h1{font-size:clamp(1.85rem,4vw,2.7rem);line-height:1.4;margin-top:36px}article h2{font-size:1.6rem;margin-top:56px;padding-top:22px;border-top:1px solid #d5cdbf}article h3{margin-top:35px;font-size:1.2rem}article p,article li{line-height:1.95}article a{overflow-wrap:anywhere}.draft-note{padding:12px 18px;border-left:3px solid #984526;background:#eeebe3;font:14px/1.8 system-ui,sans-serif}.paper-nav{display:flex;flex-wrap:wrap;gap:10px 22px;padding:22px 0;border-bottom:1px solid #d5cdbf;font:14px/1.6 system-ui,sans-serif}.paper-nav a[aria-current]{font-weight:700;color:#18232d}blockquote{border-left:3px solid #17617d;margin:25px 0;padding:0 18px;color:#52606b}figure{background:white;margin:26px 0;padding:16px;border:1px solid #d5cdbf;overflow-x:auto}figure img{display:block;min-width:680px;width:100%;height:auto}figcaption{font:12px/1.6 system-ui,sans-serif;color:#52606b;margin-top:10px}.math-block{padding:8px 0;overflow-x:auto;overflow-y:hidden}.table-wrap{overflow-x:auto;margin:24px 0}table{border-collapse:collapse;width:100%;min-width:740px;font:14px/1.85 system-ui,sans-serif}th,td{padding:14px;border:1px solid #d5cdbf;text-align:left;vertical-align:top}th{background:#eeebe3}code{font-size:.85em;overflow-wrap:anywhere}footer{border-top:1px solid #d5cdbf;padding:22px 0;margin-top:55px;font:12px/1.8 system-ui,sans-serif;color:#52606b}mjx-container[display=true]{max-width:100%;overflow-x:auto;overflow-y:hidden}article img{max-width:none}@media(max-width:540px){header .brand{font-size:16px}header nav{font-size:13px}article{font-size:16px}figure{margin-left:0;margin-right:0}article h2{font-size:1.35rem}}
+ </style><script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'},startup:{pageReady:()=>MathJax.startup.defaultPageReady().then(()=>document.documentElement.dataset.mathReady='true')}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script></head><body><header><span class="brand">OpenAI <em>Math Digest</em></span><nav><a href="preview.ja.html" lang="ja">日本語</a><a href="preview.en.html" lang="en">English</a></nav></header><main><div class="draft-note">Worker C · Local draft preview. AI-generated guide; check important claims against the originals.</div><nav class="paper-nav" aria-label="Four articles"><a  href="../minimal-metrics-injectivity/preview.en.html">05 · Minimal metrics</a><a  href="../fourfold-nonvanishing/preview.en.html">06 · Fourfold nonvanishing</a><a aria-current="page" href="../uniform-slc-indices/preview.en.html">02 · Uniform slc indices</a><a  href="../conditional-kahler-fourfolds/preview.en.html">03 · Conditional Kähler models</a></nav><article><h1>Uniform slc indices: controlling residue cycles by klt characters</h1>
+<p>Catalog 034, item 02 / Internal ID: <code>uniform-slc-indices</code></p>
+<p>Source: OpenAI, <em>Uniform indices for semi-log-canonical log Calabi–Yau pairs</em>, October 5, 2026, 42 pages; <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf">fixed PDF</a>. Page references agree with PDF pagination. This AI-generated exposition presents the manuscript's claims and proof structure. The editorial checks are limited to the scope recorded below; consult the source for mathematical use.</p>
+<h2>Theorem 1.1: Cartier trivialization independent of component count</h2>
+<p>Fix <span class="math-inline">\(d\geq4\)</span> and a finite set <span class="math-inline">\(\Phi\subset[0,1]\cap\mathbb Q\)</span>. <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf">Theorem 1.1, p.2</a> asserts that an integer <span class="math-inline">\(a=a(d,\Phi)&gt;0\)</span> works for every connected, projective, equidimensional slc pair <span class="math-inline">\((X,B)\)</span> of dimension <span class="math-inline">\(d\)</span> over any algebraically closed field of characteristic zero satisfying
+<div class="math-block">\[
+K_X+B\sim_{\mathbb Q}0,\qquad
+\{\text{nonzero coefficients of }B\}\subset\Phi:
+\]</div>
+the divisor <span class="math-inline">\(a(K_X+B)\)</span> is Cartier and
+<div class="math-block">\[
+\mathcal O_X\!\left(a(K_X+B)\right)\simeq\mathcal O_X.
+\]</div>
+The theorem's stated range <span class="math-inline">\(d\geq4\)</span> is distinct from the consequence obtained by adding established lower-dimensional results. The exponent is independent of the numbers of normalization components and lc strata.</p>
+<figure><a class="diagram-link" href="diagrams/slc-descent.en.svg" target="_blank"><img src="diagrams/slc-descent.en.svg" alt="From normalization through conductor cycles to slc trivialization"></a><figcaption>Proof diagram · Click to enlarge</figcaption></figure>
+<p>For the normalization <span class="math-inline">\(\nu:\coprod X_i\to X\)</span>, write
+<span class="math-inline">\(K_{X_i}+\Delta_i=\nu^*(K_X+B)|_{X_i}\)</span>. The conductor enters <span class="math-inline">\(\Delta_i\)</span> with coefficient one. The normal lc index theorem, <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-Pluricanonical-Iitaka-Fibrations-October-3-2026/paper.pdf">UI Theorem 1.2, p.2</a>, supplies an <strong>even</strong> common integer <span class="math-inline">\(m\)</span>, depending only on <span class="math-inline">\(d,\Phi\)</span>, and rational <span class="math-inline">\(m\)</span>-canonical forms with <span class="math-inline">\(\operatorname{div}(\theta_i)=-m\Delta_i\)</span>. This trivializes the normalization components; descent remains to be proved.</p>
+<p>Form the finite graph whose vertices are normalization components and whose edges are generic conductor nodes. For an edge <span class="math-inline">\(e:i\to j\)</span>, the branch correspondence <span class="math-inline">\(\tau\)</span> compares the residues by <span class="math-inline">\(r_e=\tau^*\theta_T/\theta_S\)</span>. The original rational linear triviality supplies a possibly nonuniform principal Cartier degree <span class="math-inline">\(M\)</span>, divisible by <span class="math-inline">\(m\)</span>. Comparing its trivialization with the <span class="math-inline">\(\theta_i\)</span> gives
+<div class="math-block">\[
+r_e^{M/m}=b_i/b_j,
+\]</div>
+which proves that <span class="math-inline">\(r_e\)</span> is constant. This step does not bound <span class="math-inline">\(M\)</span>. <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf">§7.3, pp.37–38</a></p>
+<p>Uniformity comes from transporting these constants to minimal klt strata. Within one dlt component, the <span class="math-inline">\(\mathbb P^1\)</span>-links of <a href="https://arxiv.org/pdf/1107.2863v3">Kollár Theorem 10 and Proposition 14, pp.6,8–9</a> preserve residues: evenness removes the sign. Across the conductor, Lemma 7.2 constructs a <span class="math-inline">\(B\)</span>-birational map of minimal strata carrying the same multiplier <span class="math-inline">\(r_e\)</span>. It does not simply restrict an arbitrary birational map to a stratum. On a common SNC model, it compares residue fields and proves that the relevant local monomial matrix has determinant <span class="math-inline">\(\pm1\)</span>. <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf">Lemmas 7.1–7.2, pp.35–37</a></p>
+<p>A closed walk therefore gives a <span class="math-inline">\(B\)</span>-birational self-map of one minimal klt stratum with character <span class="math-inline">\(\prod_e r_e\)</span>. Theorem 6.1 below gives
+<div class="math-block">\[
+L=\operatorname{lcm}_{0\leq q\leq d-1}L(q,m),\qquad a=mL,
+\]</div>
+so every closed walk satisfies <span class="math-inline">\(\prod_e r_e^L=1\)</span>. Constants chosen along a spanning tree then satisfy <span class="math-inline">\(c_i=c_jr_e^L\)</span> on every edge, and the forms <span class="math-inline">\(c_i\theta_i^L\)</span> glue. Loops and multiple edges are included. No factor equal to the length of a cycle enters the exponent. <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf">Equations (7.10)–(7.11), p.38</a></p>
+<p>One must obtain a Cartier generator, not merely a descended section. At the split node <span class="math-inline">\(F[[x,y]]/(xy)\)</span>, the canonical generator has branches <span class="math-inline">\((dx/x,-dy/y)\)</span>; matching even-degree residues matches generators. Nonsplit nodes are checked after a quadratic extension and descended. The <span class="math-inline">\(S_2\)</span> extension of these codimension-one generators identifies the degree-<span class="math-inline">\(a\)</span> reflexive extension itself with <span class="math-inline">\(\mathcal O_X\)</span>. Finally, descent to a finitely generated field and faithfully flat base change transfer the conclusion from <span class="math-inline">\(\mathbb C\)</span> to any algebraically closed characteristic-zero field. <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf">§§7.2–7.3, pp.37–39</a></p>
+<h2>Theorem 5.1: the Hodge rank containing the volume form</h2>
+<p>The character bound uses a particular Hodge rank, not all Betti numbers. For a smooth projective <span class="math-inline">\(n\)</span>-fold <span class="math-inline">\(U\)</span>, let <span class="math-inline">\(T(U)\subset H^n(U,\mathbb Q)\)</span> be the smallest rational Hodge substructure containing <span class="math-inline">\(H^{n,0}(U)\)</span>, and let <span class="math-inline">\(r(U)=\dim_{\mathbb Q}T(U)\)</span>. In <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf">Theorem 5.1, p.16</a>, <span class="math-inline">\(n\geq2\)</span> and <span class="math-inline">\(T\)</span> is a complex projective <span class="math-inline">\(\mathbb Q\)</span>-factorial terminal <span class="math-inline">\(n\)</span>-fold with <span class="math-inline">\(K_T\sim0\)</span>. A smooth resolution <span class="math-inline">\(U\)</span> satisfies <span class="math-inline">\(h^1(U,\mathcal O_U)=0\)</span>, and <strong>every rational image <span class="math-inline">\(Y\)</span> with <span class="math-inline">\(0&lt;\dim Y&lt;n\)</span> has rationally connected smooth projective resolution</strong>. The asserted bound is <span class="math-inline">\(r(T):=r(U)\leq R_n\)</span>.</p>
+<figure><a class="diagram-link" href="diagrams/hodge-rank.en.svg" target="_blank"><img src="diagrams/hodge-rank.en.svg" alt="Hodge-rank contradiction and the use of LA"></a><figcaption>Proof diagram · Click to enlarge</figcaption></figure>
+<p>Lemma 4.1 bounds <span class="math-inline">\(r(T)\)</span> from a Seshadri lower bound for a normalized ample class on a canonical model with <span class="math-inline">\(K\sim0\)</span>. Its diagonal argument uses the quantitative Hodge norm gap of Lemma 3.2. Unbounded rank would force small local positivity. Tracking, generic chains, and the small-volume Iitaka-fibre estimate of <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-Pluricanonical-Iitaka-Fibrations-October-3-2026/paper.pdf">UI Lemmas 6.2–6.4, pp.25–26</a> then produce covering families of <span class="math-inline">\(\kappa=0\)</span> subvarieties with small vanishing order for their complete section systems. <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf">Lemma 5.5, pp.18–20</a></p>
+<p>The chain field is realized as a morphism on a small terminal model. Applying <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf">LA Theorem 11.1, p.73</a> to <span class="math-inline">\((T,\epsilon J)\)</span> for a movable <span class="math-inline">\(J\)</span> supplies termination and a semiample endpoint. This is an actual use of LA abundance. <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf">Lemma 5.6, pp.20–21</a> The proof maximizes the dimension of a proper chain quotient and bounds its base using the rational-image hypothesis and UI's moduli-denominator and boundedness inputs. It then removes divisors mapping into codimension at least two in the base. Lemma 5.7 calibrates a big divisor <span class="math-inline">\(D\)</span> and a linear functional <span class="math-inline">\(\ell_X\)</span>. With <span class="math-inline">\(v=\operatorname{vol}(D)^{1/n}\)</span>, <span class="math-inline">\(b=\dim Y\)</span>, and <span class="math-inline">\(s=n-b\)</span>, the scale is
+<div class="math-block">\[
+c\delta\leq v\leq C\delta,\qquad \ell_X(D)\leq C\delta.
+\]</div>
+<a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf">pp.21–25</a></p>
+<p>Comparison with a base hyperplane makes the small-order families vertical; maximality makes their chain leaves fill the generic fibre. Vertical jets bound the generic rank by <span class="math-inline">\(C(m\eta v)^s\)</span>. Determinants and cotangent slopes on the bounded base give
+<div class="math-block">\[
+h^0(X,mD)\leq C(m\eta v)^s(m\delta)^b.
+\]</div>
+For sufficiently small <span class="math-inline">\(\eta\)</span>, this contradicts the volume leading term <span class="math-inline">\(m^nv^n/n!\)</span>. The section estimate on <span class="math-inline">\(\mathbb P^b\)</span> in Lemma 5.8 must be linear in the rank for this comparison. <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf">§5.5, pp.25–28</a></p>
+<h2>Theorem 6.1: bounding a character, not the order of the map</h2>
+<p>For <span class="math-inline">\(n\geq0,m\geq1\)</span>, <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf">Theorem 6.1, p.29</a> asserts an integer <span class="math-inline">\(L(n,m)&gt;0\)</span> for integral complex projective klt pairs <span class="math-inline">\((V,\Delta)\)</span> of dimension <span class="math-inline">\(n\)</span>, with <span class="math-inline">\(\Delta\geq0\)</span> and <strong><span class="math-inline">\(m(K_V+\Delta)\)</span> an integral principal divisor</strong>. If a rational <span class="math-inline">\(m\)</span>-canonical form satisfies <span class="math-inline">\(\operatorname{div}(\theta)=-m\Delta\)</span>, then every <span class="math-inline">\(B\)</span>-birational self-map satisfies
+<div class="math-block">\[
+f^*\theta=c\theta\quad\Longrightarrow\quad c^{L(n,m)}=1.
+\]</div>
+The map <span class="math-inline">\(f\)</span> need not have finite order.</p>
+<figure><a class="diagram-link" href="diagrams/characters.en.svg" target="_blank"><img src="diagrams/characters.en.svg" alt="Decomposing characters on a product cover"></a><figcaption>Proof diagram · Click to enlarge</figcaption></figure>
+<p>After crepant terminalization, <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-log-Iitaka-fibrations-and-bounded-moduli-denominators-October-4-2026/uniform-log-iitaka.pdf">ULI Proposition 5.1 and Lemmas 5.2–5.3, pp.12–13</a> provide a quasi-étale product cover. It has a rationally connected factor carrying all the boundary, an abelian factor, and boundary-free Calabi–Yau or symplectic factors. Lemma 6.4 uses a characteristic subgroup of the smooth-locus fundamental group to lift the map, and its <span class="math-inline">\(n!\)</span>-th power fixes the factor directions. The cover degree need not be bounded. For factor multipliers <span class="math-inline">\(d_i\)</span> and form degrees <span class="math-inline">\(p_i\)</span>, the comparison is
+<div class="math-block">\[
+c^{n!}=\prod_i d_i^{\,m/p_i};
+\]</div>
+the cover degree does not enter this exponent. <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf">pp.30–32</a></p>
+<p>For the RC factor, fixed-index boundedness from <a href="https://arxiv.org/pdf/2204.04946v2">Han–Jiang Theorem 1.2, pp.1–2</a> leads to the bounded-family representation theorem <a href="https://arxiv.org/pdf/2002.11928">Jiang–Liu Theorem 3.2, p.8</a>. For the nonabelian boundary-free factors, <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-Pluricanonical-Iitaka-Fibrations-October-3-2026/paper.pdf">UI Lemma 5.2, pp.21–22</a> supplies the rational-image property needed in Theorem 5.1. Abelian factors have the cohomology rank bound <span class="math-inline">\(\binom{2r}{r}\)</span>. The action on an integral polarized Hodge structure constrains a character of order <span class="math-inline">\(e\)</span> by <span class="math-inline">\(\varphi(e)\leq b(r)\)</span>; take the least common multiple of the possible orders. Combining this with the RC bound yields <span class="math-inline">\(L(n,m)=n!E(n,m)\)</span>. <a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf">Lemmas 6.5–6.6, pp.32–34</a></p>
+<h2>Inputs and their use</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Role here</th>
+<th>Check performed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-Pluricanonical-Iitaka-Fibrations-October-3-2026/paper.pdf">UI Thm.1.2, p.2</a></td>
+<td>Thm.2.2 and §7.3: common normal lc index</td>
+<td>Input statement and application compared</td>
+</tr>
+<tr>
+<td><a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-Pluricanonical-Iitaka-Fibrations-October-3-2026/paper.pdf">UI Thm.1.1, Props.4.1,4.5</a></td>
+<td>Prop.2.4: bounded chain-quotient bases</td>
+<td>Target's input description read; proofs outside scope</td>
+</tr>
+<tr>
+<td><a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-Pluricanonical-Iitaka-Fibrations-October-3-2026/paper.pdf">UI Lems.6.2–6.4, pp.25–26</a></td>
+<td>Inputs 5.2–5.4 and Lemma 5.5: chains and small volumes</td>
+<td>Input statements and uses compared</td>
+</tr>
+<tr>
+<td><a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf">LA Thm.11.1, p.73</a></td>
+<td>Thm.2.3, Lemma 5.6 and §5.4: good models</td>
+<td>Statement and rational-boundary applications compared; proof outside scope</td>
+</tr>
+<tr>
+<td><a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-log-Iitaka-fibrations-and-bounded-moduli-denominators-October-4-2026/uniform-log-iitaka.pdf">ULI Prop.5.1, Lems.5.2–5.3, pp.12–13</a></td>
+<td>Input 6.3 and Lemma 6.4: product structure stable under further covers</td>
+<td>Original statements and uses compared</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/pdf/2204.04946v2">HJ Thm.1.2</a> and <a href="https://arxiv.org/pdf/2002.11928">JL Thm.3.2</a></td>
+<td>Lemma 6.5: RC character bound</td>
+<td>Original statements compared; promotion from bounded varieties to log bounded pairs read only here</td>
+</tr>
+<tr>
+<td><a href="https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-Pluricanonical-Iitaka-Fibrations-October-3-2026/paper.pdf">UI Lem.5.2, pp.21–22</a></td>
+<td>Lemma 6.6: applying Thm.5.1 to nonabelian factors</td>
+<td>Input and application compared; also an indirect dependence on LA nonvanishing</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/pdf/1107.2863v3">K Thm.10, Prop.14</a></td>
+<td>Lemma 7.1: residue-preserving maps within a component</td>
+<td>Original statements and even-degree sign calculation compared</td>
+</tr>
+</tbody>
+</table></div>
+<p>U4 is also cited in Inputs 5.2–5.4 as the source of geometric lemmas used through UI. Its original lemmas were not rechecked for this draft. A bibliography entry alone is not a dependency edge.</p>
+<h2>Sources and scope of the checks</h2>
+<p>The source commit is <code>adc7f1241b42e322a6451854ab7e4b4c146bf78a</code> and the SHA-256 is <code>588f61707a03040f0265823b76aa32e17f238bfed772f79bdcd8f9867746a126</code>. See the <a href="sources.json">source record</a> and <a href="status.md">work record</a>.</p>
+<p>Editorial reading covered the main statements, §§2–3, the chain quotient, calibration statement and vertical–horizontal jet comparison in §5, factor characters in §6, and residues, cycles, nodes and <span class="math-inline">\(S_2\)</span> descent in §7. It did not check all diagonal calculations in Lemma 4.1, every calibration estimate in Lemma 5.7, or independently validate the fundamental-group lift and local valuation argument. Original slope inputs such as Campana–Păun, the underlying singular Beauville–Bogomolov literature, and the proofs of the UI and LA input theorems remain unchecked. This draft traces citations and applications; it does not certify the theorem.</p></article><footer>OpenAI Math Digest · Independent, unofficial reading project.<br>Design adapted from <a href="https://masataka123.github.io/geometry-paper-digest/">Geometry Paper Digest</a> (MIT). This is a local preview, not a published page.</footer></main></body></html>
