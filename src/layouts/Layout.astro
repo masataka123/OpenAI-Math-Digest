@@ -9,7 +9,7 @@ const {lang='ja', title, otherPath='', description} = Astro.props;
 const en=lang==='en', base=import.meta.env.BASE_URL;
 const canonical=new URL(Astro.url.pathname, Astro.site);
 const route=Astro.url.pathname;
-const guideKind=route.includes('/fields/')?'field':route.includes('/catalog/')?'catalog':route.includes('/papers/')?'paper':route.includes('/about/')?'about':'home';
+const guideKind=route.includes('/fields/')?'field':route.includes('/catalog/')?'catalog':route.includes('/papers/')?'paper':'home';
 ---
 <!doctype html>
 <html lang={lang}>
@@ -36,7 +36,7 @@ const guideKind=route.includes('/fields/')?'field':route.includes('/catalog/')?'
  <a class="skip" href="#content">{en?'Skip to content':'本文へ'}</a>
  <div class="site-chrome"><header class="masthead">
   <a class="brand" href={`${base}${lang}/`}>OpenAI <em>Math Digest</em></a>
-  <nav class="main-nav" aria-label={en?'Site navigation':'サイト案内'}><a href={`${base}${lang}/#fields`}>{en?'Fields':'分野一覧'}</a><a href={`${base}${lang}/about/`}>{en?'Editorial method':'編集方針'}</a></nav>
+  <nav class="main-nav" aria-label={en?'Site navigation':'サイト案内'}><a href={`${base}${lang}/#fields`}>{en?'Fields':'分野一覧'}</a></nav>
   <nav class="language-switch" aria-label="日本語 / English">{['ja','en'].map(code=><a id={code!==lang?'language':undefined} class:list={{active:code===lang}} aria-current={code===lang?'page':undefined} href={code===lang?Astro.url.pathname:`${base}${otherPath}`} lang={code} hreflang={code}>{code==='ja'?'日本語':'English'}</a>)}</nav>
  </header></div>
  <div class="ai-notice"><span class="ai-label">{en?'AI-GENERATED GUIDE':'AI生成の解説'}</span><p>{en?'This guide may contain errors or inaccurate explanations. Check important claims and proofs against the original papers.':'このサイトの解説はAIが生成しており、誤りや不正確な説明を含む可能性があります。重要な主張・証明は原論文でご確認ください。'}</p></div>
