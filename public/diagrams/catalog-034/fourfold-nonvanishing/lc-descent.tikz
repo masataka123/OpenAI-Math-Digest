@@ -1,0 +1,7 @@
+\begin{tikzpicture}
+\node[card] (n0) {\heading{01}{滑らかな四次元の非消滅を確立する}{Establish smooth fourfold nonvanishing}\Tx{$X\text{ smooth projective},\quad\dim X=4,\quad K_X\text{ pseudo-effective}\Rightarrow\kappa(X)\ge0.$}{$X\text{ smooth projective},\quad\dim X=4,\quad K_X\text{ pseudo-effective}\Rightarrow\kappa(X)\ge0.$}};
+\node[card,below=2.1cm of n0] (n1) {\heading{02}{元のlc対に実係数の有効代表を得る}{Obtain an effective real representative on the original lc pair}\Tx{$\dim X\le4,\quad D=K_X+\Delta\text{ nef},\quad D\sim_{\mathbb R}G\ge0.$}{$\dim X\le4,\quad D=K_X+\Delta\text{ nef},\quad D\sim_{\mathbb R}G\ge0.$}};
+\flow{n0}{n1}{\Tx{滑らかな非消滅から、4次元以下のlc実境界の非消滅へ。}{Smooth nonvanishing implies lc real-boundary nonvanishing through dimension four.}\\[4pt]\Cite{hash}{[Hash] Thm. 1.4, pp. 1--2}\quad \Cite{fn}{$\S$8, p. 35}}
+\node[result,below=2.1cm of n1] (n2) {\heading{03}{台を保って有理化し、指定指数を払う}{Rationalize with the same support and clear the prescribed index}\Tx{$D\sim_{\mathbb Q}G_{\mathbb Q}\ge0,\quad rD\text{ Cartier}.$\\[3pt]$\exists m>0:\ H^0(X,\mathcal O_X(mrD))\ne0.$}{$D\sim_{\mathbb Q}G_{\mathbb Q}\ge0,\quad rD\text{ Cartier}.$\\[3pt]$\exists m>0:\ H^0(X,\mathcal O_X(mrD))\ne0.$}};
+\flow{n1}{n2}{\Tx{有限個の主因子による有理線形系。零係数を固定し正係数を保つ。}{Use a finite rational linear system, keeping zero coefficients and preserving positivity.}\\[4pt]\Cite{fn}{Lemma 8.1, Cor. 1.2 proof, p. 35}}
+\end{tikzpicture}

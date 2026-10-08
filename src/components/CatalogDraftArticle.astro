@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {renderDraft} from '../lib/render-draft.mjs';
+import {paperSource} from '../data/site.mjs';
+import '../styles/paper.css';
+import '../styles/draft-article.css';
+const articles=import.meta.glob('../../drafts/catalog-034/*/article.*.md',{query:'?raw',import:'default',eager:true});
+const figures=import.meta.glob('../../public/diagrams/catalog-034/*/*.svg',{query:'?raw',import:'default',eager:true});
+const {paper,lang}=Astro.props, en=lang==='en',base=import.meta.env.BASE_URL;
+const article=await renderDraft(articles[`../../drafts/catalog-034/${paper.id}/article.${lang}.md`],{lang,paperId:paper.id,base,diagramSource:stem=>figures[`../../public/diagrams/catalog-034/${paper.id}/${stem}.svg`]});
+---
+<Layout lang={lang} title={paper.title} otherPath={(en?'ja':'en')+'/papers/'+paper.id+'/'}>
+ <article class="paper-article draft-article">
+  <nav class="breadcrumbs" aria-label={en?'Breadcrumb':'現在位置'}><a href={base+lang+'/'}>{en?'Fields':'分野一覧'}</a><span>/</span><a href={base+lang+'/fields/algebraic-complex-geometry/'}>{en?'Algebraic and Complex Geometry':'代数幾何学・複素幾何学'}</a><span>/</span><a href={base+lang+'/catalog/034/'}>034</a><span>/</span><span>{String(paper.order).padStart(2,'0')}</span></nav>
+  <header class="family-header">
+   <p class="eyebrow">CATALOGUE 034 · PAPER {String(paper.order).padStart(2,'0')} / 14 <span class="badge">{en?'Overview':'概説'}</span></p>
+   <h1 lang="en">{paper.title}</h1>
+   {article.subtitleHtml&&<p class="paper-subtitle" set:html={article.subtitleHtml}/>}
+   {article.ledeHtml&&<p class="lede" set:html={article.ledeHtml}/>}
+   <p class="paper-byline">{en?'Manuscript author':'原稿の著者'}: OpenAI · {paper.version} · {paper.pages} {en?'pages, including references':'ページ（参考文献を含む）'}</p>
+   <a class="button primary" href={paperSource(paper)}>{en?'Read the manuscript on GitHub':'GitHubで原稿を読む'} <span aria-hidden="true">↗</span></a>
+  </header>
+  <nav class="contents" aria-label={en?'Article contents':'記事内の目次'}>{article.headings.map(h=><a href={'#'+h.slug} set:html={h.html}/>)}</nav>
+  {article.introHtml&&<div class="article-prose draft-intro" set:html={article.introHtml}/>}
+  <div class="draft-body"><Fragment set:html={article.html}/></div>
+  <p class="source-note"><a href={base+lang+'/catalog/034/#paper-'+paper.id}>{en?'Back to catalogue 034':'カタログ034の一覧へ戻る'} →</a></p>
+ </article>
+</Layout>

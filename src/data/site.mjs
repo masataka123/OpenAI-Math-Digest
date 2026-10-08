@@ -120,7 +120,7 @@ export const papers = inventory034.manuscripts.map((entry, index) => {
   return {
     id: manuscriptIds034[index], title: entry.title, path: entry.path.replace(/^preprints\//, ''),
     version: `${year}-${month === 'September' ? '09' : '10'}-${day.padStart(2, '0')}`,
-    pages: entry.pdfPages, order: entry.order, featured: ['schnell-fiber-spaces','log-abundance-characteristic-zero'].includes(manuscriptIds034[index]),
+    pages: entry.pdfPages, order: entry.order, featured: ['schnell-fiber-spaces', 'log-abundance-characteristic-zero', 'arithmetic-stein-degree', 'relative-denominators', 'uniform-log-iitaka', 'kahler-log-abundance', 'minimal-metrics-injectivity', 'fourfold-nonvanishing', 'uniform-slc-indices', 'conditional-kahler-fourfolds', 'uniform-pluricanonical-iitaka', 'lifting-adjoint-sections', 'effective-log-iitaka-fourfolds', 'abundance-after-nonvanishing'].includes(manuscriptIds034[index]),
   };
 });
 export const catalogs = [{

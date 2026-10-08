@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+\node[card] (n0) {\heading{01}{正規化の各成分を自明化}{Trivialize normalization components}\Tx{$\operatorname{div}(\theta_i)=-m\Delta_i,\quad m=m(d,\Phi)\ \text{even}$}{$\operatorname{div}(\theta_i)=-m\Delta_i,\quad m=m(d,\Phi)\ \text{even}$}};
+\node[card,below=2.1cm of n0] (n1) {\heading{02}{conductorの比を定数にする}{Make conductor ratios constant}\Tx{$r_e=\tau^*\theta_T/\theta_S,\quad r_e^{M/m}=b_i/b_j$\\非一様な $M$ は定数性のみに使う}{$r_e=\tau^*\theta_T/\theta_S,\quad r_e^{M/m}=b_i/b_j$\\The nonuniform $M$ proves constancy only}};
+\flow{n0}{n1}{\Tx{normal lc指数と元の主因子を比較}{Compare the normal index with the original principal multiple}\\[4pt]\Cite{ui}{UI: Thm.\ 1.2, p.\ 2}\quad \Cite{slc}{\S7.3, pp.\ 37--38}}
+\node[card,below=2.1cm of n1] (n2) {\heading{03}{閉路を最小klt stratumへ移す}{Move a cycle to one minimal klt stratum}\Tx{$f^*\theta_A=(\prod_e r_e)\theta_A,\quad \dim A\leq d-1$}{$f^*\theta_A=(\prod_e r_e)\theta_A,\quad \dim A\leq d-1$}};
+\flow{n1}{n2}{\Tx{内部の留数保存と枝を渡る同倍率写像}{Preserve internal residues and transport branch multipliers}\\[4pt]\Cite{k}{K: Prop.\ 14, pp.\ 8--9}\quad \Cite{slc}{Lems.\ 7.1--7.2, pp.\ 35--37}}
+\node[card,below=2.1cm of n2] (n3) {\heading{04}{全閉路を同じ冪で消す}{Kill all cycles with one exponent}\Tx{$L=\operatorname{lcm}_{q<d}L(q,m),\quad a=mL$\\$c_i=c_jr_e^L$}{$L=\operatorname{lcm}_{q<d}L(q,m),\quad a=mL$\\$c_i=c_jr_e^L$}};
+\flow{n2}{n3}{\Tx{klt指標の一様指数を全域木に適用}{Apply the uniform character exponent and a spanning tree}\\[4pt]\Cite{slc}{Thm.\ 6.1, p.\ 29; (7.10)--(7.11), p.\ 38}}
+\node[result,below=2.1cm of n3] (n4) {\heading{05}{node上の生成元からCartier降下}{Descend node generators to a Cartier divisor}\Tx{$\mathcal O_X(a(K_X+B))\simeq\mathcal O_X$\\偶数次数の留数照合と $S_2$ 延長}{$\mathcal O_X(a(K_X+B))\simeq\mathcal O_X$\\Even residue matching and $S_2$ extension}};
+\flow{n3}{n4}{\Tx{codimension oneの生成元を延長}{Extend generators from codimension one}\\[4pt]\Cite{slc}{\S\S7.2--7.3, pp.\ 37--39}}
+\end{tikzpicture}

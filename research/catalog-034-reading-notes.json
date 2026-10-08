@@ -2,7 +2,7 @@
   "sourceCommit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
   "checkedOn": "2026-10-08",
   "workStarted": "2026-10-08 12:56 JST (initial survey); resumed 13:05 JST after the user chose to proceed without expert review",
-  "scope": "Principal statements of all 14 manuscripts and 17 selected result-to-use connections. Compared stated inputs with their receiving passages; no certification of the complete input or receiving proof. Not an exhaustive graph.",
+  "scope": "Principal statements of all 14 manuscripts and 20 selected result-to-use connections. Worker C adds four proof overviews with article-specific reading records; complete input and receiving proofs are not certified.",
   "manuscripts": [
     {
       "id": "kahler-log-abundance",
@@ -22,7 +22,7 @@
       "sha256": "588f61707a03040f0265823b76aa32e17f238bfed772f79bdcd8f9867746a126",
       "hashMatchesInventory": true,
       "principalStatementsRead": "Theorem 1.1 · p. 2",
-      "scope": "Catalogue-level principal statements and selected application passages, not the complete proof."
+      "scope": "Separate bilingual proof overview: statements, selected proof passages and direct inputs compared. Detailed scope and unresolved points are recorded in drafts/catalog-034/uniform-slc-indices/sources.json. Complete proof verification is not claimed."
     },
     {
       "id": "conditional-kahler-fourfolds",
@@ -32,7 +32,7 @@
       "sha256": "ac000b352a0abe8e1a2dfd99bef21dcbf232fae995e2395048a528c02157270c",
       "hashMatchesInventory": true,
       "principalStatementsRead": "Theorems 1.1–1.2 · p. 4; Assumptions 2.2–2.4 · pp. 8–9",
-      "scope": "Catalogue-level principal statements and selected application passages, not the complete proof."
+      "scope": "Separate bilingual proof overview: statements, selected proof passages and direct inputs compared. Detailed scope and unresolved points are recorded in drafts/catalog-034/conditional-kahler-fourfolds/sources.json. Complete proof verification is not claimed."
     },
     {
       "id": "log-abundance-characteristic-zero",
@@ -52,7 +52,7 @@
       "sha256": "b2a7d738f44a3d34e5d22e0a7fb8a8d38e97b6e2858f6c77d70cb9b03193fbd6",
       "hashMatchesInventory": true,
       "principalStatementsRead": "Theorems 1.1–1.2 · pp. 1–2",
-      "scope": "Catalogue-level principal statements and selected application passages, not the complete proof."
+      "scope": "Separate bilingual proof overview: statements, selected proof passages and direct inputs compared. Detailed scope and unresolved points are recorded in drafts/catalog-034/minimal-metrics-injectivity/sources.json. Complete proof verification is not claimed."
     },
     {
       "id": "fourfold-nonvanishing",
@@ -62,7 +62,7 @@
       "sha256": "1946d50201ab1ae0c02a6ba95143b55528b2525d45673a2985404aee4d8f2cb4",
       "hashMatchesInventory": true,
       "principalStatementsRead": "Theorem 1.1 / Corollary 1.2 · p. 2",
-      "scope": "Catalogue-level principal statements and selected application passages, not the complete proof."
+      "scope": "Separate bilingual proof overview: statements, selected proof passages and direct inputs compared. Detailed scope and unresolved points are recorded in drafts/catalog-034/fourfold-nonvanishing/sources.json. Complete proof verification is not claimed."
     },
     {
       "id": "lifting-adjoint-sections",
@@ -166,7 +166,7 @@
       "usedIn": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Fourfold-nonvanishing-by-minimal-metrics-and-moving-jets-September-27-2026/paper.pdf",
       "use": "Theorems 4.1–4.2 / §5 · pp. 13–20",
       "kind": "result",
-      "role": "Supplies zero-Lelong endpoint metrics and interior injectivity for lifting sections from the entire reduced boundary."
+      "role": "Identifies endpoint residual bundles with positive rational multiples of nef klt adjoints, supplying zero-Lelong metrics and interior injectivity. A nonzero section on the whole boundary additionally uses three-dimensional semi-dlt abundance and descent."
     },
     {
       "id": "la-nonvanishing-tool",
@@ -307,7 +307,7 @@
       "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf",
       "input": "Theorem 11.1 · p. 73",
       "usedIn": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf",
-      "use": "Theorem 2.3 / §5 · pp. 5, 24",
+      "use": "Theorem 2.3 / Lemma 5.6 · pp. 5, 20–21",
       "kind": "result",
       "role": "Supplies good models of perturbed projective klt pairs in the Hodge-rank argument."
     },
@@ -332,6 +332,39 @@
       "use": "Assumption 2.4 · p. 9",
       "kind": "premise",
       "role": "Gives semiampleness once nonvanishing is obtained for the nef Kähler klt fourfold adjoint. The other two premises remain separate."
+    },
+    {
+      "id": "la-nonvanishing-geometry",
+      "from": "log-abundance-characteristic-zero",
+      "to": "fourfold-nonvanishing",
+      "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf",
+      "input": "Lemmas 7.1–7.5 · pp. 45–52",
+      "usedIn": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Fourfold-nonvanishing-by-minimal-metrics-and-moving-jets-September-27-2026/paper.pdf",
+      "use": "§3 / Proposition 6.4 · pp. 8–12, 24",
+      "kind": "tool",
+      "role": "Independent tools controlling centre degrees, moving multiplicities, slices, and finite covers of a fixed branch complement."
+    },
+    {
+      "id": "uniform-slc-rational-images",
+      "from": "uniform-pluricanonical-iitaka",
+      "to": "uniform-slc-indices",
+      "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-Pluricanonical-Iitaka-Fibrations-October-3-2026/paper.pdf",
+      "input": "Lemma 5.2 · pp. 21–22",
+      "usedIn": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf",
+      "use": "Lemma 6.6 · pp. 32–34",
+      "kind": "tool",
+      "role": "Supplies the rational-image property of boundary-free nonabelian factors for the Hodge-rank theorem. The source lemma itself uses LA nonvanishing."
+    },
+    {
+      "id": "log-iitaka-slc-product",
+      "from": "uniform-log-iitaka",
+      "to": "uniform-slc-indices",
+      "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-log-Iitaka-fibrations-and-bounded-moduli-denominators-October-4-2026/uniform-log-iitaka.pdf",
+      "input": "Proposition 5.1 / Lemmas 5.2–5.3 · pp. 12–13",
+      "usedIn": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026/uniform-slc-index.pdf",
+      "use": "Input 6.3 / Lemma 6.4 · pp. 30–32",
+      "kind": "tool",
+      "role": "Uses a quasi-étale product cover and stability under further covers to control the character on the volume form factor by factor."
     }
   ],
   "distinctions": [
