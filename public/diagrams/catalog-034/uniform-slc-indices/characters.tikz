@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+\node[card] (n0) {\heading{01}{固定次数の形式と双有理自己写像}{Fixed-degree form and a birational self-map}\Tx{$m(K_V+\Delta)\sim0,\quad f^*\theta=c\theta$}{$m(K_V+\Delta)\sim0,\quad f^*\theta=c\theta$}};
+\node[card,below=2.1cm of n0] (n1) {\heading{02}{積被覆で因子方向を固定}{Fix factor directions on a product cover}\Tx{$\displaystyle c^{n!}=\prod_i d_i^{\,m/p_i}$\\被覆次数は指数に入れない}{$\displaystyle c^{n!}=\prod_i d_i^{\,m/p_i}$\\The cover degree does not enter the exponent}};
+\flow{n0}{n1}{\Tx{積分解・追加被覆・characteristic subgroup}{Use product decomposition and a characteristic subgroup}\\[4pt]\Cite{uli}{ULI: Prop.\ 5.1, Lems.\ 5.2--5.3, pp.\ 12--13}\quad \Cite{slc}{Lem.\ 6.4, pp.\ 30--32}}
+\node[card,below=2.1cm of n1] (n2) {\heading{03}{RC有界性とHodge rankで各因子を制御}{Control factors by RC boundedness and Hodge rank}\Tx{$d_i^{E_i}=1,\quad \varphi(e)\leq b(r)$}{$d_i^{E_i}=1,\quad \varphi(e)\leq b(r)$}};
+\flow{n1}{n2}{\Tx{RC表現評価と体積形式のHodge部分構造}{Bound RC representations and the volume-form Hodge structure}\\[4pt]\Cite{hj}{HJ: Thm.\ 1.2, pp.\ 1--2}\quad \Cite{jl}{JL: Thm.\ 3.2, p.\ 8}}
+\node[result,below=2.1cm of n2] (n3) {\heading{04}{次元と固定次数だけの指数}{An exponent depending only on dimension and degree}\Tx{$E=E(n,m),\quad L(n,m)=n!E,\quad c^{L(n,m)}=1$}{$E=E(n,m),\quad L(n,m)=n!E,\quad c^{L(n,m)}=1$}};
+\flow{n2}{n3}{\Tx{可能な指標の位数の最小公倍数を取る}{Take the least common multiple of possible character orders}\\[4pt]\Cite{slc}{Thm.\ 5.1, p.\ 16; Lems.\ 6.5--6.6, pp.\ 32--34}}
+\end{tikzpicture}

@@ -1,0 +1,7 @@
+\begin{tikzpicture}
+\node[card] (n0) {\heading{01}{同じ解消上の計量を用意する}{Use one metric on one resolution}\Tx{$(X,\Delta)\text{ projective klt},\ \dim X=4,\quad D=K_X+\Delta\text{ nef}.$\\[3pt]$\pi^*\mathcal O_X(rD):\quad \Theta(h)\ge0,\quad\nu(h,\cdot)=0.$}{$(X,\Delta)\text{ projective klt},\ \dim X=4,\quad D=K_X+\Delta\text{ nef}.$\\[3pt]$\pi^*\mathcal O_X(rD):\quad \Theta(h)\ge0,\quad\nu(h,\cdot)=0.$}};
+\node[card,below=2.1cm of n0] (n1) {\heading{02}{Euler標数から最初の切断を得る}{Use Euler characteristic to obtain the first section}\Tx{$\chi(X,\mathcal O_X)\ne0\quad\Longrightarrow\quad\kappa(X,D)\ge0.$}{$\chi(X,\mathcal O_X)\ne0\quad\Longrightarrow\quad\kappa(X,D)\ge0.$}};
+\flow{n0}{n1}{\Tx{一般化代数的特異点の因子部分を0とし、補助nef因子とパラメータを0にする。}{Use zero divisorial part; set the auxiliary nef divisor and parameter to zero.}\\[4pt]\Cite{mm}{Thm. 1.1, pp. 1--2}\quad \Cite{lp}{[LP] Cor. D, p. 4}}
+\node[result,below=2.1cm of n1] (n2) {\heading{03}{同じ零Lelong数計量で半豊富性へ}{Use the same zero-Lelong metric for semiampleness}\Tx{$D=K_X+\Delta\quad\text{semiample}.$}{$D=K_X+\Delta\quad\text{semiample}.$}};
+\flow{n1}{n2}{\Tx{正のCartier倍の計量と非負の小平次元を、四次元判定へ代入する。}{Apply the fourfold criterion to the positive Cartier multiple and nonvanishing.}\\[4pt]\Cite{gm}{[GM] Cor. 5.3, p. 499}\quad \Cite{mm}{Cor. 4.1 proof, p. 19}}
+\end{tikzpicture}

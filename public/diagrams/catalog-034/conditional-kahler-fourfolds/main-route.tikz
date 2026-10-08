@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+\node[card] (n0) {\heading{01}{三前提を保持した出発対}{Start with all three premises retained}\Tx{$(X,B)\ {\rm klt},\quad D=K_X+B\ {\rm pseudo\!-\!effective}$\\global strong $\mathbb Q$-factorial、実際の随伴線束}{$(X,B)\ {\rm klt},\quad D=K_X+B\ {\rm pseudo\!-\!effective}$\\Global strong $\mathbb Q$-factoriality; actual adjoint line}};
+\node[card,below=2.1cm of n0] (n1) {\heading{02}{最初のプログラムのnef終点}{The initial program reaches its nef endpoint}\Tx{$(Y,B_Y),\quad J=K_Y+B_Y\ {\rm nef}$\\非抽出・discrepancy比較を保持}{$(Y,B_Y),\quad J=K_Y+B_Y\ {\rm nef}$\\Retain nonextraction and discrepancy inequalities}};
+\flow{n0}{n1}{\Tx{Assumption 2.3：任意の負rayのプログラムが停止}{Assumption 2.3: every negative-ray program terminates}\\[4pt]\Cite{fm}{FM: Thm.\ 6.20, p.\ 47}\quad \Cite{ck}{Ass.\ 2.3, p.\ 9}}
+\node[card,below=2.1cm of n1] (n2) {\heading{03}{canonical帰着から同じ随伴へ切断を戻す}{Return canonical sections to the same adjoint}\Tx{$\kappa(Y,J)\geq0$\\projective・uniruled・irregular、残りは $a(W)>0$ と $a(W)=0$}{$\kappa(Y,J)\geq0$\\Projective, uniruled, irregular; then $a(W)>0$ or $a(W)=0$}};
+\flow{n1}{n2}{\Tx{三前提の下で非消滅を証明する}{Prove nonvanishing under the three premises}\\[4pt]\Cite{ck}{Prop.\ 3.5; Prop.\ 4.1; Thm.\ 9.4, pp.\ 13--14,83--84}}
+\node[result,below=2.1cm of n2] (n3) {\heading{04}{同じnef終点の実際の線束を生成}{Generate the actual line on the same endpoint}\Tx{$H^0(Y,\mathcal O_Y(mJ))\otimes\mathcal O_Y\twoheadrightarrow\mathcal O_Y(mJ)$}{$H^0(Y,\mathcal O_Y(mJ))\otimes\mathcal O_Y\twoheadrightarrow\mathcal O_Y(mJ)$}};
+\flow{n2}{n3}{\Tx{Assumption 2.4を非消滅の後で適用}{Apply Assumption 2.4 after nonvanishing}\\[4pt]\Cite{an}{AN: Thm.\ 1.1, p.\ 3}\quad \Cite{ck}{\S9.4, p.\ 84}}
+\end{tikzpicture}

@@ -1,0 +1,64 @@
+\documentclass[border=12pt]{standalone}
+\def\pgfsysdriver{pgfsys-dvisvgm.def}
+\usepackage[dvisvgm]{xcolor}
+\usepackage{xeCJK}
+\setCJKmainfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf]
+\setCJKsansfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf]
+\usepackage{amsmath,amssymb,tikz,lmodern}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
+\renewcommand{\familydefault}{\sfdefault}
+\definecolor{ink}{HTML}{25322F}
+\definecolor{green}{HTML}{246657}
+\definecolor{tint}{HTML}{EEF4F0}
+\definecolor{soft}{HTML}{C6D2CC}
+\definecolor{muted}{HTML}{52615B}
+\newif\ifJapanese
+\newcommand{\Tx}[2]{\ifJapanese #1\else #2\fi}
+\newcommand{\Eff}{\overline{\operatorname{Eff}}}
+\newcommand{\heading}[3]{{\color{green}\bfseries #1\quad\Tx{#2}{#3}}\\[5pt]}
+% A white rectangle makes the complete citation label clickable, including spaces.
+\newcommand{\refurl}[2]{\special{dvisvgm:raw <a xlink:href="#1" target="_blank" rel="noopener noreferrer">}{\setlength{\fboxsep}{0pt}\colorbox{white}{\color{green}\underline{\strut #2}}}\special{dvisvgm:raw </a>}}
+\newcommand{\refedge}[3]{\refurl{\csname source#1\endcsname\string##page=#2}{#3}}
+\newcommand{\SF}[2]{\refedge{sf}{#1}{#2}}
+% GitHub's file preview does not support PDF page fragments.
+\newcommand{\LA}[2]{\refurl{\sourcela}{#2}}
+\newcommand{\Sch}[2]{\refedge{sch}{#1}{#2}}
+\newcommand{\PS}[2]{\refedge{ps}{#1}{#2}}
+\tikzset{
+ card/.style={draw=soft,fill=white,rounded corners=2pt,align=left,text=ink,font=\fontsize{10.5}{14}\selectfont,inner xsep=12pt,inner ysep=10pt,text width=14.4cm},
+ half/.style={card,text width=6.45cm,minimum height=2.05cm},
+ result/.style={card,draw=green,fill=tint,line width=.9pt},
+ reason/.style={align=left,text=muted,font=\fontsize{9}{12}\selectfont,inner sep=0pt,text width=12.7cm},
+ branchreason/.style={reason,text width=5.95cm},
+ edge/.style={-{Stealth[length=2.4mm]},draw=green,line width=1pt},
+ wire/.style={draw=green,line width=1pt},
+}
+% Keep the arrow in a dedicated left gutter; explanations never cover it.
+\newcommand{\flow}[3]{
+ \coordinate (#2-from) at ($(#1.south)+(-6.9,0)$);
+ \coordinate (#2-to) at ($(#2.north)+(-6.9,0)$);
+ \draw[edge] (#2-from)--(#2-to);
+ \node[reason,anchor=west] (#2-reason) at ($(#2-from)!.5!(#2-to)+(.55,0)$) {#3};
+}
+\newcommand{\Cite}[2]{\refurl{\csname source#1\endcsname}{#2}}
+
+\Japanesetrue
+\newcommand{\sourceck}{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026/paper.pdf}
+\newcommand{\sourceoi}{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf}
+\newcommand{\sourcefm}{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-5-2026/paper.pdf}
+\newcommand{\sourcean}{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Abundance-after-nonvanishing-for-compact-Kahler-fourfolds-September-27-2026/paper.pdf}
+\newcommand{\sourcedps}{https://arxiv.org/pdf/math/0006205v2}
+\newcommand{\sourceou}{https://arxiv.org/pdf/2501.18088v1}
+\newcommand{\sourcedo}{https://arxiv.org/pdf/2306.00671v4}
+\newcommand{\sourcecce}{https://arxiv.org/pdf/1302.5016v3}
+\begin{document}
+\begin{tikzpicture}
+\node[card] (n0) {\heading{01}{有理型canonical frameがないと仮定}{Assume there is no meromorphic canonical frame}\Tx{$K_Y\ {\rm nef},\quad Y\text{ にprime divisorなし}$\\$p:M\to Y,\quad a(M)=0,\quad K_M\ {\rm pseudo\!-\!effective}$}{$K_Y\ {\rm nef},\quad Y\text{ has no prime divisors}$\\$p:M\to Y,\quad a(M)=0,\quad K_M\ {\rm pseudo\!-\!effective}$}};
+\node[card,below=2.1cm of n0] (n1) {\heading{02}{正則形式からconormal lineを作る}{Construct a conormal line from holomorphic forms}\Tx{$\chi(\mathcal O_M)=0,\quad h^{2,0}\geq1,\quad h^{3,0}\geq2$\\$E\subset\Omega_M^1\ \text{integrable and saturated}$}{$\chi(\mathcal O_M)=0,\quad h^{2,0}\geq1,\quad h^{3,0}\geq2$\\$E\subset\Omega_M^1\ \text{integrable and saturated}$}};
+\flow{n0}{n1}{\Tx{zero-Lelong計量・hard Lefschetz・形式の構成}{Use zero-Lelong metrics, hard Lefschetz and forms}\\[4pt]\Cite{dps}{DPS: Thm.\ 2.1.1, p.\ 8}\quad \Cite{ck}{Lems.\ 6.2--6.4, pp.\ 34--37}}
+\node[card,below=2.1cm of n1] (n2) {\heading{03}{全正current上の固定点を取る}{Take a fixed point on all positive currents}\Tx{$\alpha^2=0,\quad \nu(T,x)=0\quad(\forall T\in\mathcal C_\alpha)$\\$\mathcal F:\mathcal C_\alpha\to\mathcal C_\alpha$ は連続}{$\alpha^2=0,\quad \nu(T,x)=0\quad(\forall T\in\mathcal C_\alpha)$\\$\mathcal F:\mathcal C_\alpha\to\mathcal C_\alpha$ is continuous}};
+\flow{n1}{n2}{\Tx{Hodge indexで全currentの特異性を制御}{Use Hodge index to control every current}\\[4pt]\Cite{ck}{Lems.\ 6.8--6.10, pp.\ 41--43}}
+\node[result,below=2.1cm of n2] (n3) {\heading{04}{球面的holonomyを消して矛盾}{Kill spherical holonomy to obtain a contradiction}\Tx{$\rho_0:\pi_1(M_0)\to\operatorname{PU}(2),\quad \rho_0=1$\\$M_0\dashrightarrow\mathbb P^1\ \text{nonconstant},\quad a(M_0)=0$}{$\rho_0:\pi_1(M_0)\to\operatorname{PU}(2),\quad \rho_0=1$\\$M_0\dashrightarrow\mathbb P^1\ \text{nonconstant},\quad a(M_0)=0$}};
+\flow{n2}{n3}{\Tx{meridian、compactification、Shafarevich底を処理}{Treat meridians, compactification and the Shafarevich base}\\[4pt]\Cite{cce}{CCE: Thm.\ 1, p.\ 2}\quad \Cite{ck}{\S\S6.5--6.6, pp.\ 43--47}}
+\end{tikzpicture}
+\end{document}

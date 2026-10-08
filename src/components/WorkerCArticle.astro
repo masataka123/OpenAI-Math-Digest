@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {paperSource} from '../data/site.mjs';
+import '../styles/paper.css';
+import '../styles/worker-c.css';
+const content=import.meta.glob('../articles/worker-c/*.html',{query:'?raw',import:'default',eager:true});
+const {paper:p,lang}=Astro.props,en=lang==='en',base=import.meta.env.BASE_URL;
+const html=content[`../articles/worker-c/${p.id}.${lang}.html`].replaceAll('__SITE_BASE__',base);
+const sections=[...html.matchAll(/<h2 id="([^"]+)">([\s\S]*?)<\/h2>/g)].map(([,id,title])=>({id,title}));
+---
+<Layout lang={lang} title={p.title} otherPath={(en?'ja':'en')+'/papers/'+p.id+'/'}>
+ <article class="paper-article worker-c-article">
+  <nav class="breadcrumbs" aria-label={en?'Breadcrumb':'現在位置'}><a href={base+lang+'/'}>{en?'Fields':'分野一覧'}</a><span aria-hidden="true">/</span><a href={base+lang+'/catalog/034/'}>{en?'Catalogue':'カタログ'} 034</a><span aria-hidden="true">/</span><span aria-current="page">{String(p.order).padStart(2,'0')}</span></nav>
+  <header class="family-header"><p class="eyebrow">CATALOGUE 034 · PAPER {String(p.order).padStart(2,'0')} / 14 <span class="badge">{en?'Overview · First draft':'概説・初稿'}</span></p><h1 lang="en">{p.title}</h1><p class="paper-byline">{en?'Manuscript author':'原稿の著者'}: OpenAI · {p.version} · {p.pages} {en?'pages, including references':'ページ（参考文献を含む）'}</p><a class="button primary" href={paperSource(p)}>{en?'Read the manuscript on GitHub':'GitHubで原稿を読む'} ↗</a></header>
+  <nav class="contents" aria-label={en?'Article contents':'記事内の目次'}>{sections.map(s=><a href={'#'+s.id} set:html={s.title}/>)}</nav>
+  <div class="worker-c-prose" set:html={html}/>
+  <p class="source-line"><a href={base+lang+'/catalog/034/#paper-'+p.id}>{en?'Return to catalogue 034':'カタログ034へ戻る'} →</a></p>
+ </article>
+</Layout>

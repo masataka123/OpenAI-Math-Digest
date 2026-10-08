@@ -1,0 +1,64 @@
+\documentclass[border=12pt]{standalone}
+\def\pgfsysdriver{pgfsys-dvisvgm.def}
+\usepackage[dvisvgm]{xcolor}
+\usepackage{xeCJK}
+\setCJKmainfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf]
+\setCJKsansfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf]
+\usepackage{amsmath,amssymb,tikz,lmodern}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
+\renewcommand{\familydefault}{\sfdefault}
+\definecolor{ink}{HTML}{25322F}
+\definecolor{green}{HTML}{246657}
+\definecolor{tint}{HTML}{EEF4F0}
+\definecolor{soft}{HTML}{C6D2CC}
+\definecolor{muted}{HTML}{52615B}
+\newif\ifJapanese
+\newcommand{\Tx}[2]{\ifJapanese #1\else #2\fi}
+\newcommand{\Eff}{\overline{\operatorname{Eff}}}
+\newcommand{\heading}[3]{{\color{green}\bfseries #1\quad\Tx{#2}{#3}}\\[5pt]}
+% A white rectangle makes the complete citation label clickable, including spaces.
+\newcommand{\refurl}[2]{\special{dvisvgm:raw <a xlink:href="#1" target="_blank" rel="noopener noreferrer">}{\setlength{\fboxsep}{0pt}\colorbox{white}{\color{green}\underline{\strut #2}}}\special{dvisvgm:raw </a>}}
+\newcommand{\refedge}[3]{\refurl{\csname source#1\endcsname\string##page=#2}{#3}}
+\newcommand{\SF}[2]{\refedge{sf}{#1}{#2}}
+% GitHub's file preview does not support PDF page fragments.
+\newcommand{\LA}[2]{\refurl{\sourcela}{#2}}
+\newcommand{\Sch}[2]{\refedge{sch}{#1}{#2}}
+\newcommand{\PS}[2]{\refedge{ps}{#1}{#2}}
+\tikzset{
+ card/.style={draw=soft,fill=white,rounded corners=2pt,align=left,text=ink,font=\fontsize{10.5}{14}\selectfont,inner xsep=12pt,inner ysep=10pt,text width=14.4cm},
+ half/.style={card,text width=6.45cm,minimum height=2.05cm},
+ result/.style={card,draw=green,fill=tint,line width=.9pt},
+ reason/.style={align=left,text=muted,font=\fontsize{9}{12}\selectfont,inner sep=0pt,text width=12.7cm},
+ branchreason/.style={reason,text width=5.95cm},
+ edge/.style={-{Stealth[length=2.4mm]},draw=green,line width=1pt},
+ wire/.style={draw=green,line width=1pt},
+}
+% Keep the arrow in a dedicated left gutter; explanations never cover it.
+\newcommand{\flow}[3]{
+ \coordinate (#2-from) at ($(#1.south)+(-6.9,0)$);
+ \coordinate (#2-to) at ($(#2.north)+(-6.9,0)$);
+ \draw[edge] (#2-from)--(#2-to);
+ \node[reason,anchor=west] (#2-reason) at ($(#2-from)!.5!(#2-to)+(.55,0)$) {#3};
+}
+\newcommand{\Cite}[2]{\refurl{\csname source#1\endcsname}{#2}}
+
+\Japanesetrue
+\newcommand{\sourceck}{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026/paper.pdf}
+\newcommand{\sourceoi}{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf}
+\newcommand{\sourcefm}{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-5-2026/paper.pdf}
+\newcommand{\sourcean}{https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Abundance-after-nonvanishing-for-compact-Kahler-fourfolds-September-27-2026/paper.pdf}
+\newcommand{\sourcedps}{https://arxiv.org/pdf/math/0006205v2}
+\newcommand{\sourceou}{https://arxiv.org/pdf/2501.18088v1}
+\newcommand{\sourcedo}{https://arxiv.org/pdf/2306.00671v4}
+\newcommand{\sourcecce}{https://arxiv.org/pdf/1302.5016v3}
+\begin{document}
+\begin{tikzpicture}
+\node[card] (n0) {\heading{01}{ample twistで先に切断を得る}{Obtain sections after ample twisting first}\Tx{$q(W)=0,\quad 0<a(W)=d<4$\\$\kappa(K_W+Nb^*H)\geq0\quad(N\gg0)$}{$q(W)=0,\quad 0<a(W)=d<4$\\$\kappa(K_W+Nb^*H)\geq0\quad(N\gg0)$}};
+\node[card,below=2.1cm of n0] (n1) {\heading{02}{一つのempty-boundaryプログラムを使う}{Use one empty-boundary program}\Tx{$N>5k_i\quad\Rightarrow\quad H_i\cdot R_i=0$\\$K_{V_i}+NH_i$ をnefにしてからsemiampleへ}{$N>5k_i\quad\Rightarrow\quad H_i\cdot R_i=0$\\Make $K_{V_i}+NH_i$ nef, then semiample}};
+\flow{n0}{n1}{\Tx{局所有理性と任意選択の停止}{Use local rationality and arbitrary-choice termination}\\[4pt]\Cite{ck}{Lem.\ 4.2, Prop.\ 4.3, pp.\ 14--16}}
+\node[card,below=2.1cm of n1] (n2) {\heading{03}{実際のcanonical pullbackを保持}{Retain an actual canonical pullback}\Tx{$K_V\sim_{\mathbb Q}g^*A_T,\quad K_M\sim_{\mathbb Q}f^*A+R$\\$R\geq0,\quad A\ {\rm pseudo\!-\!effective},\quad q(S)=0$}{$K_V\sim_{\mathbb Q}g^*A_T,\quad K_M\sim_{\mathbb Q}f^*A+R$\\$R\geq0,\quad A\ {\rm pseudo\!-\!effective},\quad q(S)=0$}};
+\flow{n1}{n2}{\Tx{既存の切断にAssumption 2.4、次にStein分解}{Apply Assumption 2.4 to existing sections, then Stein factorization}\\[4pt]\Cite{an}{AN: Thm.\ 1.1, p.\ 3}\quad \Cite{ck}{(19)--(20), p.\ 16}}
+\node[result,below=2.1cm of n2] (n3) {\heading{04}{底の次元ごとに非消滅}{Obtain nonvanishing in each base dimension}\Tx{$d=1:\ S=\mathbb P^1;\quad d=2:\ K_S\cdot P_0\leq0$\\$d=3:\ K_T+\Xi\sim_{\mathbb Q}A_T,\quad(T,\Xi)\ {\rm klt}$\\$\kappa(S,A)\geq0\ \Rightarrow\ \kappa(W,K_W)\geq0$}{$d=1:\ S=\mathbb P^1;\quad d=2:\ K_S\cdot P_0\leq0$\\$d=3:\ K_T+\Xi\sim_{\mathbb Q}A_T,\quad(T,\Xi)\ {\rm klt}$\\$\kappa(S,A)\geq0\ \Rightarrow\ \kappa(W,K_W)\geq0$}};
+\flow{n2}{n3}{\Tx{surfaceはfiber powers、threefoldはmodular次数}{Use fibre powers for surfaces and modular orders for threefolds}\\[4pt]\Cite{oi}{OI: Thm.\ 1.1, p.\ 3}\quad \Cite{ck}{Lems.\ 4.4--4.5, pp.\ 17--23}}
+\end{tikzpicture}
+\end{document}
