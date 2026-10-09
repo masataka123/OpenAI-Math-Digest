@@ -1,4 +1,4 @@
-"""Regenerate the eight self-contained TeX sources and their SVG diagrams.
+"""Regenerate the bilingual self-contained TeX sources and their SVG diagrams.
 Run: python3 drafts/catalog-063/generalized-mukai/diagrams/render.py
 Requires XeLaTeX, xeCJK with Harano Aji, TikZ, and dvisvgm.
 No booklet PDF is produced. Style follows the repository's MIT-licensed diagrams.

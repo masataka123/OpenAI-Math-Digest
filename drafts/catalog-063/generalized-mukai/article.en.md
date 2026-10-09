@@ -43,22 +43,74 @@ Unprefixed theorem, lemma, section and equation numbers refer to [Generalized Mu
 Each citation gives the result and pages. When printed pagination differs from the PDF position, both are shown. GitHub previews do not automatically jump to the cited page.
 <!-- /reference-guide -->
 
+
+
+
+## 2. Theorem 1.1 — Proof overview of the main theorem
+
+<!-- proof-target:1 -->Proof target：[Theorem 1.1 · p. 2; §1 · pp. 2–3](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /proof-target -->
+
+**Proof route.** Use $X,n,r,\iota$ from Theorem 1.1. If $\iota=1$, then $r(\iota-1)=0<n$, so the inequality is immediate and equality is impossible. Assume $\iota\ge2$ below. The lower bound in [Proposition 3.1](#proposition-3-1) leads to independence in [Proposition 4.1](#proposition-4-1). [Proposition 5.3](#proposition-5-3) supplies both the inequality and the input for the equality case; [Proposition 6.4](#proposition-6-4) then gives the product structure.
+
+![Theorem 1.1: from the descendant bound to the inequality, equality classification, and converse](diagrams/main.en.svg)
+
+### 1. From a lower bound and independence to the inequality
+
+Proposition 3.1 alone does not give independence. Combine it with the recurrence in Lemma 2.1 and the density of free degrees in Lemma 3.3. If every joint eigenvalue tuple were algebraically dependent, the resulting superexponential upper bound would contradict the descendant lower bound. This proves Proposition 4.1. The details are separated into the sections on the [lower bound](#proof-1) and [independence](#proof-2).
+
+<!-- cite:descendant-target -->[Proposition 3.1 · p. 6](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite --> · <!-- cite:recurrence -->[Lemma 2.1; (4)–(5) · p. 5](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite --> · <!-- cite:free-direction -->[Lemma 3.3 · pp. 10–11; Proposition 4.1 (proof) · p. 12](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite --> · <!-- cite:independence -->[Proposition 4.1; (8)–(11) · pp. 11–13](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite -->
+
+Apply Proposition 5.3 to the independent tuple. It yields linearly independent curve degrees $\gamma_1,\ldots,\gamma_r$ with $S_{\gamma_1}\cdots S_{\gamma_r}\ne0$. Writing $d_\gamma=-K_X\cdot\gamma$, one obtains
+
+$$
+r(\iota-1)\le\sum_{j=1}^r(d_{\gamma_j}-1)\le n.
+$$
+
+The first inequality uses $d_{\gamma_j}\ge\iota$ for positive stable-map degrees; the second counts the grading drop of the nonzero product. This proves the inequality in the main theorem. The [alternating-trace section](#proof-3) explains how to extract this product.
+
+<!-- cite:inequality -->[Proposition 5.3; (15) · p. 15](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite -->
+
+### 2. Equality forces the product of projective spaces
+
+If $r(\iota-1)=n$, all the preceding bounds are equalities and each $d_{\gamma_j}=\iota$. The independent nonzero product from Proposition 5.3 is exactly the additional input required by Proposition 6.4. Lemma 6.3 passes to actual proper rational-curve families. The corrected chain-locus dimension bound and cyclic rotation make every family covering. The product characterization gives
+
+$$
+X\simeq(\mathbb P^{\iota-1})^r.
+$$
+
+The [equality section](#proof-4) explains the hypotheses and applications of these external results.
+
+<!-- cite:proper-family -->[Lemma 6.3 · pp. 16–17](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite --> · <!-- cite:classified -->[Proposition 6.4 · p. 17](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite --> · <!-- cite:chain-bound -->[Mukai chain bound &#91;BCDD&#93; · Theorem 5.2 · print p. 623 / PDF p. 23](https://druel.perso.math.cnrs.fr/textes/mukai.pdf#page=23)<!-- /cite --> · <!-- cite:erratum -->[Mukai chain bound &#91;ERR&#93; · Erratum · p. 1](https://druel.perso.math.cnrs.fr/textes/mukai_erratum.pdf#page=1)<!-- /cite --> · <!-- cite:product -->[Product characterization &#91;OC&#93; · Theorem 1.1 · print p. 271 / PDF p. 2](https://doi.org/10.4153/CMB-2006-028-3)<!-- /cite -->
+
+
+### 3. The product attains equality
+
+Conversely, let $X=(\mathbb P^{\iota-1})^r$ with $\iota\ge2$. Its dimension is $r(\iota-1)$ and its Picard number is $r$. If $H_j$ is the pullback of the hyperplane class from the $j$th factor, then $-K_X=\iota\sum_jH_j$. A line in one factor has anticanonical degree $\iota$. Every irreducible rational curve has nonnegative integral intersections with the $H_j$, at least one of which is positive. Thus the pseudoindex is $\iota$, and equality holds. This completes both directions of Theorem 1.1.
+
+<!-- cite:classification -->[Theorem 6.2 · p. 16; Proposition 6.4; converse · p. 17](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite -->
+
 <span class="legacy-anchor" id="2-from-a-virtual-evaluation-fiber-to-a-point-descendant-lower-bound" aria-hidden="true"></span>
 
-## 2. Proof of Proposition 3.1 — the point-descendant lower bound
 
-<!-- proof-target:1 -->Proof target：[Proposition 3.1 · p. 6](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /proof-target -->
+<span class="legacy-anchor" id="2-proof-of-proposition-31--the-point-descendant-lower-bound" aria-hidden="true"></span>
 
-**Proof route.** [This section](#proof-1) supplies a positive lower bound for point descendants in free degrees. [The next section](#proof-2) compares it with a recurrence to obtain independent quantum-divisor eigenvalues. [An alternating trace](#proof-3) converts this into a nonzero product of curve correspondences, whose grading proves the inequality. [At equality](#proof-4), minimal rational-curve families provide the classification.
+## 3. Proof of Proposition 3.1 — the point-descendant lower bound
 
-For a numerical curve degree $\beta$, write $d_\beta=-K_X\cdot\beta$, and fix an embedding $X\hookrightarrow\mathbb P^N$ defined by $-aK_X$. Proposition 3.1 supplies the bound
+<!-- proof-target:2 -->Proof target：[Proposition 3.1 · p. 6](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /proof-target -->
+
+<!-- statement:proposition-3-1 -->
+### Proposition 3.1 — Point-descendant lower bound
+
+Let $X$ be the smooth complex projective Fano manifold above, with $\iota\ge2$. Fix a positive integer $a$ and an embedding $X\hookrightarrow\mathbb P^N$ such that $\mathcal O_{\mathbb P^N}(1)|_X\simeq\mathcal O_X(-aK_X)$. Suppose that the numerical curve degree $\beta$ is represented by a nonconstant free map $\mathbb P^1\to X$. Put $d=-K_X\cdot\beta$ and $b=ad$. The manuscript asserts
 
 $$
-\big\langle\tau_{d_\beta-2}(\mathrm{pt})\big\rangle_\beta
-\ge (a d_\beta)^{-(d_\beta-1)}
+\langle\tau_{d-2}(\mathrm{pt})\rangle_\beta\ge b^{-(d-1)}.
 $$
 
-whenever $\beta$ is represented by a nonconstant free map. A quantitative estimate, rather than nonvanishing alone, is needed for the later comparison of decay rates.
+<!-- cite:descendant-target -->[Proposition 3.1 · p. 6](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite -->
+<!-- /statement -->
+
+Write $d_\beta=-K_X\cdot\beta$. The next section compares this quantitative bound with an upper bound from the recurrence.
 
 ![Contracting the evaluation fiber and bounding the boundary image to obtain the descendant lower bound](diagrams/descendant.en.svg)
 
@@ -88,9 +140,12 @@ All weights of $W$ are at most $b$. Lemma 3.2 gives $\int_Z\xi^h\ge b^{-(h+1)}$ 
 
 <span class="legacy-anchor" id="3-from-the-recurrence-and-decay-rates-to-independent-eigenvalues" aria-hidden="true"></span>
 
-## 3. Proof of Proposition 4.1 — independent eigenvalues
 
-<!-- proof-target:2 -->Proof target：[Proposition 4.1; (8)–(11) · pp. 12–13](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /proof-target -->
+<span class="legacy-anchor" id="3-proof-of-proposition-41--independent-eigenvalues" aria-hidden="true"></span>
+
+## 4. Proof of Proposition 4.1 — independent eigenvalues
+
+<!-- proof-target:3 -->Proof target：[Proposition 4.1; (8)–(11) · pp. 11–13](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /proof-target -->
 
 Put $H_k=H^{2k}(X,\mathbb C)$ and $H=\bigoplus_{k=0}^n H_k$. For a numerical divisor basis $D_1,\ldots,D_r$, set $\beta_j=D_j\cdot\beta$. Define the two-point correspondence by $(S_\beta a,b)=\langle a,b\rangle_\beta$. The commuting quantum multiplication matrices are
 
@@ -100,6 +155,14 @@ A_j(q)=D_j\cup(-)+\sum_{\beta>0}q^\beta\beta_jS_\beta,
 $$
 
 The grading kills terms with $d_\beta>n+1$, so these are finite Laurent polynomial matrices. No semisimplicity of quantum cohomology is assumed.
+
+<!-- statement:proposition-4-1 -->
+### Proposition 4.1 — An algebraically independent joint tuple
+
+For $X$ and the quantum divisor operators $A_1(q),\ldots,A_r(q)$ above, take a simultaneous upper triangular form over $L=\overline{\mathbb C(q_1,\ldots,q_r)}$. A joint diagonal tuple consists of the entries at one common diagonal position. The manuscript asserts that at least one such tuple $(\lambda_1,\ldots,\lambda_r)$ has coordinates algebraically independent over $\mathbb C$. Semisimplicity of quantum cohomology is not assumed.
+
+<!-- cite:independence-statement -->[Proposition 4.1 · p. 11](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite -->
+<!-- /statement -->
 
 ![Contradicting superexponential decay with the exponential lower bound for normalized descendants](diagrams/spectrum.en.svg)
 
@@ -145,13 +208,31 @@ $$
 
 The logarithm of the upper bound is $-\epsilon d_\beta\log d_\beta+O(d_\beta)$, whereas the lower bound is $-O(d_\beta)$. Their incompatibility proves the algebraic independence asserted in Proposition 4.1.
 
-<!-- cite:independence -->[Proposition 4.1; (8)–(11) · pp. 12–13](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite -->
+<!-- cite:independence -->[Proposition 4.1; (8)–(11) · pp. 11–13](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite -->
 
 <span class="legacy-anchor" id="4-from-an-alternating-trace-to-independent-curve-correspondences" aria-hidden="true"></span>
 
-## 4. Proof of Proposition 5.3 — trace and inequality
 
-<!-- proof-target:3 -->Proof target：[Proposition 5.3; (15) · p. 15](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /proof-target -->
+<span class="legacy-anchor" id="4-proof-of-proposition-53--trace-and-inequality" aria-hidden="true"></span>
+
+## 5. Proof of Proposition 5.3 — trace and inequality
+
+<!-- proof-target:4 -->Proof target：[Proposition 5.3; (15) · p. 15](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /proof-target -->
+
+<!-- statement:proposition-5-3 -->
+### Proposition 5.3 — Independent curve correspondences
+
+Suppose the quantum divisor operators $A_1(q),\ldots,A_r(q)$ have a joint eigenvalue tuple algebraically independent over $\mathbb C$. Let $S_\gamma$ be the two-point correspondence from the preceding section and put $d_\gamma=-K_X\cdot\gamma$. The manuscript asserts that there exist linearly independent numerical degrees $\gamma_1,\ldots,\gamma_r$ of positive genus-zero stable maps such that
+
+$$
+S_{\gamma_1}\cdots S_{\gamma_r}\ne0,
+\qquad \sum_{j=1}^r(d_{\gamma_j}-1)\le n.
+$$
+
+Consequently $r(\iota-1)\le n$. Proposition 4.1 supplies the independent tuple required here.
+
+<!-- cite:inequality -->[Proposition 5.3; (15) · p. 15](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite -->
+<!-- /statement -->
 
 Independence of eigenvalues alone does not yet exhibit a nonzero product of correspondences in the fixed cohomology basis. Lemma 5.1 handles the derivatives of a basis depending on the variables.
 
@@ -197,9 +278,32 @@ This is Proposition 5.3 and proves the inequality in Theorem 1.1.
 
 <span class="legacy-anchor" id="5-from-equality-to-a-product-of-projective-spaces" aria-hidden="true"></span>
 
-## 5. Proof of Proposition 6.4 — classification at equality
+<span class="legacy-anchor" id="5-proof-of-proposition-64--classification-at-equality" aria-hidden="true"></span>
 
-<!-- proof-target:4 -->Proof target：[Proposition 6.4 · p. 17](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /proof-target -->
+## 6. Proof of Proposition 6.4 — classification at equality
+
+<!-- proof-target:5 -->Proof target：[Proposition 6.4 · p. 17](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /proof-target -->
+
+<!-- statement:proposition-6-4 -->
+### Proposition 6.4 — Rigidity at equality
+
+Suppose $\iota\ge2$, $r(\iota-1)=n$, and the independent nonzero product in (15) of Proposition 5.3 exists: there are linearly independent positive stable-map degrees $\gamma_1,\ldots,\gamma_r$ with
+
+$$
+S_{\gamma_1}\cdots S_{\gamma_r}\ne0,
+\qquad \sum_{j=1}^r(d_{\gamma_j}-1)\le n.
+$$
+
+Then the manuscript asserts
+
+$$
+X\simeq(\mathbb P^{\iota-1})^r.
+$$
+
+For the main theorem, Proposition 5.3 provides the existence of this nonzero product.
+
+<!-- cite:classified -->[Proposition 6.4 · p. 17](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite -->
+<!-- /statement -->
 
 Assume $r(\iota-1)=n$. Both inequalities above must be equalities, forcing every selected degree to satisfy $d_{\gamma_j}=\iota$. Only now does the argument pass from a nonzero correspondence product to actual families of minimal rational curves.
 
@@ -225,7 +329,9 @@ The families are unsplit, covering, numerically independent, and all have antica
 
 <!-- cite:classification -->[Theorem 6.2 · p. 16; Proposition 6.4; converse · p. 17](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite --> · <!-- cite:product -->[Product characterization &#91;OC&#93; · Theorem 1.1 · print p. 271 / PDF p. 2](https://doi.org/10.4153/CMB-2006-028-3)<!-- /cite -->
 
-## 6. Which papers supply which steps
+<span class="legacy-anchor" id="6-which-papers-supply-which-steps" aria-hidden="true"></span>
+
+## 7. Which papers supply which steps
 
 These inputs and alternative constructions are external to catalogue 063. The Mustaţă–Mustaţă construction is an alternative to the contraction explicitly constructed in the manuscript. Their statements have been compared with the manuscript's applications; complete proofs of the external results have not been independently verified.
 
@@ -240,10 +346,12 @@ These inputs and alternative constructions are external to catalogue 063. The Mu
 
 Givental's quantum differential equations and Khalkhali's generalized trace are background references cited by the manuscript. Lemmas 2.1 and 5.1 derive the particular identities needed here; the background references have not been turned into additional direct dependency edges. Relations with the existing catalogues 033 and 034 have not been exhaustively investigated.
 
-## 7. Return to the sources
+<span class="legacy-anchor" id="7-return-to-the-sources" aria-hidden="true"></span>
+
+## 8. Return to the sources
 
 <!-- reading-list -->
-- [Proposition 3.1 · p. 6; Proposition 4.1 · p. 13](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf) — The descendant lower bound and the independence conclusion.
+- [Proposition 3.1 · p. 6; Proposition 4.1 · p. 11](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf) — The descendant lower bound and the independence conclusion.
 - [§4 · pp. 11–13](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf) — Iteration of the recurrence and comparison with the lower bound.
 - [Lemmas 5.1–5.2 · pp. 13–15](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf) — Cancellation of basis derivatives and selection of a joint eigenvalue tuple.
 - [Proposition 5.3; (15) · p. 15](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf) — The nonzero trace term yields the inequality.

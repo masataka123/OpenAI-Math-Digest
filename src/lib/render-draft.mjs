@@ -5,6 +5,7 @@ const escape=s=>s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>',
 export async function renderDraft(source,{lang,paperId,base,diagramSource,sectionIds=[],catalogId='034'}){
  const maths=[],diagrams=[];
  let markdown=source.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/,'');
+ markdown=markdown.replace(/<!-- statement:([a-z0-9-]+) -->/g,'\nSTATEMENTSTARTTOKEN$1ENDTOKEN\n').replace(/<!-- \/statement -->/g,'\nSTATEMENTENDTOKEN\n');
  markdown=markdown.replace(/<!-- (?:cite:[a-z0-9-]+|proof-target:\d+|reference-guide|reading-list|\/(?:cite|proof-target|reference-guide|reading-list)) -->/g,'');
  markdown=markdown.replace(/!\[([^\]]*)\]\((diagrams\/([^()]+)\.svg)\)/g,(_,alt,file,stem)=>{
   const index=diagrams.length;diagrams.push({alt,stem});return `PROOFDIAGRAM${index}TOKEN`;
@@ -29,6 +30,7 @@ export async function renderDraft(source,{lang,paperId,base,diagramSource,sectio
   const caption=escape(alt),en=lang==='en';
   return `<figure class="proof-figure"><div class="proof-diagram" tabindex="0" role="region" aria-label="${caption}">${svg}</div><figcaption>${caption}</figcaption><div class="diagram-tools"><span>${en?'Underlined citations open the sources. Tap the figure to enlarge it.':'図の下線付き引用から原典へ移れます。図をタップすると拡大できます。'}</span><a href="${asset}.svg" target="_blank" rel="noopener noreferrer">${en?'Open figure':'図を拡大'} ↗</a><a href="${asset}.tex" download>${en?'TeX source':'TeXソース'} ↓</a></div></figure>`;
  });
+ html=html.replace(/<p>STATEMENTSTARTTOKEN([a-z0-9-]+)ENDTOKEN<\/p>/g,'<div class="article-prose theorem-statement" id="$1" style="break-inside:avoid">').replace(/<p>STATEMENTENDTOKEN<\/p>/g,'</div>');
  html=html.replace(/<table>/g,'<div class="digest-table-wrap" tabindex="0"><table class="digest-table">').replace(/<\/table>/g,'</table></div>');
  html=html.replace(/<p>\s*\$\$([\s\S]*?)\$\$\s*<\/p>/g,'<div class="math-display">$$$$$1$$$$</div>');
  html=html.replace(/href="(sources\.json|status\.md)"/g,(_,file)=>`href="https://github.com/masataka123/OpenAI-Math-Digest/blob/main/drafts/catalog-${catalogId}/${paperId}/${file}"`);

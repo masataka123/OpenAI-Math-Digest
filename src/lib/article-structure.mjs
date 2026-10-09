@@ -2,6 +2,7 @@ const plain = html => html.replace(/<[^>]+>/g, '').trim();
 const attribute = text => text.replaceAll('&','&amp;').replaceAll('"','&quot;');
 
 function headingKind(text) {
+ if (/主定理の証明概略|proof overview of/i.test(text)) return 'proof-overview';
  if (/矢印に付した引用|references on the arrows/i.test(text)) return 'diagram-sources';
  if (/主要結果|主結果|main results/i.test(text)) return 'results';
  if (/どの論文が|which papers supply|依存|外部入力|直接入力|dependencies|external inputs|catalogue connections/i.test(text)) return 'dependencies';
@@ -34,7 +35,7 @@ export function articleStructure(html,headingData,sectionIds=[]) {
   const lede=intro.match(/^<p>([\s\S]*?)<\/p>/);
   if(lede) {ledeHtml=lede[1];intro=intro.slice(lede[0].length).trim();}
  }
- const headings=[],used=new Set();let proofCount=0;
+ const headings=[],used=new Set();let proofCount=0,legacySectionNumber=0;
  const sections=(firstSection<0?[]:html.slice(firstSection).split(/(?=<h2\b)/)).filter(Boolean).map((chunk,index)=>{
   const match=chunk.match(/^<h2\b[^>]*>([\s\S]*?)<\/h2>/);
   const title=match[1],kind=headingKind(plain(title)),oldSlug=headingData[index].slug;
@@ -42,7 +43,7 @@ export function articleStructure(html,headingData,sectionIds=[]) {
   if(used.has(slug))slug+=`-${index+1}`;
   used.add(slug);
   // Keep the earlier Markdown and worker-C anchors while sharing new IDs across languages.
-  const aliases=[oldSlug,`section-${index+1}`].filter((id,i,all)=>id!==slug&&all.indexOf(id)===i);
+  const aliases=[oldSlug,kind==='proof-overview'?'section-overview':`section-${++legacySectionNumber}`].filter((id,i,all)=>id!==slug&&all.indexOf(id)===i);
   const anchor=aliases.map(id=>`<span class="legacy-anchor" id="${attribute(id)}" aria-hidden="true"></span>`).join('');
   let body=chunk.slice(match[0].length),className='paper-section';
   if(kind==='results'){
@@ -58,7 +59,7 @@ export function articleStructure(html,headingData,sectionIds=[]) {
   }
   else if(kind==='diagram-sources')className='figure-key';
   else if(kind==='sources')className+=' article-prose';
-  else if(kind==='proof'){
+  else if(kind==='proof'||kind==='proof-overview'){
    className+=' proof-section';
    const figureEnd=body.lastIndexOf('</figure>');
    const end=figureEnd<0?0:figureEnd+'</figure>'.length;

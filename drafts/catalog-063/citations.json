@@ -310,8 +310,8 @@
       "locations": [
         {
           "result": "Proposition 4.1; (8)–(11)",
-          "printed": "12–13",
-          "pdf": "12–13"
+          "printed": "11–13",
+          "pdf": "11–13"
         }
       ]
     },
@@ -500,8 +500,8 @@
         },
         {
           "result": "Proposition 4.1",
-          "printed": "13",
-          "pdf": "13"
+          "printed": "11",
+          "pdf": "11"
         }
       ]
     },
@@ -584,6 +584,16 @@
           "pdf": "6"
         }
       ]
+    },
+    "independence-statement": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 4.1",
+          "printed": "11",
+          "pdf": "11"
+        }
+      ]
     }
   },
   "markdownFiles": [
@@ -611,6 +621,7 @@
         "OC"
       ],
       "proofTargets": [
+        "main-result",
         "descendant-target",
         "independence",
         "inequality",
@@ -651,6 +662,33 @@
             "ja": "最小有理曲線族から等号の場合を分類する。",
             "en": "Minimal rational-curve families classify the equality case."
           }
+        }
+      ],
+      "mainResults": [
+        "main-result"
+      ],
+      "statements": {
+        "main-result": "theorem-1-1",
+        "descendant-target": "proposition-3-1",
+        "independence": "proposition-4-1",
+        "inequality": "proposition-5-3",
+        "classified": "proposition-6-4"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "main-result",
+          "conclusion": "inequality",
+          "anchor": "proof-overview-step-1"
+        },
+        {
+          "result": "main-result",
+          "conclusion": "equality-forward",
+          "anchor": "proof-overview-step-2"
+        },
+        {
+          "result": "main-result",
+          "conclusion": "equality-converse",
+          "anchor": "proof-overview-step-3"
         }
       ]
     }

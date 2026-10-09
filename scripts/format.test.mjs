@@ -35,6 +35,8 @@ test('new catalogues have official inventories and bilingual guides for every ow
    assert.ok(references);assert.ok(!/\$\$(?:KM|PA|MM|MMC|TZ|CA|DE|BCDD|ERR|OC)\$\$/.test(html),'Citation keys must not become display math');assert.equal((references.match(/<li>/g)||[]).length,guide.externalSources.length);
    assert.ok(html.indexOf('id="diagram-sources"')<html.indexOf('<figure'));
    assert.equal((html.match(/(?:証明対象|Proof target)：/g)||[]).length,guide.proofTargets.length);
+   for(const anchor of Object.values(guide.statements))assert.ok(html.includes(`id="${anchor}"`),`Missing statement anchor: ${anchor}`);
+   for(const coverage of guide.conclusionCoverage)assert.ok(html.includes(`id="${coverage.anchor}"`),`Missing conclusion explanation: ${coverage.anchor}`);
    const sources=html.slice(html.indexOf('<section id="sources"'));
    assert.ok(sources.includes('<ul>'));assert.ok((sources.match(/<li>/g)||[]).length>=guide.readingList.length);
   }
@@ -45,7 +47,7 @@ test('missing roles, reference lists, reading purposes and proof targets are rej
  assert.throws(()=>validateGuide(bad,guide,article),/source role/);
  assert.throws(()=>validateGuide(registry,{...guide,externalSources:guide.externalSources.filter(s=>s!=='KM')},article),/Undefined external/);
  assert.throws(()=>validateGuide(registry,guide,article.replace('<!-- reference-guide -->','')),/reference-guide/);
- assert.throws(()=>validateGuide(registry,guide,article.replace('## 2. Proposition 3.1','## 2. A method')),/Proof heading/);
+ assert.throws(()=>validateGuide(registry,guide,article.replace('## 3. Proposition 3.1','## 3. A method')),/Proof heading/);
  const badGuide=structuredClone(guide);delete badGuide.readingList[0].purpose.ja;
  assert.throws(()=>validateGuide(registry,badGuide,article),/reading purpose/);
 });
@@ -59,4 +61,15 @@ test('one-paper inventory retains all columns and rejects incomplete rows or wro
 test('internal references are unprefixed; external references carry defined keys and readable names',()=>{
  assert.ok(!citationMarkdown(registry,'main-result','ja').includes('Generalized Mukai'));
  assert.match(citationMarkdown(registry,'chain-bound','ja'),/Mukai chain bound.*BCDD/);
+});
+
+test('main-theorem proofs and the statements of proof targets cannot be omitted',()=>{
+ const noMain=structuredClone(guide);noMain.mainResults=[];
+ assert.throws(()=>validateGuide(registry,noMain,article),/main results/);
+ const noStatement=article.replace('<!-- statement:proposition-5-3 -->','');
+ assert.throws(()=>validateGuide(registry,guide,noStatement),/Statement must precede/);
+ const noCoverage=structuredClone(guide);noCoverage.conclusionCoverage=[];
+ assert.throws(()=>validateGuide(registry,noCoverage,article),/conclusion coverage/);
+ const omitted=structuredClone(guide);omitted.mainResults=['independence'];
+ assert.throws(()=>validateGuide(registry,omitted,article),/Main-result inventory/);
 });

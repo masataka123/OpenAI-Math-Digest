@@ -65,3 +65,7 @@ XeLaTeX、xeCJK／Harano Aji、TikZ、dvisvgmを使用。XeLaTeXはXDV出力と�
 ## 形式統一1.2（2026-10-09、サイト本部）
 
 公式順4列一覧、図の前の文献案内、本稿／外部の引用区別、証明対象と原典案内を共通仕様に適合させた。日英PDFは18/19ページに再生成し、画面・紙面・リンクを検査。数学の確認範囲は変更なし。詳細は `coordination/catalog-063/FORMAT_REVISION.md` と `format-revision-validation.json`。公開反映は同記録へ追記する。
+
+## 主張・証明の改訂1.3（2026-10-09、サイト本部）
+
+主定理の全体図と3段階の説明、4命題の主張欄を日英で追加。主張の原典箇所と主定理への接続を再照合。日英5図、PDF22／23ページへ更新。元の外部証明等の未確認範囲は維持。今回の検査・公開状態は `coordination/catalog-063/PROOF_REVISION.md` を参照。

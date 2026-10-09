@@ -23,11 +23,29 @@ export function validateGuide(registry,guide,markdown,figures=''){
  }
  const sections=markdown.split(/(?=^## )/m).filter(s=>s.includes('](diagrams/'));
  if(!guide.proofTargets?.length||sections.length!==guide.proofTargets.length)throw Error('Every proof section needs a target');
+ if(!guide.mainResults?.length||!guide.statements)throw Error('Missing main results or statement inventory');
+ const resultName=id=>registry.citations[id]?.locations[0].result.match(/^(?:Theorem|Corollary|Proposition|Lemma) \d+(?:\.\d+)*/)?.[0];
+ const resultsSection=markdown.split(/(?=^## )/m).find(s=>/^## .*?(?:主要結果|main results)/i.test(s));
+ const declared=[...resultsSection?.matchAll(/^### ((?:Theorem|Corollary|Proposition|Lemma) \d+(?:\.\d+)*)/gm)??[]].map(m=>m[1]);
+ if(JSON.stringify(declared)!==JSON.stringify(guide.mainResults.map(resultName)))throw Error('Main-result inventory must cover every presented result');
+ for(const id of guide.mainResults)if(!guide.proofTargets.includes(id))throw Error(`Missing main-result proof: ${id}`);
+ if(!guide.conclusionCoverage?.length)throw Error('Missing conclusion coverage');
+ for(const id of guide.mainResults)if(!guide.conclusionCoverage.some(c=>c.result===id))throw Error(`Missing conclusion coverage: ${id}`);
+ for(const c of guide.conclusionCoverage)if(!guide.mainResults.includes(c.result)||!c.conclusion?.trim()||!c.anchor?.trim())throw Error('Incomplete conclusion coverage');
  sections.forEach((s,i)=>{
   const cite=registry.citations[guide.proofTargets[i]];
   if(!cite||cite.source!==guide.selfSource||!s.includes(`<!-- proof-target:${i+1} -->`))throw Error(`Missing proof target ${i+1}`);
   const target=cite.locations[0].result.match(/^(?:Theorem|Corollary|Proposition|Lemma) \d+(?:\.\d+)*/)?.[0]??cite.locations[0].result;
   if(!s.split('\n')[0].includes(target))throw Error(`Proof heading must name ${target}`);
+  const id=guide.proofTargets[i],anchor=guide.statements[id];
+  if(!anchor)throw Error(`Missing statement: ${id}`);
+  if(!guide.mainResults.includes(id)){
+   const open=`<!-- statement:${anchor} -->`,close='<!-- /statement -->';
+   const at=s.indexOf(open),end=s.indexOf(close,at);
+   if(at<0||end<at||end>s.indexOf('](diagrams/'))throw Error(`Statement must precede diagram: ${id}`);
+   const block=s.slice(at+open.length,end);
+   if(!block.includes(`### ${target}`)||!block.includes('<!-- cite:')||block.replace(/<!--[^>]*-->/g,'').trim().split('\n').filter(Boolean).length<3)throw Error(`Incomplete statement: ${id}`);
+  }
  });
  if(!guide.readingList?.length)throw Error('Missing source reading list');
  for(const item of guide.readingList){if(!registry.citations[item.citation])throw Error('Unknown reading citation');bilingual(item.purpose,'reading purpose');}

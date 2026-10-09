@@ -8,6 +8,7 @@ const proofLabels={
  'kahler-b-semiampleness':[['全体図','Overview'],['閾値と延長','Thresholds and extension'],['積分解の族','A product family'],['因子の半豊富性','Semiample factors'],['延長と降下','Extension and descent']],
 };
 export function articleNavigationLabel(paperId,heading,lang){
+ if(heading.slug==='proof-overview')return lang==='en'?'Theorem 1.1: proof overview':'Theorem 1.1の証明概略';
  const n=heading.slug.match(/^proof-(\d+)$/)?.[1];
  return proofLabels[paperId]?.[Number(n)-1]?.[lang==='en'?1:0]??legacyLabel(paperId,heading,lang);
 }

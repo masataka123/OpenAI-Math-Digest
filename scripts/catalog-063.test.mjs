@@ -28,7 +28,7 @@ test('063 overview, article and external-input records resolve to the same bilin
     return fs.readFileSync(`${asset}.svg`,'utf8');
    },
   });
-  assert.equal((rendered.html.match(/class="proof-figure"/g)||[]).length,4);
+  assert.equal((rendered.html.match(/class="proof-figure"/g)||[]).length,5);
   assert.ok(rendered.html.includes('id="theorem-1-1"'));
   assert.ok(!/diagrams\/catalog-03[34]\//.test(rendered.html));
   for(const edge of connections.connections){

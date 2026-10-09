@@ -43,22 +43,74 @@ $$
 各引用に結果番号とページを付します。誌面番号とPDF内の位置が異なる場合は両方を示します。GitHubの閲覧リンクではページ位置への自動移動を前提としません。
 <!-- /reference-guide -->
 
+
+
+
+## 2. Theorem 1.1 — 主定理の証明概略
+
+<!-- proof-target:1 -->証明対象：[Theorem 1.1 · p. 2; §1 · pp. 2–3](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /proof-target -->
+
+**証明の道筋。** $X,n,r,\iota$ はTheorem 1.1の記号とする。$\iota=1$ では $r(\iota-1)=0<n$ なので不等式は自明で、等号は生じない。以下は $\iota\ge2$ とする。[Proposition 3.1](#proposition-3-1) の下界から [Proposition 4.1](#proposition-4-1) の独立性へ進み、[Proposition 5.3](#proposition-5-3) で不等式と等号分類の入力を同時に得る。等号を仮定すると [Proposition 6.4](#proposition-6-4) が積の構造を与える。
+
+![Theorem 1.1：descendantの下界から不等式、等号分類、逆向きの確認まで](diagrams/main.ja.svg)
+
+### 1. 下界と独立性から不等式を得る
+
+Proposition 3.1だけで独立性が従うわけではない。Lemma 2.1の漸化式とLemma 3.3のfree次数の稠密性を合わせ、すべての同時固有値組が代数的従属だとすると得られる超指数的上界を、descendantの下界と矛盾させる。これがProposition 4.1である。詳しい議論は[下界](#proof-1)と[独立性](#proof-2)の節に分ける。
+
+<!-- cite:descendant-target -->[Proposition 3.1 · p. 6](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite --> · <!-- cite:recurrence -->[Lemma 2.1; (4)–(5) · p. 5](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite --> · <!-- cite:free-direction -->[Lemma 3.3 · pp. 10–11; Proposition 4.1 (proof) · p. 12](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite --> · <!-- cite:independence -->[Proposition 4.1; (8)–(11) · pp. 11–13](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite -->
+
+独立な固有値組にProposition 5.3を適用すると、線形独立な曲線次数 $\gamma_1,\ldots,\gamma_r$ と非零積 $S_{\gamma_1}\cdots S_{\gamma_r}$ が得られる。$d_\gamma=-K_X\cdot\gamma$ と書けば、
+
+$$
+r(\iota-1)\le\sum_{j=1}^r(d_{\gamma_j}-1)\le n.
+$$
+
+最初の評価は正の安定写像次数に対する $d_{\gamma_j}\ge\iota$、二番目は非零作用素積の次数減少量から従う。これで主定理の不等式が得られる。[交代トレースの節](#proof-3)で、非零積を取り出す部分を説明する。
+
+<!-- cite:inequality -->[Proposition 5.3; (15) · p. 15](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite -->
+
+### 2. 等号なら射影空間の積となる
+
+$r(\iota-1)=n$ なら上の評価はすべて等号となり、各 $d_{\gamma_j}=\iota$ である。Proposition 5.3で得た独立な非零積は、Proposition 6.4が要求する入力でもある。Lemma 6.3で実際のproperな有理曲線族へ移り、訂正後のchain locusの次元評価と巡回操作で各族をcoveringにする。積の特徴付けを適用して
+
+$$
+X\simeq(\mathbb P^{\iota-1})^r
+$$
+
+を得る。使用する外部定理の仮定と適用は[等号分類の節](#proof-4)で説明する。
+
+<!-- cite:proper-family -->[Lemma 6.3 · pp. 16–17](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite --> · <!-- cite:classified -->[Proposition 6.4 · p. 17](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite --> · <!-- cite:chain-bound -->[Mukai chain bound &#91;BCDD&#93; · Theorem 5.2 · 誌面 p. 623 / PDF p. 23](https://druel.perso.math.cnrs.fr/textes/mukai.pdf#page=23)<!-- /cite --> · <!-- cite:erratum -->[Mukai chain bound &#91;ERR&#93; · Erratum · p. 1](https://druel.perso.math.cnrs.fr/textes/mukai_erratum.pdf#page=1)<!-- /cite --> · <!-- cite:product -->[Product characterization &#91;OC&#93; · Theorem 1.1 · 誌面 p. 271 / PDF p. 2](https://doi.org/10.4153/CMB-2006-028-3)<!-- /cite -->
+
+
+### 3. この積では等号が成立する
+
+逆に $X=(\mathbb P^{\iota-1})^r$、$\iota\ge2$ とする。次元は $r(\iota-1)$、Picard数は $r$。$H_j$ を各因子の超平面類の引き戻しとすると $-K_X=\iota\sum_jH_j$ である。各因子の直線で反標準次数は $\iota$、任意の既約有理曲線では各 $H_j$ との交点数は非負整数で少なくとも一つが正なので、pseudoindexは $\iota$ となる。したがって等号が成立し、Theorem 1.1の両方向が揃う。
+
+<!-- cite:classification -->[Theorem 6.2 · p. 16; Proposition 6.4; converse · p. 17](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite -->
+
 <span class="legacy-anchor" id="2-仮想評価ファイバーから-point-descendant-の下界へ" aria-hidden="true"></span>
 
-## 2. Proposition 3.1 の証明 — point descendant の下界
 
-<!-- proof-target:1 -->証明対象：[Proposition 3.1 · p. 6](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /proof-target -->
+<span class="legacy-anchor" id="2-proposition-31-の証明--point-descendant-の下界" aria-hidden="true"></span>
 
-**証明の道筋。** [この節](#proof-1)で free な次数の point descendant に正の下界を与え、[次節](#proof-2)で漸化式と比較して量子因子の固有値の独立性を得る。[交代トレース](#proof-3)がそれを曲線対応の非零積へ変換し、次数の減少量から不等式を導く。[等号の場合](#proof-4)は最小次数の曲線族を取り出して分類する。
+## 3. Proposition 3.1 の証明 — point descendant の下界
 
-数値的曲線次数 $\beta$ に対し $d_\beta=-K_X\cdot\beta$ と書く。$-aK_X$ による埋込み $X\hookrightarrow\mathbb P^N$ を固定する。Proposition 3.1 が供給する入力は、$\beta$ が非定数 free map で表されるときの
+<!-- proof-target:2 -->証明対象：[Proposition 3.1 · p. 6](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /proof-target -->
+
+<!-- statement:proposition-3-1 -->
+### Proposition 3.1 — Point descendant の下界
+
+$X$ は上記の滑らかな複素射影Fano多様体、$\iota\ge2$ とする。正整数 $a$ と埋込み $X\hookrightarrow\mathbb P^N$ を固定し、$\mathcal O_{\mathbb P^N}(1)|_X\simeq\mathcal O_X(-aK_X)$ とする。数値的曲線次数 $\beta$ が非定数free写像 $\mathbb P^1\to X$ で表されると仮定する。$d=-K_X\cdot\beta$、$b=ad$ と置くと、原稿の主張は
 
 $$
-\big\langle\tau_{d_\beta-2}(\mathrm{pt})\big\rangle_\beta
-\ge (a d_\beta)^{-(d_\beta-1)}
+\langle\tau_{d-2}(\mathrm{pt})\rangle_\beta\ge b^{-(d-1)}.
 $$
 
-である。これは非零性だけでなく、後の減衰率の比較に必要な定量的下界である。
+<!-- cite:descendant-target -->[Proposition 3.1 · p. 6](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite -->
+<!-- /statement -->
+
+以下では $d_\beta=-K_X\cdot\beta$ と書く。この定量的下界を、次節で漸化式から得る上界と比較する。
 
 ![評価ファイバーの縮約と境界像の次元評価からdescendantの下界を得る](diagrams/descendant.ja.svg)
 
@@ -88,9 +140,12 @@ $W$ の重みはすべて $b$ 以下である。Lemma 3.2 は、$h$ 次元の整
 
 <span class="legacy-anchor" id="3-漸化式と減衰率から固有値の独立性へ" aria-hidden="true"></span>
 
-## 3. Proposition 4.1 の証明 — 固有値の独立性
 
-<!-- proof-target:2 -->証明対象：[Proposition 4.1; (8)–(11) · pp. 12–13](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /proof-target -->
+<span class="legacy-anchor" id="3-proposition-41-の証明--固有値の独立性" aria-hidden="true"></span>
+
+## 4. Proposition 4.1 の証明 — 固有値の独立性
+
+<!-- proof-target:3 -->証明対象：[Proposition 4.1; (8)–(11) · pp. 11–13](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /proof-target -->
 
 $H_k=H^{2k}(X,\mathbb C)$、$H=\bigoplus_{k=0}^n H_k$ と置く。数値的因子基底 $D_1,\ldots,D_r$ に対して $\beta_j=D_j\cdot\beta$ とし、二点不変量が定める対応を $(S_\beta a,b)=\langle a,b\rangle_\beta$ と書く。可換な量子乗法行列は
 
@@ -100,6 +155,14 @@ A_j(q)=D_j\cup(-)+\sum_{\beta>0}q^\beta\beta_jS_\beta,
 $$
 
 次数制約により $d_\beta>n+1$ の項は消え、これは有限 Laurent 多項式行列になる。以下の議論は量子コホモロジーの半単純性を仮定しない。
+
+<!-- statement:proposition-4-1 -->
+### Proposition 4.1 — 代数的に独立な同時固有値組
+
+上記の $X$ と量子因子作用素 $A_1(q),\ldots,A_r(q)$ に対し、$L=\overline{\mathbb C(q_1,\ldots,q_r)}$ 上で同時上三角化を取る。同じ対角位置の成分の組をjoint diagonal tupleと呼ぶ。原稿の主張は、少なくとも一つの組 $(\lambda_1,\ldots,\lambda_r)$ の座標が $\mathbb C$ 上代数的に独立である、というものである。量子コホモロジーの半単純性は仮定しない。
+
+<!-- cite:independence-statement -->[Proposition 4.1 · p. 11](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite -->
+<!-- /statement -->
 
 ![階乗正規化したdescendantの指数下界と超指数的上界の矛盾](diagrams/spectrum.ja.svg)
 
@@ -145,13 +208,31 @@ $$
 
 を与える。上界の対数は $-\epsilon d_\beta\log d_\beta+O(d_\beta)$、下界は $-O(d_\beta)$ で矛盾する。これが Proposition 4.1 の代数的独立性である。
 
-<!-- cite:independence -->[Proposition 4.1; (8)–(11) · pp. 12–13](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite -->
+<!-- cite:independence -->[Proposition 4.1; (8)–(11) · pp. 11–13](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite -->
 
 <span class="legacy-anchor" id="4-交代トレースから独立な曲線対応の積へ" aria-hidden="true"></span>
 
-## 4. Proposition 5.3 の証明 — 交代トレースと不等式
 
-<!-- proof-target:3 -->証明対象：[Proposition 5.3; (15) · p. 15](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /proof-target -->
+<span class="legacy-anchor" id="4-proposition-53-の証明--交代トレースと不等式" aria-hidden="true"></span>
+
+## 5. Proposition 5.3 の証明 — 交代トレースと不等式
+
+<!-- proof-target:4 -->証明対象：[Proposition 5.3; (15) · p. 15](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /proof-target -->
+
+<!-- statement:proposition-5-3 -->
+### Proposition 5.3 — 独立な曲線対応の非零積
+
+量子因子作用素 $A_1(q),\ldots,A_r(q)$ が $\mathbb C$ 上代数的に独立な同時固有値組を持つと仮定する。$S_\gamma$ は前節の二点不変量による対応、$d_\gamma=-K_X\cdot\gamma$ とする。原稿は、正次数のgenus-zero安定写像の数値的次数で、線形独立な $\gamma_1,\ldots,\gamma_r$ が存在し、
+
+$$
+S_{\gamma_1}\cdots S_{\gamma_r}\ne0,
+\qquad \sum_{j=1}^r(d_{\gamma_j}-1)\le n
+$$
+
+を満たすと主張する。したがって $r(\iota-1)\le n$。独立な固有値組の存在はProposition 4.1から供給される。
+
+<!-- cite:inequality -->[Proposition 5.3; (15) · p. 15](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite -->
+<!-- /statement -->
 
 固有値の独立性だけでは、固定したコホモロジー基底で非零の対応の積を取り出せない。原稿の Lemma 5.1 は、変数に依存する基底変換の微分項を処理する。
 
@@ -197,9 +278,32 @@ $$
 
 <span class="legacy-anchor" id="5-等号から射影空間の積へ" aria-hidden="true"></span>
 
-## 5. Proposition 6.4 の証明 — 等号の場合の分類
+<span class="legacy-anchor" id="5-proposition-64-の証明--等号の場合の分類" aria-hidden="true"></span>
 
-<!-- proof-target:4 -->証明対象：[Proposition 6.4 · p. 17](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /proof-target -->
+## 6. Proposition 6.4 の証明 — 等号の場合の分類
+
+<!-- proof-target:5 -->証明対象：[Proposition 6.4 · p. 17](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /proof-target -->
+
+<!-- statement:proposition-6-4 -->
+### Proposition 6.4 — 等号の場合の剛性
+
+$\iota\ge2$、$r(\iota-1)=n$ を仮定し、Proposition 5.3の式(15)、すなわち線形独立な正の安定写像次数 $\gamma_1,\ldots,\gamma_r$ に対して
+
+$$
+S_{\gamma_1}\cdots S_{\gamma_r}\ne0,
+\qquad \sum_{j=1}^r(d_{\gamma_j}-1)\le n
+$$
+
+を満たす積が存在するとする。このとき原稿の主張は
+
+$$
+X\simeq(\mathbb P^{\iota-1})^r
+$$
+
+である。主定理への適用では、この非零積の存在をProposition 5.3で確保する。
+
+<!-- cite:classified -->[Proposition 6.4 · p. 17](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite -->
+<!-- /statement -->
 
 $r(\iota-1)=n$ とする。上の二つの不等式が等号になるため、選ばれたすべての次数が $d_{\gamma_j}=\iota$ になる。ここで初めて、対応の非零性から実際の最小有理曲線の族へ移る。
 
@@ -225,7 +329,9 @@ Mukai chain bound の Theorem 5.2 は、数値的に独立な proper 既約成�
 
 <!-- cite:classification -->[Theorem 6.2 · p. 16; Proposition 6.4; converse · p. 17](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite --> · <!-- cite:product -->[Product characterization &#91;OC&#93; · Theorem 1.1 · 誌面 p. 271 / PDF p. 2](https://doi.org/10.4153/CMB-2006-028-3)<!-- /cite -->
 
-## 6. どの論文が、どの段階を担うか
+<span class="legacy-anchor" id="6-どの論文がどの段階を担うか" aria-hidden="true"></span>
+
+## 7. どの論文が、どの段階を担うか
 
 以下はカタログ063外からの入力と別構成である。Mustaţă–Mustaţă の構成は、本稿で明示する縮約の別経路として区別する。供給結果の記述と本稿の適用箇所を照合した。外部結果の証明全体は検証対象としていない。
 
@@ -240,10 +346,12 @@ Mukai chain bound の Theorem 5.2 は、数値的に独立な proper 既約成�
 
 Givental の量子微分方程式と Khalkhali の generalized trace は原稿が挙げる背景である。本稿の Lemma 2.1 と Lemma 5.1 はそれぞれ必要な式を本文で導いており、背景文献をそのまま追加の直接依存辺にはしていない。既存カタログ033・034との関係の網羅調査は行っていない。
 
-## 7. 原典を読む入口と確認範囲
+<span class="legacy-anchor" id="7-原典を読む入口と確認範囲" aria-hidden="true"></span>
+
+## 8. 原典を読む入口と確認範囲
 
 <!-- reading-list -->
-- [Proposition 3.1 · p. 6; Proposition 4.1 · p. 13](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf) — descendantの下界と、固有値の独立性の結論。
+- [Proposition 3.1 · p. 6; Proposition 4.1 · p. 11](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf) — descendantの下界と、固有値の独立性の結論。
 - [§4 · pp. 11–13](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf) — 漸化式を反復し、下界と比較する核心。
 - [Lemmas 5.1–5.2 · pp. 13–15](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf) — 基底変換の微分を相殺し、一つの固有値組を選ぶ。
 - [Proposition 5.3; (15) · p. 15](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf) — 交代トレースの非零項から不等式を得る。

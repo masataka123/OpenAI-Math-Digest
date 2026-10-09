@@ -23,10 +23,10 @@ test('ranges and unknown citations fail rather than silently produce plausible r
 test('managed citation markers preserve shared source-line and article structure',async()=>{
  const source=fs.readFileSync('drafts/catalog-063/generalized-mukai/article.ja.md','utf8');
  const {html,headings}=await renderDraft(source,{lang:'ja',paperId:'generalized-mukai',catalogId:'063',base:'/',diagramSource:()=>'<svg/>'});
- assert.equal((html.match(/class="source-line"/g)||[]).length,15);
- assert.equal((html.match(/class="proof-step"/g)||[]).length,13);
+ assert.equal((html.match(/class="source-line"/g)||[]).length,23);
+ assert.equal((html.match(/class="proof-step"/g)||[]).length,16);
  assert.ok(html.includes('id="theorem-1-1"'));
- assert.deepEqual(headings.map(h=>h.slug),['results','diagram-sources','proof-1','proof-2','proof-3','proof-4','dependencies','sources']);
+ assert.deepEqual(headings.map(h=>h.slug),['results','diagram-sources','proof-overview','proof-1','proof-2','proof-3','proof-4','dependencies','sources']);
  assert.ok(!html.includes('<!-- cite:'));
 });
 test('every registered new catalogue uses checked citations and fresh diagram outputs',()=>{
