@@ -1,6 +1,6 @@
 # 063の形式統一と制作セット1.2
 
-2026-10-09、担当：サイト本部。ユーザーが指定した4項目を、制作文書・共通表示・必須データ検査・見本比較の各工程へ組み込んだ。現在はローカル検査済み、今回の公開反映は確認待ち。
+2026-10-09、担当：サイト本部。ユーザーが指定した4項目を、制作文書・共通表示・必須データ検査・見本比較の各工程へ組み込んだ。現在は公開反映まで確認済み。
 
 ## 統一した項目
 
@@ -26,3 +26,12 @@
 ## 内容確認の範囲
 
 今回の作業は形式・導線・引用表示の編集。元の `sources.json` と記事末尾にある未確認範囲を保持した。証明の独立検証や、入力文献の全証明の検証を追加実施したという意味ではない。
+
+## 公開反映
+
+- 内容commit：`e71c586cf8f111729fce1402dbb89a6e3dbd17b8`。
+- [Actions 37872108013](https://github.com/masataka123/OpenAI-Math-Digest/actions/runs/37872108013)：build・deploy成功。
+- 公開28リソース（HTML8、PDF2、SVG／TeX16、案内画像2）はHTTP 200、今回のローカル版とSHA-256一致。
+- 公開された日英カタログ・記事を375px／1440pxの8条件で再確認。一覧4列、文献案内10件、証明対象4件、原典案内5件、数式130件、4図、PDF18/19ページへの案内を確認。ページ横はみ出し・数式エラーなし。
+- 証拠：[公開検査記録](format-revision-publication.json)。
+- [日本語カタログ](https://masataka123.github.io/OpenAI-Math-Digest/ja/catalog/063/#papers)・[日本語記事の文献案内](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/generalized-mukai/#diagram-sources)。
