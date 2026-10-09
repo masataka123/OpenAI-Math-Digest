@@ -1,11 +1,11 @@
 # カタログ063本部 — The generalized Mukai conjecture
 
 - 採用仕様：制作セット **1.0（2026-10-09）**。[制作手順](../../production/README.md)、[記事雛形](../../production/ARTICLE_TEMPLATE.md)、[カタログ雛形](../../production/CATALOG_TEMPLATE.md)、[記録仕様](../../production/RECORDS.md)に従う。
-- 準備・制作日：2026-10-09（JST）。状態：**公開準備完了（未公開）。サイト組込み・日英PDF・ローカル検査済み**。
-- 現在の依頼：「サイト本部での組込みと日英PDF作成をお願いします」。準備・記事制作を終え、このチャットがサイト本部作業も担当した。
+- 準備・制作日：2026-10-09（JST）。状態：**公開確認済み。サイト組込み・日英PDF・公開サイト検査済み**。
+- 現在の依頼：「GitHub Pagesへの公開しましょう！」。準備・記事制作・サイト組込みに続き、このチャットで公開と反映確認を担当した。
 - 制作構成：**single**。本部が記事担当を兼任する。別の記事窓口や WORKER_A 等は作らず、下記を本部兼記事担当の指示書とする。
 - PDF担当：**サイト本部**。このチャットで日本語・英語とも生成済み。各16ページ・2章（短いカタログ案内＋記事1本）・4図。引継ぎは [SITE_HQ_HANDOFF.md](SITE_HQ_HANDOFF.md) に作成済み。別チャットへの自動送信は未実施。
-- 成果物：[日本語記事](../../drafts/catalog-063/generalized-mukai/article.ja.md)・[英語記事](../../drafts/catalog-063/generalized-mukai/article.en.md)、各4点のTeX/SVG、短い日英案内、出典・接続・検査記録。サイト登録・公開用図の配置・日英解説PDFと版台帳を整えた。[サイト本部の検査記録](SITE_INTEGRATION.md)を参照。commit・push・公開確認は未実施。原論文PDFと解説PDFは別の成果物である。
+- 成果物：[日本語記事](../../drafts/catalog-063/generalized-mukai/article.ja.md)・[英語記事](../../drafts/catalog-063/generalized-mukai/article.en.md)、各4点のTeX/SVG、短い日英案内、出典・接続・検査記録。サイト登録・公開用図の配置・日英解説PDFと版台帳を整えた。[サイト本部の検査記録](SITE_INTEGRATION.md)を参照。commit・push・公開確認まで完了。[公開記録](PUBLICATION.md)を参照。原論文PDFと解説PDFは別の成果物である。
 
 ## 台帳と公式順
 

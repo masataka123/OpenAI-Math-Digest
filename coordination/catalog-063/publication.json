@@ -1,0 +1,572 @@
+{
+  "catalogId": "063",
+  "status": "published-and-verified",
+  "checkedAt": "2026-10-09T09:54:09+09:00",
+  "authorizedBy": "GitHub Pagesへの公開しましょう！",
+  "contentCommit": "1888d7706297db793c5d58eb0a38ed69735ba768",
+  "actions": {
+    "run": {
+      "id": 37866735889,
+      "headSha": "1888d7706297db793c5d58eb0a38ed69735ba768",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/masataka123/OpenAI-Math-Digest/actions/runs/37866735889",
+      "createdAt": "2026-10-09T00:49:44Z",
+      "updatedAt": "2026-10-09T00:50:58Z"
+    },
+    "jobs": [
+      {
+        "id": 113615128001,
+        "name": "build",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 37866735889,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v7",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-node@v7",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Run npm ci",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Run npm test",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Run npm run build",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Run npm run check:links",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Run npm run check:pdf",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Run actions/upload-pages-artifact@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 9
+          },
+          {
+            "name": "Post Run actions/setup-node@v7",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 17
+          },
+          {
+            "name": "Post Run actions/checkout@v7",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 18
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 19
+          }
+        ]
+      },
+      {
+        "id": 113615353641,
+        "name": "deploy",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 37866735889,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/configure-pages@v6",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/deploy-pages@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          }
+        ]
+      }
+    ]
+  },
+  "deployedResources": {
+    "checkedAt": "2026-10-09T09:51:45+09:00",
+    "contentCommit": "1888d7706297db793c5d58eb0a38ed69735ba768",
+    "resources": [
+      {
+        "url": "https://masataka123.github.io/OpenAI-Math-Digest/ja/",
+        "status": 200,
+        "bytes": 17490,
+        "sha256": "9ab75a3ce835650a5783927b280cb185dba6c938f92e8d0ee5a122185d0c0ebb",
+        "matchesLocal": true
+      },
+      {
+        "url": "https://masataka123.github.io/OpenAI-Math-Digest/ja/fields/algebraic-complex-geometry/",
+        "status": 200,
+        "bytes": 22521,
+        "sha256": "53be4abd2c8db3b6b07f1331648af9bcb55ddc080f3b46642874786f1127650f",
+        "matchesLocal": true
+      },
+      {
+        "url": "https://masataka123.github.io/OpenAI-Math-Digest/ja/catalog/063/",
+        "status": 200,
+        "bytes": 11932,
+        "sha256": "5e578eb50c2555b485532224281269fa56085b4393edf46055d199e2cb3feb51",
+        "matchesLocal": true
+      },
+      {
+        "url": "https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/generalized-mukai/",
+        "status": 200,
+        "bytes": 1140464,
+        "sha256": "407b4c43b59144aed0557b0a674b3268fd0d5de5039e266750a4da06e5da26d2",
+        "matchesLocal": true
+      },
+      {
+        "url": "https://masataka123.github.io/OpenAI-Math-Digest/pdf/catalog-063-ja.pdf",
+        "status": 200,
+        "bytes": 1008893,
+        "sha256": "5b46d23effd94001a8cd627a125e51024cf2ed146a48c2fa6f4962a3c6c983d5",
+        "matchesLocal": true
+      },
+      {
+        "url": "https://masataka123.github.io/OpenAI-Math-Digest/en/",
+        "status": 200,
+        "bytes": 16198,
+        "sha256": "1533541adb2659572f8712f2de0d96ec6081a40c494c42a6c46578147c3292f3",
+        "matchesLocal": true
+      },
+      {
+        "url": "https://masataka123.github.io/OpenAI-Math-Digest/en/fields/algebraic-complex-geometry/",
+        "status": 200,
+        "bytes": 22258,
+        "sha256": "30c72e1bc12933fbcc2acdbc9b787f03943309847ce9be3c37998bf3263e0195",
+        "matchesLocal": true
+      },
+      {
+        "url": "https://masataka123.github.io/OpenAI-Math-Digest/en/catalog/063/",
+        "status": 200,
+        "bytes": 11831,
+        "sha256": "5458fe1e828df073d85ed6187cb17a956fc6f31c1e2d3d5c80aae03ab5cb6b30",
+        "matchesLocal": true
+      },
+      {
+        "url": "https://masataka123.github.io/OpenAI-Math-Digest/en/papers/generalized-mukai/",
+        "status": 200,
+        "bytes": 872527,
+        "sha256": "81ebfd3c147c7c13514ea7bb96d0ea56036c2ead8a586220eff114c073df11d7",
+        "matchesLocal": true
+      },
+      {
+        "url": "https://masataka123.github.io/OpenAI-Math-Digest/pdf/catalog-063-en.pdf",
+        "status": 200,
+        "bytes": 659159,
+        "sha256": "21825a26d450125edd66ec8b608f88bd4b9d69a9add57623fe0aa884de542b57",
+        "matchesLocal": true
+      },
+      {
+        "url": "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-063/generalized-mukai/descendant.en.svg",
+        "status": 200,
+        "bytes": 200853,
+        "sha256": "89ea64c66df43e941e8531d3a42bc4bfb88d7da7b8af978f6a2207865b50d14a",
+        "matchesLocal": true
+      },
+      {
+        "url": "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-063/generalized-mukai/descendant.en.tex",
+        "status": 200,
+        "bytes": 4961,
+        "sha256": "cccf5af4cc3518e9f207ff72a69b449046e8385f7c3d697260ae5a42b2d66844",
+        "matchesLocal": true
+      },
+      {
+        "url": "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-063/generalized-mukai/descendant.ja.svg",
+        "status": 200,
+        "bytes": 258619,
+        "sha256": "19ea961b4ee4d1543b99958beb1c4a152e60c8c225cf93c4f2c7718fb618148c",
+        "matchesLocal": true
+      },
+      {
+        "url": "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-063/generalized-mukai/descendant.ja.tex",
+        "status": 200,
+        "bytes": 4960,
+        "sha256": "fa92eb49d938a843511d669a29c7c06bb44df258509ecfbe027a117a73877e55",
+        "matchesLocal": true
+      },
+      {
+        "url": "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-063/generalized-mukai/equality.en.svg",
+        "status": 200,
+        "bytes": 180378,
+        "sha256": "654e38b6ec29a3a448a1b239d0a5b8725f0a4c057f5bdf615fdde7b61a2d8b8a",
+        "matchesLocal": true
+      },
+      {
+        "url": "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-063/generalized-mukai/equality.en.tex",
+        "status": 200,
+        "bytes": 5093,
+        "sha256": "b133ef60d6a31979fce7de2fcd10b7156ff0d891af94d0c2772d60766f8670ec",
+        "matchesLocal": true
+      },
+      {
+        "url": "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-063/generalized-mukai/equality.ja.svg",
+        "status": 200,
+        "bytes": 275314,
+        "sha256": "622c8b526399552aad0cfd5329397b143675f95cb84b7e3327046ce3f61ea90c",
+        "matchesLocal": true
+      },
+      {
+        "url": "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-063/generalized-mukai/equality.ja.tex",
+        "status": 200,
+        "bytes": 5092,
+        "sha256": "887ac5572b0e7c18939891bb2f5de013eb35938866537f157fdaedd4d5f762ee",
+        "matchesLocal": true
+      },
+      {
+        "url": "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-063/generalized-mukai/spectrum.en.svg",
+        "status": 200,
+        "bytes": 196980,
+        "sha256": "9115ffc15e3ad90154330c53f6d28d01164996a7f676c21b536615bd891fa4bb",
+        "matchesLocal": true
+      },
+      {
+        "url": "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-063/generalized-mukai/spectrum.en.tex",
+        "status": 200,
+        "bytes": 5289,
+        "sha256": "167265fbc03a3be740cf4a16873847aa42367229a4f07356fa582ef352a76f3b",
+        "matchesLocal": true
+      },
+      {
+        "url": "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-063/generalized-mukai/spectrum.ja.svg",
+        "status": 200,
+        "bytes": 263140,
+        "sha256": "54f0800a9130d7ada377b643b54471c8f10e5d5616420fab72ff466a8db8da0b",
+        "matchesLocal": true
+      },
+      {
+        "url": "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-063/generalized-mukai/spectrum.ja.tex",
+        "status": 200,
+        "bytes": 5288,
+        "sha256": "0aa095bd3c511b6d4fb72110fee2d40b11932ad9fce614f903b06a75ab92b125",
+        "matchesLocal": true
+      },
+      {
+        "url": "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-063/generalized-mukai/trace.en.svg",
+        "status": 200,
+        "bytes": 183669,
+        "sha256": "e22c7395bb44236bd286dac4a701459cb6bc3b9a38c109cf70de16ecccb9a13a",
+        "matchesLocal": true
+      },
+      {
+        "url": "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-063/generalized-mukai/trace.en.tex",
+        "status": 200,
+        "bytes": 4953,
+        "sha256": "87db423d76b309a7412ac1cd809bd259034648001fb4c0c0470a75991b18073c",
+        "matchesLocal": true
+      },
+      {
+        "url": "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-063/generalized-mukai/trace.ja.svg",
+        "status": 200,
+        "bytes": 243306,
+        "sha256": "1b8146d768e1f2675cc757291731cf13869db1afe13116b53f0bcffc14b576b7",
+        "matchesLocal": true
+      },
+      {
+        "url": "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-063/generalized-mukai/trace.ja.tex",
+        "status": 200,
+        "bytes": 4952,
+        "sha256": "e46bfb5ed87e975c23d7fb12f91f0c5aa68c38f693b31f04cd1e92922985e39a",
+        "matchesLocal": true
+      },
+      {
+        "url": "https://masataka123.github.io/OpenAI-Math-Digest/images/guide-portrait.png",
+        "status": 200,
+        "bytes": 578899,
+        "sha256": "3daf7dd8c22c4c218247588bb1a9319ea5d1faad4b4c8550767afa73934e3dac",
+        "matchesLocal": true
+      },
+      {
+        "url": "https://masataka123.github.io/OpenAI-Math-Digest/images/guide-pixel.png",
+        "status": 200,
+        "bytes": 253655,
+        "sha256": "40587b64421887684fa878fa11858563ce2a1e4d120c1de2f7d0f1e55c4fdab5",
+        "matchesLocal": true
+      }
+    ]
+  },
+  "liveBrowser": {
+    "pages": [
+      {
+        "lang": "ja",
+        "route": "",
+        "width": 1440,
+        "viewport": 1440,
+        "pageWidth": 1440,
+        "mathErrors": 0,
+        "mathCount": 0,
+        "figureCount": 0,
+        "brokenImages": [],
+        "bodyFont": "16px"
+      },
+      {
+        "lang": "ja",
+        "route": "",
+        "width": 375,
+        "viewport": 375,
+        "pageWidth": 375,
+        "mathErrors": 0,
+        "mathCount": 0,
+        "figureCount": 0,
+        "brokenImages": [],
+        "bodyFont": "16px"
+      },
+      {
+        "lang": "ja",
+        "route": "fields/algebraic-complex-geometry/",
+        "width": 1440,
+        "viewport": 1440,
+        "pageWidth": 1440,
+        "mathErrors": 0,
+        "mathCount": 0,
+        "figureCount": 0,
+        "brokenImages": [],
+        "bodyFont": "16px"
+      },
+      {
+        "lang": "ja",
+        "route": "fields/algebraic-complex-geometry/",
+        "width": 375,
+        "viewport": 375,
+        "pageWidth": 375,
+        "mathErrors": 0,
+        "mathCount": 0,
+        "figureCount": 0,
+        "brokenImages": [],
+        "bodyFont": "16px"
+      },
+      {
+        "lang": "ja",
+        "route": "catalog/063/",
+        "width": 1440,
+        "viewport": 1440,
+        "pageWidth": 1440,
+        "mathErrors": 0,
+        "mathCount": 0,
+        "figureCount": 0,
+        "brokenImages": [],
+        "bodyFont": "16px"
+      },
+      {
+        "lang": "ja",
+        "route": "catalog/063/",
+        "width": 375,
+        "viewport": 375,
+        "pageWidth": 375,
+        "mathErrors": 0,
+        "mathCount": 0,
+        "figureCount": 0,
+        "brokenImages": [],
+        "bodyFont": "16px"
+      },
+      {
+        "lang": "ja",
+        "route": "papers/generalized-mukai/",
+        "width": 1440,
+        "viewport": 1440,
+        "pageWidth": 1440,
+        "mathErrors": 0,
+        "mathCount": 130,
+        "figureCount": 4,
+        "brokenImages": [],
+        "bodyFont": "16px"
+      },
+      {
+        "lang": "ja",
+        "route": "papers/generalized-mukai/",
+        "width": 375,
+        "viewport": 375,
+        "pageWidth": 375,
+        "mathErrors": 0,
+        "mathCount": 130,
+        "figureCount": 4,
+        "brokenImages": [],
+        "bodyFont": "16px"
+      },
+      {
+        "lang": "en",
+        "route": "",
+        "width": 1440,
+        "viewport": 1440,
+        "pageWidth": 1440,
+        "mathErrors": 0,
+        "mathCount": 0,
+        "figureCount": 0,
+        "brokenImages": [],
+        "bodyFont": "16px"
+      },
+      {
+        "lang": "en",
+        "route": "",
+        "width": 375,
+        "viewport": 375,
+        "pageWidth": 375,
+        "mathErrors": 0,
+        "mathCount": 0,
+        "figureCount": 0,
+        "brokenImages": [],
+        "bodyFont": "16px"
+      },
+      {
+        "lang": "en",
+        "route": "fields/algebraic-complex-geometry/",
+        "width": 1440,
+        "viewport": 1440,
+        "pageWidth": 1440,
+        "mathErrors": 0,
+        "mathCount": 0,
+        "figureCount": 0,
+        "brokenImages": [],
+        "bodyFont": "16px"
+      },
+      {
+        "lang": "en",
+        "route": "fields/algebraic-complex-geometry/",
+        "width": 375,
+        "viewport": 375,
+        "pageWidth": 375,
+        "mathErrors": 0,
+        "mathCount": 0,
+        "figureCount": 0,
+        "brokenImages": [],
+        "bodyFont": "16px"
+      },
+      {
+        "lang": "en",
+        "route": "catalog/063/",
+        "width": 1440,
+        "viewport": 1440,
+        "pageWidth": 1440,
+        "mathErrors": 0,
+        "mathCount": 0,
+        "figureCount": 0,
+        "brokenImages": [],
+        "bodyFont": "16px"
+      },
+      {
+        "lang": "en",
+        "route": "catalog/063/",
+        "width": 375,
+        "viewport": 375,
+        "pageWidth": 375,
+        "mathErrors": 0,
+        "mathCount": 0,
+        "figureCount": 0,
+        "brokenImages": [],
+        "bodyFont": "16px"
+      },
+      {
+        "lang": "en",
+        "route": "papers/generalized-mukai/",
+        "width": 1440,
+        "viewport": 1440,
+        "pageWidth": 1440,
+        "mathErrors": 0,
+        "mathCount": 130,
+        "figureCount": 4,
+        "brokenImages": [],
+        "bodyFont": "16px"
+      },
+      {
+        "lang": "en",
+        "route": "papers/generalized-mukai/",
+        "width": 375,
+        "viewport": 375,
+        "pageWidth": 375,
+        "mathErrors": 0,
+        "mathCount": 130,
+        "figureCount": 4,
+        "brokenImages": [],
+        "bodyFont": "16px"
+      }
+    ],
+    "interactions": {
+      "fieldCatalogueArticleAndReturn": true,
+      "languageAnchor": true,
+      "viewerZoomAndFit": true,
+      "viewerCitationPopup": true,
+      "viewerUniqueIds": true
+    },
+    "pageErrors": []
+  },
+  "pdfEditions": {
+    "ja": {
+      "file": "catalog-063-ja.pdf",
+      "date": "2026-10-09",
+      "pages": 16,
+      "bytes": 1008893,
+      "sha256": "5b46d23effd94001a8cd627a125e51024cf2ed146a48c2fa6f4962a3c6c983d5",
+      "contentHash": "5cd6dcbbfed254bdc7232b3b0ad9f815f50e4e6c406c86b2a7f1afa1f04190c9",
+      "chapters": 2,
+      "mathExpressions": 130,
+      "figures": 4
+    },
+    "en": {
+      "file": "catalog-063-en.pdf",
+      "date": "2026-10-09",
+      "pages": 16,
+      "bytes": 659159,
+      "sha256": "21825a26d450125edd66ec8b608f88bd4b9d69a9add57623fe0aa884de542b57",
+      "contentHash": "2ab7a0ee80d17b6a2fb1edaaa77813be5f54ae9dfcfea9788bda6a7339f5db9d",
+      "chapters": 2,
+      "mathExpressions": 130,
+      "figures": 4
+    }
+  },
+  "releaseChecklist": {
+    "completed": 30,
+    "pending": 0
+  },
+  "mathematicalScope": "unchanged; see sources.json and article source sections",
+  "recordCommit": "The subsequent documentation commit records this successful content deployment; site assets are unchanged."
+}
