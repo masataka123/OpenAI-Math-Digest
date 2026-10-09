@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import {loadCitations,citationMarkdown,citationUrl,citationTex,pageNumbers} from './lib/citations.mjs';
 import {syncCitations,findCitationRegistries} from './sync-citations.mjs';
 import {renderDraft} from '../src/lib/render-draft.mjs';
-import {catalogs} from '../src/data/site.mjs';
+import {catalogs,papers} from '../src/data/site.mjs';
 const file='drafts/catalog-063/citations.json',registry=loadCitations(file);
 
 test('printed page numbers are distinguished from PDF destinations',()=>{
@@ -41,7 +41,9 @@ test('every registered new catalogue uses checked citations and fresh diagram ou
     assert.ok(!managed.has(full),`Overlapping registry ownership: ${full}`);managed.add(full);
    }
   }
-  for(const paperId of ['overview',...catalog.paperIds])for(const lang of ['ja','en']){
+  // A shared paper keeps its original owner and citation registry; do not force a duplicate draft.
+  const ownedPaperIds=catalog.paperIds.filter(id=>papers.find(p=>p.id===id)?.catalogId===catalog.id);
+  for(const paperId of ['overview',...ownedPaperIds])for(const lang of ['ja','en']){
    const expected=new URL(`../drafts/catalog-${catalog.id}/${paperId}/article.${lang}.md`,import.meta.url).pathname;
    assert.ok(managed.has(expected),`Missing managed article: ${expected}`);
   }
