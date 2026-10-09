@@ -123,4 +123,4 @@ npm run check:links
 - [x] Theorem 1.1の不等式、等号から積、逆向き、iota=1の処理を全体図・文章に対応させた。
 - [x] 4命題の仮定・結論・番号・ページを原典と照合し、図の前に掲載した。
 - [x] 主張→図→直後の説明が日英で揃うことを確認した。検査範囲は [PROOF_REVISION.md](PROOF_REVISION.md)。
-- [ ] 更新した日英PDF、リンク、公開版の反映を最終確認した。
+- [x] 更新した日英PDF、9,465内部参照、公開32リソースの版一致と8画面条件を最終確認した。[証拠](proof-revision-publication.json)。

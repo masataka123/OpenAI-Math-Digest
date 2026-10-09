@@ -33,4 +33,13 @@
 - 日英トップ・分野・063総括・記事を1440px／375pxで確認（16条件）。図5枚、主張欄5件、主定理の説明3段階。ページ横はみ出し・数式エラー・画像欠落なし。
 - 既存アンカー56件／言語を維持。図の拡大・引用先・言語切替・カタログとの往復を確認。
 - 最終PDFは日本語22ページ・英語23ページ、各2章・5図。主張欄が途中で分割されないよう調整し、主定理の図・説明と全4命題の主張を紙面で確認。
-- 詳細：[検査記録](proof-revision-validation.json)。一時画像はtmp/proof-063とtmp/pdfs/qa-063-proof（Git対象外）。公開反映は確認待ち。
+- 詳細：[検査記録](proof-revision-validation.json)。一時画像はtmp/proof-063とtmp/pdfs/qa-063-proof（Git対象外）。公開反映まで確認済み。
+
+
+## 公開確認
+
+内容commit：`9b61d51b841fdbaf98ddb953efa285b56c8ac828`。[Actions 37873887517](https://github.com/masataka123/OpenAI-Math-Digest/actions/runs/37873887517) 成功。
+
+公開32リソース（HTML8・PDF2・SVG/TeX20・案内画像2）はHTTP 200、今回の版とSHA-256一致。日英のカタログ・記事を375px／1440pxの8条件で確認し、主張欄5件、全体節の3説明段階、5図、PDF22/23ページの案内を確認。数式エラー・ページ横はみ出しなし。
+
+[公開検査記録](proof-revision-publication.json)・[主定理の証明概略](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/generalized-mukai/#proof-overview)。
