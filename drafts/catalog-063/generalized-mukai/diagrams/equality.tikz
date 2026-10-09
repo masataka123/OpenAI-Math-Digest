@@ -1,0 +1,21 @@
+
+\node[card] (a) {\heading{1}{等号がすべての曲線次数を最小にする}{Equality makes every selected degree minimal}
+$r(\iota-1)=n,\quad d_{\gamma_j}=\iota,\quad
+S_{\gamma_1}\cdots S_{\gamma_r}\ne0$\\
+\Tx{対応の台から、合成順に沿う非空な incidence chain を得る}{The supports give a nonempty incidence chain, ordered by composition.}};
+\node[card,below=2cm of a] (b) {\heading{2}{全既約成分を取って proper 性を得る}{Take full irreducible components and obtain properness}
+$V^j\subset\mathrm{RatCurves}^{n}(X),\quad -K_X\cdot V^j=\iota$\\
+\Tx{最小次数により分裂・多重被覆を排除。数値類は独立}{Minimal degree excludes splitting and multiple covers; classes are independent.}};
+\flow{a}{b}{\Tx{評価像の台、最小次数の安定極限を使用：}{Use the evaluation supports and stable limits of minimal degree:}\\
+\PRef{Lemma 6.3, pp. 16--17}\quad\Tx{任意の部分族ではなく全成分を選ぶ}{Choose full components, not arbitrary subfamilies.}};
+\node[card,below=2.4cm of b] (c) {\heading{3}{endpoint の次元評価と巡回操作}{Endpoint dimension and cyclic rotation}
+$\dim\mathrm{Locus}(V^1,\ldots,V^r)_x\ge r(\iota-1)=n$\\
+\Tx{最後の族が covering。chain を巡回させ、すべての族を covering にする}{The last family covers; rotate the chain to make every family covering.}};
+\flow{b}{c}{\BCRef{Mukai chain bound, Thm. 5.2, p. 623}\ +\ \ERRef{Erratum, p. 1}\\
+\Tx{訂正の「proper な既約成分」という仮定を確認：}{The corrected hypothesis requires proper irreducible components:}\\
+\PRef{Thm. 6.1; Prop. 6.4, pp. 16--17}};
+\node[result,below=2cm of c] (d) {\heading{4}{積の特徴付けを適用}{Apply the product characterization}
+$n_j=\iota-1>0,\quad \sum_j n_j=n,\qquad
+X\simeq(\mathbb P^{\iota-1})^r$};
+\flow{c}{d}{\Tx{unsplit・covering・独立な族と次数 $n_j+1$ が揃う：}{Unsplit, covering, independent families have degrees $n_j+1$:}\\
+\OCRef{Product characterization, Thm. 1.1, p. 271}\quad \PRef{Prop. 6.4, p. 17}};

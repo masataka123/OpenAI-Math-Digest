@@ -1,0 +1,428 @@
+{
+  "catalogId": "063",
+  "productionVersion": "1.0",
+  "checkingScope": "単論文。外部入力9件と代替構成2件の記述・使用を照合。訂正は対応するchain boundと一体で記録。カタログ内に異なる論文間の辺は存在しないが、他カタログとの全関係は未調査。",
+  "omittedSections": [
+    {
+      "section": "catalogue relationship diagram",
+      "reason": "1本のため省略。記事内4図に証明を集約。"
+    },
+    {
+      "section": "paper selector and intra-catalogue dependency table",
+      "reason": "選択対象1本。空の表を置かず、外部入力は記事の表・段階と本記録で案内。"
+    }
+  ],
+  "connections": [
+    {
+      "id": "correlator-recursion",
+      "from": {
+        "paperId": "km",
+        "external": true,
+        "displayName": "Correlator relations",
+        "result": "equation (4a)",
+        "pages": "388",
+        "version": "1998 published version, Communications in Mathematical Physics 196, 385–398",
+        "sourceUrl": "https://www.ihes.fr/~maxim/TEXTS/relation_between_23.pdf"
+      },
+      "to": {
+        "paperId": "generalized-mukai",
+        "result": "Lemma 2.1, recurrence (4)",
+        "pages": "5",
+        "version": "2026-09-24",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf"
+      },
+      "role": "point markingのgenus-zero recursionから二点側と三点側を分離。三点側の次数零を古典的積として保持する。",
+      "hypotheses": "滑らかな射影X、正次数のpoint側。次数零二点は不安定で除く。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-063-hq",
+        "date": "2026-10-09",
+        "record": "../generalized-mukai/sources.json",
+        "scope": "供給結果の記述と原稿本文での使用を照合。外部結果の全証明の独立検証ではない。"
+      },
+      "articleLinks": {
+        "ja": "../generalized-mukai/article.ja.md#proof-2-step-1",
+        "en": "../generalized-mukai/article.en.md#proof-2-step-1"
+      },
+      "unresolved": [
+        "外部結果の全証明は未検証。"
+      ]
+    },
+    {
+      "id": "correlator-divisor",
+      "from": {
+        "paperId": "km",
+        "external": true,
+        "displayName": "Correlator relations",
+        "result": "Lemma 1.4, equation (12)",
+        "pages": "391",
+        "version": "1998 published version, Communications in Mathematical Physics 196, 385–398",
+        "sourceUrl": "https://www.ihes.fr/~maxim/TEXTS/relation_between_23.pdf"
+      },
+      "to": {
+        "paperId": "generalized-mukai",
+        "result": "Lemma 2.1, recurrence (4)",
+        "pages": "5",
+        "version": "2026-09-24",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf"
+      },
+      "role": "divisor挿入をβ_jへ変え、D_j cup pt = 0で補正項を消す。",
+      "hypotheses": "正次数、D_jは因子、point classは最高次数。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-063-hq",
+        "date": "2026-10-09",
+        "record": "../generalized-mukai/sources.json",
+        "scope": "供給結果の記述と原稿本文での使用を照合。外部結果の全証明の独立検証ではない。"
+      },
+      "articleLinks": {
+        "ja": "../generalized-mukai/article.ja.md#proof-2-step-1",
+        "en": "../generalized-mukai/article.en.md#proof-2-step-1"
+      },
+      "unresolved": [
+        "外部結果の全証明は未検証。"
+      ]
+    },
+    {
+      "id": "descendant-string",
+      "from": {
+        "paperId": "pandharipande",
+        "external": true,
+        "displayName": "Rational curves on hypersurfaces",
+        "result": "§1.2, string equation",
+        "pages": "311",
+        "version": "1998, Astérisque 252, Séminaire Bourbaki 848, 307–340",
+        "sourceUrl": "https://www.numdam.org/item/SB_1997-1998__40__307_0.pdf"
+      },
+      "to": {
+        "paperId": "generalized-mukai",
+        "result": "Lemma 2.1, identity (5)",
+        "pages": "5",
+        "version": "2026-09-24",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf"
+      },
+      "role": "二点descendantと1のpairingを一点descendantへ落とす。",
+      "hypotheses": "滑らかな射影X。非凸の場合にも仮想類による式が成立するという原典記述を確認。正次数なのでforgetful morphismを使用可能。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-063-hq",
+        "date": "2026-10-09",
+        "record": "../generalized-mukai/sources.json",
+        "scope": "供給結果の記述と原稿本文での使用を照合。外部結果の全証明の独立検証ではない。"
+      },
+      "articleLinks": {
+        "ja": "../generalized-mukai/article.ja.md#proof-2-step-1",
+        "en": "../generalized-mukai/article.en.md#proof-2-step-1"
+      },
+      "unresolved": [
+        "外部結果の全証明は未検証。"
+      ]
+    },
+    {
+      "id": "intermediate-contraction",
+      "from": {
+        "paperId": "mustata",
+        "external": true,
+        "displayName": "Intermediate moduli",
+        "result": "Definition 1.2; Proposition 1.3; proof of Lemma 3.3",
+        "pages": "5–6, 17–18",
+        "version": "arXiv:math/0409569v4, 2006-07-17",
+        "sourceUrl": "https://arxiv.org/pdf/math/0409569v4"
+      },
+      "to": {
+        "paperId": "generalized-mukai",
+        "result": "§§3.2–3.3; Proposition 3.1",
+        "pages": "7–8",
+        "version": "2026-09-24",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf"
+      },
+      "role": "印以外の成分を共通零点へ縮約する別構成、重み付き係数とmarked cotangent classの照合。原稿は族の縮約を本文で構成している。",
+      "hypotheses": "射影空間への一標点安定写像、degree b。i:X→P^Nは非定数成分を縮約しない。",
+      "kind": "alternative",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-063-hq",
+        "date": "2026-10-09",
+        "record": "../generalized-mukai/sources.json",
+        "scope": "供給結果の記述と原稿本文での使用を照合。外部結果の全証明の独立検証ではない。"
+      },
+      "articleLinks": {
+        "ja": "../generalized-mukai/article.ja.md#proof-1-step-1",
+        "en": "../generalized-mukai/article.en.md#proof-1-step-1"
+      },
+      "unresolved": [
+        "外部結果の全証明は未検証。",
+        "原稿§3.2の独自構成の全技術的整合性は独立検証未完了。"
+      ]
+    },
+    {
+      "id": "intermediate-stack",
+      "from": {
+        "paperId": "mustata-chow",
+        "external": true,
+        "displayName": "Chow ring",
+        "result": "Proposition 1.7; characteristic discussion",
+        "pages": "5, 8",
+        "version": "arXiv:math/0507464v5, 2006-11-30",
+        "sourceUrl": "https://arxiv.org/pdf/math/0507464v5"
+      },
+      "to": {
+        "paperId": "generalized-mukai",
+        "result": "§3.2; Proposition 3.1",
+        "pages": "7",
+        "version": "2026-09-24",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf"
+      },
+      "role": "引用されるintermediate-space経路のfine DM stack構成を補う。仮想類の正値性を供給する結果ではない。",
+      "hypotheses": "genus zero、標数零、射影空間へのweighted stable maps。",
+      "kind": "alternative",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-063-hq",
+        "date": "2026-10-09",
+        "record": "../generalized-mukai/sources.json",
+        "scope": "供給結果の記述と原稿本文での使用を照合。外部結果の全証明の独立検証ではない。"
+      },
+      "articleLinks": {
+        "ja": "../generalized-mukai/article.ja.md#proof-1-step-1",
+        "en": "../generalized-mukai/article.en.md#proof-1-step-1"
+      },
+      "unresolved": [
+        "外部結果の全証明は未検証。"
+      ]
+    },
+    {
+      "id": "fano-chain-connected",
+      "from": {
+        "paperId": "campana",
+        "external": true,
+        "displayName": "Fano rational connectedness",
+        "result": "Corollary 3.2",
+        "pages": "543",
+        "version": "1992, Annales scientifiques de l’École Normale Supérieure 25, 539–545",
+        "sourceUrl": "https://www.numdam.org/item/10.24033/asens.1658.pdf"
+      },
+      "to": {
+        "paperId": "generalized-mukai",
+        "result": "Lemma 3.3",
+        "pages": "10",
+        "version": "2026-09-24",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf"
+      },
+      "role": "Fanoからrational chain connectednessへ進む。",
+      "hypotheses": "滑らかな複素射影Fano。旧用語をDebarreのRC/RCCの区別に読み替える。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-063-hq",
+        "date": "2026-10-09",
+        "record": "../generalized-mukai/sources.json",
+        "scope": "供給結果の記述と原稿本文での使用を照合。外部結果の全証明の独立検証ではない。"
+      },
+      "articleLinks": {
+        "ja": "../generalized-mukai/article.ja.md#proof-2-step-3",
+        "en": "../generalized-mukai/article.en.md#proof-2-step-3"
+      },
+      "unresolved": [
+        "外部結果の全証明は未検証。"
+      ]
+    },
+    {
+      "id": "chain-to-separable",
+      "from": {
+        "paperId": "debarre",
+        "external": true,
+        "displayName": "Rational curves",
+        "result": "Theorem 2.49; Definition 2.20 and following discussion",
+        "pages": "43, 29",
+        "version": "2011-08-29 lecture notes",
+        "sourceUrl": "https://www.math.ens.psl.eu/~debarre/NotesGAEL.pdf"
+      },
+      "to": {
+        "paperId": "generalized-mukai",
+        "result": "Lemma 3.3",
+        "pages": "10",
+        "version": "2026-09-24",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf"
+      },
+      "role": "smooth RCCからRC、標数零でSRCへ進みTian–Zongの仮定を用意。",
+      "hypotheses": "滑らかな射影X、標数零。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-063-hq",
+        "date": "2026-10-09",
+        "record": "../generalized-mukai/sources.json",
+        "scope": "供給結果の記述と原稿本文での使用を照合。外部結果の全証明の独立検証ではない。"
+      },
+      "articleLinks": {
+        "ja": "../generalized-mukai/article.ja.md#proof-2-step-3",
+        "en": "../generalized-mukai/article.en.md#proof-2-step-3"
+      },
+      "unresolved": [
+        "外部結果の全証明は未検証。"
+      ]
+    },
+    {
+      "id": "rational-cycle-generation",
+      "from": {
+        "paperId": "tian-zong",
+        "external": true,
+        "displayName": "One-cycles",
+        "result": "Theorem 1.3",
+        "pages": "2",
+        "version": "arXiv:1209.4342v5, 2013-07-22",
+        "sourceUrl": "https://arxiv.org/pdf/1209.4342v5"
+      },
+      "to": {
+        "paperId": "generalized-mukai",
+        "result": "Lemma 3.3",
+        "pages": "10–11",
+        "version": "2026-09-24",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf"
+      },
+      "role": "CH_1の有理曲線生成からN_1の有理曲線次数による生成を得る。",
+      "hypotheses": "smooth proper separably rationally connected、代数閉体。Fanoと標数零から成立。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-063-hq",
+        "date": "2026-10-09",
+        "record": "../generalized-mukai/sources.json",
+        "scope": "供給結果の記述と原稿本文での使用を照合。外部結果の全証明の独立検証ではない。"
+      },
+      "articleLinks": {
+        "ja": "../generalized-mukai/article.ja.md#proof-2-step-3",
+        "en": "../generalized-mukai/article.en.md#proof-2-step-3"
+      },
+      "unresolved": [
+        "外部結果の全証明は未検証。"
+      ]
+    },
+    {
+      "id": "comb-to-free",
+      "from": {
+        "paperId": "tian-zong",
+        "external": true,
+        "displayName": "One-cycles",
+        "result": "Proposition 2.4",
+        "pages": "4",
+        "version": "arXiv:1209.4342v5, 2013-07-22",
+        "sourceUrl": "https://arxiv.org/pdf/1209.4342v5"
+      },
+      "to": {
+        "paperId": "generalized-mukai",
+        "result": "Lemma 3.3",
+        "pages": "10–11",
+        "version": "2026-09-24",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf"
+      },
+      "role": "very free teethを付けたcombの平滑化で任意の有理曲線次数をfree次数の差にする。",
+      "hypotheses": "SRC、handle=P^1、twistの次数=-1。H^1(f*T_X(-1))=0からP^1上の分裂によりfree。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-063-hq",
+        "date": "2026-10-09",
+        "record": "../generalized-mukai/sources.json",
+        "scope": "供給結果の記述と原稿本文での使用を照合。外部結果の全証明の独立検証ではない。"
+      },
+      "articleLinks": {
+        "ja": "../generalized-mukai/article.ja.md#proof-2-step-3",
+        "en": "../generalized-mukai/article.en.md#proof-2-step-3"
+      },
+      "unresolved": [
+        "外部結果の全証明は未検証。"
+      ]
+    },
+    {
+      "id": "ordered-chain-bound",
+      "from": {
+        "paperId": "bcdd",
+        "external": true,
+        "displayName": "Mukai chain bound",
+        "result": "Theorem 5.2, corrected by the one-page erratum",
+        "pages": "623; erratum 1",
+        "version": "2003 published version, Commentarii Mathematici Helvetici 78, 601–626",
+        "sourceUrl": "https://druel.perso.math.cnrs.fr/textes/mukai.pdf",
+        "correction": {
+          "paperId": "bcdd-erratum",
+          "sourceUrl": "https://druel.perso.math.cnrs.fr/textes/mukai_erratum.pdf",
+          "version": "undated author-hosted one-page correction, retrieved 2026-10-09",
+          "pages": "1",
+          "requirement": "RatCurves^n(X)のproper irreducible componentsを要求する。"
+        }
+      },
+      "to": {
+        "paperId": "generalized-mukai",
+        "result": "Theorem 6.1; Proposition 6.4",
+        "pages": "16–17",
+        "version": "2026-09-24",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf"
+      },
+      "role": "非空な順序付きchainのendpoint locusの次元下界。等号時には最後の族がcoveringとなり、巡回により全族へ拡張。",
+      "hypotheses": "数値類が独立なproper全既約成分。Lemma 6.3がこの条件を用意。任意のproper部分族では不足。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-063-hq",
+        "date": "2026-10-09",
+        "record": "../generalized-mukai/sources.json",
+        "scope": "供給結果の記述と原稿本文での使用を照合。外部結果の全証明の独立検証ではない。"
+      },
+      "articleLinks": {
+        "ja": "../generalized-mukai/article.ja.md#proof-4-step-2",
+        "en": "../generalized-mukai/article.en.md#proof-4-step-2"
+      },
+      "unresolved": [
+        "外部結果の全証明は未検証。"
+      ]
+    },
+    {
+      "id": "product-characterization",
+      "from": {
+        "paperId": "occhetta",
+        "external": true,
+        "displayName": "Product characterization",
+        "result": "Theorem 1.1",
+        "pages": "271",
+        "version": "2006 published version, Canadian Mathematical Bulletin 49(2), 270–280",
+        "sourceUrl": "https://doi.org/10.4153/CMB-2006-028-3"
+      },
+      "to": {
+        "paperId": "generalized-mukai",
+        "result": "Theorem 6.2; Proposition 6.4",
+        "pages": "16–17",
+        "version": "2026-09-24",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf"
+      },
+      "role": "独立unsplit covering族の次数和条件から射影空間の積を得る。",
+      "hypotheses": "滑らかな複素射影X。n_j=iota−1>0、degree(V^j)=n_j+1、sum n_j=n。properとcoveringはLemma 6.3と巡回操作による。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-063-hq",
+        "date": "2026-10-09",
+        "record": "../generalized-mukai/sources.json",
+        "scope": "供給結果の記述と原稿本文での使用を照合。外部結果の全証明の独立検証ではない。"
+      },
+      "articleLinks": {
+        "ja": "../generalized-mukai/article.ja.md#proof-4-step-3",
+        "en": "../generalized-mukai/article.en.md#proof-4-step-3"
+      },
+      "unresolved": [
+        "外部結果の全証明は未検証。"
+      ]
+    }
+  ],
+  "unresolved": [
+    "仮想基本類の一般構成・結合律などの基礎を独立には検証していない。",
+    "§3.2の族の縮約、局所境界因子の大域化、base changeとスタック上の降下の全技術的整合性は独立検証未完了。本文の説明と引用先の構成を読んだ範囲に限定。",
+    "Lemma 5.1の交換子相殺の本文を読んだが、全項を独立に展開する完全検算は未完了。",
+    "外部入力の全証明と、その先の依存文献の再帰的な検証は未実施。",
+    "カタログ033・034その他の記事との全依存関係は未調査。書誌的重複なしを数学的依存なしとは扱わない。"
+  ]
+}

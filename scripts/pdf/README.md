@@ -19,8 +19,10 @@ default is the current date in Asia/Tokyo. PDFs are published under `public/pdf/
 intermediate HTML stays in `tmp/pdfs/`.
 
 `src/data/pdf-editions.json` is keyed by catalogue ID and then language. Selected
-exports retain the other editions. Every booklet contains the catalogue synthesis
-and each of that catalogue's paper overviews. Links within the same language and
+exports retain the other editions. Every booklet contains the catalogue overview
+and each of that catalogue's paper overviews. A single-paper catalogue uses a short
+guide and one article (two chapters); its cover and contents use matching wording.
+Links within the same language and
 booklet become PDF destinations. Other catalogues, other languages, and original
 manuscripts remain clickable web links. Cross-catalogue sources keep their pinned
 versions.

@@ -1,0 +1,19 @@
+
+\node[card] (a) {\heading{1}{評価ファイバーと非障害部分}{Evaluation fiber and unobstructed locus}
+$F=\mathrm{ev}^{-1}(x),\quad h=d-2,\quad b=ad,\quad [F]^{\mathrm{vir}}|_U=[U]$\\
+\Tx{$\beta$ は free、$x$ は非常に一般、$U$ は既約な源を持つ写像}{$\beta$ is free; $x$ is very general; $U$ has irreducible source.}};
+\node[card,below=2cm of a] (b) {\heading{2}{印以外を共通零点へ縮約}{Contract unmarked trees to common zeros}
+$\Phi:F\longrightarrow W,\quad \psi=\Phi^*\xi,\quad 1\le w_j\le b$\\
+\Tx{印の近傍と cotangent line を保ち、$U$ 上の generic degree は1}{The marking and cotangent line are preserved; generic degree on $U$ is one.}};
+\flow{a}{b}{\Tx{全次数を印の成分へ移す：}{Move all degree to the marked component: }\PRef{\S\S3.2--3.3, pp. 7--8}\\
+\MMRef{Intermediate moduli, Prop. 1.3, pp. 5--6}\ \Tx{（別構成）}{(alternative construction)}};
+\node[card,below=2cm of b] (c) {\heading{3}{境界の押し出しを消す}{Kill the pushed-forward boundary}
+$\dim\Phi(F\setminus U)\le d_0+u-2\le h-1$\\
+$\Phi_*[F]^{\mathrm{vir}}=\sum_\alpha[\overline{\Phi(U_\alpha)}]\ne0$\quad\Tx{有効 $h$-cycle}{effective $h$-cycle}};
+\flow{b}{c}{\Tx{各 tail の次数 $\ge\iota\ge2$、Chow localization：}{Each tail has degree $\ge\iota\ge2$; Chow localization:}\\
+\PRef{\S3.4, pp. 8--9}\quad\Tx{仮想類そのものの有効性は不要}{No effectivity of the virtual class itself is used.}};
+\node[result,below=2cm of c] (d) {\heading{4}{重み付き次数から定量的下界}{A quantitative bound from weighted degree}
+$\displaystyle \langle\tau_{d-2}(\mathrm{pt})\rangle_\beta
+=\int_{\Phi_*[F]^{\mathrm{vir}}}\xi^h\ge b^{-(h+1)}=(ad)^{-(d-1)}$};
+\flow{c}{d}{\Tx{座標部分スタックの次数 $1/(w_0\cdots w_h)$ と射影公式：}{Coordinate-substack degree $1/(w_0\cdots w_h)$ and projection formula:}\\
+\PRef{Lemma 3.2; Prop. 3.1, pp. 9--10}};

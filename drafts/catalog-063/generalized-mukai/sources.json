@@ -1,0 +1,741 @@
+{
+  "catalogId": "063",
+  "paperId": "generalized-mukai",
+  "title": "The generalized Mukai conjecture",
+  "version": "2026-09-24",
+  "sourceCommit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf",
+  "downloadUrl": "https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf",
+  "pdfPages": 19,
+  "sha256": "0273a9c7907eb9d1ab3b3f99ff5668503c4db51764545764e91b03389e267317",
+  "checkedOn": "2026-10-09",
+  "owner": "catalog-063-hq",
+  "checkingScope": "主結果と§§2–6の証明本文を読み、核心の接続を整理した。下記外部入力は記述と適用を照合。主張全体の独立検証・査読済みを意味しない。",
+  "statements": [
+    {
+      "result": "Theorem 1.1",
+      "pages": "2",
+      "hypotheses": "Smooth connected complex projective Fano X, n>0, rho_X the Picard number, iota_X the pseudoindex.",
+      "conclusion": "rho_X(iota_X−1)≤n, with equality iff X≅(P^(iota_X−1))^rho_X.",
+      "checking": "原典の仮定・結論・等号の双方向を日英に照合。"
+    },
+    {
+      "result": "Proposition 3.1",
+      "pages": "6",
+      "hypotheses": "iota≥2, β represented by a nonconstant free map, d=−K·β, embedding by −aK.",
+      "conclusion": "〈τ_(d−2)(pt)〉_β≥(ad)^(−(d−1)).",
+      "checking": "pp.6–10の証明本文を読解。スタックの重み、境界像、pushforwardを区別。"
+    },
+    {
+      "result": "Proposition 4.1",
+      "pages": "11",
+      "hypotheses": "Quantum-divisor matrices over the algebraic closure of C(q_1,…,q_r).",
+      "conclusion": "Some joint diagonal tuple is algebraically independent over C.",
+      "checking": "pp.11–13の漸化式、反復、下界との比較を読解。"
+    },
+    {
+      "result": "Proposition 5.3",
+      "pages": "15",
+      "hypotheses": "Same Fano assumptions.",
+      "conclusion": "Independent γ_1,…,γ_r with nonzero ordered S-product; r(iota−1)≤n.",
+      "checking": "Lemmas5.1–5.2と展開(15)から次数評価へ進む箇所を読解。"
+    },
+    {
+      "result": "Proposition 6.4",
+      "pages": "17",
+      "hypotheses": "Equality r(iota−1)=n, iota≥2.",
+      "conclusion": "X≅(P^(iota−1))^r.",
+      "checking": "Lemma6.3、corrected chain bound、巡回操作、Occhettaへの適用を照合。"
+    }
+  ],
+  "proofPassages": [
+    {
+      "section": "§2, Lemma 2.1, (1)–(5)",
+      "pages": "3–5",
+      "read": "量子因子の次数、可換性と斉次性。divisor/TRR/string、不安定な次数零項の区別。"
+    },
+    {
+      "section": "§§3.1–3.4, Proposition 3.1, Lemma 3.2",
+      "pages": "6–10",
+      "read": "very general point、評価ファイバー、族の縮約、重み付き係数、境界像、Chow localization、単項式退化による次数下界。"
+    },
+    {
+      "section": "Lemma 3.3",
+      "pages": "10–11",
+      "read": "free次数の加法閉性、生成、comb smoothing、Zariski稠密性。"
+    },
+    {
+      "section": "§§4.1–4.2, Proposition 4.1, (6)–(11)",
+      "pages": "11–13",
+      "read": "階乗正規化、有限シフト、斉次関係式、固定pでの差分、線形回数の反復とStirling下界。p.11画像でLの代数閉包のバーを確認。"
+    },
+    {
+      "section": "§5, Lemmas 5.1–5.2, Proposition 5.3, (12)–(15)",
+      "pages": "13–15",
+      "read": "同時共役と基底微分、交代化、補間多項式によるtuple選別、非零項抽出、次数。交換子全項の独立検算は保留。"
+    },
+    {
+      "section": "§6, Theorems 6.1–6.2, Lemma 6.3, Proposition 6.4",
+      "pages": "16–17",
+      "read": "最小degree、台とincidence chain、full proper components、endpoint locus、巡回、積の特徴付けと逆向き。"
+    }
+  ],
+  "externalSources": [
+    {
+      "id": "km",
+      "authors": "Kontsevich–Manin",
+      "title": "Relations between the correlators of the topological sigma-model coupled to gravity",
+      "displayName": "Correlator relations",
+      "version": "1998 published version, Communications in Mathematical Physics 196, 385–398",
+      "sourceUrl": "https://www.ihes.fr/~maxim/TEXTS/relation_between_23.pdf",
+      "downloadUrl": "https://www.ihes.fr/~maxim/TEXTS/relation_between_23.pdf",
+      "pdfPages": 14,
+      "sha256": "a0d674bc7407ae8f5f93f858ec2823f0b0f9b2cabe99409d79199e83910c10bb",
+      "checkedLocations": [
+        {
+          "pdfPage": 4,
+          "printedPage": "388"
+        },
+        {
+          "pdfPage": 7,
+          "printedPage": "391"
+        }
+      ],
+      "checking": "Cited statement/formula and its application checked; no complete independent verification of the external proof.",
+      "cache": "tmp/catalog-063-production/km.pdf"
+    },
+    {
+      "id": "pandharipande",
+      "authors": "Rahul Pandharipande",
+      "title": "Rational curves on hypersurfaces (after A. Givental)",
+      "displayName": "Rational curves on hypersurfaces",
+      "version": "1998, Astérisque 252, Séminaire Bourbaki 848, 307–340",
+      "sourceUrl": "https://www.numdam.org/item/SB_1997-1998__40__307_0.pdf",
+      "downloadUrl": "https://www.numdam.org/item/SB_1997-1998__40__307_0.pdf",
+      "pdfPages": 35,
+      "sha256": "720c5ebc39a8a90e9671471ba658332e382eba558e58aee5d67106ec6baebb18",
+      "checkedLocations": [
+        {
+          "pdfPage": 6,
+          "printedPage": "311"
+        }
+      ],
+      "checking": "Cited statement/formula and its application checked; no complete independent verification of the external proof.",
+      "cache": "tmp/catalog-063-production/pandharipande.pdf"
+    },
+    {
+      "id": "mustata",
+      "authors": "Andrei Mustaţă and Magdalena Anca Mustaţă",
+      "title": "Intermediate Moduli Spaces of Stable Maps",
+      "displayName": "Intermediate moduli",
+      "version": "arXiv:math/0409569v4, 2006-07-17",
+      "sourceUrl": "https://arxiv.org/pdf/math/0409569v4",
+      "downloadUrl": "https://arxiv.org/pdf/math/0409569v4",
+      "pdfPages": 42,
+      "sha256": "2487e3b1f787caea118f901265265866d4ce0faa0f0ee3e83934e46a8f9c1077",
+      "checkedLocations": [
+        {
+          "pdfPage": 5,
+          "printedPage": "5"
+        },
+        {
+          "pdfPage": 6,
+          "printedPage": "6"
+        },
+        {
+          "pdfPage": 17,
+          "printedPage": "17"
+        },
+        {
+          "pdfPage": 18,
+          "printedPage": "18"
+        }
+      ],
+      "checking": "Cited statement/formula and its application checked; no complete independent verification of the external proof.",
+      "cache": "tmp/catalog-063-production/mustata.pdf"
+    },
+    {
+      "id": "mustata-chow",
+      "authors": "Anca M. Mustaţă and Andrei Mustaţă",
+      "title": "The Chow ring of M̄₀,ₘ(ℙⁿ,d)",
+      "displayName": "Chow ring",
+      "version": "arXiv:math/0507464v5, 2006-11-30",
+      "sourceUrl": "https://arxiv.org/pdf/math/0507464v5",
+      "downloadUrl": "https://arxiv.org/pdf/math/0507464v5",
+      "pdfPages": 28,
+      "sha256": "4f1b28e5174766f8c28df502cf05ecfc014dbf0933c5b6ea3737e836516ea207",
+      "checkedLocations": [
+        {
+          "pdfPage": 5,
+          "printedPage": "5"
+        },
+        {
+          "pdfPage": 8,
+          "printedPage": "8"
+        }
+      ],
+      "checking": "Cited statement/formula and its application checked; no complete independent verification of the external proof.",
+      "cache": "tmp/catalog-063-production/mustata-chow.pdf"
+    },
+    {
+      "id": "tian-zong",
+      "authors": "Zhiyu Tian and Hong R. Zong",
+      "title": "One cycles on rationally connected varieties",
+      "displayName": "One-cycles",
+      "version": "arXiv:1209.4342v5, 2013-07-22",
+      "sourceUrl": "https://arxiv.org/pdf/1209.4342v5",
+      "downloadUrl": "https://arxiv.org/pdf/1209.4342v5",
+      "pdfPages": 14,
+      "sha256": "8c2c28535ef6571004913e3b6248e0a15d01cb02535547cf9728ea707160f3fe",
+      "checkedLocations": [
+        {
+          "pdfPage": 2,
+          "printedPage": "2"
+        },
+        {
+          "pdfPage": 4,
+          "printedPage": "4"
+        }
+      ],
+      "checking": "Cited statement/formula and its application checked; no complete independent verification of the external proof.",
+      "cache": "tmp/catalog-063-production/tian-zong.pdf"
+    },
+    {
+      "id": "campana",
+      "authors": "Frédéric Campana",
+      "title": "Connexité rationnelle des variétés de Fano",
+      "displayName": "Fano rational connectedness",
+      "version": "1992, Annales scientifiques de l’École Normale Supérieure 25, 539–545",
+      "sourceUrl": "https://www.numdam.org/item/10.24033/asens.1658.pdf",
+      "downloadUrl": "https://www.numdam.org/item/10.24033/asens.1658.pdf",
+      "pdfPages": 8,
+      "sha256": "dab5d544fd7edddbb1a9e231014af7c7c90632b0aac1740c0b86c8adcb59b80d",
+      "checkedLocations": [
+        {
+          "pdfPage": 6,
+          "printedPage": "543"
+        }
+      ],
+      "checking": "Cited statement/formula and its application checked; no complete independent verification of the external proof.",
+      "cache": "tmp/catalog-063-production/campana.pdf"
+    },
+    {
+      "id": "debarre",
+      "authors": "Olivier Debarre",
+      "title": "Rational curves on algebraic varieties",
+      "displayName": "Rational curves",
+      "version": "2011-08-29 lecture notes",
+      "sourceUrl": "https://www.math.ens.psl.eu/~debarre/NotesGAEL.pdf",
+      "downloadUrl": "https://www.math.ens.psl.eu/~debarre/NotesGAEL.pdf",
+      "pdfPages": 62,
+      "sha256": "d0b2edebad57968eaf27093f2f05acd69a980445920732ac3d3ebe8963bb986d",
+      "checkedLocations": [
+        {
+          "pdfPage": 30,
+          "printedPage": "29"
+        },
+        {
+          "pdfPage": 44,
+          "printedPage": "43"
+        }
+      ],
+      "checking": "Cited statement/formula and its application checked; no complete independent verification of the external proof.",
+      "cache": "tmp/catalog-063-production/debarre.pdf"
+    },
+    {
+      "id": "bcdd",
+      "authors": "Laurent Bonavero, Cinzia Casagrande, Olivier Debarre and Stéphane Druel",
+      "title": "Sur une conjecture de Mukai",
+      "displayName": "Mukai chain bound",
+      "version": "2003 published version, Commentarii Mathematici Helvetici 78, 601–626",
+      "sourceUrl": "https://druel.perso.math.cnrs.fr/textes/mukai.pdf",
+      "downloadUrl": "https://druel.perso.math.cnrs.fr/textes/mukai.pdf",
+      "pdfPages": 26,
+      "sha256": "2948c53eccc00f653802f543cd169ee06024e9067e5954035a2baed01036a9c8",
+      "checkedLocations": [
+        {
+          "pdfPage": 22,
+          "printedPage": "622"
+        },
+        {
+          "pdfPage": 23,
+          "printedPage": "623"
+        },
+        {
+          "pdfPage": 24,
+          "printedPage": "624"
+        }
+      ],
+      "checking": "Cited statement/formula and its application checked; no complete independent verification of the external proof.",
+      "cache": "tmp/catalog-063-production/bcdd.pdf"
+    },
+    {
+      "id": "bcdd-erratum",
+      "authors": "Bonavero–Casagrande–Debarre–Druel",
+      "title": "Erratum to Sur une conjecture de Mukai",
+      "displayName": "Mukai chain bound — Erratum",
+      "version": "undated author-hosted one-page correction, retrieved 2026-10-09",
+      "sourceUrl": "https://druel.perso.math.cnrs.fr/textes/mukai_erratum.pdf",
+      "downloadUrl": "https://druel.perso.math.cnrs.fr/textes/mukai_erratum.pdf",
+      "pdfPages": 1,
+      "sha256": "6040c6a04b1c282a06ce7139c0727149193e7cd89927ddcf40078dfe673332ec",
+      "checkedLocations": [
+        {
+          "pdfPage": 1,
+          "printedPage": "1"
+        }
+      ],
+      "checking": "Cited statement/formula and its application checked; no complete independent verification of the external proof.",
+      "cache": "tmp/catalog-063-production/bcdd-erratum.pdf"
+    },
+    {
+      "id": "occhetta",
+      "authors": "Gianluca Occhetta",
+      "title": "A characterization of products of projective spaces",
+      "displayName": "Product characterization",
+      "version": "2006 published version, Canadian Mathematical Bulletin 49(2), 270–280",
+      "sourceUrl": "https://doi.org/10.4153/CMB-2006-028-3",
+      "downloadUrl": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/780A467520AE4046D054AA8BFB5838A7/S0008439500004707a.pdf/div-class-title-a-characterization-of-products-of-projective-spaces-div.pdf",
+      "pdfPages": 11,
+      "sha256": "cc253a62e251d9d332e8f26283f56760aac5a2a0ee45919d4d729b9f78bf768d",
+      "checkedLocations": [
+        {
+          "pdfPage": 1,
+          "printedPage": "270"
+        },
+        {
+          "pdfPage": 2,
+          "printedPage": "271"
+        }
+      ],
+      "checking": "Cited statement/formula and its application checked; no complete independent verification of the external proof.",
+      "cache": "tmp/catalog-063-production/occhetta.pdf"
+    }
+  ],
+  "dependencies": [
+    {
+      "id": "correlator-recursion",
+      "from": {
+        "paperId": "km",
+        "external": true,
+        "displayName": "Correlator relations",
+        "result": "equation (4a)",
+        "pages": "388",
+        "version": "1998 published version, Communications in Mathematical Physics 196, 385–398",
+        "sourceUrl": "https://www.ihes.fr/~maxim/TEXTS/relation_between_23.pdf"
+      },
+      "to": {
+        "paperId": "generalized-mukai",
+        "result": "Lemma 2.1, recurrence (4)",
+        "pages": "5",
+        "version": "2026-09-24",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf"
+      },
+      "role": "point markingのgenus-zero recursionから二点側と三点側を分離。三点側の次数零を古典的積として保持する。",
+      "hypotheses": "滑らかな射影X、正次数のpoint側。次数零二点は不安定で除く。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-063-hq",
+        "date": "2026-10-09",
+        "record": "../generalized-mukai/sources.json",
+        "scope": "供給結果の記述と原稿本文での使用を照合。外部結果の全証明の独立検証ではない。"
+      },
+      "articleLinks": {
+        "ja": "../generalized-mukai/article.ja.md#proof-2-step-1",
+        "en": "../generalized-mukai/article.en.md#proof-2-step-1"
+      },
+      "unresolved": [
+        "外部結果の全証明は未検証。"
+      ]
+    },
+    {
+      "id": "correlator-divisor",
+      "from": {
+        "paperId": "km",
+        "external": true,
+        "displayName": "Correlator relations",
+        "result": "Lemma 1.4, equation (12)",
+        "pages": "391",
+        "version": "1998 published version, Communications in Mathematical Physics 196, 385–398",
+        "sourceUrl": "https://www.ihes.fr/~maxim/TEXTS/relation_between_23.pdf"
+      },
+      "to": {
+        "paperId": "generalized-mukai",
+        "result": "Lemma 2.1, recurrence (4)",
+        "pages": "5",
+        "version": "2026-09-24",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf"
+      },
+      "role": "divisor挿入をβ_jへ変え、D_j cup pt = 0で補正項を消す。",
+      "hypotheses": "正次数、D_jは因子、point classは最高次数。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-063-hq",
+        "date": "2026-10-09",
+        "record": "../generalized-mukai/sources.json",
+        "scope": "供給結果の記述と原稿本文での使用を照合。外部結果の全証明の独立検証ではない。"
+      },
+      "articleLinks": {
+        "ja": "../generalized-mukai/article.ja.md#proof-2-step-1",
+        "en": "../generalized-mukai/article.en.md#proof-2-step-1"
+      },
+      "unresolved": [
+        "外部結果の全証明は未検証。"
+      ]
+    },
+    {
+      "id": "descendant-string",
+      "from": {
+        "paperId": "pandharipande",
+        "external": true,
+        "displayName": "Rational curves on hypersurfaces",
+        "result": "§1.2, string equation",
+        "pages": "311",
+        "version": "1998, Astérisque 252, Séminaire Bourbaki 848, 307–340",
+        "sourceUrl": "https://www.numdam.org/item/SB_1997-1998__40__307_0.pdf"
+      },
+      "to": {
+        "paperId": "generalized-mukai",
+        "result": "Lemma 2.1, identity (5)",
+        "pages": "5",
+        "version": "2026-09-24",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf"
+      },
+      "role": "二点descendantと1のpairingを一点descendantへ落とす。",
+      "hypotheses": "滑らかな射影X。非凸の場合にも仮想類による式が成立するという原典記述を確認。正次数なのでforgetful morphismを使用可能。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-063-hq",
+        "date": "2026-10-09",
+        "record": "../generalized-mukai/sources.json",
+        "scope": "供給結果の記述と原稿本文での使用を照合。外部結果の全証明の独立検証ではない。"
+      },
+      "articleLinks": {
+        "ja": "../generalized-mukai/article.ja.md#proof-2-step-1",
+        "en": "../generalized-mukai/article.en.md#proof-2-step-1"
+      },
+      "unresolved": [
+        "外部結果の全証明は未検証。"
+      ]
+    },
+    {
+      "id": "intermediate-contraction",
+      "from": {
+        "paperId": "mustata",
+        "external": true,
+        "displayName": "Intermediate moduli",
+        "result": "Definition 1.2; Proposition 1.3; proof of Lemma 3.3",
+        "pages": "5–6, 17–18",
+        "version": "arXiv:math/0409569v4, 2006-07-17",
+        "sourceUrl": "https://arxiv.org/pdf/math/0409569v4"
+      },
+      "to": {
+        "paperId": "generalized-mukai",
+        "result": "§§3.2–3.3; Proposition 3.1",
+        "pages": "7–8",
+        "version": "2026-09-24",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf"
+      },
+      "role": "印以外の成分を共通零点へ縮約する別構成、重み付き係数とmarked cotangent classの照合。原稿は族の縮約を本文で構成している。",
+      "hypotheses": "射影空間への一標点安定写像、degree b。i:X→P^Nは非定数成分を縮約しない。",
+      "kind": "alternative",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-063-hq",
+        "date": "2026-10-09",
+        "record": "../generalized-mukai/sources.json",
+        "scope": "供給結果の記述と原稿本文での使用を照合。外部結果の全証明の独立検証ではない。"
+      },
+      "articleLinks": {
+        "ja": "../generalized-mukai/article.ja.md#proof-1-step-1",
+        "en": "../generalized-mukai/article.en.md#proof-1-step-1"
+      },
+      "unresolved": [
+        "外部結果の全証明は未検証。",
+        "原稿§3.2の独自構成の全技術的整合性は独立検証未完了。"
+      ]
+    },
+    {
+      "id": "intermediate-stack",
+      "from": {
+        "paperId": "mustata-chow",
+        "external": true,
+        "displayName": "Chow ring",
+        "result": "Proposition 1.7; characteristic discussion",
+        "pages": "5, 8",
+        "version": "arXiv:math/0507464v5, 2006-11-30",
+        "sourceUrl": "https://arxiv.org/pdf/math/0507464v5"
+      },
+      "to": {
+        "paperId": "generalized-mukai",
+        "result": "§3.2; Proposition 3.1",
+        "pages": "7",
+        "version": "2026-09-24",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf"
+      },
+      "role": "引用されるintermediate-space経路のfine DM stack構成を補う。仮想類の正値性を供給する結果ではない。",
+      "hypotheses": "genus zero、標数零、射影空間へのweighted stable maps。",
+      "kind": "alternative",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-063-hq",
+        "date": "2026-10-09",
+        "record": "../generalized-mukai/sources.json",
+        "scope": "供給結果の記述と原稿本文での使用を照合。外部結果の全証明の独立検証ではない。"
+      },
+      "articleLinks": {
+        "ja": "../generalized-mukai/article.ja.md#proof-1-step-1",
+        "en": "../generalized-mukai/article.en.md#proof-1-step-1"
+      },
+      "unresolved": [
+        "外部結果の全証明は未検証。"
+      ]
+    },
+    {
+      "id": "fano-chain-connected",
+      "from": {
+        "paperId": "campana",
+        "external": true,
+        "displayName": "Fano rational connectedness",
+        "result": "Corollary 3.2",
+        "pages": "543",
+        "version": "1992, Annales scientifiques de l’École Normale Supérieure 25, 539–545",
+        "sourceUrl": "https://www.numdam.org/item/10.24033/asens.1658.pdf"
+      },
+      "to": {
+        "paperId": "generalized-mukai",
+        "result": "Lemma 3.3",
+        "pages": "10",
+        "version": "2026-09-24",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf"
+      },
+      "role": "Fanoからrational chain connectednessへ進む。",
+      "hypotheses": "滑らかな複素射影Fano。旧用語をDebarreのRC/RCCの区別に読み替える。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-063-hq",
+        "date": "2026-10-09",
+        "record": "../generalized-mukai/sources.json",
+        "scope": "供給結果の記述と原稿本文での使用を照合。外部結果の全証明の独立検証ではない。"
+      },
+      "articleLinks": {
+        "ja": "../generalized-mukai/article.ja.md#proof-2-step-3",
+        "en": "../generalized-mukai/article.en.md#proof-2-step-3"
+      },
+      "unresolved": [
+        "外部結果の全証明は未検証。"
+      ]
+    },
+    {
+      "id": "chain-to-separable",
+      "from": {
+        "paperId": "debarre",
+        "external": true,
+        "displayName": "Rational curves",
+        "result": "Theorem 2.49; Definition 2.20 and following discussion",
+        "pages": "43, 29",
+        "version": "2011-08-29 lecture notes",
+        "sourceUrl": "https://www.math.ens.psl.eu/~debarre/NotesGAEL.pdf"
+      },
+      "to": {
+        "paperId": "generalized-mukai",
+        "result": "Lemma 3.3",
+        "pages": "10",
+        "version": "2026-09-24",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf"
+      },
+      "role": "smooth RCCからRC、標数零でSRCへ進みTian–Zongの仮定を用意。",
+      "hypotheses": "滑らかな射影X、標数零。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-063-hq",
+        "date": "2026-10-09",
+        "record": "../generalized-mukai/sources.json",
+        "scope": "供給結果の記述と原稿本文での使用を照合。外部結果の全証明の独立検証ではない。"
+      },
+      "articleLinks": {
+        "ja": "../generalized-mukai/article.ja.md#proof-2-step-3",
+        "en": "../generalized-mukai/article.en.md#proof-2-step-3"
+      },
+      "unresolved": [
+        "外部結果の全証明は未検証。"
+      ]
+    },
+    {
+      "id": "rational-cycle-generation",
+      "from": {
+        "paperId": "tian-zong",
+        "external": true,
+        "displayName": "One-cycles",
+        "result": "Theorem 1.3",
+        "pages": "2",
+        "version": "arXiv:1209.4342v5, 2013-07-22",
+        "sourceUrl": "https://arxiv.org/pdf/1209.4342v5"
+      },
+      "to": {
+        "paperId": "generalized-mukai",
+        "result": "Lemma 3.3",
+        "pages": "10–11",
+        "version": "2026-09-24",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf"
+      },
+      "role": "CH_1の有理曲線生成からN_1の有理曲線次数による生成を得る。",
+      "hypotheses": "smooth proper separably rationally connected、代数閉体。Fanoと標数零から成立。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-063-hq",
+        "date": "2026-10-09",
+        "record": "../generalized-mukai/sources.json",
+        "scope": "供給結果の記述と原稿本文での使用を照合。外部結果の全証明の独立検証ではない。"
+      },
+      "articleLinks": {
+        "ja": "../generalized-mukai/article.ja.md#proof-2-step-3",
+        "en": "../generalized-mukai/article.en.md#proof-2-step-3"
+      },
+      "unresolved": [
+        "外部結果の全証明は未検証。"
+      ]
+    },
+    {
+      "id": "comb-to-free",
+      "from": {
+        "paperId": "tian-zong",
+        "external": true,
+        "displayName": "One-cycles",
+        "result": "Proposition 2.4",
+        "pages": "4",
+        "version": "arXiv:1209.4342v5, 2013-07-22",
+        "sourceUrl": "https://arxiv.org/pdf/1209.4342v5"
+      },
+      "to": {
+        "paperId": "generalized-mukai",
+        "result": "Lemma 3.3",
+        "pages": "10–11",
+        "version": "2026-09-24",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf"
+      },
+      "role": "very free teethを付けたcombの平滑化で任意の有理曲線次数をfree次数の差にする。",
+      "hypotheses": "SRC、handle=P^1、twistの次数=-1。H^1(f*T_X(-1))=0からP^1上の分裂によりfree。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-063-hq",
+        "date": "2026-10-09",
+        "record": "../generalized-mukai/sources.json",
+        "scope": "供給結果の記述と原稿本文での使用を照合。外部結果の全証明の独立検証ではない。"
+      },
+      "articleLinks": {
+        "ja": "../generalized-mukai/article.ja.md#proof-2-step-3",
+        "en": "../generalized-mukai/article.en.md#proof-2-step-3"
+      },
+      "unresolved": [
+        "外部結果の全証明は未検証。"
+      ]
+    },
+    {
+      "id": "ordered-chain-bound",
+      "from": {
+        "paperId": "bcdd",
+        "external": true,
+        "displayName": "Mukai chain bound",
+        "result": "Theorem 5.2, corrected by the one-page erratum",
+        "pages": "623; erratum 1",
+        "version": "2003 published version, Commentarii Mathematici Helvetici 78, 601–626",
+        "sourceUrl": "https://druel.perso.math.cnrs.fr/textes/mukai.pdf",
+        "correction": {
+          "paperId": "bcdd-erratum",
+          "sourceUrl": "https://druel.perso.math.cnrs.fr/textes/mukai_erratum.pdf",
+          "version": "undated author-hosted one-page correction, retrieved 2026-10-09",
+          "pages": "1",
+          "requirement": "RatCurves^n(X)のproper irreducible componentsを要求する。"
+        }
+      },
+      "to": {
+        "paperId": "generalized-mukai",
+        "result": "Theorem 6.1; Proposition 6.4",
+        "pages": "16–17",
+        "version": "2026-09-24",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf"
+      },
+      "role": "非空な順序付きchainのendpoint locusの次元下界。等号時には最後の族がcoveringとなり、巡回により全族へ拡張。",
+      "hypotheses": "数値類が独立なproper全既約成分。Lemma 6.3がこの条件を用意。任意のproper部分族では不足。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-063-hq",
+        "date": "2026-10-09",
+        "record": "../generalized-mukai/sources.json",
+        "scope": "供給結果の記述と原稿本文での使用を照合。外部結果の全証明の独立検証ではない。"
+      },
+      "articleLinks": {
+        "ja": "../generalized-mukai/article.ja.md#proof-4-step-2",
+        "en": "../generalized-mukai/article.en.md#proof-4-step-2"
+      },
+      "unresolved": [
+        "外部結果の全証明は未検証。"
+      ]
+    },
+    {
+      "id": "product-characterization",
+      "from": {
+        "paperId": "occhetta",
+        "external": true,
+        "displayName": "Product characterization",
+        "result": "Theorem 1.1",
+        "pages": "271",
+        "version": "2006 published version, Canadian Mathematical Bulletin 49(2), 270–280",
+        "sourceUrl": "https://doi.org/10.4153/CMB-2006-028-3"
+      },
+      "to": {
+        "paperId": "generalized-mukai",
+        "result": "Theorem 6.2; Proposition 6.4",
+        "pages": "16–17",
+        "version": "2026-09-24",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf"
+      },
+      "role": "独立unsplit covering族の次数和条件から射影空間の積を得る。",
+      "hypotheses": "滑らかな複素射影X。n_j=iota−1>0、degree(V^j)=n_j+1、sum n_j=n。properとcoveringはLemma 6.3と巡回操作による。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-063-hq",
+        "date": "2026-10-09",
+        "record": "../generalized-mukai/sources.json",
+        "scope": "供給結果の記述と原稿本文での使用を照合。外部結果の全証明の独立検証ではない。"
+      },
+      "articleLinks": {
+        "ja": "../generalized-mukai/article.ja.md#proof-4-step-3",
+        "en": "../generalized-mukai/article.en.md#proof-4-step-3"
+      },
+      "unresolved": [
+        "外部結果の全証明は未検証。"
+      ]
+    }
+  ],
+  "backgroundReferences": [
+    {
+      "name": "Givental, quantum differential equations",
+      "kind": "background",
+      "reason": "必要なdescendant recurrenceはLemma2.1で直接導出。引用だけで別の直接辺を作らない。"
+    },
+    {
+      "name": "Khalkhali, generalized trace",
+      "kind": "background",
+      "reason": "必要なconjugation invarianceはLemma5.1の本文で示す。直接辺にしない。"
+    }
+  ],
+  "unresolved": [
+    "仮想基本類の一般構成・結合律などの基礎を独立には検証していない。",
+    "§3.2の族の縮約、局所境界因子の大域化、base changeとスタック上の降下の全技術的整合性は独立検証未完了。本文の説明と引用先の構成を読んだ範囲に限定。",
+    "Lemma 5.1の交換子相殺の本文を読んだが、全項を独立に展開する完全検算は未完了。",
+    "外部入力の全証明と、その先の依存文献の再帰的な検証は未実施。",
+    "カタログ033・034その他の記事との全依存関係は未調査。書誌的重複なしを数学的依存なしとは扱わない。"
+  ],
+  "inheritedNotes": "準備のSOURCE_NOTES.mdは書誌・重複の記録。今回の証明読解とは分離。外部論文の旧稿／別版を暗黙に同一視しない。"
+}

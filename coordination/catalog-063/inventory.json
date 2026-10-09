@@ -1,0 +1,222 @@
+{
+  "catalogId": "063",
+  "productionVersion": "1.0",
+  "preparedOn": "2026-10-09",
+  "preparedAt": "2026-10-09T08:45:13+09:00",
+  "sourceCommit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "overviewTitle": "The generalized Mukai conjecture",
+  "contentsTitle": "The generalized Mukai conjecture",
+  "titleJa": "一般化向井予想",
+  "subject": "Algebraic and complex geometry",
+  "subjectJa": "代数幾何学・複素幾何学",
+  "subjectOrder": 2,
+  "subjectCatalogRange": "032–069",
+  "subjectCatalogIds": [
+    "032",
+    "033",
+    "034",
+    "035",
+    "036",
+    "037",
+    "038",
+    "039",
+    "040",
+    "041",
+    "042",
+    "043",
+    "044",
+    "046",
+    "047",
+    "048",
+    "049",
+    "050",
+    "051",
+    "052",
+    "053",
+    "054",
+    "055",
+    "056",
+    "057",
+    "058",
+    "059",
+    "060",
+    "062",
+    "063",
+    "064",
+    "065",
+    "066",
+    "067",
+    "068",
+    "069"
+  ],
+  "subjectOverviewStartPage": 5,
+  "overviewPdfPage": 8,
+  "overviewPrintedDate": "2026-10-06",
+  "contentsUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/CONTENTS.md",
+  "overviewUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/overview.pdf",
+  "overviewTexUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/overview.tex",
+  "mode": "single",
+  "manuscriptCount": 1,
+  "totalPages": 19,
+  "currentRequestScope": "site-integration-and-bilingual-pdf-production; publication-not-requested",
+  "productionStatus": "release-ready; not-published",
+  "checkingScope": "書誌・収録順・重複確認に加え、原稿§§2–6の証明本文を読解。外部10文献の関連箇所を参照し、直接入力9件と別構成2件の記述・適用を照合。全証明の独立検証ではなく、残る確認範囲は記事末尾とsources.jsonに明記。",
+  "sourceFiles": [
+    {
+      "path": "CONTENTS.md",
+      "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/CONTENTS.md",
+      "downloadUrl": "https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/CONTENTS.md",
+      "sha256": "cc7c0b8a1cdedd845a777e77cf682657308503daf8346c1349e06e9259d063c2",
+      "localCache": "tmp/catalog-063-preparation/CONTENTS.md"
+    },
+    {
+      "path": "overview.tex",
+      "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/overview.tex",
+      "downloadUrl": "https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/overview.tex",
+      "sha256": "aa54c8e14b7647226264045ae846df7ce6803d2ded48aa3183195e45f9f91962",
+      "localCache": "tmp/catalog-063-preparation/overview.tex"
+    },
+    {
+      "path": "overview.pdf",
+      "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/overview.pdf",
+      "downloadUrl": "https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/overview.pdf",
+      "sha256": "22e174f66a102a13c615697d751e20a25796738edc04c10736b30f932fae3018",
+      "localCache": "tmp/catalog-063-preparation/overview.pdf",
+      "pdfPages": 41
+    }
+  ],
+  "sourceLocations": {
+    "contentsLines": [
+      1597,
+      1606
+    ],
+    "overviewTexLine": 200,
+    "overviewPdfPage": 8
+  },
+  "duplicateCheck": {
+    "checkedOn": "2026-10-09",
+    "siteGitCommit": "7614ea8441da0c71482a2307130e77cdea361fcf",
+    "registeredCatalogIds": [
+      "033",
+      "034"
+    ],
+    "registeredPaperCount": 19,
+    "registeredPaperIds": [
+      "orbifold-logarithmic-iitaka",
+      "whole-fiber-variation",
+      "reverse-logarithmic-additivity",
+      "projective-hodge-lines",
+      "kahler-b-semiampleness",
+      "kahler-log-abundance",
+      "uniform-slc-indices",
+      "conditional-kahler-fourfolds",
+      "log-abundance-characteristic-zero",
+      "minimal-metrics-injectivity",
+      "fourfold-nonvanishing",
+      "lifting-adjoint-sections",
+      "schnell-fiber-spaces",
+      "uniform-log-iitaka",
+      "uniform-pluricanonical-iitaka",
+      "relative-denominators",
+      "arithmetic-stein-degree",
+      "effective-log-iitaka-fourfolds",
+      "abundance-after-nonvanishing"
+    ],
+    "inventoryComparisons": [
+      {
+        "inventory": "coordination/catalog-033/inventory.json",
+        "count": 5,
+        "matches": []
+      },
+      {
+        "inventory": "research/catalog-034-inventory.json",
+        "count": 14,
+        "matches": []
+      }
+    ],
+    "exactChecks": [
+      "正式タイトル（大文字小文字を正規化）",
+      "原典のリポジトリ内パス",
+      "既存台帳のPDF SHA-256",
+      "paper ID generalized-mukai の衝突"
+    ],
+    "textSearch": {
+      "directories": [
+        "src/data",
+        "research",
+        "coordination",
+        "drafts",
+        "prototype"
+      ],
+      "patterns": [
+        "mukai",
+        "ムカイ",
+        "向井",
+        "generalized-mukai"
+      ],
+      "extensions": [
+        ".json",
+        ".md",
+        ".mjs",
+        ".tex",
+        ".tikz"
+      ],
+      "matchesBeforePreparationFiles": []
+    },
+    "officialContentsOccurrencesOfSamePath": 1,
+    "result": "checked-no-existing-article",
+    "scopeLimit": "現在の作業場の登録・台帳・原稿・試作を照合。別チャットの未引渡し成果物や作業場外の記事は調査対象外。書誌上の重複なしは数学的な直接依存なしを意味しない。"
+  },
+  "manuscripts": [
+    {
+      "order": 1,
+      "paperId": "generalized-mukai",
+      "title": "The generalized Mukai conjecture",
+      "displayName": "Generalized Mukai",
+      "displayNameJa": "一般化向井予想",
+      "author": "OpenAI",
+      "version": "2026-09-24",
+      "versionEvidence": "PDF p. 1: September 24, 2026; directory name agrees.",
+      "sourceCommit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "path": "preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf",
+      "pdfPages": 19,
+      "sha256": "0273a9c7907eb9d1ab3b3f99ff5668503c4db51764545764e91b03389e267317",
+      "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf",
+      "downloadUrl": "https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf",
+      "existingArticle": null,
+      "existingArticleStatus": "checked-no-match",
+      "existingArticleVersionDifference": "not-applicable; no existing article",
+      "draftDirectory": "drafts/catalog-063/generalized-mukai",
+      "worker": "catalog-hq",
+      "articleStatus": "content-edited",
+      "localPdfCache": "tmp/catalog-063-preparation/article.pdf",
+      "localTextCache": "tmp/catalog-063-preparation/article.txt",
+      "cachePolicy": "Git対象外の再取得可能な原典キャッシュ。永続的な同一性は固定URLとSHA-256で管理。",
+      "proofCheckingStatus": "proof-passages-read; full-independent-verification-not-complete",
+      "externalConnectionsStatus": "9-direct-and-2-alternative-connections-checked; full-external-proofs-not-verified"
+    }
+  ],
+  "pdfPlan": {
+    "owner": "site-hq",
+    "languages": [
+      "ja",
+      "en"
+    ],
+    "required": true,
+    "chaptersPerLanguage": 2,
+    "status": "generated-and-locally-verified",
+    "figuresPerLanguage": 4,
+    "pagesPerLanguage": {
+      "ja": 16,
+      "en": 16
+    },
+    "editionManifest": "src/data/pdf-editions.json",
+    "verifiedOn": "2026-10-09"
+  },
+  "preparationNotes": "SOURCE_NOTES.md",
+  "instructions": "README.md",
+  "releaseChecklist": "RELEASE_CHECKLIST.md",
+  "siteHqHandoff": "SITE_HQ_HANDOFF.md",
+  "validation": "VALIDATION.md",
+  "siteIntegration": "SITE_INTEGRATION.md"
+}

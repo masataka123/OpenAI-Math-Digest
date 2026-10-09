@@ -1,0 +1,20 @@
+
+\node[card] (a) {\heading{1}{独立な固有値組を補間で選ぶ}{Select an independent tuple by interpolation}
+$A_0=p(A_1,\ldots,A_r),\quad p(\lambda)=1,\quad p(\mu)=0\ (\mu\ne\lambda)$\\
+\Tx{同時上三角化を用い、半単純性は仮定しない}{Use simultaneous triangularization; no semisimplicity is assumed.}};
+\node[card,below=2cm of a] (b) {\heading{2}{共役に不変な交代トレース}{A conjugation-invariant alternating trace}
+$\displaystyle \Theta=\sum_{\pi\in\mathfrak S_r}\mathrm{sgn}(\pi)\mathrm{Tr}(A_0\,dA_{\pi(1)}\cdots dA_{\pi(r)})$\\
+$\Theta=r!m_\lambda\,d\lambda_1\wedge\cdots\wedge d\lambda_r\ne0$};
+\flow{a}{b}{\Tx{基底の微分が作る交換子項を置換ごとに相殺：}{Pair permutations to cancel the commutators from differentiating the basis:}\\
+\PRef{Lemmas 5.1--5.2, pp. 13--15}\quad $[A_j,B_\ell]=[A_\ell,B_j]$};
+\node[card,below=2cm of b] (c) {\heading{3}{固定基底で非零項を抽出}{Extract a nonzero term in the fixed basis}
+$\omega_{\gamma_1}\wedge\cdots\wedge\omega_{\gamma_r}\ne0,
+\qquad S_{\gamma_1}\cdots S_{\gamma_r}\ne0$\\
+\Tx{次数ベクトル $\gamma_1,\ldots,\gamma_r$ は線形独立}{The degree vectors $\gamma_1,\ldots,\gamma_r$ are linearly independent.}};
+\flow{b}{c}{\Tx{展開して、外積とトレースがともに非零の項を取る：}{Expand and choose a term with both wedge and trace nonzero:}\\
+$\omega_\gamma=\sum_\ell\gamma_\ell\,dq_\ell/q_\ell$,\quad \PRef{Prop. 5.3, (15), p. 15}};
+\node[result,below=2cm of c] (d) {\heading{4}{余次元の減少量を数える}{Count the total codimension drop}
+$S_\gamma(H_k)\subset H_{k+1-d_\gamma},\qquad
+\displaystyle r(\iota-1)\le\sum_{j=1}^r(d_{\gamma_j}-1)\le n$};
+\flow{c}{d}{\Tx{作用素積が非零なら、総減少量は $H_0,\ldots,H_n$ の幅以下：}{A nonzero product cannot lower degree beyond the range $H_0,\ldots,H_n$:}\\
+\PRef{\S2, pp. 3--4; Prop. 5.3, p. 15}};

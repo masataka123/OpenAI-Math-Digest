@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {renderDraft} from '../lib/render-draft.mjs';
+import {fieldsForCatalog} from '../data/site.mjs';
+import pdfEditions from '../data/pdf-editions.json';
+import '../styles/paper.css';
+import '../styles/draft-article.css';
+import '../styles/catalog.css';
+const {catalog,lang}=Astro.props,en=lang==='en',base=import.meta.env.BASE_URL;
+const articles=import.meta.glob('../../drafts/catalog-*/overview/article.*.md',{query:'?raw',import:'default',eager:true});
+const figures=import.meta.glob('../../public/diagrams/catalog-*/overview/*.svg',{query:'?raw',import:'default',eager:true});
+const directory=`catalog-${catalog.id}/overview`;
+const article=await renderDraft(articles[`../../drafts/${directory}/article.${lang}.md`],{
+ lang,paperId:'overview',catalogId:catalog.id,base,sectionIds:catalog.overviewSectionIds??[],
+ diagramSource:stem=>figures[`../../public/diagrams/${directory}/${stem}.svg`],
+});
+const fields=fieldsForCatalog(catalog.id),pdf=pdfEditions[catalog.id]?.[lang];
+const single=catalog.paperIds.length===1;
+---
+<Layout lang={lang} title={catalog.title[lang]} otherPath={`${en?'ja':'en'}/catalog/${catalog.id}/`}>
+ <div class="paper-article catalog-page catalog-markdown-overview">
+  <nav class="breadcrumbs" aria-label={en?'Breadcrumb':'現在位置'}><a href={base+lang+'/'}>{en?'Fields':'分野一覧'}</a><span>/</span>{fields.map(field=><><a href={`${base}${lang}/fields/${field.id}/`}>{field.title[lang]}</a><span>/</span></>)}<span>{catalog.id}</span></nav>
+  <header class="family-header catalog-intro">
+   <p class="eyebrow">CATALOGUE {catalog.id}</p><h1 lang={lang}>{catalog.title[lang]}</h1>
+   {!en&&<p class="official" lang="en">{catalog.title.en}</p>}
+   <p class="lede" set:html={article.ledeHtml}/>
+  </header>
+  {pdf&&<aside class="catalog-pdf" aria-label={en?'PDF edition':'PDF版'}><a href={base+'pdf/'+pdf.file} target="_blank" rel="noopener noreferrer">{single?(en?'Read the catalogue guide and article as a PDF':'カタログ案内と記事をPDFで読む'):(en?`Read the guide and all ${catalog.paperIds.length} articles as a PDF`:`カタログ案内と全${catalog.paperIds.length}篇をPDFで読む`)} ↗</a><p>{en?'English':'日本語'} · {pdf.pages}{en?' pages':'ページ'} · {(pdf.bytes/1048576).toFixed(1)} MB · {pdf.date}{en?' edition':'版'}<br/>{en?'Linked contents, proof diagrams, and source references.':'目次・証明図・原典へのリンク付き。'}</p></aside>}
+  <nav class="catalog-nav" aria-label={en?'On this page':'このページの内容'}>{article.headings.map(h=><a href={'#'+h.slug}>{h.text}</a>)}</nav>
+  {article.introHtml&&<div class="article-prose draft-intro" set:html={article.introHtml}/>}
+  <div class="draft-body"><Fragment set:html={article.html}/></div>
+ </div>
+</Layout>

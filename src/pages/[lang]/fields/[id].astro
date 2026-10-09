@@ -16,9 +16,9 @@ const {field}=Astro.props, lang=Astro.params.lang, en=lang==='en', base=import.m
     <div class="field-catalog-intro">
      <h3><a href={`${base}${lang}/catalog/${c.id}/`}>{c.title[lang]}</a></h3>
      <p>{c.description[lang]}</p>
-     <span class="badge">{overviews.length===c.paperIds.length?(en?`All ${overviews.length} overviews available`:`全${overviews.length}篇の概説を掲載`):(en?`${overviews.length} of ${c.paperIds.length} overviews available`:`全${c.paperIds.length}篇中${overviews.length}篇の概説を掲載`)}</span>
-     <p class="field-catalog-summary">{en?'The catalogue synthesis connects the results, proof strategies, and theorems used across these manuscripts.':'総括では、各論文の結果・証明戦略・使用する定理のつながりを図でたどれます。'}</p>
-     <a class="button primary" href={`${base}${lang}/catalog/${c.id}/`}>{en?'Explore the synthesis and connections':'総括・論文間のつながりを見る'}<span aria-hidden="true">→</span></a>
+     <span class="badge">{overviews.length===c.paperIds.length?(en?(overviews.length===1?'Proof overview available':`All ${overviews.length} overviews available`):`全${overviews.length}篇の概説を掲載`):(en?`${overviews.length} of ${c.paperIds.length} overviews available`:`全${c.paperIds.length}篇中${overviews.length}篇の概説を掲載`)}</span>
+     <p class="field-catalog-summary">{c.paperIds.length===1?(en?'The catalogue guide leads to the article, its external inputs, and the bilingual PDF editions.':'カタログ案内から、記事・外部入力の説明・日英PDFへ進めます。'):(en?'The catalogue synthesis connects the results, proof strategies, and theorems used across these manuscripts.':'総括では、各論文の結果・証明戦略・使用する定理のつながりを図でたどれます。')}</p>
+     <a class="button primary" href={`${base}${lang}/catalog/${c.id}/`}>{c.paperIds.length===1?(en?'Open the catalogue guide':'カタログ案内を見る'):(en?'Explore the synthesis and connections':'総括・論文間のつながりを見る')}<span aria-hidden="true">→</span></a>
     </div>
     <details class="field-catalog-overviews">
      <summary class="field-overview-heading"><span>{en?`Proof overviews (${overviews.length})`:`各論文の証明概説（${overviews.length}篇）`}</span><span class="small muted">{en?'Official catalogue order':'公式カタログ順'}</span></summary>

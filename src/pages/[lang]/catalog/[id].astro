@@ -1,8 +1,9 @@
 ---
 import Catalog034Overview from '../../../components/Catalog034Overview.astro';
 import CatalogDraftOverview from '../../../components/CatalogDraftOverview.astro';
+import CatalogMarkdownOverview from '../../../components/CatalogMarkdownOverview.astro';
 import {catalogs,languages} from '../../../data/site.mjs';
 export function getStaticPaths(){return languages.flatMap(lang=>catalogs.map(catalog=>({params:{lang,id:catalog.id},props:{catalog}})));}
 const {catalog}=Astro.props,lang=Astro.params.lang;
 ---
-{catalog.id==='034'?<Catalog034Overview catalog={catalog} lang={lang}/>:<CatalogDraftOverview catalog={catalog} lang={lang}/>}
+{catalog.id==='034'?<Catalog034Overview catalog={catalog} lang={lang}/>:catalog.id==='033'?<CatalogDraftOverview catalog={catalog} lang={lang}/>:<CatalogMarkdownOverview catalog={catalog} lang={lang}/>}

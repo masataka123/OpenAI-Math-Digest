@@ -1,5 +1,6 @@
 import inventory033 from '../../coordination/catalog-033/inventory.json' with { type: 'json' };
 import inventory034 from '../../research/catalog-034-inventory.json' with { type: 'json' };
+import inventory063 from '../../coordination/catalog-063/inventory.json' with { type: 'json' };
 import subjectSource from './catalog-subjects.json' with { type: 'json' };
 export const text = (ja, en) => ({ ja, en });
 export const languages = ['ja', 'en'];
@@ -19,7 +20,7 @@ const fieldTranslations = [
     "id": "algebraic-complex-geometry",
     "ja": "代数幾何学・複素幾何学",
     "catalogIds": [
-      "033", "034"
+      "033", "034", "063"
     ]
   },
   {
@@ -128,7 +129,11 @@ export const papers = [...inventory033.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '033', sourceCommit: inventory033.sourceCommit,
  title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
  pages: entry.pdfPages, order: entry.order, featured: true,
-})), ...papers034];
+})), ...papers034, ...inventory063.manuscripts.map(entry => ({
+ id: entry.paperId, catalogId: '063', sourceCommit: inventory063.sourceCommit,
+ title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
+ pages: entry.pdfPages, order: entry.order, featured: true,
+}))];
 export const catalogs = [{
  id: '033', sourceCommit: inventory033.sourceCommit,
  title: text('Campanaのorbifold飯高予想と対数的劣加法性', inventory033.overviewTitle),
@@ -141,6 +146,13 @@ export const catalogs = [{
   contentsTitle: 'Log abundance for compact Kähler spaces under logarithmic Iitaka subadditivity',
   description: text('豊富性と良い極小モデルに関する論文群を、仮定と結論、証明の関係から整理する。', 'A guide to manuscripts on abundance and good minimal models, organized by hypotheses, conclusions, and arguments.'),
   paperIds: manuscriptIds034,
+}, {
+  id: '063', sourceCommit: inventory063.sourceCommit, mode: 'single',
+  title: text(inventory063.titleJa, inventory063.overviewTitle),
+  contentsTitle: inventory063.contentsTitle,
+  description: text('一般化向井不等式と等号の場合の分類を、point descendant・量子乗法・最小有理曲線族の接続から読む。', 'Follow point descendants, quantum multiplication, and minimal rational curves through the generalized Mukai inequality and its equality case.'),
+  paperIds: inventory063.manuscripts.map(p => p.paperId),
+  overviewSectionIds: ['papers', 'connections', 'sources'],
 }];
 export const paperSource = paper => `https://github.com/openai/math/blob/${paper.sourceCommit ?? sourceCommit}/preprints/${paper.path}`;
 export const catalogsForField = id => fields.find(field => field.id === id).catalogIds.map(id => catalogs.find(catalog => catalog.id === id));
