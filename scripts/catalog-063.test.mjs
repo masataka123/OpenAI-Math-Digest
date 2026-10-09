@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {catalogs,papers,paperSource,catalogsForField} from '../src/data/site.mjs';
+import {renderCatalogInventory} from '../src/lib/catalog-inventory.mjs';
 import {renderDraft} from '../src/lib/render-draft.mjs';
 import inventory from '../coordination/catalog-063/inventory.json' with {type:'json'};
 import connections from '../drafts/catalog-063/overview/connections.json' with {type:'json'};
@@ -36,8 +37,9 @@ test('063 overview, article and external-input records resolve to the same bilin
   }
   headings.push(rendered.headings.map(h=>h.slug));
   const overview=await renderDraft(fs.readFileSync(`${root}/overview/article.${lang}.md`,'utf8'),{lang,paperId:'overview',catalogId:'063',base:'/OpenAI-Math-Digest/',sectionIds:['papers','connections','sources'],diagramSource:()=>{throw Error('No duplicate overview figure expected');}});
+  overview.html=overview.html.replace('<p>CATALOGINVENTORYTOKEN</p>',renderCatalogInventory(catalogs.find(c=>c.id==='063'),papers,JSON.parse(fs.readFileSync(`${root}/overview/presentation.json`)),lang,'/OpenAI-Math-Digest/'));
   assert.ok(overview.html.includes('id="paper-generalized-mukai"'));
-  assert.ok(overview.html.includes(`/${lang}/papers/${id}/#theorem-1-1`));
+  assert.ok(overview.html.includes(`/${lang}/papers/${id}/`));
   assert.ok(!/作成予定|awaiting production/.test(overview.introHtml));
  }
  assert.deepEqual(...headings);

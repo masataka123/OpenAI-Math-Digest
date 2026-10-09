@@ -1,11 +1,12 @@
 # 日英記事の雛形
 
-制作セット1.1。[制作手順](README.md)と併用する。以下のコードブロックを各 `article.ja.md` / `article.en.md` にコピーし、`{{...}}` を原典に基づいて置き換える。雛形の説明やプレースホルダーは公開しない。
+制作セット1.2。[制作手順](README.md)と併用する。以下のコードブロックを各 `article.ja.md` / `article.en.md` にコピーし、`{{...}}` を原典に基づいて置き換える。雛形の説明やプレースホルダーは公開しない。
 
 引用は [CITATIONS.md](CITATIONS.md) に従う。以下のマーカーはcitations.jsonから生成して完成させる。本文・TeXへURLとページを別々に転記しない。
 
 ## 固定するもの・変えるもの
 
+- 必須データと生成方法は [FORMAT_CONTRACT.md](FORMAT_CONTRACT.md) に従う。文献一覧を一般的な引用ルールの説明だけで代用しない。
 - 固定：主要結果 → 引用案内 → 証明の道筋・図と直後の説明 → 外部入力 → 原典・確認範囲。日英で結果・仮定・数式・節・図・確認範囲を一致させる。
 - 可変：採り上げる主要結果、証明節・段階・図の数と長さ。原論文の論理に合わせる。Schnellの3図をそのまま要求しない。
 - 主要結果のH3は `Theorem 1.1 — …` 等、原典の種別・番号から始める。原典に番号がない場合は番号を創作せず、サイト本部へアンカー対応を申し送る。
@@ -41,9 +42,13 @@
 
 ## 図の矢印に付した引用
 
-{{略号のない結果は本稿内であること、外部文献の表示名と引用キーの対応を示す。外部入力がなければその旨を短く記す。}}
+<!-- reference-guide -->
+{{articleGuidesから生成する文献一覧。外部入力がない場合も宣言する。}}
+<!-- /reference-guide -->
 
-## 2. {{主定理の証明 — 核心の帰着}}
+## 2. {{Theorem 1.1等の原典番号}} の証明 — {{核心の帰着}}
+
+<!-- proof-target:1 -->{{生成する証明対象と原典リンク}}<!-- /proof-target -->
 
 **証明の道筋。** {{目標から結論までの道筋。場合分け、主要入力、後の詳細節との対応。}}
 
@@ -70,6 +75,10 @@
 | {{表示名・結果・原典リンク}} | {{本稿の結果・ページと概説の段階リンク}} | {{用途と適用仮定}} | {{照合した範囲}} |
 
 ## 4. 原典を読む入口と確認範囲
+
+<!-- reading-list -->
+{{結果・ページ・読む目的の一覧を生成}}
+<!-- /reading-list -->
 
 {{核心の節・定理・ページへの案内。読んだ証明箇所、入力の照合、残る未確認を簡潔に記す。外部証明の全検証とは区別する。}}
 
@@ -104,9 +113,13 @@
 
 ## References on the arrows
 
-{{Identify results internal to this manuscript and map external citation keys to readable paper names.}}
+<!-- reference-guide -->
+{{Generated manuscript convention and external reference list.}}
+<!-- /reference-guide -->
 
-## 2. {{Proof of the main theorem — the central reduction}}
+## 2. Proof of {{Theorem 1.1 or original result}} — {{central reduction}}
+
+<!-- proof-target:1 -->{{Generated proof target and source link}}<!-- /proof-target -->
 
 **Proof route.** {{Explain the route, cases, main inputs, and links to later proof sections where applicable.}}
 
@@ -133,6 +146,10 @@
 | {{Readable name, result, source link}} | {{Result, page, link to the overview step}} | {{Use and hypotheses}} | {{What was checked}} |
 
 ## 4. Return to the sources
+
+<!-- reading-list -->
+{{Generated result, pages and reading purpose list}}
+<!-- /reading-list -->
 
 {{Guide readers to the key sections, results, and pages. State the passages read, inputs checked, and unresolved points, separately from independent verification of complete proofs.}}
 

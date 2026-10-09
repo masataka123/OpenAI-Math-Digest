@@ -8,7 +8,7 @@
 OpenAI Math Digest のカタログNNN本部を担当してください。
 作業先：/Users/iwai/Desktop/GitHub/OpenAI-Math-Digest
 
-AGENTS.md、PROJECT_PLAN.md、production/README.mdとそこから参照する制作セットを読み、Git状態と既存ファイルを確認してください。過去の033・034の担当数・分類数・公開許可を新しいカタログへコピーしないでください。
+production/FORMAT_CONTRACT.mdの4項目を必須として、AGENTS.md、PROJECT_PLAN.md、production/README.mdとそこから参照する制作セットを読み、Git状態と既存ファイルを確認してください。過去の033・034の担当数・分類数・公開許可を新しいカタログへコピーしないでください。
 
 今回は準備を行ってください。
 1. 公式カタログの収録論文を確認し、公式順、正式タイトル、読みやすい表示名、paper ID、原稿版・URL・ページ数・SHA-256、既存記事との重複を記録する。
@@ -31,6 +31,8 @@ AGENTS.md、PROJECT_PLAN.md、production/README.mdとそこから参照する制
 
 初稿は1本最大60分、下限なし。未確認箇所を残して区切り、その後の編集は別に記録してください。記事はARTICLE_TEMPLATE.md、カタログはCATALOG_TEMPLATE.mdに従い、構成上不要な関係図や分類を増やさないでください。
 
+FORMAT_CONTRACT.mdに従い、共通表用presentation.json、文献一覧・証明対象・原典案内用articleGuidesを用意してください。
+
 日英記事・TeX/SVG・出典・日英カタログ案内まで仕上げ、サイト本部向けのSITE_HQ_HANDOFF.mdをRECORDS.mdに従って作成してください。必須の日英PDF・サイト組込み・公開確認はサイト本部の担当として未実施なら明記してください。
 ```
 
@@ -44,3 +46,7 @@ check:citationsによる生成漏れ検査と033・034との形式比較を行�
 ```
 
 公開まで依頼する場合は、上の依頼に「検査後、commit・pushして公開し、公開サイトで反映を確認してください。」を添える。すでに同じ範囲の公開をユーザーから依頼されている場合は、その依頼を引き継いで進める。
+
+## 制作セット1.2の必須形式
+
+[FORMAT_CONTRACT.md](FORMAT_CONTRACT.md)を適用する。共通の公式順表、図前の文献一覧、本稿内／外部の引用区別、証明対象・原典読書案内の4項目を埋める。各記事の受領時に見本と比較し、全記事完成まで待たない。`npm test`と`npm run check:citations`に加え、034の表・Schnell・033 Orbifold Iitakaと実画面を比較し、日英PC／375pxと日英PDFの証拠を記録する。

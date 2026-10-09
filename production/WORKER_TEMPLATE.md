@@ -20,7 +20,7 @@
 
 1. ルートのAGENTS・計画と制作セットを読む。初稿開始・締切を記録する。
 2. 原稿版とハッシュを台帳と照合。既存メモを今回の読解実績として扱わない。
-3. ARTICLE_TEMPLATE.mdの形式で日英を書く。主要結果の仮定・量化・番号・ページ、証明本文、外部入力の記述と適用箇所を確認する。
+3. FORMAT_CONTRACT.mdの4項目とARTICLE_TEMPLATE.mdの形式で日英を書く。主要結果の仮定・量化・番号・ページ、証明本文、外部入力の記述と適用箇所を確認する。
 4. 図の箱に操作と数式、矢印に使う内容・結果番号・原典リンクを置き、図直後に段階説明を付ける。図数は証明に応じて決める。
 5. CITATIONS.mdを読み、担当フォルダにcitations.jsonを置いて本文・TeXの引用を生成する。誌面/PDFページを照合し、担当記録だけを--registryで指定する。本文・図で台帳の表示名を使う。引用キーを導入する場合も名前を併記し、キーだけで論文を案内しない。
 6. RECORDS.mdの出典と状態記録を用意し、図の再生成コマンド、実施した確認、未完成を残す。
@@ -46,6 +46,10 @@ drafts/catalog-NNN/<paper-id>/
 ```text
 OpenAI Math Digest のカタログ{{NNN}}、担当{{担当名}}をお願いします。
 作業先は /Users/iwai/Desktop/GitHub/OpenAI-Math-Digest です。
-AGENTS.md、PROJECT_PLAN.md、production/README.md、coordination/catalog-{{NNN}}/README.mdと、この指示書{{パス}}を読み、割り当てられた全記事を順次作成してください。
+production/FORMAT_CONTRACT.mdの4項目を必須として、AGENTS.md、PROJECT_PLAN.md、production/README.md、coordination/catalog-{{NNN}}/README.mdと、この指示書{{パス}}を読み、割り当てられた全記事を順次作成してください。
 日英本文・図・出典・状態記録を担当フォルダへ保存してください。初稿は1本最大60分で区切り、次の担当記事へ進んでください。1本ごとに成果物、確認範囲、未完成、本部への申し送りをこのチャットへ報告してください。
 ```
+
+## 制作セット1.2の必須形式
+
+[FORMAT_CONTRACT.md](FORMAT_CONTRACT.md)を適用する。共通の公式順表、図前の文献一覧、本稿内／外部の引用区別、証明対象・原典読書案内の4項目を埋める。各記事の受領時に見本と比較し、全記事完成まで待たない。`npm test`と`npm run check:citations`に加え、034の表・Schnell・033 Orbifold Iitakaと実画面を比較し、日英PC／375pxと日英PDFの証拠を記録する。

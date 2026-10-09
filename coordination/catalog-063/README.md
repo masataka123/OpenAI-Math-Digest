@@ -1,10 +1,10 @@
 # カタログ063本部 — The generalized Mukai conjecture
 
-- 採用仕様：制作セット **1.1（2026-10-09）**（初稿は1.0）。[制作手順](../../production/README.md)、[記事雛形](../../production/ARTICLE_TEMPLATE.md)、[カタログ雛形](../../production/CATALOG_TEMPLATE.md)、[記録仕様](../../production/RECORDS.md)に従う。
+- 採用仕様：制作セット **1.2（2026-10-09）**（初稿は1.0）。[制作手順](../../production/README.md)、[記事雛形](../../production/ARTICLE_TEMPLATE.md)、[カタログ雛形](../../production/CATALOG_TEMPLATE.md)、[記録仕様](../../production/RECORDS.md)に従う。
 - 準備・制作日：2026-10-09（JST）。状態：**公開確認済み。サイト組込み・日英PDF・公開サイト検査済み**。
-- 現在の依頼：公開後の引用・ページ表記の統一と再発防止。改訂を公開し、反映確認済み。[改訂記録](CITATION_REVISION.md)を参照。
+- 現在の依頼：4項目の形式統一を仕組み化し063へ適用。ローカル検査済み、今回の公開反映は確認待ち。[形式改訂記録](FORMAT_REVISION.md)を参照。過去の引用改訂は [CITATION_REVISION.md](CITATION_REVISION.md)。
 - 制作構成：**single**。本部が記事担当を兼任する。別の記事窓口や WORKER_A 等は作らず、下記を本部兼記事担当の指示書とする。
-- PDF担当：**サイト本部**。このチャットで日本語・英語とも生成済み。各17ページ・2章（短いカタログ案内＋記事1本）・4図。引継ぎは [SITE_HQ_HANDOFF.md](SITE_HQ_HANDOFF.md) に作成済み。別チャットへの自動送信は未実施。
+- PDF担当：**サイト本部**。このチャットで日本語・英語とも生成済み。日本語18ページ・英語19ページ、各2章（短いカタログ案内＋記事1本）・4図。引継ぎは [SITE_HQ_HANDOFF.md](SITE_HQ_HANDOFF.md) に作成済み。別チャットへの自動送信は未実施。
 - 成果物：[日本語記事](../../drafts/catalog-063/generalized-mukai/article.ja.md)・[英語記事](../../drafts/catalog-063/generalized-mukai/article.en.md)、各4点のTeX/SVG、短い日英案内、出典・接続・検査記録。サイト登録・公開用図の配置・日英解説PDFと版台帳を整えた。[サイト本部の検査記録](SITE_INTEGRATION.md)を参照。commit・push・公開確認まで完了。[公開記録](PUBLICATION.md)を参照。原論文PDFと解説PDFは別の成果物である。
 
 ## 台帳と公式順

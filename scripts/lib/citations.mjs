@@ -22,7 +22,7 @@ export function loadCitations(file) {
   if(!entry)throw Error(`Unknown source record: ${key}`);
   const url=new URL(entry.sourceUrl);
   if(url.protocol!=='https:')throw Error(`Unsafe source URL: ${key}`);
-  sources[key]={...entry,displayName:ref.displayName??entry.displayName,
+  sources[key]={...entry,displayName:ref.displayName??entry.displayName,guideRole:ref.guideRole,guideVersion:ref.guideVersion,internal:ref.recordId==='self',key,
    samePagination:ref.pagination==='same',url:url.href};
   if(!sources[key].displayName)throw Error(`Missing readable source name: ${key}`);
  }
@@ -54,7 +54,7 @@ export function citationParts(registry,id,lang) {
   const page=loc.printed===loc.pdf?pages(loc.pdf):`${lang==='ja'?'誌面':'print'} ${pages(loc.printed)} / PDF ${pages(loc.pdf)}`;
   return `${loc.result} · ${page}`;
  });
- return [source.displayName,...locations];
+ return [source.internal?'':source.key==='OVERVIEW'?source.displayName:`${source.displayName} [${source.key}]`,...locations];
 }
 
 export function citationUrl(registry,id) {
@@ -67,7 +67,7 @@ export function citationUrl(registry,id) {
 
 export function citationMarkdown(registry,id,lang) {
  const [name,...locations]=citationParts(registry,id,lang);
- const label=(name+' · '+locations.join('; ')).replaceAll('[','\\[').replaceAll(']','\\]');
+ const label=((name?name+' · ':'')+locations.join('; ')).replaceAll('[','&#91;').replaceAll(']','&#93;');
  return `[${label}](${citationUrl(registry,id)})`;
 }
 
@@ -88,7 +88,7 @@ function wrap(text,max=72){
 export function citationTex(registry,lang){
  const definitions=Object.keys(registry.citations).map(id=>{
   const [name,...locations]=citationParts(registry,id,lang);
-  const lines=locations.flatMap((loc,i)=>wrap((i===0?name+' · ':'')+loc));
+  const lines=locations.flatMap((loc,i)=>wrap((i===0&&name?name+' · ':'')+loc));
   // Hash characters inside the macro body must be escaped for TeX's definition parser.
   const url=citationUrl(registry,id).replaceAll('#','\\string##');
   return `\\expandafter\\def\\csname cite-${id}\\endcsname{\\shortstack[l]{${lines.map(line=>`\\refurl{${url}}{${texEscape(line)}}`).join('\\\\')}}}`;

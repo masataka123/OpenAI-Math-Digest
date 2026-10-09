@@ -3,6 +3,7 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 import {loadCitations,expandCitationMarkers,citationTex} from './lib/citations.mjs';
+import {validateGuide,expandGuides} from './lib/article-guides.mjs';
 
 export function findCitationRegistries(catalogId){
  const files=[];
@@ -34,11 +35,19 @@ export function syncCitations({check=false,catalogId,textOnly=false,registryFile
    const starts=[...text.matchAll(/<!-- cite:([^>]+) -->/g)],ends=text.match(/<!-- \/cite -->/g)??[];
    if(starts.length!==ends.length)throw Error(`Unbalanced citation markers: ${relative}`);
    for(const [,id] of starts)if(!registry.citations[id])throw Error(`Unknown citation: ${id}`);
-   const remainder=text.replace(/<!-- cite:[a-z0-9-]+ -->[\s\S]*?<!-- \/cite -->/g,'');
+   const guide=registry.articleGuides?.[relative.replace(/\/?article\.(ja|en)\.md$/,'')||'.'];
+   let expanded=text;
+   if(guide){
+    const figureDir=path.join(dir,path.dirname(relative),'diagrams');
+    const figures=fs.readdirSync(figureDir).filter(n=>n.endsWith('.tikz')).map(n=>fs.readFileSync(path.join(figureDir,n),'utf8')).join('\n');
+    validateGuide(registry,guide,text,figures);
+    expanded=expandGuides(text,registry,guide,lang);
+   }
+   const remainder=text.replace(/<!-- (?:cite:[a-z0-9-]+|reference-guide|reading-list|proof-target:\d+) -->[\s\S]*?<!-- \/(?:cite|reference-guide|reading-list|proof-target) -->/g,'');
    // Managed documents may link to articles, but source citations must use the registry.
    for(const [,key] of remainder.matchAll(/\]\[([^\]]+)\]/g))if(registry.sources[key])throw Error(`Unmanaged source citation: ${relative}`);
    for(const source of Object.values(registry.sources))if(remainder.includes(source.url))throw Error(`Handwritten source URL: ${relative}`);
-   write(relative,expandCitationMarkers(text,registry,lang));
+   write(relative,expandCitationMarkers(expanded,registry,lang));
   }
   for(const directory of registry.diagramDirectories){
    for(const name of fs.readdirSync(path.join(dir,directory)).filter(n=>n.endsWith('.tikz'))){

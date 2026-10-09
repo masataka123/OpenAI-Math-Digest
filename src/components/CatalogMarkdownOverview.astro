@@ -1,8 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import {renderDraft} from '../lib/render-draft.mjs';
-import {fieldsForCatalog} from '../data/site.mjs';
+import {fieldsForCatalog,papers} from '../data/site.mjs';
 import pdfEditions from '../data/pdf-editions.json';
+import {renderCatalogInventory} from '../lib/catalog-inventory.mjs';
 import '../styles/paper.css';
 import '../styles/draft-article.css';
 import '../styles/catalog.css';
@@ -16,6 +17,11 @@ const article=await renderDraft(articles[`../../drafts/${directory}/article.${la
 });
 const fields=fieldsForCatalog(catalog.id),pdf=pdfEditions[catalog.id]?.[lang];
 const single=catalog.paperIds.length===1;
+const inventories=import.meta.glob('../../drafts/catalog-*/overview/presentation.json',{import:'default',eager:true});
+const inventory=inventories[`../../drafts/catalog-${catalog.id}/overview/presentation.json`];
+if(article.html.split('<p>CATALOGINVENTORYTOKEN</p>').length!==2)throw Error('Catalogue requires exactly one official inventory');
+article.html=article.html.replace(/<div class="article-prose proof-explanation">\s*<p>CATALOGINVENTORYTOKEN<\/p>\s*<\/div>/,renderCatalogInventory(catalog,papers,inventory,lang,base));
+if(article.html.includes('CATALOGINVENTORYTOKEN'))throw Error('Inventory must be a standalone catalogue block');
 ---
 <Layout lang={lang} title={catalog.title[lang]} otherPath={`${en?'ja':'en'}/catalog/${catalog.id}/`}>
  <div class="paper-article catalog-page catalog-markdown-overview">

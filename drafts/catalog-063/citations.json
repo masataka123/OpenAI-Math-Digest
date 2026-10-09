@@ -10,44 +10,124 @@
     },
     "KM": {
       "recordFile": "generalized-mukai/sources.json",
-      "recordId": "km"
+      "recordId": "km",
+      "guideRole": {
+        "ja": "correlatorの関係式と漸化式",
+        "en": "Correlator relations and recursion"
+      },
+      "guideVersion": {
+        "ja": "1998年公刊版",
+        "en": "1998 published version"
+      }
     },
     "PA": {
       "recordFile": "generalized-mukai/sources.json",
-      "recordId": "pandharipande"
+      "recordId": "pandharipande",
+      "guideRole": {
+        "ja": "divisor・string・topological recursionの関係式",
+        "en": "Divisor, string and topological recursion relations"
+      },
+      "guideVersion": {
+        "ja": "1998年公刊版（Astérisque 252）",
+        "en": "1998 published version (Astérisque 252)"
+      }
     },
     "MM": {
       "recordFile": "generalized-mukai/sources.json",
-      "recordId": "mustata"
+      "recordId": "mustata",
+      "guideRole": {
+        "ja": "安定写像の中間モジュライによる縮約の別構成",
+        "en": "An alternative contraction via intermediate moduli of stable maps"
+      },
+      "guideVersion": {
+        "ja": "arXiv v4（2006年7月17日）",
+        "en": "arXiv v4 (July 17, 2006)"
+      }
     },
     "MMC": {
       "recordFile": "generalized-mukai/sources.json",
-      "recordId": "mustata-chow"
+      "recordId": "mustata-chow",
+      "guideRole": {
+        "ja": "中間モジュライのスタックとcotangent class",
+        "en": "Intermediate stacks and the cotangent class"
+      },
+      "guideVersion": {
+        "ja": "arXiv v5（2006年11月30日）",
+        "en": "arXiv v5 (November 30, 2006)"
+      }
     },
     "TZ": {
       "recordFile": "generalized-mukai/sources.json",
-      "recordId": "tian-zong"
+      "recordId": "tian-zong",
+      "guideRole": {
+        "ja": "有理曲線による1-cycleの生成とcomb smoothing",
+        "en": "Generation of one-cycles by rational curves and comb smoothing"
+      },
+      "guideVersion": {
+        "ja": "arXiv v5（2013年7月22日）",
+        "en": "arXiv v5 (July 22, 2013)"
+      }
     },
     "CA": {
       "recordFile": "generalized-mukai/sources.json",
-      "recordId": "campana"
+      "recordId": "campana",
+      "guideRole": {
+        "ja": "Fano多様体の有理連結性",
+        "en": "Rational connectedness of Fano varieties"
+      },
+      "guideVersion": {
+        "ja": "1992年公刊版",
+        "en": "1992 published version"
+      }
     },
     "DE": {
       "recordFile": "generalized-mukai/sources.json",
-      "recordId": "debarre"
+      "recordId": "debarre",
+      "guideRole": {
+        "ja": "separably rationally connectedへの移行",
+        "en": "Passage to separable rational connectedness"
+      },
+      "guideVersion": {
+        "ja": "2011年8月29日版の講義ノート",
+        "en": "Lecture notes dated August 29, 2011"
+      }
     },
     "BCDD": {
       "recordFile": "generalized-mukai/sources.json",
-      "recordId": "bcdd"
+      "recordId": "bcdd",
+      "guideRole": {
+        "ja": "順序付きchain locusの次元下界",
+        "en": "Dimension bound for an ordered chain locus"
+      },
+      "guideVersion": {
+        "ja": "2003年公刊版",
+        "en": "2003 published version"
+      }
     },
     "ERR": {
       "recordFile": "generalized-mukai/sources.json",
       "recordId": "bcdd-erratum",
-      "displayName": "Mukai chain bound"
+      "displayName": "Mukai chain bound",
+      "guideRole": {
+        "ja": "chain boundの適用条件の訂正",
+        "en": "Correction to the hypotheses of the chain bound"
+      },
+      "guideVersion": {
+        "ja": "日付記載なしの著者公開訂正1ページ（2026年10月9日取得）",
+        "en": "Undated one-page author correction (retrieved October 9, 2026)"
+      }
     },
     "OC": {
       "recordFile": "generalized-mukai/sources.json",
-      "recordId": "occhetta"
+      "recordId": "occhetta",
+      "guideRole": {
+        "ja": "射影空間の積の特徴付け",
+        "en": "Characterization of products of projective spaces"
+      },
+      "guideVersion": {
+        "ja": "2006年公刊版",
+        "en": "2006 published version"
+      }
     },
     "OVERVIEW": {
       "recordFile": "../../coordination/catalog-063/inventory.json",
@@ -484,6 +564,26 @@
           "pdf": "3–17"
         }
       ]
+    },
+    "reading-recurrence": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§4",
+          "printed": "11–13",
+          "pdf": "11–13"
+        }
+      ]
+    },
+    "descendant-target": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 3.1",
+          "printed": "6",
+          "pdf": "6"
+        }
+      ]
     }
   },
   "markdownFiles": [
@@ -494,5 +594,65 @@
   ],
   "diagramDirectories": [
     "generalized-mukai/diagrams"
-  ]
+  ],
+  "articleGuides": {
+    "generalized-mukai": {
+      "selfSource": "P",
+      "externalSources": [
+        "KM",
+        "PA",
+        "MM",
+        "MMC",
+        "TZ",
+        "CA",
+        "DE",
+        "BCDD",
+        "ERR",
+        "OC"
+      ],
+      "proofTargets": [
+        "descendant-target",
+        "independence",
+        "inequality",
+        "classified"
+      ],
+      "readingList": [
+        {
+          "citation": "bounds-compared",
+          "purpose": {
+            "ja": "descendantの下界と、固有値の独立性の結論。",
+            "en": "The descendant lower bound and the independence conclusion."
+          }
+        },
+        {
+          "citation": "reading-recurrence",
+          "purpose": {
+            "ja": "漸化式を反復し、下界と比較する核心。",
+            "en": "Iteration of the recurrence and comparison with the lower bound."
+          }
+        },
+        {
+          "citation": "trace-interpolation",
+          "purpose": {
+            "ja": "基底変換の微分を相殺し、一つの固有値組を選ぶ。",
+            "en": "Cancellation of basis derivatives and selection of a joint eigenvalue tuple."
+          }
+        },
+        {
+          "citation": "inequality",
+          "purpose": {
+            "ja": "交代トレースの非零項から不等式を得る。",
+            "en": "The nonzero trace term yields the inequality."
+          }
+        },
+        {
+          "citation": "classification",
+          "purpose": {
+            "ja": "最小有理曲線族から等号の場合を分類する。",
+            "en": "Minimal rational-curve families classify the equality case."
+          }
+        }
+      ]
+    }
+  }
 }

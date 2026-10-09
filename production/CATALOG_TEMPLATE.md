@@ -1,12 +1,12 @@
 # カタログページの雛形
 
-制作セット1.1。共通化するのは入口の順序、文字・図・引用の表示、原典に結び付く説明である。034の3分類を全カタログに適用しない。本文・見出し・確認範囲は日英で対応させる。
+制作セット1.2。共通化するのは入口の順序、文字・図・引用の表示、原典に結び付く説明である。034の3分類を全カタログに適用しない。本文・見出し・確認範囲は日英で対応させる。
 
 ## 共通の冒頭
 
 1. 公式番号、公式の英語見出しと日本語訳、何を扱うかの短い概要。
 2. その言語の冊子PDFを開くリンク。日英切替から他言語版へ進める。PDFは原論文の合本ではなく、本サイトの案内と解説を収録する。
-3. 公式順の記事一覧。タイトルから概説へ進み、原典は別リンク。公式順・正式タイトルを保つ。
+3. [FORMAT_CONTRACT.md](FORMAT_CONTRACT.md)の共通4列表を使う。1本でも項目を省略しない。日英の最初の内容節に `CATALOGINVENTORYTOKEN` を1回置き、overview/presentation.jsonから表示する。
 
 長い日本語タイトルは語の切れ目を考慮して改行し、デスクトップと375px幅で確認する。掲載数・接続数・図数は実データから算出し、固定文言にしない。分野ページの論文一覧は折り畳みを維持する。
 
@@ -21,9 +21,9 @@ CATALOGUE NNN
 [このカタログの解説PDFを開く]
 
 収録論文 / Paper in this catalogue
-01 正式タイトル → 個別記事
-   主結果・方法を一〜二文で紹介
-   原稿版・ページ数・原論文（GitHub）
+CATALOGINVENTORYTOKEN
+   共通表1行：公式順／論文・概説／主張／議論の役割
+   表示名・版・ページ・原典リンクを含む
 
 必要な場合のみ：他の論文とのつながり / Connections to other papers
    供給元の結果 → 本稿の使用箇所、または本稿の結果 → 利用先
@@ -47,7 +47,7 @@ CATALOGUE NNN
 [このカタログの解説PDFを開く]
 
 公式順の記事一覧 / Papers in official catalogue order
-   全論文の正式タイトル→概説、主結果、役割、原典、版、ページ数
+   CATALOGINVENTORYTOKEN（全論文を共通表へ表示）
 
 全体の見取り図 / How the results fit together
    必要な数の経路・独立した話題を短く紹介
@@ -80,6 +80,7 @@ CATALOGUE NNN
 drafts/catalog-NNN/overview/
   article.ja.md
   article.en.md
+  presentation.json     公式順の共通表の必須データ
   connections.json
   diagrams/             必要な場合だけ
   status.md

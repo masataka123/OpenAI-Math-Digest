@@ -5,7 +5,7 @@ const escape=s=>s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>',
 export async function renderDraft(source,{lang,paperId,base,diagramSource,sectionIds=[],catalogId='034'}){
  const maths=[],diagrams=[];
  let markdown=source.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/,'');
- markdown=markdown.replace(/<!-- cite:[a-z0-9-]+ -->|<!-- \/cite -->/g,'');
+ markdown=markdown.replace(/<!-- (?:cite:[a-z0-9-]+|proof-target:\d+|reference-guide|reading-list|\/(?:cite|proof-target|reference-guide|reading-list)) -->/g,'');
  markdown=markdown.replace(/!\[([^\]]*)\]\((diagrams\/([^()]+)\.svg)\)/g,(_,alt,file,stem)=>{
   const index=diagrams.length;diagrams.push({alt,stem});return `PROOFDIAGRAM${index}TOKEN`;
  });

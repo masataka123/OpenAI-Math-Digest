@@ -4,17 +4,9 @@
 
 滑らかな複素 Fano 多様体に対する一般化向井不等式と、等号の場合の分類を扱う。公式一覧の収録論文は1本。
 
-## 収録論文
+## 全1篇の要点（公式カタログ順）
 
-<span id="paper-generalized-mukai" class="legacy-anchor"></span>
-
-### 01. [The generalized Mukai conjecture](../generalized-mukai/article.ja.md)
-
-Point descendant の下界と漸化式から固有値の独立性を導き、交代トレースと次数評価で不等式を得る。等号時には、訂正後の ordered-chain bound と Occhetta の積の特徴付けを使う。
-
-OpenAI、2026-09-24版、19ページ。
-
-<!-- cite:source-guide -->[Generalized Mukai · Theorem 1.1 · p. 2; §§2–6 · pp. 3–17](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite --> · [主結果](../generalized-mukai/article.ja.md#theorem-1-1) · [証明の道筋](../generalized-mukai/article.ja.md#proof-1)
+CATALOGINVENTORYTOKEN
 
 ## 外部結果とのつながり
 

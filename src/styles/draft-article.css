@@ -2,7 +2,7 @@
 .draft-body .paper-section>p,.draft-body .paper-section>ul,.draft-body .paper-section>ol{max-width:900px;line-height:1.95}
 .draft-body .paper-section>p{margin:18px 0}
 .draft-body code,.draft-intro code{font-size:var(--font-meta);overflow-wrap:anywhere}
-.draft-body .digest-table{min-width:850px;table-layout:auto}
+.draft-body .digest-table:not(.catalog-inventory){min-width:850px;table-layout:auto}
 .draft-body .math-display{max-width:900px}
 .draft-body mjx-container[display=true]{overflow-x:auto;overflow-y:hidden;padding:5px 0;max-width:100%}
 .draft-body blockquote,.draft-intro blockquote{margin:24px 0;padding:14px 22px;border-left:3px solid var(--link);background:#edf0e8;font-size:1rem;max-width:900px}

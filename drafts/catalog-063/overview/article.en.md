@@ -4,17 +4,9 @@
 
 This catalogue concerns the generalized Mukai inequality for smooth complex Fano manifolds and the classification at equality. The official list contains one manuscript.
 
-## Paper in this catalogue
+## All manuscripts, in official catalogue order
 
-<span id="paper-generalized-mukai" class="legacy-anchor"></span>
-
-### 01. [The generalized Mukai conjecture](../generalized-mukai/article.en.md)
-
-A lower bound for point descendants and a recurrence yield independence of eigenvalues. An alternating trace and the grading give the inequality. The equality case uses the corrected ordered-chain bound and Occhetta's product characterization.
-
-OpenAI, September 24, 2026 version, 19 pages.
-
-<!-- cite:source-guide -->[Generalized Mukai · Theorem 1.1 · p. 2; §§2–6 · pp. 3–17](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite --> · [Main result](../generalized-mukai/article.en.md#theorem-1-1) · [Proof route](../generalized-mukai/article.en.md#proof-1)
+CATALOGINVENTORYTOKEN
 
 ## Connections to external results
 
