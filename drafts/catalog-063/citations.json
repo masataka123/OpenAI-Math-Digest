@@ -1,0 +1,498 @@
+{
+  "schemaVersion": 1,
+  "catalogId": "063",
+  "sources": {
+    "P": {
+      "recordFile": "generalized-mukai/sources.json",
+      "recordId": "self",
+      "displayName": "Generalized Mukai",
+      "pagination": "same"
+    },
+    "KM": {
+      "recordFile": "generalized-mukai/sources.json",
+      "recordId": "km"
+    },
+    "PA": {
+      "recordFile": "generalized-mukai/sources.json",
+      "recordId": "pandharipande"
+    },
+    "MM": {
+      "recordFile": "generalized-mukai/sources.json",
+      "recordId": "mustata"
+    },
+    "MMC": {
+      "recordFile": "generalized-mukai/sources.json",
+      "recordId": "mustata-chow"
+    },
+    "TZ": {
+      "recordFile": "generalized-mukai/sources.json",
+      "recordId": "tian-zong"
+    },
+    "CA": {
+      "recordFile": "generalized-mukai/sources.json",
+      "recordId": "campana"
+    },
+    "DE": {
+      "recordFile": "generalized-mukai/sources.json",
+      "recordId": "debarre"
+    },
+    "BCDD": {
+      "recordFile": "generalized-mukai/sources.json",
+      "recordId": "bcdd"
+    },
+    "ERR": {
+      "recordFile": "generalized-mukai/sources.json",
+      "recordId": "bcdd-erratum",
+      "displayName": "Mukai chain bound"
+    },
+    "OC": {
+      "recordFile": "generalized-mukai/sources.json",
+      "recordId": "occhetta"
+    },
+    "OVERVIEW": {
+      "recordFile": "../../coordination/catalog-063/inventory.json",
+      "recordId": "overview"
+    }
+  },
+  "citations": {
+    "main-result": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "2",
+          "pdf": "2"
+        },
+        {
+          "result": "§1",
+          "printed": "2–3",
+          "pdf": "2–3"
+        }
+      ]
+    },
+    "evaluation-fiber": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§§3.1–3.3",
+          "printed": "6–8",
+          "pdf": "6–8"
+        }
+      ]
+    },
+    "intermediate-moduli": {
+      "source": "MM",
+      "locations": [
+        {
+          "result": "Definition 1.2; Proposition 1.3",
+          "printed": "5–6",
+          "pdf": "5–6"
+        },
+        {
+          "result": "Lemma 3.3 (proof)",
+          "printed": "17–18",
+          "pdf": "17–18"
+        }
+      ]
+    },
+    "chow-ring": {
+      "source": "MMC",
+      "locations": [
+        {
+          "result": "Proposition 1.7",
+          "printed": "5",
+          "pdf": "5"
+        }
+      ]
+    },
+    "boundary": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§3.4",
+          "printed": "8–9",
+          "pdf": "8–9"
+        }
+      ]
+    },
+    "degree-bound": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 3.2; Proposition 3.1 (proof)",
+          "printed": "9–10",
+          "pdf": "9–10"
+        }
+      ]
+    },
+    "recurrence": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 2.1; (4)–(5)",
+          "printed": "5",
+          "pdf": "5"
+        }
+      ]
+    },
+    "correlators": {
+      "source": "KM",
+      "locations": [
+        {
+          "result": "(4a)",
+          "printed": "388",
+          "pdf": "4"
+        },
+        {
+          "result": "Lemma 1.4, (12)",
+          "printed": "391",
+          "pdf": "7"
+        }
+      ]
+    },
+    "rational-hypersurfaces": {
+      "source": "PA",
+      "locations": [
+        {
+          "result": "§1.2",
+          "printed": "311",
+          "pdf": "6"
+        }
+      ]
+    },
+    "factorial": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§4.1; (6)–(7)",
+          "printed": "11–12",
+          "pdf": "11–12"
+        }
+      ]
+    },
+    "free-direction": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 3.3",
+          "printed": "10–11",
+          "pdf": "10–11"
+        },
+        {
+          "result": "Proposition 4.1 (proof)",
+          "printed": "12",
+          "pdf": "12"
+        }
+      ]
+    },
+    "one-cycles": {
+      "source": "TZ",
+      "locations": [
+        {
+          "result": "Theorem 1.3",
+          "printed": "2",
+          "pdf": "2"
+        },
+        {
+          "result": "Proposition 2.4",
+          "printed": "4",
+          "pdf": "4"
+        }
+      ]
+    },
+    "campana": {
+      "source": "CA",
+      "locations": [
+        {
+          "result": "Corollary 3.2",
+          "printed": "543",
+          "pdf": "6"
+        }
+      ]
+    },
+    "debarre": {
+      "source": "DE",
+      "locations": [
+        {
+          "result": "Definition 2.20",
+          "printed": "29",
+          "pdf": "30"
+        },
+        {
+          "result": "Theorem 2.49",
+          "printed": "43",
+          "pdf": "44"
+        }
+      ]
+    },
+    "independence": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 4.1; (8)–(11)",
+          "printed": "12–13",
+          "pdf": "12–13"
+        }
+      ]
+    },
+    "trace": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 5.1; (12)–(14)",
+          "printed": "13–14",
+          "pdf": "13–14"
+        }
+      ]
+    },
+    "interpolation": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 5.2",
+          "printed": "14–15",
+          "pdf": "14–15"
+        }
+      ]
+    },
+    "inequality": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 5.3; (15)",
+          "printed": "15",
+          "pdf": "15"
+        }
+      ]
+    },
+    "proper-family": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 6.3",
+          "printed": "16–17",
+          "pdf": "16–17"
+        }
+      ]
+    },
+    "covering": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 6.1",
+          "printed": "16",
+          "pdf": "16"
+        },
+        {
+          "result": "Proposition 6.4",
+          "printed": "17",
+          "pdf": "17"
+        }
+      ]
+    },
+    "chain-bound": {
+      "source": "BCDD",
+      "locations": [
+        {
+          "result": "Theorem 5.2",
+          "printed": "623",
+          "pdf": "23"
+        }
+      ]
+    },
+    "erratum": {
+      "source": "ERR",
+      "locations": [
+        {
+          "result": "Erratum",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "classification": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 6.2",
+          "printed": "16",
+          "pdf": "16"
+        },
+        {
+          "result": "Proposition 6.4; converse",
+          "printed": "17",
+          "pdf": "17"
+        }
+      ]
+    },
+    "product": {
+      "source": "OC",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "271",
+          "pdf": "2"
+        }
+      ]
+    },
+    "reading-scope": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§§2–6",
+          "printed": "3–17",
+          "pdf": "3–17"
+        }
+      ]
+    },
+    "contraction": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§§3.2–3.3",
+          "printed": "7–8",
+          "pdf": "7–8"
+        }
+      ]
+    },
+    "intermediate-construction": {
+      "source": "MM",
+      "locations": [
+        {
+          "result": "Proposition 1.3",
+          "printed": "5–6",
+          "pdf": "5–6"
+        }
+      ]
+    },
+    "recurrence-bound": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 2.1",
+          "printed": "5",
+          "pdf": "5"
+        },
+        {
+          "result": "§4.1",
+          "printed": "11–12",
+          "pdf": "11–12"
+        }
+      ]
+    },
+    "correlator-recursion": {
+      "source": "KM",
+      "locations": [
+        {
+          "result": "Lemma 1.4",
+          "printed": "391",
+          "pdf": "7"
+        }
+      ]
+    },
+    "free-homogeneity": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 3.3; §4.2",
+          "printed": "10–12",
+          "pdf": "10–12"
+        }
+      ]
+    },
+    "finite-shifts": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "(9)–(11)",
+          "printed": "12–13",
+          "pdf": "12–13"
+        }
+      ]
+    },
+    "bounds-compared": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 3.1",
+          "printed": "6",
+          "pdf": "6"
+        },
+        {
+          "result": "Proposition 4.1",
+          "printed": "13",
+          "pdf": "13"
+        }
+      ]
+    },
+    "trace-interpolation": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemmas 5.1–5.2",
+          "printed": "13–15",
+          "pdf": "13–15"
+        }
+      ]
+    },
+    "grading": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§2",
+          "printed": "3–4",
+          "pdf": "3–4"
+        },
+        {
+          "result": "Proposition 5.3",
+          "printed": "15",
+          "pdf": "15"
+        }
+      ]
+    },
+    "classified": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 6.4",
+          "printed": "17",
+          "pdf": "17"
+        }
+      ]
+    },
+    "overview": {
+      "source": "OVERVIEW",
+      "locations": [
+        {
+          "result": "Catalogue 063",
+          "printed": "8",
+          "pdf": "8"
+        }
+      ]
+    },
+    "source-guide": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "2",
+          "pdf": "2"
+        },
+        {
+          "result": "§§2–6",
+          "printed": "3–17",
+          "pdf": "3–17"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "generalized-mukai/article.ja.md",
+    "generalized-mukai/article.en.md",
+    "overview/article.ja.md",
+    "overview/article.en.md"
+  ],
+  "diagramDirectories": [
+    "generalized-mukai/diagrams"
+  ]
+}

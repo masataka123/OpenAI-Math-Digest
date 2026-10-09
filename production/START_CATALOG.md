@@ -14,7 +14,7 @@ AGENTS.md、PROJECT_PLAN.md、production/README.mdとそこから参照する制
 1. 公式カタログの収録論文を確認し、公式順、正式タイトル、読みやすい表示名、paper ID、原稿版・URL・ページ数・SHA-256、既存記事との重複を記録する。
 2. production/RECORDS.mdに沿ってcoordination/catalog-NNN/inventory.jsonを作る。未取得・未照合の項目は未確認とする。
 3. 収録1本なら本部が記事担当を兼任し、短いカタログ案内にする。複数なら負荷と関連性から可変人数で分担し、3分類・3担当に固定しない。
-4. coordination/catalog-NNN/README.mdに採用仕様版、制作構成、担当・変更範囲、PDF担当（サイト本部）、現在の依頼範囲を記録する。分担する場合はproduction/WORKER_TEMPLATE.mdから各担当の指示書と貼り付け用プロンプトを作る。
+4. coordination/catalog-NNN/README.mdに採用仕様版、制作構成、担当・変更範囲、PDF担当（サイト本部）、現在の依頼範囲を記録する。各担当にCITATIONS.mdを適用し、担当フォルダごとの引用記録と図生成を割り当てる。分担する場合はproduction/WORKER_TEMPLATE.mdから各担当の指示書と貼り付け用プロンプトを作る。
 5. production/RELEASE_CHECKLIST.mdを同フォルダへコピーし、必須成果物と担当を記入する。
 
 準備した台帳・指示書・担当案をこのチャットに報告してください。この準備依頼では記事執筆、新しいチャットの作成、他チャットへの送信、公開はまだ始めません。
@@ -38,9 +38,9 @@ AGENTS.md、PROJECT_PLAN.md、production/README.mdとそこから参照する制
 
 ```text
 カタログNNNの組込みをお願いします。
-coordination/catalog-NNN/SITE_HQ_HANDOFF.mdとRELEASE_CHECKLIST.mdを確認し、制作セットに沿って日英ページ・導線を組み込み、日英PDFを作成してください。現在の表示が033専用である箇所をそのまま流用せず、単論文／複数論文の構成に対応させてください。
+coordination/catalog-NNN/SITE_HQ_HANDOFF.mdとRELEASE_CHECKLIST.mdを確認し、制作セットに沿って日英ページ・導線を組み込み、日英PDFを作成してください。既存カタログ固有の表示をそのまま流用せず、共通部品を使い、単論文／複数論文の構成に対応させてください。
 
-本文・図・PDFの一致、PCとスマホ、引用・内部リンク・日英切替を確認し、成果物と残る未確認事項を報告してください。
+check:citationsによる生成漏れ検査と033・034との形式比較を行い、本文・図・PDFの一致、PCとスマホ、引用・内部リンク・日英切替を確認し、成果物と残る未確認事項を報告してください。
 ```
 
 公開まで依頼する場合は、上の依頼に「検査後、commit・pushして公開し、公開サイトで反映を確認してください。」を添える。すでに同じ範囲の公開をユーザーから依頼されている場合は、その依頼を引き継いで進める。

@@ -3,6 +3,7 @@
 - ユーザーとの会話は日本語。サイト記事は日本語版・英語版を用意する。
 - 最初に PROJECT_PLAN.md を読む。既存の試作は完成記事ではない。
 - 新規カタログの制作は production/README.md とそこから参照する制作セットを使う。過去のカタログ固有の担当・公開許可・固定の分類数は引き継がない。現在のユーザー指示を優先する。
+- 新規記事・カタログの引用は production/CITATIONS.md に従う。表示名・結果番号・誌面/PDFページを共通記録から本文とTeXへ生成する。記事担当ごとに引用記録を分け、公開前にcheck:citationsと033・034との表示比較を行う。
 - 独立した GitHub リポジトリと GitHub Pages を使う。採用名称は OpenAI Math Digest。ユーザーが用意した作業先は /Users/iwai/Desktop/GitHub/OpenAI-Math-Digest。旧名称 geometry-proof-atlas は試作時のものなので移行時に更新する。
 - Geometry Paper Digest の Astro 構成・配色・書体・数式表示を再利用する。既存サイトのソースは変更しない。MIT の帰属表示を維持する。
 - サイト全体は数学の複数分野を扱う。当面の収録は代数幾何学・複素幾何学のカタログ034から始める。

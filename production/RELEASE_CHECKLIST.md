@@ -1,6 +1,6 @@
 # カタログ公開チェックリスト
 
-制作セット1.0。`coordination/catalog-NNN/RELEASE_CHECKLIST.md` へコピーして使う。
+制作セット1.1。`coordination/catalog-NNN/RELEASE_CHECKLIST.md` へコピーして使う。
 各項目に担当・確認日・結果やログの場所を記録する。チェックを付けるだけで済ませない。
 
 - 対象番号／仕様版：
@@ -36,6 +36,7 @@
 以下の `NNN` はサイトへ登録済みの番号へ置換する。PDFのPython環境はリポジトリ内の `scripts/pdf/README.md` を参照する。
 
 ```sh
+npm run check:citations
 npm test
 npm run build
 npm run check:links
@@ -52,6 +53,9 @@ npm run check:links
 - [ ] PC幅でも長いタイトル・図内ラベル・引用の重なりを確認。
 - [ ] 図の拡大／全体表示／引用、接続UI（ある場合）、日英切替とアンカー維持を確認。
 - [ ] 新しいMarkdownの定理カード、出典行、証明段階が実際に共通表示になっている。ファイルの見出し確認だけで代用しない。
+
+- [ ] CITATIONS.mdの書式、誌面/PDFページの併記、同一記録からの本文・図生成を確認。check:citationsで古い図・公開コピー漏れなし。
+- [ ] 033・034の実画面と比較し、出典行・定理・証明段階の表示が共通。番号や略号の旧形式をコピーしていない。比較したページと結果を記録。
 
 ## PDF（サイト本部・必須）
 

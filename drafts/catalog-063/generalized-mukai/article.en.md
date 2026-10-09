@@ -22,11 +22,13 @@ $$
 
 Write $r=\rho_X$ and $\iota=\iota_X$. If $\iota=1$, the left side is $0<n$, so the argument concerns $\iota\ge2$.
 
-[Theorem 1.1 · p. 2; §1 · pp. 2–3][P]
+<!-- cite:main-result -->[Generalized Mukai · Theorem 1.1 · p. 2; §1 · pp. 2–3](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite -->
 
 ## References on the arrows
 
-Unqualified result numbers refer to **Generalized Mukai**. External inputs are displayed as Kontsevich–Manin's **Correlator relations**, Pandharipande's **Rational curves on hypersurfaces**, Mustaţă–Mustaţă's **Intermediate moduli** and **Chow ring**, Tian–Zong's **One-cycles**, Bonavero–Casagrande–Debarre–Druel's **Mukai chain bound** and its erratum, and Occhetta's **Product characterization**. Checking a cited statement and its application is distinct from independently verifying the entire proof of that input.
+Citations follow “paper name · result or section · pages.” This manuscript is labelled **Generalized Mukai**. When printed pagination differs from the PDF position, both are shown as “print p. … / PDF p. …”; otherwise p. / pp. is sufficient. GitHub previews do not navigate to a cited PDF page automatically.
+
+The input table below explains the roles of external results. Checking their statements and applications is distinct from independently verifying their complete proofs.
 
 ## 2. From a virtual evaluation fiber to a point-descendant lower bound
 
@@ -47,7 +49,7 @@ whenever $\beta$ is represented by a nonconstant free map. A quantitative estima
 
 Let $\beta$ be free, and set $d=d_\beta$, $b=ad$, and $h=d-2$. For a very general point $x$, put $F=\mathrm{ev}^{-1}(x)\subset\overline M_{0,1}(X,\beta)$. The open substack $U$ with irreducible source is nonempty and smooth, with $[F]^{\mathrm{vir}}|_U=[U]$. The manuscript retains the marked component and replaces the other trees by common zeros at their attachment points. In §3.2, $L^+=L(\sum_e e\Delta_e)$ transfers all degree to the marked component without changing a neighborhood of the marking. Normalized coefficients define $\Phi:F\to W$ into a weighted projective stack $W$, with $\psi=\Phi^*\xi$, $\xi=c_1(\mathcal O_W(1))$, and generic stack degree one on $U$.
 
-[§§3.1–3.3 · pp. 6–8][P] · [Intermediate moduli, Definition 1.2, Proposition 1.3, and proof of Lemma 3.3 · pp. 5–6, 17–18][MM] · [Chow ring, Proposition 1.7 · p. 5][MMC]
+<!-- cite:evaluation-fiber -->[Generalized Mukai · §§3.1–3.3 · pp. 6–8](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite --> · <!-- cite:intermediate-moduli -->[Intermediate moduli · Definition 1.2; Proposition 1.3 · pp. 5–6; Lemma 3.3 (proof) · pp. 17–18](https://arxiv.org/pdf/math/0409569v4#page=5)<!-- /cite --> · <!-- cite:chow-ring -->[Chow ring · Proposition 1.7 · p. 5](https://arxiv.org/pdf/math/0507464v5#page=5)<!-- /cite -->
 
 ### 2. It is the boundary pushforward that vanishes
 
@@ -59,13 +61,13 @@ $$
 
 The boundary term in Chow localization therefore vanishes after pushforward. Thus $\Phi_*[F]^{\mathrm{vir}}$ is a nonempty effective $h$-cycle consisting of closures of components of $\Phi(U)$. The argument does not assume that $[F]^{\mathrm{vir}}$ itself is effective or that all tail maps are unobstructed.
 
-[§3.4 · pp. 8–9][P]
+<!-- cite:boundary -->[Generalized Mukai · §3.4 · pp. 8–9](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite -->
 
 ### 3. Turning stack degrees into a numerical bound
 
 All weights of $W$ are at most $b$. Lemma 3.2 gives $\int_Z\xi^h\ge b^{-(h+1)}$ for every integral $h$-dimensional closed substack $Z\subset W$. A monomial degeneration of the weighted homogeneous ideal reduces the estimate to coordinate substacks, of degree $1/(w_0\cdots w_h)$. The projection formula gives $\int_{[F]^{\mathrm{vir}}}\psi^h=\int_{\Phi_*[F]^{\mathrm{vir}}}\xi^h$, hence the desired lower bound. Stabilizer denominators are essential to this numerical estimate.
 
-[Lemma 3.2 and the proof of Proposition 3.1 · pp. 9–10][P]
+<!-- cite:degree-bound -->[Generalized Mukai · Lemma 3.2; Proposition 3.1 (proof) · pp. 9–10](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite -->
 
 ## 3. From the recurrence and decay rates to independent eigenvalues
 
@@ -91,19 +93,19 @@ $$
 
 The divisor correction vanishes because $D_j\cup\mathrm{pt}=0$. In topological recursion, the degree-zero three-point side contributes classical cup product, while the primary term contributes $A_{j,\beta}v_0$. The initial value $v_0$ must not be identified with an unstable degree-zero two-point invariant. The second identity uses the string equation. The cited source explicitly states that this equation remains valid for nonconvex smooth projective targets using virtual classes.
 
-[Lemma 2.1, (4)–(5) · p. 5][P] · [Correlator relations, (4a) and Lemma 1.4 (12) · pp. 388, 391][KM] · [Rational curves on hypersurfaces, §1.2 · p. 311][PA]
+<!-- cite:recurrence -->[Generalized Mukai · Lemma 2.1; (4)–(5) · p. 5](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite --> · <!-- cite:correlators -->[Correlator relations · (4a) · print p. 388 / PDF p. 4; Lemma 1.4, (12) · print p. 391 / PDF p. 7](https://www.ihes.fr/~maxim/TEXTS/relation_between_23.pdf#page=4)<!-- /cite --> · <!-- cite:rational-hypersurfaces -->[Rational curves on hypersurfaces · §1.2 · print p. 311 / PDF p. 6](https://www.numdam.org/item/SB_1997-1998__40__307_0.pdf#page=6)<!-- /cite -->
 
 ### 2. Finite shifts and factorial normalization
 
 Set $w_{\beta,k}=(d_\beta+k)!v_{\beta,k}$. Then $(A_j(E)w)_{\beta,k}=\beta_jw_{\beta,k}/(d_\beta+k)$. Combining these identities with the coefficients of $-K_X$ and inverting the grading-raising classical term by a finite nilpotent series gives $\|w_\beta\|\le B^{d_\beta+1}$. The positive shifts here form a finite set and decrease anticanonical degree. The shifts arising from the polynomial relation below need not have this monotonicity.
 
-[§4.1, (6)–(7) · pp. 11–12][P]
+<!-- cite:factorial -->[Generalized Mukai · §4.1; (6)–(7) · pp. 11–12](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite -->
 
 ### 3. A free direction avoiding a relation
 
 Suppose every joint diagonal tuple over $L=\overline{\mathbb C(q_1,\ldots,q_r)}$ is algebraically dependent. Multiplying finitely many relations, then using simultaneous triangularization and homogeneity (3), gives a nonzero homogeneous polynomial $Q$ with $Q(A_1,\ldots,A_r)=0$. Lemma 3.3 supplies a free degree $\eta$ with $Q(\eta)\ne0$. That lemma uses rational connectedness of Fano manifolds, Tian–Zong's generation of $\mathrm{CH}_1$ by rational curves, and comb smoothing. Taking handle $\mathbb P^1$ and a twist of degree $-1$ gives $H^1(f^*T_X(-1))=0$ after smoothing, hence freeness. Every rational curve degree is a difference of free degrees; closure under addition then gives Zariski density.
 
-[Lemma 3.3 · pp. 10–11; proof of Proposition 4.1 · p. 12][P] · [One-cycles, Theorem 1.3 and Proposition 2.4 · pp. 2, 4][TZ] · [Campana, Corollary 3.2 · p. 543][CA] · [Debarre, Definition 2.20 and Theorem 2.49 · pp. 29, 43][DE]
+<!-- cite:free-direction -->[Generalized Mukai · Lemma 3.3 · pp. 10–11; Proposition 4.1 (proof) · p. 12](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite --> · <!-- cite:one-cycles -->[One-cycles · Theorem 1.3 · p. 2; Proposition 2.4 · p. 4](https://arxiv.org/pdf/1209.4342v5#page=2)<!-- /cite --> · <!-- cite:campana -->[Fano rational connectedness · Corollary 3.2 · print p. 543 / PDF p. 6](https://www.numdam.org/item/10.24033/asens.1658.pdf#page=6)<!-- /cite --> · <!-- cite:debarre -->[Rational curves · Definition 2.20 · print p. 29 / PDF p. 30; Theorem 2.49 · print p. 43 / PDF p. 44](https://www.math.ens.psl.eu/~debarre/NotesGAEL.pdf#page=30)<!-- /cite -->
 
 ### 4. Linearly many iterations force incompatible decay
 
@@ -122,7 +124,7 @@ $$
 
 The logarithm of the upper bound is $-\epsilon d_\beta\log d_\beta+O(d_\beta)$, whereas the lower bound is $-O(d_\beta)$. Their incompatibility proves the algebraic independence asserted in Proposition 4.1.
 
-[Proposition 4.1, (8)–(11) · pp. 12–13][P]
+<!-- cite:independence -->[Generalized Mukai · Proposition 4.1; (8)–(11) · pp. 12–13](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite -->
 
 ## 4. From an alternating trace to independent curve correspondences
 
@@ -142,7 +144,7 @@ $$
 
 A change of basis $G(q)$ introduces $K=G^{-1}dG$. Setting $B_j(t)=dA_j+t[K,A_j]$ gives $[A_j,B_\ell(t)]=[A_\ell,B_j(t)]$. Pairing permutations with exchanged labels cancels the commutator terms in the differentiated trace. The proof does not differentiate $A_0$ or require $A_0$ to commute with $dA_j$.
 
-[Lemma 5.1, (12)–(14) · pp. 13–14][P]
+<!-- cite:trace -->[Generalized Mukai · Lemma 5.1; (12)–(14) · pp. 13–14](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite -->
 
 ### 2. Selecting one joint tuple
 
@@ -154,7 +156,7 @@ $$
 
 The matrix $A_0$ need not be an idempotent projector on a generalized eigenspace: selecting the diagonal entries suffices. This is another point at which the argument avoids semisimplicity.
 
-[Lemma 5.2 · pp. 14–15][P]
+<!-- cite:interpolation -->[Generalized Mukai · Lemma 5.2 · pp. 14–15](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite -->
 
 ### 3. Returning to the fixed basis and counting degrees
 
@@ -166,7 +168,7 @@ $$
 
 This is Proposition 5.3 and proves the inequality in Theorem 1.1.
 
-[Proposition 5.3, (15) · p. 15][P]
+<!-- cite:inequality -->[Generalized Mukai · Proposition 5.3; (15) · p. 15](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite -->
 
 ## 5. From equality to a product of projective spaces
 
@@ -178,7 +180,7 @@ Assume $r(\iota-1)=n$. Both inequalities above must be equalities, forcing every
 
 The two-evaluation image $Z_\gamma\subset X\times X$ contains the support of the correspondence inducing $S_\gamma$. If the incidence fiber product matching consecutive evaluations were empty, the composition would vanish. A nonzero product therefore supplies a chain. Order the curves according to composition, reversing and relabelling the degree list if necessary. Total degree $\iota$ forces each stable map to have exactly one nonconstant component, birational onto its image. Take the **full irreducible components** of $\mathrm{RatCurves}^n(X)$ containing these curves. After forgetting the markings, a stable limit has neither splitting, multiple covers, nor contracted trees. These components are consequently proper.
 
-[Lemma 6.3 · pp. 16–17][P]
+<!-- cite:proper-family -->[Generalized Mukai · Lemma 6.3 · pp. 16–17](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite -->
 
 ### 2. The ordered-locus bound makes every family covering
 
@@ -186,13 +188,13 @@ Theorem 5.2 of the Mukai chain bound gives dimension at least $\sum_j(-K_X\cdot 
 
 At equality the lower bound is $n$, so the last family $V^r$ is covering. Properness makes its evaluation image closed, hence all of $X$. Prepending a member of $V^r$ to the original chain and dropping the last member rotates the order. Repeating this operation puts each $V^j$ last in a nonempty chain. The same dimension bound makes every family covering.
 
-[Theorem 6.1 · p. 16; Proposition 6.4 · p. 17][P] · [Mukai chain bound, Theorem 5.2 · p. 623][BCDD] · [Mukai chain bound, Erratum · p. 1][ERR]
+<!-- cite:covering -->[Generalized Mukai · Theorem 6.1 · p. 16; Proposition 6.4 · p. 17](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite --> · <!-- cite:chain-bound -->[Mukai chain bound · Theorem 5.2 · print p. 623 / PDF p. 23](https://druel.perso.math.cnrs.fr/textes/mukai.pdf#page=23)<!-- /cite --> · <!-- cite:erratum -->[Mukai chain bound · Erratum · p. 1](https://druel.perso.math.cnrs.fr/textes/mukai_erratum.pdf#page=1)<!-- /cite -->
 
 ### 3. Checking Occhetta's hypotheses
 
 The families are unsplit, covering, numerically independent, and all have anticanonical degree $\iota$. With $n_j=\iota-1>0$, one has $\sum_j n_j=n$, so Occhetta's Theorem 1.1 gives $X\simeq(\mathbb P^{\iota-1})^r$. Conversely, computing the dimension, Picard number, and pseudoindex of this product proves equality.
 
-[Theorem 6.2 · p. 16; Proposition 6.4 and the converse · p. 17][P] · [Product characterization, Theorem 1.1 · p. 271][OC]
+<!-- cite:classification -->[Generalized Mukai · Theorem 6.2 · p. 16; Proposition 6.4; converse · p. 17](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite --> · <!-- cite:product -->[Product characterization · Theorem 1.1 · print p. 271 / PDF p. 2](https://doi.org/10.4153/CMB-2006-028-3)<!-- /cite -->
 
 ## 6. Which papers supply which steps
 
@@ -200,12 +202,12 @@ These inputs and alternative constructions are external to catalogue 063. The Mu
 
 | Source and result | Used at | Role and required hypotheses | Checking scope |
 |---|---|---|---|
-| [Correlator relations, (4a), Lemma 1.4 (12)][KM]; [Rational curves on hypersurfaces, §1.2][PA] | [Lemma 2.1, p. 5](#proof-2-step-1) | Genus-zero recursion, divisor and string identities; smooth projective target, positive-degree forgetful morphism, $D_j\cup\mathrm{pt}=0$ | Published 1998 formulas, pp. 388, 391 / p. 311, the nonconvex qualification, and application checked |
-| [Intermediate moduli, Definition 1.2, Proposition 1.3, proof of Lemma 3.3][MM]; [Chow ring, Proposition 1.7][MMC] | [§§3.2–3.3, pp. 7–8](#proof-1-step-1) | Alternative contraction away from the marking, weighted coefficients, cotangent class; projective-space target in characteristic zero | arXiv v4 pp. 5–6, 17–18 / v5 pp. 5, 8 checked; positivity of the virtual pushforward is argued in the manuscript's §3.4 |
-| [Campana, Corollary 3.2][CA]; [Debarre, Definition 2.20, Theorem 2.49][DE] | [Lemma 3.3, p. 10](#proof-2-step-3) | Smooth complex projective Fano implies rational chain connectedness, then separable rational connectedness | p. 543 / 2011 version pp. 29, 43 checked, retaining the distinction from Campana's older terminology |
-| [One-cycles, Theorem 1.3, Proposition 2.4][TZ] | [Lemma 3.3, pp. 10–11](#proof-2-step-3) | Rational-curve generation and comb smoothing; smooth proper SRC target, handle $\mathbb P^1$, twist $-1$ | arXiv v5 pp. 2, 4 and passage to numerical degrees checked |
-| [Mukai chain bound, Theorem 5.2][BCDD] and [Erratum][ERR] | [Theorem 6.1 and Proposition 6.4, pp. 16–17](#proof-4-step-2) | Proper **irreducible components**, independent numerical classes, nonempty ordered chain | Published p. 623, erratum p. 1, and connection from Lemma 6.3 checked |
-| [Product characterization, Theorem 1.1][OC] | [Theorem 6.2 and Proposition 6.4, pp. 16–17](#proof-4-step-3) | Independent unsplit covering families, degrees $n_j+1$, $\sum n_j=n$ | Published p. 271 and application after cyclic rotation checked |
+| <!-- cite:correlators -->[Correlator relations · (4a) · print p. 388 / PDF p. 4; Lemma 1.4, (12) · print p. 391 / PDF p. 7](https://www.ihes.fr/~maxim/TEXTS/relation_between_23.pdf#page=4)<!-- /cite -->; <!-- cite:rational-hypersurfaces -->[Rational curves on hypersurfaces · §1.2 · print p. 311 / PDF p. 6](https://www.numdam.org/item/SB_1997-1998__40__307_0.pdf#page=6)<!-- /cite --> | [Lemma 2.1, p. 5](#proof-2-step-1) | Genus-zero recursion, divisor and string identities; smooth projective target, positive-degree forgetful morphism, $D_j\cup\mathrm{pt}=0$ | Input formulas, the nonconvex qualification, and application checked. |
+| <!-- cite:intermediate-moduli -->[Intermediate moduli · Definition 1.2; Proposition 1.3 · pp. 5–6; Lemma 3.3 (proof) · pp. 17–18](https://arxiv.org/pdf/math/0409569v4#page=5)<!-- /cite -->; <!-- cite:chow-ring -->[Chow ring · Proposition 1.7 · p. 5](https://arxiv.org/pdf/math/0507464v5#page=5)<!-- /cite --> | [§§3.2–3.3, pp. 7–8](#proof-1-step-1) | Alternative contraction away from the marking, weighted coefficients, cotangent class; projective-space target in characteristic zero | Alternative contraction and cotangent class checked; virtual positivity is argued in §3.4. |
+| <!-- cite:campana -->[Fano rational connectedness · Corollary 3.2 · print p. 543 / PDF p. 6](https://www.numdam.org/item/10.24033/asens.1658.pdf#page=6)<!-- /cite -->; <!-- cite:debarre -->[Rational curves · Definition 2.20 · print p. 29 / PDF p. 30; Theorem 2.49 · print p. 43 / PDF p. 44](https://www.math.ens.psl.eu/~debarre/NotesGAEL.pdf#page=30)<!-- /cite --> | [Lemma 3.3, p. 10](#proof-2-step-3) | Smooth complex projective Fano implies rational chain connectedness, then separable rational connectedness | Checked while retaining the distinction from Campana’s older terminology. |
+| <!-- cite:one-cycles -->[One-cycles · Theorem 1.3 · p. 2; Proposition 2.4 · p. 4](https://arxiv.org/pdf/1209.4342v5#page=2)<!-- /cite --> | [Lemma 3.3, pp. 10–11](#proof-2-step-3) | Rational-curve generation and comb smoothing; smooth proper SRC target, handle $\mathbb P^1$, twist $-1$ | Generation by rational curves and passage to numerical degrees checked. |
+| <!-- cite:chain-bound -->[Mukai chain bound · Theorem 5.2 · print p. 623 / PDF p. 23](https://druel.perso.math.cnrs.fr/textes/mukai.pdf#page=23)<!-- /cite --> and <!-- cite:erratum -->[Mukai chain bound · Erratum · p. 1](https://druel.perso.math.cnrs.fr/textes/mukai_erratum.pdf#page=1)<!-- /cite --> | [Theorem 6.1 and Proposition 6.4, pp. 16–17](#proof-4-step-2) | Proper **irreducible components**, independent numerical classes, nonempty ordered chain | Original statement, erratum, and connection from Lemma 6.3 checked. |
+| <!-- cite:product -->[Product characterization · Theorem 1.1 · print p. 271 / PDF p. 2](https://doi.org/10.4153/CMB-2006-028-3)<!-- /cite --> | [Theorem 6.2 and Proposition 6.4, pp. 16–17](#proof-4-step-3) | Independent unsplit covering families, degrees $n_j+1$, $\sum n_j=n$ | Statement and application after cyclic rotation checked. |
 
 Givental's quantum differential equations and Khalkhali's generalized trace are background references cited by the manuscript. Lemmas 2.1 and 5.1 derive the particular identities needed here; the background references have not been turned into additional direct dependency edges. Relations with the existing catalogues 033 and 034 have not been exhaustively investigated.
 
@@ -217,16 +219,4 @@ The proof passages in §§2–6 were read, and the external statements listed ab
 
 Outstanding verification includes the foundations of virtual classes and associativity, all technical compatibility of the family contraction and stack descent in §3.2, a complete independent check of the commutator calculation in Lemma 5.1, and the full proofs of external inputs. Complete dependencies with existing articles remain uninvestigated. These limits are distinct from the statement-and-application checks recorded above.
 
-[§§2–6 · pp. 3–17][P] · [Detailed source and checking record](sources.json)
-
-[P]: https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf
-[KM]: https://www.ihes.fr/~maxim/TEXTS/relation_between_23.pdf
-[PA]: https://www.numdam.org/item/SB_1997-1998__40__307_0.pdf
-[MM]: https://arxiv.org/pdf/math/0409569v4
-[MMC]: https://arxiv.org/pdf/math/0507464v5
-[TZ]: https://arxiv.org/pdf/1209.4342v5
-[CA]: https://www.numdam.org/item/10.24033/asens.1658.pdf
-[DE]: https://www.math.ens.psl.eu/~debarre/NotesGAEL.pdf
-[BCDD]: https://druel.perso.math.cnrs.fr/textes/mukai.pdf
-[ERR]: https://druel.perso.math.cnrs.fr/textes/mukai_erratum.pdf
-[OC]: https://doi.org/10.4153/CMB-2006-028-3
+<!-- cite:reading-scope -->[Generalized Mukai · §§2–6 · pp. 3–17](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite --> · [Detailed source and checking record](sources.json)

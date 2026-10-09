@@ -1,6 +1,8 @@
 # 日英記事の雛形
 
-制作セット1.0。[制作手順](README.md)と併用する。以下のコードブロックを各 `article.ja.md` / `article.en.md` にコピーし、`{{...}}` を原典に基づいて置き換える。雛形の説明やプレースホルダーは公開しない。
+制作セット1.1。[制作手順](README.md)と併用する。以下のコードブロックを各 `article.ja.md` / `article.en.md` にコピーし、`{{...}}` を原典に基づいて置き換える。雛形の説明やプレースホルダーは公開しない。
+
+引用は [CITATIONS.md](CITATIONS.md) に従う。以下のマーカーはcitations.jsonから生成して完成させる。本文・TeXへURLとページを別々に転記しない。
 
 ## 固定するもの・変えるもの
 
@@ -29,13 +31,13 @@
 
 {{原典に沿った仮定、量化、記号、結論。条件付きの主張は条件を保つ。}}
 
-[Theorem {{番号}} · pp. {{ページ}}][P]
+<!-- cite:main-result -->{{共通記録から生成する引用 / Generated citation}}<!-- /cite -->
 
 ### Corollary {{原典の番号}} — {{内容}}
 
 {{必要な系がある場合だけ置く。主要結果は原典順。}}
 
-[Corollary {{番号}} · p. {{ページ}}][P]
+<!-- cite:main-corollary -->{{共通記録から生成する引用 / Generated citation}}<!-- /cite -->
 
 ## 図の矢印に付した引用
 
@@ -53,13 +55,13 @@
 
 {{どの結果を何のために使うか。その仮定をここで満たす理由、得る結論。}}
 
-[{{本稿の結果・式番号}} · pp. {{ページ}}][P] · [{{入力論文の表示名}}, {{結果番号}} · p. {{ページ}}][INPUT]
+<!-- cite:step-one -->{{共通記録から生成する引用 / Generated citation}}<!-- /cite -->
 
 ### 2. {{次の帰着と結論}}
 
 {{前段で得たものをどう使い、主張へ至るか。}}
 
-[{{結果・節番号}} · pp. {{ページ}}][P]
+<!-- cite:step-two -->{{共通記録から生成する引用 / Generated citation}}<!-- /cite -->
 
 ## 3. どの論文が、どの段階を担うか
 
@@ -71,10 +73,10 @@
 
 {{核心の節・定理・ページへの案内。読んだ証明箇所、入力の照合、残る未確認を簡潔に記す。外部証明の全検証とは区別する。}}
 
-[{{読む入口となる節・結果}} · pp. {{ページ}}][P]
+<!-- cite:reading-scope -->{{共通記録から生成する引用 / Generated citation}}<!-- /cite -->
 
-[P]: {{本稿の固定版GitHub閲覧URL}}
-[INPUT]: {{入力原典の固定版閲覧URL}}
+
+
 ```
 
 ## English
@@ -92,13 +94,13 @@
 
 {{Preserve the original hypotheses, quantifiers, notation, and conclusion.}}
 
-[Theorem {{number}} · pp. {{pages}}][P]
+<!-- cite:main-result -->{{共通記録から生成する引用 / Generated citation}}<!-- /cite -->
 
 ### Corollary {{original number}} — {{Result}}
 
 {{Include only a relevant corollary; keep the original order.}}
 
-[Corollary {{number}} · p. {{page}}][P]
+<!-- cite:main-corollary -->{{共通記録から生成する引用 / Generated citation}}<!-- /cite -->
 
 ## References on the arrows
 
@@ -116,13 +118,13 @@
 
 {{Identify the input, its purpose, why its hypotheses apply, and the resulting conclusion.}}
 
-[{{Internal result or equation}} · pp. {{pages}}][P] · [{{Readable input name}}, {{result}} · p. {{page}}][INPUT]
+<!-- cite:step-one -->{{共通記録から生成する引用 / Generated citation}}<!-- /cite -->
 
 ### 2. {{The next reduction and conclusion}}
 
 {{Explain how the preceding conclusion yields the target statement.}}
 
-[{{Result or section}} · pp. {{pages}}][P]
+<!-- cite:step-two -->{{共通記録から生成する引用 / Generated citation}}<!-- /cite -->
 
 ## 3. Which papers supply which steps
 
@@ -134,10 +136,10 @@
 
 {{Guide readers to the key sections, results, and pages. State the passages read, inputs checked, and unresolved points, separately from independent verification of complete proofs.}}
 
-[{{Key section or result}} · pp. {{pages}}][P]
+<!-- cite:reading-scope -->{{共通記録から生成する引用 / Generated citation}}<!-- /cite -->
 
-[P]: {{Pinned GitHub source-view URL}}
-[INPUT]: {{Pinned input source-view URL}}
+
+
 ```
 
 ## 適用上の注意

@@ -57,3 +57,7 @@ XeLaTeX、xeCJK／Harano Aji、TikZ、dvisvgmを使用。XeLaTeXはXDV出力と�
 - 公開準備完了。組込み工程終了時点ではcommit・push・Actions・公開反映は未実施だった。数学的未確認範囲に変更なし。
 
 - 公開確認（2026-10-09）：ユーザーの公開依頼に基づきcommit `1888d77` をmainへpush。Actions 37866735889 のbuild・deploy成功、公開サイトの日英ページ・図・PDFと実ブラウザーの操作を確認。数学的本文・確認範囲に変更なし。記録：../../../coordination/catalog-063/PUBLICATION.md。
+
+## 引用形式の改訂（2026-10-09）
+
+サイト本部が制作セット1.1を適用し、引用表示・TeX図・日英PDFを更新。数学的内容と未確認範囲を維持。各17ページ・2章・4図。詳細と公開状態は [改訂記録](../../../coordination/catalog-063/CITATION_REVISION.md) を参照。

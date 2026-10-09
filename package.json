@@ -9,6 +9,8 @@
     "preview": "astro preview",
     "test": "node --test scripts/*.test.mjs",
     "check:links": "node scripts/check-links.mjs",
+    "citations": "node scripts/sync-citations.mjs",
+    "check:citations": "node scripts/sync-citations.mjs --check",
     "diagrams": "node scripts/render-proof-diagrams.mjs",
     "diagrams:catalog": "node scripts/render-catalog-diagrams.mjs",
     "pdf:catalog": "node scripts/build-catalog-pdf.mjs",

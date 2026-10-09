@@ -12,20 +12,22 @@ This catalogue concerns the generalized Mukai inequality for smooth complex Fano
 
 A lower bound for point descendants and a recurrence yield independence of eigenvalues. An alternating trace and the grading give the inequality. The equality case uses the corrected ordered-chain bound and Occhetta's product characterization.
 
-OpenAI, September 24, 2026 version, 19 pages. Short name: Generalized Mukai.
+OpenAI, September 24, 2026 version, 19 pages.
 
-[Original manuscript (pinned GitHub version)][P] · [Main result](../generalized-mukai/article.en.md#theorem-1-1) · [Proof route](../generalized-mukai/article.en.md#proof-1)
+<!-- cite:source-guide -->[Generalized Mukai · Theorem 1.1 · p. 2; §§2–6 · pp. 3–17](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf)<!-- /cite --> · [Main result](../generalized-mukai/article.en.md#theorem-1-1) · [Proof route](../generalized-mukai/article.en.md#proof-1)
 
 ## Connections to external results
 
-The [article's input table](../generalized-mukai/article.en.md#dependencies) distinguishes direct inputs from an alternative contraction construction, recording applications, hypotheses, and checking scope. Relations to other catalogues have not been comprehensively investigated.
+The [input table](../generalized-mukai/article.en.md#dependencies) distinguishes direct inputs from an alternative contraction, with uses, hypotheses, and checking scope. Connections to other catalogues remain incompletely investigated.
 
 ## Sources and checking scope
 
-The official subject is **Algebraic and complex geometry**. [CONTENTS][CONTENTS] and the [official overview, p. 8][OVERVIEW] were checked at commit `fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb` (overview dated October 6, 2026).
+Official subject: **Algebraic and complex geometry**. Catalogue edition: October 6, 2026.
 
-The proof text in §§2–6 and the statements and applications of its direct inputs were checked. This is not an independent verification of the entire proof. Remaining technical checks and the scope of external proof verification are stated in the [article's final section](../generalized-mukai/article.en.md#sources).
+<!-- cite:overview -->[OpenAI Research Catalog · Catalogue 063 · p. 8](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/overview.pdf)<!-- /cite --> · [Official manuscript list][CONTENTS]
 
-[P]: https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf
+Source snapshot: `fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb`.
+
+Sections 2–6 and the statements and applications of direct inputs were checked. This is not a complete independent proof verification; remaining checks are listed [in the article](../generalized-mukai/article.en.md#sources).
+
 [CONTENTS]: https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/CONTENTS.md
-[OVERVIEW]: https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/overview.pdf
