@@ -1,0 +1,520 @@
+{
+  "catalogId": "042",
+  "productionVersion": "1.3",
+  "checkingScope": "15接続：14件は入力の記述と利用条件を照合、Verbitsky erratumの1件は背景・訂正枠組み。未照合の解析・格子・力学入力は記事sources.jsonのunresolvedに残す。全依存の検証ではない。",
+  "omittedSections": [
+    "単論文のため空の論文間関係図は設けない。"
+  ],
+  "connections": [
+    {
+      "id": "curves",
+      "from": {
+        "paperId": "cg",
+        "external": true,
+        "result": "Theorem A",
+        "pages": "1–2",
+        "version": "2022 published version, Forum of Mathematics, Sigma 10, e36",
+        "sourceUrl": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/4D944E80C9877293A6E64D2CE35B2D12/S205050942200024Xa.pdf/curves_of_maximal_moduli_on_k3_surfaces.pdf"
+      },
+      "to": {
+        "paperId": "every-complex-k3-oka",
+        "result": "Proposition 5.1, pp.28–31",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Every-complex-K3-surface-is-Oka-September-23-2026/paper.pdf"
+      },
+      "role": "unbounded genus-one families give two distinct moving directions",
+      "hypotheses": "projective K3 over C; Theorem A with g=1",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-042-hq",
+        "date": "2026-10-10",
+        "record": "../every-complex-k3-oka/sources.json",
+        "scope": "statement/use only, not full proof"
+      },
+      "articleLinks": {
+        "ja": "../every-complex-k3-oka/article.ja.md#proof-overview-step-3",
+        "en": "../every-complex-k3-oka/article.en.md#proof-overview-step-3"
+      },
+      "unresolved": [
+        "External proof not independently verified."
+      ]
+    },
+    {
+      "id": "torelli",
+      "from": {
+        "paperId": "huybrechts",
+        "external": true,
+        "result": "Chapter 7, Theorem 5.3",
+        "pages": "135",
+        "version": "Author-hosted prepublication draft, copyright 2015; retrieved 2026-10-10 (distinct from the cited 2016 book)",
+        "sourceUrl": "https://www.math.uni-bonn.de/people/huybrech/K3Global.pdf"
+      },
+      "to": {
+        "paperId": "every-complex-k3-oka",
+        "result": "§9, p.52",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Every-complex-K3-surface-is-Oka-September-23-2026/paper.pdf"
+      },
+      "role": "re-marking and Hodge isometry transfer the L-property",
+      "hypotheses": "complex K3 surfaces; integral Hodge isometry",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-042-hq",
+        "date": "2026-10-10",
+        "record": "../every-complex-k3-oka/sources.json",
+        "scope": "statement/use only, not full proof"
+      },
+      "articleLinks": {
+        "ja": "../every-complex-k3-oka/article.ja.md#proof-overview-step-4",
+        "en": "../every-complex-k3-oka/article.en.md#proof-overview-step-4"
+      },
+      "unresolved": [
+        "External proof not independently verified."
+      ]
+    },
+    {
+      "id": "cap-oka",
+      "from": {
+        "paperId": "cap",
+        "external": true,
+        "result": "Theorem 0.1",
+        "pages": "1",
+        "version": "arXiv:math/0402278v5, 2005-05-06 (PDF dated May 5)",
+        "sourceUrl": "https://arxiv.org/pdf/math/0402278v5"
+      },
+      "to": {
+        "paperId": "every-complex-k3-oka",
+        "result": "§10.1, p.53",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Every-complex-K3-surface-is-Oka-September-23-2026/paper.pdf"
+      },
+      "role": "CAP implies Oka",
+      "hypotheses": "CAP in every source dimension",
+      "kind": "consequence",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-042-hq",
+        "date": "2026-10-10",
+        "record": "../every-complex-k3-oka/sources.json",
+        "scope": "statement/use only, not full proof"
+      },
+      "articleLinks": {
+        "ja": "../every-complex-k3-oka/article.ja.md#proof-3-step-1",
+        "en": "../every-complex-k3-oka/article.en.md#proof-3-step-1"
+      },
+      "unresolved": [
+        "External proof not independently verified."
+      ]
+    },
+    {
+      "id": "immersions",
+      "from": {
+        "paperId": "oka1",
+        "external": true,
+        "result": "Corollary 2.10",
+        "pages": "7",
+        "version": "arXiv:2303.15855v5, 2025-04-10",
+        "sourceUrl": "https://arxiv.org/pdf/2303.15855v5"
+      },
+      "to": {
+        "paperId": "every-complex-k3-oka",
+        "result": "Corollary 10.1, p.53",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Every-complex-K3-surface-is-Oka-September-23-2026/paper.pdf"
+      },
+      "role": "jet-preserving immersion",
+      "hypotheses": "dim S=2, all specified first derivatives nonzero",
+      "kind": "consequence",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-042-hq",
+        "date": "2026-10-10",
+        "record": "../every-complex-k3-oka/sources.json",
+        "scope": "statement/use only, not full proof"
+      },
+      "articleLinks": {
+        "ja": "../every-complex-k3-oka/article.ja.md#proof-3-step-2",
+        "en": "../every-complex-k3-oka/article.en.md#proof-3-step-2"
+      },
+      "unresolved": [
+        "External proof not independently verified."
+      ]
+    },
+    {
+      "id": "surface-cases",
+      "from": {
+        "paperId": "flexibility",
+        "external": true,
+        "result": "Theorem 4; Introduction",
+        "pages": "3–4",
+        "version": "arXiv:1207.4838v3, 2013-02-21",
+        "sourceUrl": "https://arxiv.org/pdf/1207.4838v3"
+      },
+      "to": {
+        "paperId": "every-complex-k3-oka",
+        "result": "Corollary 10.2, p.54",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Every-complex-K3-surface-is-Oka-September-23-2026/paper.pdf"
+      },
+      "role": "positive and negative class-VII cases",
+      "hypotheses": "minimal compact surface; exhaustive taxonomy uses GSS",
+      "kind": "consequence",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-042-hq",
+        "date": "2026-10-10",
+        "record": "../every-complex-k3-oka/sources.json",
+        "scope": "statement/use only, not full proof"
+      },
+      "articleLinks": {
+        "ja": "../every-complex-k3-oka/article.ja.md#proof-4-step-5",
+        "en": "../every-complex-k3-oka/article.en.md#proof-4-step-5"
+      },
+      "unresolved": [
+        "External proof not independently verified."
+      ]
+    },
+    {
+      "id": "shell",
+      "from": {
+        "paperId": "gss",
+        "external": true,
+        "result": "Theorem 1.1",
+        "pages": "1",
+        "version": "September 24, 2026; official catalog 060, commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Global-Spherical-Shells-on-Minimal-Surfaces-of-Class-VII-September-24-2026/paper.pdf"
+      },
+      "to": {
+        "paperId": "every-complex-k3-oka",
+        "result": "Corollary 10.2, p.54",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Every-complex-K3-surface-is-Oka-September-23-2026/paper.pdf"
+      },
+      "role": "positive-b2 class VII is Kato",
+      "hypotheses": "connected, compact, minimal, b1=1, b2>0, kappa=-infty",
+      "kind": "consequence",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-042-hq",
+        "date": "2026-10-10",
+        "record": "../every-complex-k3-oka/sources.json",
+        "scope": "statement/use only, not full proof"
+      },
+      "articleLinks": {
+        "ja": "../every-complex-k3-oka/article.ja.md#proof-4-step-4",
+        "en": "../every-complex-k3-oka/article.en.md#proof-4-step-4"
+      },
+      "unresolved": [
+        "External proof not independently verified."
+      ]
+    },
+    {
+      "id": "enriques-cover",
+      "from": {
+        "paperId": "enriques",
+        "external": true,
+        "result": "Introduction",
+        "pages": "1",
+        "version": "arXiv:math/0604629v2, 2006-08-27",
+        "sourceUrl": "https://arxiv.org/pdf/math/0604629v2"
+      },
+      "to": {
+        "paperId": "every-complex-k3-oka",
+        "result": "Corollary 10.2, p.54",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Every-complex-K3-surface-is-Oka-September-23-2026/paper.pdf"
+      },
+      "role": "étale K3 cover followed by Oka descent",
+      "hypotheses": "complex Enriques; unramified holomorphic cover",
+      "kind": "consequence",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-042-hq",
+        "date": "2026-10-10",
+        "record": "../every-complex-k3-oka/sources.json",
+        "scope": "statement/use only, not full proof"
+      },
+      "articleLinks": {
+        "ja": "../every-complex-k3-oka/article.ja.md#proof-4-step-1",
+        "en": "../every-complex-k3-oka/article.en.md#proof-4-step-1"
+      },
+      "unresolved": [
+        "External proof not independently verified."
+      ]
+    },
+    {
+      "id": "elliptic-input",
+      "from": {
+        "paperId": "elliptic",
+        "external": true,
+        "result": "Theorem 1.1",
+        "pages": "1",
+        "version": "arXiv:2502.20028v6, 2026-05-05 (PDF notes edits May 4)",
+        "sourceUrl": "https://arxiv.org/pdf/2502.20028v6"
+      },
+      "to": {
+        "paperId": "every-complex-k3-oka",
+        "result": "Corollary 10.3, p.54",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Every-complex-K3-surface-is-Oka-September-23-2026/paper.pdf"
+      },
+      "role": "global dominating spray",
+      "hypotheses": "projective and Oka; both hypotheses required",
+      "kind": "consequence",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-042-hq",
+        "date": "2026-10-10",
+        "record": "../every-complex-k3-oka/sources.json",
+        "scope": "statement/use only, not full proof"
+      },
+      "articleLinks": {
+        "ja": "../every-complex-k3-oka/article.ja.md#proof-5-step-1",
+        "en": "../every-complex-k3-oka/article.en.md#proof-5-step-1"
+      },
+      "unresolved": [
+        "External proof not independently verified."
+      ]
+    },
+    {
+      "id": "local-torelli",
+      "from": {
+        "paperId": "huybrechts",
+        "external": true,
+        "result": "Chapter 6, Proposition 2.8",
+        "pages": "107",
+        "version": "Author-hosted prepublication draft, copyright 2015; retrieved 2026-10-10 (distinct from the cited 2016 book)",
+        "sourceUrl": "https://www.math.uni-bonn.de/people/huybrech/K3Global.pdf"
+      },
+      "to": {
+        "paperId": "every-complex-k3-oka",
+        "result": "Proposition 7.1, p.44",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Every-complex-K3-surface-is-Oka-September-23-2026/paper.pdf"
+      },
+      "role": "deformations give an open set of the full period domain",
+      "hypotheses": "universal deformation of a complex K3 surface",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-042-hq",
+        "date": "2026-10-10",
+        "record": "../every-complex-k3-oka/sources.json",
+        "scope": "statement/use only, not full proof"
+      },
+      "articleLinks": {
+        "ja": "../every-complex-k3-oka/article.ja.md#proof-overview-step-1",
+        "en": "../every-complex-k3-oka/article.en.md#proof-overview-step-1"
+      },
+      "unresolved": [
+        "External proof not independently verified."
+      ]
+    },
+    {
+      "id": "projectivity",
+      "from": {
+        "paperId": "huybrechts",
+        "external": true,
+        "result": "§1.3.3, footnote 9",
+        "pages": "16",
+        "version": "Author-hosted prepublication draft, copyright 2015; retrieved 2026-10-10 (distinct from the cited 2016 book)",
+        "sourceUrl": "https://www.math.uni-bonn.de/people/huybrech/K3Global.pdf"
+      },
+      "to": {
+        "paperId": "every-complex-k3-oka",
+        "result": "Proof of Theorem 1.1, p.52",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Every-complex-K3-surface-is-Oka-September-23-2026/paper.pdf"
+      },
+      "role": "positive integral (1,1) class gives projectivity",
+      "hypotheses": "rational positive period plane; P-perp has signature (1,19)",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-042-hq",
+        "date": "2026-10-10",
+        "record": "../every-complex-k3-oka/sources.json",
+        "scope": "statement/use only, not full proof"
+      },
+      "articleLinks": {
+        "ja": "../every-complex-k3-oka/article.ja.md#proof-overview-step-3",
+        "en": "../every-complex-k3-oka/article.en.md#proof-overview-step-3"
+      },
+      "unresolved": [
+        "External proof not independently verified."
+      ]
+    },
+    {
+      "id": "orbit-erratum",
+      "from": {
+        "paperId": "erratum",
+        "external": true,
+        "result": "Theorem 2.5",
+        "pages": "5",
+        "version": "arXiv:1708.05802v1, 2017-08-19",
+        "sourceUrl": "https://arxiv.org/pdf/1708.05802v1"
+      },
+      "to": {
+        "paperId": "every-complex-k3-oka",
+        "result": "Lemma 9.1, pp.51–52",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Every-complex-K3-surface-is-Oka-September-23-2026/paper.pdf"
+      },
+      "role": "corrected rational-direction framework; the manuscript supplies its fixed-v argument",
+      "hypotheses": "oriented positive planes in the K3 lattice",
+      "kind": "background",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-042-hq",
+        "date": "2026-10-10",
+        "record": "../every-complex-k3-oka/sources.json",
+        "scope": "statement/use only, not full proof"
+      },
+      "articleLinks": {
+        "ja": "../every-complex-k3-oka/article.ja.md#proof-overview-step-4",
+        "en": "../every-complex-k3-oka/article.en.md#proof-overview-step-4"
+      },
+      "unresolved": [
+        "External proof not independently verified."
+      ]
+    },
+    {
+      "id": "jet-input",
+      "from": {
+        "paperId": "interpolation",
+        "external": true,
+        "result": "Proposition 1.2; Corollary 1.3",
+        "pages": "734–735",
+        "version": "2005 published version, Annales de l’Institut Fourier 55(3), 733–751",
+        "sourceUrl": "https://www.numdam.org/article/AIF_2005__55_3_733_0.pdf"
+      },
+      "to": {
+        "paperId": "every-complex-k3-oka",
+        "result": "Corollary 10.1, p.53",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Every-complex-K3-surface-is-Oka-September-23-2026/paper.pdf"
+      },
+      "role": "approximation with jet interpolation from Oka",
+      "hypotheses": "continuous map holomorphic near the approximation and interpolation sets",
+      "kind": "consequence",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-042-hq",
+        "date": "2026-10-10",
+        "record": "../every-complex-k3-oka/sources.json",
+        "scope": "statement/use only, not full proof"
+      },
+      "articleLinks": {
+        "ja": "../every-complex-k3-oka/article.ja.md#proof-3-step-1",
+        "en": "../every-complex-k3-oka/article.en.md#proof-3-step-1"
+      },
+      "unresolved": [
+        "External proof not independently verified."
+      ]
+    },
+    {
+      "id": "oka-one",
+      "from": {
+        "paperId": "oka1",
+        "external": true,
+        "result": "Definition 1.1; following discussion",
+        "pages": "2",
+        "version": "arXiv:2303.15855v5, 2025-04-10",
+        "sourceUrl": "https://arxiv.org/pdf/2303.15855v5"
+      },
+      "to": {
+        "paperId": "every-complex-k3-oka",
+        "result": "Corollary 10.1, p.53",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Every-complex-K3-surface-is-Oka-September-23-2026/paper.pdf"
+      },
+      "role": "individual jet orders for an open Riemann surface",
+      "hypotheses": "compact Runge K, closed discrete A; Oka implies Oka-1",
+      "kind": "consequence",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-042-hq",
+        "date": "2026-10-10",
+        "record": "../every-complex-k3-oka/sources.json",
+        "scope": "statement/use only, not full proof"
+      },
+      "articleLinks": {
+        "ja": "../every-complex-k3-oka/article.ja.md#proof-3-step-1",
+        "en": "../every-complex-k3-oka/article.en.md#proof-3-step-1"
+      },
+      "unresolved": [
+        "External proof not independently verified."
+      ]
+    },
+    {
+      "id": "cover-descent",
+      "from": {
+        "paperId": "flexibility",
+        "external": true,
+        "result": "Introduction (covering maps)",
+        "pages": "2",
+        "version": "arXiv:1207.4838v3, 2013-02-21",
+        "sourceUrl": "https://arxiv.org/pdf/1207.4838v3"
+      },
+      "to": {
+        "paperId": "every-complex-k3-oka",
+        "result": "Corollary 10.2, p.54",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Every-complex-K3-surface-is-Oka-September-23-2026/paper.pdf"
+      },
+      "role": "Oka property descends from a K3 cover",
+      "hypotheses": "unramified holomorphic covering of an Enriques surface",
+      "kind": "consequence",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-042-hq",
+        "date": "2026-10-10",
+        "record": "../every-complex-k3-oka/sources.json",
+        "scope": "statement/use only, not full proof"
+      },
+      "articleLinks": {
+        "ja": "../every-complex-k3-oka/article.ja.md#proof-4-step-1",
+        "en": "../every-complex-k3-oka/article.en.md#proof-4-step-1"
+      },
+      "unresolved": [
+        "External proof not independently verified."
+      ]
+    },
+    {
+      "id": "enriques-projective",
+      "from": {
+        "paperId": "enriques",
+        "external": true,
+        "result": "§2, Remark 2.1 and proof",
+        "pages": "4–5",
+        "version": "arXiv:math/0604629v2, 2006-08-27",
+        "sourceUrl": "https://arxiv.org/pdf/math/0604629v2"
+      },
+      "to": {
+        "paperId": "every-complex-k3-oka",
+        "result": "Corollary 10.3, p.54",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Every-complex-K3-surface-is-Oka-September-23-2026/paper.pdf"
+      },
+      "role": "projectivity supplies the second ellipticity hypothesis",
+      "hypotheses": "complex Enriques surface; source states projectivity, independent analytic proof not checked",
+      "kind": "consequence",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "catalog-042-hq",
+        "date": "2026-10-10",
+        "record": "../every-complex-k3-oka/sources.json",
+        "scope": "statement/use only, not full proof"
+      },
+      "articleLinks": {
+        "ja": "../every-complex-k3-oka/article.ja.md#proof-5-step-2",
+        "en": "../every-complex-k3-oka/article.en.md#proof-5-step-2"
+      },
+      "unresolved": [
+        "External proof not independently verified."
+      ]
+    }
+  ]
+}

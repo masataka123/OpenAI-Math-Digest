@@ -1,0 +1,62 @@
+{
+  "catalogId": "042",
+  "stage": "preparation-only",
+  "checkedOn": "2026-10-10",
+  "externalSources": [
+    {
+      "id": "gss",
+      "displayName": "Global Spherical Shells",
+      "title": "Global Spherical Shells on Minimal Surfaces of Class VII",
+      "authors": [
+        "OpenAI"
+      ],
+      "version": "September 24, 2026",
+      "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Global-Spherical-Shells-on-Minimal-Surfaces-of-Class-VII-September-24-2026/paper.pdf",
+      "downloadUrl": "https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Global-Spherical-Shells-on-Minimal-Surfaces-of-Class-VII-September-24-2026/paper.pdf",
+      "sha256": "d441e45f773bce9fc3728c7de5f2cfb21fcb92849c9e8403561a787c335f4aae",
+      "pdfPages": 39,
+      "localCache": "/tmp/math-digest-042-preparation/gss.pdf",
+      "checkedLocations": [
+        {
+          "result": "Theorem 1.1",
+          "printedPage": "1",
+          "pdfPage": 1
+        }
+      ],
+      "checking": "定理の仮定・結論と本稿Corollary 10.2 p.54での適用を照合。GSS証明は未検証。"
+    },
+    {
+      "id": "fl-surfaces",
+      "displayName": "Surface flexibility",
+      "title": "Holomorphic flexibility properties of compact complex surfaces",
+      "authors": [
+        "Franc Forstnerič",
+        "Finnur Lárusson"
+      ],
+      "version": "arXiv:1207.4838v3, 21 February 2013",
+      "sourceUrl": "https://arxiv.org/abs/1207.4838v3",
+      "downloadUrl": "https://arxiv.org/pdf/1207.4838v3",
+      "sha256": "9d182037bb28f04f8d8908a05a4bcade757cc56d8b842ae653c425e287feca53",
+      "pdfPages": 16,
+      "localCache": "/tmp/math-digest-042-preparation/flexibility.pdf",
+      "checkedLocations": [
+        {
+          "result": "Introduction: covering descent",
+          "printedPage": "2",
+          "pdfPage": 2
+        },
+        {
+          "result": "Theorem 4 and class VII cases",
+          "printedPage": "3",
+          "pdfPage": 3
+        },
+        {
+          "result": "Introduction: Kodaira dimension zero cases",
+          "printedPage": "4",
+          "pdfPage": 4
+        }
+      ],
+      "checking": "記述と本稿Corollary 10.2 p.54への接続を照合。外部論文の各証明は未検証。"
+    }
+  ]
+}

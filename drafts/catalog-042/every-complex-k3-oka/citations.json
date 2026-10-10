@@ -1,0 +1,658 @@
+{
+  "schemaVersion": 1,
+  "catalogId": "042",
+  "sources": {
+    "P": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "displayName": "K3 Oka",
+      "pagination": "same"
+    },
+    "CG": {
+      "recordFile": "sources.json",
+      "recordId": "cg",
+      "guideRole": {
+        "ja": "genus-one曲線族の非等自明変形と非有界次数を§5で使う",
+        "en": "Nonisotrivial genus-one families of unbounded degree in §5"
+      },
+      "pagination": "same"
+    },
+    "K3": {
+      "recordFile": "sources.json",
+      "recordId": "huybrechts",
+      "guideRole": {
+        "ja": "local/global Torelliと正の整(1,1)類による射影性判定",
+        "en": "Local/global Torelli and the positive integral (1,1)-class criterion"
+      },
+      "pagination": "same",
+      "guideVersion": {
+        "ja": "著者公開の公刊前draft、copyright 2015、2026年10月10日取得。原稿引用の2016年公刊版とは区別",
+        "en": "Author-hosted prepublication draft, copyright 2015, retrieved October 10, 2026; distinct from the cited 2016 book"
+      }
+    },
+    "VE": {
+      "recordFile": "sources.json",
+      "recordId": "erratum",
+      "guideRole": {
+        "ja": "軌道閉包の訂正された枠組み。固定vの主張は本稿Lemma 9.1で追う",
+        "en": "Corrected orbit-closure framework; the fixed-v statement is proved in Lemma 9.1 of the manuscript"
+      },
+      "pagination": "same"
+    },
+    "CAP": {
+      "recordFile": "sources.json",
+      "recordId": "cap",
+      "guideRole": {
+        "ja": "任意次元の凸近似性からOka性へ",
+        "en": "From convex approximation in every source dimension to the Oka property"
+      },
+      "pagination": "same"
+    },
+    "JI": {
+      "recordFile": "sources.json",
+      "recordId": "interpolation",
+      "guideRole": {
+        "ja": "Oka性からjet補間を伴う近似へ",
+        "en": "From the Oka property to approximation with jet interpolation"
+      }
+    },
+    "O1": {
+      "recordFile": "sources.json",
+      "recordId": "oka1",
+      "guideRole": {
+        "ja": "個別jet次数の補間と複素次元2でのimmersion",
+        "en": "Individual jet orders and immersed maps into a complex surface"
+      },
+      "pagination": "same"
+    },
+    "FL": {
+      "recordFile": "sources.json",
+      "recordId": "flexibility",
+      "guideRole": {
+        "ja": "被覆によるOka降下、既知のκ=0例、class VIIの正例と負例",
+        "en": "Covering descent, established κ=0 cases, and positive/negative class-VII cases"
+      },
+      "pagination": "same"
+    },
+    "GSS": {
+      "recordFile": "sources.json",
+      "recordId": "gss",
+      "guideRole": {
+        "ja": "Corollary 10.2だけの入力：b₂>0の極小class VIIをKatoへ帰着",
+        "en": "Input only to Corollary 10.2: positive-b₂ minimal class VII surfaces are Kato"
+      },
+      "pagination": "same",
+      "guideVersion": {
+        "ja": "2026年9月24日版・公式060（固定commitは出典記録）",
+        "en": "September 24, 2026; official 060 (fixed commit in the source record)"
+      }
+    },
+    "EN": {
+      "recordFile": "sources.json",
+      "recordId": "enriques",
+      "guideRole": {
+        "ja": "Enriquesの不分岐K3二重被覆と射影性の記述",
+        "en": "The étale K3 double cover and the statement of Enriques projectivity"
+      },
+      "pagination": "same"
+    },
+    "PE": {
+      "recordFile": "sources.json",
+      "recordId": "elliptic",
+      "guideRole": {
+        "ja": "projectiveかつOkaから大域的dominating sprayへ",
+        "en": "A global dominating spray for a projective Oka manifold"
+      },
+      "pagination": "same"
+    }
+  },
+  "citations": {
+    "main-result": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "dense": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Corollary 1.2",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "classification": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Corollary 10.2",
+          "printed": "54",
+          "pdf": "54"
+        }
+      ]
+    },
+    "sprays": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Corollary 10.3",
+          "printed": "54",
+          "pdf": "54"
+        }
+      ]
+    },
+    "local": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Definition 2.1; Proposition 2.2",
+          "printed": "5–9",
+          "pdf": "5–9"
+        }
+      ]
+    },
+    "propagation": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 2.9; Corollary 2.10",
+          "printed": "10–12",
+          "pdf": "10–12"
+        }
+      ]
+    },
+    "cap-target": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 3.1",
+          "printed": "12",
+          "pdf": "12"
+        }
+      ]
+    },
+    "polydisc": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 3.3; Proposition 3.4",
+          "printed": "15–19",
+          "pdf": "15–19"
+        }
+      ]
+    },
+    "faces": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemmas 4.3–4.5; §4.4",
+          "printed": "21–28",
+          "pdf": "21–28"
+        }
+      ]
+    },
+    "projective": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 5.1; Lemmas 5.2–5.4",
+          "printed": "28–31",
+          "pdf": "28–31"
+        }
+      ]
+    },
+    "sewing": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 6.1",
+          "printed": "31–32",
+          "pdf": "31–32"
+        }
+      ]
+    },
+    "zero-mode": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 6.2",
+          "printed": "32–33",
+          "pdf": "32–33"
+        }
+      ]
+    },
+    "split-chain": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 6.3; §6.3",
+          "printed": "33–36",
+          "pdf": "33–36"
+        }
+      ]
+    },
+    "recenter": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 6.4",
+          "printed": "36–37",
+          "pdf": "36–37"
+        }
+      ]
+    },
+    "open-period": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 7.1; §§7.3–7.4",
+          "printed": "37–44",
+          "pdf": "37–44"
+        }
+      ]
+    },
+    "fixed-period": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 8.1; Lemmas 8.2–8.5",
+          "printed": "44–50",
+          "pdf": "44–50"
+        }
+      ]
+    },
+    "orbits": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 9.1",
+          "printed": "51–52",
+          "pdf": "51–52"
+        }
+      ]
+    },
+    "final-proof": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proof of Theorem 1.1",
+          "printed": "52",
+          "pdf": "52"
+        }
+      ]
+    },
+    "interpolation-use": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Corollary 10.1; proof of Corollary 1.2",
+          "printed": "53",
+          "pdf": "53"
+        }
+      ]
+    },
+    "consequences": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§10.2",
+          "printed": "54",
+          "pdf": "54"
+        }
+      ]
+    },
+    "curves": {
+      "source": "CG",
+      "locations": [
+        {
+          "result": "Theorem A",
+          "printed": "1–2",
+          "pdf": "1–2"
+        }
+      ]
+    },
+    "local-torelli": {
+      "source": "K3",
+      "locations": [
+        {
+          "result": "Chapter 6, Proposition 2.8",
+          "printed": "107",
+          "pdf": "107"
+        }
+      ]
+    },
+    "torelli": {
+      "source": "K3",
+      "locations": [
+        {
+          "result": "Chapter 7, Theorem 5.3",
+          "printed": "135",
+          "pdf": "135"
+        }
+      ]
+    },
+    "projectivity": {
+      "source": "K3",
+      "locations": [
+        {
+          "result": "§1.3.3, footnote 9",
+          "printed": "16",
+          "pdf": "16"
+        }
+      ]
+    },
+    "orbit-erratum": {
+      "source": "VE",
+      "locations": [
+        {
+          "result": "Theorem 2.5",
+          "printed": "5",
+          "pdf": "5"
+        }
+      ]
+    },
+    "cap-oka": {
+      "source": "CAP",
+      "locations": [
+        {
+          "result": "Theorem 0.1",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "jet-input": {
+      "source": "JI",
+      "locations": [
+        {
+          "result": "Proposition 1.2; Corollary 1.3",
+          "printed": "734–735",
+          "pdf": "3–4"
+        }
+      ]
+    },
+    "oka-one": {
+      "source": "O1",
+      "locations": [
+        {
+          "result": "Definition 1.1; following discussion",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "immersions": {
+      "source": "O1",
+      "locations": [
+        {
+          "result": "Corollary 2.10",
+          "printed": "7",
+          "pdf": "7"
+        }
+      ]
+    },
+    "cover-descent": {
+      "source": "FL",
+      "locations": [
+        {
+          "result": "Introduction (covering maps)",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "surface-cases": {
+      "source": "FL",
+      "locations": [
+        {
+          "result": "Theorem 4; Introduction",
+          "printed": "3–4",
+          "pdf": "3–4"
+        }
+      ]
+    },
+    "shell": {
+      "source": "GSS",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "enriques-cover": {
+      "source": "EN",
+      "locations": [
+        {
+          "result": "Introduction",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "enriques-projective": {
+      "source": "EN",
+      "locations": [
+        {
+          "result": "§2, Remark 2.1 and proof",
+          "printed": "4–5",
+          "pdf": "4–5"
+        }
+      ]
+    },
+    "elliptic-input": {
+      "source": "PE",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ],
+  "articleGuides": {
+    ".": {
+      "selfSource": "P",
+      "externalSources": [
+        "CG",
+        "K3",
+        "VE",
+        "CAP",
+        "JI",
+        "O1",
+        "FL",
+        "GSS",
+        "EN",
+        "PE"
+      ],
+      "mainResults": [
+        "main-result",
+        "dense",
+        "classification",
+        "sprays"
+      ],
+      "proofTargets": [
+        "main-result",
+        "cap-target",
+        "sewing",
+        "dense",
+        "classification",
+        "sprays"
+      ],
+      "statements": {
+        "main-result": "theorem-1-1",
+        "dense": "corollary-1-2",
+        "classification": "corollary-10-2",
+        "sprays": "corollary-10-3",
+        "cap-target": "theorem-3-1",
+        "sewing": "theorem-6-1"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "main-result",
+          "conclusion": "r=0: full period domain",
+          "anchor": "proof-overview-step-1"
+        },
+        {
+          "result": "main-result",
+          "conclusion": "r=1: fixed positive rational direction",
+          "anchor": "proof-overview-step-2"
+        },
+        {
+          "result": "main-result",
+          "conclusion": "r=2: projective case",
+          "anchor": "proof-overview-step-3"
+        },
+        {
+          "result": "main-result",
+          "conclusion": "all m and all compact convex K",
+          "anchor": "proof-overview-step-4"
+        },
+        {
+          "result": "dense",
+          "conclusion": "prescribed point and exact tangent vector",
+          "anchor": "proof-3-step-1"
+        },
+        {
+          "result": "dense",
+          "conclusion": "immersion and ordinary density",
+          "anchor": "proof-3-step-2"
+        },
+        {
+          "result": "dense",
+          "conclusion": "projective case: Zariski density",
+          "anchor": "proof-3-step-3"
+        },
+        {
+          "result": "classification",
+          "conclusion": "K3 and all Enriques",
+          "anchor": "proof-4-step-1"
+        },
+        {
+          "result": "classification",
+          "conclusion": "tori, bielliptic and Kodaira",
+          "anchor": "proof-4-step-2"
+        },
+        {
+          "result": "classification",
+          "conclusion": "b2=0: Hopf yes, Inoue no",
+          "anchor": "proof-4-step-3"
+        },
+        {
+          "result": "classification",
+          "conclusion": "b2>0: Enoki yes, Inoue–Hirzebruch and intermediate no",
+          "anchor": "proof-4-step-4"
+        },
+        {
+          "result": "classification",
+          "conclusion": "exhaustive iff in minimal class VII",
+          "anchor": "proof-4-step-5"
+        },
+        {
+          "result": "sprays",
+          "conclusion": "projective K3: global dominating spray",
+          "anchor": "proof-5-step-1"
+        },
+        {
+          "result": "sprays",
+          "conclusion": "all Enriques: global dominating spray",
+          "anchor": "proof-5-step-2"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "main-result",
+          "purpose": {
+            "ja": "主張の量化と射影性を仮定しない範囲",
+            "en": "Quantifiers and the absence of a projectivity hypothesis"
+          }
+        },
+        {
+          "citation": "orbits",
+          "purpose": {
+            "ja": "三つの有理性の場合分けと軌道移送",
+            "en": "The rationality trichotomy and orbit transfer"
+          }
+        },
+        {
+          "citation": "local",
+          "purpose": {
+            "ja": "二方向のstripから局所操作Lを得る",
+            "en": "Two strip directions produce the local operation L"
+          }
+        },
+        {
+          "citation": "cap-target",
+          "purpose": {
+            "ja": "任意次元の凸近似という目標",
+            "en": "Convex approximation in every source dimension"
+          }
+        },
+        {
+          "citation": "faces",
+          "purpose": {
+            "ja": "実面を除く解析と凸集合への最終移行",
+            "en": "Real-face gluing and the final passage to convex sets"
+          }
+        },
+        {
+          "citation": "projective",
+          "purpose": {
+            "ja": "異なる次数の曲線族とcomplete flows",
+            "en": "Different curve degrees and complete flows"
+          }
+        },
+        {
+          "citation": "sewing",
+          "purpose": {
+            "ja": "一様な横幅を保つ貼合せの仮定",
+            "en": "The hypotheses retaining a uniform transverse width"
+          }
+        },
+        {
+          "citation": "open-period",
+          "purpose": {
+            "ja": "全period domainの開集合を構成",
+            "en": "Construct an open set in the full period domain"
+          }
+        },
+        {
+          "citation": "fixed-period",
+          "purpose": {
+            "ja": "固定vの相対開集合とsafe action",
+            "en": "The relative open set for fixed v and safe actions"
+          }
+        },
+        {
+          "citation": "interpolation-use",
+          "purpose": {
+            "ja": "指定jetから稠密immersionを作る",
+            "en": "From prescribed jets to a dense immersion"
+          }
+        },
+        {
+          "citation": "consequences",
+          "purpose": {
+            "ja": "曲面分類と大域sprayの別々の入力",
+            "en": "Separate inputs for classification and global sprays"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+\node[card] (cases) {\heading{}{二つの対象で二つの仮定を揃える}{Supply both hypotheses for each surface}
+\textbf{\Tx{射影的K3}{Projective K3}}:\quad\Tx{射影性は仮定、Oka性はTheorem 1.1}{projectivity assumed; Oka by Theorem 1.1}\\[8pt]
+\textbf{Enriques}:\quad\Tx{射影性は既知、Oka性はCorollary 10.2}{projectivity established; Oka by Corollary 10.2}\\
+\Cite{enriques-projective}
+};
+\node[card,below=2.6cm of cases] (oka) {\heading{}{ProjectiveとOkaを同時に使う}{Use projectivity and Oka together}
+$X\text{ projective}\quad+\quad X\text{ Oka}$\\
+\Tx{Enriquesはすべて含む。非射影的K3はこの入力を満たさない。}{Includes every Enriques surface; a nonprojective K3 does not meet this input.}};
+\flow{cases}{oka}{\Tx{K3の主定理とEnriquesへの被覆降下でOka性を供給}{The K3 theorem and covering descent supply the Oka property}\\\Cite{main-result}\quad\Cite{classification}};
+\node[result,below=2.5cm of oka] (spray) {\heading{}{大域的dominating holomorphic spray}{A global dominating holomorphic spray}
+$E\to X,\quad s:E\to X,\quad s(0_x)=x,\quad d(s|_{E_x})_{0_x}:E_x\twoheadrightarrow T_xX$};
+\flow{oka}{spray}{\Tx{projective Oka manifoldをellipticにする外部定理を適用}{Apply the external theorem making projective Oka manifolds elliptic}\\\Cite{elliptic-input}};

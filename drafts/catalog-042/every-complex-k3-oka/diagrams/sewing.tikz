@@ -1,0 +1,23 @@
+\node[card] (raw) {
+\heading{}{Exactな環状transition}{Exact annular transitions}
+$J_j^{-1}F_j=(w+u_j,p+v_j),\quad\|(u_j,v_j)\|\le e,\quad L_j\ge1$\\
+$\displaystyle\oint\bigl(F_j^*(p\,dw)-p\,dw\bigr)=0$
+};
+\node[card,below=2.4cm of raw] (zero) {
+\heading{}{横方向の零モードを除く}{Remove the transverse zero mode}
+$(u,v)=(u_0,0)+X_H+R,\quad\|R\|\le C\delta^{-2}e^2$\\
+\Tx{水平零モードはshearへ吸収。$H$はmean-zero。}{Absorb the horizontal zero mode into the shear; $H$ has mean zero.}
+};
+\flow{raw}{zero}{\Tx{symplectic条件と周期零から $v_0=O(\delta^{-1}e^2)$}{Symplecticity and zero period give $v_0=O(\delta^{-1}e^2)$}\\\Cite{zero-mode}};
+\node[card,below=2.4cm of zero] (iteration) {
+\heading{}{鎖全体で一様な二次反復}{Uniform quadratic iteration along the chain}
+$e_{n+1}\le C\delta_n^{-q}e_n^2,\quad \delta_n=d_0 2^{-n},\quad b>0$\\
+\Tx{正・負Fourier成分を分け、Hamiltonian flowで消去する。}{Split positive and negative Fourier modes; cancel by Hamiltonian flows.}
+};
+\flow{zero}{iteration}{\Tx{$L_j\ge1$の指数減衰によりblock数・長さに依存しない分解}{Exponential decay from $L_j\ge1$ gives a split independent of length and block count}\\\Cite{split-chain}};
+\node[result,below=2.5cm of iteration] (entire) {
+\heading{}{横幅を保つentire strip}{An entire strip retaining transverse width}
+$\Phi:\mathbb C\times\Delta_b\to M,\quad \Phi^*\omega=dw\wedge dp$\\
+\Tx{周期1。各blockで小さな座標変更。固定有限階の導関数も近似。}{Period one; small coordinate changes on each block, with finite-order derivative approximation.}
+};
+\flow{iteration}{entire}{\Tx{補正transitionは $(w+\widetilde a_j(p),p)$、幅損失は可算和可能}{Corrected transitions are $(w+\widetilde a_j(p),p)$; width losses are summable}\\\Cite{sewing}};

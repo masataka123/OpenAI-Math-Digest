@@ -1,6 +1,7 @@
 import inventory033 from '../../coordination/catalog-033/inventory.json' with { type: 'json' };
 import inventory034 from '../../research/catalog-034-inventory.json' with { type: 'json' };
 import inventory038 from '../../coordination/catalog-038/inventory.json' with { type: 'json' };
+import inventory042 from '../../coordination/catalog-042/inventory.json' with { type: 'json' };
 import inventory051 from '../../coordination/catalog-051/inventory.json' with { type: 'json' };
 import inventory063 from '../../coordination/catalog-063/inventory.json' with { type: 'json' };
 import subjectSource from './catalog-subjects.json' with { type: 'json' };
@@ -22,7 +23,7 @@ const fieldTranslations = [
     "id": "algebraic-complex-geometry",
     "ja": "代数幾何学・複素幾何学",
     "catalogIds": [
-      "033", "034", "038", "051", "063"
+      "033", "034", "038", "042", "051", "063"
     ]
   },
   {
@@ -135,6 +136,10 @@ export const papers = [...inventory033.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '038', sourceCommit: inventory038.sourceCommit,
  title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
  pages: entry.pdfPages, order: entry.order, featured: true,
+})), ...inventory042.manuscripts.map(entry => ({
+ id: entry.paperId, catalogId: '042', sourceCommit: inventory042.sourceCommit,
+ title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
+ pages: entry.pdfPages, order: entry.order, featured: true,
 })), ...inventory051.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '051', sourceCommit: inventory051.sourceCommit,
  title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
@@ -162,6 +167,13 @@ export const catalogs = [{
   contentsTitle: inventory038.contentsTitle,
   description: text('指数型最小化と局所的な持上げから、藤田の自由性予想の主張と証明の接続を読む。', 'Follow exponential minimization and local lifting through the claimed proof of Fujita’s freeness conjecture.'),
   paperIds: inventory038.manuscripts.map(p => p.paperId),
+  overviewSectionIds: ['papers', 'connections', 'sources'],
+}, {
+  id: '042', sourceCommit: inventory042.sourceCommit, mode: 'single',
+  title: text(inventory042.titleJa, inventory042.overviewTitle),
+  contentsTitle: inventory042.contentsTitle,
+  description: text('K3曲面のOka性へ至る局所操作・周期の分類・凸近似と、その帰結を読む。', 'Follow local operations, period cases, and convex approximation to the Oka property of K3 surfaces and its consequences.'),
+  paperIds: inventory042.manuscripts.map(p => p.paperId),
   overviewSectionIds: ['papers', 'connections', 'sources'],
 }, {
   id: '051', sourceCommit: inventory051.sourceCommit, mode: 'single',

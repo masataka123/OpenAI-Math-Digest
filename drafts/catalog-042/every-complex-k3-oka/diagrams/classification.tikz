@@ -1,0 +1,17 @@
+\node[card] (inputs) {\heading{}{連結・極小・コンパクト複素曲面}{Connected minimal compact complex surfaces}
+\textbf{$\kappa=0$}\\
+\Tx{K3：Theorem 1.1。Enriques：不分岐K3二重被覆。}{K3: Theorem 1.1. Enriques: an unramified K3 double cover.}\\
+\Tx{Tori・bielliptic・Kodaira：既知のOka例。}{Tori, bielliptic, and Kodaira surfaces: established Oka cases.}\\[8pt]
+\textbf{Class VII, $b_2=0$}\\
+\Tx{HopfまたはInoue。}{Hopf or Inoue.}\\[8pt]
+\textbf{Class VII, $b_2>0$}\\
+$b_1=1,\ \kappa=-\infty\ \Longrightarrow\ \text{global spherical shell}\ \Longrightarrow\ \text{Kato}$\\
+\Tx{Enoki・Inoue--Hirzebruch・intermediateで網羅。}{Exhausted by Enoki, Inoue--Hirzebruch, and intermediate surfaces.}\\
+\Cite{shell}
+};
+\node[result,below=4.3cm of inputs] (answers) {\heading{}{正例と負例をともに判定する}{Decide both positive and negative cases}
+$\kappa=0:\quad\text{all Oka}$\\[6pt]
+$\text{Class VII}:\quad\text{Oka}\ \Longleftrightarrow\ \text{Hopf or Enoki}$\\[6pt]
+\Tx{Inoue・Inoue--Hirzebruch・intermediateはnot strongly Liouville、したがって非Oka。}{Inoue, Inoue--Hirzebruch, and intermediate surfaces are not strongly Liouville, hence not Oka.}
+};
+\flow{inputs}{answers}{\Tx{K3被覆から降下。既知の正例と非strongly-Liouvilleの障害を適用。}{Descend from the K3 cover; apply the positive cases and the strongly-Liouville obstruction.}\\\Cite{enriques-cover}\\\Cite{cover-descent}\\\Cite{surface-cases}\\\Cite{classification}};

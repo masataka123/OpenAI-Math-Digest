@@ -1,0 +1,28 @@
+\node[card] (cases) {
+\heading{Theorem 1.1}{周期の三つの場合を尽くす}{Exhaust the three period types}
+$P\in\mathcal D,\quad r=\dim_{\mathbb Q}(P\cap\Lambda_{\mathbb Q})\in\{0,1,2\}$\\[9pt]
+\textbf{$r=0$}\quad\Tx{非偏極の開集合 $\mathcal O\subset\mathcal D$}{An unrestricted open set $\mathcal O\subset\mathcal D$}\\
+\Tx{quadricの退化 $\to$ 一様幅のstrip $\to$ 全点 $L$}{Quadric degeneration $\to$ uniform-width strips $\to$ $L$ everywhere}\\
+\Cite{open-period}\\[8pt]
+\textbf{$r=1$}\quad\Tx{固定 $v$ の相対開集合 $\mathcal O_v\subset\mathcal D_v$}{A relative open set $\mathcal O_v\subset\mathcal D_v$ for fixed $v$}\\
+$[\operatorname{Im}\sigma]=v,\ (\sigma,e)\ne0$;
+\Tx{safe cycle $\to$ 異なる二葉 $\to$ 全点 $L$}{safe cycles $\to$ distinct leaves $\to$ $L$ everywhere}\\
+\Cite{fixed-period}\\[8pt]
+\textbf{$r=2$}\quad\Tx{正の整 $(1,1)$ 類 $\to$ 射影的}{Positive integral $(1,1)$ class $\to$ projective}\\
+\Tx{異なる次数のgenus-one曲線族 $\to$ complete flows $\to$ 全点 $L$}{Genus-one families of different degrees $\to$ complete flows $\to$ $L$ everywhere}\\
+\Cite{projective}\\[-1pt]
+\Cite{curves}
+};
+\node[result,below=3.6cm of cases] (local) {
+\heading{}{元のK3曲面へ移す}{Transfer back to the original K3 surface}
+$L\text{ at every }x\in X$\\
+\Tx{$r=0,1$：軌道が対応する開集合と交差。$r=2$：射影的構成を直接適用。}{$r=0,1$: the orbit meets the appropriate open set. $r=2$: apply the projective construction directly.}
+};
+\flow{cases}{local}{\Tx{有理方向の型に応じた軌道稠密性とTorelli同型}{Orbit density for each rationality type and Torelli isomorphism}\\\Cite{orbits}\\\Cite{torelli}};
+\node[result,below=2.8cm of local] (cap) {
+\heading{}{すべての源の次元で凸近似}{Convex approximation in every source dimension}
+$\forall m\ge1,\ K\Subset\mathbb C^m\text{ convex},\quad
+f\simeq_K F:\mathbb C^m\longrightarrow X$\\
+\Tx{任意の精度で一様近似：CAP、したがってOka}{Uniform approximation to arbitrary accuracy: CAP, hence Oka}
+};
+\flow{local}{cap}{\Tx{全点 $L$ と完備距離から任意凸集合を扱う}{Use $L$ everywhere and completeness for arbitrary convex sets}\\\Cite{cap-target}\quad\Cite{final-proof}\\\Cite{cap-oka}};

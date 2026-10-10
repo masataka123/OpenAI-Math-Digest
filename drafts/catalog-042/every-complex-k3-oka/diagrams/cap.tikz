@@ -1,0 +1,25 @@
+\node[card] (strips) {
+\heading{}{二方向を一致する短い軸で組む}{Align two complete directions on a short axis}
+$\sigma_1:\mathbb C\times\Delta_b\to Y,\quad
+\sigma_2:\Delta_b\times\mathbb C\to Y,\quad
+\sigma_1(z,0)=\sigma_2(z,0)$\\
+\Tx{必要な点で局所正則同型。有限長の一様な極限も許す。}{Local biholomorphisms at the required points; uniform finite-length limits are also allowed.}
+};
+\node[card,below=2.8cm of strips] (planar) {
+\heading{}{局所操作と平面discの拡張}{Local operation and planar disc extension}
+$D\times P_0\ \subset\ D'\times P_0,\qquad q=\dim P_0\text{ arbitrary}$\\
+\Tx{passive parameterを残す。良い境界から例外点へ $L$ を伝える。}{Retain passive parameters; propagate $L$ from good boundaries across exceptional points.}
+};
+\flow{strips}{planar}{\Tx{軸上の一致で誤差を小さくし、Cousin分解で貼合せ}{Axial agreement makes errors small; Cousin splitting glues the maps}\\\Cite{local}\\\Cite{propagation}};
+\node[card,below=2.5cm of planar] (poly) {
+\heading{}{Polydiscの成長とexhaustion}{Polydisc growth and exhaustion}
+$\operatorname{diam}(\text{passive image})=O(d^{-1}),\qquad\sum\varepsilon_j<\infty$\\
+\Tx{一つの長い変数へ変形し、buffered overlapで接合する。}{Use one long variable and glue over a buffered open overlap.}
+};
+\flow{planar}{poly}{\Tx{polynomial automorphismで横方向を一つのwitness近傍に収める}{A polynomial automorphism fits the transverse image in one witness neighborhood}\\\Cite{polydisc}};
+\node[result,below=3cm of poly] (convex) {
+\heading{}{一般の凸集合を扱う}{Treat an arbitrary convex compact set}
+$K\subset\mathbb C^m\quad\longrightarrow\quad F:\mathbb C^m\to Y$\\
+\Tx{次元帰納法・有限個の実面除去・完備性による極限}{Induction on dimension, removal of finitely many real faces, and a complete-target limit}
+};
+\flow{poly}{convex}{\Tx{実面上のHölder jumpを線形分解し、二次反復で貼る}{Split the Hölder jump on a real face, then glue by quadratic iteration}\\\Cite{faces}\\\Cite{cap-target}};

@@ -1,0 +1,12 @@
+\node[card] (cap) {\heading{}{K3のCAPから補間へ}{From K3 CAP to interpolation}
+$S\text{ has CAP}\quad\Longrightarrow\quad S\text{ is Oka and Oka-1}$\\
+\Tx{近似・homotopy・各点で異なるjet次数を保持}{Approximation, homotopy, and individual jet orders}};
+\node[card,below=3.4cm of cap] (data) {\heading{}{稠密列と正確な接ベクトルを与える}{Prescribe dense values and exact tangent vectors}
+$a_j=3j,\quad h(a_j)=x_j,\quad h'(a_j)=v_j\ne0$\\
+$x_0=x,\quad v_0=v,\quad\overline{\{x_j:j\ge1\}}=S$\\
+\Tx{局所germをcutoffとpathで一つの連続写像に延ばす}{Extend the local germs to one continuous map using cutoffs and paths}};
+\flow{cap}{data}{\Tx{CAP判定とjet補間の定理が、原稿Corollary 10.1を与える}{CAP characterization and jet interpolation give Corollary 10.1}\\\Cite{cap-oka}\\\Cite{jet-input}\\\Cite{oka-one}};
+\node[result,below=3cm of data] (imm) {\heading{}{稠密な正則immersion}{A dense holomorphic immersion}
+$f:\mathbb C\to S,\quad f(0)=x,\quad f'(0)=v,\quad\overline{f(\mathbb C)}=S$\\
+\Tx{射影的なら通常閉なZariski閉集合を用いてZariski稠密}{If projective, ordinary closedness of Zariski closed sets gives Zariski density}};
+\flow{data}{imm}{\Tx{複素次元2と全非零一次jetによりimmersionを選び、稠密列を像に含める}{Complex dimension two and nonzero first jets allow immersion; its image contains the dense sequence}\\\Cite{immersions}\\\Cite{interpolation-use}};
