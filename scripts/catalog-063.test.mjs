@@ -13,7 +13,7 @@ test('063 uses its pinned single manuscript and preserves official field order',
  assert.deepEqual(catalog.paperIds,[record.paperId]);
  assert.equal(catalog.title.en,inventory.overviewTitle);
  assert.equal(paperSource(papers.find(p=>p.id===record.paperId)),record.sourceUrl);
- assert.deepEqual(catalogsForField('algebraic-complex-geometry').map(c=>c.id),['033','034','063']);
+ assert.deepEqual(catalogsForField('algebraic-complex-geometry').map(c=>c.id),['033','034','038','063']);
  assert.equal(catalogs.find(c=>c.id==='034').sourceCommit,'adc7f1241b42e322a6451854ab7e4b4c146bf78a');
 });
 

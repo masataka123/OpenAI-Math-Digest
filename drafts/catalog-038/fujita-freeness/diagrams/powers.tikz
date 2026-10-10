@@ -1,0 +1,11 @@
+\node[card] (a) {\heading{1}{必要な分だけ積の次元を増やす}{Increase the product dimension as needed}
+ $m\geq n+1,\quad r=m-n-1,\quad Y=X\times\mathbf P^r$\\[3pt]
+ $A=L\boxtimes\mathcal O_{\mathbf P^r}(1),\quad\dim Y=n+r$};
+\node[card,below=2.0cm of a] (b) {\heading{2}{積へ主定理を適用する}{Apply the main theorem to the product}
+ $K_Y+(n+r+1)A=(K_X+mL)\boxtimes\mathcal O_{\mathbf P^r}(n)$\\[3pt]
+ \Tx{smooth、connected、projectiveとampleの仮定を満たす}{The smooth, connected, projective and ample hypotheses hold}};
+\flow{a}{b}{\Tx{全次元での主定理から、この随伴束の大域生成を得る。}{The all-dimensional theorem gives global generation of this adjoint.}\\[3pt]\Cite{main-result}};
+\node[result,below=2.0cm of b] (c) {\heading{3}{fiberへ制限して元の指数を得る}{Restrict to a fiber to obtain the required exponent}
+ $\left.\bigl((K_X+mL)\boxtimes\mathcal O_{\mathbf P^r}(n)\bigr)\right|_{X\times\{z\}}\simeq K_X+mL$\\[3pt]
+ \Tx{すべての整数mに成立。r=0は主定理そのもの。}{Holds for every such integer m; r=0 is the main theorem itself.}};
+\flow{b}{c}{\Tx{大域生成束の制限は大域生成。L自体の大域生成は不要。}{Restriction preserves global generation; L itself need not be generated.}\\[3pt]\Cite{all-powers}};

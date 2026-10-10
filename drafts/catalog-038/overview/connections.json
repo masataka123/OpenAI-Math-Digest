@@ -1,0 +1,213 @@
+{
+  "catalogId": "038",
+  "productionVersion": "1.3",
+  "checkingScope": "単論文。外部4入力の記述・使用箇所と、Fujitaの局所持上げへの方法上の参照1件を照合。入力定理の証明全体は未検証。他カタログの全依存関係は未調査。",
+  "omittedSections": [
+    {
+      "section": "カタログ内論文間の総括図・依存表・選択UI",
+      "reason": "単論文であり内部の論文間接続はない。外部接続は記事の短い一覧へ集約。これは他カタログとの依存なしを意味しない。"
+    }
+  ],
+  "connections": [
+    {
+      "id": "demailly-kollar",
+      "from": {
+        "paperId": "demailly-kollar",
+        "result": "Lemma 3.2; Theorem 3.1",
+        "printedPages": "14–15",
+        "pdfPages": "14–15",
+        "version": "arXiv:math/9910118v2, 2000-05-01",
+        "sourceUrl": "https://arxiv.org/pdf/math/9910118v2"
+      },
+      "to": {
+        "paperId": "fujita-freeness",
+        "result": "Lemma 2.3; §3; Lemma 4.3",
+        "pages": "5, 8, 11",
+        "version": "2026-09-23",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Fujitas-freeness-conjecture-September-23-2026/Fujitas-freeness-conjecture-September-23-2026.pdf"
+      },
+      "kind": "direct",
+      "role": "局所的なanalytic semicontinuityとgeneric-resolution stratificationからZariski閉性を得る。",
+      "hypotheses": "局所polydisc上のφ=1/2 log Σ|g_i|²、e^φはHölder。動く点は座標平行移動。非平坦ideal familyのconstructibilityは本稿が別途論じる。",
+      "checking": {
+        "status": "statement-and-use-compared",
+        "checkedBy": "catalog-hq",
+        "checkedOn": "2026-10-10",
+        "scope": "原典の指定箇所と本稿使用箇所を比較。入力定理の証明全体は未検証。"
+      },
+      "unresolved": [
+        "外部証明の独立検証は対象外。"
+      ],
+      "articleLinks": {
+        "ja": {
+          "to": "../fujita-freeness/article.ja.md#proof-overview-step-2",
+          "from": "https://arxiv.org/pdf/math/9910118v2"
+        },
+        "en": {
+          "to": "../fujita-freeness/article.en.md#proof-overview-step-2",
+          "from": "https://arxiv.org/pdf/math/9910118v2"
+        }
+      }
+    },
+    {
+      "id": "fujino",
+      "from": {
+        "paperId": "fujino",
+        "result": "Theorem 0.1",
+        "printedPages": "1",
+        "pdfPages": "1",
+        "version": "Lecture note v1.04, 2009-07-22",
+        "sourceUrl": "https://www.math.kyoto-u.ac.jp/~fujino/kawamata--viehweg2.pdf"
+      },
+      "to": {
+        "paperId": "fujita-freeness",
+        "result": "Theorem 2.4; §3; §6.3",
+        "pages": "5, 8, 22",
+        "version": "2026-09-23",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Fujitas-freeness-conjecture-September-23-2026/Fujitas-freeness-conjecture-September-23-2026.pdf"
+      },
+      "kind": "direct",
+      "role": "rounding形式の消滅から制限写像の全射を得る。",
+      "hypotheses": "smooth projective T、fractional boundaryがSNC、残余Q-divisorがnef and big。Sへの制限後ではなくT上で消滅を適用する。",
+      "checking": {
+        "status": "statement-and-use-compared",
+        "checkedBy": "catalog-hq",
+        "checkedOn": "2026-10-10",
+        "scope": "原典の指定箇所と本稿使用箇所を比較。入力定理の証明全体は未検証。"
+      },
+      "unresolved": [
+        "外部証明の独立検証は対象外。"
+      ],
+      "articleLinks": {
+        "ja": {
+          "to": "../fujita-freeness/article.ja.md#proof-overview-step-4",
+          "from": "https://www.math.kyoto-u.ac.jp/~fujino/kawamata--viehweg2.pdf"
+        },
+        "en": {
+          "to": "../fujita-freeness/article.en.md#proof-overview-step-4",
+          "from": "https://www.math.kyoto-u.ac.jp/~fujino/kawamata--viehweg2.pdf"
+        }
+      }
+    },
+    {
+      "id": "gardner",
+      "from": {
+        "paperId": "gardner",
+        "result": "Theorem 4.1",
+        "printedPages": "362",
+        "pdfPages": "8",
+        "version": "Bulletin AMS 39 (2002), 355–405; published version",
+        "sourceUrl": "https://www.ceremade.dauphine.fr/~carlier/Brunn-Minkowski"
+      },
+      "to": {
+        "paperId": "fujita-freeness",
+        "result": "§5.3, (5.13)",
+        "pages": "16",
+        "version": "2026-09-23",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Fujitas-freeness-conjecture-September-23-2026/Fujitas-freeness-conjecture-September-23-2026.pdf"
+      },
+      "kind": "direct",
+      "role": "有限格子集合の単位立方体による厚み付けから離散和集合の成長を得る。",
+      "hypotheses": "非空の有限集合を用いるため有界可測集合であり、そのMinkowski和も有限立方体和として可測。",
+      "checking": {
+        "status": "statement-and-use-compared",
+        "checkedBy": "catalog-hq",
+        "checkedOn": "2026-10-10",
+        "scope": "原典の指定箇所と本稿使用箇所を比較。入力定理の証明全体は未検証。"
+      },
+      "unresolved": [
+        "外部証明の独立検証は対象外。"
+      ],
+      "articleLinks": {
+        "ja": {
+          "to": "../fujita-freeness/article.ja.md#proof-1-step-3",
+          "from": "https://www.ceremade.dauphine.fr/~carlier/Brunn-Minkowski"
+        },
+        "en": {
+          "to": "../fujita-freeness/article.en.md#proof-1-step-3",
+          "from": "https://www.ceremade.dauphine.fr/~carlier/Brunn-Minkowski"
+        }
+      }
+    },
+    {
+      "id": "fujita1993",
+      "from": {
+        "paperId": "fujita1993",
+        "result": "§1(1.6)",
+        "printedPages": "3",
+        "pdfPages": "3",
+        "version": "arXiv:alg-geom/9311013v1, 1993-11-30",
+        "sourceUrl": "https://arxiv.org/pdf/alg-geom/9311013v1"
+      },
+      "to": {
+        "paperId": "fujita-freeness",
+        "result": "§6.3",
+        "pages": "22–23",
+        "version": "2026-09-23",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Fujitas-freeness-conjecture-September-23-2026/Fujitas-freeness-conjecture-September-23-2026.pdf"
+      },
+      "kind": "background",
+      "role": "等号因子の周囲の狭義discrepancy不等式から消滅・持上げ・降下を行う方法上の参照。",
+      "hypotheses": "三次元の主定理は適用しない。本稿は被約Sに対する制限とLemma 2.5の降下を記述する。",
+      "checking": {
+        "status": "method-comparison",
+        "checkedBy": "catalog-hq",
+        "checkedOn": "2026-10-10",
+        "scope": "原典の指定箇所と本稿使用箇所を比較。入力定理の証明全体は未検証。"
+      },
+      "unresolved": [
+        "外部証明の独立検証は対象外。"
+      ],
+      "articleLinks": {
+        "ja": {
+          "to": "../fujita-freeness/article.ja.md#proof-overview-step-4",
+          "from": "https://arxiv.org/pdf/alg-geom/9311013v1"
+        },
+        "en": {
+          "to": "../fujita-freeness/article.en.md#proof-overview-step-4",
+          "from": "https://arxiv.org/pdf/alg-geom/9311013v1"
+        }
+      }
+    },
+    {
+      "id": "wlodarczyk",
+      "from": {
+        "paperId": "wlodarczyk",
+        "result": "Theorems 1.0.1, 2.4.1; Definition 2.1.3",
+        "printedPages": "781, 783, 786",
+        "pdfPages": "3, 5, 8",
+        "version": "JAMS 18 (2005), 779–822; published version",
+        "sourceUrl": "https://www.math.purdue.edu/~wlodarcz/singularities/Resolution.pdf"
+      },
+      "to": {
+        "paperId": "fujita-freeness",
+        "result": "§2.1; §4; §6.2",
+        "pages": "3, 12, 21",
+        "version": "2026-09-23",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Fujitas-freeness-conjecture-September-23-2026/Fujitas-freeness-conjecture-September-23-2026.pdf"
+      },
+      "kind": "direct",
+      "role": "SNC境界を保つsmooth blow-up列によるprincipalizationと解消。",
+      "hypotheses": "標数0。marked idealの境界Eを固定し、既存primeはstrict transformとして保持。projective modelからのblow-upはprojective。",
+      "checking": {
+        "status": "statement-and-use-compared",
+        "checkedBy": "catalog-hq",
+        "checkedOn": "2026-10-10",
+        "scope": "原典の指定箇所と本稿使用箇所を比較。入力定理の証明全体は未検証。"
+      },
+      "unresolved": [
+        "外部証明の独立検証は対象外。"
+      ],
+      "articleLinks": {
+        "ja": {
+          "to": "../fujita-freeness/article.ja.md#proof-2-step-2",
+          "from": "https://www.math.purdue.edu/~wlodarcz/singularities/Resolution.pdf"
+        },
+        "en": {
+          "to": "../fujita-freeness/article.en.md#proof-2-step-2",
+          "from": "https://www.math.purdue.edu/~wlodarcz/singularities/Resolution.pdf"
+        }
+      }
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 import inventory033 from '../../coordination/catalog-033/inventory.json' with { type: 'json' };
 import inventory034 from '../../research/catalog-034-inventory.json' with { type: 'json' };
+import inventory038 from '../../coordination/catalog-038/inventory.json' with { type: 'json' };
 import inventory063 from '../../coordination/catalog-063/inventory.json' with { type: 'json' };
 import subjectSource from './catalog-subjects.json' with { type: 'json' };
 export const text = (ja, en) => ({ ja, en });
@@ -20,7 +21,7 @@ const fieldTranslations = [
     "id": "algebraic-complex-geometry",
     "ja": "代数幾何学・複素幾何学",
     "catalogIds": [
-      "033", "034", "063"
+      "033", "034", "038", "063"
     ]
   },
   {
@@ -129,7 +130,11 @@ export const papers = [...inventory033.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '033', sourceCommit: inventory033.sourceCommit,
  title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
  pages: entry.pdfPages, order: entry.order, featured: true,
-})), ...papers034, ...inventory063.manuscripts.map(entry => ({
+})), ...papers034, ...inventory038.manuscripts.map(entry => ({
+ id: entry.paperId, catalogId: '038', sourceCommit: inventory038.sourceCommit,
+ title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
+ pages: entry.pdfPages, order: entry.order, featured: true,
+})), ...inventory063.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '063', sourceCommit: inventory063.sourceCommit,
  title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
  pages: entry.pdfPages, order: entry.order, featured: true,
@@ -146,6 +151,13 @@ export const catalogs = [{
   contentsTitle: 'Log abundance for compact Kähler spaces under logarithmic Iitaka subadditivity',
   description: text('豊富性と良い極小モデルに関する論文群を、仮定と結論、証明の関係から整理する。', 'A guide to manuscripts on abundance and good minimal models, organized by hypotheses, conclusions, and arguments.'),
   paperIds: manuscriptIds034,
+}, {
+  id: '038', sourceCommit: inventory038.sourceCommit, mode: 'single',
+  title: text(inventory038.titleJa, inventory038.overviewTitle),
+  contentsTitle: inventory038.contentsTitle,
+  description: text('指数型最小化と局所的な持上げから、藤田の自由性予想の主張と証明の接続を読む。', 'Follow exponential minimization and local lifting through the claimed proof of Fujita’s freeness conjecture.'),
+  paperIds: inventory038.manuscripts.map(p => p.paperId),
+  overviewSectionIds: ['papers', 'connections', 'sources'],
 }, {
   id: '063', sourceCommit: inventory063.sourceCommit, mode: 'single',
   title: text(inventory063.titleJa, inventory063.overviewTitle),

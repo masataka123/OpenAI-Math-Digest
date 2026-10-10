@@ -1,0 +1,438 @@
+{
+  "schemaVersion": 1,
+  "catalogId": "038",
+  "sources": {
+    "P": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "displayName": "Fujita freeness"
+    },
+    "DK": {
+      "recordFile": "sources.json",
+      "recordId": "demailly-kollar",
+      "guideRole": {
+        "ja": "特異性指数の半連続性。thresholdとflag上の閉条件への入力",
+        "en": "Semicontinuity of singularity exponents, used in threshold and flag-incidence loci"
+      }
+    },
+    "KV": {
+      "recordFile": "sources.json",
+      "recordId": "fujino",
+      "guideRole": {
+        "ja": "nef and bigな残余からの消滅と切断の持上げ",
+        "en": "Vanishing for a nef and big remainder and lifting of sections"
+      }
+    },
+    "BM": {
+      "recordFile": "sources.json",
+      "recordId": "gardner",
+      "guideRole": {
+        "ja": "制限切断の初期指数が強制する和集合の成長",
+        "en": "Growth of sums of initial-exponent sets forced by restricted sections"
+      }
+    },
+    "FL": {
+      "recordFile": "sources.json",
+      "recordId": "fujita1993",
+      "guideRole": {
+        "ja": "局所discrepancyと持上げの方法上の参照。三次元の主定理は適用しない",
+        "en": "Methodological source for local discrepancy and lifting; its threefold main theorem is not applied"
+      }
+    },
+    "RES": {
+      "recordFile": "sources.json",
+      "recordId": "wlodarczyk",
+      "guideRole": {
+        "ja": "既存SNC境界を保つ解消・principalization",
+        "en": "Resolution and principalization preserving an existing SNC boundary"
+      }
+    }
+  },
+  "citations": {
+    "main-result": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "all-powers": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Corollary 6.3",
+          "printed": "23",
+          "pdf": "23"
+        }
+      ]
+    },
+    "normalization": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§2.1; Lemmas 2.1–2.2",
+          "printed": "3–4",
+          "pdf": "3–4"
+        }
+      ]
+    },
+    "threshold": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 2.3",
+          "printed": "5",
+          "pdf": "5"
+        }
+      ]
+    },
+    "vanishing": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 2.4",
+          "printed": "5",
+          "pdf": "5"
+        }
+      ]
+    },
+    "descent": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 2.5",
+          "printed": "6",
+          "pdf": "6"
+        }
+      ]
+    },
+    "ordinary": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 3.2",
+          "printed": "6–9",
+          "pdf": "6–9"
+        }
+      ]
+    },
+    "ordinary-statement": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 3.2",
+          "printed": "6",
+          "pdf": "6"
+        }
+      ]
+    },
+    "objective": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "(4.1)",
+          "printed": "9",
+          "pdf": "9"
+        }
+      ]
+    },
+    "attainment": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemmas 4.2–4.3; Proposition 4.4",
+          "printed": "10–12",
+          "pdf": "10–12"
+        }
+      ]
+    },
+    "specialization": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 4.5",
+          "printed": "12–13",
+          "pdf": "12–13"
+        }
+      ]
+    },
+    "point-center": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 5.1",
+          "printed": "13",
+          "pdf": "13"
+        }
+      ]
+    },
+    "restriction": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 5.2; (5.1)–(5.3)",
+          "printed": "13–14",
+          "pdf": "13–14"
+        }
+      ]
+    },
+    "variation": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§5.2; (5.4)–(5.10)",
+          "printed": "14–16",
+          "pdf": "14–16"
+        }
+      ]
+    },
+    "slice-growth": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§5.3; (5.11)–(5.16)",
+          "printed": "16–17",
+          "pdf": "16–17"
+        }
+      ]
+    },
+    "limits": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§5.4; (5.17)–(5.21)",
+          "printed": "17–19",
+          "pdf": "17–19"
+        }
+      ]
+    },
+    "rational-support": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§6.1; Lemma 6.1; (6.1)–(6.5)",
+          "printed": "19–20",
+          "pdf": "19–20"
+        }
+      ]
+    },
+    "isolation": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 6.2",
+          "printed": "21–22",
+          "pdf": "21–22"
+        }
+      ]
+    },
+    "boundary": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§6.2; (6.6)–(6.9)",
+          "printed": "21",
+          "pdf": "21"
+        }
+      ]
+    },
+    "rigidity": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "(6.10)–(6.12)",
+          "printed": "22",
+          "pdf": "22"
+        }
+      ]
+    },
+    "lifting": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§6.3; (6.13)–(6.15)",
+          "printed": "22–23",
+          "pdf": "22–23"
+        }
+      ]
+    },
+    "reading-scope": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§§2–6",
+          "printed": "3–23",
+          "pdf": "3–23"
+        }
+      ]
+    },
+    "dk-semicontinuity": {
+      "source": "DK",
+      "locations": [
+        {
+          "result": "Theorem 3.1; Lemma 3.2",
+          "printed": "14–15",
+          "pdf": "14–15"
+        }
+      ]
+    },
+    "kv-vanishing": {
+      "source": "KV",
+      "locations": [
+        {
+          "result": "Theorem 0.1",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "bm-inequality": {
+      "source": "BM",
+      "locations": [
+        {
+          "result": "Theorem 4.1",
+          "printed": "362",
+          "pdf": "8"
+        }
+      ]
+    },
+    "fujita-lifting": {
+      "source": "FL",
+      "locations": [
+        {
+          "result": "§1(1.6)",
+          "printed": "3",
+          "pdf": "3"
+        }
+      ]
+    },
+    "snc-resolution": {
+      "source": "RES",
+      "locations": [
+        {
+          "result": "Theorem 1.0.1",
+          "printed": "781",
+          "pdf": "3"
+        },
+        {
+          "result": "Definition 2.1.3",
+          "printed": "783",
+          "pdf": "5"
+        },
+        {
+          "result": "Theorem 2.4.1",
+          "printed": "786",
+          "pdf": "8"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ],
+  "articleGuides": {
+    ".": {
+      "selfSource": "P",
+      "externalSources": [
+        "DK",
+        "KV",
+        "BM",
+        "FL",
+        "RES"
+      ],
+      "mainResults": [
+        "main-result",
+        "all-powers"
+      ],
+      "proofTargets": [
+        "main-result",
+        "point-center",
+        "isolation",
+        "all-powers"
+      ],
+      "statements": {
+        "main-result": "theorem-1-1",
+        "point-center": "proposition-5-1",
+        "isolation": "lemma-6-2",
+        "all-powers": "corollary-6-3"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "main-result",
+          "conclusion": "global-generation-at-every-closed-point",
+          "anchor": "proof-overview-step-4"
+        },
+        {
+          "result": "all-powers",
+          "conclusion": "all-integers-m-at-least-n-plus-one",
+          "anchor": "proof-3-step-2"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "ordinary",
+          "purpose": {
+            "ja": "狭義性を生む等号の場合と、例外因子からの持上げ。",
+            "en": "The equality case behind strictness and lifting from the point blowup."
+          }
+        },
+        {
+          "citation": "attainment",
+          "purpose": {
+            "ja": "基底とモデルを同時に動かした最小化の達成。",
+            "en": "Attainment with both bases and models varying."
+          }
+        },
+        {
+          "citation": "restriction",
+          "purpose": {
+            "ja": "中心の次数・特異性によらない制限像の下界。",
+            "en": "A restriction-image lower bound independent of the degree and singularities of the center."
+          }
+        },
+        {
+          "citation": "limits",
+          "purpose": {
+            "ja": "固定パラメータ・部分列・極限の順序。",
+            "en": "The fixed parameter, subsequence and order of limits."
+          }
+        },
+        {
+          "citation": "rational-support",
+          "purpose": {
+            "ja": "支持不等式とpositivity budgetを保つ有理化。",
+            "en": "Rationalization preserving support inequalities and the positivity budget."
+          }
+        },
+        {
+          "citation": "isolation",
+          "purpose": {
+            "ja": "等号が同じprofileを強制する箇所。",
+            "en": "The equality conditions forcing the same profile."
+          }
+        },
+        {
+          "citation": "lifting",
+          "purpose": {
+            "ja": "局所有効性で足りる持上げと、例外補正の降下。",
+            "en": "Lifting using local effectivity and descent with exceptional positive correction."
+          }
+        },
+        {
+          "citation": "all-powers",
+          "purpose": {
+            "ja": "積への適用から全指数へ移る短い証明。",
+            "en": "The product argument giving every higher exponent."
+          }
+        }
+      ]
+    }
+  }
+}

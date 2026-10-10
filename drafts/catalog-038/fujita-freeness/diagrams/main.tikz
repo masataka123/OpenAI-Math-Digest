@@ -1,0 +1,19 @@
+\node[card] (a) {\heading{1}{基点を仮定し、狭義の超過を得る}{Assume a base point; obtain strict excess}
+ $P=K_X+(n+1)L,\quad x\in\operatorname{Bs}|P|$\\[3pt]
+ $\displaystyle\liminf_j\frac{1}{jN_j}\sum_{\gamma\in H_j}|\gamma|_1>\frac n{n+1}$};
+\node[card,below=2.5cm of a] (b) {\heading{2}{基底と重みを動かして最小値を取る}{Minimize over bases and weighted orders}
+ $\displaystyle F_{m,t}=\frac1{N_m}\sum_i e^{A(v)/t-v(s_i)/m}$\\[3pt]
+ $0<c\leq f_{m,t}(x)\leq1-\delta,\qquad 0<a_*\leq A(v)\leq a^*$};
+\flow{a}{b}{\Tx{等号なら消滅で持ち上がる。flagの閉条件とSNC retractionで達成。}{Equality would permit lifting; closed flag loci and SNC retraction give attainment.}\\[3pt]\Cite{ordinary-statement}\\[3pt]\Cite{attainment}};
+\node[card,below=2.0cm of b] (c) {\heading{3}{すべての最小化中心を点へ}{Force every minimizing center to be a point}
+ $t<n+1\ \text{\Tx{を固定}{fixed}},\qquad c_X(v)=\{x\}$\\[3pt]
+ \Tx{任意に大きい次数で、全最小化対に成立}{For every minimizing pair in arbitrarily large degrees}};
+\flow{b}{c}{\Tx{接方向の一階変分と、中心によらない制限像の成長を比較。}{Compare tangential first variation with uniform restriction-image growth.}\\[3pt]\Cite{point-center}};
+\node[card,below=2.5cm of c] (d) {\heading{4}{等号因子を有理データで分離する}{Isolate the equality divisor using rational data}
+ $S\ne0,\quad \rho(S)=\{x\},\quad \operatorname{coeff}_F B=A(F)\ (F\subset S)$\\[3pt]
+ \Tx{隣接する他成分では狭義不等式。残余はnef and big。}{Strict inequality on other adjacent components; nef and big remainder.}};
+\flow{c}{d}{\Tx{支持不等式と厳密な予算を有理化し、idealの最小値を混ぜる。}{Rationalize support inequalities and the strict budget; mix in an ideal minimum.}\\[3pt]\Cite{rational-support}\\[3pt]\Cite{isolation}};
+\node[result,below=2.8cm of d] (e) {\heading{5}{持上げを降下させ、基点を除く}{Lift and descend to remove the base point}
+ $H^1(T,\mathcal O_T(D))=0\quad\Longrightarrow\quad s\in H^0(X,P),\ s(x)\ne0$\\[3pt]
+ \Tx{任意の非生成点の仮定に矛盾し、Theorem 1.1へ}{Contradicts failure at any point; proves Theorem 1.1}};
+\flow{d}{e}{\Tx{S上の非零fiber値を持ち上げ、例外的な正補正を降下させる。}{Lift a nonzero fiber value on S; descend the exceptional positive correction.}\\[3pt]\Cite{kv-vanishing}\\[3pt]\Cite{lifting}\\[3pt]\Cite{descent}};

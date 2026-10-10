@@ -1,0 +1,15 @@
+\node[card] (a) {\heading{1}{正次元中心を仮定する}{Assume a positive-dimensional center}
+ $\dim W=d>0,\quad I_W(h)=\dim\operatorname{im}(R_h\to H^0(W,hL|_W))$\\[3pt]
+ $(d!I_W(h))^{1/d}\geq h-C_d\quad\text{\Tx{（Wによらない）}{(uniform in W)}}$};
+\node[card,below=2.5cm of a] (b) {\heading{2}{接方向の微分で上から抑える}{Bound the tangential moment from above}
+ $A(v_\epsilon)=A(v)+d\epsilon+O(\epsilon^2)$\\[3pt]
+ $\displaystyle T_m=\frac{\sum |\beta|_1e^{-\ell(p)/m}}{mQ_m}\leq\frac dt$};
+\flow{a}{b}{\Tx{非常に一般の点yでの特殊化比較を介し、右微分を非負にする。}{Specialization at a very general point y makes the right derivative nonnegative.}\\[3pt]\Cite{specialization}\\[3pt]\Cite{variation}};
+\node[card,below=2.9cm of b] (c) {\heading{3}{同じmomentに下界を作る}{Bound the same moment from below}
+ $b_p(j+h)\geq b_p(j)+h-C'_d$\\[3pt]
+ $\displaystyle\liminf T_m\geq dI_*,\qquad I_*=\int_0^1s^ne^{(1-s)a_* /(n+1)}\,ds$};
+\flow{b}{c}{\Tx{一様制限像と立方体の和集合を使い、sliceの成長を加重する。}{Use uniform restriction images and sums of cubes; weight the slice growth.}\\[3pt]\Cite{restriction}\\[3pt]\Cite{bm-inequality}\\[3pt]\Cite{slice-growth}};
+\node[result,below=2.15cm of c] (d) {\heading{4}{固定tで矛盾し、全最小化中心を点へ}{Contradict at fixed t; all minimizing centers are points}
+ $\displaystyle\frac dt\geq\liminf T_m\geq dI_*>\frac dt$\\[3pt]
+ \Tx{一つのt、任意に大きいm、すべての最小化対}{One t; arbitrarily large m; every minimizing pair}};
+\flow{c}{d}{\Tx{$I_*>1/t$を満たすtを先に固定。mを無限大へ、次に分割数を無限大へ。}{Fix t with $I_*>1/t$ first; send m to infinity, then the partition size.}\\[3pt]\Cite{limits}};

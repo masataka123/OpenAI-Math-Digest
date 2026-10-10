@@ -1,0 +1,16 @@
+\node[card] (a) {\heading{1}{正係数と支持条件を保って有理化する}{Rationalize positive supporting data}
+ $b^0\cdot q^0=1,\quad b_i^0>0,\quad m\sum_i b_i^0<n+1$\\[3pt]
+ \Tx{qの所属polytopeを保ち、正次元像を避ける}{Preserve polytope membership and avoid positive-dimensional images}};
+\node[card,below=2.0cm of a] (b) {\heading{2}{idealの最小値で境界を摂動する}{Perturb the boundary by an ideal minimum}
+ $\displaystyle B=(1-\eta)\rho^*\sum_i b_i^0D_i+\frac\eta M G$\\[3pt]
+ $\displaystyle\frac{\operatorname{ord}_F G}{M}=\min_{i:q_i^0>0}\frac{\operatorname{ord}_F D_i}{q_i^0}$};
+\flow{a}{b}{\Tx{有理rayの因子F0を保持し、idealをprincipalizeする。}{Retain the divisor F0 of the rational ray and principalize the ideal.}\\[3pt]\Cite{rational-support}\\[3pt]\Cite{boundary}};
+\node[card,below=2.0cm of b] (c) {\heading{3}{等号が全profileを固定する}{Equality fixes the entire profile}
+ $\displaystyle\frac{\operatorname{coeff}_F B}{a_F}=\frac{r_F}{a_F}\bigl((1-\eta)b^0\cdot q'+\eta\mu\bigr)\leq1$\\[3pt]
+ $\text{\Tx{等号}{Equality}}\ \Longrightarrow\ r_F=a_F,\quad q'=q^0$};
+\flow{b}{c}{\Tx{正の係数の平均と最小値を比較。零座標も正係数で制御する。}{Compare a positive weighted average with its minimum, including zero coordinates.}\\[3pt]\Cite{rigidity}};
+\node[result,below=2.0cm of c] (d) {\heading{4}{局所持上げに必要な配置を得る}{Obtain the configuration for local lifting}
+ $S\ne0,\quad\rho(S)=\{x\}$\\[3pt]
+ $\operatorname{coeff}_F B=a_F\ (F\subset S),\quad
+ \operatorname{coeff}_F B<a_F\ (F\not\subset S,\ F\cap S\ne\varnothing)$};
+\flow{c}{d}{\Tx{等号ならSの定義条件を満たす。S以外の隣接成分では狭義。}{Equality forces the defining conditions of S; other adjacent components are strict.}\\[3pt]\Cite{isolation}};
