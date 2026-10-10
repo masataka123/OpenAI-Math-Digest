@@ -60,7 +60,7 @@
   "manuscriptCount": 1,
   "totalPages": 31,
   "currentRequestScope": "site-integration-bilingual-pdf-and-publication-authorized",
-  "productionStatus": "release-prepared; deployment-pending",
+  "productionStatus": "published-and-live-verified",
   "checkingScope": "公式書誌・版・ハッシュ・重複を確認。原稿の主要な証明接続と12外部文献の指定結果・使用条件を照合し、日英本文・7図・案内を作成。全証明の独立検証ではない。詳細と未照合範囲はCONTENT_REVIEW.md。",
   "sourceFiles": [
     {
@@ -208,7 +208,7 @@
       "existingArticleVersionDifference": "完成記事なし。旧試作参照commitと今回のPDFはSHA-256一致。",
       "draftDirectory": "drafts/catalog-051/canonical-ampleness",
       "worker": "catalog-hq",
-      "articleStatus": "content-edited-and-integrated",
+      "articleStatus": "published-and-live-verified",
       "localPdfCache": "/tmp/catalog-051-preparation/canonical-ampleness.pdf",
       "localTextCache": "/tmp/catalog-051-preparation/paper.txt",
       "cachePolicy": "一時キャッシュ。Gitへ原典PDF・抽出全文は追加しない。固定downloadUrlから再取得してsha256を照合。",
@@ -289,7 +289,7 @@
     ],
     "required": true,
     "expectedChapters": 2,
-    "status": "generated-and-visually-checked; publication-pending",
+    "status": "published-and-live-verified",
     "pages": {
       "ja": 23,
       "en": 24
@@ -306,5 +306,13 @@
     "userRequest": "じゃあ公開しましょう",
     "date": "2026-10-10",
     "siteHq": "this-chat"
+  },
+  "publication": {
+    "checkedAt": "2026-10-10T15:17:46.710563+09:00",
+    "contentCommit": "effac913a0751d6d417fa31b52f5162d8f1078cf",
+    "actionsUrl": "https://github.com/masataka123/OpenAI-Math-Digest/actions/runs/38030206688",
+    "resourceCount": 38,
+    "browserConditions": 8,
+    "status": "verified"
   }
 }

@@ -7,7 +7,7 @@
 - カタログ本部／サイト本部：本チャット（記事担当を兼任）／本チャット（公開指示後に兼任）
 - 構成：single（1本・31ページ）
 - 現在のユーザー依頼範囲：「じゃあ公開しましょう」に基づく組込み・日英PDF・GitHub Pages公開と確認。
-- 状態：内容点検・組込み・日英PDF・ローカル検査済み／配信待ち
+- 状態：内容点検・組込み・日英PDF・ローカル検査・公開確認済み
 
 ## 担当・確認状態の記録方針
 
@@ -75,10 +75,10 @@ npm run check:links
 
 ユーザーの「じゃあ公開しましょう」に基づいて今回の051を公開する。
 
-- [ ] 公開する差分・最新Git状態を確認し、通常のcommit・pushで反映。他担当の成果物を消していない。
-- [ ] GitHub Actionsのbuild/deploy成功を確認。
-- [ ] 公開URLで日英カタログ・記事・画像・PDFが今回の版に更新されたことを確認。
-- [ ] 公開URL・commit・確認結果・残る数学的未確認を報告。
+- [x] 公開する差分・最新Git状態を確認し、通常のcommit・pushで反映。他担当の成果物を消していない。
+- [x] GitHub Actionsのbuild/deploy成功を確認。
+- [x] 公開URLで日英カタログ・記事・画像・PDFが今回の版に更新されたことを確認。
+- [x] 公開URL・commit・確認結果・残る数学的未確認を報告。
 
 公開が未依頼ならこの節は「依頼範囲外」と明記し、公開前の作業まで完了させる。機械的検査の成功を全証明の独立検証や専門家査読済みと表現しない。
 
@@ -91,7 +91,7 @@ npm run check:links
 | SITE_HQ_HANDOFF.md | カタログ本部 | 作成済み | SITE_HQ_HANDOFF.md。別チャットへの送信はしていない |
 | サイト組込み・全体検査・日英実画面比較 | 本チャット | 完了 | validation/integrated/checks.json、release-* |
 | 日英PDF（各2章） | 本チャット | 23/24ページ生成・全47ページ点検済み | validation/pdf-pages/、release-pdfcheck.log |
-| 公開・公開確認 | 本チャット | 配信待ち | PUBLICATION.md |
+| 公開・公開確認 | 本チャット | 完了 | PUBLICATION.md、validation/published*、actions-release*.json |
 
 ## 制作セット1.3の必須形式
 
@@ -113,3 +113,5 @@ npm run check:links
 ## 内容制作時点の補足
 
 ローカル共通表示プレビューでは日英PC／375pxと033・034見本の比較を実施済み。その後の公開指示により正式ルートの20条件とPDF全47ページを確認し、上の該当項目を完了とした。参照：CONTENT_REVIEW.mdの4項目受領表、SITE_HQ_HANDOFF.md。
+
+公開項目の担当・確認日：本チャット／2026-10-10。本文commit `effac913`、Actions build/deploy成功、38公開資産の一致、公開8表示条件を確認。URL・数学的未確認範囲はPUBLICATION.mdに記録。

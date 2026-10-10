@@ -4,7 +4,13 @@
 
 ## 配信状態
 
-公開準備完了。GitHub Pagesへの配信と公開URLの確認はこの後に記録する。
+**公開確認済み（2026-10-10T15:17:46.710563+09:00）。** 本文公開commit `effac913a0751d6d417fa31b52f5162d8f1078cf`、[GitHub Actions](https://github.com/masataka123/OpenAI-Math-Digest/actions/runs/38030206688) のbuild・deployとも成功。
+
+- [日本語カタログ](https://masataka123.github.io/OpenAI-Math-Digest/ja/catalog/051/)／[English catalogue](https://masataka123.github.io/OpenAI-Math-Digest/en/catalog/051/)
+- [日本語記事](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/canonical-ampleness/)／[English article](https://masataka123.github.io/OpenAI-Math-Digest/en/papers/canonical-ampleness/)
+- [日本語PDF（23ページ）](https://masataka123.github.io/OpenAI-Math-Digest/pdf/catalog-051-ja.pdf)／[English PDF（24 pages）](https://masataka123.github.io/OpenAI-Math-Digest/pdf/catalog-051-en.pdf)
+
+公開38リソース（各言語のトップ・分野・案内・記事、日英PDF、28図資産）がHTTP 200・ローカルとSHA-256一致。日英×1280/375px×記事・案内の8条件、全7図の拡大・全体表示・引用、言語切替時のアンカー保持、PDF・分野導線を確認。横はみ出し・MathJaxエラー・JavaScript例外・欠損画像なし。検査証拠はvalidation/published-resources.json、published/checks.jsonと画面、actions-release*.json。公開後の追記は確認記録のみ。
 
 ## 差分
 

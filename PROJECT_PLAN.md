@@ -300,3 +300,5 @@ OpenAI math の論文群について、博士院生以上・研究者が、証�
 - Kobayashi’s canonical-ampleness conjecture（単論文、2026-09-23版31ページ）を制作セット1.3で日英記事化。主定理全体・中間命題4件・系2件の7図を配置し、主要結果の全結論に説明を対応。
 - ユーザーの「じゃあ公開しましょう」に基づき本チャットがサイト本部を兼任。日英PDFは23/24ページ、各2章・7図。既存033・034の記事・図と既存8冊のPDFを維持。
 - 35テスト、59ページのビルド、21,803内部参照、全10冊のPDF照合、20画面条件と全47冊子ページの目視確認が成功。公開結果は[051公開記録](coordination/catalog-051/PUBLICATION.md)。
+
+- 051公開確認：本文commit `effac913`、[Actions](https://github.com/masataka123/OpenAI-Math-Digest/actions/runs/38030206688)のbuild/deploy成功。38公開リソースのSHA-256一致と公開8表示条件を確認。日英記事・案内・冊子PDFとも公開済み。
