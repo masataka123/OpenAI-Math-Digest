@@ -1,0 +1,9 @@
+\node[card] (n0) {\heading{1}{中心固定の円板変分}{Centered disc variations}$J(f)=d(f)+P_q(f)-\delta A_h(f)$\quad $\mathcal LJ\le0$};
+\node[card,below=3.4cm of n0] (n1) {\heading{2}{同じHessianから二つの出力}{Two outputs of the same Hessian}\Tx{$h=k,q=R_k$：$K_X$ nef。$q=-h,\delta=1$：$R_h\ge-h\Rightarrow h^n\ge ck^n$。}{$h=k,q=R_k$: $K_X$ nef. $q=-h,\delta=1$: $R_h\ge-h\Rightarrow h^n\ge ck^n$.}};
+\node[card,below=3.4cm of n1] (n2) {\heading{3}{Monge–Ampèreで結合}{Join by Monge–Ampère}$[h_t]=\alpha+t[k],\ R_{h_t}=-h_t+tk,\quad \int_X\alpha^n>0$};
+\node[card,below=3.4cm of n2] (n3) {\heading{4}{Morse判定から射影性へ}{Morse criterion, then projectivity}$K_X\text{ big},\quad X\text{ Moishezon}+\text{K\"ahler}\Rightarrow X\text{ projective}$};
+\node[result,below=3.4cm of n3] (n4) {\heading{5}{有理曲線なしから豊富性・埋込み}{No rational curves: ampleness and embedding}$(1+\eta m)K_X\sim_{\mathbb Q}(K_X+\eta E)+\eta H\quad\text{ample}$\\[3pt]$K_X^{\otimes r}$\quad\Tx{十分大きい$r$で射影埋込み}{gives a projective embedding for large $r$}};
+\flow{n0}{n1}{\Tx{境界正則性・枠・実際の変分族を確保してトレースを計算}{Boundary regularity and frames give actual variations and trace identities}\\[4pt]\Cite{trace}\\[2pt]\Cite{nef}\\[2pt]\Cite{volume}};
+\flow{n1}{n2}{\Tx{nef類の近傍で方程式を解き、一様下界を積分する}{Solve in classes near the nef class; integrate the uniform lower bound}\\[4pt]\Cite{ma-input}\\[2pt]\Cite{intersection}};
+\flow{n2}{n3}{\Tx{負固有値部分の積分は$O(\varepsilon)$。Morse不等式と滑らかなKähler Moishezonの射影性}{The negative-index error is $O(\varepsilon)$; use Morse and projectivity criteria}\\[4pt]\Cite{morse-input}\\[2pt]\Cite{projective-input}};
+\flow{n3}{n4}{\Tx{big分解をklt摂動し、錐定理でnef＋ampleに帰着}{A big decomposition and klt perturbation reduce to nef plus ample}\\[4pt]\Cite{ample}\\[2pt]\Cite{cone-input}\\[2pt]\Cite{kleiman-input}};

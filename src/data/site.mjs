@@ -1,6 +1,7 @@
 import inventory033 from '../../coordination/catalog-033/inventory.json' with { type: 'json' };
 import inventory034 from '../../research/catalog-034-inventory.json' with { type: 'json' };
 import inventory038 from '../../coordination/catalog-038/inventory.json' with { type: 'json' };
+import inventory051 from '../../coordination/catalog-051/inventory.json' with { type: 'json' };
 import inventory063 from '../../coordination/catalog-063/inventory.json' with { type: 'json' };
 import subjectSource from './catalog-subjects.json' with { type: 'json' };
 export const text = (ja, en) => ({ ja, en });
@@ -21,7 +22,7 @@ const fieldTranslations = [
     "id": "algebraic-complex-geometry",
     "ja": "代数幾何学・複素幾何学",
     "catalogIds": [
-      "033", "034", "038", "063"
+      "033", "034", "038", "051", "063"
     ]
   },
   {
@@ -134,6 +135,10 @@ export const papers = [...inventory033.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '038', sourceCommit: inventory038.sourceCommit,
  title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
  pages: entry.pdfPages, order: entry.order, featured: true,
+})), ...inventory051.manuscripts.map(entry => ({
+ id: entry.paperId, catalogId: '051', sourceCommit: inventory051.sourceCommit,
+ title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
+ pages: entry.pdfPages, order: entry.order, featured: true,
 })), ...inventory063.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '063', sourceCommit: inventory063.sourceCommit,
  title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
@@ -157,6 +162,13 @@ export const catalogs = [{
   contentsTitle: inventory038.contentsTitle,
   description: text('指数型最小化と局所的な持上げから、藤田の自由性予想の主張と証明の接続を読む。', 'Follow exponential minimization and local lifting through the claimed proof of Fujita’s freeness conjecture.'),
   paperIds: inventory038.manuscripts.map(p => p.paperId),
+  overviewSectionIds: ['papers', 'connections', 'sources'],
+}, {
+  id: '051', sourceCommit: inventory051.sourceCommit, mode: 'single',
+  title: text(inventory051.titleJa, inventory051.overviewTitle),
+  contentsTitle: inventory051.contentsTitle,
+  description: text('円板変分から標準束の豊富性へ至る証明と、大域生成・有限被覆の二つの系を読む。', 'Follow disc variations to canonical ampleness and its consequences for global generation and finite covers.'),
+  paperIds: inventory051.manuscripts.map(p => p.paperId),
   overviewSectionIds: ['papers', 'connections', 'sources'],
 }, {
   id: '063', sourceCommit: inventory063.sourceCommit, mode: 'single',

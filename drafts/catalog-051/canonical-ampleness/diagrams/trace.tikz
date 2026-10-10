@@ -1,0 +1,7 @@
+\node[card] (n0) {\heading{1}{面積罰則と最大化}{Area penalty and attainment}$J=d+P_q-\delta A_h,\qquad A_k(f)-A_{k,r}(f)\le C_f(1-r)$};
+\node[card,below=3.4cm of n0] (n1) {\heading{2}{境界で正規化された正則枠}{A boundary-normalized holomorphic frame}$f,B\in W^{1,p_0}\cap C^0,\quad p_0>2,\quad B^*hB=I\ \text{on }\partial\mathbb D$};
+\node[card,below=3.4cm of n1] (n2) {\heading{3}{中心固定の変分を実現}{Realize centered variations}$Hg=Tg-(Tg)(0),\quad g+Q(zSt+Hg)=0$\\[3pt]$F_t(0)=x,\qquad \partial_{t_j}F|_0=zb_j$};
+\node[result,below=3.4cm of n2] (n3) {\heading{4}{弱い境界極限で三つの恒等式}{Three identities via the weak boundary limit}$\mathcal Ld=\operatorname{tr}(B(0)^*kB(0))$\\[3pt]$\mathcal LP_q=\frac1{2\pi}\int_0^{2\pi}\operatorname{tr}_h q(f(e^{i\theta}))\,d\theta,\qquad \mathcal LA_h=n-A_{R_h}(f)$};
+\flow{n0}{n1}{\Tx{膨張比較の尾評価からSobolev正則性。重み付きHardy空間で枠を正規化}{The dilation tail gives Sobolev regularity; normalize in a weighted Hardy space}\\[4pt]\Cite{regularity}\\[2pt]\Cite{frame}\\[2pt]\Cite{oka-input}};
+\flow{n1}{n2}{\Tx{中心を保つ右逆と可逆な線形化に複素陰関数定理を適用}{Use a centered right inverse and the complex implicit function theorem}\\[4pt]\Cite{cauchy-input}\\[2pt]\Cite{implicit-input}\\[2pt]\Cite{variation}};
+\flow{n2}{n3}{\Tx{閉形式の微分を境界へ移し、$N=I$でトレースと行列式の誤差を消す}{Move derivatives to the boundary; $N=I$ removes the trace–determinant error}\\[4pt]\Cite{trace}\\[2pt]\Cite{determinant}};

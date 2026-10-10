@@ -1,0 +1,5 @@
+\node[card] (n0) {\heading{1}{nef類のKähler近傍}{Kähler classes near the nef class}$\alpha=[-R_k],\quad\gamma_t=-R_k+tk+i\partial\bar\partial a_t>0$};
+\node[card,below=3.4cm of n0] (n1) {\heading{2}{任意の正の体積形式で方程式を解く}{Solve for an arbitrary positive volume form}$h_t=\gamma_t+i\partial\bar\partial w_t,\quad h_t^n=e^{a_t+w_t}k^n$\\[3pt]$R_{h_t}=-h_t+tk\ge-h_t$};
+\node[result,below=3.4cm of n1] (n2) {\heading{3}{交点多項式をゼロで評価}{Evaluate the intersection polynomial at zero}$\displaystyle\int_X(\alpha+t[k])^n\ge c_{n,D}\int_Xk^n$\\[3pt]$\displaystyle (2\pi)^n\int_Xc_1(K_X)^n\ge c_{n,D}\int_Xk^n>0$};
+\flow{n0}{n1}{\Tx{nef性で$\gamma_t$を選び、存在定理に$e^{a_t}k^n$を入力}{Use nefness to choose $\gamma_t$; prescribe $e^{a_t}k^n$ in the existence theorem}\\[4pt]\Cite{nef}\\[2pt]\Cite{ma-input}};
+\flow{n1}{n2}{\Tx{一様体積下界を積分し、計量収束を仮定せず$t\downarrow0$}{Integrate the uniform bound and take $t\downarrow0$ without metric convergence}\\[4pt]\Cite{volume}\\[2pt]\Cite{intersection}};

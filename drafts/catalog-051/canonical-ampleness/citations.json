@@ -1,0 +1,634 @@
+{
+  "schemaVersion": 1,
+  "catalogId": "051",
+  "sources": {
+    "P": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "displayName": "Canonical ampleness"
+    },
+    "PR": {
+      "recordFile": "sources.json",
+      "recordId": "poletsky",
+      "guideRole": {
+        "ja": "det T_Xの零切断を除く空間の包絡をpshにする。Proposition 6.2で使用",
+        "en": "Plurisubharmonicity of the envelope on the punctured determinant bundle, used in Proposition 6.2"
+      }
+    },
+    "MA": {
+      "recordFile": "sources.json",
+      "recordId": "berman",
+      "guideRole": {
+        "ja": "Aubin–Yauの存在定理の任意の正の体積形式に対する記述。Theorem 8.1からProposition 8.2へ",
+        "en": "Aubin–Yau existence in the stated arbitrary-volume-form setting; Theorem 8.1 and Proposition 8.2"
+      }
+    },
+    "HM": {
+      "recordFile": "sources.json",
+      "recordId": "morse",
+      "guideRole": {
+        "ja": "Lemma 9.1の切断増大とMoishezon性の判定",
+        "en": "Section growth and the Moishezon criterion in Lemma 9.1"
+      }
+    },
+    "MP": {
+      "recordFile": "sources.json",
+      "recordId": "namikawa",
+      "guideRole": {
+        "ja": "滑らかなKähler Moishezon多様体の射影性。Theorem 9.2で使用",
+        "en": "Projectivity of the smooth Kähler Moishezon manifold, used in Theorem 9.2"
+      }
+    },
+    "DT": {
+      "recordFile": "sources.json",
+      "recordId": "diverio",
+      "guideRole": {
+        "ja": "Proposition 9.3と同じ判定の比較参照。本稿は錐定理から改めて証明する。曲率仮定の主定理を入力にしない",
+        "en": "A comparison statement for Proposition 9.3, which the manuscript proves through the cone theorem; the curvature main theorem is not an input"
+      }
+    },
+    "LC": {
+      "recordFile": "sources.json",
+      "recordId": "fujino",
+      "guideRole": {
+        "ja": "Proposition 9.3のklt摂動、有理曲線、nef＋ampleの豊富性",
+        "en": "The klt perturbation, rational curve, and nef-plus-ample steps of Proposition 9.3"
+      }
+    },
+    "FF": {
+      "recordFile": "sources.json",
+      "recordId": "fujita",
+      "guideRole": {
+        "ja": "Corollary 10.1だけへの入力。L=K_X、指数m−1",
+        "en": "Input only to Corollary 10.1, with L=K_X and exponent m−1"
+      }
+    },
+    "SC": {
+      "recordFile": "sources.json",
+      "recordId": "semialgebraic",
+      "guideRole": {
+        "ja": "Corollary 10.2だけへの入力。通常の普遍被覆の積分類",
+        "en": "Input only to Corollary 10.2: product classification of the ordinary universal cover"
+      }
+    },
+    "KA": {
+      "recordFile": "sources.json",
+      "recordId": "kobayashi",
+      "guideRole": {
+        "ja": "Corollary 10.2でK_F ampleからAut(F)有限",
+        "en": "Finiteness of Aut(F) from ample K_F in Corollary 10.2"
+      }
+    },
+    "CG": {
+      "recordFile": "sources.json",
+      "recordId": "cauchy",
+      "guideRole": {
+        "ja": "Lemma 4.1とProposition 4.3で使うL^p→W^{1,p}の∂̄右逆",
+        "en": "The L^p→W^{1,p} right inverse used in Lemma 4.1 and Proposition 4.3"
+      }
+    },
+    "IF": {
+      "recordFile": "sources.json",
+      "recordId": "implicit",
+      "guideRole": {
+        "ja": "Proposition 4.3の中心固定正則族の構成",
+        "en": "Construction of the centered holomorphic family in Proposition 4.3"
+      }
+    },
+    "OK": {
+      "recordFile": "sources.json",
+      "recordId": "oka",
+      "guideRole": {
+        "ja": "Lemma 4.1のStein円板上の正則枠。GL_n(C)の枠束に適用",
+        "en": "The holomorphic frame over a Stein disc in Lemma 4.1, via its GL_n(C) frame bundle"
+      }
+    }
+  },
+  "citations": {
+    "main": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "completion": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§9; completion of Theorem 1.1",
+          "printed": "24–26",
+          "pdf": "24–26"
+        }
+      ]
+    },
+    "disc": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 3.2; Lemma 3.3",
+          "printed": "6–8",
+          "pdf": "6–8"
+        }
+      ]
+    },
+    "regularity": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 3.4",
+          "printed": "8–9",
+          "pdf": "8–9"
+        }
+      ]
+    },
+    "frame": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 4.1; Proposition 4.2",
+          "printed": "10–12",
+          "pdf": "10–12"
+        }
+      ]
+    },
+    "variation": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 4.3",
+          "printed": "13–16",
+          "pdf": "13–16"
+        }
+      ]
+    },
+    "trace": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 5.2",
+          "printed": "17–18",
+          "pdf": "17–18"
+        }
+      ]
+    },
+    "determinant": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 5.1",
+          "printed": "17",
+          "pdf": "17"
+        }
+      ]
+    },
+    "maximum": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Corollary 5.3",
+          "printed": "19",
+          "pdf": "19"
+        }
+      ]
+    },
+    "ricci-bound": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 6.1",
+          "printed": "19–20",
+          "pdf": "19–20"
+        }
+      ]
+    },
+    "potentials": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 6.2",
+          "printed": "20–21",
+          "pdf": "20–21"
+        }
+      ]
+    },
+    "nef": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 6.4; Lemma 6.3",
+          "printed": "21",
+          "pdf": "21"
+        }
+      ]
+    },
+    "smoothing": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Appendix A; Lemma A.1",
+          "printed": "27–30",
+          "pdf": "27–30"
+        }
+      ]
+    },
+    "volume": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 7.1",
+          "printed": "22",
+          "pdf": "22"
+        }
+      ]
+    },
+    "intersection": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 8.2",
+          "printed": "23–24",
+          "pdf": "23–24"
+        }
+      ]
+    },
+    "ma-self": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 8.1",
+          "printed": "23",
+          "pdf": "23"
+        }
+      ]
+    },
+    "big": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 9.1",
+          "printed": "24–25",
+          "pdf": "24–25"
+        }
+      ]
+    },
+    "projectivity": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 9.2",
+          "printed": "25",
+          "pdf": "25"
+        }
+      ]
+    },
+    "ample": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 9.3",
+          "printed": "25–26",
+          "pdf": "25–26"
+        }
+      ]
+    },
+    "powers": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Corollary 10.1",
+          "printed": "26",
+          "pdf": "26"
+        }
+      ]
+    },
+    "cover": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Corollary 10.2",
+          "printed": "26–27",
+          "pdf": "26–27"
+        }
+      ]
+    },
+    "conventions": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§2; Lemma 2.1",
+          "printed": "4–5",
+          "pdf": "4–5"
+        }
+      ]
+    },
+    "pr-input": {
+      "source": "PR",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "1407",
+          "pdf": "1"
+        }
+      ]
+    },
+    "ma-input": {
+      "source": "MA",
+      "locations": [
+        {
+          "result": "§1, equation (1.1)",
+          "printed": "366–367",
+          "pdf": "3–4"
+        }
+      ]
+    },
+    "morse-input": {
+      "source": "HM",
+      "locations": [
+        {
+          "result": "(0.7); Theorem 0.8(a)",
+          "printed": "193–194",
+          "pdf": "6–7"
+        }
+      ]
+    },
+    "projective-input": {
+      "source": "MP",
+      "locations": [
+        {
+          "result": "Theorem 6",
+          "printed": "3",
+          "pdf": "3"
+        }
+      ]
+    },
+    "ample-input": {
+      "source": "DT",
+      "locations": [
+        {
+          "result": "Lemma 2.1",
+          "printed": "3",
+          "pdf": "3"
+        }
+      ]
+    },
+    "cone-input": {
+      "source": "LC",
+      "locations": [
+        {
+          "result": "Theorem 1.1(5)",
+          "printed": "728–729",
+          "pdf": "2–3"
+        }
+      ]
+    },
+    "kleiman-input": {
+      "source": "LC",
+      "locations": [
+        {
+          "result": "§4.4; Theorem 4.10",
+          "printed": "737–738",
+          "pdf": "11–12"
+        }
+      ]
+    },
+    "fujita-input": {
+      "source": "FF",
+      "locations": [
+        {
+          "result": "Corollary 6.3",
+          "printed": "23",
+          "pdf": "23"
+        }
+      ]
+    },
+    "classification-input": {
+      "source": "SC",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "finite-input": {
+      "source": "KA",
+      "locations": [
+        {
+          "result": "Theorem",
+          "printed": "184",
+          "pdf": "1"
+        }
+      ]
+    },
+    "cauchy-input": {
+      "source": "CG",
+      "locations": [
+        {
+          "result": "§4.1",
+          "printed": "11",
+          "pdf": "11"
+        }
+      ]
+    },
+    "implicit-input": {
+      "source": "IF",
+      "locations": [
+        {
+          "result": "Theorem 2.3(ii), (d)",
+          "printed": "11",
+          "pdf": "11"
+        }
+      ]
+    },
+    "oka-input": {
+      "source": "OK",
+      "locations": [
+        {
+          "result": "Theorem 1.3; §1, example (A)",
+          "printed": "1–3",
+          "pdf": "1–3"
+        }
+      ]
+    },
+    "morse-growth": {
+      "source": "HM",
+      "locations": [
+        {
+          "result": "Theorem 0.1(a)",
+          "printed": "189",
+          "pdf": "2"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ],
+  "articleGuides": {
+    ".": {
+      "selfSource": "P",
+      "externalSources": [
+        "PR",
+        "MA",
+        "HM",
+        "MP",
+        "DT",
+        "LC",
+        "FF",
+        "SC",
+        "KA",
+        "CG",
+        "IF",
+        "OK"
+      ],
+      "mainResults": [
+        "main",
+        "powers",
+        "cover"
+      ],
+      "proofTargets": [
+        "main",
+        "trace",
+        "nef",
+        "volume",
+        "intersection",
+        "powers",
+        "cover"
+      ],
+      "statements": {
+        "main": "theorem-1-1",
+        "trace": "proposition-5-2",
+        "nef": "proposition-6-4",
+        "volume": "proposition-7-1",
+        "intersection": "proposition-8-2",
+        "powers": "corollary-10-1",
+        "cover": "corollary-10-2"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "main",
+          "conclusion": "canonical-ampleness",
+          "anchor": "proof-overview-step-4"
+        },
+        {
+          "result": "main",
+          "conclusion": "positive-pluricanonical-projective-embedding",
+          "anchor": "proof-overview-step-4"
+        },
+        {
+          "result": "powers",
+          "conclusion": "all-integers-m-at-least-n-plus-two",
+          "anchor": "proof-5-step-2"
+        },
+        {
+          "result": "cover",
+          "conclusion": "connected-finite-etale-product-cover",
+          "anchor": "proof-6-step-3"
+        },
+        {
+          "result": "cover",
+          "conclusion": "bounded-symmetric-D-and-simply-connected-smooth-hyperbolic-projective-F",
+          "anchor": "proof-6-step-1"
+        },
+        {
+          "result": "cover",
+          "conclusion": "discrete-free-properly-discontinuous-cocompact-action",
+          "anchor": "proof-6-step-3"
+        },
+        {
+          "result": "cover",
+          "conclusion": "point-factor-cases",
+          "anchor": "proof-6-step-2"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "disc",
+          "purpose": {
+            "ja": "最大化と境界面積の尾評価。",
+            "en": "Attainment and the boundary-area tail."
+          }
+        },
+        {
+          "citation": "frame",
+          "purpose": {
+            "ja": "境界正規化と正則性。",
+            "en": "Boundary normalization and regularity."
+          }
+        },
+        {
+          "citation": "variation",
+          "purpose": {
+            "ja": "形式的方向を実際の正則族にする箇所。",
+            "en": "Realizing formal directions by holomorphic families."
+          }
+        },
+        {
+          "citation": "trace",
+          "purpose": {
+            "ja": "積分の微分と弱い境界極限。",
+            "en": "Differentiation under the integrals and the weak boundary limit."
+          }
+        },
+        {
+          "citation": "potentials",
+          "purpose": {
+            "ja": "行列式束上の包絡と標準束の符号。",
+            "en": "The determinant-bundle envelope and the canonical-bundle sign."
+          }
+        },
+        {
+          "citation": "smoothing",
+          "purpose": {
+            "ja": "有界だが不連続なポテンシャルの貼合せ。",
+            "en": "Gluing bounded, possibly discontinuous potentials."
+          }
+        },
+        {
+          "citation": "volume",
+          "purpose": {
+            "ja": "補助量に依存しない下界。",
+            "en": "The lower bound independent of auxiliary choices."
+          }
+        },
+        {
+          "citation": "intersection",
+          "purpose": {
+            "ja": "計量収束を使わないコホモロジー極限。",
+            "en": "The cohomological limit without metric convergence."
+          }
+        },
+        {
+          "citation": "completion",
+          "purpose": {
+            "ja": "bigから射影性・ampleへの各入力。",
+            "en": "The inputs from bigness to projectivity and ampleness."
+          }
+        },
+        {
+          "citation": "powers",
+          "purpose": {
+            "ja": "038の全指数版の使用。",
+            "en": "Use of the all-powers input from 038."
+          }
+        },
+        {
+          "citation": "cover",
+          "purpose": {
+            "ja": "058の分類と有限指数部分群。",
+            "en": "The classification from 058 and the finite-index subgroup."
+          }
+        }
+      ]
+    }
+  }
+}

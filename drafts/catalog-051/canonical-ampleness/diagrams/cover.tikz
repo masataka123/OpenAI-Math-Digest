@@ -1,0 +1,7 @@
+\node[card] (n0) {\heading{1}{射影性を得て普遍被覆を分類}{Obtain projectivity and classify the cover}$\widetilde X\simeq D\times\mathbb C^m\times F$};
+\node[card,below=3.4cm of n0] (n1) {\heading{2}{双曲性で余分な因子を除く}{Remove the extra factor by hyperbolicity}$m=0,\quad F\text{ smooth, simply connected, projective, hyperbolic}$};
+\node[card,below=3.4cm of n1] (n2) {\heading{3}{有限自己同型群で作用を分離}{Separate the action using finite automorphisms}$\operatorname{Aut}(F)\text{ finite},\quad\Gamma\longrightarrow\operatorname{Aut}(F)$\\[3pt]$\Gamma_0=\ker(\Gamma\to\operatorname{Aut}(F)),\qquad [\Gamma:\Gamma_0]<\infty$};
+\node[result,below=3.4cm of n2] (n3) {\heading{4}{有限エタール被覆として降ろす}{Descend to a finite étale cover}$X_0=(D/\Gamma_0)\times F\longrightarrow X$\\[3pt]\Tx{$\Gamma_0$は離散・自由・固有不連続に作用し、$D/\Gamma_0$はコンパクト。$D$または$F$が点の場合を含む。}{$\Gamma_0$ acts discretely, freely and properly discontinuously; $D/\Gamma_0$ is compact. Point factors are allowed.}};
+\flow{n0}{n1}{\Tx{058の分類を使う。被覆と因子は双曲的、積の滑らかさから$F$は滑らか}{Use 058; covers and factors are hyperbolic, and smoothness descends to $F$}\\[4pt]\Cite{main}\\[2pt]\Cite{classification-input}};
+\flow{n1}{n2}{\Tx{主定理を$F$へ再適用。コンパクトな$F$から$D$への写像は定数}{Reapply the main theorem to $F$; maps from compact $F$ to $D$ are constant}\\[4pt]\Cite{finite-input}\\[2pt]\Cite{cover}};
+\flow{n2}{n3}{\Tx{核は有限指数。自由性・固有不連続性・コンパクト性を確認する}{The kernel has finite index; check freeness, proper discontinuity and compactness}\\[4pt]\Cite{cover}};

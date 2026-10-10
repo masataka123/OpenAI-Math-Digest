@@ -1,0 +1,7 @@
+\node[card] (n0) {\heading{1}{固定テスト円板に対する上界}{A bound for each fixed test disc}$h=k,\ q=R_k,\quad P_{R_k}(g)\le C$\quad\Tx{すべての有限面積円板$g$}{for every finite-area disc $g$}};
+\node[card,below=3.4cm of n0] (n1) {\heading{2}{行列式束上のpsh包絡}{A psh envelope on the determinant bundle}$Y=(\det T^{1,0}X)\setminus0_X,\quad \ell=\log|s|_k^2$\\[3pt]$\ell-C\le v\le\ell,\qquad v(\lambda s)=v(s)+\log|\lambda|^2$};
+\node[card,below=3.4cm of n1] (n2) {\heading{3}{双対束の曲率を読む}{Read the curvature of the dual bundle}$v-\ell=u\circ\pi,\quad -C\le u\le0$\\[3pt]$|s_i^*|^2=e^{-(a_i+u)},\quad -R_k+i\partial\bar\partial u\ge0$};
+\node[result,below=3.4cm of n2] (n3) {\heading{4}{有界ポテンシャルを平滑化}{Smooth the bounded potential}$\forall\varepsilon>0\quad\exists u_\varepsilon\in C^\infty(X,\mathbb R):\quad -R_k+i\partial\bar\partial u_\varepsilon\ge-\varepsilon k$};
+\flow{n0}{n1}{\Tx{最大円板と比較した後で$\delta\downarrow0$。Poletsky包絡の$-\infty$を排除}{Compare before taking $\delta\downarrow0$; exclude the envelope value $-\infty$}\\[4pt]\Cite{ricci-bound}\\[2pt]\Cite{pr-input}};
+\flow{n1}{n2}{\Tx{斉次性で局所重みを降ろし、$K_X$の符号を保持する}{Descend the weights by homogeneity, keeping the canonical-bundle sign}\\[4pt]\Cite{potentials}};
+\flow{n2}{n3}{\Tx{局所supの重なり誤差を抑え、cutoffと正則化maxで貼り合わせる}{Control overlap errors of local suprema; glue by cutoffs and regularized maxima}\\[4pt]\Cite{smoothing}\\[2pt]\Cite{nef}};

@@ -1,0 +1,5 @@
+\node[card] (n0) {\heading{1}{定数円板との比較}{Compare with a constant disc}$q=-h,\ \delta=1,\ R_h\ge-h$\\[3pt]$P_h(f)+A_h(f)\le d(f)\le D$};
+\node[card,below=3.4cm of n0] (n1) {\heading{2}{行列式の下界・トレースの上界}{Determinant below, trace above}$\det(B(0)^*hB(0))=e^{P_{R_h}(f)}\ge e^{-D}$\\[3pt]$\operatorname{tr}(B(0)^*kB(0))\le2n+D$};
+\node[result,below=3.4cm of n1] (n2) {\heading{3}{枠を比で消去}{Cancel the frame in the ratio}$\displaystyle \frac{h^n}{k^n}=\frac{\det(B(0)^*hB(0))}{\det(B(0)^*kB(0))}\ge e^{-D}\left(\frac n{2n+D}\right)^n$};
+\flow{n0}{n1}{\Tx{Ricciの下界と最大性を三つの恒等式へ代入する}{Insert the Ricci bound and maximality into the trace identities}\\[4pt]\Cite{maximum}\\[2pt]\Cite{determinant}};
+\flow{n1}{n2}{\Tx{相加相乗平均で分母を抑える。定数は$h$・点・枠に依存しない}{Bound the denominator by arithmetic–geometric mean; the constant is uniform}\\[4pt]\Cite{volume}};

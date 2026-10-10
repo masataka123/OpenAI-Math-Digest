@@ -10,7 +10,7 @@ const root='drafts/catalog-033';
 test('033 registers five papers in official order without moving the 034 source snapshot',()=>{
  assert.equal(catalog.paperIds.length,5);
  assert.equal(catalog.title.en,"Campana's orbifold Iitaka conjecture and logarithmic subadditivity");
- assert.deepEqual(catalogsForField('algebraic-complex-geometry').map(c=>c.id),['033','034','038','063']);
+ assert.deepEqual(catalogsForField('algebraic-complex-geometry').map(c=>c.id),['033','034','038','051','063']);
  for(const record of Object.values(records.papers)){
   const paper=papers.find(p=>p.id===record.paperId);
   assert.equal(paperSource(paper),record.sourceUrl);

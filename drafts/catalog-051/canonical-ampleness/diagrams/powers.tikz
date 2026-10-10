@@ -1,0 +1,3 @@
+\node[card] (n0) {\heading{1}{先に射影性と豊富性を得る}{First obtain projectivity and ampleness}$X\text{ smooth projective},\qquad L=K_X\text{ ample}$};
+\node[result,below=3.4cm of n0] (n1) {\heading{2}{すべての指数を一つずらす}{Shift every eligible exponent by one}$m\ge n+2\ \Longrightarrow\ m-1\ge n+1$\\[3pt]$K_X\otimes L^{\otimes(m-1)}=K_X^{\otimes m}$\quad\Tx{大域生成}{globally generated}};
+\flow{n0}{n1}{\Tx{038の全指数版を$L=K_X$へ適用する}{Apply the all-exponents corollary in 038 with $L=K_X$}\\[4pt]\Cite{main}\\[2pt]\Cite{fujita-input}\\[2pt]\Cite{powers}};

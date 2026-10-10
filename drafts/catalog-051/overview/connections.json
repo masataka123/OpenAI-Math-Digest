@@ -1,0 +1,569 @@
+{
+  "catalogId": "051",
+  "productionVersion": "1.3",
+  "checkingScope": "12外部文献の記述と使用箇所を照合。主定理の直接入力8件、同じ判定の比較参照1件、系への入力3件。全外部証明と網羅的依存関係は未調査。",
+  "omittedSections": [
+    {
+      "section": "catalog-internal graph / paper selector",
+      "reason": "収録1本で内部の論文間接続なし。空の表・図・選択UIを置かない。証明全体図は個別記事へ。"
+    }
+  ],
+  "connections": [
+    {
+      "id": "oka-to-canonical-ampleness",
+      "from": {
+        "paperId": "oka",
+        "result": "Theorem 1.3; §1, example (A)",
+        "locations": [
+          {
+            "result": "Theorem 1.3; §1, example (A)",
+            "printed": "1–3",
+            "pdf": "1–3"
+          }
+        ],
+        "version": "arXiv:math/0305238v1, 2003-05-16; first page unnumbered",
+        "sourceUrl": "https://arxiv.org/pdf/math/0305238v1"
+      },
+      "to": {
+        "paperId": "canonical-ampleness",
+        "result": "Lemma 4.1",
+        "printed": "10",
+        "pdf": "10",
+        "version": "2026-09-23",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Canonical-ampleness-of-compact-hyperbolic-Kahler-manifolds-September-23-2026/canonical-ampleness.pdf"
+      },
+      "role": "Stein円板上の正則枠を得る",
+      "hypotheses": "円板は可縮Stein、GL_n(C)正則枠束は連続切断を持つ。Lie群ファイバーのOka原理で正則切断へ。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-compared",
+        "by": "catalog-051 本部兼記事担当",
+        "date": "2026-10-10",
+        "record": "../canonical-ampleness/sources.json",
+        "scope": "入力結果の記述・必要な仮定と本文の適用箇所を照合。外部結果の証明全体は再検証しない。"
+      },
+      "articleLinks": {
+        "source": {
+          "ja": "https://arxiv.org/pdf/math/0305238v1",
+          "en": "https://arxiv.org/pdf/math/0305238v1"
+        },
+        "target": {
+          "ja": "../canonical-ampleness/article.ja.md#proof-1-step-2",
+          "en": "../canonical-ampleness/article.en.md#proof-1-step-2"
+        }
+      },
+      "unresolved": []
+    },
+    {
+      "id": "cauchy-to-canonical-ampleness",
+      "from": {
+        "paperId": "cauchy",
+        "result": "§4.1",
+        "locations": [
+          {
+            "result": "§4.1",
+            "printed": "11",
+            "pdf": "11"
+          }
+        ],
+        "version": "arXiv:1411.3989v4, 2016-04-05",
+        "sourceUrl": "https://arxiv.org/pdf/1411.3989v4"
+      },
+      "to": {
+        "paperId": "canonical-ampleness",
+        "result": "Lemma 4.1; Proposition 4.3",
+        "printed": "10; 13–16",
+        "pdf": "10; 13–16",
+        "version": "2026-09-23",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Canonical-ampleness-of-compact-hyperbolic-Kahler-manifolds-September-23-2026/canonical-ampleness.pdf"
+      },
+      "role": "中心を固定する∂̄右逆を構成",
+      "hypotheses": "p>2でT:L^p→W^{1,p}。中心評価が連続なのでTg−Tg(0)を使える。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-compared",
+        "by": "catalog-051 本部兼記事担当",
+        "date": "2026-10-10",
+        "record": "../canonical-ampleness/sources.json",
+        "scope": "入力結果の記述・必要な仮定と本文の適用箇所を照合。外部結果の証明全体は再検証しない。"
+      },
+      "articleLinks": {
+        "source": {
+          "ja": "https://arxiv.org/pdf/1411.3989v4",
+          "en": "https://arxiv.org/pdf/1411.3989v4"
+        },
+        "target": {
+          "ja": "../canonical-ampleness/article.ja.md#proof-1-step-2",
+          "en": "../canonical-ampleness/article.en.md#proof-1-step-2"
+        }
+      },
+      "unresolved": []
+    },
+    {
+      "id": "implicit-to-canonical-ampleness",
+      "from": {
+        "paperId": "implicit",
+        "result": "Theorem 2.3(ii), (d)",
+        "locations": [
+          {
+            "result": "Theorem 2.3(ii), (d)",
+            "printed": "11",
+            "pdf": "11"
+          }
+        ],
+        "version": "arXiv:math/0303320v1, 2003-03-25",
+        "sourceUrl": "https://arxiv.org/pdf/math/0303320v1"
+      },
+      "to": {
+        "paperId": "canonical-ampleness",
+        "result": "Proposition 4.3",
+        "printed": "13–16",
+        "pdf": "13–16",
+        "version": "2026-09-23",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Canonical-ampleness-of-compact-hyperbolic-Kahler-manifolds-September-23-2026/canonical-ampleness.pdf"
+      },
+      "role": "指定した一次方向を実際の正則族へ",
+      "hypotheses": "複素Banach空間の解析写像。Q(0)=DQ(0)=0なのでg方向の微分は恒等。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-compared",
+        "by": "catalog-051 本部兼記事担当",
+        "date": "2026-10-10",
+        "record": "../canonical-ampleness/sources.json",
+        "scope": "入力結果の記述・必要な仮定と本文の適用箇所を照合。外部結果の証明全体は再検証しない。"
+      },
+      "articleLinks": {
+        "source": {
+          "ja": "https://arxiv.org/pdf/math/0303320v1",
+          "en": "https://arxiv.org/pdf/math/0303320v1"
+        },
+        "target": {
+          "ja": "../canonical-ampleness/article.ja.md#proof-1-step-2",
+          "en": "../canonical-ampleness/article.en.md#proof-1-step-2"
+        }
+      },
+      "unresolved": []
+    },
+    {
+      "id": "poletsky-to-canonical-ampleness",
+      "from": {
+        "paperId": "poletsky",
+        "result": "Theorem 1.1",
+        "locations": [
+          {
+            "result": "Theorem 1.1",
+            "printed": "1407",
+            "pdf": "1"
+          }
+        ],
+        "version": "Indiana Univ. Math. J. 61 (2012), 1407–1423; published version",
+        "sourceUrl": "https://users.fmf.uni-lj.si/forstneric/papers/2012Indiana.pdf"
+      },
+      "to": {
+        "paperId": "canonical-ampleness",
+        "result": "Proposition 6.2",
+        "printed": "20–21",
+        "pdf": "20–21",
+        "version": "2026-09-23",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Canonical-ampleness-of-compact-hyperbolic-Kahler-manifolds-September-23-2026/canonical-ampleness.pdf"
+      },
+      "role": "行列式束上のPoisson包絡をpshにする",
+      "hypotheses": "Yは連結複素多様体、ℓは連続。ℓ−C≤v≤ℓで−∞の選択肢を排除。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-compared",
+        "by": "catalog-051 本部兼記事担当",
+        "date": "2026-10-10",
+        "record": "../canonical-ampleness/sources.json",
+        "scope": "入力結果の記述・必要な仮定と本文の適用箇所を照合。外部結果の証明全体は再検証しない。"
+      },
+      "articleLinks": {
+        "source": {
+          "ja": "https://users.fmf.uni-lj.si/forstneric/papers/2012Indiana.pdf",
+          "en": "https://users.fmf.uni-lj.si/forstneric/papers/2012Indiana.pdf"
+        },
+        "target": {
+          "ja": "../canonical-ampleness/article.ja.md#proof-2-step-2",
+          "en": "../canonical-ampleness/article.en.md#proof-2-step-2"
+        }
+      },
+      "unresolved": []
+    },
+    {
+      "id": "berman-to-canonical-ampleness",
+      "from": {
+        "paperId": "berman",
+        "result": "§1, equation (1.1)",
+        "locations": [
+          {
+            "result": "§1, equation (1.1)",
+            "printed": "366–367",
+            "pdf": "3–4"
+          }
+        ],
+        "version": "Math. Z. 291 (2019), 365–394; repository copy with cover sheet",
+        "sourceUrl": "https://research.chalmers.se/publication/509847/file/509847_Fulltext.pdf"
+      },
+      "to": {
+        "paperId": "canonical-ampleness",
+        "result": "Theorem 8.1; Proposition 8.2",
+        "printed": "23–24",
+        "pdf": "23–24",
+        "version": "2026-09-23",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Canonical-ampleness-of-compact-hyperbolic-Kahler-manifolds-September-23-2026/canonical-ampleness.pdf"
+      },
+      "role": "近似Kähler類にRicci下界を持つ計量を選ぶ",
+      "hypotheses": "コンパクトKähler、γ_t>0、任意の正の滑らかな体積形式e^{a_t}k^n。ddcの規約差と指数係数を照合。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-compared",
+        "by": "catalog-051 本部兼記事担当",
+        "date": "2026-10-10",
+        "record": "../canonical-ampleness/sources.json",
+        "scope": "入力結果の記述・必要な仮定と本文の適用箇所を照合。外部結果の証明全体は再検証しない。"
+      },
+      "articleLinks": {
+        "source": {
+          "ja": "https://research.chalmers.se/publication/509847/file/509847_Fulltext.pdf",
+          "en": "https://research.chalmers.se/publication/509847/file/509847_Fulltext.pdf"
+        },
+        "target": {
+          "ja": "../canonical-ampleness/article.ja.md#proof-4-step-1",
+          "en": "../canonical-ampleness/article.en.md#proof-4-step-1"
+        }
+      },
+      "unresolved": []
+    },
+    {
+      "id": "morse-to-canonical-ampleness",
+      "from": {
+        "paperId": "morse",
+        "result": "(0.7); Theorem 0.8(a)",
+        "locations": [
+          {
+            "result": "(0.7); Theorem 0.8(a)",
+            "printed": "193–194",
+            "pdf": "6–7"
+          }
+        ],
+        "version": "Ann. Inst. Fourier 35(4) (1985), 189–229; Numdam scan with cover sheet",
+        "sourceUrl": "https://numdam.org/item/10.5802/aif.1034.pdf",
+        "additionalLocations": [
+          {
+            "result": "Theorem 0.1(a)",
+            "printed": "189",
+            "pdf": "2"
+          }
+        ]
+      },
+      "to": {
+        "paperId": "canonical-ampleness",
+        "result": "Lemma 9.1; Proposition 9.3",
+        "printed": "24–25",
+        "pdf": "24–25",
+        "version": "2026-09-23",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Canonical-ampleness-of-compact-hyperbolic-Kahler-manifolds-September-23-2026/canonical-ampleness.pdf"
+      },
+      "role": "nef＋正の交点からbig、さらにbig分解の切断評価",
+      "hypotheses": "滑らかなHermitian束、index≤1の曲率積分正。弱いMorse不等式は超平面切片H上のO(m^{n−1})にも使用。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-compared",
+        "by": "catalog-051 本部兼記事担当",
+        "date": "2026-10-10",
+        "record": "../canonical-ampleness/sources.json",
+        "scope": "入力結果の記述・必要な仮定と本文の適用箇所を照合。外部結果の証明全体は再検証しない。"
+      },
+      "articleLinks": {
+        "source": {
+          "ja": "https://numdam.org/item/10.5802/aif.1034.pdf",
+          "en": "https://numdam.org/item/10.5802/aif.1034.pdf"
+        },
+        "target": {
+          "ja": "../canonical-ampleness/article.ja.md#proof-overview-step-3",
+          "en": "../canonical-ampleness/article.en.md#proof-overview-step-3"
+        }
+      },
+      "unresolved": []
+    },
+    {
+      "id": "namikawa-to-canonical-ampleness",
+      "from": {
+        "paperId": "namikawa",
+        "result": "Theorem 6",
+        "locations": [
+          {
+            "result": "Theorem 6",
+            "printed": "3",
+            "pdf": "3"
+          }
+        ],
+        "version": "arXiv:math/0101019v6, 2001-11-12",
+        "sourceUrl": "https://arxiv.org/pdf/math/0101019v6"
+      },
+      "to": {
+        "paperId": "canonical-ampleness",
+        "result": "Theorem 9.2",
+        "printed": "25",
+        "pdf": "25",
+        "version": "2026-09-23",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Canonical-ampleness-of-compact-hyperbolic-Kahler-manifolds-September-23-2026/canonical-ampleness.pdf"
+      },
+      "role": "Moishezonから射影性へ",
+      "hypotheses": "Kähler性を保持し、滑らかなので1-rational singularitiesの条件を満たす。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-compared",
+        "by": "catalog-051 本部兼記事担当",
+        "date": "2026-10-10",
+        "record": "../canonical-ampleness/sources.json",
+        "scope": "入力結果の記述・必要な仮定と本文の適用箇所を照合。外部結果の証明全体は再検証しない。"
+      },
+      "articleLinks": {
+        "source": {
+          "ja": "https://arxiv.org/pdf/math/0101019v6",
+          "en": "https://arxiv.org/pdf/math/0101019v6"
+        },
+        "target": {
+          "ja": "../canonical-ampleness/article.ja.md#proof-overview-step-3",
+          "en": "../canonical-ampleness/article.en.md#proof-overview-step-3"
+        }
+      },
+      "unresolved": []
+    },
+    {
+      "id": "diverio-to-canonical-ampleness",
+      "from": {
+        "paperId": "diverio",
+        "result": "Lemma 2.1",
+        "locations": [
+          {
+            "result": "Lemma 2.1",
+            "printed": "3",
+            "pdf": "3"
+          }
+        ],
+        "version": "arXiv:1606.01381v2 (margin: 2016-08-04; manuscript date: 2019-04-19); author version",
+        "sourceUrl": "https://arxiv.org/pdf/1606.01381v2"
+      },
+      "to": {
+        "paperId": "canonical-ampleness",
+        "result": "Proposition 9.3",
+        "printed": "25–26",
+        "pdf": "25–26",
+        "version": "2026-09-23",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Canonical-ampleness-of-compact-hyperbolic-Kahler-manifolds-September-23-2026/canonical-ampleness.pdf"
+      },
+      "role": "同じ標準束豊富性判定の比較参照。本稿はProposition 9.3をlog cone theoremから改めて証明しており、DTの証明そのものへの必須依存としない。",
+      "hypotheses": "先に滑らかな射影性とK_X bigを得る。有理曲線を双曲性で除外。曲率仮定付き主定理への適用ではない。",
+      "kind": "alternative",
+      "checking": {
+        "status": "statement-and-application-compared",
+        "by": "catalog-051 本部兼記事担当",
+        "date": "2026-10-10",
+        "record": "../canonical-ampleness/sources.json",
+        "scope": "入力結果の記述・必要な仮定と本文の適用箇所を照合。外部結果の証明全体は再検証しない。"
+      },
+      "articleLinks": {
+        "source": {
+          "ja": "https://arxiv.org/pdf/1606.01381v2",
+          "en": "https://arxiv.org/pdf/1606.01381v2"
+        },
+        "target": {
+          "ja": "../canonical-ampleness/article.ja.md#proof-overview-step-4",
+          "en": "../canonical-ampleness/article.en.md#proof-overview-step-4"
+        }
+      },
+      "unresolved": []
+    },
+    {
+      "id": "fujino-to-canonical-ampleness",
+      "from": {
+        "paperId": "fujino",
+        "result": "Theorem 1.1(5)",
+        "locations": [
+          {
+            "result": "Theorem 1.1(5)",
+            "printed": "728–729",
+            "pdf": "2–3"
+          }
+        ],
+        "version": "Publ. RIMS 47 (2011), 727–789; published version",
+        "sourceUrl": "https://ems.press/content/serial-article-files/41145",
+        "additionalLocations": [
+          {
+            "result": "§4.4; Theorem 4.10",
+            "printed": "737–738",
+            "pdf": "11–12"
+          }
+        ]
+      },
+      "to": {
+        "paperId": "canonical-ampleness",
+        "result": "Proposition 9.3",
+        "printed": "25–26",
+        "pdf": "25–26",
+        "version": "2026-09-23",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Canonical-ampleness-of-compact-hyperbolic-Kahler-manifolds-September-23-2026/canonical-ampleness.pdf"
+      },
+      "role": "klt摂動をnefにし、nef＋ampleから豊富性へ",
+      "hypotheses": "小さい正有理ηで(X,ηE)klt、境界有効。非lc locusは空。射影的錐定理とKleimanを適用。解消定理の原典は未確認。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-compared",
+        "by": "catalog-051 本部兼記事担当",
+        "date": "2026-10-10",
+        "record": "../canonical-ampleness/sources.json",
+        "scope": "入力結果の記述・必要な仮定と本文の適用箇所を照合。外部結果の証明全体は再検証しない。"
+      },
+      "articleLinks": {
+        "source": {
+          "ja": "https://ems.press/content/serial-article-files/41145",
+          "en": "https://ems.press/content/serial-article-files/41145"
+        },
+        "target": {
+          "ja": "../canonical-ampleness/article.ja.md#proof-overview-step-4",
+          "en": "../canonical-ampleness/article.en.md#proof-overview-step-4"
+        }
+      },
+      "unresolved": [
+        "Kollár [20], Theorem 35の原典は未確認"
+      ]
+    },
+    {
+      "id": "fujita-to-canonical-ampleness",
+      "from": {
+        "paperId": "fujita-freeness",
+        "result": "Corollary 6.3",
+        "locations": [
+          {
+            "result": "Corollary 6.3",
+            "printed": "23",
+            "pdf": "23"
+          }
+        ],
+        "version": "2026-09-23; fixed catalogue 038 manuscript",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Fujitas-freeness-conjecture-September-23-2026/Fujitas-freeness-conjecture-September-23-2026.pdf"
+      },
+      "to": {
+        "paperId": "canonical-ampleness",
+        "result": "Corollary 10.1",
+        "printed": "26",
+        "pdf": "26",
+        "version": "2026-09-23",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Canonical-ampleness-of-compact-hyperbolic-Kahler-manifolds-September-23-2026/canonical-ampleness.pdf"
+      },
+      "role": "全整数m≥n+2でK_Xのm乗を大域生成",
+      "hypotheses": "X滑らかな連結射影、L=K_X ample、m−1≥n+1。入力は038のCorollary 6.3。",
+      "kind": "consequence",
+      "checking": {
+        "status": "statement-and-application-compared",
+        "by": "catalog-051 本部兼記事担当",
+        "date": "2026-10-10",
+        "record": "../canonical-ampleness/sources.json",
+        "scope": "入力結果の記述・必要な仮定と本文の適用箇所を照合。外部結果の証明全体は再検証しない。"
+      },
+      "articleLinks": {
+        "source": {
+          "ja": "https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/fujita-freeness/#proof-3",
+          "en": "https://masataka123.github.io/OpenAI-Math-Digest/en/papers/fujita-freeness/#proof-3"
+        },
+        "target": {
+          "ja": "../canonical-ampleness/article.ja.md#proof-5-step-2",
+          "en": "../canonical-ampleness/article.en.md#proof-5-step-2"
+        }
+      },
+      "unresolved": []
+    },
+    {
+      "id": "semialgebraic-to-canonical-ampleness",
+      "from": {
+        "paperId": "semialgebraic-universal-covers",
+        "result": "Theorem 1.1",
+        "locations": [
+          {
+            "result": "Theorem 1.1",
+            "printed": "1",
+            "pdf": "1"
+          }
+        ],
+        "version": "2026-09-24; fixed catalogue 058 manuscript",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Semialgebraic-universal-covers-of-normal-projective-varieties-September-24-2026/paper.pdf"
+      },
+      "to": {
+        "paperId": "canonical-ampleness",
+        "result": "Corollary 10.2",
+        "printed": "26–27",
+        "pdf": "26–27",
+        "version": "2026-09-23",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Canonical-ampleness-of-compact-hyperbolic-Kahler-manifolds-September-23-2026/canonical-ampleness.pdf"
+      },
+      "role": "通常の普遍被覆をD×C^m×Fへ分類",
+      "hypotheses": "Xは主定理で射影的。普通の複素位相で開な半代数的実現を仮定。双曲性と滑らかさは利用先で追加。",
+      "kind": "consequence",
+      "checking": {
+        "status": "statement-and-application-compared",
+        "by": "catalog-051 本部兼記事担当",
+        "date": "2026-10-10",
+        "record": "../canonical-ampleness/sources.json",
+        "scope": "入力結果の記述・必要な仮定と本文の適用箇所を照合。外部結果の証明全体は再検証しない。"
+      },
+      "articleLinks": {
+        "source": {
+          "ja": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Semialgebraic-universal-covers-of-normal-projective-varieties-September-24-2026/paper.pdf",
+          "en": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Semialgebraic-universal-covers-of-normal-projective-varieties-September-24-2026/paper.pdf"
+        },
+        "target": {
+          "ja": "../canonical-ampleness/article.ja.md#proof-6-step-1",
+          "en": "../canonical-ampleness/article.en.md#proof-6-step-1"
+        }
+      },
+      "unresolved": []
+    },
+    {
+      "id": "kobayashi-to-canonical-ampleness",
+      "from": {
+        "paperId": "kobayashi",
+        "result": "Theorem",
+        "locations": [
+          {
+            "result": "Theorem",
+            "printed": "184",
+            "pdf": "1"
+          }
+        ],
+        "version": "Tohoku Math. J. (2) 11 (1959), 184–190; published version",
+        "sourceUrl": "https://www.jstage.jst.go.jp/article/tmj1949/11/2/11_2_184/_pdf"
+      },
+      "to": {
+        "paperId": "canonical-ampleness",
+        "result": "Corollary 10.2",
+        "printed": "27",
+        "pdf": "27",
+        "version": "2026-09-23",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Canonical-ampleness-of-compact-hyperbolic-Kahler-manifolds-September-23-2026/canonical-ampleness.pdf"
+      },
+      "role": "Aut(F)を有限にして有限指数核へ移る",
+      "hypotheses": "正次元FはコンパクトでK_F ample、従ってc1(F)<0。Fが点なら別途自明。",
+      "kind": "consequence",
+      "checking": {
+        "status": "statement-and-application-compared",
+        "by": "catalog-051 本部兼記事担当",
+        "date": "2026-10-10",
+        "record": "../canonical-ampleness/sources.json",
+        "scope": "入力結果の記述・必要な仮定と本文の適用箇所を照合。外部結果の証明全体は再検証しない。"
+      },
+      "articleLinks": {
+        "source": {
+          "ja": "https://www.jstage.jst.go.jp/article/tmj1949/11/2/11_2_184/_pdf",
+          "en": "https://www.jstage.jst.go.jp/article/tmj1949/11/2/11_2_184/_pdf"
+        },
+        "target": {
+          "ja": "../canonical-ampleness/article.ja.md#proof-6-step-2",
+          "en": "../canonical-ampleness/article.en.md#proof-6-step-2"
+        }
+      },
+      "unresolved": []
+    }
+  ]
+}

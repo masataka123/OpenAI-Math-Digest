@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "catalogId": "051",
+  "sources": {
+    "P": {
+      "recordFile": "../canonical-ampleness/sources.json",
+      "recordId": "self"
+    },
+    "OVERVIEW": {
+      "recordFile": "../../../coordination/catalog-051/inventory.json",
+      "recordId": "overview"
+    }
+  },
+  "citations": {
+    "official-overview": {
+      "source": "OVERVIEW",
+      "locations": [
+        {
+          "result": "Catalogue 051",
+          "printed": "7",
+          "pdf": "7"
+        }
+      ]
+    },
+    "main-result": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "1",
+          "pdf": "1"
+        },
+        {
+          "result": "Corollaries 10.1–10.2",
+          "printed": "26–27",
+          "pdf": "26–27"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": []
+}
