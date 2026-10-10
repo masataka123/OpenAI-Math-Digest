@@ -7,7 +7,7 @@
 - カタログ本部／サイト本部：042本部（記事担当兼任）／本チャットがサイト本部を兼任（2026-10-10の公開指示）
 - 構成：single（1本）
 - 現在のユーザー依頼範囲：日英サイト・PDF・公開確認（追加指示「じゃあ記事を公開してください.」）
-- 状態：公開前検査完了、commit・push・配信確認待ち。内容・形式の照合範囲はCONTENT_REVIEW.md／FORMAT_REVIEW.md。公開工程はPUBLICATION.md。
+- 状態：公開確認済み。内容・形式の照合範囲はCONTENT_REVIEW.md／FORMAT_REVIEW.md。公開工程はPUBLICATION.md。
 
 ## 内容と成果物（記事担当・カタログ本部）
 
@@ -69,12 +69,12 @@ npm run check:links
 
 ## 公開（現在のユーザー依頼の範囲でサイト本部が実施）
 
-- [ ] 公開する差分・最新Git状態を確認し、通常のcommit・pushで反映。他担当の成果物を消していない。
-- [ ] GitHub Actionsのbuild/deploy成功を確認。
-- [ ] 公開URLで日英カタログ・記事・画像・PDFが今回の版に更新されたことを確認。
-- [ ] 公開URL・commit・確認結果・残る数学的未確認を報告。
+- [x] 公開する差分・最新Git状態を確認し、通常のcommit・pushで反映。他担当の成果物を消していない。
+- [x] GitHub Actionsのbuild/deploy成功を確認。
+- [x] 公開URLで日英カタログ・記事・画像・PDFが今回の版に更新されたことを確認。
+- [x] 公開URL・commit・確認結果・残る数学的未確認を報告。
 
-公開指示を受領し、日英サイト・PDF・検査を本チャットで実施。公開配信の確認は上の公開4項目で別管理する。機械的検査の成功を全証明の独立検証や専門家査読済みと表現しない。
+公開指示を受領し、日英サイト・PDF・検査を本チャットで実施。公開4項目はPUBLICATION.md、validation/actions-release*.json、published-resources.json、published/checks.jsonで確認。担当：サイト本部（本チャット）、2026-10-10。機械的検査の成功を全証明の独立検証や専門家査読済みと表現しない。
 
 ## 残作業
 
@@ -82,7 +82,7 @@ npm run check:links
 |---|---|---|
 | 日英記事・図・案内・引用記録 | 042本部兼記事担当 | 初稿完了、CONTENT_REVIEW／FORMAT_REVIEW |
 | サイト組込み・日英PDF・画面検査 | サイト本部（本チャット） | 完了、PUBLICATION.mdとvalidation/ |
-| 公開配信・公開URL確認 | サイト本部（本チャット） | commit・push後にActions・実サイトを確認 |
+| 公開配信・公開URL確認 | サイト本部（本チャット） | 完了、Actions build/deploy成功・36資産ハッシュ一致・公開8画面条件を確認。PUBLICATION.md |
 | 数学的な残る照合 | 後続編集 | 記事末尾・sources.jsonのunresolved。独立検証未了を保持 |
 
 ## 制作セット1.3の必須形式

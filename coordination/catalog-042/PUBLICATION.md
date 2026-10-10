@@ -1,6 +1,6 @@
 # カタログ042 公開工程
 
-2026-10-10。ユーザーの「じゃあ記事を公開してください.」を受け、本チャットがサイト本部を兼任する。初稿28分12秒とは別工程。公開作業開始16:10 JST。日英サイト・PDF・公開確認を実施中。
+2026-10-10。ユーザーの「じゃあ記事を公開してください.」を受け、本チャットがサイト本部を兼任する。初稿28分12秒とは別工程。公開作業開始16:10 JST。日英サイト・PDF・公開確認を完了。
 
 数学的確認の限界は記事末尾・CONTENT_REVIEW.mdに保持する。既存記事・既存PDFの保持をvalidation/preservation-baseline.jsonで照合する。
 
@@ -20,3 +20,16 @@ npmがPATHにないため、package.jsonと同じNodeエントリーポイント
 ## 数学的確認の限界
 
 著者の主張と、選択した証明箇所・直接入力の記述と適用条件の編集側照合を区別する。全解析評価、§§7–8のatlasとrecentring、Lemma 8.2の格子構成、追加のRatner・Borel等の原典照合、外部定理の全証明の独立検証は未実施。原稿の全証明の正しさを保証しない。詳細は記事末尾・sources.json・CONTENT_REVIEW.md。
+
+## 配信結果
+
+**公開確認済み（2026-10-10T16:24:43.082769+09:00）。** 公開commit `aa9fcbc36f0a67f98cb568708328ad37e4a2ebb8`。
+[GitHub Actions](https://github.com/masataka123/OpenAI-Math-Digest/actions/runs/38033938603) のbuild・deployとも成功。
+
+- [日本語カタログ](https://masataka123.github.io/OpenAI-Math-Digest/ja/catalog/042/)／[English catalogue](https://masataka123.github.io/OpenAI-Math-Digest/en/catalog/042/)
+- [日本語記事](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/every-complex-k3-oka/)／[English article](https://masataka123.github.io/OpenAI-Math-Digest/en/papers/every-complex-k3-oka/)
+- [日本語PDF](https://masataka123.github.io/OpenAI-Math-Digest/pdf/catalog-042-ja.pdf)／[English PDF](https://masataka123.github.io/OpenAI-Math-Digest/pdf/catalog-042-en.pdf)：各24ページ。
+
+公開36リソース（日英トップ・分野・案内・記事、2冊PDF、26図資産）はHTTP 200・検査済みdistとSHA-256一致。公開環境でも日英×1440/375px×案内・記事の8条件を確認。全6図の拡大・全体表示・図中引用、言語切替時のproof-2保持、PDF導線を確認。ページ横はみ出し、MathJaxエラー、JavaScript例外、欠損画像なし。遅延読込画像は読込完了を待って検査した。
+
+証拠：validation/actions-release.json／actions-release-jobs.json／published-resources.json／published/checks.jsonとPNG。公開後の記録コミットは確認記録・台帳状態だけを更新し、`[skip ci]`で同一のWeb成果物の再配信を省く。公開版は上記commit。初稿記録completion.jsonは変更しない。

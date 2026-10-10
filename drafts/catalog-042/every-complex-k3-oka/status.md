@@ -48,3 +48,5 @@ node coordination/catalog-042/check-draft.mjs
 ## 公開工程（初稿後の別工程）
 
 2026-10-10、ユーザーの公開指示により本チャットがサイト本部を兼任。サイト登録・公開図コピー・日英PDFを作成。案内のPDF待ち表記を除き、Corollary 1.2の本文・引用を同ページに保つ改ページ指定を日英に追加した。数学的記述・引用・未確認範囲は変更していない。検査と配信状態はcoordination/catalog-042/PUBLICATION.md。
+
+公開確認済み：2026-10-10。公開commit aa9fcbc、Actions 38033938603成功。日英各24ページPDF、公開36リソース一致、日英PC/375pxを確認。詳細はPUBLICATION.md。
