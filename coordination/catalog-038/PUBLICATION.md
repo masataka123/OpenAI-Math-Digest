@@ -21,4 +21,14 @@
 
 ## 公開結果
 
-commit・push・Actions・実サイト確認は次の工程。成功後にこの節を更新する。
+**公開確認済み**（2026-10-10T13:43:35+09:00）。
+
+- 本文・図・PDFの公開commit：`606d5a70b1f11441d3b621a4ad8e8f3257482ea0`。mainへの通常push完了。
+- [GitHub Actions](https://github.com/masataka123/OpenAI-Math-Digest/actions/runs/38024887150)：build / deployともsuccess。
+- [日本語カタログ](https://masataka123.github.io/OpenAI-Math-Digest/ja/catalog/038/) / [English catalogue](https://masataka123.github.io/OpenAI-Math-Digest/en/catalog/038/)。
+- [日本語記事](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/fujita-freeness/) / [English article](https://masataka123.github.io/OpenAI-Math-Digest/en/papers/fujita-freeness/)。
+- 日英PDFはカタログ冒頭から開ける。日本語18ページ、英語22ページ、各2章・4図・90リンク。
+- トップ・分野・カタログ・記事・8SVG・8TeX・日英PDFの26リソースがHTTP 200、手元の最終ビルド／成果物とSHA-256一致。validation/published-resources.json。
+- 公開サイトの日英×1280px/375px×記事／カタログの8条件で表示・数式・画像・PDF導線・図の拡大／ズーム／全体表示／引用・言語切替のアンカー維持を確認。validation/published/checks.jsonと画像。
+- 数学的な確認範囲は本文末尾のまま。公開工程としての残作業なし。今回の確認記録を後続の記録用commitへ保存する。
+

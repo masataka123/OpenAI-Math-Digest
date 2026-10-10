@@ -59,7 +59,7 @@
   "manuscriptCount": 1,
   "totalPages": 25,
   "currentRequestScope": "site integration, bilingual PDF generation, commit/push and publication verification authorized",
-  "productionStatus": "release-prepared-publication-pending",
+  "productionStatus": "publication-verified",
   "checkingScope": "公式書誌と重複確認に加え、原稿§§2–6、主張・全結論、直接外部4入力の記述・適用箇所、方法上の参照1件を照合。全証明の独立検証・外部証明の再帰的検証は未実施。",
   "sourceFiles": [
     {
@@ -193,7 +193,7 @@
       "existingArticleVersionDifference": "not-applicable; no existing article",
       "draftDirectory": "drafts/catalog-038/fujita-freeness",
       "worker": "catalog-hq",
-      "articleStatus": "bilingual-draft-ready",
+      "articleStatus": "published-and-verified",
       "localPdfCache": "/tmp/catalog-038-preparation/fujita.pdf",
       "localTextCache": "/tmp/catalog-038-preparation/fujita.txt",
       "cachePolicy": "一時キャッシュ。固定commitのdownloadUrlから再取得しSHA-256を照合する。原典PDFはGitへ追加しない。",
@@ -254,7 +254,7 @@
     ],
     "required": true,
     "expectedChapters": 2,
-    "status": "generated-ja-en; publication pending"
+    "status": "published-and-verified-ja-en"
   },
   "omittedSections": [
     {
@@ -265,5 +265,13 @@
   "publicationAuthorization": {
     "request": "じゃあ公開をしてください.",
     "recordedAt": "2026-10-10T13:38:30+09:00"
+  },
+  "publication": {
+    "contentCommit": "606d5a70b1f11441d3b621a4ad8e8f3257482ea0",
+    "workflowRun": "https://github.com/masataka123/OpenAI-Math-Digest/actions/runs/38024887150",
+    "verifiedAt": "2026-10-10T13:43:35+09:00",
+    "resources": 26,
+    "browserConditions": 8,
+    "status": "verified"
   }
 }

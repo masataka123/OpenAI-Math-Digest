@@ -39,3 +39,7 @@ python3 drafts/catalog-038/fujita-freeness/diagrams/render.py
 ## 後続の編集
 
 2026-10-10T13:38:30+09:00 本チャットがサイト本部として登録・公開を担当。日本語末尾の確認範囲を意味を変えずに短縮し、冊子末尾の引用だけのページを解消。主張・数式・証明・引用記録は維持。日英PDF、公開用図コピー、全体検査、PC/375px・図拡大・言語切替を確認。詳細はcoordination/catalog-038/PUBLICATION.md。初稿時計とは別の公開編集。
+
+## 公開確認
+
+2026-10-10T13:43:35+09:00 本チャットがサイト本部を兼任し、日英ページ・日英PDF・公開図を組込み、公開commit `606d5a7` のActions成功と実サイトの表示・リンク・内容hashを確認。現在は公開確認済み。coordination/catalog-038/PUBLICATION.md参照。上の未実施の記述は引渡し時の履歴。

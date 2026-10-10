@@ -6,3 +6,7 @@
 - overview専用citations.jsonのtext-only検査成功。共通renderCatalogInventoryとrenderDraftによる日英作業用表示を確認。
 - PDF：サイト本部が各言語2章の冊子を生成し、共通ヘッダーの一覧より前へリンクを組み込む。日英とも未生成。
 - 台帳・受領・次工程：coordination/catalog-038/SITE_HQ_HANDOFF.md / CONTENT_REVIEW.md / RELEASE_CHECKLIST.md。
+
+## 公開確認
+
+2026-10-10T13:43:35+09:00 本チャットがサイト本部を兼任し、日英ページ・日英PDF・公開図を組込み、公開commit `606d5a7` のActions成功と実サイトの表示・リンク・内容hashを確認。現在は公開確認済み。coordination/catalog-038/PUBLICATION.md参照。上の未実施の記述は引渡し時の履歴。
