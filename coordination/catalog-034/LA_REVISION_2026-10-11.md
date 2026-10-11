@@ -4,7 +4,7 @@
 - 担当：034本部。この依頼に限りサイト組込み・日英PDF・公開確認も兼任。
 - 承認範囲：2026-10-11のユーザー依頼でcommit・push・公開まで承認済み。他チャットへの依頼なし。
 - 開始：2026-10-11 17:47:48 JST。既存記事の改訂として記録し、初稿60分枠は適用しない。
-- 状態：公開準備完了。最終PDF・必要なローカル検査済み、配信後の確認を残す。
+- 状態：公開確認済み。本文・図・日英PDF・必要検査・commit／push・配信確認を完了。
 - 制作ルール：AGENTS / PROJECT_PLAN / production README / FORMAT_CONTRACT / CITATIONS / RELEASE_CHECKLISTを確認。作業先の制作セット1.4を参照したが、共通ルールの未コミット変更は本公開に含めない。
 
 ## 内容の改訂
@@ -66,3 +66,21 @@
 - PC／375px表示、数式、言語切替、図拡大の前半での完了検査を引き継ぐ。再開後は有理性の短い補足のみで、画面CSSや図を再変更していない。公開後にも日英画面を確認する。
 - 033最新公開を含む基点c48c841との差分はLA・034のPDF・制作記録だけ。共通生成器・共通CSS・他記事・他カタログPDFおよび台帳項目は保持。
 - 証拠：[検査記録](validation-la-20261011/)（テスト・引用・build・リンク・PDFログ、PDF照合JSON、日英全変更紙面のコンタクトシート）。
+
+## 公開確認完了
+
+- 内容commit：`e0517a9c4562ac8499e4b72ede12b5536c9398be`。mainへpush。
+- [GitHub Actions run 38129249896](https://github.com/masataka123/OpenAI-Math-Digest/actions/runs/38129249896)：build／deployともsuccess。テスト・引用・build・内部リンク・全PDF検査がGitHub上でも成功。
+- 公開26リソース（記事2、カタログ2、SVG10、TeX10、PDF2）がHTTP 200。記事の新設主張欄・節を検出し、全図・TeX・日英PDFは手元成果物とSHA-256が一致。
+- 公開日英記事を1280×900と375×812で確認。横あふれなし、数式merror 0、各言語5図・6主張欄。日英切替で#nonvanishingを保持。一時viewport指定を解除。
+- 共有作業先もfast-forwardで内容commitを反映。取り込み前の未コミット／未追跡15ファイル（ローカル中断記録・保全アーカイブを含む）のSHA-256とステージ状態が不変であることを確認。
+- 完了後の数学的留保は「照合範囲と残る未確認」に記載の通り。記事・図・PDF・公開について残作業なし。図・文章の量は維持し、再開後の軽微な余白／改ページの追加調整なし。
+
+公開URL：
+
+- [日本語記事](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/log-abundance-characteristic-zero/)
+- [英語記事](https://masataka123.github.io/OpenAI-Math-Digest/en/papers/log-abundance-characteristic-zero/)
+- [カタログ034 日本語PDF](https://masataka123.github.io/OpenAI-Math-Digest/pdf/catalog-034-ja.pdf)
+- [カタログ034 英語PDF](https://masataka123.github.io/OpenAI-Math-Digest/pdf/catalog-034-en.pdf)
+
+確認終了：2026-10-11T18:47:24+09:00。改訂時間は中断前39分35秒と再開後の作業・生成・配信待ちを分けて記録し、中断時間を作業時間へ算入しない。
