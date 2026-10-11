@@ -84,3 +84,5 @@
 - [カタログ034 英語PDF](https://masataka123.github.io/OpenAI-Math-Digest/pdf/catalog-034-en.pdf)
 
 確認終了：2026-10-11T18:47:24+09:00。改訂時間は中断前39分35秒と再開後の作業・生成・配信待ちを分けて記録し、中断時間を作業時間へ算入しない。
+
+最終共有状態の補足：最初のfast-forward直後には既存15ファイルがすべて一致した。その後の確認で、別作業によるAGENTS.mdとproductionの共通方針5ファイルの更新を検出した。これらは今回のLA commitに含まれず、更新後の内容をそのまま保持した。ステージ状態は不変。詳細はshared-worktree-preservation.jsonのfinalObservationを参照。
