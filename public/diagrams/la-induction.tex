@@ -61,7 +61,7 @@
 $\mathrm{GLM}_{\leq n-1}$\quad\Tx{（次元0から開始）}{(start in dimension zero)}};
 \node[card,below=2.15cm of start] (nv) {\heading{01}{まず、次元 $n$ の滑らかな非消滅を得る}{First obtain smooth nonvanishing in dimension $n$}
 $X\text{ smooth projective},\quad K_X\in\Eff(X)\ \Longrightarrow\ \kappa(X)\geq0.$};
-\flow{start}{nv}{\Tx{符号付き境界の判定と反例の幾何からジェットを構成。\\Frobenius による相反する評価で反例を排除する（図2・3）。}{The signed criterion and counterexample geometry supply jets.\\Incompatible Frobenius estimates exclude the counterexample (Figures 2--3).}\\[4pt]
+\flow{start}{nv}{\Tx{符号付き境界の判定と反例の幾何からジェットを構成。\\Frobenius による相反する評価で反例を排除する（図3--5）。}{The signed criterion and counterexample geometry supply jets.\\Incompatible Frobenius estimates exclude the counterexample (Figures 3--5).}\\[4pt]
 \LA{12}{Thm. 3.1}\quad\LA{69}{Thm. 9.6}\quad\LA{30}{Lemma 6.1}\quad\OI{40}{[OI] Cor. 6.2}}
 \node[card,below=1.65cm of nv] (nef) {\heading{02}{lc 対の非消滅と、nef な極小モデルを得る}{Obtain lc nonvanishing and a nef minimal model}
 \Tx{実係数 lc 対を dlt モデルへ。有理係数 nef 境界に分解する。}{Pass to a dlt model and decompose into rational nef boundaries.}\\[3pt]
@@ -70,7 +70,7 @@ $L=K_Z+\Delta\ \text{nef},\qquad\kappa(Z,L)\geq0.$};
 \Hash{1}{[Hash] Thm. 1.4}\quad\LA{9}{Prop. 2.5, first step}}
 \node[card,below=2.2cm of nef] (good) {\heading{03}{残った nef 随伴因子を半豊富にする}{Make the remaining nef adjoints semiample}
 $\kappa(L)\geq1:$\quad\Tx{低次元の良いモデルへ帰着。}{reduce to lower-dimensional good models.}\\[4pt]
-$\kappa(L)=0:$\quad\Tx{境界の摂動と図2を使い、$L\sim_{\mathbb Q}0$。}{boundary perturbations and Figure 2 give $L\sim_{\mathbb Q}0$.}};
+$\kappa(L)=0:$\quad\Tx{境界の摂動と図3を使い、$L\sim_{\mathbb Q}0$。}{boundary perturbations and Figure 3 give $L\sim_{\mathbb Q}0$.}};
 \flow{nef}{good}{\Tx{正の小平次元は [FG17]。0 の場合は、摂動後の擬有効性で分岐し、\\Mori ファイバー空間への降下、または境界上の abundance を使う。}{[FG17] treats positive Iitaka dimension. In dimension zero, perturb the\\boundary: descend through a Mori fiber space or use boundary abundance.}\\[4pt]
 \FGring{5}{[FG17] Lemma 3.5}\quad\LA{9}{Lemma 2.4}\quad\LA{10}{Prop. 2.5, pp. 10--12}}
 \node[result,below=1.75cm of good] (induction) {\heading{04}{実係数の結論を得て、帰納法を閉じる}{Recover the real-boundary conclusion and close the induction}

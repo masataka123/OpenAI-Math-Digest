@@ -1,0 +1,349 @@
+{
+  "catalog": "034",
+  "officialOrder": 4,
+  "paperId": "log-abundance-characteristic-zero",
+  "title": "Log abundance in characteristic zero",
+  "revisionStartedAt": "2026-10-11T17:47:48+09:00",
+  "kind": "existing-article substantive revision; not a first-draft timebox",
+  "source": {
+    "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf",
+    "version": "2026-09-24",
+    "pages": 85,
+    "sha256": "87b191f75e8c852683847be18fb99e2a226e11e55967624c8d2bbba41c509be0"
+  },
+  "mainResults": [
+    "theorem-1-1",
+    "theorem-9-6",
+    "theorem-11-1"
+  ],
+  "proofTargets": [
+    "theorem-11-1 / theorem-1-1",
+    "proposition-2-5",
+    "theorem-3-1",
+    "theorem-9-6",
+    "theorem-9-1"
+  ],
+  "statements": {
+    "theorem-1-1": "theorem-1-1",
+    "theorem-9-6": "theorem-9-6",
+    "theorem-11-1": "theorem-11-1",
+    "proposition-2-5": "proposition-2-5",
+    "theorem-3-1": "theorem-3-1",
+    "theorem-9-1": "theorem-9-1"
+  },
+  "conclusionCoverage": [
+    {
+      "result": "theorem-1-1",
+      "conclusion": "Rational lc nef adjoint is semiample over every algebraically closed field of characteristic zero",
+      "anchors": [
+        "induction-explanation-4",
+        "good-model-explanation-5"
+      ],
+      "sourcePages": [
+        2,
+        8,
+        72,
+        73
+      ]
+    },
+    {
+      "result": "theorem-9-6",
+      "conclusion": "Smooth canonical nonvanishing under lower-dimensional real-boundary good models",
+      "anchors": [
+        "witnesses-explanation-1",
+        "witnesses-explanation-2",
+        "witnesses-explanation-3",
+        "witnesses-explanation-4",
+        "nonvanishing-explanation-4"
+      ],
+      "sourcePages": [
+        69,
+        70,
+        71,
+        72
+      ]
+    },
+    {
+      "result": "theorem-11-1",
+      "conclusion": "Good log minimal models for pseudo-effective real-boundary projective complex lc pairs",
+      "anchors": [
+        "induction-explanation-1",
+        "induction-explanation-2",
+        "induction-explanation-3",
+        "good-model-explanation-1",
+        "good-model-explanation-5"
+      ],
+      "sourcePages": [
+        7,
+        9,
+        10,
+        11,
+        12,
+        73
+      ]
+    }
+  ],
+  "intermediateChecks": [
+    {
+      "result": "proposition-2-5",
+      "pages": "9–12",
+      "hypotheses": "Assumption 2.1 + NV_n; real effective lc boundary; pseudo-effective adjoint",
+      "connection": "Hashizume ordinary models; rational simplex; κ≥1; κ=0 non-pseudo-effective/klt/non-klt branches in that order",
+      "status": "statement and use compared with manuscript"
+    },
+    {
+      "result": "theorem-3-1",
+      "pages": "12–30",
+      "hypotheses": "Q-factorial dlt reduced D; nef L=K+D; L-cD pseudo-effective; signed rational representative on D; whole D restriction semiample",
+      "connection": "κ=ν; used separately in Proposition 2.5 and Proposition 6.10; no NV_n assumed by the criterion",
+      "status": "statement and interfaces compared; full Hodge lifting calculation not independently verified"
+    },
+    {
+      "result": "theorem-9-1",
+      "pages": "62–69",
+      "hypotheses": "Exact numerical conditions plus fixed complete-intersection flag, finite jets, actual strongly movable curve on a blowup",
+      "connection": "finite reduction → full-rank evaluation → diagonal rank deficit and two-factor order bound → contradiction",
+      "status": "statement, parameter quantifiers, determinant calculations and logical connections compared; canonical filtration external proof not reverified"
+    }
+  ],
+  "reading": [
+    {
+      "pages": "7–12",
+      "purpose": "induction, nef comparison, gluing, all branches of Proposition 2.5"
+    },
+    {
+      "pages": "12–13, 29–30",
+      "purpose": "Theorem 3.1 statement, endpoint cases and nef-reduction completion"
+    },
+    {
+      "pages": "41–43",
+      "purpose": "Propositions 6.9–6.10 and their use of lower-dimensional induction"
+    },
+    {
+      "pages": "52–57, 61",
+      "purpose": "scaling data, scalar bounds, two-slot jets and exclusion interfaces"
+    },
+    {
+      "pages": "62–73",
+      "purpose": "full finite-data statement, Frobenius determinant bounds, geometric witnesses, field descent and closing induction"
+    },
+    {
+      "pages": "82–85",
+      "purpose": "external bibliography and result attribution"
+    }
+  ],
+  "externalSources": [
+    {
+      "key": "Hash",
+      "author": "Kenta Hashizume",
+      "title": "On the non-vanishing conjecture and existence of log minimal models",
+      "version": "arXiv:1609.00121v4 (2017)",
+      "url": "https://arxiv.org/html/1609.00121v4",
+      "location": "Theorem 1.4",
+      "use": {
+        "ja": "Proposition 2.5：同次元の滑らかな非消滅から実係数lc非消滅・通常の極小モデルを得る。豊富性の仮定は追加されない。",
+        "en": "Proposition 2.5: smooth nonvanishing supplies real-boundary lc nonvanishing and ordinary minimal models, with no abundance premise."
+      },
+      "checking": "statement and specified application compared this revision; cited proof not independently verified"
+    },
+    {
+      "key": "FG14",
+      "author": "Osamu Fujino · Yoshinori Gongyo",
+      "title": "Log pluricanonical representations and the abundance conjecture",
+      "version": "Compositio Mathematica 150 (2014), author final PDF",
+      "url": "https://www.math.kyoto-u.ac.jp/~fujino/fg-comp-final.pdf#page=2",
+      "location": "Theorem 1.5 · PDF p. 2",
+      "use": {
+        "ja": "Proposition 2.3：slc対の正規化上の半豊富性をconductorを含む全被約境界へ降ろす。",
+        "en": "Proposition 2.3: descend semiampleness from the normalization of an slc pair to the whole reduced boundary."
+      },
+      "checking": "statement and specified application compared this revision; cited proof not independently verified"
+    },
+    {
+      "key": "FG17",
+      "author": "Osamu Fujino · Yoshinori Gongyo",
+      "title": "On log canonical rings",
+      "version": "author manuscript PDF (log-ring-aspm)",
+      "url": "https://www.math.kyoto-u.ac.jp/~fujino/log-ring-aspm.pdf#page=5",
+      "location": "Lemma 3.5 · p. 5",
+      "use": {
+        "ja": "Proposition 2.5：有理係数Q-factorial dlt対でκ≥1の枝。低次元の良いモデルを仮定して同次元の良いモデルを得る。",
+        "en": "Proposition 2.5: rational Q-factorial dlt pairs with κ≥1; smaller-dimensional good models supply a good model in the current dimension."
+      },
+      "checking": "statement and specified application compared this revision; cited proof not independently verified"
+    },
+    {
+      "key": "Ambro",
+      "author": "Florin Ambro",
+      "title": "The moduli b-divisor of an lc-trivial fibration",
+      "version": "arXiv:math/0308143v1 (2003)",
+      "url": "https://arxiv.org/pdf/math/0308143v1#page=2",
+      "location": "Theorem 0.2 · p. 2",
+      "use": {
+        "ja": "Proposition 2.5のMoriファイバー空間：有効kltな全空間と実際の有理線形引き戻しから、有効kltな底の随伴因子を供給する。",
+        "en": "The Mori-fiber branch of Proposition 2.5: an effective globally klt total pair and actual rational-linear pullback give an effective klt adjoint on the base."
+      },
+      "checking": "statement and specified application compared this revision; cited proof not independently verified"
+    },
+    {
+      "key": "OI",
+      "author": "OpenAI",
+      "title": "Orbifold and logarithmic Iitaka subadditivity",
+      "version": "2026-09-26 · fixed catalogue-034 snapshot",
+      "sourceKey": "oi",
+      "location": "Corollary 6.2 · pp. 40–41",
+      "use": {
+        "ja": "Lemma 6.1のみ：境界0の劣加法性で正次元のAlbanese像を排除。既存の照合記録を継承。",
+        "en": "Lemma 6.1 only: zero-boundary subadditivity excludes positive-dimensional Albanese image. Prior statement comparison retained."
+      },
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf",
+      "checking": "prior comparison retained"
+    },
+    {
+      "key": "HPS",
+      "author": "Christopher Hacon · Mihnea Popa · Christian Schnell",
+      "title": "Algebraic fiber spaces over abelian varieties: around a recent theorem by Cao and Păun",
+      "version": "2017 · version 2",
+      "sourceKey": "hps",
+      "location": "Theorem 1.1 · p. 2",
+      "use": {
+        "ja": "Lemma 6.1の底はmaximal Albanese dimensionをもつため、上の用途の代替となる。既存の照合記録を継承。",
+        "en": "The maximal-Albanese-dimension base in Lemma 6.1 permits this alternative input. Prior statement comparison retained."
+      },
+      "url": "https://people.math.harvard.edu/~mpopa/papers/HPS.pdf",
+      "checking": "prior comparison retained"
+    },
+    {
+      "key": "BDPP",
+      "author": "Sébastien Boucksom · Jean-Pierre Demailly · Mihai Păun · Thomas Peternell",
+      "title": "The pseudo-effective cone of a compact Kähler manifold and varieties of negative Kodaira dimension",
+      "version": "arXiv:math/0405285v1 (2004)",
+      "url": "https://arxiv.org/pdf/math/0405285v1#page=6",
+      "location": "Theorem 2.2 · p. 6",
+      "use": {
+        "ja": "§9.2.2：滑らかな射影的爆発上の非擬有効なクラスを、実際のstrongly movable curveとの負の交点で検出する。",
+        "en": "§9.2.2: detect a non-pseudo-effective class on a smooth projective blowup by negative pairing with an actual strongly movable curve."
+      },
+      "checking": "statement and specified application compared this revision; cited proof not independently verified"
+    },
+    {
+      "key": "CP",
+      "author": "Frédéric Campana · Mihai Păun",
+      "title": "Orbifold generic semi-positivity: an application to families of canonically polarized manifolds",
+      "version": "Annales de l’Institut Fourier 65 (2015)",
+      "url": "https://www.numdam.org/item/10.5802/aif.2945.pdf#page=11",
+      "location": "Theorem 2.1 · print p. 844 / PDF p. 11",
+      "use": {
+        "ja": "§9.2.1：滑らかなW、境界0、擬有効なK_Wに適用し余接束のgeneric semipositivityを得る。完備交差旗の固定には原稿が引用する制限定理も使う。",
+        "en": "§9.2.1: apply to smooth W with zero boundary and pseudo-effective K_W for generic semipositivity of the cotangent bundle. The source also uses a restriction theorem to fix the complete-intersection flag."
+      },
+      "checking": "statement and specified application compared this revision; cited proof not independently verified"
+    },
+    {
+      "key": "Langer",
+      "author": "Adrian Langer",
+      "title": "Semistable sheaves in positive characteristic",
+      "version": "Annals of Mathematics 159 (2004)",
+      "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v159-n1-p04.pdf#page=8",
+      "location": "Corollary 2.5 · print p. 258 / PDF p. 8",
+      "use": {
+        "ja": "Lemma 9.4：固定曲線上の階数nの束と、接束を生成する固定次数のnef捻りから、一様なFrobenius傾き誤差を得る。",
+        "en": "Lemma 9.4: the rank-n bundle on the fixed curve and a nef twist of fixed degree generating its tangent bundle give a uniform Frobenius slope error."
+      },
+      "checking": "statement and specified application compared this revision; cited proof not independently verified"
+    }
+  ],
+  "figures": [
+    {
+      "id": "induction",
+      "target": [
+        "theorem-11-1",
+        "theorem-1-1"
+      ],
+      "parts": 4
+    },
+    {
+      "id": "good-model",
+      "target": "Proposition 2.5 · pp. 9–12",
+      "parts": 5
+    },
+    {
+      "id": "boundary",
+      "target": "Theorem 3.1 · p. 12",
+      "parts": 3
+    },
+    {
+      "id": "witnesses",
+      "target": [
+        "theorem-9-6"
+      ],
+      "parts": 4
+    },
+    {
+      "id": "nonvanishing",
+      "target": "Theorem 9.1 · p. 62",
+      "parts": 4
+    }
+  ],
+  "unverified": [
+    "Full Hodge-module lifting calculation in §§3–5",
+    "All valuation/current, moving-component, special-termination and branch-family estimates in §§6–8",
+    "Independent external-source rechecking of every auxiliary BCHM/Birkar, restriction, Saito and Sun input",
+    "Proofs of external results",
+    "Full deductions of consequences in §§11–14 and catalogue-036 companion proof",
+    "Expert review and formal verification"
+  ],
+  "editorialScope": {
+    "other13Articles": "unchanged in both languages; 26 built main elements matched baseline",
+    "catalogSynthesis": "not redesigned",
+    "sharedRules": "read existing uncommitted 1.4 rules, excluded their changes from this release",
+    "citations": "retained legacy keys and renderer per user instruction; common la-inputs guide for added references; no bulk registry migration"
+  },
+  "verificationStatus": "release ready: final bilingual PDF visual review and all required local checks passed",
+  "pausedAt": "2026-10-11T18:27:23+09:00",
+  "publicationStatus": "not committed, not pushed, not published",
+  "resumedAt": "2026-10-11T18:30:00+09:00",
+  "resumedAtPrecision": "minute; approximate",
+  "integrationBase": "c48c841",
+  "resumePolicy": "Retain prose detail; no further minor whitespace/page-break adjustment if text, formulas and figures are complete and non-overlapping.",
+  "parameterFollowup": "Rechecked pp.9,12,69: rational perturbation epsilon, and rational epsilon/t in Theorem 9.6, stated in both languages.",
+  "finalPdfs": {
+    "ja": {
+      "pages": 204,
+      "articlePages": [
+        76,
+        93
+      ],
+      "chapters": 15,
+      "figures": 54,
+      "mathExpressions": 1922,
+      "sha256": "72dd63619b44288f8cbe268b56fc13c11841724f74dc129f9222ac96d75ff693",
+      "figurePages": {
+        "log-abundance-characteristic-zero--caption-boundary": 84,
+        "log-abundance-characteristic-zero--caption-good-model": 81,
+        "log-abundance-characteristic-zero--caption-induction": 78,
+        "log-abundance-characteristic-zero--caption-nonvanishing": 89,
+        "log-abundance-characteristic-zero--caption-witnesses": 86
+      }
+    },
+    "en": {
+      "pages": 228,
+      "articlePages": [
+        85,
+        108
+      ],
+      "chapters": 15,
+      "figures": 54,
+      "mathExpressions": 1875,
+      "sha256": "0ac9b5a247f10980e97b7b6a8449204178aab3369935ee5b619043d82cb7bc04",
+      "figurePages": {
+        "log-abundance-characteristic-zero--caption-boundary": 95,
+        "log-abundance-characteristic-zero--caption-good-model": 91,
+        "log-abundance-characteristic-zero--caption-induction": 88,
+        "log-abundance-characteristic-zero--caption-nonvanishing": 103,
+        "log-abundance-characteristic-zero--caption-witnesses": 99
+      }
+    }
+  },
+  "validationRecord": "coordination/catalog-034/validation-la-20261011"
+}

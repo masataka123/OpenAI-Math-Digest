@@ -1,14 +1,18 @@
 ---
+import {laInputGuide} from '../data/la-inputs.mjs';
 import Layout from '../layouts/Layout.astro';
 import ProofDiagram from './ProofDiagram.astro';
 import {sourceCommit} from '../data/site.mjs';
 import {laArticle as article,laSource,laReferences as refs} from '../data/la.mjs';
 import '../styles/paper.css';
 const {paper:p,lang}=Astro.props, en=lang==='en', base=import.meta.env.BASE_URL;
-const sections=[['results',en?'Results':'主要結果'],['induction',en?'Induction':'全体図'],['boundary',en?'Boundary geometry':'境界の幾何'],['nonvanishing',en?'Nonvanishing':'非消滅'],['connections',en?'Connections':'論文間の接続'],['sources',en?'Reading scope':'確認範囲']];
+// A body stylesheet is retained by the booklet pipeline; media=print leaves screen layout unchanged.
+const printCss='.la-article .figure-key{font-size:8.5pt;line-height:1.5}.la-article .figure-key p{margin:5pt 0}.la-article .figure-key li{margin:3pt 0}.la-article .la-induction,.la-article .la-witnesses{break-before:page}.la-article .la-induction .proof-diagram>svg,.la-article .la-witnesses .proof-diagram>svg{max-height:185mm}.la-article .la-induction .proof-figure,.la-article .la-witnesses .proof-figure{margin:10pt 0}.la-article .screen-only{display:none}';
+const sections=[['results',en?'Results':'主要結果'],['induction',en?'Induction':'全体図'],['good-model',en?'Good models':'良いモデル'],['boundary',en?'Boundary geometry':'境界の幾何'],['witnesses',en?'Fixed inputs':'入力の構成'],['nonvanishing',en?'Nonvanishing':'非消滅'],['connections',en?'Connections':'論文間の接続'],['sources',en?'Reading scope':'確認範囲']];
 ---
 <Layout lang={lang} title={p.title} otherPath={(en?'ja':'en')+'/papers/'+p.id+'/'} description={article.lede[lang]}>
- <article class="paper-article">
+ <article class="paper-article la-article">
+ <link rel="stylesheet" media="print" href={'data:text/css,'+encodeURIComponent(printCss)}/>
  <nav class="breadcrumbs" aria-label={en?'Breadcrumb':'現在位置'}><a href={base+lang+'/'}>{en?'Fields':'分野一覧'}</a><span aria-hidden="true">/</span><a href={base+lang+'/catalog/034/'}>{en?'Catalogue':'カタログ'} 034</a><span aria-hidden="true">/</span><span aria-current="page">Log abundance</span></nav>
  <header class="family-header">
   <p class="eyebrow">CATALOGUE 034 · PAPER 04 / 14 <span class="badge">{en?'Overview':'概説'}</span></p>
@@ -31,33 +35,36 @@ const sections=[['results',en?'Results':'主要結果'],['induction',en?'Inducti
  <aside class="figure-key" id="diagram-sources">
   <strong>{en?'How to read the citations':'図と本文の引用について'}</strong>
   <p>{en?'Numbers without a prefix refer to this LA manuscript. The arrows state both the cited result and what it supplies. Page numbers refer to the pinned PDF; GitHub opens the file preview.':'略号のない定理・命題・補題番号は、このLA原稿を指します。矢印には引用番号と、そこから使う内容を記しています。ページ番号は参照版PDFのものです。本原稿へのリンクはGitHubのファイル閲覧画面を開きます。'}</p>
-  <ul>
-   <li><a href={refs.hash}>[Hash]</a> Hashizume · <span lang="en">On the non-vanishing conjecture and existence of log minimal models</span> · Theorem 1.4</li>
-   <li><a href={refs.glue+'#page=2'}>[FG14]</a> Fujino–Gongyo · <span lang="en">Log pluricanonical representations and the abundance conjecture</span> · Theorem 1.5</li>
-   <li><a href={refs.rings+'#page=5'}>[FG17]</a> Fujino–Gongyo · <span lang="en">On log canonical rings</span> · Lemma 3.5</li>
-   <li><a href={refs.oi}>[OI]</a> OpenAI · <span lang="en">Orbifold and logarithmic Iitaka subadditivity</span> · Corollary 6.2 · {en?'catalogue':'カタログ'} 033</li>
-  </ul>
+  <ul>{laInputGuide.map(input=><li><a href={input.url??refs[input.sourceKey]}>[{input.key}] {input.author} · <span lang="en">{input.title}</span></a> — {input.version}; {en?input.location:input.location.replace('print p.','誌面p.').replace('PDF p.','PDF p.')}. {input.use[lang]}</li>)}</ul>
+  <p>{en?'These are the external interfaces expanded below. The manuscript also uses established MMP, rational-polytope and restriction results, Hodge-module strictness/vanishing, and canonical Frobenius filtrations. The relevant source locations are identified below; their full proofs and all auxiliary application details are outside this revision’s independent checks.':'以下で詳しく使う外部入力を挙げました。このほか原稿は確立済みのMMP・有理多面体・制限定理、Hodge加群のstrictnessと消滅、標準Frobeniusフィルトレーションを使います。使用箇所を以下に示しますが、各入力の全証明と補助的な適用の全詳細は今回の独立検証の範囲外です。'}</p>
  </aside>
- {article.proofs.map((proof,index)=><section id={proof.id} class="paper-section proof-section">
+ {article.proofs.map((proof,index)=><section id={proof.id} class={'paper-section proof-section la-'+proof.id}>
   <h2>{index+2}. {proof.title[lang]}</h2><p class="article-prose">{proof.intro[lang]}</p>
-  {proof.id==='induction'&&<p class="article-prose">{en?'The first step uses ':'第1段階で使う '}<a href="#nonvanishing">{en?'nonvanishing, Theorems 9.1 / 9.6':'非消滅（Theorems 9.1・9.6）'}</a>{en?'; the zero-Iitaka branch uses ':'、小平次元0の枝で使う '}<a href="#boundary">{en?'the boundary criterion, Theorem 3.1':'境界の判定（Theorem 3.1）'}</a>{en?'. The next two diagrams expand these inputs to the induction.':'を後の二つの図で詳しく説明します。両者が以下の帰納法のどこに戻るかを対応させて読みます。'}</p>}
-  {proof.id==='nonvanishing'&&<p class="article-prose">{en?'Read this diagram as ':'この図の読み順は、'}<a href="#nonvanishing-explanation-2">{en?'fixed data':'固定するデータ'}</a> → <a href="#nonvanishing-explanation-3">{en?'the determinant lower bound':'行列式の下界'}</a> → <a href="#nonvanishing-explanation-4">{en?'the upper bound and contradiction':'上界と矛盾'}</a>{en?'. Theorem 9.1 is the comparison tool; applying it to the constructed data gives the conditional nonvanishing step, Theorem 9.6.':'です。Theorem 9.1 は比較の道具であり、構成したデータへの適用が帰納仮定付きの Theorem 9.6 を与えます。'}</p>}
-
-  {proof.statement&&<aside id="theorem-3-1" class="theorem-statement article-prose"><h3><a href={laSource}>{proof.statement.label}</a></h3><p>{proof.statement.body[lang]}</p></aside>}
+  {proof.statementLinks&&<p class="source-line">{en?'Statements above: ':'冒頭の主張：'}{proof.statementLinks.map((id,i)=><>{i>0&&<span>·</span>}<a href={'#'+id}>{article.results.find(result=>result.id===id)?.label}</a></>)}<span>·</span><a href={laSource}>{en?'Manuscript proof':'原典の証明'} ↗</a></p>}
+  {proof.statement&&<aside id={proof.statement.id} class="theorem-statement article-prose"><h3><a href={laSource}>{proof.statement.label}</a></h3><p>{proof.statement.body[lang]}</p>
+   {proof.statement.formula&&<div class="math-display">{proof.statement.formula}</div>}
+   {proof.statement.items&&<ol>{proof.statement.items.map(item=><li>{item[lang]}</li>)}</ol>}
+   {proof.statement.after&&<p>{proof.statement.after[lang]}</p>}
+   <p class="source-line"><a href={laSource}>{proof.statement.label} · GitHub ↗</a></p>
+  </aside>}
   <ProofDiagram proof={proof} lang={lang} collection="la"/>
   <div class="article-prose proof-explanation">{proof.parts.map((part,i)=><section id={proof.id+'-explanation-'+(i+1)}>
    <h3>{part.title[lang]}</h3>{part.body[lang].split('\n\n').map(paragraph=><p>{paragraph}</p>)}
    {part.formula&&<div class="math-display">{part.formula}</div>}
    {part.after&&part.after[lang].split('\n\n').map(paragraph=><p>{paragraph}</p>)}
    <p class="source-line">{part.refs.map((ref,j)=><>{j>0&&<span>·</span>}<a href={ref.url}>{ref.label} ↗</a></>)}</p>
-   {proof.id==='induction'&&i===0&&<p><a href="#nonvanishing">{en?'How Theorem 9.6 is proved':'Theorem 9.6 の証明へ'} →</a></p>}
+   {proof.id==='induction'&&i===0&&<p><a href="#witnesses">{en?'How Theorem 9.6 is proved':'Theorem 9.6 の証明へ'} →</a></p>}
+   {proof.id==='induction'&&i===1&&<p><a href="#good-model">{en?'The branches of Proposition 2.5':'Proposition 2.5 の場合分け'} →</a></p>}
    {proof.id==='induction'&&i===2&&<p><a href="#boundary">{en?'The boundary criterion used here':'ここで使う境界の判定へ'} →</a></p>}
   </section>)}</div>
-  {proof.id==='boundary'&&<p class="article-prose">{en?'The conclusion is abundance, not yet the final semiampleness statement. Use it in ':'得た結論を使うのは '}<a href="#induction-explanation-3">{en?'the zero-Iitaka branch of the induction':'帰納法の小平次元0の枝'}</a>{en?' and in ':'と、'}<a href="#nonvanishing-explanation-1">{en?'the signed-representative branch of nonvanishing':'非消滅の符号付き代表元の枝'}</a>{en?'.':'です。ここでの結論は abundance であり、各適用先の追加の議論を経て半豊富性へ進みます。'}</p>}
+  {proof.id==='boundary'&&<p class="article-prose">{en?'The conclusion is abundance, not yet the final semiampleness statement. Use it in ':'得た結論を使うのは '}<a href="#induction-explanation-3">{en?'the zero-Iitaka branch of the induction':'帰納法の小平次元0の枝'}</a>{en?' and in ':'と、'}<a href="#witnesses-explanation-1">{en?'the signed-representative branch of nonvanishing':'非消滅の符号付き代表元の枝'}</a>{en?'.':'です。ここでの結論は abundance であり、各適用先の追加の議論を経て半豊富性へ進みます。'}</p>}
   {proof.id==='nonvanishing'&&<p class="article-prose">{en?'Return Theorem 9.6 to ':'Theorem 9.6 を '}<a href="#induction-explanation-1">{en?'step 1 of the main diagram':'全体図の第1段階'}</a>{en?'. Hashizume and Proposition 2.5 then produce good models in the same dimension; induction gives Theorem 11.1.':'へ戻します。Hashizume と Proposition 2.5 によって同じ次元の良いモデルを得て、帰納法を閉じた結果が Theorem 11.1 です。'}</p>}
  </section>)}
  <section id="connections" class="paper-section article-prose">
-  <h2>{en?'5. Where the other papers enter':'5. 他の論文と、どこでつながるか'}</h2>
+  <h2>{en?'7. External inputs and consequences':'7. 外部入力と主定理後の帰結'}</h2>
+  <h3>{en?'Inputs to the main proof':'主証明に入る入力'}</h3>
+  <p>{en?'Hashizume is used only after smooth nonvanishing has been proved. Fujino–Gongyo gluing supplies the whole-boundary condition before that step, using smaller-dimensional models. The positive-Iitaka lemma and Ambro’s descent enter the subsequent good-model argument. BDPP, Campana–Păun and the restriction theorem construct the fixed witnesses of Theorem 9.6; Langer’s slope bound is used inside the independent Theorem 9.1. Their hypotheses and uses are specified in the reference guide and the corresponding proof stages.':'Hashizumeを使うのは滑らかな非消滅を得た後です。Fujino–Gongyoのgluingは、その前に低次元モデルから全境界の条件を供給します。正の小平次元の補題とAmbroの降下は、その後の良いモデルの議論に入ります。BDPP・Campana–Păunと制限定理はTheorem 9.6の固定データを構成し、Langerの傾き評価は独立したTheorem 9.1の内部で使います。各仮定と使用箇所は図前の文献案内と対応する説明段階に記しました。'}</p>
+  <p class="source-line"><a href="#good-model">Proposition 2.5</a><span>·</span><a href="#boundary">Theorem 3.1</a><span>·</span><a href="#witnesses">Theorem 9.6</a><span>·</span><a href="#nonvanishing">Theorem 9.1</a></p>
   <h3>{en?'Catalogue 033 → LA: subadditivity in one lemma':'カタログ033 → LA：劣加法性を使う1か所'}</h3>
   <p>{en?'[OI], Corollary 6.2 is stated as LA’s Theorem 1.2. Its only use is Lemma 6.1, with both boundaries zero. If the Albanese image had positive dimension, its resolved Stein base would have nonnegative Kodaira dimension, and the smaller-dimensional fiber would have nonvanishing by induction. Subadditivity would contradict the counterexample.':'[OI] Corollary 6.2 は LA の Theorem 1.2 として記載され、Lemma 6.1 でのみ、両境界が0の場合に使われます。Albanese像が正次元なら、解消したStein底の小平次元は非負で、低次元のファイバーにも帰納法による非消滅があります。劣加法性を適用すると反例の仮定に矛盾します。'}</p>
   <p>{en?'For this specific base of maximal Albanese dimension, the established Hacon–Popa–Schnell Theorem 1.1 supplies the same required inequality, as the LA introduction also records. This alternative covers the application in Lemma 6.1, not the full logarithmic theorem of [OI].':'この底は maximal Albanese dimension をもつため、既存の Hacon–Popa–Schnell Theorem 1.1 でも必要な不等式を得られます。LAの序論もこの代替を明記しています。これは Lemma 6.1 の適用を賄うもので、[OI] の対数的な主張全体を置き換えるという意味ではありません。'}</p>
@@ -83,19 +90,21 @@ const sections=[['results',en?'Results':'主要結果'],['induction',en?'Inducti
   <p class="source-line"><a href={laSource}>§§11–14 · pp. 73–81 ↗</a><span>·</span><a href={refs.gmm}>{en?'Catalogue 036: generalized minimal models · Corollary 1.2':'カタログ036：一般化極小モデル · Corollary 1.2'} ↗</a></p>
  </section>
  <section id="sources" class="paper-section article-prose">
-  <h2>{en?'6. Source entry points and reading scope':'6. 原典を読む入口と確認範囲'}</h2>
+  <h2>{en?'8. Source entry points and reading scope':'8. 原典を読む入口と確認範囲'}</h2>
   <ul class="reading-list">
    <li><a href={laSource}>§2 / Proposition 2.5 · pp. 7–12</a> — {en?'The two induction outputs and the zero-Iitaka cases.':'二段階の帰納法と、小平次元0の場合分け。'}</li>
    <li><a href={laSource}>Theorem 3.1 / §§3–5 · pp. 12–30</a> — {en?'Signed representatives, formal lifting, compact families, and descent.':'符号付き代表元、形式的持ち上げ、完備な族と降下。'}</li>
+   <li><a href={laSource}>Proposition 2.5 / §10 / Theorem 11.1 · pp. 9–12, 72–73</a> — {en?'Close each dimension only after smooth nonvanishing; return from rational to real boundaries.':'滑らかな非消滅の後で各次元を閉じ、有理係数から実係数へ戻す順序。'}</li>
    <li><a href={laSource}>Propositions 8.1, 8.3 · pp. 53–61</a> — {en?'The scalar bound and the two-factor jet construction.':'スカラー上界と二因子のジェット構成。'}</li>
    <li><a href={laSource}>Theorem 9.1 / Theorem 9.6 · pp. 62–72</a> — {en?'The determinant contradiction and construction of its witnesses.':'行列式の矛盾と、その仮定を満たすデータの構成。'}</li>
   </ul>
-  <aside class="scope"><strong>{en?'Scope of the first draft · 8 October 2026':'初稿の確認範囲 · 2026年10月8日'}</strong>
-   <p>{en?'Read the principal statements, Proposition 2.5, the construction and closing argument of Theorem 3.1, the interfaces of §§6–8, and the proof and application of Theorem 9.1. Compared the external statements of Hashizume Theorem 1.4, Fujino–Gongyo Theorem 1.5 and Lemma 3.5, [OI] Corollary 6.2, and Hacon–Popa–Schnell Theorem 1.1 with their uses.':'主要な定理の記述、Proposition 2.5、Theorem 3.1 の構成と結論への接続、§§6–8の主要命題の役割、Theorem 9.1 の証明と適用を読みました。外部入力のうち、Hashizume Theorem 1.4、Fujino–Gongyo Theorem 1.5 / Lemma 3.5、[OI] Corollary 6.2、Hacon–Popa–Schnell Theorem 1.1 の記述と使用箇所を照合しました。'}</p>
+  <aside class="scope"><strong>{en?'Revision scope · 11 October 2026':'改訂の確認範囲 · 2026年10月11日'}</strong>
+   <p>{en?'Rechecked the pinned 24 September manuscript (85 pages, inventory hash matched): the statements and branch structure of Proposition 2.5, the inputs and completion of Theorem 3.1, the interfaces of Propositions 6.9–6.10 and 8.1/8.3, the fixed-data statement and determinant proof of Theorem 9.1, and the construction and use of its witnesses in Theorem 9.6. The ordering of the induction and the final descent in §§10–11 were compared with the article. External statements rechecked in this revision include Hashizume Theorem 1.4, Fujino–Gongyo Theorem 1.5 and Lemma 3.5, Ambro Theorem 0.2, BDPP Theorem 2.2, Campana–Păun Theorem 2.1, and Langer Corollary 2.5.':'固定した2026年9月24日版（85ページ、台帳のハッシュと一致）で、Proposition 2.5の主張と分岐、Theorem 3.1の入力と証明の結び、Propositions 6.9–6.10・8.1・8.3の接続、Theorem 9.1の固定データの主張と行列式の証明、Theorem 9.6の入力構成と適用を再読しました。§§10–11の帰納順序と最後の降下を記事と照合しました。外部原典はHashizume Theorem 1.4、Fujino–Gongyo Theorem 1.5 / Lemma 3.5、Ambro Theorem 0.2、BDPP Theorem 2.2、Campana–Păun Theorem 2.1、Langer Corollary 2.5の記述を再照合しました。'}</p>
+   <p>{en?'The geometry and external inputs of §§6–8 are described at the interface level: the article does not independently establish every current, valuation, moving-component, special-termination, or branch-family estimate. The supplied finite data and the way Theorem 9.1 uses them have been traced; this is not a certification that all of their geometric construction is correct. The statements of the auxiliary BCHM/Birkar, restriction, Saito and Sun inputs have not all been independently rechecked against their own sources in this revision. The OI/Hacon–Popa–Schnell comparison retains the previous reading record.':'§§6–8の幾何と外部入力は、何を供給して次へ渡すかという接続を中心に説明しています。カレント・付値・動く成分・special termination・分岐族の各評価を独立に証明したものではありません。固定データとTheorem 9.1での使用を追ったことは、その幾何学的構成の全ての正しさの認定ではありません。補助入力であるBCHM／Birkar、制限定理、Saito、Sunの主張は、今回それぞれの外部原典との再照合を全て済ませたものではありません。OI／Hacon–Popa–Schnellの比較は既存の読解記録を引き継ぎます。'}</p>
    <p>{en?'This overview reconstructs the manuscript’s argument. The full Hodge-module lifting calculation, the valuation/current and moving-component estimates in §§6–8, all cited proofs, and the full deductions in §§11–14 have not been independently verified. The catalogue-036 connection records LA’s citation; the companion proof was not checked. No expert review or formal verification is claimed.':'本記事は原稿の論証を再構成する概説です。Hodge加群による持ち上げ計算、§§6–8の付値・カレント・動く基底成分の全評価、引用文献の証明、§§11–14の各帰結の全証明を独立に検証したものではありません。カタログ036との接続はLA本文の引用関係の確認であり、引用先の証明は未検証です。専門家の査読・形式検証は未実施です。'}</p>
   </aside>
-  <p class="source-note">{en?'Pinned manuscript snapshot':'原稿の参照版'}: <code>{sourceCommit}</code><br/>{en?'The checked PDF matches the SHA-256 recorded in the catalogue inventory. GitHub citation links open the file preview; use the displayed page and theorem numbers to locate the passage.':'原典PDFはカタログ調査時に記録したSHA-256と一致しています。GitHubへの引用リンクはファイル閲覧画面を開きます。該当箇所は表示されたページ・定理番号を目印にお読みください。'}</p>
-  <a class="back" href={base+lang+'/catalog/034/'}>← {en?'Catalogue 034':'カタログ034'}</a>
+  <p class="source-note screen-only">{en?'Pinned manuscript snapshot':'原稿の参照版'}: <code>{sourceCommit}</code><br/>{en?'The checked PDF matches the SHA-256 recorded in the catalogue inventory. GitHub citation links open the file preview; use the displayed page and theorem numbers to locate the passage.':'原典PDFはカタログ調査時に記録したSHA-256と一致しています。GitHubへの引用リンクはファイル閲覧画面を開きます。該当箇所は表示されたページ・定理番号を目印にお読みください。'}</p>
+  <a class="back screen-only" href={base+lang+'/catalog/034/'}>← {en?'Catalogue 034':'カタログ034'}</a>
  </section>
  </article>
 </Layout>

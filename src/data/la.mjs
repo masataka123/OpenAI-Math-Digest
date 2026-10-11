@@ -1,3 +1,4 @@
+import {extendLa} from './la-details.mjs';
 import {text, sourceRoot, papers, paperSource} from './site.mjs';
 const m=String.raw;
 export const laSource=paperSource(papers.find(p=>p.id==='log-abundance-characteristic-zero'));
@@ -50,7 +51,7 @@ The signed-boundary criterion, Theorem 3.1, enters both this nonvanishing argume
      refs:[ref('Lemma 2.2 · p. 8'),ref('§10 / Proposition 10.1 · pp. 72–73')]},
    ]},
   {id:'boundary',diagram:'boundary',title:text('Theorem 3.1：境界から abundance を得る','Theorem 3.1: abundance from the boundary'),
-   intro:text(m`Theorem 3.1 は境界の係数に負値を許す。結論は abundance、すなわち $\kappa(L)=\nu(L)$ であり、これを Proposition 2.5 や Proposition 6.10 の状況へ適用する。`,m`Theorem 3.1 allows negative coefficients in a representative supported on the boundary. Its conclusion is abundance, $\kappa(L)=\nu(L)$, which is then used in Propositions 2.5 and 6.10.`),
+   intro:text(m`Theorem 3.1 は境界に支えられた代表元の係数に負値を許す。結論は abundance、すなわち $\kappa(L)=\nu(L)$ であり、これを Proposition 2.5 や Proposition 6.10 の状況へ適用する。`,m`Theorem 3.1 allows negative coefficients in a representative supported on the boundary. Its conclusion is abundance, $\kappa(L)=\nu(L)$, which is then used in Propositions 2.5 and 6.10.`),
    statement:{label:'Theorem 3.1 · p. 12',body:text(m`$(X,D)$ は複素射影的 $\mathbb Q$-factorial dlt 対、$D=\sum D_i$ は被約とする。$L=K_X+D$ は nef、ある $c>0$ について $L-cD$ は擬有効、$L\sim_{\mathbb Q}\sum a_iD_i$（$a_i\in\mathbb Q$）と仮定する。被約スキーム $D$ 全体で $L|_D$ が半豊富ならば、$\kappa(X,L)=\nu(X,L)$。`,m`Let $(X,D)$ be a projective $\mathbb Q$-factorial dlt pair over $\mathbb C$ with $D=\sum D_i$ reduced. Assume $L=K_X+D$ is nef, $L-cD$ is pseudo-effective for some $c>0$, and $L\sim_{\mathbb Q}\sum a_iD_i$ with $a_i\in\mathbb Q$. If $L|_D$ is semiample on the whole reduced scheme $D$, then $\kappa(X,L)=\nu(X,L)$.`)},
    alt:text('符号付き境界から、正成分の分離、Hodge理論による形式的持ち上げ、境界外の完備部分多様体の族、nef reduction上のbig因子へ至る図。','A signed boundary leads to separated positive components, formal Hodge-theoretic lifting, compact subvarieties off the boundary, and a big divisor on the nef-reduction base.'),
    caption:text('図2. 非自明な場合 0 < ν(L) < dim X の幾何。境界から離れた L-trivial な部分多様体が、nef reduction の底の次元を決める。','Figure 2. The nontrivial range 0 < ν(L) < dim X. Compact L-trivial subvarieties off the boundary determine the dimension of the nef-reduction base.'),
@@ -101,3 +102,5 @@ Bases adapted to vanishing orders have independent leading terms, so the two fac
    ]},
  ],
 };
+
+extendLa(laArticle,laSource,laReferences);

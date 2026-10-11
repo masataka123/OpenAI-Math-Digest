@@ -1,0 +1,27 @@
+\begin{tikzpicture}
+\node[card] (start) {\heading{START}{低次元の良いモデルの下で反例を仮定}{Assume a counterexample under smaller-dimensional good models}
+$K_X\in\Eff(X),\quad\kappa(X)=-\infty,\quad n\geq2.$\\[3pt]
+\Tx{被覆曲線・固定被覆の対応を排除し、二つのジェット評価を得る。}{Exclude covering curves and fixed-cover correspondences to obtain two jet estimates.}};
+\node[card,below=1.65cm of start] (choice) {\heading{01}{定数を依存順に選ぶ}{Choose constants in their dependency order}
+$\epsilon\ \longrightarrow\ q\ \longrightarrow\ (t,r),\qquad r\mu_t\to\epsilon,\quad r>qm+1.$\\[3pt]
+$(14\epsilon)^n<1/4,\quad80\epsilon<3/4,\quad L=r(K+tA),\quad S=mK.$};
+\flow{start}{choice}{\Tx{スカラー上界は十分可除な全次数、二因子評価は $q$ を固定して小さい $t$。}{The scalar bound controls all sufficiently divisible degrees; two-slot jets use fixed $q$ and small $t$.}\\[3pt]\LA{53}{Prop. 8.1, pp. 53--54}\quad\LA{56}{Prop. 8.3, pp. 56--61}\quad\LA{69}{(61), p. 69}}
+\node[card,below=1.6cm of choice] (flag) {\heading{02}{小さい豊富因子と一つの旗}{A small ample divisor and one flag}
+$H=H_0+\eta H_{\rm amp},\quad H^n\leq(2\epsilon)^n.$\\[3pt]
+$K_WH^{n-1}\leq2H^n/r,\quad(2L+qS)H^{n-1}\leq4H^n.$\\[3pt]
+$\mu_{\min}(\Omega_W^1|_C)\geq0.$};
+\flow{choice}{flag}{\Tx{scaling model の正部分を引き戻し、厳密な余裕の範囲で豊富にする。}{Pull back the positive part of the scaling model, then perturb within strict margins.}\\[3pt]\LA{70}{$\S9.2.1$ / (62)--(64), p. 70}}
+\node[card,below=1.65cm of flag] (curve) {\heading{03}{全重みを評価する一つの可動曲線}{One movable curve controls all weights}
+$D^+=2r(K+2tA)+2E,\quad\pi_x^*D^+-40\epsilon J\notin\Eff(\widehat W).$\\[3pt]
+$\gamma=f_*(A_1\cdots A_{n-1}),\quad J\cdot\gamma>0.$\\[3pt]
+$\pi_x^*(L+K_W/2+\lambda S)\cdot\gamma<40\epsilon J\cdot\gamma\quad(0\leq\lambda\leq q).$};
+\flow{flag}{curve}{\Tx{スカラー消滅上界と可動曲線双対性。還元に必要な条件は端点2個。}{Scalar vanishing and movable duality; only two endpoint inequalities must be spread.}\\[3pt]\LA{70}{$\S9.2.2$ / (65)--(66), pp. 70--71}}
+\node[card,below=1.65cm of curve] (jets) {\heading{04}{一つの次数・有限個のジェット切断を固定}{Fix one degree and finitely many jet sections}
+$Z=\mathbb P(\mathcal O_W(S)_1\oplus\mathcal O_W(S)_2),\quad M=L_1+L_2+q\xi.$\\[3pt]
+$|k_0M|$\quad\Tx{が $z_*$ で次数 $(2n+2)k_0$ まで生成。}{generates jets through order $(2n+2)k_0$ at $z_*$.}};
+\flow{curve}{jets}{\Tx{Seshadri 定数 $>2n+2$ を実際の有限ジェット全射にする。}{Realize the Seshadri bound $>2n+2$ by an actual finite jet surjection.}\\[3pt]\LA{71}{$\S9.2.3$, p. 71}}
+\node[result,below=1.65cm of jets] (end) {\heading{END}{全データを固定して Theorem 9.1 に渡す}{Fix all data and apply Theorem 9.1}
+\Tx{標数 $p$ を動かすのはこの後。両立不可能性が反例を排除する。}{Only now may $p$ vary. Incompatibility excludes the counterexample.}\\[3pt]
+$\kappa(X,K_X)\geq0\qquad\text{Theorem 9.6.}$};
+\flow{jets}{end}{\Tx{偏極・旗・可動曲線・ジェットが定理の全仮定を満たす。}{The polarization, flag, curve and jets satisfy every hypothesis.}\\[3pt]\LA{62}{Thm. 9.1, p. 62}\quad\LA{72}{$\S9.2.4$, p. 72}}
+\end{tikzpicture}

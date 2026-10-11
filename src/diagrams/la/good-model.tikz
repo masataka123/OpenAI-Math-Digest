@@ -1,0 +1,36 @@
+\begin{tikzpicture}
+\node[card] (start) {\heading{START}{低次元の良いモデルと、同次元の非消滅を使う}{Use smaller-dimensional good models and current-dimensional nonvanishing}
+$\mathrm{GLM}_{\leq n-1}+\mathrm{NV}_n$\quad\Tx{実係数 lc 対、随伴因子は擬有効。}{Real-boundary lc pair, pseudo-effective adjoint.}};
+\node[card,below=1.55cm of start] (rational) {\heading{01}{有理係数の nef dlt 随伴因子へ}{Reduce to rational nef dlt adjoints}
+$L=K_Z+\Delta,\quad L\text{ nef},\quad\kappa(L)\geq0.$\\[3pt]
+$\kappa(L)>0:$\quad\Tx{低次元の良いモデルで完了。}{lower-dimensional good models finish this branch.}};
+\flow{start}{rational}{\Tx{通常の極小モデルを得て、nef 境界の有理単体へ分解。}{Obtain ordinary minimal models, then a rational simplex of nef boundaries.}\\[3pt]\Hash{1}{[Hash] Thm. 1.4}\quad\LA{9}{Prop. 2.5, pp. 9--10}\quad\FGring{5}{[FG17] Lemma 3.5, p. 5}}
+\node[card,below=1.55cm of rational] (zero) {\heading{02}{残る $\kappa(L)=0$ を摂動で分ける}{Split the remaining case $\kappa(L)=0$ by perturbation}
+$P=\Delta\ \text{(klt)},\qquad P=\lfloor\Delta\rfloor\ \text{(otherwise)}.$\\[3pt]
+$L-\epsilon P$\quad\Tx{の擬有効性を調べる。}{is the perturbed adjoint.}};
+\flow{rational}{zero}{\Tx{非消滅は獲得済み。小平次元0から数値次元0への移行を証明する。}{Nonvanishing is available; prove the passage from Iitaka to numerical dimension zero.}\\[3pt]\LA{10}{Prop. 2.5, p. 10}}
+\node[half,below=2.2cm of zero.south,anchor=north,xshift=-4cm,minimum height=3.3cm] (mori) {\heading{A}{小摂動が擬有効でない}{Small perturbations are not pseudo-effective}
+\Tx{同じ $mL$ を保つ $L$-trivial MMP。}{An $L$-trivial MMP preserves the same $mL$.}\\[4pt]
+$L'\sim_{\mathbb Q}f^*A,\quad\dim T<n.$\\[4pt]
+\Tx{klt 底、または支配的な境界に随伴。\\半豊富性を底へ降ろす。}{Use a klt base or adjunction to a dominating\\floor component; descend semiampleness.}};
+\node[half,below=2.2cm of zero.south,anchor=north,xshift=4cm,minimum height=3.3cm] (klt) {\heading{B}{klt で摂動が擬有効}{The klt perturbation is pseudo-effective}
+$L\sim_{\mathbb Q}H_0+\epsilon\Delta\geq0.$\\[4pt]
+\Tx{解消・nef モデルで全被約台を確保。}{Keep full reduced support on a nef model.}\\[4pt]
+$\kappa=0\overset{\text{Thm. 3.1}}{\Longrightarrow}\nu=0$\\[3pt]
+\Tx{有効代表元を消し、$L\sim_{\mathbb Q}0$。}{Kill the effective representative: $L\sim_{\mathbb Q}0$.}};
+\draw[wire] (zero.south)--++(0,-.3) coordinate (fork);
+\draw[edge] (fork)-| ($(mori.north)+(-3.15,0)$);
+\draw[edge] (fork)-| ($(klt.north)+(-3.15,0)$);
+\node[branchreason,anchor=west] at ($(mori.north)+(-2.65,1.05)$) {\Tx{Cartier 指数の一様性と低次元帰納。}{Uniform Cartier index and lower-dimensional induction.}\\[3pt]\LA{9}{Lemma 2.4, p. 9}\quad\LA{10}{Prop. 2.5, p. 10}};
+\node[branchreason,anchor=west] at ($(klt.north)+(-2.65,1.05)$) {\Tx{全境界の半豊富性と小摂動を確認。}{Check whole-boundary semiampleness and the perturbation.}\\[3pt]\LA{8}{Prop. 2.3, p. 8}\quad\LA{11}{Prop. 2.5, p. 11}};
+\node[card,below=2.25cm of klt.south,anchor=north,xshift=-4cm] (lc) {\heading{C}{残る非klt・擬有効の枝}{The remaining non-klt pseudo-effective branch}
+$2(L-\epsilon P)=L+(L-2\epsilon P).$\\[3pt]
+\Tx{二つの klt 摂動は $\kappa_\sigma=0$。単調性で $\nu(L)=0$。}{Both klt perturbations have $\kappa_\sigma=0$; monotonicity gives $\nu(L)=0$.}\\[3pt]
+$L\sim_{\mathbb Q}E\geq0\ \Longrightarrow\ E=0.$};
+\draw[edge] (klt.south)--++(0,-.5)-| ($(lc.north)+(6.6,0)$);
+\node[reason,text width=12.8cm,anchor=west] at ($(lc.north)+(-6.9,.85)$) {\Tx{A・Bで証明済みの klt 結論だけを使う。摂動は nef と仮定しない。}{Use only the klt conclusion already proved in A--B; perturbations need not be nef.}\\[3pt]\LA{12}{Prop. 2.5, p. 12}};
+\node[result,below=1.45cm of lc] (end) {\heading{END}{有理係数から実係数へ戻し、良いモデルを得る}{Return from rational to real boundaries and obtain good models}
+\Tx{半豊富な有理随伴因子の有限正結合。元の nef 対へは比較で降下。}{Finite positive combinations of semiample adjoints; nef comparison returns to the pair.}\\[3pt]
+$\mathrm{GLM}_{\leq n}\quad\text{and}\quad\mathrm{SA}_n.$};
+\flow{lc}{end}{\Tx{全分岐の結論を有理単体へ戻す。}{Combine all branch conclusions in the rational simplex.}\\[3pt]\LA{12}{Prop. 2.5, p. 12}\quad\LA{8}{Lemma 2.2, p. 8}}
+\end{tikzpicture}
