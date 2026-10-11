@@ -1,0 +1,29 @@
+\node[card] (start) {\heading{1}{有限被覆で $b_1$ を最大化}{Maximize $b_1$ on a finite cover}
+$G=\pi_1(X),\quad N=\operatorname{Im}(\pi_1(S)\to G)$\\
+$1\to N\to G\to\pi_1(A)\to1$,\quad $N$ \Tx{は有限生成かつFAb}{is finitely generated and FAb}\\\Cite{exact}\quad\Cite{fab}};
+\node[card,below=2.3cm of start] (minimal) {\heading{2}{無限 $N$ を仮定し相対底を最小化}{Assume $N$ infinite and minimize the relative base}
+$X\dashrightarrow Z\to A,\quad Q=N/B_0\subset R=G/B_0$\\
+$\pi_1^{\rm orb}(Y,\Delta_Y)\twoheadrightarrow Q,\quad\dim Y=\ell>0$};
+\flow{start}{minimal}{\Tx{有限指数条件を実現し、全無限商に同じ最小性を課す}{Realize finite-index conditions; retain minimality for all infinite quotients}\\\Cite{minimum}};
+\node[half,minimum height=2.4cm,below=2.25cm of minimal.south west,anchor=north west] (left) {\heading{}{無限線形像がある}{An infinite linear image}
+\Tx{FAbから半単純商、有限被覆でtorsion-free像}{FAb gives a semisimple quotient; a finite cover gives torsion-free image}};
+\node[half,minimum height=2.4cm,below=2.25cm of minimal.south east,anchor=north east] (right) {\heading{}{全有限次元線形像が有限}{All finite-dimensional linear images finite}
+\Tx{Hilbert係数テンソルと条件(M)}{Hilbert tensors and condition (M)}};
+\coordinate (fork) at ($(minimal.south)+(-6.9,-1.55)$);
+\draw[wire] ($(minimal.south)+(-6.9,0)$)--(fork)--(right.north |- fork);
+\draw[edge] (left.north |- fork)--(left.north);
+\draw[edge] (right.north |- fork)--(right.north);
+\node[reason,anchor=center] at ($(minimal.south)+(0,-.65)$) {\Tx{同じ無限商 $Q$ について二分する}{Split into two cases for the same infinite quotient $Q$}\quad\Cite{cases}};
+\node[result,half,minimum height=2.4cm,below=2.35cm of left] (bigleft) {\heading{}{通常の標準因子がbig}{The ordinary canonical divisor is big}$K_Y\ \text{big}$\\$\Longrightarrow\ K_Y+\Delta_Y\ \text{big}$};
+\node[result,half,minimum height=2.4cm,below=2.35cm of right] (bigright) {\heading{}{orbifold随伴因子がbig}{The orbifold adjoint is big}$K_Y+\Delta_Y\ \text{big}$};
+\draw[edge] ($(left.south)+(-3.05,0)$)--($(bigleft.north)+(-3.05,0)$);
+\draw[edge] ($(right.south)+(-3.05,0)$)--($(bigright.north)+(-3.05,0)$);
+\node[branchreason,text width=5.3cm,fill=white] at ($(left.south)!.5!(bigleft.north)$) {\Tx{最小性でgenerically large、一般型判定}{Minimality gives generic largeness; apply the general-type criterion}\\\Cite{linear}};
+\node[branchreason,text width=5.3cm,fill=white] at ($(right.south)!.5!(bigright.north)$) {\Tx{最小rankが $\ell$、big lineを降下}{Minimal rank is $\ell$; descend a big line}\\\Cite{hilbert}};
+\coordinate (middle) at ($(bigleft.south)!.5!(bigright.south)$);
+\node[result,below=2.6cm of middle] (end) {\heading{3}{specialnessに矛盾、従って $N$ は有限}{Contradict specialness, so $N$ is finite}
+\Tx{有限核とトーラス格子から $G$ はvirtually abelian}{A finite kernel and torus lattice make $G$ virtually abelian}\\
+\Tx{有限指数アーベル部分群 $\leftrightarrow$ 基本群がアーベルな有限不分岐正則被覆}{Finite-index abelian subgroup $\leftrightarrow$ finite unramified holomorphic cover\\with abelian fundamental group}};
+\draw[wire] (bigleft.south)--++(0,-.4)--($(middle)+(-6.9,-.4)$);
+\draw[edge] (bigright.south)--++(0,-.4)--($(middle)+(-6.9,-.4)$)--($(end.north)+(-6.9,0)$);
+\node[reason,fill=white] at ($(middle)!.5!(end.north)$) {\Tx{各準備モデルの正値性を真のinertiaで降下、Bogomolov層を得る}{Descend positivity on every prepared model using actual inertia to obtain a Bogomolov sheaf}\\\Cite{descent}\quad\Cite{kernel}};

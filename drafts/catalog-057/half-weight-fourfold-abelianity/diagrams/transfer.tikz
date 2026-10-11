@@ -1,0 +1,8 @@
+\node[card] (a) {\heading{1}{特殊性への反証を仮定}{Assume a violation of specialness}$L\longrightarrow\Omega_Y^p,\quad\kappa(L)=p,\quad u_a=s_a/s_0$};
+\node[card,below=2.0cm of a] (b) {\heading{2}{比と方向を基底へ降ろす}{Descend ratios and their direction}$u_a=g^*v_a,\quad\sigma=dv_1\wedge\cdots\wedge dv_p\ne0$};
+\flow a b {\Tx{自明な随伴次数で比がファイバー上定数、連結性で降下}{Trivial graded pieces make ratios fibrewise constant; connectedness gives descent}\\\Cite{wedge}; \Cite{descent}};
+\node[result,below=2.1cm of b] (c) {\heading{3}{禁止された直線束}{A forbidden line bundle}$K\longrightarrow\Omega_{\mathcal X}^p,\quad\kappa(K)=p\quad\Longrightarrow\quad\bot$};
+\flow b c {\Tx{submersionで因子的極を排除し、飽和した方向へ延長}{Detect divisorial poles by submersions and extend in the saturated direction}\\\Cite{saturation}; \Cite{transfer}};
+\node[card,below=.7cm of c] (d) {\heading{4}{別の位相的議論}{The separate topological argument}$g^*D=2E,\quad g^{-1}B\longrightarrow B$\quad\Tx{は連結ファイバー}{has connected fibres}};
+\node[result,below=2.2cm of d] (e) {\heading{5}{meridianを殺し、全射を保つ}{Kill meridians and retain surjectivity}$\pi_1(Y)\twoheadrightarrow\pi_1(X\setminus D)/\langle\!\langle\gamma^2\rangle\!\rangle$};
+\flow d e {\Tx{meridianは$\gamma^{2e}$へ写る。局所自明化で$\pi_1$は全射}{Meridians map to $\gamma^{2e}$; local triviality gives surjectivity on $\pi_1$}\\\Cite{fibration}; \Cite{transfer}};

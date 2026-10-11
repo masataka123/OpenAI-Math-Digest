@@ -1,0 +1,10 @@
+\node[half] (a) {\heading{1}{コンパクトKählerの入力}{The compact Kähler input}\Tx{特殊な滑らかな$Y$}{Smooth special $Y$}\\$\pi_1(Y)$\ \Tx{は仮想可換}{is virtually abelian}\\\Cite{compact}};
+\node[half,right=.7cm of a] (b) {\heading{3}{根空間からの構成}{Construction from the root space}\Tx{特殊な射影8次元多様体$Y$}{A special projective eightfold $Y$}\\$\pi_1(Y)\twoheadrightarrow G$\\\Cite{root-construction}; \Cite{root-transfer}};
+\node[result,below=3.4cm of $(a.south)!.5!(b.south)$] (c) {\heading{3}{条件付きの群全体の結論}{The conditional conclusion for the entire group}$G=\pi_1(X^4\setminus D)/\langle\!\langle\gamma^2\rangle\!\rangle$\ \Tx{は仮想可換}{is virtually abelian}\\\Cite{root}};
+\coordinate (afrom) at ($(a.south west)+(.15,0)$);
+\draw[edge] (afrom)--(afrom |- c.north);
+\node[branchreason,anchor=north west] at ($(a.south west)+(.65,-.4)$) {\Tx{任意次元の定理を$\dim Y=8$で適用}{Apply the all-dimensional theorem at $\dim Y=8$}\\\Cite{compact}; \Cite{root-use}};
+\coordinate (bfrom) at ($(b.south west)+(.15,0)$);
+\draw[edge] (bfrom)--(bfrom |- c.north);
+\node[branchreason,anchor=north west] at ($(b.south west)+(.65,-.4)$) {\Tx{特殊性を移し、全射の像へ有限指数可換群を送る}{Transfer specialness and send the abelian finite-index subgroup to the quotient}\\\Cite{root-transfer}; \Cite{root-use}};
+\node[card,below=.8cm of c] (d) {\heading{2}{開多様体では線形像と完備化}{Linear images and completion for open varieties}\Tx{滑らかな連結特殊準射影多様体$V$：通常の完全性と混合Hodge構造}{Smooth connected special quasi-projective $V$: ordinary exactness and mixed Hodge structures}\\$\rho\colon\pi_1(V)\to\mathrm{GL}_d(\mathbf C)$; $\rho(\pi_1(V))$\ \Tx{は有限指数でclass $\le2$。群全体の主張とは区別}{is virtually of class $\le2$; distinct from a statement about the entire group}\\\Cite{open}\\\Tx{第1論文への参照は背景（証明依存の矢印なし）}{The reference to paper 1 is background (no proof-dependency arrow)}};

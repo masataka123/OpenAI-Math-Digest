@@ -1,0 +1,336 @@
+{
+  "schemaVersion": 1,
+  "catalogId": "057",
+  "citationStyle": "author-key",
+  "sources": {
+    "P": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "pagination": "same"
+    },
+    "OpenAI26a": {
+      "recordFile": "sources.json",
+      "recordId": "companion",
+      "guideRole": {
+        "ja": "特殊な滑らかなコンパクトKähler多様体の基本群全体の仮想可換性。Assumption 1.2を供給",
+        "en": "Virtual abelianity of the entire fundamental group of a special smooth compact Kähler manifold; supplies Assumption 1.2"
+      }
+    },
+    "Ehr52": {
+      "recordFile": "sources.json",
+      "recordId": "ehr52",
+      "guideRole": {
+        "ja": "連結コンパクトファイバーを持つsubmersionの局所自明化と基本群の全射",
+        "en": "Local triviality for submersions with connected compact fibres, used for surjectivity on fundamental groups"
+      }
+    },
+    "Ser56": {
+      "recordFile": "sources.json",
+      "recordId": "ser56",
+      "guideRole": {
+        "ja": "有限解析写像のcoherent代数と構造写像の代数化",
+        "en": "Algebraization of a finite analytic map through its coherent algebra and structure maps"
+      }
+    },
+    "Dem12": {
+      "recordFile": "sources.json",
+      "recordId": "dem12",
+      "guideRole": {
+        "ja": "Lemma 2.1で用いる正則微分形式の閉性",
+        "en": "Closedness of holomorphic differential forms in Lemma 2.1"
+      }
+    },
+    "StacksM": {
+      "recordFile": "sources.json",
+      "recordId": "stacks-morphisms",
+      "guideRole": {
+        "ja": "有限射の射影性",
+        "en": "Projectivity of finite morphisms"
+      }
+    },
+    "StacksC": {
+      "recordFile": "sources.json",
+      "recordId": "stacks-coherent",
+      "guideRole": {
+        "ja": "Koszul列で使う射影空間のコホモロジー",
+        "en": "Cohomology of projective space in the Koszul calculation"
+      }
+    }
+  },
+  "citations": {
+    "main": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.3",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "assumption": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Assumption 1.2",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "definition": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Definition 1.1",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "transfer": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 3.1",
+          "printed": "5–6",
+          "pdf": "5–6"
+        }
+      ]
+    },
+    "construction": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 4.1",
+          "printed": "6",
+          "pdf": "6"
+        }
+      ]
+    },
+    "wedge": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 2.1",
+          "printed": "3",
+          "pdf": "3"
+        }
+      ]
+    },
+    "saturation": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 2.2",
+          "printed": "3–4",
+          "pdf": "3–4"
+        }
+      ]
+    },
+    "descent": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 2.4",
+          "printed": "4",
+          "pdf": "4"
+        }
+      ]
+    },
+    "choice": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 4.2",
+          "printed": "7–8",
+          "pdf": "7–8"
+        }
+      ]
+    },
+    "projective": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 4.3",
+          "printed": "8",
+          "pdf": "8"
+        }
+      ]
+    },
+    "fibres": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 4.4",
+          "printed": "9",
+          "pdf": "9"
+        }
+      ]
+    },
+    "finish": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proof of Theorem 1.3",
+          "printed": "9",
+          "pdf": "9"
+        }
+      ]
+    },
+    "appendix": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Appendix A",
+          "printed": "10–13",
+          "pdf": "10–13"
+        }
+      ]
+    },
+    "companion": {
+      "source": "OpenAI26a",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "fibration": {
+      "source": "Ehr52",
+      "locations": [
+        {
+          "result": "§1, Proposition",
+          "printed": "154",
+          "pdf": "3"
+        }
+      ]
+    },
+    "gaga": {
+      "source": "Ser56",
+      "locations": [
+        {
+          "result": "§12, Théorèmes 2–3",
+          "printed": "19–20",
+          "pdf": "20–21"
+        }
+      ]
+    },
+    "closed": {
+      "source": "Dem12",
+      "locations": [
+        {
+          "result": "VI, Proposition 8.9",
+          "printed": "312",
+          "pdf": "312"
+        }
+      ]
+    },
+    "finite-projective": {
+      "source": "StacksM",
+      "locations": [
+        {
+          "result": "Lemma 45.16 (Tag 0B3I)",
+          "printed": "108",
+          "pdf": "108"
+        }
+      ]
+    },
+    "p3-cohomology": {
+      "source": "StacksC",
+      "locations": [
+        {
+          "result": "Lemma 8.1 (Tag 01XT)",
+          "printed": "16–17",
+          "pdf": "16–17"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ],
+  "articleGuides": {
+    ".": {
+      "selfSource": "P",
+      "externalSources": [
+        "OpenAI26a",
+        "Ehr52",
+        "Ser56",
+        "Dem12",
+        "StacksM",
+        "StacksC"
+      ],
+      "mainResults": [
+        "main"
+      ],
+      "proofTargets": [
+        "main",
+        "transfer",
+        "construction"
+      ],
+      "statements": {
+        "main": "theorem-1-3",
+        "transfer": "proposition-3-1",
+        "construction": "proposition-4-1"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "main",
+          "conclusion": "The entire discrete orbifold group contains an abelian subgroup of finite index, under Assumption 1.2.",
+          "anchor": "proof-overview-step-2"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "main",
+          "purpose": {
+            "ja": "条件付き結論と対象となる群。",
+            "en": "The conditional conclusion and the group it concerns."
+          }
+        },
+        {
+          "citation": "transfer",
+          "purpose": {
+            "ja": "特殊性の降下とmeridianによる群の全射を分けて読む。",
+            "en": "Separate specialness transfer from the meridian argument for the group quotient."
+          }
+        },
+        {
+          "citation": "choice",
+          "purpose": {
+            "ja": "固定点排除の余次元4と、除外集合の余次元2を区別する。",
+            "en": "Distinguish codimension four for fixed-point avoidance from codimension two for the excluded set."
+          }
+        },
+        {
+          "citation": "fibres",
+          "purpose": {
+            "ja": "連結な種数1の積と各因子のsubmersion点。",
+            "en": "The connected genus-one product and submersion points in every factor."
+          }
+        },
+        {
+          "citation": "companion",
+          "purpose": {
+            "ja": "最後に適用する基本群全体の主張。",
+            "en": "The assertion about the entire fundamental group used at the last step."
+          }
+        },
+        {
+          "citation": "appendix",
+          "purpose": {
+            "ja": "14次元の別構成。本記事の詳細照合の対象外。",
+            "en": "An alternative 14-dimensional construction, outside the detailed checking scope here."
+          }
+        }
+      ]
+    }
+  }
+}

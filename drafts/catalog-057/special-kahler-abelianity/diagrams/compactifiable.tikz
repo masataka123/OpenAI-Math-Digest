@@ -1,0 +1,7 @@
+\node[card] (n0) {\heading{1}{(i) 非virtually abelianなdeck群の最小反例}{(i) A minimal counterexample for the deck group}$V\subset\overline V\ \text{normal compact complex},\quad V\to X\ \text{infinite Galois}$};
+\node[card,below=2.15cm of n0] (n1) {\heading{2}{(i) 基底はsmooth special、矛盾}{(i) A smooth special base gives a contradiction}$\pi_1(X)\ \text{virtually abelian}\ \Longrightarrow\ \Gamma\ \text{virtually abelian}$};
+\flow{n0}{n1}{\Tx{最小次元基底をsmooth specialへ帰着し、主定理を適用}{Reduce the minimal base to smooth special and apply the main theorem}\\\Cite{ch-minimal}\quad\Cite{main}};
+\node[card,below=2.15cm of n1] (n2) {\heading{3}{(ii) Kählerコンパクト化の下でAlbanese束}{(ii) An Albanese bundle under Kähler compactification}$X^{\prime}\to A\ \text{locally trivial},\quad F\ \text{simply connected compact K\"ahler}$};
+\flow{n1}{n2}{\Tx{(i)を無限普遍被覆へ適用；有限群の場合も含め束定理を使う}{Apply (i) to an infinite universal cover; include finite groups and use the bundle theorem}\\\Cite{ch-bundle}};
+\node[result,below=2.15cm of n2] (n3) {\heading{4}{(ii) 通常の普遍被覆の積分解}{(ii) The product decomposition of the ordinary universal cover}$U\simeq F\times\mathbb C^q,\quad q=\dim A$};
+\flow{n2}{n3}{\Tx{$\mathbb C^q$へ引き戻し、Oka--Grauertで自明化；$F$の単連結性}{Pull back to $\mathbb C^q$ and trivialize by Oka--Grauert; use simple connectedness of $F$}\\\Cite{cor15}};

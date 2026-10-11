@@ -1,0 +1,561 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "author-key",
+  "catalogId": "057",
+  "sources": {
+    "P": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "pagination": "same"
+    },
+    "CDY25": {
+      "recordFile": "sources.json",
+      "recordId": "cdy",
+      "guideRole": {
+        "ja": "線形像の分解、有限étale被覆でのspecialness、quasi-Albaneseの優勢性・完全性",
+        "en": "Linear-image decomposition, specialness under finite étale covers, and quasi-Albanese dominance and exactness"
+      }
+    },
+    "Fuj24": {
+      "recordFile": "sources.json",
+      "recordId": "fujino",
+      "guideRole": {
+        "ja": "quasi-Albaneseが誘導する第一ホモロジー同型",
+        "en": "First-homology identification induced by the quasi-Albanese map"
+      }
+    },
+    "Hain87": {
+      "recordFile": "sources.json",
+      "recordId": "hain87",
+      "guideRole": {
+        "ja": "基点付き代数写像に自然な混合Hodge構造とbracket",
+        "en": "Pointed functorial mixed Hodge structures and the bracket"
+      }
+    },
+    "Hain15": {
+      "recordFile": "sources.json",
+      "recordId": "hain15",
+      "guideRole": {
+        "ja": "unipotent completionの基礎体拡大",
+        "en": "Extension of the ground field for unipotent completion"
+      }
+    },
+    "Del71": {
+      "recordFile": "sources.json",
+      "recordId": "deligne",
+      "guideRole": {
+        "ja": "混合Hodge構造のstrictnessと開多様体の第一ホモロジーの重み",
+        "en": "Strictness and weights on first homology of smooth open varieties"
+      }
+    },
+    "Cam": {
+      "recordFile": "sources.json",
+      "recordId": "campana",
+      "guideRole": {
+        "ja": "対数Kodaira次元0のspecialness、neatモデル・合成の底因子",
+        "en": "Specialness at log Kodaira dimension zero, neat models and composed base divisors"
+      }
+    },
+    "CDHP26": {
+      "recordFile": "sources.json",
+      "recordId": "cdhp",
+      "guideRole": {
+        "ja": "special対の規約とneatモデル。先行する線形像の結論およびファイバーspecialnessとの比較",
+        "en": "Conventions for special pairs and neat models; prior linear-image result and comparison with fibre specialness"
+      }
+    },
+    "Groth": {
+      "recordFile": "sources.json",
+      "recordId": "sga1",
+      "guideRole": {
+        "ja": "有限指数部分群に対応する被覆の代数化",
+        "en": "Algebraization of the finite cover corresponding to a finite-index subgroup"
+      }
+    }
+  },
+  "citations": {
+    "linear": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "completion": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.2",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "surface": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.3",
+          "printed": "3",
+          "pdf": "3"
+        }
+      ]
+    },
+    "logzero": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Corollary 3.1",
+          "printed": "8",
+          "pdf": "8"
+        }
+      ]
+    },
+    "linear-proof": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§3",
+          "printed": "7–8",
+          "pdf": "7–8"
+        }
+      ]
+    },
+    "mhs": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§2.1",
+          "printed": "4–5",
+          "pdf": "4–5"
+        }
+      ]
+    },
+    "kernel": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§2.2; (2.3)–(2.5)",
+          "printed": "5–6",
+          "pdf": "5–6"
+        }
+      ]
+    },
+    "weights": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§2.3; (2.6)–(2.10)",
+          "printed": "6",
+          "pdf": "6"
+        }
+      ]
+    },
+    "limit": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§2.3",
+          "printed": "7",
+          "pdf": "7"
+        }
+      ]
+    },
+    "surface-geometry": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§4.1; (4.1)–(4.4)",
+          "printed": "8–9",
+          "pdf": "8–9"
+        }
+      ]
+    },
+    "convention": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§§4.2–4.3; Definition 4.1",
+          "printed": "10–11",
+          "pdf": "10–11"
+        }
+      ]
+    },
+    "special-proof": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§5",
+          "printed": "11–13",
+          "pdf": "11–13"
+        }
+      ]
+    },
+    "units": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 6.1; §6.1",
+          "printed": "13–14",
+          "pdf": "13–14"
+        }
+      ]
+    },
+    "meridians": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§6.2; (6.3)–(6.4)",
+          "printed": "15",
+          "pdf": "15"
+        }
+      ]
+    },
+    "comparison": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§7; (7.1)–(7.3)",
+          "printed": "15–18",
+          "pdf": "15–18"
+        }
+      ]
+    },
+    "ordinary": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Question 8.1; §8",
+          "printed": "18",
+          "pdf": "18"
+        }
+      ]
+    },
+    "cdy-linear": {
+      "source": "CDY25",
+      "locations": [
+        {
+          "result": "Theorem A",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "cdy-cover": {
+      "source": "CDY25",
+      "locations": [
+        {
+          "result": "Theorem 3.1",
+          "printed": "5",
+          "pdf": "5"
+        }
+      ]
+    },
+    "cdy-albanese": {
+      "source": "CDY25",
+      "locations": [
+        {
+          "result": "Lemma 4.4",
+          "printed": "9",
+          "pdf": "9"
+        }
+      ]
+    },
+    "cdy-exact": {
+      "source": "CDY25",
+      "locations": [
+        {
+          "result": "Proposition 4.13",
+          "printed": "12",
+          "pdf": "12"
+        }
+      ]
+    },
+    "fuj-homology": {
+      "source": "Fuj24",
+      "locations": [
+        {
+          "result": "Lemmas 3.11–3.12",
+          "printed": "20–21",
+          "pdf": "20–21"
+        }
+      ]
+    },
+    "hain-mhs": {
+      "source": "Hain87",
+      "locations": [
+        {
+          "result": "Theorem 6.3.1",
+          "printed": "321",
+          "pdf": "51"
+        }
+      ]
+    },
+    "hain-field": {
+      "source": "Hain15",
+      "locations": [
+        {
+          "result": "§4",
+          "printed": "8",
+          "pdf": "8"
+        }
+      ]
+    },
+    "del-strict": {
+      "source": "Del71",
+      "locations": [
+        {
+          "result": "Theorem 2.3.5",
+          "printed": "30",
+          "pdf": "27"
+        }
+      ]
+    },
+    "del-weights": {
+      "source": "Del71",
+      "locations": [
+        {
+          "result": "Corollary 3.2.15(ii)",
+          "printed": "39",
+          "pdf": "36"
+        }
+      ]
+    },
+    "cam-zero": {
+      "source": "Cam",
+      "locations": [
+        {
+          "result": "Theorem 6.7",
+          "printed": "92",
+          "pdf": "92"
+        }
+      ]
+    },
+    "cam-neat": {
+      "source": "Cam",
+      "locations": [
+        {
+          "result": "Corollary 4.11",
+          "printed": "49",
+          "pdf": "49"
+        }
+      ]
+    },
+    "cam-compose": {
+      "source": "Cam",
+      "locations": [
+        {
+          "result": "Proposition 3.13",
+          "printed": "44",
+          "pdf": "44"
+        }
+      ]
+    },
+    "cdhp-models": {
+      "source": "CDHP26",
+      "locations": [
+        {
+          "result": "Definitions 2.1–2.9; Lemma 2.7; Proposition 2.8",
+          "printed": "7–9",
+          "pdf": "7–9"
+        }
+      ]
+    },
+    "cdhp-fibre": {
+      "source": "CDHP26",
+      "locations": [
+        {
+          "result": "Theorem 7.15",
+          "printed": "70",
+          "pdf": "70"
+        }
+      ]
+    },
+    "cdhp-claim": {
+      "source": "CDHP26",
+      "locations": [
+        {
+          "result": "Claim 7.17",
+          "printed": "73–74",
+          "pdf": "73–74"
+        }
+      ]
+    },
+    "cover-algebraic": {
+      "source": "Groth",
+      "locations": [
+        {
+          "result": "Exposé XII, Theorem 5.1",
+          "printed": "251",
+          "pdf": "267"
+        }
+      ]
+    },
+    "cdhp-linear": {
+      "source": "CDHP26",
+      "locations": [
+        {
+          "result": "Theorem A",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ],
+  "articleGuides": {
+    ".": {
+      "selfSource": "P",
+      "externalSources": [
+        "CDY25",
+        "Fuj24",
+        "Hain87",
+        "Hain15",
+        "Del71",
+        "Cam",
+        "CDHP26",
+        "Groth"
+      ],
+      "mainResults": [
+        "linear",
+        "completion",
+        "surface",
+        "logzero"
+      ],
+      "proofTargets": [
+        "linear",
+        "completion",
+        "surface",
+        "surface",
+        "logzero"
+      ],
+      "statements": {
+        "linear": "theorem-1-1",
+        "completion": "theorem-1-2",
+        "surface": "theorem-1-3",
+        "logzero": "corollary-3-1"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "linear",
+          "conclusion": "全有限次元複素線形像のvirtual class≤2",
+          "anchor": "proof-overview-step-2"
+        },
+        {
+          "result": "completion",
+          "conclusion": "全canonical rational quotientのclass≤2",
+          "anchor": "proof-1-step-2"
+        },
+        {
+          "result": "completion",
+          "conclusion": "full rational completionの有限次元性とclass≤2",
+          "anchor": "proof-1-step-3"
+        },
+        {
+          "result": "completion",
+          "conclusion": "複素unipotent像のclass≤2",
+          "anchor": "proof-1-step-3"
+        },
+        {
+          "result": "surface",
+          "conclusion": "全upper modelを含む対のspecialness",
+          "anchor": "proof-2-step-2"
+        },
+        {
+          "result": "surface",
+          "conclusion": "quasi-Albanese普遍性",
+          "anchor": "proof-3-step-1"
+        },
+        {
+          "result": "surface",
+          "conclusion": "全ファイバー連結・一般ファイバーの形と非special性",
+          "anchor": "proof-3-step-1"
+        },
+        {
+          "result": "surface",
+          "conclusion": "ordinary π1同型とファイバー群の像0",
+          "anchor": "proof-3-step-2"
+        },
+        {
+          "result": "logzero",
+          "conclusion": "線形像・full rational completion・複素unipotent像の3結論",
+          "anchor": "proof-4-step-1"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "linear-proof",
+          "purpose": {
+            "ja": "有限被覆上での入力の再適用",
+            "en": "Reapply the inputs on the finite cover"
+          }
+        },
+        {
+          "citation": "kernel",
+          "purpose": {
+            "ja": "離散群のtorsionを処理して交換子に同定",
+            "en": "Handle discrete torsion and identify the commutator"
+          }
+        },
+        {
+          "citation": "weights",
+          "purpose": {
+            "ja": "二つの重み制約から中心性へ",
+            "en": "Use two weight bounds to force centrality"
+          }
+        },
+        {
+          "citation": "limit",
+          "purpose": {
+            "ja": "極限の安定化と複素表現への移行",
+            "en": "Stabilization and passage to complex representations"
+          }
+        },
+        {
+          "citation": "special-proof",
+          "purpose": {
+            "ja": "全upper modelの両次元の底を排除",
+            "en": "Exclude curve and surface bases on every upper model"
+          }
+        },
+        {
+          "citation": "units",
+          "purpose": {
+            "ja": "代数的quasi-Albaneseの普遍性",
+            "en": "The algebraic quasi-Albanese universal property"
+          }
+        },
+        {
+          "citation": "meridians",
+          "purpose": {
+            "ja": "X内の円板でmeridianを消す",
+            "en": "Kill meridians using discs inside X"
+          }
+        },
+        {
+          "citation": "comparison",
+          "purpose": {
+            "ja": "指定v2との底因子の比較",
+            "en": "Compare base divisors with the specified v2"
+          }
+        },
+        {
+          "citation": "ordinary",
+          "purpose": {
+            "ja": "completionでは見えない核を区別",
+            "en": "Separate the kernel invisible to completion"
+          }
+        }
+      ]
+    }
+  }
+}

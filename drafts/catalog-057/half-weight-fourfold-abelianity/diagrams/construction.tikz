@@ -1,0 +1,9 @@
+\node[card] (a) {\heading{1}{根空間上で8本の方程式}{Eight equations on the root space}$T^2=\pi^*\mathcal O_X(D),\quad q_{j\nu}=\sum_{i=1}^4a_{j\nu i}z_{ji}^2=0$\\$j=1,\ldots,4,\quad\nu=1,2$};
+\node[card,below=2.0cm of a] (b) {\heading{2}{滑らかで固定点のない空間}{A smooth space without fixed points}\Tx{固定した$x\in D$でのパラメータ条件}{Parameter conditions at a fixed $x\in D$}:\\$\operatorname{codim}=4>\dim D=3$};
+\flow a b {\Tx{独立な係数評価で滑らかさ、4個の行列式で固定点を排除}{Independent evaluations give smoothness; four determinants exclude fixed points}\\\Cite{choice}};
+\node[card,below=2.1cm of b] (c) {\heading{3}{通常の射影空間へ代数化}{Algebraize over an ordinary projective space}$S\longrightarrow Q=\bigl(\mathbb P_X(\mathcal O_X^{\oplus2}\oplus\mathcal O_X(D)^{\oplus2})\bigr)^4_X$\quad\Tx{有限}{finite}};
+\flow b c {\Tx{座標の平方、coherent代数のGAGA、有限射の射影性}{Square coordinates; algebraize the coherent algebra; use projectivity of finite maps}\\\Cite{gaga}; \Cite{finite-projective}};
+\node[card,below=2.0cm of c] (d) {\heading{4}{良いファイバーと因子的な制御}{Good fibres and control along divisors}$F=C_1\times\cdots\times C_4,\quad\Omega_F^1\simeq\mathcal O_F^4,\quad\operatorname{codim}_X Z\ge2$};
+\flow c d {\Tx{Koszul列で連結性、rank条件で各因子上のsubmersion点}{Koszul gives connectedness; rank conditions give submersion points over divisors}\\\Cite{p3-cohomology}; \Cite{fibres}};
+\node[result,below=1.8cm of d] (e) {\heading{5}{支配する成分を取る}{Take the dominating component}$Y^8\longrightarrow X^4,\quad g^*D=2E$\quad\Tx{とProposition 3.1の四条件}{and all four conditions of Proposition 3.1}};
+\flow d e {\Tx{一般ファイバーの連結性で支配成分は一意}{Connected general fibres give a unique dominating component}\\\Cite{fibres}; \Cite{construction}};

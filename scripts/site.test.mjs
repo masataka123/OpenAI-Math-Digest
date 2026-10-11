@@ -1,6 +1,16 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {fields,catalogs,papers,languages,catalogsForField,fieldsForCatalog,catalogsForPaper} from '../src/data/site.mjs';
+import {articleNavigationLabel} from '../src/data/article-navigation.mjs';
+test('proof-overview navigation retains the result number from the heading',()=>{
+ for(const lang of languages){
+  const heading={slug:'proof-overview',text:'2. Theorem 1.3 — Proof overview of the main theorem'};
+  const label=articleNavigationLabel('half-weight-fourfold-abelianity',heading,lang);
+  assert.ok(label.includes('Theorem 1.3'));
+  assert.ok(!label.includes('Theorem 1.1'));
+  assert.equal(articleNavigationLabel('generalized-mukai',{...heading,text:'2. Theorem 1.1 — 主定理の証明概略'},lang),lang==='en'?'Theorem 1.1: proof overview':'Theorem 1.1の証明概略');
+ }
+});
 test('field, catalogue and manuscript references resolve without duplicate records',()=>{
  for(const collection of [fields,catalogs,papers])assert.equal(new Set(collection.map(x=>x.id)).size,collection.length);
  for(const field of fields)for(const id of field.catalogIds)assert.ok(catalogs.some(c=>c.id===id),id);

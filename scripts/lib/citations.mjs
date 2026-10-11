@@ -13,6 +13,7 @@ export function pageNumbers(value) {
 export function loadCitations(file) {
  const data=JSON.parse(fs.readFileSync(file,'utf8')),dir=path.dirname(file),sources={};
  if(data.schemaVersion!==1)throw Error(`Unsupported citation schema: ${file}`);
+ if(data.citationStyle!==undefined&&!['author-key','readable-name'].includes(data.citationStyle))throw Error(`Unsupported citation style: ${data.citationStyle}`);
  for(const [key,ref] of Object.entries(data.sources)){
   const record=JSON.parse(fs.readFileSync(path.resolve(dir,ref.recordFile),'utf8'));
   const entry=ref.recordId==='self'?record:ref.recordId==='overview'?{
@@ -67,8 +68,14 @@ export function citationUrl(registry,id) {
 
 export function citationMarkdown(registry,id,lang) {
  const [name,...locations]=citationParts(registry,id,lang);
- const label=((name?name+' · ':'')+locations.join('; ')).replaceAll('[','&#91;').replaceAll(']','&#93;');
+ const label=(compactCitation(registry,id,locations)??((name?name+' · ':'')+locations.join('; '))).replaceAll('[','&#91;').replaceAll(']','&#93;');
  return `[${label}](${citationUrl(registry,id)})`;
+}
+
+function compactCitation(registry,id,locations){
+ const source=registry.sources[registry.citations[id].source];
+ if(registry.citationStyle!=='author-key'||source.internal||source.key==='OVERVIEW')return null;
+ return `[${source.key}, ${locations.map(location=>location.replace(' · ', ', ')).join('; ')}]`;
 }
 
 export function expandCitationMarkers(markdown,registry,lang){
@@ -88,7 +95,8 @@ function wrap(text,max=72){
 export function citationTex(registry,lang){
  const definitions=Object.keys(registry.citations).map(id=>{
   const [name,...locations]=citationParts(registry,id,lang);
-  const lines=locations.flatMap((loc,i)=>wrap((i===0&&name?name+' · ':'')+loc));
+  const compact=compactCitation(registry,id,locations);
+  const lines=compact?wrap(compact):locations.flatMap((loc,i)=>wrap((i===0&&name?name+' · ':'')+loc));
   // Hash characters inside the macro body must be escaped for TeX's definition parser.
   const url=citationUrl(registry,id).replaceAll('#','\\string##');
   return `\\expandafter\\def\\csname cite-${id}\\endcsname{\\shortstack[l]{${lines.map(line=>`\\refurl{${url}}{${texEscape(line)}}`).join('\\\\')}}}`;

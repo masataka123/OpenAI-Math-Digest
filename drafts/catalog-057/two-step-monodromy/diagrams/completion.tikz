@@ -1,0 +1,15 @@
+\node[card] (start) {\heading{1}{Canonicalな有限段階}{Canonical finite stages}
+$\mathfrak g_c=\mathfrak m_V/\overline{\gamma_{c+1}\mathfrak m_V},\quad U_c=\exp(\mathfrak g_c)$\\
+\Tx{基点付き包含 $F\hookrightarrow V$ とbracketはMHSの射。}{The pointed inclusion $F\hookrightarrow V$ and bracket are MHS morphisms.}};
+\node[card,below=2.8cm of start] (kernel) {\heading{2}{ファイバー像は交換子}{The fibre image is the commutator}
+$N=\ker a_*,\quad N/[\Gamma,\Gamma]=\operatorname{Tor}H_1(V,\mathbb Z)$\\
+$K_c=\overline{\operatorname{im}(N)}^{\mathrm{Zar}}=[U_c,U_c],\quad \mathfrak k_c=[\mathfrak g_c,\mathfrak g_c]$.};
+\flow{start}{kernel}{\Tx{第一ホモロジー同型とtorsionの消去。基点付きMHSを保持}{First-homology identification and elimination of torsion; preserve pointed MHS}\\\Cite{fuj-homology}\\\Cite{hain-mhs}\\\Cite{kernel}};
+\node[card,below=2.6cm of kernel] (weight) {\heading{3}{二つの重み制約を合わせる}{Combine two weight bounds}
+$H_1(F,\mathbb Q)\twoheadrightarrow B_c=\mathfrak k_c/[\mathfrak k_c,\mathfrak k_c]$\\
+$W_{-3}B_c=0,\quad W_{-2}B_c=B_c,\quad \mathfrak g_c\otimes\mathfrak k_c\longrightarrow B_c\text{ is }0$.};
+\flow{kernel}{weight}{\Tx{ファイバーの重みは$-1,-2$、交換子の重みは高々$-2$}{Fibre weights are $-1,-2$; commutator weights are at most $-2$}\\\Cite{del-weights}\\\Cite{del-strict}\\\Cite{weights}};
+\node[result,below=2.8cm of weight] (end) {\heading{4}{二段で安定し、任意のunipotent像へ}{Stabilize at step two; pass to every unipotent image}
+$\gamma_3\mathfrak g_c\subseteq\gamma_4\mathfrak g_c\subseteq\gamma_3\mathfrak g_c\Rightarrow\gamma_3\mathfrak g_c=0$\\
+$\mathfrak m_V\simeq\mathfrak g_2$ \Tx{は有限次元。複素unipotent像もclass $\le2$。}{is finite-dimensional; complex unipotent images have class $\le2$.}};
+\flow{weight}{end}{\Tx{冪零性、分離的逆極限、基礎体拡大と普遍性}{Nilpotence, separated inverse limit, field extension and universality}\\\Cite{weights}\quad\Cite{limit}\\\Cite{hain-field}};

@@ -1,0 +1,14 @@
+\node[card] (start) {\heading{1}{同じ曲面を二つの方法で調べる}{Two calculations on the same surface}
+$X=Y\setminus\sum D_i,\quad A_i^\circ\simeq\mathbb A^1\subset X,\quad a:X\longrightarrow E$.};
+\node[card,below=2cm of start] (alb) {\heading{2}{切断とunitsによる代数的普遍性}{Algebraic universality from the section and units}
+$s:E\longrightarrow X,\quad a\circ s=\mathrm{id},\quad \mathcal O(X)^*=\mathbb C^*$\\
+$f:X\longrightarrow G\text{ semiabelian}\Rightarrow f=(f\circ s)\circ a$.\\
+\Tx{全ファイバー連結、一般 $F=\mathbb P^1\setminus\{q_i\}$ は非special。}{All fibres are connected; general $F=\mathbb P^1\setminus\{q_i\}$ is nonspecial.}};
+\flow{start}{alb}{\Tx{$D_i\cdot A_j=\delta_{ij}$がunitsを定数にし、切断が因子化を一意にする}{The intersection matrix forces constant units; the section makes factorization unique}\\\Cite{units}\quad\Cite{surface-geometry}};
+\node[card,below=2cm of alb] (meridian) {\heading{3}{残した曲線を通る円板}{Discs through the retained curves}
+$U=X\setminus\bigcup A_i^\circ\simeq E\times(\mathbb P^1\setminus\{q_i\})$\\
+$b(u,t)=(ut,t),\quad m_i=\partial\{u=0,|t|\le\varepsilon\}\text{ in }X$.};
+\flow{alb}{meridian}{\Tx{基本群は独立に計算：局所blowup chartでmeridianを同定}{Compute the group independently; identify meridians in the blowup chart}\\\Cite{meridians}};
+\node[result,below=1.9cm of meridian] (end) {\heading{4}{通常基本群とファイバー群の像}{Ordinary fundamental group and fibre image}
+$a_*:\pi_1(X)\xrightarrow{\sim}\pi_1(E)\simeq\mathbb Z^2,\quad \operatorname{im}(\pi_1(F)\to\pi_1(X))=1$.};
+\flow{meridian}{end}{\Tx{すべてのpuncture loopを消し、切断で楕円曲線の生成元を残す}{Kill all puncture loops; retain elliptic generators using the section}\\\Cite{meridians}};

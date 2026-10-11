@@ -1,0 +1,5 @@
+\node[card] (n0) {\heading{1}{有限指数アーベル部分群}{A finite-index abelian subgroup}$H\le G=\pi_1(X),\quad H\simeq\mathbb Z^r\oplus T,\quad T\ \text{finite}$};
+\node[card,below=2.15cm of n0] (n1) {\heading{2}{群全体の忠実線形表現}{A faithful linear representation of the whole group}$\sigma:H\hookrightarrow\operatorname{GL}(V),\quad\operatorname{Ind}_H^G\sigma\ \text{faithful}$};
+\flow{n0}{n1}{\Tx{核の元は $H$ のsummandを保ち、その上で $\sigma$ の核に入る}{A kernel element preserves the $H$-summand and acts there through the faithful $\sigma$}\\\Cite{cor14}};
+\node[result,below=2.15cm of n1] (n2) {\heading{3}{通常の普遍被覆が正則凸}{The ordinary universal cover is holomorphically convex}\Tx{compact K\"ahler linear Shafarevichを適用}{Apply compact K\"ahler linear Shafarevich}\\\Tx{Stein性は結論しない}{Steinness is not asserted}};
+\flow{n1}{n2}{\Tx{基本群の忠実線形性を仮定として使う}{Use faithful linearity of the fundamental group}\\\Cite{cce-convex}};

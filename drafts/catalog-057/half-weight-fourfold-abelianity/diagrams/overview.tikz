@@ -1,0 +1,7 @@
+\node[card] (a) {\heading{1}{特殊な根空間}{A special root space}$X^4,\ D\ne\varnothing,\quad\mathcal X=\sqrt[2]{(X,D)}$};
+\node[card,below=1.9cm of a] (b) {\heading{2}{補助8次元多様体}{An auxiliary eightfold}$Y^8\xrightarrow{f}\mathcal X\xrightarrow{\pi}X,\quad g^*D=2E,\quad F=C_1\times\cdots\times C_4$};
+\flow a b {\Tx{種数1の4因子と因子上のsubmersion点を構成}{Construct four genus-one factors and submersion points over divisors}\\\Cite{construction}};
+\node[card,below=1.9cm of b] (c) {\heading{3}{特殊性と群の全射}{Specialness and a group quotient}\Tx{$Y$は特殊、$\pi_1(Y)\twoheadrightarrow G$}{$Y$ is special, $\pi_1(Y)\twoheadrightarrow G$}};
+\flow b c {\Tx{微分形式の降下／偶数meridian関係と連結ファイバー}{Descent of forms / even meridian relations and connected fibres}\\\Cite{transfer}};
+\node[result,below=2.1cm of c] (d) {\heading{4}{群全体の結論}{Conclusion for the entire group}$G=\pi_1(X\setminus D)/\langle\!\langle\gamma^2\rangle\!\rangle$\quad\Tx{は仮想可換}{is virtually abelian}};
+\flow c d {\Tx{特殊なコンパクトKähler多様体$Y$に適用、商へ移す}{Apply the compact Kähler input to $Y$, then pass to the quotient}\\\Cite{companion}; \Cite{finish}};

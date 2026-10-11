@@ -1,0 +1,7 @@
+\node[card] (n0) {\heading{1}{specialかつ最大Γ次元}{Special with maximal ordinary Gamma dimension}$\gamma d(X)=\dim X$};
+\node[card,below=2.15cm of n0] (n1) {\heading{2}{有限被覆でAlbanese群と同一化}{Identify the group with its Albanese lattice on a finite cover}$\pi_1(X^{\prime})\simeq\pi_1(\operatorname{Alb}(X^{\prime})),\quad\operatorname{Im}\pi_1(F)=1$};
+\flow{n0}{n1}{\Tx{torsion-free abelian部分群の有限被覆へ移る}{Pass to the finite cover for a torsion-free abelian subgroup}\\\Cite{main}\quad\Cite{cor13}};
+\node[card,below=2.15cm of n1] (n2) {\heading{3}{Albaneseは双有理}{Albanese is bimeromorphic}\Tx{最大Γ次元で $\dim F=0$、連結性で1点}{Maximal Gamma dimension gives $\dim F=0$; connectedness gives one point}\\$X^{\prime}\dashrightarrow\operatorname{Alb}(X^{\prime})$};
+\flow{n1}{n2}{\Tx{specialnessと最大Γ次元を被覆で保持、Albanese連結性を使う}{Preserve specialness and maximal Gamma dimension; use connectedness of Albanese}\\\Cite{cor13}};
+\node[result,below=2.15cm of n2] (n3) {\heading{4}{普遍被覆が $\mathbb C^n$ の場合へ}{Pass to the case of universal cover $\mathbb C^n$}\Tx{Conjecture Sの成立から双有理Iitaka結論へ}{Conjecture S gives the bimeromorphic Iitaka conclusion}};
+\flow{n2}{n3}{\Tx{Appendixの別の幾何学的含意を用いる}{Use the separate geometric implication in the appendix}\\\Cite{ch-s}};

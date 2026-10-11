@@ -1,0 +1,9 @@
+\node[card] (n0) {\heading{1}{二つの解析的入口}{Two analytic inputs}\Tx{非amenable：scalar低スペクトル／amenable：reduced $H^1\ne0$}{Nonamenable: low scalar spectrum / amenable: reduced $H^1\ne0$}};
+\node[card,below=2.15cm of n0] (n1) {\heading{2}{係数線と正曲率}{Coefficient lines and positive curvature}$0\ne\eta\in H^0(\mathcal Y,\Omega^p_{\mathcal Y}\otimes H_\rho)$\\[5pt]\Tx{外積でrank 1、係数線のspanは無限次元}{Exterior power gives rank one with infinite coefficient span}};
+\flow{n0}{n1}{\Tx{低スペクトルをHilbert ultrapowerへ／非(T)からcohomologyへ}{Pass low spectrum to a Hilbert ultrapower / obtain cohomology from non-(T)}\\\Cite{spectrum}\quad\Cite{shalom}};
+\node[card,below=2.15cm of n1] (n2) {\heading{3}{最小rankはfull rank}{The minimum rank is full}$F:U^\circ\to\mathbb P(B),\quad \operatorname{rank}F=s$\\$\ell\ \le\ \operatorname{gdim}(S^{\prime},Q^{\prime}\twoheadrightarrow I)\ \le\ s\ \le\ \ell$};
+\flow{n1}{n2}{\Tx{像germのmonodromyを離散化、有限volumeファイバーと(M)を比較}{Discretize image-germ monodromy; compare finite-volume fibres with (M)}\\\Cite{rank}\quad\Cite{compact-fibres}};
+\node[card,below=2.15cm of n2] (n3) {\heading{4}{ordinary big lineと射影性}{An ordinary big line and projectivity}\Tx{Galois積とstabilizerを消す冪で $A$ を降下}{Descend $A$ by Galois products and powers killing stabilizers}\\$A\ \text{big}\ \Longrightarrow\ Y\ \text{Moishezon + K\"ahler}\ \Longrightarrow\ Y\ \text{projective}$};
+\flow{n2}{n3}{\Tx{曲率は非空開集合で厳密に正、volume判定でbig}{Curvature is strictly positive on an open set; the volume criterion gives bigness}\\\Cite{big-line}\quad\Cite{bou-volume}};
+\node[result,below=2.15cm of n3] (n4) {\heading{5}{adapted cover上で正値性を適用}{Apply positivity on an adapted cover}$\pi^*A\longrightarrow(\pi^*\Omega^1(Y,\Delta))^{\otimes m}\quad\Longrightarrow\quad K_Y+\Delta\ \text{big}$};
+\flow{n3}{n4}{\Tx{射影性とordinary big lineを先に確立して適用}{Apply only after projectivity and an ordinary big line are established}\\\Cite{cp-big}};

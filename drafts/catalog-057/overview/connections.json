@@ -1,0 +1,101 @@
+{
+  "catalogId": "057",
+  "productionVersion": "1.4",
+  "checkingScope": "All three draft articles and recorded principal proof inputs compared with fixed originals. Direct use A→C checked in C Assumption 1.2 / pp.5–6 / proof p.9 and A Theorem 1.1 p.2; A→B identified as background from B §1 p.1. No claim of exhaustive equivalence/generalization classification.",
+  "omittedSections": [
+    {
+      "section": "classification cards / selector UI",
+      "reason": "Three distinct target objects are already compared by the official-order table; additional cards duplicate those distinctions."
+    }
+  ],
+  "connections": [
+    {
+      "id": "compact-to-root",
+      "from": {
+        "paperId": "special-kahler-abelianity",
+        "result": "Theorem 1.1",
+        "pages": "2",
+        "version": "2026-09-23",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-abelianity-conjecture-for-special-compact-Kahler-manifolds-September-23-2026/paper.pdf"
+      },
+      "to": {
+        "paperId": "half-weight-fourfold-abelianity",
+        "result": "Assumption 1.2; Theorem 1.3 proof",
+        "pages": "2, 9",
+        "version": "2026-10-05",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/A-conditional-abelianity-theorem-for-special-fourfold-pairs-with-a-half-weight-divisor-October-5-2026/main.pdf"
+      },
+      "kind": "premise",
+      "alsoDirectInput": true,
+      "role": "Apply virtual abelianity of the entire compact Kähler group to the constructed Y, then take its quotient G.",
+      "hypotheses": "C Proposition 4.1 builds smooth connected projective Y of dimension 8; Proposition 3.1 transfers specialness from the root space and gives π1(Y)→G surjective.",
+      "checking": {
+        "by": "HQ, independently A",
+        "date": "2026-10-11",
+        "scope": "statement and application; complete independent proof of A is not claimed",
+        "records": [
+          "coordination/catalog-057/REVIEW_HQ_BY_A.md",
+          "drafts/catalog-057/half-weight-fourfold-abelianity/sources.json"
+        ]
+      },
+      "articleLinks": {
+        "ja": {
+          "from": "../special-kahler-abelianity/article.ja.md#theorem-1-1",
+          "to": "../half-weight-fourfold-abelianity/article.ja.md#proof-overview"
+        },
+        "en": {
+          "from": "../special-kahler-abelianity/article.en.md#theorem-1-1",
+          "to": "../half-weight-fourfold-abelianity/article.en.md#proof-overview"
+        }
+      },
+      "unresolved": []
+    },
+    {
+      "id": "compact-background-for-open",
+      "from": {
+        "paperId": "special-kahler-abelianity",
+        "result": "Theorem 1.1",
+        "pages": "2",
+        "version": "2026-09-23",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-abelianity-conjecture-for-special-compact-Kahler-manifolds-September-23-2026/paper.pdf"
+      },
+      "to": {
+        "paperId": "two-step-monodromy",
+        "result": "§1, compact-setting comparison",
+        "pages": "1",
+        "version": "2026-09-24",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Two-step-monodromy-of-special-quasi-projective-varieties-September-24-2026/paper.pdf"
+      },
+      "kind": "background",
+      "role": "Position the open linear-image result relative to compact Kähler abelianity.",
+      "hypotheses": "No application of A to the proofs of B Theorems 1.1–1.3 is asserted.",
+      "checking": {
+        "by": "HQ",
+        "date": "2026-10-11",
+        "scope": "B pp.1–18 read; principal proof routes use CDY and mixed Hodge inputs, not A",
+        "records": [
+          "coordination/catalog-057/REVIEW_B_BY_HQ.md"
+        ]
+      },
+      "articleLinks": {
+        "ja": {
+          "from": "../special-kahler-abelianity/article.ja.md#theorem-1-1",
+          "to": "../two-step-monodromy/article.ja.md#dependencies"
+        },
+        "en": {
+          "from": "../special-kahler-abelianity/article.en.md#theorem-1-1",
+          "to": "../two-step-monodromy/article.en.md#dependencies"
+        }
+      },
+      "unresolved": []
+    }
+  ],
+  "diagramDecision": {
+    "adopted": true,
+    "diagram": "connections",
+    "purpose": "Show the merger of the compact Kähler group theorem and the geometric eightfold construction, while keeping the open linear-image/completion route separate.",
+    "consideration": "Considered omitting a lone inter-paper edge. Retained one diagram because the two inputs to C converge and because juxtaposing B prevents an invalid substitution of a linear-image bound for entire-group abelianity.",
+    "diagramVsTable": "The diagram shows convergence and scope distinction; the two-row table records premise vs background, hypotheses and use pages. No separate per-edge figures or fixed categories.",
+    "unconfirmedEdges": "No arrows between A and B or between B and C; containment/analogy is not inferred from titles."
+  }
+}

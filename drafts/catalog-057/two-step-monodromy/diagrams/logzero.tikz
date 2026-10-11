@@ -1,0 +1,11 @@
+\node[card] (start) {\heading{1}{対数Kodaira次元0のコンパクト化}{A compactification of log Kodaira dimension zero}
+$V=Y\setminus D,\quad (Y,D)\text{ smooth projective SNC},\quad\kappa(Y,K_Y+D)=0$.};
+\node[card,below=2.7cm of start] (special) {\heading{2}{対からopen-varietyのspecialnessへ}{From pair specialness to open-variety specialness}
+$(Y,D)\text{ special},\quad D_{\mathrm{open}}\le D_{\mathrm{high}}$\\
+$\Delta(g,D_{\mathrm{open}})\le\Delta(g,D_{\mathrm{high}})\Rightarrow V\text{ special}$.};
+\flow{start}{special}{\Tx{Campanaの定理とneatモデル上の比較}{Campana's theorem and comparison on a neat model}\\\Cite{cam-zero}\quad\Cite{cam-neat}\\\Cite{convention}};
+\node[result,below=2.4cm of special] (end) {\heading{3}{線形像とcompletionの両経路}{Both the linear-image and completion routes}
+\Tx{線形像：有限指数でclass $\le2$。}{Linear images: class $\le2$ after finite index.}\\
+\Tx{全有理completion：有限次元、class $\le2$。}{Full rational completion: finite-dimensional, class $\le2$.}\\
+\Tx{複素unipotent像：class $\le2$。}{Complex unipotent images: class $\le2$.}};
+\flow{special}{end}{\Tx{線形像にはTheorem 1.1、$V$自身の完全性にはTheorem 1.2}{Use Theorem 1.1 for linear images; Theorem 1.2 with exactness on $V$ itself}\\\Cite{linear}\quad\Cite{completion}\\\Cite{logzero}};

@@ -1,0 +1,5 @@
+\node[card] (n0) {\heading{1}{零境界のKodaira次元0}{Kodaira dimension zero with zero boundary}$X\ \text{compact K\"ahler},\quad\kappa(X,K_X)=0$};
+\node[card,below=2.15cm of n0] (n1) {\heading{2}{specialnessを得る}{Obtain specialness}$(X\mid0)\ \text{special}$};
+\flow{n0}{n1}{\Tx{Fujiki class $\mathcal C$ の $\kappa=0$ 対へ適用}{Apply the result for Kodaira-dimension-zero pairs in Fujiki class $\mathcal C$}\\\Cite{cam-kappa}};
+\node[result,below=2.15cm of n1] (n2) {\heading{3}{通常の基本群の結論}{Conclusion for the ordinary group}$\pi_1(X)\ \text{virtually abelian}$};
+\flow{n1}{n2}{\Tx{special compact K\"ahlerの主定理を適用}{Apply the main theorem for special compact K\"ahler manifolds}\\\Cite{main}\quad\Cite{cor12}};

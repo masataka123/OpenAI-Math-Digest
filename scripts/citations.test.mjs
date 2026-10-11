@@ -7,6 +7,22 @@ import {renderDraft} from '../src/lib/render-draft.mjs';
 import {catalogs,papers} from '../src/data/site.mjs';
 const file='drafts/catalog-063/citations.json',registry=loadCitations(file);
 
+test('author-key citations stay compact in both languages and TeX without changing legacy output',()=>{
+ const compact={...registry,citationStyle:'author-key'};
+ for(const lang of ['ja','en']){
+  const markdown=citationMarkdown(compact,'chain-bound',lang);
+  assert.match(markdown,/&#91;BCDD, /);
+  assert.ok(!markdown.includes('Mukai chain bound'));
+  assert.match(markdown,/PDF p\. 23/);
+  assert.match(markdown,/#page=23/);
+  const tex=citationTex(compact,lang);
+  assert.match(tex,/\[BCDD, /);
+  assert.ok(!tex.includes('Mukai chain bound'));
+  assert.equal(citationMarkdown(compact,'main-result',lang),citationMarkdown(registry,'main-result',lang));
+  assert.match(citationMarkdown(registry,'chain-bound',lang),/Mukai chain bound/);
+ }
+});
+
 test('printed page numbers are distinguished from PDF destinations',()=>{
  assert.match(citationMarkdown(registry,'chain-bound','ja'),/誌面 p\. 623 \/ PDF p\. 23/);
  assert.match(citationUrl(registry,'chain-bound'),/#page=23$/);

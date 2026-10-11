@@ -1,0 +1,200 @@
+{
+  "paperId": "half-weight-fourfold-abelianity",
+  "title": "A conditional abelianity theorem for special fourfold pairs with a half-weight divisor",
+  "version": "2026-10-05",
+  "sourceCommit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/A-conditional-abelianity-theorem-for-special-fourfold-pairs-with-a-half-weight-divisor-October-5-2026/main.pdf",
+  "sha256": "d017fae040e20002b012b8636d9a757cb4471728d3e06d6b80cca60970602c32",
+  "pdfPages": 14,
+  "catalogId": "057",
+  "displayName": "A conditional abelianity theorem for special fourfold pairs with a half-weight divisor",
+  "authors": "OpenAI",
+  "checkedOn": "2026-10-11",
+  "statements": [
+    {
+      "result": "Theorem 1.3",
+      "pages": "2",
+      "checked": "Assumption 1.2; smooth connected projective fourfold; nonempty smooth connected reduced D; root special; entire orbifold group virtually abelian."
+    },
+    {
+      "result": "Proposition 3.1",
+      "pages": "5–6",
+      "checked": "All four hypotheses, specialness transfer, unconditional group surjection and conditional virtual abelianity."
+    },
+    {
+      "result": "Proposition 4.1",
+      "pages": "6–9",
+      "checked": "Eight-dimensional projective construction; four genus-one factors; all transfer hypotheses."
+    }
+  ],
+  "proofPassages": [
+    {
+      "pages": "3–9",
+      "scope": "Read Lemmas 2.1, 2.2, 2.4 and proofs of Propositions 3.1, 4.1 (Lemmas 4.2–4.4), then Theorem 1.3 proof."
+    }
+  ],
+  "inheritedNotes": "coordination/catalog-057/PREPARATION_NOTES.md; preliminary reading separately recorded",
+  "unresolved": [
+    "Appendix A alternative 14-dimensional construction not checked in detail.",
+    "Hironaka resolution input in Lemma 2.1 not checked against its original paper; no independent verification of that external proof.",
+    "This article checks stated inputs and their use, not a complete independent proof of companion OpenAI26a."
+  ],
+  "dependencies": [
+    {
+      "source": "companion",
+      "kind": "premise",
+      "role": "Theorem 1.1 statement checked against PDF p.2; used for the special smooth projective eightfold in the final step.",
+      "checked": "statement-and-application",
+      "fullExternalProofChecked": false
+    },
+    {
+      "source": "ehr52",
+      "kind": "direct",
+      "role": "§1 unnumbered proposition: submersion with compact connected fibres gives a differentiable fibre bundle. Statement/use only.",
+      "checked": "statement-and-application",
+      "fullExternalProofChecked": false
+    },
+    {
+      "source": "ser56",
+      "kind": "direct",
+      "role": "Theorems 2–3 give algebraization of the coherent algebra and its multiplication/unit; full proof not rechecked.",
+      "checked": "statement-and-application",
+      "fullExternalProofChecked": false
+    },
+    {
+      "source": "dem12",
+      "kind": "direct",
+      "role": "VI Proposition 8.9: holomorphic p-forms on compact Kähler manifolds are closed; used in cyclic-root proof of Lemma 2.1.",
+      "checked": "statement-and-application",
+      "fullExternalProofChecked": false
+    },
+    {
+      "source": "stacks-morphisms",
+      "kind": "direct",
+      "role": "Lemma 45.16, Tag 0B3I: finite morphisms are projective; original paper cites containing section Tag 01WG.",
+      "checked": "statement-and-application",
+      "fullExternalProofChecked": false
+    },
+    {
+      "source": "stacks-coherent",
+      "kind": "direct",
+      "role": "Lemma 8.1, Tag 01XT: intermediate cohomology of O(k) on P^3 vanishes; original paper cites containing section Tag 01XS.",
+      "checked": "statement-and-application",
+      "fullExternalProofChecked": false
+    }
+  ],
+  "externalSources": [
+    {
+      "id": "companion",
+      "authors": "OpenAI",
+      "title": "The abelianity conjecture for special compact Kähler manifolds",
+      "displayName": "The abelianity conjecture for special compact Kähler manifolds",
+      "version": "2026-09-23",
+      "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-abelianity-conjecture-for-special-compact-Kahler-manifolds-September-23-2026/paper.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "2",
+          "pdfPage": 2
+        }
+      ],
+      "checking": "Theorem 1.1 statement checked against PDF p.2; used for the special smooth projective eightfold in the final step.",
+      "sha256": "dfbf9ad2335b9d20dedd8a2ae527ebb45b74155a976acc6d284dd851144e22b8"
+    },
+    {
+      "id": "ehr52",
+      "authors": "Charles Ehresmann",
+      "title": "Les connexions infinitésimales dans un espace fibré différentiable",
+      "displayName": "Les connexions infinitésimales dans un espace fibré différentiable",
+      "version": "1952, Séminaire Bourbaki, exp. 24 (lecture 1950), pp. 153–168",
+      "sourceUrl": "https://www.numdam.org/item/SB_1948-1951__1__153_0.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "154",
+          "pdfPage": 3
+        }
+      ],
+      "checking": "§1 unnumbered proposition: submersion with compact connected fibres gives a differentiable fibre bundle. Statement/use only.",
+      "sha256": "863b51edaa24fb4065bacc2ca59417e662694e17d3a90487ccd872e697659e6d"
+    },
+    {
+      "id": "ser56",
+      "authors": "Jean-Pierre Serre",
+      "title": "Géométrie algébrique et géométrie analytique",
+      "displayName": "Géométrie algébrique et géométrie analytique",
+      "version": "1956, Annales de l’Institut Fourier 6, pp. 1–42",
+      "sourceUrl": "https://www.numdam.org/item/AIF_1956__6__1_0.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "19",
+          "pdfPage": 20
+        },
+        {
+          "printedPage": "20",
+          "pdfPage": 21
+        }
+      ],
+      "checking": "Theorems 2–3 give algebraization of the coherent algebra and its multiplication/unit; full proof not rechecked.",
+      "sha256": "9898f985dd6932496e26450bfe0beca8655a937032f545b97cebd88d1bc8eb98"
+    },
+    {
+      "id": "dem12",
+      "authors": "Jean-Pierre Demailly",
+      "title": "Complex Analytic and Differential Geometry",
+      "displayName": "Complex Analytic and Differential Geometry",
+      "version": "June 21, 2012",
+      "sourceUrl": "https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/agbook.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "312",
+          "pdfPage": 312
+        }
+      ],
+      "checking": "VI Proposition 8.9: holomorphic p-forms on compact Kähler manifolds are closed; used in cyclic-root proof of Lemma 2.1.",
+      "sha256": "d7c7654a7417e8322e5dcf8fe8ec818b4c1a18cf280b41f2df5a871b776d89a1"
+    },
+    {
+      "id": "stacks-morphisms",
+      "authors": "The Stacks project authors",
+      "title": "The Stacks Project — Morphisms of Schemes",
+      "displayName": "The Stacks Project — Morphisms of Schemes",
+      "version": "version ed88ff78, compiled July 14, 2026",
+      "sourceUrl": "https://stacks.math.columbia.edu/download/morphisms.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "108",
+          "pdfPage": 108
+        }
+      ],
+      "checking": "Lemma 45.16, Tag 0B3I: finite morphisms are projective; original paper cites containing section Tag 01WG.",
+      "sha256": "0bebe1d93baa7e4e99cb4f36fe50c7bcb6094772b8a2f760885a492892eca75f"
+    },
+    {
+      "id": "stacks-coherent",
+      "authors": "The Stacks project authors",
+      "title": "The Stacks Project — Cohomology of Schemes",
+      "displayName": "The Stacks Project — Cohomology of Schemes",
+      "version": "version ed88ff78, compiled July 14, 2026",
+      "sourceUrl": "https://stacks.math.columbia.edu/download/coherent.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "16",
+          "pdfPage": 16
+        },
+        {
+          "printedPage": "17",
+          "pdfPage": 17
+        }
+      ],
+      "checking": "Lemma 8.1, Tag 01XT: intermediate cohomology of O(k) on P^3 vanishes; original paper cites containing section Tag 01XS.",
+      "sha256": "b4980a08a8cce98fed6a420364b18c119364a9436577031b28a16863bcbdbfb8"
+    }
+  ],
+  "externalVisualEvidence": [
+    "tmp/catalog-057-hq/external/ehr52-3.png",
+    "tmp/catalog-057-hq/external/ser56-20.png",
+    "tmp/catalog-057-hq/external/ser56-21.png",
+    "tmp/catalog-057-hq/external/dem12-312.png",
+    "tmp/catalog-057-hq/external/stacks-morphisms-108.png",
+    "tmp/catalog-057-hq/external/stacks-coherent-16.png"
+  ]
+}

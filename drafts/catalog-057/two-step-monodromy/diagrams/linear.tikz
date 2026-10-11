@@ -1,0 +1,14 @@
+\node[card] (start) {\heading{1}{有限被覆で像を分解}{Split the image on a finite cover}
+$L=\overline{\rho(\pi_1(V))}^{\mathrm{Zar}},\quad \Gamma_0=\rho^{-1}(L^0),\quad L^0=U\times T$.\\
+\Tx{$V_0\to V$を$\Gamma_0$に対応する連結有限étale被覆とする。}{Take the connected finite étale cover $V_0\to V$ corresponding to $\Gamma_0$.}};
+\node[card,below=3.2cm of start] (exact) {\heading{2}{同じ被覆で完全性を取り直す}{Re-establish exactness on that cover}
+$V_0$ \Tx{はspecial。quasi-Albaneseは支配的で、}{is special. Its quasi-Albanese is dominant, and}\\
+$\pi_1(F_0)\longrightarrow\pi_1(V_0)\longrightarrow\pi_1(\operatorname{Alb}(V_0))\longrightarrow1$
+\\\Tx{は完全。$F_0$は滑らかで連結な一般ファイバー。}{is exact, with $F_0$ a smooth connected general fibre.}};
+\flow{start}{exact}{\Tx{像の分解、被覆の代数化とspecialnessの保存}{Image decomposition, algebraization and specialness of the cover}\\
+\Cite{cdy-linear}\quad\Cite{cdy-cover}\\\Cite{cover-algebraic}\\
+\Tx{quasi-Albaneseの優勢性・連結性・完全性}{Quasi-Albanese dominance, connectedness and exactness}\\\Cite{cdy-albanese}\quad\Cite{cdy-exact}};
+\node[result,below=2.7cm of exact] (end) {\heading{3}{三重交換子は両因子で消える}{Triple commutators vanish in both factors}
+$\gamma_3\rho(\Gamma_0)=1,\qquad [\rho(\pi_1(V)):\rho(\Gamma_0)]<\infty$.\\
+\Tx{Theorem 1.1：線形像はvirtually class $\le2$。}{Theorem 1.1: the linear image is virtually of class $\le2$.}};
+\flow{exact}{end}{\Tx{$U$への像にcompletion定理、$T$には可換性を使う}{Apply the completion theorem to the image in $U$; $T$ is abelian}\\\Cite{completion}\\\Tx{有限指数を保持して元の像へ戻る}{Return to the original image, retaining finite index}\\\Cite{linear-proof}};

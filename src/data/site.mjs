@@ -3,6 +3,7 @@ import inventory034 from '../../research/catalog-034-inventory.json' with { type
 import inventory038 from '../../coordination/catalog-038/inventory.json' with { type: 'json' };
 import inventory042 from '../../coordination/catalog-042/inventory.json' with { type: 'json' };
 import inventory051 from '../../coordination/catalog-051/inventory.json' with { type: 'json' };
+import inventory057 from '../../coordination/catalog-057/inventory.json' with { type: 'json' };
 import inventory063 from '../../coordination/catalog-063/inventory.json' with { type: 'json' };
 import subjectSource from './catalog-subjects.json' with { type: 'json' };
 export const text = (ja, en) => ({ ja, en });
@@ -23,7 +24,7 @@ const fieldTranslations = [
     "id": "algebraic-complex-geometry",
     "ja": "代数幾何学・複素幾何学",
     "catalogIds": [
-      "033", "034", "038", "042", "051", "063"
+      "033", "034", "038", "042", "051", "057", "063"
     ]
   },
   {
@@ -144,6 +145,10 @@ export const papers = [...inventory033.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '051', sourceCommit: inventory051.sourceCommit,
  title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
  pages: entry.pdfPages, order: entry.order, featured: true,
+})), ...inventory057.manuscripts.map(entry => ({
+ id: entry.paperId, catalogId: '057', sourceCommit: inventory057.sourceCommit,
+ title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
+ pages: entry.pdfPages, order: entry.order, featured: true,
 })), ...inventory063.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '063', sourceCommit: inventory063.sourceCommit,
  title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
@@ -181,6 +186,13 @@ export const catalogs = [{
   contentsTitle: inventory051.contentsTitle,
   description: text('円板変分から標準束の豊富性へ至る証明と、大域生成・有限被覆の二つの系を読む。', 'Follow disc variations to canonical ampleness and its consequences for global generation and finite covers.'),
   paperIds: inventory051.manuscripts.map(p => p.paperId),
+  overviewSectionIds: ['papers', 'connections', 'sources'],
+}, {
+  id: '057', sourceCommit: inventory057.sourceCommit, mode: 'multi',
+  title: text(inventory057.titleJa, inventory057.overviewTitle),
+  contentsTitle: inventory057.contentsTitle,
+  description: text('特殊多様体の通常基本群、開多様体の線形像、根オービフォールドへの移行を、3篇の証明と接続から読む。', 'Follow three proofs linking ordinary fundamental groups of special varieties, linear images for open varieties, and the passage to root orbifolds.'),
+  paperIds: inventory057.manuscripts.map(p => p.paperId),
   overviewSectionIds: ['papers', 'connections', 'sources'],
 }, {
   id: '063', sourceCommit: inventory063.sourceCommit, mode: 'single',

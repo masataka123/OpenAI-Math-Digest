@@ -1,0 +1,7 @@
+\node[card] (n0) {\heading{1}{cofinalな準備モデルのファイバー正値性}{Fibre positivity on cofinal prepared models}$K_Y+\Delta_Z|_Y\ \text{big},\quad d=\dim Y>0$};
+\node[card,below=2.15cm of n0] (n1) {\heading{2}{最小値 $b$ とIitaka写像}{A minimum $b$ and the Iitaka fibration}$b=\min\kappa(Z,K_Z+\Delta_Z)\ge d$\\$K_{Z_1}+\Delta_1=\mu^*(K_{Z_0}+\Delta_{Z_0})+E,\quad E\ge0$};
+\flow{n0}{n1}{\Tx{klt劣加法性を使い、補助境界で切断を保つ}{Use klt subadditivity and preserve sections with an auxiliary boundary}\\\Cite{jw-subadd}\quad\Cite{descent}};
+\node[card,below=2.15cm of n1] (n2) {\heading{3}{トーラス束で真の境界を回収}{Recover true inertia on a torus bundle}$Z^*=W_1\times_{A_1/T_1}A_1\xrightarrow{p}W_1$\\$K_{Z^*}+\Delta_{Z^*}=p^*(K_{W_1}+\Delta_{W_1})$};
+\flow{n1}{n2}{\Tx{Iitakaファイバーの $\kappa=0$ とAlbanese、isogenyで束を得る}{Use the zero-Kodaira Iitaka fibre and Albanese; an isogeny gives the bundle}\\\Cite{jw-albanese}\quad\Cite{descent}};
+\node[result,below=2.15cm of n2] (n3) {\heading{4}{一般型底からBogomolov層}{From a general-type base to a Bogomolov sheaf}$K_{W_1}+\Delta_{W_1}\ \text{big}$\\$L\subset\Omega_{M_1}^{b},\quad\kappa(M_1,L)=b>0\quad\Longrightarrow\quad\bot$};
+\flow{n2}{n3}{\Tx{同変比較と最小値でbig、neatモデルで微分が極を相殺}{Equivariant comparison and minimality give bigness; differentials cancel poles on a neat model}\\\Cite{inertia}\quad\Cite{descent}};

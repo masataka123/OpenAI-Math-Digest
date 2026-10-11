@@ -1,0 +1,24 @@
+\node[card] (start) {\heading{1}{残した例外曲線と対数標準因子}{Retained exceptional curves and the log canonical divisor}
+$j^*q_i=D_i+A_i,\quad m_j(q_i)=\min(\infty,1)=1$\\
+$K_Y+D\sim j^*\mathcal O_{\mathbb P^1}(n-2),\quad \kappa(Y,K_Y+D)=1$.};
+\node[card,below=2cm of start] (models) {\heading{2}{任意のupper modelで底の次元を分ける}{Test every upper model by base dimension}
+$u:(Y',D')\longrightarrow(Y,D),\qquad g:Y'\longrightarrow Z\text{ neat}$.\\
+\Tx{$u$はelementary birational orbifold morphism。}{Here $u$ is an elementary birational orbifold morphism.}};
+\flow{start}{models}{\Tx{切断の増大度とinfimum multiplicityを各モデルへ移す}{Transport section growth and infimum multiplicities to each model}\\\Cite{surface-geometry}\quad\Cite{convention}};
+\node[half,below=2.3cm of models.south west,anchor=north west] (surface) {\heading{$\dim Z=2$}{双有理の底}{Birational base}
+$H^0(Y',m(K_{Y'}+D'))$\\$\hookrightarrow H^0(Y,m(K_Y+D))$\\
+\Tx{切断増大は一次：$\kappa(K_Z+\Delta)\le1<2$。}{Linear growth gives $\kappa(K_Z+\Delta)\le1<2$.}};
+\node[half,below=2.3cm of models.south east,anchor=north east] (curve) {\heading{$\dim Z=1$}{楕円曲線slice}{Elliptic slices}
+$0\ge\deg(h)\deg(K_C+\Delta)>0$\\
+\Tx{非定数sliceを排除し、$g=j\circ u$へ帰着。}{Exclude nonconstant slices; reduce to $g=j\circ u$.}\\
+$A_i'\Rightarrow\Delta(j\circ u,D')=0$.};
+\draw[edge] ($(models.south west)+(.25,0)$)--($(surface.north west)+(.25,0)$);
+\draw[edge] ($(models.south east)+(-6.7,0)$)--($(curve.north west)+(.25,0)$);
+\node[reason,text width=5.6cm,anchor=south west] at ($(surface.north west)+(.65,.4)$) {\Tx{余次元2での延長とneat性}{Extension in codimension two and neatness}\\\Cite{special-proof}};
+\node[reason,text width=5.6cm,anchor=south west] at ($(curve.north west)+(.65,.4)$) {\Tx{Riemann--Hurwitzと重複度1}{Riemann--Hurwitz and multiplicity one}\\\Cite{special-proof}};
+\node[result,below=2cm of $(surface.south)!.5!(curve.south)$] (end) {\heading{3}{全モデルで一般型の底を排除}{Exclude general-type bases on all models}
+\Tx{$(Y,D)$はDefinition 4.1の意味でspecial。}{$(Y,D)$ is special in the sense of Definition 4.1.}};
+\draw[edge] ($(surface.south west)+(.25,0)$)--($(end.north west)+(.25,0)$);
+\node[reason,text width=5.6cm,anchor=north west] at ($(surface.south west)+(.65,-.3)$) {\Tx{次元2未満の増大度}{Growth below dimension two}\\\Cite{special-proof}};
+\draw[edge] ($(curve.south west)+(.25,0)$)--($(end.north east)+(-6.7,0)$);
+\node[reason,text width=5.6cm,anchor=north west] at ($(curve.south west)+(.65,-.3)$) {\Tx{底は$(\mathbb P^1,0)$}{The base is $(\mathbb P^1,0)$}\\\Cite{special-proof}};

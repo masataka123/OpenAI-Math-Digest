@@ -1,0 +1,38 @@
+{
+  "checkedAt": "2026-10-11T22:29:43.579456+09:00",
+  "checks": {
+    "jsonParse": true,
+    "inventoryRequiredFields": true,
+    "officialOrder": true,
+    "pdfIntegrity": true,
+    "sourceFileIntegrity": true,
+    "pageTotal": true,
+    "existingChangesPreserved": true,
+    "productionSnapshotPreserved": true,
+    "headUnchanged": true,
+    "localLinks": true,
+    "noDraftsStarted": true,
+    "onlyPreparationFilesAdded": true
+  },
+  "localLinkCount": 15,
+  "missingLinks": [],
+  "newGitEntries": [
+    "?? coordination/catalog-057/ARTICLE_PLAN.md",
+    "?? coordination/catalog-057/PREPARATION_BASELINE.json",
+    "?? coordination/catalog-057/PREPARATION_NOTES.md",
+    "?? coordination/catalog-057/README.md",
+    "?? coordination/catalog-057/RELEASE_CHECKLIST.md",
+    "?? coordination/catalog-057/WORKER_A.md",
+    "?? coordination/catalog-057/WORKER_B.md",
+    "?? coordination/catalog-057/inventory.json"
+  ],
+  "notRun": [
+    "site build",
+    "check:citations",
+    "npm test",
+    "new article screen comparison",
+    "bilingual booklet generation",
+    "publication"
+  ],
+  "notRunReason": "準備のみ。記事・レジストリ・実装を作成／変更していない。後続の担当はRELEASE_CHECKLISTに記録。"
+}
