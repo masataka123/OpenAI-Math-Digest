@@ -63,3 +63,7 @@ python3 drafts/catalog-057/special-kahler-abelianity/diagrams/render.py
 - 2026-10-11、本部受領：独立点検の指摘反映、日英・原典・結論アンカー・引用同期・生成ハッシュ・ローカル表示を確認。最終結果は coordination/catalog-057/STAGE1_VALIDATION.json と FORMAT_REVIEW.md。本文・図の追加変更とは区別。サイト組込み・冊子PDF・公開は後段。
 
 - 2026-10-12、第2段階のサイト本部編集（初稿と別枠、作業全体の開始・終了はSTAGE2_REPORT参照）：日英のTheorem 4.1の条件(M)について、PDFで `\tag{M}` が異常に拡大することを紙面画像で検出。ラベルを通常の段落「条件(M)／Condition (M)」へ移し、数式をgatheredの2行にした。仮定・量化・結論は変更していない。日英PDF再生成後、日本語p.13／英語p.16の条件表示・数式・次の図を画像点検。引用・図の変更なし。サイト組込み・日英PDFは第2段階で完了、公開は未実施。検査記録はcoordination/catalog-057/STAGE2_REPORT.md。
+
+## 第3段階の公開確認（2026-10-12）
+
+本チャットがサイト本部としてcommit `0cc452a` をmainへpush。Actions 38151381273のbuild／deploy成功、公開78リソースのhash一致、日英24表示条件・6操作経路を確認。記事本文・図・PDF・数学的な確認範囲は第2段階から変更していない。公開URLと証拠はcoordination/catalog-057/PUBLICATION.md。

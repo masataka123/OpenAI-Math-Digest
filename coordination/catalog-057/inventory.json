@@ -61,8 +61,8 @@
   "mode": "multi",
   "manuscriptCount": 3,
   "totalPages": 83,
-  "currentRequestScope": "stage-2: site integration, bilingual booklet PDFs, prepublication checks; publication excluded",
-  "productionStatus": "stage-2-complete; publication-ready; not-published",
+  "currentRequestScope": "stage-3: publication and live verification",
+  "productionStatus": "published-and-verified",
   "checkingScope": "主要結果・全結論への証明概略、選択した証明本文、直接入力の記述と適用箇所を担当と独立点検者で照合。全証明の独立再検証とは区別。各sources.json、REVIEW_*、STAGE1_REPORT参照。",
   "sourceFiles": [
     {
@@ -189,7 +189,7 @@
       "existingArticleVersionDifference": "既存記事・同一原稿記録との一致なし。版の比較対象なし。",
       "draftDirectory": "drafts/catalog-057/special-kahler-abelianity",
       "worker": "subagent article_a",
-      "articleStatus": "content-reviewed; site-integrated; bilingual-pdf-generated",
+      "articleStatus": "content-reviewed; published; live-verified",
       "localPdfCache": "/Users/iwai/Desktop/GitHub/OpenAI-Math-Digest/tmp/catalog-057-preparation/paper-1.pdf",
       "cachePolicy": "一時キャッシュ。Git対象外。固定downloadUrlから再取得してsha256を照合する。",
       "proofCheckingStatus": "主要主張・結論対応・主要接続・直接入力の記述と適用を照合。未確認は記事末尾とsources.jsonに列挙。独立レビュー指摘反映済み。",
@@ -216,7 +216,7 @@
       "existingArticleVersionDifference": "既存記事・同一原稿記録との一致なし。版の比較対象なし。",
       "draftDirectory": "drafts/catalog-057/two-step-monodromy",
       "worker": "subagent article_b",
-      "articleStatus": "content-reviewed; site-integrated; bilingual-pdf-generated",
+      "articleStatus": "content-reviewed; published; live-verified",
       "localPdfCache": "/Users/iwai/Desktop/GitHub/OpenAI-Math-Digest/tmp/catalog-057-preparation/paper-2.pdf",
       "cachePolicy": "一時キャッシュ。Git対象外。固定downloadUrlから再取得してsha256を照合する。",
       "proofCheckingStatus": "主要主張・結論対応・主要接続・直接入力の記述と適用を照合。未確認は記事末尾とsources.jsonに列挙。独立レビュー指摘反映済み。",
@@ -243,7 +243,7 @@
       "existingArticleVersionDifference": "既存記事・同一原稿記録との一致なし。版の比較対象なし。",
       "draftDirectory": "drafts/catalog-057/half-weight-fourfold-abelianity",
       "worker": "catalog HQ",
-      "articleStatus": "content-reviewed; site-integrated; bilingual-pdf-generated",
+      "articleStatus": "content-reviewed; published; live-verified",
       "localPdfCache": "/Users/iwai/Desktop/GitHub/OpenAI-Math-Digest/tmp/catalog-057-preparation/paper-3.pdf",
       "cachePolicy": "一時キャッシュ。Git対象外。固定downloadUrlから再取得してsha256を照合する。",
       "proofCheckingStatus": "主要主張・結論対応・主要接続・直接入力の記述と適用を照合。未確認は記事末尾とsources.jsonに列挙。独立レビュー指摘反映済み。",
@@ -279,5 +279,13 @@
       "figures": 16
     }
   },
-  "stage2CompletedAt": "2026-10-12T00:20:43.113305+09:00"
+  "stage2CompletedAt": "2026-10-12T00:20:43.113305+09:00",
+  "publication": {
+    "commit": "0cc452aad1fe9fbd269f2b0ba90ad92366e32f26",
+    "actionUrl": "https://github.com/masataka123/OpenAI-Math-Digest/actions/runs/38151381273",
+    "verifiedAt": "2026-10-12T00:37:37.627404+09:00",
+    "record": "coordination/catalog-057/PUBLICATION.md",
+    "jaUrl": "https://masataka123.github.io/OpenAI-Math-Digest/ja/catalog/057/",
+    "enUrl": "https://masataka123.github.io/OpenAI-Math-Digest/en/catalog/057/"
+  }
 }

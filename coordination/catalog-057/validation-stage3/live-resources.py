@@ -1,6 +1,7 @@
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
-import urllib.request,json,hashlib,sys,datetime
+import urllib.request,json,hashlib,sys,datetime,ssl
+ssl_context=ssl.create_default_context(cafile='/etc/ssl/cert.pem')
 base='https://masataka123.github.io/OpenAI-Math-Digest/'
 snapshot=Path(sys.argv[1]);commit=sys.argv[2]
 ids=['special-kahler-abelianity','two-step-monodromy','half-weight-fourfold-abelianity']
@@ -14,7 +15,7 @@ for lang in ['ja','en']:items.append((f'pdf/catalog-057-{lang}.pdf',snapshot/f'p
 def one(item):
  rel,file=item;url=base+rel;expected=hashlib.sha256(file.read_bytes()).hexdigest()
  try:
-  with urllib.request.urlopen(urllib.request.Request(url+'?release='+commit,headers={'Cache-Control':'no-cache','User-Agent':'OpenAI-Math-Digest-publication-check'}),timeout=40) as response:
+  with urllib.request.urlopen(urllib.request.Request(url+'?release='+commit,headers={'Cache-Control':'no-cache','User-Agent':'OpenAI-Math-Digest-publication-check'}),timeout=40,context=ssl_context) as response:
    data=response.read();status=response.status;mime=response.headers.get('Content-Type')
   actual=hashlib.sha256(data).hexdigest()
   return {'url':url,'status':status,'contentType':mime,'bytes':len(data),'sha256':actual,'expectedSha256':expected,'matches':actual==expected}

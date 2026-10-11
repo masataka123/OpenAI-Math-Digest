@@ -5,7 +5,7 @@ const ids=['special-kahler-abelianity','two-step-monodromy','half-weight-fourfol
 const browser=await chromium.launch({headless:true,executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'});
 const context=await browser.newContext({deviceScaleFactor:1}),page=await context.newPage(),pages=[],interactions=[],errors=[],failedRequests=[];
 page.on('pageerror',e=>errors.push(String(e)));page.on('requestfailed',r=>failedRequests.push({url:r.url(),error:r.failure()?.errorText}));
-async function ready(){await page.waitForFunction(()=>typeof window.MathJax?.typesetPromise==='function');await page.evaluate(async()=>{await MathJax.startup.promise;await document.fonts.ready;});}
+async function ready(){await page.waitForFunction(()=>typeof window.MathJax?.typesetPromise==='function');await page.evaluate(async()=>{await MathJax.startup.promise;await document.fonts.ready;});await page.waitForFunction(()=>[...document.images].every(x=>x.complete&&x.naturalWidth>0));}
 for(const lang of ['ja','en'])for(const width of [1280,375])for(const route of ['','fields/algebraic-complex-geometry/','catalog/057/',...ids.map(x=>'papers/'+x+'/')]){
  await page.setViewportSize({width,height:950});const response=await page.goto(base+lang+'/'+route);assert.equal(response.status(),200);await ready();
  const m=await page.evaluate(()=>({width:innerWidth,pageWidth:document.documentElement.scrollWidth,mathCount:document.querySelectorAll('mjx-container').length,mathErrors:document.querySelectorAll('[data-mml-node="merror"]').length,figures:document.querySelectorAll('.proof-figure').length,brokenImages:[...document.images].filter(x=>!x.complete||!x.naturalWidth).map(x=>x.src),language:!!document.querySelector('#language')}));

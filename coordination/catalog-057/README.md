@@ -1,7 +1,8 @@
-# カタログ057 — 第2段階完了（公開前）
+# カタログ057 — 公開確認済み
 
-2026-10-12 JST。制作セット1.4と補足を適用。第1段階の記事制作・内容点検・カタログ案内に続き、**第2段階のサイト組込み・日英PDF・公開前検査が完了**。本チャットがサイト本部を兼任した。日本語47頁／英語52頁、各4章・16図。commit・push・公開確認は未実施で、後続段階。
+2026-10-12 JST。制作セット1.4と補足を適用。第1段階の記事・案内、第2段階の組込み・PDF・公開前検査に続き、**第3段階の公開・反映確認が完了**。本チャットがサイト本部を担当。公開commit `0cc452a`、Actions build／deploy成功。日本語47頁／英語52頁、各4章・16図を公開し、78リソースのhash一致・24表示条件・6操作経路を確認した。
 
+- 公開URL・結果・保全・確認の限界：[PUBLICATION.md](PUBLICATION.md)
 - 第2段階の成果・検査・残る公開作業：[STAGE2_REPORT.md](STAGE2_REPORT.md)
 - 第1段階の成果と点検結果：[STAGE1_REPORT.md](STAGE1_REPORT.md)
 - 唯一の書誌台帳：[inventory.json](inventory.json)
@@ -31,6 +32,6 @@
 
 ## 作業状態の保持
 
-開始時main、HEAD `6c2b85685c11ada504b1d71f84721d7857a0a8fe`。既存変更のあるAGENTS／PROJECT_PLAN／production文書／引用処理と、034の中断記録を保持した。全2048追跡ファイルの開始時ハッシュは不変。第1段階の保存先はdrafts/catalog-057、coordination/catalog-057と無視対象tmp。第2段階では共通登録・目次ラベル・対応テスト・PDF版情報と057公開用成果物を更新。既存の他カタログ記事・図・PDF、他担当の開始時変更は保持した。詳細はvalidation-stage2/preservation.json。branch切替・commit・pushは未実施。
+開始時main、HEAD `6c2b85685c11ada504b1d71f84721d7857a0a8fe`。既存変更のあるAGENTS／PROJECT_PLAN／production文書／引用処理と、034の中断記録を保持した。全2048追跡ファイルの開始時ハッシュは不変。第1段階の保存先はdrafts/catalog-057、coordination/catalog-057と無視対象tmp。第2段階では共通登録・目次ラベル・対応テスト・PDF版情報と057公開用成果物を更新。既存の他カタログ記事・図・PDF、他担当の開始時変更は保持した。詳細はvalidation-stage2/preservation.json。branch切替は未実施。第3段階では対象ファイルを選択してcommit・pushし、公開を確認した。
 
-準備時の記録は[PREPARATION_NOTES.md](PREPARATION_NOTES.md)、[ARTICLE_PLAN.md](ARTICLE_PLAN.md)、[WORKER_A.md](WORKER_A.md)、[WORKER_B.md](WORKER_B.md)を履歴として保持する。現状は本READMEと第2段階報告を優先する。
+準備時の記録は[PREPARATION_NOTES.md](PREPARATION_NOTES.md)、[ARTICLE_PLAN.md](ARTICLE_PLAN.md)、[WORKER_A.md](WORKER_A.md)、[WORKER_B.md](WORKER_B.md)を履歴として保持する。現状は本READMEとPUBLICATION.mdを優先する。
