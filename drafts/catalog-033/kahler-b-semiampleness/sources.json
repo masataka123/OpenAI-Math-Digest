@@ -233,5 +233,95 @@
     "MWWZ積分解後のBeauvilleによる因子細分とKodairaの射影性判定はBS Lemma5.3内の用途のみ確認、外部証明は未検証。",
     "カタログ033の他稿・034との直接依存は未調査。Campana orbifold Iitaka theorem不使用を依存不存在へ一般化しない。",
     "サイト組込み・共通ヘッダーのAI注意書き・日英切替・スマートフォンの実サイト表示・公開前QAは本部の掲載工程。"
-  ]
+  ],
+  "externalSources": [
+    {
+      "id": "FF",
+      "displayName": "Variation of mixed Hodge structure and its applications",
+      "authors": "Osamu Fujino; Taro Fujisawa",
+      "version": "arXiv:2304.00672v3 (2025-03-11)",
+      "sourceUrl": "https://arxiv.org/pdf/2304.00672v3",
+      "checkingOrigin": "Existing dependencies record; no new external-proof verification in the 2026-10-11 revision."
+    },
+    {
+      "id": "MWWZ",
+      "displayName": "Compact Kähler manifolds with nef anti-canonical bundle",
+      "authors": "Shin-ichi Matsumura; Juanyong Wang; Xiaojun Wu; Qimin Zhang",
+      "version": "arXiv:2506.23218v1 (2025-06-29)",
+      "sourceUrl": "https://arxiv.org/pdf/2506.23218v1",
+      "checkingOrigin": "Existing dependencies record; no new external-proof verification in the 2026-10-11 revision."
+    },
+    {
+      "id": "Toma",
+      "displayName": "Bounded sets of sheaves on Kähler manifolds",
+      "authors": "Matei Toma",
+      "version": "arXiv:1103.5835v3",
+      "sourceUrl": "https://arxiv.org/pdf/1103.5835v3",
+      "checkingOrigin": "Existing dependencies record; no new external-proof verification in the 2026-10-11 revision."
+    },
+    {
+      "id": "BFMT",
+      "displayName": "Baily–Borel compactifications of period images and the b-semiampleness conjecture",
+      "authors": "Benjamin Bakker; Stefano Filipazzi; Mirko Mauri; Jacob Tsimerman",
+      "version": "arXiv:2508.19215v2 (2025-12-18)",
+      "sourceUrl": "https://arxiv.org/pdf/2508.19215v2",
+      "checkingOrigin": "Existing dependencies record; no new external-proof verification in the 2026-10-11 revision."
+    },
+    {
+      "id": "BB",
+      "displayName": "Compactification of arithmetic quotients of bounded symmetric domains",
+      "authors": "Walter L. Baily, Jr.; Armand Borel",
+      "version": "Annals of Mathematics 84 (1966), 442–528",
+      "sourceUrl": "https://doi.org/10.2307/1970457",
+      "checkingOrigin": "Existing dependencies record; no new external-proof verification in the 2026-10-11 revision."
+    },
+    {
+      "id": "Fujiki",
+      "displayName": "Countability of the Douady space of a complex space",
+      "authors": "Akira Fujiki",
+      "version": "Japanese Journal of Mathematics 5 (1979), 431–447",
+      "sourceUrl": "https://doi.org/10.4099/math1924.5.431",
+      "checkingOrigin": "Existing dependencies record; no new external-proof verification in the 2026-10-11 revision."
+    },
+    {
+      "id": "Vil",
+      "displayName": "Hodge modules and Kähler morphisms",
+      "authors": "Mads Bach Villadsen",
+      "version": "arXiv:2401.09544v1 (2024-01-17)",
+      "sourceUrl": "https://arxiv.org/pdf/2401.09544v1",
+      "checkingOrigin": "Existing dependencies record; no new external-proof verification in the 2026-10-11 revision."
+    }
+  ],
+  "revision20261011": {
+    "productionVersion": "1.4 + 2026-10-11 supplement",
+    "scope": "Statements and their connections to the existing proof overview; not full independent revalidation.",
+    "statementsAdded": [
+      {
+        "result": "Proposition 5.6",
+        "pdfPages": "22–25"
+      },
+      {
+        "result": "Proposition 6.1",
+        "pdfPages": "25–28"
+      },
+      {
+        "result": "Proposition 7.5",
+        "pdfPages": "33–34"
+      }
+    ],
+    "mainConclusionCoverage": [
+      {
+        "result": "main",
+        "conclusion": "(a) stability under every higher smooth compact Kähler modification",
+        "anchor": "proof-2-step-3"
+      },
+      {
+        "result": "main",
+        "conclusion": "(b) one multiple generated at every point",
+        "anchor": "proof-5-step-2"
+      }
+    ],
+    "manuscriptHashRechecked": true,
+    "externalChecking": "Earlier records retained; no new claim of complete verification."
+  }
 }

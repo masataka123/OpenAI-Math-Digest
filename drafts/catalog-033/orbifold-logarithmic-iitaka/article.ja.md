@@ -69,19 +69,24 @@ $$
 
 ## 図の矢印に付した引用
 
-略号のない結果番号は本原稿[OI]を指す。主要な外部入力には次の略号を使う。
+<!-- reference-guide -->
+略号のない定理・補題・節・式番号は本原稿 [Orbifold and logarithmic Iitaka subadditivity](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf) を指します。外部入力には次の略号を使います。
 
-- [Fuj] Fujino：弱正値性。著者版0.54（2015年6月30日）。
-- [FF] Fujino–Fujisawa：標準延長。著者版0.55（2025年3月11日）。
-- [Vil] Villadsen：コンパクト化。arXiv v1。
-- [BC] Brunebarbe–Cadorel：対数一般型性。arXiv v1。
-- [BT] Bakker–Tsimerman：Ax–Schanuel。arXiv v1。
-- [KP] Kovács–Patakfalvi：安定族の正値性。62ページの著者版。
-- [Cam] Campana：orbifold基底。arXiv v8。
+- [FF](https://www.math.kyoto-u.ac.jp/~fujino/vmhs-applications8.pdf) Osamu Fujino; Taro Fujisawa — *Variation of mixed Hodge structure and its applications*：Hodge延長と相対対数最高形式の比較。author version 0.55, 2025-03-11, 36 pages。
+- [Vil](https://arxiv.org/pdf/2401.09544v1) Mads Bach Villadsen — *Hodge modules and Kähler morphisms*：period商または有限被覆のコンパクト化。記事末尾の照合範囲を参照。arXiv:2401.09544v1, 2024-01-17, 26 pages。
+- [BC](https://arxiv.org/pdf/1707.01327v1) Yohan Brunebarbe; Benoît Cadorel — *Hyperbolicity of varieties supporting a variation of Hodge structure*：immersiveなperiod写像から対数一般型性を得る。arXiv:1707.01327v1, posted 2017-07-05, manuscript dated 2017-07-06, 7 pages。
+- [BT](https://arxiv.org/pdf/1712.05088v1) Benjamin Bakker; Jacob Tsimerman — *The Ax–Schanuel conjecture for variations of Hodge structures*：境界でのrank lossのためのAx–Schanuel入力。arXiv:1712.05088v1, 2017-12-14, 12 pages。
+- [KP](https://sites.math.washington.edu/~kovacs/2013/papers/Kovacs_Patakfalvi__Projectivity.pdf) Sándor J. Kovács; Zsolt Patakfalvi — *Projectivity of the moduli space of stable log-varieties and subadditivity of log-Kodaira dimension*：射影安定族の正値性とmarked modelのvariationの下界。62-page author manuscript; PDF metadata creation date 2016-09-26 UTC (2016-09-27 JST)。
+- [Fuj](https://www.math.kyoto-u.ac.jp/~fujino/weak-posi11.pdf) Osamu Fujino — *Notes on the weak positivity theorems*：負のample捻りを伴う切断の構成に使う弱正値性。author version 0.54, 2015-06-30, 44 pages。
+- [Cam](https://arxiv.org/pdf/0705.0737v8) Frédéric Campana — *Orbifoldes géométriques spéciales et classification biméromorphe des variétés kählériennes compactes*：neatモデルで不変なorbifold底項を計算。arXiv:0705.0737v8, 155-page PDF; arXiv stamp 2009-07-15, title page date 2018-10-25。
+- [BFMT](https://arxiv.org/pdf/2508.19215v2) Benjamin Bakker; Stefano Filipazzi; Mirko Mauri; Jacob Tsimerman — *Baily–Borel compactifications of period images and the b-semiampleness conjecture*：Hodge/moduli同定と射影的半豊富性。使用する定理と未確認範囲は本文で区別。arXiv:2508.19215v2, 2025-12-18 (as specified in OI reference [7])。
 
-各リンクの表示にページを付す。GitHubのPDF閲覧リンクではページ位置への自動移動を前提としない。
+各引用に結果番号とページを付します。誌面番号とPDF内の位置が異なる場合は両方を示します。GitHubの閲覧リンクではページ位置への自動移動を前提としません。
+<!-- /reference-guide -->
 
 ## 2. Theorem 1.1の証明 — 相対飯高底への移送
+
+<!-- proof-target:1 -->証明対象：[Theorem 1.1 · pp. 2–3](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf)<!-- /proof-target --> [仮定・結論](#theorem-1-1)を参照する。
 
 **証明の道筋。** 主定理では、相対飯高底の切断比較に二つの正値性入力を合わせる。最後の[ample捻りの相殺](#proof-2)を次節で展開し、得た下界から[対数劣加法性](#proof-3)と[標数0への移行](#proof-4)を導く。[WVへの追加結果](#proof-5)は主定理の経路と分けて読む。
 
@@ -150,7 +155,23 @@ $$
 
 ## 3. Proposition 3.4の核心 — Ample捻りを固定切断で消す
 
+<!-- proof-target:2 -->証明対象：[Proposition 3.4 · pp. 19–20](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf)<!-- /proof-target -->
+
 $D_W=K_W+T$、$M=p^*P$とする。$h$のファイバー上で$D_W+M$がbigであることから出発する。原稿は$\kappa$の極限連続性を使わず、係数を有理数で固定して二つの線形系を掛け合わせる。
+
+<!-- statement:proposition-3-4 -->
+### Proposition 3.4
+
+$h:W\to Y$を滑らかなコンパクトFujiki class C多様体間の連結ファイバーをもつ全射とする。$T,C$はそれぞれ$W,Y$上の有理SNC境界（係数$[0,1]$）で、$C\leq B(h,T)$とする。$Y$の余次元2以上へ写る**すべての**$W$の素因子$E$について$T_E=1$を仮定する。$p:W\to S$は滑らかな射影多様体への連結ファイバーをもつ全射で、$P$は$S$上のnefな有理line、$M=p^*P$とする。ある有理数$a_0>0$で$K_S+a_0P$がbigであり、$K_W+T+M$が非常に一般の$h$ファイバー上でbigならば、
+
+$$
+\begin{aligned}\kappa(W,K_W+T+M)\ &\geq\dim(W/Y)\\&\quad+\kappa(Y,K_Y+C).\end{aligned}
+$$
+
+最後の項が$-\infty$なら不等式は自動的である。$S$が点なら$M\sim_{\mathbb Q}0$となる。
+
+<!-- cite:oi-adjoint -->[Proposition 3.4 · pp. 19–20](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf)<!-- /cite -->
+<!-- /statement -->
 
 ![随伴加法性：正のample捻りの線形系と負の捻りの固定切断を合わせる](diagrams/cancellation.ja.svg)
 
@@ -208,6 +229,8 @@ $$
 
 ## 4. Corollary 6.2の証明 — 対数的底との比較
 
+<!-- proof-target:3 -->証明対象：[Corollary 6.2 · pp. 40–41](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf)<!-- /proof-target --> [仮定・結論](#corollary-6-2)を参照する。
+
 必要なのは$D_Y$を一つのモデルの境界に含めることに加え、その比較を不変量$\kappa(f\mid D_X)$に移すことである。
 
 ![対数劣加法性：係数1からorbifold基底の比較を得て主定理を適用する](diagrams/logarithmic.ja.svg)
@@ -234,7 +257,13 @@ Theorem 1.1に$\Delta=D_X$を代入する。滑らかな準射影多様体$U\to 
 
 [WV, Theorem 2.1 · p. 6][WV] · [RA, Corollary 1.2 / §7.6 · pp. 2, 50][RA]
 
+class Cの場合も、neatモデルでの境界比較とTheorem 1.1への代入は同じであり、底と全空間の射影性を追加しない。これがCorollary 6.2のコンパクトclass Cの結論を与える。
+
+
+
 ## 5. Corollary 6.3の証明 — 幾何学的一般ファイバーと体の変更
+
+<!-- proof-target:4 -->証明対象：[Corollary 6.3 · p. 41](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf)<!-- /proof-target --> [仮定・結論](#corollary-6-3)を参照する。
 
 複素数上の非常に一般のファイバーで得た不等式を、幾何学的一般ファイバーの切断空間を介して標数0の代数閉体へ移す。
 
@@ -300,6 +329,13 @@ Lemma 7.4は、実際の成分上の最小値と高いモデル上の全付値�
 [WV・pp. 6, 21, 69–70][WV] · [RA・pp. 2, 50][RA] · [OI・pp. 5, 41][OI]
 
 ## 8. 原典を読む入口と確認範囲
+
+<!-- reading-list -->
+- [Theorem 1.1 · pp. 2–3](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf) — 主定理の仮定・結論を確認し、下記の証明箇所と対応させる
+- [Proposition 3.4 · pp. 19–20](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf) — 余次元2の境界条件と、固定切断で捻りを相殺する操作を読む
+- [Corollary 6.2 · pp. 40–41](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf) — 係数1の境界条件から対数的底の下界へ移る
+- [Corollary 6.3 · p. 41](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf) — 通常・対数的な結論を幾何学的一般ファイバーと体拡大で移す
+<!-- /reading-list -->
 
 原稿はOpenAI、2026年9月26日版、参考文献込み55ページ。参照commitは`fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb`。まず§6 pp. 39–40で入力の合流を読み、Proposition 2.7 pp. 10–17の固定参照空間への切断比較、Proposition 3.4 pp. 19–20の相殺へ戻ると論証を追いやすい。二つの正値性入力は§4 pp. 20–31と§5 pp. 31–38で証明される。
 

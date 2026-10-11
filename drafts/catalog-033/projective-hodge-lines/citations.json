@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "readable-name",
+  "catalogId": "033",
+  "legacyCitationKeys": [
+    "PH",
+    "BBT",
+    "BC",
+    "FM",
+    "Amb",
+    "Fuj",
+    "Has"
+  ],
+  "revisionScope": "2026-10-11 statement/guide revision. Published citation keys and all existing TeX/SVG citations are retained; only the new statement and guide blocks are generated. Figure copies and hashes are checked separately by catalog-033 tests.",
+  "sources": {
+    "PH": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "displayName": "Projective Hodge lines and ordinary Iitaka subadditivity",
+      "pagination": "same"
+    },
+    "BBT": {
+      "recordFile": "sources.json",
+      "recordId": "BBT",
+      "guideRole": {
+        "ja": "格子を保つperiod像の代数化とHodge lineの正値性",
+        "en": "Algebraicity of integral period images and positivity of Hodge lines"
+      }
+    },
+    "BC": {
+      "recordFile": "sources.json",
+      "recordId": "BC",
+      "guideRole": {
+        "ja": "immersiveなperiod写像から対数一般型性を得る",
+        "en": "Log-general type from an immersive period map"
+      }
+    },
+    "FM": {
+      "recordFile": "sources.json",
+      "recordId": "FM",
+      "guideRole": {
+        "ja": "標準束公式の残余因子と全次数の直像",
+        "en": "Residual divisors and all-degree direct images in the canonical bundle formula"
+      }
+    },
+    "Amb": {
+      "recordFile": "sources.json",
+      "recordId": "Amb",
+      "guideRole": {
+        "ja": "moduli b-divisorと延長Hodge eigensheaf",
+        "en": "Moduli b-divisors and the extended Hodge eigensheaf"
+      }
+    },
+    "Fuj": {
+      "recordFile": "sources.json",
+      "recordId": "Fuj",
+      "guideRole": {
+        "ja": "負のample捻りを伴う切断の構成に使う弱正値性",
+        "en": "Weak positivity for producing sections with a negative ample twist"
+      }
+    },
+    "Has": {
+      "recordFile": "sources.json",
+      "recordId": "Has",
+      "guideRole": {
+        "ja": "有効klt対の一般型ファイバーに対する加法性",
+        "en": "Addition for general-type fibers of effective klt pairs"
+      }
+    }
+  },
+  "citations": {
+    "main": {
+      "source": "PH",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "adjoint": {
+      "source": "PH",
+      "locations": [
+        {
+          "result": "Theorem 1.2",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "ph-reduction": {
+      "source": "PH",
+      "locations": [
+        {
+          "result": "Proposition 6.4",
+          "printed": "20–21",
+          "pdf": "20–21"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [],
+  "articleGuides": {
+    ".": {
+      "selfSource": "PH",
+      "externalSources": [
+        "BBT",
+        "BC",
+        "FM",
+        "Amb",
+        "Fuj",
+        "Has"
+      ],
+      "proofTargets": [
+        "adjoint",
+        "ph-reduction",
+        "main"
+      ],
+      "mainResults": [
+        "main",
+        "adjoint"
+      ],
+      "statements": {
+        "main": "theorem-1-1",
+        "adjoint": "theorem-1-2",
+        "ph-reduction": "proposition-6-4"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "main",
+          "conclusion": "ordinary inequality, automatic negative case and arbitrary characteristic-zero field",
+          "anchor": "proof-3-step-3"
+        },
+        {
+          "result": "adjoint",
+          "conclusion": "nef pullback line and connected-fiber quotient",
+          "anchor": "proof-1-step-3"
+        },
+        {
+          "result": "adjoint",
+          "conclusion": "adjoint bigness for every sufficiently large integer",
+          "anchor": "proof-1-step-3"
+        },
+        {
+          "result": "adjoint",
+          "conclusion": "rational triviality for a point quotient",
+          "anchor": "proof-1-step-1"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "adjoint",
+          "purpose": {
+            "ja": "最高lineの仮定、nefな降下、随伴bignessの結論を区別する",
+            "en": "Distinguish the highest-line hypothesis, nef descent, and adjoint bigness"
+          }
+        },
+        {
+          "citation": "ph-reduction",
+          "purpose": {
+            "ja": "残余因子の例外性とHodge同定を保つ標準束帰着を読む",
+            "en": "Read the canonical bundle reduction preserving exceptionality of the residual divisor and the Hodge identification"
+          }
+        },
+        {
+          "citation": "main",
+          "purpose": {
+            "ja": "主定理の仮定・結論を確認し、下記の証明箇所と対応させる",
+            "en": "Read the main hypotheses and conclusion alongside the proof passages below"
+          }
+        }
+      ]
+    }
+  }
+}

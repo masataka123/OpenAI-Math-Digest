@@ -11,8 +11,8 @@ import {validateGuide} from './lib/article-guides.mjs';
 const registry=loadCitations('drafts/catalog-063/citations.json'),guide=registry.articleGuides['generalized-mukai'];
 const article=fs.readFileSync('drafts/catalog-063/generalized-mukai/article.ja.md','utf8');
 
-test('new catalogues have official inventories and bilingual guides for every owned article',async()=>{
- for(const catalog of catalogs.filter(c=>!['033','034'].includes(c.id))){
+test('new and revised catalogues have official inventories and bilingual guides for every owned article',async()=>{
+ for(const catalog of catalogs.filter(c=>c.id!=='034')){
   const data=JSON.parse(fs.readFileSync(`drafts/catalog-${catalog.id}/overview/presentation.json`));
   validateInventory(catalog,papers,data);
   for(const lang of ['ja','en']){

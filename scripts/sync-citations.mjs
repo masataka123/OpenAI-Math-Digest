@@ -39,14 +39,18 @@ export function syncCitations({check=false,catalogId,textOnly=false,registryFile
    let expanded=text;
    if(guide){
     const figureDir=path.join(dir,path.dirname(relative),'diagrams');
-    const figures=fs.readdirSync(figureDir).filter(n=>n.endsWith('.tikz')).map(n=>fs.readFileSync(path.join(figureDir,n),'utf8')).join('\n');
+    const managedFigures=registry.diagramDirectories.some(p=>path.resolve(dir,p)===path.resolve(figureDir));
+    const figures=managedFigures?fs.readdirSync(figureDir).filter(n=>n.endsWith('.tikz')).map(n=>fs.readFileSync(path.join(figureDir,n),'utf8')).join('\n'):'';
     validateGuide(registry,guide,text,figures);
     expanded=expandGuides(text,registry,guide,lang);
    }
    const remainder=text.replace(/<!-- (?:cite:[a-z0-9-]+|reference-guide|reading-list|proof-target:\d+) -->[\s\S]*?<!-- \/(?:cite|reference-guide|reading-list|proof-target) -->/g,'');
-   // Managed documents may link to articles, but source citations must use the registry.
-   for(const [,key] of remainder.matchAll(/\]\[([^\]]+)\]/g))if(registry.sources[key])throw Error(`Unmanaged source citation: ${relative}`);
-   for(const source of Object.values(registry.sources))if(remainder.includes(source.url))throw Error(`Handwritten source URL: ${relative}`);
+   // The 033 statement revision retains its published citations and figures. Only
+   // explicitly listed legacy keys are exempt; new managed blocks still validate.
+   const legacy=new Set(registry.legacyCitationKeys??[]);
+   if(legacy.size&&(registry.catalogId!=='033'||[...legacy].some(key=>!registry.sources[key])))throw Error('Invalid legacy citation scope');
+   for(const [,key] of remainder.matchAll(/\]\[([^\]]+)\]/g))if(registry.sources[key]&&!legacy.has(key))throw Error(`Unmanaged source citation: ${relative}`);
+   for(const [key,source] of Object.entries(registry.sources))if(remainder.includes(source.url)&&!legacy.has(key))throw Error(`Handwritten source URL: ${relative}`);
    write(relative,expandCitationMarkers(expanded,registry,lang));
   }
   for(const directory of registry.diagramDirectories){

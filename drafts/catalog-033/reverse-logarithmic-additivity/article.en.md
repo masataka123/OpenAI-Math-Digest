@@ -56,16 +56,23 @@ The point $y$ may be any such point of the original $V$: it need not lie in the 
 
 ## References on the arrows
 
-Unprefixed numbers refer to [RA]. The diagrams retain the Proposition / Lemma / Corollary labels at the statements. Some later cross-references in the manuscript instead call these results “Theorem.” GitHub preview links do not guarantee navigation to a PDF page; page numbers appear explicitly in the labels.
+<!-- reference-guide -->
+Unprefixed theorem, lemma, section and equation numbers refer to [The reverse logarithmic Kodaira inequality and additivity](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-reverse-logarithmic-Kodaira-inequality-and-additivity-September-26-2026/paper.pdf). External inputs use the following keys.
 
-- [OI]: *Orbifold and logarithmic Iitaka subadditivity*, pinned 2026-09-26 manuscript.
-- [FF14]: Fujino–Fujisawa, *Variations of mixed Hodge structure and semipositivity theorems*, author manuscript dated 2014-03-17. [FF17] is their supplement dated 2017-07-07.
-- [BBT]: Bakker–Brunebarbe–Tsimerman, *o-minimal GAGA and a conjecture of Griffiths*, arXiv v3.
-- [FG]: Fujino–Gongyo, *On the moduli b-divisors of lc-trivial fibrations*, published version, 2014.
-- [CP]: Campana–Păun, *Foliations with positive slopes and birational stability of orbifold cotangent bundles*, checked in arXiv v4.
-- [BDPP]: Boucksom–Demailly–Păun–Peternell, *The pseudo-effective cone of a compact Kähler manifold and varieties of negative Kodaira dimension*, arXiv v1.
+- [OI](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf) OpenAI — *Orbifold and logarithmic Iitaka subadditivity*: Inputs, additional results, or alternatives within the catalogue; see the use and relation type in the table below. 2026-09-26.
+- [FF14](https://www.math.kyoto-u.ac.jp/~fujino/vmhs-sp108.pdf) Osamu Fujino; Taro Fujisawa — *Variations of mixed Hodge structure and semipositivity theorems*: Local freeness of the Hodge and weight filtrations. Author manuscript 2014-03-17, vmhs-sp108.pdf.
+- [FF17](https://www.math.kyoto-u.ac.jp/~fujino/fujino-fujisawa-memo2.pdf) Osamu Fujino; Taro Fujisawa — *A short remark on [2]*: The strictness correction to FF14. 2017-07-07.
+- [BBT](https://arxiv.org/pdf/1811.12230v3) Benjamin Bakker; Yohan Brunebarbe; Jacob Tsimerman — *o-minimal GAGA and a conjecture of Griffiths*: Algebraicity of integral period images and positivity of Hodge lines. arXiv:1811.12230v3, 2022-10-23.
+- [FG](https://www.numdam.org/item/10.5802/aif.2894.pdf) Osamu Fujino; Yoshinori Gongyo — *On the moduli b-divisors of lc-trivial fibrations*: b-nefness for lc-trivial fibrations allowing negative boundary coefficients. Annales de l’Institut Fourier 64 (2014), 1721–1735; published PDF with cover.
+- [CP](https://arxiv.org/pdf/1508.02456v4) Frédéric Campana; Mihai Păun — *Foliations with positive slopes and birational stability of orbifold cotangent bundles*: Orbifold cotangent degree estimates and relative pseudoeffectivity. arXiv:1508.02456v4, 2017-06-14 (RA bibliography cites Publ. Math. IHÉS 129 (2019)).
+- [BDPP](https://arxiv.org/pdf/math/0405285v1) Sébastien Boucksom; Jean-Pierre Demailly; Mihai Păun; Thomas Peternell — *The pseudo-effective cone of a compact Kähler manifold and varieties of negative Kodaira dimension*: Pseudoeffectivity and movable curves, or the comparison with non-uniruledness. arXiv:math/0405285v1.
+
+Each citation gives the result and pages. When printed pagination differs from the PDF position, both are shown. GitHub previews do not automatically jump to the cited page.
+<!-- /reference-guide -->
 
 ## 2. Proof of Theorem 1.1 — Reduction by Kodaira dimension
+
+<!-- proof-target:1 -->Proof target：[Theorem 1.1 · p. 2](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-reverse-logarithmic-Kodaira-inequality-and-additivity-September-26-2026/paper.pdf)<!-- /proof-target --> See the [hypotheses and conclusion](#theorem-1-1).
 
 **Proof route.** First derive the upper bound with Proposition 1.3 as input. Its proof is then expanded into [constructing sections from a Hodge vector](#proof-2) and [removing the twist for a positive-dimensional period quotient](#proof-3). OI enters only in the final [additivity corollary](#proof-4).
 
@@ -112,6 +119,8 @@ The last upper bound is the image-dimension estimate for a total-space linear sy
 
 ## 3. Proof of Proposition 1.3 — From a Hodge vector to a base section
 
+<!-- proof-target:2 -->Proof target：[Proposition 1.3 · p. 3](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-reverse-logarithmic-Kodaira-inequality-and-additivity-September-26-2026/paper.pdf)<!-- /proof-target --> See the [hypotheses and conclusion](#proposition-1-3).
+
 Fix a nonzero section $s$. The constructed Hodge vector need not generate the whole highest Hodge bundle. The argument therefore retains its coefficients and the compact flags determined by its projective direction. Below, $\mathcal E_0$ denotes the highest Hodge bundle, distinct from the boundary $E$.
 
 ![Section construction: preserve the original coefficient lattice and zero test, then separate point and positive-dimensional period quotients](diagrams/section-construction.en.svg)
@@ -148,9 +157,41 @@ A base section vanishing at the specified point makes restriction to one fiber i
 
 [RA, §2.3・proof of Proposition 1.3 · pp. 5–6, 50][RA]
 
-## 4. A positive-dimensional period quotient — Remove the twist and recover sections
+## 4. Proposition 7.7 — A positive-dimensional period quotient and twist removal
+
+<span class="legacy-anchor" id="4-a-positive-dimensional-period-quotient--remove-the-twist-and-recover-sections" aria-hidden="true"></span>
+
+<!-- proof-target:3 -->Proof target：[Proposition 7.7 · pp. 49–50](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-reverse-logarithmic-Kodaira-inequality-and-additivity-September-26-2026/paper.pdf)<!-- /proof-target -->
 
 Assume $\dim S>0$. Write $Y\xrightarrow{x}W\xrightarrow{h}S$ on suitably prepared models; the section comparison always returns to a fixed original pair. The notation $\geq_{\mathrm{pe}}$ means that the difference is pseudoeffective.
+
+<!-- statement:proposition-7-7 -->
+### Proposition 7.7
+
+Use the data of §§4–7 attached to the nonzero total-space pluriform in Proposition 1.3. Here $S$ is the quotient recording the full Lie period and compact flag, $Y\xrightarrow{x}W\xrightarrow{h}S$ is the relative Iitaka reduction, and $L_W$ represents the complete section spaces of the fixed original pair $(Y,D)$, as in Step 1 below. If $\dim S>0$, then
+
+$$
+L_W\text{ is big},\qquad\kappa(Y,K_Y+D)\geq\dim W>0.
+$$
+
+The numerical twist-removal result used here is Proposition 7.2 below.
+
+<!-- cite:ra-positive -->[Proposition 7.7 · pp. 49–50](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-reverse-logarithmic-Kodaira-inequality-and-additivity-September-26-2026/paper.pdf)<!-- /cite -->
+<!-- /statement -->
+
+<!-- statement:proposition-7-2 -->
+### Proposition 7.2
+
+Let $h:W\to S$ be a surjective morphism of smooth projective varieties with $\dim S>0$. Let $L$ be a rational divisor on $W$ and $H$ a nef rational divisor on $S$. Assume that $L$ is big on the generic $h$-fiber, $L-h^*K_S$ is pseudoeffective, and $K_S+bH$ is big for some rational $b\geq0$. Suppose there are a dominant generically finite morphism $\pi:\widehat W\to W$ from a smooth projective variety, a nef rational divisor $P$ on $\widehat W$, and a rational $Q>0$ such that, with $\widetilde H=\pi^*h^*H$,
+
+$$
+\begin{aligned}\nu(P+\widetilde H)&=\nu(P),\\Q\pi^*L&\geq_{\rm pe}P.\end{aligned}
+$$
+
+Then $L$ is big.
+
+<!-- cite:ra-removal -->[Proposition 7.2 · pp. 44–45](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-reverse-logarithmic-Kodaira-inequality-and-additivity-September-26-2026/paper.pdf)<!-- /cite -->
+<!-- /statement -->
 
 ![Positive-dimensional quotient: the exact section lattice, nef moduli and Higgs-tail lines, and numerical removal of the period twist](diagrams/period-removal.en.svg)
 
@@ -234,6 +275,8 @@ Positive base Kodaira dimension excludes this branch when the base has Kodaira d
 
 ## 5. Proof of Corollary 1.2 — Add the lower bound
 
+<!-- proof-target:4 -->Proof target：[Corollary 1.2 · p. 2](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-reverse-logarithmic-Kodaira-inequality-and-additivity-September-26-2026/paper.pdf)<!-- /proof-target --> See the [hypotheses and conclusion](#corollary-1-2).
+
 Only here does the other catalogue-033 manuscript [OI] enter. The notation $\kappa_X,\kappa_Y,\kappa_F$ and the $-\infty$ convention are unchanged from Section 2.
 
 ![Additivity: combine the independent upper bound with OI logarithmic subadditivity for the same pairs and the same fiber](diagrams/additivity.en.svg)
@@ -268,6 +311,13 @@ For smooth families with nonnegative fiber and base Kodaira dimensions, comparis
 [AS, Theorem A · pp. 1–2][AS] is cited for the connection-form argument in [§5.1 and Lemma 5.1 · pp. 26–28][RA]. The manuscript supplies the needed semisimple argument itself; we distinguish this as a relation of proof method. Theorem A and the manuscript's stated use were compared, without tracing the full proof in [AS]. Other relations within catalogue 033 remain unexamined or unrecorded; a missing arrow does not mean absence of dependence.
 
 ## 7. Return to the sources
+
+<!-- reading-list -->
+- [Theorem 1.1 · p. 2](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-reverse-logarithmic-Kodaira-inequality-and-additivity-September-26-2026/paper.pdf) — Read the main hypotheses and conclusion alongside the proof passages below
+- [Proposition 1.3 · p. 3](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-reverse-logarithmic-Kodaira-inequality-and-additivity-September-26-2026/paper.pdf) — Read the section construction that retains the zero at a prescribed point of the original base
+- [Proposition 7.7 · pp. 49–50](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-reverse-logarithmic-Kodaira-inequality-and-additivity-September-26-2026/paper.pdf) — Combine numerical twist removal with the complete section comparison to recover positive base Kodaira dimension
+- [Corollary 1.2 · p. 2](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-reverse-logarithmic-Kodaira-inequality-and-additivity-September-26-2026/paper.pdf) — Locate the added lower bound and the treatment of negative infinity
+<!-- /reading-list -->
 
 - [§2 · pp. 5–7][RA]: all sign cases of the upper bound, using Proposition 1.3 alone.
 - [Proposition 3.1 and Lemmas 3.2–3.3 · pp. 8–14][RA]: the original coefficient lattice and prescribed zero.

@@ -423,5 +423,116 @@
     "mathjaxErrors": 0,
     "sourceUrlsReachable": 9,
     "siteBuildAndMobileQA": "not performed; HQ integration responsibility"
+  },
+  "externalSources": [
+    {
+      "id": "OI",
+      "displayName": "Orbifold and logarithmic Iitaka subadditivity",
+      "authors": "OpenAI",
+      "version": "2026-09-26",
+      "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf",
+      "checkingOrigin": "Existing dependencies record; no new external-proof verification in the 2026-10-11 revision."
+    },
+    {
+      "id": "FF14",
+      "displayName": "Variations of mixed Hodge structure and semipositivity theorems",
+      "authors": "Osamu Fujino; Taro Fujisawa",
+      "version": "Author manuscript 2014-03-17, vmhs-sp108.pdf",
+      "sourceUrl": "https://www.math.kyoto-u.ac.jp/~fujino/vmhs-sp108.pdf",
+      "checkingOrigin": "Existing dependencies record; no new external-proof verification in the 2026-10-11 revision."
+    },
+    {
+      "id": "FF17",
+      "displayName": "A short remark on [2]",
+      "authors": "Osamu Fujino; Taro Fujisawa",
+      "version": "2017-07-07",
+      "sourceUrl": "https://www.math.kyoto-u.ac.jp/~fujino/fujino-fujisawa-memo2.pdf",
+      "checkingOrigin": "Existing dependencies record; no new external-proof verification in the 2026-10-11 revision."
+    },
+    {
+      "id": "BBT",
+      "displayName": "o-minimal GAGA and a conjecture of Griffiths",
+      "authors": "Benjamin Bakker; Yohan Brunebarbe; Jacob Tsimerman",
+      "version": "arXiv:1811.12230v3, 2022-10-23",
+      "sourceUrl": "https://arxiv.org/pdf/1811.12230v3",
+      "checkingOrigin": "Existing dependencies record; no new external-proof verification in the 2026-10-11 revision."
+    },
+    {
+      "id": "FG",
+      "displayName": "On the moduli b-divisors of lc-trivial fibrations",
+      "authors": "Osamu Fujino; Yoshinori Gongyo",
+      "version": "Annales de l’Institut Fourier 64 (2014), 1721–1735; published PDF with cover",
+      "sourceUrl": "https://www.numdam.org/item/10.5802/aif.2894.pdf",
+      "checkingOrigin": "Existing dependencies record; no new external-proof verification in the 2026-10-11 revision."
+    },
+    {
+      "id": "CP",
+      "displayName": "Foliations with positive slopes and birational stability of orbifold cotangent bundles",
+      "authors": "Frédéric Campana; Mihai Păun",
+      "version": "arXiv:1508.02456v4, 2017-06-14 (RA bibliography cites Publ. Math. IHÉS 129 (2019))",
+      "sourceUrl": "https://arxiv.org/pdf/1508.02456v4",
+      "checkingOrigin": "Existing dependencies record; no new external-proof verification in the 2026-10-11 revision."
+    },
+    {
+      "id": "BDPP",
+      "displayName": "The pseudo-effective cone of a compact Kähler manifold and varieties of negative Kodaira dimension",
+      "authors": "Sébastien Boucksom; Jean-Pierre Demailly; Mihai Păun; Thomas Peternell",
+      "version": "arXiv:math/0405285v1",
+      "sourceUrl": "https://arxiv.org/pdf/math/0405285v1",
+      "checkingOrigin": "Existing dependencies record; no new external-proof verification in the 2026-10-11 revision."
+    }
+  ],
+  "revision20261011": {
+    "productionVersion": "1.4 + 2026-10-11 supplement",
+    "scope": "Statements and their connections to the existing proof overview; not full independent revalidation.",
+    "statementsAdded": [
+      {
+        "result": "Proposition 7.7",
+        "pdfPages": "49–50"
+      },
+      {
+        "result": "Proposition 7.2",
+        "pdfPages": "44–45"
+      }
+    ],
+    "mainConclusionCoverage": [
+      {
+        "result": "main",
+        "conclusion": "vanishing in all positive degrees when either dimension is negative infinity",
+        "anchor": "proof-1-step-1"
+      },
+      {
+        "result": "main",
+        "conclusion": "upper bound over a base of dimension zero",
+        "anchor": "proof-1-step-2"
+      },
+      {
+        "result": "main",
+        "conclusion": "upper bound over a base of positive Kodaira dimension",
+        "anchor": "proof-1-step-3"
+      },
+      {
+        "result": "additivity",
+        "conclusion": "finite equality",
+        "anchor": "proof-4-step-1"
+      },
+      {
+        "result": "additivity",
+        "conclusion": "equality in negative-infinity cases",
+        "anchor": "proof-4-step-2"
+      },
+      {
+        "result": "section",
+        "conclusion": "nonvanishing on the original base",
+        "anchor": "proof-2-step-3"
+      },
+      {
+        "result": "section",
+        "conclusion": "a section vanishing at the prescribed point when the base has dimension zero",
+        "anchor": "proof-2-step-3"
+      }
+    ],
+    "manuscriptHashRechecked": true,
+    "externalChecking": "Earlier records retained; no new claim of complete verification."
   }
 }

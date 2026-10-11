@@ -1,0 +1,220 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "readable-name",
+  "catalogId": "033",
+  "legacyCitationKeys": [
+    "OI",
+    "FF",
+    "Vil",
+    "BC",
+    "BT",
+    "KP",
+    "Fuj",
+    "Cam",
+    "BFMT"
+  ],
+  "revisionScope": "2026-10-11 statement/guide revision. Published citation keys and all existing TeX/SVG citations are retained; only the new statement and guide blocks are generated. Figure copies and hashes are checked separately by catalog-033 tests.",
+  "sources": {
+    "OI": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "displayName": "Orbifold and logarithmic Iitaka subadditivity",
+      "pagination": "same"
+    },
+    "FF": {
+      "recordFile": "sources.json",
+      "recordId": "FF",
+      "guideRole": {
+        "ja": "Hodge延長と相対対数最高形式の比較",
+        "en": "Hodge extensions and relative logarithmic top forms"
+      }
+    },
+    "Vil": {
+      "recordFile": "sources.json",
+      "recordId": "Vil",
+      "guideRole": {
+        "ja": "period商または有限被覆のコンパクト化。記事末尾の照合範囲を参照",
+        "en": "Compactification of period quotients or finite covers; see the checked scope below"
+      }
+    },
+    "BC": {
+      "recordFile": "sources.json",
+      "recordId": "BC",
+      "guideRole": {
+        "ja": "immersiveなperiod写像から対数一般型性を得る",
+        "en": "Log-general type from an immersive period map"
+      }
+    },
+    "BT": {
+      "recordFile": "sources.json",
+      "recordId": "BT",
+      "guideRole": {
+        "ja": "境界でのrank lossのためのAx–Schanuel入力",
+        "en": "Ax–Schanuel input to boundary rank loss"
+      }
+    },
+    "KP": {
+      "recordFile": "sources.json",
+      "recordId": "KP",
+      "guideRole": {
+        "ja": "射影安定族の正値性とmarked modelのvariationの下界",
+        "en": "Positivity of projective stable families and variation bounds for marked models"
+      }
+    },
+    "Fuj": {
+      "recordFile": "sources.json",
+      "recordId": "Fuj",
+      "guideRole": {
+        "ja": "負のample捻りを伴う切断の構成に使う弱正値性",
+        "en": "Weak positivity for producing sections with a negative ample twist"
+      }
+    },
+    "Cam": {
+      "recordFile": "sources.json",
+      "recordId": "Cam",
+      "guideRole": {
+        "ja": "neatモデルで不変なorbifold底項を計算",
+        "en": "Computing the invariant orbifold base term on neat models"
+      }
+    },
+    "BFMT": {
+      "recordFile": "sources.json",
+      "recordId": "BFMT",
+      "guideRole": {
+        "ja": "Hodge/moduli同定と射影的半豊富性。使用する定理と未確認範囲は本文で区別",
+        "en": "Hodge/moduli identification and projective semiampleness; the results used and checking limits are distinguished below"
+      }
+    }
+  },
+  "citations": {
+    "main": {
+      "source": "OI",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "2–3",
+          "pdf": "2–3"
+        }
+      ]
+    },
+    "log": {
+      "source": "OI",
+      "locations": [
+        {
+          "result": "Corollary 6.2",
+          "printed": "40–41",
+          "pdf": "40–41"
+        }
+      ]
+    },
+    "charzero": {
+      "source": "OI",
+      "locations": [
+        {
+          "result": "Corollary 6.3",
+          "printed": "41",
+          "pdf": "41"
+        }
+      ]
+    },
+    "oi-adjoint": {
+      "source": "OI",
+      "locations": [
+        {
+          "result": "Proposition 3.4",
+          "printed": "19–20",
+          "pdf": "19–20"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [],
+  "articleGuides": {
+    ".": {
+      "selfSource": "OI",
+      "externalSources": [
+        "FF",
+        "Vil",
+        "BC",
+        "BT",
+        "KP",
+        "Fuj",
+        "Cam",
+        "BFMT"
+      ],
+      "proofTargets": [
+        "main",
+        "oi-adjoint",
+        "log",
+        "charzero"
+      ],
+      "mainResults": [
+        "main",
+        "log",
+        "charzero"
+      ],
+      "statements": {
+        "main": "theorem-1-1",
+        "log": "corollary-6-2",
+        "charzero": "corollary-6-3",
+        "oi-adjoint": "proposition-3-4"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "main",
+          "conclusion": "orbifold lower bound, including the automatic negative case",
+          "anchor": "proof-1-step-5"
+        },
+        {
+          "result": "log",
+          "conclusion": "projective and class-C logarithmic lower bound",
+          "anchor": "proof-3-step-2"
+        },
+        {
+          "result": "charzero",
+          "conclusion": "ordinary characteristic-zero inequality",
+          "anchor": "proof-4-step-2"
+        },
+        {
+          "result": "charzero",
+          "conclusion": "logarithmic characteristic-zero inequality",
+          "anchor": "proof-4-step-2"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "main",
+          "purpose": {
+            "ja": "主定理の仮定・結論を確認し、下記の証明箇所と対応させる",
+            "en": "Read the main hypotheses and conclusion alongside the proof passages below"
+          }
+        },
+        {
+          "citation": "oi-adjoint",
+          "purpose": {
+            "ja": "余次元2の境界条件と、固定切断で捻りを相殺する操作を読む",
+            "en": "Check the codimension-two boundary condition and cancellation of the twist by a fixed section"
+          }
+        },
+        {
+          "citation": "log",
+          "purpose": {
+            "ja": "係数1の境界条件から対数的底の下界へ移る",
+            "en": "Follow the coefficient-one boundary condition into the logarithmic base bound"
+          }
+        },
+        {
+          "citation": "charzero",
+          "purpose": {
+            "ja": "通常・対数的な結論を幾何学的一般ファイバーと体拡大で移す",
+            "en": "Transfer both ordinary and logarithmic conclusions using the geometric generic fiber and field extension"
+          }
+        }
+      ]
+    }
+  }
+}

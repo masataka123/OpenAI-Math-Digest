@@ -69,19 +69,24 @@ More generally, the logarithmic inequality holds over $k$ under the same boundar
 
 ## References on the arrows
 
-Unprefixed result numbers refer to this manuscript [OI]. The main external inputs use the following keys.
+<!-- reference-guide -->
+Unprefixed theorem, lemma, section and equation numbers refer to [Orbifold and logarithmic Iitaka subadditivity](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf). External inputs use the following keys.
 
-- [Fuj] Fujino: weak positivity. Author version 0.54 (June 30, 2015).
-- [FF] Fujino–Fujisawa: canonical extensions. Author version 0.55 (March 11, 2025).
-- [Vil] Villadsen: compactification. arXiv v1.
-- [BC] Brunebarbe–Cadorel: logarithmic general type. arXiv v1.
-- [BT] Bakker–Tsimerman: Ax–Schanuel. arXiv v1.
-- [KP] Kovács–Patakfalvi: stable-family positivity. The 62-page author manuscript.
-- [Cam] Campana: the orbifold base. arXiv v8.
+- [FF](https://www.math.kyoto-u.ac.jp/~fujino/vmhs-applications8.pdf) Osamu Fujino; Taro Fujisawa — *Variation of mixed Hodge structure and its applications*: Hodge extensions and relative logarithmic top forms. author version 0.55, 2025-03-11, 36 pages.
+- [Vil](https://arxiv.org/pdf/2401.09544v1) Mads Bach Villadsen — *Hodge modules and Kähler morphisms*: Compactification of period quotients or finite covers; see the checked scope below. arXiv:2401.09544v1, 2024-01-17, 26 pages.
+- [BC](https://arxiv.org/pdf/1707.01327v1) Yohan Brunebarbe; Benoît Cadorel — *Hyperbolicity of varieties supporting a variation of Hodge structure*: Log-general type from an immersive period map. arXiv:1707.01327v1, posted 2017-07-05, manuscript dated 2017-07-06, 7 pages.
+- [BT](https://arxiv.org/pdf/1712.05088v1) Benjamin Bakker; Jacob Tsimerman — *The Ax–Schanuel conjecture for variations of Hodge structures*: Ax–Schanuel input to boundary rank loss. arXiv:1712.05088v1, 2017-12-14, 12 pages.
+- [KP](https://sites.math.washington.edu/~kovacs/2013/papers/Kovacs_Patakfalvi__Projectivity.pdf) Sándor J. Kovács; Zsolt Patakfalvi — *Projectivity of the moduli space of stable log-varieties and subadditivity of log-Kodaira dimension*: Positivity of projective stable families and variation bounds for marked models. 62-page author manuscript; PDF metadata creation date 2016-09-26 UTC (2016-09-27 JST).
+- [Fuj](https://www.math.kyoto-u.ac.jp/~fujino/weak-posi11.pdf) Osamu Fujino — *Notes on the weak positivity theorems*: Weak positivity for producing sections with a negative ample twist. author version 0.54, 2015-06-30, 44 pages.
+- [Cam](https://arxiv.org/pdf/0705.0737v8) Frédéric Campana — *Orbifoldes géométriques spéciales et classification biméromorphe des variétés kählériennes compactes*: Computing the invariant orbifold base term on neat models. arXiv:0705.0737v8, 155-page PDF; arXiv stamp 2009-07-15, title page date 2018-10-25.
+- [BFMT](https://arxiv.org/pdf/2508.19215v2) Benjamin Bakker; Stefano Filipazzi; Mirko Mauri; Jacob Tsimerman — *Baily–Borel compactifications of period images and the b-semiampleness conjecture*: Hodge/moduli identification and projective semiampleness; the results used and checking limits are distinguished below. arXiv:2508.19215v2, 2025-12-18 (as specified in OI reference [7]).
 
-Page locators are displayed in the links; GitHub PDF previews are not assumed to navigate to a specified page automatically.
+Each citation gives the result and pages. When printed pagination differs from the PDF position, both are shown. GitHub previews do not automatically jump to the cited page.
+<!-- /reference-guide -->
 
 ## 2. Proof of Theorem 1.1 — Transfer to the relative Iitaka base
+
+<!-- proof-target:1 -->Proof target：[Theorem 1.1 · pp. 2–3](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf)<!-- /proof-target --> See the [hypotheses and conclusion](#theorem-1-1).
 
 **Proof route.** The main proof combines exact section comparison on the relative Iitaka base with two positivity inputs. The next section expands the final [cancellation of the ample twist](#proof-2); the resulting lower bound then yields [logarithmic subadditivity](#proof-3) and the [characteristic-zero statement](#proof-4). The [additional inputs to WV](#proof-5) form a separate part of the article.
 
@@ -150,7 +155,23 @@ Proposition 2.7 and exceptional descent return these systems to the original $(X
 
 ## 3. The core of Proposition 3.4 — Cancel the ample twist with a fixed section
 
+<!-- proof-target:2 -->Proof target：[Proposition 3.4 · pp. 19–20](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf)<!-- /proof-target -->
+
 Write $D_W=K_W+T$ and $M=p^*P$. Start from bigness of $D_W+M$ on the fibers of $h$. The argument fixes rational coefficients and multiplies two systems; it makes no limiting-continuity assertion for $\kappa$.
+
+<!-- statement:proposition-3-4 -->
+### Proposition 3.4
+
+Let $h:W\to Y$ be a surjective map with connected fibers between smooth compact manifolds in Fujiki class C. Let $T,C$ be rational SNC boundaries (coefficients in $[0,1]$) on $W,Y$, with $C\leq B(h,T)$. Assume $T_E=1$ for **every** prime divisor $E$ of $W$ mapping to codimension at least two in $Y$. Let $p:W\to S$ be surjective with connected fibers, with $S$ smooth projective, and let $P$ be a nef rational line on $S$, $M=p^*P$. If $K_S+a_0P$ is big for some rational $a_0>0$, and $K_W+T+M$ is big on very general $h$-fibers, then
+
+$$
+\begin{aligned}\kappa(W,K_W+T+M)\ &\geq\dim(W/Y)\\&\quad+\kappa(Y,K_Y+C).\end{aligned}
+$$
+
+The inequality is automatic when the last term is $-\infty$. If $S$ is a point, $M\sim_{\mathbb Q}0$.
+
+<!-- cite:oi-adjoint -->[Proposition 3.4 · pp. 19–20](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf)<!-- /cite -->
+<!-- /statement -->
 
 ![Adjoint addition: combine a positively twisted system with one fixed negatively twisted section](diagrams/cancellation.en.svg)
 
@@ -210,6 +231,8 @@ Multiplication by a fixed section preserves image dimension, allowing the two po
 
 ## 4. Proof of Corollary 6.2 — Compare with the logarithmic base
 
+<!-- proof-target:3 -->Proof target：[Corollary 6.2 · pp. 40–41](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf)<!-- /proof-target --> See the [hypotheses and conclusion](#corollary-6-2).
+
 One needs both the inclusion of the prescribed boundary on a model and its transfer to the invariant $\kappa(f\mid D_X)$.
 
 ![Logarithmic subadditivity: coefficient one yields an invariant base comparison, followed by the main theorem](diagrams/logarithmic.en.svg)
@@ -234,7 +257,13 @@ This lower bound is used in WV’s parameter-field construction and in the corol
 
 [WV, Theorem 2.1 · p. 6][WV] · [RA, Corollary 1.2 / §7.6 · pp. 2, 50][RA]
 
+For compact class-C manifolds, the same neat-model boundary comparison and substitution into Theorem 1.1 apply without adding projectivity of the base or total space. This gives the compact class-C conclusion of Corollary 6.2.
+
+
+
 ## 5. Proof of Corollary 6.3 — Geometric generic fibers and field extension
+
+<!-- proof-target:4 -->Proof target：[Corollary 6.3 · p. 41](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf)<!-- /proof-target --> See the [hypotheses and conclusion](#corollary-6-3).
 
 Section spaces on the geometric generic fiber transfer the inequality from very general complex fibers to algebraically closed fields of characteristic zero.
 
@@ -300,6 +329,13 @@ Within catalogue 033, [OI] Corollary 6.2 supplies [WV] Theorem 2.1, and [OI] The
 [WV · pp. 6, 21, 69–70][WV] · [RA · pp. 2, 50][RA] · [OI · pp. 5, 41][OI]
 
 ## 8. Return to the sources
+
+<!-- reading-list -->
+- [Theorem 1.1 · pp. 2–3](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf) — Read the main hypotheses and conclusion alongside the proof passages below
+- [Proposition 3.4 · pp. 19–20](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf) — Check the codimension-two boundary condition and cancellation of the twist by a fixed section
+- [Corollary 6.2 · pp. 40–41](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf) — Follow the coefficient-one boundary condition into the logarithmic base bound
+- [Corollary 6.3 · p. 41](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf) — Transfer both ordinary and logarithmic conclusions using the geometric generic fiber and field extension
+<!-- /reading-list -->
 
 The manuscript is by OpenAI, dated September 26, 2026, with 55 pages including references. The reference commit is `fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb`. Start with the assembly in §6, pp. 39–40, then return to the fixed-reference section comparison in Proposition 2.7, pp. 10–17, and cancellation in Proposition 3.4, pp. 19–20. The two positivity inputs are proved in §4, pp. 20–31, and §5, pp. 31–38.
 

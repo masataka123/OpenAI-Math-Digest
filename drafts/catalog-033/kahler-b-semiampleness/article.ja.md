@@ -44,16 +44,23 @@ $$
 
 ## 図の矢印に付した引用
 
-略号のない結果番号は本稿[BS]を指す。主要な外部入力には次の略号を使う。
+<!-- reference-guide -->
+略号のない定理・補題・節・式番号は本原稿 [B-semiampleness for compact log-smooth Kähler fibrations](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/B-semiampleness-for-compact-log-smooth-Kahler-fibrations-September-10-2026/paper.pdf) を指します。外部入力には次の略号を使います。
 
-- [FF] Fujino–Fujisawa。
-- [MWWZ] Matsumura–Wang–Wu–Zhang。
-- [BFMT] Bakker–Filipazzi–Mauri–Tsimerman。
-- [Toma] Toma。
+- [FF](https://arxiv.org/pdf/2304.00672v3) Osamu Fujino; Taro Fujisawa — *Variation of mixed Hodge structure and its applications*：Hodge延長と相対対数最高形式の比較。arXiv:2304.00672v3 (2025-03-11)。
+- [MWWZ](https://arxiv.org/pdf/2506.23218v1) Shin-ichi Matsumura; Juanyong Wang; Xiaojun Wu; Qimin Zhang — *Compact Kähler manifolds with nef anti-canonical bundle*：klt log Calabi–Yauファイバーの有限étale積分解。arXiv:2506.23218v1 (2025-06-29)。
+- [Toma](https://arxiv.org/pdf/1103.5835v3) Matei Toma — *Bounded sets of sheaves on Kähler manifolds*：固定Kähler空間上のDouady成分のコンパクト性。arXiv:1103.5835v3。
+- [BFMT](https://arxiv.org/pdf/2508.19215v2) Benjamin Bakker; Stefano Filipazzi; Mirko Mauri; Jacob Tsimerman — *Baily–Borel compactifications of period images and the b-semiampleness conjecture*：Hodge/moduli同定と射影的半豊富性。使用する定理と未確認範囲は本文で区別。arXiv:2508.19215v2 (2025-12-18)。
+- [BB](https://doi.org/10.2307/1970457) Walter L. Baily, Jr.; Armand Borel — *Compactification of arithmetic quotients of bounded symmetric domains*：算術商の代数性。外部原典は未照合。Annals of Mathematics 84 (1966), 442–528。
+- [Fujiki](https://doi.org/10.4099/math1924.5.431) Akira Fujiki — *Countability of the Douady space of a complex space*：Douady成分の可算性。外部原典は未照合。Japanese Journal of Mathematics 5 (1979), 431–447。
+- [Vil](https://arxiv.org/pdf/2401.09544v1) Mads Bach Villadsen — *Hodge modules and Kähler morphisms*：period商または有限被覆のコンパクト化。記事末尾の照合範囲を参照。arXiv:2401.09544v1 (2024-01-17)。
 
-外部入力の照合範囲は[依存する結果の一覧](#dependencies)に記す。図の引用は原典にリンクし、GitHub閲覧URLのページは表示ラベルで指定する。
+各引用に結果番号とページを付します。誌面番号とPDF内の位置が異なる場合は両方を示します。GitHubの閲覧リンクではページ位置への自動移動を前提としません。
+<!-- /reference-guide -->
 
 ## 2. Theorem 1.1の全体像
+
+<!-- proof-target:1 -->証明対象：[Theorem 1.1 · p. 3](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/B-semiampleness-for-compact-log-smooth-Kahler-fibrations-September-10-2026/paper.pdf)<!-- /proof-target --> [仮定・結論](#theorem-1-1)を参照する。
 
 **証明の道筋。** まず[閾値と延長次数の比較](#proof-2)でTheorem 1.1(a)の安定化を得る。(b)では、[積分解を族にする](#proof-3)、[各因子の半豊富性を得る](#proof-4)、[指定した同型を延長して大域生成を降ろす](#proof-5)という順に進む。
 
@@ -82,6 +89,8 @@ root eigenlineの延長次数をlctと比較し、任意の高いモデルに対
 (a)と(b)を合わせてTheorem 1.1を得る。以後の詳細図では、[安定化](#proof-2)、[族の構成](#proof-3)、[因子の半豊富性](#proof-4)、[同型と切断の降下](#proof-5)を順に展開する。
 
 ## 3. Theorem 1.1(a) — 閾値を延長次数として読む
+
+<!-- proof-target:2 -->証明対象：[Theorem 1.1 · p. 3](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/B-semiampleness-for-compact-log-smooth-Kahler-fibrations-September-10-2026/paper.pdf)<!-- /proof-target --> [仮定・結論](#theorem-1-1)を参照する。
 
 $p:W\to S$をSNC境界をもつモデルとし、$D_W$をcrepant境界、$Q_S=\mu_0^*L-K_S$とする。十分可除な$m$について$\mathcal O_W(m(K_{W/S}+D_W))\simeq p^*\mathcal O_S(mQ_S)$を固定する。局所生成元の$m$乗根から作る被覆は、非連結でもすべての成分を保持する。
 
@@ -123,9 +132,37 @@ $$
 
 [BS, Corollaries 4.5–4.6 · pp. 16–18][BS]
 
-## 4. Theorem 1.1(b)の準備 — 点ごとの積分解を族にする
+## 4. Proposition 5.6 — 点ごとの積分解を族にする
+
+<span class="legacy-anchor" id="4-theorem-11bの準備--点ごとの積分解を族にする" aria-hidden="true"></span>
+
+<!-- proof-target:3 -->証明対象：[Proposition 5.6 · pp. 22–25](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/B-semiampleness-for-compact-log-smooth-Kahler-fibrations-September-10-2026/paper.pdf)<!-- /proof-target -->
 
 前節の深いstratumから、良いファイバーがklt log Calabi–Yauとなる族を取り出す。$G_m$は次数$m$のlog-plurivolume lineである。必要なのは、ファイバーごとの分解に加えて、lineの同定とノルムを保持する一つの族である。
+
+<!-- statement:proposition-5-6 -->
+### Proposition 5.6
+
+Theorem 1.1の設定で、Corollary 4.6とLemma 5.1（pp. 17–19）から得た、最深係数1 stratumの**marked klt family**を用いる。良い開集合$U\subset S$、十分可除な正整数$m$、指定された次数$m$のlog-volume line $G_m$とその留数ノルムを固定する。
+
+滑らかなコンパクト連結多様体からのproper全射$r:P\to S$と、稠密開集合$P^\circ\subseteq r^{-1}(U)$を取ると、引き戻した族は有限étale被覆上で
+
+$$
+(J,D_J)\simeq(Q,C)\times_{P^\circ}\prod_iT_i
+$$
+
+と分解する。各族はproper smoothで連結ファイバーをもつ。$(Q,C)$はeffective klt SNC対の射影族で、$P^\circ\times\mathbb P^N$に埋め込まれ、$P$全体から射影Hilbert schemeの固定積への正則写像により普遍marked族から引き戻される。各$T_i$は固定コンパクトKähler多様体の部分多様体の族で、$n_i=\dim T_i>0$、整格子（torsionを除く）とflatな実偏極をもち、最高lineは$\lambda_i=(\pi_i)_*\omega_{T_i/P^\circ}$である。torus型では$h^{1,0}=n_i$かつ$\bigwedge^{n_i}F^1R^1\simeq\lambda_i$、symplectic型では$n_i$が偶数、$h^{2,0}=1$かつ$(F^2R^2)^{\otimes n_i/2}\simeq\lambda_i$で、これらはcup積による。
+
+すべてのファイバー上で$m(K_Q+C)$と$mK_{T_i}$は自明である。$G_{m,Q}=(\pi_Q)_*\mathcal O_Q(m(K_{Q/P^\circ}+C))$とすると、**指定された正則線束の同型**とノルムの一致
+
+$$
+\begin{gathered}r^*G_m\simeq G_{m,Q}\otimes\bigotimes_i\lambda_i^{\otimes m},\\\|s\|_{\rm res}=c\|s_Q\|_{Q,\rm res}\prod_i\|\omega_i\|_{\rm Hdg}^{m}.\end{gathered}
+$$
+
+を得る。被覆次数を$e$とすると、整合する体積規約では$c=e^{-m/2}>0$である。このノルムは十分可除な$r^*(mM_S)$の冪の生成元と双対に両側の対数増大評価を与える。さらにsmooth compactな補助底変更後も良い開集合上で保持される。$r$の一般有限性や$P$のKähler性は仮定しない。
+
+<!-- cite:bs-family -->[Proposition 5.6 · pp. 22–25](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/B-semiampleness-for-compact-log-smooth-Kahler-fibrations-September-10-2026/paper.pdf)<!-- /cite -->
+<!-- /statement -->
 
 ![有限被覆とcompact parameter spaceから積分解の族を構成する](diagrams/family.ja.svg)
 
@@ -158,9 +195,37 @@ $$
 
 [BS, Proposition 5.6・§§6–7 · pp. 22–34][BS]
 
-## 5. 各因子から半豊富な延長を得る
+## 5. Proposition 6.1 / Proposition 7.5 — 各因子の半豊富な延長
+
+<span class="legacy-anchor" id="5-各因子から半豊富な延長を得る" aria-hidden="true"></span>
+
+<!-- proof-target:4 -->証明対象：[Proposition 6.1 · pp. 25–28](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/B-semiampleness-for-compact-log-smooth-Kahler-fibrations-September-10-2026/paper.pdf)<!-- /proof-target -->
 
 射影的な$(Q,C)$と、非射影的でもよい$T_i$には異なる入力を使う。以下では有限被覆・graphの解消・共通tensor powerを取った後の補助底も$P$と書く。
+
+<!-- statement:proposition-6-1 -->
+### Proposition 6.1
+
+Proposition 5.6の$P^\circ\subset P$と射影因子$(Q,C)$、そのline $G_{m,Q}$を用いる。proper modification $\pi:P'\to P$（$P'$はsmooth compact）と良い開集合の縮小の後、正整数$a$、**大域生成される**正則線束$H_Q$、指定同型
+
+$$
+H_Q|_{\pi^{-1}(P^\circ)}\simeq(\pi^*G_{m,Q})^{\otimes a}|_{\pi^{-1}(P^\circ)}
+$$
+
+が存在する。$N_{m,Q}(s)=(\int_{Q_x}|s|^{2/m})^{m/2}$の$a$乗を左辺へ移すと、穿孔diskが良い開集合内にある任意の正則disk上で、局所生成元とその双対のノルムが$1+|\log|t||$の冪で抑えられる。必要なら有限power substitutionを行う。
+
+<!-- cite:bs-projective -->[Proposition 6.1 · pp. 25–28](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/B-semiampleness-for-compact-log-smooth-Kahler-fibrations-September-10-2026/paper.pdf)<!-- /cite -->
+<!-- /statement -->
+
+<!-- statement:proposition-7-5 -->
+### Proposition 7.5
+
+Proposition 5.6の$r:P\to S$と$T_i\to P^\circ$について、$\mathcal H_i=F^{n_i}(R^{n_i}(t_i)_*\mathbb C\otimes\mathcal O_{P^\circ})=\lambda_i$とする。良い開集合の有限étale被覆を延長・解消して得るproper generically finite全射$\pi:P'\to P$の後、smooth compactな$P'$上に半豊富な正則線束$H_i$が存在し、良い開集合への制限を**指定された**$\pi^*\mathcal H_i$と同定できる。
+
+境界はSNCにできる。穿孔diskが良い開集合内にある任意のdisk上で、$H_i$の生成元と逆生成元には体積ノルム(7.4)および双対の対数冪増大評価がある。積体積同型で使う冪を含め、すべての正の冪でもこの評価を保つ。
+
+<!-- cite:bs-period -->[Proposition 7.5 · pp. 33–34](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/B-semiampleness-for-compact-log-smooth-Kahler-fibrations-September-10-2026/paper.pdf)<!-- /cite -->
+<!-- /statement -->
 
 ![射影的比較とtorus・symplecticの周期写像を別々に処理する](diagrams/factors.ja.svg)
 
@@ -187,6 +252,8 @@ torusでは$\lambda_i\simeq\det F^1R^1$である。symplectic因子の次元を$
 [BS, Lemma 8.1・§9 · pp. 34–37][BS]
 
 ## 6. Theorem 1.1(b) — 指定した同型を延長して切断を降ろす
+
+<!-- proof-target:5 -->証明対象：[Theorem 1.1 · p. 3](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/B-semiampleness-for-compact-log-smooth-Kahler-fibrations-September-10-2026/paper.pdf)<!-- /proof-target --> [仮定・結論](#theorem-1-1)を参照する。
 
 前節までの同型は$P^\circ$上で与えられている。これを境界の捻りを残さずに延長する段階と、proper全射から大域生成を降ろす段階を分ける。
 
@@ -227,6 +294,12 @@ $r$のStein分解を$P\xrightarrow{h}T\xrightarrow{q}S$、$\deg q=d$とする。
 これらは本稿の補助結果に対する直接入力である。外部定理の証明全体は検証していない。Baily–Borelの算術商の代数性、Fujikiの可算性、有限被覆のコンパクト化、純Hodge延長の一般理論については、本稿内の用途を読んだが外部原典の該当箇所の照合を残した。本稿p. 3の「Campana orbifold Iitaka theoremを使わない」という記述から、他の外部依存まで排除しない。カタログ033の他稿および034との直接依存は未調査である。
 
 ## 8. 原典を読む入口と確認範囲
+
+<!-- reading-list -->
+- [Theorem 1.1 · p. 3](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/B-semiampleness-for-compact-log-smooth-Kahler-fibrations-September-10-2026/paper.pdf) — 主定理の仮定・結論を確認し、下記の証明箇所と対応させる
+- [Proposition 5.6 · pp. 22–25](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/B-semiampleness-for-compact-log-smooth-Kahler-fibrations-September-10-2026/paper.pdf) — 積分解だけでなく指定line・cup積・積ノルムを同時に運ぶ構成を読む
+- [Proposition 6.1 · pp. 25–28](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/B-semiampleness-for-compact-log-smooth-Kahler-fibrations-September-10-2026/paper.pdf) — 射影的比較因子から指定lineの大域生成と両側ノルム評価を得る
+<!-- /reading-list -->
 
 原典はOpenAI、2026年9月10日稿、全38ページ。上記[BS]はcommit `fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb`の固定版である。[§§3–4 · pp. 6–18][BS]で固有直線と閾値の接続、[Proposition 5.6 · pp. 22–25][BS]で族の構成、[§§6–9 · pp. 25–37][BS]で因子の半豊富性から降下までを辿れる。
 

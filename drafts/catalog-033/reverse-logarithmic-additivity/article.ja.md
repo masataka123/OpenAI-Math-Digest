@@ -56,16 +56,23 @@ $$
 
 ## 図の矢印に付した引用
 
-略号のない番号は本稿[RA]を指す。図では記述箇所に従いProposition / Lemma / Corollaryを区別する。原稿の後方参照では、これらが一律に「Theorem」と呼ばれる箇所がある。GitHub閲覧リンクではページ移動を保証せず、参照するPDFページをラベルに明記する。
+<!-- reference-guide -->
+略号のない定理・補題・節・式番号は本原稿 [The reverse logarithmic Kodaira inequality and additivity](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-reverse-logarithmic-Kodaira-inequality-and-additivity-September-26-2026/paper.pdf) を指します。外部入力には次の略号を使います。
 
-- [OI]：*Orbifold and logarithmic Iitaka subadditivity*、2026-09-26固定版。
-- [FF14]：Fujino–Fujisawa、*Variations of mixed Hodge structure and semipositivity theorems*、2014-03-17著者稿。[FF17]は2017-07-07の補足。
-- [BBT]：Bakker–Brunebarbe–Tsimerman、*o-minimal GAGA and a conjecture of Griffiths*、arXiv v3。
-- [FG]：Fujino–Gongyo、*On the moduli b-divisors of lc-trivial fibrations*、2014年刊行版。
-- [CP]：Campana–Păun、*Foliations with positive slopes and birational stability of orbifold cotangent bundles*、照合版はarXiv v4。
-- [BDPP]：Boucksom–Demailly–Păun–Peternell、*The pseudo-effective cone of a compact Kähler manifold and varieties of negative Kodaira dimension*、arXiv v1。
+- [OI](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf) OpenAI — *Orbifold and logarithmic Iitaka subadditivity*：カタログ内の入力・追加結果・別経路。使用箇所と種別は本文の表を参照。2026-09-26。
+- [FF14](https://www.math.kyoto-u.ac.jp/~fujino/vmhs-sp108.pdf) Osamu Fujino; Taro Fujisawa — *Variations of mixed Hodge structure and semipositivity theorems*：Hodge・weight filtrationの局所自由性。Author manuscript 2014-03-17, vmhs-sp108.pdf。
+- [FF17](https://www.math.kyoto-u.ac.jp/~fujino/fujino-fujisawa-memo2.pdf) Osamu Fujino; Taro Fujisawa — *A short remark on [2]*：FF14のstrictnessに関する補足。2017-07-07。
+- [BBT](https://arxiv.org/pdf/1811.12230v3) Benjamin Bakker; Yohan Brunebarbe; Jacob Tsimerman — *o-minimal GAGA and a conjecture of Griffiths*：格子を保つperiod像の代数化とHodge lineの正値性。arXiv:1811.12230v3, 2022-10-23。
+- [FG](https://www.numdam.org/item/10.5802/aif.2894.pdf) Osamu Fujino; Yoshinori Gongyo — *On the moduli b-divisors of lc-trivial fibrations*：負の境界を許すlc-trivial fibrationのb-nef性。Annales de l’Institut Fourier 64 (2014), 1721–1735; published PDF with cover。
+- [CP](https://arxiv.org/pdf/1508.02456v4) Frédéric Campana; Mihai Păun — *Foliations with positive slopes and birational stability of orbifold cotangent bundles*：orbifold余接束の次数評価と相対擬有効性。arXiv:1508.02456v4, 2017-06-14 (RA bibliography cites Publ. Math. IHÉS 129 (2019))。
+- [BDPP](https://arxiv.org/pdf/math/0405285v1) Sébastien Boucksom; Jean-Pierre Demailly; Mihai Păun; Thomas Peternell — *The pseudo-effective cone of a compact Kähler manifold and varieties of negative Kodaira dimension*：擬有効性と可動曲線、またはnon-unirulednessの比較。arXiv:math/0405285v1。
+
+各引用に結果番号とページを付します。誌面番号とPDF内の位置が異なる場合は両方を示します。GitHubの閲覧リンクではページ位置への自動移動を前提としません。
+<!-- /reference-guide -->
 
 ## 2. Theorem 1.1の証明 — 小平次元の符号による帰着
+
+<!-- proof-target:1 -->証明対象：[Theorem 1.1 · p. 2](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-reverse-logarithmic-Kodaira-inequality-and-additivity-September-26-2026/paper.pdf)<!-- /proof-target --> [仮定・結論](#theorem-1-1)を参照する。
 
 **証明の道筋。** まずProposition 1.3を入力として上界を導く。その入力の証明を[Hodgeベクトルから切断を構成する段階](#proof-2)と、[正次元period商の捻りを除く段階](#proof-3)に分けて展開する。OIの下界を使うのは、最後の[加法性の帰結](#proof-4)である。
 
@@ -112,6 +119,8 @@ $$
 
 ## 3. Proposition 1.3の証明 — Hodgeベクトルから元の底の切断へ
 
+<!-- proof-target:2 -->証明対象：[Proposition 1.3 · p. 3](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-reverse-logarithmic-Kodaira-inequality-and-additivity-September-26-2026/paper.pdf)<!-- /proof-target --> [仮定・結論](#proposition-1-3)を参照する。
+
 非零切断$s$を固定する。構成するHodgeベクトルは最高Hodge束全体を生成するとは限らない。このため、ベクトルの係数と、その射影方向が決めるcompact flagを保持する。以下の$\mathcal E_0$は最高Hodge束であり、境界$E$とは別の記号である。
 
 ![切断構成：元の対数的係数格子と指定点の零点を保持し、period商が点か正次元かで分岐する](diagrams/section-construction.ja.svg)
@@ -148,9 +157,41 @@ $S$が点なら降下した変動は定数となる。定数枠での$u_*$の各
 
 [RA, §2.3・Proposition 1.3の証明 · pp. 5–6, 50][RA]
 
-## 4. 正次元period商 — 捻りを除いて実際の切断へ戻す
+## 4. Proposition 7.7 — 正次元period商と捻りの除去
+
+<span class="legacy-anchor" id="4-正次元period商--捻りを除いて実際の切断へ戻す" aria-hidden="true"></span>
+
+<!-- proof-target:3 -->証明対象：[Proposition 7.7 · pp. 49–50](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-reverse-logarithmic-Kodaira-inequality-and-additivity-September-26-2026/paper.pdf)<!-- /proof-target -->
 
 $\dim S>0$とする。以下では適切なモデル上で$Y\xrightarrow{x}W\xrightarrow{h}S$と書くが、切断の比較先は固定した元の対である。$\geq_{\mathrm{pe}}$は差が擬有効であることを表す。
+
+<!-- statement:proposition-7-7 -->
+### Proposition 7.7
+
+Proposition 1.3の非零の全空間pluriformに付随する§§4–7のデータを用いる。$S$は全Lie periodとcompact flagを記録する商、$Y\xrightarrow{x}W\xrightarrow{h}S$は相対飯高帰着、$L_W$は固定した元の対$(Y,D)$の完全切断空間を表す因子である（下の第1段）。$\dim S>0$ならば
+
+$$
+L_W\text{ はbig},\qquad\kappa(Y,K_Y+D)\geq\dim W>0.
+$$
+
+適用される数値的な捻り除去は、次のProposition 7.2である。
+
+<!-- cite:ra-positive -->[Proposition 7.7 · pp. 49–50](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-reverse-logarithmic-Kodaira-inequality-and-additivity-September-26-2026/paper.pdf)<!-- /cite -->
+<!-- /statement -->
+
+<!-- statement:proposition-7-2 -->
+### Proposition 7.2
+
+$h:W\to S$を滑らかな射影多様体間の全射、$\dim S>0$とする。$L$は$W$上の有理因子、$H$は$S$上のnefな有理因子とし、次を仮定する。$L$は$h$の一般ファイバー上でbig、$L-h^*K_S$は擬有効であり、ある有理数$b\geq0$で$K_S+bH$がbigである。さらに滑らかな射影多様体からの優越的generically finite morphism $\pi:\widehat W\to W$、$\widehat W$上のnefな有理因子$P$、有理数$Q>0$が存在して、$\widetilde H=\pi^*h^*H$に対し
+
+$$
+\begin{aligned}\nu(P+\widetilde H)&=\nu(P),\\Q\pi^*L&\geq_{\rm pe}P.\end{aligned}
+$$
+
+を満たす。このとき$L$はbigである。
+
+<!-- cite:ra-removal -->[Proposition 7.2 · pp. 44–45](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-reverse-logarithmic-Kodaira-inequality-and-additivity-September-26-2026/paper.pdf)<!-- /cite -->
+<!-- /statement -->
 
 ![正次元period商での論証：正確な切断格子、nefなmoduli部分とHiggs tails、数値的な捻りの除去](diagrams/period-removal.ja.svg)
 
@@ -234,6 +275,8 @@ Lemma 7.3では$\nu(P+\widetilde H)=\nu(P)$により、nef Morse不等式の損�
 
 ## 5. Corollary 1.2の証明 — 上界に下界を加える
 
+<!-- proof-target:4 -->証明対象：[Corollary 1.2 · p. 2](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-reverse-logarithmic-Kodaira-inequality-and-additivity-September-26-2026/paper.pdf)<!-- /proof-target --> [仮定・結論](#corollary-1-2)を参照する。
+
 ここで初めて033内の別稿[OI]を使う。$\kappa_X,\kappa_Y,\kappa_F$の記号と$-\infty$の規約は第2節と同じである。
 
 ![加法性：本稿の独立した上界とOIの対数的劣加法性を、同じ対・同じファイバーで組み合わせる](diagrams/additivity.ja.svg)
@@ -268,6 +311,13 @@ smooth族でファイバーと底の小平次元が非負なら、WV Theorem 1.1
 [AS, Theorem A · pp. 1–2][AS]は、[§5.1・Lemma 5.1 · pp. 26–28][RA]のconnection-form論証の出典である。本稿は必要な半単純の場合の議論を本文で与えているため、ここでは証明方法の関係として区別する。Theorem Aの記述と本稿の位置付けを比較したが、[AS]の全証明は追跡していない。その他の033内の関係は未調査・未記録であり、矢印がないことを「依存なし」と解釈しない。
 
 ## 7. 原典を読む入口と確認範囲
+
+<!-- reading-list -->
+- [Theorem 1.1 · p. 2](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-reverse-logarithmic-Kodaira-inequality-and-additivity-September-26-2026/paper.pdf) — 主定理の仮定・結論を確認し、下記の証明箇所と対応させる
+- [Proposition 1.3 · p. 3](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-reverse-logarithmic-Kodaira-inequality-and-additivity-September-26-2026/paper.pdf) — 元の底の指定点における零点まで保持する切断構成を読む
+- [Proposition 7.7 · pp. 49–50](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-reverse-logarithmic-Kodaira-inequality-and-additivity-September-26-2026/paper.pdf) — 数値的な捻り除去と完全切断空間の比較から底の正の小平次元へ戻る
+- [Corollary 1.2 · p. 2](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-reverse-logarithmic-Kodaira-inequality-and-additivity-September-26-2026/paper.pdf) — 独立した上界へ下界を加える箇所と負の無限大の扱いを読む
+<!-- /reading-list -->
 
 - [§2 · pp. 5–7][RA]：Proposition 1.3だけを用いた全符号の場合の上界。
 - [Proposition 3.1・Lemmas 3.2–3.3 · pp. 8–14][RA]：元の係数格子と指定点の零点。

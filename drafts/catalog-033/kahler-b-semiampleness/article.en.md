@@ -44,16 +44,23 @@ The statement includes a point base and relative dimension zero. No projectivity
 
 ## References on the arrows
 
-Unprefixed result numbers refer to [BS]. The main external inputs use the following keys.
+<!-- reference-guide -->
+Unprefixed theorem, lemma, section and equation numbers refer to [B-semiampleness for compact log-smooth Kähler fibrations](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/B-semiampleness-for-compact-log-smooth-Kahler-fibrations-September-10-2026/paper.pdf). External inputs use the following keys.
 
-- [FF] Fujino–Fujisawa.
-- [MWWZ] Matsumura–Wang–Wu–Zhang.
-- [BFMT] Bakker–Filipazzi–Mauri–Tsimerman.
-- [Toma] Toma.
+- [FF](https://arxiv.org/pdf/2304.00672v3) Osamu Fujino; Taro Fujisawa — *Variation of mixed Hodge structure and its applications*: Hodge extensions and relative logarithmic top forms. arXiv:2304.00672v3 (2025-03-11).
+- [MWWZ](https://arxiv.org/pdf/2506.23218v1) Shin-ichi Matsumura; Juanyong Wang; Xiaojun Wu; Qimin Zhang — *Compact Kähler manifolds with nef anti-canonical bundle*: Finite étale product decompositions of klt log Calabi–Yau fibers. arXiv:2506.23218v1 (2025-06-29).
+- [Toma](https://arxiv.org/pdf/1103.5835v3) Matei Toma — *Bounded sets of sheaves on Kähler manifolds*: Compactness of Douady components in a fixed Kähler space. arXiv:1103.5835v3.
+- [BFMT](https://arxiv.org/pdf/2508.19215v2) Benjamin Bakker; Stefano Filipazzi; Mirko Mauri; Jacob Tsimerman — *Baily–Borel compactifications of period images and the b-semiampleness conjecture*: Hodge/moduli identification and projective semiampleness; the results used and checking limits are distinguished below. arXiv:2508.19215v2 (2025-12-18).
+- [BB](https://doi.org/10.2307/1970457) Walter L. Baily, Jr.; Armand Borel — *Compactification of arithmetic quotients of bounded symmetric domains*: Algebraicity of arithmetic quotients; the external original remains unchecked. Annals of Mathematics 84 (1966), 442–528.
+- [Fujiki](https://doi.org/10.4099/math1924.5.431) Akira Fujiki — *Countability of the Douady space of a complex space*: Countability of Douady components; the external original remains unchecked. Japanese Journal of Mathematics 5 (1979), 431–447.
+- [Vil](https://arxiv.org/pdf/2401.09544v1) Mads Bach Villadsen — *Hodge modules and Kähler morphisms*: Compactification of period quotients or finite covers; see the checked scope below. arXiv:2401.09544v1 (2024-01-17).
 
-The [dependency table](#dependencies) records the checks. Diagram citations link to the sources; GitHub PDF page numbers are specified in the labels.
+Each citation gives the result and pages. When printed pagination differs from the PDF position, both are shown. GitHub previews do not automatically jump to the cited page.
+<!-- /reference-guide -->
 
 ## 2. Overview of Theorem 1.1
+
+<!-- proof-target:1 -->Proof target：[Theorem 1.1 · p. 3](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/B-semiampleness-for-compact-log-smooth-Kahler-fibrations-September-10-2026/paper.pdf)<!-- /proof-target --> See the [hypotheses and conclusion](#theorem-1-1).
 
 **Proof route.** First, [compare thresholds with extension orders](#proof-2) to obtain stabilization in Theorem 1.1(a). Part (b) then [organizes product decompositions into a family](#proof-3), [obtains semiampleness for each factor](#proof-4), and [extends the specified isomorphism before descending global generation](#proof-5).
 
@@ -82,6 +89,8 @@ Two-sided norm bounds remove poles from both the isomorphism and its inverse, le
 Together (a) and (b) prove Theorem 1.1. The detailed diagrams below expand [stabilization](#proof-2), [family construction](#proof-3), [semiampleness of the factors](#proof-4), and [descent of the isomorphism and sections](#proof-5).
 
 ## 3. Theorem 1.1(a) — Read thresholds as extension orders
+
+<!-- proof-target:2 -->Proof target：[Theorem 1.1 · p. 3](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/B-semiampleness-for-compact-log-smooth-Kahler-fibrations-September-10-2026/paper.pdf)<!-- /proof-target --> See the [hypotheses and conclusion](#theorem-1-1).
 
 Let $p:W\to S$ be a model with SNC boundary, let $D_W$ be the crepant boundary, and put $Q_S=\mu_0^*L-K_S$. Fix $\mathcal O_W(m(K_{W/S}+D_W))\simeq p^*\mathcal O_S(mQ_S)$ for sufficiently divisible $m$. The cover obtained by taking an $m$th root of a local generator retains every component, even if disconnected.
 
@@ -123,9 +132,37 @@ Retain the stabilized moduli line and its specified log-volume identification; t
 
 [BS, Corollaries 4.5–4.6 · pp. 16–18][BS]
 
-## 4. Preparing Theorem 1.1(b) — Turn fibrewise decompositions into a family
+## 4. Proposition 5.6 — From fiberwise splittings to a family
+
+<span class="legacy-anchor" id="4-preparing-theorem-11b--turn-fibrewise-decompositions-into-a-family" aria-hidden="true"></span>
+
+<!-- proof-target:3 -->Proof target：[Proposition 5.6 · pp. 22–25](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/B-semiampleness-for-compact-log-smooth-Kahler-fibrations-September-10-2026/paper.pdf)<!-- /proof-target -->
 
 The deepest stratum supplies a family with klt log Calabi–Yau good fibres. Write $G_m$ for its degree-$m$ log-plurivolume line. Beyond a decomposition of each fibre, the proof needs a single family carrying both a line identification and its norm.
+
+<!-- statement:proposition-5-6 -->
+### Proposition 5.6
+
+In the setting of Theorem 1.1, use the **marked klt family** extracted from the deepest coefficient-one stratum by Corollary 4.6 and Lemma 5.1 (pp. 17–19). Fix its good open $U\subset S$, a sufficiently divisible positive integer $m$, and the specified degree-$m$ log-volume line $G_m$ with its residue norm.
+
+After a proper surjection $r:P\to S$ from a smooth compact connected manifold, there is a dense open $P^\circ\subseteq r^{-1}(U)$ on which a finite étale cover of the pulled-back family decomposes as
+
+$$
+(J,D_J)\simeq(Q,C)\times_{P^\circ}\prod_iT_i.
+$$
+
+All families are proper and smooth with connected fibers. The projective family $(Q,C)$ consists of effective klt SNC pairs, embeds in $P^\circ\times\mathbb P^N$, and is pulled back from universal marked families by a holomorphic map from all of $P$ to a fixed product of projective Hilbert schemes. Each $T_i$ is a family of submanifolds of a fixed compact Kähler manifold, with $n_i=\dim T_i>0$, integral lattices modulo torsion, flat real polarizations, and highest line $\lambda_i=(\pi_i)_*\omega_{T_i/P^\circ}$. In torus type, $h^{1,0}=n_i$ and $\bigwedge^{n_i}F^1R^1\simeq\lambda_i$; in symplectic type, $n_i$ is even, $h^{2,0}=1$, and $(F^2R^2)^{\otimes n_i/2}\simeq\lambda_i$. These maps are cup products.
+
+On every fiber, $m(K_Q+C)$ and $mK_{T_i}$ are trivial. For $G_{m,Q}=(\pi_Q)_*\mathcal O_Q(m(K_{Q/P^\circ}+C))$, there is a **specified isomorphism of holomorphic lines** with matching norms:
+
+$$
+\begin{gathered}r^*G_m\simeq G_{m,Q}\otimes\bigotimes_i\lambda_i^{\otimes m},\\\|s\|_{\rm res}=c\|s_Q\|_{Q,\rm res}\prod_i\|\omega_i\|_{\rm Hdg}^{m}.\end{gathered}
+$$
+
+For cover degree $e$, compatible volume conventions give $c=e^{-m/2}>0$. This norm gives generators and duals of sufficiently divisible powers of $r^*(mM_S)$ two-sided logarithmic growth bounds. The assertions persist on the good open after further smooth compact auxiliary base changes. Neither generic finiteness of $r$ nor a Kähler form on $P$ is required.
+
+<!-- cite:bs-family -->[Proposition 5.6 · pp. 22–25](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/B-semiampleness-for-compact-log-smooth-Kahler-fibrations-September-10-2026/paper.pdf)<!-- /cite -->
+<!-- /statement -->
 
 ![Finite covers and compact parameter spaces produce a product family](diagrams/family.en.svg)
 
@@ -158,9 +195,37 @@ The product decomposition and product norm on the same auxiliary base $P$ enter 
 
 [BS, Proposition 5.6・§§6–7 · pp. 22–34][BS]
 
-## 5. Obtain semiample extensions from the factors
+## 5. Proposition 6.1 / Proposition 7.5 — Semiample extensions of the factors
+
+<span class="legacy-anchor" id="5-obtain-semiample-extensions-from-the-factors" aria-hidden="true"></span>
+
+<!-- proof-target:4 -->Proof target：[Proposition 6.1 · pp. 25–28](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/B-semiampleness-for-compact-log-smooth-Kahler-fibrations-September-10-2026/paper.pdf)<!-- /proof-target -->
 
 Different inputs treat the projective pair $(Q,C)$ and the possibly nonprojective $T_i$. In this section, $P$ also denotes the auxiliary base after finite covers, graph resolutions, and a common tensor power.
+
+<!-- statement:proposition-6-1 -->
+### Proposition 6.1
+
+Use $P^\circ\subset P$, the projective factor $(Q,C)$, and its line $G_{m,Q}$ from Proposition 5.6. After a proper modification $\pi:P'\to P$ with $P'$ smooth compact and shrinking the good open, there are a positive integer $a$, a **globally generated** holomorphic line $H_Q$, and a specified isomorphism
+
+$$
+H_Q|_{\pi^{-1}(P^\circ)}\simeq(\pi^*G_{m,Q})^{\otimes a}|_{\pi^{-1}(P^\circ)}.
+$$
+
+Transport the $a$-th power of $N_{m,Q}(s)=(\int_{Q_x}|s|^{2/m})^{m/2}$ to the left. Along every holomorphic disk whose punctured disk lies in the good open, a local generator and its dual have norms bounded by powers of $1+|\log|t||$, after a finite power substitution if needed.
+
+<!-- cite:bs-projective -->[Proposition 6.1 · pp. 25–28](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/B-semiampleness-for-compact-log-smooth-Kahler-fibrations-September-10-2026/paper.pdf)<!-- /cite -->
+<!-- /statement -->
+
+<!-- statement:proposition-7-5 -->
+### Proposition 7.5
+
+For $r:P\to S$ and $T_i\to P^\circ$ in Proposition 5.6, put $\mathcal H_i=F^{n_i}(R^{n_i}(t_i)_*\mathbb C\otimes\mathcal O_{P^\circ})=\lambda_i$. After a proper generically finite surjection $\pi:P'\to P$ obtained by extending a finite étale cover of the good open and resolving, there are semiample holomorphic lines $H_i$ on smooth compact $P'$ with **specified** restrictions $\pi^*\mathcal H_i$.
+
+The boundary can be taken SNC. Along any disk whose punctured disk lies in the good open, a generator of $H_i$ and its inverse have powers-of-logarithm growth bounds in the volume norm (7.4) and its dual. The bounds persist for all positive powers, including those used in the product-volume identification.
+
+<!-- cite:bs-period -->[Proposition 7.5 · pp. 33–34](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/B-semiampleness-for-compact-log-smooth-Kahler-fibrations-September-10-2026/paper.pdf)<!-- /cite -->
+<!-- /statement -->
 
 ![Separate projective comparison from the period maps of torus and symplectic factors](diagrams/factors.en.svg)
 
@@ -187,6 +252,8 @@ Tensor the semiample extensions and retain the two-sided norm bounds needed to e
 [BS, Lemma 8.1・§9 · pp. 34–37][BS]
 
 ## 6. Theorem 1.1(b) — Extend the specified isomorphism and descend sections
+
+<!-- proof-target:5 -->Proof target：[Theorem 1.1 · p. 3](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/B-semiampleness-for-compact-log-smooth-Kahler-fibrations-September-10-2026/paper.pdf)<!-- /proof-target --> See the [hypotheses and conclusion](#theorem-1-1).
 
 The preceding identifications initially live on $P^\circ$. First extend them without a residual boundary twist; then descend global generation through a proper surjection.
 
@@ -227,6 +294,12 @@ One common multiple is generated at every point of $S$. Together with pullback s
 These are direct inputs to auxiliary results in [BS]. Their complete proofs were not verified. Uses of Baily–Borel algebraicity, Fujiki countability, compactification of finite covers, and general pure Hodge extension theory were read in [BS], but the corresponding external passages remain unchecked. The statement on p. 3 that the Campana orbifold Iitaka theorem is not used does not exclude other external dependencies. Direct dependencies involving other Catalog 033 papers or Catalog 034 remain uninvestigated.
 
 ## 8. Return to the sources
+
+<!-- reading-list -->
+- [Theorem 1.1 · p. 3](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/B-semiampleness-for-compact-log-smooth-Kahler-fibrations-September-10-2026/paper.pdf) — Read the main hypotheses and conclusion alongside the proof passages below
+- [Proposition 5.6 · pp. 22–25](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/B-semiampleness-for-compact-log-smooth-Kahler-fibrations-September-10-2026/paper.pdf) — Follow the simultaneous transport of the decomposition, specified line, cup products, and product norm
+- [Proposition 6.1 · pp. 25–28](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/B-semiampleness-for-compact-log-smooth-Kahler-fibrations-September-10-2026/paper.pdf) — Obtain global generation and two-sided norm bounds for the specified line through the projective comparison factor
+<!-- /reading-list -->
 
 The source is OpenAI's September 10, 2026 manuscript, 38 pages, pinned at commit `fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb`. Follow [§§3–4, pp. 6–18][BS] for eigenlines and thresholds, [Proposition 5.6, pp. 22–25][BS] for the family construction, and [§§6–9, pp. 25–37][BS] for factor semiampleness and descent.
 

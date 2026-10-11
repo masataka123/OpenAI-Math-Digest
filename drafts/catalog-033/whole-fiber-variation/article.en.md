@@ -56,22 +56,33 @@ If $V$ is Campana-special, $\operatorname{Var}(f)=0$. In particular, $\bar\kappa
 
 ## References on the arrows
 
-Unprefixed result, equation, and section numbers refer to [WV]. GitHub links open a fixed-commit manuscript preview; consult the PDF pages given in the labels.
+<!-- reference-guide -->
+Unprefixed theorem, lemma, section and equation numbers refer to [Logarithmic Kodaira dimension and whole-fiber variation](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf). External inputs use the following keys.
 
-- [OI]: *Orbifold and logarithmic Iitaka subadditivity*, 2026-09-26. Subadditivity and adjoint positivity.
-- [Fuj]: Fujino, *Notes on the weak positivity theorems*, 2015-06-30, version 0.54.
-- [Del]: Deligne, *Théorie de Hodge II*, 1971. Finite characters and invariant cycles.
-- [DHP]: Demailly–Hacon–Păun, *Extension theorems, non-vanishing and the existence of good minimal models*, arXiv v2.
-- [PT]: Păun–Takayama, *Positivity of twisted relative pluricanonical bundles and their direct images*, arXiv v1.
-- [BCHM]: Birkar–Cascini–Hacon–McKernan, *Existence of minimal models for varieties of log general type*, the 81-page arXiv v2.
-- [KP]: Kovács–Patakfalvi, *Projectivity of the moduli space of stable log-varieties and subadditivity of log-Kodaira dimension*, the 62-page author manuscript.
-- [Han]: Hanamura, *Structure of birational automorphism groups, I: non-uniruled varieties*, 1988. The original theorem statements were not compared in this reading.
-- [SGA1]: *Revêtements étales et groupe fondamental*, 2003 re-edition. The original purity statement was not compared in this reading.
-- [Lan]: Landesman, *Invariance of the tame fundamental group under base change between algebraically closed fields*, arXiv v3.
-- [BDPP]: Boucksom–Demailly–Păun–Peternell, *The pseudo-effective cone of a compact Kähler manifold and varieties of negative Kodaira dimension*, arXiv v1.
-- [LA]: *Log abundance in characteristic zero*, 2026-09-24. [Taj]: Taji, *Birational geometry of smooth families of varieties admitting good minimal models*, arXiv v4.
+- [OI](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf) OpenAI — *Orbifold and logarithmic Iitaka subadditivity*: Inputs, additional results, or alternatives within the catalogue; see the use and relation type in the table below. 2026-09-26.
+- [Fuj](https://www.math.kyoto-u.ac.jp/~fujino/weak-posi11.pdf) Osamu Fujino — *Notes on the weak positivity theorems*: Weak positivity for producing sections with a negative ample twist. version 0.54, 2015-06-30.
+- [Del](https://www.numdam.org/item/PMIHES_1971__40__5_0.pdf) Pierre Deligne — *Théorie de Hodge II*: Finite characters; original-source checking of invariant cycles remains open. 1971, printed p.47 = PDF p.44.
+- [DHP](https://arxiv.org/pdf/1012.0493v2) Jean-Pierre Demailly; Christopher D. Hacon; Mihai Păun — *Extension theorems, non-vanishing and the existence of good minimal models*: Extension used to contract divisors carrying poles. arXiv:1012.0493v2.
+- [PT](https://arxiv.org/pdf/1409.5504v1) Mihai Păun; Shigeharu Takayama — *Positivity of twisted relative pluricanonical bundles and their direct images*: Relative Bergman weights and uniform estimates. arXiv:1409.5504v1.
+- [BCHM](https://arxiv.org/pdf/math/0610203v2) Caucher Birkar; Paolo Cascini; Christopher D. Hacon; James McKernan — *Existence of minimal models for varieties of log general type*: Existence of big klt adjoint models. arXiv:math/0610203v2, 81 pages.
+- [KP](https://sites.math.washington.edu/~kovacs/2013/papers/Kovacs_Patakfalvi__Projectivity.pdf) Sándor J. Kovács; Zsolt Patakfalvi — *Projectivity of the moduli space of stable log-varieties and subadditivity of log-Kodaira dimension*: Positivity of projective stable families and variation bounds for marked models. 62-page author manuscript; hash pinned.
+- [Han](https://doi.org/10.1007/BF01394338) Masaki Hanamura — *Structure of birational automorphism groups, I: non-uniruled varieties*: Making the cocycle constant; the original theorem statement remains unchecked. 1988, DOI 10.1007/BF01394338.
+- [SGA1](https://arxiv.org/abs/math/0206203v2) Alexander Grothendieck et al. — *Revêtements étales et groupe fondamental (SGA 1)*: Purity from codimension-one unramifiedness; the original statement remains unchecked. 2003 re-edition; arXiv:math/0206203v2.
+- [Lan](https://arxiv.org/pdf/2005.09690v3) Aaron Landesman — *Invariance of the tame fundamental group under base change between algebraically closed fields*: Descent of finite étale covers, morphisms, and actions across base extension. arXiv:2005.09690v3.
+- [BDPP](https://arxiv.org/pdf/math/0405285v1) Sébastien Boucksom; Jean-Pierre Demailly; Mihai Păun; Thomas Peternell — *The pseudo-effective cone of a compact Kähler manifold and varieties of negative Kodaira dimension*: Pseudoeffectivity and movable curves, or the comparison with non-uniruledness. arXiv:math/0405285v1.
+- [LA](https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf) OpenAI — *Log abundance in characteristic zero*: Good minimal models used only for the consequence Corollary 1.3. 2026-09-24.
+- [Taj](https://arxiv.org/pdf/2005.01025v4) Behrouz Taji — *Birational geometry of smooth families of varieties admitting good minimal models*: Variation and special-base consequences for smooth families with good minimal models. arXiv:2005.01025v4.
+- [RA](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-reverse-logarithmic-Kodaira-inequality-and-additivity-September-26-2026/paper.pdf) OpenAI — *The reverse logarithmic Kodaira inequality and additivity*: Inputs, additional results, or alternatives within the catalogue; see the use and relation type in the table below. 2026-09-26.
+- [PH](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Projective-Hodge-lines-and-ordinary-Iitaka-subadditivity-September-27-2026/paper.pdf) OpenAI — *Projective Hodge lines and ordinary Iitaka subadditivity*: Inputs, additional results, or alternatives within the catalogue; see the use and relation type in the table below. 2026-09-27.
+
+Each citation gives the result and pages. When printed pagination differs from the PDF position, both are shown. GitHub previews do not automatically jump to the cited page.
+<!-- /reference-guide -->
 
 ## 2. Overview of Theorem 1.1
+
+<!-- proof-target:1 -->Proof target：[Theorem 1.1 · p. 2](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf)<!-- /proof-target --> See the [hypotheses and conclusion](#theorem-1-1).
+
+When $\kappa(F)=-\infty$, the inequality is automatic under the stated convention. Below, $d=\kappa(F)\geq0$: combine the base term supplied by OI with the variation term supplied by descent of the whole fiber.
 
 **Proof route.** The main theorem has three stages: [construct the parameter field](#proof-2), [establish constancy of the Kodaira-zero fibre](#proof-3), and [descend the original whole fibre](#proof-4). The [empty-boundary corollary](#proof-5) and the [smooth-family consequence using LA and Taji](#proof-6) are treated separately after the main proof.
 
@@ -99,9 +110,31 @@ Markings fix Iitaka-base coordinates and a finite normalization. Constant cocycl
 
 Combine this bound with the section-system dimension identity to obtain Theorem 1.1. Corollary 1.2 sets the boundaries to zero; Corollary 1.3 is a separate consequence using LA and Taji. The diagrams for the [parameter field](#proof-2), [first constancy](#proof-3), and [whole-fibre descent](#proof-4) expand these three stages.
 
-## 3. Theorem 1.1: constructing the parameter field
+## 3. Proposition 2.10 — Constructing the parameter field
+
+<span class="legacy-anchor" id="3-theorem-11-constructing-the-parameter-field" aria-hidden="true"></span>
+
+<!-- proof-target:2 -->Proof target：[Proposition 2.10 · pp. 12–14](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf)<!-- /proof-target -->
 
 Assume $d=\kappa(F)\geq0$. The first task is to compare the absolute logarithmic Iitaka base $Z$ and the original base $Y$ inside the same function field, producing a subfield of $\mathbb C(Y)$ of transcendence degree $\bar\kappa(U)-d$. No constancy assertion is used at this stage.
+
+<!-- statement:proposition-2-10 -->
+### Proposition 2.10
+
+Assume Theorem 1.1 and $d=\kappa(F)\geq0$. Choose a compatible SNC compactification $(X,D_X)\to(Y,D_Y)$ with the reduced inverse boundary. In the models of Proposition 2.7, let $q:X'\to Z$ be the absolute logarithmic Iitaka map, $q=h\circ x$, and $X'\xrightarrow{x}W\xrightarrow{g}Y$. The maps $x,g,h$ have connected fibers and $W\to Y\times Z$ is generically finite onto its image. Put $r=\dim W_z$ and $p_1=\dim Y-r$.
+
+The models can be chosen with smooth connected projective varieties $S,T_0$, a birational morphism $\rho:S\to Y$, a map $g_S:W\to S$ satisfying $g=\rho\circ g_S$, and compatible morphisms from $S,Z$ to $T_0$, such that
+
+$W\longrightarrow(S\times_{T_0}Z)_{\rm main}$ is dominant and generically finite.
+
+$$
+\begin{gathered}\dim(W/Y)=d,\qquad\dim T_0=p_1,\\\dim Z=d+\dim T_0\end{gathered}
+$$
+
+The generic fibers of $S\to T_0$ and $Z\to T_0$ are geometrically integral. With $D_S=(\rho^*D_Y)_{\rm red}$ made SNC, very general $t$ satisfies $\kappa(S_t,K_{S_t}+D_S|_{S_t})\geq0$. In particular, $\mathbb C(T_0)\subseteq\mathbb C(S)=\mathbb C(Y)$ holds **inside the original field tower**.
+
+<!-- cite:wv-parameter -->[Proposition 2.10 · pp. 12–14](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf)<!-- /cite -->
+<!-- /statement -->
 
 ![Logarithmic subadditivity and the family of images produce an embedded parameter field](diagrams/parameter-field.en.svg)
 
@@ -148,9 +181,35 @@ Fix the resulting $b=\overline{\mathbb C(T_0)}$ as the candidate definition fiel
 
 [WV, §§3–7 · pp. 14–59][WV]
 
-## 4. Theorem 1.1: the root cover and the first constancy statement
+For the last conclusion of Proposition 2.10, pull the fixed nonzero base section $\xi$ to $S$ and restrict it nontrivially to very general $S_t$. Adjunction gives $\kappa(S_t,K_{S_t}+D_S|_{S_t})\geq0$, retaining base nonvanishing for the later marked-model comparison.
+
+
+
+## 4. Theorem 4.1 / Proposition 4.10 — From the root cover to first constancy
+
+<span class="legacy-anchor" id="4-theorem-11-the-root-cover-and-the-first-constancy-statement" aria-hidden="true"></span>
+
+<!-- proof-target:3 -->Proof target：[Theorem 4.1 · p. 26](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf)<!-- /proof-target -->
 
 The least ordinary pluricanonical index makes the **entire** highest Hodge piece rank one, rather than just an eigenspace. Manuscript Section 4 supplies the analytic passage from its flatness to birational constancy.
+
+<!-- statement:theorem-4-1 -->
+### Theorem 4.1
+
+Let $\pi^\circ:P^\circ\to C^\circ$ be a smooth projective morphism with connected fibers over a smooth connected complex algebraic curve. Assume that its very general fiber $D$ has $\kappa(D)=0$ and $h^0(D,K_D)=1$, and put $n=\dim D$. Suppose the **entire top Hodge bundle** $F^n(R^n\pi^\circ_*\mathbb C\otimes\mathcal O_{C^\circ})$ is a flat line with finite monodromy character.
+
+Then a finite extension $L/\mathbb C(C^\circ)$ and a smooth connected projective variety $D_0/\mathbb C$ exist such that the generic fiber over $L$ is birational to $(D_0)_L$. For a finite group $\Gamma$ acting over the base, the identification can be chosen $\Gamma$-equivariant. A finite fiberwise birational action is also allowed after passage to an equivariant smooth projective model.
+
+<!-- cite:wv-curve -->[Theorem 4.1 · p. 26](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf)<!-- /cite -->
+<!-- /statement -->
+
+<!-- statement:proposition-4-10 -->
+### Proposition 4.10
+
+Consider the maps $x:X'\to W$, $h:W\to Z$ fixed in Propositions 2.7–2.10 and the family of their Kodaira-dimension-zero geometric generic fibers $J$. For very general $z\in Z$, the geometric generic fiber of this family over $W_z$ is birational to the base change of a smooth projective variety over $\mathbb C$. Relatively, after extending $\mathbb C(Z)$ to its algebraic closure, the geometric generic fiber of $x$ over the resulting $h$-fiber is birationally constant over that algebraically closed field.
+
+<!-- cite:wv-relative -->[Proposition 4.10 · p. 43](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf)<!-- /cite -->
+<!-- /statement -->
 
 ![The minimal root cover, restricted Hodge-line triviality, and analytic contraction give the first constancy statement](diagrams/root-constancy.en.svg)
 
@@ -200,9 +259,29 @@ This fixes the Kodaira-zero fiber $J$. The [next descent](#proof-4) retains Iita
 
 [WV, §6 introduction・§7.4 · pp. 46, 58–59][WV]
 
-## 5. Theorem 1.1: descend the whole fiber with its Iitaka-base coordinates
+## 5. Proposition 7.3 — Descent retaining the whole Iitaka base
+
+<span class="legacy-anchor" id="5-theorem-11-descend-the-whole-fiber-with-its-iitaka-base-coordinates" aria-hidden="true"></span>
+
+<!-- proof-target:4 -->Proof target：[Proposition 7.3 · pp. 57–59](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf)<!-- /proof-target -->
 
 Put $b=\overline{\mathbb C(T_0)}$ and denote the geometric generic fibers of $W,S,Z$ over $T_0$ by $H_0,I,P_0$. Write $p_I:H_0\to I$ and $a_0:H_0\to P_0$ for the induced maps. The map $H_0\to I\times_bP_0$ is generically finite and $\dim P_0=d$. Constancy of $J$ must now be made compatible with the coordinates of $P_0$.
+
+<!-- statement:proposition-7-3 -->
+### Proposition 7.3
+
+In the setting of §§6–7, fix $b=\overline{\mathbb C(T_0)}\subseteq\Omega$. After the marking of Proposition 6.2 and finite parameter extension, let $V'/b$ be the fixed finite normalization of the original Iitaka base and $I/b$ the parameter variety; put $k=b(V')$, $L_0=b(I)$, and $K=L_0(V')$. The Kodaira-dimension-zero fiber $J/K$ has total field $K(J)$ from the original fibration. Use the finite Galois splitting with constant cocycle of Lemma 7.1 and the unramifiedness at moving divisors **after every finite parameter extension** from Proposition 7.2.
+
+For an algebraic closure $\Lambda$ of $L_0$, there is a finitely generated field $F_b/b$ containing $k$ and an isomorphism
+
+$$
+\begin{aligned}\operatorname{Frac}(\Lambda\otimes_bF_b)\\{}\simeq\operatorname{Frac}(\Lambda\otimes_{L_0}K(J)).\end{aligned}
+$$
+
+On identifying $\Lambda=\Omega$, the right-hand side is the function field of the **whole original geometric generic fiber**. Thus $\operatorname{Var}(f)\leq\dim T_0$.
+
+<!-- cite:wv-descent -->[Proposition 7.3 · pp. 57–59](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf)<!-- /cite -->
+<!-- /statement -->
 
 ![Markings fix a finite normalization, and unramifiedness at moving divisors permits descent of the entire function field](diagrams/whole-fiber-descent.en.svg)
 
@@ -262,6 +341,8 @@ This completes the lower bound involving variation in Theorem 1.1. Corollary 1.2
 
 ## 6. Corollary 1.2: take empty boundaries
 
+<!-- proof-target:5 -->Proof target：[Corollary 1.2 · p. 2](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf)<!-- /proof-target --> See the [hypotheses and conclusion](#corollary-1-2).
+
 For projective $X,Y$, use empty compactification boundaries. The geometric generic fiber and its field-of-definition invariant are unchanged.
 
 ![Empty boundaries specialize the logarithmic inequality to the projective inequality](diagrams/projective-case.en.svg)
@@ -277,6 +358,8 @@ The ordinary Iitaka–Viehweg inequality applies to projective fibrations over a
 [WV, Corollary 1.2 · p. 2; §9 introduction · p. 69][WV]
 
 ## 7. Corollary 1.3: good models for a smooth family
+
+<!-- proof-target:6 -->Proof target：[Corollary 1.3 · p. 5](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf)<!-- /proof-target --> See the [hypotheses and conclusion](#corollary-1-3).
 
 This route uses smoothness of the family and non-uniruledness of every closed fiber. It does not enter the proof of the main theorem.
 
@@ -353,6 +436,15 @@ Section 9 applies this construction to the ordinary relative Iitaka fibration. I
 Unrecorded relations remain unexamined. Comparing an input's statement with its application is distinct from verifying the input theorem's entire proof.
 
 ## 10. Return to the sources
+
+<!-- reading-list -->
+- [Theorem 1.1 · p. 2](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf) — Read the main hypotheses and conclusion alongside the proof passages below
+- [Proposition 2.10 · pp. 12–14](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf) — Follow the embedding of the parameter field into the original base field and the dimension identity
+- [Theorem 4.1 · p. 26](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf) — Follow the flat entire top line through contraction of poles and equivariant flows to birational constancy
+- [Proposition 7.3 · pp. 57–59](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf) — Retain the fixed Iitaka-base coordinates while descending the cover and action to the whole fiber
+- [Corollary 1.2 · p. 2](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf) — Set the boundary to zero to obtain the projective Iitaka–Viehweg inequality
+- [Corollary 1.3 · p. 5](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf) — Check how good models and Taji also supply the negative-base and special-base consequences
+<!-- /reading-list -->
 
 - Embedded parameter field: Proposition 2.10, equation (2.12), pp.12–14.
 - Actual minimum versus all-valuation threshold: Propositions 3.3 and 3.5, pp.17–19, returning in Lemma 6.4's multiplicity-one minimizer.

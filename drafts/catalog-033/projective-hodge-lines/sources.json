@@ -226,5 +226,89 @@
       "checking": "入力記述と比較段落を今回照合。WVは自身のdirect comparisonを主経路で使用すると明記。",
       "unresolved": "PH §§8–9の別証明自体は未検証。"
     }
-  ]
+  ],
+  "externalSources": [
+    {
+      "id": "BBT",
+      "displayName": "o-minimal GAGA and a conjecture of Griffiths",
+      "authors": "Benjamin Bakker; Yohan Brunebarbe; Jacob Tsimerman",
+      "version": "arXiv:1811.12230v3 (2022-10-23)",
+      "sourceUrl": "https://arxiv.org/pdf/1811.12230v3",
+      "checkingOrigin": "Existing dependencies record; no new external-proof verification in the 2026-10-11 revision."
+    },
+    {
+      "id": "BC",
+      "displayName": "Hyperbolicity of varieties supporting a variation of Hodge structure",
+      "authors": "Yohan Brunebarbe; Benoît Cadorel",
+      "version": "arXiv:1707.01327v1",
+      "sourceUrl": "https://arxiv.org/pdf/1707.01327v1",
+      "checkingOrigin": "Existing dependencies record; no new external-proof verification in the 2026-10-11 revision."
+    },
+    {
+      "id": "FM",
+      "displayName": "A canonical bundle formula",
+      "authors": "Osamu Fujino; Shigefumi Mori",
+      "version": "JDG 56 (2000), author-hosted journal PDF",
+      "sourceUrl": "https://www.math.kyoto-u.ac.jp/~fujino/Canonical.pdf",
+      "checkingOrigin": "Existing dependencies record; no new external-proof verification in the 2026-10-11 revision."
+    },
+    {
+      "id": "Amb",
+      "displayName": "Shokurov’s boundary property",
+      "authors": "Florin Ambro",
+      "version": "arXiv:math/0210271v1 (2002-10-17)",
+      "sourceUrl": "https://arxiv.org/pdf/math/0210271v1",
+      "checkingOrigin": "Existing dependencies record; no new external-proof verification in the 2026-10-11 revision."
+    },
+    {
+      "id": "Fuj",
+      "displayName": "Notes on the weak positivity theorems",
+      "authors": "Osamu Fujino",
+      "version": "2015-06-30, version 0.54",
+      "sourceUrl": "https://www.math.kyoto-u.ac.jp/~fujino/weak-posi11.pdf",
+      "checkingOrigin": "Existing dependencies record; no new external-proof verification in the 2026-10-11 revision."
+    },
+    {
+      "id": "Has",
+      "displayName": "Log Iitaka conjecture for abundant log canonical fibrations",
+      "authors": "Kenta Hashizume",
+      "version": "arXiv:1902.10923v2 (2019-05-01)",
+      "sourceUrl": "https://arxiv.org/pdf/1902.10923v2",
+      "checkingOrigin": "Existing dependencies record; no new external-proof verification in the 2026-10-11 revision."
+    }
+  ],
+  "revision20261011": {
+    "productionVersion": "1.4 + 2026-10-11 supplement",
+    "scope": "Statements and their connections to the existing proof overview; not full independent revalidation.",
+    "statementsAdded": [
+      {
+        "result": "Proposition 6.4",
+        "pdfPages": "20–21"
+      }
+    ],
+    "mainConclusionCoverage": [
+      {
+        "result": "main",
+        "conclusion": "ordinary inequality, automatic negative case and arbitrary characteristic-zero field",
+        "anchor": "proof-3-step-3"
+      },
+      {
+        "result": "adjoint",
+        "conclusion": "nef pullback line and connected-fiber quotient",
+        "anchor": "proof-1-step-3"
+      },
+      {
+        "result": "adjoint",
+        "conclusion": "adjoint bigness for every sufficiently large integer",
+        "anchor": "proof-1-step-3"
+      },
+      {
+        "result": "adjoint",
+        "conclusion": "rational triviality for a point quotient",
+        "anchor": "proof-1-step-1"
+      }
+    ],
+    "manuscriptHashRechecked": true,
+    "externalChecking": "Earlier records retained; no new claim of complete verification."
+  }
 }

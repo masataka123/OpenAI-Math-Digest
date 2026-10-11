@@ -56,22 +56,33 @@ $$
 
 ## 図の矢印に付した引用
 
-略号のない結果・式・節番号は本稿[WV]を指す。GitHubの原稿リンクは固定commitの閲覧ページであり、PDFページは表示ラベルから参照する。
+<!-- reference-guide -->
+略号のない定理・補題・節・式番号は本原稿 [Logarithmic Kodaira dimension and whole-fiber variation](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf) を指します。外部入力には次の略号を使います。
 
-- [OI]：*Orbifold and logarithmic Iitaka subadditivity*、2026-09-26。劣加法性と随伴正値性。
-- [Fuj]：Fujino、*Notes on the weak positivity theorems*、2015-06-30、version 0.54。
-- [Del]：Deligne、*Théorie de Hodge II*、1971。有限指標と不変サイクル。
-- [DHP]：Demailly–Hacon–Păun、*Extension theorems, non-vanishing and the existence of good minimal models*、arXiv v2。
-- [PT]：Păun–Takayama、*Positivity of twisted relative pluricanonical bundles and their direct images*、arXiv v1。
-- [BCHM]：Birkar–Cascini–Hacon–McKernan、*Existence of minimal models for varieties of log general type*、81ページのarXiv v2。
-- [KP]：Kovács–Patakfalvi、*Projectivity of the moduli space of stable log-varieties and subadditivity of log-Kodaira dimension*、62ページの著者稿。
-- [Han]：Hanamura、*Structure of birational automorphism groups, I: non-uniruled varieties*、1988。原典の定理文は今回未照合。
-- [SGA1]：*Revêtements étales et groupe fondamental*、2003年復刻版。purityの原典記述は今回未照合。
-- [Lan]：Landesman、*Invariance of the tame fundamental group under base change between algebraically closed fields*、arXiv v3。
-- [BDPP]：Boucksom–Demailly–Păun–Peternell、*The pseudo-effective cone of a compact Kähler manifold and varieties of negative Kodaira dimension*、arXiv v1。
-- [LA]：*Log abundance in characteristic zero*、2026-09-24。[Taj]：Taji、*Birational geometry of smooth families of varieties admitting good minimal models*、arXiv v4。
+- [OI](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf) OpenAI — *Orbifold and logarithmic Iitaka subadditivity*：カタログ内の入力・追加結果・別経路。使用箇所と種別は本文の表を参照。2026-09-26。
+- [Fuj](https://www.math.kyoto-u.ac.jp/~fujino/weak-posi11.pdf) Osamu Fujino — *Notes on the weak positivity theorems*：負のample捻りを伴う切断の構成に使う弱正値性。version 0.54, 2015-06-30。
+- [Del](https://www.numdam.org/item/PMIHES_1971__40__5_0.pdf) Pierre Deligne — *Théorie de Hodge II*：有限指標。不変サイクルの外部原典の照合は未了。1971, printed p.47 = PDF p.44。
+- [DHP](https://arxiv.org/pdf/1012.0493v2) Jean-Pierre Demailly; Christopher D. Hacon; Mihai Păun — *Extension theorems, non-vanishing and the existence of good minimal models*：極を持つ因子の収縮に用いる拡張。arXiv:1012.0493v2。
+- [PT](https://arxiv.org/pdf/1409.5504v1) Mihai Păun; Shigeharu Takayama — *Positivity of twisted relative pluricanonical bundles and their direct images*：相対Bergman weightと一様評価。arXiv:1409.5504v1。
+- [BCHM](https://arxiv.org/pdf/math/0610203v2) Caucher Birkar; Paolo Cascini; Christopher D. Hacon; James McKernan — *Existence of minimal models for varieties of log general type*：big klt adjoint modelの存在。arXiv:math/0610203v2, 81 pages。
+- [KP](https://sites.math.washington.edu/~kovacs/2013/papers/Kovacs_Patakfalvi__Projectivity.pdf) Sándor J. Kovács; Zsolt Patakfalvi — *Projectivity of the moduli space of stable log-varieties and subadditivity of log-Kodaira dimension*：射影安定族の正値性とmarked modelのvariationの下界。62-page author manuscript; hash pinned。
+- [Han](https://doi.org/10.1007/BF01394338) Masaki Hanamura — *Structure of birational automorphism groups, I: non-uniruled varieties*：cocycleの定数化。原定理の記述は未照合。1988, DOI 10.1007/BF01394338。
+- [SGA1](https://arxiv.org/abs/math/0206203v2) Alexander Grothendieck et al. — *Revêtements étales et groupe fondamental (SGA 1)*：高さ1の非分岐性からのpurity。原典記述は未照合。2003 re-edition; arXiv:math/0206203v2。
+- [Lan](https://arxiv.org/pdf/2005.09690v3) Aaron Landesman — *Invariance of the tame fundamental group under base change between algebraically closed fields*：有限étale被覆・射・群作用の基底拡大に関する降下。arXiv:2005.09690v3。
+- [BDPP](https://arxiv.org/pdf/math/0405285v1) Sébastien Boucksom; Jean-Pierre Demailly; Mihai Păun; Thomas Peternell — *The pseudo-effective cone of a compact Kähler manifold and varieties of negative Kodaira dimension*：擬有効性と可動曲線、またはnon-unirulednessの比較。arXiv:math/0405285v1。
+- [LA](https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf) OpenAI — *Log abundance in characteristic zero*：Corollary 1.3にgood minimal modelを供給する帰結への入力。2026-09-24。
+- [Taj](https://arxiv.org/pdf/2005.01025v4) Behrouz Taji — *Birational geometry of smooth families of varieties admitting good minimal models*：good minimal modelを持つsmooth族のvariationとspecial baseの帰結。arXiv:2005.01025v4。
+- [RA](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-reverse-logarithmic-Kodaira-inequality-and-additivity-September-26-2026/paper.pdf) OpenAI — *The reverse logarithmic Kodaira inequality and additivity*：カタログ内の入力・追加結果・別経路。使用箇所と種別は本文の表を参照。2026-09-26。
+- [PH](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Projective-Hodge-lines-and-ordinary-Iitaka-subadditivity-September-27-2026/paper.pdf) OpenAI — *Projective Hodge lines and ordinary Iitaka subadditivity*：カタログ内の入力・追加結果・別経路。使用箇所と種別は本文の表を参照。2026-09-27。
+
+各引用に結果番号とページを付します。誌面番号とPDF内の位置が異なる場合は両方を示します。GitHubの閲覧リンクではページ位置への自動移動を前提としません。
+<!-- /reference-guide -->
 
 ## 2. Theorem 1.1の全体像
+
+<!-- proof-target:1 -->証明対象：[Theorem 1.1 · p. 2](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf)<!-- /proof-target --> [仮定・結論](#theorem-1-1)を参照する。
+
+$\kappa(F)=-\infty$の場合は主張の規約により不等式が自動的に成り立つ。以下は$d=\kappa(F)\geq0$の場合を扱い、OIの下界が与える底の項と、全ファイバーの降下が与えるvariationの項を合わせる。
 
 **証明の道筋。** 主定理は、[parameter fieldの構成](#proof-2)、[小平次元0のファイバーのconstancy](#proof-3)、[元の全ファイバーの降下](#proof-4)の三段階からなる。[境界を空にする帰結](#proof-5)と、LA・Tajiを使う[smooth familyの帰結](#proof-6)は、主定理の後で分けて扱う。
 
@@ -99,9 +110,29 @@ markingは飯高底の座標と有限正規化を固定する。定数cocycleと
 
 この不等式を切断系の次元等式と合わせてTheorem 1.1を得る。Corollary 1.2は境界0の特殊化、Corollary 1.3はLA・Tajiを加える別の帰結である。以下の[parameter field](#proof-2)、[最初のconstancy](#proof-3)、[全ファイバーの降下](#proof-4)の各図で、この三段階を展開する。
 
-## 3. Theorem 1.1：parameter fieldの構成
+## 3. Proposition 2.10 — parameter fieldの構成
+
+<span class="legacy-anchor" id="3-theorem-11parameter-fieldの構成" aria-hidden="true"></span>
+
+<!-- proof-target:2 -->証明対象：[Proposition 2.10 · pp. 12–14](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf)<!-- /proof-target -->
 
 $d=\kappa(F)\geq0$ とする。まず絶対対数的飯高底 $Z$ と元の底 $Y$ を同じ関数体の中で比較し、$\bar\kappa(U)-d$ 次元の体を $\mathbb C(Y)$ の部分体として得る。この段階ではファイバーのconstancyを使わない。
+
+<!-- statement:proposition-2-10 -->
+### Proposition 2.10
+
+Theorem 1.1の仮定で$d=\kappa(F)\geq0$とする。被約逆像境界を保つSNCコンパクト化$(X,D_X)\to(Y,D_Y)$を取り、Proposition 2.7のモデルで$q:X'\to Z$を絶対対数飯高写像、$q=h\circ x$、$X'\xrightarrow{x}W\xrightarrow{g}Y$とする。$x,g,h$は連結ファイバーをもち、$W\to Y\times Z$は像上generically finiteである。$r=\dim W_z$、$p_1=\dim Y-r$と置く。
+
+これらのモデルとともに滑らかな連結射影多様体$S,T_0$を選び、双有理射$\rho:S\to Y$、$g=\rho\circ g_S$とする写像$g_S:W\to S$、および$S,Z$から$T_0$への射を得る。誘導射$W\longrightarrow(S\times_{T_0}Z)_{\rm main}$は優越的かつgenerically finiteで、
+
+$$
+\begin{gathered}\dim(W/Y)=d,\qquad\dim T_0=p_1,\\\dim Z=d+\dim T_0\end{gathered}
+$$
+
+を満たす。$S\to T_0$と$Z\to T_0$の一般ファイバーは幾何学的整で、$D_S=(\rho^*D_Y)_{\rm red}$をSNCにすると、非常に一般の$t$で$\kappa(S_t,K_{S_t}+D_S|_{S_t})\geq0$となる。特に$\mathbb C(T_0)\subseteq\mathbb C(S)=\mathbb C(Y)$を**元の体の中で**得る。
+
+<!-- cite:wv-parameter -->[Proposition 2.10 · pp. 12–14](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf)<!-- /cite -->
+<!-- /statement -->
 
 ![対数的劣加法性、二つの飯高系、像の族からparameter fieldを得る](diagrams/parameter-field.ja.svg)
 
@@ -148,9 +179,35 @@ $$
 
 [WV, §§3–7 · pp. 14–59][WV]
 
-## 4. Theorem 1.1：root coverから最初のconstancyへ
+Proposition 2.10の最後の結論には、固定した非零底切断$\xi$を$S$へ引き戻し、非常に一般の$S_t$へ非零に制限する。随伴により$\kappa(S_t,K_{S_t}+D_S|_{S_t})\geq0$となり、後のmarked model比較でも底の非消滅を保つ。
+
+
+
+## 4. Theorem 4.1 / Proposition 4.10 — root coverから最初のconstancyへ
+
+<span class="legacy-anchor" id="4-theorem-11root-coverから最初のconstancyへ" aria-hidden="true"></span>
+
+<!-- proof-target:3 -->証明対象：[Theorem 4.1 · p. 26](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf)<!-- /proof-target -->
 
 $J$ の最小のordinary pluricanonical indexを使うことにより、固有成分だけでなく最高Hodge成分**全体**をrank oneにする。その平坦性から双有理的constancyへ進む箇所が§4の解析的議論である。
+
+<!-- statement:theorem-4-1 -->
+### Theorem 4.1
+
+$\pi^\circ:P^\circ\to C^\circ$を滑らかな連結複素代数曲線上の、連結ファイバーをもつsmooth projective morphismとする。非常に一般のファイバー$D$は$\kappa(D)=0$、$h^0(D,K_D)=1$を満たすとし、$n=\dim D$と置く。**全最高Hodge束**$F^n(R^n\pi^\circ_*\mathbb C\otimes\mathcal O_{C^\circ})$が平坦なlineで、そのモノドロミー指標が有限であると仮定する。
+
+このとき有限拡大$L/\mathbb C(C^\circ)$と滑らかな連結射影多様体$D_0/\mathbb C$が存在し、$L$へ拡大した一般ファイバーは$(D_0)_L$と双有理になる。有限群$\Gamma$が底上で作用する場合はこの同定を$\Gamma$同変に取れる。有限なファイバーごとの双有理作用も、同変な滑らかな射影モデルに替えて扱える。
+
+<!-- cite:wv-curve -->[Theorem 4.1 · p. 26](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf)<!-- /cite -->
+<!-- /statement -->
+
+<!-- statement:proposition-4-10 -->
+### Proposition 4.10
+
+Propositions 2.7–2.10で固定した$x:X'\to W$、$h:W\to Z$と、その小平次元0の幾何学的一般ファイバー$J$の族を考える。非常に一般の$z\in Z$に対し、$W_z$上のこの族の幾何学的一般ファイバーは、$\mathbb C$上の滑らかな射影多様体の基底拡大と双有理である。相対的にも、$\mathbb C(Z)$を代数閉包へ拡大した$h$ファイバー上で、$x$の幾何学的一般ファイバーはその代数閉体上で双有理的に一定となる。
+
+<!-- cite:wv-relative -->[Proposition 4.10 · p. 43](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf)<!-- /cite -->
+<!-- /statement -->
 
 ![最小root cover、制限上のHodge lineの自明性、解析的収縮による最初のconstancy](diagrams/root-constancy.ja.svg)
 
@@ -200,9 +257,29 @@ $$
 
 [WV, §6導入・§7.4 · pp. 46, 58–59][WV]
 
-## 5. Theorem 1.1：飯高底を残した全ファイバーの降下
+## 5. Proposition 7.3 — 飯高底を残した全ファイバーの降下
+
+<span class="legacy-anchor" id="5-theorem-11飯高底を残した全ファイバーの降下" aria-hidden="true"></span>
+
+<!-- proof-target:4 -->証明対象：[Proposition 7.3 · pp. 57–59](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf)<!-- /proof-target -->
 
 $b=\overline{\mathbb C(T_0)}$ とし、$W,S,Z$ の $T_0$ 上の幾何学的一般ファイバーを $H_0,I,P_0$ と書く。$p_I:H_0\to I$、$a_0:H_0\to P_0$ を誘導射とする。$H_0\to I\times_bP_0$ はgenerically finite、$\dim P_0=d$ である。目標は $J$ のconstancyを $P_0$ の座標と両立させることである。
+
+<!-- statement:proposition-7-3 -->
+### Proposition 7.3
+
+§§6–7の設定で$b=\overline{\mathbb C(T_0)}\subseteq\Omega$を固定する。Proposition 6.2のmarkingと有限parameter拡大後、元の飯高底の有限正規化を$V'/b$、parameter varietyを$I/b$とし、$k=b(V')$、$L_0=b(I)$、$K=L_0(V')$と置く。$J/K$は小平次元0のファイバーで、$K(J)$は元の全空間から来る体である。Lemma 7.1の定数cocycleをもつ有限Galois splittingと、Proposition 7.2の**すべての有限parameter拡大後**の動く因子での非分岐性を用いる。
+
+$L_0$の代数閉包$\Lambda$に対し、$k\subseteq F_b$を満たす有限生成体$F_b/b$と同型
+
+$$
+\begin{aligned}\operatorname{Frac}(\Lambda\otimes_bF_b)\\{}\simeq\operatorname{Frac}(\Lambda\otimes_{L_0}K(J)).\end{aligned}
+$$
+
+が存在する。$\Lambda=\Omega$と同定すると右辺は元の**全幾何学的一般ファイバー**の関数体であり、$\operatorname{Var}(f)\leq\dim T_0$となる。
+
+<!-- cite:wv-descent -->[Proposition 7.3 · pp. 57–59](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf)<!-- /cite -->
+<!-- /statement -->
 
 ![markingによる有限正規化の固定と、動く因子上の非分岐性から全関数体を降下させる](diagrams/whole-fiber-descent.ja.svg)
 
@@ -262,6 +339,8 @@ Theorem 1.1のvariationを含む下界が完成する。境界を空にしたCor
 
 ## 6. Corollary 1.2：境界を空にする
 
+<!-- proof-target:5 -->証明対象：[Corollary 1.2 · p. 2](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf)<!-- /proof-target --> [仮定・結論](#corollary-1-2)を参照する。
+
 射影的な $X,Y$ には空のコンパクト化境界を用いる。variationを定義する幾何学的一般ファイバーとその定義体は変わらない。
 
 ![空の境界によって対数的不等式を射影的不等式へ特殊化する](diagrams/projective-case.ja.svg)
@@ -277,6 +356,8 @@ $D_X=D_Y=0$ ならば $\bar\kappa(X)=\kappa(X)$、$\bar\kappa(Y)=\kappa(Y)$。�
 [WV, Corollary 1.2 · p. 2; §9導入 · p. 69][WV]
 
 ## 7. Corollary 1.3：good modelを介するsmooth familyの帰結
+
+<!-- proof-target:6 -->証明対象：[Corollary 1.3 · p. 5](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf)<!-- /proof-target --> [仮定・結論](#corollary-1-3)を参照する。
 
 ここではすべての閉ファイバーのnon-unirulednessと、族のsmoothnessを使う。主定理の証明にこの経路を逆向きに組み込まない。
 
@@ -351,6 +432,15 @@ $$
 未記録の関係は未調査であり、依存なしを意味しない。入力の記述と適用の照合は、その入力定理自体の全証明検証とは区別する。
 
 ## 10. 原典を読む入口と確認範囲
+
+<!-- reading-list -->
+- [Theorem 1.1 · p. 2](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf) — 主定理の仮定・結論を確認し、下記の証明箇所と対応させる
+- [Proposition 2.10 · pp. 12–14](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf) — parameter fieldが元の底の部分体となる理由と次元等式を読む
+- [Theorem 4.1 · p. 26](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf) — 平坦な全最高lineから、極の収縮・同変flowによる双有理的constancyへ進む
+- [Proposition 7.3 · pp. 57–59](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf) — 固定した飯高底の座標を残し、被覆と群作用を全ファイバーへ降ろす
+- [Corollary 1.2 · p. 2](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf) — 境界を空にして射影的なIitaka–Viehweg不等式を得る
+- [Corollary 1.3 · p. 5](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf) — good modelとTajiの入力が負の底・special baseの帰結も担うことを読む
+<!-- /reading-list -->
 
 - parameter fieldの埋込み：Proposition 2.10、式(2.12)、pp.12–14。
 - actual minimumとall-valuation threshold：Propositions 3.3・3.5、pp.17–19。これがLemma 6.4のmultiplicity-one minimizerに戻る。

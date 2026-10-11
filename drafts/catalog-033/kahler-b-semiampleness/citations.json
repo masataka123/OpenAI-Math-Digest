@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "readable-name",
+  "catalogId": "033",
+  "legacyCitationKeys": [
+    "BS",
+    "FF",
+    "MWWZ",
+    "Toma",
+    "BFMT",
+    "BB",
+    "Fujiki",
+    "Vil"
+  ],
+  "revisionScope": "2026-10-11 statement/guide revision. Published citation keys and all existing TeX/SVG citations are retained; only the new statement and guide blocks are generated. Figure copies and hashes are checked separately by catalog-033 tests.",
+  "sources": {
+    "BS": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "displayName": "B-semiampleness for compact log-smooth Kähler fibrations",
+      "pagination": "same"
+    },
+    "FF": {
+      "recordFile": "sources.json",
+      "recordId": "FF",
+      "guideRole": {
+        "ja": "Hodge延長と相対対数最高形式の比較",
+        "en": "Hodge extensions and relative logarithmic top forms"
+      }
+    },
+    "MWWZ": {
+      "recordFile": "sources.json",
+      "recordId": "MWWZ",
+      "guideRole": {
+        "ja": "klt log Calabi–Yauファイバーの有限étale積分解",
+        "en": "Finite étale product decompositions of klt log Calabi–Yau fibers"
+      }
+    },
+    "Toma": {
+      "recordFile": "sources.json",
+      "recordId": "Toma",
+      "guideRole": {
+        "ja": "固定Kähler空間上のDouady成分のコンパクト性",
+        "en": "Compactness of Douady components in a fixed Kähler space"
+      }
+    },
+    "BFMT": {
+      "recordFile": "sources.json",
+      "recordId": "BFMT",
+      "guideRole": {
+        "ja": "Hodge/moduli同定と射影的半豊富性。使用する定理と未確認範囲は本文で区別",
+        "en": "Hodge/moduli identification and projective semiampleness; the results used and checking limits are distinguished below"
+      }
+    },
+    "BB": {
+      "recordFile": "sources.json",
+      "recordId": "BB",
+      "guideRole": {
+        "ja": "算術商の代数性。外部原典は未照合",
+        "en": "Algebraicity of arithmetic quotients; the external original remains unchecked"
+      }
+    },
+    "Fujiki": {
+      "recordFile": "sources.json",
+      "recordId": "Fujiki",
+      "guideRole": {
+        "ja": "Douady成分の可算性。外部原典は未照合",
+        "en": "Countability of Douady components; the external original remains unchecked"
+      }
+    },
+    "Vil": {
+      "recordFile": "sources.json",
+      "recordId": "Vil",
+      "guideRole": {
+        "ja": "period商または有限被覆のコンパクト化。記事末尾の照合範囲を参照",
+        "en": "Compactification of period quotients or finite covers; see the checked scope below"
+      }
+    }
+  },
+  "citations": {
+    "main": {
+      "source": "BS",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "3",
+          "pdf": "3"
+        }
+      ]
+    },
+    "bs-family": {
+      "source": "BS",
+      "locations": [
+        {
+          "result": "Proposition 5.6",
+          "printed": "22–25",
+          "pdf": "22–25"
+        }
+      ]
+    },
+    "bs-projective": {
+      "source": "BS",
+      "locations": [
+        {
+          "result": "Proposition 6.1",
+          "printed": "25–28",
+          "pdf": "25–28"
+        }
+      ]
+    },
+    "bs-period": {
+      "source": "BS",
+      "locations": [
+        {
+          "result": "Proposition 7.5",
+          "printed": "33–34",
+          "pdf": "33–34"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [],
+  "articleGuides": {
+    ".": {
+      "selfSource": "BS",
+      "externalSources": [
+        "FF",
+        "MWWZ",
+        "Toma",
+        "BFMT",
+        "BB",
+        "Fujiki",
+        "Vil"
+      ],
+      "proofTargets": [
+        "main",
+        "main",
+        "bs-family",
+        "bs-projective",
+        "main"
+      ],
+      "mainResults": [
+        "main"
+      ],
+      "statements": {
+        "main": "theorem-1-1",
+        "bs-family": "proposition-5-6",
+        "bs-projective": "proposition-6-1",
+        "bs-period": "proposition-7-5"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "main",
+          "conclusion": "(a) stability under every higher smooth compact Kähler modification",
+          "anchor": "proof-2-step-3"
+        },
+        {
+          "result": "main",
+          "conclusion": "(b) one multiple generated at every point",
+          "anchor": "proof-5-step-2"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "main",
+          "purpose": {
+            "ja": "主定理の仮定・結論を確認し、下記の証明箇所と対応させる",
+            "en": "Read the main hypotheses and conclusion alongside the proof passages below"
+          }
+        },
+        {
+          "citation": "bs-family",
+          "purpose": {
+            "ja": "積分解だけでなく指定line・cup積・積ノルムを同時に運ぶ構成を読む",
+            "en": "Follow the simultaneous transport of the decomposition, specified line, cup products, and product norm"
+          }
+        },
+        {
+          "citation": "bs-projective",
+          "purpose": {
+            "ja": "射影的比較因子から指定lineの大域生成と両側ノルム評価を得る",
+            "en": "Obtain global generation and two-sided norm bounds for the specified line through the projective comparison factor"
+          }
+        }
+      ]
+    }
+  }
+}

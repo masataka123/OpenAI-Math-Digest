@@ -1,201 +1,132 @@
-# Campana's orbifold Iitaka conjecture and logarithmic subadditivity
+# Catalogue 033 — Campana's orbifold Iitaka conjecture and logarithmic subadditivity
 
-**カタログ033の総括　下界、variation、上界を結果単位でつなぐ**
+**結果・使用箇所・証明記事への入口**
 
-033の5篇は、同じHodge的道具を一列に積み重ねる構成ではない。OIの下界と随伴正値性はWVの別々の段階へ入り、RAは独立に上界を示した後でOIの下界を合わせる。PHは通常劣加法性の別証明を与え、BSは実際のmoduli lineの半豊富性を扱う。以下では、原稿が主張する結果と記事の説明を対応させ、どの結果がどの段階に何を渡すかを示す。
+小平次元の劣加法性とvariation、対数的加法性、moduli lineの半豊富性を扱う5篇を案内する。公式順の一覧から主張と方法を選び、結果単位の接続から各記事の証明段階へ進める。
 
-## 1. 公式順の記事一覧
+## 公式順の記事一覧
 
-分野は **Algebraic and complex geometry**。公式overviewの033見出しをページ名とし、CONTENTSの別表記は *Iitaka subadditivity, variation, and logarithmic additivity* である。5篇、参考文献込み259ページ。各タイトルから日本語概説へ進める。
+CATALOGINVENTORYTOKEN
 
-| 順序と記事 | 原稿版・ページ数 | 役割 |
+## 033内で結果を使う箇所
+
+<span class="legacy-anchor" id="図の矢印に付した引用" aria-hidden="true"></span>
+<span class="legacy-anchor" id="diagram-sources" aria-hidden="true"></span>
+<span class="legacy-anchor" id="2-下界からvariationへ進み独立した上界と合わせる" aria-hidden="true"></span>
+<span class="legacy-anchor" id="main-routes" aria-hidden="true"></span>
+<span class="legacy-anchor" id="main-routes-step-1" aria-hidden="true"></span>
+<span class="legacy-anchor" id="1-対数劣加法性でparameter-fieldの次元を測る" aria-hidden="true"></span>
+<span class="legacy-anchor" id="main-routes-step-2" aria-hidden="true"></span>
+<span class="legacy-anchor" id="2-制限したhodge-lineから最初のconstancyへ進む" aria-hidden="true"></span>
+<span class="legacy-anchor" id="main-routes-step-3" aria-hidden="true"></span>
+<span class="legacy-anchor" id="3-raの上界に同じ対の下界を加える" aria-hidden="true"></span>
+<span class="legacy-anchor" id="3-追加の相対飯高構成へ渡す三つの入力" aria-hidden="true"></span>
+<span class="legacy-anchor" id="additional-routes" aria-hidden="true"></span>
+<span class="legacy-anchor" id="additional-routes-step-1" aria-hidden="true"></span>
+<span class="legacy-anchor" id="1-固定参照空間へ切断と比を戻す" aria-hidden="true"></span>
+<span class="legacy-anchor" id="additional-routes-step-2" aria-hidden="true"></span>
+<span class="legacy-anchor" id="2-被約境界で全最高部分をlineにする" aria-hidden="true"></span>
+<span class="legacy-anchor" id="additional-routes-step-3" aria-hidden="true"></span>
+<span class="legacy-anchor" id="3-二種類の最小値を区別して境界を正規化する" aria-hidden="true"></span>
+<span class="legacy-anchor" id="7-確認した直接依存の一覧" aria-hidden="true"></span>
+<span class="legacy-anchor" id="section-8" aria-hidden="true"></span>
+<span class="legacy-anchor" id="overview" aria-hidden="true"></span>
+<span class="legacy-anchor" id="connection-explorer" aria-hidden="true"></span>
+
+Orbifold IitakaはWhole-fiber variationの主証明に異なる二つの入力を渡す。Reverse log additivityはまず独立した上界を示し、下界を加えるのは加法性の帰結である。以下の論文名は記事の該当節、結果番号は固定版の原典へリンクする。
+
+| 供給元の結果 | 利用先・使用箇所 | 使う内容 |
 |---|---|---|
-| 01 [Orbifold and logarithmic Iitaka subadditivity](../orbifold-logarithmic-iitaka/article.ja.md) [OI] | 2026-09-26 · 55 ページ · [原典][OI] | orbifold下界、対数下界、Hodge lineの随伴正値性を供給。 |
-| 02 [Logarithmic Kodaira dimension and whole-fiber variation](../whole-fiber-variation/article.ja.md) [WV] | 2026-09-26 · 75 ページ · [原典][WV] | parameter fieldへ全ファイバーを降下し、variationを含む下界を得る。 |
-| 03 [The reverse logarithmic Kodaira inequality and additivity](../reverse-logarithmic-additivity/article.ja.md) [RA] | 2026-09-26 · 51 ページ · [原典][RA] | stratum smoothnessの下で独立に上界を示し、OIの下界と合わせる。 |
-| 04 [Projective Hodge lines and ordinary Iitaka subadditivity](../projective-hodge-lines/article.ja.md) [PH] | 2026-09-27 · 40 ページ · [原典][PH] | 射影的Hodge lineから通常劣加法性へ進む別証明。 |
-| 05 [B-semiampleness for compact log-smooth Kähler fibrations](../kahler-b-semiampleness/article.ja.md) [BS] | 2026-09-10 · 38 ページ · [原典][BS] | lct moduli lineを同定し、積分解・延長・norm降下で半豊富性を得る。 |
+| <span id="connection-c01"></span>[Orbifold Iitaka](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/orbifold-logarithmic-iitaka/#proof-3) · [Corollary 6.2 · pp. 40–41][OI] | [Whole-fiber variation](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/whole-fiber-variation/#proof-2) · [Theorem 2.1; Lemmas 2.8–2.9 · pp. 6, 10–12][WV] | **直接入力**。通常の対数下界を与え、飯高ファイバー上で二つの非負な項を0にする。parameter fieldの構成に使う。 |
+| <span id="connection-c02"></span>[Orbifold Iitaka](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/orbifold-logarithmic-iitaka/#proof-1-step-4) · [Theorem 3.1 · pp. 17–18][OI] | [Whole-fiber variation](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/whole-fiber-variation/#proof-3) · [Theorem 3.8 / Proposition 3.9; Proposition 3.12 · pp. 21, 23][WV] | **直接入力**。制限した変動のHodge lineに随伴正値性を与える。切断次元の上界と合わせて随伴比較の底を点にし、Mの有理自明性を得る。 |
+| <span id="connection-c03"></span>[Orbifold Iitaka](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/orbifold-logarithmic-iitaka/#proof-3) · [Corollary 6.2 · pp. 40–41][OI] | [Reverse log additivity](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/reverse-logarithmic-additivity/#proof-4) · [Corollary 1.2; Theorem 7.8 / §7.6 · pp. 2, 50][RA] | **帰結への入力**。同じ対と非常に一般のファイバーに下界を与え、RAの上界と合わせて加法性にする。 |
 
-各篇には日英概説と証明図がある。OI・RAの主定理の全体図を残し、WVにはparameter fieldから全ファイバー降下まで、BSには安定化から半豊富性までの全体図を加えた。図の数は論証に応じて異なる。
+最初の二つの入力はparameter fieldと制限Hodge lineの段階を支える。それだけで全ファイバーのconstancyが得られるわけではなく、[Whole-fiber variationの全体図](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/whole-fiber-variation/#proof-1)でconstancy・marking・降下までを追う。[Reverse log additivityの上界の証明](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/reverse-logarithmic-additivity/#proof-1)は、小平次元の全符号を処理してから下界へ進む。
 
-[公式overview · PDF p. 5][OV] · [公式CONTENTS][CONTENTS]
+Whole-fiber variation §9の追加の相対飯高構成には、さらに次の三つを使う。§7.4で完結する主証明とは別の経路である。
 
-## 図の矢印に付した引用
+| 供給元の結果 | 利用先・使用箇所 | 使う内容 |
+|---|---|---|
+| <span id="connection-c04"></span>[Orbifold Iitaka](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/orbifold-logarithmic-iitaka/#proof-1-step-3) · [Proposition 2.7 · pp. 10, 16–17][OI] | [Whole-fiber variation](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/whole-fiber-variation/#proof-7) · [Proposition 9.1(i), (iii) · pp. 69–70][WV] | **追加結果内の入力**。元のXを参照空間に固定し、相対・絶対の切断と比を保持する。追加の通常相対飯高構成で相対bignessを得る。 |
+| <span id="connection-c05"></span>[Orbifold Iitaka](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/orbifold-logarithmic-iitaka/#proof-5) · [Lemma 7.1 / Corollary 7.2 · pp. 43–46][OI] | [Whole-fiber variation](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/whole-fiber-variation/#proof-7) · [Proposition 9.1(iv), (v) · pp. 69–70][WV] | **追加結果内の入力**。被約境界と最小指数のroot coverから全最高部分をrank oneにし、正規化済みMを純粋整変動のlineとして実現する。 |
+| <span id="connection-c06"></span>[Orbifold Iitaka](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/orbifold-logarithmic-iitaka/#proof-5) · [Lemma 7.4 · pp. 46–47][OI] | [Whole-fiber variation](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/whole-fiber-variation/#proof-7) · [Proposition 9.1: initial normalized boundary · pp. 69–70][WV] | **追加結果内の入力**。実際のsource成分での最小値と全付値のlctを区別してBを正規化する。切断比較とHodge lineを同じモデル上で使う。 |
 
-OI・WV・RA・PH・BSは上の5篇。034のLAは *Log abundance in characteristic zero*、KAは *Log abundance for compact Kähler spaces under logarithmic Iitaka subadditivity*、CKは *Conditional good minimal models for compact Kähler fourfolds* を指す。
+切断の保存、**被約境界での全最高line**、同じモデル上の境界の正規化を分担する。記述と使用箇所の照合であり、全付値比較や§§8–9全体の証明確認ではない。
 
-実線は図に指定した結果の証明へ実際に使う入力である。「帰結」「追加」の入力を主定理の必須経路へ移さない。破線は受け手が明記する前提への対応。別証明・類似手法・背景は後の文章で扱い、依存の矢印には含めない。各矢印の引用は固定原典へリンクする。ページ番号はラベルで確認する。
+## カタログ034との接続
 
-## 2. 下界からvariationへ進み、独立した上界と合わせる
+<span class="legacy-anchor" id="4-034のモデル存在と033の帰結をつなぐ" aria-hidden="true"></span>
+<span class="legacy-anchor" id="models" aria-hidden="true"></span>
+<span class="legacy-anchor" id="models-step-1" aria-hidden="true"></span>
+<span class="legacy-anchor" id="1-laではalbanese帰着に限って使う" aria-hidden="true"></span>
+<span class="legacy-anchor" id="models-step-2" aria-hidden="true"></span>
+<span class="legacy-anchor" id="2-wvのsmooth-familyの帰結ではgood-modelを入力する" aria-hidden="true"></span>
+<span class="legacy-anchor" id="models-step-3" aria-hidden="true"></span>
+<span class="legacy-anchor" id="3-ckの条件付き前提の範囲を保持する" aria-hidden="true"></span>
+<span class="legacy-anchor" id="5-kähler稿の具体的な補助結果へ渡す" aria-hidden="true"></span>
+<span class="legacy-anchor" id="section-6" aria-hidden="true"></span>
+<span class="legacy-anchor" id="kahler" aria-hidden="true"></span>
+<span class="legacy-anchor" id="kahler-step-1" aria-hidden="true"></span>
+<span class="legacy-anchor" id="1-相対飯高帰着で小平次元0のファイバーへ移る" aria-hidden="true"></span>
+<span class="legacy-anchor" id="kahler-step-2" aria-hidden="true"></span>
+<span class="legacy-anchor" id="2-bigな場合をstable-familyとの比較で排除する" aria-hidden="true"></span>
+<span class="legacy-anchor" id="kahler-step-3" aria-hidden="true"></span>
+<span class="legacy-anchor" id="3-実際のlineと切断空間を同時に比較する" aria-hidden="true"></span>
+<span class="legacy-anchor" id="kahler-step-4" aria-hidden="true"></span>
+<span class="legacy-anchor" id="4-bigな底の捻りから補間用の切断を得る" aria-hidden="true"></span>
 
-**目標。** WVに必要な二つのOI入力と、RAの上界が完成した後に使うOI入力を分離する。図のWV側の二つの箱は同じ主定理の異なる証明段階であり、RA側は加法性の帰結を表す。
+両方向に異なる結果が渡る。Log Abundanceから戻る良いモデルはWhole-fiber variationのsmooth族の帰結で使い、variation主定理の入力にはしない。
 
-![OIからWVの二つの段階への直接入力と、RAの加法性への入力](diagrams/main.ja.svg)
+| 供給元の結果 | 利用先・使用箇所 | 使う内容 |
+|---|---|---|
+| <span id="connection-c07"></span>[Orbifold Iitaka](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/orbifold-logarithmic-iitaka/#proof-3) · [Corollary 6.2 · pp. 40–41][OI] | [Log Abundance](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/log-abundance-characteristic-zero/#nonvanishing-explanation-1) · [Theorem 1.2 → Lemma 6.1 · pp. 6, 30–31][LA] | **直接入力**。境界0のAlbaneseファイブレーションに適用し、非消滅反例のirregularityを0にする。LAでの劣加法性の用途はここに限る。 |
+| <span id="connection-c12"></span>[Log Abundance](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/log-abundance-characteristic-zero/#corollary-11-2) · [Corollary 11.2 · pp. 73–74][LA] | [Whole-fiber variation](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/whole-fiber-variation/#proof-6) · [Corollary 1.3 proof · p. 5][WV] | **帰結への入力**。BDPPで擬有効となる各閉ファイバーにsemiampleなgood modelと有効例外差を与える。canonical性を確認してTajiを適用する。 |
+| <span id="connection-c08"></span>[Orbifold Iitaka](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/orbifold-logarithmic-iitaka/#proof-1-step-2) · [Lemma 2.6 · p. 9][OI] | [Kähler abundance](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/kahler-log-abundance/#proof-3) · [§5.1; reused in Lemma 5.7 · pp. 91, 98][KA] | **直接入力**。相対飯高底へ移して一般ファイバーを小平次元0にし、低次元への帰納法を続ける。 |
+| <span id="connection-c09"></span>[Orbifold Iitaka](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/orbifold-logarithmic-iitaka/#proof-2-step-1) · [Lemma 5.2 · p. 32][OI] | [Kähler abundance](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/kahler-log-abundance/#proof-3) · [§5.1 · p. 91][KA] | **直接入力**。水平境界を少し下げたbigなファイバーを射影的stable familyに比較し、代数次元0でbigな場合を排除する。 |
+| <span id="connection-c10"></span>[Orbifold Iitaka](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/orbifold-logarithmic-iitaka/#proof-1) · [Proposition 2.7 / Theorem 3.1 · pp. 10–17, 17–18][OI] | [Kähler abundance](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/kahler-log-abundance/#proof-3) · [Lemma 5.2 · pp. 91–94][KA] | **直接入力**。切断空間と実際の有理Hodge lineを比較し、M=p*Pと底の随伴bignessを得る。余次元2へ落ちる項の符号は別途扱う。 |
+| <span id="connection-c11"></span>[Orbifold Iitaka](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/orbifold-logarithmic-iitaka/#proof-2) · [Lemma 3.3 · pp. 18–19][OI] | [Kähler abundance](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/kahler-log-abundance/#proof-3) · [Lemma 5.7, interpolation · pp. 98–99][KA] | **直接入力**。bigな底の捻りから非零切断を作り、別の有効因子と補間して正の小平次元を強制する。 |
 
-### 1. 対数劣加法性でparameter fieldの次元を測る
+Log AbundanceのAlbanese帰着は境界0の場合で、原稿にはこの用途をHacon–Popa–Schnellで賄う別経路もある。Kähler稿への各行は特定の補助結果の利用であり、利用先自身の仮定を残す。Log Abundanceを経由する推移的な経路を、Schnellへの直接入力とはしない。
 
-WVはOI Corollary 6.2をTheorem 2.1として再掲する。射影的なSNCコンパクト化で逆像境界の支持条件を満たし、$d=\kappa(F)\geq0$の場合に$\bar\kappa(U)\geq d+\bar\kappa(V)$を得る。さらに飯高ファイバー上で二つの非負な小平次元が0となり、対数形式の比例性から像の族を測る。WV Proposition 2.10が得るのは、元の底の関数体に入る$\mathbb C(T_0)$と$\bar\kappa(U)=d+\dim T_0$である。全ファイバーの一定性はまだ使わない。
+<span id="connection-p01"></span>
 
-[OI, Corollary 6.2 · pp. 40–41][OI] · [WV, Theorem 2.1・Lemmas 2.8–2.9・Proposition 2.10 · pp. 6, 10–14][WV]
+**明示的な前提への対応。** [Orbifold Iitaka, Theorem 1.1 · pp. 2–3][OI]は[Conditional Kähler models, Assumption 2.2 · pp. 7–8][CK]に対応する。任意次元class C、係数1、不変な底項の規約まで含めた対応であり、他のKähler MMP・豊富性の前提は残る。[前提の記述](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/conditional-kahler-fourfolds/#results)へ進める。
 
-### 2. 制限したHodge lineから最初のconstancyへ進む
+## 別証明・結果の包含・背景
 
-OI Theorem 3.1は、整格子を持つ周囲の変動の複素直和因子に対する随伴正値性を与える。WVではroot coverの全最高部分がlineであり、これを飯高ファイバーへ制限した変動に適用し直す。$K+B+M$の切断次元の上界と$K+B$の非消滅を合わせると、正次元の随伴比較の底は排除され、$M$が有理的に自明になる。有限指標、解析的な双有理的constancy、marking、cocycleと有限被覆の降下は、その後に必要な別の段階である。period像の次元だけをwhole-fiber variationと同一視しない。
+<span class="legacy-anchor" id="6-phとbsの役割と直接辺にしない比較" aria-hidden="true"></span>
+<span class="legacy-anchor" id="section-7" aria-hidden="true"></span>
+<span class="legacy-anchor" id="comparisons-step-1" aria-hidden="true"></span>
+<span class="legacy-anchor" id="1-phは通常劣加法性への別経路を与える" aria-hidden="true"></span>
+<span class="legacy-anchor" id="comparisons-step-2" aria-hidden="true"></span>
+<span class="legacy-anchor" id="2-bsは半豊富性へ進むための異なる入力を使う" aria-hidden="true"></span>
+<span class="legacy-anchor" id="comparisons-step-3" aria-hidden="true"></span>
+<span class="legacy-anchor" id="3-類似手法と背景を分ける" aria-hidden="true"></span>
 
-[OI, Theorem 3.1 · pp. 17–18][OI] · [WV, Theorem 3.8・Propositions 3.9, 3.12・Corollary 3.16 · pp. 21–25; §§4–7 · pp. 25–59][WV]
+[Projective Hodge lines, Theorem 1.1 · p. 2][PH]と[Orbifold Iitaka, Corollary 6.3 · p. 41][OI]は、標数0での同じ通常劣加法性への別証明である。後者は対数的結論も含む。通常の主張はその境界0の特殊化という**結果の包含**であり、証明依存ではない。[二つの底の補間](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/projective-hodge-lines/#proof-3)と[標数0への移行](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/orbifold-logarithmic-iitaka/#proof-4)を比較できる。
 
-### 3. RAの上界に、同じ対の下界を加える
+[Projective Hodge lines, Lemma 8.4 / Theorem 8.1 · pp. 28–29][PH]は[Whole-fiber variation, Remark 3.17 · p. 25][WV]が挙げる別の随伴比較である。制限上でtensor replacementを作り直す必要があり、受け手の本文は直接比較を採用する。別に、smooth族で底とファイバーの小平次元が非負なら、加法性とvariation下界の比較でも底の上界を得る（[比較段落 · p. 5][WV]）。負の底やすべてのspecial baseはこの経路で扱わない。
 
-RA Theorem 1.1は、境界の全stratumが開いた底上で滑らかな場合の上界を与える。OIを使うのはCorollary 1.2であり、$D_X=E,D_Y=D$として同じ対・同じ非常に一般のファイバーへCorollary 6.2を適用する。両辺が有限なら等号を得る。右辺に$-\infty$があれば、RAの上界が与える全正次数での切断消滅が等号の内容を担う。
+Orbifold IitakaとProjective Hodge linesの弱正値性・補間は類似手法だが、Hodge lineの仮定は異なる。Orbifold IitakaとKähler B-semiamplenessのroot line計算でも、orbifoldのinf-multiplicity境界とlct discriminantは別物である。[Kähler B-semiampleness · p. 3][BS]はorbifold Iitaka theoremを使わないと明記するが、全論文間関係の調査済みを意味しない。[全体図](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/kahler-b-semiampleness/#proof-1)で安定化と積分解の経路を追える。
 
-[RA, Theorem 1.1・Corollary 1.2 · p. 2; Theorem 7.8・§7.6 · p. 50][RA] · [OI, Corollary 6.2 · pp. 40–41][OI]
+Reverse log additivityのconnection-formによるAx–Schanuel論証の出典は方法の背景として記録する。必要な半単純の場合を本文内で論じており、[外部入力の説明](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/reverse-logarithmic-additivity/#dependencies)で外部定理の直接適用と区別する。
 
-**得られた結果の使い道。** WVでは$\operatorname{Var}(f)\leq\dim T_0$を全関数体の降下で示し、上の次元等式と組み合わせる。RAの加法性とWV Theorem 1.1を比較する別経路では、smoothな族で$\kappa(F)\geq0$、$\bar\kappa(V)\geq0$のときに$\operatorname{Var}(f)\leq\bar\kappa(V)$を得る。この別経路は負の底の分岐やすべてのspecial baseを扱うものではない。
+## 原典・確認範囲
 
-[WV, §7.4 · pp. 58–59; Corollary 1.3後の比較 · p. 5][WV]
+<span class="legacy-anchor" id="8-原典の版と残る確認範囲" aria-hidden="true"></span>
+<span class="legacy-anchor" id="section-9" aria-hidden="true"></span>
 
-## 3. 追加の相対飯高構成へ渡す三つの入力
+[公式一覧][CONTENTS]／[OpenAI Research Catalog · 033 · p. 5][OV]。公式分野はAlgebraic and complex geometryで、記事一覧は公式順を保つ。033原稿はcommit `fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb`に固定する。034の接続先は公開記事の参照版 `adc7f1241b42e322a6451854ab7e4b4c146bf78a`（Log Abundance：2026-09-24、Kähler abundance：2026-10-04、conditional Kähler models：2026-10-05）を保持する。
 
-**目標。** WV §§8–9は主証明とは別の経路である。元の$X$の切断環を保持したまま、通常の相対飯高底上で整純粋変動の全最高lineを使える形に整えること。図はProposition 9.1に実際に渡される三つの役割を分けて示す。
+2026年10月11日の改訂では、5篇の固定PDFと不足していた証明対象の主張・結論を照合し、ハッシュを再確認して、既存の接続と記事を突き合わせた。12入力と1前提対応の原典記述・使用箇所の照合は10月8日の記録を継承し、外部証明の全検証を新たに主張しない。適用条件と確認限界を含む[接続記録](https://github.com/masataka123/OpenAI-Math-Digest/blob/main/drafts/catalog-033/overview/connections.json)を保持している。
 
-![WV Proposition 9.1の切断比較、全最高line、境界正規化に対するOIの追加入力](diagrams/additional.ja.svg)
+- [Orbifold Iitaka](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/orbifold-logarithmic-iitaka/#sources)：rank loss、安定族の全構成、付値・BFMT比較、coreの帰結。
+- [Whole-fiber variation](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/whole-fiber-variation/#sources)：正則化・L²の全評価、Hanamura・SGA1の原典記述、§§8–9全体。
+- [Reverse log additivity](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/reverse-logarithmic-additivity/#sources)：斉次置換、compact flag、境界・表現論の全計算。
+- [Projective Hodge lines](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/projective-hodge-lines/#sources)：多変数延長、補助結果の全証明、§§8–9の別証明。
+- [Kähler B-semiampleness](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/kahler-b-semiampleness/#sources)：parameter-space全構成、偏極変更、外部コンパクト化理論。
 
-### 1. 固定参照空間へ切断と比を戻す
-
-OI Proposition 2.7の相対比較は、WVの元の$X$を参照空間として使う。一般ファイバー上で切断の像の次元が保たれるため、$K_W+B+M$の$Y$上のbignessと元の多重標準系との比較が同時に得られる。
-
-[OI, Proposition 2.7 · pp. 10, 16–17][OI] · [WV, Proposition 9.1(i), (iii)と証明 · pp. 69–70][WV]
-
-### 2. 被約境界で全最高部分をlineにする
-
-OI Lemma 7.1とCorollary 7.2は、対数的小平次元0の被約SNC対の最小指数root coverを用いる。固有指標の部分だけでなく全最高部分がrank oneとなり、$M$をそのparabolic延長として同定する。一般の有理境界ではこの全最高部分の主張は成立しないため、被約性を残す。
-
-[OI, Lemma 7.1・Corollary 7.2・Remark 7.3 · pp. 43–46][OI] · [WV, Proposition 9.1(iv), (v) · pp. 69–70][WV]
-
-### 3. 二種類の最小値を区別して境界を正規化する
-
-OI Lemma 7.4は、切断の正則性を測る実際の成分上の最小値と、高いモデルの付値も許すlctを同じSNCモデルで比較する。WVはこの結果で初期境界を正規化する。今回、入力の記述と受け手の用途を照合したが、付値比較と全モデル変更の証明全体を独立検証したわけではない。
-
-[OI, Lemma 7.4 · pp. 46–47][OI] · [WV, Proposition 9.1の証明 · p. 70][WV]
-
-**得られた結果の使い道。** WV Theorem 8.1へ入れるデータを揃え、Corollaries 9.2–9.4で第二の飯高底と元の全ファイバーの定義体を結び付ける。§8の中間の体積・次数評価と§9全体は部分調査であり、この図を追加経路全体の証明検証とは扱わない。
-
-## 4. 034のモデル存在と033の帰結をつなぐ
-
-**目標。** OIの劣加法性が034へ渡る用途と、034のLAからWVへ戻る用途を分ける。下図のCKは、受け手が掲げた前提との対応として破線で示す。
-
-![OIからLAとCKへの接続、およびLAからWV Corollary 1.3への入力](diagrams/models.ja.svg)
-
-### 1. LAではAlbanese帰着に限って使う
-
-LA Lemma 6.1は、下の次元でのgood modelを帰納的に仮定し、仮想的な非消滅反例のAlbanese写像を考える。滑らかな底はabelian varietyの部分多様体へ一般有限に写るため小平次元が非負である。ファイバーも帰納法で非負となり、境界0のOI Corollary 6.2が全空間の非消滅を与えて矛盾する。これがLAにおける劣加法性の唯一の使用箇所である。LA p.6はこの用途をHacon–Popa–Schnellの結果でも賄えると明記する。
-
-[LA, Theorem 1.2 · p. 6; Lemma 6.1 · pp. 30–31][LA] · [OI, Corollary 6.2 · pp. 40–41][OI]
-
-### 2. WVのsmooth familyの帰結ではgood modelを入力する
-
-WV Corollary 1.3では、各閉ファイバーのnon-unirulednessからBDPPで$K_F$の擬有効性を得る。LA Corollary 11.2がsemiampleなモデルと有効例外差を供給し、その比較からcanonical singularitiesを確認する。そこでTajiの結果を適用し、variationの二つの分岐とspecial baseの帰結を得る。LAをWV Theorem 1.1の入力に移さない。
-
-[LA, Corollary 11.2 · pp. 73–74][LA] · [WV, Corollary 1.3と証明 · p. 5][WV]
-
-### 3. CKの条件付き前提の範囲を保持する
-
-CK Assumption 2.2は、係数1を含む任意次元class Cのorbifold劣加法性と、不変な底・neatモデルの規約を明記する。OI Theorem 1.1と底の定義はこの前提に対応する。CKの他のMMP・非消滅後のabundanceの前提まで解消したとは扱わない。
-
-[OI, 定義・Theorem 1.1 · pp. 2–3][OI] · [CK, Assumption 2.2・(2)–(5) · pp. 7–8][CK]
-
-**得られた結果の使い道。** LAのgood modelはSchnellにも使われるが、その直接入力はLA Corollary 11.2である。OI → LA → SchnellをOI → Schnellの一本の直接辺へ置き換えない。034の版と条件付きの範囲は既存記事のまま保持する。
-
-## 5. Kähler稿の具体的な補助結果へ渡す
-
-**目標。** KAの旧固定版では、OIの全主定理だけでなく、帰着・比較・正値性を担う補助結果が別々に使われる。目標はそれらを「劣加法性からの帰結」という一語でまとめないことである。
-
-![KAの相対飯高帰着、stable family比較、Hodge line、捻りの有効化への直接入力](diagrams/kahler.ja.svg)
-
-### 1. 相対飯高帰着で小平次元0のファイバーへ移る
-
-KA §5.1はOI Lemma 2.6を用いて相対飯高底へ移り、低次元のProposition 5.1へ戻る。狭義変換と被約例外境界の規約を保つため、ファイバーの対数的小平次元0という条件が後の比較にも使える。
-
-[OI, Lemma 2.6 · p. 9][OI] · [KA, §5.1 · p. 91; Lemma 5.7 · p. 98][KA]
-
-### 2. bigな場合をstable familyとの比較で排除する
-
-水平境界の係数を少し下げてもファイバー上のbignessは残る。KAはこの条件でOI Lemma 5.2を適用し、射影的stable familyへ比較する。代数次元0ならその射影的parameter底は点となり、正次元の射影因子の有理関数が矛盾を与える。
-
-[OI, Lemma 5.2 · p. 32][OI] · [KA, §5.1 · p. 91][KA]
-
-### 3. 実際のlineと切断空間を同時に比較する
-
-KA Lemma 5.2はOI Proposition 2.7のHodge lineと切断比較、Theorem 3.1の随伴正値性を組み合わせる。結論は数値類だけでなく$M=p^*P_S$という有理lineの同定と$K_S+a_0P_S$のbignessである。元の参照空間への降下が全切断空間の比較を担う。底の余次元2以上へ落ちる残余項の符号は、この段階の結論に追加しない。
-
-[OI, Proposition 2.7・Theorem 3.1 · pp. 10–18][OI] · [KA, Lemma 5.2 · pp. 91–94][KA]
-
-### 4. bigな底の捻りから補間用の切断を得る
-
-KA Lemma 5.7のp.99は、相対系の非消滅・SNC境界・射影的な底というOI Lemma 3.3の仮定を列挙して適用する。得た負の豊富捻りを持つ有効因子を、正の捻りを持つ別の有効因子と有理係数で補間し、正の小平次元を強制する。
-
-[OI, Lemma 3.3 · pp. 18–19][OI] · [KA, Lemma 5.7 · pp. 98–99][KA]
-
-**得られた結果の使い道。** これらはKAの次元帰納法と底上の随伴計算へ入る。KA Assumption 1.1と他の外部入力を保持し、OIだけからKA全体が従うとは記載しない。
-
-## 6. PHとBSの役割と直接辺にしない比較
-
-### 1. PHは通常劣加法性への別経路を与える
-
-PHはBBTによるfull period image、BCによる対数一般型性をTheorem 1.2の随伴正値性へ使い、Fujino–Mori／Ambroの標準束比較、Fujinoの弱正値性、Hashizumeの一般型ファイバーの劣加法性を§§6–7で組み合わせる。各入力の結果番号・版・使用箇所は[PH記事§5](../projective-hodge-lines/article.ja.md)にまとめた。Theorem 1.1とOI Corollary 6.3は通常劣加法性の別証明である。
-
-PH Lemma 8.4／Theorem 8.1はWV Remark 3.17で別の随伴比較として挙がる。制限した変動にtensor replacementを作り直す必要があり、共通tensor指数は要求しない。WVが実際に採用する直接比較とは分ける。
-
-[PH, Theorems 1.1–1.2 · p. 2; Theorem 8.1・Lemma 8.4 · pp. 28–29][PH] · [WV, Remark 3.17 · p. 25][WV]
-
-### 2. BSは半豊富性へ進むための異なる入力を使う
-
-BSはFujino–Fujisawaの延長を§§3–4のmoduli line同定に、Matsumura–Wang–Wu–Zhangの積分解とTomaのコンパクト性を§5の族の構成に使う。§§6–7ではBFMTの代数的b-semiamplenessを射影的比較因子に、算術periodコンパクト化をtorus・symplectic因子に分けて適用する。最後はノルムで指定した同型を延長し、全点での大域生成を降ろす。結果番号・仮定・使用箇所は[BS記事§7](../kahler-b-semiampleness/article.ja.md)を参照する。
-
-BS p.3はorbifold Iitaka theoremを入力としないと明記する。今回の確認では他の033稿への直接辺を追加していないが、これは全関係を調べて依存がないと証明した意味ではない。
-
-[BS, Theorem 1.1・証明概観 · p. 3; §§5–9 · pp. 18–37][BS]
-
-### 3. 類似手法と背景を分ける
-
-OIとPHは弱正値性と有理係数の補間を使うが、OIのcomplex summandとPHのentire highest lineでは仮定が異なる。OIとBSはroot eigenline・境界次数・実際の線束を追跡するが、orbifold inf-multiplicityの底とlct discriminantは同じものではない。これらは記事と原典箇所からの編集上の手法比較であり、依存の主張ではない。
-
-RA記事が扱うAx–Schanuelのconnection-form論証の出典は方法の背景に分類する。本文内で必要な半単純の場合を論じることと、外部論文の定理をそのまま入力することを区別する。
-
-[OI, Proposition 3.4 · pp. 19–20][OI] · [PH, §7.3 · pp. 25–26][PH] · [BS, §§3–4 · pp. 6–18][BS] · [RA, §5.1・Lemma 5.1 · pp. 26–28][RA]
-
-## 7. 確認した直接依存の一覧
-
-主証明・帰結・追加結果を合わせた12件を、図と同じ結果単位で示す。いずれも入力の記述、受け手の使用箇所、対応する記事を照合したもの。入力定理の証明全体の検証とは区別する。CKの前提対応1件、別経路3件、類似手法2件、背景1件はこの実線の一覧に混ぜない。
-
-| ID・種別 | 入力結果 | 使用箇所 | 渡す内容と目的 |
-|---|---|---|---|
-| c01 · 直接入力 | [OI Corollary 6.2 · pp. 40–41][OI] | [WV Theorem 2.1; Lemmas 2.8–2.9 · pp. 6, 10–12][WV] | 通常の対数下界を与え、飯高ファイバー上で二つの非負な項を0にする。parameter fieldの構成に使う。 |
-| c02 · 直接入力 | [OI Theorem 3.1 · pp. 17–18][OI] | [WV Theorem 3.8 / Proposition 3.9; Proposition 3.12 · pp. 21, 23][WV] | 制限した変動のHodge lineに随伴正値性を与える。切断次元の上界と合わせて随伴比較の底を点にし、Mの有理自明性を得る。 |
-| c03 · 帰結への入力 | [OI Corollary 6.2 · pp. 40–41][OI] | [RA Corollary 1.2; Theorem 7.8 / §7.6 · pp. 2, 50][RA] | 同じ対と非常に一般のファイバーに下界を与え、RAの上界と合わせて加法性にする。 |
-| c04 · 追加結果への入力 | [OI Proposition 2.7 · pp. 10, 16–17][OI] | [WV Proposition 9.1(i), (iii) · pp. 69–70][WV] | 元のXを参照空間に固定し、相対・絶対の切断と比を保持する。追加の通常相対飯高構成で相対bignessを得る。 |
-| c05 · 追加結果への入力 | [OI Lemma 7.1 / Corollary 7.2 · pp. 43–46][OI] | [WV Proposition 9.1(iv), (v) · pp. 69–70][WV] | 被約境界と最小指数のroot coverから全最高部分をrank oneにし、正規化済みMを純粋整変動のlineとして実現する。 |
-| c06 · 追加結果への入力 | [OI Lemma 7.4 · pp. 46–47][OI] | [WV Proposition 9.1: 初期境界の正規化 · pp. 69–70][WV] | 実際のsource成分での最小値と全付値のlctを区別してBを正規化する。切断比較とHodge lineを同じモデル上で使う。 |
-| c07 · 直接入力 | [OI Corollary 6.2 · pp. 40–41][OI] | [LA Theorem 1.2 → Lemma 6.1 · pp. 6, 30–31][LA] | 境界0のAlbaneseファイブレーションに適用し、非消滅反例のirregularityを0にする。LAでの劣加法性の用途はここに限る。 |
-| c08 · 直接入力 | [OI Lemma 2.6 · pp. 9][OI] | [KA §5.1; Lemma 5.7 · pp. 91, 98][KA] | 相対飯高底へ移して一般ファイバーを小平次元0にし、低次元への帰納法を続ける。 |
-| c09 · 直接入力 | [OI Lemma 5.2 · pp. 32][OI] | [KA §5.1 · pp. 91][KA] | 水平境界を少し下げたbigなファイバーを射影的stable familyに比較し、代数次元0でbigな場合を排除する。 |
-| c10 · 直接入力 | [OI Proposition 2.7 / Theorem 3.1 · pp. 10–17, 17–18][OI] | [KA Lemma 5.2 · pp. 91–94][KA] | 切断空間と実際の有理Hodge lineを比較し、M=p*Pと底の随伴bignessを得る。余次元2へ落ちる項の符号は別途扱う。 |
-| c11 · 直接入力 | [OI Lemma 3.3 · pp. 18–19][OI] | [KA Lemma 5.7の補間 · pp. 98–99][KA] | bigな底の捻りから非零切断を作り、別の有効因子と補間して正の小平次元を強制する。 |
-| c12 · 帰結への入力 | [LA Corollary 11.2 · pp. 73–74][LA] | [WV Corollary 1.3の証明 · pp. 5][WV] | BDPPで擬有効となる各閉ファイバーにsemiampleなgood modelと有効例外差を与える。canonical性を確認してTajiを適用する。 |
-
-## 8. 原典の版と残る確認範囲
-
-033は2026-10-08に固定したcommit `fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb`。034の接続先は公開記事と同じ `adc7f1241b42e322a6451854ab7e4b4c146bf78a` で、LAは2026-09-24、KAは2026-10-04、CKは2026-10-05版を使う。KA・CKの10月6日版への更新はここに含めない。5篇と今回照合した034の3篇は保存PDFのSHA-256を既存台帳と再照合した。
-
-| 記事 | 残る主要な未確認範囲 |
-|---|---|
-| OI | 全rank-loss論証、安定族比較の全構成、§7のBFMTとの全接続・全付値比較、coreの帰結。今回のLemma 7.4の記述・使用照合を全証明確認に拡大しない。 |
-| WV | 正則化・L²評価の全独立検算、Hanamuraの原定理、SGA1のpurity原文、§8の中間評価と§9全体。OI追加入力の記述・用途は今回補った。 |
-| RA | 斉次置換・compact flag・有限monodromy、全境界評価と表現論、入力文献の全証明。 |
-| PH | 多変数のHodge延長、全補助結果、§§8–9の別証明。WVとの代替関係は記述と用途の確認。 |
-| BS | 全parameter-space構成、偏極の変更と延長の全整合性、外部の算術商・コンパクト化理論。 |
-
-各記事の外部入力表には、原典記述と適用箇所を照合したものと受け手のみを読んだものが分けてある。本総括はその確認範囲を保持する。図にない関係は未調査・未記録であり、全依存の網羅を意味しない。
+未記録の関係は未調査である。主張・使用箇所の照合、証明概略の説明、証明全体の独立検証を区別し、専門家査読・形式検証済みとはしない。
 
 [OI]: https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf
 [WV]: https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026/paper.pdf

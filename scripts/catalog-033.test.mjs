@@ -20,7 +20,7 @@ test('033 registers five papers in official order without moving the 034 source 
  assert.equal(catalogs.find(c=>c.id==='034').paperIds.length,14);
 });
 
-test('dependency explorer distinguishes 12 inputs and one premise from alternatives',()=>{
+test('retained connection records distinguish 12 inputs and one premise from alternatives',()=>{
  assert.equal(dependencyConfig.entries.filter(d=>d.kind!=='premise').length,12);
  assert.equal(dependencyConfig.entries.filter(d=>d.kind==='premise').length,1);
  assert.equal(records.connections.filter(d=>d.kind==='alternative').length,3);
@@ -33,7 +33,7 @@ test('dependency explorer distinguishes 12 inputs and one premise from alternati
  assert.ok(!dependencyConfig.entries.some(c=>c.toId==='schnell-fiber-spaces'));
 });
 
-test('033 bilingual sections, all 52 figure pairs and relative article links survive rendering',async()=>{
+test('033 bilingual sections, 44 retained article figures and relative article links survive rendering',async()=>{
  let figures=0;
  for(const id of ['overview',...catalog.paperIds]){
   const headings=[];
@@ -53,5 +53,15 @@ test('033 bilingual sections, all 52 figure pairs and relative article links sur
   }
   assert.deepEqual(...headings,`${id}: bilingual anchors`);
  }
- assert.equal(figures,52);
+ assert.equal(figures,44);
+});
+
+test('033 guide uses the common inventory and retains each result-use record once',()=>{
+ for(const lang of ['ja','en']){
+  const source=fs.readFileSync(`${root}/overview/article.${lang}.md`,'utf8');
+  assert.equal(source.split('CATALOGINVENTORYTOKEN').length,2);
+  assert.ok(!source.includes('](diagrams/'));
+  for(const d of dependencyConfig.entries)assert.equal(source.split(`id="connection-${d.id}"`).length,2);
+  assert.ok(!/Three strands|議論をつなぐ3つの流れ/.test(source));
+ }
 });

@@ -1,0 +1,236 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "readable-name",
+  "catalogId": "033",
+  "legacyCitationKeys": [
+    "RA",
+    "OI",
+    "FF14",
+    "FF17",
+    "BBT",
+    "FG",
+    "CP",
+    "BDPP"
+  ],
+  "revisionScope": "2026-10-11 statement/guide revision. Published citation keys and all existing TeX/SVG citations are retained; only the new statement and guide blocks are generated. Figure copies and hashes are checked separately by catalog-033 tests.",
+  "sources": {
+    "RA": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "displayName": "The reverse logarithmic Kodaira inequality and additivity",
+      "pagination": "same"
+    },
+    "OI": {
+      "recordFile": "sources.json",
+      "recordId": "OI",
+      "guideRole": {
+        "ja": "カタログ内の入力・追加結果・別経路。使用箇所と種別は本文の表を参照",
+        "en": "Inputs, additional results, or alternatives within the catalogue; see the use and relation type in the table below"
+      }
+    },
+    "FF14": {
+      "recordFile": "sources.json",
+      "recordId": "FF14",
+      "guideRole": {
+        "ja": "Hodge・weight filtrationの局所自由性",
+        "en": "Local freeness of the Hodge and weight filtrations"
+      }
+    },
+    "FF17": {
+      "recordFile": "sources.json",
+      "recordId": "FF17",
+      "guideRole": {
+        "ja": "FF14のstrictnessに関する補足",
+        "en": "The strictness correction to FF14"
+      }
+    },
+    "BBT": {
+      "recordFile": "sources.json",
+      "recordId": "BBT",
+      "guideRole": {
+        "ja": "格子を保つperiod像の代数化とHodge lineの正値性",
+        "en": "Algebraicity of integral period images and positivity of Hodge lines"
+      }
+    },
+    "FG": {
+      "recordFile": "sources.json",
+      "recordId": "FG",
+      "guideRole": {
+        "ja": "負の境界を許すlc-trivial fibrationのb-nef性",
+        "en": "b-nefness for lc-trivial fibrations allowing negative boundary coefficients"
+      }
+    },
+    "CP": {
+      "recordFile": "sources.json",
+      "recordId": "CP",
+      "guideRole": {
+        "ja": "orbifold余接束の次数評価と相対擬有効性",
+        "en": "Orbifold cotangent degree estimates and relative pseudoeffectivity"
+      }
+    },
+    "BDPP": {
+      "recordFile": "sources.json",
+      "recordId": "BDPP",
+      "guideRole": {
+        "ja": "擬有効性と可動曲線、またはnon-unirulednessの比較",
+        "en": "Pseudoeffectivity and movable curves, or the comparison with non-uniruledness"
+      }
+    }
+  },
+  "citations": {
+    "main": {
+      "source": "RA",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "additivity": {
+      "source": "RA",
+      "locations": [
+        {
+          "result": "Corollary 1.2",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "section": {
+      "source": "RA",
+      "locations": [
+        {
+          "result": "Proposition 1.3",
+          "printed": "3",
+          "pdf": "3"
+        }
+      ]
+    },
+    "ra-positive": {
+      "source": "RA",
+      "locations": [
+        {
+          "result": "Proposition 7.7",
+          "printed": "49–50",
+          "pdf": "49–50"
+        }
+      ]
+    },
+    "ra-removal": {
+      "source": "RA",
+      "locations": [
+        {
+          "result": "Proposition 7.2",
+          "printed": "44–45",
+          "pdf": "44–45"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [],
+  "articleGuides": {
+    ".": {
+      "selfSource": "RA",
+      "externalSources": [
+        "OI",
+        "FF14",
+        "FF17",
+        "BBT",
+        "FG",
+        "CP",
+        "BDPP"
+      ],
+      "proofTargets": [
+        "main",
+        "section",
+        "ra-positive",
+        "additivity"
+      ],
+      "mainResults": [
+        "main",
+        "additivity",
+        "section"
+      ],
+      "statements": {
+        "main": "theorem-1-1",
+        "additivity": "corollary-1-2",
+        "section": "proposition-1-3",
+        "ra-positive": "proposition-7-7",
+        "ra-removal": "proposition-7-2"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "main",
+          "conclusion": "vanishing in all positive degrees when either dimension is negative infinity",
+          "anchor": "proof-1-step-1"
+        },
+        {
+          "result": "main",
+          "conclusion": "upper bound over a base of dimension zero",
+          "anchor": "proof-1-step-2"
+        },
+        {
+          "result": "main",
+          "conclusion": "upper bound over a base of positive Kodaira dimension",
+          "anchor": "proof-1-step-3"
+        },
+        {
+          "result": "additivity",
+          "conclusion": "finite equality",
+          "anchor": "proof-4-step-1"
+        },
+        {
+          "result": "additivity",
+          "conclusion": "equality in negative-infinity cases",
+          "anchor": "proof-4-step-2"
+        },
+        {
+          "result": "section",
+          "conclusion": "nonvanishing on the original base",
+          "anchor": "proof-2-step-3"
+        },
+        {
+          "result": "section",
+          "conclusion": "a section vanishing at the prescribed point when the base has dimension zero",
+          "anchor": "proof-2-step-3"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "main",
+          "purpose": {
+            "ja": "主定理の仮定・結論を確認し、下記の証明箇所と対応させる",
+            "en": "Read the main hypotheses and conclusion alongside the proof passages below"
+          }
+        },
+        {
+          "citation": "section",
+          "purpose": {
+            "ja": "元の底の指定点における零点まで保持する切断構成を読む",
+            "en": "Read the section construction that retains the zero at a prescribed point of the original base"
+          }
+        },
+        {
+          "citation": "ra-positive",
+          "purpose": {
+            "ja": "数値的な捻り除去と完全切断空間の比較から底の正の小平次元へ戻る",
+            "en": "Combine numerical twist removal with the complete section comparison to recover positive base Kodaira dimension"
+          }
+        },
+        {
+          "citation": "additivity",
+          "purpose": {
+            "ja": "独立した上界へ下界を加える箇所と負の無限大の扱いを読む",
+            "en": "Locate the added lower bound and the treatment of negative infinity"
+          }
+        }
+      ]
+    }
+  }
+}

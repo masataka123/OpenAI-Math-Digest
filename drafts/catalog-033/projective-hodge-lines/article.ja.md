@@ -40,18 +40,22 @@ $$
 
 ## 図の矢印に付した引用
 
-略号のない結果番号は本稿[PH]を指す。主要な外部入力には次の略号を使う。
+<!-- reference-guide -->
+略号のない定理・補題・節・式番号は本原稿 [Projective Hodge lines and ordinary Iitaka subadditivity](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Projective-Hodge-lines-and-ordinary-Iitaka-subadditivity-September-27-2026/paper.pdf) を指します。外部入力には次の略号を使います。
 
-- [BBT] Bakker–Brunebarbe–Tsimerman。
-- [BC] Brunebarbe–Cadorel。
-- [FM] Fujino–Mori。
-- [Amb] Ambro。
-- [Fuj] Fujino。
-- [Has] Hashizume。
+- [BBT](https://arxiv.org/pdf/1811.12230v3) Benjamin Bakker; Yohan Brunebarbe; Jacob Tsimerman — *o-minimal GAGA and a conjecture of Griffiths*：格子を保つperiod像の代数化とHodge lineの正値性。arXiv:1811.12230v3 (2022-10-23)。
+- [BC](https://arxiv.org/pdf/1707.01327v1) Yohan Brunebarbe; Benoît Cadorel — *Hyperbolicity of varieties supporting a variation of Hodge structure*：immersiveなperiod写像から対数一般型性を得る。arXiv:1707.01327v1。
+- [FM](https://www.math.kyoto-u.ac.jp/~fujino/Canonical.pdf) Osamu Fujino; Shigefumi Mori — *A canonical bundle formula*：標準束公式の残余因子と全次数の直像。JDG 56 (2000), author-hosted journal PDF。
+- [Amb](https://arxiv.org/pdf/math/0210271v1) Florin Ambro — *Shokurov’s boundary property*：moduli b-divisorと延長Hodge eigensheaf。arXiv:math/0210271v1 (2002-10-17)。
+- [Fuj](https://www.math.kyoto-u.ac.jp/~fujino/weak-posi11.pdf) Osamu Fujino — *Notes on the weak positivity theorems*：負のample捻りを伴う切断の構成に使う弱正値性。2015-06-30, version 0.54。
+- [Has](https://arxiv.org/pdf/1902.10923v2) Kenta Hashizume — *Log Iitaka conjecture for abundant log canonical fibrations*：有効klt対の一般型ファイバーに対する加法性。arXiv:1902.10923v2 (2019-05-01)。
 
-各版・照合範囲は[依存する結果の一覧](#dependencies)に記す。図の引用先は原典であり、GitHub閲覧URLのページはリンク表示中の番号で参照する。
+各引用に結果番号とページを付します。誌面番号とPDF内の位置が異なる場合は両方を示します。GitHubの閲覧リンクではページ位置への自動移動を前提としません。
+<!-- /reference-guide -->
 
 ## 2. Theorem 1.2 — 周期像から境界と分岐を除く
+
+<!-- proof-target:1 -->証明対象：[Theorem 1.2 · p. 2](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Projective-Hodge-lines-and-ordinary-Iitaka-subadditivity-September-27-2026/paper.pdf)<!-- /proof-target --> [仮定・結論](#theorem-1-2)を参照する。
 
 **証明の道筋。** Theorem 1.1には二つの準備を合流させる。本節でTheorem 1.2の随伴正値性を示し、[標準束公式による切断比較](#proof-2)を用意してから、[二つの底の比較と補間](#proof-3)で通常の飯高劣加法性を導く。
 
@@ -64,6 +68,8 @@ $T$をneat levelでの実際のfull period imageの滑らかな射影モデル�
 最高lineを含む最小の有理部分変動に替えると、一般のHodge構造はそのlineで有理的に生成される。これにより、lineを固定する有理正規モノドロミー部分群を排除できる。neat levelで周期像を代数化し、その正規化の関数体を保ったまま有限群作用を考える。lineの有限安定化群の指標はtensor powerで消し、商の上に有理lineを降ろす。原来の$M$との同一視は共通alteration上の延長同士を比較し、normで降ろすので、開集合上だけの同一視ではない。
 
 [Lemmas 2.1–2.3 · pp. 5–7; §5, (5.1) · pp. 13–15][PH] · [BBT, Theorem 1.1 · p. 1][BBT]
+
+周期像が点なら、延長lineは定数lineである。共通alteration上の同定をnormで降ろすことで$M\sim_{\mathbb Q}0$となり、Theorem 1.2の点の場合の結論も得る。
 
 ### 2. 境界と有限分岐で別々に階数を落とす
 
@@ -87,9 +93,35 @@ $$
 
 [PH, §7.3 · pp. 25–26][PH]
 
-## 3. 標準束公式 — 最高lineと切断比較を用意する
+## 3. Proposition 6.4 — 標準束公式と切断比較
+
+<span class="legacy-anchor" id="3-標準束公式--最高lineと切断比較を用意する" aria-hidden="true"></span>
+
+<!-- proof-target:2 -->証明対象：[Proposition 6.4 · pp. 20–21](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Projective-Hodge-lines-and-ordinary-Iitaka-subadditivity-September-27-2026/paper.pdf)<!-- /proof-target -->
 
 $d=\kappa(F)\geq0$とし、相対飯高写像を$\widetilde X\xrightarrow{g}Y\xrightarrow{q}Z$と書く。$\dim(Y/Z)=d$で、$g$の幾何学的一般ファイバー$C$は小平次元$0$である。ここでTheorem 1.2に入るlineと、元の多重標準切断との比較を同時に保持する。
+
+<!-- statement:proposition-6-4 -->
+### Proposition 6.4
+
+複素数上で$f:X\to Z$を滑らかな連結射影多様体間の連結ファイバーをもつ全射とし、幾何学的一般ファイバー$F$について$d=\kappa(F)\geq0$とする。滑らかな射影多様体$\widetilde X,Y$、双有理射$\mu:\widetilde X\to X$、連結ファイバーをもつ全射$\widetilde X\xrightarrow{g}Y\xrightarrow{q}Z$を、$qg=f\mu$、$\dim Y-\dim Z=d$、$g$の幾何学的一般ファイバーの小平次元が0となるように取れる。
+
+Theorem 6.1（pp. 16–18）のデータ$B,M,R$を同時に取り、$B\geq0$はSNC、$(Y,B)$はklt、$M$は$Y$へ降下するnefなmoduli b-divisorのtraceとし、
+
+$$
+\begin{gathered}K_{\widetilde X}\sim_{\mathbb Q}g^*(K_Y+B+M)+R,\\g_*\mathcal O_{\widetilde X}(\lfloor kR^+\rfloor)=\mathcal O_Y\quad(k\in\mathbb Z_{>0}).\end{gathered}
+$$
+
+を満たす。$R^-$は$Y$の余次元2以上へ写り、**元の$X$上でも例外的**である。$M$はgenerically finiteな半安定基底変更後、全最高部分がrank oneの偏極可能な有理変動の延長Hodge lineの正の有理倍として実現される（(6.4)）。$D=K_Y+B+M$と置くと
+
+$$
+\kappa(X)\geq\kappa(Y,D),\qquad D|_{Y_{\bar\eta}}\text{ はbig}
+$$
+
+となる。$\bar\eta$は$Z$の幾何学的一般点で、非常に一般の滑らかな$q$ファイバーでも同じbignessが成り立つ。
+
+<!-- cite:ph-reduction -->[Proposition 6.4 · pp. 20–21](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Projective-Hodge-lines-and-ordinary-Iitaka-subadditivity-September-27-2026/paper.pdf)<!-- /cite -->
+<!-- /statement -->
 
 ![最小指数root coverと残余因子からHodge lineおよび切断比較を得る](diagrams/canonical.ja.svg)
 
@@ -130,6 +162,10 @@ $$
 [PH, Proposition 6.4・§7.3 · pp. 20–21, 25–26][PH]
 
 ## 4. Theorem 1.1 — 二つの底と補間
+
+<!-- proof-target:3 -->証明対象：[Theorem 1.1 · p. 2](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Projective-Hodge-lines-and-ordinary-Iitaka-subadditivity-September-27-2026/paper.pdf)<!-- /proof-target --> [仮定・結論](#theorem-1-1)を参照する。
+
+$\kappa(F)=-\infty$または$\kappa(Z)=-\infty$なら、Theorem 1.1の不等式は規約により自動的である。以下では両者が非負の場合を扱う。
 
 $\kappa(Z)\geq0$とする。Theorem 1.2で$M=p^*L$と書けても、$p:Y\to S$と$q:Y\to Z$の間に因子化は仮定できない。$S$が点なら一般型ファイバーの劣加法性を$q$に直接適用する。以下は$\dim S>0$の場合である。
 
@@ -190,6 +226,12 @@ $$
 これらは主経路の直接入力である。固定部分定理、モノドロミー正規性、nilpotent-orbit・延長理論については本稿の使用箇所を読んだが、各外部原典の全照合は未了である。033内では、[WV, Remark 3.17 · p. 25][WV]が本稿Lemma 8.4 / Theorem 8.1を別の随伴比較として挙げる。WV自身の証明は直接比較を使うと明記されており、この関係は`alternative`である。OIとの通常劣加法性の関係も別証明として扱い、PH→OIの直接辺は作らない。他の関係は未調査である。
 
 ## 6. 原典を読む入口と確認範囲
+
+<!-- reading-list -->
+- [Theorem 1.2 · p. 2](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Projective-Hodge-lines-and-ordinary-Iitaka-subadditivity-September-27-2026/paper.pdf) — 最高lineの仮定、nefな降下、随伴bignessの結論を区別する
+- [Proposition 6.4 · pp. 20–21](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Projective-Hodge-lines-and-ordinary-Iitaka-subadditivity-September-27-2026/paper.pdf) — 残余因子の例外性とHodge同定を保つ標準束帰着を読む
+- [Theorem 1.1 · p. 2](https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Projective-Hodge-lines-and-ordinary-Iitaka-subadditivity-September-27-2026/paper.pdf) — 主定理の仮定・結論を確認し、下記の証明箇所と対応させる
+<!-- /reading-list -->
 
 - [§§2–5 · pp. 5–16][PH]：有理最小化、接方向の極限、二種類のrank loss、商の降下、体積評価。
 - [§6 · pp. 16–22][PH]：最小指数root cover、境界を含むHodge同定、残余因子による切断比較。
