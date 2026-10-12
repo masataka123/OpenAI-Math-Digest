@@ -1,6 +1,6 @@
 # カタログ068 制作計画
 
-- 採用：制作セット1.4と2026-10-11/12補足。現在は第2段階の公開準備まで完了、公開指示待ち。詳細はSTAGE2_REPORT.md / SITE_HQ_HANDOFF.md。
+- 採用：制作セット1.4と2026-10-11/12補足。現在は第3段階まで完了、公開反映確認済み。詳細はPUBLICATION.md / SITE_HQ_HANDOFF.md。
 
 以下は第1段階の制作計画・停止記録を保存したもの。
 - 作業先：/Users/iwai/Desktop/GitHub/OpenAI-Math-Digest、main。共有ブランチを切り替えない。
@@ -28,3 +28,7 @@
 ## 第2段階の引渡し
 
 サイト登録・公開用図144点・日英冊子PDF（111/119ページ）・公開前検査を完了。公開は未実施。第2段階の記録はSTAGE2_REPORT.md、検査と終了時刻はstage2-completion.json、次段階の操作はSITE_HQ_HANDOFF.md。
+
+## 第3段階の完了
+
+2026-10-12T10:30:56.683453+09:00：公開commit `25b74a784d29750590b00e9c3be37dfd7046fccf`、Actionsと実公開反映を確認。PUBLICATION.md / validation-stage3/参照。数学的確認範囲は変更していない。
