@@ -1,0 +1,10 @@
+\node[half] (metric) {\heading{05}{全零次rankから体積計量}{Volume metric from full rank at zero}
+$-K_Y+A_0,\quad e^{-\Phi}\in L^1_{\rm loc}$\\$p_*f^*A_0=0$\\\Cite{e-metric}};
+\node[half,right=.65cm of metric] (ring) {\heading{06}{二方向を含む有限生成}{Finite generation in two directions}
+$R(Y;k_0P(t_0),k_0P(t_*))$\\\Tx{非加重可積分性とstrictな開集合}{Unweighted integrability and a strict open set}\\\Cite{f-ring}};
+\node[card,below=3.5cm of $(metric.south)!.5!(ring.south)$] (exact) {\heading{07}{漸近次数から厳密な零次数へ}{From asymptotic order to exact order zero}
+$N_j\sim m_jL+M,\quad v(N_j)/m_j\longrightarrow0$\\$\Longrightarrow\quad N\ge0,\quad N\sim_{\mathbb Q}L,\quad v(N)=0$\\\Cite{g-main}};
+\coordinate (l) at ($(metric.south)+(-3.2,0)$);\coordinate (r) at ($(ring.south)+(-3.2,0)$);
+\draw[edge] (l)--(l |- exact.north);\draw[edge] (r)--(r |- exact.north);
+\node[branchreason,anchor=west] at ($(l)+(.35,-1.7)$) {\Tx{07の零次rankと水平strict patchに適用}{Full rank one at zero and a horizontal strict patch in 07}\\\Cite{e-metric}\\\Cite{g-apply}};
+\node[branchreason,anchor=west] at ($(r)+(.35,-1.7)$) {\Tx{共通分母・共通補正で実際の生成元を取る}{Common correction and denominator give actual generators}\\\Cite{f-ring}\\\Cite{g-apply}};

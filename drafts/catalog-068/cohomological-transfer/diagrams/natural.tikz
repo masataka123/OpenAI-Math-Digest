@@ -1,0 +1,5 @@
+\node[card] (n0) {\heading{}{自然指数の実際の零値}{The actual value at zero of the natural index}$\chi(X,\mathcal O_X)\ne0,\quad I_T(am)=R(m),\quad R(0)=\chi(X,\mathcal O_X)$};
+\node[card,below=2.2cm of n0] (n1) {\heading{}{不変微分形式と固定行列式}{Invariant forms and a fixed determinant}$\alpha_m\in H^0(X,\Omega_X^{n-q}\otimes L^{m+1})^T,\quad M\hookrightarrow\bigwedge^e\Omega_X^{n-q}$};
+\flow{n0}{n1}{\Tx{指数の非零多項式と同変hard Lefschetz}{Nonzero index polynomial and equivariant hard Lefschetz}\\\Cite{index}\quad\Cite{hard-lefschetz}};
+\node[result,below=2.2cm of n1] (n2) {\heading{}{自然不変な正の反標準切断}{A positive naturally invariant anticanonical section}$-M\in\Eff(X),\quad s_i\in H^0(X,M+a_iL)^T\ \Longrightarrow\ H^0(X,mL)^T\ne0$};
+\flow{n1}{n2}{\Tx{逆行列式の擬有効性を確認し、固定誤差を除く}{Verify inverse-determinant pseudoeffectivity and remove the fixed error}\\\Cite{cotangent}\quad\Cite{main}};

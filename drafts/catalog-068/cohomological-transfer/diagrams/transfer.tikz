@@ -1,0 +1,7 @@
+\node[card] (n0) {\heading{}{指定指標を持つ無限個の入力}{Unbounded inputs with a specified character}$0\ne s_i\in H^0(X,M+iP)^T,\quad -M\in\Eff(X)$};
+\node[card,below=2.2cm of n0] (n1) {\heading{}{比の共通体と正規化した相対切断}{Common ratio field and normalized relative section}$\gamma:f^*(kB)\longrightarrow kP^{\prime},\quad\operatorname{rank}(f_*\mathcal O_V(E+jkP^{\prime}))^T=1$};
+\flow{n0}{n1}{\Tx{水平次数のアフィン性と縦係数の最小値}{Affine horizontal orders and minimal vertical coefficients}\\\Cite{ratio}\quad\Cite{rank}};
+\node[card,below=2.2cm of n1] (n2) {\heading{}{二つの計量と固定イデアル}{Two metrics and a fixed ideal}$kB:\text{ continuous},\quad -K_Y+D_*:\Theta\ge\delta\omega_Y,\quad \mathcal O_Y(-D_*)\subseteq\mathcal J$};
+\flow{n1}{n2}{\Tx{連続な最大値計量と特異な零次数積分を分ける}{Separate the continuous maximum metric from the singular degree-zero integral}\\\Cite{metric}\quad\Cite{strict}};
+\node[result,below=2.2cm of n2] (n3) {\heading{}{零捻りから正の不変切断へ}{From zero twist to a positive invariant section}$\mathcal F=\mathcal O_Y(D_*)\otimes\mathcal J,\quad\chi(\mathcal F)=h^0(\mathcal F)>0$\\$\Longrightarrow\ H^0(X,jkP)^T\ne0\quad(j>0)$};
+\flow{n2}{n3}{\Tx{イデアルを固定してNadel消滅、例外補正を除く}{Nadel vanishing with a fixed ideal; remove the exceptional correction}\\\Cite{ideal}\quad\Cite{nadel}};

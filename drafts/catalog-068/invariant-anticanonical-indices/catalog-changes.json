@@ -1,0 +1,74 @@
+{
+  "presentationRow": {
+    "paperId": "invariant-anticanonical-indices",
+    "displayName": "Invariant anticanonical indices and conversion of twisted differentials",
+    "result": "Theorems 1.1–1.2 · pp. 1–2; Corollary 5.2 · pp. 16–17",
+    "claim": {
+      "ja": "自然トーラス作用の不変反標準Euler指数は可除指数上で多項式となり実際の零次値を保つ。別に、smoothly semipositiveな−K_Sの無限twistsから固定擬有効誤差を除き、正冪の通常切断を得る。",
+      "en": "The naturally linearized invariant anticanonical Euler index is polynomial on divisible exponents with its actual value at zero. Independently, smooth semipositivity removes a fixed pseudoeffective error from unbounded twists to produce an ordinary positive-power section."
+    },
+    "role": {
+      "ja": "局所化・削除面の相殺と、有界底計量・零次も含む消滅という独立な二経路を接続する。不変形式を有限被覆へ先に降下し、その後で通常のconversionを使う。",
+      "en": "Connects independent localization/deleted-face and bounded-metric/vanishing arguments. Invariant forms descend to the finite cover before ordinary conversion is applied."
+    }
+  },
+  "connections": [
+    {
+      "id": "01-cover-to-02-form-descent",
+      "from": {
+        "paperId": "anticanonical-smooth-semipositivity",
+        "result": "Theorem 2.1",
+        "pages": "5–8"
+      },
+      "to": {
+        "paperId": "invariant-anticanonical-indices",
+        "result": "§5; Proposition 5.1",
+        "pages": "16"
+      },
+      "kind": "direct",
+      "role": "Supplies finite cover with residual torus and deck-invariant canonical frames for invariant-form descent",
+      "hypotheses": "Smooth connected projective X with smoothly semipositive anticanonical line. The compact residual factor has no positive-degree forms, so I_T(0)=1.",
+      "checking": "Both fixed-source statements and use checked by papers_01_02 on 2026-10-12; external structure proofs not recursively verified.",
+      "unresolved": []
+    },
+    {
+      "id": "01-norm-to-02-global",
+      "from": {
+        "paperId": "anticanonical-smooth-semipositivity",
+        "result": "Lemma 2.2",
+        "pages": "8"
+      },
+      "to": {
+        "paperId": "invariant-anticanonical-indices",
+        "result": "Corollary 5.2 proof",
+        "pages": "17"
+      },
+      "kind": "consequence",
+      "role": "Turns an ordinary section of −kK_S into one of −k deg(ν) K_X after conversion",
+      "hypotheses": "Finite étale cover; no Galois assumption needed",
+      "checking": "Source statement/proof and use checked",
+      "unresolved": []
+    },
+    {
+      "id": "01-02-alternative-nonvanishing",
+      "from": {
+        "paperId": "anticanonical-smooth-semipositivity",
+        "result": "Theorem 1.1",
+        "pages": "2, 25–26"
+      },
+      "to": {
+        "paperId": "invariant-anticanonical-indices",
+        "result": "Corollary 5.2",
+        "pages": "16–17"
+      },
+      "kind": "alternative",
+      "role": "Same smooth-semipositive nonvanishing conclusion, but 02 descends forms before ordinary conversion; not a proof-dependency edge",
+      "hypotheses": "Identical smooth connected projective and smooth metric semipositivity hypotheses",
+      "checking": "Statements and final proof paths compared",
+      "unresolved": []
+    }
+  ],
+  "notes": [
+    "Do not draw 01 Theorem1.2 or Theorem7.2 as inputs to 02 main theorems. 02 p.3 expressly limits its use of 01 to cover and norm."
+  ]
+}

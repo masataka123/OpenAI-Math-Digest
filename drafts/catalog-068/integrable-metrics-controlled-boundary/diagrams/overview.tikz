@@ -1,0 +1,7 @@
+\node[card] (n0) {\heading{1}{二つの入口を区別}{Distinguish two inputs}$H^0(X,(\Omega_X^1)^{\otimes p}\otimes m_jL)\ne0\quad\text{or}\quad N_j\sim m_jL-P\geq0$};
+\node[card,below=2.0cm of n0] (n1) {\heading{2}{固定誤差から一つの底へ}{From one fixed error to one base}$P\ \text{pseudoeffective},\quad X\xleftarrow{\pi} Z\xrightarrow{f}Y,\quad M=\sum_Q\mu_Q(\pi^*R)Q$};
+\flow{n0}{n1}{\Tx{tensorからは行列式を抽出。固定誤差の入力ならここから開始}{Extract a determinant from tensors; the fixed-error input starts at this stage}\\[3pt]\Cite{determinant}};
+\node[card,below=2.0cm of n1] (n2) {\heading{3}{解析入力と代数的補正を合流}{Combine the metric input and algebraic correction}$\mathcal J(g)\supset\mathcal O_Y(-C),\quad\Theta_g\geq\delta\omega_Y\quad\Longrightarrow\quad M+C^\prime\sim_{\mathbb Q}G\geq0$};
+\flow{n1}{n2}{\Tx{Iitaka maximalityと直像正値性が重み付きmetricを供給}{Iitaka maximality and direct-image positivity supply the weighted metric}\\[3pt]\Cite{direct-image}};
+\node[result,below=2.0cm of n2] (n3) {\heading{4}{元の多様体上の通常切断}{An ordinary section on the original variety}$f^*C^\prime\ \text{exceptional over }X\quad\Longrightarrow\quad H^0(X,mL)\ne0$};
+\flow{n2}{n3}{\Tx{Theorem 1.1の支持制御とLemma 5.2の帰還}{Support control in Theorem 1.1 and return in Lemma 5.2}\\[3pt]\Cite{return}};

@@ -1,0 +1,7 @@
+\node[card] (n0) {\heading{}{不変指数の零次値}{The invariant index at zero}$I_T(0)=1\Longrightarrow P\ne0$};
+\node[card,below=2.7cm of n0] (n1) {\heading{}{不変twisted formsを降下}{Descend invariant twisted forms}$H^0(F,\Omega_F^p\otimes L_F^{m+1})^T\hookrightarrow H^0(S,\Omega_S^p\otimes(-K_S)^{m+1})$};
+\node[card,below=2.7cm of n1] (n2) {\heading{}{通常の固定誤差とconversion}{An ordinary fixed error and conversion}$N_j\sim d_j(-K_S)-D,\quad D\text{ pseudoeffective}\Longrightarrow H^0(S,-kK_S)\ne0$};
+\node[result,below=2.7cm of n2] (n3) {\heading{}{有限ノルムで元の多様体へ}{Return by the finite norm}$H^0(X,-k\deg(\nu)K_X)\ne0$};
+\flow{n0}{n1}{\Tx{Hard Lefschetzはm+1を用い、不変枠が降下を保つ}{Hard Lefschetz uses m+1; invariant frames preserve descent}\\[5pt]\Cite{forms}; \Cite{descent}};
+\flow{n1}{n2}{\Tx{飽和行列式の負を擬有効にし、普通の定理を適用}{The negative saturated determinant is pseudoeffective; apply ordinary conversion}\\[5pt]\Cite{lmptx23}; \Cite{conversion}};
+\flow{n2}{n3}{\Tx{等変なconversionは使わず、有限étale normを取る}{Use the finite étale norm; equivariant conversion is unnecessary}\\[5pt]\Cite{openai26a}; \Cite{global}};

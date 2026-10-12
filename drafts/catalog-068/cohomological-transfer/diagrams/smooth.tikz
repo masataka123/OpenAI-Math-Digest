@@ -1,0 +1,5 @@
+\node[card] (n0) {\heading{}{有限被覆上の残留compact monodromy}{Residual compact monodromy on a finite cover}$\widetilde X=\mathbb C^c\times V\times F,\quad\chi(F,\mathcal O_F)=1$};
+\node[card,below=2.2cm of n0] (n1) {\heading{}{不変切断をdeck作用に沿って降ろす}{Descend the invariant section along the deck action}$H^0(F,-mK_F)^H\ne0\ \Longrightarrow\ H^0(X^{\prime},-mK_{X^{\prime}})\ne0$};
+\flow{n0}{n1}{\Tx{自然線形化、不変標準枠、compact群の代数化}{Natural linearization, invariant canonical frames and algebraization of the compact group}\\\Cite{structure}\quad\Cite{natural}};
+\node[result,below=2.2cm of n1] (n2) {\heading{}{有限normで元の多様体へ}{Return to the original variety by finite norm}$d=\deg(X^{\prime}/X),\quad H^0(X,-mdK_X)\ne0$};
+\flow{n1}{n2}{\Tx{有限étale normは非零積を降下させる}{The finite étale norm descends a nonzero product}\\\Cite{norm}\quad\Cite{smooth-proof}};

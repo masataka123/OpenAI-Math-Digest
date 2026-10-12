@@ -1,0 +1,3353 @@
+ALGEBRAIC FIBER SPACES OVER ABELIAN VARIETIES:
+AROUND A RECENT THEOREM BY CAO AND P ˘AUN
+CHRISTOPHER HACON, MIHNEA POPA, AND CHRISTIAN SCHNELL
+To Lawrence Ein, on his 60th birthday.
+Abstract. We present a simpliﬁed proof for a recent theorem by Junyan
+Cao and Mihai P˘ aun, conﬁrming a special case of Iitaka’sCn,m conjecture: if
+f : X→ Y is an algebraic ﬁber space, and if the Albanese mapping of Y is
+generically ﬁnite over its image, then we have the inequality of Kodaira dimen-
+sions κ(X)≥κ(Y ) +κ(F ), where F denotes a general ﬁber of f. We include
+a detailed survey of the main algebraic and analytic techniques, especially the
+construction of singular hermitian metrics on pushforwards of adjoint bundles
+(due to Berndtsson, P˘ aun, and Takayama).
+A. Introduction
+1. Main result. In the classiﬁcation of algebraic varieties up to birational equiv-
+alence, the most fundamental invariants of a smooth projective variety X are the
+spaces of global sections of the pluricanonical bundles ω⊗m
+X . The rate of growth of
+the plurigenera Pm(X) = dim H0(X, ω⊗m
+X ) is measured by the Kodaira dimension
+κ(X) = lim sup
+m→+∞
+log Pm(X)
+log m ∈{−∞ , 0, 1, . . . ,dim X}.
+The following conjecture by Iitaka and Viehweg predicts the behavior of the Kodaira
+dimension in families. Recall that an algebraic ﬁber space is a surjective morphism
+with connected ﬁbers between two smooth projective varieties.
+Conjecture. Let f : X→ Y be an algebraic ﬁber space with general ﬁber F . Pro-
+vided that κ(Y )≥ 0, the Kodaira dimension of X satisﬁes the inequality
+κ(X)≥ κ(F ) + max{κ(Y ), var(f)},
+where var(f) measures the birational variation in moduli of the ﬁbers.
+Using analytic techniques, Cao and P˘ aun [CP15] have recently proved the con-
+jectured subadditivity of the Kodaira dimension in the case where Y is an abelian
+variety; as κ(Y ) = 0, this amounts to the inequality
+κ(X)≥ κ(F ).
+With very little extra work, one can deduce the subadditivity of the Kodaira dimen-
+sion in any algebraic ﬁber space whose base Y has maximal Albanese dimension,
+meaning that the Albanese mapping Y → Alb(Y ) is generically ﬁnite over its im-
+age. This includes of course the case where Y is a curve of genus ≥ 1, where the
+following result was ﬁrst proved by Kawamata [Kaw82, Theorem 2].
+Date: May 9, 2017.
+12 C. D. HACON, M. POPA, AND CH. SCHNELL
+Theorem 1.1. Let f : X → Y be an algebraic ﬁber space with general ﬁber F .
+Assume that Y has maximal Albanese dimension, then κ(X)≥ κ(F ) + κ(Y ).
+Remark. A proof of this result is also claimed in [CH11], however the proof given
+there is incomplete because of a serious mistake in §4.
+The purpose of this paper is to explain a simpliﬁed proof of the Cao-P˘ aun the-
+orem that combines both analytic and algebraic techniques. We ﬁrst reduce to the
+case when κ(X) = 0 and Y is an abelian variety, where we then prove a more
+precise statement (Theorem 5.2). This is done in Chapter B. We then take the
+opportunity to provide a detailed survey of the results that are used in the proof,
+for the beneﬁt of those readers who are more familiar with one or the other side of
+the story.
+In Chapter C, we discuss the main algebraic tools, contained mostly in the
+papers [CH04, Hac04, Lai11, PP11a, PS14], namely results from generic vanishing
+theory. The upshot of the discussion is that when f : X→ A is a ﬁber space over
+an abelian variety, with κ(X) = 0, then for all m suﬃciently large and divisible,
+f∗ω⊗m
+X is a unipotent vector bundle on A, meaning a successive extension of copies
+of OA. This is as far as the algebraic techniques seem to go at present. While we
+recall the basic generic vanishing and Fourier-Mukai tools involved, as this topic
+is well-established in the literature, we provide fewer background details. Sources
+where a comprehensive treatment can be found include the lecture notes [Sch13],
+as well as [Par12, Pop12].
+In Chapter D and Chapter E we discuss the main analytic tools, contained
+mostly in the papers [BP08, PT14, CP15], namely the existence of singular metrics
+with semi-positive curvature (in a suitable sense) on pushforwards of pluricanonical
+bundles, and a very surprising criterion for such a metric to be smooth and ﬂat.
+This time, the upshot is that when f : X → A is a ﬁber space onto an abelian
+variety, with κ(X) = 0, then f∗ω⊗m
+X is a vector bundle with a ﬂat hermitian metric.
+Because a unipotent vector bundle with a ﬂat hermitian metric must be trivial,
+the algebraic and analytic results together lead to the conclusion in Theorem 1.1.
+Since the analytic results are still new, and are likely to be less familiar to algebraic
+geometers, we decided to include as many details as possible. For another survey
+of these and related results, we recommend [P˘ au16].
+Remark. For the sake of exposition, we present only the simplest version of the
+result by Cao and P˘ aun. One can tweak the proof of Theorem 1.1 to show that the
+inequality in Theorem 1.1 still holds when X is replaced by a klt pair ( X, ∆), and
+F by the pair ( F, ∆F ); this is done in [CP15, Theorem 4.22].
+2. What is new? The presentation in Chapter D contains various small improve-
+ments compared to the original papers [BP08, PT14, CP15]. We brieﬂy summarize
+the main points here. Let f : X→ Y be a projective and surjective holomorphic
+mapping between two complex manifolds. Given a holomorphic line bundle L on X,
+and a singular hermitian metric h on L with semi-positive curvature, we construct
+a singular hermitian metric on the torsion-free coherent sheaf
+F = f∗
+(
+ωX/Y⊗ L⊗I (h)
+)
+,
+and show that this metric has semi-positive curvature (in the sense that the log-
+arithm of the norm of every local section of the dual sheaf is plurisubharmonic).ALGEBRAIC FIBER SPACES OVER ABELIAN VARIETIES 3
+In [PT14], P˘ aun and Takayama constructed a singular hermitian metric with semi-
+positive curvature on the larger sheaf f∗
+(
+ωX/Y⊗ L
+)
+, under the additional assump-
+tion that the restriction of ( L, h) to a general ﬁber of f has trivial multiplier ideal.
+Another diﬀerence with [PT14] is that we do not use approximation by smooth
+metrics or results about Stein manifolds; instead, both the construction of the met-
+ric, and the proof that it has semi-positive curvature, rely on the Ohsawa-Takegoshi
+extension theorem with sharp estimates, recently proved by B locki and Guan-Zhou
+[B lo13, GZ15]. This approach was suggested to us by Mihai P˘ aun.
+Note. Berndtsson and Lempert [BL16] explain how one can use the curvature prop-
+erties of pushforwards of adjoint bundles to get a relatively short proof of (one ver-
+sion of) the Ohsawa-Takegoshi theorem with sharp estimates. This suggests that
+the two results are not so far from each other. That said, we hope that using the
+Ohsawa-Takegoshi theorem as a black box will make the proof of the main result
+more accessible to algebraic geometers than it would otherwise be.
+We introduce what we call the “minimal extension property” for singular her-
+mitian metrics (see§20), and show that, as a consequence of the Ohsawa-Takegoshi
+theorem with sharp estimates, the singular hermitian metric on F always has this
+property. We then use the minimal extension property, together with some basic
+inequalities from analysis, to give an alternative proof for the following result by
+Cao and P˘ aun: whenY is projective, F is a hermitian ﬂat bundle if and only if the
+line bundle det F has trivial ﬁrst Chern class in H2(Y, R). The original argument
+in [CP15] relied on some results by Rauﬁ about curvature tensors for singular her-
+mitian metrics [Rau15]. We also show that when Y is projective, every nontrivial
+morphism of sheaves F→ OY is split surjective; this result is new.
+In Chapter E, we apply these results to construct canonical singular hermitian
+metrics with semi-positive curvature on the sheaves f∗ω⊗m
+X/Y for m≥ 2. Here, one
+small improvement over [PT14] is the observation that these metrics are continuous
+on the Zariski-open subset of Y where f : X→ Y is submersive.
+Our discussion of generic vanishing theory in Chapter C is fairly standard, but
+includes (in§11) a new result relating the structure of the cohomological support
+loci V 0(ω⊗m
+X ) for m≥ 2 to the Iitaka ﬁbration of X. Here the main Theorem 5.2
+is one of the crucial ingredients.
+3. Acknowledgements. We thank Mihai P˘ aun for encouraging us to write this
+paper, and for many useful discussions and advice about its contents. We also
+thank Dano Kim and Luigi Lombardi for reading and commenting on a draft ver-
+sion. During the preparation of the paper, CH was partially supported by NSF
+grants DMS-1300750 and DMS-1265285 and by a grant from the Simons Founda-
+tion (Award #256202). MP was partially supported by NSF grant DMS-1405516
+and by a Simons Fellowship. CS was partially supported by NSF grants DMS-
+1404947 and DMS-1551677, and by a Centennial Fellowship from the American
+Mathematical Society.
+B. Proof of the main statement
+4. Main analytic and algebraic input. In this section we lay out the tools
+neeed to prove the main result. We also give a brief sketch of the proof, which is4 C. D. HACON, M. POPA, AND CH. SCHNELL
+presented in more detail in §5. The rest of the paper will be devoted to a detailed
+survey of the results stated here.
+We ﬁrst note that one can reduce Theorem 1.1 to the special case whenκ(X) = 0
+and Y = A is an abelian variety, with the help of the Iitaka ﬁbration; the argument
+for this is recalled in §5 below. We will therefore make these assumptions in the
+remainder of this section. The condition κ(X) = 0 is equivalent to saying that
+Pm(X)≤ 1 for all m∈ N, with equality for m suﬃciently large and divisible. Let
+F be the general ﬁber of f : X→ A. Our goal is to prove that κ(F ) = 0. What
+we will actually show is that Pm(F ) = 1 whenever Pm(X) = 1; this is enough to
+conclude that κ(F ) = 0.
+Fix now an integer m∈ N such that Pm(X) = 1, and consider the pushforward
+of the m-th pluricanonical bundle
+Fm = f∗ω⊗m
+X .
+This is a torsion-free coherent sheaf on A, whose rank at the generic point of A is
+equal to Pm(F ). (In fact, this holds for every smooth ﬁber of f, by invariance of
+plurigenera.) The space of global sections of Fm has dimension
+h0(
+A, f∗ω⊗m
+X
+)
+= dim H0(X, ω⊗m
+X ) = Pm(X) = 1.
+To obtain the conclusion, it is enough to show that Fm has rank 1 generically; we
+will in fact prove the stronger statement that Fm≃ OA. This uses both algebraic
+and analytic properties of Fm.
+Generic vanishing and unipotency. We ﬁrst explain the algebraic input. We
+borrow an idea from generic vanishing theory, initiated in [GL87, GL91], namely
+to consider the locus
+V 0(A, Fm) =
+{
+P∈ Pic0(A)
+⏐⏐ H0(A, Fm⊗ P )̸= 0
+}
+=
+{
+P∈ Pic0(A)
+⏐⏐ H0(
+X, ω⊗m
+X ⊗ f∗P
+)
+̸= 0
+}
+⊆ Pic0(A).
+The following result by Chen-Hacon [CH04, §3], Lai [Lai11, Theorem 3.5] and Siu
+[Siu11, Theorem 2.2] describes the structure of V 0(A, Fm); it is a generalization
+of a famous theorem by Simpson [Sim93]. The proof by Simpson (which applies
+when m = 0 , 1) relies on Hodge theory and the Gelfond-Schneider theorem in
+transcendence theory; the cited works use a construction with cyclic coverings,
+originally due to Viehweg, to reduce the general case to the case m = 1. We review
+the argument in§10.
+Theorem 4.1. Let X be a smooth projective variety. For each m∈ N, the locus
+{
+P∈ Pic0(X)
+⏐⏐ H0(
+X, ω⊗m
+X ⊗ P
+)
+̸= 0
+}
+⊆ Pic0(X)
+is a ﬁnite union of abelian subvarieties translated by points of ﬁnite order.
+This theorem implies that V 0(A, Fm) is also a ﬁnite union of abelian subvarieties
+translated by points of ﬁnite order. The reason is that, as f : X→ A has connected
+ﬁbers, the pullback morphism f∗ : Pic 0(A)→ Pic0(X) is injective. Since we are
+assuming that Pm(X) = 1, we have OA∈ V 0(A, Fm); let s0∈ H0(X, ω⊗m
+X ) be any
+nontrivial section. Now we observe that κ(X) = 0 forces
+V 0(A, Fm) ={OA}.ALGEBRAIC FIBER SPACES OVER ABELIAN VARIETIES 5
+To see why, suppose that we had P∈ V 0(A, Fm) for some nontrivial line bundle
+P∈ Pic0(A). By Theorem 4.1, we can assume that P has ﬁnite order d̸= 1. Let
+s1∈ H0(A, Fm⊗ P ) = H0(
+X, ω⊗m
+X ⊗ f∗P
+)
+be any nontrivial section; then s⊗d
+0 and s⊗d
+1 are two linearly independent sections
+of ω⊗dm
+X , contradicting the fact that Pdm(X) = 1.
+Knowing the locus V 0(A, Fm) gives us a lot of information about Fm, due to
+the following result [PS14, Theorem 1.10]. It is based on a vanishing theorem
+for pushforwards of pluricanonical bundles, which is again proved using Viehweg’s
+cyclic covering construction; we review the argument in §8.
+Theorem 4.2. Let f : X→ A be a morphism from a smooth projective variety to
+an abelian variety. For every m∈ N, the sheaf Fm = f∗ω⊗m
+X is a GV-sheaf on A.
+Recall that a coherent sheaf F on an abelian variety A is called a GV-sheaf if
+its cohomology support loci
+Vi(A, F) =
+{
+P∈ Pic0(A)
+⏐⏐ Hi(A, F⊗ P )̸= 0
+}
+satisfy the inequalities codim Vi(A, F)≥ i for every i∈ N. This property can be
+seen as a variant of (semi-)positivity on abelian varieties; in fact every GV-sheaf
+on A is nef, see [PP11b, Theorem 4.1].
+Note. A more conceptual description involves the Fourier-Mukai transform
+RΦP : Db
+coh(OA)→ Db
+coh
+(
+OPic0(A)
+)
+,
+which is an equivalence between the bounded derived categories of coherent sheaves
+on A and the dual abelian variety Pic0(A). In terms of the Fourier-Mukai transform,
+F is a GV-sheaf if and only if the complex of sheaves
+RHom
+(
+RΦP (F), O ˆA
+)
+∈ Db
+coh
+(
+OPic0(A)
+)
+is concentrated in degree 0, and is therefore again a coherent sheaf ˆF on Pic0(A).
+By the base change theorem, the support of ˆF is precisely the locus V 0(A, F).
+In the case at hand, we have V 0(A, Fm) ={OA}; consequently, ˆFm is a suc-
+cessive extension of skyscraper sheaves supported at the origin in Pic 0(A). We will
+use this via the following elementary consequence; see §9 for details. Recall ﬁrst
+from [Muk81] that a vector bundle U on A is called unipotent if it has a ﬁltration
+0 = U0⊂ U1⊂···⊂ Un = U
+such that Ui/Ui−1≃ OA for all i = 1, . . . , n. Note in particular that det U≃ OA.
+More generally, U is called homogeneous if it has a ﬁltration
+0 = U0⊂ U1⊂···⊂ Un = U
+such that Ui/Ui−1 is isomorphic to a line bundle in Pic 0(A) for all i = 1, . . . , n. A
+homogeneous vector bundle U is called decomposable if U = U1⊕ U2, where the Ui
+are non-zero vector bundles, and indecomposable if this is not the case.
+Corollary 4.3. Let X be a smooth projective variety with κ(X) = 0 , and let
+f : X→ A be an algebraic ﬁber space over an abelian variety.
+(a) If Fm̸= 0 for some m∈ N, then the coherent sheaf Fm is an indecompos-
+able homogeneous vector bundle.6 C. D. HACON, M. POPA, AND CH. SCHNELL
+(b) If H0(X, ω⊗m
+X )̸= 0 for some m∈ N, then the coherent sheaf Fm is an
+indecomposable unipotent vector bundle.
+Singular hermitian metrics on pushforwards of pluricanonical bundles.
+We now come to the analytic input. To motivate it, recall that the space of global
+sections of Fm has dimension Pm(X) = 1. In order to show that Pm(F ) = 1, we
+therefore need to argue that the unipotent vector bundle Fm is actually the trivial
+bundle OA. For the moment this seems quite hopeless with algebraic methods, so
+it is at this point that the analytic methods take over.
+The crucial development that allows us to proceed is recent work on the notion
+of a singular hermitian metric on a torsion-free sheaf; the highlight of this study is
+the following remarkable result by P˘ aun and Takayama [PT14, Theorem 3.3.5]. In
+order to state it, recall that to a singular hermitian metric h on a line bundle L,
+one associates the multiplier ideal sheaf I(h)⊆ OX, consisting of those functions
+that are locally square-integrable with respect to h.
+Theorem 4.4. Let f : X→ Y be a projective morphism of smooth varieties, and
+let (L, h) be a line bundle on X with a singular hermitian metric of semi-positive
+curvature. Then the torsion-free sheaf f∗
+(
+ωX/Y⊗L⊗I (h)
+)
+has a canonical singular
+hermitian metric with semi-positive curvature.
+The relevant deﬁnitions and the proof are described in Chapter D and Chap-
+ter E, where we also present another key statement. Indeed, Cao and P˘ aun [CP15,
+Corollary 2.9 and Theorem 5.23] show that their singular hermitian metrics behave
+much like smooth metrics with Griﬃths semi-positive curvature: if the determinant
+line bundle det F has trivial ﬁrst Chern class, then F is actually a hermitian ﬂat
+bundle. This is (a) below; part (b) is new.
+Theorem 4.5. Let f : X→ Y be a surjective morphism of smooth projective vari-
+eties. Let (L, h) be a line bundle on X with a singular hermitian metric of semi-
+positive curvature, and deﬁne F = f∗
+(
+ωX/Y⊗ L⊗I (h)
+)
+.
+(a) If c1(det F) = 0 in H2(Y, R), then the torsion-free sheaf F is locally free,
+and the singular hermitian metric in Theorem 4.4 is smooth and ﬂat.
+(b) Every nonzero morphism F→ OY is split surjective.
+The application of these results to Theorem 1.1 stems from the fact that the
+bundles Fm with m≥ 2 naturally ﬁt into this framework. Let us brieﬂy summarize
+how this works when f : X→ Y is an algebraic ﬁber space with general ﬁber F . For
+every m∈ N such that Pm(F )̸= 0, the spaces of m-canonical forms on the smooth
+ﬁbers of f induce in a canonical way a singular hermitian metric with semi-positive
+curvature on ωX/Y , called the m-th Narasimhan-Simha metric . (For m = 1, the
+Narasimhan-Simha metric is of course just the Hodge metric.) Denote by h the
+induced singular hermitian metric on the line bundle L = ω⊗(m−1)
+X/Y . Pretty much
+by construction, the inclusion
+f∗
+(
+ωX/Y⊗ L⊗I (h)
+)
+⊆ f∗
+(
+ωX/Y⊗ L
+)
+= f∗ω⊗m
+X/Y
+is generically an isomorphism, and so Theorem 4.4 and Theorem 4.5 apply.
+Corollary 4.6. Let f : X→ Y be an algebraic ﬁber space.
+(a) For any m∈ N, the torsion-free sheaf f∗ω⊗m
+X/Y has a canonical singular
+hermitian metric with semi-positive curvature.ALGEBRAIC FIBER SPACES OVER ABELIAN VARIETIES 7
+(b) If c1(det f∗ω⊗m
+X/Y ) = 0 in H2(Y, R), then f∗ω⊗m
+X/Y is locally free, and the
+singular hermitian metric on it is smooth and ﬂat.
+(c) Every nonzero morphism f∗ω⊗m
+X/Y → OY is split surjective.
+In our case, Fm = f∗ω⊗m
+X is a unipotent vector bundle by Corollary 4.3, and so
+the hypothesis in (b) is satisﬁed; after this point, the proof of Theorem 1.1 becomes
+straightforward.
+5. Proof of Theorem 1.1. We now explain how Theorem 1.1 follows quickly by
+combining the results outlined in the previous section. Recall that we are starting
+with an algebraic ﬁber space f : X→ Y , where X is a smooth projective variety,
+and Y is of maximal Albanese dimension. Let us note right away that one can
+perform a useful reduction, following in part the argument in [CH02, Theorem 4.9].
+Lemma 5.1. To prove Theorem 1.1, it is enough to assume that κ(X) = 0 and
+that Y is an abelian variety.
+Proof. We begin by showing that if κ(X) =−∞, then κ(F ) =−∞. If this were
+not the case, then we could pick some m > 0 such that Pm(F ) > 0 and hence
+f∗ω⊗m
+X ̸= 0. Let Y → A be the Albanese morphism of Y , and g : X → A the
+induced morphism. Since F is an irreducible component of the general ﬁber of
+X→ g(X)⊆ A, it follows that g∗ω⊗m
+X ̸= 0. By Theorem 4.2, g∗ω⊗m
+X is a GV-sheaf,
+and in particular by the general Lemma 7.4 below, the set
+V 0(g∗ω⊗m
+X ) =
+{
+P∈ Pic0(A)
+⏐⏐ H0(A, g∗ω⊗m
+X ⊗ P )̸= 0
+}
+is non-empty. Now by Theorem 4.1 and the comments immediately after,V 0(g∗ω⊗m
+X )
+contains a torsion point P ∈ Pic0(A), i.e. there is an integer k > 0 such that
+P⊗k≃ OA. But then h0(X, ω⊗m
+X ⊗ g∗P ) = h0(A, g∗ω⊗m
+X ⊗ P )̸= 0 and so
+h0(X, ω⊗km
+X ) = h0(
+X, (ω⊗m
+X ⊗ P )⊗k)
+̸= 0.
+This contradicts the assumption κ(X) =−∞.
+Assume now that κ(X)≥ 0. We will ﬁrst prove the statement in the case that
+κ(Y ) = 0. By Kawamata’s theorem [Kaw81, Theorem 1], since Y is of maximal
+Albanese dimension, it is in fact birational to its Albanese variety and so we may
+assume that Y is an abelian variety. Let h: X → Z the Iitaka ﬁbration of X.
+Since we are allowed to work birationally, we can assume that Z is smooth. We
+denote by G its general ﬁber, so that in particular κ(G) = 0. By the same result of
+Kawamata, the Albanese map of G is surjective, so we deduce that B = f(G)⊆ Y
+is an abelian subvariety. If G→ B′→ B is the Stein factorization, then B′→ B is
+an ´ etale map of abelian varieties. We thus have an induced ﬁber space
+G−→ B′
+over an abelian variety, with κ(G) = 0, and whose general ﬁber is H = F∩ G.
+Assuming that Theorem 1.1 holds for algebraic ﬁbers spaces of Kodaira dimension
+zero over abelian varieties, we obtain κ(H) = 0. Note however that H is also an
+irreducible component of the general ﬁber of
+h|F : F−→ h(F ).
+Considering the Stein factorization of this morphism, the easy addition formula
+[Mor87, Corollary 2.3], implies that
+κ(F )≤ κ(H) + dimh(F ) = dim h(F ).8 C. D. HACON, M. POPA, AND CH. SCHNELL
+(Note that we can assume that g(F ) is smooth, by passing to a birational model.)
+Since dim h(F )≤ dim Z = κ(X), we obtain the required inequality κ(F )≤ κ(X).
+Finally we prove the general case. Since Y has maximal Albanese dimension,
+after replacing it by a resolution of singularities of an ´ etale cover of its Stein fac-
+torization, and X by a resolution of the corresponding ﬁber product, by [Kaw81,
+Theorem 13] we may assume that Y = Z×K where Z is of general type and K is an
+abelian variety. In particular κ(Y ) = dim Z = κ(Z). If E is the general ﬁber of the
+induced morphism X→ Z, then the induced morphism E→ K has general ﬁber
+isomorphic to F . By what we have proven above, we deduce that κ(E)≥ κ(F ).
+We then have the required inequality
+κ(X) = κ(Z) + κ(E)≥ κ(Y ) + κ(F ),
+where the ﬁrst equality is [Kaw81, Theorem 3], since Z is of general type. □
+We may therefore assume that f : X→ A is a ﬁber space onto an abelian variety,
+and κ(X) = 0. Note that this last condition means that we haveh0(X, ω⊗m
+X ) = 1 for
+all suﬃciently divisible integers m > 0. The task at hand is to show that κ(F ) = 0.
+(It is a well known consequence of the easy addition formula [Mor87, Corollary 2.3]
+that if κ(F ) =−∞, then κ(X) =−∞.) We show in fact the following more precise
+statement:
+Theorem 5.2. If f : X→ A is an algebraic ﬁber space over an abelian variety,
+with κ(X) = 0, then we have
+Fm = f∗ω⊗m
+X ≃ OA
+for every m∈ N such that H0(X, ω⊗m
+X )̸= 0.
+Proof. From Corollary 4.3, we know thatFm is an indecomposable unipotent vector
+bundle on A. In particular,
+det Fm≃ OA.
+Corollary 4.6 implies then that Fm has a smooth hermitian metric that is ﬂat.
+Thus Fm is a successive extension of trivial bundles OA that can be split oﬀ as
+direct summands with the help of the ﬂat metric. It follows that in fact Fm≃ O⊕r
+A ,
+the trivial bundle of some rank r≥ 1. But then, since
+h0(A, f∗ω⊗m
+X ) = h0(X, ω⊗m
+X ) = 1,
+we obtain that r = 1, which is the statement of the theorem. □
+In the remaining chapters, we explain the material in §4 in more detail.
+C. Generic vanishing
+6. Canonical bundles and their pushforwards. As explained above, the al-
+gebraic tools used in this paper revolve around the topic of generic vanishing. This
+study was initiated by Green and Lazarsfeld [GL87, GL91], in part as an attempt
+to provide a useful weaker version of Kodaira Vanishing for the canonical bundle,
+in the absence of twists by positive line bundles. An important addition was pro-
+vided in work of Simpson [Sim93]. The results of Green-Lazarsfeld were extended
+to include higher direct images of canonical bundles in [Hac04]. From the point
+of view of this paper, the main statements to keep in mind are summarized in theALGEBRAIC FIBER SPACES OVER ABELIAN VARIETIES 9
+following theorem. Recall that for any coherent sheaf F on an abelian variety A,
+we consider for all k≥ 0 the cohomological support loci
+Vk(F) ={ P∈ Pic0(A)| Hk(X, F⊗ P )̸= 0}
+They are closed subsets of Pic0(A), by the semi-continuity theorem for cohomology.
+Theorem 6.1. If f : X→ A is a morphism from a smooth projective variety to an
+abelian variety, then for any j, k≥ 0 we have
+(1) [Hac04] codimPic0(A) Vk(Rjf∗ωX)≥ k.
+(2) [GL91, Sim93] Every irreducible component of Vk(Rjf∗ωX) is a translate
+of an abelian subvariety of A by a point of ﬁnite order.
+What we use in this paper are (partial) extensions of these results to push-
+forwards of pluricanonical bundles f∗ω⊗m
+X , for m≥ 2. We describe these in the
+following sections, beginning with an abstract study in the next.
+7. The GV property and unipotency. Let A be an abelian variety of dimension
+g. The generic vanishing property (1) in the theorem above can be formalized into
+the following:
+Deﬁnition 7.1. The sheaf F is called a GV-sheaf on A if it satisﬁes
+codimPic0(A) Vk(F)≥ k for all k≥ 0.
+We will identify Pic 0(A) with the dual abelian variety ˆA, and denote by P the
+normalized Poincar´ e bundle onA× ˆA. It induces the integral transforms
+RΦP : Db
+coh(OA)−→ Db
+coh
+(
+O ˆA
+)
+, RΦP F = Rp2∗(p∗
+1F⊗ P ).
+and
+RΨP : Db
+coh
+(
+O ˆA
+)
+−→ Db
+coh(OA), RΨP G = Rp1∗(p∗
+2G⊗ P ).
+These functors are known from [Muk81, Theorem 2.2] to be equivalences of derived
+categories, usually called the Fourier-Mukai transforms; moreover,
+(7.2) RΨP◦ RΦP = (−1A)∗[−g] and RΦP◦ RΨP = (−1 ˆA)∗[−g],
+where [−g] denotes shifting g places to the right.
+Standard applications of base change (see e.g. [PP11b, Lemma 2.1] and [PP11a,
+Proposition 3.14]) lead to the following basic properties of GV -sheaves:
+Lemma 7.3. Let F be a coherent sheaf on A. Then:
+(1) F is a GV-sheaf if and only if
+codim ˆA Supp RkΦP F≥ k for all k≥ 0.
+(2) If F is a GV-sheaf, then
+Vg(F)⊆···⊆ V 1(F)⊆ V 0(F).
+To give a sense of what is going on, here is a sketch of the proof of part (1):
+note that the restriction of p1∗F⊗ P to a ﬁber A×{ α} of p2 is isomorphic to
+the sheaf F⊗ α on A, and so ﬁberwise we are looking at the cohomology groups
+Hk(A, F⊗α). A simple application of the theorem on cohomology and base change
+then shows for every m≥ 0 that
+⋃
+k≥m
+Supp RkΦP F =
+⋃
+k≥m
+Vk(F).10 C. D. HACON, M. POPA, AND CH. SCHNELL
+This implies the result by descending induction on k.
+Lemma 7.4. If F is a GV-sheaf on A, then F = 0 if and only if V 0(F) =∅.
+Proof. By Lemma 7.3, we see that V 0(F) =∅ is equivalent to Vk(F) =∅ for all
+k≥ 0, which by base change is in turn equivalent to RΦP F = 0. By Mukai’s
+derived equivalence, this is equivalent to F = 0. □
+The following proposition is the same as [Hac04, Corollary 3.2(4)], since it can
+be seen that the assumption on F imposed there is equivalent to that of being a
+GV-sheaf. This is the main way in which generic vanishing is used in this paper;
+for the deﬁnition of a unipotent vector bundle see §4.
+Proposition 7.5. Let F be a GV-sheaf on an abelian variety A. If V 0(F) ={0},
+then F is a unipotent vector bundle.
+Proof. By [Muk81, Example 2.9], if g = dim A, then F is a unipotent vector bundle
+if and only if
+(7.6) RiΦP F = 0 for all i̸= g, and RgΦP F = G ,
+where G is a coherent sheaf supported at the origin 0∈ ˆA. To review the argument,
+notice that if this is the case, then if l = length(G ) > 0, we have h0(ˆA, G )̸= 0 and
+so there is a short exact sequence
+0−→ k(0)−→ G−→ G′−→0
+where G′ is a coherent sheaf supported at the origin 0∈ ˆA, with length(G′) = l−1.
+Applying RΨP we obtain a short exact sequence of vector bundles on A
+0−→ OA−→ R0ΨP G−→ R0ΨP G′−→0,
+and by (7 .2) we have R0ΨP G = (−1A)∗F. It is then not hard to see that F′ =
+R0ΨP G′ also satisﬁes the hypotheses in (7 .6) and so, proceeding by induction on
+l, we may assume that F′ is a unipotent vector bundle. It follows that F is also
+a unipotent vector bundle as well (since it is an extension of a unipotent vector
+bundle by OA).
+We now check that the two conditions in (7 .6) are satisﬁed. By Lemma 7.3 the
+hypothesis implies that
+Vi(F)⊆{ 0} for all i≥ 0.
+By base change one obtains that RiΦP F is supported at most at 0 ∈ ˆA for 0≤
+i≤ g. It remains to show that RiΦP F = 0 for i̸= g. Note that
+Hj(ˆA, RiΦP F⊗ α) = 0 for all j > 0, 0≤ i≤ g, and α∈ Pic0(ˆA),
+and so by base change we have
+RjΨP (RiΦP F) = 0 for all j > 0 and 0≤ i≤ g.
+By an easy argument involving the spectral sequence of the composition of two
+functors, since RΨP◦ RΦP = (−1A)∗[−g], it then follows that R0ΨP (RiΦP F) =
+Hi(
+(−1A)∗F[−g]
+)
+, and so in particular
+R0ΨP (RiΦP F) = 0 for i < g.
+But then RΨP (RiΦP F) = 0 for i < g , and hence RiΦP F = 0 for i < g .
+□ALGEBRAIC FIBER SPACES OVER ABELIAN VARIETIES 11
+For later use, we note that a very useful tool for detecting generic vanishing is a
+cohomological criterion introduced in [Hac04, Corollary 3.1]. Before stating it, we
+recall that an ample line bundle N on an abelian variety B induces an isogeny
+ϕN : B−→ˆB, x → t∗
+xN⊗ N−1,
+where tx denotes translation by x∈ B.
+Theorem 7.7. A coherent sheaf F on A is a GV-sheaf if and only if given any
+suﬃciently large power M of an ample line bundle on ˆA, one has
+Hi(
+A, F⊗ RgΨP (M−1)
+)
+= 0 for all i > 0.
+If ϕM : ˆA→ A is the isogeny induced by M, this is also equivalent to
+Hi(ˆA, ϕ∗
+M F⊗ M) = 0 for all i > 0.
+Remark. Note that since M is ample, Hi(ˆA, M−1⊗ α) = 0 for all i < g and α∈
+Pic0(ˆA)≃ A, and so RiΨP (M−1) = 0 for i̸= g. If we denote RgΨP (M−1) = ˆM−1,
+then by [Muk81, Proposition 3.11] we have ϕ∗
+M ˆM−1≃ M⊕h0(M), hence the second
+assertion.
+8. Pushforwards of pluricanonical bundles. In this section we explain the
+proof of Theorem 4.2, following [PS14, §5]. In loc. cit. we noted that a very quick
+proof can be given based on the general eﬀective vanishing theorem for pushforwards
+of pluricanonical bundles proved there. However, another more self-contained, if less
+eﬃcient, proof using cyclic covering constructions is also given; we choose to explain
+this here, as cyclic covering constructions are in the background of many arguments
+in this article. We ﬁrst recall Koll´ ar’s vanishing theorem [Kol86, Theorem 2.1].
+Theorem 8.1. Let f : X → Y be a morphism of projective varieties, with X
+smooth. If L is an ample line bundle on Y , then
+Hj(Y, Rif∗ωX⊗ L) = 0 for all i and all j > 0.
+Proof of Theorem 4.2. Let M = L⊗d, where L is an ample and globally generated
+line bundle on ˆA, and d is an integer that can be chosen arbitrarily large. Let
+ϕM : ˆA→ A be the isogeny induced by M. According to Theorem 7.7, it is enough
+to show that
+Hi(ˆA, ϕ∗
+M f∗ω⊗m
+X ⊗ M) = 0 for all i > 0.
+Equivalently, we need to show that
+Hi(ˆA, h∗ω⊗m
+X1 ⊗ L⊗d) = 0 for all i > 0,
+where h: X1→ ˆA is the base change of f : X→ A via ϕM, as in the diagram
+X1 X
+ˆA A
+h f
+ϕM
+We can conclude immediately if we know that there exists a bound d = d(g, m),
+i.e. depending only on g = dim A and m, such that the vanishing in question
+holds for any morphism h. (Note that we cannot apply Serre Vanishing here, as
+construction depends on the original choice of M.) But Proposition 8.2 below12 C. D. HACON, M. POPA, AND CH. SCHNELL
+shows that there exists a morphism ϕ : Z → ˆA with Z smooth projective, and
+k≤ g + m, such that h∗ω⊗m
+X1 ⊗ L⊗k(m−1) is a direct summand of ϕ∗ωZ. Applying
+Koll´ ar vanishing, Theorem 8.1, we deduce that
+Hi(ˆA, h∗ω⊗m
+X1 ⊗ L⊗d) = 0 for all i > 0 and all d≥ (g + m)(m− 1) + 1,
+which ﬁnishes the proof. (The main result of [PS14] shows that one can in fact take
+d≥ m(g + 1)− g.) □
+Proposition 8.2. Let f : X→ Y be a morphism of projective varieties, with X
+smooth and Y of dimension n. Let L be an ample and globally generated line bundle
+on Y , and m≥ 1 an integer. Then there exists a smooth projective variety Z with a
+morphism ϕ : Z→ Y , and an integer 0≤ k≤ n + m, such that f∗ω⊗m
+X ⊗ L⊗k(m−1)
+is a direct summand in ϕ∗ωZ.
+Proof. The sheaf f∗ω⊗m
+X ⊗ L⊗pm is globally generated for some suﬃciently large p.
+Denote by k the minimal p≥ 0 for which this is satisﬁed.
+Consider now the adjunction morphism
+f∗f∗ω⊗m
+X → ω⊗m
+X .
+After blowing up X, if necessary, we can assume that the image sheaf is of the form
+ω⊗m
+X ⊗ OX(−E) for a divisor E with normal crossing support. As f∗ω⊗m
+X ⊗ L⊗km
+is globally generated, the line bundle
+ω⊗m
+X ⊗ f∗L⊗km⊗ OX(−E)
+is globally generated as well. It is therefore isomorphic to OX(D), where D is an
+irreducible smooth divisor, not contained in the support of E, such that D + E also
+has normal crossings. We have thus arranged that
+(ωX⊗ f∗L⊗k)⊗m≃ OX(D + E).
+We can now take the associated covering of X of degree m, branched along D + E,
+and resolve its singularities. This gives us a generically ﬁnite morphism g : Z→ X
+of degree m, and we denote ϕ = f◦ g : Z→ Y .
+By a well-known calculation of Esnault and Viehweg, see e.g. [EV92, Lemma
+2.3], the direct image g∗ωZ contains the sheaf
+ωX⊗
+(
+ωX⊗ f∗L⊗k)⊗m−1
+⊗OX
+(
+−
+⌊m−1
+m
+(
+D + E
+)⌋)
+≃ ω⊗m
+X ⊗ f∗L⊗k(m−1)⊗OX
+(
+−
+⌊m−1
+m E
+⌋)
+as a direct summand. If we now apply f∗, we ﬁnd that
+f∗
+(
+ω⊗m
+X ⊗ OX
+(
+−
+⌊m−1
+m E
+⌋))
+⊗ L⊗k(m−1)
+is a direct summand of ϕ∗ωZ. Finally, E is the relative base locus of ω⊗m
+X , and so
+f∗
+(
+ω⊗m
+X ⊗ OX
+(
+−
+⌊m−1
+m E
+⌋))
+≃ f∗ω⊗m
+X .
+In other words, f∗ω⊗m
+X ⊗ L⊗k(m−1) is a direct summand in ϕ∗ωZ. By Theorem 8.1,
+the sheaf f∗ω⊗m
+X ⊗L⊗k(m−1)+n+1 is 0-regular in the sense of Castelnuovo-Mumford,ALGEBRAIC FIBER SPACES OVER ABELIAN VARIETIES 13
+and hence globally generated. 1 By our minimal choice of k, this is only possible if
+k(m− 1) + n + 1≥ (k− 1)m + 1,
+which is equivalent to k≤ n + m. □
+9. Fiber spaces over abelian varieties. Let f : X→ A be a ﬁber space over
+an abelian variety. For simplicity, for each m≥ 0 we denote
+Fm = f∗ω⊗m
+X .
+Note that F0 = OA. Though this is not really necessary for the argument, we ﬁrst
+remark that we can be precise about the values of m≥ 1 for which Fm̸= 0.
+Lemma 9.1. We have Fm̸= 0 if and only if there exists P∈ Pic0(A) such that
+H0(X, ω⊗m
+X ⊗ f∗P )̸= 0.
+Proof. By Theorem 4.2 we know that Fm is a GV-sheaf on A for all m≥ 1. We
+conclude from Lemma 7.4 that Fm̸= 0 if and only if V 0(Fm)̸=∅, which by the
+projection formula is precisely the statement of the lemma. □
+The purpose of this subsection is to give the
+Proof of Corollary 4.3. We will only prove the second statement, since the ﬁrst one
+is similar. We ﬁx an m such that H0(A, Fm) = H0(X, ω⊗m
+X )̸= 0. In particular
+Fm is a non-trivial GV-sheaf on A. Since κ(X) = 0, we have h0(A, Fm) = 1, and
+in particular 0∈ V 0(Fm). We claim that
+V 0(Fm) ={0},
+which implies that Fm is unipotent by Proposition 7.5.
+To see this, note ﬁrst that by Theorem 4.1 and the comments immediately after,
+V 0(Fm) is a union of torsion translates of abelian subvarieties of Pic 0(A). Then,
+proceeding as in [CH01, Lemma 2.1], if there were two distinct points P, Q ∈
+V 0(Fm) we could assume that they are both torsion of the same order k. Since f
+is a ﬁber space, the mapping
+f∗ : Pic 0(A)−→Pic0(X)
+is injective, and so f∗P and f∗Q are distinct as well. Now if P∈ V 0(Fm), then
+H0(X, ω⊗m
+X ⊗ f∗P )≃ H0(A, Fm⊗ P )̸= 0,
+and similarly for Q. Let D ∈ |mKX + f∗P| and G ∈ |mKX + f∗Q|, so that
+kD, kG∈| mkKX|. Since h0(X, ω⊗mk
+X ) = 1, it follows that kD = kF , and hence
+f∗P = f∗Q. This is the required contradiction.
+Finally, since h0(A, Fm) = 1, it is clear that Fm is indecomposable. □
+1Recall that a sheaf F onY is 0-regular with respect to an ample and globally generated line
+bundle L if
+H i(Y, F⊗L⊗−i) = 0 for all i> 0.
+The Castelnuovo-Mumford Lemma says that every 0-regular sheaf is globally generated.14 C. D. HACON, M. POPA, AND CH. SCHNELL
+10. Cohomological support loci for pluricanonical bundles. In this section
+we explain an important ingredient used in Corollary 4.3, namely Theorem 4.1,
+the analogue of Simpson’s theorem for the 0-th cohomological support locus of
+a pluricanonical bundle. We give a slight generalization, emphasizing again the
+ubiquitous cyclic covering trick.
+For a coherent sheaf F on an abelian variety A, for each k≥ 1 we consider the
+following reﬁnement of V 0(F), namely
+V 0
+k (F) ={ P∈ Pic0(A)| h0(X, F⊗ P )≥ k}.
+Theorem 10.1. Let f : X→ A be a morphism from a smooth projective variety
+to an abelian variety, and ﬁx integers m, k≥ 1. Then every irreducible component
+of V 0
+k (f∗ω⊗m
+X ) is a torsion subvariety, i.e. a translate of an abelian subvariety of
+Pic0(A) by a torsion point.
+To prove Theorem 10.1, we ﬁrst collect a few lemmas. Given a smooth projective
+variety X, and a line bundle L on X with κ(L)≥ 0, recall that the asymptotic
+multiplier ideal of L is deﬁned as
+I
+(
+∥L∥
+)
+=I
+(
+1
+p D
+)
+⊆ OX ,
+where p is any suﬃciently large and divisible integer, D is the divisor of a general
+section in H0(X, L⊗p), and the ideal sheaf on the right is the multiplier ideal of the
+Q-divisor 1
+p D; see [Laz04, Ch. 11]. It is easy to see that the ideal sheaf I
+(
+∥L∥
+)
+is
+independent of the choice of p and D. Further properties of asymptotic multiplier
+ideals appear in the proof of Lemma 10.4 below.
+Lemma 10.2. There exists a morphism g : Y → X with Y smooth and projective,
+such that the sheaf ωX⊗ L⊗I
+(
+∥L∥
+)
+is a direct summand of g∗ωY .
+Proof. Take D as above, and let µ: X′→ X be a log resolution of (X, D) such that
+X′ is smooth and µ∗D plus the exceptional divisor of µ is a divisor with simple
+normal crossing support. Then
+µ∗L⊗p = OX′(µ∗D),
+and we let f : Y → X′ be a resolution of singularities of the degree p branched
+covering of X′ deﬁned by µ∗D. According to the calculation of Esnault and Viehweg
+recalled in the proof of Proposition 8.2, f∗ωY contains as a direct summand the
+sheaf
+ωX′⊗ µ∗L⊗ OX′
+(
+−
+⌊ 1
+p µ∗D
+⌋)
+≃ µ∗(
+ωX⊗ L
+)
+⊗ OX′
+(
+KX′/X−
+⌊ 1
+p µ∗D
+⌋)
+,
+and so µ∗f∗ωY contains as a direct summand the sheaf
+ωX⊗ L⊗ µ∗OX′
+(
+KX′/X−
+⌊ 1
+p µ∗D
+⌋)
+= ωX⊗ L⊗I
+(
+∥L∥
+)
+.
+We can therefore take g = µ◦ f. □
+Lemma 10.3. If F and G are two coherent sheaves on an abelian variety A, and
+F is a direct summand of G , then every irreducible component of V 0
+k (F) is also
+an irreducible component of V 0
+ℓ (G ) for some ℓ≥ k.ALGEBRAIC FIBER SPACES OVER ABELIAN VARIETIES 15
+Proof. Let Z⊆ V 0
+k (F) be an irreducible component. We can assume without loss
+of generality that k = min
+{
+h0(X, F⊗ α)
+⏐⏐ α∈ Z
+}
+. By assumption, we have a
+decomposition G≃ F⊕ F′. We deﬁne
+ℓ = k + min
+{
+h0(X, F′⊗ α)
+⏐⏐ α∈ Z
+}
+.
+By the semicontinuity of h0(A, F′⊗ α) and h0(A, F⊗ α), it follows that there
+is a neighborhood U of the generic point of Z such that h0(F′⊗ α)≤ ℓ− k and
+h0(F⊗ α)≤ k for any α∈ U. Since h0(F⊗ α) < k for any α∈ U\ (U∩ Z) it is
+easy to see that Z is an irreducible component of V 0
+ℓ (G ). □
+Lemma 10.4. If V 0
+k (f∗ω⊗m
+X ) contains a point, then it also contains a torsion
+subvariety through that point.
+Proof. Take any point in V 0
+k (f∗ω⊗m
+X ). Since Pic 0(X) is divisible, we may assume
+that our point is of the form L⊗m
+0 for some L0∈ Pic0(X). This means that
+h0(
+X, ω⊗m
+X ⊗ f∗L⊗m
+0
+)
+≥ k.
+For r≥ 0, setIr =I
+(
+∥ω⊗r
+X ⊗ f∗L⊗r
+0 ∥
+)
+. According to Lemma 10.2, there exists a
+morphism g : Y → X such that
+ωX⊗ (ωX⊗ f∗L0)⊗(m−1)⊗Im−1 = ω⊗m
+X ⊗ L⊗(m−1)
+0 ⊗Im−1
+is a direct summand of g∗ωY . Consequently, f∗(ω⊗m
+X ⊗ Lm−1
+0 ⊗Im−1) is a direct
+summand of h∗ωY , where h = f◦ g : Y → A. By Simpson’s theorem we know
+that, for any ℓ, every irreducible component of V 0
+ℓ (h∗ωY ) is a torsion subvariety.
+Together with Lemma 10.3, this shows that every irreducible component of
+V 0
+k
+(
+f∗(ω⊗m
+X ⊗ L⊗(m−1)
+0 ⊗Im−1)
+)
+is a torsion subvariety. We observe that this set contains L0: the reason is that
+sinceIm⊆I m−1 (see [Laz04, Theorem 11.1.8]), we have
+H0(
+X, (ωX⊗ f∗L0)⊗m⊗Im
+)
+⊆ H0(
+X, (ωX⊗ f∗L0)⊗m⊗Im−1
+)
+⊆ H0(
+X, (ωX⊗ f∗L0)⊗m)
+,
+and the two spaces on the outside are equal because the subscheme deﬁned by Im
+is contained in the base locus of ( ωX⊗ f∗L0)⊗m by [Laz04, Theorem 11.1.8].
+Now let W be an irreducible component of V 0
+k
+(
+f∗(ω⊗m
+X ⊗ L⊗(m−1)
+0 ⊗I m−1)
+)
+passing through the point L0. For every L∈ W , we have
+h0(
+X, ω⊗m
+X ⊗ L⊗(m−1)
+0 ⊗ L
+)
+≥ h0(
+X, ω⊗m
+X ⊗ L⊗(m−1)
+0 ⊗Im−1⊗ L
+)
+≥ k,
+and so L⊗(m−1)
+0 ⊗ W⊆ V 0
+k (f∗ω⊗m
+X ). As noted above, L⊗(m−1)
+0 ⊗ W contains the
+point L⊗m
+0 ; it is also a torsion subvariety, because W is a torsion subvariety and
+L0∈ W . □
+Proof of Theorem 10.1. Let Z⊆ V 0
+k (f∗ω⊗m
+X ) be an irreducible component; we have
+to show that Z is a torsion subvariety. In case Z is a point, this follows directly from
+Lemma 10.4, so let us assume that dim Z≥ 1. Let Z0⊆ Z denote the Zariski-open
+subset obtained by removing the intersection with the other irreducible components
+of V 0
+k (f∗ω⊗m
+X ). Then again by Lemma 10.4, every point of Z0 lies on a torsion
+subvariety that is contained in Z. Because there are only countably many torsion
+subvarieties in Pic 0(X), Baire’s theorem implies that Z itself must be a torsion
+subvariety. □16 C. D. HACON, M. POPA, AND CH. SCHNELL
+11. Iitaka ﬁbration and cohomological support loci. In this section, we use
+Theorem 5.2 to give a precise description of the cohomological support loci
+V 0(ω⊗m
+X ) =
+{
+P∈ Pic0(X)
+⏐⏐ H0(X, ω⊗m
+X ⊗ P )̸= 0
+}
+for all m≥ 2, in terms of the Iitaka ﬁbration of X. After a birational modiﬁcation
+of X, the Iitaka ﬁbration can be realized as a morphism f : X→ Y , where Y is
+smooth projective of dimension κ(X). By the universal property of the Albanese
+mapping, we obtain a commutative diagram
+X AX
+Y AY
+aX
+f af
+aY
+where AX = Alb( X) and AY = Alb( Y ) are the two Albanese varieties. The
+following simple lemma appears in [CH04, Lemma 2.6].
+Lemma 11.1. With notation as above, the following things are true:
+(a) The homomorphism af is surjective with connected ﬁbers.
+(b) Setting K = ker(af), we have a short exact sequence
+0→ Pic0(Y )→ Pic0(X)→ Pic0(K)→ 0.
+(c) If F is a general ﬁber of f, then the kernel of the natural homomorphism
+Pic0(X)→ Pic0(F ) is a ﬁnite union of torsion translates of Pic0(Y ).
+Using this lemma and the results of Green-Lazarsfeld [GL87, GL91] and Simpson
+[Sim93], one can prove the following results about the locus V 0(ωX):
+(1) There are ﬁnitely many quotient abelian varieties Alb(X)→ Bi and ﬁnitely
+many torsion points αi∈ Pic0(X) such that
+V 0(ωX) =
+n⋃
+i=1
+(
+αi + Pic0(Bi)
+)
+.
+This is proved in [GL91, Theorem 0.1] and [Sim93]. Note that V 0(ωX) may
+be empty; in that case, we take n = 0.
+(2) We have Pic 0(Bi)⊆ Pic0(Y ), where f : X → Y is the Iitaka ﬁbration;
+when X is of maximal Albanese dimension, then the union of the Pic 0(Bi)
+generates Pic0(Y ). This is proved in [CH04, CH07].
+(3) At a general point P of the i-th irreducible component αi + Pic0(Bi), one
+has s∪v = 0 for all s∈ H0(X, ωX⊗P ) and all v∈ H1(Bi, OBi); conversely,
+if s∈ H0(X, ωX⊗ P ) is nonzero and s∪ v = 0 for some v∈ H1(X, OX),
+then necessarily v∈ H1(Bi, OBi).
+Note. One can interpret property (3) as follows. If P∈ Pic0(X) is a general point
+of a component of V 0(ωX), and we identify the tangent space to Pic 0(X) at the
+point P with the vector space H1(X, OX), then s∪ v = 0∈ H1(X, ωX⊗ P ) if and
+only if s deforms to ﬁrst order in the direction of v. Property (3) then says that if
+s deforms to ﬁrst order in the direction of v, then it deforms to arbitrary order.
+It turns out that the cohomology support loci V 0(ω⊗m
+X ) for m≥ 2 are governed
+by the Iitaka ﬁbration f : X→ Y : in contrast to the case m = 1, every irreducible
+component is now simply a torsion translate of Pic 0(Y ).ALGEBRAIC FIBER SPACES OVER ABELIAN VARIETIES 17
+Theorem 11.2. Let X be a smooth complex projective variety, and let F be a
+general ﬁber of the Iitaka ﬁbration f : X→ Y . Let m≥ 2.
+(a) For every torsion point α∈ Pic0(X), and every β∈ Pic0(Y ), we have
+h0(X, ω⊗m
+X ⊗ α) = h0(X, ω⊗m
+X ⊗ α⊗ f∗β).
+(b) There exist ﬁnitely many torsion points α1, . . . , αn∈ Pic0(X) such that
+V 0(ω⊗m
+X ) =
+n⋃
+i=1
+(
+αi + Pic0(Y )
+)
+.
+(c) At every point α∈ V 0(ω⊗m
+X ), one has s∪ v = 0 for all s∈ H0(X, ω⊗m
+X ⊗ α)
+and all v∈ H1(Y, OY ); conversely, if s∈ H0(X, ω⊗m
+X ⊗ α) is nonzero and
+s∪ v = 0 for some v∈ H1(X, OX), then necessarily v∈ H1(Y, OY ).
+Proof. We begin by proving (a), following Jiang’s version [Jia11, Lemma 3.2] of the
+original argument in [HP02, Proposition 2.12]. Let g : X→ AY be the morphism
+induced by composing f with the Albanese map of Y .
+X AX
+Y AY
+aX
+f g af
+aY
+Let H be an ample divisor on AY . By construction, g factors through the Iitaka
+ﬁbration of X, and so there is an integer d≫ 0 such that
+(11.3) dKX∼ g∗H + E
+for some eﬀective divisor E on X. In particular, all suﬃciently large and divisible
+powers of ωX have nontrivial global sections.
+Now consider the torsion-free coherent sheaf
+F = g∗
+(
+ω⊗m
+X ⊗ α⊗I
+(
+∥ω⊗(m−1)
+X ∥
+))
+on the abelian variety AY . From our discussion of asymptotic multiplier ideals in
+§10, it is easy to see that we have inclusions
+I
+(
+∥ω⊗m
+X ⊗ α∥
+)
+=I
+(
+∥ω⊗m
+X ∥
+)
+⊆I
+(
+∥ω⊗(m−1)
+X ∥
+)
+,
+by choosing the integer p∈ N in the deﬁnition of the asymptotic multiplier ideal as
+a multiple of the order of the torsion point α∈ Pic0(X). Since
+H0
+(
+X, ω⊗m
+X ⊗ α⊗I
+(
+∥ω⊗m
+X ⊗ α∥
+))
+= H0(
+X, ω⊗m
+X ⊗ α
+)
+,
+this shows that H0(AY , F) = H0(X, ω⊗m
+X ⊗ α). For p∈ N suﬃciently large and
+divisible, we have
+I
+(
+∥ω⊗(m−1)
+X ∥
+)
+= µ∗OX′
+(
+KX′/X−
+⌊ 1
+p F
+⌋)
+.
+Here µ: X′→ X is a log resolution of the complete linear system of ω⊗p(m−1)
+X : the
+divisor F + D has simple normal crossing support, the linear system |D| is base
+point free, and
+(11.4) p(m− 1)µ∗KX∼ F + D.
+(see [Laz04, 9.2.10]). We may also assume that the larger divisor F + D + µ∗E has
+simple normal crossing support.18 C. D. HACON, M. POPA, AND CH. SCHNELL
+Now F is the pushforward, via the mapping g◦ µ: X′→ AY , of the line bundle
+µ∗α⊗ OX′
+(
+KX′ + (m− 1)µ∗KX−
+⌊ 1
+p F
+⌋)
+,
+and for any ε∈ Q, we have the Q-linear equivalence of Q-divisors
+(m− 1)µ∗KX−
+⌊ 1
+p F
+⌋
+∼Q 1−ε
+p (F + D) + ε(m−1)
+d
+(
+µ∗g∗H + µ∗E)−
+⌊ 1
+p F
+⌋
+by combining (11.3) and (11.4). This allows us to write
+KX′ + (m− 1)µ∗KX−
+⌊ 1
+p F
+⌋
+∼Q KX′ + ∆ +ε(m−1)
+d µ∗g∗H,
+where ∆ is the Q-divisor on X′ given by the formula
+∆ = 1−ε
+p D + ε(m−1)
+d µ∗E + 1−ε
+p F−
+⌊ 1
+p F
+⌋
+.
+By construction, the support of ∆ is a divisor with simple normal crossings; and if
+we choose ε > 0 suﬃciently small, then ∆ is a boundary divisor, meaning that the
+coeﬃcient of every irreducible component belongs to the interval [0 , 1). To see that
+∆≥ 0 it suﬃces to observe that p(m− 1)µ∗E≥ dF and to check that ⌊∆⌋ = 0 it
+suﬃces to observe that the coeﬃcients of 1
+p D +{ 1
+p F} are < 1 and apply continuity.
+In particular, the pair ( X′, ∆) is klt. We can now apply the version for Q-divisors
+of Koll´ ar’s vanishing theorem [Kol95,§10] and conclude that the pushforward of
+µ∗(α⊗ g∗β)⊗ OX′
+(
+KX′ + (m− 1)µ∗KX−
+⌊ 1
+p F
+⌋)
+under the map g◦µ: X′→ AY has vanishing higher cohomology for allβ∈ Pic0(Y ).
+Together with the projection formula, this shows that
+Hi(
+AY , F⊗ β
+)
+= 0
+for every i > 0 and every β∈ Pic0(Y ). It follows that
+h0(
+AY , F⊗ β
+)
+= χ
+(
+AY , F⊗ β
+)
+has the same value for every β∈ Pic0(Y ). But then
+h0(
+X, ω⊗m
+X ⊗ α
+)
+= h0(
+AY , F
+)
+= h0(
+AY , F⊗ g∗β
+)
+= h0
+(
+X, ω⊗m
+X ⊗ α⊗ g∗β⊗I
+(
+∥ω⊗(m−1)
+X ∥
+))
+≤ h0(
+X, ω⊗m
+X ⊗ α⊗ g∗β
+)
+,
+and by semicontinuity, we conclude that in fact
+h0(
+X, ω⊗m
+X ⊗ α
+)
+= h0(
+X, ω⊗m
+X ⊗ α⊗ g∗β
+)
+.
+We next prove (b). Assuming that V 0(ω⊗m
+X ) is nonempty, there are by Theo-
+rem 10.1 ﬁnitely many distinct torsion elements α1, . . . , αs∈ Pic0(X), and abelian
+subvarieties Bi⊂ Pic0(X), such that
+V 0(ω⊗m
+X ) =
+s⋃
+i=1
+(
+αi + Bi
+)
+.
+By (a) we know that Pic0(Y )⊆ Bi; indeed, (a) implies that for every torsion point
+α∈ V 0(ω⊗m
+X ) we have α + Pic0(Y )⊆ V 0(ω⊗m
+X ), and this applies of course to αi.
+To prove (b), it is therefore enough to show that Bi⊆ Pic0(Y ). Take an arbitrary
+element α∈ V 0(ω⊗m
+X ), and let s∈ H0(X, ω⊗m
+X ⊗ α) be a nonzero global section.ALGEBRAIC FIBER SPACES OVER ABELIAN VARIETIES 19
+The restriction of s to a general ﬁber F of the Iitaka ﬁbration f : X→ Y is then a
+nonzero global section of
+ω⊗m
+F ⊗ α|F ,
+and because κ(F ) = 0, it follows that α|F is torsion in Pic 0(F ). According to
+Lemma 11.1, a nonzero multiple of α therefore belongs to Pic 0(Y ). This is enough
+to conclude that Bi⊆ Pic0(Y ), and so (b) is proved.
+To prove (c), note ﬁrst that standard arguments (see for instance [EV92, Lemma
+12.6]) imply the ﬁrst half, namely that if v∈ H1(Y, OY ) then
+s∪ v = 0 for all s∈ H0(
+X, ω⊗m
+X ⊗ α
+)
+.
+For the second half, suppose that s∈ H0(X, ω⊗m
+X ⊗ α) is a nonzero global section
+such that s∪ v = 0 for some v∈ H1(X, OX). Restricting to a general ﬁber F of
+the Iitaka ﬁbration f : X→ Y , we get
+0 = s|F∪ v|F∈ H1(
+F, ω⊗m
+F ⊗ α|F
+)
+,
+where s|F ∈ H0(
+F, ω⊗m
+F ⊗ α|F
+)
+is nonzero, and v|F ∈ H1(F, OF ). Since α ∈
+V 0(ω⊗m
+X ), we haveα|F = αi|F for some i = 1, . . . , s, as a consequence of Lemma 11.1
+and (b). In particular, α|F is torsion, say of order k, and so
+s⊗k|F∈ H0(
+F, ω⊗km
+F
+)
+.
+Let aF : F→ AF denote the Albanese mapping of F . Recalling that κ(F ) = 0, we
+get from Theorem 5.2 that ( aF )∗ω⊗km
+F = OAF . Under the isomorphism
+H0(
+F, ω⊗km
+F
+)
+= H0(
+AF , OAF
+)
+,
+our nonzero section s⊗k|F therefore corresponds to a nonzero constant σ ∈ C;
+likewise, under the isomorphism
+H1(F, OF ) = H1(
+AF , OAF
+)
+,
+the vector v|F corresponds to a vector u∈ H1(
+AF , OAF
+)
+. It is not hard to see that
+the two isomorphisms are compatible with cup product; consequently, s⊗k∪ v =
+0 implies that σu = 0, and hence that u = 0. By the inﬁnitesimal version of
+Lemma 11.1, this means that v∈ H1(Y, OY ), as asserted. □
+D. Singular metrics on pushforwards of adjoint line bundles
+12. Plurisubharmonic functions. Let X be a complex manifold. We begin our
+survey of the analytic techniques by recalling the following important deﬁnition;
+see for example [Dem12, I.5] for more details.
+Deﬁnition 12.1. A function ϕ: X→ [−∞, +∞) is called plurisubharmonic if it is
+upper semi-continuous, locally integrable, and satisﬁes the mean-value inequality
+(12.2) ( ϕ◦ γ)(0)≤ 1
+π
+∫
+∆
+(ϕ◦ γ) dµ
+for every holomorphic mapping γ : ∆→ X from the open unit disk ∆ ⊆ C.
+Suppose that ϕ is plurisubharmonic. From (12.2) one can deduce, by integrating
+over the space of lines through a given point, that the mean-value inequality
+(ϕ◦ ι)(0)≤ 1
+µ(B)
+∫
+B
+(ϕ◦ ι) dµ20 C. D. HACON, M. POPA, AND CH. SCHNELL
+also holds for any open embeddingι: B ↪→ X of the open unit ball B⊆ Cn; here n is
+the local dimension of X at the point ι(0). In other words, every plurisubharmonic
+function is also subharmonic. Together with local integrability, this implies that ϕ
+is locally bounded from above.
+Lemma 12.3. Every plurisubharmonic function on a compact complex manifold is
+locally constant.
+Proof. Let ϕ be a plurisubharmonic function on a compact complex manifoldX. As
+ϕ is upper semi-continuous and locally bounded from above, it achieves a maximum
+on every connected component of X. The mean-value inequality then forces ϕ to
+be locally constant. □
+Observe that a plurisubharmonic function is uniquely determined by its values on
+any subset whose complement has measure zero. Indeed, the mean-value inequality
+provides an upper bound on the value at any point x∈ X, and the upper semi-
+continuity a lower bound. One also has the following analogue of the Riemann and
+Hartogs extension theorems for holomorphic functions [Dem12, Theorem I.5.24]; by
+what we have just said, there can be at most one extension in each case.
+Lemma 12.4. Let Z⊆ X be a closed analytic subset, and let ϕ be a plurisubhar-
+monic function on X\ Z.
+(a) If codim Z≥ 2, then ϕ extends to a plurisubharmonic function on X.
+(b) If codim Z = 1, then ϕ extends to a plurisubharmonic function on X if and
+only if it is locally bounded near every point of Z.
+A plurisubharmonic function ϕ determines a coherent sheaf of idealsI(ϕ)⊆ OX,
+called the multiplier ideal sheaf, whose sections over any open subset U⊆ X consist
+of those holomorphic functions f ∈ H0(U, OX) for which the function |f|2e−ϕ is
+locally integrable. We use the convention that the value of the product is 0 at
+points x∈ X where f(x) = 0 and ϕ(x) =−∞.
+Since plurisubharmonic functions are locally bounded from above, Montel’s the-
+orem in several variables implies the following compactness property.
+Proposition 12.5. Let ϕ: B→ [−∞, +∞) be a plurisubharmonic function on the
+open unit ball B⊆ Cn. Consider the collection of holomorphic functions
+HK(ϕ) =
+{
+f∈ H0(B, OB)
+⏐⏐⏐⏐
+∫
+B
+|f|2e−ϕ dµ≤ K
+}
+.
+Any sequence of functions in HK(ϕ) has a subsequence that converges uniformly on
+compact subsets to an element of HK(ϕ).
+Proof. The mean-value inequality for holomorphic functions implies that all func-
+tions in HK(ϕ) are uniformly bounded on every closed ball of radius R < 1. Let us
+brieﬂy review the argument. Because ϕ is locally bounded from above, there is a
+constant C≥ 0 such that ϕ≤ C on the closed ball of radius ( R + 1)/2. Fix a point
+z∈ BR(0) in the closed ball of radius R, and a holomorphic function f∈ HK(ϕ).
+By the mean-value inequality,
+|f(z)|2≤ 1
+rnµ(B)
+∫
+Br(z)
+|f|2 dµ≤ eC
+rnµ(B)
+∫
+Br(z)
+|f|2e−ϕ dµ≤ K· eC
+rnµ(B) ,ALGEBRAIC FIBER SPACES OVER ABELIAN VARIETIES 21
+where r = (1−R)/2. By the n-dimensional version of Montel’s theorem [GR09, The-
+orem I.A.12], this uniform bound implies that any sequence f0, f1, f2, . . .∈ HK(ϕ)
+has a subsequence that converges uniformly on compact subsets to a holomorphic
+function f∈ H0(B, OB). By Fatou’s lemma,
+∫
+B
+|f|2e−ϕ dµ≤ lim inf
+k→+∞
+∫
+B
+|fk|2e−ϕ dµ≤ K,
+which means that f∈ HK(ϕ). □
+Note. The example of an orthonormal sequence in HK(ϕ) shows that the conver-
+gence need not be with respect to the L2-norm.
+13. Singular hermitian metrics on line bundles. Many of the newer ap-
+plications of analytic techniques in algebraic geometry – such as Siu’s proof of the
+invariance of plurigenera – rely on the notion ofsingular hermitian metrics on holo-
+morphic line bundles. The word “singular” here means two things at once: ﬁrst,
+that the metric is not necessarily C∞; second, that certain vectors in the ﬁbers of
+the line bundle are allowed to have either inﬁnite length or length zero.
+Let X be a complex manifold, and let L be a holomorphic line bundle on X
+with a singular hermitian metric h. In any local trivialization of L, such a metric
+is represented by a “weight function” of the form e−ϕ, where ϕ is a measurable
+function with values in [ −∞, +∞]. More precisely, suppose that the restriction
+of L to an open subset U ⊆ X is trivial, and that s0 ∈ H0(U, L) is a nowhere
+vanishing holomorphic section. Then any other holomorphic section s∈ H0(U, L)
+can be written as s = f s0 for a unique holomorphic function f on U, and the length
+squared of s with respect to the singular hermitian metric h is
+(13.1) |s|2
+h =|f|2e−ϕ.
+The points where ϕ is not ﬁnite correspond to singularities of the metric: at points
+where ϕ(x) =−∞, the metric becomes inﬁnite; at points where ϕ(x) = +∞, the
+metric stops being positive deﬁnite.
+Note. At points x∈ U where ϕ(x) = −∞, we use the following convention: the
+product in (13.1) equals 0 if f(x) = 0; otherwise, it equals +∞. With this rule in
+place,|s|h is a well-deﬁned measurable function on U with values in [0 , +∞].
+We say that a singular hermitian metric h is continuous if the local weight
+functions ϕ are continuous functions with values in [−∞, +∞]. This is equivalent
+to asking that, for every open subset U⊆ X and every section s∈ H0(U, L), the
+function|s|h : U→ [0, +∞] should be continuous.
+We say that the pair ( L, h) has semi-positive curvature if the local weight func-
+tions ϕ are plurisubharmonic. In that case, ϕ is locally integrable, and the curvature
+current of (L, h) can be deﬁned, in the sense of distributions, by the formula
+Θh =
+√−1
+2π ∂ ¯∂ϕ.
+It is easy to see that Θ h is a well-deﬁned closed positive (1 , 1)-current on X; its
+cohomology class in H2(X, R) equals the ﬁrst Chern class c1(L). Conversely, if the
+current Θh is positive, then one can make the local weight functions ϕ plurisubhar-
+monic by modifying them on a set of measure zero [Dem12, Theorem I.5.8].22 C. D. HACON, M. POPA, AND CH. SCHNELL
+Note. Most authors include the condition of local integrability into the deﬁnition
+of a singular hermitian metric. We use a diﬀerent convention, so as to be consistent
+with the deﬁnition of singular hermitian metrics on vector bundles later on.
+A singular hermitian metric of semi-positive curvature is automatically positive
+deﬁnite at every point. Indeed, ϕ is locally bounded from above, and so the factor
+e−ϕ in the local expression for h may equal +∞ at certain points, but has to be
+locally bounded from below by a positive constant. Moreover, ϕ is upper semi-
+continuous, and so the function|s|h : U→ [0, +∞] is not just measurable, but even
+lower semi-continuous, for every holomorphic section s∈ H0(U, L) on some open
+subset U⊆ X.
+Lemma 13.2. Suppose that X is compact, and that h is a singular hermitian
+metric with semi-positive curvature on a holomorphic line bundle L. If c1(L) = 0
+in H2(X, R), then h is actually a smooth metric with zero curvature.
+Proof. The cohomology class of the closed positive (1 , 1)-current Θh equals zero in
+H2(X, R), and so there is a globally deﬁned plurisubharmonic function ψ in X such
+that Θh =
+√−1
+2π ∂ ¯∂ψ. By Lemma 12.3, ψ is locally constant, and so Θh = 0. Now all
+the local weight functions ϕ satisfy ∂ ¯∂ϕ = 0, and are therefore smooth functions;
+but this means exactly that h is a smooth metric. □
+The curvature assumption implies that the multiplier ideal sheaf I(h)⊆ OX is a
+coherent sheaf of ideals on X; in the notation from above, a holomorphic function
+f : U→ C is a section ofI(h) if and only if the function|f|2e−ϕ is locally integrable.
+Consequently, the subspace
+H0(
+X, L⊗I (h)
+)
+⊆ H0(X, L)
+consists of all global holomorphic sections of L for which the lower semi-continuous
+function|s|2
+h : X→ [0, +∞] is locally integrable.
+14. The Ohsawa-Takegoshi extension theorem. It is known that a line bundle
+on a projective complex manifold admits a singular hermitian metric with semi-
+positive curvature if and only if it is pseudo-eﬀective. The power of the metric
+approach to positivity comes from fact that one can extend holomorphic sections
+from submanifolds with precise bounds on the norm of the extension. The most
+important result in this direction is the famous Ohsawa-Takegoshi theorem.2
+Let X be a complex manifold of dimension n, and let ( L, h) be a holomorphic
+line bundle with a singular hermitian metric of semi-positive curvature. What we
+actually need is the “adjoint version” of the Ohsawa-Takegoshi theorem, which is
+about extending sections of the adjoint bundle ωX⊗L, or equivalently, holomorphic
+n-forms with coeﬃcients in L. Before we can state the theorem, we ﬁrst have to
+introduce some notation.
+Given β∈ H0(X, ωX⊗L), we deﬁne a nonnegative measurable (n, n)-form|β|2
+h as
+follows: view β∧ β as a smooth (n, n)-form with coeﬃcients in L⊗ L, compose with
+2We use the name “Ohsawa-Takegoshi theorem” for convenience only; in reality, there is a
+large collection of diﬀerent L2-extension theorems in complex analysis, of which Theorem 14.4
+below is an important but nevertheless special case. For more on this topic, see for example [ ?].ALGEBRAIC FIBER SPACES OVER ABELIAN VARIETIES 23
+the singular hermitian metric h, and then multiply by the factor cn = 2−n(−1)n2/2.
+Locally, we can write β = f s0⊗ dz 1∧···∧ dzn, and then
+(14.1) |β|2
+h =|f|2e−ϕ(dx 1∧ dy1)∧···∧ (dxn∧ dyn),
+where z1 = x1 + y1
+√−1, . . . , zn = xn + yn
+√−1 are local holomorphic coordinates
+on U. Using this notation, we have
+H0(
+X, ωX⊗ L⊗I (h)
+)
+=
+{
+β∈ H0(X, ωX⊗ L)
+⏐⏐|β|2
+h is locally integrable
+}
+.
+We also deﬁne the L2-norm of the element β∈ H0(X, ωX⊗ L) to be
+(14.2) ∥β∥2
+h =
+∫
+X
+|β|2
+h∈ [0, +∞].
+When X is compact, β∈ H0(
+X, ωX⊗L⊗I(h)
+)
+is equivalent to having∥β∥2
+h < +∞;
+in general, ﬁniteness of the L2-norm is a much stronger requirement.
+Now suppose that f : X→ B is a holomorphic mapping to the open unit ball
+B⊆ Cr. We assume that f is projective and that 0∈ B is a regular value of f; the
+central ﬁber X0 = f−1(0) is therefore a projective complex manifold of dimension
+n− r = dim X− dim B. We denote by ( L0, h0) the restriction of ( L, h) to X0. As
+long as h0 is not identically equal to + ∞, it deﬁnes a singular hermitian metric
+with semi-positive curvature on L0, and we have the space
+(14.3) H0(
+X0, ωX0⊗ L0⊗I (h0)
+)
+of holomorphic (n− r)-forms with coeﬃcients in L0 that are square-integrable with
+respect to h0; as before, the deﬁning condition is that the integral
+∥α∥2
+h0 =
+∫
+X0
+|α|2
+h0
+should be ﬁnite; note that the deﬁnition of |α|2
+h0 involves the constant cn−r.
+The Ohsawa-Takegoshi theorem says that every section of ωX0⊗ L0⊗I (h0) can
+be extended to a section of ωX⊗ L⊗I (h) with ﬁnite L2-norm – and, crucially, it
+provides a universal upper bound on the L2-norm of the extension. (If h0≡ +∞,
+then the space in (14.3) is trivial and the extension problem is not interesting.)
+Here β∈ H0(X, ωX⊗ L) is an extension of α∈ H0(X0, ωX0⊗ L0) if
+β|X0 = α∧ d f= α∧ (d f1∧···∧ d fr),
+where f = (f1, . . . , fr). That said, the precise statement of the Ohsawa-Takegoshi
+extension theorem is the following.
+Theorem 14.4. Let f : X→ B be a projective morphism such that 0∈ B is a
+regular value. Let (L, h) be a holomorphic line bundle with a singular hermitian
+metric of semi-positive curvature. Denote by (L0, h0) the restriction to the central
+ﬁber X0 = f−1(0), and suppose that h0̸≡ +∞. Then for every α∈ H0(
+X0, ωX0⊗
+L0⊗I (h0)
+)
+, there exists at least one β∈ H0(
+X, ωX⊗ L⊗I (h)
+)
+with
+β|X0 = α∧ d f and ∥β∥2
+h≤ µ(B)·∥ α∥2
+h0 .
+The special thing about this form of the extension theorem is that the constant
+µ(B) = πr/r! in the estimate is the volume of the unit ball B⊆ Cr; the example
+of a product X = B× X0 shows that this is optimal. Earlier proofs of the Ohsawa-
+Takegoshi theorem, for example by Siu or P˘ aun [Siu02, P˘ au07], only gave a weaker24 C. D. HACON, M. POPA, AND CH. SCHNELL
+estimate, in which µ(B) had to be replaced by a certain constant C0≤ 200. The
+proof of the sharp estimate is due to B locki and Guan-Zhou [B lo13, GZ15]. There
+is also a (weaker) version of the Ohsawa-Takegoshi theorem for the case where the
+ﬁbers are compact K¨ ahler manifolds, proved by Cao [Cao14].
+Proof of Theorem 14.4. In [GZ15, §3.12], the result is stated only for “projective
+families”, meaning in the case where f : X→ B is smooth and everywhere sub-
+mersive, but the same proof works as long as 0 ∈ B is a regular value. Guan and
+Zhou have (2 π)r/r! as the constant, but the extra factor of 2 r goes away because
+our deﬁnition of∥β∥2
+h and∥α∥2
+h involves dividing by 2n and 2n−r, respectively.
+For the reader who wants to look up the result in [GZ15], we brieﬂy explain
+how to deduce Theorem 14.4 from Guan and Zhou’s main theorem. Choose an
+embedding X ↪→ B× PN, and let H⊆ X be the preimage of a suﬃciently general
+hyperplane in PN. Then X\ H is a Stein manifold and X0\ X0∩ H a closed
+submanifold. We can now apply [GZ15, Theorem 2.2] to the pair ( X, X0), taking
+A = 0, cA(t)≡ 1, and Ψ = r log|f|2 = r log
+(
+|f1|2 +··· +|fr|2)
+. □
+Note. Observe that if we write the inequality in Theorem 14.4 in the form
+1
+µ(B)∥β∥2
+h≤∥ α∥2
+h0 ,
+then it looks like a mean-value inequality; this fact will play a crucial role later or,
+when we construct singular hermitian metrics on pushforwards of adjoint bundles.
+15. Coherent sheaves and Fr´ echet spaces.In this section, we brieﬂy review
+some fundamental results about section spaces of coherent sheaves on complex
+manifolds. Recall that a Fr´ echet spaceis a Hausdorﬀ topological vector space, whose
+topology is induced by a countable family of semi-norms, and which is complete
+with respect to this family of semi-norms. Most of the familiar theorems about
+Banach spaces, such as the open mapping theorem or the closed graph theorem,
+remain true for Fr´ echet spaces.
+Example 15.1. On a complex manifold X, the vector space H0(X, OX) of all holo-
+morphic functions on X is a Fr´ echet space, under the topology of uniform conver-
+gence on compact subsets. More precisely, each compact subset K⊆ X gives rise
+to a semi-norm
+∥f∥K = sup
+x∈K
+|f(x)|
+on the space H0(X, OX); to get a countable family, write X as a countable union
+of compact subsets. The same construction works for any open subset U⊆ X, and
+when U⊆ V , the restriction mapping H0(V, OX)→ H0(U, OX) is continuous.
+In fact, the section spaces of all coherent sheaves on a given complex manifold
+can be made into Fr´ echet spaces in a consistent way; the construction is explained
+for example in [GR09, Ch. VIII,§A]. Let F be a coherent sheaf on a complex man-
+ifold X. Then for every open subset U⊆ X, the space of sections H0(U, F) has the
+structure of a Fr´ echet space, in such a way that ifU⊆ V , the restriction mapping
+H0(V, F)→ H0(U, F) is continuous. Moreover, if φ: F→ G is any morphism be-
+tween two coherent sheaves, then the induced mappingsφU : H0(U, F)→ H0(U, G )
+are all continuous. The Fr´ echet space topology has several other good properties,
+such as the following [GR09, Proposition VIII.A.2].ALGEBRAIC FIBER SPACES OVER ABELIAN VARIETIES 25
+Proposition 15.2. If F⊆ G , then H0(U, F) is a closed subspace of H0(U, G ).
+Let f : X→ Y be a proper holomorphic mapping between complex manifolds,
+and let F be a coherent sheaf on X. By Grauert’s coherence theorem, the push-
+forward sheaf f∗F is a coherent sheaf on Y . The vector space
+H0(Y, f∗F) = H0(X, F)
+therefore has two (a priori diﬀerent) Fr´ echet space topologies, one coming fromY ,
+the other from X.
+Proposition 15.3. In the situation just described, the two Fr´ echet space topologies
+on H0(Y, f∗F) = H0(X, F) are equal.
+Proof. Since the problem is local, we may replace Y by a Stein open subset and
+assume that we have a surjective morphism
+O⊕m
+Y → f∗F .
+The induced mapping H0(Y, OY )⊕m→ H0(Y, f∗F) is continuous and surjective;
+by the open mapping theorem, the topology on H0(Y, f∗F) must be the quotient
+topology. We also get a morphism O⊕m
+X → F, and therefore a factorization
+H0(Y, OY )⊕m→ H0(X, OX)⊕m→ H0(X, F).
+Both mappings are continuous: the ﬁrst because, f being proper, uniform conver-
+gence on compact subsets of Y implies uniform convergence on compact subsets
+of X; the second because O⊕m
+X → F is a morphism. It follows that the identity
+mapping
+H0(Y, f∗F)→ H0(X, F)
+is continuous; by the open mapping theorem, it must be a homeomorphism. □
+16. Singular hermitian inner products. Before we can talk about singular
+hermitian metrics on vector bundles, we ﬁrst have to be clear about what we mean
+by a “singular” hermitian inner product on a vector space. The purpose of this
+section is to deﬁne this notion with some care. Throughout, we let V be a ﬁnite-
+dimensional complex vector space. There are two ways in which a hermitian inner
+product can be singular: there may be vectors whose length is + ∞, and others
+whose length is 0. The best way to formalize this is to work not with the inner
+product itself, but with the associated length function [BP08, §3].
+Deﬁnition 16.1. A singular hermitian inner product on a ﬁnite-dimensional com-
+plex vector space V is a function|−|h : V → [0, +∞] with the following properties:
+(1) |λv|h =|λ|·| v|h for every λ∈ C\{ 0} and every v∈ V , and|0|h = 0.
+(2) |v + w|h≤| v|h +|w|h for every v, w∈ V .
+(3) |v + w|2
+h +|v− w|2
+h = 2|v|2
+h + 2|w|2
+h for every v, w∈ V .
+Our convention is that an inequality is satisﬁed if both sides are equal to + ∞.
+It is easy to deduce from the axioms that both
+V0 =
+{
+v∈ V
+⏐⏐|v|h = 0
+}
+and Vﬁn =
+{
+v∈ V
+⏐⏐|v|h < +∞
+}
+are linear subspaces of V . We say that h is positive deﬁnite if V0 = 0; we say that h
+is ﬁnite if Vﬁn = V . Clearly,|−|h is a semi-norm on Vﬁn; it is a norm if and only if26 C. D. HACON, M. POPA, AND CH. SCHNELL
+V0 = 0. The third axiom is the parallelogram law for this semi-norm. The formula
+⟨v, w⟩h = 1
+4
+3∑
+k=0
+(
+√
+−1)k·
+⏐⏐v + (
+√
+−1)kw
+⏐⏐
+h
+therefore deﬁnes a semi-deﬁnite hermitian inner product on the subspace Vﬁn; it is
+positive deﬁnite if and only if V0 = 0. We use the same notation for the induced
+hermitian inner product on the quotient space Vﬁn /V0.
+Given a singular hermitian inner product h on V , we obtain a singular hermitian
+inner product h∗ on the dual space V∗ = HomC(V, C) by setting
+|f|h∗ = sup
+{|f(v)|
+|v|h
+⏐⏐⏐⏐ v∈ V with|v|h̸= 0
+}
+for any linear functional f ∈ V∗, with the understanding that a fraction with
+denominator +∞ is equal to 0. (If V0 = V , then we deﬁne|f|h∗ = 0 for f = 0, and
+|f|h∗ = +∞ otherwise.) It is easy to see that |f|h∗ = 0 if and only if f annihilates
+the subspace Vﬁn, and that |f|h∗ < +∞ if and only if f annihilates the subspace
+V0. One then checks that h∗ is again a singular hermitian inner product on V∗,
+and that the resulting hermitian inner product ⟨−,−⟩h∗ on
+{
+f∈ V∗⏐⏐|f|h∗ < +∞
+}
+{
+f∈ V∗
+⏐⏐|f|h∗ = 0
+} ≃ HomC
+(
+Vﬁn /V0, C
+)
+agrees with the one naturally induced by ⟨−,−⟩h. Here is another way to think
+about h∗. From a nonzero linear functional f : V → C, we get an induced singular
+hermitian inner product on C by setting
+|λ|h,f = inf
+{
+|v|h
+⏐⏐ v∈ V satisﬁes f(v) = λ
+}
+If λ̸= 0, this quantity is + ∞ unless the restriction of f to the subspace Vﬁn is
+nonzero; if V0 = V , then|λ|h,f = 0 for every λ∈ C. Taking into account various
+special cases, the following result is immediate from the deﬁnition.
+Lemma 16.2. Let f : V → C be a nonzero linear functional. Then
+|λ|h,f = |λ|
+|f|h∗
+for every nonzero λ∈ C.
+Let r = dim V . Since the product of 0 and + ∞ is undeﬁned, we do not get a
+singular hermitian inner product on
+det V =
+r⋀
+V
+unless V0 = 0 or Vﬁn = V . But when h is either positive deﬁnite or ﬁnite, there is a
+well-deﬁned singular hermitian inner product det h on the one-dimensional vector
+space det V . If Vﬁn = V , we declare that
+|v1∧···∧ vr|deth = det
+
+
+⟨v1, v1⟩h ··· ⟨ v1, vr⟩h
+... ... ...
+⟨vr, v1⟩h ··· ⟨ vr, vr⟩h
+
+ .
+If Vﬁn̸= V and V0 = 0, we let|−|deth equal +∞ on all nonzero elements of det V .ALGEBRAIC FIBER SPACES OVER ABELIAN VARIETIES 27
+17. Singular hermitian metrics on vector bundles. The purpose of this
+section is to extend the concept of singular hermitian metrics from holomorphic
+line bundles to holomorphic vector bundles of arbitrary rank. Let X be a complex
+manifold, and let E be a holomorphic vector bundle on X of some rank r≥ 1.
+Deﬁnition 17.1. A singular hermitian metric on E is a function h that associates
+to every point x∈ X a singular hermitian inner product |−|h,x : Ex→ [0, +∞] on
+the complex vector space Ex, subject to the following two conditions:
+(1) h is ﬁnite and positive deﬁnite almost everywhere, meaning that for all x
+outside a set of measure zero, |−|h,x is a hermitian inner product on Ex.
+(2) h is measurable, meaning that the function
+|s|h : U→ [0, +∞], x ↦→
+⏐⏐s(x)
+⏐⏐
+h,x,
+is measurable whenever U⊆ X is open and s∈ H0(U, E).
+In the case r = 1, this specializes to the deﬁnition of singular hermitian metrics
+on holomorphic line bundles. The requirement that h be measurable is extremely
+weak: the singular hermitian metrics that we will actually encounter below are at
+least semi-continuous. The advantage of the above deﬁnition is that it behaves well
+under duality. By applying the general construction from the previous section, we
+obtain on each ﬁber
+E∗
+x = HomC(Ex, C)
+of the dual bundle E∗ a singular hermitian inner product |−|h∗,x. The following
+result shows that these form a singular hermitian metric on E∗.
+Proposition 17.2. A singular hermitian metric h on a holomorphic vector bundle
+E induces a singular hermitian metric h∗ on the dual bundle E∗.
+Proof. If|−|h,x is ﬁnite and positive deﬁnite, then|−|h∗,x is also ﬁnite and positive
+deﬁnite, and so the ﬁrst condition in the deﬁnition is clearly satisﬁed. The second
+condition is of a local nature, and so we may assume without loss of generality
+that E is the trivial bundle of rank r. Denote by s1, . . . , sr∈ H0(X, E) the global
+sections corresponding to a choice of trivialization. The expression
+Hi,j(x) =⟨si(x), sj(x)⟩h,x
+is well-deﬁned outside a set of measure zero, and the resulting function is measur-
+able. Denote by H∈ Matr×r(C) the r× r-matrix with entries Hi,j. Then h∗ is
+represented by the transpose of the matrix H−1, in the natural trivialization of E∗;
+the usual formula for the inverse of a matrix shows that all entries of this matrix
+are again measurable functions. □
+Note. In more sheaf-theoretic terms, a singular hermitian metric on a holomorphic
+vector bundle E is a morphism of sheaves of sets
+|−|h : E→ MX
+from E to the sheaf of measurable functions on X with values in [0 , +∞]. The
+following conditions need to be satisﬁed:
+(1) One has |f s|h =|f|·| s|h for every s∈ H0(U, E) and every f∈ H0(U, O).
+(2) If s∈ H0(U, E) and|s|h = 0 almost everywhere, then s = 0.
+(3) For almost every point x∈ X, the function |−|h,x : Ex → [0, +∞] is a
+singular hermitian inner product (in the sense of Deﬁnition 17.1).28 C. D. HACON, M. POPA, AND CH. SCHNELL
+Again, we use the convention that |f|·| s|h = 0 at points where f is zero.
+18. Semi-positive curvature. Let h be a singular hermitian metric on a holo-
+morphic vector bundle E, and denote by h∗ the induced singular hermitian metric
+on the dual bundle E∗. Suppose for a moment that h is smooth, and denote by Θh
+the curvature tensor of the Chern connection; it is a (1 , 1)-form with coeﬃcients in
+the bundle End( E). One says that ( E, h) has semi-positive curvature in the sense
+of Griﬃths if, for every choice of holomorphic tangent vector ξ∈ TxX, the matrix
+Θh(ξ, ξ) is positive semi-deﬁnite [Dem12, VII.6]. This is known to be equivalent to
+the condition that the function log|f|h∗ is plurisubharmonic for every local section
+f∈ H0(U, E∗). In the singular case, we use this condition as the deﬁnition.
+Deﬁnition 18.1. We say that the pair ( E, h) has semi-positive curvature if the
+function log|f|h∗ is plurisubharmonic for every f∈ H0(U, E∗).
+The point of this deﬁnition is that it allows us to talk about the curvature of a
+singular hermitian metric without mentioning the curvature tensor: unlike in the
+case of line bundles, the curvature tensor of h does not in general make sense even
+as a distribution [Rau15, Theorem 1.3]. The following lemma gives an equivalent
+formulation of the deﬁnition.
+Lemma 18.2. Let h be a singular hermitian metric on E. Then (E, h) has semi-
+positive curvature if, and only if, for every open subset U⊆ X and every nonzero
+morphism E|U→ L to a line bundle, the induced singular hermitian metric on L
+has semi-positive curvature.
+Proof. The construction of the induced singular hermitian metric on L works as in
+Lemma 16.2. At each point x∈ U, the linear mapping Ex→ Lx between ﬁbers
+induces a singular hermitian inner product on the one-dimensional complex vector
+space Lx: the length of a vector λ∈ Lx is the inﬁmum of|e|h,x over all e∈ Ex that
+map to λ. (If Ex→ Lx is zero, then the inﬁmum equals +∞ whenever λ̸= 0.)
+Let us compute the curvature of the induced metric. After replacing X by an
+open neighborhood of a given point in U, we may assume that L is trivial; our
+morphism E→ OX is then given by a linear functional f∈ H0(X, E∗). Let e−ϕ be
+the weight function of the induced metric. The formula in Lemma 16.2 says that
+e−ϕ(x) = 1
+|f(x)|2
+h∗,x
+for every x∈ X. Taking logarithms, we get ϕ = 2 log|f|h∗, which is plurisubhar-
+monic because the pair ( E, h) has semi-positive curvature. □
+Suppose that ( E, h) has semi-positive curvature. Since plurisubharmonic func-
+tions are locally bounded from above, the singular hermitian inner product |−|h∗,x
+on E∗
+x must be ﬁnite for every x∈ X; dually, every|−|h,x must be positive deﬁnite.
+The determinant line bundle det E therefore has a well-deﬁned singular hermitian
+metric that we denote by the symbol deth. We will prove later (in Proposition 25.1)
+that the pair (det E, det h) again has semi-positive curvature.
+When (E, h) has semi-positive curvature, the pointwise length of any holomor-
+phic section of E∗ is an upper semi-continuous function. Likewise, the pointwise
+length of any holomorphic section of E is a lower semi-continuous function.ALGEBRAIC FIBER SPACES OVER ABELIAN VARIETIES 29
+Lemma 18.3. If (E, h) has semi-positive curvature, then for any s∈ H0(X, E),
+the function|s|h : X→ [0, +∞] is lower semi-continuous.
+Proof. Since the question is local, we may assume without loss of generality that
+X is the open unit ball in Cn, and E the trivial bundle of rank r≥ 1. We have
+|s|h≥|f(s)|
+|f|h∗
+for every f∈ H0(X, E∗), and it is easy to see that |s|h is the pointwise supremum
+of the collection of functions on the right-hand side. Because log |f|h∗ is upper
+semi-continuous, each
+|f(s)|
+|f|h∗
+=|f(s)|· e− log|f|h∗
+is a lower semi-continuous function from X to [0, +∞]; their pointwise supremum
+is therefore also lower semi-continuous. □
+Example 18.4. The following example, due to Rauﬁ [Rau15, Theorem 1.3], shows
+that the function |s|h can indeed have jumps. Let E be the trivial bundle of rank
+2 on C. We ﬁrst deﬁne a singular hermitian metric h∗ on the dual bundle E∗: at
+each point z∈ C, it is represented by the matrix(1 +|z|2 z
+¯z |z|2
+)
+.
+From this, one computes that the singular hermitian metric h on E is given by
+1
+|z|4
+(|z|2 −z
+−¯z 1 +|z|2
+)
+as long as z̸= 0. Contrary to what this formula might suggest, one has⏐⏐(1, 0)
+⏐⏐
+h,0 = 1;
+the length of the vector (1 , 0) is thus|z|−2 for z̸= 0, but 1 for z = 0.
+19. Singular hermitian metrics on torsion-free sheaves. Let X be a complex
+manifold, and let F be a torsion-free coherent sheaf on X. Let X(F)⊆ X denote
+the maximal open subset where F is locally free; then X\X(F) is a closed analytic
+subset of codimension≥ 2. If F̸= 0, then the restriction of F to the open subset
+X(F) is a holomorphic vector bundle E of some rank r≥ 1.
+Deﬁnition 19.1. A singular hermitian metric on F is a singular hermitian metric
+h on the holomorphic vector bundle E. We say that such a metric has semi-positive
+curvature if the pair ( E, h) has semi-positive curvature.
+Suppose that F has a singular hermitian metric with semi-positive curvature.
+Since X\ X(F) has codimension≥ 2, every holomorphic section of the dual bundle
+E∗ extends to a holomorphic section of the reﬂexive coherent sheaf
+F∗ =Hom(F , OX),
+and every plurisubharmonic function on X(F) extends to a plurisubharmonic func-
+tion on X (see Lemma 12.4). For every open subset U⊆ X and every holomorphic
+section f∈ H0(U, F∗), we thus obtain a well-deﬁned plurisubharmonic function
+log|f|h∗ : U→ [−∞, +∞).
+Note that the function |f|h∗ is upper semi-continuous.30 C. D. HACON, M. POPA, AND CH. SCHNELL
+What about holomorphic sections of the sheaf F itself? For any s∈ H0(U, F),
+the function|s|h is lower semi-continuous on U∩X(F). In a suitable neighborhood
+of every point in U, we can imitate the proof of Lemma 18.3 and take the pointwise
+supremum of the functions
+|f(s)|· e− log|f|h∗
+,
+where f runs over all sections of F∗. Since the pointwise supremum of a family of
+lower semi-continuous functions is again lower semi-continuous, we obtain in this
+manner a distinguished extension
+|s|h : U→ [0, +∞]
+to a lower semi-continuous function on U.
+Deﬁnition 19.2. We say that a singular hermitian metric on F is continuous if,
+for every open subset U ⊆ X and every holomorphic section s∈ H0(U, F), the
+function|s|h : U→ [0, +∞] is continuous.
+Proposition 19.3. Let φ: F → G be a morphism between two torsion-free co-
+herent sheaves that is generically an isomorphism. If F has a singular hermitian
+metric with semi-positive curvature, then so does G .
+Proof. Let h denote the singular hermitian metric on F. On the open subset of
+X(F)∩ X(G ) where φ is an isomorphism, G clearly acquires a singular hermit-
+ian metric that we also denote by h for simplicity. Because the dual morphism
+φ∗ : G∗ → F∗ is injective, the function log |f|h∗ is plurisubharmonic for every
+f ∈ H0(U, G∗)⊆ H0(U, F∗). Consequently, h extends to a singular hermitian
+metric with semi-positive curvature on all of X(G ). □
+Example 19.4. If F has a singular hermitian metric of semi-positive curvature,
+then the same is true for the reﬂexive hull F∗∗.
+20. The minimal extension property. The Ohsawa-Takegoshi theorem leads
+us to consider the following “minimal extension property” for singular hermitian
+metrics. To keep the statement simple, let us assume thatX is a connected complex
+manifold of dimension n, and denote by B⊆ Cn the open unit ball.
+Deﬁnition 20.1. We say that a singular hermitian metric on F has the minimal
+extension property if there exists a nowhere dense closed analytic subset Z⊆ X
+with the following two properties:
+(1) F is locally free on X\ Z, or equivalently, X\ Z⊆ X(F).
+(2) For every embedding ι: B ↪→ X with x = ι(0)∈ X\ Z, and every v∈ Ex
+with|v|h,x = 1, there is a holomorphic section s∈ H0(
+B, ι∗F
+)
+such that
+s(0) = v and 1
+µ(B)
+∫
+B
+|s|2
+h dµ≤ 1;
+here (E, h) denotes the restriction to the open subset X(F).
+The point of the minimal extension property is the ability to extend sections
+over the “bad” locus Z, with good control on the norm of the extension. We will
+see later that pushforwards of adjoint line bundles always have this property, as a
+consequence of the Ohsawa-Takegoshi theorem.ALGEBRAIC FIBER SPACES OVER ABELIAN VARIETIES 31
+Example 20.2. The minimal extension property rules out certain undesirable ex-
+amples like the following. Let Z⊆ X be a closed analytic subset of codimension
+≥ 2, and letIZ⊆ OX denote the ideal sheaf of Z. ThenIZ is trivial on X\ Z, and
+the constant hermitian metric on this trivial bundle is a singular hermitian metric
+with semi-positive curvature on IZ. But this metric does not have the minimal
+extension property, because a holomorphic function f : B→ C with f(0) = 1 and
+1
+µ(B)
+∫
+B
+|f|2dµ≤ 1
+must be constant.
+21. Pushforwards of adjoint line bundles. Let X be a complex manifold of
+dimension n, and let (L, h) be a holomorphic line bundle with a singular hermitian
+metric of semi-positive curvature. If X is compact, the space H0(X, ωX⊗ L) is
+ﬁnite-dimensional, and the formula
+∥β∥2
+h =
+∫
+X
+|β|2
+h
+endows it with a positive deﬁnite singular hermitian inner product that is ﬁnite
+on the subspace H0(
+X, ωX⊗ L⊗I (h)
+)
+. We are now going to analyze how this
+construction behaves in families.
+Suppose then that f : X→ Y is a projective surjective morphism between two
+connected complex manifolds, with dim X = n and dim Y = r; the general ﬁber of
+f is a projective complex manifold of dimension n− r, but there may be singular
+ﬁbers. Let ( L, h) be a holomorphic line bundle with a singular hermitian metric
+of semi-positive curvature on X. The following important theorem was essentially
+proved by P˘ aun and Takayama [PT14, Theorem 3.3.5], building on earlier results
+for smooth morphisms by Berndtsson and P˘ aun [Ber09, BP08].
+Theorem 21.1. Let f : X→ Y be a projective surjective morphism between two
+connected complex manifolds. If (L, h) is a holomorphic line bundle with a singular
+hermitian metric of semi-positive curvature on X, then the pushforward sheaf
+F = f∗
+(
+ωX/Y⊗ L⊗I (h)
+)
+has a canonical singular hermitian metric H. This metric has semi-positive curva-
+ture and satisﬁes the minimal extension property.
+The metric in the theorem is uniquely characterized by a simple property that
+we now describe. Recall from (14.2) and (14.1) that any β∈ H0(
+X, ωX⊗ L⊗I (h)
+)
+gives rise to a locally integrable ( n, n)-form|β|2
+h. Any such form can be integrated
+against compactly supported smooth functions, and therefore deﬁnes a current of
+bidegree (n, n) on X. If we use brackets to denote the evaluation pairing between
+(n, n)-currents and compactly supported smooth functions, then
+⟨
+|β|2
+h, φ
+⟩
+=
+∫
+X
+φ·| β|2
+h.
+By the same token, any section β∈ H0(Y, ωY⊗ F) deﬁnes a current of bidegree
+(r, r) on Y that we denote by the symbol |β|2
+H. Now suppose that
+β∈ H0(U, ωY⊗ F)≃ H0(
+f−1(U), ωX⊗ L⊗I (h)
+)
+.32 C. D. HACON, M. POPA, AND CH. SCHNELL
+The singular hermitian metric H is uniquely characterized by the condition that
+⟨
+|β|2
+H , φ
+⟩
+=
+⟨
+|β|2
+h, f∗φ
+⟩
+for every compactly supported smooth function φ∈ Ac(U). Said diﬀerently, |β|2
+H
+is the pushforward of the current |β|2
+h under the proper mapping f.
+Corollary 21.2. In the situation of Theorem 21.1, suppose that the inclusion
+f∗
+(
+ωX/Y⊗ L⊗I (h)
+)
+↪→ f∗(ωX/Y⊗ L)
+is generically an isomorphism. Then f∗(ωX/Y ⊗ L) also has a singular hermitian
+metric with semi-positive curvature and the minimal extension property.
+Proof. The existence of the metric follows from Proposition 19.3. The minimal
+extension property continues to hold because every section of f∗
+(
+ωX/Y⊗ L⊗I (h)
+)
+is of course also a section of f∗(ωX/Y⊗ L). □
+Example 21.3. If we apply Theorem 21.1 to the identity morphism id: X→ X, we
+only get a singular hermitian metric on L⊗I (h). To recover the singular hermitian
+metric on L that we started from, we can use Corollary 21.2.
+The proof of Theorem 21.1 gives the following additional information about the
+singular hermitian metric on F = f∗
+(
+ωX/Y⊗ L⊗I (h)
+)
+(see the end of §24).
+Corollary 21.4. In the situation of Theorem 21.1, suppose that f : X→ Y is sub-
+mersive and that the singular hermitian metric h on the line bundle L is continuous.
+Then the singular hermitian metric H on F is also continuous.
+The following three sections explain the proof of Theorem 21.1. In a nutshell,
+it is an application of the Ohsawa-Takegoshi extension theorem. We present the
+argument in three parts that rely on successively stronger versions of the extension
+theorem: ﬁrst the ability to extend sections from a ﬁber; then the fact that there
+is a universal bound on the norm of the extension; and ﬁnally the optimal bound
+in Theorem 14.4.
+22. Proof of the pushforward theorem, Part I. Our ﬁrst goal is to deﬁne the
+singular hermitian metric on
+F = f∗
+(
+ωX/Y⊗ L⊗I (h)
+)
+,
+and to establish a few basic facts about it. In this part of the proof, we only use the
+weakest version of the Ohsawa-Takegoshi extension theorem, namely the ability to
+extend sections from a ﬁber.
+The idea is to construct the metric ﬁrst over a Zariski-open subset Y\ Z where
+everything is nice, and then to extend it over the bad locusZ. To begin with, choose
+a nowhere dense closed analytic subset Z⊆ Y with the following three properties:
+(1) The morphism f is submersive over Y\ Z.
+(2) Both F and the quotient sheaf f∗(ωX/Y⊗ L)/F are locally free on Y\ Z.
+(3) On Y\ Z, the locally free sheaf f∗(ωX/Y⊗ L) has the base change property.
+By the base change theorem, the third condition will hold as long as the coherent
+sheaves Rif∗(ωX/Y⊗ L) are locally free on Y\ Z. The restriction of F to the open
+subset Y\ Z is a holomorphic vector bundle E of some rank r≥ 1. The second
+and third condition together guarantee that
+Ey = F|y⊆ f∗(ωX/Y⊗ L)|y = H0(
+Xy, ωXy⊗ Ly
+)ALGEBRAIC FIBER SPACES OVER ABELIAN VARIETIES 33
+whenever y∈ Y\ Z. As before, ( Ly, hy) denotes the restriction of ( L, h) to the
+ﬁber Xy = f−1(y); it may happen that hy≡ +∞. The Ohsawa-Takegoshi theorem
+gives us the following additional information about Ey.
+Lemma 22.1. For any y∈ Y\ Z, we have inclusions
+H0(
+Xy, ωXy⊗ Ly⊗I (hy)
+)
+⊆ Ey⊆ H0(
+Xy, ωXy⊗ Ly
+)
+.
+Proof. If hy≡ +∞, then the subspace of the left is trivial, which means that the
+asserted inclusion is true by default. If hy is not identically equal to + ∞, then
+given α∈ H0(
+Xy, ωXy⊗ Ly⊗I (hy)
+)
+and a suitable open neighborhood U of the
+point y, there is by Theorem 14.4 some
+β∈ H0(
+U, ωY⊗ F
+)
+≃ H0(
+f−1(U), ωX⊗ L⊗I (h)
+)
+such that β|Xy = α∧ d f. Since ωY is trivial on U, this gives us a section of F in a
+neighborhood of the ﬁber Xy whose restriction to Xy agrees with α. □
+Note. We will see in a moment that the two subspaces
+H0(
+Xy, ωXy⊗ Ly⊗I (hy)
+)
+⊆ Ey
+are equal for almost every y∈ Y\ Z. But unless F = 0, the two subspaces are
+diﬀerent for example at points where hy is identically equal to +∞.
+We can now deﬁne on each Ey with y∈ Y\ Z a singular hermitian inner product
+in the following manner. Given an element
+α∈ Ey⊆ H0(
+Xy, ωXy⊗ Ly
+)
+,
+we can integrate over the compact complex manifold Xy and deﬁne
+|α|2
+H,y =
+∫
+Xy
+|α|2
+hy ∈ [0, +∞].
+It is easy to see that |−|H,y is a positive deﬁnite singular hermitian inner product.
+Clearly|α|H,y < +∞ if and only if α∈ H0(
+Xy, ωXy⊗ Ly⊗I (hy)
+)
+; in light of
+Lemma 22.1, our singular hermitian inner product|−|H,y is therefore ﬁnite precisely
+on the subspace H0(
+Xy, ωXy⊗ Ly⊗I (hy)
+)
+⊆ Ey.
+Let us now analyze how the individual singular hermitian inner products |−|H,y
+ﬁt together on Y\ Z. Fix a point y∈ Y\ Z and an open neighborhood U⊆ Y\ Z
+biholomorphic to the open unit ball B⊆ Cr; after pulling everything back to U, we
+may assume without loss of generality that Y = B and Z =∅ and y = 0. Denote
+by t1, . . . , tr the standard coordinate system on B; then the canonical bundle ωB
+is trivialized by the global section dt1∧···∧ dtr, and the volume form on B is
+dµ = cr(dt1∧···∧ dtr)∧ (d¯t1∧···∧ d¯tr).
+Fix a holomorphic section s∈ H0(B, E), and denote by
+β = s∧ (dt1∧···∧ dtr)∈ H0(
+B, ωB⊗ E
+)
+≃ H0(
+X, ωX⊗ L⊗I (h)
+)
+the corresponding holomorphic n-form on X with coeﬃcients in L. Since f : X→ B
+is smooth, Ehresmann’s ﬁbration theorem shows that X is diﬀeomorphic to the
+product B× X0. After choosing a K¨ ahler metricω0 on X0, we can write
+(22.2) |β|2
+h = F· dµ∧ ωn−r
+0
+(n− r)! ,34 C. D. HACON, M. POPA, AND CH. SCHNELL
+where F : B×X0→ [0, +∞] is lower semi-continuous and locally integrable; the rea-
+son is of course that the local weight functions for ( L, h) are upper semi-continuous
+functions. At every point y∈ B, we then have by construction
+(22.3) |s(y)|2
+H,y =
+∫
+X0
+F (y,−) ωn−r
+0
+(n− r)! .
+By Fubini’s theorem, the function y↦→| s(y)|H,y is measurable; moreover, since F
+is locally integrable and X0 is compact, we must have |s(y)|H,y < +∞ for almost
+every y∈ B. Being coherent, E is generated over B by a ﬁnite number of global
+sections; the singular hermitian inner product|−|H,y is therefore ﬁnite and positive-
+deﬁnite for almost every y∈ B, hence for almost every y∈ Y\ Z. In particular,
+the ﬁrst inclusion in Lemma 22.1 is an equality for almost every y∈ Y\ Z. We
+may summarize the conclusion as follows.
+Proposition 22.4. On Y\ Z, the singular hermitian inner products |−|H,y deter-
+mine a singular hermitian metric on the holomorphic vector bundle E.
+While we are not yet ready to show that ( E, H) has semi-positive curvature, we
+can already show that the function |s|H is always lower semi-continuous.
+Proposition 22.5. For any open subset U⊆ Y\ Z and any section s∈ H0(U, E),
+the function|s|H : U→ [0, +∞] is lower semi-continuous.
+Proof. As before, we may assume that U = B is the open unit ball in Cm; it is
+clearly suﬃcient to show that |s|H is lower semi-continuous at the origin. In other
+words, we need to argue that
+|s(0)|H,0≤ lim inf
+k→+∞
+|s(yk)|H,yk
+holds for every sequence y0, y1, y2, . . .∈ B that converges to the origin. As in
+(22.2), the given section s∈ H0(B, E) determines a lower semi-continuous function
+F : B× X0→ [0, +∞] such that (22.3) is satisﬁed. By the lower semi-continuity of
+F and Fatou’s lemma, we obtain
+∫
+X0
+F (0,−) ωn−r
+0
+(n− r)!≤
+∫
+X0
+lim inf
+k→+∞
+F (yk,−) ωn−r
+0
+(n− r)!
+≤ lim inf
+k→+∞
+∫
+X0
+F (yk,−) ωn−r
+0
+(n− r)! ,
+which is the desired inequality up to taking square roots. □
+23. Proof of the pushforward theorem, Part II. Having deﬁned ( E, H) on
+the open subset Y\ Z, our next task is to say something about the induced singular
+hermitian metric H∗ on the dual vector bundle E∗. In particular, we need to prove
+that the norm of any local section of F∗ is uniformly bounded in the neighborhood
+of any point in Z, and that its logarithm is an upper semi-continuous function. This
+part of the argument relies on the existence of a uniform bound in the Ohsawa-
+Takegoshi theorem, but not on the precise value of the constant. Let us start by
+reformulating the statement of the Ohsawa-Takegoshi in terms of the pair ( E, H).
+Lemma 23.1. For every embedding ι: B ↪→ Y with y = ι(0)∈ Y \ Z, and for
+every α∈ Ey with|α|H,y = 1, there is a holomorphic section s∈ H0(B, ι∗F) with
+s(0) = α and
+∫
+B
+|s|2
+H dµ≤ C0,ALGEBRAIC FIBER SPACES OVER ABELIAN VARIETIES 35
+where C0 is the same constant as in the Ohsawa-Takegoshi theorem.
+Proof. After pulling everything back to B, we may assume that Y = B and y = 0.
+Since|α|H,0 = 1, by Theorem 14.4 there exists an elementβ∈ H0(
+X, ωX⊗L⊗I(h)
+)
+with
+β|X0 = α∧ d f and ∥β∥2
+h =
+∫
+X
+|β|2
+h≤ C0.
+In fact, one can takeC0 = µ(B), but the exact value of the constant is not important
+here. Using dt1∧···∧ dtr as a trivialization of the canonical bundle ωB, we may
+consider β as a holomorphic section s∈ H0(B, F); the two conditions from above
+then turn into
+s(0) = α and
+∫
+B
+|s|2
+H dµ≤ C0,
+due to the fact that dµ = cr(dt1∧···∧ dtr)∧ (d¯t1∧···∧ d¯tr). □
+Fix an open subset U ⊆ Y and a holomorphic section g∈ H0(U, F∗); after
+replacing Y by the open subset U, we may assume without loss of generality that
+g∈ H0(Y, F∗). Consider the measurable function
+(23.2) ψ = log|g|H∗ : Y\ Z→ [−∞, +∞].
+Ultimately, our goal is to show that ψ extends to a plurisubharmonic function on
+all of Y . The following boundedness result is the crucial step in this direction.
+Proposition 23.3. Every point in Y has an open neighborhood U⊆ Y such that
+ψ = log|g|H∗ is bounded from above by a constant on U\ U∩ Z.
+Proof. Choose two suﬃciently small open neighborhoods U⊆ V ⊆ Y of the given
+point, such that V is compact, U ⊆ V , and for every point y∈ U, there is an
+embedding ι: B ↪→ Y of the unit ball B⊆ Cr with ι(0) = y and ι(B)⊆ V . We
+shall argue that there is a constant C≥ 0 such that ψ≤ C on U\ U∩ Z.
+Fix a point y∈ U\ Z. If ψ(y) =−∞, there is nothing to prove, so let us suppose
+from now on that ψ(y)̸=−∞. By deﬁnition of the metric on the dual bundle, we
+can then ﬁnd a vector α∈ Ey with|α|H,y = 1 such that
+ψ(y) = log
+⏐⏐g(α)
+⏐⏐.
+Choose an embedding ι: B ↪→ Y such that ι(0) = y and ι(B) ⊆ V . Using
+Lemma 23.1, we obtain a holomorphic section s∈ H0(V, F) with s(0) = α and
+∫
+V
+|s|2
+H dµ≤ C0;
+the integrand is of course only deﬁned on the subset V\ V∩ Z, but this does not
+matter because V∩ Z has measure zero. It follows that ψ(y) is equal to the value
+of log|g(s)| at the point y, and so the desired upper bound for ψ is a consequence
+of Lemma 23.4 below. □
+Lemma 23.4. Fix K≥ 0, and consider the set
+SK =
+{
+s∈ H0(V, F)
+⏐⏐⏐⏐
+∫
+V
+|s|2
+H dµ≤ K
+}
+.
+There is a constant C≥ 0 such that, for every section s∈ SK, the holomorphic
+function g(s) is uniformly bounded by C on the compact set U.36 C. D. HACON, M. POPA, AND CH. SCHNELL
+Proof. Since g(s) is holomorphic on V , it is clear that each individual function g(s)
+is bounded on U. To get an upper bound that works for every s∈ SK at once, we
+use a compactness argument. Given a section s∈ H0(V, F), we invert the process
+from above and deﬁne
+β = s⊗
+(
+dt1∧···∧ dtr
+)
+∈ H0(V, ωY⊗ F) = H0(
+f−1(V ), ωX⊗ L⊗I (h)
+)
+.
+If s∈ SK, then one has
+∥β∥2
+h =
+∫
+V
+|s|2
+H dµ≤ K.
+Because V is compact and f is proper, we can cover f−1(V ) by ﬁnitely many
+open sets W that are biholomorphic to the open unit ball in Cn, and on which
+L is trivial. Let z1, . . . , zn be a holomorphic coordinate system on W , choose a
+nowhere vanishing holomorphic section s0∈ H0(W, L), and write|s0|2
+h = e−ϕ, with
+ϕ plurisubharmonic on W . Then β|W = bs0⊗ dz 1∧···∧ dzn for some holomorphic
+function b∈ H0(W, OW ), and
+∫
+W
+|b|2e−ϕ(dx 1∧ dy1)∧···∧ (dxn∧ dyn) =
+∫
+W
+|β|2
+h≤ K.
+As we are dealing with ﬁnitely many open sets, Proposition 12.5 shows that every
+sequence in SK has a subsequence that converges uniformly on compact subsets to
+some β∈ H0(
+f−1(V ), ωX⊗ L⊗I (h)
+)
+. This is all that we need.
+Indeed, suppose that the assertion was false. Then we could ﬁnd a sequence
+s0, s1, s2, . . .∈ SK such that the maximum value of |g(sk)| on the compact set U
+was at least k. Let β0, β1, β2, . . . denote the corresponding sequence of holomorphic
+sections of ωX⊗L⊗I(h) on the open set f−1(V ); after passing to a subsequence, the
+βk will converge uniformly on compact subsets to β∈ H0(
+f−1(V ), ωX⊗ L⊗I (h)
+)
+.
+Let s∈ H0(V, F) be the unique section of F such that
+β = s⊗
+(
+dt1∧···∧ dtr
+)
+.
+By Proposition 15.3, the sk converge to s in the Fr´ echet space topology onH0(V, F).
+Since g : F→ OY is a morphism, the holomorphic functions g(sk) therefore con-
+verge uniformly on compact subsets to g(s). But then |g(sk)| must be uniformly
+bounded on U, contradicting our initial choice. □
+The next step is to show that the function ψ = log|g|H∗ is upper semi-continuous
+on Y\ Z. The proof is similar to that of Proposition 22.5.
+Proposition 23.5. For every g∈ H0(Y, F∗), the function ψ = log|g|H∗ is upper
+semi-continuous on Y\ Z.
+Proof. After restricting everything to a suitable open neighborhood of any given
+point y∈ Y\ Z, we may assume without loss of generality that Y = B and Z =∅
+and y = 0. Then g∈ H0(B, E∗), and it will be enough to show that ψ = log|g|H∗
+is upper semi-continuous at the origin. In other words, we need to argue that
+(23.6) lim sup
+k→+∞
+ψ(yk)≤ ψ(0)
+for every sequence y0, y1, y2, . . .∈ B that converges to the origin. We may assume
+that ψ(yk)̸=−∞ for all k∈ N, and that the sequence ψ(yk) actually has a limit.ALGEBRAIC FIBER SPACES OVER ABELIAN VARIETIES 37
+As we saw before, there is, for each k∈ N, a holomorphic section sk∈ H0(B, E)
+such that ψ(yk) equals the value of log|g(sk)| at the point yk; the Ohsawa-Takegoshi
+theorem allows us to choose these sections in such a way that
+|sk(yk)|H,yk = 1 and
+∫
+B
+|sk|H dµ≤ K
+for some constant K≥ 0. Passing to a subsequence, if necessary, we can arrange
+that the sk converge uniformly on compact subsets to some s∈ H0(B, E). Then
+the holomorphic functions g(sk) converge uniformly on compact subsets to g(s),
+and (23.6) reduces to showing that the value at the origin of log |g(s)| is less or
+equal to ψ(0). By deﬁnition of the dual metric H∗, we have
+ψ≥ log|g(s)|− log|s|H ,
+and so this is equivalent to proving that|s(0)|H,0≤ 1. As in (22.2) and (22.3), each
+sk determines a lower semi-continuous function Fk : B× X0→ [0, +∞] with
+1 =|sk(yk)|2
+H,yk =
+∫
+X0
+Fk(yk,−) ωn−r
+0
+(n− r)! .
+Likewise, s determines a lower semi-continuous function F : B× X0→ [0, +∞].
+Since the local weight functions e−ϕ of the pair ( L, h) are lower semi-continuous,
+and since sk converges uniformly on compact subsets to s, we get
+F (0,−)≤ lim inf
+k→+∞
+Fk(yk,−).
+We can now apply Fatou’s lemma and conclude the proof in the same way as in
+Proposition 22.5. □
+24. Proof of the pushforward theorem, Part III. In this section, we complete
+the proof of Theorem 21.1 by showing that the pair ( E, H) has semi-positive cur-
+vature, and that H extends to a singular hermitian metric on F with the minimal
+extension property. The key point is that we can prove the required mean-value
+inequalities because the optimal value of the constant in the Ohsawa-Takegoshi
+theorem is exactly the volume of the unit ball. To illustrate how this works, let us
+ﬁrst show that the singular hermitian metric H on Y\ Z has the minimal extension
+property (see§20). For the statement, recall that r = dim Y , and that B⊆ Cr is
+the open unit ball.
+Proposition 24.1. For every embedding ι: B ↪→ Y with y = ι(0)∈ Y\ Z, and for
+every α∈ Ey with|α|H,y = 1, there is a holomorphic section s∈ H0(B, ι∗F) with
+s(0) = α and 1
+µ(B)
+∫
+B
+|s|2
+H dµ≤ 1.
+Proof. The proof is the same as that of Lemma 23.1; we only need to replace the
+constant C0 by its optimal value µ(B). □
+Now let us prove that H extends to a singular hermitian metric on F with semi-
+positive curvature. Keeping the notation from above, this amounts to proving that
+the function ψ : Y\Z→ [−∞, +∞) in (23.2) extends to a plurisubharmonic function
+on Y . We already know that ψ is upper semi-continuous (by Proposition 23.5) and
+bounded from above in a neighborhood of every point in Y (by Proposition 23.3).
+What we need to prove is the mean-value inequality along holomorphic arcs in38 C. D. HACON, M. POPA, AND CH. SCHNELL
+Y\ Z. The Ohsawa-Takegoshi theorem with sharp estimates renders the proof of
+the mean-value inequality almost a triviality.
+Proposition 24.2. For every holomorphic mapping γ : ∆→ Y\ Z, the function
+ψ = log|g|H∗ satisﬁes the mean-value inequality
+(ψ◦ γ)(0)≤ 1
+π
+∫
+∆
+(ψ◦ γ) dµ.
+Proof. If h is identically equal to +∞ on the preimage of γ(∆), the inequality is
+clear, so we may assume that this is not the case. Since f : X→ Y is submersive
+over Y \ Z, we may then pull everything back to ∆ and reduce the problem to
+the case Y = ∆. If ψ(0) =−∞, then the mean-value inequality holds by default.
+Assuming from now on that ψ(0) ̸= −∞, we choose an element α ∈ E0 with
+|α|H,0 = 1, such that
+ψ(0) = log|g|H∗,0 = log|g(α)|.
+Using the minimal extension property (in Proposition 24.1, with m = 1), there is a
+holomorphic section s∈ H0(∆, E) such that
+s(0) = α and 1
+π
+∫
+∆
+|s|2
+H dµ≤ 1.
+The existence of this section is all that we need to prove the mean-value inequality.
+By deﬁnition of the metric H∗ on the dual bundle, we have the pointwise inequality
+|g|H∗≥|g(s)|
+|s|H
+and therefore 2 ψ≥ log|g(s)|2− log|s|2
+H; here g(s) is a holomorphic function on ∆,
+whose value at the origin equals g(α). Integrating, we get
+1
+π
+∫
+∆
+2ψ dµ≥ 1
+π
+∫
+∆
+log|g(s)|2 dµ− 1
+π
+∫
+∆
+log|s|2
+H dµ
+Now log|g(s)|2 satisﬁes the mean-value inequality, and so the ﬁrst term on the
+right-hand side is at least log |g(α)|2 = 2 ψ(0). Since the function x↦→− log x is
+convex, and since the function|s|2
+H is integrable, the second term can be estimated
+by Jensen’s inequality to be at least
+− log
+(1
+π
+∫
+∆
+|s|2
+H dµ
+)
+≥− log 1 = 0.
+Putting everything together, we obtain
+1
+π
+∫
+∆
+2ψ dµ≥ 2ψ(0),
+which is the mean-value inequality (up to a factor of 2). □
+We have veriﬁed that ψ is plurisubharmonic on Y\ Z. We already know from
+Proposition 23.3 that ψ is locally bounded from above in a neighborhood of every
+point in Y ; consequently, it extends uniquely to a plurisubharmonic function on all
+of Y , using Lemma 12.4. By duality, the singular hermitian metric H is therefore
+well-deﬁned on the entire open set Y (F) where the sheaf F = f∗
+(
+ωX⊗ L⊗I (h)
+)
+is locally free. We have already shown that H has the minimal extension property.
+This ﬁnishes the proof of Theorem 21.1. □ALGEBRAIC FIBER SPACES OVER ABELIAN VARIETIES 39
+Proof of Corollary 21.4. Suppose that f : X→ Y is submersive and that the sin-
+gular hermitian metric h on the line bundle L is continuous. To prove that H is
+continuous, it suﬃces to show that for every locally deﬁned section s∈ H0(U, F),
+the function|s|2
+H on U\ U∩ Z admits a continuous extension to all of U. This is a
+local problem, and so we may assume that Y = B is the open unit ball in Cr, with
+coordinates t1, . . . , tr, and that s∈ H0(B, F). Deﬁne
+β = s∧ (dt1∧···∧ dtr)∈ H0(B, ωB⊗ F) = H0(
+X, ωX⊗ L⊗I (h)
+)
+.
+By Ehresmann’s ﬁbration theorem, X is diﬀeomorphic to the product B× X0, and
+as in (22.2), we can write
+|β|2
+h = F· dµ∧ ωn−r
+0
+(n− r)!
+with F : B× X0→ [0, +∞] continuous. Now
+y↦→
+∫
+X0
+F (y,−) ωn−r
+0
+(n− r)!
+deﬁnes a continuous function on B that agrees with|s|2
+H on the complement of the
+bad set Z, due to (22.3). □
+25. Positivity of the determinant line bundle. In this section, we show that if
+a holomorphic vector bundle E has a singular hermitian metric with semi-positive
+curvature, then the determinant line bundle det E has the same property. The
+proof in [Rau15, Proposition 1.1] relies on locally approximating a given singular
+hermitian metric from below by smooth hermitian metrics [BP08, Proposition 3.1].
+Proposition 25.1. If (E, h) has semi-positive curvature, so does (det E, det h).
+Let us ﬁrst analyze what happens over a point. Let V be a complex vector space
+of dimension r, and|−|h a positive deﬁnite singular hermitian inner product onV ; in
+the notation of§16, we have V0 = 0. Let P(V ) be the projective space parametrizing
+one-dimensional quotient spaces of V , and denote by O(1) the universal line bundle
+on P(V ). We have a surjective morphism V⊗O→ O(1), and so h induces a singular
+hermitian metric on O(1), with singularities along the subspace P(V /Vﬁn)⊆ P(V ).
+To see this, choose a basis e1, . . . , er∈ V such that e1, . . . , ek form an orthonormal
+basis of Vﬁn with respect to the inner product ⟨−,−⟩h, and denote by [ z1, . . . , zr]
+the resulting homogeneous coordinates on P(V ). Then the local weight functions
+of the metric on O(1) are given by the formula
+log
+(
+|z1|2 +··· +|zk|2)
+,
+with the convention that zi = 1 on the i-th standard aﬃne open subset.
+Now the one-dimensional complex vector space det V = ⋀r V is naturally the
+space of global sections of an adjoint bundle on P(V ), because
+det V ≃ H0(
+P(V ), ωP(V )⊗ O(r)
+)
+.
+The isomorphism works as follows. The element e1∧···∧ er∈ det V determines a
+holomorphic r-form dz 1∧···∧ dzr on the dual vector space V∗; after contraction
+with the Euler vector ﬁeldz1∂/∂z1+··· +zr∂/∂zr, we get a holomorphic (r−1)-form
+Ω =
+r∑
+i=1
+(−1)i−1zidz 1∧···∧ ˆdzi∧···∧ dzr40 C. D. HACON, M. POPA, AND CH. SCHNELL
+on P(V ) that is homogeneous of degree r, hence a global section of the holomorphic
+line bundle ωP(V )⊗ O(r). Integration over P(V ) therefore deﬁnes a positive deﬁnite
+singular hermitian inner product H on det V . We have
+|e1∧···∧ er|2
+H =
+∫
+P(V )
+cr−1· Ω∧ Ω(
+|z1|2 +··· +|zk|2)r ,
+which simpliﬁes in the aﬃne chart z1 = 1 to
+|e1∧···∧ er|2
+H =
+∫
+Cr−1
+dµ(
+1 +|z2|2 +··· +|zk|2)r .
+Now there are two cases. If Vﬁn̸= V , then k < r , and the integral is easily seen to
+be +∞. If Vﬁn = V , then k = r, and the integral evaluates to πr−1/(r− 1)!, the
+volume of the open unit ball in Cr−1. In conclusion, we always have
+|e1∧···∧ er|2
+H = πr−1
+(r− 1)!·| e1∧···∧ er|2
+deth.
+With this result in hand, we can now prove Proposition 25.1.
+Proof. Let p: P(E)→ X denote the associated Pr−1-bundle, and let OE(1) be the
+universal line bundle on P(E). We have a surjective morphism p∗E→ OE(1), and
+by Lemma 18.2, the singular hermitian metric on E induces a singular hermitian
+metric on the line bundle OE(1), still with semi-positive curvature. We have
+ωP(E)/X≃ p∗ det E⊗ OE(−r),
+and therefore det E≃ p∗
+(
+ωP(E)/X⊗OE(r)
+)
+is the pushforward of an adjoint bundle.
+The calculation above shows that, up to a factor of πr−1/(r− 1)!, the resulting
+singular hermitian metric on detE agrees with det h pointwise. The assertion about
+the curvature of (det E, det h) is therefore a consequence of Corollary 21.2. □
+26. Consequences of the minimal extension property. In this section, we
+derive a few interesting consequences from the minimal extension property. All of
+the results below are true for smooth hermitian metrics with Griﬃths semi-positive
+curvature on holomorphic vector bundles; the minimal extension property is what
+makes them work even in the presence of singularities.
+Let F be a torsion-free coherent sheaf on X, of generic rank r≥ 1, and sup-
+pose that F has a singular hermitian metric with semi-positive curvature and the
+minimal extension property. Let E be the holomorphic vector bundle of rank r ob-
+tained by restricting F to the open subset X(F); by assumption, the pair ( E, h)
+has semi-positive curvature. Proposition 25.1 shows that (det E, det h) also has
+semi-positive curvature. Let det F be the holomorphic line bundle obtained as the
+double dual of ⋀rF; its restriction to X(F) agrees with det E. Since X\ X(F)
+has codimension≥ 2, the singular hermitian metric on det E extends uniquely to a
+singular hermitian metric on det F. The following result is due to Cao and P˘ aun
+[CP15, Theorem 5.23], who proved it using results by Rauﬁ [Rau15].
+Theorem 26.1. Suppose that X is compact and that c1(det F) = 0 in H2(X, R).
+Then F is locally free, and (E, h) is a hermitian ﬂat bundle on X = X(F).
+Proof. Since X is compact, the singular hermitian metric on det F is smooth and
+has zero curvature (by Lemma 13.2). Restricting to the open subset X(F), we
+see that the same is true for (det E, det h). Now the idea is to use the minimalALGEBRAIC FIBER SPACES OVER ABELIAN VARIETIES 41
+extension property to construct, locally on X, a collection of r sections of F that
+are orthonormal with respect to h.
+We can certainly cover X by open subsets that are isomorphic to the open unit
+ball B⊆ Cn and are centered at points x∈ X\ Z where the singular hermitian
+inner product|−|h,x is ﬁnite and positive deﬁnite. After restricting everything to
+an open subset of this kind, we may assume that X = B, that the point 0∈ B lies
+in the subset B\ Z, and that|−|h,0 is a genuine hermitian inner product on the r-
+dimensional complex vector space E0. Choose an orthonormal basis e1, . . . , er∈ E0.
+By the minimal extension property for F, we can ﬁnd r holomorphic sections
+s1, . . . , sr∈ H0(B, F) such that
+si(0) = ei and 1
+µ(B)
+∫
+B
+|si|2
+h dµ≤ 1.
+Since the logarithm function is strictly concave, Jensen’s inequality shows that
+(26.2) 1
+µ(B)
+∫
+B
+log|si|2
+h dµ≤ log
+( 1
+µ(B)
+∫
+B
+|si|2
+h dµ
+)
+≤ 0,
+with equality if and only if |si|h = 1 almost everywhere.
+Now let us analyze the singular hermitian metric on det E. The expression
+Hi,j(x) =⟨si(x), sj(x)⟩h,x
+is well-deﬁned outside a set of measure zero, and the resulting function is locally
+integrable. Denote by H(x) the r× r-matrix with these entries; it is almost every-
+where positive deﬁnite, and we have
+⏐⏐s1∧···∧ sr
+⏐⏐2
+deth = det H.
+Since det h is actually smooth and ﬂat, we can choose a nowhere vanishing section
+δ∈ H0(B, det F) such that |δ|deth≡ 1. We then have s1∧···∧ sr = g· δ for a
+holomorphic function g∈ H0(B, OB) with g(0) = 1, and
+|g|2 =
+⏐⏐s1∧···∧ sr
+⏐⏐2
+deth = det H.
+From Hadamard’s inequality for semi-positive deﬁnite matrices, we obtain
+|g(x)|2 = det H(x)≤
+r∏
+i=1
+Hi,i(x) =
+r∏
+i=1
+⏐⏐si(x)
+⏐⏐2
+h,x,
+with equality if and only if the matrix H(x) is diagonal. Taking logarithms, we get
+log|g(x)|2≤
+r∑
+i=1
+log
+⏐⏐si(x)
+⏐⏐2
+h,x.
+This inequality is valid almost everywhere; integrating, we ﬁnd that
+(26.3) 1
+µ(B)
+∫
+B
+log|g|2 dµ≤
+r∑
+i=1
+1
+µ(B)
+∫
+B
+|si|2
+h dµ.
+Now log|g|2 is plurisubharmonic, and so the mean-value inequality shows that the
+left-hand side in (26.3) is greater or equal to log |g(0)|2 = 0. At the same time,
+the right-hand side is less or equal to 0 by (26.2). The conclusion is that all our
+inequalities are actually equalities, and so H(x) is almost everywhere equal to the
+identity matrix of size r× r. In other words, the sections s1, . . . , sr∈ H0(B, F)
+are almost everywhere orthonormal with respect to h.42 C. D. HACON, M. POPA, AND CH. SCHNELL
+For any holomorphic section f∈ H0(B, F∗), we therefore have
+|f|2
+h∗ =
+r∑
+i=1
+|f◦ si|2
+almost everywhere on B; because the logarithms of both sides are plurisubharmonic
+functions on B, the identity actually holds everywhere. The singular hermitian
+metric h∗ is therefore smooth; but then h is also smooth, and the pair ( E, h) is a
+hermitian ﬂat bundle.
+To conclude the proof, we need to argue that F is locally free on all of B. The
+sections s1, . . . , sr∈ H0(B, F) give rise to a morphism of sheaves
+σ : O⊕r
+B → F .
+We already know that σ is an isomorphism on the open subset B(F); by Hartog’s
+theorem, its inverse extends to a morphism of sheaves
+τ : F→ O⊕r
+B
+with τ◦ σ = id. Because F is torsion-free, this forces σ to be an isomorphism. □
+Note. Our proof gives a diﬀerent interpretation for the fact that (det E, det h) has
+semi-positive curvature. Indeed, without assuming that det h is smooth and ﬂat, we
+have det H =|g|2e−ϕ, where ϕ: B→ [−∞, +∞) is locally integrable and ϕ(0) = 0.
+The various inequalities above then combine to give
+0≤ 1
+µ(B)
+∫
+B
+ϕ dµ,
+which is exactly the mean-value inequality for ϕ.
+The next theorem is a new result. It says that when X is compact, all global
+sections of the dual coherent sheaf F∗ arise from trivial summands in F. Equiva-
+lently, every nonzero morphism F→ OX has a section, which means that F splits
+oﬀ a direct summand isomorphic to OX.
+Theorem 26.4. Suppose that X is compact and connected. Then for every nonzero
+f∈ H0(X, F∗), there exists a unique global section s∈ H0(X, F) such that|s|h is
+a.e. constant and f◦ s≡ 1.
+Proof. Because the singular hermitian metric on F has semi-positive curvature,
+the function log|f|h∗ is plurisubharmonic on X, hence equal to a nonzero constant.
+After rescaling the metric, we may assume without loss of generality that|f|h∗≡ 1.
+As in the proof of Theorem 26.1, we cover X by open subsets that are isomorphic
+to B⊆ Cn and are centered at points x∈ X\ Z where|−|h,x is ﬁnite and positive
+deﬁnite. We shall argue that there is a unique section of F with the desired
+properties on each open set of this type; by uniqueness, these sections will then
+glue together to give us the global section s∈ H0(X, F) that we are looking for.
+We may therefore assume without loss of generality that X = B, that the origin
+belongs to the subset B\ Z, and that |−|h,0 is a hermitian inner product on the
+vector space E0. It is easy to see from
+sup
+{|f(v)|
+|v|h,0
+⏐⏐⏐⏐ v∈ E0 with|v|h,0̸= 0
+}
+=|f|h∗,0 = 1ALGEBRAIC FIBER SPACES OVER ABELIAN VARIETIES 43
+that there exists a vector v∈ E0 with f(v) = 1 and |v|h,0 = 1. By the minimal
+extension property, there is a section s∈ H0(B, F) such that
+s(0) = v and 1
+µ(B)
+∫
+B
+|s|2
+h dµ≤ 1.
+Now f◦ s is a holomorphic function on B, and by deﬁnition of h∗, we have
+|f◦ s|
+|s|h
+≤| f|h∗ = 1.
+Taking logarithms and integrating, we get
+1
+µ(B)
+∫
+B
+log|f◦ s|2 dµ≤ 1
+µ(B)
+∫
+B
+log|s|2
+h dµ≤ log
+( 1
+µ(B)
+∫
+B
+|s|2
+h dµ
+)
+≤ 0,
+using Jensen’s inequality along the way. By the mean-value inequality, the left-
+hand side is greater or equal to log( f◦ s)(0) = 0, and so once again, all inequalities
+must be equalities. It follows that f◦ s≡ 1, and that the measurable function |s|h
+is equal to 1 almost everywhere.
+It remains to prove the uniqueness statement. Suppose that s′∈ H0(B, F) is
+another holomorphic section with the property that f◦ s′≡ 1 and|s′|h = 1 almost
+everywhere. Outside a set of measure zero, we have
+|s′− s|2
+h +|s′ + s|2
+h = 2|s|2
+h + 2|s′|2
+h = 4,
+and since f(s′ + s) = 2, we must have|s′ + s|2
+h≥ 4. This implies that |s′− s|2
+h = 0
+almost everywhere, and hence that s′ = s. □
+E. Pushforwards of relative pluricanonical bundles
+27. Introduction. In the previous chapter, we presented a general formalism for
+constructing singular hermitian metrics with semi-positive curvature on sheaves of
+the form f∗(ωX/Y⊗ L). The applications to algebraic geometry come from the fact
+that the sheaves f∗ω⊗m
+X/Y with m≥ 2 naturally ﬁt into this framework. The main
+result is the following; see [BP08, Corollary 4.2], and also [Tsu11, Theorem 1.12],
+[PT14, Theorem 4.2.2].
+Theorem 27.1. Let f : X→ Y be a surjective projective morphism with connected
+ﬁbers between two complex manifolds. Suppose that f∗ω⊗m
+X/Y ̸= 0 for some m≥ 2.
+(a) The line bundle ωX/Y has a canonical singular hermitian metric with semi-
+positive curvature, called the m-th Narasimhan-Simha metric. This metric
+is continuous on the preimage of the smooth locus of f.
+(b) If h denotes the induced singular hermitian metric on L = ω⊗(m−1)
+X/Y , then
+f∗
+(
+ωX/Y⊗ L⊗I (h)
+)
+↪→ f∗ω⊗m
+X/Y
+is an isomorphism over the smooth locus of f.
+We can therefore apply Corollary 21.2 and conclude that for any m≥ 1, the
+torsion-free sheaf f∗ω⊗m
+X/Y has a singular hermitian metric with semi-positive curva-
+ture and the minimal extension property. Over the smooth locus of f, this metric is
+ﬁnite and continuous. The minimal extension property has the following remarkable
+consequences.
+Corollary 27.2. Suppose that Y is compact.44 C. D. HACON, M. POPA, AND CH. SCHNELL
+(a) If c1
+(
+det f∗ω⊗m
+X/Y
+)
+= 0 in H2(Y, R), then f∗ω⊗m
+X/Y is locally free and the
+singular hermitian metric on it is smooth and ﬂat.
+(b) Any nonzero morphism f∗ω⊗m
+X/Y → OY is split surjective.
+Proof. This follows from Theorem 26.1 and Theorem 26.4. □
+Note. There are two or three points in the proof where we need to use invariance
+of plurigenera. This means that Theorem 27.1 cannot be used to give a new proof
+for the invariance of plurigenera.
+28. The absolute case. Let us start by discussing the absolute case. Take X to
+be a smooth projective variety of dimension n. Fix an integer m≥ 1 for which the
+vector space
+Vm = H0(X, ω⊗m
+X )
+of all m-canonical forms is nontrivial. Our goal is to construct a singular hermitian
+metric on the line bundle ωX, with singularities along the base locus of Vm, such
+that all elements of Vm have bounded norm. We can measure the length of an
+m-canonical form v∈ Vm by a real number ℓ(v)∈ [0, +∞), deﬁned by the formula
+(28.1) ℓ(v) =
+(∫
+X
+(cm
+n v∧ v)1/m
+)m/2
+.
+The constant cn = 2−n(−1)n2/2 is there to make the expression in parentheses
+positive. A more concrete deﬁnition is as follows. In local coordinates z1, . . . , zn,
+we have an expression
+v = g(z1, . . . , zn)(dz 1∧···∧ dzn)⊗m,
+with g holomorphic; the integrand in (28.1) is then locally given by
+(28.2) |g|2/mcn(dz 1∧···∧ dzn)∧ (d¯z1∧···∧ d¯zn).
+For m≥ 2, the length function ℓ is not a norm, because the triangle inequality fails
+to hold. On the other hand, ℓ is continuous on Vm, with ℓ(v) = 0 iﬀ v = 0; we also
+have ℓ(λv) =|λ|· ℓ(v) for every λ∈ C.
+We can now construct a singular hermitian metric hm on the line bundle ωX by
+using the length function ℓ. Given an element ξ in the ﬁber of ωX at a point x∈ X,
+we deﬁne
+|ξ|hm,x = inf
+{
+ℓ(v)1/m⏐⏐ v∈ Vm satisﬁes v(x) = ξ⊗m}
+∈ [0, +∞].
+In other words, we look for the m-canonical form of minimal length whose value at
+the point x is equal to the m-th power of ξ; if x belongs to the base locus of Vm,
+then|ξ|hm,x = +∞ for ξ̸= 0. We obtain in this way a singular hermitian metric hm
+on the line bundle ωX, with singularities precisely along the base locus of the linear
+system Vm. The advantage of this construction is that it is completely canonical:
+there is no need to choose a basis for Vm.
+Note. Following P˘ aun and Takayama, we may callhm the m-th Narasimhan-Simha
+metric on the line bundle ωX, because Narasimhan and Simha [NS68] used this
+metric in the special case ωX ample. A similar construction also appears in Kawa-
+mata’s proof of Iitaka’s conjecture over curves [Kaw82, §2].
+Proposition 28.3. The Narasimhan-Simha metric hm on ωX is continuous, has
+singularities exactly along the base locus of Vm, and has semi-positive curvature.ALGEBRAIC FIBER SPACES OVER ABELIAN VARIETIES 45
+Proof. We compute the local weights of hm. Let z1, . . . , zn be local holomorphic
+coordinates on a suitable open subset U⊆ X, and set s0 = dz 1∧···∧ dzn, which
+is a nowhere vanishing section of ωX on the subset U. Consider the function
+ϕm =− log|s0|2
+hm : U→ [−∞, +∞).
+The deﬁnition of hm shows that, for every x∈ U,
+(28.4) ϕm(x) = 2
+m sup
+{
+log 1
+ℓ(v)
+⏐⏐⏐⏐ v∈ Vm satisﬁes v(x) = s0(x)⊗m
+}
+.
+For each v∈ Vm, there is a holomorphic function gv : U→ C with v|U = gv· s⊗m
+0 .
+If gv(x)̸= 0, then the m-canonical form v/gv(x) contributes to the right-hand side
+of (28.4), and so we obtain
+(28.5) ϕm(x) = 2
+m sup
+{
+log|gv(x)|
+⏐⏐⏐ v∈ Vm satisﬁes ℓ(v)≤ 1
+}
+.
+We will see in a moment that the supremum is actually a maximum, because the
+set of m-canonical forms v∈ Vm with ℓ(v)≤ 1 is compact. Evidently, ϕm(x) =−∞
+if and only if x∈ U belongs to the base locus of Vm.
+Now observe that the family of holomorphic functions
+Gm =
+{
+gv∈ H0(U, OX)
+⏐⏐ v∈ Vm satisﬁes ℓ(v)≤ 1
+}
+is uniformly bounded on compact subsets. Indeed, the fact that ℓ(v)≤ 1 gives us
+a uniform bound on the L2/m-norm of each gv, and then we can argue as in the
+proof of Proposition 12.5, using the mean-value inequality. By the n-dimensional
+version of Montel’s theorem, the family Gm is equicontinuous; due to (28.5), our
+ϕm is therefore continuous, as a function from U into [−∞, +∞).
+From (28.5), we can also determine the curvature properties ofhm. For each ﬁxed
+v∈ Vm, the function log|gv|2/m is continuous and plurisubharmonic, and equal to
+−∞ precisely on the zero locus of gv. As the upper envelope of an equicontinuous
+family of plurisubharmonic functions, ϕm is itself plurisubharmonic [Dem12, Theo-
+rem I.5.7]. This shows that the Narasimhan-Simha metric on ωX has semi-positive
+curvature. □
+Another good feature of the Narasimhan-Simha metric is that all m-canonical
+forms are bounded with respect to this metric. Indeed, if we also use hm to denote
+the induced singular hermitian metric on ω⊗m
+X , then by construction, we have the
+pointwise inequality|v|hm≤ ℓ(v) for every v∈ Vm. In order to ﬁt the Narasimhan-
+Simha metric into the framework of Chapter D, we write
+ω⊗m
+X = ωX⊗ ω⊗(m−1)
+X ,
+and endow the line bundle L = ω⊗(m−1)
+X with the singular hermitian metric h
+induced by hm. This metric is continuous and has semi-positive curvature.
+Lemma 28.6. For every v∈ Vm, we have ∥v∥h≤ ℓ(v).
+Proof. We keep the notation introduced during the proof of Proposition 28.3. The
+weight of h with respect to the section s⊗(m−1)
+0 of the line bundle ω⊗(m−1)
+X is
+e−(m−1)·ϕm ,46 C. D. HACON, M. POPA, AND CH. SCHNELL
+where ϕm is the function deﬁned in (28.5). Now ﬁx an m-canonical form v∈ Vm
+with ℓ(v) = 1. On the open set U, the integrand in the deﬁnition of ∥v∥h is
+|gv|2e−(m−1)·ϕm· cn(dz 1∧···∧ dzn)∧ (d¯z1∧···∧ d¯zn).
+Because of (28.5), we have ϕm≥ log|gv|2/m, and therefore
+|gv|2e−(m−1)·ϕm≤| gv|2·| gv|−2(m−1)/m =|gv|2/m.
+Looking back at the deﬁnition of ℓ(v) in (28.2), this shows that ∥v∥h≤ ℓ(v). □
+Since ℓ is not itself a norm, the inequality will in general be strict. One useful
+consequence of Lemma 28.6 is the identity
+(28.7) H0(
+X, ωX⊗ L⊗I (h)
+)
+= H0(X, ωX⊗ L) = H0(
+X, ω⊗m
+X
+)
+.
+Note that the multiplier idealI(h) may well be nontrivial; nevertheless, it imposes
+no extra conditions on global sections of ω⊗m
+X .
+29. The Ohsawa-Takegoshi theorem for pluricanonical forms. To analyze
+how the Narasimhan-Simha metric behaves in families, we will need a version of
+the Ohsawa-Takegoshi theorem for m-canonical forms. Suppose that f : X→ B
+is a holomorphic mapping to the open unit ball B⊆ Cr, with f projective and
+f(X) = B, and such that the central ﬁber X0 = f−1(0) is nonsingular. To simplify
+the discussion, let us also assume that f is the restriction of a holomorphic family
+over a ball of slightly larger radius. As in (28.1), we have length functions ℓ and ℓ0
+on X respectively X0; because X is not compact, it may happen that ℓ(v) = +∞
+for certain v∈ H0(X, ω⊗m
+X ).
+Theorem 29.1. For each u∈ H0(
+X0, ω⊗m
+X0
+)
+, there is some v∈ H0(
+X, ω⊗m
+X
+)
+with
+ℓ(v)≤ µ(B)m/2· ℓ0(u),
+such that the restriction of v to X0 is equal to u∧ (d f1∧···∧ d fr)⊗m.
+Proof. Without loss of generality, we may assume that ℓ0(u) = 1. Since X0 is a
+projective complex manifold, invariance of plurigenera tells us that the ﬁber of the
+coherent sheaf f∗ω⊗m
+X at the point 0 ∈ B is equal to H0(
+X0, ω⊗m
+X0
+)
+. Because B is
+a Stein manifold, we can then certainly ﬁnd a section
+v∈ H0(
+B, f∗ω⊗m
+X
+)
+= H0(X, ω⊗m
+X )
+with the correct restriction to X0. By assuming that f comes from a morphism to
+a ball of slightly larger radius, we can also arrange that the quantity
+ℓ(v) =
+(∫
+X
+(cm
+n v∧ v)1/m
+)m/2
+is ﬁnite. Of course, v will not in general satisfy the desired inequality.
+The way to deal with this problem is to consider ω⊗m
+X = ωX⊗ ω⊗(m−1)
+X as an
+adjoint bundle and to apply the Ohsawa-Takegoshi theorem to get another extension
+of smaller length. The section v∈ H0(X, ω⊗m
+X ) induces a singular hermitian metric
+on the line bundle ω⊗m
+X , whose curvature is semi-positive. With respect to a local
+trivialization
+ϕ: ω⊗m
+X |U→ OU ,ALGEBRAIC FIBER SPACES OVER ABELIAN VARIETIES 47
+the weight of this metric is given by log |ϕ◦ v|2. Endow the line bundle ω⊗(m−1)
+X
+with the singular hermitian metric whose local weight is
+m− 1
+m log|ϕ◦ v|2.
+It is easy to see that the norm of u with respect to this metric is still equal to
+ℓ0(u) = 1. Theorem 14.4 says that there exists another section v′∈ H0(X, ω⊗m
+X ),
+with the same restriction to X0, whose norm squared is bounded by µ(B). To get
+a useful expression for the norm squared, write
+v′ = F v,
+with F meromorphic on X and identically equal to 1 on X0; then the inequality in
+the Ohsawa-Takegoshi theorem takes the form
+∫
+X
+|F|2(cm
+n v∧ v)1/m≤ µ(B).
+We can use this to get an upper bound for the quantity
+ℓ(v′) =
+(∫
+X
+|F|2/m(cm
+n v∧ v)1/m
+)m/2
+.
+To begin with, let us write ( cm
+n v∧ v)1/m = L dµ, where L is a nonnegative real-
+analytic function on X, and dµ is some choice of volume form. Using H¨ older’s
+inequality with exponents 1 /m and (m− 1)/m, we have
+ℓ(v′)2/m =
+∫
+X
+|F|2/mL dµ≤
+(∫
+X
+|F|2L dµ
+)1/m(∫
+X
+L dµ
+)(m−1)/m
+,
+and therefore ℓ(v′)≤ µ(B)1/2· ℓ(v)(m−1)/m, which we may rewrite as
+ℓ(v′)
+µ(B)m/2≤
+( ℓ(v)
+µ(B)m/2
+)(m−1)/m
+.
+Now we iterate this construction to produce an inﬁnite sequence of m-canonical
+forms v0, v1, v2, . . .∈ H0(X, ω⊗m
+X ), all with the correct restriction to X0. The
+inequality from above shows that one of two things happens: eitherℓ(vk)≤ µ(B)m/2
+for some k≥ 0; or ℓ(vk) > µ(B)m/2 for every k∈ N, and
+lim
+k→+∞
+ℓ(vk) = µ(B)m/2.
+If the former happens, we are done. If the latter happens, we apply Lemma 29.2: it
+says that a subsequence converges uniformly on compact subsets to an m-canonical
+form v∈ H0(X, ω⊗m
+X ). Now v satisﬁes ℓ(v)≤ µ(B)m/2 (by Fatou’s lemma), and
+its restriction to X0 is of course still equal to u∧ (d f1∧···∧ d fr)⊗m. □
+Lemma 29.2. Let X be a complex manifold, and let v0, v1, v2, . . .∈ H0(X, ω⊗m
+X )
+be a sequence of m-canonical forms such that ℓ(vk)≤ C for every k∈ N. Then a
+subsequence converges uniformly on compact subsets to a limit v∈ H0(X, ω⊗m
+X ).
+Proof. With respect to a local trivialization of ω⊗m
+X , we have a sequence of holo-
+morphic functions whose L2/m-norm is uniformly bounded. Using the mean-value
+inequality, this implies that the sequence of functions is uniformly bounded on
+compact subsets; now apply Montel’s theorem to get the desired conclusion. □48 C. D. HACON, M. POPA, AND CH. SCHNELL
+Note. One interesting thing about the proof of Theorem 29.1 is that it looks very
+similar to Viehweg’s covering trick (which we used for example in the proof of
+Proposition 8.2). The advantage of the metric approach is that one can take a limit
+to obtain a solution with the same properties as in the case m = 1.
+30. The relative case. With the help of Theorem 29.1, it is quite easy to analyze
+the behavior of the Narasimhan-Simha metric in families. Let us ﬁrst consider the
+case of a smooth morphism f : X→ Y ; as in the statement of Theorem 27.1, we
+assume that f is projective with connected ﬁbers, and that f(X) = Y . Recall that
+by invariance of plurigenera, the dimension of the space of m-canonical forms on
+the ﬁber Xy = f−1(y) is the same for every y∈ Y .
+The restriction of the relative canonical bundle ωX/Y to the ﬁber Xy identiﬁes
+to the canonical bundle ωXy of the ﬁber. We can therefore apply the construction
+in§28 ﬁber by ﬁber to produce a singular hermitian metric hm on ωX/Y , called the
+m-th relative Narasimhan-Simha metric ; we shall give a more careful deﬁnition of
+hm in a moment. The ﬁrst result is that hm is continuous.
+Proposition 30.1. Under the assumptions above, the relative Narasimhan-Simha
+metric on ωX/Y is continuous.
+Proof. Once again, this is an application of the Ohsawa-Takegoshi theorem for
+pluricanonical forms, which allows us to extend m-canonical forms from the ﬁbers
+of f, with a uniform upper bound on the length of the extension. After shrinking Y ,
+we can assume that Y = B is the open unit ball in Cr, with coordinates t1, . . . , tr.
+We denote by Vm = H0(X, ω⊗m
+X ) the (typically inﬁnite-dimensional) vector space
+of all m-canonical forms on X. Given v∈ Vm and a point y∈ Y , we have
+v|Xy = vy⊗ (dt1∧···∧ dtr)⊗m
+for a unique m-canonical form vy∈ H0(Xy, ω⊗m
+Xy ). We denote by ℓ(v) the length
+of v on X, and by ℓy(vy) the length of vy on Xy. The Ohsawa-Takegoshi theorem
+for pluricanonical forms (in Theorem 29.1) implies that, possibly after shrinking Y ,
+there is a constant C≥ 0 with the following property:
+(30.2) For every y∈ Y and every m-canonical form u on Xy of length≤ 1,
+there is an m-canonical form v∈ Vm such that vy = u and ℓ(v)≤ C.
+Now let n = dim X. As the morphism f is smooth, every point in X has an open
+neighborhood U with coordinates z1, . . . , zn−r, t1, . . . , tr. Then s0 = dz 1∧···∧
+dzn−r gives a local trivialization of ωX/Y , and we consider the weight function
+ϕm =− log|s0|2
+hm : U→ [−∞, +∞)
+of the relative Narasimhan-Simha metric hm. On each ﬁber, ϕm is given by the
+formula in (28.5); we can use the Ohsawa-Takegoshi theorem to obtain a more
+uniform description. For each v∈ Vm, we have
+v|U = gv· (s0∧ dt1∧···∧ dtr)⊗m
+for a unique holomorphic function gv : U→ C. By (28.5) and (30.2), we have
+ϕm(x) = 2
+m sup
+{
+log|gv(x)|
+⏐⏐⏐ v∈ Vm satisﬁes ℓ(v)≤ C and ℓy(vy)≤ 1
+}
+;
+where y = f(x). We are going to prove that this deﬁnes a continuous function on
+U.ALGEBRAIC FIBER SPACES OVER ABELIAN VARIETIES 49
+Fix a point x∈ U, and let x0, x1, x2, . . . be any sequence in U with limit x. Set
+yk = f(xk) and y = f(x). For every k∈ N, choose an m-canonical form uk of
+length ℓyk(uk) = 1 on the ﬁber Xyk, such that uk computes ϕm(xk). Extend uk to
+an m-canonical form vk of length ℓ(vk)≤ C on X by using (30.2); then
+ϕm(xk) = 2
+m log
+⏐⏐gvk(xk)
+⏐⏐.
+After passing to a subsequence, v0, v1, v2, . . . converges uniformly on compact sub-
+sets to an m-canonical form v∈ H0(X, ω⊗m
+X ). Since ℓyk(vn,yk) = 1, Fatou’s lemma
+shows that ℓy(vy)≤ 1. Moreover, the holomorphic functions gvk converge uniformly
+on compact subsets to gv, and therefore
+(30.3) lim
+k→+∞
+ϕm(xk) = 2
+m log
+⏐⏐gv(x)
+⏐⏐≤ ϕm(x).
+On the other hand, we can choose an m-canonical form u′ of length ℓy(u′) = 1 on
+the ﬁber Xy, such that u′ computes ϕm(x). Extend u′ to an m-canonical form v′
+of length ℓ(v′)≤ C on X by using (30.2); then
+ϕm(x) = 2
+m log|gv′(x)|.
+Now it is easy to see from the deﬁnition of the length function that ℓyk(v′
+yk) tends
+to ℓy(v′
+y) as k→ +∞. In particular, the m-canonical form v′
+yk on Xyk has nonzero
+length for k≫ 0, which means that
+2
+m
+(
+log|gv′(xk)|− log ℓyk(v′
+yk)
+)
+≤ ϕm(xk).
+Since the left-hand side tends to ϕm(x), we obtain
+(30.4) ϕm(x)≤ lim inf
+k→+∞
+ϕm(xk).
+The two inequalities in (30.3) and (30.4) together say that ϕm is continuous. □
+Next, we prove that hm has semi-positive curvature – just as in the case of
+adjoint bundles, the proof of this fact is very short, because we know the optimal
+value of the constant in Theorem 29.1.
+Proposition 30.5. Under the assumptions above, the relative Narasimhan-Simha
+metric on ωX/Y has semi-positive curvature.
+Proof. Keep the notation introduced during the proof of Proposition 30.1. Because
+the local weight function ϕm is continuous, it suﬃces to prove that ϕm satisﬁes
+the mean-value inequality for mappings from the one-dimensional unit disk ∆ into
+U. If the image of ∆ lies in a single ﬁber, this is okay, because we already know
+from Proposition 28.3 that ϕm is plurisubharmonic on each ﬁber. So assume from
+now on that the mapping from ∆ to Y is non-constant. Since the morphism f is
+smooth, we can then make a base change and reduce the problem to the case where
+Y = ∆ and where i: ∆ ↪→ X is a section of f : X→ ∆.
+Now let x0 = i(0) and X0 = f−1(0), and choose some u∈ H0(X0, ω⊗m
+X0 ) with
+ℓ0(u) = 1 that computes ϕm(x0). By Theorem 29.1, there exists an m-canonical
+form v∈ H0(X, ω⊗m
+X ) with v|X0 = u∧ d f⊗m, whose length satisﬁes the inequality
+ℓ(v)≤ µ(∆)m/2· ℓ0(u) = πm/2.50 C. D. HACON, M. POPA, AND CH. SCHNELL
+In the notation introduced during the proof of Proposition 30.1, we then have
+ϕm(x0) = 2
+m log
+⏐⏐gv(x0)
+⏐⏐.
+If we deﬁne vy∈ H0(Xy, ω⊗m
+Xy ) by the formula v|Xy = vy∧ d f⊗m, then we have
+ℓ(v)2/m =
+∫
+X
+(cm
+n v∧ v)1/m =
+∫
+∆
+ℓy(vy)2/m dµ.
+Now we observe that for almost every y∈ ∆, the ratio vy/ℓy(vy) is an m-canonical
+form on Xy of unit length; by deﬁnition of the weight function ϕm, we have
+ϕm(x)≥ 2
+m
+(
+log|gv(x)|− log ℓy(vy)
+)
+= 2
+m log|gv(x)|− log ℓy(vy)2/m.
+If we now compute the mean value of ϕm◦ i over ∆, we ﬁnd that
+1
+π
+∫
+∆
+ϕm(i(y)) dµ≥ 1
+π
+∫
+∆
+2
+m log
+⏐⏐gv(i(y))
+⏐⏐ dµ− 1
+π
+∫
+∆
+log ℓy(vy)2/m dµ.
+The ﬁrst term on the right is greater or equal to 2/m log|gv(x0)| = ϕm(x0), because
+the function gv◦ i is holomorphic. To estimate the remaining integral, note that
+1
+π
+∫
+∆
+log ℓy(vy)2/m dµ≤ log
+(1
+π
+∫
+∆
+ℓy(vy)2/m dµ
+)
+= log
+(1
+π· ℓ(v)2/m
+)
+≤ 0,
+by Jensen’s inequality and the fact thatℓ(v)≤ πm/2. Consequently, ϕm does satisfy
+the required mean-value inequality, and hm has semi-positive curvature. □
+Note. Compare also Lemma 7 and Lemma 8 in [Kaw82].
+After these preparations, we can now prove Theorem 27.1 in general.
+Proof of Theorem 27.1. Suppose that f : X→ Y is a projective morphism between
+two complex manifolds with f(X) = Y . Let Z ⊆ Y denote the closed analytic
+subset where f fails to be submersive. We already know that the restriction of the
+line bundle ωX/Y to f−1(Y\ Z) has a well-deﬁned singular hermitian metric hm
+that is continuous and has semi-positive curvature. To show that hm extends to a
+singular hermitian metric with semi-positive curvature on all of X, all we need to
+prove is that the local weights of hm remain bounded near f−1(Z); this is justiﬁed
+by Lemma 12.4. P˘ aun and Takayama [PT14, Theorem 4.2.7] observed that this
+local boundedness again follows very easily from the Ohsawa-Takegoshi theorem
+for pluricanonical forms.
+Fix a point x0∈ X with f(x0)∈ Z. Since the problem is local on Y , we may
+assume that Y = B is the open unit ball in Cr, with coordinates t1, . . . , tr, and
+that f(x0) = 0. On a suitable neighborhood U of the point x0, we have coordinates
+z1, . . . , zn; note that because f is most likely not submersive at x0, we cannot assert
+that t1, . . . , tr are part of this coordinate system. Let s0∈ H0(U, ωX/Y ) be a local
+trivialization of ωX/Y , chosen so that
+dz 1∧···∧ dzn = s0∧ (dt1∧···∧ dtr).
+Denote by ϕm the weight function of hm with respect to this local trivialization:
+ϕm(x) =− log|s0|2
+hm : U→ [−∞, +∞)
+For v ∈ H0(X, ω⊗m
+X ), we have v|U = gv· (dz 1∧···∧ dzn)⊗m for a holomor-
+phic function gv : U→ C. As explained during the proof of Proposition 30.1, theALGEBRAIC FIBER SPACES OVER ABELIAN VARIETIES 51
+Ohsawa-Takegoshi theorem for pluricanonical forms implies that there is a constant
+C≥ 0 with the following property: for every x∈ U, there is some v∈ H0(X, ω⊗m
+X )
+of length ℓ(v)≤ C such that
+ϕm(x) = 2
+m log|gv(x)|.
+For x suﬃciently close to x0, there is a positive number R > 0 such that U con-
+tains the closed ball of radius R centered at x. The mean-value inequality and
+the fact that ℓ(v)≤ C now combine to give us an upper bound for ϕm(x) that
+depends only on C and R, but is independent of the point x. In particular, ϕm
+is uniformly bounded in a neighborhood of the point x0∈ f−1(Z), and therefore
+extends uniquely to a plurisubharmonic function on all of U.
+The Narasimhan-Simha metric on each ﬁber Xy with y̸∈ Z satisﬁes (28.7); by
+the Ohsawa-Takegoshi theorem, this means that the inclusion
+f∗
+(
+ωX/Y⊗ L⊗I (h)
+)
+↪→ f∗
+(
+ωX/Y⊗ L
+)
+= f∗ω⊗m
+X/Y
+is an isomorphism over Y\ Z. Due to Corollary 21.4, the singular hermitian metric
+on f∗ω⊗m
+X/Y is therefore ﬁnite and continuous on Y\ Z. □
+References
+[Ber09] Bo Berndtsson, Curvature of vector bundles associated to holomorphic ﬁbrations , Ann.
+of Math. (2) 169 (2009), no. 2, 531–560. MR 2480611
+[BL16] Bo Berndtsson and L´ aszl´ o Lempert, A proof of the Ohsawa–Takegoshi theorem with
+sharp estimates, J. Math. Soc. Japan 68 (2016), no. 4, 1461–1472. MR 3564439
+[B lo13] Zbigniew B locki, On the Ohsawa-Takegoshi extension theorem , Univ. Iagel. Acta Math.
+(2013), no. 50, [2012 on articles], 53–61. MR 3235002
+[BP08] Bo Berndtsson and Mihai P˘ aun, Bergman kernels and the pseudoeﬀectivity of relative
+canonical bundles, Duke Math. J. 145 (2008), no. 2, 341–378. MR 2449950
+[Cao14] Junyan Cao, Ohsawa-Takegoshi extension theorem for compact K¨ ahler manifolds and
+applications, preprint arXiv:1404.6937, 2014.
+[CH01] Jungkai Chen and Christopher Hacon, Characterization of abelian varieties , Invent.
+Math. 143 (2001), no. 2, 435–447. MR 1835393 (2002c:14063)
+[CH02] , On algebraic ﬁber spaces over varieties of maximal Albanese dimension , Duke
+Math. J. 111 (2002), no. 1, 159–175. MR 1876444 (2002m:14007)
+[CH04] , On the irregularity of the image of the Iitaka ﬁbration , Comm. Algebra 32
+(2004), no. 1, 203–215. MR 2036231
+[CH07] , Pluricanonical systems on irregular 3-folds of general type, Math. Z. 255 (2007),
+no. 2, 343–355. MR 2262735
+[CH11] , Kodaira dimension of irregular varieties, Invent. Math. 186 (2011), no. 3, 481–
+500. MR 2854084
+[CP15] Junyan Cao and Mihai P˘ aun, Kodaira dimension of algebraic ﬁber spaces over abelian
+varieties, preprint arXiv:1504.01095, to appear in Invent. Math., 2015.
+[Dem12] Jean-Pierre Demailly, Complex analytic and diﬀerential geometry , 2012.
+[EV92] H´ el` ene Esnault and Eckart Viehweg, Lectures on vanishing theorems , DMV Seminar,
+vol. 20, Birkh¨ auser Verlag, Basel, 1992. MR 1193913 (94a:14017)
+[GL87] Mark Green and Robert Lazarsfeld, Deformation theory, generic vanishing theorems,
+and some conjectures of Enriques, Catanese and Beauville , Invent. Math. 90 (1987),
+no. 2, 389–407. MR 910207 (89b:32025)
+[GL91] , Higher obstructions to deforming cohomology groups of line bundles , J. Amer.
+Math. Soc. 4 (1991), no. 1, 87–103. MR 1076513 (92i:32021)
+[GR09] Robert C. Gunning and Hugo Rossi, Analytic functions of several complex vari-
+ables, AMS Chelsea Publishing, Providence, RI, 2009, Reprint of the 1965 original.
+MR 2568219
+[GZ15] Qi’an Guan and Xiangyu Zhou, A solution of an L2 extension problem with an optimal
+estimate and applications, Ann. of Math. (2) 181 (2015), no. 3, 1139–1208. MR 329682252 C. D. HACON, M. POPA, AND CH. SCHNELL
+[Hac04] Christopher Hacon, A derived category approach to generic vanishing , J. Reine Angew.
+Math. 575 (2004), 173–187. MR 2097552 (2005m:14026)
+[HP02] Christopher D. Hacon and Rita Pardini, On the birational geometry of varieties of max-
+imal Albanese dimension , J. Reine Angew. Math. 546 (2002), 177–199. MR 1900998
+[Jia11] Zhi Jiang, An eﬀective version of a theorem of Kawamata on the Albanese map , Com-
+mun. Contemp. Math. 13 (2011), no. 3, 509–532. MR 2813500
+[Kaw81] Yujiro Kawamata, Characterization of abelian varieties , Compositio Math. 43 (1981),
+no. 2, 253–276. MR 622451 (83j:14029)
+[Kaw82] , Kodaira dimension of algebraic ﬁber spaces over curves , Invent. Math. 66
+(1982), no. 1, 57–71. MR 652646 (83h:14025)
+[Kol86] J´ anos Koll´ ar,Higher direct images of dualizing sheaves. I, Ann. of Math. (2) 123 (1986),
+no. 1, 11–42. MR 825838 (87c:14038)
+[Kol95] , Shafarevich maps and automorphic forms , M. B. Porter Lectures, Princeton
+University Press, Princeton, NJ, 1995. MR 1341589
+[Lai11] Ching-Jui Lai, Varieties ﬁbered by good minimal models, Math. Ann. 350 (2011), no. 3,
+533–547. MR 2805635 (2012e:14032)
+[Laz04] Robert Lazarsfeld, Positivity in algebraic geometry. II , Ergebnisse der Mathematik und
+ihrer Grenzgebiete. 3. Folge. A Series of Modern Surveys in Mathematics, vol. 49,
+Springer-Verlag, Berlin, 2004, Positivity for vector bundles, and multiplier ideals.
+MR 2095472
+[Mor87] Shigefumi Mori, Classiﬁcation of higher-dimensional varieties, Algebraic geometry, Bow-
+doin, 1985 (Brunswick, Maine, 1985), Proc. Sympos. Pure Math., vol. 46, Amer. Math.
+Soc., Providence, RI, 1987, pp. 269–331. MR 927961
+[Muk81] Shigeru Mukai, Duality betweenD(X) and D( ˆX) with its application to Picard sheaves ,
+Nagoya Math. J. 81 (1981), 153–175. MR 607081 (82f:14036)
+[NS68] M. S. Narasimhan and R. R. Simha, Manifolds with ample canonical class, Invent. Math.
+5 (1968), 120–128. MR 0236960
+[Par12] Giuseppe Pareschi, Basic results on irregular varieties via Fourier-Mukai methods , Cur-
+rent developments in algebraic geometry, Math. Sci. Res. Inst. Publ., vol. 59, Cambridge
+Univ. Press, Cambridge, 2012, pp. 379–403. MR 2931876
+[P˘ au07] Mihai P˘ aun,Siu’s invariance of plurigenera: a one-tower proof , J. Diﬀerential Geom.
+76 (2007), no. 3, 485–493. MR 2331528
+[P˘ au16] , Singular Hermitian metrics and positivity of direct images of pluricanonical
+bundles, preprint arXiv:1606.00174, 2016.
+[Pop12] Mihnea Popa, Generic vanishing ﬁltrations and perverse objects in derived categories of
+coherent sheaves, Derived categories in algebraic geometry, EMS Ser. Congr. Rep., Eur.
+Math. Soc., Z¨ urich, 2012, pp. 251–278. MR 3050706
+[PP11a] Giuseppe Pareschi and Mihnea Popa, GV-sheaves, Fourier-Mukai transform, and
+generic vanishing , Amer. J. Math. 133 (2011), no. 1, 235–271. MR 2752940
+(2012e:14043)
+[PP11b] , Regularity on abelian varieties III: relationship with generic vanishing and ap-
+plications, Grassmannians, moduli spaces and vector bundles, Clay Math. Proc., vol. 14,
+Amer. Math. Soc., Providence, RI, 2011, pp. 141–167. MR 2807853 (2012h:14113)
+[PS14] Mihnea Popa and Christian Schnell, On direct images of pluricanonical bundles, Algebra
+Number Theory 8 (2014), no. 9, 2273–2295. MR 3294390
+[PT14] Mihai P˘ aun and Shigeharu Takayama, Positivity of twisted relative pluricanonical bun-
+dles and their direct images , preprint arXiv:1409.5504, 2014.
+[Rau15] Hossein Rauﬁ, Singular hermitian metrics on holomorphic vector bundles , Ark. Mat. 53
+(2015), no. 2, 359–382. MR 3391176
+[Sch13] Christian Schnell, Graduate course on the generic vanishing theorem and its appli-
+cations, http://www.math.stonybrook.edu/~cschnell/pdf/notes/generic-vanishing.
+pdf, 2013.
+[Sim93] Carlos Simpson, Subspaces of moduli spaces of rank one local systems , Ann. Sci. ´Ecole
+Norm. Sup. (4) 26 (1993), no. 3, 361–401. MR 1222278 (94f:14008)
+[Siu02] Yum-Tong Siu, Extension of twisted pluricanonical sections with plurisubharmonic
+weight and invariance of semipositively twisted plurigenera for manifolds not neces-
+sarily of general type , Complex geometry (G¨ ottingen, 2000), Springer, Berlin, 2002,
+pp. 223–277. MR 1922108ALGEBRAIC FIBER SPACES OVER ABELIAN VARIETIES 53
+[Siu11] , Section extension from hyperbolic geometry of punctured disk and holomorphic
+family of ﬂat bundles , Sci. China Math. 54 (2011), no. 8, 1767–1802. MR 2824973
+[Tsu11] Hajime Tsuji, Canonical singular Hermitian metrics on relative canonical bundles ,
+Amer. J. Math. 133 (2011), no. 6, 1469–1501. MR 2863368
+Department of Mathematics, University of Utah, Salt Lake City, UT 84112, USA
+E-mail address: hacon@math.utah.edu
+Department of Mathematics, Northwestern University, 2033 Sheridan Road, Evanston,
+IL 60208, USA
+E-mail address: mpopa@math.northwestern.edu
+Department of Mathematics, Stony Brook University, Stony Brook, NY 11794-3651
+E-mail address: cschnell@math.sunysb.edu

@@ -1,0 +1,7 @@
+\node[card] (n0) {\heading{}{自然線形化とcompact平均}{Natural linearization and compact averaging}$L=-K_V,\quad H^0(V,\Omega_V^j)=0\ (j>0),\quad T\curvearrowright V$};
+\node[card,below=2.2cm of n0] (n1) {\heading{}{商の一般不変切断と零次rank}{Invariant generic section and rank at zero on the quotient}$\mathbb C(Y)=\mathbb C(V)^T,\quad \rho=\text{action-field wedge}\otimes\text{base frame}$\\$s_J\rho^m\ne0,\quad h^0(J+mp^*L)^T=1\quad(m\ge0)$};
+\node[card,below=2.2cm of n1] (n2) {\heading{}{二計量を降ろし許容極付き非消滅}{Transfer two metrics and apply allowed-pole nonvanishing}$B\ \text{bounded semipositive},\quad -K_Y+D_Y\ \text{finite weighted volume}$\\$H^0(Y,aB+cD_Y)\ne0$};
+\node[result,below=2.2cm of n2] (n3) {\heading{}{元の境界は零なので極が残らない}{The original zero boundary leaves no poles}$H^0(V,-mK_V)^T\ne0\quad\text{for some }m>0$};
+\flow{n0}{n1}{\Tx{作用場の外積と商函数の比から、零次も含む不変rankを作る}{Action-field wedges and quotient ratios give invariant ranks, including zero}\\[4pt]\Cite{quotient}};
+\flow{n1}{n2}{\Tx{滑らかな不変直像は直交商。通常の底へ二計量を移送}{The smooth invariant direct image is an orthogonal quotient; transfer to the ordinary base}\\[4pt]\Cite{transfer}};
+\flow{n2}{n3}{\Tx{Theorem 6.1の切断を戻し、D=0と例外台で極を除く}{Return the section from Theorem 6.1; D=0 and exceptional support remove the poles}\\[4pt]\Cite{t61}};

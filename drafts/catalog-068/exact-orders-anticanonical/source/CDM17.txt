@@ -1,0 +1,1182 @@
+
+===PDF PAGE 1===
+arXiv:1703.00292v2  [math.AG]  3 Apr 2017
+A GENERAL EXTENSION THEOREM FOR COHOMOLOGY CLASSES
+ON NON REDUCED ANAL YTIC SUBSP ACES
+JUNYAN CAO(1), JEAN-PIERRE DEMAILLY (2), SHIN-ICHI MATSUMURA (3)
+In memory of Professor Lu QiKeng (1927–2015)
+Abstract. The main purpose of this paper is to generalize the celebrate d L2 extension theorem
+of Ohsawa-Takegoshi in several directions : the holomorphi c sections to extend are taken in a
+possibly singular hermitian line bundle, the subvariety fr om which the extension is performed
+may be non reduced, the ambient manifold is K¨ ahler and holom orphically convex, but not
+necessarily compact.
+1. Introduction and preliminaries
+The purpose of this paper is to generalize the celebrated L2 extension theorem of Ohsawa-
+Takegoshi [OT87] under the weakest possible hypotheses, al ong the lines of [Dem15b] and
+[Mat16b]. Especially, the ambient complex manifold X is a K¨ ahler manifold that is only assumed
+to be holomorphically convex , and is not necessarily compact; by the Remmert reduction th eo-
+rem, this is the same as a K¨ ahler manifold X that admits a proper holomorphic map π : X → S
+onto a Stein complex space S. This allows in particular to consider relative situations over a
+Stein base. We consider a holomorphic line bundle E → X equipped with a singular hermitian
+metric h, namely a metric which can be expressed locally as h = e− ϕ where ϕ is a quasi-psh
+function, i.e. a function that is locally the sum ϕ = ϕ0 + u of a plurisubharmonic function ϕ0
+and of a smooth function u. Such a bundle admits a curvature current
+(1) Θ E,h := i∂∂ϕ = i∂∂ϕ0 + i∂∂u
+which is locally the sum of a positive (1 , 1)-current i∂∂ϕ0 and a smooth (1 , 1)-form i∂∂u. Our
+goal is to extend sections that are deﬁned on a (non necessari ly reduced) complex subspace
+Y ⊂ X, when the structure sheaf OY := OX/I(e− ψ) is given by the multiplier ideal sheaf of
+a quasi-psh function ψ with neat analytic singularities , i.e. locally on a neighborhood V of an
+arbitrary point x0 ∈ X we have
+(2) ψ(z) = c log
+∑
+|gj(z)|2 + v(z), g j ∈ O X (V ), v ∈ C ∞ (V ).
+Let us recall that the multiplier ideal sheaf I(e− ϕ) of a quasi-psh function ϕ is deﬁned by
+(3) I(e− ϕ)x0 =
+{
+f ∈ O X,x0 ; ∃U ∋ x0 ,
+∫
+U
+|f |2e− ϕdλ < +∞
+}
+with respect to the Lebesgue measure λ in some local coordinates near x0. As usual, we also
+denote by KX = Λ nT ∗
+X the canonical bundle of an n-dimensional complex manifold X. As is
+well known, I(e− ϕ) ⊂ O X is a coherent ideal sheaf (see e.g. [Dem-book]). Our main res ult is
+given by the following general statement.
+Date: April 4, 2017, version 2.
+2010 Mathematics Subject Classiﬁcation. Primary 32L10; Secondary 32E05.
+Key words and phrases. Compact K¨ ahler manifold, singular hermitian metric, cohe rent sheaf cohomology,
+Dolbeault cohomology, plurisubharmonic function, L2 estimates, Ohsawa-Takegoshi extension theorem, multipli er
+ideal sheaf.
+This work was supported by the Agence Nationale de la Recherc he grant “Convergence de Gromov-Hausdorﬀ
+en g´ eom´ etrie k¨ ahl´ erienne” (ANR-GRACK), the European Research Council project “Algebraic and K¨ ahler Ge-
+ometry” (ERC-ALKAGE, grant No. 670846 from September 2015) , the Japan Society for the Promotion of
+Science Grant-in-Aid for Young Scientists (B) (JSPS, grant No. 25800051) and the JSPS Program for Advancing
+Strategic International Networks to Accelerate the Circul ation of Talented Researchers.
+1
+
+===PDF PAGE 2===
+2 JUNYAN CAO, JEAN-PIERRE DEMAILLY, SHIN-ICHI MATSUMURA
+Theorem 1.1. Let E be a holomorphic line bundle over a holomorphically convex K ¨ ahler mani-
+fold X. Let h be a possibly singular hermitian metric on E, ψ a quasi-psh function with neat
+analytic singularities on X. Assume that there exists a positive continuous function δ > 0 on X
+such that
+(4) Θ E,h + (1 + αδ)i∂
+∂ψ ≥ 0 in the sense of currents, for all α ∈ [0, 1].
+Then the morphism induced by the natural inclusion I(he− ψ) → I (h)
+(5) H q(X, KX ⊗ E ⊗ I (he− ψ)) → H q(X, KX ⊗ E ⊗ I (h))
+is injective for every q ≥ 0. In other words, the morphism induced by the natural sheaf sur jection
+I(h) → I (h)/I(he− ψ)
+(6) H q(X, KX ⊗ E ⊗ I (h)) → H q(X, KX ⊗ E ⊗ I (h)/I(he− ψ))
+is surjective for every q ≥ 0.
+Remark 1.2. If h is smooth, we have I(h) = OX and I(h)/I(he− ψ) = OX /I(e− ψ) := OY
+where Y is the zero subvariety of the ideal sheaf I(e− ψ). Then for q = 0, the surjectivity
+statement can be interpreted an extension theorem for holom orphic sections, with respect to the
+restriction morphism
+(7) H 0(X, KX ⊗ E) → H 0(Y, (KX ⊗ E)|Y ).
+In general, the quotient sheaf I(h)/I(he− ψ) is supported in an analytic subvariety Y ⊂ X,
+which is the zero set of the quotient ideal
+JY := I(he− ψ) : I(h) =
+{
+f ∈ O X ; f · I(h) ⊂ I (he− ψ)
+}
+,
+and (6) can be considered as a restriction morphism to Y . □
+The crucial idea of the proof is to prove the results (say, in t he form of the surjectivity
+statement), only up to approximation. This is done by solvin g a
+∂-equation
+∂uε + wε = v
+where the right hand side v is given and wε is an error term such that ∥wε∥ = O(εa) as ε → 0,
+for some constant a > 0. A twisted Bochner-Kodaira-Nakano identity introduced b y Donnelly
+and Feﬀerman [DF83], and Ohsawa and Takegoshi [OT87] is used f or that purpose, with an
+additional correction term. The version we need can be state d as follows.
+Proposition 1.3. (see [Dem15b, Prop. 3.12]) Let X be a complete K¨ ahler manifold equipped
+with a (non necessarily complete ) K¨ ahler metricω, and let (E, h) be a Hermitian vector bundle
+over X. Assume that there are smooth and bounded functions η, λ > 0 on X such that the
+curvature operator
+B = Bn,q
+E,h,ω,η,λ = [η ΘE,h − i ∂∂η − iλ− 1d∂η ∧ ∂η, Λω] ∈ C ∞ (X, Herm(Λn,qT ∗
+X ⊗ E))
+satisﬁes B + εI > 0 for some ε > 0 ( so that B can be just semi-positive or even slightly negative;
+here I is the identity endomorphism ). Given a section v ∈ L2(X, Λn,qT ∗
+X ⊗ E) such that ∂v = 0
+and
+M (ε) :=
+∫
+X
+⟨(B + εI)− 1v, v⟩ dVX,ω < +∞ ,
+there exists an approximate solution fε ∈ L2(X, Λn,q− 1T ∗
+X ⊗ E) and a correction term wε ∈
+L2(X, Λn,qT ∗
+X ⊗ E) such that ∂uε = v − wε and
+∫
+X
+(η + λ)− 1|uε|2 dVX,ω + 1
+ε
+∫
+X
+|wε|2 dVX,ω ≤ M (ε).
+Moreover, if v is smooth, then uε and wε can be taken smooth.
+
+===PDF PAGE 3===
+A GENERAL EXTENSION THEOREM FOR COHOMOLOGY CLASSES 3
+In our situation, the main part of the solution, namely uε, may very well explode as ε → 0.
+In order to show that the equation ∂u = v can be solved, it is therefore needed to check
+that the space of coboundaries is closed in the space of cocyc les in the Fr´ echet topology under
+consideration (here, the L2
+loc topology), in other words, that the related cohomology grou p
+H q(X, F) is Hausdorﬀ. In this respect, the fact of considering
+∂-cohomology of smooth forms
+equipped with the C ∞ topology on the one hand, or cohomology of forms u ∈ L2
+loc with
+∂u ∈ L2
+loc
+on the other hand, yields the same topology on the resulting c ohomology group H q(X, F). This
+comes from the fact that both complexes yield ﬁne resolution s of the same coherent sheaf F,
+and the topology of H q(X, F) can also be obtained by using ˇCech cochains with respect to a
+Stein covering U of X. The required Hausdorﬀ property then comes from the followi ng well
+known fact.
+Lemma 1.4. Let X be a holomorphically convex complex space and F a coherent analytic
+sheaf over X. Then all cohomology groups H q(X, F) are Hausdorﬀ with respect to their natural
+topology (induced by the Fr´ echet topology of local uniform convergence of holomorphic cochains).1
+In fact, the Remmert reduction theorem implies that X admits a proper holomorphic map
+π : X → S onto a Stein space S, and Grauert’s direct image theorem shows that all direct
+images Rqπ∗F are coherent sheaves on S. Now, as S is Stein, Leray’s theorem combined with
+Cartan’s theorem B tells us that we have an isomorphism H q(X, F) ≃ H 0(S, Rqπ∗F). More
+generally, if U ⊂ S is a Stein open subset, we have
+(8) H q(π− 1(U ), F) ≃ H 0(U, Rqπ∗F)
+and when U ⋐ S is relatively compact, it is easily seen that this a topologi cal isomorphism
+of Fr´ echet spaces since both sides are OS(U ) modules of ﬁnite type and can be seen as a
+Fr´ echet quotient of some direct sumOS(U )⊕ N by looking at local generators and local relations
+of Rqπ∗F. Therefore H q(X, F) ≃ H 0(S, Rqπ∗F) is a topological isomorphism and the space of
+sections in the right hand side is a Fr´ echet space. In partic ular, H q(X, F) is Hausdorﬀ. □
+The isomorphism (8) shows that it is enough to prove Theorem 1 .1 locally over X, i.e., we
+can replace X by X ′ = π− 1(S′) ⋐ X where S′ ⋐ S. Therefore, we can assume that δ > 0 is a
+constant rather than a continuous function.
+2. Proof of the extension theorem
+In this section, we give a proof of Theorem 1.1 based on a gener alization of the arguments of
+[Dem15b, Th. 2.14]. We start by proving the special case of th e extension result for holomorphic
+sections ( q = 0).
+Theorem 2.1. Let (X, ω) be a holomorphically convex K¨ ahler manifold and ψ be a quasi-
+psh function with neat analytic singularities. Let E be a line bundle with a possibly singu-
+lar metric h, and Y the support of the sheaf I(h)/I(he− ψ), along with the structure sheaf
+OY := I(he− ψ) : I(h). Assume that there is a continuous function δ > 0 such that
+iΘE,h + (1 + αδ)i∂
+∂ψ ≥ 0 in the sense of currents, for all α ∈ [0, 1].
+Then the restriction morphism
+H 0(X, OX (KX ⊗ E) ⊗ I (h)) → H 0(Y, OX (KX ⊗ E) ⊗ I (h)/I(he− ψ)|Y )
+is surjective.
+Proof. (a) Let us ﬁrst assume for simplicity that h is smooth. We will explain the general case
+later. Then I(h) = OX and I(h)/I(he− ψ) = OY = OX /I(e− ψ). After possibly shrinking X into
+a relatively compact holomorphically convex open subset X ′ = π− 1(S′) ⋐ X, we can suppose
+1 It was pointed out to us by Prof. Takeo Ohsawa that this result does not hold under the assumption that X
+is weakly pseudoconvex, i.e., if we only assume that X admits a smooth psh exhaustion. A counter-example can
+be derived from [Kaz84]. As a consequence, it is unclear whet her the results of the present paper extend to the
+K¨ ahler weakly pseudoconvex case, although the main L2 estimates are still valid in that situation.
+
+===PDF PAGE 4===
+4 JUNYAN CAO, JEAN-PIERRE DEMAILLY, SHIN-ICHI MATSUMURA
+that δ > 0 is a constant and that ψ ≤ 0, after subtracting a large constant to ψ. Also, without
+loss of generality, we can assume that ψ admits a discrete sequence of “jumping numbers”
+(9) 0 = m0 < m 1 < · · ·< m p < · · · such that I(mψ) = I(mpψ) for m ∈ [mp, mp+1[.
+Since ψ is assumed to have analytic singularities, this follows fro m using a log resolution of
+singularities, thanks to the Hironaka desingularization t heorem (by the much deeper result of
+[GZ15] on the strong openness conjecture, one could even pos sibly eliminate the assumption
+that ψ has analytic singularities). We ﬁx here p such that mp ≤ 1 < m p+1, and in the notation
+of [Dem15b], we let Y = Y (mp) be deﬁned by the non necessarily reduced structure sheaf
+OY = OX /I(e− ψ) = OX /I(e− mpψ).
+Step 1 (Construction of a smooth extension) . Take
+f ∈ H 0(Y, OX (KX ⊗ E)|Y ) = H 0(X, OX (KX ⊗ E) ⊗ O X /I(e− mpψ)).
+Let U = ( Ui) be a Stein covering of X and let ( ρi) be a partition of unity subordinate to ( Ui).
+Thanks to the exact sequence
+(10) 0 → I (e− ψ) → O X → O X/I(e− ψ) → 0,
+we can ﬁnd a ˜fi ∈ H 0(Ui, OX (KX ⊗ E)) such that
+˜fi|Y ∩ Ui = f |Y ∩ Ui.
+Then (10) implies that
+(11) ˜fi − ˜fj ∈ H 0(Ui ∩ Uj, OX (KX ⊗ E) ⊗ I (e− ψ)).
+As a consequence, the smooth section ˜f := ∑
+i
+ρi · ˜fi is a smooth extension of f and satisﬁes
+∂ ˜f = ∑
+i
+(∂ρi) ·( ˜fi − ˜fj) on Uj, hence
+(12)
+∫
+X
+|∂ ˜f |2
+ω,he− ψdVX,ω =
+∫
+X
+∑
+j
+ρj
+⏐
+⏐
+⏐
+∑
+i
+(
+∂ρi) ·( ˜fi − ˜fj)
+⏐
+⏐
+⏐
+2
+ω,h
+e− ψdVX,ω < +∞ .
+Step 2 (L2-estimates). We follow here the arguments of [Dem15b, proof of th. 2.14, p. 217].
+Let t ∈ Z− and let χt be the negative convex increasing function deﬁned in [Dem15 b, (5.8 ∗),
+p. 211]. Put ηt := 1 − δ ·χt(ψ) and λt := 2δ (χ2
+t (ψ))2
+χ′′
+t (ψ) . We set
+Rt := ηt(ΘE,h + i∂
+∂ψ) − i∂∂ηt − λ− 1
+t i∂ηt ∧ ∂ηt
+= ηt(ΘE,h + (1 + δη− 1
+t χ′
+t(ψ))i∂
+∂ψ ) + δ ·χ′′
+t (ψ)
+2 i∂ψ ∧ ∂ψ.
+Note that χ′′
+t (ψ) ≥ 1
+8 on Wt = {t < ψ < t + 1}. The curvature assumption (4) implies
+ΘE,h + (1 + δη− 1
+t χ′
+t(ψ)) i∂
+∂ψ ≥ 0 on X.
+As in [Dem15b], we ﬁnd
+(13) Rt ≥ 0 on X
+and
+(14) Rt ≥ δ
+16 i∂ψ ∧ ∂ψ on Wt = {t < ψ < t + 1}.
+Let θ : [ −∞ , +∞ [ → [0, 1] be a smooth non increasing real function satisfying θ(x) = 1 for
+x ≤ 0, θ(x) = 0 for x ≥ 1 and |θ′| ≤ 2. By applying the L2 estimate (Proposition 1.3), for every
+ε > 0 we can ﬁnd sections ut,ε, wt,ε satisfying
+(15) ∂ut,ε + wt,ε = vt := ∂
+(
+θ(ψ − t) · ˜f
+)
+and
+(16)
+∫
+X
+(ηt+λt)− 1|ut,ε|2
+ω,he− ψdVX,ω+ 1
+ε
+∫
+X
+|wt,ε|2
+ω,he− ψdVX,ω ≤
+∫
+X
+⟨(Rt+εI)− 1vt, vt⟩e− ψdVX,ω ,
+
+===PDF PAGE 5===
+A GENERAL EXTENSION THEOREM FOR COHOMOLOGY CLASSES 5
+where
+(17) vt =
+∂
+(
+θ(ψ − t) ˜f
+)
+= θ′(ψ − t) ∂ψ ∧ ˜f + θ(ψ − t) ∂ ˜f .
+Combining (13), (14), (16) and (17), we get
+∫
+X |ut,ε|2
+ω,he− ψdVX,ω < +∞ and
+(18)
+∫
+X
+|wt,ε|2
+ω,he− ψdVX,ω ≤ 128 ε
+δ
+∫
+{t<ψ<t+1}
+|˜f |2
+ω,he− ψdVX,ω + 2
+∫
+{ψ<t+1}
+|
+∂ ˜f |2
+ω,he− ψdVX,ω.
+We now estimate the right hand side of (18). Since ˜f is smooth, we have an obvious upper
+bound of the ﬁrst term
+(19)
+∫
+{t<ψ<t+1}
+|˜f |2
+ω,he− ψdVX,ω ≤ C1e− t,
+where C1 is the C 0 norm of ˜f . For the second term, thanks to (9), (11) and (12), we have
+(20)
+∫
+X
+|
+∂ ˜f |2
+ω,he− (1+α)ψdVX,ω < +∞
+for any α ∈ ]0, mp+1 − 1[. As a consequence, we get
+(21)
+∫
+{ψ<t+1}
+|
+∂ ˜f |2
+ω,he− ψdVX,ω ≤ C2eαt
+for some constant C2 depending only on α. By taking ε = e(1+α)t, (18), (19) and (21) imply
+(22)
+∫
+X
+|wt,ε|2
+ω,he− ψdVX,ω ≤ C3eαt = O(ε
+α
+1+α ),
+for some constant C3, whence the error tends to 0 as t → −∞ and ε → 0.
+Step 3 (Final conclusion) . Putting everything together and redeﬁning ut = ut,ε, wt = wt,ε for
+simplicity of notation, we get
+(23)
+∂(θ(ψ − t) · ˜f − ut) = wt,
+∫
+X
+|ut|2
+he− ψdVX,ω < +∞
+and
+(24) lim
+t→−∞
+∫
+X
+|wt|2
+ω,he− ψdVX,ω = 0.
+After shrinking X, we can assume that we have a ﬁnite Stein covering U = ( Ui) where the Ui
+are biholomorphic to bounded pseudoconvex domains. The sta ndard H¨ ormanderL2 estimates
+then provide L2 sections st,j on Uj such that
+∂st,j = wt on Uj and
+(25) lim
+t→−∞
+∫
+Uj
+|st,j|2
+ω,he− ψdVX,ω = 0.
+Then
+∂
+(
+θ(ψ − t) · ˜f − ut −
+∑
+j
+ρjst,j
+)
+= −
+∑
+j
+(∂ρj) ·st,j on X
+= −
+∑
+j
+(∂ρj) ·(st,j − st,i) on Ui.(26)
+As
+∂(st,j − st,i) = 0 on Ui ∩ Uj, the diﬀerence is holomorphic and the right hand side of (26) i s
+smooth. Moreover, (25) shows that these diﬀerences converge uniformly to 0, hence the right
+hand side of (26) converges to 0 in C ∞ topology. The left hand side implies that this is a
+coboundary in the C ∞ Dolbeault resolution of OX (KX ⊗ E). By applying Lemma 1.4, we
+conclude that there is a C ∞ section σt of KX ⊗ E converging uniformly to 0 on compact subsets
+of X as t → −∞ , such that ∂σt = ∑
+j
+(∂ρj) ·st,j on X. This implies that
+˜ft := θ(ψ − t) · ˜f − ut −
+∑
+j
+ρjst,j + σt
+
+===PDF PAGE 6===
+6 JUNYAN CAO, JEAN-PIERRE DEMAILLY, SHIN-ICHI MATSUMURA
+is holomorphic on X. H¨ ormander’sL2 estimates also produce local smooth solutions σt,i on Ui
+with the additional property that lim
+t→−∞
+∫
+Ui
+|σt,i|2
+ω,he− ψdVX,ω = 0. Therefore
+˜ft,i := θ(ψ − t) · ˜f − ut −
+∑
+j
+ρjst,j + σt,i
+is holomorphic on Ui and ˜ft − ˜ft,i converges uniformly to 0 on compact subsets of Ui. However,
+by construction, ˜ft,i − ˜fi is a holomorphic section on Ui that satisﬁes the L2 estimate with respect
+to the weight e− ψ, hence ˜ft,i − ˜fi is a section of OX (KX ⊗ E) ⊗ I (e− ψ) on Ui, in other words
+the image of ˜ft,i in
+H 0(Ui, OX (KX ⊗ E) ⊗ O X /I(e− ψ))
+coincides with f|Ui. As a consequence, the image of ˜ft in
+H 0(X, OX (KX ⊗ E) ⊗ O X/I(e− ψ)) = H 0(Y, (KX ⊗ E)|Y )
+converges to f . By the direct image argument used in the preliminary sectio n, this density
+property implies the surjectivity of the restriction morph ism to Y .
+(b) We now prove the theorem for the general case when h = e− ϕ is not necessarily smooth. We
+can reduce ourselves to the case when ψ has divisorial singularities (see [Dem15b] or the next
+section for a more detailed argument). Let us pick a section
+f ∈ H 0(X, OX (KX ⊗ E) ⊗ I (h)/I(he− ψ)).
+By using the same reasoning as in Step 1, we can ﬁnd a smooth ext ension ˜f ∈ C ∞ (X, KX ⊗ E)
+of f such that
+(27)
+∫
+X
+|
+∂ ˜f |2
+ω,he− ψdVX,ω < +∞ .
+For every t ∈ Z− ﬁxed, as ψ has divisorial singularities, we still have
+ΘE,h + (1 + δη− 1
+t χ′
+t(ψ))(i∂
+∂ψ )ac ≥ 0 on X,
+where ( i∂∂ψ)ac is the absolutely continuous part of i∂∂ψ. The regularization techniques of
+[DPS01] and [Dem15a, Th. 1.7, Remark 1.11] (cf. also the next section) produce a family of
+singular metrics {ht,ε}+∞
+k=1 which are smooth in the complement X ∖ Zt,ε of an analytic set, such
+that I(ht,ε) = I(h), I(ht,εe− ψ) = I(he− ψ) and
+ΘE,h t,ε + (1 + δη− 1
+t χ′
+t(ψ)) i∂
+∂ψ ≥ − 1
+2 εω on X.
+The additional error term − 1
+2 εω is irrelevant when we use Proposition 1.3, as it is absorbed b y
+taking the hermitian operator B + εI. Therefore for every t ∈ Z− , with the adjustment ε = eαt,
+α ∈ ]0, mk+1 − 1[, we can ﬁnd a singular metric ht = ht,ε which is smooth in the complement
+X \Zt of an analytic set, such that I(ht) = I(h), I(hte− ψ) = I(he− ψ) and ht ↑ h as t → −∞ ,
+and approximate solutions of the ∂-equation such that
+∂(θ(ψ − t) · ˜f − ut) = wt ,
+∫
+X
+|ut|2
+ω,hte− ψdVX,ω < +∞
+and
+lim
+t→−∞
+∫
+X
+|wt|2
+ω,hte− ψdVX,ω = 0.
+Proposition 1.3 can indeed be applied since X ∖ Zt is complete K¨ ahler (at least after we shrink
+X a little bit as X ′ = π− 1(S′), cf. [Dem82]). The theorem is then proved by using the same
+argument as in Step 3; it is enough to notice that the holomorp hic sections st,j − st,i and ˜ft,i − ˜fi
+satisfy the L2-estimate with respect to ( ht, ψ) [instead of the expected ( h, ψ)], but the multiplier
+ideal sheaves involved are unchanged. The Hausdorﬀ propert y is applied to the cohomology
+group H 1(X, OX (KX ⊗ E) ⊗ I (h)) instead of H 1(X, KX ⊗ E), and the density property to the
+morphism of direct image sheaves
+π∗
+(
+OX (KX ⊗ E) ⊗ I (h)
+)
+→ π∗
+(
+OX (KX ⊗ E) ⊗ I (h)/I(he− ψ)
+)
+
+===PDF PAGE 7===
+A GENERAL EXTENSION THEOREM FOR COHOMOLOGY CLASSES 7
+over the Stein space S. □
+Proof of the extension theorem for degree q cohomology classes. The reasoning is
+extremely similar, so we only explain the few additional arg uments needed. In fact, Proposition
+1.3 can be applied right away to arbitrary ( n, q)-forms with q ≥ 1, and the twisted Bochner-
+Kodaira-Nakano inequality yields exactly the same estimat es. Any cohomology class in
+H q(Y, OX (KX ⊗ E) ⊗ I (h)/I(he− ψ))
+is represented by a holomorphic ˇCech q-cocycle with respect to the Stein covering U = (Ui), say
+(ci0...iq ), c i0...iq ∈ H 0(
+Ui0 ∩ . . . ∩ Uiq , OX (KX ⊗ E) ⊗ I (h)/I(he− ψ)
+)
+.
+By the standard sheaf theoretic isomorphisms with Dolbeaul t cohomology (cf. e.g. [Dem-e-book]),
+this class is represented by a smooth ( n, q)-form
+f =
+∑
+i0,...,iq
+ci0...iq ρi0∂ρi1 ∧ . . .∂ρiq
+by means of a partition of unity ( ρi) subordinate to ( Ui). This form is to be interpreted as a form
+on the (non reduced) analytic subvariety Y associated with the ideal sheaf J = I(he− ψ) : I(h)
+and the structure sheaf OY = OX /J . We get an extension as a smooth (no longer ∂-closed)
+(n, q)-form on X by taking
+˜f =
+∑
+i0,...,iq
+˜ci0...iq ρi0∂ρi1 ∧ . . .∂ρiq
+where ˜ci0...iq is an extension of ci0...iq from Ui0 ∩ . . . ∩ Uiq ∩ Y to Ui0 ∩ . . . ∩ Uiq . Again, we can
+ﬁnd approximate L2 solutions of the ∂-equation such that
+∂(θ(ψ − t) · ˜f − ut) = wt ,
+∫
+X
+|ut|2
+ω,hte− ψdVX,ω < +∞
+and
+lim
+t→−∞
+∫
+X
+|wt|2
+ω,hte− ψdVX,ω = 0.
+The diﬃculty is that L2 sections cannot be restricted in a continuous way to a subvar iety. In
+order to overcome this problem, we play again the game of retu rning to ˇCech cohomology by
+solving inductively
+∂-equations for wt on Ui0 ∩ . . . ∩ Uik , until we reach an equality
+(28) ∂
+(
+θ(ψ − t) · ˜f − ˜ut
+)
+= ˜wt := −
+∑
+i0,...,iq− 1
+st,i0...iq ∂ρi0 ∧ ∂ρi1 ∧ . . . ∂ρiq
+with holomorphic sections st,I = st,i0...iq on UI = Ui0 ∩ . . . ∩ Uiq , such that
+lim
+t→−∞
+∫
+UI
+|st,I |2
+ω,hte− ψdVX,ω = 0.
+Then the right hand side of (28) is smooth, and more precisely has coeﬃcients in the sheaf
+C∞ ⊗ O I(he− ψ), and ˜wt → 0 in C ∞ topology. A priori, ˜ut is an L2 (n, q)-form equal to ut
+plus a combination ∑ρist,i of the local solutions of
+∂st,i = wt, plus ∑ρist,i,j ∧ ∂ρj where
+∂st,i,j = st,j − st,i, plus etc . . . , and is such that
+∫
+X
+|˜ut|2
+ω,hte− ψdVX,ω < +∞ .
+Since H q(X, OX (KX ⊗ E) ⊗ I (he− ψ)) can be computed with the L2
+loc resolution of the coherent
+sheaf, or alternatively with the
+∂-complex of ( n, •)-forms with coeﬃcients in C∞ ⊗ O I(he− ψ), we
+may assume that ˜ut ∈ C ∞ ⊗ O I(he− ψ), after playing again with ˇCech cohomology. Lemma 1.4
+yields a sequence of smooth ( n, q)-forms σt with coeﬃcients in C∞ ⊗ O I(h), such that ∂σt = ˜wt
+and σt → 0 in C ∞ -topology. Then ˜ft = θ(ψ − t) · ˜f − ˜ut − σt is a ∂-closed ( n, q)-form on X with
+values in C∞ ⊗ O I(h) ⊗ O X (E), whose image in H q(X, OX (KX ⊗ E) ⊗ I (h)/I(he− ψ)) converges
+
+===PDF PAGE 8===
+8 JUNYAN CAO, JEAN-PIERRE DEMAILLY, SHIN-ICHI MATSUMURA
+to {f } in C ∞ Fr´ echet topology. We conclude by a density argument on the S tein space S, by
+looking at the coherent sheaf morphism
+Rqπ∗
+(
+OX (KX ⊗ E) ⊗ I (h)
+)
+→ Rqπ∗
+(
+OX (KX ⊗ E) ⊗ I (h)/I(he− ψ)
+)
+. □
+3. An alternative proof based on injectivity theorems
+We give here an alternative proof based on injectivity theor ems, in the case when X is compact
+K¨ ahler. The case of a holomorphically convex manifold is en tirely similar, so we will content
+ourselves to indicate the required additional arguments at the end.
+Proof of Theorem 1.1. First of all, we reduce the proof of Theorem 1.1 to the case whe n ψ has
+divisorial singularities. Since ψ has analytic singularities, there exists a modiﬁcation π : X ′ → X
+such that the pull-back π∗ψ has divisorial singularities. For the singular hermitian l ine bundle
+(E′, h′) := ( π∗E, π∗h) and the quasi-psh function ψ′ := π∗ψ, we can easily check that
+π∗(KX ′ ⊗ E′ ⊗ I (h′e− ψ′
+)) = KX ⊗ E ⊗ I (he− ψ),
+π∗(KX ′ ⊗ E′ ⊗ I (h′)) = KX ⊗ E ⊗ I (h).
+Hence we obtain the following commutative diagram :
+H q(X, KX ⊗ E ⊗ I (he− ψ))
+∼
+= π∗
+↓↓
+f →→
+⟲
+H q(X, KX ⊗ E ⊗ I (h))
+π∗
+↓↓
+H q(X ′, KX ′ ⊗ E′ ⊗ I (h′e− ψ′
+))
+g →→ H q(X ′, KX ′ ⊗ E′ ⊗ I (h′)),
+where f , g are the morphisms induced by the natural inclusions and π∗ is the natural edge
+morphism. It follows that the left edge morphism π∗ is an isomorphism since the curvature of
+the singular hermitian metric h′e− ψ′
+on E′ is semi-positive by the assumption. Indeed, even if
+h′ does not have analytic singularities, we can see that
+Rqπ∗(KX ′ ⊗ E′ ⊗ I (h′e− ψ′
+)) = 0 for every q > 0
+by [Mat16b, Corollary 1.5]. (In the case of X being a projective variety, a relatively easy proof
+can be found in [FM16].) If Theorem 1.1 can be proven when ψ has divisorial singularities, it
+follows that the morphism g in the above diagram is injective since ( E′, h′) = ( π∗E, π∗h) and
+ψ′ = π∗ψ satisfy the assumptions in Theorem 1.1 and ψ′ has divisorial singularities. Therefore
+the morphism f is also injective by the commutative diagram.
+Now we explain the idea of the proof of Theorem 1.1. If we can ob tain equisingular approxi-
+mations hε of h satisfying the following properties :
+ΘE,h ε + i∂∂ψ ≥ − εω and Θ E,h ε + (1 + δ)i∂∂ψ ≥ − εω,
+then a proof similar to [FM16] works, where ω is a ﬁxed K¨ ahler form on X. In the case when
+ψ has divisorial singularities, we can attain either of the ab ove curvature properties, but we do
+not know whether we can attain them at the same time. For this r eason, we will look for an
+essential curvature condition arising from the assumption s on the curvatures in Theorem 1.1, in
+order to use the “twisted” Bochner-Kodaira-Nakano identit y.
+From now on, we consider a quasi-psh ψ with divisorial singularities. Then there exist an
+eﬀective R-divisor D and a smooth (1 , 1)-form γ on X such that
+i
+2π ∂∂ψ = [D] + 1
+2π γ
+in the sense of (1 , 1)-currents, where [ D] denotes the current of the integration over D. For
+the irreducible decomposition D = ∑N
+i=1 aiDi and the deﬁning section ti of Di, we can take a
+smooth hermitian metric bi on Di such that
+eψ = |s|2
+b := |t1|2a1
+b1 |t2|2a2
+b2 · · · |tN |2aN
+bN
+and − γ = Θ b(D) :=
+N∑
+i=1
+aiΘbi(Di).
+
+===PDF PAGE 9===
+A GENERAL EXTENSION THEOREM FOR COHOMOLOGY CLASSES 9
+For a positive number 0 < c ≪ 1, we deﬁne the continuous functions σ and η on X by
+σ = σc := log(|s|2
+b + c) and η = ηc := 1
+c − χ(σ),
+where χ(t) := t − log(− t).
+Remark 3.1. (i) We may assume that |s|2
+b < 1/5 by subtracting a positive constant from ψ.
+Further we may assume that σ < log(1/5) and 1 < χ ′(σ) < 7/4 by choosing a suﬃciently small
+c > 0.
+(ii) Further, the function η is a continuous function on X with η > 1/c. The function η is
+smooth on X \D, but it need not be smooth on X since |s|2
+b is not smooth in the case when
+0 < a i < 1 for some i.
+Throughout the proof, we ﬁx a K¨ ahler form ω on X. The following proposition gives a
+suitable approximation of a singular hermitian metric h on E, which enables us to use the
+twisted Bochner-Kodaira-Nakano identity. The proof is bas ed on the argument in [Ohs04],
+[Fuj13] and the equisingular approximation theorem in [DPS 01, Theorem 2.3].
+Proposition 3.2. There exist singular hermitian metrics {hε}0<ε≪ 1 on E with the following
+properties:
+(a) hε is smooth on X \Zε, where Zε is a proper subvariety on X.
+(b) hε′ ≤ hε′′ ≤ h holds on X for ε′ > ε′′> 0.
+(c) I(h) = I(hε) and I(he− ψ) = I(hεe− ψ) on X.
+(d) η(Θhε(E) + γ) − i∂
+∂η − η− 2i∂η ∧ ∂η ≥ − εω on X \D.
+(e) For arbitrary t > 0, by taking a suﬃciently small ε > 0, we have
+∫
+e− tφ − e− tφε < ∞ ,
+where φ (resp. φε) is a local weight of h (resp. hε).
+Proof. We ﬁx a a suﬃciently small c with 7 c/4 ≤ δ. Then, by Remark 3.1, we can easily check
+that
+χ′(σ)|s|2
+b
+η(|s|2
+b + c) ≤ 7
+4η ≤ 7
+4 c ≤ δ.
+In particular, it follows that
+Θh +
+(
+1 + χ′(σ)|s|2
+b
+η(|s|2
+b + c)
+)
+γ ≥ 0 on X
+since ψ has divisorial singularities and satisﬁes the assumptions in Theorem 1.1. By applying
+the equisingular approximation theorem ([DPS01, Theorem 2 .3]) to h, we can take singular
+hermitian metrics {hε}0<ε≪ 1 on E satisfying properties (a), (b), (e), the former conclusion
+of (c), and the following curvature property:
+Θhε +
+(
+1 + χ′(σ)|s|2
+b
+η(|s|2
+b + c)
+)
+γ ≥ − εω on X.
+Now we check property (d) from the above curvature property. The function η may not be
+smooth on X, but it is smooth on X \D. Therefore the same computation as in [Ohs04] and
+[Fuj13] works on X \D. In particular, from a complicated but straightforward com putation, we
+obtain
+− i∂
+∂η = − χ′(σ)|s|2
+b
+|s|2
+b + c Θb(D) +
+( c
+χ′(σ)|s|2
+b
++ χ′′(σ)
+χ′(σ)2
+)
+i∂η ∧ ∂η
+
+===PDF PAGE 10===
+10 JUNYAN CAO, JEAN-PIERRE DEMAILLY, SHIN-ICHI MATSUMURA
+on X \D (see [Fuj13] for the precise computation). Then, by − γ = Θ b(D) on X \D, we can
+see that
+η(Θhε(E) + γ) − i∂
+∂η − 1
+η2 i∂η ∧ ∂η
+=
+( c
+χ′(σ)|s|2
+b
++ χ′′(σ)
+χ′(σ)2 − 1
+η2
+)
+i∂η ∧ ∂η + η
+(
+Θhε(E) + (1 + χ′(σ)|s|2
+b
+η(|s|2
+b + c) )γ
+)
+≥
+( c
+χ′(σ)|s|2
+b
++ χ′′(σ)
+χ′(σ)2 − 1
+η2
+)
+i∂η ∧ ∂η − εηω
+on X \D. A straightforward computation yields that χ′′(σ)/χ′(σ)2 ≥ 1/η2, and thus the ﬁrst
+term is semi-positive. Since η is bounded above, we infer that property (d) holds.
+Finally we check the last conclusion of property (c) by provi ng the following lemma, which can
+be obtained from the strong openness theorem (see [GZ15], [L em14], [Hie14]) and property (e).
+Lemma 3.3. For a quasi-psh function ϕ, we have I(he− ϕ) = I(hεe− ϕ). In particular, we obtain
+the last conclusion of property (c).
+Proof. We have the inclusion I(he− ϕ) ⊂ I (hεe− ϕ) by hε ≤ h. To get the converse inclusion, we
+consider a local holomorphic function g such that |g|2e− ϕ− φε is integrable, where φε (resp. φ) is
+a local weight of hε (resp. h). Then H¨ older’s inequality yields
+∫
+|g|2e− φ− ϕ =
+∫
+|g|2e− ϕ− φεe− φ+φε
+≤
+( ∫
+|g|2pe− p(ϕ+φε)
+) 1/p
+·
+( ∫
+e− q(φ− φε)
+) 1/q
+,
+where p, q are real numbers such that 1 /p+ 1/q = 1 and p > 1. By the strong openness theorem,
+the function |g|2pe− p(ϕ+φε) is integrable when p is suﬃciently close to one. On the other hand,
+we have ∫
+e− q(φ− φε) − 1 =
+∫
+eqφε
+(
+e− qφ − e− qφε
+)
+≤ sup eqφε
+∫ (
+e− qφ − e− qφε
+)
+.
+The right hand side is ﬁnite for a suﬃciently small ε by property (e). □
+This concludes the proof of Proposition 3.2. □
+From now on, we proceed to prove Theorem 1.1 by using Proposit ion 3.2. In the same
+way as in [FM16, Section 5], one constructs a family of comple te K¨ ahler forms{ωε,δ}0<δ≪ 1 on
+Yε := X \(Zε ∪ D) with the following properties :
+(A) ωε,δ is a complete K¨ ahler form on Yε := X \(Zε ∪ D) for every δ > 0.
+(B) ωε,δ ≥ ω on Yε for every δ ≥ 0.
+(C) For every point p in X, there exists a bounded function Ψ ε,δ on an open neighborhood
+Bp such that ωε,δ = i∂
+∂Ψε,δ on Bp and Ψ ε,δ converges uniformly to a bounded function
+that is independent of ε.
+For simplicity, we put H := he− ψ and Hε := hεe− ψ. We consider a cohomology class β ∈
+H q(X, KX ⊗ E ⊗ I (H)) such that β = 0 ∈ H q(X, KX ⊗ E ⊗ I (h)). By the De Rham-Weil
+isomorphism
+H q(X, KX ⊗ E ⊗ I (H)) ∼
+=
+Ker
+∂ : Ln,q
+(2) (E)H,ω → Ln,q+1
+(2) (E)H,ω
+Im ∂ : Ln,q− 1
+(2) (E)H,ω → Ln,q
+(2) (E)H,ω
+,
+the cohomology class β can be represented by a
+∂-closed E-valued (n, q)-form u with ∥u∥H,ω < ∞
+(that is, β = {u}). Here Ln,•
+(2) (E)H,ω is the L2-space of E-valued (n, •)-forms on X with respect
+to the L2-norm ∥ • ∥H,ω deﬁned by
+∥ • ∥2
+H,ω :=
+∫
+X
+| • |2
+H,ω dVω,
+
+===PDF PAGE 11===
+A GENERAL EXTENSION THEOREM FOR COHOMOLOGY CLASSES 11
+where dVω := ωn/n! and n := dim X. For the L2-norm ∥ • ∥Hε,ωε,δ deﬁned by
+∥ • ∥2
+ε,δ := ∥ • ∥2
+Hε,ωε,δ :=
+∫
+X
+| • |2
+Hε,ωε,δ dVωε,δ ,
+one can easily check that
+∥u∥ε,δ ≤ ∥ u∥H,ωε,δ ≤ ∥ u∥H,ω < ∞ .(29)
+Indeed, the ﬁrst inequality is obtained from property ( b), and the second inequality is obtained
+from property ( B) for ωε,δ (for example see [FM16, Lemma 2,4]). In particular, we see th at u
+belongs to the L2-space
+Ln,q
+(2) (E)ε,δ := Ln,q
+(2) (Yε, E)Hε,ωε,δ
+of E-valued (n, q)-forms on Yε (not X) with respect to ∥ • ∥ε,δ. By the orthogonal decomposition
+(see for example [Mat16a, Proposition 5.8])
+Ln,q
+(2) (F )ε,δ = Im
+∂ ⊕ H n,q
+ε,δ (F ) ⊕ Im ∂
+∗
+ε,δ,
+the E-valued form u can be decomposed as follows :
+u =
+∂wε,δ + uε,δ for some wε,δ ∈ Dom ∂ ⊂ Ln,q− 1
+(2) (E)ε,δ, and uε,δ ∈ H n,q
+ε,δ (E).(30)
+Here
+∂
+∗
+ε,δ is (the maximal extension of) the formal adjoint of the
+∂-operator and Hn,q
+ε,δ (E) is the
+space of harmonic forms on Yε, that is,
+Hn,q
+ε,δ (E) := {w ∈ Ln,q
+(2) (E)ε,δ |
+∂w = 0 and ∂
+∗
+ε,δw = 0.}.
+Proposition 3.4 (resp. Proposition 3.5) can be proved by the same method as in [FM16,
+Proposition 5.4, 5.6, 5.7] (resp. [FM16, Proposition 5.9, 5 .10]), so we omit the proofs here.
+Proposition 3.4. If we have
+lim
+ε→ 0
+lim
+δ→ 0
+∥uε,δ∥K,hε,ωε,δ = 0,
+for every relatively compact set K ⋐ X \D, then the cohomology class β is zero in H q(X, KX ⊗
+E ⊗ I (H)). Here ∥ • ∥K,hε,ωε,δ denotes the L2-norm on K with respect to hε (not Hε) and ωε,δ.
+Proposition 3.5. There exists vε,δ ∈ Ln,q− 1
+(2) (E)hε,ωε,δ satisfying the following properties :
+∂vε,δ = uε,δ and lim
+δ→ 0
+∥vε,δ∥ε,δ is bounded by a constant independent of ε.(31)
+Remark 3.6. In general, we have
+Ln,•
+(2) (E)ε,δ = Ln,•
+(2) (E)Hε,ωε,δ ⫋ Ln,•
+(2) (E)hε,ωε,δ ,
+and thus vε,δ may not be L2-integrable with respect to Hε.
+For the above solution vε,δ of the
+∂-equation, by using the density lemma, we can take a
+family of smooth E-valued forms {vε,δ,k}∞
+k=1 with the following properties :
+vε,δ,k → vε,δ and
+∂vε,δ,k → ∂vε,δ = uε,δ in Ln,•
+(2) (E)hε,ωε,δ.(32)
+Now we consider the level set Xc := {x ∈ X | − |s|2
+b < c} ⋐ X \D for a negative number c. The
+set of the critical values of |s|2
+b is of Lebesgue measure zero from Sard’s theorem. Hence, for a
+given relatively compact K ⋐ X \D, we can choose − 1 ≪ c < 0 such that
+K ⋐ Xc := {x ∈ X | − |s|2
+b < c} and d|s|2
+b ̸= 0 at every point in ∂Xc.
+Then, by [Mat16b, Proposition 2.5, Remark 2.6] (see also [FK , (1.3.2) Proposition]), we obtain
+⟨ ⟨
+∂vε,δ,k, uε,δ⟩ ⟩Xd,hε,ωε,δ = ⟨ ⟨vε,δ,k, ∂
+∗
+hε,ωε,δuε,δ⟩ ⟩Xd,hε,ωε,δ − ( (vε,δ,k, (
+∂|s|2
+b)∗uε,δ) )∂Xd,hε,ωε,δ(33)
+for almost all d ∈ ]c − a, c + a[, where a is a suﬃciently small positive number. Here
+∂
+∗
+hε,ωε,δ is
+the formal adjoint of the
+∂-operator in Ln,•
+(2) (E)hε,ωε,δ and ( (•, •) )∂Xd,hε,ωε,δ is the inner product
+on the boundary ∂Xd deﬁned by
+( (a, b) )∂Xd,hε,ωε,δ :=
+∫
+∂Xd
+⟨a, b⟩hε,ωε,δ dSε,δ,
+
+===PDF PAGE 12===
+12 JUNYAN CAO, JEAN-PIERRE DEMAILLY, SHIN-ICHI MATSUMURA
+for smooth E-valued forms a, b, where dSε,δ denotes the volume form on ∂Xd deﬁned by dSε,δ :=
+− ∗ d|s|2
+b /
+⏐
+⏐d|s|2
+b
+⏐
+⏐
+hε,ωε.δ
+and ∗ denotes the Hodge star operator with respect to ωε,δ. Note that
+dVε,δ = dSε,δ ∧ d|s|2
+b . One can easily see that
+lim
+k→∞
+⟨ ⟨
+∂vε,δ,k, uε,δ⟩ ⟩Xd,hε,ωε,δ = ⟨ ⟨∂vε,δ, uε,δ⟩ ⟩Xd,hε,ωε,δ = ⟨ ⟨uε,δ, uε,δ⟩ ⟩Xd,hε,ωε,δ
+by (32), and thus it is suﬃcient to show that the right hand sid e of equality (33) converges to
+zero. For this purpose, we ﬁrst prove the following proposit ion.
+Proposition 3.7.
+lim
+ε→ 0
+lim
+δ→ 0
+∥(∂|s|2
+b )∗uε,δ∥ε,δ = 0.
+Proof of Proposition 3.7. By property (d) and property (B), we have
+η(Θhε(E) + γ) − i∂
+∂η ≥ η− 2i∂η ∧ ∂η − εω
+≥ η− 2i∂η ∧ ∂η − εωε,δ.
+Since uε,δ is harmonic with respect to Hε and ωε,δ, we have ∂
+∗
+ε,δuε,δ = 0 and
+∂uε,δ = 0. Further
+we have γ = i∂∂ψ on X \D. Therefore we obtain
+0 ≥ −∥ √ ηD′∗uε,δ∥2
+ε,δ = ∥√
+η∂uε,δ∥2
+ε,δ + ∥√
+η∂
+∗
+ε,δuε,δ∥2
+ε,δ − ∥ √
+ηD′∗uε,δ∥2
+ε,δ
+= ⟨ ⟨
+(
+ηΘHε − i∂
+∂η
+)
+Λuε,δ, uε,δ⟩ ⟩ε,δ + 2Re⟨ ⟨∂η ∧ ∂
+∗
+ε,δuε,δ, uε,δ⟩ ⟩ε,δ
+= ⟨ ⟨
+(
+ηΘHε − i∂
+∂η
+)
+Λuε,δ, uε,δ⟩ ⟩ε,δ
+≥ ⟨ ⟨
+(
+η− 2i∂η ∧ ∂η)Λuε,δ, uε,δ⟩ ⟩ε,δ − εq∥uε,δ∥2
+ε,δ.
+from the twisted Bochner-Kodaira-Nakano identity (see [Oh s04, Lemma 2.1] or [Fuj13, Propo-
+sition 2.20. 2.21]). On the other hand, one can easily check t hat
+⟨ ⟨
+(
+η− 2i∂η ∧
+∂η)Λuε,δ, uε,δ⟩ ⟩ε,δ = ∥η− 1(∂η)∗uε,δ∥2
+ε,δ = ∥η− 1 ∗ ∂η ∗ uε,δ∥2
+ε,δ,
+∂η = − χ′(σ)∂σ = − χ′(σ)
+(|s|2
+b + c) ∂|s|2
+b .
+By the above arguments, we conclude that
+εq∥uε,δ∥2
+ε,δ ≥ ∥ χ′(σ)
+η(|s|2
+b + c) (
+∂|s|2
+b)∗uε,δ∥2
+ε,δ.
+It follows that the left hand side converges to zero from ∥u∥H,ω ≥ ∥ uε,δ∥ε,δ. Further the function
+χ′(σ)/η(|s|2
+b + c) is bounded below since we have
+1
+5 > |s|2
+b , C > η, χ ′(σ) > 1
+for some constant C. This completes the proof. □
+Finally we prove the following proposition by using Proposi tion 3.7.
+Proposition 3.8. (i) For a relatively compact set K ⋐ X \D, we have
+lim
+ε→ 0
+lim
+δ→ 0
+lim
+k→ 0
+⟨ ⟨vε,δ,k, ∂
+∗
+hε,δuε,δ⟩ ⟩K,hε,ωε,δ = 0.
+(ii) For almost all d ∈ ]c − a, c + a[, we have
+lim
+ε→ 0
+lim
+δ→ 0
+lim
+k→ 0
+( (vε,δ,k, (∂|s|2
+b )∗uε,δ) )∂Xd,hε,ωε,δ = 0.
+Proof of Proposition 3.8. In general, we have the formula D′
+gu = G− 1∂(Gu) for a smooth her-
+mitian metric g, where G is a local function representing g. Let Gε be a local function rep-
+resenting hε. We remark that Gεe− ψ is a local function representing Hε. By the deﬁnition of
+∂
+∗
+ε,δ =
+∂
+∗
+Hε,ωε,δ , we have
+0 =
+∂
+∗
+ε,δuε,δ = − ∗ D′
+Hε ∗ uε,δ = − ∗ (Gεe− ψ)− 1∂(Gεe− ψ ∗ uε,δ),
+
+===PDF PAGE 13===
+A GENERAL EXTENSION THEOREM FOR COHOMOLOGY CLASSES 13
+and thus we obtain
+∂
+∗
+hε,ωε,δuε,δ = − ∗ (Gε)− 1∂(eψGεe− ψ ∗ uε,δ) = − ∗ ∂eψ ∗ uε,δe− ψ = − (
+∂|s|2
+b )∗uε,δe− ψ.
+Now we have
+lim
+k→∞
+⏐
+⏐⟨ ⟨vε,δ,k,
+∂
+∗
+hε,ωε,δuε,δ⟩ ⟩K,hε,ωε,δ
+⏐
+⏐ ≤ lim
+k→∞
+∥vε,δ,k∥K,hε,ωε,δ ∥
+∂
+∗
+hε,ωε,δ uε,δ∥K,hε,ωε,δ
+= ∥vε,δ∥K,hε,ωε,δ ∥
+∂
+∗
+hε,ωε,δ uε,δ∥K,hε,ωε,δ .
+Since
+limδ→ 0 ∥vε,δ∥K,hε,ωε,δ can be bounded by a constant that is independent of ε, it is suﬃcient
+to show that lim ε→ 0 limδ→ 0 ∥∂
+∗
+hε,ωε,δ uε,δ∥K,hε,ωε,δ = 0. We have e− ψ/2 = 1 /|s|b < C K on K for
+some constant CK > 0, since K is a relatively compact set in X \D. Hence we see that
+∥
+∂
+∗
+hε,ωε,δ uε,δ∥K,hε,ωε,δ = ∥ − (
+∂|s|2
+b )∗uε,δe− ψ∥K,hε,ωε,δ ≤ CK∥(
+∂|s|2
+b )∗uε,δ∥K,ε,δ.
+We obtain the ﬁrst statement (i) since the right hand side con verges to zero by Proposition 3.7.
+Now we prove statement (ii). By the Cauchy-Schwarz inequali ty, we have
+⏐
+⏐( (vε,δ,k, (
+∂|s|2
+b )∗uε,δ) )∂Xd,hε,ωε,δ
+⏐
+⏐2 ≤ ( (vε,δ,k, vε,δ,k) )∂Xd,hε,ωε,δ ( ((
+∂|s|2
+b )∗uε,δ, (
+∂|s|2
+b)∗uε,δ) )∂Xd,hε,ωε,δ .
+By Fubini’s theorem, we obtain∫
+d∈ ]c− a,c+a[
+( (vε,δ,k, vε,δ,k) )∂Xd,hε,ωε,δ dSε,δ =
+∫
+c− a<−| s|2
+b<c+a
+|vε,δ,k|2
+hε,ωε,δ dVε,δ ≤ ∥ vε,δ∥2
+hε,δ.
+By Fatou’s lemma, we see that∫
+d∈ ]c− a,c+a[
+lim
+ε→ 0
+lim
+δ→ 0
+lim
+k→∞
+( (vε,δ,k, vε,δ,k) )∂Xd,hε,ωε,δ dSε,δ ≤ lim
+ε→ 0
+lim
+δ→ 0
+∥vε,δ∥2
+hε,δ < ∞ .
+Therefore the integrand of the left hand side is ﬁnite for alm ost all d ∈ (c − a, c + a). On the
+other hand, by the same argument, we see that∫
+d∈ ]c− a,c+a[
+lim
+ε→ 0
+lim
+δ→ 0
+( ((∂|s|2
+b)∗uε,δ, (
+∂|s|2
+b )∗uε,δ) )∂Xd,hε,ωε,δ dSε,δ ≤ lim
+ε→ 0
+lim
+δ→ 0
+∥(∂|s|2
+b)∗uε,δ∥hε,ωε,δ = 0.
+Therefore the integrand of the left hand side is zero for almo st all d ∈ (c − a, c + a). This
+completes the proof. □
+Theorem 1.1 is now a consequence of Proposition 3.4, Proposi tion 3.8, and equation (33). □
+Remark 3.9. In the case of a holomorphically convex manifold, a proof bas ed on injectivity
+theorems can be obtained by a slight modiﬁcation of the above proof. The only problem is
+that an E-valued diﬀerential form u representing a given cohomology class is not necessarily
+L2-integrable but just locally L2-integrable. Since X admits a holomorphic map π : X → S to
+a Stein space S, the form u is L2-integrable with respect to the metric he− ψe− Φ for a suitable
+psh exhaustion function Φ on X. Then it is not hard to check that our arguments still work by
+replacing h with he− Φ.
+Remark 3.10. It would be interesting to know whether the hypothesis that ψ has analytic
+singularities is really needed. The main statement still ma kes sense when ψ has arbitrary
+analytic singularities, and one may thus guess that the resu lt can be extended by performing a
+further regularization of ψ.
+References
+[Dem82] J.-P. Demailly, Estimations L2 pour l’op´ erateur
+∂ d’un ﬁbr´ e vectoriel holomorphe semi-positif au-dessus
+d’une vari´ et´ e k¨ ahl´ erienne compl` ete,Ann. Sci. ´Ecole Norm. Sup(4). 15 (1982), 457–511.
+[Dem-e-book] J.-P. Demailly, Complex analytic and diﬀerential geometry, e-book available on the web page of the
+author, https://www-fourier.ujf-grenoble.fr/~demailly/manuscripts/agbook.pdf
+[Dem-book] J.-P. Demailly, Analytic methods in algebraic geometry, Surveys of Modern Mathematics, 1. Interna-
+tional Press, Somerville, Higher Education Press, Beijing , (2012).
+[Dem15a] J.-P. Demailly, On the cohomology of pseudoeﬀective line bundles, J.E. Fornaess et al. (eds.) Complex
+Geometry and Dynamics, Abel Symposia 10, DOI 10.1007/978-3 -319-20337-9 4.
+
+===PDF PAGE 14===
+14 JUNYAN CAO, JEAN-PIERRE DEMAILLY, SHIN-ICHI MATSUMURA
+[Dem15b] J.-P. Demailly, Extension of holomorphic functions deﬁned on non reduced an alytic subvarieties,
+arXiv:1510.05230v1, Advanced Lectures in Mathematics Vol ume 35.1, the legacy of Bernhard Riemann after
+one hundred and ﬁfty years, 2015.
+[DPS01] J.-P. Demailly, T. Peternell, M. Schneider, Pseudo-eﬀective line bundles on compact K¨ ahler manifolds,
+International Journal of Math. 6 (2001), 689–741.
+[DF83] H. Donnelly, C. Feﬀerman, L2-cohomology and index theorem for the Bergman metric, Ann. Math. 118
+(1983) 593–618.
+[FK] G. B. Folland, J. J. Kohn, The Neumann problem for the Cauchy-Riemann complex, Annals of Mathematics
+Studies, No. 75. Princeton University Press, Princeton, N.J.; University of Tokyo Press, Tokyo, (1972).
+[Fuj13] O. Fujino, A transcendental approach to Koll´ ar’s injectivity theorem I I,J. Reine Angew. Math. 681 (2013),
+149–174.
+[FM16] O. Fujino, S. Matsumura, Injectivity theorem for pseudo-eﬀective line bundles and it s applications,
+arXiv:1605.02284v1.
+[GZ15] Qi’an Guan, Xiangyu Zhou, A proof of Demailly’s strong openness conjecture, Annals of Math. 182 (2015),
+no. 2, 605–616.
+[Hie14] P. H. Hiˆ e
+p, The weighted log canonical threshold, C. R. Math. Acad. Sci. Paris 352 (2014), no. 4, 283–288.
+[Kaz84] H. Kazama, ∂-cohomology of (H, C)-groups, Publ. Res. Inst. Math. Sci. 20 (1984), 297–317.
+[Lem14] L. Lempert, Modules of square integrable holomorphic germs, arXiv:1404.0407v2.
+[Mat16a] S. Matsumura, An injectivity theorem with multiplier ideal sheaves of sin gular metrics with transcen-
+dental singularities, arXiv:1308.2033v4, to appear in J. Algebraic Geom.
+[Mat16b] S. Matsumura, An injectivity theorem with multiplier ideal sheaves for hi gher direct images under K¨ ahler
+morphisms, arXiv:1607.05554v1.
+[Ohs04] T. Ohsawa, On a curvature condition that implies a cohomology injectiv ity theorem of Koll´ ar-Skoda type,
+Publ. Res. Inst. Math. Sci. 41 (2005), no. 3, 565–577.
+[OT87] T. Ohsawa, K. Takegoshi, On the extension of L2holomorphic functions, Math. Zeitschrift 195 (1987),
+197–204.
+(1) Institut de Math ´ematiques de Jussieu, Universit ´e Pierre et Marie Curie, 4 place Jussieu,
+75252 P aris, e-mail : junyan.cao@imj-prg.fr
+(2) Institut Fourier, Universit ´e Grenoble Alpes, 100 rue des Maths, 38610 Gi `eres, France, e-mail :
+jean-pierre.demailly@univ-grenoble-alpes.fr
+(3) Mathematical Institute, Tohoku University, 6-3, Arama ki Aza-Aoba, Aoba-ku, Sendai 980-8578,
+Japan, e-mail : mshinichi@m.tohoku.ac.jp, mshinichi0@gmail.com

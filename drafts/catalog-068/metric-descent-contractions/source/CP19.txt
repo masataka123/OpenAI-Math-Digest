@@ -1,0 +1,2134 @@
+FOLIATIONS WITH POSITIVE SLOPES AND BIRATIONAL
+STABILITY OF ORBIFOLD COTANGENT BUNDLES
+by FRÉDÉRIC CAMPANA and MIHAI P˘AUN
+ABSTRACT
+Let X be a smooth connected projective manifold, together with an snc orbifold divisor /Delta1, such that the pair
+(X,/Delta1)is log-canonical. If K X + /Delta1is pseudo-effective, we show , among other things, that any quotient of its orbifold
+cotangent bundle has a pseudo-effective determinant. This improves considerably our previous result (Campana and P˘aun
+in Ann. Inst. Fourier. 65:835, 2015), where generic positivity instead of pseudo-effectivity was obtained. One of the new
+ingredients in the proof is a version of the Bogomolov-McQuillan algebraicity criterion for holomorphic foliations whose
+minimal slope with respect to a movable class (instead of an ample complete intersection class) is positive.
+CONTENTS
+1 .I n t r o d u c t i o n....................................................... 1
+2 .S l o p e a n d s e m i - s t a b i l i t y w i t h r e s p e c t t o m o v a b l e c l a s s e s............................... 5
+2 . 1 .T h e m o v a b l e c o n e ................................................. 5
+2.2. Slopes associated to a movable class . . . .................................... 5
+2 . 3 .T e n s o r p r o d u c t s.................................................. 7
+2 . 4 .A v a n i s h i n g c r i t e r i o n : f r o m e x t e r i o r t o t e n s o r p o w e r s .............................. 8
+2 . 5 .B i r a t i o n a l i n v a r i a n c e o f s l o p e - p o s i t i v e f o l i a t i o n s ................................. 9
+3 .P s e u d o e f f e c t i v i t y o f r e l a t i v e c a n o n i c a l b u n d l e s .................................... 10
+4 .A l g e b r a i c i t y c r i t e r i a f o r f o l i a t i o n s ........................................... 14
+4 . 1 .A l g e b r a i c i t y .................................................... 15
+4 . 2 .R a t i o n a l c o n n e c t e d n e s s.............................................. 19
+4 . 3 .P s e u d o - e f f e c t i v i t y o f c o t a n g e n t s h e a v e s o f f o l i a t i o n s ............................... 20
+4 . 4 .D e s c e n t o f f o l i a t i o n s ................................................ 24
+5 .O r b i f o l d t e n s o r b u n d l e s o n K a w a m a t a c o v e r s .................................... 25
+5 . 1 .R a m i ﬁ e d c o v e r i n g s ................................................ 26
+5 . 2 .O r b i f o l d t e n s o r b u n d l e s.............................................. 26
+5 . 3 .T h e t a n g e n t b u n d l e a n d t h e L i e b r a c k e t o n o r b i f o l d s .............................. 28
+5 . 4 .T h e r e l a t i v e c a n o n i c a l b u n d l e o f a n o r b i f o l d ﬁ b r a t i o n ............................. 34
+6. Proof of Theorems 1.4 and 1.3 ............................................. 37
+6.1. Proof of Theorem 1.4 ............................................... 37
+6.2. Proof of Theorem 1.3 ............................................... 38
+7 .B i r a t i o n a l s t a b i l i t y o f t h e o r b i f o l d c o t a n g e n t b u n d l e ................................. 38
+7 . 1 .N u m e r i c a l d i m e n s i o n............................................... 39
+7 . 2 .B i r a t i o n a l s t a b i l i t y o f o r b i f o l d c o t a n g e n t b u n d l e s ................................ 40
+7 . 3 .C r i t e r i a f o r p s e u d o e f f e c t i v i t y a n d l o g - g e n e r a l t y p e ............................... 40
+7.4. Cases −(KX + /Delta1)e i t h e r a m p l e , o r n u m e r i c a l l y t r i v i a l............................. 43
+8 .V a r i a t i o n a n d p o s i t i v i t y f o r q u a s i - p r o j e c t i v e f a m i l i e s ................................. 43
+8 . 1 .C r i t e r i a f o r p s e u d o e f f e c t i v i t y a n d b i g n e s s o f ‘ p u r e l y ’ l o g a r i t h m i c c o t a n g e n t b u n d l e s.............45
+A c k n o w l e d g e m e n t s..................................................... 47
+P u b l i s h e r ’ s N o t e ...................................................... 47
+R e f e r e n c e s ......................................................... 47
+1. Introduction
+In the present text we evaluate the positive directions of the tangent bundle of a pro-
+jective manifold by means of the slope of its subsheaves with respect to classes of movable
+https://doi.org/10.1007/s10240-019-00105-w2 FRÉDÉRIC CAMPANA, MIHAI P ˘AUN
+curves. The crucial property is the birational nature of this notion. We show that the pos-
+itive directions of the tangent bundle are given by ﬁbering-type contractions birationally
+preserved. They are the same ones as those appearing in the Log-minimal model pro-
+gram, which rest on much more delicate notions and arguments, in some sense dual to
+those presented here.
+Our basic tool and starting point is Theorem 1.1 below . This result is also valid
+in the orbifold context, considerably extending its range of applicability . The arguments
+we use lead to positivity/negativity properties of tensor powers of orbifold cotangent
+bundles. In this article, we work in characteristic zero exclusively . Classical results on
+rational curves are known, and thus quoted here, only when the orbifold divisor is zero.
+Let X be a projective manifold, and let
+F ⊂ TX be a holomorphic foliation. Given
+a movable class α ∈ Hn−1,n−1(X, R) on X, the condition: μα,min(F)> 0 means that the
+inequality of intersection numbers:
+(1) c1(Q).α >0,
+holds for any non-zero quotientF → Q → 0.
+Our ﬁrst main result is:
+Theorem 1.1.— Let X be projective smooth, and let F ⊂ TX be a foliation such that
+μα,min(F)> 0 for some movable class α. Then F is an algebraic foliation and the closure of its
+leaves are rationally connected.
+The algebraicity statement is the movable version of the Bogomolov-McQuillan alge-
+braicity criterion [7], where the class α is a complete intersection class [C]=[ H]n−1 of
+(very) ample hypersurfaces. The condition (1) in this case means that the restriction F|C
+is ample. The proof given here follows the ideas from [ 7], strengthened by the theory of
+semi-stability with respect to movable classes introduced and developed in [ 18]. A main
+difference with [ 7] is that we do not restrict to movable curves of the given class. The
+failure of Mehta-Ramanathan in this context would anyhow prevent from doing this.
+The rational connectedness statement is obtained by a simple and direct combina-
+tion of several results: the existence of a ‘relative rational quotient’ for any ﬁbration, the
+pseudo-effectivity of the canonical bundle of its base by [ 25], and Theorem 3.4 below ,
+asserting (in a more reﬁned version) the pseudo-effectivity of the relative canonical bun-
+dle of a ﬁbration having generic ﬁbres with pseudo-effective canonical bundle. The slope
+considerations are central in this proof, as well as their birational preservation in the case
+of movable classes.
+This proof radically differs from the previous ones given in [ 7]a n d[ 35]i nt h e
+special case of α a complete intersection class.
+Theorem 1.1 plays a crucial role in the proof of the next statement (we refer to
+Theorem 4.9 in Section 4 for a more complete statement).FOLIATIONS WITH POSITIVE SLOPES AND BIRATIONAL STABILITY. . . 3
+Theorem 1.2.— Let X be a non-singular projective manifold, and let F be a foliation on X
+having canonical singularities and such thatKF pseudo-effective. For any m> 0, the determinant bundle
+of any coherent, torsion-free quotient of ⊗ m/Omega11
+F is pseudo-effective.
+When K X is pseudo-effective, Theorem 1.2 follows directly from Theorem 1.3
+below , since/Omega11
+F is a quotient of/Omega11
+X. Remark however that it is interesting in its own right,
+since foliations F with KF pseudo-effective on some uniruled X ′s do exist (cf. [ 19]). In
+fact, Theorem 1.2 does not seem provable with the methods of [19], even using also [5].
+Our original motivation was to establish the birational stability of the cotangent
+bundle /Omega11(X,/Delta1)of smooth log-canonical orbifold pairs (X,/Delta1)for which K X + /Delta1is
+pseudo-effective (this last condition being essentially necessary).
+Recall (cf. [19]) that the orbifold cotangent bundle is deﬁned by lifting logarithmic
+differentials with denominators of fractionary exponents to suitable ramiﬁed covers π :
+X/Delta1→ X adapted to the pair (X,/Delta1).T h er a m i ﬁ e dc o v e rπ is Galois, and we denote by
+G the corresponding group.
+Theorem 1.3.— Let (X,/Delta1)be a smooth projective log-canonical pair, with pseudo-effective
+canonical bundle KX + /Delta1.L e tQ be any quotient of the tensor power ⊗ mπ⋆/Omega11(X,/Delta1),m ≥ 1 being
+any integer.
+For any movable classα on X, we then have, on X/Delta1:
+(2) c1(Q).π⋆α≥ 0
+If /Delta1= 0, and if KX is pseudo-effective, this says that the determinant of any quo-
+tient of ⊗ m/Omega11
+X is pseudo-effective, strengthening a fundamental result of Y . Miyaoka [41]
+stating that /Omega11
+X|C is nef for any sufﬁciently generic complete intersection curve C ⊂ X.
+In [18], Theorem 1.3 is stated1 as Theorem 1.4 when /Delta1= 0. In [ 19] we obtained the
+analog of Miyaoka’s theorem for log-canonical orbifolds.
+In order to illustrate the main ideas, we now sketch the proof of Theorem 1.3 in
+case /Delta1= 0.
+Assume by contradiction the existence of a sheafQ and a movable classα as above,
+such that the inequality ( 2) is not satisﬁed. By dualising, this means that the maximal
+destabilising subsheaf F of TX has a positive α-slope. The algebraicity criterion of The-
+orem 1.1 shows that F deﬁnes a rational map p : X/axisshort/axisshort/arrowaxisrightZ, the generic ﬁbre of which is
+the Zariski-closure of a leaf ofF, and rationally connected. This contradicts the pseudo-
+effectivity of KX.
+If /Delta1̸= 0, then the proof of Theorem 1.3 requires several constructions of foun-
+dational nature. They are related to the notion of holomorphic orbifold tensors, which
+1 As pointed out by A. Langer, there is a gap in the proof of Theorem 1.4 of [ 18]. On page 49, the reference to
+Y . Miyaoka’s paper in Comment. Math. Univ . St Paul. 42 (1993), pp. 1–7 is indeed used in a context which is not covered
+by this text. This does not affect the results of Sections 3 and 5 of [ 18]. In fact, all statements of [ 18] are true, as special
+cases of the ones in the present text.4 FRÉDÉRIC CAMPANA, MIHAI P ˘AUN
+is exposed in detail in Section 5. As we have already mentioned, the holomorphic ten-
+sors corresponding to (X,/Delta1)a r ed e ﬁ n e do ns u i t a b l ec o v e r sπ : X/Delta1→ X. An equally
+important technical tool is the orbifold version of Lie bracket. We show that the orbifold
+tangent bundle is closed with respect to this operation, and we derive an orbifold version
+of Frobenius integrability criteria. The inverse imageπ
+⋆TX is not a sub-sheaf of TX/Delta1,a n d
+additional arguments are needed in this broader context.
+The difference in the conclusions of Theorem 1.4 and Theorem 1.1 is due to the
+absence of a theory of rationally connected objects in the category of orbifold pairs.
+A consequence of the results we develop in orbifold setting is the following version
+of Theorem 1.1, as follows.
+Theorem 1.4.— Let (X,/Delta1)be a smooth projective log-canonical pair. LetF ⊂ π∗T(X,/Delta1)
+be a saturated G-invariant subsheaf such that:
+(1) μα,min(F)> 0,
+(2) μα,min(F)> 1
+2μα,max(π∗T(X,/Delta1)/F).
+The saturation of F in π∗(TX) then is equal to the π-inverse image of a coherent sheaf F′ ⊂ TX.
+Moreover,F′ deﬁnes an algebraic foliation on X such that the restriction of KX + /Delta1to the closure F′ of
+the generic leaf of F′ is not pseudo-effective.
+Structure of the text. — Section 2 recalls the notions and results needed here about the
+stability with respect to a movable class, introduced in [18].
+Section 3 studies the positivity properties of the relative canonical bundle of a rational
+map. In particular, its degree on lifts of movable classes is preserved under modiﬁca-
+tions.This permits a reduction to ‘neat’ models of arbitrary rational ﬁbrations.
+Section 4 establishes Theorems 1.1 and 1.2.
+In the next two sections we treat the orbifold version of these results.
+Section 5 reviews the deﬁnition of the orbifold (co)tangent bundles. For the smooth
+log-canonical pairs (X,/Delta1)considered here, these objects admit an explicit simple de-
+scription on suitable ramiﬁed covers introduced by Y . Kawamata.
+The notion of Lie derivative in orbifold setting is introduced here. This operator is
+deduced from the lift of the Lie derivative of T X. We establish a version of the classical
+Frobenius integrability criteria, in the following sense. If F/Delta1⊂ π⋆T(X,/Delta1)is a saturated
+and G-invariant subsheaf for which the orbifold Lie bracket vanishes, then F/Delta1is the
+π-inverse image of a holomorphic foliationF on X.
+Section 6 gives the proofs of Theorems 1.4 and 1.3, by combining the previous
+preparatory results.
+Section 7 deals with thebirational stability of the orbifold cotangent bundle of(X,/Delta1)
+if KX + /Delta1is pseudo-effective. This means that the numerical dimension of any sub-line
+bundle L of ⊗ mπ∗/Omega11(X,/Delta1)is bounded by the numerical dimension of KX + /Delta1.
+Combined in Section 8 with the work of Viehweg-Zuo [50], these results permit to
+compare the variation of families of projective manifolds with ample canonical bundlesFOLIATIONS WITH POSITIVE SLOPES AND BIRATIONAL STABILITY. . . 5
+to the canonical bundle on the base of the family . Related results by B. Taji and Popa-
+Schnell are mentioned ([49]a n d[47]).
+2. Slope and semi-stability with respect to movable classes
+We will collect in this section a few results concerning the notion of slope stability
+of a sheaf with respect to a movable class. They were introduced in [ 18]. These results
+play a crucial role in the proof of our algebraicity criteria, cf. section four. See [26]f o ra
+detailed and extended presentation.
+2.1. The movable cone. — To start with, let N1(X)R be the space of numerical curves
+classes on X. We recall the following notion.
+Deﬁnition 2.1.— Ac l a s sα∈ N1(X)R is called movable if we haveα· D ≥ 0 for any effective
+divisor D. The set of such classes form a closed convex cone denoted by Mov(X) and called the movable
+cone.
+A movable class is said to be rational if it belongs to N1(X)Q.
+By the main result in [ 6], the set Mov (X) is the closed convex cone in N 1(X)R
+generated by the classes [C] of ‘movable curves’, where an irreducible curve is said to be
+‘movable’ if it is a member of a covering algebraic family of curves on X parametrised
+by an irreducible projective variety . This is also the closed cone generated by the classes
+of curves of the form π
+⋆(H1 ∩···∩ Hn−1),w h e r eπ : ˆX → X is a modiﬁcation of the
+manifold X, and the H′
+j s are hyperplane sections of ˆX.
+Let p : Y → X is be a generically ﬁnite map between two smooth projective man-
+ifolds. If β ∈ N1(Y)R is a movable class on Y, then the p-inverse image of β is denoted by
+p⋆(β) ∈ N1(X)R and it is deﬁned in such a way that the projection formula holds true. Al-
+ternatively ,β can be represented by a closed real form of bi-degree(n− 1, n− 1) and then
+p⋆(β) is the class deﬁned by the pull-back of the said form. It is clear thatp⋆(β) ∈ Mov(X)
+as soon as we have β ∈ Mov(Y).
+2.2. Slopes associated to a movable class. —LetE ̸= 0 be a coherent, torsion-free sheaf
+on X; let detE its determinant, that is, the bi-dual of its top power. This is a line bundle
+on X with ﬁrst Chern class c1(E).I f α∈ Mov(X) is a movable class the α-slope μα(E) of
+E is:
+(3) μα(E) := c1(E).α
+rk(E)
+The α-semi-stability is deﬁned as usual.
+Deﬁnition 2.2.— The torsion-free coherent sheaf E is α-semistable if
+(4) μα(G) ≤ μα(E)
+for any non-trivial coherent subsheafG ⊂ E.6 FRÉDÉRIC CAMPANA, MIHAI P ˘AUN
+The α-stability (not used here) is deﬁned in a similar manner, the inequality ( 4)
+being strict if the rank of G is strictly smaller than the rank of E.
+As showed in [ 18], essentially all of the properties of the classical slope-stability
+theory still hold in this extended setting. A crucial exception is the Mehta-Ramanathan
+theorem (see Example 4.3 below).
+The construction of Harder-Narasimhan ﬁltrations with respect to movable classes
+also holds, with the same properties. We only state the results for smooth projective man-
+ifolds since this is the only case needed here. As observed in [ 26] ,t h et h e o r ya d a p t s
+immediately when the variety X is Q-factorial.
+Deﬁnition 2.3.— Let X be a non-singular manifold, and let
+E be a coherent, torsion-free sheaf
+of positive rank on X.W ed e ﬁ n e :
+(5) μα,max(E) := sup
+{
+μα(F) :F ⊂ E, any nonzero coherent subsheaf
+}
+as well as its dual version:
+(6) μα,min(E) := inf
+{
+μα(Q) :E → Q → 0
+}
+where the quotient sheafQ in (6) is coherent, non-zero and torsion-free.
+We quote next the following result.
+Proposition 2.4.— [18] There exists a non-zero, coherent sheaf, unique and maximal for the
+inclusionF ⊂ E such that we have
+(7) μα(F) = μα,max(E).
+The supremum in (5) is thus a maximum. Moreover, the sheafF is saturated inE.
+The sheaf F in Proposition 2.4 is obviously α-semistable; it is called the maximal
+destabilising subsheaf.
+The following simple vanishing criterion for sections of coherent sheaves in terms
+of the slope function will be used here.
+Lemma 2.5 ([18]).— Let E be a coherent, torsion-free sheaf.
+If μα,max(E)< 0 for some movable class α, then H0(X,E) = 0.
+More generally: Hom(E,E′) = 0,i f μα,min(E)>μ α,max(E′).
+For example, the ﬁrst claim of this lemma applies ifE is α-semistable and of nega-
+tive slope.
+We will use the following in the proof of Theorem 2.10:
+Proposition 2.6.— Let π : X′ → X a ﬁnite Galois ramiﬁed cover of group G and degree d
+between complex and connected projective manifolds. Letα be a movable class onX,a n dl e tE be a torsionFOLIATIONS WITH POSITIVE SLOPES AND BIRATIONAL STABILITY. . . 7
+free coherent sheaf on X.W ed e ﬁ n eE′ := π∗(E) and α′ := π∗(α) the respective inverse images. Then
+we have
+μα,max(E) = 1
+d μα′,max
+(
+E′)
+,
+and F′ := π∗(F) is the maximal destabilising subsheaf of E′,i f F is the maximal destabilising
+subsheaf of E.
+Proof. — Let F′ be the maximal destabilising subsheaf ofE′ (with respect to α′). It
+is G-invariant, since so isE′.M o r e o v e r ,F′ is saturated inE′ by Proposition 2.4.T h e nw e
+haveF′ = π∗(F) for some torsion free coherent sheafF on X, cf. [26] and thus we infer
+the inequality d · μα,max(E) ≥ μα′,max(E′).
+Since we clearly have d · μα,max(E) ≤ μα′,max(E′), the claim follows. □
+2.3. T ensor products. —If E1,E2 be two coherent, torsion-free sheaves on X. We
+denote byE1ˆ⊗E2 the reﬂexive hull (E1 ⊗ E2)⋆⋆.
+The following fundamental result was established in [ 18]i ft h ec l a s sα is either
+rational or in the interior of Mov (X). When Ej are vector bundles, the proof given by
+Matei Toma relies on the deep analytic Kobayashi-Hitchin correspondance for Gaudu-
+chon metrics established by Li-Yau [39]. Forα arbitrary , the proof given in [26], is treated
+by reduction to this basic case.
+Theorem 2.7 ([18, 26]).— Let α be a movable class on X;i f
+Ej as above are both α-
+semistable, then so isE1ˆ⊗E2.
+The slope behaves well under tensor operations. We only mention next the few
+properties used here, and we refer to the articles quoted above for a complete proof.
+Proposition 2.8.— Let E,G be two torsion-free coherent sheaves, and let α be a movable class.
+Then we have the following properties:
+(1) The slope of the tensor product equals
+μα(Eˆ⊗G) = μα(E) + μα(G).
+(2) For each m≥ 1 we have
+μα
+(
+Symm(E)
+)⋆⋆
+= mμα(E).
+(3) The slope of the exterior product equals
+μα
+(
+∧2(E)
+)⋆⋆
+= 2μα(E).
+(4) Moreover, ifE andG are semistable with respect toα, then the sheavesEˆ⊗G,( Symm(E))⋆⋆
+and (∧2(E))⋆⋆ are equally α-semistable.8 FRÉDÉRIC CAMPANA, MIHAI P ˘AUN
+The following statement is established in [ 26] as consequence of the existence of
+the Harder-Narasimhan ﬁltration with respect to a mobile class.
+Theorem 2.9 ([18, 26]).— Let E,G be two torsion-free coherent sheaves, and let α be a
+movable class. Then we have
+(8) μα,max(Eˆ⊗G) = μα,max(E) + μα,max(G),
+together with the corresponding relations for μα,min. Similar identities hold true if we replace the reﬂexive
+tensor product in (8) with (Symm E)⋆⋆ or with (∧2E)⋆⋆.
+The results collected here are relevant in the context of the vanishing criterion we
+discuss next.
+2.4. A vanishing criterion: from exterior to tensor powers. — We consider the following
+situation: π : X′ → X is a ﬁnite ramiﬁed Galois cover of group G between two connected
+complex projective manifolds. Let E ′ be a G-invariant holomorphic vector bundle on
+X′,a n dL′ be any numerically trivial line bundle on X ′. We ﬁnally consider also ample
+movable classesα= Hn−1, for H varying in an non-empty open subset of the polarisation
+classes on X, with α′ := π∗(α) their inverse images on X′.B y[ 27], Proposition 6.5, these
+α′s thus cover a nonempty open subset U in the cone of movable classes on X. The proof
+of [27] consists in differentiating the map p : H → Hn−1, the Hard Lefschetz theorem
+implying that it is submersive at any point of H (moreover, the authors also show the
+injectivity of p by a ingenious use of Khovanskii-Teissier inequalities).
+Theorem 2.10.— We assume that the following holds
+(1) μ
+π∗(γ ),max(E′) ≤ 0, for any γ ∈ U.
+(2) H 0(X′,∧qE′ ⊗ L′) = 0,f o ra n yq> 0,a n dL′ ≡ 0 on X′.
+Then we have
+H0(
+X′,⊗ mE′ ⊗ L′)
+= 0,
+for any m > 0 and L′ ≡ 0 on X′.
+Before proceeding to the proof, we remark that if E ′ = π∗(E) for some vector
+bundle E on X, and if H 1(X, Z) = 0,2 then the hypothesis (2) above can be replaced by
+the weaker hypothesis:
+(2′)H 0(X,∧qE) = 0, for any q > 0.
+and obtain the same conclusion.
+2 In particular, if the algebraic fundamental groupˆπ1(X) of X is trivial.FOLIATIONS WITH POSITIVE SLOPES AND BIRATIONAL STABILITY. . . 9
+Proof of Theorem 2.10.— Assume by contradiction that we have a non-zero section
+of ⊗ mE′ ⊗ L′ for some L′ ≡ 0. Then μα′,max(⊗ mE′ ⊗ L′) = m.μα′,max(E′) = 0, for every
+α ∈ U. There thus exists an α for which the maximal α′-destabilising subsheaf F′ ⊂ E′
+has maximum rank q > 0. Because μβ′,max(E′) = 0f o rβ′ = π∗(β) with β close to α,w e
+see3 that F′ is also the β′-maximal destabilising subsheaf of E ′ (just write β = α + t.γ,
+t > 0, and replace t by − t, just as in the proof of the vanishing of a derivative in a
+local maximum). Since F′ is G-invariant, so is det (F′),a n ds oN. det(F′) = π∗(L),f o r
+some L ∈ Pic(X),i fN := Card(G) = deg(π).T h u sN. det(F′).π∗(α)= π∗(L).π∗(α)=
+N.L.α = 0,∀α ∈ U, and: L ≡ 0, so that, also: det (F′) ≡ 0. Since det (F′) ⊂∧ qE′,w e
+get that H0(E′,∧qE′ ⊗ L′) ̸= 0, if L′ =− det(F′). This contradicts the hypothesis 2, and
+proves the theorem.
+Let us show how to modify the proof in order to get the conclusion from the hy-
+pothesis 2′ if E′ = π∗(E) and if H 1(X, Z) = 0: in this case indeed, by Proposition 2.6,
+μπ∗(α),max(π∗(E)) = N.μα,max(E) and the maximal π∗(α)-destabilising subsheaf F′ of
+π∗(E) is the inverse image by π of the maximal destabilising subsheaf F of E. We thus
+obtain F ⊂ Es u c ht h a td e t(F) ≡ 0, so that OX ∼= det(F), because H1(X, Z) = 0, and
+so: OX ∼= det(F) ⊂∧ q(E), contradicting 2′. □
+An illustration of the applications of this result is the following statement.
+Corollary 2.11 ([21]).— Let (X, D) be a smooth orbifold pair with X projective smooth and
+D a reduced divisor on X with simple normal crossings. Assume that:
+(1) (X, D) is Fano (i.e.: −(KX + D) is ample);
+(2) H 0(X,/Omega1
+q
+X(Log(D)) ⊗ L) = 0,f o rq > 0 and any L ≡ 0 in Pic(X).
+Then we have H0(X,⊗ m/Omega11
+X(Log(D)) ⊗ L) = 0 for any m > 0 and L ≡ 0 on X.
+F o rt h ep r o o fw er e f e rt o[21].
+Remark that, in general, H0(X,/Omega1
+q
+X(Log(D))) ̸= 0 for Fano pairs (X, D) as above
+(as shown by (Pn, D), if D is a union of k ≤ n hyperplanes in general position, for which
+h0(X,/Omega11
+X(Log(D))) = k.)
+2.5. Birational invariance of slope-positive foliations. — We consider a saturated distri-
+bution F ⊂ TX, and a birational morphism π : ˆX → X, where ˆX is also non-singular.
+Then we get an induced distribution on ˆF ⊂ TˆX, as follows. The tangent bundle of ˆX
+can be seen as subsheaf of the π-inverse image π⋆(TX) of the tangent bundle of X, and
+we deﬁne ˆF := π⋆(F) ∩ TˆX.
+We establish next the preservation of the slopes under birational modiﬁcations.
+Although very simple, this observation is fundamental. It is also noticed in the very re-
+cent article [23]. It was already stated in [ 18], Section 5, but not used in the context of
+foliations.
+3 This clever observation was communicated to us by Matei Toma.10 FRÉDÉRIC CAMPANA, MIHAI P ˘AUN
+Lemma 2.12.— Let π : ˆX → X be a birational morphism between two smooth and connected
+complex projective manifolds.
+LetF ⊂ TX be a saturated distribution, and ˆF := π∗(F)∩ TˆX be its inverse image in TˆX.
+Let α be a movable class on X,a n dˆα := π⋆α be its inverse image on ˆX. Then ˆα ∈ Mov(ˆX) is a
+movable class on ˆX. Moreover, we have
+(9) μα(F) = μˆα(ˆF)
+as well as μα,min(F) = μˆα,min(ˆF).
+Proof. — The fact that ˆα is a movable class on ˆX is a direct consequence of the
+deﬁnition. We have μα(F) = μˆα(π⋆F); on the other hand, det(ˆF) and det(π⋆F) differ
+by an (effective) π-exceptional divisor E on ˆX. Since ˆα· E = 0 for any such divisor, the
+statement is proved. □
+Remark 2.13. — In particular, both slopes in (9) are simultaneously positive, nega-
+tive, or zero provided that the class ˆα is the inverse image of the movable class α on X. However, in
+the other-contracting-direction, this type of preservation of slope-positivity with respect
+to movable classes β and π
+⋆β on ˆX and X respectively may fail, as illustrated by the
+following example. LetF be the foliation given by a generic pencil of conics on P2.T h e
+slope of F is negative, but becomes positive on the blow-upˆP2 of the four base-points, if
+one chooses for β on ˆP2, for example the class of the strict transform of a generic mem-
+ber of the given pencil of conic, or a suitable ample class. We thank J. Pereira for this
+observation and for this example. This example will reappear below in the context of
+Theorem 4.9.
+Remark 2.14.—L e t
+F1 ⊂ F2 be two torsion-free coherent sheaves having the
+same rank (we recall that in this context, the sheaves Fi are locally free outside a subset
+of co-dimension at least two, and their respective rank is deﬁned via the associated vector
+bundles). If μ
+α,min(F1)> 0, then we equally have μα,min(F2)> 0. This is a consequence
+of the fact that det(F2) = det(F1)⊗ O(D) for some effective divisor D. Notice, by contrast,
+that ifF1 is semi-stable,F2 need not be semi-stable (see Remark 4.18).
+3. Pseudoeffectivity of relative canonical bundles
+Let p : X/axisshort/axisshort/arrowaxisrightZ be a dominant and connected rational map, where X and Z are
+non-singular projective manifolds. In this section we deﬁne the ‘saturated’ relative canon-
+ical bundle of p, and establish some of its birational positivity properties with respect to a
+movable class. This relies in particular on the preceding observation that changing both
+X and the birational model Z, and lifting α, the slopes of the corresponding sheaves are
+preserved.FOLIATIONS WITH POSITIVE SLOPES AND BIRATIONAL STABILITY. . . 11
+Let X0 ⊂ X be the largest Zariski open set such that the restriction
+(10) p|X0 : X0 → Z
+of our given rational map p is holomorphic; in particular we have codim X(X \ X0) ≥ 2.
+The map (10) above will be denoted by p0 in the sequel.
+Deﬁnition 3.1.— Let KZ be any divisor on Z in the canonical class. Let p⋆KZ be the closure
+p⋆
+0KZ of the analytic cycle p⋆
+0KZ of X0. The relative canonical bundle of p is
+(11)K X/Z := KX − p⋆KZ.
+We introduce next the divisor D(p) on X by:
+(12)D (p) :=
+∑
+k
+(tk − 1)Fk,
+where the hypersurfaces Fk in (12) are all the irreducible divisors of X which, restricted
+to X0, are mapped by p0 to divisors Gk ⊂ Z, such that p⋆
+0Gk vanishes to the order tk ≥ 2
+along Fk. It is a key object in the study of holomorphic foliations, whose deﬁnition will be
+recalled next.
+Deﬁnition 3.2.— A foliation on a manifold X is a coherent subsheaf F ⊂ TX enjoying the
+following properties:
+(i) F is closed under the Lie bracket, and
+(ii) The quotient TX/F is torsion-free, i.e.F is saturated in TX.
+Let X0 ⊂ X be the maximal open subset of X such that the restriction F|X0 is a
+sub-bundle. We note that the codimension of the complement X \ X0 in X is at least
+two, given that F is torsion-free. A leaf of F is a connected, locally closed holomorphic
+sub-manifold L ⊂ X0 whose tangent bundle coincides with F, i.e. TL =F|L.Al e a fLi s
+called algebraic if it is open in its Zariski closure.
+For example, the kernel of the differential of a rational map p : X/axisshort/axisshort/arrowaxisrightZd e ﬁ n e sa
+foliation on X, whose leaves are algebraic. Even if /Delta1= 0, the relevance of the divisor
+D(p) to the study of foliations is explained by the following remark 3.3. This is certainly
+well-known to experts. We will not give the proof of this statement here, because the more
+general orbifold version will be established in Lemma 5.12.
+Remark 3.3.— L e t p : X/axisshort/axisshort/arrowaxisrightZ be a dominant rational ﬁbration, and let
+F be a
+foliation on X such thatF = Ker(dp).L e tπX : ˆX → Xa n dπZ :ˆZ → Z be modiﬁcations
+of X and Z, respectively , such that the following properties are satisﬁed:
+(i) The induced map ˆp : ˆX → ˆZ is regular, its discriminant locus E is a snc divisor
+and so it is the inverse imageˆp−1(E).12 FRÉDÉRIC CAMPANA, MIHAI P ˘AUN
+(ii) If a component W of ˆp−1(E) isˆp-exceptional, then it is also πX-exceptional.
+Let ˆF be the foliation induced byF on ˆX; then we have the equality
+(13)K ˆF = KˆX/ˆZ − D(ˆp).
+modulo a divisor which is πX-exceptional, cf. Lemma 5.12 and [23]. In particular, if KX
+is pseudo-effective, then so it is KF , by the crucial Theorem 3.4 below .
+In the previous remark, we denote by
+(14)K F := det
+(
+F⋆)
+the canonical bundle of a foliationF.
+The main result of this section is the following one. A similar observation is made
+in [23], Proposition 4.3 and the references there.
+Theorem 3.4.— Let (X,/Delta1)be a lc pair, such thatX is smooth and such that/Delta1is snc. Assume
+that KX + /Delta1is pseudo-effective. Then for any rational map p as in Remark 3.3, the divisor
+KX/Z + /Delta1hor − D(p)
+is pseudo-effective.
+In the statement Theorem 3.4 a b o v ew ed e n o t eb y/Delta1hor the divisor having the
+same multiplicities as /Delta1on the irreducible hypersurfaces of X which project onto Y via
+the map p, and zero for any other hypersurfaces.
+Proof. — We shall deduce this statement from Theorem 2.11 in [19].
+Consider a holomorphic birational model of p. There exists a modiﬁcations πX :
+ˆX → X of X for which the next properties hold:
+(1) The induced map ˆp : ˆX → Z is holomorphic.
+(2) The πX inverse image of /Delta1is snc.
+Deﬁne the divisor ˆ/Delta1by the usual formula:
+(15)E 1 + π⋆
+X(KX + /Delta1)= KˆX + ˆ/Delta1
+where E1 is effective and πX-exceptional and (ˆX, ˆ/Delta1)is lc.
+By Deﬁnition 3.1 we deduce that we have the equality
+(16) ˆp⋆KZ = π⋆
+X
+(
+p⋆KZ
+)
++ E2
+where E2 is a πX-exceptional divisor.FOLIATIONS WITH POSITIVE SLOPES AND BIRATIONAL STABILITY. . . 13
+Combining (15)a n d(16)w eg e t :
+(17)E 1 + π⋆
+X(KX/Z + /Delta1)= KˆX/Z + ˆ/Delta1+ E2,
+which is preserved when taking into account the multiplicity divisors of the mapsp andˆp:
+(18)E 1 + π⋆
+X
+(
+KX/Z + /Delta1− D(p)
+)
+= KˆX/Z + ˆ/Delta1− D(ˆp) + E2.
+Notice however that the divisors(Ej) in (17)a n d(18) may be different, but for the notation
+simplicity we keep the same symbols. The point is that both of them are πX-exceptional,
+and can be assumed to be effective.
+Next we use the pseudo-effectivity theorem in [ 19], which implies that the Q-line
+bundle
+(19)K ˆX/Z + ˆ/Delta1hor − D(ˆp)
+is pseudo-effective on ˆX (we remark that at this point the hypothesis(X,/Delta1)is log-canonical
+is used in an essential manner). The hypothesis in the statement [19] are indeed satisﬁed,
+since for any z ∈ Z generic the restriction K ˆXz + ˆ/Delta1|Xz is pseudo-effective, since so is
+KX + /Delta1,a n dt h u sa l s oKˆX + ˆ/Delta1.
+The conclusion follows from the following simple statement.
+Lemma 3.5.— Let π : ˆX → X be a modiﬁcation between projective manifolds. Let ˆL, L be
+line bundles on ˆX and X respectively. Assume that:
+(20) ˆL = π∗L + E1
+for some π-exceptional divisor E1 on ˆX.I f ˆL is pseudo-effective, then so is L.
+Proof. — Let γ be a movable class on X. Then π⋆γ is a movable class on ˆX, and
+then we have
+c1(ˆL).π⋆γ ≥ 0.
+By relation (20), we deduce that
+c1(L).γ ≥ 0
+since E1 · π⋆γ = 0, E1 being exceptional.
+Thus L is pseudo-effective, by [6]. □
+The following alternative arguments for Lemma 3.5 were kindly pointed out to
+us by the referees. We reproduce them here (in arbitrary order), for the beneﬁt of the
+readers.14 FRÉDÉRIC CAMPANA, MIHAI P ˘AUN
+• We have (π⋆(ˆL))⋆⋆ = L, as it follows immediately from the assumptions of 3.5.
+Since the push-forward of a pseudo-effective class is pseudo-effective, we are done. This
+has the advantage of avoiding the use of [6].
+• We consider an ample line bundle ˆA := π
+⋆(A) − Eo n ˆX, where E is effective
+and π-exceptional, and A is ample on X. Then for any couple of positive integers the
+k ≫ m the bundle kˆL + mˆA has non-identically zero sections. They are induced by the
+sections of kL + mA (since E1 is exceptional), and the proof is ﬁnished.
+The proof of Theorem 3.4 is therefore ﬁnished, by ( 18) combined with
+Lemma 3.5. □
+Remark 3.6. — In the statement Theorem 3.4 above, if the dominant rational map
+p : X/axisshort/axisshort/arrowaxisrightZ is given, then the pseudo-effectivity of the bundle KX/Z +/Delta1hor − D(p) is in fact
+equivalent to the pseudo-effectivity of KˆXz + /Delta1|ˆXz for all points z in the complement of a
+Zariski closed subset of Z, cf. [19] (here we use the notations in the proof of Theorem3.4).
+From this perspective, the hypothesis “K X + /Delta1pseudo-effective” of Theorem 3.4 may
+look abusive. However the point is that this hypothesis insures the pseudo-effectivity of
+K
+X/Z +/Delta1hor − D(p) even if the rational mapp is not given a-priori (and it will be the case
+in what follows).
+4. Algebraicity criteria for foliations
+We begin this section by introducing the following notion—which maybe not stan-
+dard, but it is very convenient for us.
+Deﬁnition 4.1.— Let F ⊂ TX be a holomorphic foliation of rank r. We say that the foliation
+F is algebraic if it is induced by a rational map i.e.F = ker(dp) generically on X, for some dominant
+rational map p : X/axisshort/axisshort/arrowaxisrightZ.
+If this is the case, we see that all the leaves ofF are algebraic subsets of X.
+The main result of this section is the following statement.
+Theorem 4.2.— Let X be a smooth projective manifold, and let F be a foliation on X such
+that there exists a movable class α for which we have
+(21) μα,min(F)> 0.
+The following assertions hold true.
+(1) The foliation F is algebraic.
+(2) The closure of every leaf of F is rationally connected.
+If the class α is a complete intersection of ample hypersurfaces on X, and if F is
+α-semistable, Theorem 4.2 is due to Bogomolov-McQuillan cf. [ 7], as well as Kebekus,FOLIATIONS WITH POSITIVE SLOPES AND BIRATIONAL STABILITY. . . 15
+Sola-Conde and Toma in [ 35]. We equally refer to the article by J.-B. Bost, [ 8], who
+proves a different, but related, result in an arithmetic context. These results originate in
+[28], and [7]i sm o t i v a t e db y[41]. As already mentioned, the approach of the proof below
+for claim (1) is the same as in [7]. The main difference is that we work directly on X and
+not by restricting
+F to complete intersection curves. In this way , the Mehta-Ramanathan
+theorem is not needed, and we avoid the inextricable difﬁculties generated by both the
+singularities of
+F, and the singularities of covering families of movable curves at their
+base loci. Notice further that the Mehta-Ramanathan theorem fails for movable curves,
+cf. Example 4.3 below , already mentioned in [18]. The extension from “generic complete
+intersection class” to “movable class” enlarges considerably the potential applicability .
+Example 4.3. — The Mehta-Ramanathan restriction theorem is open in this mov-
+able context, but might fail to hold quite drastically even for ‘strongly’ covering families of
+curves on surfaces. It is indeed shown in [6], Section 7, that if S is a smooth K3-surface,
+then
+OP(1) is not pseudoeffective on P:= P(/Omega11
+S). This means that there exists on S an al-
+gebraic family of irreducible curves Ct on S effectively parametrised by a quasi-projective
+irreducible surface T such that, for each such curve Ct the saturation in TS of the tangent
+sheaf to Ct has positive degree on Ct .M o r e o v e r ,f o rx ∈ S generic, all but a ﬁnite number
+of tangent directions of TS at x are realised by the tangent directions to the C ′
+ts going
+through x. The proof given in [ 6] is quite indirect. It were interesting to have concrete
+realisations of such families Ct even on special K3′s.
+We shall next prove claim (1); the claim (2) will be established in Section4.2.
+4.1. Algebraicity.
+Proof. — Let E ⊂ X be the singular set of the foliation F. By deﬁnition, it consists
+of points whereF is not a subbundle ot TX, and in particular:
+(22)c o d i m X(E) ≥ 2.
+Let x ∈ X \ E. Since F is not singular at x, there exists an open set /Omega1x ⊂ X \ Et o g e t h e r
+with a submersion πx : /Omega1x → Cn−r with connected ﬁbres such that for each y ∈ /Omega1x the
+intersection Ly ∩ /Omega1x of the leaf of F passing through y with /Omega1x is given by the ﬁbre of πx
+containing y.W er e c a l lt h a tn = dim(X) and r is the rank of the foliationF.
+Thus we have a cover of the open set X\ Ew i t ho p e ns e t s/Omega1x as above. Let(/Omega1i)i∈I
+be a countable, locally ﬁnite cover extracted from(/Omega1x)x∈X\E.W ed e ﬁ n e
+˜/Omega1:= ∪i∈I/Omega1i × /Omega1i ⊂ (X \ E) × (X \ E);
+it is an open subset.16 FRÉDÉRIC CAMPANA, MIHAI P ˘AUN
+We deﬁne the following (n + r)-dimensional locally closed analytic subset /Lambda1⊂ ˜/Omega1
+as follows
+(23) /Lambda1:=
+{
+(z,w) ∈ X × X : z ∈ /Omega1i and w ∈ Lz ∩ /Omega1i for some i ∈ I
+}
+.
+We note that the (local) analyticity of /Lambda1is a direct consequence of the fact that F is a
+holomorphic foliation.
+The set /Lambda1contains the open subset of the diagonal deﬁned by:
+(24)X 0 :=
+{
+(z, z) ∈ X × X : z ∈ X \ E
+}
+and we consider
+(25)V := /Lambda1
+Zar
+t h eZ a r i s k ic l o s u r eo f/Lambda1in X × X.
+We have dim(V) ≥ dim(/Lambda1)= n+ r, and we show next that the algebraicity ofF is
+equivalent to the equality dim(V) = n + r. Indeed, if this holds true, then /Lambda1is open in its
+Zariski-closure V in X× X. We consider the mapπV : V → X given by the restriction to
+V of the projection on the ﬁrst factor X × X → X. Note that the generic ﬁbres of πV are
+irreducible, of dimension equal to r (they correspond to the Zariski closure of the leaves
+of F).
+Let τ: ˆV → V be a desingularisation of V, and let W ⊂ ˆVb et h ec o m p o n e n to fˆV
+which contains the inverse image of the generic ﬁbres of πV.W ed e n o t eb yf : W → X
+the composed map πV ◦τ|W; it is surjective and by general results, there exists a constant
+d > 0 such that the degree of each ﬁbre of f is smaller than d.
+We consider the Chow scheme Chow (W) =∪ δ>0 Chowr,δ(W) corresponding to
+r-dimensional cycles of W (where the index δa b o v es t a n d sf o rt h ed e g r e eo ft h ec y c l e ) .
+The rational map
+(26) p : X/axisshort/axisshort/arrowaxisrightChow(W) x → f −1(x)
+induces the foliation F generically , and we are done by the compactness of the compo-
+nents of the Barlet-Chow scheme of X.
+The algebraicity of F will then follow from the next standard Riemann-Roch
+bound on sections:
+Lemma 4.4.— Let X0 ⊂ /Lambda1⊂ V ⊂ X×X be deﬁned as above. If, for some ample line bundle
+L on X × X, there exists a constant C > 0 such that h 0(V, kL|V) ≤ Ckn+r as k →∞ , then the
+dimension of V is equal to n + r.
+We show now the existence of such a constant CL = C > 0 for any ample L.
+Proposition 4.5.— Let L be an ample line bundle on X × X. There exists a constant C > 0
+such that: h0(V, kL|V) ≤ Ckn+r ,f o ra n yk≥ 0. As a consequence, the dimension of the algebraic set V
+is equal to n + r.FOLIATIONS WITH POSITIVE SLOPES AND BIRATIONAL STABILITY. . . 17
+Proof. — The main ideas in the proof of Proposition 4.5 are the same as in [7]: for
+any k ≥ 0, the sections of L k on V restrict injectively to /Lambda1, since V is its Zariski closure.
+Next, one considers the restriction of these sections to the formal neighbourhood of X 0
+in /Lambda1. In other words, we study the Taylor expansion of sections of L k|/Lambda1at the points of
+the diagonal X0 in the normal directions in /Lambda1.
+For any m > 0, let Xm be the mth inﬁnitesimal neighbourhood of X0 in /Lambda1,d e ﬁ n e d
+by the structure sheaf: OXm := O/Lambda1/Im+1
+0 ,w h e r eI0 is the sheaf of ideals of the diagonal
+X0 ⊂ /Lambda1. It is enough to produce a bound C > 0 independent of m, k such that
+(27) h0(
+Xm, L⊗ k ⊗ OXm
+)
+≤ Ckn+r
+for any k, m. Indeed, the space H0(Xm, L⊗ k ⊗ OXm ) is nothing, but the space of all possible
+Taylor expansions at order m of sections of Lk along X0 in the directions ofF.
+For this, remark that over (X \ E), we have a natural isomorphism F ∼= NX0//Lambda1,
+since the normal bundle of X 0 in /Lambda1is naturally isomorphic to the vector bundle corre-
+sponding to F|X\E.
+The following exact sequence holds over X0, F∗ being the dual of F:
+(28)0 → Symm(
+F∗)
+→ OXm+1 → OXm → 0.
+It shows that it is sufﬁcient to establish that there exists a constant C> 0s u c ht h a t ,
+for any k ≥ 0:
+(29)
+∑
+m≥0
+h0(
+X0, Lk ⊗ Symm(
+F∗))
+≤ C.kn+r.
+The estimate (29) will be a consequence of following statement.
+Lemma 4.6.— Let F ⊂ TX be a coherent sheaf, which is locally free when restricted to the
+open set X0 ⊂ X such that codimX(X \ X0) ≥ 2.L e tδ0 > L.α
+μα,min(F) be any positive integer. The
+following assertions are true.
+(a) We have H0(X0, Lk ⊗ Symm(F∗)) = 0 if m ≥ δ0k.
+(b) There exists a non-singular projective manifold Y of dimension dim(Y) = dim(X) +
+rk(F) − 1 together with a map p : Y → X and a line bundle B → Y such that we have
+(30) p⋆
+(
+Bm)
+= ˆSm(
+F⋆)
+for any m ≥ 1.I n (30) we denote by ˆSm(F⋆) the double dual of the symmetric power
+Symm(F⋆).
+(c) For any pair of positive integers k, m we have the equality
+(31) h0(
+X0, Lk ⊗ Symm(
+F⋆))
+= h0(
+Y, p⋆(
+Lk)
+⊗ Bm)
+.18 FRÉDÉRIC CAMPANA, MIHAI P ˘AUN
+Before proving Lemma 4.6, we notice that it implies almost immediately the in-
+equality (29). Indeed, we have
+(32)
+∑
+m≥0
+h0(
+X0, Lk ⊗ Symm(
+F⋆))
+=
+∑
+m≤δ0k
+h0(
+X0, Lk ⊗ Symm(
+F⋆))
+by the point (a) of Lemma 4.6. Next, the point (c), together with the fact that the dimen-
+sion of Y is equal ton+ r − 1 shows that the right hand side of (32)i sO(kn+r). This can be
+seen as follows: the dimension of the space of global sections of the bundle p⋆(Lk) ⊗ Bm is
+smaller that h0(Y, p⋆(Lk)⊗ Hm), where H is a very ample bundle on Y such that H⊗ B−1
+is effective. We therefore have to evaluate the quantity
+(33)
+∑
+m≤δ0k
+h0(
+Y, p⋆(
+Lk)
+⊗ Hm)
+which is smaller thanδ0k· h0(Y, p⋆(Lk)⊗ Hδ0k) w h e r ew er e c a l lt h a tδ0 is a positive integer.
+By Riemann-Roch theorem, we have the estimate h0(Y, p⋆(Lk) ⊗ HCk) = O(kn+r−1) as
+k →∞ , so all in all we have established (29).
+In what follows we will identify X with the diagonal of X× X, and X0 with X \ E.
+Proof. — The point (a) follows from Lemma2.5 and the slope inequality , ifm ≥ k.B:
+(34) μα,max
+(
+Lk ⊗ ˆSm(
+F⋆))
+= k.L.α− m.μα,min(F)< 0.
+We remark that here we have used Theorem2.9.
+The point (b) is completely proved in the book by N. Nakayama [45]( c f .C h a p t e rV ,
+Section 3.23), so we will simply recall the construction of (Y, B) for the convenience of
+the reader.
+Let π : P(F⋆) → X be the scheme over X associated to the torsion free coher-
+ent sheaf F⋆,a n dl e tOF⋆(1) be the tautological line bundle on P(F⋆).L e t P′(F⋆) be
+the normalisation of the component of P(F⋆) which contains the Zariski open subset
+π−1(X0) (we recall the crucial fact that the codimension of X \ X0 in X is greater than
+two). Finally , let Y be a smooth projective variety such that there exists a birational mor-
+phism Y → P
+′(F⋆) which is biholomorphic overπ−1(X0).W ed e n o t eb yμ : Y → P(F⋆)
+the resulting map, and let
+(35) p : Y → X
+be the composition π ◦μ. Nakayama shows that we can take
+(36)B := μ⋆(
+OF⋆(1)
+)
++ /Lambda1,
+where /Lambda1is an effective p-exceptional divisor. The important fact here (cf. [45]) is that B
+can be chosen so that (30) holds for any m.
+The equality (31) is a direct consequence of (b), together with the deﬁnition of the
+set X0, so we do not provide any further explanations. □FOLIATIONS WITH POSITIVE SLOPES AND BIRATIONAL STABILITY. . . 19
+Thus, Proposition 4.5 is proved as well. □
+Hence, the algebraically criterion is established. □
+4.2. Rational connectedness. — The following result was proved (by very different
+arguments) in the case of ample classes in [7]a n d[35]. Our proof here is using two main
+techniques: the existence of the relative rational quotient of a mapp and the fact that the
+projective manifolds whose canonical class is not pseudo-effective are uniruled (actually ,
+this is the unique argument in positive characteristic we need in this paper).
+Theorem 4.7.— Let X be projective smooth manifold, and let
+F ⊂ TX be a foliation. Assume
+that there exists a movable class α for which μα,min(F)> 0. Then F is an algebraic foliation and its
+leaves are rationally connected.
+Proof. — The fact that F is an algebraic foliation has been proved. We now treat
+the last claim of Theorem 4.7 using the relative rational quotient.
+Let p : X /axisshort/axisshort/arrowaxisrightZb et h er a t i o n a lm a p(26) induced by the application p0 : X /axisshort/axisshort/arrowaxisright
+Chow(W), with Z a desingularisation of the image of p0. We also consider the relative
+rational quotient of p:
+(37) r : X/axisshort/axisshort/arrowaxisrightY
+This map is constructed in [ 10]o r[ 36] for the absolute version. The existence of the
+relative version follows from [12], Appendix. We also have a map s : Y/axisshort/axisshort/arrowaxisrightZ, such that
+s ◦r = p.
+Assume by contradiction that the ﬁbres of p are not rationally connected, then:
+(a) dim Y > dim Z.
+(b) The canonical bundle of the desingularisation of any generic ﬁbre of s is
+pseudo-effective by [25].
+(c) The generic ﬁbres of r are rationally connected.
+We will consider now regular models of the maps deﬁned above: let πX : ˆX → X
+and πY : ˆY → Y be smooth modiﬁcations of X and Y respectively , such that the applica-
+tions
+(38) ˆp := p ◦πX, ˆs := s ◦πY
+are regular. We can also assume that there exists a mapˆr : ˆX → ˆY such that the equality
+ˆs ◦ˆr =ˆp is preserved.
+Let ˆH := ker(dˆs) be the foliation induced by the kernel of the differential of ˆs.B y
+formula (13) combined with Remark 3.6 and the property (b) above, we see that
+(39)d e t
+( ˆH⋆)20 FRÉDÉRIC CAMPANA, MIHAI P ˘AUN
+is pseudo-effective on ˆY, modulo a divisor which is πY-exceptional (we can assume that
+the transversality conditions (i) and (ii) in Remark3.3 hold true, modulo changing Z with
+a birational model—this operation is harmless in our present context). Let H be the
+foliation induced by ˆH on Y; we deduce that det(H⋆) is pseudo-effective, by Lemma 3.5.
+Let ˆF be the foliation induced byF on ˆX. Then we have a morphism:
+(40) ˆF → (πY ◦ˆr)⋆H
+and we claim that it is generically surjective. The ﬁrst observation is that the map
+ˆF → ˆr⋆ ˆH is well-deﬁned and generically surjective. This is the case because ˆXa n dˆY
+are smooth, and for any general enough z ∈ Z the map in question is induced by the
+differential of the map ˆXz → ˆYz.T h em a pˆr⋆ ˆH → (πY ◦ˆr )⋆H is an isomorphism at the
+generic point of ˆY.
+We have μπ⋆
+Xα,min(ˆF)> 0, since μα,min(F)> 0, cf. Lemma 2.12 and its proof.
+Hence we infer that
+(41) μπ⋆
+Xα
+(
+ˆr⋆H
+)
+> 0,
+contradicting the pseudo-effectivity of detH⋆. □
+Remark 4.8. — The discrepancies K ˆX − π∗(KX)|F of the generic ﬁbre F of ˆp of a
+‘neat model’ of the rational ﬁbrationp deﬁned byF above are of great geometric interest
+also.
+4.3. Pseudo-effectivity of cotangent sheaves of foliations. — We establish here a foliated
+version of Theorem 1.3 when /Delta1= 0. One of the motivations for this statement is the
+existence (cf. [ 19]) of foliations with K F pseudo-effective on some projective uniruled
+manifolds. Due to the non-preservation of the pseudo-effectivity of K F under blow-ups
+whenF ̸= TX, new phenomena appear.
+Theorem 4.9.— Let X be a non-singular projective manifold, and let F ⊂ O(TX) be a
+foliation on X, with KF is pseudo-effective. Then one of the following occurs.
+(1) For any positive integer m ≥ 1, and any coherent, torsion-free sheaf Q such that there exists
+a generically surjective map
+(42) ⊗ mF⋆ → Q,
+detQ is a pseudo-effective line bundle on X,o r :
+(2) There exists a proper birational morphism π : ˆX → X and a morphism p : ˆX → Z with
+rationally connected ﬁbres tangent to ˆF, the inverse image of F in ˆX.M o r e o v e r ,ˆF is the
+inverse image by p of a foliation H on Z. In particular, KˆF is not pseudo-effective in this
+second case.FOLIATIONS WITH POSITIVE SLOPES AND BIRATIONAL STABILITY. . . 21
+Proof. — Let α∈ Mov(X) be a movable class; we have to prove that, either:
+(43) c1(Q).α≥ 0,
+or that case (2) occurs. Assume thus that the relation ( 43) does not hold. Thus
+μα,min(ˆ⊗
+m
+F⋆)< 0a n db yT h e o r e m2.9 this implies that we have μα,min(F⋆)< 0, which
+in turns shows the inequality μα,max(F)> 0.
+Let G ⊂ F the α-maximal destabilising sheaf of F;t h e nG is α-semi-stable, and:
+(44) μα(G)> 0.
+It is a simple matter to check that the slope inequalities in Lemma4.10 below are satisﬁed,
+that is to say:
+(45)2 μα,min(G)>μ α,max(F/G).
+This is a well-known consequence of the maximality ofG, so we only sketch the argument
+as follows. We consider a sub-sheaf H ⊂ F/G. Then there exists a sub-sheaf H ⊂ F,
+containing G and inducing H.H e n c ew eh a v eμα(H) ≤ μα(G), from which we deduce
+(after a few standard computations which we skip) that μα,max(F/G) ≤ μα(G).N o wt h e
+semi-stability of G with respect to α implies the inequality (45).
+Lemma 4.10.— Let G ⊂ F ⊂ TX be holomorphic (possibly singular) distributions on X
+smooth projective connected. Assume that F is a foliation, and that for some movable class α we have:
+μα,min(G)> 0 and also:
+(46)2 .μα,min(G)>μ α,max(F/G)).
+Then G is a foliation.
+Proof. — The natural composed map ∧2G → TX/G → TX/F derived from
+the Lie bracket on X vanishes, since F is a foliation, and thus deﬁnes a section of
+Hom(∧2(G) → (F/G)) over X. But this vector space vanishes because of the slope con-
+ditions. This forces the Lie bracket ∧2G → TX/G to vanish, as claimed. □
+In conclusion, G is integrable. Moreover, by Theorem 4.2 the foliation G is alge-
+braic, and has rationally connected closure of its leaves. Let X 0 ⊂ X be the maximal
+Zariski open set such thatG|X0 is a vector bundle, and such that the singularities ofG are
+contained in the complement X \ X0 (which has co-dimension greater than two).
+Thus there exists a rational map
+p : X/axisshort/axisshort/arrowaxisrightZ
+such that G = ker(dp) generically on X—thus G is“algebraic”, according to Deﬁni-
+tion 4.1, beginning of Section 4.22 FRÉDÉRIC CAMPANA, MIHAI P ˘AUN
+We consider a modiﬁcation πX : ˆX → X such that the composed map ˆp := p ◦πX
+is holomorphic. Since the foliationG is the kernel of the differential of the mapp we infer
+that the canonical bundle of the ﬁbres ofˆp is not pseudo-effective,b y( 44).
+Let ˆG and ˆF be the foliations induced by G and F on ˆX, respectively . Then we
+still have ˆG = ker(dˆp) generically on ˆXa n dˆG ⊂ ˆF.
+The following “rigidity lemma” (cf. [ 2], Lemma 6.7 for similar ideas) will then
+show that we are in case (2) and this will ﬁnish the proof, once we prove that K ˆF is not
+pseudo-effective, which is shown below , after the proof of Lemma4.11.
+Lemma 4.11.— Let ˆG ⊂ ˆF be two foliations on ˆX Assume that ˆG is algebraic, deﬁned
+generically asG = ker(dˆp) for a dominant mapˆp : ˆX → Z. There then exists a foliationH on Z such
+that ˆF =ˆp⋆H, generically on ˆX.
+Proof. — Let x0 ∈ ˆXb es u c ht h a tˆF is non-singular at x0,a n ds u c ht h a ty0 :=ˆp(x0)
+is a regular value ofˆp.
+Let /Lambda10 ⊂ ˆX be a germ a submanifold contained in the leaf Lx0 ofF at x0,t r a n s v e r s e
+to G0 :=ˆp−1(y0),a n ds u c ht h a t
+Fx0 =Gx0 + T/Lambda10,x0
+is a direct sum decomposition. Nextˆp(/Lambda10) is a germ of a submanifold V0 of Z at y0,a n d
+W0 :=ˆp−1(V0) is contained, and hence equal to the germ of the leafFx0 . Indeed: for each
+x ∈ /Lambda10,ˆp−1(ˆp(x)) =G(x) ⊂ F(x),a n dF(x) thus contains bothˆp−1(ˆp(x)),a n d/Lambda10.
+Since this holds for every x0 having the properties speciﬁed above, the lemma fol-
+lows by analytic continuation. □
+We now check that KˆF is not pseudo-effective: as a consequence of Lemma 4.11,
+we have the exact sequence
+(47)0 → ˆG|U → ˆF|U → O⊕ r
+U → 0
+where U:=ˆp−1(V) and V is a small topological coordinate set centered at a regular value
+ofˆp.
+Therefore we have
+(48)K F = KˆG|F = KˆF|F
+where F is a generic ﬁbre of ˆp. This shows that K ˆF is not pseudo-effective. Therefore
+Theorem 4.9 is proved. □
+Remark 4.12. — The case (2) in Theorem 4.9 actually occurs (see Example 4.15
+below). This is due to the fact that, contrarily to the case when F = TX, the pseudo-
+effectivity of KF is, in general, not birationally invariant. We thank S. Druel, who called
+our attention on the fact that K ˆF in the above proof could, a priori, be non pseudo-
+effective.FOLIATIONS WITH POSITIVE SLOPES AND BIRATIONAL STABILITY. . . 23
+The following corollary is a consequence of the previous rational connectedness
+statement of Theorem 4.2. Claim (1) generalises in the projective case Brunella’s The-
+orem [9] (which asserts that this result holds in the compact Kähler case as well). This
+corollary gives an optimal geometric obstruction to the pseudo-effectivity of the canonical
+bundle of foliations on projective manifolds.
+Corollary 4.13.— Let X be a projective manifold, and let
+F be a foliation of rank 0 < r <
+n := dim(X). Assume that F is not algebraic. Then:
+(i) If r = 1, the bundle KF is pseudo-effective.
+(ii) For an arbitrary rank r, if the bundle KF is not pseudo-effective, there exists a non-trivial
+algebraic foliationG ⊂ F such that μα,min(G)> 0 for some movable class α.
+We remark that the converse of the point (ii) does not hold, by Example4.15 below .
+Proof. — Claim (i). Since by assumption F is not algebraic, Theorem 4.2 implies,
+that for each movable class α,w eh a v e :
+(49) μα,min(F) = μα(F) ≤ 0.
+If the rank r of F is equal to one, then this implies (cf. [ 6]) that KF is pseudo-effective,
+and the point (i) is proved.
+The second point has been established during the proof of Theorem 4.9. □
+The following statement gives a criteria for the conclusion (1) of Theorem 4.9 to
+hold true.
+Corollary 4.14.— In the set-up of Theorem 4.9 the statement (1) holds true provided that one
+of the following conditions is satisﬁed.
+1. The foliation F is “totally transcendental” i.e. its general leaf does not contains any positive
+dimensional algebraic submanifold of X.
+2. The singularities of F are canonical (this implies that KˆF is pseudo-effective for any modiﬁ-
+cation ˆX → X).
+Example 4.15.— L e t F0 be the foliation deﬁned on P2 by the pencil of conics
+generated by two smooth conics meeting in 4 distinct points. Now take X := P2 × Y,
+where Y is any uniruled projective manifold. Take forF the inverse image ofF0 on X by
+the ﬁrst projection (onP2). Then KF is pseudo-effective, since KF0 is. On the other hand,
+F contains q∗(TY),w h e r eq is the second projection. Dualising, we get a projection from
+F∗ onto TY∗, which has a non pseudo-effective determinant. We are then in Case 2 of
+Theorem 4.9.Am o d i ﬁ c a t i o nπ : ˆX → X as in the proof is obviously obtained by lifting
+F0 to the blow-up of P2 in the 4 base points of the pencil, and taking the product with Y.24 FRÉDÉRIC CAMPANA, MIHAI P ˘AUN
+Remark 4.16. — One can easily see, using Chow cycle spaces and the two pre-
+ceding lemmas, that any foliationF on X projective smooth contains a largest algebraic
+foliation G given as Ker(df ) for a ﬁbration f : X/axisshort/axisshort/arrowaxisrightZ, such that F = f ∗(H) for some
+‘totally transcendental’ foliation H on Z. And then, K F is pseudo-effective if and only
+if KG is, since KF = KG + f ∗(KH),a n dK H is pseudo-effective. Indeed: if K G is not
+pseudo-effective, we have a rationally connected ﬁbration tangent toG, contradicting the
+pseudo-effectivity of F; the other direction is obvious. We refer to [ 40], Lemma 2.4 for
+a more detailed discussion regarding this topic. Moreover, Case 2 of Theorem 4.9 oc-
+curs for F if and only if it occurs for G. In other words: Case 2 of Theorem 4.9 occurs
+essentially only for algebraic foliations.
+4.4. Descent of foliations. — The following consequence of the preceding theorem
+will mainly be needed in the proof of Theorem 1.3. But it may have some interest by
+itself.
+Corollary 4.17.— Let π : X′ → X be a ﬁnite surjective holomorphic map of degree d > 1
+between complex projective manifolds. Let α be a movable class on X,a n dl e tα′ := π∗(α) be its pull-
+back to X′.L e tF′ ⊂ π∗(TX) be a torsion-free subsheaf, withFsat its saturation inπ∗(TX). Assume
+moreover that:
+(a) μα′,min(F′)> 0;
+(b) Fsat = π∗(F) for some subsheafF ⊂ TX.
+Then μα,min(F)> 0; in particular, ifF is integrable, then the corresponding foliation is algebraic.
+Proof. — Since μα′,min(F′)> 0w ed e d u c et h a tw eh a v e
+(50) μα′,min
+(
+Fsat)
+> 0
+by Remark 2.14.L e tQ be a quotient of F;t h e nπ⋆Q is a quotient of π⋆F =Fsat.B y
+(50) above, we deduce:
+(51) μα′
+(
+π⋆Q
+)
+> 0
+and this is equivalent withμα(Q)> 0, which is the claim. The last part of Corollary4.17
+follows from the algebraically criteria. □
+Remark 4.18. — In general, in the situation of the preceding corollary , if F′ is α-
+semi-stable, Fs does not need to be α-semi-stable, as shown by the natural injection of
+O(1) ⊕ O(1) in O(1) ⊕ O(2) over P1.
+Remark 4.19. — These results on foliations immediately extend to logarithmic fo-
+liations. We show this in the next section, which will also serve as a simpliﬁed model forFOLIATIONS WITH POSITIVE SLOPES AND BIRATIONAL STABILITY. . . 25
+the case of arbitrary smooth ‘orbifold pairs’, treated below , and for which additional con-
+structions and deﬁnitions are required. We added this short section in order to make the
+application (through Corollary 8.7) to families of canonically polarised manifolds in Sec-
+tion 8.1 below independent from the general ‘orbifold version’. The proof given here of
+Corollary 8.7 is quite different and shorter from the one given in [48], which showed that
+the general orbifold pairs could be avoided. Notice however that, once the foundational
+material are laid, the continuity method used in Theorem 7.11 gives a much more direct
+alternative proof of Corollary 8.7.
+5. Orbifold tensor bundles on Kawamata covers
+Let (X,/Delta1)be a smooth log canonical pair, written as:
+(52) /Delta1=
+∑
+j∈J
+cj/Delta1j =
+∑
+j∈J
+(
+1 − bj
+aj
+)
+/Delta1j
+where J is a ﬁnite set, and for each j ∈ Jw eh a v e0≤ bj < aj are coprime integers, and the
+hypersurfaces (/Delta1j) are snc. If the coefﬁcient bj is equal to zero, then we agree that the
+corresponding denominator aj is equal to 1.
+These orbifold pairs (X,/Delta1)interpolate between the compact, or projective case (i.e.
+when either J =∅ )a n dt h e logarithmic, or quasi-projective case ,w h e nbj = 0f o ra l l j ∈ J,
+respectively . In both cases, the notions of tangent bundle, cotangent bundles and more
+generally , of holomorphic tensors are classically deﬁned. They play a fundamental role
+in the study of the geometry of (quasi-)projective manifolds.
+We shall introduce the analogous notions corresponding to an arbitrary orbifold
+pair (X,/Delta1). Unfortunately they can only be deﬁned on a suitable ramiﬁed cover of X
+adapted to (X,/Delta1). However, we shall see that they enjoy properties similar to those of
+the usual ones in the two standard cases (compact, and logarithmic) mentioned above.
+These properties will turn out to be independent on the cover used to deﬁne them.
+The underlying idea for the deﬁnition is that the local generators as an
+OX-module
+of the orbifold cotangent bundle should “look like”:
+(53) dz1
+z1−b1/a1
+1
+,..., dzr
+z1−br/ar
+r
+, dzn1+1,..., dzn,
+on some coordinate open set U⊂ X where the divisor⌈/Delta1⌉ is given byz1 ... zr = 0. Unlike
+in the cases mentioned above, these symbols involve multi-valued functions. Nevertheless,
+we have the identity
+(54) π∗
+( dz
+z1−b/a
+)
+= NwNb/a dw
+w ,26 FRÉDÉRIC CAMPANA, MIHAI P ˘AUN
+where z = wN, and we see that the right-hand side is an usual logarithmic differential
+provided that N/a is an integer.
+This suggests that in order to construct the tensor bundle corresponding to the
+pair (X,/Delta1), one needs an auxiliary object, namely a map which ramiﬁes along D with
+divisible enough order. The formal deﬁnition will be given in what follows.
+5.1. Ramiﬁed coverings. — We recall in this sub-section a few basic facts concerning
+global ramiﬁed covers associated to an orbifold pair (X,/Delta1), for which a polarisation is
+ﬁxed. Our main references are [38], [32][ 24], [31]).
+Deﬁnition 5.1.— Let (X,/Delta1)be an orbifold pair as in (52). A ramiﬁed cover adapted to
+(X,/Delta1)is by deﬁnition a Galois covering π : X/Delta1→ X satisfying the following requirements.
+(i) The variety X/Delta1is non-singular, and the ramiﬁcation order ofπ along each component /Delta1i is
+equal to ai, i.e. π⋆(/Delta1i) = ai
+∑
+j Dji.
+(ii) The support of the divisor π⋆(/Delta1)+ Ram(π) as well as the branching loci ∑ Hj of π
+have simple normal crossings.
+Such a map π will be referred to as “Kawamata cover” in what follows, cf. [ 36],
+Theorem 1.1.1. The properties which will be relevant for us are stated in the following
+lemma.
+Lemma 5.2.— Let (X,/Delta1)be an orbifold pair; then the following assertions are true.
+(a) The pair (X,/Delta1)admits a Kawamata cover.
+(b) Let π : X/Delta1→ X be any Kawamata cover corresponding to (X,/Delta1),a n dl e tG be the
+associated Galois group. For any point y ∈ X/Delta1there exists an open coordinate set y ∈ U
+which is Gy–invariant, and such that the restriction π|U has the following shape
+(55) π(w1,...,w n) =
+(
+wa1
+1 ,...,w ak
+k ,w k+1,...,w p,w m1
+p+1,...w mn
+n
+)
+with respect to co-ordinates (wi) and (zj) on U and its image, respectively.
+In the deﬁnition above we denote by G y the isotropy group of y.W en o t et h a ti n
+(55) we assume that the divisor ⌈/Delta1⌉ is locally given by the equation z1 ... zk = 0. Also,
+the local hypersurfaces zp+1 = 0,..., zn = 0 correspond to the extra-ramiﬁcation of π—
+which is in general unavoidable, but which will not affect us in any way .
+As we see from Lemma 5.2,t h em a pπ can be seen as the global version of the
+standard application w → z = wa and we will use it in order to deﬁne the orbifold co-
+tangent bundle and its associated tensor powers.
+5.2. Orbifold tensor bundles. — Let (X,/Delta1)be an orbifold pair, and let π : X/Delta1→ X
+be a Kawamata cover. We ﬁrst introduce here the notion of co-tangent bundle associated
+to (X,/Delta1)by following the elegant approach by Y . Miyaoka in [42].FOLIATIONS WITH POSITIVE SLOPES AND BIRATIONAL STABILITY. . . 27
+We denote by /Omega11
+X⟨⌈/Delta1⌉⟩ the logarithmic tangent bundle associated to (X,⌈/Delta1⌉).
+Then we have a well-deﬁned residue map
+(56) /Omega11
+X
+⟨
+⌈/Delta1⌉
+⟩
+→
+⨁
+i
+O/Delta1i → 0,
+which induces a map between the π–inverse images of the sheaves above
+(57) π⋆/Omega11
+X
+⟨
+⌈/Delta1⌉
+⟩
+→
+⨁
+i
+Oπ⋆/Delta1i → 0.
+In ( 57) we have used the ﬂatness of π in order to identify π⋆O/Delta1with Oπ⋆/Delta1.B yt h e
+properties of the map π, we can write π⋆/Delta1i = aiDi for some Cartier divisor D i on X/Delta1.
+Therefore, we have a quotient map of sheaves
+(58) Oπ⋆/Delta1i → ObiDi → 0
+for every i in our set of indices.
+All in all, we have a surjective map
+(59) π⋆/Omega11
+X
+⟨
+⌈/Delta1⌉
+⟩
+→
+⨁
+i
+ObiDi → 0
+and we introduce the following notion.
+Deﬁnition 5.3.— The orbifold co-tangent bundle associated to (X,/Delta1)is the kernel of the map
+(59). It is a vector bundle of rank n= dim(X), and it will be denoted in what follows byπ⋆/Omega11(X,/Delta1).
+Thus, we have the exact sequence
+(60)0 → π⋆/Omega11(X,/Delta1)→ π⋆/Omega11
+X
+⟨
+⌈/Delta1⌉
+⟩
+→
+⨁
+i
+ObiDi → 0.
+At this point, a few remarks are in order.
+• The bundle π⋆/Omega11(X,/Delta1)is G-invariant: this is a direct consequence of the def-
+inition.
+• With respect to the coordinate system in Lemma 5.2(2), the local frame of this
+bundle is expressed as
+wb1−1
+1 dw1,...,w bk−1
+k dwk, dwk+1,..., dwp,w
+mp+1−1
+p+1 dwp+1,...,w mn−1
+n dwn.
+• The determinant of the bundle π⋆/Omega11(X,/Delta1)is quickly computed from the se-
+quence (60),
+(61)d e t
+(
+π⋆/Omega11(X,/Delta1)
+)
+= π⋆(KX + /Delta1).28 FRÉDÉRIC CAMPANA, MIHAI P ˘AUN
+5.3. The tangent bundle and the Lie bracket on orbifolds. — The following deﬁnition is
+natural.
+Deﬁnition 5.4.— The orbifold tangent bundle associated to(X,/Delta1)the dual of π⋆/Omega11(X,/Delta1).
+It is a G-invariant vector bundle, and it will be denoted in the sequel by π⋆T(X,/Delta1).
+With respect to the coordinates in Lemma 5.2, the local generators of π⋆T(X,/Delta1)
+can be written as follows
+(62) wa1−b1
+1 e1,...,w ak−bk
+k ek, ek+1,..., en
+where ej := π⋆ ∂
+∂zj
+is the local frame of the inverse image π⋆TX.
+Remark that the local generators of the orbifold tangent bundle can also be written
+as follows
+(63) w
+1−bj
+j
+∂
+∂wj
+, ∂
+∂wi
+,w 1−ml
+l
+∂
+∂wl
+where j = 1,..., k as well as i = k + 1,..., p and l = p+ 1,..., n. In this way , the tangent
+bundle π⋆T(X,/Delta1)looks more like that dual of π⋆/Omega11(X,/Delta1).
+Motivation. — Let F ⊂ TX be a coherent subsheaf. The corresponding Lie bracket
+(64) /Lambda12F → TX/F
+isOX-linear, and if this map vanishes identically , thenF deﬁnes a holomorphic foliation.
+In the remaining part of this sub-section we will consider the orbifold analogue of these
+results.
+More precisely , let
+F/Delta1⊂ π⋆T(X,/Delta1)be a coherent subsheaf of the orbifold tangent
+bundle. Our objective in what follows is twofold: ﬁrst we show that under some reasonable
+hypothesis, we can construct an
+OX/Delta1-linear map
+(65) /Lambda12F/Delta1→ π⋆T(X,/Delta1)/F/Delta1.
+Then we will show here that if the map (65) vanishes identically , thenF/Delta1is induced by a
+holomorphic foliation on X by a very explicit procedure.
+The ﬁrst step in this direction is the following statement which permits to recognize
+the subsheaves of π⋆TX which are inverse images of a sheaf on X.
+Lemma 5.5.— [26], [22]L e tF ⊂ π⋆TX be a coherentOX/Delta1-module, which is saturated in
+the inverse image of the tangent sheaf TX.I fm o r e o v e rF is G-invariant, then there exists a sheaf FX of
+OX-modules on X such that
+(66) F = π⋆(FX).FOLIATIONS WITH POSITIVE SLOPES AND BIRATIONAL STABILITY. . . 29
+This result Lemma 5.5 is completely proved in the references indicated above, so
+we will not discuss it here at all.
+Let F/Delta1⊂ π⋆T(X,/Delta1)be a coherent G-invariant and saturated subsheaf of the
+orbifold tangent bundle. We denote by Fs the saturation of F/Delta1in π⋆TX.T h e nFs is
+equally G-invariant, so by Lemma 5.5 there exists a subsheafFX ⊂ TX such that
+(67) Fs = π⋆(FX).
+Let
+(68) /Lambda12FX → TX/FX
+be the OX-linear map induced by the Lie bracket on X. Its π-inverse image composed
+with the natural map /Lambda12F/Delta1→ /Lambda12F2 gives theOX/Delta1-linear map
+(69) /Lambda12F/Delta1→ π⋆TX/Fs.
+On the other hand, given thatF/Delta1is saturated inside the orbifold tangent bundle, we have
+the equality F/Delta1=Fs ∩ π⋆T(X,/Delta1). Thus, we infer that the natural map
+(70) π⋆T(X,/Delta1)/F/Delta1→ π⋆TX/Fs
+is injective.
+In this setting, we have the following statement, establishing the existence of the
+Lie bracket for orbifolds (X,/Delta1).
+Proposition 5.6.— Let FX ⊂ π⋆T(X,/Delta1)be a coherent G-invariant and saturated subsheaf
+of the orbifold tangent bundle. Then the map (69) factors through (70), i.e. we have anOX/Delta1-linear map
+(71) /Lambda12F/Delta1→ π⋆T(X,/Delta1)/F/Delta1
+Our proof will unfold as follows. Let U ⊂ X/Delta1be one of the coordinate subsets
+provided by Lemma 5.2. We ﬁrst construct lifting of the usual Lie bracket on X
+[·,·]U : /Lambda12π⋆TX|U → π⋆TX|U
+which is only locally deﬁned. Then we show that the orbifold tangent bundleπ⋆T(X,/Delta1)
+is closed under this map.
+On the other hand, given any subsheafG ⊂ π⋆TX we show that the map /Lambda12G →
+π⋆TX/G induced by the π-lifting of the usual Lie bracket on X coincides with the one
+given by [·,·]U. The former is globally deﬁned and OX/Delta1-linear. The proposition follows
+by a linear combination of these facts.30 FRÉDÉRIC CAMPANA, MIHAI P ˘AUN
+Proof. — Let LX be the Lie bracket deﬁned on vector ﬁelds on X:
+(72) LX : /Lambda12TX → TX.
+Let v be a local section of the bundle π⋆TX. We chose local coordinates w =
+(w1,...,w n) and z = (z1,..., zn) near y0 := π(x0) given by Lemma 5.2 (we remark that
+the ﬁnite group G is not used in the following deﬁnition). Then the map π : X/Delta1→ Xi s
+locally written as follows
+(73) π(w) =
+(
+wa1
+1 ,...,w ak
+k ,w k+1,...,w p,w
+mp+1
+p+1 ,...,w mn
+n
+)
+.
+In order to simplify the notations, letcj := 1−
+bj
+aj
+be the coefﬁcient of Dj in /Delta1; if the index
+“j” corresponds to one of the hypersurfaces Hj , then we set cj := 0.
+We can write v in a unique manner
+(74) v =
+∑
+I∈Er,a
+wIπ⋆vI
+where Er,a is the set of indices I = (i1,..., ik, ip+1,... in) such that 0 ≤ ij ≤ aj − 1f o rj =
+1,..., k and 0 ≤ iα ≤ mα − 1f o r i ≥ p + 1. and we use the multi-index notation wI :=∏
+j w
+ij
+1 .T h e(vI) above are local vector ﬁelds on X.
+Then we deﬁne
+(75) [v1,v 2]U :=
+∑
+I,J
+wI+Jπ⋆(
+LX(v1I ∧ v2J)
+)
+.
+We have the following statement, showing that the orbifold tangent bundle is preserved
+by the local map ( 75) (we thank B. Claudon for pointing out a slight inaccuracy in the
+previous version of it).
+Proposition 5.7.— The orbifold tangent space π∗T(X,/Delta1)is closed under the local bracket
+[·,·]U.
+Proof. — We consider the restriction of [·,·]U to the exterior power of the orbifold
+tangent bundle, composed with the natural projection map
+(76) [·,·]/Delta1,U : /Lambda12π∗T(X,/Delta1)→ π∗TX/π∗T(X,/Delta1);
+the claim is that this map is identically zero.
+By deﬁnition, the local generators as OY-modules of π∗(TX) are
+(77) ∂k := π∗ ∂
+∂zk
+, k = 1,... n.FOLIATIONS WITH POSITIVE SLOPES AND BIRATIONAL STABILITY. . . 31
+As already mentioned, the local generators of π⋆T(X,/Delta1)can be written explicitly as
+follows
+(78) wa1c1
+1 ∂1,...,w ak ck
+k ∂k,∂k+1,...∂ n.
+Any local functionϕ∈OX/Delta1can be written in an unique mannerϕ(w) = ∑
+I∈Er,a wIψI(z),
+for some holomorphic functions(ψI) deﬁned locally on X; in this expression we are using
+the same conventions as in (74).
+Let v = ∑n
+j=0 ϕj(w)∂j be a local section of π∗T(X,/Delta1); in particular it can be ex-
+pressed as follows
+(79) v =
+∑
+I∈Er,a
+wIπ⋆ρI
+where ρI := ∑n
+j=1 ψIj
+∂
+∂zj
+, for each multi-index I.
+T h em a i no b s e r v a t i o nn o wi st h a twe can assume that the function ψIj divisible by z j
+provided that the j th index of I satisﬁes the inequality 0 ≤ ij ≤ aj cj − 1. This is an immediate
+consequence of the deﬁnitions, and we detail the argument next.
+By (78) there exists a family of functions (μj)j=1,...,n such that we have
+(80) v =
+k∑
+j=1
+μjwaj cj ∂j +
+n∑
+j=k+1
+μj∂j;
+we by identifying the coefﬁcients in (80)–(79), we obtain
+(81)
+∑
+I
+wIψIj(z) = μj(w)w
+aj cj
+j
+for each j = 1,..., k. This clearly proves our assertion, since we have cj ≤ 1.
+Let π∗V := π∗(TX⟨⌈/Delta1⌉⟩) be the inverse image of the logarithmic tangent bundle
+of corresponding to the pair (X,⌈/Delta1⌉).
+By relation (79) together with the observation above we obtain the decomposition
+(82) v =
+n∑
+j=1
+aj cj−1∑
+ij=0
+wIπ⋆VIj +
+n∑
+j=1
+aj−1∑
+ij=aj cj
+wIπ⋆WIj
+where VIj a b o v ea r el o c a ls e c t i o n so fV,a n dw h e r eWIj are local holomorphic vector ﬁelds
+on X, multiple of ∂
+∂zj
+.I n( 82) we dropped the indexesip+1,..., in since they are playing no
+role.
+The proof ends by a case by case analysis.32 FRÉDÉRIC CAMPANA, MIHAI P ˘AUN
+(a) We have
+(83)
+[
+wIπ⋆VI,w Jπ⋆VJ
+]
+U = wI+Jπ⋆(
+LX(VI, VJ)
+)
+so it belongs to π⋆T(X,/Delta1), given the fact that the logarithmic tangent bundle
+is stable by the Lie bracketLX.
+(b) If j, r ≤ k then we have
+(84)
+[
+w
+aj cj
+j f ∂j,w ar cr
+r g∂r
+]
+U = w
+aj cj
+j war cr
+r π⋆
+(
+LX
+(
+f ∂
+∂zj
+, g ∂
+∂zr
+))
+which clearly belongs to π⋆T(X,/Delta1).
+(c) If V I is a local section of V and if r ≤ k then we have
+(85)
+[
+wIπ⋆VI,w ar cr
+r g∂r
+]
+U = wIwar cr
+r π⋆
+(
+LX
+(
+VI, g ∂
+∂zr
+))
+and, say , if r ̸= 1w eh a v eLX(fz1
+∂
+∂z1
+, g ∂
+∂zr
+) = az1
+∂
+∂z1
++ b ∂
+∂zr
+for some functions
+a and b whose expressions do not matter: the point is that the π-inverse im-
+age of this vector belongs to π⋆T(X,/Delta1)when multiplied with war cr
+r .I f r = 1,
+then no additional explanations are required, because of the factor war cr
+r . Also,
+if l ≥ k + 1w eh a v eLX(f ∂
+∂zl
+, g ∂
+∂zr
+) = a ∂
+∂zl
++ b ∂
+∂zr
+for some (other) functions a
+and b, but the result is the same: the π-inverse image of this vector belongs
+to π⋆T(X,/Delta1)when multiplied with war cr
+r –remark that there is no vanishing
+condition imposed for the coefﬁcients ≥ k + 1i n( 78).
+The Proposition 5.7 is proved. □
+Proposition 5.8.— Let G ⊂ π⋆TX be a coherent subsheaf, such that there exists GX ⊂ TX
+with the property thatG = π⋆GX. Then the following map induced by [·,·]U
+(86) /Lambda12G → π⋆TX/G
+coincides with the π-inverse image of the Lie bracket/Lambda12GX → TX/GX.I ti st h e r e f o r eOX/Delta1-linear and
+globally deﬁned.
+Proof. — Let qj,ρj be positive integers, such thatρj ≤ aj − 1. We denote bywqa+ρ :=∏w
+qj aj+ρj
+j . The calculation required by the Lemma 5.8 is very simple, based on identities
+of the following type
+wqa+ρπ⋆(
+LX(v1,v 2)
+)
+= wρπ⋆(
+zqLX(v1,v 2)
+)
+(87)
+= wρπ⋆(
+LX
+(
+zqv1,v 2
+))
++ ψπ⋆v1FOLIATIONS WITH POSITIVE SLOPES AND BIRATIONAL STABILITY. . . 33
+where vj are local sections of GX,a n dψ is a local function on X /Delta1. This implies that if
+V1, V2 are local sections of π⋆GX,t h e nw eh a v e
+(88) π⋆LX
+(
+ϕ(w)V1 ∧ V2
+)
+≡ ϕ(w)π⋆LX(V1 ∧ V2)
+modulo a vector in π⋆GX =G. This is precisely what we need to prove, given the Deﬁni-
+tion (75). □
+We are now ready for the proof of Proposition 5.6, as follows. By Proposition 5.8,
+the composed map:
+(89) /Lambda12F/Delta1→ /Lambda12Fs → π⋆TX/Fs
+is OX/Delta1-linear (recall that Fs is the saturation of F/Delta1in π⋆TX). This induces a unique
+factorisation (cf. Proposition 5.7)t h r o u g h :
+(90) /Lambda12F/Delta1→ π⋆T(X,/Delta1)/F/Delta1,
+since the maps /Lambda12F/Delta1→ /Lambda12Fs and π⋆T(X,/Delta1)/F/Delta1→ π⋆TX/Fs are both injective.W e
+are using the fact that F/Delta1= Fs ∩ π⋆T(X,/Delta1), hence Proposition 5.6 follows from the
+OX/Delta1-linearity of (89). □
+We have the following consequence of these considerations.
+Corollary 5.9.— LetF/Delta1⊂ π⋆T(X,/Delta1)be a coherent subsheaf. Assume thatF/Delta1is saturated
+and G-invariant. Let Fs be the saturation of F/Delta1in π⋆TX; by Lemma 5.5 we have Fs = π⋆F.
+We assume moreover that the orbifold Lie bracket (90) vanishes identically. Then the sheaf F deﬁnes a
+holomorphic foliation on X.
+Proof. — By hypothesis, the linear map ( 90) is identically zero, so we obtain the
+following partial conclusion: let v1 and v2 be two local sections of F/Delta1; then [v1,v 2]U ∈F/Delta1.
+Let V1, V2 be two local sections ofF: there exists two local holomorphic functions
+ϕ1 and ϕ2 on X/Delta1such that
+(91) vj := ϕjπ⋆Vj ∈F/Delta1
+for each j = 1, 2 .H e n c ew eh a v eϕ1ϕ2π⋆LX(V1, V2) ∈F/Delta1and thus
+(92) π⋆LX(V1, V2) ∈Fs.
+This implies that we have
+(93)
+LX(V1, V2) ∈F
+and thus F deﬁnes a foliation on X. □34 FRÉDÉRIC CAMPANA, MIHAI P ˘AUN
+5.4. The relative canonical bundle of an orbifold ﬁbration. —The following results (Theo-
+rem 5.10 and Lemma 5.12) have been shown in [19], Proposition 1.9 and Theorem 2.11,
+by computing the degree of both sides on complete intersection curves of very ample
+classes. We present here a different proof.
+Theorem 5.10.— Let
+F/Delta1⊂ π∗T(X,/Delta1)be such that its saturation Fsat
+/Delta1in π⋆TX is equal
+to π⋆(F),w h e r eF = Ker(dp) ⊂ TX is an algebraic foliation induced by the rational ﬁbration
+p : X/axisshort/axisshort/arrowaxisrightZ.I f KX + /Delta1is pseudo-effective, then:
+(94) μπ⋆β(F/Delta1) ≤ 0,
+for any movable class β on X.
+Proof. — It is based on the following two statements of possibly independent inter-
+est.
+Lemma 5.11.— Let F/Delta1⊂ π∗T(X,/Delta1)be such that Fsat
+/Delta1= π∗(F),w h e r eF =
+Ker(dp) ⊂ TX is an algebraic foliation induced by the rational ﬁbration p : X /axisshort/axisshort/arrowaxisrightZ. Then we
+have
+(95)d e t F⋆
+/Delta1= π⋆(
+KF + /Delta1hor)
+.
+As in Theorem 5.10,l e t p : X/axisshort/axisshort/arrowaxisrightZ be a rational map, and let F := Ker(dp) be
+the foliation induced by the kernel of its differential. The following statement holds true;
+it appears in [23] in a slightly different form.
+Lemma 5.12.— Let π
+X : ˆX → X and let πZ : ˆZ → Z be a modiﬁcation of X and Z,
+respectively, such that the following properties are satisﬁed.
+(i) The induced mapˆp : ˆX → ˆZ is regular, and let E be its discriminant divisor.
+(ii) The inverse image
+(96) ˆE :=ˆp−1E
+has normal crossings.
+(iii) Every component of ˆE which is contracted byˆp is equally contracted by πX.
+Let ˆF be the foliation induced byF on ˆX; then we claim that the following equality holds true
+(97)K ˆF = KˆX/ˆZ − D(ˆp)
+modulo a divisor which is πX-exceptional.
+Before proving these statements, we show that they imply Theorem5.10.L e tβ be
+a movable class on X; by (97) we have the equality
+(98) c1
+(
+KˆF + ˆ/Delta1hor)
+.π⋆
+Xβ = c1
+(
+KˆX/ˆZ + ˆ/Delta1hor − D(ˆp)
+)
+.π⋆
+XβFOLIATIONS WITH POSITIVE SLOPES AND BIRATIONAL STABILITY. . . 35
+because W · π⋆
+Xβ = 0f o ra n yπX–exceptional divisor W. Thus we obtain:
+(99) c1
+(
+KˆF + ˆ/Delta1hor)
+.π⋆
+Xβ ≥ 0
+by Theorem 3.4. By (iii) of Lemma 5.12 combined with the equality (95)w eh a v e
+(100) c1
+(
+KˆF + ˆ/Delta1hor)
+.π⋆
+Xβ = c1
+(
+F⋆
+/Delta1
+)
+.π⋆β,
+proving Theorem 5.10.
+•Proof of Lemma 5.11
+The equality ( 95) will be shown next to hold by a direct computation in local
+coordinates. Let X 1 ⊂ X be a Zariski open set such that the restriction F|X1 is a non-
+singular foliation, and such that we have X1 ∩ Dj ∩ Dk =∅ for each pair of indexes j ̸= k,
+cf. (52). We equally assume that X 1 does not contain any of the tangency points of F
+with the support of /Delta1t, i.e. the set of points z ∈∪ Dj such that the tangent space of the
+divisor at z containsFz.H e r ew ed e n o t eb y/Delta1t the set of components of /Delta1which are not
+invariant byF.
+We have
+(101)c o d i m X(X \ X1) ≥ 2,
+hence it would be enough to show that (95) holds true when restricted to π−1(X1),g i v e n
+that the map π is ﬁnite.
+Let x0 ∈ π−1(D1 ∩ X1) be a point; we have to distinguish between two cases.
+If D1 is not invariant by F,t h e ni np a r t i c u l a rD1 is horizontal with respect to the
+map p, and moreover we can choose the local coordinates (z1,..., zn) on an open set U
+containing the point π(x0) such that
+(102)D 1 ∩ U = (z1 = 0),
+and such thatF|U is generated by
+(103) ∂
+∂z1
+,..., ∂
+∂zq
+.
+Near x0 the map π is given by (w1,...,w n) → (wa1
+1 ,w 2,...,w n) and the intersection
+π⋆F ∩ π⋆T(X,/Delta1)is generated by
+(104) wa1−b1
+1 π⋆ ∂
+∂z1
+,π ⋆ ∂
+∂z2
+,...,π ⋆ ∂
+∂zq
+,
+(notations as in Section 5.4) and the formula (95) follows.
+If D1 is invariant byF,t h e nw eﬁ r s tr e m a r kt h a tD1 cannot be horizontal with respect
+to the map p (given thatF is equal to the kernel of this map generically). An appropriate
+choice of coordinates will give
+(105)D 1 ∩ U = (zq+1 = 0),36 FRÉDÉRIC CAMPANA, MIHAI P ˘AUN
+and such thatF|U is generated by
+(106) ∂
+∂z1
+,..., ∂
+∂zq
+and the mapπ is (w1,...,w q,w q+1,...,w n) → (z1,... zq, z
+aq+1
+q+1 ,..., zn). The intersection
+π⋆F ∩ π⋆T(X,/Delta1)is generated by
+(107) π⋆ ∂
+∂z1
+,π ⋆ ∂
+∂z2
+,...,π ⋆ ∂
+∂zq
+,
+which settles Lemma 5.11 in this second case.
+If the point x0 does not belong to the support of π−1(/Delta1), then the veriﬁcation
+of (95) is simpler. Indeed, near such point the orbifold tangent space coincides with the
+inverse image of the tangent bundle of X, thus we have Fsat
+/Delta1,x0 = π⋆(F)x0 . The formula
+(95) follows—we remark that in this case it makes no difference if π is ramiﬁed at x0 or
+not.
+All in all, the lemma is proved. □
+•Proof of Lemma 5.12
+Let J ⊂ˆp⋆TˆZ be the image of the differential ofˆp,s ot h a tw eh a v e
+(108)0 → ˆF → TˆX → J → 0
+outside a set of codimension at least two.
+Let x0 be a generic point of a component W of ˆE which is notˆp-exceptional.T h e nw e
+have a coordinate system centered at x0,s a y(z1,..., zn) with respect to which the mapˆp
+can be written as follows
+(109) (z1,..., zn) →
+(
+zq+1,..., zn−1, zkn
+n
+)
+where W = (zn = 0) near x0.
+By a direct computation of the differential, we deduce that J is generated by the
+vector ﬁelds
+(110) ∂
+∂t1
+, ∂
+∂t2
+,..., zkn−1
+n
+∂
+∂tn−q
+near y0.
+Hence the determinant of J is equal to
+(111)d e t J =− p⋆KˆZ −
+∑
+i
+(ki − 1)Yi
+where the hypersurfaces appearing in the ﬁrst sum in (111) correspond to the components
+of the pre-image of E ⊂ ˆZ which are not exceptional with respect toˆp.FOLIATIONS WITH POSITIVE SLOPES AND BIRATIONAL STABILITY. . . 37
+Thus, by the sequence (108)w eo b t a i n
+(112)d e t F − p⋆KˆZ −
+∑
+i
+(ki − 1)μ⋆Yi =− KˆX
+and after rearranging the terms, this can be reformulated as follows
+(113)K ˆF = KˆX/ˆZ − D(ˆp)
+modulo a divisor which is πX-exceptional. This is what we wanted to prove. □
+6. Proof of Theorems 1.4 and 1.3
+6.1. Proof of Theorem 1.4.— We recall here some notions. Let(X,/Delta1)be a smooth
+projective log-canonical orbifold pair. Let π : X/Delta1→ X be a Kawamata cover adapted
+to (X,/Delta1),a n dl e tπ∗/Omega11(X,/Delta1)and π∗T(X,/Delta1)be its cotangent and tangent bundles,
+respectively . Let furtherF/Delta1⊂ π∗T(X,/Delta1)be a coherent, saturated subsheaf. We denote
+by Fsat
+/Delta1the saturation of F/Delta1in π⋆TX. We assume that we have Fsat
+/Delta1= π∗(FX) for some
+uniquely determined distribution FX ⊂ TX on X.
+Denote by /Psi1:∧ 2F/Delta1→ π∗T(X,/Delta1)/F/Delta1the associated orbifold Lie bracket (cf.
+Corollary 5.6).
+Deﬁnition 6.1.— We say that F/Delta1is a foliation on (X,/Delta1)if the above map /Psi1vanishes
+identically.
+Remark 6.2. — We assume that
+2.μπ∗α,min(F/Delta1)>μ π∗α,max
+(
+π∗T(X,/Delta1)
+)
+/F/Delta1
+for some movable class α on X. Then π∗LX vanishes identically , by the usual slope con-
+siderations.
+Remark 6.3.—I f μπ∗α,max(π∗T(X,/Delta1)) >0t h e nw eo b t a i naf o l i a t i o nF/Delta1by
+choosing appropriate pieces of the Harder-Narasimhan ﬁltration of π∗T(X,/Delta1).
+Recall the statement of Theorem 1.4:
+Theorem 6.4.— Let F/Delta1⊂ π∗(T(X,/Delta1))be such that: μπ⋆α,min(F/Delta1)> 0, and such that
+2.μα,min(F/Delta1)>μ α,max(π∗(T(X,/Delta1)/F/Delta1). The saturation of F/Delta1in π∗(TX) then deﬁnes an al-
+gebraic foliation FX on X such that the restriction of KX + /Delta1to the closure F of the generic leaf of F
+is not pseudo-effective.38 FRÉDÉRIC CAMPANA, MIHAI P ˘AUN
+Proof. — By Lemma 5.5 there exists a sheafFX on X such that
+π⋆(FX) =Fsat
+/Delta1.
+By Remark 6.2 and Corollary 5.9 we infer thatFX is a foliation on X. Moreover we have
+μα,min(FX) ≥ μπ∗α,min(F/Delta1)> 0.
+Next, by Lemma 5.11 and 5.12 we see that K X/Z + /Delta1is not pseudo-effective (we use
+the same notations as in these statements). We obtain Theorem 6.4 as a consequence of
+Remark 3.6 (and the references therein). □
+6.2. Proof of Theorem 1.3.
+Proof. — Let (X,/Delta1)be a smooth lc pair as in Theorem 1.3,a n dl e tπ : X/Delta1→ X
+be a ramiﬁed cover associated to this pair, given by Lemma 5.2. Consider any quotient
+⊗ mπ⋆/Omega11(X,/Delta1)→ Q → 0.
+By contradiction, assume that c1(Q).π⋆α< 0 for some movable class α on X.
+Then we haveμπ∗α,min(⊗ mπ⋆/Omega11(X,/Delta1))<0. By Theorem 2.9 in Section 2 the inequality
+μπ∗α,max(π⋆T(X,/Delta1))>0 is equally satisﬁed.
+Let 0 → F/Delta1→ π⋆T(X,/Delta1)be the maximal π⋆α destabilising subsheaf of the orb-
+ifold tangent bundle. The maximality of F/Delta1induces a few important properties: it is
+π⋆α-semistable, G-invariant and saturated in π⋆T(X,/Delta1).
+Moreover, we have:μπ⋆α(F/Delta1)> 0, and
+2μπ⋆α(F/Delta1)>μ π⋆α,max
+(
+π∗T(X,/Delta1)/F/Delta1
+)
+.
+The conclusion then follows by combining Remark6.2, Corollary 5.9 and Theorem 5.10.
+Indeed, the saturation of F/Delta1in the π-inverse image of T X is the inverse image of a
+foliation FX on X. It turns out that FX is algebraic, and the contradiction follows by
+applying Theorem 5.10. □
+7. Birational stability of the orbifold cotangent bundle
+In this section we show the birational stability of /Omega11(X,/Delta1)if K X + /Delta1is pseudo-
+effective, in the sense that, the numerical dimension of any sub-line bundle L of
+⊗ m(/Omega11(X,/Delta1))is bounded from above by the numerical dimension of K X + /Delta1, this for
+any m ≥ 0. This term was introduced in [ 13] to express the fact that the positivity of the
+subsheaves of the cotangent bundles (measured in terms of sections rather than slopes) is
+a tm o s tt h es a m ea sf o rt h ec o t a n g e n tb u n d l ei t s e l f .
+If the bundle L is big, then it turns out that the assumption KX + /Delta1pseudo-effective
+can be dropped. This result was obtained in [ 19] by delicate arguments using crucially
+[5]. The strengthening from ‘generic semi-positive’ to ‘pseudo-effective’ obtained here
+permits to give below a short and obvious argument, without using [5].FOLIATIONS WITH POSITIVE SLOPES AND BIRATIONAL STABILITY. . . 39
+7.1. Numerical dimension. — Let X be smooth and projective, and let L be a line-
+bundle (or Q-line-bundle) on X. Let A be any sufﬁciently ample line bundle on X. Recall
+from [45]:
+Deﬁnition 7.1.— The numerical dimension ν(X,L) of L is deﬁned by:
+ν(X,L) := max
+{
+k ∈ Z | lim sup
+p→∞
+h0(X, p.L + A)
+pk < +∞
+}
+.
+We have the following properties:
+1.1. ν(X,L) ∈{ − ∞, 0, 1,..., n},a n dν(X,L) ≥ κ(X,L).
+1.2. ν(X,L) ≥ 0 if and only if L is pseudo-effective. See [ 45], Section 5,
+Lemma 1.4.
+1.3. ν(X, k.L) = ν(X,L),f o ra n yk > 0.
+1.4. ν(X, k.L + P) ≥ ν(X,L) if P is a pseudo-effective Q-line bundle.
+1.5. If ν(X,L) = n,t h e nκ(X,L) = n (i.e.:L is ‘big’).
+This variant of the Iitaka-Moishezon dimension of Q-line bundles permits, when
+applied to adjoint line-bundles, to turn conjectures of Abundance-type into theorems. We
+deﬁne now:
+Deﬁnition 7.2.— Let (X,/Delta1)be a projective log-canonical pair with X smooth and /Delta1sup-
+ported on an snc divisor. Letπ : X/Delta1→ X be an adapted cover. Let
+ν+(X,/Delta1):= max
+{
+ν(X,L) |∃ m such that π∗(L) ⊂⊗ mπ⋆/Omega11(X,/Delta1)
+}
+.
+We deﬁne, as usual:ν(X,/Delta1):= ν(X, KX + /Delta1).
+We obviously have the following properties:
+P. 1 .ν+(X,/Delta1)≥ ν(X,/Delta1)≥ κ(X,/Delta1). We shall show below the equality:
+ν+(X,/Delta1)= ν(X,/Delta1),w h e nKX + /Delta1is pseudo-effective.
+P .2. When/Delta1= 0, we thus have, if KX is pseudo-efective:
+κ(X) ≤ κ+(X) ≤ ν+(X) = ν(X),
+where κ+(X) was deﬁned in [11]a s :
+κ+(X) = max
+{
+κ
+(
+X, det(F)
+)
+| F ⊂ /Omega1p(X), p > 0
+}
+.
+P. 3 . L e t X= Pd × Y, with dim (Y) = n − d < n,a n dK Y pseudo-effective. Then
+ν(X) =− ∞ , while ν+(X) = ν(Y) ≥ 0. These examples show that the restriction K X
+pseudo-effective is needed, and explain why the this condition can be dropped when
+ν+(X) = n.
+P. 4 . L e trX : X → RX be the ‘rational quotient’ of X (called also its ‘MRC-
+ﬁbration’). It has rationally connected ﬁbres and non-uniruled base (by [ 25]). One can
+easily show that ν+(X) = ν(RX).40 FRÉDÉRIC CAMPANA, MIHAI P ˘AUN
+7.2. Birational stability of orbifold cotangent bundles.
+Theorem 7.3.— Let (X,/Delta1)to be smooth projective orbifold pair, such thatKX +/Delta1is pseudo-
+effective. Then ν+(X,/Delta1)= ν(X,/Delta1). In other words:
+Let L be a line bundle on X, together with a non-trivial morphism π⋆L →⊗ mπ⋆/Omega11(X,/Delta1).
+Then: ν(X,L) ≤ ν(X, KX + /Delta1).
+Proof. — Let Q := ⊗mπ⋆/Omega11(X,/Delta1)/π⋆L the quotient sheaf. Since
+det(Q) = nm−1π⋆(KX + /Delta1)− π⋆L,
+we have:
+nm−1(KX + /Delta1)=L + P.
+H e r ePi saQ-line bundle on X, whose π-inverse image is equal to det(Q).
+The bundle det(Q) is non-negative when evaluated on any inverse image of any
+movable class on X, by Theorem 1.3. Thus P is pseudo-effective, and therefore ν(KX +
+/Delta1)≥ ν(L) by property P .4 above. □
+Remark 7.4. — Assume that the line bundle L in Theorem 7.3 is big. Then KX +
+/Delta1is big if pseudo-effective. Indeed we deduce that ν(X, KX + /Delta1)= n, and then the
+conclusion follows from the property P .5 in Section7.1 (or, without it, from the fact that
+the sum of a pseudo-effective and of a big Q-line bundle is big). We shall remove the
+hypothesis “KX + /Delta1pseudo-effective” in the next subsection.
+Remark 7.5. — The following observation has been communicated by Behrouz
+Taji: if X is smooth projective,n-dimensional, and if ν(X) = 0, with χ(X,OX) ̸= 0, then
+π1(X) is ﬁnite of cardinality at most 2n−1.
+To see this, just apply [ 11], Theorem 4.1, which says that X has a ﬁnite funda-
+mental group of cardinality at most 2 n−1 if κ+(X) ≤ 0. But now , observe that:κ+(X) ≤
+ν+(X) = ν(X) = 0. The last equality holds by Theorem7.3, since KX is pseudo-effective
+if ν(X) = 0. Notice that ν(X) = 0 implies κ(X) = 0, by [ 33], and that the converse
+is conjecturally true by Abundance. It was conjectured in [ 11]t h a tκ+(X) = κ(X) if
+κ(X) ≥ 0.
+7.3. Criteria for pseudoeffectivity and log-general type.
+Theorem 7.6.— Let (X,/Delta1)be a smooth orbifold log-canonical pair, and let L be a pseudo-
+effective line bundle on X. We assume that there exists a non-zero map
+(114) π⋆L → π⋆/Omega1⊗ m(X,/Delta1)⊗ π⋆(KX + /Delta1)p
+for integers m ≥ 0 and p > 0.T h e nKX + /Delta1is pseudo-effective. (The converse is obvious, taking
+m = 0, p = 1.)FOLIATIONS WITH POSITIVE SLOPES AND BIRATIONAL STABILITY. . . 41
+Proof. — Let H be an ample line bundle on X. Let tmin be the minimum of the
+positive real numbers t such that
+(115)K X + /Delta1+ tH
+is pseudo-effective. The existence oftmin is guaranteed by the fact that the pseudo-effective
+cone is closed.
+We claim that tmin = 0. If not, let (tk) ⊂ Q+ be a decreasing sequence of (positive)
+rational numbers converging to tmin. Since H is ample, there exists a smooth Q-divisor
+still denoted by H in the linear system |H| such that the orbifold
+(116) (X,/Delta1+ tkH)
+is log-smooth and log-canonical for each k ≥ 1. If we denote by πk the corresponding
+ramiﬁed cover, then the map (114) induces an injective morphism of sheaves
+(117) π⋆
+k L ⊗ π⋆
+k (KX + /Delta1)−p → π⋆
+k /Omega1m(X,/Delta1+ tkH)
+and let Qk be the co-kernel of (117). As in the proof of 7.11 we infer that we have
+(118) nm−1(KX + /Delta1+ tkH) = L − p(KX + /Delta1)+ Pk
+where Pk is pseudo-effective. But this implies that
+(119)K X + /Delta1+ tk
+nm−1
+p + nm−1 H
+is pseudo-effective, for each value of the parameter k.
+On the other hand, there exists k0 ≫ 0s u c ht h a t
+tk0
+c(m, n)
+p + c(m, n) < tmin
+since we have assumed that tmin > 0 is a strictly positive number. Combined with the fact
+that the Q-bundle in (119) is pseudo-effective for k := k0, this is in contradiction with the
+choice of tmin. □
+Remark 7.7. — When m > 0, p = 0, the above situation occurs with K (X,/Delta1)either
+pseudo-effective, or not pseudo-effective, as one sees by considering X = Pk × Zn−k,f o r
+0 ≤ k < n,i f /Delta1= 0, KZ pseudo-effective.
+When p < 0 instead, we get a lower bound for the existence of L, by the same
+method.42 FRÉDÉRIC CAMPANA, MIHAI P ˘AUN
+Theorem 7.8.— Let (X,/Delta1)be a smooth orbifold log-canonical pair such that KX + /Delta1is
+pseudo-effective, but not numerically trivial.
+If p > nm−1 is an integer, every map
+π⋆(
+L · (KX + /Delta1)p)
+→ π⋆/Omega1⊗ m(X,/Delta1)
+vanishes, for any pseudo-effective line bundleL on X. In particular we haveH0(X/Delta1,π ⋆/Omega1⊗ m(X,/Delta1)⊗
+π⋆(KX + /Delta1)−p) = 0,i fp > nm−1.
+Proof. — Let a non-zero mapπ∗(L) → π⋆/Omega1⊗ m(X,/Delta1)⊗ π⋆(KX +/Delta1)−⊗ p be given.
+The same arguments as above show that we have
+L + P + p.(KX + /Delta1)= nm−1.(KX + /Delta1)
+for some pseudo-effective P. Let now α ∈ Mov(X) be such that (KX + /Delta1).α >0 (this is
+here that the numerical non-triviality of (KX + /Delta1)is used). We get: (nm−1 − p).((KX +
+/Delta1).α)≥ 0, and the conclusion by dividing by (KX + /Delta1).α. □
+Remark 7.9. — The trivial example of an Abelian variety X together with /Delta1= 0
+shows that for any (m, p) ∈ Z⊕ 2 the conclusion may fail when K(X,/Delta1)is trivial. It however
+holds for any blow-up of these X′s. This example illustrates again the fact that our results
+are stable by blow-ups, but not necessarily by contractions.
+Remark 7.10. — Also, we note that this statement is considerably weaker than the
+version obtained in [ 20], where the same conclusion is obtained under the assumption
+that p > m. However, the technical tools needed in [20] for the proof of this sharper result
+are much more involved than the present arguments.
+Theorem 7.11 ([19]).— Let (X,/Delta1)be a smooth log-canonical pair, together with a big line
+bundleL → X which admits a non-trivial morphism
+(120) π⋆L →⊗ mπ⋆/Omega11(X,/Delta1).
+Then KX + /Delta1is big.
+Proof. — One proof is essentially the same as the one used for Theorem7.6 above,
+and also as the one used in [ 19], and of Theorem 2.3 in [ 18], which deals with the
+case /Delta1= 0. The statement can also however be directly deduced from the preceding
+Theorem 7.6 by exactly the same extremely short argument used to deduce Corollary8.7
+from Theorem 8.6, and to which we refer. □FOLIATIONS WITH POSITIVE SLOPES AND BIRATIONAL STABILITY. . . 43
+7.4. Cases −(KX + /Delta1)either ample, or numerically trivial. — We give here a strength-
+ened form of a result in [ 19]. The proof is exactly the same as the one of Theorem 7.3
+above, so we just state the result.
+Theorem 7.12.— Let (X,/Delta1)be smooth, projective and log-canonical. Assume that KX +
+/Delta1≡ 0.
+Then μπ∗(α),max(π∗(/Omega11(X,/Delta1))≤ 0.
+Let π∗L →⊗ m(π∗/Omega11(X,/Delta1)),m > 0 be a non-zero sheaf morphism, for some line bundle L
+on X.
+Then: −L is pseudo-effective. In particular: κ(X, L) ≤ 0.
+Remark 7.13. — It is proved in [ 15], Theorem 4.6, that if c1(KX + /Delta1)= 0 (resp.
+if −(KX + /Delta1)is ample), and if the coefﬁcients of /Delta1are ‘standard’ (i.e.: of the form
+cj = (1 − 1
+mj
+),w i t hmj > 0 integer), the orbifold fundamental group π1(X,/Delta1)is almost
+abelian (resp. ﬁnite).
+By combining these ideas with adjacent techniques, the following vanishing result
+is established in [21], using algebro-geometric arguments in characteristic 0 only .
+Theorem 7.14.— [21]L e t (X,/Delta1)be a smooth projective klt orbifold pair. Assume that
+−(KX + /Delta1)is ample. Let π : X/Delta1→ X be a Kawamata cover adapted to /Delta1. Then, for any m > 0
+and any line bundle L′ ≡ 0 on X/Delta1,w eh a v e :H0(X/Delta1,⊗ m(π∗/Omega11(X,/Delta1))⊗ L′) = 0.M o r e o v e r
+π1(X) ={ 1}.
+8. Variation and positivity for quasi-projective families
+We mention here an application of Theorem 7.11 in the theory of moduli. An
+extremely simpliﬁed proof of Theorem 7.11 is presented in the next section.
+Let f : V → B a projective submersion with connected ﬁbres between two quasi-
+projective connected manifolds V, B. The ‘variation’ V ar(f ) ∈{ 0,..., d := dim(B)} of f
+is the rank of the Kodaira-Spencer map κσ : TB → R1f∗(TV/B) at the generic point
+of B. Thus Var(f ) = 0 if and only if f is isotrivial.
+Let ¯B be any ‘good’ smooth projective compatiﬁcation of B, such that D = ¯B − B
+is an snc divisor.
+The following result was conjectured by E. Viehweg, generalising a former hyper-
+bolicity conjecture of I. R. Shafarevich. Special cases where obtained previously by [34],
+[29], [46].
+Theorem 8.1.— Let f : V → B be as above. Assume that the ﬁbres of f all have an ample
+canonical bundle and that Var(f ) = dim(B). Then the base B is of log-general type, i.e.
+κ(¯B, K¯B + D) = dim(B).44 FRÉDÉRIC CAMPANA, MIHAI P ˘AUN
+Proof. — In [50], Viehweg-Zuo have shown that, in this situation, for somem > 0,
+there exists a big sub-line bundle L of Symm(/Omega11
+X(Log(D)).F r o mT h e o r e m7.11 we de-
+duce that K¯B + Di sb i g . □
+Partial generalisations have been obtained in [ 47]a n d[ 49], also using Theo-
+rem 7.11 and variants of the Viehweg-Zuo sheaf.
+In [47], it is shown that, for f : V → Ba sa b o v e ,¯B is of Log-general type if the
+ﬁbres of f are of general type, and if the (birational) variation is maximal (equal to d).
+In [49], the ‘isotriviality conjecture’ formulated in [ 13] is solved. This conjecture
+says that if B is ‘special’, and if the ﬁbres off are canonically polarised, thenf is isotrivial.
+Recall that B being ‘special’ means that κ(¯B,L)< p,f o ra n yp > 0a n da n yL ⊂
+/Omega1
+p
+¯B(Log(D)). (V ery) particular cases of ‘special’ quasi-projective manifolds are the ones
+such that κ(¯B, K¯B + D) = 0 for some (or any) good projective compactiﬁcation ¯Bo fB .
+We refer to [13] for more details on ‘specialness’ and structure results.
+When d = 1, the only ‘special’ quasi-projective curves are: P1, C, C∗,a n dE ,a n y
+elliptic curve. I. R. Shafarevich originally formulated his ‘hyperbolicity conjecture’ as
+the isotriviality of smooth families of curves of genus at least 2 parametrised by a ‘special’
+quasi-projective curve. Remark that quasi-projective curves are ‘special’ if and only if non-
+hyperbolic. In higher dimensions, there are (lots of) ‘special’ quasi-projective manifolds¯B
+of all possible log-Kodaira dimensions less than d := dim(B).
+We mention here yet another result, which can be seen as a version of Viehweg
+conjecture for Calabi-Yau families.
+Theorem 8.2.— Let f : V → B be as above. Assume that the ﬁrst Chern class of the ﬁbres of
+f is trivial, and that Var(f ) = dim(B). Then the base B is of log-general type, i.e.
+κ(¯B, K
+¯B + D) = dim(B).
+Proof. — It is completely similar to the argument we have provided for Theo-
+rem 8.1, except that the existence of the Viehweg-Zuo sheaf is established in [ 4], Theo-
+rem 9.9. □
+The preceding results suggest the more general isotriviality question:
+Question. — Let f : V → Bb ea sa b o v e4 Assume that the ﬁbres of f have a pseudo-
+effective canonical bundle. If B is ‘special’, is then f is birationally isotrivial? If the bira-
+tional variation of f is maximal, is then B is of log-general type?
+The question is also interesting when f has Fano ﬁbres. A. Kuznetsov in [ 37],
+mentions that ‘Gushel-Mukai’ manifolds (complete intersections in G r(2, 5) of Plücker
+4 One may even assume only thatf be ‘quasi-submersive’, meaning that the reduction of each of its ﬁbres is smooth.
+The conclusion should then hold by replacing B with the ‘orbifold base’ of f , in the sense of [ 12]. This conjecture was
+formulated in this form in [1] when the reduced ﬁbres of f have a semi-ample canonical bundle.FOLIATIONS WITH POSITIVE SLOPES AND BIRATIONAL STABILITY. . . 45
+hyperplanes and one hyperquadric) provide non-isotrivial families of Fano threefolds with
+Picard number 1 parametrised by a smooth projective surface. These families are, how-
+ever, birationally isotrivial.
+8.1. Criteria for pseudoeffectivity and bigness of ‘purely’ logarithmic cotangent bundles. —This
+ﬁnal subsection is inspired by a very recent and elegant article of C. Schnell cf. [48]. The
+point in [ 48] is that Theorem 7.11 can be obtained by combining some of the main
+results established in the previous sections with induction on the dimension on X. In
+this way one can avoid using the full force of the results we have in the general orbifold
+context, provided that all the coefﬁcients of the divisor /Delta1are equal to one. Nevertheless,
+the algebraicity criteria (Theorem 1.1) seems indispensable.
+Notice however that, even for moduli problems, the treatment of multiple ﬁbres
+requires the orbifold context.
+We change slightly the notations: the orbifold divisor /Delta1will be denoted here by
+D = ∑ D
+i, so as to indicate that the pair (X, D) is purely logarithmic. As before, X is
+non-singular and D is a reduced divisor with simple normal crossings on X. In what
+follows we will only be concerned with orbifold pairs (X, D) of this type.
+In this case the orbifold tangent bundle is the usual logarithmic tangent bundle.
+This is a vector bundle on X, sometimes denoted by T X(− Log(D)), but for the consis-
+tency’s sake, we will conserve the notation T(X, D) here.
+The logarithmic tangent bundle T(X, D) is closed under the Lie bracket induced
+from TX., i.e. we have
+(121) LD : /Lambda12T(X, D) → T(X, D)
+given by the restriction of the Lie bracket of X to the subsheaf T(X, D).
+Let F ⊂ T(X, D) be a coherent subsheaf. We have aOX-linear map
+(122) LF
+D : /Lambda12F → T(X, D)/F
+induced byLD.
+The following statements are particular cases of Corollary5.9 and of Theorem6.4,
+respectively . In the purely logarithmic case, their proofs simpliﬁes considerably , due to the
+fact that no adapted cover is needed.
+Lemma 8.3.— LetF ⊂ T(X, D) be a coherent saturated subsheaf, such that the corresponding
+Lie bracket LF
+D vanishes identically. We denote byFs ⊂ TX the saturation of F in the tangent bundle
+of X. Then Fs deﬁnes a holomorphic foliation.
+Theorem 8.4.— Let F ⊂ T(X, D) be a coherent subsheaf such that the corresponding Lie
+bracket LF
+D is identically zero. We assume moreover that μα,min(F)> 0,f o rs o m eα ∈ Mov(X).
+Then the following are true.46 FRÉDÉRIC CAMPANA, MIHAI P ˘AUN
+(1) The saturation Fs of F in TX deﬁnes an algebraic foliation.
+(2) The restriction of KX +D to the closure of the generic leaf of the algebraic foliationFs ⊂ TX
+is not pseudo-effective.
+As in the general case of an arbitrary orbifold divisor, the conclusion of the point
+(2) of Theorem 8.4 means the following. There exists a birational map p : X′ → Xs u c h
+that the support D′ of p−1(D) has simple normal crossings, together with a surjective map
+f : X′ → Z where Z is a non-singular algebraic manifold, such that we have.
+•The foliation induced byFs on X′ coincides generically with Ker(f ),
+•The restriction KX′ + D′|X′z is not pseudo-effective, where X′
+z i st h eﬁ b r eo ff at
+a generic point z ∈ Z.
+Remark 8.5. — The conclusion here is considerably weaker than in the case where
+D = 0 (rational connectedness being replaced by uniruledness). The analogous result
+in this generalised situation is established in [ 21], after suitable equivalent deﬁnitions
+of rational connectedness in this context are given (based on negativity of the orbifold
+cotangent bundles, but without reference to ‘orbifold rational curves’).
+The next result is the particular case of Theorem 7.6,w h e r e/Delta1is reduced, which
+permits to give an extremely simple proof (inspired by , and simplifying [48], who observed
+that one can argue directly in the logarithmic setting).
+Theorem 8.6.— Let (X, D) be a smooth projective connected purely logarithmic orbifold pair.
+Let L be a pseudo-effective line bundle on X such that there exists a sheaf embedding
+L →⊗ m(
+/Omega11(X, D)
+)
+⊗
+(
+KX ⊗ OX(D)
+)⊗ p
+for some m ≥ 0, p > 0. Then KX + D is pseudo-effective.
+Proof. — Assume by contradiction that K X + D is not pseudo effective. Let α ∈
+Mov(X) be such that(KX + D).α <0. LetF ⊂ T(X, D) be a maximal destabilising sub-
+sheaf, and f : X → Z be a ﬁbration such that F = Ker(df ) generically (here we replace
+(X, D) by a suitable birational smooth model in order to make f regular, as explained in
+the bullets above). The generic orbifold ﬁbre (Xz, Dz) is thus smooth and KXz + Dz not
+pseudo-effective.
+We proceed now by induction on dim(X).
+If dim(Z) = 0, then F = T(X, D),a n d
+0 <μ α,min
+(
+T(X, D)
+)
+=− μα,max
+(
+/Omega1(X, D)
+)
+.
+In the following (in)equalities, we denote/Omega1(X, D) := /Omega1,T is its dual, and K:= KX + D.
+We have
+0 ≤ L.α≤ μα,max
+((
+⊗ m/Omega1⊗ Kp))
+=− m.μα,min(T) + p.K.α≤ p.K.α <0,
+and thus we obtain a contradiction.FOLIATIONS WITH POSITIVE SLOPES AND BIRATIONAL STABILITY. . . 47
+If dim(Z)> 0, we apply the preceding argument to Xz. We have a non-zero mor-
+phism
+L|Xz →⊗ k(
+/Omega11(Xz, Dz)
+)
+⊗
+(
+KXz ⊗ OXz (Dz)
+)⊗ p
+for some 0 ≤ k ≤ m, and the important thing is that p ≥ 1, so we can use induction to
+conclude that KXz + Dz is pseudo-effective. This is a contradiction. □
+Corollary 8.7.— Let (X, D) be a smooth projective connected purely logarithmic orbifold pair.
+Let L be a line bundle on X, which admits an embedding L ⊂⊗ m/Omega11(X, D) for some m > 0,a n d
+such that the Q-bundle ε(KX + D)+ L is big for some rational numberε≥ 0. Then KX + D is big.
+Proof. — Since ε(KX + D) + L is big, there exists an integer q > 0 such that the
+bundle L1 := Lq ⊗ KX ⊗ OX(D) is effective (the number q depends on (X, D), La n dε).
+The hypothesis of Corollary8.7 shows that L1 admits an injection into⊗ mq/Omega11(X, D)⊗
+KX ⊗ OX(D).I fs o ,T h e o r e m8.6 implies that KX + D is pseudo-effective. The corollary
+then follows, since any quotient of ⊗ m/Omega11(X, D) has pseudo-effective determinant. □
+Acknowledgements
+We thank B. Claudon, S. Druel, J. V . Pereira, E. Rousseau, B. Taji and M. Toma for
+comments, advices, corrections and complements on the ﬁrst version of this text. We are
+equally grateful to the anonymous referees for important suggestions and constructive
+criticism which improved substantially the exposition and the mathematical content of
+this article.
+Publisher’s Note
+Springer Nature remains neutral with regard to jurisdictional claims in published
+maps and institutional afﬁliations.
+REFERENCES
+1. E. A.-F . C AMPANA, Characteristic foliations on smooth non-uniruled divisors on projective hyperkähler manifolds,
+arXiv:1405.0539.
+2. C. A RAUJO and S. DRU E L, On Fano foliations, Adv. Math., 238 (2013), 70–118, arXiv:1112.4512.
+3. B. B.-M. P ˘AUN, Quantitative extensions of pluricanonical forms and closed positive currents, Nagoya Math. J. , 205
+(2012), 25–65.
+4. B. B ERNDTSSON,M .P ˘AUN and X. W ANG, Algebraic ﬁber spaces and curvature of higher direct images,
+arXiv:1704.02279 (second version).
+5. C. B IRKAR,P .CASCINI,C .H ACON and J. MCKERNAN, Existence of minimal models for varieties of log-general type, J.
+Am. Math. Soc., 23 (2010), 405–468, arXiv:math/0610203.
+6. S. B OUCKSOM,J . - P .DEMAILLY,M .P ˘AUN and T . PETERNELL, The pseudo-effective cone of a compact Kähler manifold
+and varieties of negative Kodaira dimension, J. Algebraic Geom., 22 (2013), 201–248, arXiv:math/0405285.
+7. F . BOGOMOLOV and M. M CQUILLAN, Rational curves on foliated varieties, IHES preprint IHES/M/01/07.Février
+2001.
+8. J.-B. B OST, Algebraic leaves of algebraic foliations over number ﬁelds,Publ. Math. IHÉS, 93 (2001), 161–221.48 FRÉDÉRIC CAMPANA, MIHAI P ˘AUN
+9. M. B R UNELLA, Uniformisation de feuilletages et feuilles entières (French) [Uniformization of foliations and entire
+leaves], in Complex manifolds, foliations and uniformization , Panor. Synthèses, vol. 34/35, pp. 1–52, Soc. Math., Paris,
+2011.
+10. F . CAMPANA, Connexité rationnelle des variétés de Fano (French) [Rational connectedness of Fano manifolds],Ann. Sci.
+Éc. Norm. Supér., 25 (1992), 539–545.
+11. F . CAMPANA, Fundamental group and positivity of cotangent bundles of compact Kähler manifolds, J. Algebraic Geom.,
+4 (1995), 487–502.
+12. F . CAMPANA, Orbifolds, special varieties and classiﬁcation theory ,Ann. Inst. Fourier, 54 (2004), 499–665.
+13. F . CAMPANA, Orbifoldes géométriques spéciales et classiﬁcation biméromorphe des variétés Kählériennes compactes,
+J. Inst. Math. Jussieu, 10 (2011), 809–934.
+14. F . CAMPANA, Special orbifolds and birational classiﬁcation: a survey, EMS Series, pp. 123–169, Eur. Math. Soc., Zurich, 2011,
+arXiv:1001.3763.
+15. F . CAMPANA and B. CLAUDON, Abelianity conjecture for compact Kähler threefolds, in Proceedings of the Edinburgh Math-
+ematical Society, pp. 1–24, 2014 (Special volume dedicated to V . V . Shokurov).
+16. F . CAMPANA,J .P .DEMAILLY and T . PETERNELL, Rationally connected manifolds and semipositivity of the Ricci curva-
+ture, in Recent advances in algebraic geometry, LMS Lecture Notes Series, vol. 417, pp. 71–91, 2014.
+17. F . CAMPANA,H .G UENANCIA and M. P˘AUN, Metrics with cone singularities along normal crossing divisors and holomor-
+phic tensor ﬁelds, Ann. Sci. ENS, 46 (2013), 877–914.
+18. F . CAMPANA and T . PETERNELL, Geometric stability of the cotangent bundle and the universal cover of a projective
+manifold, Bull. Soc. Math. Fr., 139 (2011), 41–74.
+19. F . CAMPANA and M. P˘AUN, Orbifold generic semi-positivity: an application to families of canonically polarized mani-
+folds, Ann. Inst. Fourier, 65 (2015), 835–861.
+20. F . CAMPANA and M. P ˘AUN, Positivity properties of the bundle of logarithmic tensors on compact Kähler manifolds,
+Compos. Math., 152 (2016), 2350–2370.
+21. F . CAMPANA, Slope rational connectedness for orbifolds, arXiv:1607.07829.
+22. B. C LAUDON, Positivité du cotangent. Bourbaki 2015–2016.
+23. S. D RU E L, On foliations with nef anti-canonical bundle, Trans. Am. Math. Soc., 369 (2017), 7765–7787, arXiv:1507.
+01348.
+24. H. E SNAULT and E. VIEHWEG, Lectures on vanishing theorems, DMV Seminar, vol. 20, Birkhäser V erlag, Basel, 1992.
+25. T . GRABER,J .H ARRIS and J. STARR, Families of rationally connected varieties, J. Am. Math. Soc., 16 (2003), 57–67.
+26. D. G REB,S .K EBEKUS and T . PETERNELL, Movable curves and semistable sheaves, Int. Math. Res. Not. , 2016 (2016),
+536–570, arXiv:1408.4308.
+27. D. G REB and M. TOMA, Compact moduli spaces for slope-semistable sheaves, arXiv:1303.2480.
+28. R. H ARTSHORNE, Cohomological dimension of algebraic varieties, Ann. Math., 88 (1968), 403–450.
+29. K. J ABBUSCH and S. KEBEKUS, Families over special base manifolds and a conjecture of Campana,Math. Z., 269 (2011),
+847–878.
+30. S. K EEL and J. Mc KERNAN, Rational curves on quasi-projective surfaces, Memoirs AMS, vol. 140, 1999.
+31. Y . KAWAMATA, Characterization of Abelian varieties, Compos. Math., 43 (1981), 253–276.
+32. Y . KAWAMATA,K .M ATSUKI and K. MATSUDA, Introduction to the minimal model problem, in Algebraic geometry,A d v .
+Stud. Pure Math., vol. 10, Sendai 1985., pp. 283–360, 1987.
+33. Y . KAWAMATA, On the abundance theorem in the case of numerical Kodaira dimension zero,A m .J .M a t h ., 135 (2013),
+115–124.
+34. S. K EBEKUS and S. K OVÀCS, The structure of surfaces and threefolds mapping to the moduli stack of canonically
+polarised varieties, Duke Math. J., 155 (2010), 1–33.
+35. S. K EBEKUS,L .S OLA-CONDE and M. TOMA, Rationally connected foliations after Bogomolov and McQuillan, J. Alge-
+braic Geom., 16 (2007), 65–81.
+36. J. K OLLÁR,Y .MIY AOKAand S. MORI, Rationally connected manifolds. Rationally connected varieties,J. Algebraic Geom.,
+1 (1992), 429–448.
+37. A. K UZNETSOV, e-mail to F . Campana, May 31, 2015.
+38. R. L AZARSFELD, Positivity in Algebraic Geometry, Ergebnisse der Mathematik und ihrer Grenzgebiete. 3. Folge/A
+Series of Modern Surveys in Mathematics.
+39. J. L I and S.-T . YAU, Hermitian Yang-Mills connections on non-Kähler manifolds, in S. T . Yau (ed.)Mathematical aspects
+of string theory, pp. 560–573, World Scientiﬁc Publ., London, 1987.
+40. F . LORA Y,J .P EREIRA and F . TOUZET, Singular foliations with trivial canonical class, arXiv:1107.1538v6.FOLIATIONS WITH POSITIVE SLOPES AND BIRATIONAL STABILITY. . . 49
+41. Y . MIY AOKA, Deformation of a morphism along a foliation, in Algebraic geometry bowdoin 1985, Proc. Symp. Pure Math.,
+vol. 46, pp. 245–268, 1987.
+42. Y . MIY AOKA, The orbibundle Miyaoka-Yau-Sakai inequality and an effective Bogomolov-McQuillan inequality ,Publ.
+Res. Inst. Math. Sci., Kyoto Univ., 44 (2008), 403–417.
+43. Y . MIY AOKAand S. MORI, A numerical criteria for uniruledness, Ann. Math., 124 (1986), 65–69.
+44. D. M UMFORD, Towards an enumerative geometry of the moduli space of curves, in M. Artin and J. Tate (eds.)Arithmetic
+and geometry, vol. II, Papers Dedicated to I. R. Shafarevich, Progress in Mathematics, vol. 36, 1983.
+45. N. N A K AYA M A, Zariski-decomposition and abundance, Mathematical Society of Japan Memoirs, vol. 14, 2004.
+46. Z. P ATAKFALVI, Viehweg hyperbolicity conjecture is true over compact bases, Adv. Math., 229 (2012), 1640–1642,
+arXiv:1109.2835.
+47. M. P OPA and C. S CHNELL, Kodaira dimension and zeros of holomorphic one-forms, Ann. Math., 179 (2014), 1109–
+1120.
+48. S CHNELL, On a theorem of Campana and P˘aun, Epiga, 1 (2017), 175–184.
+49. B. T AJI, The isotriviality of families of canonically-polarised manifolds over a special quasi-projective base, Compos.
+Math., 142 (2016), 1421–1434, arXiv:1310.5391.
+50. E. V .-K. Z UO, Base spaces of non-isotrivial families of smooth minimal models, in Complex geometry , pp. 279–328,
+Springer, Göttingen, 2000.
+51. Y . ZHU, Log rationally connected surfaces, arXiv:1412.2665.
+F. C .
+Institut Elie Cartan,
+Université Lorraine,
+Nancy , France
+and
+KIAS,
+85 Hoegiro, Dongdaemun-gu,
+Seoul 130-722, South Korea
+and
+Institut Universitaire de France,
+1, rue Descartes,
+Paris 75005, France
+frederic.campana@univ-lorraine.fr
+M. P .
+KIAS,
+85 Hoegiro, Dongdaemun-gu,
+Seoul 130-722, South Korea
+and
+Department of Mathematics, College of Liberal Arts and Sciences,
+University of Illinois at Chicago,
+851 S. Morgan Street,
+Chicago, IL 60607-7045, USA
+mpaun@uic.edu
+Manuscrit reçu le 10 novembre 2015
+Manuscrit accepté le 29 avril 2018
+publié en ligne le 18 avril 2019.

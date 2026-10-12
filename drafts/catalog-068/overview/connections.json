@@ -1,0 +1,437 @@
+{
+  "catalogId": "068",
+  "productionVersion": "1.4",
+  "checkingScope": "Core result statements and actual uses, with writer and nonwriter checks. Alternative-proof comparison is not a dependency. Background citations and unread later sections are not converted into edges.",
+  "omittedSections": [
+    {
+      "section": "exclusive classification",
+      "reason": "Several proofs share the same conclusion but not the same inputs; two overlapping graph views aid reading without imposing exclusive categories."
+    },
+    {
+      "section": "all-edges diagram",
+      "reason": "Selected branch and merge interfaces are diagrammed; structure/norm details and an alternative use are in the table."
+    },
+    {
+      "section": "07 §13 / 01 structure",
+      "reason": "Mentioned in introduction; detailed recipient argument not checked in this stage."
+    }
+  ],
+  "connections": [
+    {
+      "id": "01-cover-to-02-form-descent",
+      "from": {
+        "paperId": "anticanonical-smooth-semipositivity",
+        "result": "Theorem 2.1",
+        "pages": "5–8",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Anticanonical-nonvanishing-from-smooth-semipositivity-September-26-2026/main.pdf"
+      },
+      "to": {
+        "paperId": "invariant-anticanonical-indices",
+        "result": "§5; Proposition 5.1",
+        "pages": "16",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Invariant-anticanonical-indices-and-conversion-of-twisted-differentials-September-26-2026/main.pdf"
+      },
+      "kind": "direct",
+      "role": "Supplies finite cover with residual torus and deck-invariant canonical frames for invariant-form descent",
+      "hypotheses": "Smooth connected projective X with smoothly semipositive anticanonical line. The compact residual factor has no positive-degree forms, so I_T(0)=1.",
+      "checking": "Both fixed-source statements and use checked by papers_01_02 on 2026-10-12; external structure proofs not recursively verified.",
+      "unresolved": [],
+      "articleLinks": {
+        "ja": {
+          "from": "/ja/papers/anticanonical-smooth-semipositivity/#proof-overview",
+          "to": "/ja/papers/invariant-anticanonical-indices/#proof-3"
+        },
+        "en": {
+          "from": "/en/papers/anticanonical-smooth-semipositivity/#proof-overview",
+          "to": "/en/papers/invariant-anticanonical-indices/#proof-3"
+        }
+      }
+    },
+    {
+      "id": "01-norm-to-02-global",
+      "from": {
+        "paperId": "anticanonical-smooth-semipositivity",
+        "result": "Lemma 2.2",
+        "pages": "8",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Anticanonical-nonvanishing-from-smooth-semipositivity-September-26-2026/main.pdf"
+      },
+      "to": {
+        "paperId": "invariant-anticanonical-indices",
+        "result": "Corollary 5.2 proof",
+        "pages": "17",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Invariant-anticanonical-indices-and-conversion-of-twisted-differentials-September-26-2026/main.pdf"
+      },
+      "kind": "consequence",
+      "role": "Turns an ordinary section of −kK_S into one of −k deg(ν) K_X after conversion",
+      "hypotheses": "Finite étale cover; no Galois assumption needed",
+      "checking": "Source statement/proof and use checked",
+      "unresolved": [],
+      "articleLinks": {
+        "ja": {
+          "from": "/ja/papers/anticanonical-smooth-semipositivity/#proof-overview",
+          "to": "/ja/papers/invariant-anticanonical-indices/#proof-3"
+        },
+        "en": {
+          "from": "/en/papers/anticanonical-smooth-semipositivity/#proof-overview",
+          "to": "/en/papers/invariant-anticanonical-indices/#proof-3"
+        }
+      }
+    },
+    {
+      "id": "01-02-alternative-nonvanishing",
+      "from": {
+        "paperId": "anticanonical-smooth-semipositivity",
+        "result": "Theorem 1.1",
+        "pages": "2, 25–26",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Anticanonical-nonvanishing-from-smooth-semipositivity-September-26-2026/main.pdf"
+      },
+      "to": {
+        "paperId": "invariant-anticanonical-indices",
+        "result": "Corollary 5.2",
+        "pages": "16–17",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Invariant-anticanonical-indices-and-conversion-of-twisted-differentials-September-26-2026/main.pdf"
+      },
+      "kind": "alternative",
+      "role": "Same smooth-semipositive nonvanishing conclusion, but 02 descends forms before ordinary conversion; not a proof-dependency edge",
+      "hypotheses": "Identical smooth connected projective and smooth metric semipositivity hypotheses",
+      "checking": "Statements and final proof paths compared",
+      "unresolved": [],
+      "articleLinks": {
+        "ja": {
+          "from": "/ja/papers/anticanonical-smooth-semipositivity/#proof-overview",
+          "to": "/ja/papers/invariant-anticanonical-indices/#proof-overview"
+        },
+        "en": {
+          "from": "/en/papers/anticanonical-smooth-semipositivity/#proof-overview",
+          "to": "/en/papers/invariant-anticanonical-indices/#proof-overview"
+        }
+      }
+    },
+    {
+      "id": "smooth-structure-to-bounded-corollary",
+      "from": {
+        "paperId": "anticanonical-smooth-semipositivity",
+        "result": "Theorem 2.1",
+        "pages": "5",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Anticanonical-nonvanishing-from-smooth-semipositivity-September-26-2026/main.pdf"
+      },
+      "to": {
+        "paperId": "bounded-anticanonical-metrics",
+        "result": "Corollary 4.1, proof",
+        "pages": "18",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Bounded-anticanonical-metrics-on-klt-pairs-and-torus-quotients-September-26-2026/main.pdf"
+      },
+      "role": "Residual compact torus monodromy and invariant canonical frames permit descent of Theorem1.2 natural invariant section.",
+      "hypotheses": "smooth connected projective X with smooth semipositive -K; rationally connected factor inherits metric; natural action",
+      "kind": "consequence",
+      "checking": "2026-10-12 papers_03_04: supplier statement and recipient proof passage read directly in fixed PDFs; supplier full proof not independently verified.",
+      "unresolved": [],
+      "articleLinks": {
+        "ja": {
+          "from": "/ja/papers/anticanonical-smooth-semipositivity/#proof-overview",
+          "to": "/ja/papers/bounded-anticanonical-metrics/#proof-3"
+        },
+        "en": {
+          "from": "/en/papers/anticanonical-smooth-semipositivity/#proof-overview",
+          "to": "/en/papers/bounded-anticanonical-metrics/#proof-3"
+        }
+      }
+    },
+    {
+      "id": "smooth-norm-to-bounded-corollary",
+      "from": {
+        "paperId": "anticanonical-smooth-semipositivity",
+        "result": "Lemma 2.2",
+        "pages": "8–9",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Anticanonical-nonvanishing-from-smooth-semipositivity-September-26-2026/main.pdf"
+      },
+      "to": {
+        "paperId": "bounded-anticanonical-metrics",
+        "result": "Corollary 4.1, proof",
+        "pages": "18",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Bounded-anticanonical-metrics-on-klt-pairs-and-torus-quotients-September-26-2026/main.pdf"
+      },
+      "role": "Nonzero section on finite étale cover returns as degree-multiplied nonzero section.",
+      "hypotheses": "finite étale connected cover and pulled-back anticanonical line",
+      "kind": "consequence",
+      "checking": "2026-10-12 papers_03_04: supplier statement and recipient proof passage read directly in fixed PDFs; supplier full proof not independently verified.",
+      "unresolved": [],
+      "articleLinks": {
+        "ja": {
+          "from": "/ja/papers/anticanonical-smooth-semipositivity/#proof-overview",
+          "to": "/ja/papers/bounded-anticanonical-metrics/#proof-3"
+        },
+        "en": {
+          "from": "/en/papers/anticanonical-smooth-semipositivity/#proof-overview",
+          "to": "/en/papers/bounded-anticanonical-metrics/#proof-3"
+        }
+      }
+    },
+    {
+      "id": "index-to-cohomological-natural",
+      "from": {
+        "paperId": "invariant-anticanonical-indices",
+        "result": "Theorem 1.1",
+        "pages": "1",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Invariant-anticanonical-indices-and-conversion-of-twisted-differentials-September-26-2026/main.pdf"
+      },
+      "to": {
+        "paperId": "cohomological-transfer",
+        "result": "Proposition 4.1; Lemma 4.2; Corollary 4.3",
+        "pages": "10–12",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Cohomological-transfer-and-equivariant-anticanonical-sections-September-26-2026/main.pdf"
+      },
+      "role": "Actual invariant-index value at zero supplies unbounded natural invariant cohomology; hard Lefschetz and determinants feed transfer.",
+      "hypotheses": "natural anticanonical linearization; in application smooth projective metric semipositivity and chi(O)!=0",
+      "kind": "consequence",
+      "checking": "2026-10-12 papers_03_04: supplier statement and recipient proof passage read directly in fixed PDFs; supplier full proof not independently verified.",
+      "unresolved": [],
+      "articleLinks": {
+        "ja": {
+          "from": "/ja/papers/invariant-anticanonical-indices/#proof-1",
+          "to": "/ja/papers/cohomological-transfer/#proof-3"
+        },
+        "en": {
+          "from": "/en/papers/invariant-anticanonical-indices/#proof-1",
+          "to": "/en/papers/cohomological-transfer/#proof-3"
+        }
+      }
+    },
+    {
+      "id": "smooth-structure-to-cohomological-corollary",
+      "from": {
+        "paperId": "anticanonical-smooth-semipositivity",
+        "result": "Theorem 2.1",
+        "pages": "5",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Anticanonical-nonvanishing-from-smooth-semipositivity-September-26-2026/main.pdf"
+      },
+      "to": {
+        "paperId": "cohomological-transfer",
+        "result": "§14.1, proof of Corollary 1.2",
+        "pages": "39",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Cohomological-transfer-and-equivariant-anticanonical-sections-September-26-2026/main.pdf"
+      },
+      "role": "Finite cover retains compact torus monodromy; Corollary4.3 section on F descends using invariant frames.",
+      "hypotheses": "smooth connected projective X, smooth semipositive -K; compact factor has chi(O)=1",
+      "kind": "consequence",
+      "checking": "2026-10-12 papers_03_04: supplier statement and recipient proof passage read directly in fixed PDFs; supplier full proof not independently verified.",
+      "unresolved": [],
+      "articleLinks": {
+        "ja": {
+          "from": "/ja/papers/anticanonical-smooth-semipositivity/#proof-overview",
+          "to": "/ja/papers/cohomological-transfer/#proof-4"
+        },
+        "en": {
+          "from": "/en/papers/anticanonical-smooth-semipositivity/#proof-overview",
+          "to": "/en/papers/cohomological-transfer/#proof-4"
+        }
+      }
+    },
+    {
+      "id": "smooth-norm-to-cohomological-corollary",
+      "from": {
+        "paperId": "anticanonical-smooth-semipositivity",
+        "result": "Lemma 2.2",
+        "pages": "8–9",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Anticanonical-nonvanishing-from-smooth-semipositivity-September-26-2026/main.pdf"
+      },
+      "to": {
+        "paperId": "cohomological-transfer",
+        "result": "§14.1, proof of Corollary 1.2",
+        "pages": "39",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Cohomological-transfer-and-equivariant-anticanonical-sections-September-26-2026/main.pdf"
+      },
+      "role": "Finite étale norm sends a nonzero section upstairs to positive anticanonical degree downstairs.",
+      "hypotheses": "finite étale cover; canonical bundles pull back",
+      "kind": "consequence",
+      "checking": "2026-10-12 papers_03_04: supplier statement and recipient proof passage read directly in fixed PDFs; supplier full proof not independently verified.",
+      "unresolved": [],
+      "articleLinks": {
+        "ja": {
+          "from": "/ja/papers/anticanonical-smooth-semipositivity/#proof-overview",
+          "to": "/ja/papers/cohomological-transfer/#proof-4"
+        },
+        "en": {
+          "from": "/en/papers/anticanonical-smooth-semipositivity/#proof-overview",
+          "to": "/en/papers/cohomological-transfer/#proof-4"
+        }
+      }
+    },
+    {
+      "id": "index-to-boundary-invariant",
+      "from": {
+        "paperId": "invariant-anticanonical-indices",
+        "result": "Theorem 1.1",
+        "pages": "1",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Invariant-anticanonical-indices-and-conversion-of-twisted-differentials-September-26-2026/main.pdf"
+      },
+      "to": {
+        "paperId": "integrable-metrics-controlled-boundary",
+        "result": "Proposition 9.1; Theorem 9.2",
+        "pages": "32–35",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Integrable-metrics-and-effectivity-with-controlled-boundary-September-26-2026/main.pdf"
+      },
+      "kind": "direct",
+      "role": "The actual nonzero index at zero supplies unbounded natural invariant cohomology, then (m+1)L twisted forms.",
+      "hypotheses": "Natural anticanonical linearization; chi(O)!=0; connected torus acts trivially on Hq(O).",
+      "checking": "2026-10-12 papers_06_07; independently read by papers_03_04. Supplier statement and recipient use checked in fixed PDFs; full external proofs excluded.",
+      "unresolved": [],
+      "articleLinks": {
+        "ja": {
+          "from": "/ja/papers/invariant-anticanonical-indices/#proof-1",
+          "to": "/ja/papers/integrable-metrics-controlled-boundary/#proof-5"
+        },
+        "en": {
+          "from": "/en/papers/invariant-anticanonical-indices/#proof-1",
+          "to": "/en/papers/integrable-metrics-controlled-boundary/#proof-5"
+        }
+      }
+    },
+    {
+      "id": "metric-to-boundary-alternative",
+      "from": {
+        "paperId": "metric-descent-contractions",
+        "result": "Theorem 2.1",
+        "pages": "7",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Metric-descent-and-rank-preserving-contractions-September-26-2026/main.pdf"
+      },
+      "to": {
+        "paperId": "integrable-metrics-controlled-boundary",
+        "result": "§5.3 (alternative proof of Theorem 5.1)",
+        "pages": "13–15",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Integrable-metrics-and-effectivity-with-controlled-boundary-September-26-2026/main.pdf"
+      },
+      "kind": "alternative",
+      "role": "Unweighted toroidal volume provides the correction in an alternative ordinary-conversion route.",
+      "hypotheses": "Normal equidimensional toroidal model, full adjoint rank at zero, horizontal strict patch. Not the weighted main route of §5.2.",
+      "checking": "2026-10-12 papers_06_07; independently read by papers_03_04. Supplier statement and recipient use checked in fixed PDFs; full external proofs excluded.",
+      "unresolved": [],
+      "articleLinks": {
+        "ja": {
+          "from": "/ja/papers/metric-descent-contractions/#proof-1",
+          "to": "/ja/papers/integrable-metrics-controlled-boundary/#proof-3"
+        },
+        "en": {
+          "from": "/en/papers/metric-descent-contractions/#proof-1",
+          "to": "/en/papers/integrable-metrics-controlled-boundary/#proof-3"
+        }
+      }
+    },
+    {
+      "id": "metric-to-exact",
+      "from": {
+        "paperId": "metric-descent-contractions",
+        "result": "Theorem 2.1",
+        "pages": "7",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Metric-descent-and-rank-preserving-contractions-September-26-2026/main.pdf"
+      },
+      "to": {
+        "paperId": "exact-orders-anticanonical",
+        "result": "§3.2; proof of Theorem 1.1 in §4",
+        "pages": "10–12",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026/main.pdf"
+      },
+      "kind": "direct",
+      "role": "Unweighted integrable corrected anticanonical metric, strict on an ordinary open, with exceptional correction pullback.",
+      "hypotheses": "Lemma3.2 full adjoint rank at zero and (3.5) horizontal strict patch; toroidal equidimensional model.",
+      "checking": "2026-10-12 papers_06_07; independently read by papers_03_04. Supplier statement and recipient use checked in fixed PDFs; full external proofs excluded.",
+      "unresolved": [],
+      "articleLinks": {
+        "ja": {
+          "from": "/ja/papers/metric-descent-contractions/#proof-1",
+          "to": "/ja/papers/exact-orders-anticanonical/#proof-1"
+        },
+        "en": {
+          "from": "/en/papers/metric-descent-contractions/#proof-1",
+          "to": "/en/papers/exact-orders-anticanonical/#proof-1"
+        }
+      }
+    },
+    {
+      "id": "ring-to-exact",
+      "from": {
+        "paperId": "integrable-metrics-controlled-boundary",
+        "result": "Theorem 4.3",
+        "pages": "9–10",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Integrable-metrics-and-effectivity-with-controlled-boundary-September-26-2026/main.pdf"
+      },
+      "to": {
+        "paperId": "exact-orders-anticanonical",
+        "result": "§§3.2–4; proof of Theorem 1.1",
+        "pages": "11–12",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026/main.pdf"
+      },
+      "kind": "direct",
+      "role": "A common correction and denominator give an actual bigraded divisor ring for two rational directions; select boundary-ray generators.",
+      "hypotheses": "Unweighted integrability, smooth strict ordinary open, finitely many rational directions; Q-linear rather than merely numerical equivalence.",
+      "checking": "2026-10-12 papers_06_07; independently read by papers_03_04. Supplier statement and recipient use checked in fixed PDFs; full external proofs excluded.",
+      "unresolved": [],
+      "articleLinks": {
+        "ja": {
+          "from": "/ja/papers/integrable-metrics-controlled-boundary/#proof-2",
+          "to": "/ja/papers/exact-orders-anticanonical/#proof-1"
+        },
+        "en": {
+          "from": "/en/papers/integrable-metrics-controlled-boundary/#proof-2",
+          "to": "/en/papers/exact-orders-anticanonical/#proof-1"
+        }
+      }
+    },
+    {
+      "id": "weighted-approximation-to-controlled-cone",
+      "from": {
+        "paperId": "integrable-metrics-controlled-boundary",
+        "result": "Theorem 2.2",
+        "pages": "6–7",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Integrable-metrics-and-effectivity-with-controlled-boundary-September-26-2026/main.pdf"
+      },
+      "to": {
+        "paperId": "exact-orders-anticanonical",
+        "result": "§12.2, proof of Proposition 12.1",
+        "pages": "34",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026/main.pdf"
+      },
+      "kind": "direct",
+      "role": "Weighted approximation constructs a subunit effective boundary and a correction supported over J and exceptional divisors, whose invariant pushforward class vanishes; used for a finite polyhedral cone.",
+      "hypotheses": "Global strict metric on −K_Y+J with I(phi) containing O(−J), obtained from full degree-zero rank. Distinct from unweighted Theorem4.3 in the main exact-order proof.",
+      "checking": "2026-10-12 papers_06_07 and papers_01_02 supplementary check; source statement and recipient application, not recursive proof verification.",
+      "articleLinks": {
+        "ja": {
+          "from": "/ja/papers/integrable-metrics-controlled-boundary/#proof-1",
+          "to": "/ja/papers/exact-orders-anticanonical/#proof-7"
+        },
+        "en": {
+          "from": "/en/papers/integrable-metrics-controlled-boundary/#proof-1",
+          "to": "/en/papers/exact-orders-anticanonical/#proof-7"
+        }
+      },
+      "unresolved": []
+    }
+  ]
+}

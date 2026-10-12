@@ -1,0 +1,7 @@
+\node[card] (n0) {\heading{}{正規等次元モデル上の相対切断}{Relative section on the normal equidimensional model}$s\text{ has no horizontal poles},\quad H^0(V_\eta,E+kbP_V)^T=\mathbb C(Y)s_Es^k$};
+\node[card,below=2.2cm of n0] (n1) {\heading{}{全ての底因子で非零成分を残す}{Retain a nonzero component over every base divisor}$g^*Q\hookrightarrow b\mu^*P,\quad M_e(y)=\max_{x\in W_y}|s_e(x)|^2$};
+\flow{n0}{n1}{\Tx{縦次数の最小値を引き、正規性で正則性を得る}{Subtract minimal vertical orders; normality gives regularity}\\\Cite{metric}};
+\node[card,below=2.2cm of n1] (n2) {\heading{}{連続な最大値をpsh計量へ}{Turn the continuous maximum into a psh metric}$-k^{-1}\log\!\int_{V_y}|s_e|^{2k}d\mu_y\ \longrightarrow\ -\log M_e(y)$};
+\flow{n1}{n2}{\Tx{不変部分を直交商として扱い、積分の冪根を取る}{Use the invariant orthogonal quotient and take roots of the integrals}\\\Cite{berndtsson}\quad\Cite{metric}};
+\node[result,below=2.2cm of n2] (n3) {\heading{}{正の連続最大値と同変な注入}{Positive continuous maximum and equivariant injection}$M_e>0\text{ on }Y,\quad h_Q\text{ continuous and semipositive}$};
+\flow{n2}{n3}{\Tx{余次元2の零集合を円板の最大値原理で排除}{Exclude codimension-two zeros by the maximum principle on discs}\\\Cite{metric}};

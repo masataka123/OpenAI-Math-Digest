@@ -1,0 +1,451 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "author-key",
+  "catalogId": "068",
+  "sources": {
+    "P": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "pagination": "same"
+    },
+    "Ber09": {
+      "recordFile": "sources.json",
+      "recordId": "Ber09",
+      "guideRole": {
+        "ja": "滑らかな直像の半正値性と曲率式。全直像rank 1、または直交商となる不変部分に適用",
+        "en": "Smooth direct-image positivity and its curvature formula, for full rank one or an invariant orthogonal quotient"
+      }
+    },
+    "DPS01": {
+      "recordFile": "sources.json",
+      "recordId": "DPS01",
+      "guideRole": {
+        "ja": "有界計量の全冪で乗数イデアルが自明なことを使い、非零コホモロジーを捻った形式へ送る",
+        "en": "Convert nonzero cohomology to twisted forms; bounded weights make all multiplier ideals trivial"
+      }
+    },
+    "CP19": {
+      "recordFile": "sources.json",
+      "recordId": "CP19",
+      "guideRole": {
+        "ja": "符号付き境界を直接代入せず、正の境界とample摂動に対するorbifold商の傾き非負性を使う",
+        "en": "Use orbifold quotient slopes for an effective boundary with ample perturbation, not directly for a signed boundary"
+      }
+    },
+    "HPS": {
+      "recordFile": "sources.json",
+      "recordId": "HPS",
+      "guideRole": {
+        "ja": "実際の乗数イデアルを含む直像の計量。有限積分の生成元がrank 1直像を生成することを確認して使う",
+        "en": "Metric on the direct image with the actual multiplier ideal; an integrable generator spans the rank-one direct image"
+      }
+    },
+    "PT14": {
+      "recordFile": "sources.json",
+      "recordId": "PT14",
+      "guideRole": {
+        "ja": "HPSの定式化の基礎となる特異L2直像計量。generic multiplier-ideal inclusionの同型条件も照合",
+        "en": "Underlying singular L2 direct-image positivity, including the generic multiplier-ideal isomorphism condition"
+      }
+    },
+    "Ou23": {
+      "recordFile": "sources.json",
+      "recordId": "Ou23",
+      "guideRole": {
+        "ja": "Druelの相対擬有効性の定式化と葉層の代数性。有限体積からの余接傾き評価で使用",
+        "en": "Relative pseudoeffectivity in Druel’s formulation and algebraicity of foliations, used for the finite-volume cotangent estimate"
+      }
+    },
+    "BDPP13": {
+      "recordFile": "sources.json",
+      "recordId": "BDPP13",
+      "guideRole": {
+        "ja": "非bigな擬有効因子を消すmovable曲線類を選ぶ錐双対性",
+        "en": "Cone duality supplies a movable class annihilating a nonbig pseudoeffective divisor"
+      }
+    }
+  },
+  "citations": {
+    "t21": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 2.1",
+          "printed": "7",
+          "pdf": "7"
+        }
+      ]
+    },
+    "l22": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 2.2",
+          "printed": "8–9",
+          "pdf": "8–9"
+        }
+      ]
+    },
+    "metric-proof": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§§2.2–2.3; (2.7)–(2.11)",
+          "printed": "9–11",
+          "pdf": "9–11"
+        }
+      ]
+    },
+    "t41": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 4.1",
+          "printed": "16",
+          "pdf": "16"
+        }
+      ]
+    },
+    "transfer": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemmas 3.1–3.2",
+          "printed": "12–15",
+          "pdf": "12–15"
+        }
+      ]
+    },
+    "forms": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 3.3",
+          "printed": "15–16",
+          "pdf": "15–16"
+        }
+      ]
+    },
+    "normalization": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§§4.1–4.3; Lemma 4.3",
+          "printed": "16–21",
+          "pdf": "16–21"
+        }
+      ]
+    },
+    "support": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemmas 4.4–4.5",
+          "printed": "22",
+          "pdf": "22"
+        }
+      ]
+    },
+    "interpolation": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemmas 4.6–4.7",
+          "printed": "23",
+          "pdf": "23"
+        }
+      ]
+    },
+    "rank-restoration": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§4.6",
+          "printed": "24–25",
+          "pdf": "24–25"
+        }
+      ]
+    },
+    "finite-volume": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 5.3",
+          "printed": "27",
+          "pdf": "27"
+        }
+      ]
+    },
+    "approximation": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 5.1",
+          "printed": "25–26",
+          "pdf": "25–26"
+        }
+      ]
+    },
+    "t61": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 6.1",
+          "printed": "34",
+          "pdf": "34"
+        }
+      ]
+    },
+    "induction": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§6.2",
+          "printed": "35–36",
+          "pdf": "35–36"
+        }
+      ]
+    },
+    "t71": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 7.1",
+          "printed": "38",
+          "pdf": "38"
+        }
+      ]
+    },
+    "quotient": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§7.1",
+          "printed": "38–39",
+          "pdf": "38–39"
+        }
+      ]
+    },
+    "orbit": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 7.2; §7.2",
+          "printed": "39–42",
+          "pdf": "39–42"
+        }
+      ]
+    },
+    "scope": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§1.4",
+          "printed": "6",
+          "pdf": "6"
+        }
+      ]
+    },
+    "ber": {
+      "source": "Ber09",
+      "locations": [
+        {
+          "result": "Theorem 1.2",
+          "printed": "3",
+          "pdf": "3"
+        }
+      ]
+    },
+    "ber-formula": {
+      "source": "Ber09",
+      "locations": [
+        {
+          "result": "Proposition 4.2; (4.8)",
+          "printed": "14, 17",
+          "pdf": "14, 17"
+        }
+      ]
+    },
+    "dps": {
+      "source": "DPS01",
+      "locations": [
+        {
+          "result": "Theorem 2.1.1",
+          "printed": "8",
+          "pdf": "8"
+        }
+      ]
+    },
+    "cp": {
+      "source": "CP19",
+      "locations": [
+        {
+          "result": "Theorem 1.3",
+          "printed": "3",
+          "pdf": "3"
+        }
+      ]
+    },
+    "hps": {
+      "source": "HPS",
+      "locations": [
+        {
+          "result": "Theorem 21.1",
+          "printed": "31–32",
+          "pdf": "31–32"
+        }
+      ]
+    },
+    "pt": {
+      "source": "PT14",
+      "locations": [
+        {
+          "result": "Theorem 3.3.5",
+          "printed": "24",
+          "pdf": "24"
+        }
+      ]
+    },
+    "ou": {
+      "source": "Ou23",
+      "locations": [
+        {
+          "result": "Propositions 2.2, 3.1",
+          "printed": "5–6",
+          "pdf": "5–6"
+        }
+      ]
+    },
+    "bdpp": {
+      "source": "BDPP13",
+      "locations": [
+        {
+          "result": "Theorem 2.2",
+          "printed": "6",
+          "pdf": "6"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ],
+  "articleGuides": {
+    ".": {
+      "selfSource": "P",
+      "externalSources": [
+        "Ber09",
+        "DPS01",
+        "CP19",
+        "HPS",
+        "PT14",
+        "Ou23",
+        "BDPP13"
+      ],
+      "proofTargets": [
+        "t41",
+        "t21",
+        "t41",
+        "t61",
+        "t71"
+      ],
+      "mainResults": [
+        "t21",
+        "t41",
+        "t61",
+        "t71"
+      ],
+      "statements": {
+        "t21": "theorem-2-1",
+        "t41": "theorem-4-1",
+        "t61": "theorem-6-1",
+        "t71": "theorem-7-1"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "t21",
+          "conclusion": "effective rational correction with exceptional pullback",
+          "anchor": "proof-1-step-1"
+        },
+        {
+          "result": "t21",
+          "conclusion": "semipositive metric, unweighted integrability, Zariski-open smoothness",
+          "anchor": "proof-1-step-2"
+        },
+        {
+          "result": "t21",
+          "conclusion": "conditional strict positivity on an ordinary open",
+          "anchor": "proof-1-step-3"
+        },
+        {
+          "result": "t41",
+          "conclusion": "global invariant section alternative",
+          "anchor": "proof-2-step-1"
+        },
+        {
+          "result": "t41",
+          "conclusion": "strictly smaller base preserving section/rank/relative algebraic closure",
+          "anchor": "proof-2-step-3"
+        },
+        {
+          "result": "t61",
+          "conclusion": "some a>0,c>=0 with nonzero allowed-pole section; rational L denominators",
+          "anchor": "proof-3-step-3"
+        },
+        {
+          "result": "t71",
+          "conclusion": "for each torus natural action, some m>0 invariant anticanonical section",
+          "anchor": "proof-4-step-2"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "l22",
+          "purpose": {
+            "ja": "境界交点上を含む全valuationと例外台を確認する。",
+            "en": "Check all valuations, including boundary intersections, and exceptional support."
+          }
+        },
+        {
+          "citation": "metric-proof",
+          "purpose": {
+            "ja": "積分密度の曲率と非加重可積分性を別々に読む。",
+            "en": "Separate curvature of the density from unweighted integrability."
+          }
+        },
+        {
+          "citation": "transfer",
+          "purpose": {
+            "ja": "二つの計量と許される極の台を追う。",
+            "en": "Track the two metrics and the permitted polar support."
+          }
+        },
+        {
+          "citation": "rank-restoration",
+          "purpose": {
+            "ja": "縮約後の切断比が底体へ戻る仕組みを確認する。",
+            "en": "Check how ratios return to the smaller base field."
+          }
+        },
+        {
+          "citation": "induction",
+          "purpose": {
+            "ja": "許容線形系の最大性と次元帰納法を読む。",
+            "en": "Read maximal admissible systems and dimension induction."
+          }
+        },
+        {
+          "citation": "quotient",
+          "purpose": {
+            "ja": "自然不変切断と零次rankを作る箇所。",
+            "en": "Locate the natural invariant section and rank at exponent zero."
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,7 @@
+\node[card] (n0) {\heading{}{最大の支配された底}{Maximal dominated base}$c\pi^*L-f^*H\text{ pseudoeffective},\quad\text{section ratios}\in\mathbf C(Y)$};
+\node[card,below=2.7cm of n0] (n1) {\heading{}{正規化切断と全次数rank one}{Normalized section and rank one in every degree}$\sigma:f^*B\to\ell\pi^*L,\quad E=K_V+\pi^*L,\quad\operatorname{rank}f_*\mathcal O(E+k\ell\pi^*L)=1$};
+\node[card,below=2.7cm of n1] (n2) {\heading{}{有界な底計量}{A bounded base metric}$\varphi_\beta=-\log\max_{V_y}|\sigma_\beta|^2_{h_L^\ell}\quad\text{psh and locally bounded}$};
+\node[result,below=2.7cm of n2] (n3) {\heading{}{零次消滅から正冪の切断}{Vanishing at zero forces a positive-power section}$Q(k)=h^0(Y,\mathcal G(kB))\ (k\ge0),\quad Q(0)>0\Longrightarrow H^0(S,k\ell L)\ne0$};
+\flow{n0}{n1}{\Tx{水平次数のaffine性と、縦の最小次数の差引き}{Affine horizontal orders and subtraction of vertical minima}\\[5pt]\Cite{base}};
+\flow{n1}{n2}{\Tx{smooth直像の高次moments、消えない成分で上下界}{High moments of the smooth direct image; bounds using a nonvanishing component}\\[5pt]\Cite{ber09}; \Cite{metric}};
+\flow{n2}{n3}{\Tx{小指数可積分性とKollár–Nadel、k=0も含める}{Small-exponent integrability and Kollár--Nadel, including k=0}\\[5pt]\Cite{fuj18}; \Cite{vanishing}};

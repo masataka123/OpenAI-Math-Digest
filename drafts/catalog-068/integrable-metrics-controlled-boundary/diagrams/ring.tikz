@@ -1,0 +1,5 @@
+\node[card] (n0) {\heading{1}{unweighted可積分性}{Unweighted integrability}$B=-K_Y+A_0,\quad e^{-\varphi}\in L^1_{\rm loc}$};
+\node[card,below=2.0cm of n0] (n1) {\heading{2}{共通の摂動}{Common perturbation}$\Delta_i\sim_{\mathbb Q}B+\epsilon P_i-H^\prime,\quad (Y,\Delta_i)\ {\rm klt}$};
+\flow{n0}{n1}{\Tx{開集合のstrict性からbig性、計量混合、同時摂動}{Open-set strictness gives bigness; mix metrics and perturb simultaneously}\\[3pt]\Cite{neighborhood}};
+\node[result,below=2.0cm of n1] (n2) {\heading{3}{実際の因子の環}{Ring of actual divisors}$B_i=k_0(A_0+\epsilon P_i),\quad R(Y;B_1,\ldots,B_s)\ {\rm finitely\ generated}$};
+\flow{n1}{n2}{\Tx{随伴環の有限生成と共通分母の除去}{Finite generation of adjoint rings and a common denominator}\\[3pt]\Cite{fg}};

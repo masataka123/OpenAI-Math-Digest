@@ -1,0 +1,7 @@
+\node[card] (n0) {\heading{1}{固定誤差を持つ切断}{Sections with one fixed error}$N_j\sim m_jL-P,\quad N_j\geq0,\quad m_j\longrightarrow\infty$};
+\node[card,below=2.0cm of n0] (n1) {\heading{2}{一つのIitaka底}{One Iitaka base}$R=(N_1-N_0)/(m_1-m_0),\quad M=\sum_Q\mu_Q(\pi^*R)Q\ \text{pseudoeffective}$};
+\flow{n0}{n1}{\Tx{比が底の体に属し、垂直最小値が極限で擬有効}{Ratios belong to the base field; vertical minima have a pseudoeffective limit}\\[3pt]\Cite{iitaka}};
+\node[card,below=2.0cm of n1] (n2) {\heading{3}{底の重み付きstrict計量}{Weighted strict metric on the base}$-K_Y+C,\quad \Theta_g\geq\delta\omega_Y,\quad \mathcal J(g)\supset\mathcal O_Y(-C)$};
+\flow{n1}{n2}{\Tx{全直像rank一と $\mathcal J(h)=\mathcal O_Z$}{Full direct-image rank one and $\mathcal J(h)=\mathcal O_Z$}\\[3pt]\Cite{pt}};
+\node[result,below=2.0cm of n2] (n3) {\heading{4}{補正を消して戻す}{Remove the correction and return}$M+C^\prime\sim_{\mathbb Q}G\geq0\quad\Longrightarrow\quad H^0(X,mL)\ne0$};
+\flow{n2}{n3}{\Tx{補正のpullbackは例外的、極をpushforwardで除去}{The correction pulls back exceptionally; pushforward removes its poles}\\[3pt]\Cite{return}};

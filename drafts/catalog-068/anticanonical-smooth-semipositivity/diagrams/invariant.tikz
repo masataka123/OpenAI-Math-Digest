@@ -1,0 +1,7 @@
+\node[card] (n0) {\heading{}{自然作用と有理トーラス商}{Natural action and rational torus quotient}$T\subset G,\quad\mathbf C(Z)^G=\mathbf C(S)$};
+\node[card,below=2.4cm of n0] (n1) {\heading{}{不変随伴部分が一次元}{The invariant adjoint part has rank one}$\dim_{\mathbf C(S)}H^0(Y_\eta,K_{Y/S}+\pi^*((j+1)L))^T=1$};
+\node[card,below=2.4cm of n1] (n2) {\heading{}{直交不変商の半正値性}{Semipositivity of the orthogonal invariant quotient}$P_T=\int_T t\,dt,\quad\Phi_j=-\log\|u_j\|_{L^2}^2\text{ is psh}$};
+\node[result,below=2.4cm of n2] (n3) {\heading{}{普通の非消滅を不変に持ち上げる}{Lift ordinary nonvanishing invariantly}$H^0(S,aA+bD_S)\ne0\Longrightarrow H^0(Z,mL)^T\ne0$};
+\flow{n0}{n1}{\Tx{基本ベクトル場の外積と稠密軌道上の比}{Wedge fundamental vector fields; compare ratios on a dense orbit}\\[5pt]\Cite{invariant}};
+\flow{n1}{n2}{\Tx{smooth係数の直像定理とcompact averaging}{Smooth direct-image positivity and compact averaging}\\[5pt]\Cite{ber09}; \Cite{smooth}};
+\flow{n2}{n3}{\Tx{底は無形式、D=0なので例外的極だけが残る}{The base has no forms; D=0 allows only exceptional poles}\\[5pt]\Cite{volume}; \Cite{invariant}};

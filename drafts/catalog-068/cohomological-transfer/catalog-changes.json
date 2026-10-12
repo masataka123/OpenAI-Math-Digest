@@ -1,0 +1,88 @@
+{
+  "presentation": {
+    "paperId": "cohomological-transfer",
+    "displayName": "Cohomological transfer",
+    "result": "Theorem 1.1; Corollary 1.2 · p. 2; Theorem 7.2 · pp. 17–19",
+    "claim": {
+      "ja": "smooth semipositiveな反標準束の任意線形化Pについて、-Mが擬有効で非有界次数のM+iPに不変切断があれば正のmPに不変切断がある。自然指数とmonodromyから一般のsmooth非消滅を導く。",
+      "en": "For any linearization P of a smoothly semipositive anticanonical line, unbounded invariant sections of M+iP with -M pseudoeffective give an invariant section of some positive mP. The natural index and monodromy yield ordinary smooth nonvanishing."
+    },
+    "role": {
+      "ja": "共通の不変切断比の体、連続最大値計量、零次数の特異積分を使い、非自明でも固定された乗数イデアルで誤差を除く。 独立なharmonic経路ではkernel条件から高次直像消滅を得る。",
+      "en": "A common invariant ratio field, a continuous maximum metric and a singular degree-zero integral remove the error using a fixed, possibly nontrivial multiplier ideal. An independent harmonic mechanism proves higher-direct-image vanishing from a kernel condition."
+    }
+  },
+  "connections": [
+    {
+      "id": "index-to-cohomological-natural",
+      "from": {
+        "paperId": "invariant-anticanonical-indices",
+        "result": "Theorem 1.1",
+        "pages": "1",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Invariant-anticanonical-indices-and-conversion-of-twisted-differentials-September-26-2026/main.pdf"
+      },
+      "to": {
+        "paperId": "cohomological-transfer",
+        "result": "Proposition 4.1; Lemma 4.2; Corollary 4.3",
+        "pages": "10–12",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Cohomological-transfer-and-equivariant-anticanonical-sections-September-26-2026/main.pdf"
+      },
+      "role": "Actual invariant-index value at zero supplies unbounded natural invariant cohomology; hard Lefschetz and determinants feed transfer.",
+      "hypotheses": "natural anticanonical linearization; in application smooth projective metric semipositivity and chi(O)!=0",
+      "kind": "consequence",
+      "checking": "2026-10-12 papers_03_04: supplier statement and recipient proof passage read directly in fixed PDFs; supplier full proof not independently verified.",
+      "unresolved": []
+    },
+    {
+      "id": "smooth-structure-to-cohomological-corollary",
+      "from": {
+        "paperId": "anticanonical-smooth-semipositivity",
+        "result": "Theorem 2.1",
+        "pages": "5",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Anticanonical-nonvanishing-from-smooth-semipositivity-September-26-2026/main.pdf"
+      },
+      "to": {
+        "paperId": "cohomological-transfer",
+        "result": "§14.1, proof of Corollary 1.2",
+        "pages": "39",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Cohomological-transfer-and-equivariant-anticanonical-sections-September-26-2026/main.pdf"
+      },
+      "role": "Finite cover retains compact torus monodromy; Corollary4.3 section on F descends using invariant frames.",
+      "hypotheses": "smooth connected projective X, smooth semipositive -K; compact factor has chi(O)=1",
+      "kind": "consequence",
+      "checking": "2026-10-12 papers_03_04: supplier statement and recipient proof passage read directly in fixed PDFs; supplier full proof not independently verified.",
+      "unresolved": []
+    },
+    {
+      "id": "smooth-norm-to-cohomological-corollary",
+      "from": {
+        "paperId": "anticanonical-smooth-semipositivity",
+        "result": "Lemma 2.2",
+        "pages": "8",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Anticanonical-nonvanishing-from-smooth-semipositivity-September-26-2026/main.pdf"
+      },
+      "to": {
+        "paperId": "cohomological-transfer",
+        "result": "§14.1, proof of Corollary 1.2",
+        "pages": "39",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Cohomological-transfer-and-equivariant-anticanonical-sections-September-26-2026/main.pdf"
+      },
+      "role": "Finite étale norm sends a nonzero section upstairs to positive anticanonical degree downstairs.",
+      "hypotheses": "finite étale cover; canonical bundles pull back",
+      "kind": "consequence",
+      "checking": "2026-10-12 papers_03_04: supplier statement and recipient proof passage read directly in fixed PDFs; supplier full proof not independently verified.",
+      "unresolved": []
+    }
+  ],
+  "comparisonNotes": [
+    "The companion main nonvanishing theorem is not used; only its independent structure and norm statements are inputs.",
+    "03 bounded klt route and04 chosen-character transfer are alternative proofs of the common smooth conclusion; no direct 03–04 dependency found in the core passages read."
+  ],
+  "scope": "Main transfer proof route plus independent Theorem7.2 harmonic vanishing. Other alternative mechanisms are explicitly scoped out; do not infer no dependencies there."
+}

@@ -1,0 +1,7 @@
+\node[card] (n0) {\heading{}{縦の最小次数を差し引く}{Subtract the minimum vertical orders}$c_T=\min_{Q\mapsto T}\frac{\operatorname{ord}_Q\rho}{\operatorname{ord}_Q\bar f^*T},\quad e\in H^0(k\bar\pi^*L-\bar f^*A)$};
+\node[card,below=2.4cm of n0] (n1) {\heading{}{随伴ファイバー積分}{Adjoint fiber integrals}$V_j=\int_{Y_s}|(\eta_Y/f^*ds)e_v^j|^2,\quad\Phi_j=-\log V_j$};
+\node[card,below=2.4cm of n1] (n2) {\heading{}{異なる二つの計量}{Two distinct base metrics}$j=0:\ -K_S+D_S;\qquad \Psi=\lim_{\ell}(\sup_{j\ge\ell}\Phi_j/j)^*:\ A$};
+\node[result,below=2.4cm of n2] (n3) {\heading{}{補正の支えを使って持ち上げる}{Lift using the correction support}$aA+bD_S\text{ effective}\Longrightarrow akL+cD\text{ effective}$};
+\flow{n0}{n1}{\Tx{各底因子上で一成分にはeが消えないように正規化}{Normalize so e does not vanish on one component above every prime}\\[5pt]\Cite{transfer}};
+\flow{n1}{n2}{\Tx{rank oneでpsh性、jと独立な境界次数で有界性}{Rank one gives psh weights; a j-independent boundary order gives bounds}\\[5pt]\Cite{bp08}; \Cite{moments}};
+\flow{n2}{n3}{\Tx{bad primesは例外的またはD上、残る極をDで払う}{Bad primes lie over D or are exceptional; clear remaining poles with D}\\[5pt]\Cite{transfer}};

@@ -1,0 +1,366 @@
+{
+  "catalogId": "068",
+  "paperId": "cohomological-transfer",
+  "title": "Cohomological transfer and equivariant anticanonical sections",
+  "displayName": "Cohomological transfer",
+  "authors": "OpenAI",
+  "version": "2026-09-26",
+  "sourceCommit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Cohomological-transfer-and-equivariant-anticanonical-sections-September-26-2026/main.pdf",
+  "downloadUrl": "https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Cohomological-transfer-and-equivariant-anticanonical-sections-September-26-2026/main.pdf",
+  "pdfPages": 43,
+  "sha256": "6e231fa726d0f6b62052823b6f57488108d352d56c326c3aad1cd59a126fc53c",
+  "checkedOn": "2026-10-12",
+  "checkedLocations": [
+    {
+      "printedPage": "1",
+      "pdfPage": 1
+    },
+    {
+      "printedPage": "2",
+      "pdfPage": 2
+    },
+    {
+      "printedPage": "3",
+      "pdfPage": 3
+    },
+    {
+      "printedPage": "4",
+      "pdfPage": 4
+    },
+    {
+      "printedPage": "5",
+      "pdfPage": 5
+    },
+    {
+      "printedPage": "6",
+      "pdfPage": 6
+    },
+    {
+      "printedPage": "7",
+      "pdfPage": 7
+    },
+    {
+      "printedPage": "8",
+      "pdfPage": 8
+    },
+    {
+      "printedPage": "9",
+      "pdfPage": 9
+    },
+    {
+      "printedPage": "10",
+      "pdfPage": 10
+    },
+    {
+      "printedPage": "11",
+      "pdfPage": 11
+    },
+    {
+      "printedPage": "12",
+      "pdfPage": 12
+    },
+    {
+      "printedPage": "13",
+      "pdfPage": 13
+    },
+    {
+      "printedPage": "14",
+      "pdfPage": 14
+    },
+    {
+      "printedPage": "39",
+      "pdfPage": 39
+    },
+    {
+      "printedPage": "40",
+      "pdfPage": 40
+    },
+    {
+      "printedPage": "41",
+      "pdfPage": 41
+    },
+    {
+      "printedPage": "42",
+      "pdfPage": 42
+    },
+    {
+      "printedPage": "43",
+      "pdfPage": 43
+    },
+    {
+      "printedPage": "17",
+      "pdfPage": 17
+    },
+    {
+      "printedPage": "18",
+      "pdfPage": 18
+    },
+    {
+      "printedPage": "19",
+      "pdfPage": 19
+    },
+    {
+      "printedPage": "20",
+      "pdfPage": 20
+    }
+  ],
+  "statements": [
+    {
+      "result": "Theorem 1.1",
+      "pages": "2",
+      "hypotheses": "smooth connected projective X; smooth semipositive L=-KX; algebraic torus; arbitrary linearized P underlying L; linearized M with -M pseudoeffective; unbounded positive i and nonzero invariant sections of M+iP",
+      "conclusion": "exists m>0 H0(X,mP)^T nonzero",
+      "checking": "all hypotheses/quantifiers compared; no Euler or H1 premise added"
+    },
+    {
+      "result": "Corollary 1.2",
+      "pages": "2",
+      "hypotheses": "smooth connected projective complex X; smooth semipositive -KX",
+      "conclusion": "some positive anticanonical multiple has nonzero section",
+      "checking": "proof §14.1 p39 read"
+    },
+    {
+      "result": "Proposition 2.2",
+      "pages": "6–8",
+      "hypotheses": "normal equidimensional model, smooth resolution, no horizontal poles, rank-one (invariant) generic adjoints for every k>=0",
+      "conclusion": "after powers, equivariant base-line injection with positive continuous semipositive fiber maximum metric",
+      "checking": "statement and entire proof read"
+    },
+    {
+      "result": "Corollary 4.3",
+      "pages": "11–12",
+      "hypotheses": "smooth projective complex X, smooth semipositive -KX, algebraic torus, chi(O)!=0",
+      "conclusion": "some positive natural invariant anticanonical section",
+      "checking": "actual index at zero and determinant pseudoeffectivity checked"
+    },
+    {
+      "result": "Theorem 7.2",
+      "pages": "17–19",
+      "hypotheses": "surjective smooth connected projective V→Y; smooth semipositive DV with curvature theta; Q positive continuous with psh weights; kernel theta inside kernel df on a nonempty ordinary submersion open",
+      "conclusion": "H^p(Y,R^q f_*(KV+DV) tensor Q^k)=0 for all k,q>=0,p>0",
+      "checking": "full statement and proof pp17–19 directly read in separate edit; all quantified cases explained"
+    }
+  ],
+  "proofPassages": [
+    {
+      "section": "§§2–3",
+      "pages": "5–10",
+      "read": "equidimensional model; normalized vertical minima; invariant orthogonal quotient; continuous positive fiber maximum; common ratio field; rank one at every j>=0; horizontal strictness; exceptional boundary correction; fixed multiplier ideal and zero Euler term"
+    },
+    {
+      "section": "§4",
+      "pages": "10–12",
+      "read": "natural index; equivariant hard Lefschetz with m+1; determinant and unbounded wedges; connected torus acts trivially on structure-sheaf cohomology"
+    },
+    {
+      "section": "§14.1",
+      "pages": "39",
+      "read": "algebraization of compact monodromy, invariant product section, finite norm"
+    },
+    {
+      "section": "§1.4 and §14.2–14.4",
+      "pages": "4–5, 39–41",
+      "read": "roadmap and alternative descent maps read for scope, not full alternative proofs"
+    },
+    {
+      "section": "§7, Lemma7.1 and Theorem7.2",
+      "pages": "17–19",
+      "read": "uniform smoothing; Bochner weak limit retaining cohomology class; distributional Chern equation without derivative convergence; canonical-valued fiber restriction; edge injection; smooth DV splitting then tensor Q^k; zero twist and high total degrees"
+    }
+  ],
+  "externalSources": [
+    {
+      "id": "DPS01",
+      "displayName": "Pseudo-effective line bundles on compact Kähler manifolds",
+      "authors": "Jean-Pierre Demailly; Thomas Peternell; Michael Schneider",
+      "version": "arXiv:math/0006205v2, 10 October 2000",
+      "sourceUrl": "https://arxiv.org/pdf/math/0006205v2",
+      "pdfPages": 49,
+      "checkedLocations": [
+        {
+          "printedPage": "8",
+          "pdfPage": 8
+        }
+      ],
+      "checking": "Primary PDF statement directly inspected during03 work and applied passage compared for04 §§2–4; external proof not independently verified.",
+      "sha256": null,
+      "hashNote": "Web PDF text inspection; no downloaded local external file."
+    },
+    {
+      "id": "LMPTX23",
+      "displayName": "The Nonvanishing Problem for varieties with nef anticanonical bundle",
+      "authors": "Vladimir Lazić; Shin-ichi Matsumura; Thomas Peternell; Nikolaos Tsakanikas; Zhixin Xie",
+      "version": "Documenta Mathematica 28 (2023), 1393–1440",
+      "sourceUrl": "https://ems.press/content/serial-article-files/31138",
+      "pdfPages": 48,
+      "checkedLocations": [
+        {
+          "printedPage": "1409",
+          "pdfPage": 17
+        }
+      ],
+      "checking": "Primary PDF statement directly inspected during03 work and applied passage compared for04 §§2–4; external proof not independently verified.",
+      "sha256": null,
+      "hashNote": "Web PDF text inspection; no downloaded local external file."
+    },
+    {
+      "id": "PT14",
+      "displayName": "Positivity of twisted relative pluricanonical bundles and their direct images",
+      "authors": "Mihai Păun; Shigeharu Takayama",
+      "version": "arXiv:1409.5504v1",
+      "sourceUrl": "https://arxiv.org/pdf/1409.5504v1",
+      "pdfPages": 46,
+      "checkedLocations": [
+        {
+          "printedPage": "24",
+          "pdfPage": 24
+        }
+      ],
+      "checking": "Primary PDF statement directly inspected during03 work and applied passage compared for04 §§2–4; external proof not independently verified.",
+      "sha256": null,
+      "hashNote": "Web PDF text inspection; no downloaded local external file."
+    },
+    {
+      "id": "OpenAI26a",
+      "displayName": "Anticanonical nonvanishing from smooth semipositivity",
+      "authors": "OpenAI",
+      "version": "2026-09-26; commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Anticanonical-nonvanishing-from-smooth-semipositivity-September-26-2026/main.pdf",
+      "pdfPages": 27,
+      "checkedLocations": [
+        {
+          "printedPage": "5",
+          "pdfPage": 5
+        },
+        {
+          "printedPage": "8",
+          "pdfPage": 8
+        },
+        {
+          "printedPage": "9",
+          "pdfPage": 9
+        }
+      ],
+      "checking": "Theorem2.1 p5 and Lemma2.2 p8 statements directly read; compared to04 Corollary1.2 proof §14.1 p39."
+    },
+    {
+      "id": "Ber09",
+      "authors": "Bo Berndtsson",
+      "displayName": "Curvature of vector bundles associated to holomorphic fibrations",
+      "version": "Annals of Mathematics 169 (2009), 531–560",
+      "sourceUrl": "https://annals.math.princeton.edu/wp-content/uploads/annals-v169-n2-p04.pdf",
+      "pdfPages": 30,
+      "checkedLocations": [
+        {
+          "printedPage": "533",
+          "pdfPage": 3
+        }
+      ],
+      "checking": "Theorem1.2 statement directly read and compared to Proposition2.2 p7; no full external proof verification."
+    },
+    {
+      "id": "Dem09",
+      "authors": "Jean-Pierre Demailly",
+      "displayName": "Analytic methods in algebraic geometry",
+      "version": "December 2009 lecture notes, 180-page version; distinct from the July 2011 book cited in the manuscript",
+      "sourceUrl": "https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/analmeth.pdf",
+      "pdfPages": 180,
+      "checkedLocations": [
+        {
+          "printedPage": "38",
+          "pdfPage": 38
+        }
+      ],
+      "checking": "Nadel vanishing Theorem5.11 directly read as a statement-level check for the Nadel input used in §3; original Nadel paper not independently inspected."
+    },
+    {
+      "id": "OpenAI26b",
+      "authors": "OpenAI",
+      "displayName": "Invariant anticanonical indices and conversion of twisted differentials",
+      "version": "2026-09-26; commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Invariant-anticanonical-indices-and-conversion-of-twisted-differentials-September-26-2026/main.pdf",
+      "pdfPages": 18,
+      "checkedLocations": [
+        {
+          "printedPage": "1",
+          "pdfPage": 1
+        }
+      ],
+      "checking": "Theorem1.1 full statement, natural linearization and actual constant value directly read; compared to Prop4.1 pp10–11."
+    },
+    {
+      "id": "Fujisawa15",
+      "authors": "Taro Fujisawa",
+      "displayName": "A remark on the decomposition theorem for direct images of canonical sheaves tensorized with semipositive vector bundles",
+      "version": "arXiv:1512.03887v1; arXiv header 12 December 2015 (PDF internal date June 27, 2021)",
+      "sourceUrl": "https://arxiv.org/pdf/1512.03887v1",
+      "pdfPages": 3,
+      "checkedLocations": [
+        {
+          "printedPage": "1",
+          "pdfPage": 1
+        }
+      ],
+      "checking": "Theorem1 full statement directly read; smooth Nakano coefficient and proper surjective Kähler hypotheses compared to04 p19. External proof/Takegoshi not recursively checked."
+    },
+    {
+      "id": "Dem12",
+      "authors": "Jean-Pierre Demailly",
+      "displayName": "Complex Analytic and Differential Geometry",
+      "version": "21 June 2012; 455-page author PDF",
+      "sourceUrl": "https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/agbook.pdf",
+      "pdfPages": 455,
+      "checkedLocations": [
+        {
+          "printedPage": "43",
+          "pdfPage": 43
+        },
+        {
+          "printedPage": "44",
+          "pdfPage": 44
+        }
+      ],
+      "checking": "Theorem I.5.21 Richberg approximation statement directly read; compared with04 Lemma7.1 background-curvature construction. Original Richberg1968 not separately read."
+    }
+  ],
+  "dependencies": [
+    {
+      "from": "OpenAI26b",
+      "result": "Theorem1.1 p1",
+      "to": "Proposition4.1 pp10–11; Corollary4.3 pp11–12",
+      "kind": "direct",
+      "checking": "statement/application checked"
+    },
+    {
+      "from": "OpenAI26a",
+      "result": "Theorem2.1 p5; Lemma2.2 p8",
+      "to": "Corollary1.2 proof §14.1 p39",
+      "kind": "consequence",
+      "checking": "statement/application checked"
+    }
+  ],
+  "unresolved": [
+    "Independent alternatives of §§5–6 and8–13 and14.2–14.4 are not fully explained or proof-checked. Theorem1.1/Cor1.2 shortest route and the independent Theorem7.2 are covered.",
+    "External proofs not independently verified; foundational flattening, equivariant resolution, Skoda and psh extension sources not directly inspected.",
+    "Nadel statement checked through Demailly December2009 Theorem5.11 p38, not the cited original Nadel1990 paper or July2011 book."
+  ],
+  "checkingScope": "Main results and selected direct interfaces; not full proof certification.",
+  "additionalOutputStatementChecks": [
+    {
+      "result": "Theorem5.2",
+      "page": 13,
+      "scope": "statement and role only; full proof/direct inputs not checked"
+    },
+    {
+      "result": "Theorem11.1",
+      "page": 27,
+      "scope": "statement and role only; full proof/direct inputs not checked"
+    },
+    {
+      "result": "Proposition14.1",
+      "page": 41,
+      "scope": "statement and role only; full proof/direct inputs not checked"
+    }
+  ]
+}

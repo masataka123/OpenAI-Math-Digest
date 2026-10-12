@@ -1,0 +1,176 @@
+
+===PDF PAGE 1===
+arXiv:1607.04684v1  [math.AG]  15 Jul 2016
+KOLL ´AR–NADEL TYPE V ANISHING THEOREM
+OSAMU FUJINO
+Abstract. We prove an analytic generalization of Koll´ ar’s van-
+ishing theorem, which contains the Nadel vanishing theorem as a
+special case.
+1. Introduction
+In the conference, I talked about the Hodge theoretic aspect of in-
+jectivity and vanishing theorems (see [
+2], [ 3], and [ 4]). Here, I will
+explain some analytic generalizations. In [ 5], Shin-ichi Matsumura and
+I established the following theorems.
+Theorem 1.1 ([
+5, Theorem A]) . Let F be a holomorphic line bundle
+on a compact K¨ ahler manifold X and let h be a singular hermitian
+metric on F . Let M be a holomorphic line bundle on X equipped with
+a smooth hermitian metric hM . We assume that√
+−1ΘhM (M) ≥ 0 and
+√
+−1Θh(F ) − a
+√
+−1ΘhM (M) ≥ 0
+for some a > 0. Let s be a nonzero global section of M. Then the map
+×s : H i(X, ωX ⊗ F ⊗ J (h)) → H i(X, ωX ⊗ F ⊗ J (h) ⊗ M)
+induced by ⊗s is injective for every i, where ωX is the canonical bundle
+of X and J (h) is the multiplier ideal sheaf of h.
+Theorem 1.1 is a generalization of Enoki’s injectivity theorem (see
+[1, Theorem 0.2]). Although the formulation of Theorem 1.1 may look
+artiﬁcial, it has many interesting applications (see [ 5]). Theorem 1.2
+below is a Bertini-type theorem for multiplier ideal sheaves.
+Theorem 1.2 ([
+5, Theorem 1.10]) . Let X be a compact complex man-
+ifold, let Λ be a free linear system on X with dim Λ ≥ 1, and let ϕ be
+a quasi-plurisubharmonic function on X. We put
+G = {H ∈ Λ | H is smooth and J (ϕ|H) = J (ϕ)|H}.
+Date: 2016/7/10, version 0.01.
+2010 Mathematics Subject Classiﬁcation. Primary 32L10; Secondary 32Q15.
+Key words and phrases. injectivity theorem, Nadel vanishing theorem, Koll´ ar
+vanishing theorem, multiplier ideal sheaves.
+1
+===PDF PAGE 2===
+2 OSAMU FUJINO
+Then G is dense in Λ in the classical topology. Note that J (ϕ) is the
+multiplier ideal sheaf of ϕ.
+The main purpose of this paper is to prove the following theorem,
+which is a slight generalization of [
+5, Theorem D], as an application of
+Theorem 1.1 and Theorem 1.2.
+Theorem 1.3 (Vanishing theorem of Koll´ ar–Nadel type). Let f : X →
+Y be a holomorphic map from a compact K¨ ahler manifold X to a pro-
+jective variety Y . Let F be a holomorphic line bundle on X equipped
+with a singular hermitian metric h. Let H be an ample line bundle on
+Y . Assume that there exists a smooth hermitian metric g on f ∗H such
+that
+√
+−1Θg(f ∗H) ≥ 0 and
+√
+−1Θh(F ) − ε
+√
+−1Θg(f ∗H) ≥ 0
+for some ε > 0. Then we have
+H i(Y, Rjf∗(ωX ⊗ F ⊗ J (h))) = 0
+for every i > 0 and j, where ωX is the canonical bundle of X and J (h)
+is the multiplier ideal sheaf associated to the singular her mitian metric
+h.
+We can easily see that Theorem 1.3 contains Demailly’s original for-
+mulation of the Nadel vanishing theorem (see [ 5, Theorem 1.4]) and
+Koll´ ar’s vanishing theorem (see [6, Theorem 2.1 (iii)]) as special cases.
+Therefore, we call Theorem 1.3 the vanishing theorem of Koll´ ar–Nadel
+type. For a related vanishing theorem, see [ 7, Theorem 1.3].
+In this paper, we will freely use the same notation as in [ 5].
+2. Proof of Theorem 1.3
+In this section, we prove Theorem 1.3 as an application of Theorem
+1.1 and Theorem 1.2. I hope that the following proof will show the
+reader how to use Theorem 1.1 and Theorem 1.2.
+Proof of Theorem 1.3. We use the induction on dim Y . If dim Y = 0,
+then the statement is obvious. We take a suﬃciently large positive
+integer m and a general member B ∈ | H ⊗m| such that D = f −1(B)
+is smooth, contains no associated primes of OX /J (h), and satisﬁes
+J (h|D) = J (h)|D by Theorem
+1.2. By the Serre vanishing theorem,
+we may further assume that
+(2.1) H i(Y, Rjf∗(ωX ⊗ F ⊗ J (h)) ⊗ H ⊗m) = 0
+===PDF PAGE 3===
+KOLL ´AR–NADEL TYPE V ANISHING THEOREM 3
+for every i > 0 and j. We have the following big commutative diagram.
+0
+↓↓
+0
+↓↓
+0 →→ J (h) ⊗ OX(−D)
+↓↓
+α →→ J (h)
+↓↓
+→→ Coker α →→
+β
+↓↓
+0
+0 →→ OX(−D)
+↓↓
+→→ OX
+↓↓
+→→ OD →→ 0
+(OX /J (h)) ⊗ OX (−D)
+γ →→
+↓↓
+OX /J (h)
+↓↓
+0 0
+Since D contains no associated primes of OX /J (h), γ is injective. This
+implies that β is injective by the snake lemma and that Coker α =
+J (h)|D = J (h|D). Thus we obtain the following short exact sequence:
+0 → J (h) ⊗ OX(−D) → J (h) → J (h|D) → 0.
+By taking ⊗ωX ⊗F ⊗O X (D) and using adjunction, we obtain the short
+exact sequence:
+0 → ωX⊗F ⊗J (h) → ωX⊗F ⊗J (h)⊗f ∗H ⊗m → ωD⊗F |D⊗J (h|D) → 0.
+Therefore, we see that
+0 → Rjf∗(ωX ⊗ F ⊗ J (h)) → Rjf∗(ωX ⊗ F ⊗ J (h)) ⊗ H ⊗m
+→ Rjf∗(ωD ⊗ F |D ⊗ J (h|D)) → 0(2.2)
+is exact for every j since B is a general member of |H ⊗m|. By induction
+on dim Y , we have
+(2.3) H i(B, Rjf∗(ωD ⊗ F |D ⊗ J (h|D))) = 0
+for every i > 0 and j. By taking the long exact sequence associated to
+(
+2.2), we obtain
+H i(Y, Rjf∗(ωX ⊗ F ⊗ J (h))) = H i(Y, Rjf∗(ωX ⊗ F ⊗ J (h)) ⊗ H ⊗m)
+for every i ≥ 2 and j by ( 2.3). Thus we have
+(2.4) H i(Y, Rjf∗(ωX ⊗ F ⊗ J (h))) = 0
+===PDF PAGE 4===
+4 OSAMU FUJINO
+for every i ≥ 2 and j by (
+2.1). By Leray’s spectral sequence and ( 2.1)
+and ( 2.4), we have the following commutative diagram:
+H 1(Y, F j)
+α
+↓↓
+↘ ↙ →→ H j+1(X, ωX ⊗ F ⊗ J (h))↙ ↖
+β
+↓↓
+H 1(Y, F j ⊗ H ⊗m)↘ ↙ →→ H j+1(X, ωX ⊗ F ⊗ J (h) ⊗ f ∗H ⊗m)
+for every j, where F j = Rjf∗(ωX ⊗F ⊗J (h)). Note that the horizontal
+arrows are injective. Since β is injective by Theorem 1.1, we obtain that
+α is also injective. By ( 2.1), we have
+H 1(Y, Rjf∗(ωX ⊗ F ⊗ J (h)) ⊗ H ⊗m) = 0
+for every j. Therefore, we see that H 1(Y, Rjf∗(ωX ⊗ F ⊗ J (h))) = 0
+for every j. Thus we obtain the desired vanishing theorem: Theorem
+1.3. □
+We close this section with a remark on Nakano semipositive vector
+bundles.
+Remark. Let E be a Nakano semipositive vector bundle on X. We can
+easily see that Theorem
+1.3 holds even when ωX is replaced by ωX ⊗ E.
+We leave the details as an exercise for the reader (see [ 5, Section 6]).
+Acknowledgments. I was partially supported by Grant-in-Aid for
+Young Scientists (A) 24684002, Grant-in-Aid for Scientiﬁc Resear ch
+(S) 16H06337, and Grant-in-Aid for Scientiﬁc Research (B) 16H03 925
+from JSPS. I thank Shin-ichi Matsumura very much whose comment s
+made Theorem 1.3 better than my original formulation.
+References
+[1] I. Enoki, Kawamata–Viehweg vanishing theorem for compact K¨ ahler manifolds,
+Einstein metrics and Yang–Mills connections (Sanda, 1990) , 59–68, Lecture
+Notes in Pure and Appl. Math., 145, Dekker, New York, 1993.
+[2] O. Fujino, Vanishing theorems, to appear in Adv. Stud. Pure Mat h.
+[3] O. Fujino, Injectivity theorems, to appear in Adv. Stud. Pure M ath.
+[4] O. Fujino, Foundation of the minimal model program, preprint (2 014).
+[5] O. Fujino, S. Matsumura, Injectivity theorem for pseudo-eﬀe ctive line bundles
+and its applications, preprint (2016).
+[6] J. Koll´ ar, Higher direct images of dualizing sheaves. I, Ann. of Ma th. (2) 123
+(1986), no. 1, 11–42.
+[7] S. Matsumura, A vanishing theorem of Koll´ ar–Ohsawa type on co mpact K¨ ahler
+manifolds, to appear in Math. Ann.
+Department of Mathematics, Graduate School of Science, Osa ka
+University, Toyonaka, Osaka 560-0043, Japan
+E-mail address : fujino@math.sci.osaka-u.ac.jp

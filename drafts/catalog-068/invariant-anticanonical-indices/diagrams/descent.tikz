@@ -1,0 +1,7 @@
+\node[card] (n0) {\heading{}{compact factorの不変形式}{Invariant forms on the compact factor}$u\in H^0(F,\Omega_F^p\otimes L_F^r)^T,\quad\widetilde S=\mathbf C^b\times C\times F$};
+\node[card,below=2.7cm of n0] (n1) {\heading{}{deck不変なtensor}{A deck-invariant tensor}$\eta^{-r}\otimes\operatorname{pr}_F^*u\in H^0(\widetilde S,\Omega_{\widetilde S}^p\otimes K_{\widetilde S}^{-r})$};
+\node[card,below=2.7cm of n1] (n2) {\heading{}{有限被覆上の形式へ単射}{Injection into forms on the finite cover}$H^0(F,\Omega_F^p\otimes L_F^r)^T\hookrightarrow H^0(S,\Omega_S^p\otimes(-K_S)^r)$};
+\node[result,below=2.7cm of n2] (n3) {\heading{}{非有界な指数を保ってconversionへ}{Retain unbounded exponents for conversion}$r=m+1\longrightarrow\infty,\quad D=-M\text{ pseudoeffective}$};
+\flow{n0}{n1}{\Tx{平行移動と自明作用が標準枠を保つ}{Translations and the trivial action preserve canonical frames}\\[5pt]\Cite{openai26a}};
+\flow{n1}{n2}{\Tx{微分形式・反標準束の自然作用が一致する}{Natural actions agree on the differential and anticanonical factors}\\[5pt]\Cite{descent}};
+\flow{n2}{n3}{\Tx{Hard Lefschetzの指数ずれと飽和行列式を用いる}{Use the Hard Lefschetz exponent shift and a saturated determinant}\\[5pt]\Cite{forms}; \Cite{determinant}};

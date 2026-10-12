@@ -1,0 +1,872 @@
+Invariant anticanonical indices and conversion of twisted differentials
+OpenAI
+September 26, 2026
+Abstract
+For a holomorphic action of a compact torus on a compact complex manifold, we prove that
+the invariant Euler characteristic of naturally linearized anticanonical powers is polynomial
+on a divisible progression, with its actual value at exponent zero. Independently, on a
+smooth projective variety with smoothly semipositive anticanonical bundle, we remove a fixed
+pseudoeffective error from an unbounded sequence of effective twists. These results convert
+invariant cohomology into twisted differential forms and prove anticanonical nonvanishing on
+smooth projective varieties with smoothly semipositive anticanonical bundle, by descending
+the forms before conversion.
+1 Introduction
+Two questions about anticanonical bundles motivate this paper. First, when a torus acts on
+a compact complex manifold, can the invariant Euler characteristic at the trivial power force
+invariant cohomology at large anticanonical powers? Second, on a smooth projective variety, can
+a fixed pseudoeffective error be removed from an unbounded sequence of effective anticanonical
+twists? We answer the first question without a positivity assumption and the second under smooth
+metric semipositivity. They meet in an application to differential forms: invariant cohomology
+supplies forms that descend through monodromy, and conversion is applied only after that descent.
+1.1 The invariant index and its value at zero
+Let T be a compact real torus acting smoothly by holomorphic automorphisms on a compact
+complex manifoldF. Its differential acts on the anticanonical lineLF =−KF = detTF. We call
+this thenatural linearization. The corresponding action on a section is(t·s)(x) = tLFs(t−1x);
+tensor powers carry the induced action. For each integerm≥0, define
+IT (m) =
+∑
+q≥0
+(−1)q dimH q(F,Lm
+F )T.
+ThusI T (m)is the multiplicity of the trivial representation in the Dolbeault index ofLm
+F.
+Theorem 1.1(Invariant anticanonical index).Let a compact real torusT act holomorphically
+on a compact complex manifoldF, and give−KF its natural linearization. There are an integer
+a>0and a polynomialP∈Q[t]such that
+IT (m) =P(m)for every positive multiplemofa, P(0) =I T (0).
+1The theorem has no projectivity, Kählerness, or positivity premise. Its endpoint is essential:
+when IT (0)̸= 0, the polynomial cannot vanish at all large divisible exponents. Some fixed
+cohomological degree therefore contains invariant classes at unbounded exponents. Eventual
+polynomiality alone would give no information about whether that polynomial is zero.
+The natural linearization is equally essential. On a point, twisting the trivial line by a nonzero
+torus character gives invariant dimension zero at every positive power and dimension one at power
+zero. For the natural anticanonical action, by contrast, the fiber character at a fixed component is
+the sum of the normal tangent characters. This identity controls the endpoint.
+Our calculation uses the holomorphic Lefschetz framework of Atiyah–Bott [1] and its compact-
+group, fixed-component form due to Atiyah–Segal and Atiyah–Singer [2, 3]. Polarizing its denom-
+inators expresses the invariant multiplicity as polynomially weighted lattice counts on rational
+polytopes with specified coordinate faces removed. Weighted Ehrhart theory supplies polynomiality
+on divisible exponents [4, preprint §2.4 and §3.1]. To determine the value at zero, we prove the
+count directly, retaining all small divisible exponents, and then show that the anticanonical charac-
+ter gives a deformation retraction onto the removed faces. The cancellation is a difference of Euler
+characteristics of compact polyhedra. Stanley’s treatment of deleted boundary already identifies
+this constant term and singles out boundary visible from an exterior point [21, Proposition 8.2
+and the discussion and proof of Proposition 8.3]. Here the anticanonical character produces such
+an exterior point in the affine counting space. We give a direct weighted argument and an explicit
+retraction, including degenerate polytopes.
+When F is Kähler andLF has a smooth semipositive metric, hard Lefschetz with semipositive
+coefficients [10, Theorem 0.1] gives
+H 0(F,Ω n−q
+F ⊗Lm+1
+F )−→Hq(F,Lm
+F ), n= dimF,
+surjectively. An invariant Kähler form makes this map equivariant; compact averaging then
+preserves surjectivity on invariant subspaces. The coefficient isLm+1
+F because the cohomological
+target isKF⊗Lm+1
+F =Lm
+F. Thus Theorem 1.1 supplies invariant twisted differential forms when
+IT (0)̸= 0. The use of hard Lefschetz and a nonzero Euler characteristic to obtain infinitely many
+twisted forms already appears for canonical powers in [10, Theorem 2.7.3]; here the invariant
+anticanonical index requires a separate argument to retain its value at exponent zero.
+1.2 Removing a fixed error
+We use additive notation for line bundles and Cartier divisors. A divisor ispseudoeffectiveif its
+numerical class lies in the closure of the effective cone. Smooth semipositivity means the existence
+of a smooth Hermitian metric with nonnegative Chern curvature; it implies nefness. The next
+theorem is an ordinary section theorem, with no group action.
+Theorem 1.2(Pseudoeffective-error conversion).Let S be a smooth connected projective complex
+variety, and suppose thatL =−KS has a smooth Hermitian metric with semipositive Chern
+curvature. LetDbe a pseudoeffective Cartier divisor. If
+H 0(S,OS(mjL−D))̸= 0
+for a strictly increasing sequence of positive integersmj, thenH 0(S,OS(kL))̸= 0for some integer
+k>0.
+The fixed error need not be effective. No rational-connectedness or Euler-characteristic
+assumption onS is used. The argument begins with a rational map whose base has maximal
+2dimension among mapsS99KY for which a multiple ofL dominates an ample base divisor in
+pseudoeffective order. Maximality forces ratios of the relevant sections to be base functions. Their
+horizontal zero orders consequently vary affinely with the exponent.
+After birational modifications, a normalization along base divisors produces a line bundleB
+on a smooth baseYand a nonzero map
+σ:f∗B−→ℓπ∗L, ℓ>0,
+where V is smooth,π: V→S is birational, andf : V→Y is a morphism. This map will be
+used to transfer the sections constructed on the base to positive multiples ofL on S. The same
+maximality gives rank-one adjoint direct images, whose integral metrics yield a semipositive metric
+on B by Berndtsson’s positivity theorem [5]. The normalization ofσmakes the resulting weights
+locally bounded, including near singular fibers.
+These bounds allow Fujino’s Kollár–Nadel theorem [12] to give vanishing at every nonnegative
+base twist. A single Euler polynomial therefore equals the corresponding section dimension even
+at zero, where the exceptional canonical section makes it positive. Some positive exponent gives a
+section, whichσtransfers back toS. As in the invariant-index argument, control at zero is what
+rules out the zero polynomial; the two constructions of that control are independent.
+This criterion applies to differential forms through a determinant construction. The generic-span
+method of Lazić–Peternell [15, Lemma 4.1], adapted in Lazić–Matsumura–Peternell–Tsakanikas–
+Xie [14, Lemma 5.1], extracts one fixed determinant line from infinitely many twisted forms. We
+give the argument for an unbounded positive sequence, including the numerically trivial case
+excluded by the hypotheses of those two cited lemmas. The cotangent subsheaf theorem [14,
+Theorem 4.1], with Ou’s generic nefness result [19, Theorem 1.4] as an antecedent, makes the
+negative of that line pseudoeffective. Theorem 1.2 then removes the error.
+1.3 Application through monodromy
+For a smooth connected projectiveX, anticanonical nonvanishing asks for a section of−mKX
+for somem> 0. The positive-multiple question under smooth semipositivity is associated with
+Yau’s anticanonical-section problem [24, Problem 75]. The prescribed-Ricci theorem [23] and
+the structure theorems of Demailly–Peternell–Schneider and Campana–Demailly–Peternell [9, 6]
+identify a compact rationally connected factor of the universal cover. Residual monodromy can
+still act on it through a compact torus, so a section on that factor alone need not descend. Müller’s
+equivariant theorem produces invariant plurisections under semiampleness [17, Theorem C]. His
+Theorem A proves nonvanishing for projective klt pairs with nef anti-log-canonical divisor when
+its restriction to the general fiber of the maximal rationally connected fibration is semiample;
+Corollary B proves nonvanishing for projective klt threefold pairs with nef anti-log-canonical
+divisor. Our smooth application assumes metric semipositivity and imposes no fiber-semiampleness
+condition.
+We apply the invariant index on the compact factorF and ordinary conversion on a finite
+coverSofX; descending forms is the step that connects those two spaces.
+The companionAnticanonical nonvanishing from smooth semipositivity[18] proves a finite-cover
+description with the residual torus and invariant canonical frames retained, as well as the finite
+étale norm of a section. We use only these geometric inputs. We prove locally that invariant
+twisted forms on the compact factor descend injectively to the finite cover. Theorem 1.1 and hard
+Lefschetz provide those forms, and Theorem 1.2 is applied after descent. Taking the norm then
+proves that−mKX has a nonzero section for somem>0.
+3Passing to a positive multiple is necessary. On an Enriques surfaceE, KE has order two and
+H 0(E,−KE) = 0[ 11]. ConsequentlyE×P1 has a smoothly semipositive, non-torsion anticanonical
+bundle without a first-power section. In dimension two, the classification of Chen–Filip–Sun–
+Tosatti–Zhang [7, Theorem 1.3] gives complementary geometric context.1
+Section 2 proves the index theorem and derives invariant twisted forms. Section 3 proves
+conversion by constructing the normalized relative section and bounded base metric. Section 4
+gives the determinant argument. Section 5 proves form descent and the global application. The
+two principal theorems are independent of one another; their combination takes place only in that
+last application.
+2 The invariant index, including exponent zero
+The proof of Theorem 1.1 rests on two facts about weighted lattice counts, which we establish
+before applying localization. Here is the counting problem that explains their role. For a fixed
+component, polarization of the fixed-point formula produces integral vectorsα1,...,αs,w∈Zr,
+wherer= dimT, and a subsetI⊂{1,...,s}. Its counting equation is
+s∑
+i=1
+αibi =−mw, b i>0 (i∈I), bi≥0 (i /∈I).
+The vectorsαi are positive under one linear functional;w is the natural anticanonical character;
+and I records the denominators whose expansions start at a positive exponent. Section 2.2 derives
+these data from the normal tangent action. For now this equation explains the two counting tasks.
+First, the closed count, in which every inequality is weak, is polynomial at every divisible
+exponent; its polynomial value at zero is the weight at zero. Second, imposing the strict inequalities
+removes coordinate faces. The anticanonical character gives a retraction onto their union, so
+its Euler characteristic cancels the constant of the closed count. Only the constant terms from
+contributions with no deleted faces survive. At actual exponentm = 0, positivity of theαi forces
+b = 0, allowed exactly in that same case. Matching these two endpoint calculations completes the
+index proof.
+Polynomially weighted Ehrhart sums and fundamental parallelepipeds are classical; see [4,
+preprint §2.4 and §3.1]. We give the count directly to retain the low divisible powers and the value
+at zero, before proving the special deleted-face assertion.
+Lemma 2.1(A weighted lattice count at zero).Let D⊂Rs be a nonempty closed rational
+polytope, and letW (x,m )be a polynomial inx and m. For sufficiently divisible positive integers
+m, ∑
+x∈mD∩Zs
+W(x,m)
+is polynomial inm, and its polynomial value at zero isW (0, 0). The same assertion holds with
+coefficients in any finite-dimensional vector space.
+Proof. Choose a positive integera clearing all vertex denominators. Writingm = an, replace
+D by the lattice polytopeaD and the weight byW (x,an ). Its value at(0 , 0)is unchanged.
+We may therefore prove the assertion for a lattice polytope and again call the dilation variable
+1Their introduction credits ChatGPT 5.6 Sol with suggesting a preliminary version of Lemma 5.2, which the
+authors reformulated and developed into its geometric statement and proof.
+4m. Triangulate into closed lattice simplices, using lattice vertices. It suffices first to treat a
+d-dimensional simplex with verticesv0,...,vd.
+The vectors(vi, 1)are linearly independent. Use the latticeZs+1∩spanR{(vi, 1) : 0≤i≤d}
+in their real linear span. Every lattice point in their nonnegative cone has a unique expression
+p+
+d∑
+i=0
+li(vi,1), l i∈Z≥0,
+where p is a lattice point of the half-open fundamental parallelepiped for these generators. This
+permits a lower-dimensional simplex, a nonunimodular simplex, and a simplex not containing the
+origin. The heighth of p is an integer with0≤h≤d, and heightm imposes ∑li =m−h. For
+fixedp, substitute this expression intoW and expand the resulting polynomial in the basis∏
+i
+(li
+ui
+)
+,
+with coefficients polynomial inm. The identity
+∑
+li≥0∑
+li=m−h
+d∏
+i=0
+(
+li
+ui
+)
+=
+(
+m−h+d
+d+ ∑
+iui
+)
+(2.1)
+follows by multiplying the generating functionszui/(1−z)ui+1. For m≥hit is the desired
+counting identity. For0≤m < h, the upper entry on the right is an integer between zero and
+d−1, so the binomial polynomial also vanishes. Thus the polynomial formula is valid for every
+m≥0.
+Atm = 0, every term withh> 0vanishes. The only parallelepiped point of height zero is the
+origin. For it, onlyui = 0for all i contributes in(2.1), givingW (0, 0). This proves the assertion
+for a simplex of any dimension.
+Apply inclusion–exclusion to the closed simplices in the triangulation. Each nonempty inter-
+section is a lattice face and has the same constant termW (0, 0). The alternating sum of these
+constant terms isχ(D)W (0, 0) =W (0, 0), because a nonempty convex polytope is contractible.
+The vector-valued assertion follows coefficientwise.
+2.1 The deleted boundary
+Polarizing a fixed-point denominator may exclude some coordinate faces. The next lemma proves
+the cancellation needed for those exclusions. Its geometry is simple: a point outside the nonnegative
+orthant lies in the affine space containing the polytope, and rays from that point first enter the
+polytope through the faces being removed.
+Lemma 2.2(Deleted faces).Let α1,...,αs be vectors admitting a linear functional positive on
+each, and letI⊂{1,...,s}. Putui =−1fori∈I,ui = 1otherwise, and set
+D=
+{
+xi≥0 :
+∑
+i
+αixi =
+∑
+i
+αiui
+}
+.
+IfD̸=∅andI̸=∅, the union
+A=
+⋃
+i∈I
+(
+D∩{xi = 0}
+)
+is a deformation retract ofD. In particularχ(A) = 1.
+5Proof.The positivity of the functional makesDcompact. Forx∈D, put
+t(x) = max
+i∈I
+1
+xi + 1, r(x) =u+t(x)(x−u).
+Then0 < t(x)≤1, andr(x)lies in the same affine equation space asx and u. For i∈I, its
+i-th coordinate is−1 +t(x)(xi + 1)≥0, with equality for at least one index. Fori /∈I, it is
+1−t(x)+t(x)xi≥0. Hencer(x)∈A. Ifx∈A, thent(x) = 1, sor(x) =x. The continuous straight
+homotopy fromxtor(x)stays in the convex setDand fixesA. This proves the assertion.
+Figure 1 illustrates this retraction when all three vectorsαi are1and I ={1}. The proof
+above also applies whenDhas smaller dimension or consists of one point.
+u= (−1,1,1)
+x
+r(x)
+(1,0,0) (0,1,0)
+(0,0,1)
+D
+A={x1 = 0}∩D
+Figure 1: The affine planex1 +x2 +x3 = 1, drawn using(x2,x 3)as coordinates. The triangle is
+D, and its thick edge is the deleted unionA. The pointr(x)is the first point ofD on the ray
+fromuthroughx; the homotopy movesxalong the indicated segment to that edge.
+Remark 2.3(The visible-face alternative).Stanley discusses the visible-boundary case in [21,
+discussion preceding and proof of Proposition 8.3]. Here it also gives a short geometric proof
+covering degenerate polytopes. WithD̸= ∅ and I̸= ∅, the preceding coordinate calculation
+identifiesA as exactly the first entry points of rays fromu intoD. Indeed, fora∈A, a coordinate
+with ai = 0, i∈I, stays negative on the segment fromu preceding a. By strict separation,
+choose a linear functionalf and c > 0with f(x−u) > con D, and project centrally onto
+H={z:f(z−u) =c}:
+π(x) =u+c(x−u)
+f(x−u).
+There is one first entry point on each ray meetingD, soπ|A is a continuous bijection ontoπ(D),
+hence a homeomorphism by compactness. The image is convex: it is the section byH of the
+convex cone with vertexu generated byD. Thus A is homeomorphic to a nonempty compact
+convex set andχ(A) = 1, also for lower-dimensional and singleton polytopes. Both proofs concern
+χ(D)−χ(A); one must not replace that difference by the ordinary Euler characteristic of the
+nonclosed setD\A.
+2.2 Localization and the anticanonical character
+We now identify the lattice domains in the fixed-point formula. The two lemmas above will
+determine their constant terms component by component.
+6Proof of Theorem 1.1.WriteΛ = Hom(T,S 1)for the character lattice and tλfor the value at
+t∈Tof a characterλ∈Λ. The invariant index is the coefficient oft0 in the alternating character.
+The Dolbeault complex is an equivariant elliptic complex on any compact complex manifold; a
+Kähler metric is not needed for its index. For elements generating dense cyclic subgroups ofT, the
+fixed locus isFT. IfFT is empty, the fixed-point theorem makes the entire alternating character
+zero on these elements. Such elements are dense inT, and the character of a finite-dimensional
+virtual representation is continuous, hence identically zero. In this caseIT (m) = 0for all m,
+including zero, and we takeP = 0. Otherwise apply the equivariant Dolbeault fixed-point formula
+on the dense set of these elements. Clearing its finitely many denominators gives an identity
+of rational characters. Its compact-group form, including fixed components, follows from [2,
+Theorem 2.12 and §3] and [3, Theorems 3.9 and 4.3]. For a componentZ of FT, writeνi̸= 0for
+the normal tangent characters, repeated with their ranks, andxi for the corresponding formal
+Chern roots. The natural anticanonical fiber weight is
+w=
+∑
+i
+νi.
+WritingL=K −1
+F , the contribution to the alternating character is
+∫
+Z
+td(Z)emc1(L|Z )tmw ∏
+i
+1
+1−t−νie−xi
+.(2.2)
+The action on sections uses the inverse action on arguments, accounting for the conormal characters
+in the denominator. Choose an integral one-parameter direction pairing nontrivially with every
+normal character at every fixed component. For a componentZ, letI be the indices with positive
+pairing. Putαi =νi onI, andαi =−νi otherwise. Allαi pair positively with the chosen direction.
+The pairings are positive integers, hence at least one. Expand the denominators toward exponents
+with positive pairing:
+1
+1−t−νie−xi
+=
+
+
+
+−
+∑
+bi>0
+tbiαiebixi, i∈I,
+∑
+bi≥0
+tbiαie−bixi, i /∈I.
+These expansions respect the identity of rational characters in a completion in which there are
+only finitely many terms below each pairing bound. In particular, each trivial-character coefficient
+is a finite sum.
+The coefficient of the trivial character in(2.2) is therefore a polynomially weighted lattice
+count satisfying ∑
+i
+αibi =−mw, b i>0 (i∈I), bi≥0 (i /∈I).
+Before integration, the polynomial weight in the truncated root space is
+W(b,m) = (−1)|I|
+
+td(Z) exp
+
+mc1(L|Z) +
+∑
+i∈I
+bixi−
+∑
+i/∈I
+bixi
+
+
+
+
+≤dimZ
+.(2.3)
+The bracket retains complex cohomological degrees at mostdimZ, so only finitely many terms
+contribute andWis polynomial inb,m. The sign is part of this weight. All root expressions are
+interpreted by the splitting principle in truncated cohomological degrees. Operations are first
+performed coefficientwise with formal roots. Individual root monomials or individual face terms
+7need not define cohomology classes. Permuting roots within an equal-character normal bundle,
+together with the corresponding lattice coordinates, preserves the entire lattice domain and its
+total weighted sum. Thus the complete sum is symmetric at every positive divisible exponent. Its
+polynomial continuation is symmetric coefficient by coefficient, by uniqueness of a polynomial
+on an infinite progression. Only after taking this complete sum do we interpret the symmetric
+polynomials as characteristic classes and integrate onZ.
+For positivem, the domain is the dilation bymof the rational compact polytope
+D=
+{
+bi≥0 :
+∑
+i
+αibi =−w
+}
+,(2.4)
+with the unionAof its facesb i = 0,i∈I, removed.
+If I = ∅, then−w= ∑
+iαi, soD̸= ∅. Lemma 2.1 gives the polynomial continuation, whose
+constant term is the weight at(b,m ) = (0, 0). IfI̸= ∅ and D is empty, the contribution is zero.
+Otherwise the vector with coordinates−1on I and1elsewhere belongs to the affine equation
+space in(2.4), since the linearization is anticanonical. Lemma 2.2 givesχ(A) = χ(D) = 1. By
+inclusion–exclusion and Lemma 2.1, the polynomial constant term of the count onD\Ais
+(
+χ(D)−χ(A)
+)
+W(0,0) = 0.
+These constants are exactly the actual trivial-character contributions atm = 0. Indeed,
+positivity of the pairing forces everybi = 0when ∑αibi = 0; this is permitted precisely when
+I = ∅. Summing over fixed components and taking a common divisibility integer proves both
+polynomiality andP (0) =IT (0). An empty normal list gives the one-point lattice domain inR0,
+with no deleted faces; its contribution is the ordinary index integral on that fixed component.
+This also handles a trivial torus. The empty fixed set was handled before localization. Finally,
+the polynomial has rational coefficients because its values at all positive points of an integral
+progression are integers.
+2.3 Invariant twisted forms
+The index theorem is independent of positivity. For its geometric application we now assume
+Kählerness and introduce the analytic map that turns cohomology into holomorphic forms.
+Theorem 2.4(Hard Lefschetz with semipositive coefficients).Let F be compact Kähler of
+dimension n, with Kähler formω, and letA have a smooth semipositive Hermitian metric. For
+every0≤q≤n, wedge multiplication byωq induces a surjection
+H 0(F,Ω n−q
+F ⊗A)−→Hq(F,KF⊗A).
+This is the smooth-metric case of [10, Theorem 0.1]; its multiplier ideal is trivial. The smooth-
+coefficient Lefschetz theorem of Mourougane [16, Theorem 2.6] and the earlier nef-coefficient
+cohomology work of Takegoshi [22, Theorem 1] are antecedents of this statement. We use the
+formulation in [10]. If a compact group preserves the data, the map is equivariant. Averaging over
+the group then preserves surjectivity on invariant subspaces.
+Corollary 2.5.Let F be compact Kähler with smoothly semipositiveLF =−KF, and let a compact
+torusTact holomorphically, with the natural linearization onLF. If
+∑
+q
+(−1)q dimH q(F,OF )T̸= 0,
+8then for some fixedp≥0and arbitrarily large positive integersm,
+H 0(F,Ω p
+F⊗Lm+1
+F )T̸= 0.
+Proof. By Theorem 1.1, IT (m)̸= 0for all but finitely many positive integers in a divisible
+progression. Some fixedq therefore hasHq(F,Lm
+F )T̸= 0for unbounded m. Average a Kähler form
+overT, and apply Theorem 2.4 withA=L m+1
+F . Its target is
+Hq(F,KF⊗Lm+1
+F ) =H q(F,Lm
+F ).
+The wedge map is equivariant, and compact averaging gives an invariant preimage of each invariant
+target class. Takep = dimF−q. Indeed the map isu↦→[ωq∧u]; it depends on the averaged
+Kähler form and the natural linearization, not on the coefficient metric used to establish surjectivity.
+Averaging a chosen preimage over Haar probability measure therefore leaves its invariant target
+unchanged.
+3 Removing a pseudoeffective error
+We prove Theorem 1.2. Throughout this sectionL =−KS carries a fixed smooth semipositive
+metric, and we choose effective integral divisors
+Nj∼mjL−D, m 1<m 2<···.(3.1)
+We use additive notation for line bundles. A divisor is pseudoeffective when its numerical class lies
+in the closed effective cone; on a smooth projective variety it is equivalent to admitting a singular
+Hermitian metric with semipositive curvature current [10]. Such classes pull back under dominant
+maps between smooth projective varieties and push forward under birational morphisms.
+The proof builds a resolutionπ:V→S, a morphismf :V→Y, and a line bundleB on the
+base, together with a nonzero mapf∗B→ℓπ∗L. The map will be used to transfer the sections
+constructed on the base to positive multiples ofL on S. Its normalization will also supply the
+bounds needed to construct those base sections.
+3.1 The base and the relative section
+A maximal base.Call a dominant rational map S99KY dominated byL if, after resolving it
+to a morphismf:V→Y,
+cπ∗L−f∗His pseudoeffective (3.2)
+for some positive integerc and ample Cartier divisorH on the integral projective varietyY. The
+constant map is allowed: the trivial line on a point is ample, andL is pseudoeffective. There is
+therefore a dominated map of largest possible base dimension.
+We may choose its base smooth and its function field relatively algebraically closed inC(S).
+Indeed, normalize the original base in its relative algebraic closure inC(S), a finite extension, and
+then resolve the base and the rational map. The pullback of the original ample divisor to the new
+smooth base is big. A large multiple of this pullback dominates an ample divisor in pseudoeffective
+order, which preserves(3.2). The same argument permits further birational modifications of the
+base and higher smooth source models.
+This choice has a useful maximality property. IfA is a line bundle onS and c′L−Ais
+pseudoeffective for somec′> 0, then the ratio of any two nonzero sections ofA lies in C(Y ). To
+9prove this, suppose their ratio is nonconstant and resolve the corresponding pencil. Its moving line
+is the pullback ofOP1(1), and its fixed divisor is effective, so the pencil is dominated byL. The
+joint map of this pencil andS99KY is dominated as well: add their two inequalities on a common
+resolution and restrict the ample product line to the joint image. Normalizing and resolving that
+image preserves domination. By maximality its dimension isdimY , so the pencil’s function is
+algebraic over C(Y ). Relative algebraic closedness places it inC(Y ), as asserted. A constant ratio
+already has this property. When necessary, increasingc′to an integer preserves pseudoeffectivity
+becauseLis pseudoeffective.
+Apply this property to the effective divisors in
+(mj−m2)N1 + (m2−m1)Nj∼(mj−m1)N2, j >2.(3.3)
+Their common class is(mj−m1)(m2L−D), which is bounded above by(mj−m1)m2L in
+pseudoeffective order. The equivalence function in(3.3) thus belongs toC(Y ). On any normal
+model resolving the map toY, a prime is calledhorizontalif it dominatesY, andverticalotherwise.
+A base function has order zero at a horizontal prime. Ifaj is the coefficient of the pullback ofNj
+at such a prime, then (3.3) gives
+aj =a 1 + mj−m1
+m2−m1
+(a2−a1).
+Since aj≥0along an unbounded sequence,a2≥a1. Consequently the pullback ofN2−N1 has
+effective horizontal part.
+If Y is a point, apply this calculation onS itself: every prime is horizontal, andN2−N1 is
+effective. Its class is(m2−m1)L, proving the theorem in this case. HenceforthdimY > 0. The
+remaining task is to remove the negative vertical coefficients by subtracting a divisor from the
+base.
+Normalization along base divisors.For that subtraction to see every vertical coefficient, we
+need each vertical prime to dominate a base divisor. We construct a normal intermediate model
+with this property:
+V U S
+Y
+ρ
+f
+b
+h π=bρ, f=hρ.
+Here b and ρare birational,V and Y are smooth projective, and every prime divisor ofU that
+fails to dominateYdominates a prime divisor ofY.
+For this construction, begin with a smooth resolutionV0→Y0 of the maximal map. On a
+dense open ofY0, its fibers form a flat family of subschemes ofV0 with a fixed Hilbert polynomial.
+Resolve the induced rational map fromY0 to the projective Hilbert scheme, obtaining a smooth
+projective birational baseY [13, Theorem 3.2, p. 260; p. 265]. Pull back the universal family. Every
+fiber of this family has dimensionr = dimS−dimY. The reduced closureW of the original flat
+family is integral and maps birationally toV0. Its fibers are closed subschemes of the pulled-back
+Hilbert fibers, so have dimension at mostr. The normalizationU→Wis finite, and hence has the
+same fiber-dimension bound overY. A prime divisorQ⊂Umapping into a subset of codimension
+at least two would satisfy
+dimQ≤dimY−2 +r= dimS−2,
+10which is impossible. ResolveU to obtainV. The dimension bound is needed onU; the smooth
+space V will be used for metrics and vanishing. The preceding maximality argument preserves
+(3.2) throughout these modifications.
+On this model, lets0 be the rational section of(m2−m1)b∗L whose divisor isb∗(N2−N1).
+Its horizontal part is effective by the preceding calculation. The base divisor to be subtracted is
+now determined one prime at a time.
+For each prime divisorP⊂Y, subtract the smallest normalized vertical order:
+bP = min
+Q↦→P
+ordQ(s0)
+ordQ(h∗P).(3.4)
+The minimum runs over the finitely many components ofh∗P dominatingP. This set is nonempty
+and its denominators are positive. Only finitely manybP are nonzero, becausediv(s0)has finite
+support. Every vertical prime ofU occurs in one of these minima. Together with horizontal
+effectivity, this proves
+div(s0)−h∗
+(∑
+P
+bPP
+)
+≥0.
+Choose a positive integeraclearing all denominators and set
+ℓ=a(m2−m1), B=a
+∑
+P
+bPP.
+Smoothness ofY makes B Cartier. On the normal varietyU, the resulting rational section of
+ℓb∗L−h∗Bhas nonnegative order at every prime, so is regular. Pulling it back toVgives
+σ:OV (f∗B)−→OV (ℓπ∗L).(3.5)
+For every base primeP, some component off∗P dominatingP has order zero inσ: take the strict
+transform of a prime attaining(3.4). Its strict transform defines the same divisorial valuation,
+since U is normal and hence regular at its generic point. The new exceptional divisors onV
+acquire no poles because the pulled-back section is regular. This is the normalization we will use
+near singular fibers; equidimensionality ofVis unnecessary.
+Rank one of the adjoint direct images.We now have the map that will transfer sections
+from the base. To construct a semipositive metric on its source lineB, we will use adjoint integral
+metrics. Their direct images must first be shown to have rank one. The anticanonical identity
+enters at this point. Put
+E=K V−π∗KS =K V +π∗L.(3.6)
+The divisorE is effective andπ-exceptional; denote its canonical section bye. For every integer
+k≥0, we claim that
+Gk =f∗OV (E+kℓπ∗L)has generic rank one. (3.7)
+The sectioneσk, after trivializingB over the generic point, shows that the rank is at least one,
+also whenk = 0. If it were larger, Serre’s global generation theorem would give, for some positive
+t, two sections ofE +kℓπ∗L +tf∗H independent overC(Y ). Their ratio would lie outside that
+field.
+Push their zero divisors forward toS. They become two effective divisors in one Cartier class
+A∼kℓL+tπ∗f∗H,
+11with the same rational-function ratio. Indeed, choose a Cartier divisor representing the upstairs line
+and express both sections as rational functions; birational pushforward preserves their principal
+divisors, and π∗E = 0. Smoothness makes the common downstairs divisor Cartier. Pushing
+forward (3.2) gives
+(kℓ+tc)L−Apseudoeffective.
+The maximality property then places the ratio inC(Y ), a contradiction. The coefficientkℓ+tc is
+positive even atk= 0, proving (3.7) in its full stated range.
+3.2 The bounded base metric
+We have constructedB and σ; the next task is a semipositive metric onB with locally bounded
+weights. For a local frameβ, our weight convention is−log|β|2, so semipositive curvature means
+that the weights are plurisubharmonic. We obtain them as limits of adjoint integral metrics.
+We use Berndtsson’s direct-image theorem in the following form [5, Theorem 1.2]: for a proper
+holomorphic submersion with Kähler total space and a smoothly semipositive line bundleA, the
+natural L2 metric onf∗(KV/Y +A)has semipositive curvature wherever the adjoint sections form
+a vector bundle. The coefficient metric may be semipositive; strict positivity along the fibers is
+not required.
+Let hL denote the pulled-back smooth metric onπ∗L. Choose a dense Zariski openY◦on
+whichf is smooth ande andσare not identically zero on any fiber. The fibers there are connected:
+relative algebraic closedness ofC(Y )in C(S)makes the finite part of the Stein factorization trivial.
+For a local frameβofB, setσβ=σ(f∗β)and
+φβ(y) =−log max
+Vy
+|σβ|2
+hℓ
+L
+, y∈Y ◦.(3.8)
+The fiberwise maximum is positive and continuous on this open set.
+To see thatφβis plurisubharmonic, take a local frameτofKY. Equation (3.6) gives
+KV/Y + (1 +kℓ)π∗L=E+kℓπ∗L−f∗KY.(3.9)
+Thuseσk
+β/f∗τis an adjoint section. By(3.7) and generic base change, it spans the adjoint direct
+image on a dense open subset ofY◦. For every integerk≥1, Berndtsson’s theorem makes
+φβ,k(y) =−1
+k log
+∫
+Vy
+|σβ|2k
+hℓ
+L
+|e/f∗τ|2
+hL (3.10)
+plurisubharmonic on that dense open. The integral is smooth and strictly positive throughoutY◦;
+its curvature inequality therefore holds on all ofY◦by continuity.
+The final factor in the integral is the smooth nonnegative measure obtained from aπ∗L-valued
+relative canonical form. It has positive mass and full support on each fiber, because a nonzero
+holomorphic section on a connected smooth fiber cannot vanish on an open subset. Denote this
+measure byµy, its mass byM(y)>0, and put
+qβ=|σβ|2
+hℓ
+L
+, A k(y) =
+(
+1
+M(y)
+∫
+Vy
+qk
+βdµy
+)1/k
+.
+Hölder’s inequality for the probability measureM(y)−1µy shows thatAk(y)increases with k. Full
+support givesAk(y)→maxVyqβ. The moments and their limit are continuous, so Dini’s theorem
+12makes this convergence uniform on every compact subset of a coordinate open inY◦. The limit is
+positive there. Since
+φβ,k=−logAk−1
+k logM,
+the weights in (3.10) converge locally uniformly toφβ. Their limit is plurisubharmonic.
+It remains to establish local bounds near the omitted fibers. Properness off and smoothness of
+the upstairs metric boundqβabove over every relatively compact base neighborhood. Equation(3.8)
+therefore gives a local lower bound forφβ, even as one approaches the boundary.
+For the upper bound, letP be a divisorial component ofY\Y ◦. The normalization ofσ
+supplies a componentQ aboveP on whichσis generically nonzero. Choose a general point of
+Q where P,Q are smooth,Q→Pis submersive, no other component off∗P passes through the
+point, andσ̸= 0. In suitable local coordinates, a transverse coordinate toP pulls back to a unit
+times zr
+1, withr> 0, while the other base coordinates pull back to independent coordinates along
+Q. Taking a local root absorbs the unit. This local form shows that a small source neighborhood
+maps onto a base neighborhood. On a still smaller source neighborhood,qβhas a positive lower
+bound. Every sufficiently nearby fiber meets this neighborhood, so its maximum has the same
+lower bound. This gives an upper bound forφβnear a general point ofP.
+The removable-singularity theorem for plurisubharmonic functions now extendsφβacross
+dense open subsets of all boundary divisors. These opens can be taken Zariski open: nonvanishing
+and the required differential ranks hold on algebraic opens ofQ, whose dominant constructible
+images contain dense Zariski opens ofP. The set still omitted is therefore contained in a closed
+analytic setA⊂Yof codimension at least two.
+We recall why no upper-bound obstruction remains atA. Near a point ofA, choose a small
+affine complex disk centered there whose boundary missesA, and a compact neighborhood of
+that boundary disjoint fromA. The plurisubharmonic function has a common upper bound on
+this neighborhood. For every nearbyy /∈A, choose a disk of the same radius centered aty, with
+direction sufficiently close to the original one that its boundary stays in this fixed neighborhood.
+Its direction can also be chosen so that the whole disk missesA: the radial image ofA, viewed
+from y, in the space of complex line directions has real dimension at most2dimY−4, smaller
+than the direction space dimension2dimY−2. The submean inequality gives a common upper
+bound at all suchy. Removable singularities therefore extend the function acrossA as well. The
+upper-limit extension preserves the lower bound already supplied by properness.
+We have obtained locally bounded plurisubharmonic weights on all ofY. Under β′= gβ,
+formula (3.8) gives
+φβ′ =φβ−log|g|2.
+The same relation holds after extension, so the weights define a semipositive singular Hermitian
+metrich B onB, with locally bounded weights.
+3.3 Vanishing at every nonnegative exponent
+The bounded metric onB is now available. To produce sections, we combine it with a metric on
+π∗L that is positive in base directions and has no multiplier-ideal loss. Recall thatJ (h)consists
+locally of holomorphic functionsgfor which|g|2e−φh is integrable.
+The domination (3.2) gives a singular metric onπ∗L whose curvature is positive in base
+directions. More precisely, combine a semipositive singular metric oncπ∗L−f∗H with a positive
+smooth metric onH, and take thec-th root. The resulting metrich1 satisfies
+Θh1(π∗L)≥c−1f∗ωH.
+13Mix its local weights with those of the smooth semipositive metrichL: for some0<δ <1, puth =
+h1−δ
+L hδ
+1. The local exponential-integrability consequence of Skoda’s theorem [20, Proposition 7.1,
+p. 389] supplies, near each point, a sufficiently small positive exponent for which the negative
+exponential of the singular weight is integrable. We use its arbitrary-plurisubharmonic-weight
+formulation in [8, Definition 0.1 and 1.4(8)]: for a nontrivial psh weightφ, the local integrability
+threshold ofe−2γφis positive. This formulation also includes complex dimension one. In our
+squared-norm convention, takeγ=δ/2. A finite coordinate cover of the compact spaceV gives
+one commonδ >0. The smooth part changes integrability by bounded factors. Hence
+Θh(π∗L)≥ϵf∗ωH,J(h) =O V, ϵ=δ/c>0.(3.11)
+For each integerk≥0, tensor this metric withf∗hk
+B. Its curvature is still at leastϵf∗ωH, and
+its multiplier ideal is still trivial: for every fixedk, the added weight is locally bounded. Thus the
+same choice ofhworks at all the required exponents.
+We use Fujino’s Kollár–Nadel vanishing theorem in the following form [12, Theorem 1.3]. If
+f :V→Y is a surjective morphism from a compact Kähler manifold to a projective variety and a
+line bundleAhas a singular metrich A withΘ hA(A)≥ϵf∗ωH, then
+Hi(
+Y,Rqf∗(OV (KV +A)⊗J(hA))
+)
+= 0 (i>0, q≥0).
+Fujino derives this form from the injectivity and multiplier-ideal Bertini theorems of Fujino–
+Matsumura [12, Theorems 1.1–1.3]. The metric need not have analytic singularities. Apply the
+theorem toA =π∗L+kf∗B, with the metric just constructed, and takeq = 0. SinceKV +π∗L =E,
+the projection formula gives
+Hi(
+Y,G⊗OY (kB)
+)
+= 0 (i>0, k≥0),G=f ∗OV (E).(3.12)
+Riemann–Roch on the smooth projective base makes
+Q(k) =χ
+(
+Y,G⊗OY (kB)
+)
+=
+∫
+Y
+ch(G)ekc1(B) td(Y)
+a polynomial ink, whether or notB is ample. By(3.12), this polynomial equalsh0(Y,G⊗OY (kB))
+at every nonnegative integer. At zero the canonical sectione gives a nonzero section, soQ(0)> 0.
+This is why vanishing atk = 0is indispensable: without it, the existence ofe would not determine
+the Euler characteristic. The polynomial is nonzero, and hence cannot vanish at every positive
+integer. For somek>0there is a nonzero section ofE+kf ∗BonV.
+Multiply this section byσk from (3.5). The result is a nonzero section ofE +kℓπ∗L. Finally,
+π∗OV (E) =OS: a rational function with possible poles only on the effective exceptional divisorE
+is regular away from its codimension-two image, and extends across that image by normality ofS.
+The projection formula therefore sends our section to a nonzero section ofkℓL, completing the
+proof of Theorem 1.2.
+The two appearances ofL =−KS explain the strength and the scope of the criterion. The
+identityKV +π∗L =E supplies the adjoint section used in the integral metric and turns adjoint
+vanishing into the fixed sheaff∗OV (E)at exponent zero. These steps connect the positive base
+metric to an Euler polynomial with a known nonzero value.
+4 From twisted differentials to effective divisors
+Theorem 1.2 accepts any fixed pseudoeffective error. We now construct one from differential forms,
+so that the invariant forms obtained in Section 2 can be used after descent. The construction has
+14two steps: take a fixed determinant line of a generic span, then control the sign of that line by
+generic nefness.
+Theorem 4.1(Cotangent subsheaves).Let S be smooth projective with−KS nef. If a line bundle
+Mis a saturated subsheaf of(Ω 1
+S)⊗b, whereb>0, then−Mis pseudoeffective.
+This is the smooth, zero-boundary, rank-one case of [14, Theorem 4.1]; Ou’s generic-nefness
+theorem [19, Theorem 1.4] is an antecedent of the cotangent result.
+Lemma 4.2(Determinants of twisted differentials).Let S be smooth connected projective with
+−KS =Lnef. Suppose that, for a fixedp>0,
+H 0(S,Ω p
+S⊗OS(mL))̸= 0
+for arbitrarily large positive integersm. Then there is a pseudoeffective Cartier divisorD and a
+strictly increasing sequencedj >0with effective integral divisors
+Nj∼djL−D.
+The generic-span construction below adapts [15, Lemma 4.1] and [14, Lemma 5.1]. We give the
+proof for the present unbounded positive sequence, including the numerically trivial case excluded
+by the numerical-nontriviality premises of those two cited lemmas, and include the saturation
+argument needed for the negative first-Chern-class conclusion of [14, Theorem 4.1].
+Proof. Choose one nonzero section at each of an unbounded set of exponents. OverC(S), trivialize
+L rationally and letW be the span of the chosen vectors. Take a basisu1,...,ur of W from
+among them. For infinitely many unbounded exponents, the corresponding vector has nonzero
+coefficient along one fixedua. Wedging that section with the otherr−1basis sections gives a
+nonzero section of ⋀r
+Ωp
+S⊗OS(djL),
+where, if the fixed basis sections have exponentsa1,...,ar, the new exponent isdj =mj + ∑
+i̸=aai.
+The sum is fixed, so thedj are unbounded and may be taken strictly increasing. Every such wedge
+spans the same line⋀rW.
+Let M be its saturation in⋀r Ωp
+S. A saturated rank-one subsheaf of a vector bundle on a
+smooth variety is reflexive: its double dual maps into that vector bundle by extension across
+codimension two, and any enlargement would give torsion in the quotient. HenceM is a line bundle.
+Each wedge factors throughM(djL), since its image in the torsion-free quotient is generically zero.
+In characteristic zero, exterior powers are direct summands of tensor powers. Thus⋀r Ωp
+S is
+a direct summand of(Ω 1
+S)⊗rp, andM remains saturated in that tensor power: the additional
+summand is a vector bundle, so the enlarged quotient is still torsion-free. Theorem 4.1 makes
+D =−Mpseudoeffective. The zero divisors of the induced nonzero sections ofM(djL)are the
+requiredN j.
+Corollary 4.3(Conversion of twisted differentials).Let S be smooth connected projective with
+smoothly semipositiveL=−KS. If, for one fixedp≥0,
+H 0(S,Ω p
+S⊗OS(mL))̸= 0
+for arbitrarily large positive integersm, then some positive multiple ofLhas a nonzero section.
+Proof.Forp= 0this is immediate. Forp>0, apply Lemma 4.2 and Theorem 1.2.
+155 Descent before conversion
+We now combine the two principal theorems. The geometric input describes a finite cover while
+retaining its residual torus action. Invariant forms on a compact factor then descend to that cover,
+where the ordinary conversion theorem applies.
+We use the following finite-cover structure statement from [18, Theorem (Finite cover with com-
+pact torus monodromy)]. IfX is smooth connected projective and−KX is smoothly semipositive,
+there is a connected finite étale projective coverν:S→Xwhose universal cover is
+˜S=C b×C×F.
+HereC andF are compact simply connected projective factors;C is Ricci-flat, andF has smoothly
+semipositive anticanonical bundle and no positive-degree holomorphic forms. The deck group
+acts by translations onCb, trivially onC, and through a compact real torusT of holomorphic
+isometries onF. The first two factors have nowhere-zero holomorphic canonical forms invariant
+under the deck group. Empty products are points and have unit canonical frame.
+The proof of this statement in the companion starts from Yau’s prescribed-Ricci theorem
+and the Ricci-semipositive structure theory [23, 9, 6]. Its finite-cover construction preserves
+monodromy and the invariant frames. It also proves the vanishing of holomorphic forms by the
+Bochner argument on irreducible non-Ricci-flat factors, independently of the rational-connectedness
+conclusion of the refined structure theorem. Kähler Hodge symmetry therefore gives
+Hq(F,OF ) = 0 (q >0), H 0(F,OF ) =C, I T (0) = 1.(5.1)
+This deduction includes a point factor.
+Proposition 5.1(Descent of invariant twisted forms).Letν:S→X,F, andT be the finite-cover
+data just specified. After choosing invariant canonical frames onCb and C, there is, for every
+r≥0and0≤p≤dimF, an injective linear map
+H 0(F,Ω p
+F⊗(−KF )r)T−→H0(S,Ω p
+S⊗(−KS)r).
+For some fixedp, the target is nonzero at unbounded positive integersr.
+Proof. Let ηbe the product of the chosen canonical frames onCb and C. For an invariant formu
+in the displayed source, pull back its differential part along the projection toF and useη−rfor
+the other anticanonical factors. This gives
+η−r⊗pr∗
+Fu∈H0(˜S,Ω p
+˜S⊗K−r
+˜S
+)
+.
+Translations preserve the Euclidean frame, the action onC is trivial, and the action onF lies inT,
+with its natural induced action on both tensor factors ofu. The tensor is therefore deck-invariant
+and descends holomorphically toS. Pullback along the projection is injective on differential forms,
+tensoring withη−ris invertible, and local covering charts preserve nonvanishing. Hence the descent
+map is injective. Its holomorphic sections are algebraic becauseSis projective.
+By (5.1) and Corollary 2.5, there are a fixedp and invariant sections inH 0(F, Ωp
+F⊗(−KF )m+1)
+for unbounded positivem. Apply the constructed map withr =m + 1. IfF is a point, its constant
+section gives the same assertion withp= 0.
+Corollary 5.2(Smooth anticanonical nonvanishing).Let X be a smooth connected projective
+complex variety. If−KX has a smooth Hermitian metric with semipositive Chern curvature, then
+H 0(X,−mKX)̸= 0for some integerm>0.
+16Proof. Choose the finite cover above. Proposition 5.1 gives nonzero anticanonically twisted
+differential forms onS in one fixed degree and at unbounded positive exponents. The anticanonical
+metric onS is the smooth semipositive pullback metric. Apply Corollary 4.3 onS to obtain a
+nonzero section of−kKS,k >0.
+The finite étale norm of a section [18, Lemma (Finite étale norm)] sends a nonzero section
+of ν∗A to a nonzero section ofA⊗d, whered = degν; a Galois hypothesis is unnecessary. With
+A =−kKX, the identityKS =ν∗KX therefore gives a section of−dkKX. For zero-dimensional
+connectedX, the canonical line is trivial and the assertion is immediate.
+The ordering of the argument matters. The torus-invariant objects are the forms onF;
+they descend before any section-conversion theorem is applied. Consequently no equivariant
+strengthening of Theorem 1.2 is required, and the finite cover is never treated as a global product.
+References
+[1] Michael F. Atiyah and Raoul Bott. A Lefschetz fixed point formula for elliptic differential operators.
+Bulletin of the American Mathematical Society, 72(2):245–250, 1966.
+[2] Michael F. Atiyah and Graeme B. Segal. The index of elliptic operators. II.Annals of Mathematics.
+Second Series, 87(3):531–545, 1968.
+[3] Michael F. Atiyah and Isadore M. Singer. The index of elliptic operators. III.Annals of Mathematics.
+Second Series, 87(3):546–604, 1968.
+[4] Velleda Baldoni, Nicole Berline, Jesús A. De Loera, Matthias Köppe, and Michèle Vergne. Computation
+of the highest coefficients of weighted Ehrhart quasi-polynomials of rational polyhedra.Foundations of
+Computational Mathematics, 12(4):435–469, 2012. Preprint version arXiv:1011.1602v1, 7 November
+2010.
+[5] Bo Berndtsson. Curvature of vector bundles associated to holomorphic fibrations.Annals of Mathe-
+matics. Second Series, 169(2):531–560, 2009.
+[6] Frédéric Campana, Jean-Pierre Demailly, and Thomas Peternell. Rationally connected manifolds and
+semipositivity of the Ricci curvature. In Christopher D. Hacon, Mircea Mustaţă, and Mihnea Popa,
+editors,Recent Advances in Algebraic Geometry: A Volume in Honor of Rob Lazarsfeld’s 60th Birthday,
+volume 417 ofLondon Mathematical Society Lecture Note Series, pages 71–91. Cambridge University
+Press, Cambridge, 2015. Theorem 1.4; arXiv:1210.2092v3, 5 February 2018.
+[7] Yifan Chen, Simion Filip, Song Sun, Valentino Tosatti, and Junsheng Zhang. Compact Kähler surfaces
+with semipositive anticanonical bundle, 2026. arXiv:2609.26716v1, 22 September 2026.
+[8] Jean-Pierre Demailly and János Kollár. Semi-continuity of complex singularity exponents and Kähler–
+Einstein metrics on Fano orbifolds.Annales scientifiques de l’École Normale Supérieure. Série 4,
+34(4):525–556, 2001. Elementary properties 1.4(8); arXiv:math/9910118v3, 14 November 2013.
+[9] Jean-Pierre Demailly, Thomas Peternell, and Michael Schneider. Compact Kähler manifolds with
+hermitian semipositive anticanonical bundle.Compositio Mathematica, 101(2):217–224, 1996.
+[10] Jean-Pierre Demailly, Thomas Peternell, and Michael Schneider. Pseudo-effective line bundles on
+compact Kähler manifolds.International Journal of Mathematics, 12(6):689–741, 2001.
+[11] Igor V. Dolgachev. A brief introduction to Enriques surfaces. InDevelopment of Moduli Theory—Kyoto
+2013, volume 69 ofAdvanced Studies in Pure Mathematics, pages 1–32. Mathematical Society of Japan,
+Tokyo, 2016.
+[12] Osamu Fujino. Kollár–Nadel type vanishing theorem.Southeast Asian Bulletin of Mathematics,
+42(5):643–646, 2018.
+17[13] Alexander Grothendieck. Techniques de construction et théorèmes d’existence en géométrie algébrique
+IV: les schémas de Hilbert. InSéminaire Bourbaki: années 1960/61, exposés 205–222, number 6 in
+Séminaire Bourbaki, pages 249–276. Société Mathématique de France, Paris, 1961. Exposé 221.
+[14] Vladimir Lazić, Shin-ichi Matsumura, Thomas Peternell, Nikolaos Tsakanikas, and Zhixin Xie. The
+nonvanishing problem for varieties with nef anticanonical bundle.Documenta Mathematica, 28(6):1393–
+1440, 2023.
+[15] Vladimir Lazić and Thomas Peternell. Abundance for varieties with many differential forms.Épijournal
+de Géométrie Algébrique, 2:Article 1, 35 pp., 2018.
+[16] Christophe Mourougane. Théorèmes d’annulation générique pour les fibrés vectoriels semi-négatifs.
+Bulletin de la Société Mathématique de France, 127(1):115–133, 1999.
+[17] Niklas Müller. Two non-vanishing results concerning the anti-canonical bundle.Nagoya Mathematical
+Journal, 258:201–218, 2025.
+[18] OpenAI. Anticanonical nonvanishing from smooth semipositivity. OpenAI Math Release preprint
+OAI:Anticanonical-nonvanishing-from-smooth-semipositivity-September-26-2026, 2026.
+[19] Wenhao Ou. On generic nefness of tangent sheaves.Mathematische Zeitschrift, 304:Paper No. 58, 2023.
+[20] Henri Skoda. Sous-ensembles analytiques d’ordre fini ou infini dansCn.Bulletin de la Société
+Mathématique de France, 100:353–408, 1972.
+[21] Richard P. Stanley. Combinatorial reciprocity theorems.Advances in Mathematics, 14(2):194–253,
+1974.
+[22] Kensho Takegoshi. On cohomology groups of nef line bundles tensorized with multiplier ideal sheaves
+on compact Kähler manifolds.Osaka Journal of Mathematics, 34(4):783–802, 1997.
+[23] Shing-Tung Yau. On the Ricci curvature of a compact Kähler manifold and the complex Monge–Ampère
+equation. I.Communications on Pure and Applied Mathematics, 31(3):339–411, 1978.
+[24] Shing-Tung Yau. Open problems in geometry. InLectures on Differential Geometry, volume 1 of
+Conference Proceedings and Lecture Notes in Geometry and Topology, pages 365–404. International
+Press, Cambridge, MA, 1994. In the book by Richard Schoen and Shing-Tung Yau; Problem 75, p. 395.
+18

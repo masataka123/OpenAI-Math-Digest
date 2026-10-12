@@ -1,0 +1,507 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "author-key",
+  "catalogId": "068",
+  "sources": {
+    "OpenAI26d": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "displayName": "Cohomological transfer and equivariant anticanonical sections",
+      "pagination": "same"
+    },
+    "DPS01": {
+      "recordFile": "sources.json",
+      "recordId": "DPS01",
+      "guideRole": {
+        "ja": "自然同変hard Lefschetzから無限個の捻り形式を得る",
+        "en": "Equivariant hard Lefschetz supplies unbounded twisted forms"
+      }
+    },
+    "LMPTX23": {
+      "recordFile": "sources.json",
+      "recordId": "LMPTX23",
+      "guideRole": {
+        "ja": "行列式の逆を擬有効とする",
+        "en": "Pseudoeffectivity of the inverse determinant"
+      }
+    },
+    "PT14": {
+      "recordFile": "sources.json",
+      "recordId": "PT14",
+      "guideRole": {
+        "ja": "特異係数の随伴直像計量と不変商の正値性",
+        "en": "Positivity of the singular adjoint direct-image metric and its invariant quotient"
+      }
+    },
+    "OpenAI26a": {
+      "recordFile": "sources.json",
+      "recordId": "OpenAI26a",
+      "guideRole": {
+        "ja": "残留monodromyを保持した有限被覆構造と有限étale norm",
+        "en": "Finite-cover structure retaining residual monodromy and the finite étale norm"
+      }
+    },
+    "Ber09": {
+      "recordFile": "sources.json",
+      "recordId": "Ber09",
+      "guideRole": {
+        "ja": "滑らかな係数の随伴積分と不変直交商に半正性を与える",
+        "en": "Semipositivity for smooth adjoint integrals and the invariant orthogonal quotient"
+      }
+    },
+    "Dem09": {
+      "recordFile": "sources.json",
+      "recordId": "Dem09",
+      "guideRole": {
+        "ja": "§3のNadel消滅入力を定理記述で照合する補助参照",
+        "en": "Auxiliary statement-level verification of Nadel vanishing used in §3"
+      }
+    },
+    "OpenAI26b": {
+      "recordFile": "sources.json",
+      "recordId": "OpenAI26b",
+      "guideRole": {
+        "ja": "自然反標準指数の実際の零値を含む多項式性",
+        "en": "Polynomial invariant anticanonical index retaining its actual value at zero"
+      }
+    },
+    "Fujisawa15": {
+      "recordFile": "sources.json",
+      "recordId": "Fujisawa15",
+      "guideRole": {
+        "ja": "smooth Nakano半正係数の導来分解",
+        "en": "Derived decomposition for a smooth Nakano semipositive coefficient"
+      }
+    },
+    "Dem12": {
+      "recordFile": "sources.json",
+      "recordId": "Dem12",
+      "guideRole": {
+        "ja": "Richbergの一様平滑化と小さい曲率誤差",
+        "en": "Richberg smoothing with uniform control and a small curvature error"
+      }
+    }
+  },
+  "citations": {
+    "main": {
+      "source": "OpenAI26d",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "smooth": {
+      "source": "OpenAI26d",
+      "locations": [
+        {
+          "result": "Corollary 1.2",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "metric": {
+      "source": "OpenAI26d",
+      "locations": [
+        {
+          "result": "Proposition 2.2",
+          "printed": "6–8",
+          "pdf": "6–8"
+        }
+      ]
+    },
+    "ratio": {
+      "source": "OpenAI26d",
+      "locations": [
+        {
+          "result": "§3, common ratio field and relative section",
+          "printed": "8–9",
+          "pdf": "8–9"
+        }
+      ]
+    },
+    "rank": {
+      "source": "OpenAI26d",
+      "locations": [
+        {
+          "result": "§3, equation (6)",
+          "printed": "9",
+          "pdf": "9"
+        }
+      ]
+    },
+    "strict": {
+      "source": "OpenAI26d",
+      "locations": [
+        {
+          "result": "§3, equations (7)–(8)",
+          "printed": "9–10",
+          "pdf": "9–10"
+        }
+      ]
+    },
+    "ideal": {
+      "source": "OpenAI26d",
+      "locations": [
+        {
+          "result": "§3, equation (9) and interpolation",
+          "printed": "10",
+          "pdf": "10"
+        }
+      ]
+    },
+    "natural": {
+      "source": "OpenAI26d",
+      "locations": [
+        {
+          "result": "Corollary 4.3",
+          "printed": "11–12",
+          "pdf": "11–12"
+        }
+      ]
+    },
+    "index-use": {
+      "source": "OpenAI26d",
+      "locations": [
+        {
+          "result": "Proposition 4.1; Lemma 4.2",
+          "printed": "10–11",
+          "pdf": "10–11"
+        }
+      ]
+    },
+    "natural-proof": {
+      "source": "OpenAI26d",
+      "locations": [
+        {
+          "result": "Corollary 4.3, proof",
+          "printed": "11–12",
+          "pdf": "11–12"
+        }
+      ]
+    },
+    "smooth-proof": {
+      "source": "OpenAI26d",
+      "locations": [
+        {
+          "result": "§14.1, proof of Corollary 1.2",
+          "printed": "39",
+          "pdf": "39"
+        }
+      ]
+    },
+    "routes": {
+      "source": "OpenAI26d",
+      "locations": [
+        {
+          "result": "§1.4",
+          "printed": "4–5",
+          "pdf": "4–5"
+        }
+      ]
+    },
+    "hard-lefschetz": {
+      "source": "DPS01",
+      "locations": [
+        {
+          "result": "Corollary 2.1.2",
+          "printed": "8",
+          "pdf": "8"
+        }
+      ]
+    },
+    "cotangent": {
+      "source": "LMPTX23",
+      "locations": [
+        {
+          "result": "Theorem 4.1",
+          "printed": "1409",
+          "pdf": "17"
+        }
+      ]
+    },
+    "singular-image": {
+      "source": "PT14",
+      "locations": [
+        {
+          "result": "Theorems 3.3.4–3.3.5",
+          "printed": "24",
+          "pdf": "24"
+        }
+      ]
+    },
+    "berndtsson": {
+      "source": "Ber09",
+      "locations": [
+        {
+          "result": "Theorem 1.2",
+          "printed": "533",
+          "pdf": "3"
+        }
+      ]
+    },
+    "nadel": {
+      "source": "Dem09",
+      "locations": [
+        {
+          "result": "Theorem 5.11",
+          "printed": "38",
+          "pdf": "38"
+        }
+      ]
+    },
+    "index": {
+      "source": "OpenAI26b",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "structure": {
+      "source": "OpenAI26a",
+      "locations": [
+        {
+          "result": "Theorem 2.1",
+          "printed": "5",
+          "pdf": "5"
+        }
+      ]
+    },
+    "norm": {
+      "source": "OpenAI26a",
+      "locations": [
+        {
+          "result": "Lemma 2.2",
+          "printed": "8",
+          "pdf": "8"
+        }
+      ]
+    },
+    "extra-source": {
+      "source": "OpenAI26d",
+      "locations": [
+        {
+          "result": "Theorem 5.2",
+          "printed": "13",
+          "pdf": "13"
+        }
+      ]
+    },
+    "extra-kernel": {
+      "source": "OpenAI26d",
+      "locations": [
+        {
+          "result": "Theorem 7.2",
+          "printed": "17",
+          "pdf": "17"
+        }
+      ]
+    },
+    "extra-conversion": {
+      "source": "OpenAI26d",
+      "locations": [
+        {
+          "result": "Theorem 11.1",
+          "printed": "27",
+          "pdf": "27"
+        }
+      ]
+    },
+    "extra-tensor": {
+      "source": "OpenAI26d",
+      "locations": [
+        {
+          "result": "Proposition 14.1",
+          "printed": "41",
+          "pdf": "41"
+        }
+      ]
+    },
+    "kernel": {
+      "source": "OpenAI26d",
+      "locations": [
+        {
+          "result": "Theorem 7.2",
+          "printed": "17–19",
+          "pdf": "17–19"
+        }
+      ]
+    },
+    "smoothing": {
+      "source": "OpenAI26d",
+      "locations": [
+        {
+          "result": "Lemma 7.1",
+          "printed": "17",
+          "pdf": "17"
+        }
+      ]
+    },
+    "harmonic-limit": {
+      "source": "OpenAI26d",
+      "locations": [
+        {
+          "result": "Theorem 7.2, equation (18)",
+          "printed": "18",
+          "pdf": "18"
+        }
+      ]
+    },
+    "fiber-detection": {
+      "source": "OpenAI26d",
+      "locations": [
+        {
+          "result": "Theorem 7.2, equations (19)–(21)",
+          "printed": "18–19",
+          "pdf": "18–19"
+        }
+      ]
+    },
+    "kernel-end": {
+      "source": "OpenAI26d",
+      "locations": [
+        {
+          "result": "Theorem 7.2; Proposition 7.5",
+          "printed": "19–20",
+          "pdf": "19–20"
+        }
+      ]
+    },
+    "fujisawa": {
+      "source": "Fujisawa15",
+      "locations": [
+        {
+          "result": "Theorem 1",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "richberg": {
+      "source": "Dem12",
+      "locations": [
+        {
+          "result": "Theorem I.5.21",
+          "printed": "43–44",
+          "pdf": "43–44"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ],
+  "articleGuides": {
+    ".": {
+      "selfSource": "OpenAI26d",
+      "externalSources": [
+        "DPS01",
+        "LMPTX23",
+        "PT14",
+        "OpenAI26a",
+        "Ber09",
+        "Dem09",
+        "OpenAI26b",
+        "Fujisawa15",
+        "Dem12"
+      ],
+      "mainResults": [
+        "main",
+        "smooth",
+        "kernel"
+      ],
+      "proofTargets": [
+        "main",
+        "metric",
+        "natural",
+        "smooth",
+        "kernel"
+      ],
+      "statements": {
+        "main": "theorem-1-1",
+        "smooth": "corollary-1-2",
+        "metric": "proposition-2-2",
+        "natural": "corollary-4-3",
+        "kernel": "theorem-7-2"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "main",
+          "conclusion": "invariant positive untwisted degree for the specified linearization",
+          "anchor": "proof-1-step-4"
+        },
+        {
+          "result": "smooth",
+          "conclusion": "ordinary positive anticanonical section on original X",
+          "anchor": "proof-4-step-2"
+        },
+        {
+          "result": "kernel",
+          "conclusion": "All higher base cohomology vanishes for every k,q>=0,p>0, including k=0 and total degrees above dim V.",
+          "anchor": "proof-5-step-3"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "ratio",
+          "purpose": {
+            "ja": "指標を保持して比の共通体を作る。",
+            "en": "Build a common ratio field while retaining the character."
+          }
+        },
+        {
+          "citation": "metric",
+          "purpose": {
+            "ja": "正規等次元モデル上の最大値計量。",
+            "en": "Maximum metric on a normal equidimensional model."
+          }
+        },
+        {
+          "citation": "ideal",
+          "purpose": {
+            "ja": "自明とは限らない固定イデアルと零捻り。",
+            "en": "A fixed, possibly nontrivial ideal and the zero twist."
+          }
+        },
+        {
+          "citation": "natural-proof",
+          "purpose": {
+            "ja": "自然指数を移送定理の入力へ変える。",
+            "en": "Convert the natural index to transfer inputs."
+          }
+        },
+        {
+          "citation": "smooth-proof",
+          "purpose": {
+            "ja": "不変切断を降下させ有限normを取る。",
+            "en": "Descend invariant sections and take a finite norm."
+          }
+        },
+        {
+          "citation": "kernel",
+          "purpose": {
+            "ja": "一様近似・fiber detection・smooth係数の分解を区別する。",
+            "en": "Separate uniform approximation, fiber detection and smooth-coefficient splitting."
+          }
+        },
+        {
+          "citation": "routes",
+          "purpose": {
+            "ja": "本記事で詳説しない別経路の位置。",
+            "en": "Locate alternative routes not developed in this account."
+          }
+        }
+      ]
+    }
+  }
+}

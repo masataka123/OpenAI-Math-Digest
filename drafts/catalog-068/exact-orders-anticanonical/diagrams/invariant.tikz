@@ -1,0 +1,7 @@
+\node[card] (n0) {\heading{1}{sourceの重み}{Source weight}$c=\mathrm{wt}_\lambda(L|_S),\quad H^i(X,\mathcal O_X)=0\ (i>0)$};
+\node[card,below=2.0cm of n0] (n1) {\heading{2}{有界な軌道次数}{Bounded orbit orders}$N_j\sim m_jL+M,\quad v_\lambda(N_j)=c_M+ec$};
+\flow{n0}{n1}{\Tx{局所化とhard Lefschetz、行列式rankのshift $e$}{Localization, hard Lefschetz and the determinant-rank shift $e$}\\[3pt]\Cite{determinant}};
+\node[card,below=2.0cm of n1] (n2) {\heading{3}{source重みを達成}{Attain the source weight}$v_\lambda(D)=0\quad\Longrightarrow\quad \langle\chi/m,\lambda\rangle=c$};
+\flow{n1}{n2}{\Tx{任意の固定補助lineを許すexact attainment}{Exact attainment allows any fixed auxiliary line}\\[3pt]\Cite{exact}};
+\node[result,below=2.0cm of n2] (n3) {\heading{4}{指標を打ち消す積}{A product cancelling characters}$0\in\operatorname{conv}\{\chi_i/m_i\}\quad\Longrightarrow\quad H^0(X,rL)^T\ne0$};
+\flow{n2}{n3}{\Tx{全余指標のsupport functionと有理凸結合}{Support function in all cocharacter directions and rational convex combinations}\\[3pt]\Cite{weights}};

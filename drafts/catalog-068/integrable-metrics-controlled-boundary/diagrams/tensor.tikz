@@ -1,0 +1,5 @@
+\node[card] (n0) {\heading{1}{固定次数のtwisted tensor}{Twisted tensors of fixed degree}$H^0(X,(\Omega_X^1)^{\otimes p}\otimes m_jL)\ne0$};
+\node[card,below=2.0cm of n0] (n1) {\heading{2}{飽和した像の行列式}{Determinant of the saturated span}$A=\det S,\quad P=-A\ \text{pseudoeffective},\quad N_j\sim m_j^\prime L-P\geq0$};
+\flow{n0}{n1}{\Tx{一つの基底成分だけを変えて指数を非有界に保つ}{Vary one generic basis vector to retain unbounded exponents}\\[3pt]\Cite{determinant}};
+\node[result,below=2.0cm of n1] (n2) {\heading{3}{通常の非消滅}{Ordinary nonvanishing}$H^0(X,mL)\ne0\quad(m>0)$};
+\flow{n1}{n2}{\Tx{$p=0$ は自明、外積はtensorへの交代埋込み}{The case $p=0$ is immediate; exterior forms embed by alternation}\\[3pt]\Cite{tensor}};

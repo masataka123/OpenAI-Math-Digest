@@ -1,0 +1,7 @@
+\node[card] (n0) {\heading{}{自然線形化を固定}{Keep the natural linearization}$Z\text{ smooth RC},\quad L=-K_Z,\quad T\curvearrowright Z$};
+\node[card,below=2.0cm of n0] (n1) {\heading{}{射影的安定商と境界}{Projective stable quotient with boundary}$q:U\to(W,D),\quad L|_U=q^*(-(K_W+D))$};
+\flow{n0}{n1}{\Tx{補助ample線形化で商を選び、元の線形化を降ろす}{Choose the quotient with an auxiliary ample linearization; descend the original one}\\\Cite{quotient}};
+\node[card,below=2.0cm of n1] (n2) {\heading{}{有界な軌道上限計量}{Bounded orbit-supremum metric}$|v|=\sup_{x\in q^{-1}(y)}|q^*v(x)|,\quad\chi(\widetilde W,\mathcal O)=1$};
+\flow{n1}{n2}{\Tx{弧の凸性で一様有界性、最小値原理でpsh性}{Convex arc orders give uniform bounds; the minimum principle gives psh weights}\\\Cite{orbit}\quad\Cite{minimum}};
+\node[result,below=2.0cm of n2] (n3) {\heading{}{商の切断を大域不変切断へ}{From a quotient section to a global invariant section}$0\ne\sigma\in H^0(W,mP)\ \Longrightarrow\ 0\ne\widetilde\sigma\in H^0(Z,-mK_Z)^T$};
+\flow{n2}{n3}{\Tx{有界計量判定と有界係数の除去可能性}{Bounded-metric nonvanishing and removable singularities of bounded coefficients}\\\Cite{main}\quad\Cite{extension}};

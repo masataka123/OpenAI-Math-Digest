@@ -1,0 +1,1223 @@
+Anticanonical nonvanishing from smooth semipositivity
+OpenAI
+September 26, 2026
+Abstract
+Every smooth connected projective complex variety with smoothly semipositive anticanonical
+bundle has a nonzero section of some positive anticanonical power.
+Contents
+1 Introduction 1
+1.1 Geometry, monodromy, and earlier methods . . . . . . . . . . . . . . . . . . . . . . 2
+1.2 A finite-volume theorem and the proof strategy . . . . . . . . . . . . . . . . . . . . 3
+2 Finite covers and residual monodromy 5
+2.1 The norm of a section . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+3 Measures and models for rational fibrations 9
+3.1 Adjoint measures and extension of weights . . . . . . . . . . . . . . . . . . . . . . . 9
+3.2 A normal model and a smooth resolution . . . . . . . . . . . . . . . . . . . . . . . 9
+4 Cotangent tensors and the permitted boundary 11
+4.1 Removing the ramification from the Bergman metric . . . . . . . . . . . . . . . . . 11
+4.2 The slope bound and the face used by induction . . . . . . . . . . . . . . . . . . . 13
+5 Transferring a finite measure and a bounded metric 15
+6 Choosing the smaller base and completing the induction 19
+6.1 One fixed determinant with unbounded twists . . . . . . . . . . . . . . . . . . . . . 19
+6.2 A maximal system controls every section ratio . . . . . . . . . . . . . . . . . . . . . 20
+6.3 Induction on dimension . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+7 Invariant sections and anticanonical nonvanishing 23
+7.1 The smooth invariant transfer . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+7.2 Natural invariant nonvanishing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+7.3 Descent to the original variety . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 25
+1 Introduction
+For a smooth projective complex varietyX, the anticanonical line bundle is−KX = detTX. A
+smooth Hermitian metric on this line is semipositive when its Chern curvature is a nonnegative real
+1(1, 1)-form. Such a metric makes the numerical class nef. The nonvanishing question asks whether
+H0(X,−mKX)̸= 0 for some integerm >0, or equivalently whether some positive multiple of
+−KX is linearly equivalent to an effective divisor.
+We prove the following nonvanishing theorem.
+Theorem 1.1(Anticanonical nonvanishing). LetX be a smooth connected projective variety over
+C. If−KX admits a smooth Hermitian metric of semipositive curvature, thenH0(X,−mKX)̸= 0
+for some integerm> 0.
+This is the positive-multiple formulation associated with Yau’s anticanonical nonvanishing
+question [20, Problem 75, p. 395]. The multiple matters even when the anticanonical bundle is not
+torsion. For a complex Enriques surfaceE, KE is nontrivial of order two and has no section [10,
+Section 3]. WritepE and pP1 for the two projections fromE×P1. Its anticanonical line is
+p∗
+E(−KE)⊗p∗
+P1OP1(2).
+The flat metric on the first factor and Fubini–Study metric on the second make it smoothly
+semipositive. The product formula for sections gives no first-power section, whereas the square
+has sections. Restriction to aP1 fiber shows that this anticanonical line is not torsion.
+1.1 Geometry, monodromy, and earlier methods
+The structure theory explains both the strength of the metric assumption and the difficulty that
+remains. Yau’s prescribed-Ricci theorem [19] realizes the given smooth semipositive anticanonical
+curvature as the Ricci form of a Kähler metric. The structure results of Demailly–Peternell–
+Schneider [8, Structure Theorem, p. 218] and Campana–Demailly–Peternell [5, Theorem 1.4]
+describe the universal cover by its flat, compact Ricci-flat, and remaining compact factors. The
+remaining factor is projective and has no holomorphic forms of positive degree. After passage to a
+finite-index deck subgroup, the actions that remain on this factor lie in a compact torus.
+This last action cannot be ignored. A section on the compact factor descends only if it is
+compatible with the deck transformations. The flat and Ricci-flat factors supply canonical frames;
+on the remaining factor we construct an anticanonical section fixed by the torus, for the natural
+action on that factor’s anticanonical bundle. Its product with those frames descends to a finite
+étale cover, and its finite étale norm then gives a section onX. This reasoning uses the action on
+the universal cover, not a global product decomposition of a finite cover.
+In the broader nef setting, Lazić–Matsumura–Peternell–Tsakanikas–Xie proved numerical effec-
+tivity for projective log canonical threefold pairs with rational boundary and nef log-anticanonical
+divisor, under Q-factoriality or rational singularities [13, Theorem A]. Numerical effectivity means
+that the divisor class is numerically equivalent to an effective rational divisor; the existence of a
+section requires rationallinear effectivity. For projective kltQ-pairs with nef log-anticanonical
+divisor, Müller proved actual nonvanishing in dimension three, and in arbitrary dimension when
+the log-anticanonical divisor of a general fiber of the maximal rationally connected quotient
+is semiample [15, Theorem A and Corollary B]. His equivariant theorem constructs naturally
+invariant plurisections of a semiample log-anticanonical divisor for boundary-preserving actions of
+commutative linear algebraic groups on projective sub-log-canonicalQ-pairs [15, Theorem C]. It is
+a direct methodological predecessor for addressing residual monodromy. Here the finite-volume
+argument constructs the needed naturally invariant section from smooth semipositivity, without
+assuming that fiber semiampleness.
+2In dimension two, Chen–Filip–Sun–Tosatti–Zhang have classified compact Kähler surfaces
+with Hermitian-semipositive anticanonical bundle [7, Theorem 1.3]. Their classification gives
+complementary low-dimensional geometry; the present argument develops a section-producing
+mechanism in arbitrary dimension.1
+The ordinary part of the proof builds on two further developments. Generic positivity and
+foliation methods control cotangent tensors: the relevant inputs come from movable-cone duality
+[4], movable slope theory [11], and Campana–Păun’s positive-slope algebraicity criterion [6,
+Theorem 1.1]. The slope argument follows the foliation strategy used by Ou [16, Theorem 1.4]
+and by Lazić–Matsumura–Peternell–Tsakanikas–Xie [13, Theorem 4.1]. Here the relative Bergman
+metric supplies ramification-corrected positivity when an effective boundary and a finite adjoint
+measure replace nef anticanonical data. Hard Lefschetz with multiplier ideals [9, Theorem 2.1.1]
+then produces twisted forms, whose determinants are the effective divisors used to select a smaller
+base.
+The transfer in Section 5 uses the relative Bergman metric of Berndtsson–Păun [3, Theo-
+rem 0.1]. The ordinary proof uses its singular-coefficient form. The equivariant proof instead
+uses Berndtsson’s smooth direct-image positivity [2, Theorem 1.2]: averaging is an orthogonal
+holomorphic projection onto the invariant line. These are distinct applications of positivity, and
+we state their hypotheses separately.
+1.2 A finite-volume theorem and the proof strategy
+The inductive statement involves two line bundles. We use additive notation:J +L means J⊗L,
+and mL means L⊗m. For an effective integral divisorD, writesD for the canonical section of
+OZ(D). IfJ =−KZ +D, this section is aJ-valued holomorphic top form. A metrichJ therefore
+pairs sD with its conjugate to give a measure, denoted|sD|2
+hJ.
+A singular metric has local squared frame norme−ϕ. It is semipositive whenϕis plurisubhar-
+monic; locally bounded weights means bounds on both sides.
+Theorem 1.2(Finite volume and sections with prescribed poles). LetZ be a smooth connected
+projective complex variety of dimensiond with H0(Z, Ωq
+Z) = 0 for every 1≤q≤d. LetD≥0 be
+an integral divisor. Suppose thatJ =−KZ +D has a semipositive singular Hermitian metrichJ
+satisfying ∫
+Z
+|sD|2
+hJ <∞.
+If a line bundleL on Z has a semipositive singular Hermitian metric with locally bounded weights,
+then there exist integersa> 0 and b≥0 such that
+H0(Z,aL +bD)̸= 0.
+This generality is needed because a fibration need not transfer the line whose section is sought
+to the anticanonical bundle of its base. Its fiber integrals instead produce a new target line on the
+base and a separate corrected anticanonical line carrying the volume metric. The volume metric
+hJ may be unbounded, provided the indicated measure is integrable. The metric onL has the
+separate boundedness assumption. The conclusion says that a positive power ofL has a rational
+section with poles only onD; the pole orderb is not uniform. Rationally connected varieties satisfy
+the no-forms hypothesis, but the theorem also applies more generally. For example, an Enriques
+1The authors report that ChatGPT 5.6 Sol suggested a preliminary version of their Lemma 5.2, which they
+reformulated and developed. This records their declared assistance, not an attribution of authorship.
+3surface has no positive-degree holomorphic forms and a torsion canonical bundle, although it is
+not rationally connected.
+Theorem 1.2 is proved by induction on dimension. We first describe how its components
+fit together. Assume that its conclusion fails. ThenL +D is pseudoeffective but not big. A
+supporting movable curve classα̸= 0 satisfiesL·α=D·α= 0. Finite adjoint volume bounds
+the slopes of cotangent tensors againstα; in particular their determinant lines have nonpositive
+degree. This is the content of Section 4.
+The absence of holomorphic forms givesχ(OZ) = 1. Riemann–Roch and hard Lefschetz then
+produce sections
+si∈H0(Z,M +miL), m i−→∞,
+where M is one fixed cotangent determinant withM·α≤0. Consider all nonempty complete
+systems|uL +vM +wD|with nonnegative integral coefficients. None can define a generically
+finite map: that would make its divisor big, contradicting its nonpositive pairing withα. Choose
+a system with maximal image dimension and take the relative algebraic closure of its image field
+in C(Z). This gives a rational fibration onto a strictly smaller smooth projective baseS. Products
+of sections force every ratio in the indicated systems to be a function onS.
+This control of section ratios has two consequences. First, ratios among thesi give a rational
+section ρof some kL, k > 0, with no poles on divisors dominatingS. Second, on a smooth
+resolution Y with mapsπ:Y→Z and f :Y→S, putKY/S =KY−f∗KS. The relative adjoint
+spaces forKY/S +π∗(J +jkL) have dimension one for everyj≥0. They are generated over the
+base field by the pulled-back formsD with its birational Jacobian, divided by a base canonical
+frame and multiplied byρj. We prove transfer first under these explicit hypotheses; Section 6 then
+constructs its inputs and closes the induction, including the extension and common denominator
+arguments.
+Section 5 explains why these algebraic facts are the right ones. On a normal equidimensional
+model, minima of vertical divisor orders turnρinto a regular sectione after subtracting a base
+line A. On a smooth resolution, integrate its powers against the pulled-back adjoint measure.
+The zeroth integral gives a metric on−KS +DS with finite adjoint volume. Normalized high
+moments give a locally bounded semipositive metric onA. Normalization leavese nonzero on some
+component above every base divisor. When integratingej, the boundary estimate therefore has a
+fixed order, rather than one growing withj; dividing its logarithm byj removes that boundary
+contribution. The correctionDS is supported on base primes for which every component upstairs
+is exceptional overZ or lies aboveD. Thus the induction hypothesis onS yields a section that
+lifts with no forbidden pole onZ.
+To obtain the torus-invariant section needed by the geometric reduction, Section 7 first proves
+the smooth invariant transfer statement, Proposition 7.1, and then applies it to a rational orbit
+space. Fundamental vector fields give the relative section, and a dense orbit gives invariant adjoint
+rank one in every degree. Smooth direct-image positivity applies to the invariant line because
+compact averaging is an orthogonal holomorphic projection. The ordinary theorem on the quotient
+base then produces a naturally invariant anticanonical section. The cover and norm results of
+Section 2 finish the proof of Theorem 1.1.
+The proofs belowestablish the model preparation, slope bound, and rank andtransfer arguments
+using the cited geometric and analytic results. Section 3 introduces the two birational models and
+the metric conventions used throughout.
+42 Finite covers and residual monodromy
+A smooth semipositive anticanonical metric determines much of the geometry of the universal
+cover. The remaining issue for sections is the action of the deck group. We record the geometric
+reduction with that action retained, so that an invariant section on the final compact factor
+can later be descended to a finite cover of the original variety. The geometric inputs are the
+Ricci-semipositive structure theorem of Demailly–Peternell–Schneider [8, Structure Theorem and
+§3] and the rational-connectedness refinement of Campana–Demailly–Peternell [5, Theorem 1.4].
+Theorem 2.1(Finite cover with compact torus monodromy). LetX be a smooth connected pro-
+jective complex variety whose anticanonical bundle has a smooth Hermitian metric of semipositive
+Chern curvature. There are a connected finite étale coverν:S→X, an integera≥0, and smooth
+connected projective varietiesF and Z with the following properties.
+1. For a suitable Kähler metric onX, the common universal cover ofX andS has a holomorphic
+isometric decomposition
+˜X = Ca×F×Z. (2.1)
+The compact factors are simply connected. The induced metric onF is Ricci-flat, andKF
+has a nowhere-zero parallel holomorphic section. The anticanonical bundle ofZ is smoothly
+semipositive, and
+H0(Z, Ωp
+Z) = 0 ( p> 0), H q(Z,OZ) = 0 ( q >0). (2.2)
+The varietyZ is rationally connected when it has positive dimension.
+2. There are a full latticeΛ⊂Ca and a homomorphismρ: Λ→Aut(Z) for which
+S = (Ca×F×Z)/Λ, λ ·(z,f,v ) = (z +λ,f,ρ(λ)v). (2.3)
+The closureT of ρ(Λ) in the holomorphic isometry group ofZ is a compact connected real
+torus. The trivial torus is allowed.
+3. The action ofT extends to an algebraic action of a complex algebraic torusG on Z, withT
+Zariski dense inG. OnK−1
+Z = detTZ the action is the natural one induced by the differential.
+For everym≥0, its representation on sections satisfies
+H0(Z,K−m
+Z )T =H0(Z,K−m
+Z )G. (2.4)
+4. The canonical bundles ofCa andF have nowhere-zero holomorphic framesη0 andηF invariant
+under Λ. For every integerm≥0, the product projectionspr0, prF, and prZ give the natural,
+Λ-equivariant identification
+K−m
+˜X = pr∗
+0K−m
+Ca ⊗pr∗
+FK−m
+F ⊗pr∗
+ZK−m
+Z , (2.5)
+in which the first two factors have the invariant frameη−m
+0 ⊗η−m
+F .
+Any of the factors may be a point. A point contributes the canonical frame1; ifa = 0, the lattice
+is the zero group.
+The quotient in(2.3) describes a locally trivial bundle overCa/Λ. Its monodromyρcan have
+infinite image, so the finite coverS need not be a product. This is the reason for retaining the
+natural torus action on the anticanonical bundle.
+5Proof. We first obtain the product and its cohomological properties. We then choose a finite-index
+deck subgroup and identify its compact action with an algebraic torus action.
+The metric splitting and the compact factors.The curvature form of the given metric onK−1
+X is
+a smooth semipositive representative of its first Chern class, with the usual normalizing factor.
+Yau’s prescribed-Ricci theorem therefore gives a Kähler metric onX whose Ricci form is that
+curvature form [19]; this application is also stated explicitly in [8, p. 218]. In particular its Ricci
+tensor is nonnegative. The structure theorem of [8] gives a holomorphic isometric decomposition
+˜X = Ca×
+∏
+i
+Mi,
+where eachMi is compact and simply connected and the nonflat factors are irreducible in the
+real de Rham decomposition. The compactness of these factors is the Cheeger–Gromoll input in
+the structure theorem; the holomorphic decomposition comes from the parallel complex structure.
+Group the Ricci-flat factors intoF and the remaining factors intoZ.
+Here is the Bochner argument for the part of this decomposition used below. On a compact
+Kähler manifold with nonnegative Ricci tensor, a holomorphicp-form u is parallel. Moreover, if
+λ1,...,λn≥0 are the Ricci eigenvalues in a unitary frame andu = ∑
+|J|=puJdzJ, the integrated
+Bochner formula forces the pointwise vanishing of
+∑
+|J|=p
+
+∑
+j∈J
+λj
+
+|uJ|2.
+These are the Bochner consequences used in [8, §2]; equivalently see the formula in [5, (1.6)]. In
+particular, contraction ofu with a positive Ricci eigendirection is zero. Ifu̸= 0 on an irreducible
+factor, its contraction kernel
+{v∈T 1,0Mi :ιvu = 0}
+is a proper parallel complex subbundle. At any point where the Ricci tensor is nonzero, that kernel
+is also nonzero. Its underlying real subbundle contradicts irreducibility. Thus every non-Ricci-flat
+factor has no nonzero holomorphic form of positive degree. The decomposition of exterior forms
+on a product and Kähler Hodge symmetry give(2.2). Rational connectedness of these factors,
+including the irreducible compact Hermitian-symmetric case, is the additional conclusion of [5,
+Theorem 1.4(a) and §4]; it is not inferred merely from the vanishing of forms.
+The canonical Chern connection of the Ricci-flat factorF is flat. SinceF is simply connected,
+parallel transport gives a nowhere-zero parallel holomorphic frameηF of KF. The metric induced
+on K−1
+Z has semipositive curvature, since the Ricci tensor of the product restricts to that ofZ.
+Projectivity of each compact factor follows directly from that ofX. Fix points in the other
+factors and compose its slice in˜X with the covering map toX. This holomorphic map has injective
+differential. Pulling back a positive Hermitian metric on an ample line bundle ofX therefore gives
+a positive line bundle on the compact factor. Kodaira’s embedding theorem makes that factor
+projective [12]. The argument requires the slice map to be immersive, not injective.
+Choosing the deck subgroup. Let Γ = π1(X) act on ˜X by deck transformations. These are
+holomorphic isometries. Uniqueness of the de Rham decomposition implies that, after a finite-
+index passage removing permutations of its factors, every deck transformation is a product map.
+Put M =F×Z. Projection of this deck subgroup to the Euclidean isometry group is discrete
+and has finite kernel. Indeed, for a fixed bound on the displacement of0∈Ca, a sufficiently large
+closed Euclidean ballB satisfies
+γ(B×M)∩(B×M)̸= ∅
+6for every deck transformation within that bound. SinceB×M is compact, proper discontinuity
+allows only finitely many such transformations. This proves both assertions. The Euclidean image
+is cocompact, by compactness of the quotient of the full product. Bieberbach’s theorem supplies a
+finite-index translation lattice in this image, as in [8, §3(ii)].
+For completeness, the finite kernel does not obstruct choosing an actual lattice subgroup of the
+deck group. Above the translation lattice we have an extension
+1−→N−→Γ1−→Λ 1−→0
+withN finite. Pass to the centralizer ofN in Γ1; this has finite index becauseAut(N) is finite. Its
+kernelN′is central, and its imageΛ′is a sublattice of finite index inΛ 1. Choose liftsg1,...,g 2a
+of a lattice basisλ1,...,λ2a of Λ′. Their commutators belong toN′. Ife> 0 is divisible by the
+orders of all elements ofN′, then
+[ge
+i,ge
+j] = [gi,gj]e2
+= 1.
+The commuting elementsge
+i generate a free abelian subgroup: a relation among them projects to
+a relation among the independent vectorseλi. Its image iseΛ′, so this subgroup has finite index
+in the original deck group. In casea = 0, the deck group is finite and we instead take its trivial
+subgroup.
+We next eliminate the action onF. The holomorphic isometry group of a compact simply
+connected Ricci-flat manifold is finite. To see this, its Lie algebra consists of Killing fields. The
+integrated Bochner identity makes each such field parallel. Its dual one-form is closed and,
+by simple connectedness, exact. An exact parallel one-form on a compact manifold is zero: a
+primitive attains a maximum, where its differential vanishes. Thus the compact isometry group
+has zero-dimensional Lie algebra and is finite. Passing to the kernel of the action onF preserves a
+finite-index lattice subgroup.
+The remaining action onZ has commuting image in its compact holomorphic isometry group.
+Its closure is a compact abelian Lie group. Its identity component is a torus and its component
+group is finite. Pass once more to the preimage of that identity component. The new image is
+dense in the identity component, since the latter is open in the old closure. Denote this connected
+closure byT, the deck lattice byΛ, and its action onZ byρ. This proves (2.3).
+The corresponding quotientS is a connected finite unramified holomorphic cover ofX. The
+pulled-back positive line bundle makesS projective, and the covering is a finite étale morphism
+of projective varieties. We have now accounted for every part of the deck action. In particular
+ηF is invariant because the action onF is trivial, whileη0 = dz1∧···∧dza is invariant under
+translations. The determinant of the product tangent decomposition gives(2.5), with its natural
+equivariance.
+The algebraic torus.It remains to put the compact action onZ in the algebraic category. The
+point case is immediate, so supposedimZ >0 and choose a very ample line bundleA on Z. By
+(2.2), the exponential sequence makes
+c1 : Pic(Z)−→H2(Z, Z)
+injective. Every element of the connected groupT is isotopic to the identity and hence acts trivially
+on integral cohomology. Consequentlyt∗A≃A for everyt∈T. The complete linear system ofA
+therefore defines a canonical projective representation
+T−→PGL
+(
+H0(Z,A )∗)
+7preserving the embedded varietyZ. Choices of isomorphismst∗A≃A change the associated linear
+maps only by scalars, so this projective representation is well-defined. It is continuous: choose a
+projective frame from the nondegenerate irreducible embedded variety; a projective transformation
+is determined continuously by the images of that frame. Such a frame exists by first choosing a
+projective basis and then a point outside its finitely many coordinate hyperplanes.
+Write r = dimH0(Z,A ). To diagonalize the compact projective action, take its compact
+preimage under the finite coveringSLr(C)→PGLr(C). The identity component of this preimage
+is abelian and surjects ontoT: its Lie algebra maps isomorphically to the abelian Lie algebra of
+T, and its image is an open and closed subgroup ofT. Averaging a Hermitian form makes this
+connected preimage unitary; its commuting matrices can then be diagonalized simultaneously.
+Thus, after conjugation,T lies in a diagonal algebraic torus inPGLr(C).
+Let G be its Zariski closure there. It is connected, since a connectedT cannot meet distinct
+components of an algebraic group without being disconnected. A connected algebraic subgroup
+of a diagonal torus is an algebraic torus. The projective stabilizer ofZ is Zariski closed, soG
+preservesZ and acts algebraically. Differentiation gives the natural algebraic linearization onK−1
+Z .
+The induced finite-dimensional representation onH0(Z,K−m
+Z ) is algebraic. The stabilizer of any
+section is Zariski closed, and Zariski density ofT proves (2.4). All the constructions respect point
+factors and the stated canonical-frame conventions.
+2.1 The norm of a section
+Once a section has been constructed on the finite cover, the following elementary norm returns it
+to the original variety. Its exponent is the degree of the cover; no uniform degree is needed in the
+application.
+Lemma 2.2(Finite étale norm). Letν:S→X be a finite étale morphism of degreed> 0 between
+smooth connected projective complex varieties, and letA be a line bundle onX. Every nonzero
+sections∈H0(S,ν∗A) has a nonzero norm
+Nmν(s)∈H0(X,A⊗d).
+In particular, a nonzero section ofK−m
+S , form> 0, gives a nonzero section ofK−md
+X .
+Proof. Take an analytic open setU⊂X on whichA has a framee and the cover splits intod
+sheets. On these sheets writes = fiν∗e for holomorphic functionsf1,...,fd. Define the local
+norm by ( d∏
+i=1
+fi
+)
+e⊗d.
+This expression is unchanged by a permutation of the sheets. If the frame is replaced bye′=ue,
+the functions becomef′
+i =fi/u; their product changes byu−d and the new tensor frame changes
+byud. The expressions therefore glue to a holomorphic section ofA⊗d.
+Since S is smooth and connected it is integral. The zero set of the nonzero sections is thus
+proper and has dimension less thandimS (or is empty). Its image under the finite map is a
+proper closed subset ofX. Away from that image every sheetwise factor is nonzero, so the norm
+is nonzero. Projectivity identifies this holomorphic section with an algebraic section. Finally,
+KS =ν∗KX because νis étale; applying the result withA =K−m
+X proves the last assertion. In
+dimension zero the same construction is the product of nonzero constants.
+83 Measures and models for rational fibrations
+The induction will transfer two metrics along a rational map. Divisor orders are best controlled
+on a normal equidimensional model; integration requires a smooth model. We first record how to
+retain both models at once. We also specify the analytic conventions behind the finite-volume
+hypothesis.
+3.1 Adjoint measures and extension of weights
+In a holomorphic framev of a line bundleJ, a semipositive singular metric has squared frame
+norm|v|2
+h = e−ϕwith ϕplurisubharmonic (psh) and not identically−∞. In particular ϕis
+locally bounded above and|v|2
+h has a positive local lower bound. A metric with locally bounded
+weights has bounds on both sides. Pullbacks and products of the metrics used below preserve
+semipositivity.
+ForJ =−KZ +D, write theJ-valued top formsD in coordinates as
+sD =g(z)dz1∧···∧dzd⊗v.
+Its squared norm is the measure
+|sD|2
+h =|g(z)|2e−ϕ(z)dλz, (3.1)
+with one fixed dimensional normalization of Lebesgue measure. The expression is independent
+of coordinates and frame. Its total mass need not be finite merely because the curvature is
+semipositive. For a birational morphismπ:Y →Z between smooth varieties, the pulled-back
+form includes the Jacobian:
+π∗sD∈H0(Y,KY +π∗J), div(π∗sD) =KY/Z +π∗D.
+Here KY/Z = KY −π∗KZ is the effective exceptional Jacobian divisor. Change of variables
+preserves the total mass in(3.1). All assertions about singular metrics and fiber integrals will be
+made as assertions about measures or almost everywhere defined functions, followed by their psh
+representatives.
+We use two removable-singularity facts. A psh function on the complement of an analytic set
+extends if it is locally bounded above. Across an analytic set of codimension at least two in a
+smooth space, this upper bound is automatic. To see the latter locally, project a small polydisc in
+a generic complex direction. Boundaries of suitable parallel discs lie in a compact set outside the
+analytic subset; almost all such discs miss that subset. The maximum principle gives an upper
+bound on those discs, and the submean inequality gives the same bound at every point of the
+complement. Extension by upper limits is then psh. These statements apply in line-bundle frames,
+and a uniform lower bound survives extension by upper limits.
+3.2 A normal model and a smooth resolution
+Lemma 3.1(Prepared model). LetZ be smooth connected projective andS0 an integral complex
+variety. LetZ 99KS0 be a dominant rational map with connected general fiber. There is a smooth
+9projective birational modelS of S0 and a diagram
+Y ¯Y Z
+S
+r
+f
+π
+¯π
+¯f
+in which ¯Y is normal projective,Y is smooth projective,r and ¯πare birational morphisms, and¯f
+is surjective and equidimensional. The construction may start above a prescribed birational model
+of Z. If an algebraic torus acts onZ and the rational map is invariant, the diagram can be chosen
+equivariant with trivial action onS.
+Every prime divisor on¯Y either dominatesS or maps onto a prime divisor ofS. At a general
+point of the strict transform inY of a primeQ⊂¯Y above a base primeT, there are coordinates
+in which
+f(t,x 2,...,xd) = (te,x 2,...,xs), e = ordQ( ¯f∗T)> 0, (3.2)
+wheres = dimS and d = dimZ.
+Proof. First replaceS0 birationally by a projective model of its function field and compose the
+rational map with that replacement. This preserves the generic fiber and any trivial base action.
+Resolve the graph of the resulting rational map, starting above the prescribed model if one has
+been given. Flatten the resulting projective morphism by a modification of its base, using the strict
+transform [17]. Resolve the modified base and take the main component of the base change, namely
+the closure of the component over the common dense open. Before taking that component, the flat
+family has all fibers of the generic dimensiond−s; base change preserves this. A closed component
+has fiber dimension at mostd−s. Normalize the main component to obtain¯Y. Normalization
+is finite, so this upper bound persists. The dimension inequality for a dominant map gives the
+reverse bound for every irreducible fiber component. Thus¯f is equidimensional. Resolve ¯Y to
+obtain Y; no equidimensionality is asserted forf.
+For an invariant rational map, use its invariant graph. The strict transform and main component
+are invariant, the action lifts uniquely through normalization, and characteristic-zero equivariant
+resolution supplies the smooth source. All base modifications have trivial torus action, so the
+resulting maps are equivariant.
+If a primeQ has image of codimension at least two inS, its generic fiber over its image has
+dimension at least(d−1)−(s−2) =d−s + 1, contradicting equidimensionality. Hence the only
+vertical divisors lie above base divisors. At general points ofQ and T, both divisors are smooth,
+Y →¯Y is an isomorphism, and the induced mapQ→T is a submersion. A local equation ofT
+pulls back tote times a unit. Take a holomorphiceth root of that unit and absorb it intot; choose
+the remaining base coordinates among coordinates onQ. This gives(3.2). Generic smoothness
+and constructibility ensure that these neighborhoods occur over a dense open ofT, while avoiding
+any specified proper closed subset ofQ.
+A divisor dominating the base is calledhorizontal; the others arevertical. The distinction in
+Lemma 3.1 will be used twice. Saturating pulled-back base differentials removes the factorte−1 in
+(3.2); this is the ramification correction in the slope proof. Later, the same coordinates estimate
+the fiber integrals at base divisors. Exceptional divisors created on the smooth resolution can map
+into higher codimension. They cause no loss of divisor control because normalization is performed
+first on ¯Y, and the final psh extensions are carried out on the smooth baseS.
+104 Cotangent tensors and the permitted boundary
+The induction below produces effective divisors of the formM +mL, whereM is a line bundle
+mapping nontrivially into a cotangent tensor power. We must control the contribution ofM using
+the same boundary that is allowed in the eventual section. The finite adjoint volume gives precisely
+this control. The first step is analytic: a relative Bergman metric remains positive after removing
+the vanishing of the differential along multiple fibres. The second step applies this observation to
+the positive part of the tangent sheaf’s slope filtration.
+Throughout this section,Z is a smooth connected projective complex variety,D≥0 is an
+integral divisor, and
+J =−KZ +D.
+We assume thatJ has a singular Hermitian metrichJ of semipositive curvature and that
+∫
+Z
+|sD|2
+hJ <∞. (4.1)
+Here sD, considered as a section ofKZ +J, is aJ-valued top form, and the norm denotes its
+associated positive density. A local weightϕfor hJ satisfies|e|2
+hJ =e−ϕin a holomorphic framee.
+It is plurisubharmonic, so the frame norm has a strictly positive lower bound on each relatively
+compact chart. No upper bound for that norm is assumed.
+4.1 Removing the ramification from the Bergman metric
+A saturated foliationF⊂TZ is a coherent subsheaf with torsion-free quotient, closed under the
+Lie bracket. Write
+Q =TZ/F, P = detQ∗= (
+rankQ⋀
+Q∗)∗∗.
+Since Z is smooth,P is a line bundle. If the foliation is induced by a rational fibration, thenP
+agrees generically with the pullback of the base canonical bundle. They can differ along a multiple
+fibre; that difference is the point of the following lemma.
+Lemma 4.1. Under the assumptions above, letF⊂TZ be an algebraically integrable saturated
+foliation with 0< rankF < dimZ. Then the line bundle
+D−P =D + detQ
+admits a singular Hermitian metric of semipositive curvature. In particular,c1(Q) + [D] is
+pseudoeffective.
+Proof. Setn = dimZ andb = rankQ. Resolve the rational fibration using Lemma 3.1. Thus there
+are morphisms
+r :Y−→¯Y, ¯π: ¯Y−→Z, ¯f : ¯Y−→S, π = ¯π◦r, f = ¯f◦r,
+where Y,S are smooth projective, ¯Y is normal, ¯πand r are birational, and ¯f is equidimensional
+with connected general fibres. Their dimension isn−b. The foliation is the saturated relative
+tangent sheaf at the generic point.
+Pull backsD as a top form with coefficients, and denote the result by
+η∈H0(Y,KY +π∗J).
+11Its divisor isKY/Z +π∗D; the relative canonical divisor is the effective birational Jacobian. Change
+of variables off the exceptional locus shows that the density ofηfor π∗hJ has finite total mass.
+This assertion concerns almost-everywhere densities, so no pointwise product on the metric’s polar
+set is needed.
+Over a coordinate chart in the base, letds be a nonvanishing frame ofKS. On a smooth fibre
+Ys, the restriction ofη/f∗ds is a section ofKYs +π∗J|Ys. It is nonzero on general fibres, and
+Fubini’s theorem gives finite squared norm on almost every such fibre. Berndtsson–Păun’s relative
+Bergman kernel theorem therefore supplies a semipositive metric on
+KY/S +π∗J
+[3, Theorem 0.1]. Over the smooth-fibre locus, in a holomorphic frame its weightψis the logarithm
+of the supremum of the squared absolute coefficients of fibre sections having squared norm at most
+one. Only sections integrable for the restricted twisting metric enter that supremum.
+We now compare this metric with the line bundle in the statement. Remove fromZ a closed
+subset of codimension at least two so thatπis an isomorphism over the remaining open set and
+the sheavesF,Q are locally free there. At the generic point of every divisor of this open set the
+conormal inclusion is
+f∗Ω 1
+S−→Q∗.
+For a horizontal divisor it has full rank without a divisorial zero: the restriction off to that divisor
+is generically submersive in characteristic zero. Every other divisor under consideration maps onto
+a base divisor. Indeed its strict transform on¯Y is a prime divisor, and equidimensionality excludes
+a base image of codimension at least two.
+Fix such a vertical divisorE. At its general points there are coordinates onY and S in which
+s1 =ze
+1, s i =zi (2≤i≤b), e = ordE(f∗{s1 = 0}). (4.2)
+To obtain these coordinates, take a point where the reduced mapE→{s1 = 0}is submersive,
+write f∗s1 = ze
+1u with u a unit, and absorb a locale-th root ofu into z1. Complete the other
+pulled-back base coordinates to a coordinate system. In this chart the saturated conormal bundle
+is spanned bydz1,...,dzb. The determinant of its displayed inclusion iseze−1
+1 . Consequently its
+vanishing order is exactlye−1.
+This same integer occurs in the Bergman metric. Choose a framev of π∗J and use
+ξ= (dz1∧···∧dzn)⊗(f∗ds)−1⊗v
+as the frame ofKY/S +π∗J. Ifaξis a fibre section, then, up to a constant of absolute value one
+from the order of wedge factors, its coefficient as an actual fibre top form is
+a
+eze−1
+1
+.
+This distinction between relative and fibre coefficients is also the one used in the definition of the
+relative Bergman kernel [3, Section 1].
+Choose two concentric coordinate polydiscs whose closures lie in this chart. For each fixed
+(z1,...,zb) withz1̸= 0, the larger polydisc in the free variableszb+1,...,zn lies in the same smooth
+nearby fibre. Its radius can be fixed independently of the base point. The twisting frame norm
+has a uniform positive lower bound there. The holomorphic submean inequality on that polydisc,
+for points in the smaller one, therefore gives
+∥aξ∥2
+L2(Ys) ≥c|z1|−2(e−1)
+∫
+free polydisc
+|a|2dλ≥c′|a(z)|2|z1|−2(e−1),
+12where c,c′> 0 do not depend on the fibre section or the nearby base point. For squared norm at
+most one, this implies
+ψ≤(e−1) log|z1|2 +C. (4.3)
+The estimate holds on the smooth-fibre locus; any exceptional almost-everywhere qualifications
+disappear for the psh representative by the submean inequality.
+On the submersion locus whereπis an isomorphism we haveKY/S +π∗J =D−f∗KS. The
+determinant computation above says that a frame ofD−P maps toze−1
+1 times a nonvanishing
+multiple of a frame ofD−f∗KS. The induced metric onD−P thus has weight
+ψ−(e−1) log|z1|2
+up to a pluriharmonic frame term. This weight is psh offE and is locally bounded above by(4.3);
+hence it extends psh acrossE. At a horizontal divisor there is no ramification correction, and the
+original Bergman metric already extends. The coordinate argument applies over a dense open
+subset of each divisor. The remaining excluded subset has codimension at least two in the smooth
+varietyZ, across which psh weights extend uniquely. The extensions respect changes of frame and
+therefore define a semipositive metric on the global line bundleD−P.
+4.2 The slope bound and the face used by induction
+A movable class is an element of the closed movable coneMov1(Z)⊂N1(Z)R. On a smooth
+projective variety this cone is dual to the pseudoeffective divisor cone [4]. For a torsion-free
+coherent sheafE of positive rank and a nonzero movable classα, write
+µα(E) = c1(E)·α
+rankE , µ min,α(E), µmax,α(E)
+for its slope and extremal Harder–Narasimhan slopes. Equivalently, the minimum is the infimum
+of slopes of its nonzero torsion-free quotients, and the maximum is the supremum of slopes of
+its nonzero subsheaves. We use the Harder–Narasimhan filtration and tensor slope formula for
+movable classes, including real boundary classes [11, Corollary 2.27 and Theorem 4.2].
+Theorem 4.2(Finite-volume cotangent bound). LetZ be smooth connected projective overC,
+let D≥0 be an integral divisor, and suppose thatJ =−KZ +D has a semipositive singular
+Hermitian metrichJ with
+∫
+Z|sD|2
+hJ <∞. If dimZ >0, then every nonzero real movable classα
+satisfies
+µmin,α(TZ)≥−D·α. (4.4)
+For every integerk≥0 and every line bundleM with a nonzero morphismM→(Ω 1
+Z)⊗k, the line
+bundle
+−M +kD (4.5)
+is pseudoeffective. More generally, ifE is a torsion-free subsheaf of rankr> 0 in (Ω 1
+Z)⊗k, then
+−detE +krD is pseudoeffective.
+Proof. Assume first thatdimZ >0, fixα, and setδ=D·α≥0. Semipositivity ofJ gives
+c1(TZ)·α≥−δ. (4.6)
+13Let λ1 >···>λt be the slopes of the Harder–Narasimhan quotients ofTZ, with positive ranks
+r1,...,rt. Suppose, for a contradiction, that λt <−δ. The total degree of the pieces with
+nonpositive slopes then satisfies ∑
+λi≤0
+riλi≤rtλt<−δ. (4.7)
+By (4.6), some piece has positive slope. Consequently the positive partF of the filtration is
+nonzero and proper. It is saturated, and
+µmin,α(F)> 0, µ max,α(TZ/F)≤0.
+The bracket moduloF is anOZ-linear morphism ⋀2F→TZ/F. Since the target is torsion-
+free, it factors throughA = (⋀2F)/torsion. When rankF > 1, the tensor slope formula, duality,
+and the quotient inequality giveµmin,α(A) ≥2µmin,α(F) > 0. The maximum slope of the
+target is nonpositive, so this morphism vanishes. If rankF = 1, then A = 0. Thus F is a
+foliation. Campana–Păun’s algebraicity criterion now shows that it is algebraically integrable [6,
+Theorem 1.1].
+Lemma 4.1 givesc1(TZ/F)·α≥−δ. Its left side is exactly the sum in(4.7), a contradiction.
+This proves(4.4). In particular the argument covers the cases in which the positive part would be
+zero or the whole tangent sheaf: the assumed failure of the inequality has already excluded both
+cases.
+By duality and tensor-product compatibility,
+µmax,α((Ω 1
+Z)⊗k) =−kµmin,α(TZ)≤kD·α
+fork> 0. A nonzero map fromM is injective, because its target is torsion-free. Thus(kD−M)·α≥
+0 for every movableα, and divisor–curve duality proves(4.5). For the sheafE, the same inequality
+applied to its slope givesc1(E)·α≤krD·α, which proves the determinant assertion. Determinants
+are taken reflexively; removing codimension-two singular loci does not change their first Chern
+classes.
+If k = 0, the target isOZ. A nonzero map fromM provides a nonzero section of−M, and a
+positive-rank subsheaf ofOZ has rank one with effective negative determinant. These arguments
+also cover dimension zero. In that dimension there is no nonzero cotangent tensor fork >0, and
+no minimum slope of a zero tangent sheaf is invoked.
+The coefficient ofD in this theorem is sharp even for curves. Indeed, on a smooth projective
+curve of genus at least two, take a nonzero holomorphic one-formωand putD = div(ω). Then
+J =−KZ +D is trivial and its flat metric satisfies (4.1). TakingM =kKZ gives equality in the
+cotangent bound; replacingkD bycD with c<k gives negative degree and therefore cannot give
+a pseudoeffective class.
+Corollary 4.3 (A supporting class for the induction). Under the hypotheses of Theorem 4.2,
+assume dimZ >0 and letL be a pseudoeffective line bundle for whichL +D is not big. There
+exists a nonzero real movable classαwith
+L·α=D·α= 0.
+For this classµmin,α(TZ)≥0. Suppose moreover thatM→(Ω 1
+Z)⊗k is nonzero and that effective
+divisors Ni∼M +miL are given. Then
+M·α=Ni·α= 0 for everyi.
+14Every finite nonnegative linear combination ofD,N 1,N 2,...has zero intersection withαand is
+not big.
+Proof. The class ofL +D is on the boundary of the closed pseudoeffective cone, whose interior
+is the big cone. A supporting hyperplane and cone duality give a nonzero real movable classα
+annihilating it. BothL and D pair nonnegatively withα, so they pair with it individually to zero.
+Theorem 4.2 gives the tangent inequality andM·α≤0. Effectivity of eachNi gives the reverse
+inequality throughNi·α=M·α. Finally an interior point of a full-dimensional closed convex
+cone pairs strictly positively with every nonzero member of its dual cone; hence no indicated
+combination is big.
+The supporting class in this corollary can lie on the boundary of the movable cone and need not
+be rational or represented by a single moving curve. Its role is numerical: it rules out a generically
+finite linear system made from the displayed effective divisors and thereby forces the dimension
+drop in the subsequent argument.
+5 Transferring a finite measure and a bounded metric
+The next proposition isolates the induction step. It does not assume the existence of a section
+on the base: it constructs base data to which a lower-dimensional nonvanishing theorem can be
+applied. We retain two models of the total space because they do different jobs. On a normal
+equidimensional model every vertical prime maps onto a base prime, so divisor orders can be
+normalized there. A smooth resolution carries canonical forms and fiber integrals, but need not
+remain equidimensional. Such diagrams arise from flattening a resolved rational map [17].
+A prime is calledhorizontal if it dominates the base, andvertical otherwise. For a morphism
+f :Y→S of smooth varieties we writeKY/S =KY−f∗KS. Its restriction to a smooth fiber is
+the canonical line of that fiber.
+Proposition 5.1(Two-metric transfer). LetX,S,Y be smooth connected projective varieties over
+C, and let ¯Y be a normal projective variety. Supposer :Y →¯Y and ¯π: ¯Y →X are projective
+birational morphisms, and ¯f : ¯Y →S is a surjective equidimensional morphism with connected
+general fiber. Putπ= ¯πrand f = ¯fr, as in Figure 1.
+LetD be an effective integral divisor onX, and letJ =−KX +D have a semipositive singular
+metric hJ with ∫
+X
+|sD|2
+hJ <∞.
+LetL be a line bundle onX with a semipositive metrichL of locally bounded weights. Suppose
+that for an integerk >0 there is a nonzero rational sectionρof k¯π∗L with no horizontal poles,
+and that
+dimC(S)H0
+(
+Yη,
+(
+KY/S +π∗(J +jkL)
+)
+|Yη
+)
+= 1 ( j = 0, 1, 2,...). (5.1)
+Hereηis the generic point ofS and Yη=Y×S Spec C(S).
+After replacingk,ρby dk,ρd for some integerd > 0, there are a line bundleA on S, an
+effective integral divisorDS, and a nonzero regular section
+e∈H0( ¯Y,k ¯π∗L−¯f∗A)
+with these properties:
+(i) A has a semipositive metric with locally bounded weights.
+15(ii)−KS +DS has a semipositive singular metrichS with
+∫
+S|sDS|2
+hS <∞.
+(iii) DS is supported on base primesT for which every prime component of¯f∗T is ¯π-exceptional
+or lies inSupp(¯π∗D).
+(iv) If a> 0,b≥0 are integers andH0(S,aA +bDS)̸= 0, thenH0(X,akL +cD)̸= 0 for some
+integerc≥0.
+In these conclusionsk denotes the enlarged integer.
+Y ¯Y X
+S
+r
+f
+π
+¯π
+¯f
+Figure 1: The model diagram in Proposition 5.1. The normal space¯Y is equidimensional overS;
+the smooth spaceY is used for integration. Both upper maps are birational. The diagram does
+not assert thatf is equidimensional.
+Proof. We first normalizeρso that a divided section is regular and nonzero on at least one
+component over each base prime. We then use its adjoint integrals twice: the zeroth integral
+gives the volume metric, and the high moments give the bounded metric. The support of the first
+correction will make the final lifting possible.
+IfS is a point, every prime of¯Y is horizontal. Thusρis regular by normality and descends as a
+nonzero section ofkL on the smooth varietyX. TakeA trivial andDS = 0; the metric assertions
+on a point and the lifting assertion follow. We assumedimS >0 below.
+Divisorial normalization. For a prime divisorT⊂S, define
+cT = min
+¯f(Q)=T
+ordQ(ρ)
+ordQ( ¯f∗T), (5.2)
+whereQ ranges over the prime divisors of¯Y mapping ontoT. These are finitely many components
+for each T, and the denominators are positive integers. Only finitely manycT are nonzero.
+Replace ρby a power andk by the corresponding multiple to make everycT integral, and set
+A =OS(∑
+TcTT). The rank condition(5.1) persists: the new adjoint twists form a subsequence
+of the old ones and still includej = 0.
+Divideρby the pullback of the tautological rational section ofA, obtaining a rational sectione
+of k¯π∗L−¯f∗A. Its order is nonnegative at horizontal primes by hypothesis and at vertical primes
+by (5.2). Equidimensionality ensures that every vertical prime maps onto a base prime. Thus these
+are all prime divisors of¯Y, and normality makese regular. For each base primeT, a component
+attaining the minimum in (5.2) has order zero ine. We also writee for its pullback toY.
+The fiber integrals and their curvature.Pullback of theJ-valued top form includes the Jacobian:
+ηY =π∗sD∈H0(Y,KY +π∗J), µ Y =|ηY|2
+π∗hJ.
+Change of variables gives finite total mass forµY. In particular this assertion concerns measures
+and does not require a pointwise value for a singular metric on its polar set.
+16On a coordinate chartU⊂S, take a canonical frameds ofKS and a framev ofA. The section
+ev =ef∗v belongs tokπ∗L overf−1(U). Forj = 0, 1, 2,..., set
+uj = (ηY/f∗ds)ej
+v, V j(s) =
+∫
+Ys
+|uj|2
+π∗(hJhjk
+L ), Φj =−logVj. (5.3)
+The sectionuj belongs toKY/S +π∗(J +jkL). On a smooth fiber it is a top form with coefficients
+in the indicated twisting line;(5.3) pairs that form with its conjugate to give a positive density.
+Properness, regularity ofev, and boundedness ofhL’s weights bound|ev|2 on inverse images of
+relatively compact base charts. SinceV0 is the density of the finite measuref∗µY, allVj are finite
+and positive almost everywhere on a suitable smooth-fibration open.
+For clarity, changes of frames have the following effect:
+v↦→gv, ds ↦→hds =⇒ Φj↦→Φj−j log|g|2 + log|h|2. (5.4)
+This will give weights on two different lines:−KS at j = 0, andA after division byj and passage
+to the limit.
+The relative Bergman theorem [3, Theorem 0.1] applies to the semipositive twisting metric
+π∗(hJhjk
+L ): (5.3) supplies a nonzero square-integrable adjoint section on almost every smooth fiber.
+The theorem produces a semipositive relative Bergman metric. On a dense base open where base
+change holds and(5.1) has dimension one,uj generates the adjoint section space. For almost
+every such fiberVj <∞, so its one-dimensional holomorphic adjoint space is also its full space of
+square-integrable sections: every section is a scalar multiple ofuj. Consequently the Bergman
+weight, in a holomorphic frame upstairs, is
+Φj◦f + log|ˆuj|2
+almost everywhere, where ˆuj is the coefficient ofuj. Off the zero locus of that coefficient, its
+logarithm is pluriharmonic, so subtracting it leaves a psh function upstairs. In a local product
+chart, Fubini’s theorem gives almost all constant slices on which the displayed identity holds almost
+everywhere. Restriction to any of these slices gives a psh representative ofΦj on the base. For
+fixed base frames, these representatives agree almost everywhere on overlaps, hence everywhere,
+and therefore patch.
+The base-change open can depend onj, so we now put all these weights on one fixed open
+S◦. ChooseS◦such thatf is smooth there and every fiber has a point where bothηY and e are
+nonzero. A psh weight is locally bounded above; therefore its squared frame norm has a positive
+local lower bound, even when the metric is singular. On a small product chart around such a
+point, this lower bound forhJ, together with the bounds forhL, gives
+Vj(s)≥C1Cj
+2, Φj(s)≤C +jC′, (5.5)
+locally onS◦, with positiveC1,C 2 independent ofj. Removable singularities extend each psh
+representative across its additional exceptional base loci insideS◦. The union of the exceptional
+measure-zero sets for the countably manyj still has measure zero; hence all moment comparisons
+can be used simultaneously. Almost-everywhere upper bounds also hold for the psh representatives
+by the submean inequality.
+We have now obtained all the moment weights on a fixed open set. To continue the induction,
+both kinds of weight must extend to the boundary. Their estimates use different components of a
+singular fiber.
+17The zeroth moment: finite volume with supported correction.Call a base primeT bad if every
+component of ¯f∗T is ¯π-exceptional or lies inSupp(¯π∗D). Only finitely many primes are bad: each
+is the image of a member of the finite list of exceptional and boundary divisors on¯Y.
+Take a primeT in the complement ofS◦, and a componentQ above it on¯Y. At general points
+of its strict transform inY, there are coordinates
+s1 =tℓ, s i =xi (2≤i≤dimS), ℓ = ordQ( ¯f∗T)> 0.
+Indeed, the map on the divisors is generically smooth, and a root of a nonvanishing unit absorbs
+the unit in the first coordinate. Write the coefficient ofηY as tq times a unit at such a point,
+with q≥0. Division byds contributest−(ℓ−1), so the relative top-form coefficient has magnitude
+comparable to|t|q−ℓ+1. The metric lower bound and integration over a fixed patch in the free fiber
+coordinates give
+V0(s)≥C|s1|2(q−ℓ+1)/ℓ (5.6)
+almost everywhere near a general point ofT.
+If T is not bad, chooseQ nonexceptional overX and outside Supp(¯π∗D). Then the birational
+Jacobian andsD are generically nonzero onQ, soq = 0. Thus−logV0 is locally bounded above
+there. At the bad primes choose sufficiently large nonnegative integral coefficients forDS. Equation
+(5.6) makes the weights
+Φ 0 + log|ˆsDS|2 (5.7)
+locally bounded above at general points of every boundary prime. Here the hat denotes the
+coefficient in a local frame ofOS(DS). These weights are psh off the boundary, extend across its
+general divisorial points, and then extend across the remaining analytic set of codimension at least
+two. The frame rule (5.4) gives a metric on−KS +DS.
+Pairing (5.7) with sDS cancels the added factor. The resulting adjoint measure equalsf∗µY
+almost everywhere, so has finite total mass. We have obtained the volume metric and the required
+support of its correction.
+High moments: bounded weights onA. Forl = 1, 2,..., put onS◦
+Ψ = lim
+l→∞
+(
+sup
+j≥l
+Φj
+j
+)∗
+, (5.8)
+where the star denotes upper-semicontinuous regularization in fixed local frames. Equation(5.5)
+gives uniform local upper bounds. The regularized suprema are therefore psh and decrease.
+Their limit does not collapse to−∞. On any relatively compact base chartU, including charts
+meeting the boundary, properness and bounded weights ofhL give a single constantCU > 0 with
+|ev|2
+π∗hk
+L
+≤CU, V j≤Cj
+UV0. (5.9)
+The first bound holds on the whole inverse image ofU: take a finite cover of its compact closure
+by line-bundle frames. For almost everys∈U∩S◦, V0(s) is finite and positive. Dividing(5.9) by
+j after taking negative logarithms givesΨ ≥−logCU. Thus Ψ is psh. Its frame transformation is
+exact, although that of each normalized moment has a vanishing error. On a relatively compact
+overlap, (5.4) changesΦj/j by−log|g|2 + (log|h|2)/j. The last term has absolute value at most
+C/l for everyj≥l. The two tail suprema, and then their upper-semicontinuous regularizations,
+therefore differ from one another plus−log|g|2 by at mostC/l. Taking the decreasing limit gives
+precisely Ψ ↦→Ψ−log|g|2, the weight rule forA.
+18To extendΨ, now choose a componentQ attaining the minimum in(5.2). This need not be
+the component used for the zeroth moment. Its defining property is thate is nonzero generically
+on Q. The local norm ofev is therefore bounded below on a suitable patch. The same power-map
+calculation as in (5.6), with the factorej
+v, gives
+Vj(s)≥C1Cj
+2|s1|2bT (5.10)
+for a nonnegative integerbT independent ofj. For example, increasing a nonnegative integer above
+(q−ℓ+ 1)/ℓsuffices after shrinking the coordinate chart. The absence of zeros ofe on the chosen
+component is what prevents an additional exponent proportional toj.
+Shrink the chart so that|s1|< 1, and decreaseC1 if needed so thatC1≤1. Put
+B(s) =−logC1−2bT log|s1|≥0.
+Forj≥l, the negative logarithm of (5.10) gives
+Φj(s)
+j ≤−logC2 + B(s)
+j ≤−logC2 + B(s)
+l .
+The right side is continuous offT, so it also bounds the upper-semicontinuous regularization of
+the tail supremum there. Lettingl→∞in (5.8) gives Ψ ≤−logC2 throughout the punctured
+chart. Hence Ψ is locally bounded above near general points of each boundary prime, and extends
+psh across them and then across codimension two. The lower bound in(5.9) was uniform on the
+whole base chart, so the extension retains it. The extended psh weight is locally bounded above as
+well. Thus the metric onA has locally bounded weights on both sides.
+Lifting the section.We have the two metrics needed on the base. It remains to verify that the
+divisor used for finite volume creates only permitted poles onX. Regard a nonzero section of
+aA +bDS as a rational section ofaA with poles only onDS. Pull it to the normal equidimensional
+model ¯Y and multiply byea. The resulting nonzero rational section ofak¯π∗L has poles only above
+bad primes. By their definition every such prime divisor of¯Y is exceptional overX or lies above
+D.
+At every prime ofX outside D, the strict transform in¯Y therefore has no pole. The rational
+section downstairs extends there; exceptional divisors give no additional obstruction on the smooth,
+hence normal, varietyX. Its remaining finitely many pole orders are cleared by multiplication by
+sc
+D for a sufficiently large integerc≥0. This gives a nonzero section ofakL +cD, as required.
+6 Choosing the smaller base and completing the induction
+We now prove Theorem 1.2. The transfer proposition requires a rational section without horizontal
+poles and adjoint rank one in every nonnegative degree. The task of this section is to obtain both
+conditions from failure of nonvanishing. A maximal linear system will give a strictly smaller base;
+the same maximality will control all ratios on its generic fiber.
+6.1 One fixed determinant with unbounded twists
+We first explain the passage from cohomology to a single line bundle. The determinant construction
+is a standard way to extract effective divisors from twisted differentials; compare the determinant
+method of Lazić–Peternell [14, Lemma 4.1]. We include the argument because its uniformity in
+arbitrarily far tails is needed here, including when the numerical class ofL is zero.
+19Lemma 6.1. LetZ be smooth connected projective of dimensiond> 0, withH0(Z, Ωq
+Z) = 0 for
+1≤q≤d. LetL have a semipositive metric with locally bounded weights, and letαbe a nonzero
+movable class satisfyingµmin,α(TZ)≥0. There are a line bundleM with M·α≤0, strictly
+increasing positive integersmi→∞, and nonzero sections
+si∈H0(Z,M +miL).
+The lineM is the determinant of a saturated subsheaf ofΩp
+Z for some 0≤p≤d.
+Proof. Hodge symmetry givesHq(Z,OZ) = 0 for q >0, and henceχ(OZ) = 1. Riemann–Roch
+makesχ(KZ +mL) a polynomial in the integerm, whose constant term is
+χ(KZ) = (−1)dχ(OZ) = (−1)d
+by Serre duality. It is therefore nonzero for all but finitely many positive integers. Some fixedq
+has Hq(Z,KZ +mL)̸= 0 for unbounded positivem.
+For each suchm, the metrichm
+L has trivial multiplier ideal: its weight is locally bounded, so
+every holomorphic germ is locally square integrable. Hard Lefschetz with multiplier ideals [9,
+Theorem 2.1.1] gives a surjection
+H0(Z, Ωd−q
+Z ⊗mL)−→Hq(Z,KZ +mL)
+by wedging with theqth power of a Kähler form. Choose nonzero maps−mL→U, where
+U = Ωd−q
+Z , for an increasing sequence of these exponents.
+At the generic point ofZ, take the subspace ofUC(Z) spanned by all chosen images after a
+given cutoff. These subspaces form a decreasing chain in a finite-dimensional vector space. Their
+dimensions eventually stabilize, so the subspaces themselves stabilize to a nonzero subspaceW.
+LetG⊂U be its saturated extension. It is coherent: saturate the images of finitely many maps
+spanning W. Every map in a sufficiently far tail factors throughG, becauseU/G is torsion-free
+and the composite vanishes generically.
+Put r = rankG and M = ( ⋀rG)∗∗. This is a line bundle on smoothZ. For every cutoff,
+choose r generically independent maps from the tail. Their exterior product is a nonzero section
+of M +mL, wherem is the sum of their exponents. As the cutoff tends to infinity, so doesm.
+The maps and their determinant extend across codimension two into the lineM. Selecting an
+increasing subsequence gives the sections in the statement.
+Ford−q >0, antisymmetrization embedsU in (Ω 1
+Z)⊗(d−q). The tensor slope formula and
+the assumed tangent inequality giveµmax,α(U)≤0, and thereforeM·α≤0. Ifd−q = 0, then
+U =OZ and its nonzero saturated subsheaf isOZ itself; thusM =OZ and the same conclusion
+holds.
+6.2 A maximal system controls every section ratio
+The next lemma is algebraic. It isolates the dimension drop and the rank calculation from the
+analytic transfer. The nonpositive degrees are used only to prevent the base from having the full
+dimension.
+Lemma 6.2(Maximal base and adjoint rank). LetZ be smooth connected projective of positive
+dimension d. LetL,M be line bundles andD≥0 an integral divisor. Suppose there is a nonzero
+movable classαwith
+L·α=D·α= 0, M ·α≤0,
+20and nonzero sectionssi∈H0(Z,M +miL) for strictly increasing positive integersmi→∞. There
+is a smooth projective baseS with dimS <d, together with the prepared diagram of Lemma 3.1
+and an integerk> 0, for which:
+(i) a nonzero rational sectionρof k¯π∗L has no horizontal poles on¯Y;
+(ii) putting J =−KZ +D, one has for every integerj≥0
+dimC(S)H0
+(
+Yη,
+(
+KY/S +π∗(J +jkL)
+)
+|Yη
+)
+= 1. (6.1)
+If S is a point, assertion(i) already gives a nonzero section ofkL on Z.
+Proof. Consider the nonempty complete linear systems of
+B =uL +vM +wD, u,v,w ∈Z≥0. (6.2)
+Their degrees againstαare nonpositive. A divisor whose complete system defines a generically
+finite map is big. But a big class is an interior point of the pseudoeffective cone, and so pairs
+strictly positively with every nonzero member of the dual cone. Thus every system in(6.2) has
+image dimension less thand.
+Choose B0 in this collection with maximal image dimensions, and letV be the closed image
+of its rational map. This maximum exists because the possible dimensions are integers between
+0 and d−1. LetK be the relative algebraic closure ofC(V ) in C(Z); it is a finite extension of
+C(V ), since C(Z) is a finitely generated field extension. Take a smooth projective modelS of K,
+with a morphism toV after resolution. Its dimension iss<d , and the rational mapZ 99KS has
+connected general fiber.
+Every ratio of two nonzero sections in any one system(6.2) belongs toK. Indeed, combine
+that system with|B0|by taking products of sections. The resulting linear subsystem of|B +B0|
+gives the joint rational map. If its section ratio were transcendental overC(V ), the joint image
+would have dimension at leasts + 1, contrary to the choice ofB0. The ratio is therefore algebraic
+over C(V ) and lies in its relative algebraic closure. We will use thissection-ratio propertyboth for
+interpolation and for rank one.
+Resolve|B0|before applying Lemma 3.1. The resulting smooth model carries an effective
+divisor R0 and a line bundleH0 on S such that
+π∗B0 =f∗H0 +R0. (6.3)
+HereH0 is the pullback ofOV (1). Ifs> 0 it is big, sinceS→V is generically finite. All additional
+modifications preserve the displayed effective decomposition by pullback.
+Set k =m2−m1> 0 and takeρ= ¯π∗(s2/s1). Fori> 2, the numerator and denominator in
+sk
+ismi−m2
+1
+smi−m1
+2
+(6.4)
+are sections of the same line bundle of the form(6.2): both have M coefficient mi−m1 and
+L coefficient m2(mi−m1). Thus (6.4) is a nonzero element ofK. It has order zero at every
+horizontal primeQ of ¯Y, so
+k
+(
+ordQ(¯π∗si)−ordQ(¯π∗s1)
+)
+= (mi−m1) ordQ(ρ). (6.5)
+21The left side is bounded below independently ofi, since each¯π∗si is regular. Asmi→∞, the right
+side could have this lower bound only ifordQ(ρ)≥0. This proves (i). IfS is a point, every prime
+is horizontal; normality makesρregular, and birational pushdown gives the claimed section onZ.
+In this case the rank assertion also follows from the section-ratio property. Indeed, the adjoint
+space in(6.1) identifies withH0(Z,D +jkL): the Jacobian divisor is effective and exceptional, so
+a rational section allowed to have poles only there extends downstairs across codimension two on
+smooth Z. The sectionsDρj is nonzero, and any two sections ofD +jkL have ratio inK = C by
+(6.2). Hence this space has dimension one for everyj≥0, includingj = 0.
+Assume s> 0. We now verify (6.1) in every nonnegative degree. The identity
+KY/S +π∗(J +jkL) =KY/Z +π∗(D +jkL)−f∗KS (6.6)
+shows which exceptional divisor is involved. Over the generic point ofS, a base canonical frame is
+immaterial. The Jacobian section,sD, andρj give a nonzero section of the right side. To justify
+regularity, (i) implies thatρis regular on ¯Y over a dense base open: remove the images of its
+finitely many vertical polar divisors. Its pullback toY is then regular there. Thus the adjoint
+space has dimension at least one, also forj = 0.
+Take any two nonzero sections of that generic-fiber space. Choose a rational frame ofKS
+and regard them, by(6.6), as rational sections ofKY/Z +π∗(D +jkL) with no horizontal poles.
+Their finitely many vertical polar divisors can be cleared by one effective Cartier divisorC on S:
+enclose their images, including any of codimension at least two, in a Cartier divisor and increase
+its multiplicities so thatf∗C dominates both polar divisors. SinceH0 is big, there are an integer
+a >0 and a nonzero section ofaH0−C. Multiplication by this section and bysC makes both
+rational sections regular after the common base twistaf∗H0.
+Now multiply both by the canonical section ofaR0. Formula(6.3) produces two regular sections
+of
+KY/Z +π∗(D +jkL +aB0)
+with the same ratio as the original pair. They descend to sections ofD +jkL +aB0 on Z. In
+detail, KY/Z is effective and exceptional, andπ∗OY (KY/Z ) =OZ: a rational function with poles
+only on exceptional divisors is regular away from a codimension-two subset of smoothZ and hence
+regular everywhere. Apply this fact after trivializing the line bundle onZ. The descended line
+belongs to(6.2); the section-ratio property therefore places their ratio inK = C(S). Any two
+nonzero vectors in the generic-fiber section space are thus proportional over its ground field. This
+proves dimension one for allj≥0, without discarding the zeroth degree.
+The same maximal system supplied both inputs for transfer. The interpolation identity removed
+horizontal poles, while the big lineH0 on the chosen base let us clear arbitrary vertical poles
+in the rank calculation. No equidimensionality of the smooth resolution was used: poles over
+higher-codimension base sets were cleared before pushing down the exceptional Jacobian.
+6.3 Induction on dimension
+Proof of Theorem 1.2.We induct ond = dimZ. In dimension zeroZ is a point, every line bundle
+is trivial, and the conclusion holds witha = 1,b = 0. Assumed> 0 and suppose that noaL +bD,
+with integersa> 0 and b≥0, has a section.
+The bundleL is pseudoeffective because it has a semipositive metric. The class ofL +D is
+therefore pseudoeffective. It is not big: otherwise some positive multiple ofL +D would have
+a nonzero section. Corollary 4.3 gives a nonzero movable classαwith L·α= D·α= 0 and
+22µmin,α(TZ)≥0. Apply Lemma 6.1 to obtain the fixed lineM and unbounded sections. Then
+apply Lemma 6.2.
+If its base is a point, the resulting section contradicts our assumption. Otherwise Proposition 5.1,
+applied to that prepared diagram and the two original metrics, supplies a lineA and an effective
+integral divisorDS on the smaller smooth projective baseS. The lineA has a semipositive metric
+with locally bounded weights, while−KS +DS has a semipositive metric with finite distinguished
+adjoint volume.
+The no-forms condition also passes toS. A holomorphic form on S pulls back along the
+dominant rational map on its domain of definition. Properness ofS extends the map at the generic
+point of every divisor ofZ, so that domain can be taken to have codimension-two complement.
+The pulled-back form extends across that complement becauseΩq
+Z is locally free. Dominance in
+characteristic zero makes pullback injective. HenceH0(S, Ωq
+S) = 0 for everyq >0.
+Since dimS <d, induction produces integersa> 0,b≥0 and a nonzero section ofaA +bDS.
+The lifting conclusion of Proposition 5.1 gives a nonzero section ofakL +cD on Z for somec≥0.
+Its exponent ofL is positive, so this contradicts the assumption and completes the induction.
+7 Invariant sections and anticanonical nonvanishing
+The ordinary theorem is now available on every no-forms base. We apply it to a rational torus
+quotient in order to obtain a section with the invariance required by Section 2. The quotient
+provides adjoint rank one for a geometric reason: a rational function constant on a dense orbit is a
+function on the base. Smoothness of the anticanonical metric provides positivity of that invariant
+line. We first establish the required smooth variant of transfer, then verify its hypotheses on the
+quotient.
+7.1 The smooth invariant transfer
+On a torus quotient it is the space of invariant adjoint sections, rather than the full section
+space, that is one-dimensional. We need a different positivity input for that line, while the divisor
+normalization and boundary estimates remain those already proved.
+Proposition 7.1(Smooth invariant variant). Use the varieties, maps, line bundles, and section
+of Proposition 5.1, withD = 0. Let a compact torusT act holomorphically and continuously
+on X, ¯Y,Y , with compatible holomorphic linearizations of the line bundles. Requirer, ¯π,¯f to be
+equivariant, with trivial action onS. Requireρand theJ-valued adjoint sectionηY =π∗s0 to be
+invariant, and requirehJ,hL to be smooth, semipositive, andT-invariant.
+Replace the ordinary rank hypothesis(5.1) by
+dimC(S)H0
+(
+Yη,
+(
+KY/S +π∗(J +jkL)
+)
+|Yη
+)T
+= 1 ( j = 0, 1, 2,...).
+Then all the conclusions of Proposition 5.1 hold, and the section onX produced by its lifting is
+T-invariant.
+Proof. The normalized lineA is given the trivial action. In(5.2) only base divisors are used, so
+dividing the invariantρby their rational section gives an invariante. The sectionsuj in (5.3) are
+invariant as well.
+On a dense smooth-fibration open where the adjoint direct image is locally free and its formation
+commutes with base change, Berndtsson’s theorem [2, Theorem 1.2] gives its smoothL2 metric
+23semipositive curvature. Its hypotheses hold because the total spaceY is projective, hence Kähler,
+and each twisting metricπ∗(hJhjk
+L ) is smooth and semipositive.
+Average the holomorphic group action on this vector bundle over the compact torus. This
+gives a holomorphic projection onto its invariant subbundle, which has rank one by assumption.
+The fiber integral is invariant under the group, so the projection is orthogonal. The metric on
+the invariant line is therefore its quotient metric and is semipositive. Sinceuj is its nonzero local
+generator,−logVj has the required psh representative.
+This is the only positivity step that changes. The fixed-open estimate(5.5), the zeroth-moment
+extension (5.7), the high-moment envelope(5.8), and both bounds through codimension two now
+apply exactly as in the ordinary proof. They give the two asserted base metrics. Every base
+section is invariant because the base action is trivial. The rational lifting multiplies its pullback by
+ea, so remains invariant. WithD = 0, the support condition permits only exceptional poles, and
+the final extension onX is an invariant holomorphic section.
+The distinction between the two propositions is substantive. The ordinary argument allows a
+singular volume metric because the whole adjoint space has rank one and the relative Bergman
+theorem applies. The invariant argument uses smooth coefficients to obtain a positive quotient
+metric on an orthogonal holomorphic summand.
+7.2 Natural invariant nonvanishing
+Theorem 7.2(Natural invariant nonvanishing). LetZ be smooth connected projective overC,
+with H0(Z, Ωq
+Z) = 0 for everyq >0. Suppose thatL =−KZ has a smooth Hermitian metric of
+semipositive curvature. Let a compact connected real torusT act continuously onZ by holomorphic
+automorphisms, and giveL the natural linearization induced by the differential of the action. Then
+H0(Z,mL )T̸= 0 for some integerm> 0.
+Proof. If Z is a point the natural action on its canonical line is trivial, so the constant section
+proves the claim. Otherwise replaceT by its image inAut(Z). The no-forms hypothesis and Hodge
+symmetry giveH1(Z,OZ) = 0. The algebraic-torus argument in the proof of Theorem 2.1 applies
+to this action: connectedness preserves the first Chern class of a very ample line, the vanishing of
+H1(OZ) makes that line invariant up to isomorphism, and its projective representation embedsT
+in a compact diagonal torus. Its Zariski closureG is an algebraic torus acting onZ, and natural
+sections areT-invariant exactly when they areG-invariant.
+Average the given metric overT by averaging local weights, using the natural linearization.
+Differences of metric weights are global functions, so these averages patch to a smooth invariant
+metric; its curvature remains semipositive. TakeJ =L and D = 0. The canonical section1 of
+KZ +L =OZ is invariant for the natural action, and its metric pairing is a smooth positive volume
+form of finite total mass on compactZ.
+If the generalG-orbit has dimension zero, connectedness ofG makes its action trivial: the
+orbit map is constant on a dense open and hence onZ. Theorem 1.2, withD = 0 andJ =L, then
+gives the required section. Suppose henceforth that the general orbit has dimensionr> 0.
+Take the Rosenlicht rational quotient [18, 1]. Its function field isC(Z)G, and a dense invariant
+open has geometric fibers equal to orbits. BecauseG is connected, its general orbit is geometrically
+integral; thus the invariant field is relatively algebraically closed inC(Z) and the quotient has
+connected general fiber. Choose its prepared equivariant model
+Y
+rY
+−→¯Y ¯π− →Z, f :Y→S, ¯f : ¯Y→S,
+24with trivial base action. The notation rY for the resolution avoids confusion with the orbit
+dimensionr. The generic fiber has dimensionr and a geometrically denseG-orbit. After shrinking
+a base open,f is smooth there, its fibers have a dense orbit, andπagrees birationally with the
+original quotient construction.
+We construct the relative section required for invariant transfer. Chooser elements of the Lie
+algebra ofG whose fundamental vector fieldsv1,...,vr are generically independent. Such a choice
+is possible because the general orbit has dimensionr. The vector fields are invariant, sinceG
+is commutative, and tangent to the fibers off. On the smooth-fibration open their wedge is a
+regular, generically nonzero section of−KY/S. Tensor it with the pullback of a rational frame of
+−KS, regular after shrinking the base open. This gives an invariant anticanonical section onY
+over that open. The determinant ofdπis the natural morphism
+−KY−→π∗(−KZ).
+Its image is a nonzero invariant rational section ofπ∗L, regular over the same open.
+This rational section also defines a sectionρof ¯π∗L on ¯Y with no horizontal poles. Indeed,rY
+is an isomorphism at the generic point of each prime divisor of normal¯Y. Every horizontal prime
+meets the base open on which the constructed section is regular. The birational identification of
+function fields therefore gives nonnegative order there.
+The generic-fiber adjoint spaces are finite-dimensionalC(S)-vector spaces carrying algebraic
+representations of the split torusGC(S). They decompose into character spaces. A character of
+G is trivial on the Zariski-dense subgroupT exactly when it is the zero character. Consequently
+their T-fixed andG-fixed subspaces agree, not merely those of sections onZ itself.
+For eachj≥0, on the generic fiber the section
+(π∗1/f∗ds)ρj
+is a nonzero invariant section ofKY/S +π∗((j +1)L). The formπ∗1 includes the effective birational
+Jacobian, andρhas no horizontal pole, so this is regular. Any two nonzero invariant sections of
+this line have an invariant rational function as their ratio. The equivariant birational maps and
+the defining property of the quotient give
+C(Y )G = C(Z)G = C(S),
+so this ratio belongs toC(S). Their space has dimension one overC(S), for everyj≥0 including
+j = 0.
+Proposition 7.1 now applies withk = 1, with powers subsequently taken there to clear the
+vertical minima. It supplies a lineA and effective divisorDS on S, with a bounded semipositive
+metric onA and a finite-volume semipositive metric on−KS +DS. Holomorphic forms onS pull
+back injectively toZ, as in the last part of Section 6; henceS has no positive-degree holomorphic
+forms. Theorem 1.2 gives a nonzero section ofaA +bDS with a >0,b ≥0. Invariant lifting
+produces a nonzero invariant section of a positive power ofL on Z. SinceD = 0, every permitted
+pole upstairs is exceptional overZ and disappears on its normal pushdown. WhenS is a point
+the same conclusion is the point-base case of Proposition 7.1. This completes the proof.
+7.3 Descent to the original variety
+Proof of Theorem 1.1.Use Theorem 2.1 to choose the finite étale coverν: S →X and the
+universal product ˜X = Ca×F×Z with its lattice deck action. The compact factorZ satisfies the
+25hypotheses of Theorem 7.2; letsZ̸= 0 be an invariant section ofK−m
+Z for somem> 0. IfZ is a
+point, takem = 1 and sZ = 1.
+Using the product identification (2.5), form
+η−m
+0 ⊗η−m
+F ⊗sZ∈H0( ˜X,K−m
+˜X ),
+where pullbacks by the product projections are understood. The first two frames are invariant
+under the deck lattice and the last factor is invariant under the closure of its action. The product
+is therefore invariant and descends to a nonzero holomorphic section ofK−m
+S . It is algebraic by
+projectivity. Finally Lemma 2.2 produces a nonzero section ofK−m degν
+X . The exponent is positive,
+as required.
+References
+[1] Jason Bell, Dragos Ghioca, and Zinovy Reichstein,On a dynamical version of a theorem
+of Rosenlicht, Annali della Scuola Normale Superiore di Pisa. Classe di Scienze. Serie V17
+(2017), no. 1, 187–204.
+[2] Bo Berndtsson,Curvature of vector bundles associated to holomorphic fibrations, Annals of
+Mathematics 169 (2009), no. 2, 531–560.
+[3] Bo Berndtsson and Mihai Păun,Bergman kernels and the pseudoeffectivity of relative canon-
+ical bundles, Duke Mathematical Journal 145 (2008), no. 2, 341–378, Theorem 0.1 in
+arXiv:math/0703344v4, 21 January 2008.
+[4] Sébastien Boucksom, Jean-Pierre Demailly, Mihai Păun, and Thomas Peternell,The pseudo-
+effective cone of a compact Kähler manifold and varieties of negative Kodaira dimension,
+Journal of Algebraic Geometry22 (2013), no. 2, 201–248, Theorems 2.2 and 2.4 in the 2004
+arXiv version.
+[5] Frédéric Campana, Jean-Pierre Demailly, and Thomas Peternell,Rationally connected mani-
+folds and semipositivity of the Ricci curvature, Recent Advances in Algebraic Geometry: A
+Volume in Honor of Rob Lazarsfeld’s 60th Birthday (Christopher D. Hacon, Mircea Mustaţă,
+and Mihnea Popa, eds.), London Mathematical Society Lecture Note Series, vol. 417, Cam-
+bridge University Press, Cambridge, 2015, Theorem 1.4; arXiv:1210.2092v3, 5 February 2018,
+pp. 71–91.
+[6] Frédéric Campana and Mihai Păun,Foliations with positive slopes and birational stability of
+orbifold cotangent bundles, Publications Mathématiques de l’IHÉS129 (2019), 1–49.
+[7] Yifan Chen, Simion Filip, Song Sun, Valentino Tosatti, and Junsheng Zhang,Compact Kähler
+surfaces with semipositive anticanonical bundle, 2026, arXiv:2609.26716v1, 22 September 2026.
+[8] Jean-Pierre Demailly, Thomas Peternell, and Michael Schneider,Compact Kähler manifolds
+with hermitian semipositive anticanonical bundle, Compositio Mathematica101 (1996), no. 2,
+217–224.
+[9] , Pseudo-effective line bundles on compact Kähler manifolds, International Journal of
+Mathematics 12 (2001), no. 6, 689–741, Theorem locators refer to arXiv:math/0006205v2, 10
+October 2000.
+26[10] Igor V. Dolgachev,A brief introduction to Enriques surfaces, Development of Moduli Theory—
+Kyoto 2013, Advanced Studies in Pure Mathematics, vol. 69, Mathematical Society of Japan,
+Tokyo, 2016, pp. 1–32.
+[11] Daniel Greb, Stefan Kebekus, and Thomas Peternell,Movable curves and semistable sheaves,
+International Mathematics Research Notices (2016), no. 2, 536–570, Theorem locators refer
+to arXiv:1408.4308v2, 15 April 2015.
+[12] Kunihiko Kodaira,On Kähler varieties of restricted type, Proceedings of the National Academy
+of Sciences of the United States of America40 (1954), no. 5, 313–316.
+[13] Vladimir Lazić, Shin-ichi Matsumura, Thomas Peternell, Nikolaos Tsakanikas, and Zhixin
+Xie, The Nonvanishing Problem for varieties with nef anticanonical bundle, Documenta
+Mathematica 28 (2023), no. 6, 1393–1440.
+[14] Vladimir Lazić and Thomas Peternell,Abundance for varieties with many differential forms,
+Épijournal de Géométrie Algébrique2 (2018), Article 1, 35 pp.
+[15] Niklas Müller, Two non-vanishing results concerning the anti-canonical bundle, Nagoya
+Mathematical Journal258 (2025), 201–218.
+[16] Wenhao Ou,On generic nefness of tangent sheaves, Mathematische Zeitschrift304 (2023),
+Paper No. 58, Theorem and proposition locators refer to arXiv:1703.03175v4.
+[17] Michel Raynaud and Laurent Gruson,Critères de platitude et de projectivité. Techniques de
+“platification” d’un module, Inventiones Mathematicae13 (1971), 1–89.
+[18] Maxwell Rosenlicht,Some basic theorems on algebraic groups, American Journal of Mathe-
+matics 78 (1956), no. 2, 401–443.
+[19] Shing-Tung Yau,On the Ricci curvature of a compact Kähler manifold and the complex
+Monge–Ampère equation. I, Communications on Pure and Applied Mathematics31 (1978),
+no. 3, 339–411.
+[20] , Open problems in geometry, Lectures on Differential Geometry, Conference Proceed-
+ings and Lecture Notes in Geometry and Topology, vol. 1, International Press, Cambridge, MA,
+1994, In the book by Richard Schoen and Shing-Tung Yau; Problem 75, p. 395, pp. 365–404.
+27

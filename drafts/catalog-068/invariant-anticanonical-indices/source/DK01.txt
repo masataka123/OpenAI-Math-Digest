@@ -1,0 +1,2052 @@
+
+===PDF PAGE 1===
+arXiv:math/9910118v3  [math.AG]  14 Nov 2013
+Semi-continuity of complex singularity
+exponents and K¨ ahler-Einstein
+metrics on Fano orbifolds
+Jean-Pierre Demailly
+Universit´ e de Grenoble I, Institut Fourier
+J´ anos Koll´ ar
+Princeton University, Department of Mathematics
+Abstract. We introduce complex singularity exponents of plurisubhar monic
+functions and prove a general semi-continuity result for th em. This concept
+contains as a special case several similar concepts which ha ve been considered
+e.g. by Arnold and Varchenko, mostly for the study of hypersu rface singularities.
+The plurisubharmonic version is somehow based on a reductio n to the algebraic
+case, but it also takes into account more quantitative infor mations of great interest
+for complex analysis and complex diﬀerential geometry. We g ive as an application
+a new derivation of criteria for the existence of K¨ ahler-Ei nstein metrics on certain
+Fano orbifolds, following Nadel’s original ideas (but with a drastic simplication
+in the technique, once the semi-continuity result is taken f or granted). In this
+way, 3 new examples of rigid K¨ ahler-Einstein Del Pezzo surf aces with quotient
+singularities are obtained.
+R´ esum´ e.Nous introduisons les exposants de singularit´ es complexes des fonctions
+plurisousharmoniques et d´ emontrons un th´ eor` eme de semi-continuit´ e g´ en´ eral pour
+ceux-ci. Le concept ´ etudi´ e contient comme cas particulie r des concepts voisins
+qui ont ´ et´ e consid´ er´ es par exemple par Arnold et Varchenko, principalement pour
+l’´ etude des singularit´ es d’hypersurfaces. La version pl urisousharmonique repose
+en d´ eﬁnitive sur une r´ eduction au cas alg´ ebrique, mais elle prend aussi en compte
+des informations quantitatives d’un grand int´ erˆ et pour l ’analyse complexe et la
+g´ eom´ etrie diﬀ´ erentielle complexe. Nous d´ ecrivons en application une nouvelle
+approche des crit` eres d’existence de m´ etriques K¨ ahler-Einstein pour les vari´ et´ es de
+Fano, en nous inspirant des id´ ees originales de Nadel – maisavec des simpliﬁcations
+importantes de la technique, une fois que le r´ esultat de sem i-continuit´ e est utilis´ e
+comme outil de base. Grˆ ace ` a ces crit` eres, nous obtenons trois nouveaux exemples
+de surfaces de Del Pezzo ` a singularit´ es quotients, rigides, poss´ edant une m´ etrique
+de K¨ ahler-Einstein.
+===PDF PAGE 2===
+2 J.-P. Demailly, J. Koll´ ar, Semi-continuity of complex sin gularity exponents
+Contents
+§0. Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . . . . . .2
+§1. Complex singularity exponent and Arnold multiplicity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .5
+§2. L2 extension theorem and inversion of adjunction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .10
+§3. Semi-continuity of holomorphic singularity exponents . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .14
+§4. Multiplier ideal sheaves and holomorphic approximations o f psh singularities . . . . . . . . . . .18
+§5. Semi-continuity of psh singularity exponents . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .22
+§6. Existence of K¨ ahler-Einstein metrics on Fano orbifolds . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .26
+Key words: complex singularity exponent, Arnold multiplicity, semic ontinuity
+property, log resolution, log canonical singularities, eﬀ ective divisor, coherent
+ideal sheaf, adjunction theory, inversion of adjunction, p lurisubharmonic function,
+multiplier ideal sheaf, closed positive current, Lelong nu mber, Monge-Amp` ere
+equation, Aubin-Calabi-Yau theorem, Fano variety, orbifo ld
+A.M.S. Classiﬁcation 1991: 14B05, 14J45, 32C17, 32J25, 32S05
+§0. Introduction
+The purpose of this work is to show how complex analytic metho ds (and more
+speciﬁcally L2 estimates for
+∂) can provide eﬀective forms of results related to
+the study of complex singularities. We prove in particular a strong form of the
+semi-continuity theorem for “complex singularity exponen ts” of plurisubharmonic
+(psh) functions. An application to the existence of K¨ ahler -Einstein metrics on
+certain Fano orbifolds will ﬁnally be given as an illustrati on of this result.
+We introduce the following deﬁnition as a quantitative way o f measuring singu-
+larities of a psh function ϕ (the basic deﬁnition even makes sense for an arbitrary
+measurable function ϕ , though it is unlikely to have any good properties in that
+case). Our approach is to look at the L1 integrability of exp( − 2cϕ ) in terms of
+the Lebesgue measure in some local coordinates. Several oth er types of analytic or
+algebraic objects (holomorphic functions, coherent ideal sheaves, divisors, currents,
+etc) can be treated as special cases of this formalism.
+0.1. Deﬁnition. LetX be a complex manifold and ϕ be a plurisubharmonic (psh)
+function on X. For any compact set K ⊂ X, we introduce the “complex singularity
+exponent” of ϕ on K to be the nonnegative number
+cK (ϕ ) = sup
+{
+c ⩾ 0 : exp( − 2cϕ ) is L1 on a neighborhood of K
+}
+,
+and we deﬁne the “Arnold multiplicity” to be λK (ϕ ) = cK (ϕ )− 1 :
+λK(ϕ ) = inf
+{
+λ> 0 : exp( − 2λ − 1ϕ ) is L1 on a neighborhood of K
+}
+.
+If ϕ ≡ −∞ near some connected component of K, we put of course cK (ϕ ) = 0 ,
+λK (ϕ ) = + ∞ .
+===PDF PAGE 3===
+§0. Introduction 3
+The singularity exponent cK (ϕ ) only depends on the singularities of ϕ , namely
+on the behavior of ϕ near its −∞ poles. Let T be a closed positive current of
+bidegree (1, 1) on X. Since cK (ϕ ) remains unchanged if we replace ϕ withψ such
+that ψ − ϕ is bounded, we see that it is legitimate to deﬁne
+(0. 1. 1) cK (T ) = cK (ϕ ), λ K (T ) = λK (ϕ )
+whenever ϕ is a (local) potential of T , i.e. a psh function ϕ such that ddcϕ =T ,
+where dc = (2π i)− 1(∂ − ∂). In particular, if D is an eﬀective integral divisor,
+we have cK ([D]) = cK(log |g|) where [ D] is the current of integration over D
+and g is a (local) generator of O(−D). When f is a holomorphic function, we
+write simply cK (f ),λK (f ) instead of cK (log |f |),λK (log |f |). For a coherent ideal
+sheaf I = (g1, ... ,g N ) we deﬁne in a similar way cK =cK (log(|g1|+ · · ·+ |gN |)).
+It is well known that cK (f ) is a rational number, equal to the largest root of
+the Bernstein-Sato polynomial of |f |2s on a neighborhood of K ([Lin89], see also
+[Kol97]); similarly cK (I) ∈ Q+ for any coherent ideal sheaf. Our main result
+consists in the following semi-continuity theorem.
+0.2. Main Theorem. LetX be a complex manifold. Let Z1, 1
++ (X) denote the space
+of closed positive currents of type (1, 1) onX, equipped with the weak topology, and
+let P(X) be the set of locally L1 psh functions on X, equipped with the topology
+of L1 convergence on compact subsets (= topology induced by the weak topology ).
+Then
+(1) The map ϕ ↦→ cK(ϕ ) is lower semi-continuous on P(X), and the map
+T ↦→ cK (T ) is lower semi-continuous on Z1, 1
++ (X).
+(2) (“Eﬀective version”) . Let ϕ ∈ P(X) be given. If c<c K (ϕ ) andψ converges to
+ϕ in P(X), then e− 2cψ converges to e− 2cϕ inL1 norm over some neighborhood
+U of K.
+As a special case, one gets:
+(3) The map O(X) ∋ f ↦→ cK (f ) is lower semi-continuous with respect to the
+topology of uniform convergence on compact sets (uniform convergence on a
+ﬁxed neighborhood of K is of course enough ). Moreover, if c < cK(f ) and
+g converges to f in O(X), then |g|− 2c converges to |f |− 2c in L1 on some
+neighborhoodU of K.
+In spite of their apparent simplicity, the above statements reﬂect rather
+strong semi-continuity properties of complex singulariti es under “variation of
+parameters”. Such properties have been used e.g. by Angehrn -Siu [AnSi95] in
+their approach of the Fujita conjecture, and our arguments w ill borrow some of
+their techniques in section § 3.
+Theorem 0.2 is by nature a purely local result, which is easil y seen to be
+equivalent to the special case when K = {x} is a single point and X is a small ball
+centered atx. The proof is made in several steps. The “analytic part” cons ists in a
+reduction of (1) and (2) to (3), and in the proof of the eﬀectiv e estimates leading to
+===PDF PAGE 4===
+4 J.-P. Demailly, J. Koll´ ar, Semi-continuity of complex sin gularity exponents
+the convergence statements in (2) and (3) [by contrast, the q ualitative part of (3)
+can be obtained in a purely algebraic way]. The reduction to t he holomorphic case
+(3) is based on the fact that plurisubharmonic functions can be very accurately
+approximated (both from the point of view of singularities a nd of L1
+loc topology)
+by special functions of the form
+(0. 2. 4) α log(|g1|+ · · ·+ |gN |), α ⩾ 0,
+where the gj are holomorphic functions. The existence of approximation s as in
+(0.2.4) depends in an essential way on the Ohsawa-Takegoshi L2 extension theorem
+([OhT87], [Ohs88]), see [Dem92, 93] and §2, §4. One is then reduced to the proof
+for a single holomorphic function (that is, to a psh function of the form log |f |), by
+taking a suitable generic linear combination f = ∑αjgj. Another essential idea is
+to truncate the Taylor expansion of f at x at some order k. It can then be shown
+that this aﬀects cx(f ) only by a perturbation that is under uniform control. In
+fact, the singularity exponent cx(f ) is subadditive on holomorphic functions:
+(0. 2. 5) cx(f +g) ⩽cx(f ) +cx(g), ∀f,g ∈ OX,x.
+If pk is the truncation at order k of the Taylor series, one deduces immediately
+from (0.2.5) that
+(0. 2. 6) |cx(f ) − cx(pk)|⩽ n
+k + 1.
+In this way, the proof is reduced to the case of polynomials of given degree. Such
+polynomials only depend on ﬁnitely many coeﬃcients, thus th e remaining lower
+semi-continuity property to be proved is that of the functio n t ↦→ cx(Pt) when
+Pt is a family of polynomials depending holomorphically on som e parameters t =
+(t1,...,t N ). This is indeed true, as was already observed by Varchenko [ Var82, 83].
+An algebraic proof can be given by using a log resolution of si ngularities with
+parameters. Here, however, a special attention to eﬀective estimates must be paid
+to prove the convergence statements in (2) and (3). For insta nce, it is necessary
+to get as well an eﬀective version of (0.2.6); the Ohsawa-Tak egoshi L2 extension
+theorem is again crucial in that respect.
+As a consequence of our main theorem, we give a more natural pr oof of the
+results of Siu [Siu87, 88], Tian [Tia87] and Nadel [Nad89, 90 ] on the existence
+of K¨ ahler-Einstein metric on Fano manifolds admitting a su ﬃciently big group of
+symmetries. The main point is to have suﬃcient control on the “multiplier ideal
+sheaves” which do appear in case the K¨ ahler-Einstein metri c fails to exist. This
+can be dealt with much more easily through our semi-continui ty theorem, along
+the lines suggested in Nadel’s note [Nad89] (possibly becau se of the lack of such
+semi-continuity results, the detailed version [Nad90] rel ies instead on a rather
+complicated process based on a use of “uniform” L2 estimates for sequences of
+Koszul complexes; all this disappears here, thus providing a substantially shorter
+proof). We take the opportunity to adapt Nadel’s result to Fa no orbifolds. This is
+===PDF PAGE 5===
+§1. Complex singularity exponent and Arnold multiplicity 5
+mostly a straightforward extension, except that we apply in tersection inequalities
+for currents rather than the existence of a big ﬁnite group of automorphisms to
+derive suﬃcient criteria for the existence of K¨ ahler-Eins tein metrics. In this way,
+we produce 3 new “exotic examples” of rigid Del Pezzo surface s with quotient
+singularities which admit a K¨ ahler-Einstein orbifold met ric.
+We would like to thank R.R. Simha for useful discussions whic h got us started
+with the idea of simplifying Nadel’s approach. We also thank Mongi Blel for
+sharing several viewpoints on the semicontinuity properti es of psh functions, and
+Jeﬀ McNeal for pointing out a slight inaccuracy in our origin al calculation of
+volumes of analytic tubes.
+§1. Complex singularity exponent and Arnold multiplicity
+Let X be a complex manifold and ϕ a psh function of x. The concepts of
+“complex singularity exponent” cK (ϕ ) and “Arnold multiplicity” λK (ϕ ) ofϕ along
+a compact set K ⊂ X have been deﬁned in 0.1. An equivalent deﬁnition can be
+given in terms of asymptotic estimates for the volume of subl evel sets {ϕ< logr}.
+1.1. V ariant of the deﬁnition. Let K ⊂ X be a compact set, U ⋐ X a
+relatively compact neighborhood of K, and let µU be the Riemannian measure on
+U associated with some choice of hermitian metric ω on X. Then
+cK (ϕ ) = sup
+{
+c ⩾ 0 ;r− 2cµU ({ϕ< logr}) is bounded as r → 0, for some U ⊃ K
+}
+.
+The equivalence with the earlier Deﬁnition 0.1 follows imme diately from the
+elementary inequalities
+r− 2cµU ({ϕ< logr}) ⩽
+∫
+U
+e− 2cϕ dVω ⩽µU (U ) +
+∫ 1
+0
+2cr − 2cµU ({ϕ< logr})dr
+r ,
+A ﬁrst important observation is that cK (ϕ ) and λK (ϕ ) depend only on the local
+behavior of ϕ :
+1.2. Proposition. Given a point x ∈ X, we write cx(ϕ ) instead of c{x} (ϕ ). Then
+cK(ϕ ) = inf
+x∈K
+cx(ϕ ), λ K (ϕ ) = sup
+x∈K
+λx(ϕ ).
+The statement is clear from the Borel-Lebesgue Lemma. When x is a pole,
+that is, when ϕ (x) = −∞ , the Arnold multiplicity λx(ϕ ) actually measures the
+“strength” of the singularity of ϕ in a neighborhood of x. (It actually “increases”
+with the singularity, and if x is not a pole, we have cx(ϕ ) = + ∞ , λx(ϕ ) = 0 ; see
+Prop. 1.4 below.) We now deal with various interesting speci al cases:
+1.3. Notation.
+(1) If f is a holomorphic function on X, we set cK (f ) = cK (log |f |).
+===PDF PAGE 6===
+6 J.-P. Demailly, J. Koll´ ar, Semi-continuity of complex sin gularity exponents
+(2) If I ⊂ OX is a coherent ideal sheaf, generated by functions (g1,...,g N ) on a
+neighborhood of K, we put
+cK (I) = cK
+(
+log(|g1|+ · · ·+ |gN |)
+)
+.
+(3) If T is a closed positive current of bidegree (1, 1) on X which can be written
+as T =ddcϕ on a neighborhood of K, we set cK (T ) = cK (ϕ ).
+(If no global generators exist in (2) or no global potential ϕ exists in (3), we just
+split K in ﬁnitely many pieces and take the inﬁmum, according to Prop . (1. 2)).
+(4) If D is an eﬀective divisor with rational or real coeﬃcients, we s et
+cK (D) = cK ([D]) = cK(O(−D)) = cK (g) = cK (log |g|)
+whereD is the current of integration over D and g is a local generator of the
+principal ideal sheaf O(−D).
+No confusion should arise from the above deﬁnitions, especi ally since cK (I)
+does not depend on the choice of generators of I. We use similar conventions of
+notation for λK (ϕ ). The number
+cx(f ) = sup
+{
+c ; |f |− 2c is L1 on a neighborhood of x
+}
+=λx(f )− 1
+is clearly a measure of the singularities of the hypersurfac e {f = 0 } at point x.
+This number came up in the litterature many times under diﬀer ent names. By
+[Lin89], cx(f ) is the largest root of the Bernstein-Sato polynomial assoc iated
+to the germ of f around p. If x is an isolated singularity of {f = 0 }, then
+cx(f ) = min {1,β C(fx)} where βC(fx) is the complex singular index as deﬁned
+in [ArGV84], vol.II, Sec. 13.1.5; the same thing is called “c omplex singularity
+exponent” in [Var92]. See [Kol97] for a discussion of these q uestions and for
+related results.
+1.4. Elementary properties. Let I, J be coherent ideals on X and let ϕ , ψ be
+psh functions. Denote by x a point in X and let K ⊂ X be a compact subset.
+(1) The function x ↦→ cx(ϕ ) is lower semi-continuous for the holomorphic Zariski
+topology;
+(2) If ϕ ⩽ψ , then cK (ϕ ) ⩽cK (ψ ) ;
+If I ⊂ J, then cK (I) ⩽cK (J).
+(3) λK (ϕ +ψ ) ⩽λK (ϕ ) +λK (ψ ) ;
+λK (IJ) ⩽λK (I) +λK (J).
+(4) λK (αϕ ) = αλ K (ϕ ) for all α ∈ R+ ;
+λK (Im) = mλK (I) for all integers m ∈ N.
+(5) Let I = (g1,...,g N ) and let
+I =
+{
+f ∈ OΩ,x , x ∈ Ω ; ∃C ⩾ 0, |f |⩽C max |gj| nearx
+}
+===PDF PAGE 7===
+§1. Complex singularity exponent and Arnold multiplicity 7
+be the integral closure of I. Then cK (I) = cK (I).
+(6) If the zero variety germ V (Ix) contains a p-codimensional irreducible compo-
+nent, then cx(I) ⩽p, i.e. λx(I) ⩾ 1/p .
+(7) If IY is the ideal sheaf of a p-codimensional subvarietyY ⊂ Ω, then cx(IY ) = p
+at every nonsingular point of Y .
+(8) Deﬁne the vanishing order ordx(I) of I at x to be the supremum of all integers
+k such that Ix ⊂ mk
+x, where mx ⊂ Ox is the maximal ideal. Then
+1
+n ordx(I) ⩽λx(I) ⩽ ordx(I).
+More generally, if νx(ϕ ) is the Lelong number of ϕ at x, then
+1
+nνx(ϕ ) ⩽λx(ϕ ) ⩽νx(ϕ ).
+Proof. (1) Fix a point x0 and a relatively compact coordinate ball B :=B(x0,r ) ⋐
+X. For every c ⩾ 0, let Hcϕ (B) be the Hilbert space of holomorphic functions on
+B with ﬁnite weighted L2 norm
+∥f ∥2
+c =
+∫
+B
+|f |2e− 2cϕdV
+where dV is the Lebesgue volume element in Cn, n = dim CX. A fundamental
+consequence of H¨ ormander’sL2 estimates (H¨ ormander-Bombieri-Skoda theorem
+[H¨ or66], [Bom70], [Sko75]) states that there is an element f ∈ Hcϕ (B) with
+f (x) = 1 whenever e− 2cϕ is L1 on a neighborhood of x. Hence
+{
+x ∈ B ; cx(ϕ ) ⩽c0
+}
+∩ B =
+⋂
+f ∈
+⋃
+c>c0
+Hcϕ(B)
+f − 1(0)
+is an analytic set. This proves the holomorphic Zariski lowe r semi-continuity.
+All other properties are direct consequences of the deﬁniti ons and do not
+require “hard” analysis: (2), (4), (5) are immediate; (3) is a consequence of the
+H¨ older inequality; (6,7) follow from the fact that the func tion ( ∑
+j⩽p |zj|2)− c is
+locally integrable along z1 = · · ·= zp = 0 if and only if c < p; Finally, (8) is a
+well-known result of Skoda [Sko72], depending on the basic p roperties of Lelong
+numbers and a use of standard kernel techniques.
+In the case of an ideal sheaf, the following lemma reduces the computation of
+cx(I) to the case of a principal ideal (possibly after raising I to some power Im).
+1.5. Proposition. Let (g1,...,g p) be holomorphic functions deﬁned on an open
+set Ω ⊂ Cn and let x ∈ V (g1,...,g p). Then
+cx(α 1g1 + · · ·+αpgp) ⩽ min
+{
+cx(g1,...,g p), 1
+}
+===PDF PAGE 8===
+8 J.-P. Demailly, J. Koll´ ar, Semi-continuity of complex sin gularity exponents
+for all coeﬃcients (α 1,...,α p) ∈ Cp. Moreover, the equality occurs for all
+(α 1,...,α p) in the complement of a set of measure zero in Cp. In particular,
+if I is an arbitrary ideal and cx(I) ⩽ 1, there is a principal ideal (f ) ⊂ I such that
+cx(f ) = cx(I).
+Proof. The inequality is obvious, since cx(α 1g1 + · · ·+αpgp) ⩽ 1 by (1.4.6) on the
+one hand, and
+⏐
+⏐α 1g1 + · · ·+αpgp
+⏐
+⏐− 2c
+⩾
+( ∑
+|αj|2
+) − c( ∑
+|gj|2
+) − c
+on the other hand. Now, ﬁx c< min{cx(g1,...,g p), 1}. There is a neighborhood
+Uc of x on which
+∫
+|α |=1
+dσ (α )
+∫
+Uc
+⏐
+⏐α 1g1(z) + · · ·+αpgp(z)
+⏐
+⏐− 2c
+dV (z)
+=Ac
+∫
+Uc
+( ∑
+|gj(z)|2
+) − c
+dV (z)< +∞ ,(1. 5. 1)
+wheredσ is the euclidean area measure on the unit sphere S2n− 1 ⊂ Cn andAc > 0
+is a constant. The above identity follows from the formula
+∫
+|α |=1
+|α ·w|− 2cdσ (α ) = Ac|w|− 2c,
+which is obvious by homogeneity, and we have Ac < +∞ forc< 1. The ﬁniteness
+of the right hand side of (1.5.1) implies that the left hand si de is ﬁnite for all values
+α in the complement Cp∖Nc of a negligible set. Therefore cx(α 1g1+· · ·+αpgp) ⩾c,
+and by taking the supremum over an increasing sequence of val ues cν converging
+to min {cx(g1,...,g p), 1}, we conclude that the equality holds in Proposition 1.5
+for all α ∈ Cp ∖ ⋃Ncν .
+1.6. Remark. It follows from Theorem 3.1 below that the exceptional set of values
+(α 1,...,α p) occurring in Prop. 1.5 is in fact a closed algebraic cone in Cp.
+The singularity exponent cK (I) of a coherent ideal sheaf I ⊂ OX can be
+computed by means of a “log resolution” of I, that is, a composition µ : ˜X → X
+of blow-ups with smooth centers such that µ⋆ I = O ˜X (−D) is an invertible sheaf
+associated with a normal crossing divisor D in ˜X (such a log resolution always
+exists by Hironaka [Hir64]). The following proposition is e ssentially well known
+(see e.g. [Kol95a] 10.7).
+1.7. Proposition. LetX be a complex manifold, I ⊂ OX a coherent ideal sheaf,
+and let µ : ˜X → X be a modiﬁcation (= proper bimeromorphic morphism ) such
+that µ⋆ I = O ˜X (−D) is an invertible sheaf. Assume that ˜X is normal and let
+===PDF PAGE 9===
+§1. Complex singularity exponent and Arnold multiplicity 9
+Ei ⊂ ˜X denote either an exceptional divisor of µ or an irreducible component
+of D. Write
+K ˜X =µ⋆KX +
+∑
+aiEi and D =
+∑
+biEi,
+whereai = 0 if Ei is not a component of the exceptional divisor of µ (resp.bi = 0
+if Ei is not a component of D). Then:
+(1) cK (I) ⩽ min
+i :µ (Ei)∩K̸=∅
+{ai + 1
+bi
+}
+.
+(2) Equality holds if ˜X is smooth and ∑Ei is a divisor with normal crossings.
+(3) If g = (g1, ... ,g N ) are generators of I in a neighborhood of K, then for any
+suﬃciently small neighborhood U of K there is a volume estimate
+C1r2c ⩽µU ({|g|<r }) ⩽C2r2c|logr|n− 1, ∀r <r0
+with n = dim CX, c =cK (I) and C1, C2, r0> 0.
+Proof. Since the question is local, we may assume that I is generated by
+holomorphic functions g1, ... ,g N ∈ O(X). Then (1) and (2) are straightforward
+consequences of the Jacobian formula for a change of variabl e: if U is an open set
+in X, the change z =µ (ζ) yields
+∫
+z∈U
+|g(z)|− 2cdV (z) =
+∫
+ζ∈µ − 1(U)
+|g ◦µ (ζ)|− 2c|Jµ (ζ)|2d ˜V (ζ)
+where Jµ is the Jacobian of µ , and dV , d ˜V are volume elements of X, ˜X
+respectively (embed ˜X in some smooth ambient space if necessary). Now, if hi is
+a generator of O(−Ei) at a smooth point ˜x ∈ ˜X, the divisor of Jµ is by deﬁnition∑aiEi and µ⋆ I = O(− ∑biEi). Hence, up to multiplicative bounded factors,
+|Jµ |2 ∼
+∏
+|hi|2ai, |g ◦µ |2 ∼
+∏
+|hi|2bi near ˜x,
+and |g ◦µ |− 2c|Jµ |2 is L1 near ˜x if and only if ∏|hi|− 2(cbi− ai) is L1. A necessary
+condition is that cbi − ai < 1 whenever Ei ∋ ˜x. We therefore get the necessary
+condition c < mini :µ (Ei)∩K̸=∅ {(ai + 1)/b i}, and this condition is necessary and
+suﬃcient if ∑Ei is a normal crossing divisor.
+For (3), we choose ( ˜X, O(−D)) to be a (nonsingular) log resolution of I. The
+volumeµU ({|g|<r }) is then given by integrals of the form
+(1. 7. 4)
+∫
+µ − 1(U)∩{ζ∈ ˜Uα,
+∏
+|hi|bi<r}
+∏
+|hi(ζ)|2aidV (ζ)
+over suitable coordinate charts ˜Uα ⊂ ˜X. An appropriate change of variable ζ ↦→ w,
+wi = hbi
+i (ζ), wj = ζkj (where i runs over the set of indices such that bi > 0 and
+===PDF PAGE 10===
+10 J.-P. Demailly, J. Koll´ ar, Semi-continuity of complex si ngularity exponents
+j over a disjoint set of indices) and a use of a partition of unit y leads to estimate
+(1.7.4) by a linear combination of integrals of the form
+∫
+P (r)
+∏
+|wi|2(ai+1)/b i− 2dV (w) where P (r) = {max |wi|< 1, ∏|wi|<r }
+(we assume here that a partial integration with respect to th e wj’s has already
+been performed). The lower bound C1r2c is obtained by restricting the domain of
+integration to a neighborhood of a point in the unit polydisk such that only one
+coordinate wi vanishes, precisely for i equal to the index achieving the minimum
+of (ai + 1)/b i. The upper bound C2r2c|logr|n− 1, c = min(ai + 1)/b i, is obtained
+by using the inequalities
+∏
+|wi|2(ai+1)/b i− 2 ⩽
+( ∏
+|wi|
+) 2c− 2
+⩽r2c− 2, ∀w ∈ P (r),
+µ (P (r)) =
+∫
+{max(|w1|,..., |wn− 1|)<1}
+π min
+( r2
+|w1|2 · · · |wn− 1|2, 1
+) n− 1∏
+i=1
+dV (wi)
+⩽π
+∫
+{∃i ; |wi|<r}
+n− 1∏
+i=1
+dV (wi) +πr 2
+∫
+{∀i ;r⩽|wi|<1}
+n− 1∏
+i=1
+dV (wi)
+|wi|2
+⩽C2r2|logr|n− 1.
+It should be observed that much ﬁner estimates are known to ex ist; in fact, one can
+derive rather explicit asymptotic expansions of integrals obtained by integration
+along the ﬁbers of a holomorphic function (see [Bar82]).
+§2. L2 extension theorem and inversion of adjunction
+Our starting point is the following special case of the funda mentalL2 extension
+theorem due to Ohsawa-Takegoshi ([OhT87], [Ohs88], see als o [Man93]).
+2.1. Theorem ([OhT87], [Ohs88], [Man93]) . Let Ω ⊂ Cn be a bounded pseudo-
+convex domain, and let L be an aﬃne linear subspace of Cn of codimension p ⩾ 1
+given by an orthonormal system s of aﬃne linear equations s1 = · · ·=sp = 0. For
+everyβ <p, there exists a constant Cβ,n, Ω depending only on β , n and the diame-
+ter of Ω, satisfying the following property. For every ϕ ∈ P(Ω) and f ∈ O(Ω ∩ L)
+with
+∫
+Ω∩L |f |2e− ϕdVL< +∞ , there exists an extension F ∈ O(Ω) of f such that
+∫
+Ω
+|F |2|s|− 2βe− ϕdVCn ⩽Cβ,n, Ω
+∫
+Ω∩L
+|f |2e− ϕdVL,
+wheredVCn and dVL are the Lebesgue volume elements in Cn and L respectively.
+In the sequel, we use in an essential way the fact that β can be taken arbitrarily
+close to p. It should be observed, however, that the case β = 0 is suﬃcient to
+===PDF PAGE 11===
+§2. L2 extension theorem and inversion of adjunction 11
+imply the general case. In fact, supposing L = {z1 = · · ·=zp = 0}, a substitution
+(ϕ, Ω) ↦→ (ϕk, Ωk) with
+ϕk(z1, ... ,z n) = ϕ (zk
+1, ... ,z k
+p,z p+1, ... ,z n),
+Ωk =
+{
+z ∈ Cn ; (zk
+1, ... ,z k
+p,z p+1, ... ,z n) ∈ Ω
+}
+shows that the estimate with β = 0 implies the estimate with β =p(1 − 1/k ) (use
+the change of variable ζ1 =zk
+1, ... ,ζ p =zk
+p , ζj =zj for j > p, together with the
+Jacobian formula
+dV (z) = Const
+|ζ1|2(1− 1/k ) · · · |ζp|2(1− 1/k )dV (ζ),
+and take the “trace” of the solution Fk on Ωk to get the solution F on Ω). The
+L2 extension theorem readily implies the following important monotonicity result.
+2.2. Proposition. Let ϕ ∈ P(X) be a psh function on a complex manifold X,
+and let Y ⊂ X be a complex submanifold such that ϕ |Y ̸≡ −∞ on every connected
+component of Y . Then, if K is a compact subset of Y , we have
+cK (ϕ |Y ) ⩽cK (ϕ ).
+(Here, of course, cK (ϕ ) is computed on X, i.e., by means of neighborhoods of K
+in X).
+Proof. By Prop. 1.2, we may assume that K = {y} is a single point in Y . Hence,
+after a change of coordinates, we can suppose that X is an open set in Cn and
+that Y is an aﬃne linear subspace. Let c < cy(ϕ |Y ) be given. There is a small
+ball B =B(y,r ) such that
+∫
+B∩Y e− 2cϕdVY < +∞ . By the L2 extension theorem
+applied with β = 0, Ω = B, L = Y and f (z) = 1, we can ﬁnd a holomorphic
+function F on B such that F (z) = 1 on B ∩ Y and
+∫
+B |F |2e− 2cϕdVB < +∞ . As
+F (y) = 1, we infer cy(ϕ ) ⩾ c and the conclusion follows. It should be observed
+that an algebraic proof exists when ϕ is of the form log |g|, g ∈ O(X) ; however
+that proof is rather involved. This is already a good indicat ion of the considerable
+strength of the L2 extension theorem (which will be crucial in several respect s in
+the sequel).
+We now show that the inequality given by Proposition 2.2 can s omehow be
+reversed (Theorem 2.5 below). For this, we need to restrict o urselves to a class of
+psh functions which admit a “suﬃciently good local behavior ” (such restrictions
+were already made in [Dem87], [Dem93a] to accommodate simil ar diﬃculties).
+2.3. Deﬁnition. LetX be a complex manifold. We denote by Ph(X) the class of
+all plurisubharmonic functions ϕ on X such that eϕ is locally H¨ older continuous
+on X, namely such that for every compact set K ⊂ X there are constants
+C =CK ⩾ 0, α =αK > 0 with
+|eϕ (x) − eϕ (y)|⩽Cd (x,y )α, ∀x,y ∈ K,
+===PDF PAGE 12===
+12 J.-P. Demailly, J. Koll´ ar, Semi-continuity of complex si ngularity exponents
+where d is some Riemannian metric on X. We say for simplicity that such a
+function is a H¨ older psh function.
+2.4. Example. We are mostly interested in the case of functions of the form
+ϕ = max
+j
+log
+( ∑
+k
+∏
+l
+|fj,k,l |α j,k,l
+)
+with fj,k,l ∈ O(X) and αj,k,l > 0. Such functions are easily seen to be H¨ older
+psh. Especially, if D = ∑αjDj is an eﬀective real divisor, the potential
+ϕ = ∑αj log |gj| associated with [D] is a H¨ older psh function.
+2.5. Theorem. Let H be a smooth hypersurface of X and let T be a closed
+positive current of type (1, 1) on X such that its local potential functions ϕ are
+H¨ older psh functions withϕ |H ̸≡ −∞ . We set in this case (somewhat abusively )
+T|H =ddcϕ |H. Then for any compact set K ⊂ H, we have
+cK ([H] +T ) ⩾ 1 ⇔ cK (T|H) ⩾ 1.
+In the algebraic setting (that is, when T = [ D] is deﬁned by an eﬀective
+divisor D = ∑αjDj ), the above result is known as “inversion of adjunction”, se e
+Koll´ ar et al. [K&al92], 17.7. One says that the pair (X,D ) is lc (= log canonical) if
+cK (D) ⩾ 1 for every compact set K ⊂ X, i.e., if the product ∏|gj|− 2cα j associated
+with the generators gj of O(−Dj ) is locally L1 for every c < 1. The result can
+then be rephrased as
+(2. 5. 1) ( X,H +D) is lc ⇔ (H,D |H) is lc.
+Proof of Theorem 2.5 . Since the result is purely local, we may assume that
+X =D(0,r )n is a polydisk in Cn, that H is the hyperplane zn = 0 and K = {0}.
+We must then prove the equivalence
+∀c< 1, ∃U ∋ 0, exp
+(
+− 2c(log |zn|+ϕ (z))
+)
+∈ L1(U )
+⇔ ∀ c′< 1, ∃U ′ ∋ 0, exp
+(
+− 2c′ϕ (z′, 0)
+)
+∈ L1(U ′),
+wherez = (z′,z n) ∈ Cn andU ,U ′ are neighborhoods of 0 in Cn, Cn− 1 respectively.
+First assume that ( |zn|eϕ (z))− 2c ∈ L1(U ). As eϕ is H¨ older continuous, we get
+e2cϕ (z) ⩽ (eϕ (z′, 0) +C1|zn|α )2c ⩽C2(e2cϕ (z′, 0) + |zn|2cα )
+on a neighborhood of 0, for some constants C1,C2,α> 0. Therefore the function
+1
+|zn|2c(|zn|2cα +e2cϕ (z′, 0)) ⩽C− 1
+2 (|zn|eϕ (z))− 2c
+===PDF PAGE 13===
+§2. L2 extension theorem and inversion of adjunction 13
+is in L1(U ). Suppose that U = U ′ × D(0,r n) is a small polydisk. A partial
+integration with respect to zn on a family of disks |zn|< ρ(z′) with ρ(z′) =
+ε exp(α − 1ϕ (z′, 0)) (and ε> 0 so small that ρ(z′) ⩽rn for all z′ ∈ U ′) shows that
+∫
+U
+dV (z)
+|zn|2c(|zn|2cα +e2cϕ (z′, 0)) ⩾ Const
+∫
+U ′
+dV (z′)
+e(2c− 2(1− c)α − 1)ϕ (z′, 0).
+Hence exp( − 2c′ϕ (z′, 0)) ∈ L1(U ′) with c′ = c − (1 − c)α − 1 arbitrarily close to 1.
+Conversely, if the latter condition holds, we apply the Ohsa wa-Takegoshi extension
+theorem to the function f (z′) = 1 on L = H = {zn = 0 }, with the weight
+ψ = 2c′ϕ and β =c′< 1. Since F (z′, 0) = 1, the L2 condition implies the desired
+conclusion.
+2.6. Remark. As the ﬁnal part of the proof shows, the implication
+cK ([H] +T ) ⩾ 1 ⇐ cK (T|H) ⩾ 1.
+is still true for an arbitrary (not necessarily H¨ older) psh function ϕ . The
+implication ⇒ , however, is no longer true. A simple counterexample is prov ided
+in dimension 2 by H = {z2 = 0} and T =ddcϕ with
+ϕ (z1,z 2) = max
+(
+λ log |z1|, −
+√
+− log |z2|
+)
+, λ> 1
+on the unit bidisk D(0, 1)2 ⊂ C2. Then c0([H] + T ) = c0([H]) = 1 but
+c0(T|H) = c0(λ log |z1|) = 1/λ .
+2.7. Proposition. LetX,Y be complex manifolds of respective dimensions n,m,
+let I ⊂ OX , J ⊂ OY be coherent ideals, and let K ⊂ X, L ⊂ Y be compact sets.
+Put I ⊕ J := pr⋆
+1 I + pr⋆
+2 J ⊂ OX× Y . Then
+cK× L(I ⊕ J) = cK (I) +cL(J).
+Proof. By Prop. 1.2, it is enough to show that c(x,y )(I ⊕ J) = cx(I) + cy(J) at
+every point ( x,y ) ∈ X × Y . Without loss of generality, we may assume that
+X ⊂ Cn, Y ⊂ Cm are open sets and ( x,y ) = (0 , 0). Let g = (g1, ... ,g p), resp.
+h = (h1, ... ,h q), be systems of generators of I (resp. J) on a neighborhood of 0.
+Set
+ϕ = log
+∑
+|gj|, ψ = log
+∑
+|hk|.
+Then I ⊕ J is generated by the p +q-tuple of functions
+g ⊕ h = (g1(x), ... g p(x),h 1(y), ... ,h q(y))
+and the corresponding psh function Φ( x,y ) = log
+( ∑|gj(x)|+ ∑|hk(y)|
+)
+has
+the same behavior along the poles as Φ ′(x,y ) = max( ϕ (x),ψ (y)) (up to a term
+O(1) ⩽ log 2). Now, for suﬃciently small neighborhoods U ,V of 0, we have
+µU× V
+({
+max(ϕ (x),ψ (y))< logr
+})
+=µU
+(
+{ϕ< logr} × µV ({ψ< logr}
+)
+,
+===PDF PAGE 14===
+14 J.-P. Demailly, J. Koll´ ar, Semi-continuity of complex si ngularity exponents
+hence Prop. 1.7 (3) implies
+(2. 7. 1)
+C1r2(c+c′) ⩽µU× V
+({
+max(ϕ (x),ψ (y))< logr
+})
+⩽C2r2(c+c′) |logr|n− 1+m− 1
+with c =c0(ϕ ) = c0(I) and c′ =c0(ψ ) = c0(J). From this, we infer
+c(0, 0)(I ⊕ J) = c +c′ =c0(I) +c0(J).
+2.8. Example. As c0(zm
+1 ) = 1/m , an application of Proposition 2.7 to a quasi-
+homogeneous ideal I = (zm1
+1 ,...,z mp
+p ) ⊂ OCn, 0 yields the value
+c0(I) = 1
+m1
++ · · ·+ 1
+mp
+.
+Using Proposition 2.7 and the monotonicity property, we can now prove the
+fundamental subadditivity property of the singularity exp onent.
+2.9. Theorem. Let f , g be holomorphic on a complex manifold X. Then, for
+every x ∈ X,
+cx(f +g) ≤ cx(f ) +cx(g).
+More generally, if I and J are coherent ideals, then
+cx(I + J) ≤ cx(I) +cx(J).
+Proof. Let ∆ be the diagonal in X × X. Then I + J can be seen as the restriction
+of I ⊕ J to ∆. Hence Prop. 2.2 combined with 2.7 implies
+cx(I + J) = c(x,x )((I ⊕ J)|∆) ⩽c(x,x )(I ⊕ J) = cx(I) +cx(J).
+Since (f +g) ⊂ (f ) + (g), inequality 1.4 (2) also shows that
+cx(f +g) ⩽cx((f ) + (g)) ⩽cx(f ) +cx(g).
+2.10. Remark. Iff (x1,...,x n), resp.g(y1,...,y n), are holomorphic near 0 ∈ Cn,
+resp. 0 ∈ Cm, and such that f (0) = g(0) = 0, we have the equality
+c0(f (x1,...,x n) +g(y1,...,y m)) = min {1,c 0(f ) +c0(g)}.
+This result is proved in [AGV84], vol. II, sec. 13.3.5 in the c ase of isolated
+singularities. Another proof, using the computation of c0 via a resolution as in
+Prop. 1.7, is given in [Kol97]. It can also be reduced to Propo sition 2.7 through a
+log resolution of either f or g.
+===PDF PAGE 15===
+§3. Semi-continuity of holomorphic singularity exponents 15
+§3. Semi-continuity of holomorphic singularity exponents
+We ﬁrst give a new proof (in the spirit of this work) of the semi -continuity theo-
+rem of Varchenko [Var82] concerning leading zeroes of Berns tein-Sato polynomials
+attached to singularities of holomorphic functions (see al so Lichtin [Lin87]).
+3.1. Theorem ([Var82]). LetX be a complex manifold and S a reduced complex
+space. Let f (x,s ) be a holomorphic function on X × S. Then for any x0 ∈ X, the
+function s ↦→ cx0 (f|X×{ s} ) is lower semi-continuous for the holomorphic Zariski
+topology on S. It even satisﬁes the following much stronger property: for any
+s0 ∈ S, one has
+(3. 1. 1) cx0 (f|X×{ s} ) ⩾cx0 (f|X×{ s0} )
+on a holomorphic Zariski neighborhood of s0 (i.e. the complement in S of an
+analytic subset of S disjoint from s0).
+Proof. Observe that if f|X×{ s0} is identically zero, thencx0 (f|X×{ s0} ) = 0 and there
+is nothing to prove; thus we only need to consider those s such that f|X×{ s} ̸≡ 0.
+We may of course assume that X =B is a ball in Cn andx0 = 0. Let Y =B × S,
+D = div f and µ : ˜Y → Y a log resolution of ( Y,D ). After possibly shrinking
+B a little bit, there is a Zariski dense open set S1 ⊂ S such that if s ∈ S1, the
+corresponding ﬁber
+µs : ˜Ys → B × {s}
+is a log resolution of (B, divf|B×{ s} ). Moreover, we may assume that the numerical
+invariantsai, bi attached to µs : ˜Ys → B as in Prop. 1.7 also do not depend on s.
+In particular, by (1.7.2), c0(f|B×{ s} ) is independent of s ∈ S1.
+By induction on the dimension of S, we obtain a stratiﬁcation S = ⋃Si (where
+each Si is a Zariski dense open subset of a closed complex subspace of S) such
+thatc0(f|B×{ s} ) only depends on the stratum containing s. Thus (3.1.1) reduces to
+semi-continuity with respect to the classical topology (co nsidering a 1-dimensional
+base is enough, so we may assume the base to be nonsingular as w ell). If we put
+ϕ = log |f |, this is a special case of the following Lemma, which is essen tially
+equivalent to the Main Theorem of [PS99]. Here, we would like to point out that
+this result (which we knew as early as end of 1995) can be obtai ned as a direct
+consequence of the Ohsawa-Takegoshi theorem [OhT87].
+3.2. Lemma. Let Ω ⊂ Cn and S ⊂ Cp be bounded pseudoconvex open sets. Let
+ϕ (x,s ) be a H¨ older psh function on Ω × S and let K ⊂ Ω be a compact set. Then
+(1) s ↦→ cK (ϕ (•,s )) is lower semi-continuous for the classical topology on S.
+(2) If s0 ∈ S and c < cK (ϕ (•,s 0)), there exists a neighborhood U of K and a
+uniform bound ∫
+U
+e− 2cϕ (x,s )dV (x) ⩽M (c)
+for s in a neighborhood of s0.
+===PDF PAGE 16===
+16 J.-P. Demailly, J. Koll´ ar, Semi-continuity of complex si ngularity exponents
+Proof. We use the L2 extension theorem of [OhT87], following an idea of Angehrn-
+Siu [AnSi95]. However, the “eﬀective” part (2) requires add itional considerations.
+Notice that it is enough to prove (2), since (1) is a trivial co nsequence. By shrinking
+Ω and S, we may suppose that eϕ is H¨ older continuous of exponentα on the whole
+of Ω × S and that ∫
+Ω
+e− 2cϕ (x,s 0)dV (x)< +∞ .
+Let k be a positive integer. We set
+ψk,s (x,t ) = 2cϕ (x,s + (kt)k(s0 − s)) on Ω × D,
+whereD ⊂ C is the unit disk. Then ψ is well deﬁned on Ω × D ifs is close enough
+to s0. Since ψ (x, 1/k ) = ϕ (x,s 0), we obtain by Theorem 2.1 the existence of a
+holomorphic function Fk,s (x,t ) on Ω × D such that Fk,s (x, 1/k ) = 1 and
+(3. 2. 3)
+∫
+Ω× D
+|Fk,s (x,t )|2e− ψ k,s(x,t )dV (x)dV (t) ⩽C1
+with C1 independent of k, s for |s − s0|< δk− k. As ψk,s admits a global upper
+bound independent of k,s, the family (Fk,s ) is a normal family. It follows from the
+equalityFk,s (x, 1/k ) = 1 that there is a neighborhood U ofK and a neighborhood
+D(0,ε ) of 0 in C such that |Fk,s | ⩾ 1/ 2 on U × D(0,ε ) if k is large enough. A
+change of variable t =k− 1τ1/k in (3.2.3) then yields
+∫
+U× D(0, (kε)k)
+e− 2cϕ (x,s +τ (s0− s))
+|τ|2(1− 1/k ) dV (x)dV (τ) ⩽ 4k4C1.
+As in the proof of Theorem 2.5, we get by the H¨ older continuit y of eϕ an upper
+bound
+e2cϕ (x,s +τ (s0− s)) ⩽C2(e2cϕ (x,s ) + |τ|2cα )
+with a constant C2 independent of s. Hence, for k ⩾ 1/ε , we ﬁnd
+∫
+U× D
+1(
+e2cϕ (x,s ) + |τ|2cα )
+|τ|2(1− 1/k )dV (x)dV (τ) ⩽C3(k).
+By restricting the integration to a family of disks |τ|< C4eα − 1ϕ (x,s ) (with C4 so
+small that the radius is ⩽ 1), we infer
+∫
+U
+e− 2(c− 1/kα )ϕ (x,s )dV (x) ⩽C5(k).
+Sincec − 1/kα can be taken arbitrarily close to cK (ϕ ), this concludes the proof.
+We can now prove the qualitative part of the semi-continuity theorem, in the
+holomorphic case.
+===PDF PAGE 17===
+§3. Semi-continuity of holomorphic singularity exponents 17
+3.3. Theorem. Let X be a complex manifold and K ⊂ X a compact subset.
+Then f ↦→ cK (f ) is lower semi-continuous on O(X) with respect to the topology
+of uniform convergence on compact subsets. More explicitly , for every nonzero
+holomorphic function f , for every compact set L containingK in its interior and
+every ε> 0, there is a number δ =δ(f,ǫ,K,L )> 0 such that
+(3. 3. 1) sup
+L
+|g − f |<δ ⇒ cK (g) ⩾cK (f ) − ε.
+Proof. As a ﬁrst step we reduce (3.3.1) to the special case when K is a single
+point. Assume that (3.3.1) fails. Then there is a sequence of holomorphic functions
+fi ∈ O(X) converging uniformly to f on L, such that
+cK(fi)<c K (f ) − ε.
+By Prop. 1.2 we can choose for each i a point ai ∈ K such thatcai (fi)<c K (f )− ε.
+By passing to a subsequence we may assume that the points ai converge to a point
+a ∈ K. Take a local coordinate system on X in a neighborhood of a. Consider
+the functions Fi deﬁned by
+Fi(x) = fi(x +ai − a)
+on a small coordinate ball B(a,r ) ⊂ L◦ . These functions are actually well deﬁned
+fori large enough (choose ε so that B(a,r +ε) ⊂ L andi so large that |ai − a|<ε ).
+Then Fi converges to f on B(a,r ), but
+ca(Fi) = cai (fi)<c K (f ) − ε ⩽ca(f ) − ε.
+Therefore, to get a contradiction, we only need proving Theo rem 3.3 in case
+K = {a} is a single point. Again we can change notation and assume tha t X
+is the unit ball and that our point is the origin 0.
+In the second step we reduce the lower semi-continuity of c0(f ) to polynomials
+of bounded degree. For a given holomorphic function f let Pk denote the
+degree ⩽ k part of its Taylor series. The subbaditivity property of The orem 2.9
+implies |c0(f ) − c0(pk)|⩽c0(f − pk). As |f (z) − pk(z)|=O(|z|k+1), the function
+|f − pk|− 2c is not integrable for c ⩾ n/ (k + 1). From this, it follows that
+c0(f − pk) ⩽n/ (k + 1), hence
+(3. 3. 2) |c0(f ) − c0(pk)|⩽ n
+k + 1.
+Now, if (fi) converges uniformly to f on a given neighborhood U ⊂ Cn of 0, the
+degree ⩽k partpi,k converges to pk in the ﬁnite dimension space C[z1,...,z n]k of
+polynomials of total degree ⩽k. Let us view polynomials
+P (z,s ) =
+∑
+|α |⩽k
+sαzα ∈ C[z1,...,z n]k
+===PDF PAGE 18===
+18 J.-P. Demailly, J. Koll´ ar, Semi-continuity of complex si ngularity exponents
+as functions of their coeﬃcients s = (sα ). By Theorem 3.1, we know that the
+function s ↦→ c0(P (•,s )) is lower semi-continuous. Hence we get
+c0(pi,k )>c 0(pk) − ε
+2 for i>i (k,ε ) large enough,
+and thanks to (3.3.2) this implies
+c0(fi)>c 0(f ) − ε
+2 − 2n
+k + 1 >c 0(f ) − ε
+by choosing k ⩾ 4n/ε .
+In fact, we would like to propose the following much stronger lower semi-
+continuity conjecture:
+3.4. Conjecture. Notation as in Theorem 3.3. For every nonzero holomorphic
+function f , there is a number δ =δ(f,K,L )> 0 such that
+sup
+L
+|g − f |<δ ⇒ cK (g) ⩾cK (f ).
+3.5. Remark. There is an even more striking conjecture about the numbers
+cK (f ), namely, that the set
+C = {c0(f )|f ∈ OCn, 0} ⊂ R
+satisﬁes the ascending chain condition (cf. [Sho92]; [K&al 92], 18.16): any conver-
+gent increasing sequence in C should be stationary. This conjecture and Theo-
+rem 3.3 together would imply the stronger form 3.4. Notice on the other hand
+that there do exist non stationary decreasing sequences in C by (1.4.8)*.
+§4. Multiplier ideal sheaves and holomorphic approxima-
+tions of psh singularities
+The most important concept relating psh functions to holomo rphic objects is
+the concept of multiplier ideal sheaf , which was already considered implicitly in
+the work of Bombieri [Bom70], Skoda [Sko72] and Siu [Siu74]. The precise ﬁnal
+formalization has been ﬁxed by Nadel [Nad89].
+4.1. Theorem and deﬁnition ([Nad89, 90], see also [Dem89, 93a]) . Ifϕ ∈ P(X)
+is a psh function on a complex manifold X, the multiplier ideal sheaf I(ϕ ) ⊂ OX
+is deﬁned by
+Γ(U, I(ϕ )) =
+{
+f ∈ OX (U ) ; |f |2e− 2ϕ ∈ L1
+loc(U )
+}
+* It has been recently observed by Phong and Sturm [PS00], in their study of integrals of
+the form
+∫
+|f |−s, that the ascending chain condition holds in complex dimens ion 2. Algebraic
+geometers seem to have been aware for some time of the correspondi ng algebraic geometric
+statement.
+===PDF PAGE 19===
+§4. Multiplier ideal sheaves and holomorphic approximations o f psh singularities 19
+for every open set U ⊂ X. Then I(ϕ ) is a coherent ideal sheaf in OX .
+The proof that I(ϕ ) is coherent is a rather simple consequence of H¨ ormander’s
+L2 estimates, together with the strong Noetherian property of coherent sheaves and
+the Krull lemma. When the psh function ϕ is deﬁned from holomorphic functions
+as in 2.4, it is easy to see that I(ϕ ) can be computed in a purely algebraic way
+by means of log resolutions. The concept of multiplier ideal sheaf plays a very
+important role in algebraic geometry, e.g. in Nadel’s versi on of the Kawamata-
+Viehweg vanishing theorem or in Siu’s proof [Siu93] of the bi g Matsusaka theorem.
+We now recall the technique employed in [Dem92] and [Dem93b] to produce
+eﬀective bounds for the approximation of psh functions by lo garithms of holo-
+morphic functions. The same technique produces useful comp arison inequalities
+for the singularity exponents of a psh function and its assoc iated multiplier ideal
+sheaves.
+4.2. Theorem. Letϕ be a plurisubharmonic function on a bounded open set Ω ⊂
+Cn. For every real number m> 0, let Hmϕ (Ω) be the Hilbert space of holomorphic
+functions f on Ω such that
+∫
+Ω |f |2e− 2mϕdV < +∞ and let ψm = 1
+2m log ∑|gm,k |2
+where (gm,k ) is an orthonormal basis of Hmϕ (Ω). Then :
+(1) There are constants C1,C 2> 0 independent of m and ϕ such that
+ϕ (z) − C1
+m ⩽ψm(z) ⩽ sup
+|ζ− z|<r
+ϕ (ζ) + 1
+m logC2
+rn
+for every z ∈ Ω and r <d(z,∂ Ω). In particular, ψm converges to ϕ pointwise
+and in L1
+loc topology on Ω when m → +∞ and
+(2) The Lelong numbers of ϕ and ψm are related by
+ν(ϕ,z ) − n
+m ⩽ν(ψm,z ) ⩽ν(ϕ,z ) for every z ∈ Ω.
+(3) For every compact set K ⊂ Ω, the Arnold multiplicity of ϕ , ψm and of the
+multiplier ideal sheaves I(mϕ ) are related by
+λK (ϕ ) − 1
+m ⩽λK (ψm) = 1
+mλK (I(mϕ )) ⩽λK (ϕ ).
+Proof. (1) Note that ∑|gm,k (z)|2 is the square of the norm of the evaluation linear
+form f ↦→ f (z) on Hmϕ (Ω). As ϕ is locally bounded above, the L2 topology is
+actually stronger than the topology of uniform convergence on compact subsets
+of Ω. It follows that the series ∑|gm,k |2 converges uniformly on Ω and that its
+sum is real analytic. Moreover we have
+ψm(z) = sup
+f ∈B(1)
+1
+m log |f (z)|
+===PDF PAGE 20===
+20 J.-P. Demailly, J. Koll´ ar, Semi-continuity of complex si ngularity exponents
+whereB(1) is the unit ball of Hmϕ (Ω). For r<d (z,∂ Ω), the mean value inequality
+applied to the psh function |f |2 implies
+|f (z)|2 ⩽ 1
+πnr2n/n !
+∫
+|ζ− z|<r
+|f (ζ)|2dλ(ζ)
+⩽ 1
+πnr2n/n ! exp
+(
+2m sup
+|ζ− z|<r
+ϕ (ζ)
+) ∫
+Ω
+|f |2e− 2mϕdλ.
+If we take the supremum over all f ∈ B(1) we get
+ψm(z) ⩽ sup
+|ζ− z|<r
+ϕ (ζ) + 1
+2m log 1
+πnr2n/n !
+and the right hand inequality in (1) is proved. Conversely, t he Ohsawa-Takegoshi
+extension theorem applied to the 0-dimensional subvariety {z} ⊂ Ω shows that for
+anya ∈ C there is a holomorphic function f on Ω such that f (z) = a and
+∫
+Ω
+|f |2e− 2mϕdλ ⩽C3|a|2e− 2mϕ (z),
+where C3 only depends on n and diam Ω. We ﬁx a such that the right hand side
+is 1. This gives the left hand inequality
+(4. 2. 4) ψm(z) ⩾ 1
+m log |a|=ϕ (z) − logC3
+2m .
+(2) The above inequality (4.2.4) implies ν(ψm,z ) ⩽ ν(ϕ,z ). In the opposite
+direction, we ﬁnd
+sup
+|x− z|<r
+ψm(x) ⩽ sup
+|ζ− z|<2r
+ϕ (ζ) + 1
+m logC2
+rn.
+Divide by log r and take the limit as r tends to 0. The quotient by log r of the
+supremum of a psh function over B(x,r ) tends to the Lelong number at x. Thus
+we obtain
+ν(ψm,x ) ⩾ν(ϕ,x ) − n
+m.
+(3) Inequality (4.2.4) already yields λK (ψm) ⩽ λK (ϕ ). Moreover, the multiplier
+ideal sheaf I(mϕ ) is generated by the sections in Hmϕ (Ω) (as follows from the proof
+that I(mϕ ) is coherent), and by the strong Noetherian property, it is g enerated
+by ﬁnitely many functions ( gm,k )0⩽k⩽k0(m) on every relatively compact open set
+Ω′ ⋐ Ω. It follows that we have a lower bound of the form
+(4. 2. 5) ψm(z) − C4 ⩽ 1
+2m log
+∑
+0⩽k⩽k0(m)
+|gm,k |2 ⩽ψm(z) on Ω ′.
+===PDF PAGE 21===
+§4. Multiplier ideal sheaves and holomorphic approximations o f psh singularities 21
+By choosing Ω ′ ⊃ K, we infer λK (ψm) = 1
+mλK (I(mϕ ). If λ > λK (ψm), i.e.,
+1/mλ<c K (I(mϕ )), and if U ⊂ Ω′ is a suﬃciently small open neighborhood of K,
+the H¨ older inequality for the conjugate exponentsp = 1 +mλ andq = 1 + (mλ)− 1
+yields
+∫
+U
+e− 2mp− 1ϕdV =
+∫
+U
+( ∑
+0⩽k⩽k0(m)
+|gm,k |2e− 2mϕ
+) 1/p ( ∑
+0⩽k⩽k0(m)
+|gm,k |2
+) − 1/qmλ
+dV
+⩽ (k0(m) + 1)1/p
+
+
+∫
+U
+( ∑
+0⩽k⩽k0(m)
+|gm,k |2
+) − 1/mλ
+dV
+
+
+1/q
+< +∞ .(4. 2. 6)
+(
+The estimate in the last line uses the fact that
+∫
+U
+|gm,k |2e− 2mϕdV ⩽
+∫
+Ω
+|gm,k |2e− 2mϕdV = 1.
+)
+This implies cK (ϕ ) ⩾mp− 1, i.e., λK (ϕ ) ⩽p/m =λ + 1/m . As λ>λ K (ψm) was
+arbitrary, we get λK (ϕ ) ⩽λK (ψm) + 1/m and (3) follows.
+The “approximation theorem” 4.2 allows to extend some resul ts proved for
+holomorphic functions to the case of psh functions. For inst ance, we have:
+4.3. Proposition. Let ϕ ∈ P(X), ψ ∈ P(Y ) be psh functions on complex
+manifolds X, Y , and let K ⊂ X, L ⊂ Y be compact subsets. Then :
+(1) For all positive real numbers c′, c′′ with c′> cK(ϕ ) > c′′ (if any ) and every
+suﬃciently small neighborhood U of K, there is an estimate
+C1r2c′
+⩽µU ({ϕ< logr}) ⩽C2r2c′′
+, ∀r <r0
+for some r0 > 0 and C1 =C1(c′), C2 =C2(c′′).
+(2) cK× L
+(
+max(ϕ (x),ψ (y)
+)
+=cK (ϕ ) +cL(ψ ).
+(3) If X =Y , then cx(max(ϕ,ψ )) ⩽cx(ϕ ) +cx(ψ ) for all x ∈ X.
+Proof. (1) The upper estimate is clear, since
+r− 2c′′
+µU ({ϕ< logr}) ⩽
+∫
+U
+e− 2c′′ϕdV < +∞
+for U ⊂ K suﬃciently small. In the other direction, we have an estimat e
+µU ({ψm< logr}) ⩾C1,mr2cK (ψ m)
+by Proposition 1.7 (3) and (4.2.5). As ϕ ⩽ψm +C2,m for some constant C2,m > 0,
+we get
+{ϕ< logr} ⊃ { ψm< logr − C2,m },
+===PDF PAGE 22===
+22 J.-P. Demailly, J. Koll´ ar, Semi-continuity of complex si ngularity exponents
+and ascK (ψm) converges tocK (ϕ ) by 4.2 (3), the lower estimate of µU ({ϕ< logr})
+follows.
+(2), (3) can be derived from (1) exactly as for the holomorphi c case in Prop. 2.7
+and Theorem 2.9. It should be observed that 4.3 (1) expresses a highly non trivial
+“regularity property” of the growth of volumes µU ({ϕ < logr}) when ϕ is a psh
+function (when ϕ is an arbitrary measurable function, v(r) = µU ({ϕ < logr}) is
+just an arbitrary increasing function with lim r→ 0v(r) = 0).
+4.4. Remark. In contrast with the holomorphic case 1.7 (3), the upper esti mate
+µU ({ϕ< logr}) ⩽C2r2c′′
+does not hold with c′′=cK (ϕ ), when ϕ is an arbitrary
+psh function. A simple example is given by ϕ (z) = χ ◦ log |z|whereχ : R → R is a
+convex increasing function such that χ (t) ∼ t ast → −∞ , but eχ (r) ̸∼ r as r → 0,
+e.g. such that χ (t) = t − log |t|) when t< 0. On the other hand, the lower estimate
+µU ({ϕ < logr}) ⩾ C1r2c′
+seems to be still true with c′ = cK (ϕ ), although we
+cannot prove it.
+§5. Semi-continuity of psh singularity exponents
+We are now in a position to prove our main semi-continuity the orem.
+5.1. Proof of Theorem 0.2 . Let Ω ⊂ Cn be a bounded pseudoconvex open set and
+letϕj ∈ P(Ω) be a sequence of psh functions converging to a limit ϕ ∈ P(Ω) in the
+weak topology of distributions. In fact, this already impli es that ϕj → ϕ almost
+everywhere and in L1
+loc topology; to see this, we observe that the coeﬃcients of
+Tj := ddcϕj are measures converging to those of T = ddcϕ in the weak topology
+of measures; moreover ϕj and ϕ can be recovered from Tj and T by an integral
+formula involving the Green kernel; we then use the well know n fact that integral
+operators involving a L1 kernel deﬁne continuous (and even compact) operators
+from the space of positive measures equipped with the weak to pology, towards the
+space of L1 functions with the strong L1 topology.
+By the process described in Theorem 4.2, we get for each m ∈ N⋆ a Hilbert
+orthonormal basis (gj,m,k )k∈ N of Hmϕ j (Ω), such that
+(5. 1. 1) ϕj (z) − C1
+m ⩽ 1
+2m log
+∑
+k∈ N
+|gj,m,k |2 ⩽ sup
+|ζ− z|<r
+ϕj (ζ) + 1
+m logC2
+rn
+for everyz ∈ Ω andr<d (z,∂ Ω). [Additional explanations added on November 13,
+2013, following a discussion with JingZhou Sun]. We need here a special choice
+of the orthonormal basis ( gj,m,k )k∈ N to ensure convergence as j → +∞ , since
+especially the sequence could be randomly permuted with res pect to the index k.
+To this end, select a sequence of points ( aℓ)ℓ∈ N that is dense in Ω, such that all
+aℓ are in the complement of the negligible set V (I(ϕ )) ∪ ⋃
+jV (I(ϕj)) ⊂ Ω, i.e.
+such that all functions e− ϕ and e− ϕ j are locally integrable in a neighborhood
+of aℓ. Let Sj,m,k ⊂ Hmϕ j (Ω) be the (closed) codimension k subspace of functions
+f ∈ Hmϕ j (Ω) such that f (aℓ) = 0 for 0 ≤ ℓ<k (the assertion about codimension
+===PDF PAGE 23===
+§5. Semi-continuity of psh singularity exponents 23
+follows from a standard interpolation argument based on sol ving a ∂-equation
+with H¨ ormander’sL2 estimates; however, we do not really need this argument,
+it would be enough to observe that codim Sj,m,k ≤ k is ﬁnite, and for this, any
+dense sequence ( aℓ) would work). Since ⋂
+k∈ N Sj,m,k = {0} by density of the
+sequence (aℓ), we can select the orthonormal basis ( gj,m,k )k∈ N of Hmϕ j (Ω) so that
+gj,m,k ∈ Sj,m,k ∩ S⊥
+j,m,k +1. By (5.1.1), the Cauchy-Schwarz inequality and the
+existence of a local uniform upper bound for the ϕj, the Bergman kernel function
+βj,m (z,w ) =
+∑
+k∈ N
+gj,m,k (z)
+gj,m,k (w)
+is uniformly bounded from above on every compact subset of Ω × Ω. As βj,m (z,w )
+is holomorphic in ( z, w), one can extract a subsequence p ↦→ jp such that
+˜βm(z,w ) := lim p→ +∞ βjp,m (z,w ) locally uniformly on Ω × Ω, with a limit that
+is again holomorphic in ( z, w). By restricting to the diagonal z = w, one sees
+that the individual sequences ( gj,m,k )j∈ N are also locally uniformly bounded from
+above. After extracting a diagonal subsequence still denot ed p ↦→ jp, we may
+assume that all gj,m,k converge to a limit gm,k ∈ O(Ω) when j = jp → +∞ . An
+application of the discrete Fatou lemma implies
+˜β ′
+m(z,z ) :=
+∑
+k∈ N
+|gm,k (z)|2 ⩽ ˜βm(z,z ) = lim
+p→ +∞
+∑
+k∈ N
+|gjp,m,k (z)|2.
+However, we have equality for z = aℓ, since the value βj,m (aℓ,a ℓ) is already
+achieved by truncating the series as a ﬁnite sum ∑
+0⩽k⩽ℓ (by construction
+gj,m,k (aℓ) = 0 for k > ℓ). Since ˜βm and ˜β ′
+m are real analytic and coincide on
+the dense sequence ( aℓ), we must have ˜βm(z) = ˜β ′
+m(z) everywhere. Thanks to
+(5.1.1) we ﬁnd in the limit
+ϕ (z) − C1
+m ⩽ 1
+2m log
+∑
+k∈ N
+|gm,k (z)|2 ⩽ sup
+|ζ− z|<r
+ϕ (ζ) + 1
+m logC2
+rn.
+(Notice that if two psh functions u,v satisfyu ≤ v almost everywhere, then u ⩽v
+everywhere).
+Fix a compact set K ⊂ Ω and a relatively compact open subset Ω ′ ⋐ Ω
+containing K. By the strong Noetherian property already used for (4.2.5) , there
+exist an integer k0(m) and a constant C4(m)> 0 such that
+ϕ (z) − C4(m) ⩽ 1
+2m log
+∑
+0⩽k⩽k0(m)
+|gm,k (z)|2 on Ω ′.
+Now, for c<c K (ϕ ), there is a neighborhood U of K on which
+∫
+U
+( ∑
+0⩽k⩽k0(m)
+|gm,k |2
+) − c/m
+dV ⩽e2cC4(m)
+∫
+U
+e− 2cϕdV < +∞ .
+===PDF PAGE 24===
+24 J.-P. Demailly, J. Koll´ ar, Semi-continuity of complex si ngularity exponents
+Take (without loss of generality) m ⩾ 2cK (ϕ ). Then c/m< 1/ 2 and Formula 1.5.1
+shows that there is a linear combination ∑
+0⩽k⩽k0(m)αm,kgm,k with α = (αm,k )
+in the unit sphere of Ck0(m)+1, such that
+∫
+U
+⏐
+⏐
+⏐
+∑
+0⩽k⩽k0(m)
+αm,kgm,k
+⏐
+⏐
+⏐
+− 2c/m
+dV ⩽C5(m)
+∫
+U
+e− 2cϕdV < +∞ ,
+where C5(m) is a constant depending possibly on m. By construction,
+fj,m =
+∑
+0⩽k⩽k0(m)
+αk,mgj,m,k
+is an element of the unit sphere in Hmϕ j (Ω), and fj,m converges uniformly on Ω
+to fm = ∑αm,kgm,k such that
+∫
+U |fm|− 2c/m dV < +∞ . By Lemma 5.2 below, for
+anyc′<c andK ⊂ U ′ ⋐ U , we have a uniform bound
+∫
+U ′ |fj,m |− 2c′/m dV ⩽C6(m)
+for j ⩾j0 large enough. Since
+∫
+Ω |fj,m |2e− 2mϕ jdV = 1, the H¨ older inequality for
+conjugate exponents p = 1 +m/c ′,q = 1 + c′/m yields
+∫
+U ′
+e− 2mc′/ (m+c′)ϕ jdV =
+∫
+U ′
+(
+|fj,m |2e− 2mϕ j
+) c′/ (m+c′)
+|fj,m |− 2c′/ (m+c′)dV
+⩽
+( ∫
+U ′
+|fj,m |− 2c′/m dV
+) m/ (m+c′)
+⩽C7(m)
+forj ⩾j0. Since c,c′ are arbitrary with c′<c<c K (ϕ ), the exponent mc′/ (m+c′)
+can be taken to approach c as closely as we want as m gets large. Hence
+cK (ϕj) > cK (ϕ ) − ε for j ⩾ j0(ε) large enough. Moreover, by what we have
+seen above, if c<c K(ϕ ) is ﬁxed and 0 <δ <cK (ϕ )/c − 1, there exists j1(δ) such
+that the sequence ( e− 2cϕ j )j⩾j1(δ) is contained in a bounded set of L1+δ(U ), where
+U is a small neighborhood of K. Therefore
+∫
+U∩{e− 2cϕj>M}
+e− 2cϕ jdV ⩽C8M − δ
+for j ⩾ j1(δ), with a constant C8 independent of j. Since e− 2cϕ j converges
+pointwise to e− 2cϕ on Ω, an elementary argument based on Lebesgue’s bounded
+convergence theorem shows that e− 2cϕ j converges to e− 2cϕ in L1(U ).
+To complete the proof, we need only proving the following eﬀe ctive estimate
+for holomorphic functions, which is a special case of part (3 ) in the Main Theorem.
+5.2. Lemma. Let Ω ⊂ Cn be a bounded pseudoconvex open set, and let fi ∈ O(Ω)
+be a sequence of holomorphic functions converging uniforml y to f ∈ O(Ω) on
+every compact subset. Fix a compact set K ⊂ Ω and c < cK (f ). Then there is a
+neighborhoodU of K and a uniform bound C >0 such that
+∫
+U
+|fi|− 2cdV ⩽C
+===PDF PAGE 25===
+§5. Semi-continuity of psh singularity exponents 25
+for i ⩾i0 suﬃciently large.
+Proof. We already know by Theorem 3.3 that
+∫
+U |fi|− 2cdV < +∞ for U small
+enough and i large. Unfortunately, the proof given in Theorem 3.3 is not e ﬀective
+because it depends (through the use of Hironaka’s theorem in the proof of estimates
+1.7 (3) and (2.7.1)) on the use of a sequence of log resolution s on which we
+have absolutely no control. We must in fact produce an eﬀecti ve version of
+inequality (3.3.2).
+The result of Lemma 5.2 is clearly local. Fix a point x0 ∈ K (which we assume
+to be 0 for simplicity), real numbers c′, c′′ with c<c ′′<c ′<c K (f ) ⩽c0(f ) and
+an integer k so large that
+c<c ′′− n
+k + 1 <c ′′<c ′<c 0(f ) − n
+k + 1.
+Let pk be the truncation at order k of the Taylor series of f at the origin. As
+c0(pk) ⩾c0(f ) − n
+k+1 >c ′ by (3.3.2), there is a small ball B′ =B(0,r ′
+0) such that
+∫
+B′
+|pk|− 2c′
+dV < +∞ .
+Since the truncations pi,k of fi,k converge uniformly to pk on Cn as i → +∞ ,
+Lemma 3.2 applied to the universal family of polynomials P (z,s ) = ∑
+|α |⩽ksαzα
+shows that for any ball B′′⋐ B′, there is a constant M ⩾ 0 and an integer i0 such
+that ∫
+B′′
+|pi,k |− 2c′′
+dV ⩽M for i ⩾i0.
+Let us write pi,k =fi − gi,k where gi,k consists of the sum of terms of degree >k
+in the Taylor expansion of fi at the origin. By the Ohsawa-Takegoshi theorem
+applied with the weight function ψ (x,y ) = 2c log |fi(x) − gi,k (y)|onB′′× B′′ and
+L = diagonal of Cn × Cn, there is a holomorphic function Fi on B′′× B′′ such
+that Fi(x,x ) = 1 and
+∫
+B′′× B′′
+|Fi(x,y )|2|fi(x) − gi,k (y)|− 2c′′
+dV (x)dV (y) ⩽C1
+with a constant C1 independent of i. The above L2 estimate shows that ( Fi) is
+bounded in L2 norm on B′′× B′′. Hence, there is a small ball B =B(0,r 0) ⋐ B′′
+such that |Fi(x,y )|⩾ 1/ 2 on B × B for all i ⩾i0, and
+(5. 2. 1)
+∫
+B× B
+|fi(x) − gi,k (y)|− 2c′′
+dV (x)dV (y) ⩽ 4C1.
+Moreover, we have a uniform estimate |gi,k (y)|⩽ C2|y|k+1 on B with a constant
+C2 independent of i. By integrating (5.2.1) with respect to y on the family of balls
+|y|< (|fi(x)|/ 2C2)1/ (k+1), we ﬁnd an estimate
+(5. 2. 2)
+∫
+B
+|fi(x)|2n/ (k+1)− 2c′′
+dV (x) ⩽C3.
+===PDF PAGE 26===
+26 J.-P. Demailly, J. Koll´ ar, Semi-continuity of complex si ngularity exponents
+As c′′− n/ (k + 1) > c, this is the desired estimate. It is interesting to observe
+that the proof of the Main Theorem can now be made entirely ind ependent of
+Hironaka’s desingularization theorem. In fact, the only po int where we used it is
+in the inequality c0(pk) ⩾ c0(f ) − n
+k+1 , which we derived from Proposition 2.7.
+The latter inequality can however be derived directly from t he Ohsawa-Takegoshi
+theorem through estimates for
+∫
+B× B |pk(x) +gk(y)|− 2cdV (x)dV (y).
+5.3. Remark. It follows from the proof of Prop. 1.7 that the set of positive
+exponents c such that |f |− 2c is summable on a neighborhood of a compact set
+K is always an open interval , namely ]0 ,c K(f )[. We conjecture that the same
+property holds true more generally for an arbitrary psh func tion ϕ (“openness
+conjecture”); the openness conjecture is indeed true in dim ension 1, since we have
+the well known necessary and suﬃcient criterion
+e− 2ϕ ∈ L1
+loc(V (x0)) ⇔ ν(ϕ,x 0)< 1
+(as follows e.g. from [Sko72]). By using the Main Theorem, th e openness conjecture
+would imply the following stronger statement:
+5.4. Strong openness conjecture. Let U ′ ⋐ U ⋐ X be relatively compact
+open sets in a complex manifold X. Let ϕ be a psh function on X such that∫
+Ue− ϕdV < +∞ . Then there exists ε = ε(ϕ,U,U ′) such that for every ψ psh
+on X
+∥ψ − ϕ ∥L1(U) <ε ⇒
+∫
+U ′
+e− ψdV < +∞ .
+In other words, the integrability of e− ϕ near a given compact set K should be an
+open property for the L1
+loc (= weak) topology on P(X).
+The main theorem only yields the weaker conclusion
+∫
+U ′
+e− (1− δ)ψdV < +∞ for ∥ψ − ϕ ∥L1(U) <ε =ε(ϕ,U,U ′,δ ).
+§6. Existence of K¨ ahler-Einstein metrics on Fano orbifolds
+An orbifold is a complex variety X possessing only quotient singularities,
+namely, every point x0 ∈ X has a neighborhood U isomorphic to a quotient
+Ω/ Φ where Φ = Φ x0 is a ﬁnite group acting holomorphically on a smooth open
+set Ω ⊂ Cn. Such an action can always be linearized, so we may assume tha t Φ
+is a ﬁnite subgroup of GL n(C) and Ω a Φ-invariant neighborhood of 0 (with x0
+being the image of 0). We may also assume that the elements of G distinct from
+identity have a set of ﬁxed points of codimension ⩾ 2 (otherwise, the subgroup
+generated by these is a normal subgroup N of Φ, Ω /N is again smooth, and
+Ω/ Φ = (Ω/N )/ (Φ/N )). The structure sheaf OX (resp. the m-fold canonical sheaf
+===PDF PAGE 27===
+§6. Existence of K¨ ahler-Einstein metrics on Fano orbifolds 27
+K ⊗ m
+X ) is then deﬁned locally as the direct image by π : Ω → U ≃ Ω/ Φ of the
+subsheaf of Φ-invariant sections of the corresponding shea f on Ω :
+Γ(V, OX) = Γ(π − 1(V ), OΩ)Φ, Γ(V,K ⊗ m
+X ) = Γ(π − 1(V ),K ⊗ m
+Ω )Φ,
+for all open subsets V ⊂ U . There is always an integer m0 (e.g. m0 = # Φ) such
+that K ⊗ m0
+Ω has Φ-invariant local generating sections, and then clearl y K ⊗ m
+X is an
+invertible OX -module whenever m is divisible by the lowest common multiple µ
+of the integers m0 occurring in the various quotients. Similarly, one can deﬁn e
+on U (and thus on X) the concepts of K¨ ahler metrics, Ricci curvature form, etc ,
+by looking at corresponding Φ-invariant objects on Ω. We say that a compact
+orbifold X is a Fano orbifold if K − µ
+X is ample, which is the same as requiring
+that K − µ
+X admits a smooth hermitian metric with positive deﬁnite curv ature. In
+that case, we deﬁne the curvature of K − 1
+X to be 1/µ times the curvature of K − µ
+X .
+The integral of a diﬀerential form on X (say deﬁned at least on Xreg) is always
+computed upstairs, i.e.
+∫
+Ω/ Φα = 1
+#Φ
+∫
+Ωπ⋆α .
+6.1. Deﬁnition. A compact orbifold X is said to be K¨ ahler-Einstein if it possesses
+a K¨ ahler formω = i
+2π
+∑ωjkdzj ∧ dzk satisfying the Einstein condition
+Ricci(ω ) = λω
+for some real constant λ, where where Ricci(ω ) is the closed (1, 1)-form deﬁned in
+every coordinate patch by Ricci(ω ) = − i
+2π∂∂ log det(ωjk ).
+Since Ricci(ω ) is the curvature form of K − 1
+X = det TX equipped with the
+metric det ω , a necessary condition for the existence of a K¨ ahler-Einst ein metric
+with constant λ > 0 is that K − 1
+X is ample, i.e., that X is Fano. On the other
+hand, it is well known that not all Fano orbifolds are K¨ ahler -Einstein, even when
+they are smooth; further necessary conditions are required , e.g. that the group
+of automorphisms Aut( X)◦ is reductive ([Mat57], [Lic57]), and that the Futaki
+invariants vanish [Fut83]; for instance P2 blown up in 2 points has a non reductive
+group of automorphisms and therefore is not K¨ ahler-Einste in.
+It is usually much harder to prove that a concretely given Fan o orbifold
+is K¨ ahler-Einstein. Siu [Siu87, 88], and slightly later Ti an [Tia87] and Nadel
+[Nad89, 90], gave nice suﬃcient conditions ensuring the exi stence of a K¨ ahler-
+Einstein metric; these conditions always involve the exist ence of a suﬃciently big
+group of automorphisms. Our goal here is to reprove Nadel’s m ain result in a more
+direct and conceptual way.
+6.2. T echnical setting. We ﬁrst brieﬂy recall the main technical tools and
+notation involved (see e.g. [Siu87] for more details). The a nticanonical line bundle
+K − 1
+X is assumed to be ample. Therefore it admits a smooth hermitia n metric h0
+whose (1, 1)-curvature form θ0 = i
+2πD2
+h0 is positive deﬁnite. Since θ0 ∈ c1(X), the
+Aubin-Calabi-Yau theorem shows that there exists a K¨ ahler metric ω 0 ∈ c1(X)
+such that Ricci( ω 0) = θ0. [The Aubin-Calabi-Yau is still valid in the orbifold
+===PDF PAGE 28===
+28 J.-P. Demailly, J. Koll´ ar, Semi-continuity of complex si ngularity exponents
+case, because the proof depends only on local regularity arg uments which can be
+recovered by passing to a ﬁnite cover, and global integral es timates which still
+make sense by the remark preceding Def. 6.1]. Since both θ0 andω 0 are in c1(X),
+we have
+(6. 2. 1) ω 0 =θ0 + i
+2π∂∂f for some f ∈ C∞ (X).
+We look for a new K¨ ahler form ω =ω 0 + i
+2π∂∂ϕ in the same K¨ ahler class as ω 0,
+such that Ricci ω =ω . Since Ricci( ω 0) = θ0, this is equivalent to
+− i
+2π∂∂ log(detω ) = ω =θ0 + i
+2π∂∂(ϕ +f ) = − i
+2π∂∂ log(detω 0) + i
+2π∂∂(ϕ +f ),
+that is,
+∂∂
+(
+log detω
+detω 0
++ϕ +f
+)
+= 0,
+which in its turn is equivalent to the Monge-Amp` ere equatio n
+(6. 2. 2) log (ω 0 + i
+2π∂∂ϕ )n
+ωn
+0
++ϕ +f +C = 0
+where C is a constant. Here, one can normalize ϕ so that ϕ is orthogonal to the
+1-dimensional space of constant functions in L2(X,ω 0), i.e.,
+∫
+Xϕω n
+0 = 0. The
+usual technique employed to solve (6.2.2) is the so-called “ continuity method”.
+The continuity method amounts to introducing an extra param eter t ∈ [0, 1] and
+looking for a solution ( ϕt,C t) of the equation
+(6. 2. 3) log (ω 0 + i
+2π∂∂ϕt)n
+ωn
+0
++t(ϕt +f ) +Ct = 0,
+∫
+X
+ϕtωn
+0 = 0
+as t varies from 0 to 1. Clearly ϕ 0 = 0, C0 = 0 is a solution for t = 0 and
+(ϕ,C ) = (ϕ 1,C 1) provides a solution of our initial equation (6.2.2). Moreo ver, the
+linearization of the (nonlinear) elliptic diﬀerential ope rator occuring in (6.2.3) is
+the operator
+(6. 2. 4) ( ψ,C ) ↦− → 1
+2π ∆ω tψ +tψ +C
+whereωt is the K¨ ahler metricωt =ω 0 + i
+2π∂∂ϕt and ∆ω t is the associated Laplace
+operator (with negative eigenvalues). The equation (6.2.3 ) is easily seen to be
+equivalent to
+Ricci(ωt) = tωt + (1 − t)θ0.
+From this we infer Ricci( ωt) > tωt for all t < 1, and it then follows from the
+Bochner-Kodaira-Nakano identity that all nonzero eigenva lues of − 1
+2π ∆ω t are >t
+(this is clear directly for − 1
+2π ∆ω t acting on (0, 1)-forms, and one uses the fact that ∂
+===PDF PAGE 29===
+§6. Existence of K¨ ahler-Einstein metrics on Fano orbifolds 29
+maps the λ-eigenspaceEp,q (λ) of − 1
+2π ∆ω t in bidegree (p,q ) into the corresponding
+eigenspace Ep,q +1(λ)). Then, thanks to Schauder’s estimates, (6.2.4) induces a n
+isomorphism Cs+2
+⊥ (X) ⊕ R → Cs(X) where s ∈ R+ ∖ N and Cs(X) (resp. Cs
+⊥ (X))
+is the space of real functions (resp. real functions orthogo nal to constants) of class
+Cs on X. Let T ⊂ [0, 1] be the set of parameters t for which (6.2.3) has a smooth
+solution. By elliptic regularity for (nonlinear) PDE equat ions, the existence of
+a smooth solution is equivalent to the existence of a solutio n in Cs(X) for some
+s >2. It then follows by a standard application of the implicit f unction theorem
+that T ∩ [0, 1[ is an open subset of the interval [0 , 1[.
+6.3. Suﬃcient condition for closedness. In order to obtain a solution for all
+times t ∈ [0, 1], one still has to prove that T is closed. By the well-known theory
+of complex Monge-Amp` ere equations ([Aub78], [Yau78]), a s uﬃcient condition for
+closedness is the existence of a uniform a priori C0-estimate ∥ ˜ϕt∥C0 ⩽ Const for the
+family of functions ˜ϕt =tϕt +Ct,t ∈ T, occuring in the right hand side of (6.2.3).
+A ﬁrst observation is that
+(6. 3. 1) sup
+X
+ϕt ⩽ Const, hence sup
+X
+˜ϕt ⩽Ct + Const,
+as follows from the conditions
+∫
+Xϕtωn
+0 = 0 and i
+2π∂∂ϕt ⩾ −ω 0, by simple
+considerations of potential theory. On the other hand, by [S iu88, Prop. 2.1] or
+[Tia87, Prop. 2.3], we have the Harnack-type inequality
+(6. 3. 2) sup
+X
+(− ˜ϕt) ⩽ (n +ε) sup
+X
+˜ϕt +Aε,
+where ε > 0 and Aε is a constant depending only on ε. Hence sup X(− ˜ϕt) ⩽
+(n +ε)Ct +A′
+ε and we thus only need controlling the constants Ct from above.
+Now, equation (6.2.3) implies
+∫
+X
+ωn
+0 =
+∫
+X
+(
+ω 0 + i
+2π∂∂ϕt
+) n
+=
+∫
+X
+e− ˜ϕ t− tfωn
+0.
+Forγ ∈ ]0, 1[, we easily infer from this and (6.3.2) that
+∫
+X
+ωn
+0 ⩽ Const exp
+(
+(1 − γ) sup
+X
+(− ˜ϕt)
+) ∫
+X
+e− γ ˜ϕ tωn
+0
+⩽ Constεe(1− γ )(n+ε)Ct
+∫
+X
+e− γ ˜ϕ tωn
+0
+⩽ Constεe− (γ − (1− γ )(n+ε))Ct
+∫
+X
+e− γtϕ tωn
+0.
+Ifγ ∈ ] n
+n+1, 1[ and ε is small enough, we conclude that Ct admits an upper bound
+of the form
+Ct ⩽B′
+γ log
+∫
+X
+e− γtϕ tωn
+0 +B′′
+γ
+===PDF PAGE 30===
+30 J.-P. Demailly, J. Koll´ ar, Semi-continuity of complex si ngularity exponents
+where B′
+γ and B′′
+γ depend only on γ. Hence closedness of T is equivalent to the
+uniform boundedness of the integrals
+(6. 3. 3)
+∫
+X
+e− γtϕ tωn
+0, t ∈ T,
+for any choice of γ ∈ ] n
+n+1, 1[.
+This yields the following basic existence criterion due to N adel [Nad89, 90].
+6.4. Existence criterion for K¨ ahler-Einstein metrics. Let X be a Fano
+orbifold of dimension n. Let G be a compact subgroup of the group of complex
+automorphisms of X. Then X admits a G-invariant K¨ ahler-Einstein metric,
+unlessK − 1
+X possesses aG-invariant singular hermitian metric h =h0e− ϕ (h0 being
+a smooth G-invariant metric and ϕ a G-invariant function in L1
+loc(X)), such that
+the following properties occur.
+(1) h has a semipositive curvature current
+Θh = − i
+2π∂∂ logh = Θh0 + i
+2π∂∂ϕ ⩾ 0.
+(2) For every γ ∈ ] n
+n+1, 1[, the multiplier ideal sheaf I(γϕ ) is nontrivial, (i.e.
+0 ̸= I(γϕ ) ̸= OX ).
+According to the general philosophy of orbifolds, the orbif old concept of a
+multiplier ideal sheaf I(γϕ ) is that the ideal sheaf is to be computed upstairs on a
+smooth local cover and take the direct image of the subsheaf o f invariant functions
+by the local isotropy subgroup; this ideal coincides with th e multiplier ideal sheaf
+computed downstairs only if we take downstairs the volume fo rm which is the push
+forward of an invariant volume form upstairs (which is in gen eral deﬁnitely larger
+than the volume form induced by a local smooth embedding of th e orbifold).
+Proof. Let us start with a G-invariant K¨ ahler metricω 0 = i
+2π∂∂ logh− 1
+0 , where h0
+and ω 0 have the same meaning as in 6.2; indeed, if h0 is not G-invariant, we can
+average it by using the G-action, that is, we deﬁne a new metric ( hG
+0 )− 1 on KX
+by putting
+(hG
+0 )− 1 =
+∫
+g∈G
+g⋆h− 1
+0 dµ (g),
+and we again have ωG
+0 := i
+2π∂∂ log(hG
+0 )− 1 > 0. Now, all ϕt can be taken to be G-
+invariant. If the continuity process ceases to produce a sol utionϕt att =t0 ∈ [0, 1]
+(thus, if t0 ∈
+T ∖ T), there exists a sequence tν ∈ T converging to t0 and (6.3.3)
+implies limν → +∞
+∫
+Xe− γt νϕ tνωn
+0 = + ∞ for every γ ∈ ] n
+n+1, 1[. As the space of
+closed positive currents contained in a given cohomology cl ass is compact for the
+weak topology, one can extract a subsequence Θ (p) =ω 0 + i
+2π∂∂ϕtν(p) converging
+weakly to a limit Θ = ω 0 + i
+2π∂∂ϕ ⩾ 0. The potential ϕ can be recovered from
+Tr Θ by means of the Green kernel, and therefore, by the well-k nown properties of
+===PDF PAGE 31===
+§6. Existence of K¨ ahler-Einstein metrics on Fano orbifolds 31
+the Green kernel, we infer that ϕtν(p) converges toϕ inL1(X). The semicontinuity
+theorem in its eﬀective version 0.2.2 shows that
+∫
+X
+e− γt 0ϕωn
+0 = +∞ for all γ ∈ ] n
+n+1, 1[,
+and therefore
+∫
+Xe− γϕ ωn
+0 = + ∞ for all γ ∈ ] n
+n+1, 1[. From this we conclude that
+I(γϕ ) ̸= OX . The fact that I(γϕ ) ̸= 0 is clear since ϕ ̸≡ −∞ .
+Before going further, we need Nadel’s vanishing theorem (a g eneralized version
+of the well-known Kawamata-Viehweg vanishing theorem. It i s known to be a
+rather simple consequence of H¨ ormander’sL2 estimates, see e.g. [Dem89], [Nad89],
+[Dem93b] or [Dem94]).
+6.5. Nadel vanishing theorem. Let (X,ω ) be a K¨ ahler orbifold and let L be a
+holomorphic orbifold line bundle over X equipped with a singular hermitian metric
+h of weight ϕ with respect to a smooth metric h0 (i.e. h = h0e− ϕ ). Assume that
+the curvature form Θh(L) = i
+2πD2
+h is positive deﬁnite in the sense of currents, i.e.
+Θh(L) ⩾εω for some ε> 0. If KX ⊗ L is an invertible sheaf on X, we have
+Hq(
+X,K X ⊗ L ⊗ I(ϕ )
+)
+= 0 for all q ⩾ 1.
+Recall that an “orbifold line bundle” L, is a rank 1 sheaf which is locally an
+invariant direct image of an invertible sheaf on Ω by the loca l quotient maps
+Ω → Ω/ Φ ;L itself need not be invertible; similarly, ⊗ is meant to be the orbifold
+tensor product, i.e., we take the tensor product upstairs on Ω and take the direct
+image of the subsheaf of invariants. The proof is obtained by the standard L2
+estimates applied on Xreg with respect to an orbifold K¨ ahler metric on X. It is
+crucial that KX ⊗ L be invertible on X, otherwise the set of holomorphic sections
+of KX ⊗ L satisfying the L2 estimate with respect to the weight e− ϕ might diﬀer
+from the orbifold tensor product KX ⊗ L ⊗ I(ϕ ) [and also, that tensor product
+might be equal to KX ⊗ L even though I(ϕ ) is non trivial].
+6.6. Corollary . Let X, G, h and ϕ be as in Criterion 6.4. Then, for all
+γ ∈ ] n
+n+1, 1[,
+(1) the multiplier ideal sheaf I(γϕ ) satisﬁes
+Hq(X, I(γϕ )) = 0 for all q ⩾ 1.
+(2) the associated subscheme Vγ of structure sheaf OVγ = OX/ I(γϕ ) is nonempty,
+distinct from X, G-invariant and satisﬁes
+Hq(Vγ, OVγ ) =
+{
+C for q = 0,
+0 for q ⩾ 1.
+===PDF PAGE 32===
+32 J.-P. Demailly, J. Koll´ ar, Semi-continuity of complex si ngularity exponents
+Proof. Apply Nadel’s vanishing theorem to L =K − 1
+X equipped with the singular
+hermitian metric hγ =h0e− γϕ . Then Θ hγ =γΘh + (1 − γ)Θh0 ⩾ (1 − γ)ω 0 > 0,
+and (1) follows. Finally, since X is Fano, we get
+Hq(X, OX) = 0 for all q ⩾ 1,
+by Kodaira vanishing for L =K − 1
+X . The exact sequence
+0 → I(γϕ ) → OX → OVγ → 0
+immediately implies (2).
+The strategy employed by Nadel [Nad90] to construct K¨ ahler-Einstein metrics
+is to rule out the existence of any G-invariant subscheme with the properties
+described in 6.6 (2). Of course, this is easier to achieve if G is large. One uses
+the following observations (assuming that the closedness p roperty fails, so that all
+subschemesVγ are nontrivial).
+6.7. Proposition. All subschemes Vγ are connected. Therefore, if G has no ﬁxed
+points,Vγ cannot be 0-dimensional.
+Proof. The connectedness of Vγ is a straightforward consequence of the equality
+H 0(Vγ, OVγ ) = C.
+6.8. Proposition. If Vγ contains irreducible components Zj of codimension 1,
+then the corresponding divisor Z = ∑mjZj satisﬁes the numerical inequality
+[Z] ⩽γ[K − 1
+X ] in the sense that γ[K − 1
+X ] − [Z] can be represented by a closed positive
+current. In particular, one always has the inequality
+(−KX )n− 1 ·Z ⩽γ(−KX)n.
+If K − 1
+X generates the group W (X) of Weil divisors of X modulo numerical
+equivalence, then Vγ must have codimension ⩾ 2.
+In the smooth case we have of course W (X) = Pic(X), but in general Pic( X) is a
+subgroup of ﬁnite index in W (X).
+Proof. Consider the closed positive (1 , 1) current Θh =ω 0 + i
+2π∂∂ϕ (which belongs
+to the ﬁrst Chern class c1(K − 1
+X )), and let
+Θh =
+∑
+λj [Zj] +R, λ j > 0, R ⩾ 0
+be the Siu decomposition of Θ h (namely, the [ Zj] ’s are currents of integration
+over irreducible divisors and R is a closed (1 , 1)-current which has nonzero Lelong
+numbers only in codimension 2). It is then easy to see that the subscheme Vγ
+deﬁned by I(γϕ ) precisely has [ Z] = ∑⌊γλj⌋ [Zj] as its 1-codimensional part
+(here, ⌊ ⌋ denotes the integral part). Hence γΘh − [Z] ⩾ 0 as asserted. If K − 1
+X
+===PDF PAGE 33===
+§6. Existence of K¨ ahler-Einstein metrics on Fano orbifolds 33
+generates Pic(X), this implies Z = 0, since there cannot exist any nonzero eﬀective
+integral divisor numerically smaller than [ K − 1
+X ].
+When dim X = 3, G has no ﬁxed points and K − 1
+X generates W (X), we are
+only left with the case Vγ is of pure dimension 1. This case can sometimes be
+ruled out by observing that certain groups cannot act eﬀecti vely on the curve Vγ
+(As H 1(Vγ, OVγ ) = 0, Vγ is a tree of rational curves; see Nadel [Nad90, Th. 4.1,
+4.2 and Cor. 4.1]).
+Further a priori inequalities can be derived for certain com ponents of the
+multiplier ideal subschemes Vγ . Especially, for components of codimension 2, we
+have the following simple bound, based on a use of a self-inte rsection inequality
+for the current Θ = ω 0 + i
+2π∂∂ϕ .
+6.9. Proposition. Assume that W (X) is generated by K − 1
+X and that a is
+a nonnegative number such that the orbifold vector bundle TX ⊗ O(−aKX ) is
+numerically eﬀective. Then the codimension 2 components Zj of Vγ satisfy the
+inequality ∑ 1
+δj
+νj(νj − 1)(−KX)n− 2 ·Zj ⩽ (1 +a)(−KX)n
+where νj ⩾ 1/γ is the generic Lelong number of Θ = ω 0 + i
+2π∂∂ϕ along Zj, and
+δj is the order of the local isotropy group of the orbifold at a ge neric point in Zj.
+Especially, if γ is taken to be suﬃciently close to n
+n+1 , we have
+∑
+(−KX)n− 2 ·Zj ⩽ n2
+n + 1δ(1 +a)(−KX)n
+whereδ is the maximum of the the orders of the isotropy groups.
+Proof. Since Vγ is of codimension 2 for γ arbitrarily close to 1, the generic Lelong
+number of ϕ must be ⩽ 1 along all components of codimension 1 in the Lelong
+sublevel sets Ec(ϕ ) = Ec(Θ) [again, Lelong numbers and Lelong sublevel sets are
+to be interpreted upstairs, on a smooth ﬁnite cover]. If a cod imension 2 component
+Zj occurs in I(γϕ ), the generic Lelong number γνj of γϕ along that component
+must be ⩾ 1, hence νj ⩾ 1/γ . We now apply the regularization theorem for
+closed (1, 1)-currents ([Dem92], Main Theorem). For every c > 1 we obtain a
+current Θh,c cohomologous to Θ (hence in the class c1(K − 1
+X )), which is smooth on
+X ∖Ec(Θ), thus smooth except on an analytic set of codimension ⩾ 2, such that
+Θh,c ⩾ − (ca +ε)ω 0 and such that the Lelong numbers of Θ h,c are shifted by c, i.e.
+νx(Θh,c ) = (νx(Θ) − c)+. The intersection product Θ ∧ (Θc + (ca +ε)ω 0) is well
+deﬁned, belongs to the cohomology class (1 + ca +ε)(−KX)2 and is larger than∑ 1
+δj
+νj (νj − c)[Zj] as a current. Hence, by taking the intersection with the cla ss
+(−KX )n− 2 we get
+∑ 1
+δj
+νj(νj − c)(−KX)n− 2 ·Zj ⩽ (1 +ca +ε)(−KX)n.
+===PDF PAGE 34===
+34 J.-P. Demailly, J. Koll´ ar, Semi-continuity of complex si ngularity exponents
+[The extra factor 1/δ j occurs because we have to divide by δj to convert an integral
+on a ﬁnite cover Ω to an integral on the quotient Ω / Φ]. As c tends to 1 + 0 and ε
+tends to 0+, we get the desired inequality. The last observat ion comes from the
+fact that I(Vγ ) must be constant on some interval ] n
+n+1, n
+n+1 +δ[, by the Noetherian
+property of coherent sheaves.
+6.10. Example. Let Pa = P3(a0,a 1,a 2,a 3) be the weighted projective 3-space
+with weights a0 ⩽a1 ⩽a2 ⩽a3 such that the components ai are relatively prime
+3 by 3. It is equipped with an orbifold line bundle OX (1) which, in general, is not
+locally free. Let t =a0 +a1 +a2 +a3 and
+X =
+{
+P (x0,x 1,x 2,x 3) = 0
+}
+be a generic surface of weighted degree d in Pa. It is known (see Fletcher [Fle89])
+that X has an orbifold structure (i.e., is quasi-smooth in the term inology of
+Dolgachev [Dol82]), if and only if the following conditions are satisﬁed:
+(i) For all j, there exists a monomial xm
+j xk(j) of degree d ;
+(ii) For all distinct j,k, either there exists a monomial xm
+j xp
+k of degree d, or there
+exist monomials xm1
+j xp1
+k xℓ1 , xm2
+j xp2
+k xℓ2 of degree d with ℓ1 ̸=ℓ2 ;
+(iii)For all j, there exists a monomial of degree d which does not involve xj.
+Moreover, −KX = OX (t − d) (and hence ( −KX)2 =d(t − d)2/ (a0a1a2a3)) if and
+only if the following condition also holds:
+(iv) For every j,k such that aj and ak are not relatively prime, there exists a
+monomial xm
+j xp
+k of degree d.
+We would like to use the conditions of Propositions 6.8 and 6. 9 to show that X
+carries a K¨ ahler-Einstein metric.
+Proposition 6.8 clearly applies if we can prove that ( −KX) ·Z > 2
+3 (−KX)2 for
+every eﬀective curve on X. This is not a priori trivial in the examples below since
+the Picard numbers will always be bigger than 1. Using the tor us action, every
+curve on a weighted projective space can be degenerated to a s um of lines of the
+form (xi = xj = 0). Thus ( −KX ) ·Z is bounded from below by ( t − d)/ (a2a3).
+Thus ( −KX) ·Z > 2
+3 (−KX)2 holds if
+t − d
+a2a3
+> 2
+3
+d(t − d)2
+a0a1a2a3
+, i.e. a0a1> 2
+3d(t − d).
+In the examples we give at the end, which all concern the case d = t − 1, this is
+always satisﬁed.
+In order to apply Proposition 6.9, we need to determine TX . We have exact
+sequences
+0 → OPa →
+⨁
+OPa (ai) → TPa → 0,
+0 → TX → TPa|X → OX (d) → 0,
+===PDF PAGE 35===
+§6. Existence of K¨ ahler-Einstein metrics on Fano orbifolds 35
+and we get from there a surjective arrow
+⨁
+OX (ai) → OX (d)
+given explicitly by the matrix ( ∂P/∂x i). From the above exact sequences, we ﬁnd
+a sequence of surjective arrows
+⨁
+i<j
+OX (ai +aj) → OX (Λ2TPa|X) → TX ⊗ OX (d).
+(Of course, formally speaking, we are dealing with orbifold vector bundles, which
+can be considered as locally free sheaves only when we pass to a ﬁnite Galois
+cover). Moreover, ⨁
+i̸=k̸=j
+OX (ai +aj) → TX ⊗ OX (d)
+is surjective over the open set where xk ̸= 0. This proves that, as an orbifold vector
+bundle,TX ⊗ OX (d − a0 − a2) is nef if the line ( x0 =x1 = 0) is not contained in X.
+The maximal order δ of the isotropy groups is less than a3 – which is indeed
+the maximum for Pa itself – resp. a2 if a3 divides d, since in that case a generic
+surface of degree d does not pass through the point [0 : 0 : 0 : 1]. This shows that
+we can take a = (d − a0 − a2)/ (t − d) in Proposition 6.9, and as the Zj are points
+and n = 2, we ﬁnd the condition
+1 ⩽ 4
+3a3
+(
+1 + d − a0 − a2
+t − d
+) d(t − d)2
+a0a1a2a3
+,
+with the initial a3 being replaced by a2 ifa3 dividesd. We thus compute the ratio
+ρa = 4
+3
+d(t − d)(t − a0 − a2)
+a0a1a2
+if a3 ̸ |d,
+ρa = 4
+3
+d(t − d)(t − a0 − a2)
+a0a1a3
+if a3|d,
+and when ρa < 1 we can conclude that the Del Pezzo surface is K¨ ahler-Einst ein.
+Clearly, this is easier to reach when t − d is small, and we concentrated ourselves
+on the case d = t − 1. It is then easy to check that ρa is never less than 1 when
+a0 =a1 = 1. On the other hand, a computer check seems to indicate that there is
+only a ﬁnite list of weights with a0 > 2 satisfying the Fletcher conditions, which
+all satisfy a0 ⩽ 14*. Among these, 2 cases lead to ρa < 1, namely
+a = (11, 49, 69, 128), d = 256, ρa ≃ 0. 875696, x 17
+0 x2 +x0x5
+1 +x1x3
+2 +x2
+3 = 0,
+a = (13, 35, 81, 128), d = 256, ρa ≃ 0. 955311, x 17
+0 x1 +x0x3
+2 +x5
+1x2 +x2
+3 = 0.
+* Added after proof: this has actually been shown to be true in [JK01].
+===PDF PAGE 36===
+36 J.-P. Demailly, J. Koll´ ar, Semi-continuity of complex si ngularity exponents
+It turns out that there are no other monomials of degree d than those occurring
+in the above equations. As a result, the above K¨ ahler-Einst ein Del Pezzo surfaces
+are rigid as weighted hypersurfaces.
+There are several ways to improve the estimates. For instanc e,
+TX ⊗ OX (d − a1 − a2)
+is nef except possibly along the irreducible components of t he curve (x0 = 0) ⊂ X.
+The restriction of the tangent bundle to these curves can be c omputed by hand.
+This improvement is suﬃcient to conclude that Propositions 6.8 and 6.9 also apply
+in one further case:
+a = (9, 15, 17, 20), d = 60, x 5
+0x1 +x0x3
+2 +x4
+1 +x3
+3 = 0.
+This is again a rigid weighted hypersurface. We would like to thank P. Boyer
+and K. Galicki for pointing out a numerical error which had be en committed in an
+earlier version of this work, where a further (incorrect) ex amplea = (11, 29, 39, 49),
+d = 127 was claimed. In [BG00], it is shown that the three above e xamples lead
+to the construction of non regular Sasakian-Einstein 5-man ifolds.
+References
+[AnSi95] U. Angehrn and Y.-T. Siu: Eﬀective Freeness and Point Separation for Adjoint
+Bundles; Invent. Math. 122 (1995) 291–308.
+[AnV65] A. Andreotti and E. Vesentini: Carleman estimates for the Laplace-Beltrami
+equation in complex manifolds; Publ. Math. I.H.E.S. 25 (1965), 81–130.
+[ArGV85] V.I. Arnold, S.M. Gusein-Zade and A.N. Varchenko; Singularities of Diﬀerentiable
+Maps; Progress in Math., Birkh¨ auser (1985).
+[Aub78] T. Aubin: Equations du type Monge-Amp` ere sur les vari´ et´ es k¨ ahl´ eriennes com-
+pactes; C.R. Acad. Sci. Paris Ser. A 283 (1976), 119–121 ; Bull. Sci. Math. 102
+(1978), 63–95.
+[Bar82] D. Barlet: D´ eveloppements asymptotiques des fonctions obtenues par int´ egration
+sur les ﬁbres; Invent. Math. 68 (1982), 129–174.
+[Bom70] E. Bombieri: Algebraic values of meromorphic maps; Invent. Math. 10 (1970),
+267–287 and Addendum, Invent. Math. 11 (1970), 163–166.
+[BG00] C. Boyer, K. Galicki: New Sasakian-Einstein 5-manifolds as links of isolated
+hypersurface singularities; Manuscript, February 2000.
+[Dem87] J.-P. Demailly: Nombres de Lelong g´ en´ eralis´ es, th´ eor` emes d’int´ egralit´ e et d’analy-
+ticit´ e;Acta Math. 159 (1987) 153–169.
+[Dem89] J.-P. Demailly: Transcendental proof of a generalized Kawamata-Viehweg vanis hing
+theorem; C. R. Acad. Sci. Paris S´ er. I Math. 309 (1989) 123–126 and Proceedings
+of the Conference “Geometrical and algebraical aspects in seve ral complex variables”
+held at Cetraro (Italy), C.A. Berenstein and D.C. Struppa eds, Ed itEl, June (1989),
+81–94.
+[Dem90] J.-P. Demailly: Singular hermitian metrics on positive line bundles; Proc. Conf.
+Complex algebraic varieties (Bayreuth, April 2-6, 1990), edite d by K. Hulek,
+===PDF PAGE 37===
+References 37
+T. Peternell, M. Schneider, F. Schreyer, Lecture Notes in Math., V ol. 1507, Springer-
+Verlag, Berlin, (1992).
+[Dem92] J.-P. Demailly: Regularization of closed positive currents and Intersection Th eory;
+J. Alg. Geom. 1 (1992), 361–409.
+[Dem93a] J.-P. Demailly: Monge-Amp` ere operators, Lelong numbers and intersection theory ;
+Complex Analysis and Geometry, Univ. Series in Math., edited b y V. Ancona and
+A. Silva, Plenum Press, New-York (1993).
+[Dem93b] J.-P. Demailly: A numerical criterion for very ample line bundles; J. Diﬀerential
+Geom. 37 (1993) 323–374.
+[Dem94] J.-P. Demailly: L2 vanishing theorems for positive line bundles and adjunction
+theory; Lecture Notes of the CIME Session Transcendental methods in Al gebraic
+Geometry, Cetraro, Italy, July 1994, 96 p, Duke e-prints alg-geom/9410022.
+[Dol82] I. Dolgachev: Weighted projective varieties; Group actions and vector ﬁelds, Proc.
+Polish-North Am. Semin., Vancouver 1981, Springer-Verlag, Lec t. Notes in Math.
+956 (1982) 34–71.
+[Fle89] A.R. Fletcher: Working with weighted complete intersections ; Preprint MPI/89-35,
+Max-Planck Institut f¨ ur Mathematik, Bonn, 1989.
+[FKL93] A. Fujiki, R. Kobayashi, S.S.Y. Lu: On the fundamental group of certain open
+normal surfaces; Saitama Math. J. 11 (1993), 15–20.
+[F ut83] A. Futaki: An obstruction to the existence of Einstein K¨ ahler metrics; Invent. Math.
+73 (1983), 437–443.
+[Hir64] H. Hironaka: Resolution of singularities of an algebraic variety over a ﬁeld of
+characteristic zero, I,II; Ann. Math. 79 (1964), 109–326.
+[H¨ or66] L. H¨ ormander:An introduction to Complex Analysis in several variables; 1966, 3rd
+edition, North-Holland Math. Libr., Vol. 7, Amsterdam (1973).
+[JK01] J.M. Johnson, J. Koll´ ar: K¨ ahler-Einstein metrics on log del Pezzo surfaces in
+weighted projective 3-spaces; Ann. Inst. Fourier 51 (2001), 69–79.
+[KMM87] Kawamata, Y., Matsuda, K., Matsuki, K: Introduction to the minimal model
+problem; Adv. Stud. Pure Math. 10 (1987), 283–360.
+[K&al92] J. Koll´ ar (with 14 coauthors): Flips and Abundance for Algebraic Threefolds;
+Ast´ erisque Vol. 211 (1992).
+[Kol95a] J. Koll´ ar:Shafarevich Maps and Automorphic Forms; Princeton Univ. Press (1995).
+[Kol97] J. Koll´ ar:Singularities of pairs, Algebraic Geometry, Santa Cruz, 1995; Proceedings
+of Symposia in Pure Math. vol. 62, AMS, 1997, pages 221-287.
+[Lel57] P. Lelong: Int´ egration sur un ensemble analytique complexe;Bull. Soc. Math. France
+85 (1957), 239–262.
+[Lel69] P. Lelong: Plurisubharmonic functions and positive diﬀerential forms; Gordon and
+Breach, New York, and Dunod, Paris (1969).
+[Lic57] A. Lichnerowicz: Sur les transformations analytiques des vari´ et´ es k¨ ahl´ eriennes; C. R.
+Acad. Sci. Paris 244 (1957), 3011-3014.
+[Lin87] B. Lichtin: An upper semicontinuity theorem for some leading poles of |f |2s; Com-
+plex analytic singularities, Adv. Stud. Pure Math. 8, North-Holland, Amsterdam,
+1987, 241–272.
+[Lin89] B. Lichtin: Poles of |f (z, w)|2s and roots of the B-function; Ark f¨ or Math.27 (1989),
+283–304.
+[Man93] L. Manivel: Un th´ eor` eme de prolongement L2 de sections holomorphes d’un ﬁbr´ e
+vectoriel; Math. Zeitschrift, 212 (1993) 107–122.
+[Mat57] Y. Matsushima: Sur la structure du groupe d’hom´ eomorphismes analytiques d’un e
+certaine vari´ et´ e k¨ ahl´ erienne;Nagoya Math. Journal 11 (1957), 145–150.
+[Nad89] A.M. Nadel: Multiplier ideal sheaves and existence of K¨ ahler-Einstein metrics of
+positive scalar curvature; Proc. Nat. Acad. Sci. U.S.A. 86 (1989), 7299–7300.
+===PDF PAGE 38===
+38 J.-P. Demailly, J. Koll´ ar, Semi-continuity of complex si ngularity exponents
+[Nad90] A.M. Nadel: Multiplier ideal sheaves and K¨ ahler-Einstein metrics of pos itive scalar
+curvature; Annals of Math. 132 (1990), 549–596.
+[OhT87] T. Ohsawa and K. Takegoshi: On the extension of L2 holomorphic functions; Math.
+Zeitschrift 195 (1987) 197–204.
+[Ohs88] T. Ohsawa: On the extension of L2 holomorphic functions, II; Publ. RIMS, Kyoto
+Univ. 24 (1988), 265–275.
+[PS99] D.H. Phong and J. Sturm: Algebraic estimates, stability of local zeta functions, and
+uniform estimates for distribution functions; January 1999 preprint, to appear in
+Ann. of Math.
+[PS00] D.H. Phong and J. Sturm: On a conjecture of Demailly and Koll´ ar; April 2000
+preprint.
+[Sho92] V. Shokurov: 3-fold log ﬂips; Izv. Russ. Acad. Nauk Ser. Mat. Vol. 56 (1992) 105–
+203.
+[Siu74] Y.T. Siu: Analyticity of sets associated to Lelong numbers and the exte nsion of
+closed positive currents; Invent. Math. 27 (1974), 53–156.
+[Siu87] Y.T. Siu: Lectures on Hermitian-Einstein metrics for stable bundles and K¨ ahler-
+Einstein metrics; DMV Seminar (Band 8), Birkh¨ auser-Verlag, Basel-Boston (1987).
+[Siu88] Y.T. Siu: The existence of K¨ ahler-Einstein metrics on manifolds with p ositive
+anticanonical line bundle and a suitable ﬁnite symmetry group ; Ann. of Math. 127
+(1988), 585–627.
+[Siu93] Y.T. Siu: An eﬀective Matsusaka big theorem; Ann. Inst. Fourier. 43 (1993), 1387–
+1405.
+[Sko72] H. Skoda:Sous-ensembles analytiques d’ordre ﬁni ou inﬁni dans Cn; Bull. Soc. Math.
+France 100 (1972), 353–408.
+[Sko75] H. Skoda: Estimations L2 pour l’op´ erateur ∂ et applications arithm´ etiques;
+S´ eminaire P. Lelong (Analyse), ann´ ee 1975/76, Lecture Notes in Math., Vol. 538,
+Springer-Verlag, Berlin (1977), 314–323.
+[Tia87] G. Tian: On K¨ ahler-Einstein metrics on certain K¨ ahler manifolds withc1(M) > 0;
+Invent. Math. 89 (1987), 225–246.
+[Var82] A.N. Varchenko; Complex exponents of a singularity do not change along the
+stratum µ = constant; Functional Anal. Appl. 16 (1982), 1–9.
+[Var83] A.N. Varchenko; Semi-continuity of the complex singularity index; Functional Anal.
+Appl. 17 (1983), 307–308.
+[Var92] A.N. Varchenko; Asymptotic Hodge structure ...; Math. USSR Izv. 18 (1992), 469–
+512.
+[Yau78] S.T. Yau: On the Ricci curvature of a complex K¨ ahler manifold and the com plex
+Monge-Amp` ere equation I; Comm. Pure and Appl. Math. 31 (1978), 339–411.
+(October 12, 1999; minor revision April 29, 2000; ﬁnal proof s corrected on August
+24, 2001; slightly augmented on November 15, 2013 to answer a question by
+JingZhou Sun)

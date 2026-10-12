@@ -1,0 +1,310 @@
+{
+  "catalogId": "068",
+  "paperId": "metric-descent-contractions",
+  "title": "Metric descent and rank-preserving contractions",
+  "displayName": "Metric descent and rank-preserving contractions",
+  "authors": "OpenAI",
+  "version": "September 26, 2026",
+  "sourceCommit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Metric-descent-and-rank-preserving-contractions-September-26-2026/main.pdf",
+  "sha256": "35f14f53ac82dc8a58373ec70b2a5b17625b541dc2db8226e7bb60245d6dc4d3",
+  "pdfPages": 76,
+  "checkedOn": "2026-10-12",
+  "statements": [
+    {
+      "result": "Theorem 2.1",
+      "pages": "7",
+      "checking": "仮定・量化・全結論を原典と照合。独立証明検証ではない。"
+    },
+    {
+      "result": "Theorem 4.1",
+      "pages": "16",
+      "checking": "仮定・量化・全結論を原典と照合。独立証明検証ではない。"
+    },
+    {
+      "result": "Theorem 6.1",
+      "pages": "34",
+      "checking": "仮定・量化・全結論を原典と照合。独立証明検証ではない。"
+    },
+    {
+      "result": "Theorem 7.1",
+      "pages": "38",
+      "checking": "仮定・量化・全結論を原典と照合。独立証明検証ではない。"
+    }
+  ],
+  "proofPassages": [
+    {
+      "pages": "7–11",
+      "scope": "補正の例外台、全valuationのsub-klt不等式、rank-zero直像、曲率strictness、非加重L1"
+    },
+    {
+      "pages": "12–16",
+      "scope": "Lemmas3.1–3.3の二計量移送・multiplier ideal・高次moment極限・determinant"
+    },
+    {
+      "pages": "16–25",
+      "scope": "Theorem4.1全段階。符号付き境界、支持類、水平補間、rank復元"
+    },
+    {
+      "pages": "25–28",
+      "scope": "Lemma5.1とProposition5.3の有限体積→sub-klt近似→傾き"
+    },
+    {
+      "pages": "34–39",
+      "scope": "Theorem6.1第一証明とTheorem7.1第一証明"
+    },
+    {
+      "pages": "39–42",
+      "scope": "orbit integral別証明を参照。完全なvariance計算は独立検証対象外"
+    },
+    {
+      "pages": "73–76",
+      "scope": "参考文献"
+    }
+  ],
+  "externalSources": [
+    {
+      "id": "Ber09",
+      "authors": "Bo Berndtsson",
+      "title": "Curvature of vector bundles associated to holomorphic fibrations",
+      "displayName": "Curvature of vector bundles associated to holomorphic fibrations",
+      "sourceUrl": "https://arxiv.org/pdf/math/0511225v2",
+      "version": "arXiv:math/0511225v2, 20 August 2007",
+      "pdfPages": 26,
+      "sha256": "79e7ea512237d2e8f386b68aee8635858559a8354780ca190fa0a2220e53a8ed",
+      "checkedLocations": [
+        {
+          "printedPage": "3",
+          "pdfPage": 3
+        },
+        {
+          "printedPage": "14",
+          "pdfPage": 14
+        },
+        {
+          "printedPage": "16",
+          "pdfPage": 16
+        },
+        {
+          "printedPage": "17",
+          "pdfPage": 17
+        }
+      ],
+      "guideRole": {
+        "ja": "滑らかな直像の半正値性と曲率式。全直像rank 1、または直交商となる不変部分に適用。",
+        "en": "Smooth direct-image positivity and its curvature formula, for full rank one or an invariant orthogonal quotient."
+      }
+    },
+    {
+      "id": "DPS01",
+      "authors": "Jean-Pierre Demailly; Thomas Peternell; Michael Schneider",
+      "title": "Pseudo-effective line bundles on compact Kähler manifolds",
+      "displayName": "Pseudo-effective line bundles on compact Kähler manifolds",
+      "sourceUrl": "https://arxiv.org/pdf/math/0006205v2",
+      "version": "arXiv:math/0006205v2, 10 October 2000",
+      "pdfPages": 49,
+      "sha256": "50709e54ee90dc7d43a9f6b583137a525bdf2195563e0b30535de970545dfa9a",
+      "checkedLocations": [
+        {
+          "printedPage": "8",
+          "pdfPage": 8
+        }
+      ],
+      "guideRole": {
+        "ja": "有界計量の全冪で乗数イデアルが自明なことを使い、非零コホモロジーを捻った形式へ送る。",
+        "en": "Convert nonzero cohomology to twisted forms; bounded weights make all multiplier ideals trivial."
+      }
+    },
+    {
+      "id": "CP19",
+      "authors": "Frédéric Campana; Mihai Păun",
+      "title": "Foliations with positive slopes and birational stability of orbifold cotangent bundles",
+      "displayName": "Foliations with positive slopes and birational stability of orbifold cotangent bundles",
+      "sourceUrl": "https://www.numdam.org/item/10.1007/s10240-019-00105-w.pdf",
+      "version": "Publications Mathématiques de l’IHÉS 129 (2019), 1–49",
+      "pdfPages": 49,
+      "sha256": "e5d8221d5e18e2f65fc0960e5fca792066d74c29393a0fd04d7fbb7cf58d31fd",
+      "checkedLocations": [
+        {
+          "printedPage": "2",
+          "pdfPage": 2
+        },
+        {
+          "printedPage": "3",
+          "pdfPage": 3
+        }
+      ],
+      "guideRole": {
+        "ja": "符号付き境界を直接代入せず、正の境界とample摂動に対するorbifold商の傾き非負性を使う。",
+        "en": "Use orbifold quotient slopes for an effective boundary with ample perturbation, not directly for a signed boundary."
+      }
+    },
+    {
+      "id": "HPS",
+      "authors": "Christopher D. Hacon; Mihnea Popa; Christian Schnell",
+      "title": "Algebraic fiber spaces over abelian varieties: around a recent theorem by Cao and Păun",
+      "displayName": "Algebraic fiber spaces over abelian varieties: around a recent theorem by Cao and Păun",
+      "sourceUrl": "https://people.math.harvard.edu/~mpopa/papers/HPS.pdf",
+      "version": "Author-hosted 53-page manuscript, retrieved 12 October 2026",
+      "pdfPages": 53,
+      "sha256": "1610e96e1c87b1b8c1adb8af565d9d789bfe770e8cc1f476eff0faee3944d407",
+      "checkedLocations": [
+        {
+          "printedPage": "31",
+          "pdfPage": 31
+        },
+        {
+          "printedPage": "32",
+          "pdfPage": 32
+        }
+      ],
+      "guideRole": {
+        "ja": "実際の乗数イデアルを含む直像の計量。有限積分の生成元がrank 1直像を生成することを確認して使う。",
+        "en": "Metric on the direct image with the actual multiplier ideal; an integrable generator spans the rank-one direct image."
+      }
+    },
+    {
+      "id": "PT14",
+      "authors": "Mihai Păun; Shigeharu Takayama",
+      "title": "Positivity of twisted relative pluricanonical bundles and their direct images",
+      "displayName": "Positivity of twisted relative pluricanonical bundles and their direct images",
+      "sourceUrl": "https://arxiv.org/pdf/1409.5504v1",
+      "version": "arXiv:1409.5504v1, 19 September 2014",
+      "pdfPages": 46,
+      "sha256": "27cd279ce7d28f8a260a17e41e9734be00d5b259c2978a0b4999c507bbabba57",
+      "checkedLocations": [
+        {
+          "printedPage": "24",
+          "pdfPage": 24
+        }
+      ],
+      "guideRole": {
+        "ja": "HPSの定式化の基礎となる特異L2直像計量。generic multiplier-ideal inclusionの同型条件も照合。",
+        "en": "Underlying singular L2 direct-image positivity, including the generic multiplier-ideal isomorphism condition."
+      }
+    },
+    {
+      "id": "Ou23",
+      "authors": "Wenhao Ou",
+      "title": "On generic nefness of tangent sheaves",
+      "displayName": "On generic nefness of tangent sheaves",
+      "sourceUrl": "https://arxiv.org/pdf/1703.03175v4",
+      "version": "arXiv:1703.03175v4",
+      "pdfPages": 22,
+      "sha256": "67a02f674f18fe420cb4c343d1b2b0e430ab51d2a32e2fe9ba0f26bc7c18a035",
+      "checkedLocations": [
+        {
+          "printedPage": "5",
+          "pdfPage": 5
+        },
+        {
+          "printedPage": "6",
+          "pdfPage": 6
+        }
+      ],
+      "guideRole": {
+        "ja": "Druelの相対擬有効性の定式化と葉層の代数性。有限体積からの余接傾き評価で使用。",
+        "en": "Relative pseudoeffectivity in Druel’s formulation and algebraicity of foliations, used for the finite-volume cotangent estimate."
+      }
+    },
+    {
+      "id": "BDPP13",
+      "authors": "Sébastien Boucksom; Jean-Pierre Demailly; Mihai Păun; Thomas Peternell",
+      "title": "The pseudo-effective cone of a compact Kähler manifold and varieties of negative Kodaira dimension",
+      "displayName": "The pseudo-effective cone of a compact Kähler manifold and varieties of negative Kodaira dimension",
+      "sourceUrl": "https://arxiv.org/pdf/math/0405285v1",
+      "version": "arXiv:math/0405285v1, 14 May 2004",
+      "pdfPages": 39,
+      "sha256": "0a05e3644b784c3821eaf079b3fccd1744183ae67e9793f3d599315c53002b3c",
+      "checkedLocations": [
+        {
+          "printedPage": "2",
+          "pdfPage": 2
+        },
+        {
+          "printedPage": "3",
+          "pdfPage": 3
+        },
+        {
+          "printedPage": "6",
+          "pdfPage": 6
+        }
+      ],
+      "guideRole": {
+        "ja": "非bigな擬有効因子を消すmovable曲線類を選ぶ錐双対性。",
+        "en": "Cone duality supplies a movable class annihilating a nonbig pseudoeffective divisor."
+      }
+    }
+  ],
+  "dependencies": [
+    {
+      "sourceId": "Ber09",
+      "result": "Theorem 1.2; Proposition 4.2; (4.8)",
+      "pages": "3,14,17",
+      "usedAt": "§2.2 pp9–10; Lemma3.2 p15",
+      "role": "full rank1直像の密度のpsh性とpatch strictness、smooth invariant orthogonal quotient",
+      "kind": "direct",
+      "checking": "external statement and manuscript application read; external proof not independently verified"
+    },
+    {
+      "sourceId": "DPS01",
+      "result": "Theorem 2.1.1",
+      "pages": "8",
+      "usedAt": "Lemma3.3 pp15–16",
+      "role": "χ≠0と全冪のtrivial multiplier idealからtwisted forms",
+      "kind": "direct",
+      "checking": "external statement and manuscript application read; external proof not independently verified"
+    },
+    {
+      "sourceId": "CP19",
+      "result": "Theorem 1.3",
+      "pages": "3",
+      "usedAt": "Lemma4.4 p22",
+      "role": "effective klt perturbationへquotient slope positivity適用しt→0",
+      "kind": "direct",
+      "checking": "external statement and manuscript application read; external proof not independently verified"
+    },
+    {
+      "sourceId": "HPS",
+      "result": "Theorem 21.1",
+      "pages": "31–32",
+      "usedAt": "Lemma3.2 pp14–15",
+      "role": "actual multiplier idealに入るrank1生成元からdirect image density metric",
+      "kind": "direct",
+      "checking": "external statement and manuscript application read; external proof not independently verified"
+    },
+    {
+      "sourceId": "PT14",
+      "result": "Theorem 3.3.5",
+      "pages": "24",
+      "usedAt": "Lemma3.2 p15",
+      "role": "上の特異直像定理の元のgeneric isomorphism定式化との照合",
+      "kind": "direct",
+      "checking": "external statement and manuscript application read; external proof not independently verified"
+    },
+    {
+      "sourceId": "Ou23",
+      "result": "Propositions 2.2 and 3.1",
+      "pages": "5–6",
+      "usedAt": "Proposition5.3 p27",
+      "role": "effective positive crepant boundaryで相対擬有効性、支持類のfoliation",
+      "kind": "direct",
+      "checking": "external statement and manuscript application read; external proof not independently verified"
+    },
+    {
+      "sourceId": "BDPP13",
+      "result": "Theorem 2.2",
+      "pages": "6",
+      "usedAt": "§4.4 pp21–22",
+      "role": "nonbig classをannihilateするmovable class",
+      "kind": "direct",
+      "checking": "external statement and manuscript application read; external proof not independently verified"
+    }
+  ],
+  "unresolved": [
+    "全76ページの独立証明検証はしていない。§§8–12の各縮約変種・finite-flat normの詳細は未検証。",
+    "弱toroidal化/同次元化の外部原典を今回直接再照合していない。Theorem2.1ではモデルの存在は仮定である。",
+    "全valuation・psh延長・高次moment極限の解析的正しさを独立に証明したものではない。",
+    "外部入力定理の証明とその先の引用網の再帰検証は行っていない。"
+  ]
+}

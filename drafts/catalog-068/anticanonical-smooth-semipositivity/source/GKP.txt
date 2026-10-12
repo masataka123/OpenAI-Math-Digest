@@ -1,0 +1,1664 @@
+
+===PDF PAGE 1===
+arXiv:1408.4308v2  [math.AG]  15 Apr 2015
+MOV ABLE CURVES AND SEMIST ABLE SHEA VES
+DANIEL GREB, STEFAN KEBEKUS, AND THOMAS PETERNELL
+ABSTRACT . This paper extends a number of known results on slope-semis table
+sheaves from the classical case to the setting where polaris ations are given by
+movable curve classes. As applications, we obtain new ﬂatne ss results for reﬂex-
+ive sheaves on singular varieties, as well as a characterisa tion of ﬁnite quotients of
+Abelian varieties via a Chern class condition.
+CONTENTS
+1. Introduction 1
+2. Semistability with respect to a movable class 3
+3. Openness of semistability 8
+4. T ensor products of semistable sheaves 11
+5. Bogomolov-Gieseker inequalities 14
+6. Flatness criteria 17
+7. Characterisation of torus quotients 21
+References 23
+1. I NTRODUCTION
+Given an n-dimensional, complex, projective manifold X, the notion of stability
+is arguably the single most important concept in the discuss ion of sheaves of OX-
+modules and their moduli. A widely-used stability notion is slope-stability. Its well-
+known deﬁnition depends on the choice of a very ample line bun dle H ∈ Pic(X)
+and asks to associate to any sheaf E of positive rank the slope
+µ H (E ) := c1(H )n− 1 ·c1(det E)
+rank E = [C] ·c1(det E)
+rank E ,
+where [C] is the numerical class of a curve C, obtained as the intersection of general
+elements (Hi)1≤ i<n ∈ |H |, that is, C := H1 ∩ · · · ∩Hn− 1. The sheaf E is said to be
+semistable with respect to H if E is torsion free and if µ H (F ) ≤ µ H (E ) for any
+non-zero subsheaf F ⊆ E .
+It turns out that these notions are often not ﬂexible enough t o allow for ap-
+plications in higher-dimensional birational geometry . There, one frequently needs
+to discuss a number of birational models, and compare sheave s that live on one
+model with sheaves that live on another. However, the pull-b ack of an ample po-
+larisation is generally not ample. In this setting, it is oft en advantageous to gener-
+alise the notion of slope, replacing the class [C] with a general movable curve class.
+Recall that a numerical curve class α is movable if D ·α ≥ 0 for all effective divisors
+Date: 16th April 2015.
+All three authors were partially supported by the DFG-Forsc hergruppe 790 “Classiﬁcation of Al-
+gebraic Surfaces and Compact Complex Manifolds”. Stefan Ke bekus acknowledges additional support
+through a joint fellowship of the Freiburg Institute of Adva nced Studies (FRIAS) and the University of
+Strasbourg Institute for Advanced Study (USIAS).
+1
+===PDF PAGE 2===
+2 DANIEL GREB, STEFAN KEBEKUS, AND THOMAS PETERNELL
+D. Sample applications in birational geometry are given in [ Miy87, CP11, GKP14].
+In a different direction, the paper [ GT13] uses polarisations by movable curves
+to resolve pathological wall-crossing phenomena for modul i spaces of sheaves on
+higher-dimensional varieties.
+The present paper extends a number or known results from the c lassical case
+to the setting where polarisations are given by movable curv e classes. As applica-
+tions, we prove new ﬂatness results for reﬂexive sheaves on s ingular varieties, as
+well as a uniformisation result.
+1.1. Outline of the paper. W e begin in Section
+2 with a brief account of the
+relevant deﬁnitions and of elementary properties, includi ng the existence of
+Harder-Narasimhan and Jordan-H ¨ older ﬁltrations, bounde dness results and a
+weak Mehta-Ramanathan theorem. Once these basics are estab lished, the follow-
+ing aspects will be discussed in the remainder of the paper.
+1.1.1. Openness of stability. W e will show in Section
+3 that stability is an open prop-
+erty in the interior of the movable cone. Somewhat more gener ally , we show that
+if a sheaf E is stable with respect to a movable class α that lies on the boundary
+of the movable cone, then α can be approximated by a sequence of E -stabilising
+classes from the interior.
+1.1.2. Semistability of tensor products. When semistability is deﬁned with respect to
+an ample class, a classical theorem (speciﬁc to characteris tic zero) asserts that the
+tensor product of two semistable locally free sheaves is aga in semistable, [
+HL10,
+Thm. 3.1.4]. Theorem 4.2 of Section 4 extends this result to sheaves that are
+semistable with respect to movable curve classes on possibl y singular spaces.
+Remark 1.1 (Erratum to [ GKP14]). The assertion of Theorem 4.2 is stated in
+[GKP14] as “Fact A.13”, referring to [ CP11, Thm. 5.1 and Cor. 5.2] for a proof.
+However, these references work under the additional assump tion that the mov-
+able class α ∈ N1(X)Q is big, that is, contained in the interior of the movable cone.
+This assumption is not necessarily satisﬁed in the setting o f [GKP14]. Theorem 4.2
+ﬁlls this gap.
+1.1.3. Bogomolov-Gieseker inequalities. Section
+5 discusses the Bogomolov-Gieseker
+inequality for movable polarisations on a smooth surface: i f E is a torsion-free
+coherent sheaf of rank r on a smooth projective surface, which is semistable with
+respect to some non-zero movable curve class, then there is a n inequality of Chern
+numbers, 2r ·c2(E ) ≥ (r − 1) ·c2
+1(E ).
+1.1.4. Flatness criteria. The Bogomolov-Gieseker inequality will be applied in Sec-
+tion
+6 to generalise a ﬂatness criterion of Simpson. Let X be smooth, complex,
+projective surface X, let α be a movable class and E be a torsion-free sheaf such
+that the following numbers vanish,
+c1(E ) ·α = c1(E )2 − c2(E ) = 0.
+If E is α-semistable and α2 > 0, then E is a locally free, ﬂat sheaf. In other words,
+E is given by a linear representation of the fundamental group . W e also obtain a
+criterion for projective ﬂatness, Theorem 6.4.
+The following theorem is a consequence of the ﬂatness criter ion and of results
+obtained by the authors in [ GKP13]. For convenience, the following notation is
+used. If f : A → B is any morphism of quasi-projective varieties and if S is
+any coherent sheaf of OB-modules, write f [∗]S := ( f ∗S )∗∗. A ﬁnite, surjective
+morphism is called quasi-´ etale if it is unbranched in codimension one.
+===PDF PAGE 3===
+MOV ABLE CURVES AND SEMISTABLE SHEA VES 3
+Theorem 1.2 (Flatness criterion = Theorem 6.5 on page 17 ). Let X be a normal, pro-
+jective, Q-factorial variety of dimension n with only canonical singu larities. Let E be a
+reﬂexive sheaf on X and H ∈ Div(X) an ample divisor. Suppose that E is H-semistable
+and that there exists a desingularisation π : ˜X → X such that the following two equalities
+hold,
+0 = c1(E ) ·Hn− 1 and 0 = c1
+(
+π[∗]E
+) 2 ·
+(
+π∗ H
+) n− 2 − c2
+(
+π[∗]E
+)
+·
+(
+π∗ H
+) n− 2.
+Then, there exists a quasi-´ etale morphismγ : ˆX → X such that γ[∗]E is a locally free, ﬂat
+sheaf on ˆX. □
+Remark 1.3 (Coefﬁcients in ﬂatness criterion) . In the setting of Theorem 1.2,
+the Hodge index theorem implies that c1
+(
+π[∗]E
+) 2 ·
+(
+π∗ H
+) n− 2 ≤ 0. Using the
+Bogomolov-Gieseker Inequality of Section 1.1.3, one obtains that the following
+conditions, which seemingly depend on the choice of a real pa rameter λ,
+0 = c1
+(
+π[∗]E
+) 2 ·
+(
+π∗ H
+) n− 2 − λ ·c2
+(
+π[∗]E
+)
+·
+(
+π∗ H
+) n− 2,
+are in fact equivalent for all 0 < λ < 2r
+r− 1 . The formulation of Theorem 1.2 uses
+λ = 1. The choice λ = 2 is often seen in the literature since it appears in the secon d
+Chern character, cf. [Sim92, Cor. 3.10].
+1.1.5. Characterisation of torus quotients. In the last section we apply the ﬂatness
+criteria to the cotangent sheaf of a manifold, in order to obt ain the following char-
+acterisation result.
+Theorem 1.4 (Characterisation of torus quotients = Theorem
+7.1 on page 21 ). Let X
+be a normal Q-factorial projective variety of dimension n with only cano nical singularities
+and numerically trivial canonical bundle, K X ≡ 0. Assume that there exists a desingular-
+isation π : ˜X → X and an ample divisor H ∈ Dix(X) such that c 2( ˜X) ·
+(
+π∗ H
+) n− 2 = 0.
+Then, X is smooth in codimension two, there exists an Abelian variety A and a quasi-´ etale
+morphism γ : A → X. □
+This result generalises a result for three-dimensional var ieties of Shepherd-
+Barron and Wilson [ SBW94, Cor. of Main Thm], and eliminates the a priori as-
+sumption on the codimension of the singular locus made in [ GKP13, Thm. 1.16].
+After the proof of this result was completed, we learned that Lu-T aji obtained sim-
+ilar results, to appear in a forthcoming preprint.
+1.2. Global assumptions. Throughout the paper, we work over the complex
+number ﬁeld. If not mentioned otherwise, all sheaves are ass umed to be coher-
+ent.
+1.3. Acknowledgements. W e would like to thank Matei T oma for important sug-
+gestions. The main idea of Theorem
+3.4 goes back to him. The authors would
+also like to thank two anonymous referees for their helpful a nd very detailed re-
+ports. A part of this work was done during a very pleasant stay of the third named
+author at the Freiburg Institute for Advanced Studies.
+2. S EMISTABILITY WITH RESPECT TO A MOVABLE CLASS
+2.1. Numerical classes. Given a normal projective variety X, we consider the
+space N1(X)R of numerical curve classes, as well as the space N1(X)R of numer-
+ical Cartier divisor classes. W e refer the reader to [Kol96, Sect. II.4] for a brief deﬁn-
+ition and discussion of these spaces. Recall from [ Kol96, Sect. II.4, (4.2.5)] that the
+===PDF PAGE 4===
+4 DANIEL GREB, STEFAN KEBEKUS, AND THOMAS PETERNELL
+intersection number of curves and Cartier divisors gives ri se to a nondegenerate
+bilinear pairing
+(2.1.1) N1(X)R × N1(X)R → R.
+Deﬁnition 2.2 (Cone of movable curve classes) . A class α ∈ N1(X)R is called mov-
+able if α ·D ≥ 0 for any effective Cartier divisor D. The set of movable class es forms a
+closed, convex cone Mov(X) ⊂ N1(X)R, called the movable cone.
+Remark 2.3. If X is a manifold, it has been shown in [
+BDPP13] that the movable
+cone is the closure of the convex cone in N1(X)R generated by curves whose de-
+formations cover a dense subset of X. A divisor class ∆ ∈ N1(X)R is pseudo-
+effective if and only if the associated function • ·∆ is non-negative on Mov (X).
+Deﬁnition 2.4 (Big movable class) . Let α ∈ N1(X)R be a movable class. We say that
+α is big if it lies in the interior of the movable cone.
+2.1.1. Q-Cartier divisors on singular spaces. If X is Q-factorial, we brieﬂy show that
+there exists a number m such that for any W eil divisor D, the numerical class [m ·
+D] is the numerical class of a Cartier divisor. The following no tation will be used.
+Deﬁnition 2.5 (Q-Cartier divisors that are numerically Cartier) . Let X be a normal,
+projective variety. If D is any Q-Cartier, Q-Weil divisor on X, then D deﬁnes a numerical
+class [D] ∈ N1(X)Q ⊂ N1(X)R. We say that “D is numerically Cartier” if there exists
+a Cartier divisor ∆ whose numerical class equals that of D, that is, [D] = [ ∆].
+Deﬁnition 2.6 (Numerical classes of sheaves) . Let X be a normal, projective vari-
+ety. If F is any coherent sheaf on X, its determinant is a Weil divisori al sheaf, say
+det F ∼
+= OX(D). If D is Q-Cartier, we deﬁne the numerical class of F as [F ] := [ D] ∈
+N1(X)Q ⊂ N1(X)R. If X is smooth, we also use the traditional notation c 1(F ) = [ F ].
+Theorem 2.7 (Finite generation of numerical divisor classes) . Let X be a normal,
+Q-factorial, projective variety. Then, the set
+NQ Div(X) := {[D] |D an integral Weil divisor } ⊆ N1(X)R
+is a lattice which contains the lattice spanned by numerical classes of Cartier divisors. In
+particular, there exists a positive integer m ∈ Q+ such that m ·D is numerically Cartier,
+for any integral Weil divisor D on X.
+Proof. It sufﬁces to show that NQ Div(X) is ﬁnitely generated as a Z-module. T o
+this end, let π : ˜X → X be any resolution of singularities. Since X is normal and
+Q-factorial, push-forward of W eil divisors induces a surjective map
+π∗ : N1( ˜X)Q → N1(X)Q.
+The Theorem of the Base of N´ eron-Severi, [
+Kol96, II Th. 4.5], asserts that N1( ˜X)Z
+is ﬁnitely generated. Its image under π∗ is exactly NQ Div(X). □
+2.1.2. Push-forward and pull-back. Let φ : X /axisshort/axisshort/arrowaxisrightY be any dominant, rational map
+between normal, Q-factorial, projective varieties. Assume that the inverse φ− 1
+does not contract any divisors —examples are given by resolu tions of singular-
+ities, more generally birational morphisms, and maps obtai ned by running the
+minimal model program. In this setting, there are well-know n results concern-
+ing push-forward and pull-back. In the case of rational nume rical classes, these
+are summarised in [ GKP14]. By linearity , everything said there also holds for real
+classes. For the reader’s convenience, we recall the most im portant facts.
+Push-forward of W eil divisors together with the pairing ( 2.1.1) induces linear
+morphisms
+φ∗ : N1(X)Q → N1(Y)Q as well as φ∗ : N1(Y)Q → N1(X)Q.
+===PDF PAGE 5===
+MOV ABLE CURVES AND SEMISTABLE SHEA VES 5
+Since the push-forward of any effective divisor is effectiv e, it follows immediately
+from Deﬁnition 2.2 that the pull-back of any movable curve class is again movable.
+Proposition 2.8 (Push-forward and pull-back of sheaves) . Let φ : X → Y be
+any dominant, birational morphism of normal, Q-factorial, projective varieties. Let
+α ∈ N1(Y)R be any class, and F , G be torsion-free, coherent sheaves on X and Y, re-
+spectively. Then, the following holds.
+(2.8.1) We have [F ] ·φ∗α = [ φ∗F ] ·α.
+(2.8.2) If F agrees with φ∗G away from the φ-exceptional set, and if (r, a) ∈ N × Z
+is any pair of numbers, then G contains a subsheaf G ′ of rank r and intersection
+[G ′] ·α = a if and only if F contains a subsheaf F ′ of rank r and intersection
+[F ′] ·φ∗α = a that agrees with φ∗G ′ away from the φ-exceptional set. □
+Remark 2.9. Using the notion of (semi)stability with respect to a movabl e curve
+class, cf. Deﬁnition 2.11 below , Proposition 2.8 asserts that G is α-(semi)stable if
+and only if F is φ∗α-(semi)stable.
+2.2. Slope and semistability. W e will use the following terminology throughout
+the paper.
+Deﬁnition 2.10 (Slope with respect to a movable class) . Let X be a normal, Q-
+factorial, projective variety and α ∈ Mov(X). If E ̸= 0 is any torsion-free, coherent
+sheaf on X, one deﬁnes the slope of E with respect to α as the real number
+µ α(E ) := [E ] ·α
+rank E .
+Deﬁnition 2.11 (Semistability with respect to a movable class) . In the setting of
+Deﬁnition 2.10, we say that E is α-semistable if µ α(F ) ≤ µ α(E ) for any coherent
+subsheaf 0 ⊊ F ⊆ E .
+Deﬁnition 2.12 (Stability with respect to a movable class) . In the setting of Deﬁn-
+ition 2.10, we say that E is α-stable if µ α(F ) < µ α(E ) for any coherent subsheaf
+0 ⊊ F ⊊ E with rank F < rank E .
+2.3. Elementary properties. Essentially all elementary properties satisﬁed by
+sheaves that are stable with respect to ample polarisations also hold when sta-
+bility is deﬁned by a movable class. For the reader’s conveni ence, we summarise
+those properties that will be relevant later.
+Proposition 2.13 (Subbundle of equal rank). Let X be a normal, Q-factorial, projective
+variety and α ∈ Mov(X). If F ⊆ E are two torsion-free, coherent sheaves of equal rank,
+then µ α(F ) ≤ µ α(E ).
+Proof. There exists an effective W eil-divisor D such that det F and det E differ
+only by a twist with D, or more precisely , det F ∼
+=
+(
+OX(− D) ⊗ det E
+) ∗∗. In par-
+ticular, we have the following equality of numerical classe s,
+[F ] = [ E ] − [D].
+Since α is movable, we have that [D] ·α ≥ 0, and the claim follows. □
+Corollary 2.14 (Slope of saturation) . Let X be a normal, Q-factorial, projective variety
+and α ∈ Mov(X). If F ⊆ E are two torsion-free, coherent sheaves, and if Fsat ⊆ E
+denotes the saturation of F in E , then µ α(F ) ≤ µ α(Fsat). □
+Corollary 2.15 (Stable sheaves are semistable) . Let X be a normal, Q-factorial, pro-
+jective variety and α ∈ Mov(X). Then, α-stable sheaves are α-semistable. □
+===PDF PAGE 6===
+6 DANIEL GREB, STEFAN KEBEKUS, AND THOMAS PETERNELL
+Corollary 2.16 (Semistability of direct sum of line bundles) . Let X be a normal, Q-
+factorial, projective variety. If H ∈ Pic(X) is any line bundle and r ∈ N+ any number,
+then H ⊕ r is semistable with respect to any movable class. □
+The following proposition follows from elementary Chern cl ass computations,
+which we leave to the reader.
+Proposition 2.17 (Morphism from a semistable sheaf). Let X be a normal, Q-factorial,
+projective variety and α ∈ Mov(X). If F is any α-semistable sheaf and γ : F → E any
+morphism of torsion-free OX-modules, then µ α(Image γ) ≥ µ α(F ). □
+Corollary 2.18 (Morphisms between semistable sheaves) . Let X be a normal, Q-
+factorial, projective variety and α ∈ Mov(X).
+• If F and E are semistable and if µ α(F ) > µ α(E ), then HomOX
+(
+F , E
+)
+= 0.
+• If F and E are stable and if µ α(F ) = µ α(E ), then any non-zero morphism F → E
+is injective and generically isomorphic. If we assume in addition that F is saturated
+1
+in E , then any non-zero morphism F → E is an isomorphism. □
+2.4. A generalisation of Mehta-Ramanathan’s theorem. This section contains a
+minor generalisation of the classical theorem of Mehta-Ram anathan.
+Proposition 2.19. Let π : ˜X → X be a birational morphism of normal, Q-factorial,
+projective varieties of dimension n ≥ 2 with only canonical singularities. Let H be an
+ample divisor on X and ˜H := π∗ H. Let ˜E be a torsion-free, ˜H-semistable sheaf on ˜X.
+If m ≫ 0 is sufﬁciently large and ˜D1, . . . , ˜Dn− 2 ∈ | m ˜H| is a general (n − 2)-tuple of
+hypersurfaces with associated complete intersection surf ace ˜S = ˜D1 ∩ . . . ∩ ˜Dn− 2, then
+˜E |˜S is ˜H|˜S-semistable.
+Remark 2.20. In the setting of Proposition 2.19, recall from [ GKP13, Prop. 5.1] that
+the sheaf ˜E |˜S is torsion-free. The surface ˜S has canonical singularities, [ KM98,
+Lem. 5.7], and is therefore Q-factorial, [ KM98, Prop. 4.11]. The assertion that ˜E |˜S
+is ˜H|˜S-semistable therefore makes sense.
+Proof of Proposition 2.19. Observe that the torsion-free coherent sheaf E := π∗( ˜E )
+is H-semistable by Proposition 2.8. Next, write ˜Di = π∗(Di) and set S := D1 ∩
+. . . Dn− 2 so that ˜S = π− 1(S). Since X has only canonical singularities, conclude
+as before that S is Q-factorial. Also, observe that E |S is torsion-free. By Flenner’s
+version of the Mehta-Ramanathan theorem, [Fle84, Thm. 1.2], the torsion free sheaf
+E |S is H|S-semistable. Since ˜E |˜S and (π|˜S)∗(E |S) agree outside the exceptional
+locus of π|˜S, Proposition 2.8 applies, showing that ˜E |˜S is ˜H|˜S-semistable. □
+2.5. Boundedness I: Suprema of slopes in a given bundle. Given a torsion-free
+sheaf E and a movable class α, the α-slope of subsheaves F ⊆ E cannot be arbit-
+rarily large. The following boundedness results will be use d later.
+Deﬁnition 2.21 (Suprema of slopes). Let X be a normal, Q-factorial, projective variety
+and α ∈ Mov(X). If E is any torsion-free, coherent sheaf of positive rank on X, wr ite
+µ max
+α (E ) := sup {µ α(F ) |0 ̸= F ⊆ E a coherent subsheaf} .
+Proposition 2.22 (Boundedness of µ max
+α ). In the setting of Deﬁnition 2.21, the function
+m : Mov(X) → R ∪ { ∞}, β ↦→ µ max
+β (E )
+is bounded from above by a linear function M. In particular, µ maxα (E ) < ∞.
+1Recall that F is said to be saturated in E if the quotient E /F is torsion-free.
+===PDF PAGE 7===
+MOV ABLE CURVES AND SEMISTABLE SHEA VES 7
+Proof. Choose a sufﬁciently ample line bundle H and an embedding E֒→H ⊕ r,
+where r := rank E . If F ⊆ E is any coherent subsheaf, it follows from Corol-
+lary 2.16 that µ α(F ) ≤ µ α(H ⊕ r) = [ H ] ·α for every α ∈ Mov(X). W e can
+therefore take M(β) := [ H ] ·β as the desired linear function. □
+Proposition 2.23 (Existence of subsheaves with maximal slope, I) . In the setting of
+Deﬁnition 2.21, the supremum µ maxα is a maximum. In other words, there exists a non-
+zero, coherent subsheaf F ⊆ E such that µ max
+α (E ) = µ α(F ) < ∞.
+Proof. Argue by contradiction, and assume that µ α(F ) < µ maxα (E ) for any non-
+zero, coherent subsheaf F ⊆ E . One can then ﬁnd a sequence of subsheaves
+(Fi)i∈ N such that the following holds.
+(2.23.1) The sequence of slopes converges, lim µ α(Fi) = µ max
+α (E ).
+(2.23.2) The sheaves Fi are saturated in E . All Fi have the same rank r.
+In addition, we can assume that the rank r is maximal among all sequences of
+sheaves satisfying (2.23.1)–(2.23.2). W e will construct a contradiction by proving
+the following.
+Given any number ε > 0, there exists a subsheaf Gε ⊆ E such that
+µ α(Gε) ≥ µ max
+α (E ) − ε and such that rank Gε > r.
+T o this end, let ε be any given number. Then, there exists an index i such that
+µ α(Fi) > µ max
+α (E ) − ε
+2 . There exists a larger index j > i such that µ α(Fi) <
+µ α(Fj). The subsheaves Fi and Fj are certainly not equal. Since both Fi and Fj
+are saturated in E , their sum Gε := Fi + Fj therefore has rank Gε > r. A rather
+elementary computation of Chern classes, spelled out in [ GKP14, Lemma A.12],
+now shows that µ α
+(
+Gε
+)
+> µ max
+α (E ) − ε. □
+Remark 2.24. Any sheaf F ⊆ E with µ max
+α (E ) = µ α(F ) is clearly semistable.
+2.6. Existence of the Harder-Narasimhan-ﬁltration. One consequence of the
+boundedness result obtained in Proposition 2.23 is the existence of a maxim-
+ally destabilising subsheaf, which in turn implies the exis tence of the Harder-
+Narasimhan and of Jordan-H ¨ older-ﬁltrations, even in cases where slope is deﬁned
+by a movable curve class.
+Corollary 2.25 (Existence of a unique maximally destabilising sheaf) . In the setting
+of Deﬁnition
+2.21, there exists a sheaf F ⊆ E such that the following holds.
+(2.25.1) The slope is maximal, µ α(F ) = µ max
+α (E ).
+(2.25.2) If F ′ ⊆ E is any other subsheaf with µ α(F ) = µ max
+α (E ), then F ′ ⊆ F .
+The sheaf F is called “maximally destabilising subsheaf”. It is clearl y unique, semistable,
+and saturated in E .
+Proof. By Proposition 2.23, there exists a saturated sheaf F1 ⊆ E of maximal slope.
+If F ′ is any other subsheaf of maximal slope, then either F ′ is contained in F1,
+or it follows from Proposition 2.17 that the α-slope of F1 + F ′ equals µ maxα (E ).
+In the second case, set F2 := ( F1 + F ′)sat and observe that rank F2 > rank F1.
+Iterate this process, in order to construct a strictly incre asing sequence of sheaves
+of maximal slope, F1 ⊊ F2 ⊊ . . . ⊆ E . The process terminates because the rank
+increases in each step. □
+Corollary 2.26 (Existence of a stable destabilising sheaf) . In the setting of Deﬁni-
+tion 2.21, there exists an α-stable sheaf F ⊆ E of slope µ α(F ) = µ maxα (E ).
+Proof. By Proposition 2.23, there exists a saturated, α-semistable sheaf F1 ⊆ E
+of maximal slope. If F1 is not stable, there exists a sheaf F2 ⊊ F1 that is also
+of maximal slope, but of smaller rank: rank F2 < rank F1. Iterate this process,
+===PDF PAGE 8===
+8 DANIEL GREB, STEFAN KEBEKUS, AND THOMAS PETERNELL
+in order to construct a strictly decreasing sequence of shea ves of maximal slope,
+F1 ⊋ F2 ⊋ · · ·. The process terminates because the rank decreases in each s tep.
+□
+Corollary 2.27 (Existence of the Harder-Narasimhan-ﬁltration) . In the setting of
+Deﬁnition
+2.21, there exists a unique “Harder-Narasimhan-ﬁltration”, th at is, a ﬁltration
+0 = E0 ⊊ E1 ⊊ · · ·⊊ Er = E where each quotient Qi := Ei
+/
+Ei− 1 is torsion-free,
+α-semistable, and where the sequence of slopes µ α
+(
+Qi
+)
+is strictly decreasing. □
+Corollary 2.28 (Existence of J ¨ ordan-H ¨ older-ﬁltrations). In the setting of Deﬁni-
+tion 2.21, if E is α-semistable, then there exists a “Jordan-H¨ older-ﬁltrati on”, that is, a
+ﬁltration 0 = E0 ⊊ E1 ⊊ · · ·⊊ Er = E where each quotient Qi := Ei
+/
+Ei− 1 is torsion-
+free, α-stable, and with slopes µ α
+(
+Qi
+)
+= µ α
+(
+E
+)
+. □
+Remark 2.29 (Reﬁned Harder-Narasimhan-ﬁltration) . In the setting of Deﬁni-
+tion 2.21, combining Harder-Narasimhan and Jordan-H ¨ older ﬁltrations, one ob-
+tains a “reﬁned Harder-Narasimhan-ﬁltration” 0 = E0 ⊊ E1 ⊊ · · ·⊊ Er = E where
+each quotient Qi := Ei
+/
+Ei− 1 is torsion-free, α-stable, and where the sequence of
+slopes µ α
+(
+Qi
+)
+is decreasing (though not necessarily strictly decreasing ). □
+2.7. Boundedness II: Grothendieck’s lemma. Let X be a projective manifold and
+E be any torsion-free sheaf on X. If H any ample Cartier divisor with associated
+movable curve class β := Hdim X− 1 and c is any real number, then the classical
+Grothendieck lemma, [ HL10, Lem. 1.7.9], asserts that the set of subsheaves with
+bounded slope,
+S := { F |F ⊆ E saturated, positive-rank with µ β(F ) ≥ c}
+forms a bounded family . In particular, the associated set of numerical classes is
+ﬁnite. W e show that this conclusion still holds in case where β is an arbitrary big
+class.
+Theorem 2.30 (Grothendieck’s lemma for numerical classes) . Let X be a normal,
+projective, Q-factorial variety and β ∈ Mov(X) be a big class. Further, let E be a torsion-
+free, coherent sheaf on X and c ∈ R be a real number. Then, the following set of numerical
+classes,
+Snum := { [F ] |F ⊆ E any positive-rank subsheaf with µ β(F ) ≥ c} ⊆ N1(X)Q,
+is ﬁnite.
+Proof. As before, choose a sufﬁciently ample bundle H and an embedding E֒→
+H ⊕ r, where r := rank E . It will then sufﬁce to show the claim in case where
+E = H ⊕ r. Since slopes behave linearly under twist, we may even assum e without
+loss of generality that E = O ⊕ r
+X .
+Now , given any subsheaf F ⊆ E of positive rank, its determinant det F em-
+beds into OX and is therefore a W eil divisorial sheaf of the form detF ∼
+= OX(− D),
+where D is an effective, integral W eil divisor. Since β is assumed to be a big class,
+it will therefore intersect [F ] negatively , unless [F ] = 0. The assertion is thus a
+consequence of Theorem
+2.7. □
+3. O PENNESS OF SEMISTABILITY
+W e now show that stability is an open property , at least withi n the interior of
+the movable cone. More precisely , we discuss openness prope rties for the set of
+stabilising classes, deﬁned as follows.
+===PDF PAGE 9===
+MOV ABLE CURVES AND SEMISTABLE SHEA VES 9
+Cross-section through Mov( X)
+Stab(E )
+class α
+β
+The set of movable classes that stabilise a given bundle E is open in the interior of the
+movable cone, but does contain an isolated class on the bound ary . Note that Theorem 3.4
+holds in this context because the boundary of Stab (E ) intersects the boundary of the
+movable cone tangentially .
+FIGURE 3.1. Hypothetical cross-section through Mov (X).
+Deﬁnition 3.1 (Stabilising classes) . Let X be a normal, Q-factorial, projective variety
+and let E be any non-trivial, torsion-free sheaf on X. We consider the set of movable classes
+that (semi-)stabilise E ,
+Stab(E ) := {α ∈ Mov(X) |E is α-stable}
+SStab(E ) := {α ∈ Mov(X) |E is α-semistable}.
+Remark 3.2 (Convexity of stabilising classes) . The sets Stab (E ) and SStab (E ) of
+Deﬁnition 3.1 are clearly convex. The set SStab (E ) is closed and contains Stab (E ).
+Theorem 3.3 (Openness of stability , I). Let X be a normal, Q-factorial, projective vari-
+ety and let E be any non-trivial, torsion-free sheaf on X. If α ∈ Stab(E ) is big, then
+Stab(E ) contains an open neighbourhood U = U(α) ⊆ Mov(X).
+The following result asserts that even in cases where we cann ot show openness,
+any class α ∈ Stab(E ) can be approximated by big classes in Stab (E ). The authors
+would like to thank Matei T oma who explained Theorem 3.4 to us in case where β
+is a general complete intersection curve. T ogether with fur ther related results, his
+argument will also appear in [ GRT14].
+Theorem 3.4 (Openness of stability , II) . Let X be a normal, Q-factorial, projective
+variety and let E be any non-trivial, torsion-free sheaf on X. Consider class es α ∈ Stab(E )
+and β ∈ Mov(X)◦. Then, there exists a number e ∈ Q+ such that (α + ε ·β) ∈ Stab(E ),
+for any real ε ∈ [0, e]. In particular, if L ⊂ N1(X)R is any line through α that intersects
+the interior Mov(X)◦, then L ∩ Stab(E ) is an interval of positive length.
+Remark 3.5. Let X be a normal, Q-factorial, projective variety and let E be any
+non-trivial, torsion-free sheaf on X. Given any class α ∈ Stab(E ), Theorems 3.3
+and 3.4 together assert that Stab (E ) ∩ Mov(X)◦ is open and has α as a boundary
+point. In particular, there exists a sequence of big, ration al classes βi ∈ Stab(E )
+with lim βi = α.
+W e do not know if these results are optimal. For instance, we c annot rule out
+that the set of movable classes that stabilise a given bundle E is of the form illus-
+trated in Figure 3.1. For all applications, Theorems 3.3 and 3.4 seem to sufﬁce.
+Question 3.6. Are there examples where Stab (E ) is not open in Mov (X)? If so, are
+there natural conditions to guarantee openness?
+W e begin with a preparatory subsection. Theorems 3.3 and 3.4 are then shown
+in Sections 3.2–3.3 below .
+===PDF PAGE 10===
+10 DANIEL GREB, STEFAN KEBEKUS, AND THOMAS PETERNELL
+3.1. Suprema of slopes of strict subsheaves. Given a sheaf E and a movable class
+α, we have discussed the number µ max
+α (E ) in Section
+2.5. Here, we discuss a sim-
+ilar (but more delicate) quantity , namely the supremum of sl opes of subsheaves
+F ⊊ E whose rank is strictly smaller than that of E . If α is either big or rational,
+we will again see that the supremum is in fact a maximum.
+Deﬁnition 3.7 (Suprema of slopes of strict subsheaves) . Let X be a normal, Q-
+factorial, projective variety and α ∈ Mov(X) a movable class. If E is any torsion-free,
+coherent sheaf of OX-modules with rank E ≥ 2, write
+µ max,sc
+α (E ) := sup {µ α(F ) |0 ̸= F ⊊ E coherent with rank F < rank E } .
+Remark 3.8. Obviously ,µ max,sc
+α (E ) ≤ µ max
+α (E ).
+Proposition 3.9 (Existence of subsheaves with maximal slope, II) . In the setting of
+Deﬁnition
+3.7, suppose that α is big or that α is rational. Then, there exists a coherent
+subsheaf F ⊆ E such that rank F < rank E and such that µ max,sc
+α (E ) = µ α(F ).
+Proof of Proposition 3.9 in case where α is big. Observing that the statement of Pro-
+position 3.9 remains invariant when twisting E , we may replace E by a tensor
+product and assume that there exists a number N ∈ N+, an ample line bundle H
+and a surjection H ⊕ N → E . In particular, given any torsion-free quotient E → Q
+of positive rank, there exists a non-trivial morphism of W ei l divisorial sheaves
+H ⊗ rank Q → det Q.
+It follows that the numerical class [Q] is pseudo-effective, and in fact big.
+Introduce any norm ∥ · ∥on the ﬁnite-dimensional space N1(X)R of numerical
+Cartier divisor classes. Since α is big, there exists a constant C > 0 such that
+(3.9.1) D ·α ≥ C · ∥D∥ for any pseudo-effective D ∈ N1(X)R.
+In particular, Inequality ( 3.9.1) holds for divisors D that represent numerical
+classes of non-trivial, torsion-free quotients of E .
+Returning to the assertion of Proposition 3.9, we argue by contradiction and
+assume that the number µ max,sc
+α (E ) is not attained. Then, there exists a sequence of
+subsheaves Fj ⊊ E such that the sequence of slopes µ α(Fj) is strictly increasing
+and converges to µ max,sc
+α (E ). Corollary 2.14 allows to assume that the quotients
+Qj := E /Fj are torsion-free.
+The assumption that µ α(Fj) is strictly increasing implies that the sets of nu-
+merical classes
+{
+[Fj] |j ∈ N
+}
+and
+{
+[Qj] |j ∈ N
+}
+are both inﬁnite. The theorem
+on ﬁnite generation of numerical divisor classes, Theorem 2.7, thus implies that
+both sets are unbounded with respect to the norm ∥ · ∥. Inequality ( 3.9.1) thus im-
+plies that the sequence
+(
+µ α(Qj)
+)
+j∈ N is unbounded, and so is
+(
+µ α(Fj)
+)
+j∈ N. This
+contradicts convergence. □
+Proof of Proposition 3.9 in case where α is rational. If α is rational, the Theorem on ﬁ-
+nite generation of numerical divisor classes, Theorem 2.7, allows to ﬁnd an integer
+m ∈ N+ such that (m ·α) ·[F ] is integral, for any subsheaf F ⊆ E of positive
+rank (and in fact for any coherent sheaf on X). It follows that the slope µ α(F )
+takes values in the discrete set 1
+(rank E )!·m ·Z and the claim is obvious. □
+Remark 3.10. Let α be a movable class that is either big or rational. As a con-
+sequence of Proposition 3.9, we see that E is α-stable if and only if µ max,sc
+α (E ) <
+µ maxα (E ).
+===PDF PAGE 11===
+MOV ABLE CURVES AND SEMISTABLE SHEA VES 11
+Remark 3.11. There are relevant situations where the conclusion of Propo sition 3.9
+holds even for irrational classes that lie on the boundary of Mov(X). The most sig-
+niﬁcant is that where π : ˜X → X is a resolution of singularities and α ∈ Mov(X) a
+big, movable class. Its pull-back π∗α is a movable class contained in the boundary
+∂ Mov( ˜X). However, Proposition 2.8 guarantees that everything said so far also
+holds for φ∗α.
+Remark 3.12. W e do not know whether Proposition 3.9 remains true for irrational
+classes α that lie on the boundary of the movable cone.
+3.2. Proof of Theorem 3.3. Observe that if rank E = 1, then there is nothing to
+show . W e will therefore assume throughout that proof that ra nk E ≥ 2. Choose
+any relatively compact, open neighbourhood of α in Mov(X), say V = V(α). Then,
+there exists a (small) number e ∈ Q+ such that the following holds for all numbers
+0 ≤ ε ≤ e and for all classes β ∈ V,
+(3.12.1) ε ·
+(
+µ max
+β (E ) − µ β(E )
+  
+bounded on V by Prop. 2.22
+)
+< (1 − ε) ·
+(
+µ α(E ) − µ max,sc
+α (E )
+  
+>0 by Prop. 3.9
+)
+.
+The following will then hold for any class β ∈ V, any coherent subsheaf F ⊊ E
+with rank F < rank E , and any number 0 < ε ≤ e,
+µ (1− ε)·α+ε·β(F ) = ( 1 − ε) ·µ α(F ) + ε ·µ β(F )
+≤ (1 − ε) ·µ max,sc
+α (E ) + ε ·µ max
+β (E )
+< (1 − ε) ·µ α(E ) + ε ·µ β(E ) Equation (3.12.1)
+= µ (1− ε)·α+ε·β(E ).
+Finish the proof of Theorem 3.3 by setting U := e ·(V − α) + α. □
+3.3. Proof of Theorem 3.4. Consider the set S of classes [F ] of sheaves F ⊆
+E that destabilise E with respect to β, i.e., µ β(F ) > µ β(E ). By Grothen-
+dieck’s lemma for numerical classes, Theorem 2.30, the set S is ﬁnite, say S ={
+[F1], . . . , [Fn]
+}
+for suitable Fi ⊆ E . Now , if F ⊂ E is any subsheaf with
+rank F < rank E , there are two cases:
+• [F ] ̸∈ S and it follows from α-stability of E that
+µ (1− ε)·α+ε·β(F ) < µ (1− ε)·α+ε·β(E ) for all ε ∈ [0, 1)
+• [F ] ∈ S and there exists an index j such that [F ] = [ Fj], hence
+µ (1− ε)·α+ε·β(F ) = µ (1− ε)·α+ε·β(Fj) for all ε ∈ [0, 1].
+In either case, we obtain the following inequality for all ε ∈ [0, 1],
+µ (1− ε)·α+ε·β(F ) ≤ max
+{
+max
+1≤ j≤ n
+µ (1− ε)·α+ε·β(Fj)
+  
+=:Φ(ε)
+, µ (1− ε)·α+ε·β(E )
+}
+.
+The inequality is strict for all ε for which Φ(ε) < µ (1− ε)·α+ε·β(E ). The setup is de-
+picted in Figure 3.2 on the next page . Conclude by observing that Φ is continuous
+as a function of ε, and that Φ(0) < µ α(E ). □
+4. T ENSOR PRODUCTS OF SEMISTABLE SHEAVES
+In this section we prove that the reﬂexive tensor product of sheaves which are α-
+semistable for some movable class α is again α-semistable. The following notation
+will be used.
+===PDF PAGE 12===
+12 DANIEL GREB, STEFAN KEBEKUS, AND THOMAS PETERNELL
+α β(1 − e) ·α + e ·β
+µ α(E ) µ β(E )
+µ α(F1)
+µ β(F1)
+µ α(F2)
+µ β(F2)
+µ α(F )
+µ β(F )
+Slopes of the sheaves Fj and of a sheaf F such that [F ] ̸∈ S with respect to movable
+classes (1 − ε) ·α + ε ·β. The function Φ is outlined in bold.
+FIGURE 3.2. Functions discussed in the proof of Theorem 3.4
+Notation 4.1 (Reﬂexive tensor product) . Given any two coherent sheaves A , B
+of OX-modules on a normal variety X, write A ⊠ B := ( A ⊗ B)∗∗. W e refer to
+A ⊠ B as the reﬂexive tensor product of A and B.
+Theorem 4.2 (Semistability of tensor products) . Let X be a normal Q-factorial pro-
+jective variety, and let α ∈ Mov(X) be any movable class. If F and G are torsion-free,
+positive-rank, coherent sheaves on X, then the following ho lds.
+(4.2.1) µ max
+α
+(
+F ⊠ G
+)
+= µ max
+α (F ) + µ max
+α (G ).
+(4.2.2) If F and G are α-semistable, then F ⊠ G is likewise α-semistable.
+Corollary 4.3 (Semistability of reﬂexive symmetric products) . In the setting of The-
+orem 4.2, if F is α-semistable and m ∈ N+ any number, then any reﬂexive symmetric
+product
+(
+Symm F
+) ∗∗ is again α-semistable.
+Proof. Observe that
+(
+Symm F
+) ∗∗ is a direct summand of F ⊠ m. □
+4.1. Preparation for the proof: reduction to semistability of te nsor products of
+stable sheaves. W e show in this section that to prove Theorem 4.2, it sufﬁces to
+show that the product of two stable sheaves is semistable. Th e following is the
+main result of the present Section 4.1.
+Proposition 4.4. Let X be a normal, Q-factorial, projective variety and let α ∈ Mov(X)
+be any movable class. Suppose that the reﬂexive tensor produ ct of any two torsion-free,
+α-stable sheaves is α-semistable. Then, the following holds for any two torsion- free sheaves
+F and G on X.
+(4.4.1) µ max
+α (F ⊠ G ) = µ max
+α (F ) + µ max
+α (G ).
+(4.4.2) If F and G are α-semistable, then F ⊠ G is again α-semistable.
+W e prove Proposition 4.4 in the remainder of Section 4.1. The proof is sub-
+divided into ﬁve steps.
+Step 1: Setup. Since numerical classes and slopes are unaffected when modi fying
+F and G along a subset of codimension at least two, we are free to repl ace these
+sheaves by their double duals, and assume henceforth that th e following holds.
+Assumption w.l.o.g. 4.5. The sheaves F and G are reﬂexive.
+Combining the Harder-Narasimhan ﬁltration and a Jordan-H ¨older-ﬁltration as
+in Remark
+2.29, choose a ﬁltration of F , say 0 = F0 ⊊ F1 ⊊ · · ·⊊ Fk = F such
+that the following holds.
+===PDF PAGE 13===
+MOV ABLE CURVES AND SEMISTABLE SHEA VES 13
+(4.6.1) The quotients Qi+1 := Fi+1/Fi are torsion-free and α-stable for all i.
+(4.6.2) The sequence of ranks, (rank Fi)0≤ i≤ k, is strictly increasing.
+(4.6.3) The sequence of slopes,
+(
+µ α(Qi)
+)
+1≤ i≤ k, is decreasing.
+T aking reﬂexive tensor products with G , we obtain a ﬁltration of F ⊠ G ,
+(4.6.4) 0 = F0 ⊠ G ⊊ F1 ⊠ G ⊊ · · ·⊊ Fk ⊠ G = F ⊠ G ,
+where each term Fi ⊠ G is saturated in Fi+1 ⊠ G . Consequently there exists a
+big, open subset X◦ ⊆ X where all sheaves F , G , Fi and Fi ⊠ G , as well as
+all quotients Qi and (Fi+1 ⊠ G )/(Fi ⊠ G ) are locally free. Since two reﬂexive
+sheaves are isomorphic if and only if they agree over X◦, the quotients given by
+the ﬁltration ( 4.6.4) can be identiﬁed as follows,
+(4.6.5)
+( Fi+1 ⊠ G /
+Fi ⊠ G
+) ∗∗ = Qi+1 ⊠ G .
+The slopes of these sheaves are computed as follows.
+(4.6.6)
+µ α(Qi+1 ⊠ G ) = µ α(Qi+1) + µ α(G ) Slope of product
+≤ µ α(Q1) + µ α(G ) by
+(4.6.3)
+≤ µ max
+α (F ) + µ max
+α (G )
+Step 2: Proof of Claim (4.4.1) in case where F or G are α-stable. The roles of F and
+G being symmetric, consider the case where G is α-stable. By assumption, the
+quotient sheaves Qi ⊠ G will thus be α-semistable. Inequality ( 4.6.6) therefore
+implies that any morphism A → Qi ⊠ G will be zero, if A is any semistable
+subsheaf of slope µ α(A ) > µ maxα (F ) + µ maxα (G ). It follows that any morphism
+A → F ⊠ G will be zero, and that the α-slope of any semistable subsheaf B ⊆
+F ⊠ G is bounded. In other words, we have
+µ α(B) ≤ µ max
+α (F ) + µ max
+α (G ).
+On the other hand, F ⊠ G does contain the semistable subsheaf F1 ⊠ G = Q1 ⊠
+G , whose slope equals µ maxα (F ) + µ α(G ) = µ maxα (F ) + µ maxα (G ). This proves
+Claim (4.4.1) in case where one of the factors is α-stable.
+Step 3: Proof of Claim (4.4.1) in general. Recalling from (4.6.1) that quotient sheaves
+Qi+1 are α-stable, we have seen in Step 2 that
+µ max
+α
+(
+Qi+1 ⊠ G
+)
+= µ max
+α
+(
+Qi+1
+)
++ µ max
+α
+(
+G
+)
+≤ µ max
+α
+(
+F
+)
++ µ max
+α
+(
+G
+)
+.
+As in Step 2, this implies that the α-slope of any subsheaf B ⊆ F ⊠ G is bounded
+by µ maxα (F ) + µ maxα (G ). On the other hand, F ⊠ G does contain the reﬂexive
+product of the maximally destabilising subsheaves. The slo pe of this product
+equals µ max
+α (F ) + µ max
+α (G ). This proves Claim (4.4.1) in general.
+Step 4: Proof of Claim (4.4.2). Now assume that F and G are both α-semistable. The
+slope of the product is computed as follows,
+(4.6.7)
+µ max
+α (F ⊠ G ) = µ max
+α (F ) + µ max
+α (G ) Claim
+(4.4.1)
+= µ α(F ) + µ α(G ) Semistability of F and G
+= µ α(F ⊠ G ),
+proving its semistability . This proves Claim (4.4.2) and ﬁnishes the proof of Pro-
+position 4.4. □
+===PDF PAGE 14===
+14 DANIEL GREB, STEFAN KEBEKUS, AND THOMAS PETERNELL
+4.2. Reduction to a resolution. W e end the preparations for the proof of The-
+orem
+4.2 with the following lemma. Both its claims follow immediatel y from Pro-
+position 2.8.
+Lemma 4.7. In the setting of Theorem 4.2, let π : ˜X → X be any resolution of singular-
+ities. Then the following holds.
+(4.7.1) The sheaf F is α-stable if and only if π[∗]F is (π∗α)-stable.
+(4.7.2) The sheaf F ⊠ G is α-semistable if and only if π[∗]F ⊠ π[∗]G is (π∗α)-
+semistable. □
+4.3. Proof of Theorem 4.2. W e have seen in Proposition 4.4 that to prove The-
+orem 4.2, it sufﬁces to show that the reﬂexive tensor product of any tw o α-stable
+sheaves is α-semistable. So, let F and G be any two α-stable, torsion-free, coherent
+sheaves on X.
+Combining a resolution of singularities with a classical re sult of Rossi, [ Ros68],
+we ﬁnd a smooth, projective variety ˜X and a birational morphism π : ˜X → X such
+that π[∗]F and π[∗]G are both locally free. By Lemma 4.7, it sufﬁces to establish
+(π∗α)-semistability of π[∗]F ⊗ π[∗]G . T o simplify notation we replace X by ˜X and
+assume without loss of generality that the following holds.
+Assumption w.l.o.g. 4.8. The variety X is smooth. The sheaves F and G are locally
+free.
+Under these assumptions, Theorem
+4.2 has been shown by T oma in [ CP11,
+Prop. 6.1] if the class α is rational and big. T o show Theorem 4.2 in the general
+case, let A ⊂ F ⊗ G be any proper subsheaf. Recall from Remark 3.5 that we can
+ﬁnd a sequence of big, rational classes βi ∈ Stab(F ) ∩ Stab(G ) with lim βi = α.
+T oma’s result [ CP11, Prop. 6.1] applies to show that F ⊗ G is stable with respect
+to the βi, and hence
+µ βi (A ) ≤ µ βi (F ⊗ G ) for all i ∈ N.
+Using continuity of intersection numbers, we may pass to the limit and obtain the
+desired inequality for A , thus ﬁnishing the proof of Theorem 4.2. □
+5. B OGOMOLOV -G IESEKER INEQUALITIES
+W e ﬁrst prove a Bogomolov-Gieseker inequality for locally f ree sheaves on a
+smooth projective surface which are semistable with respec t to movable classes.
+This is a minor generalisation of [Miy87, 4.7], which considers rational classes only .
+Theorem 5.1 (Bogomolov-Gieseker Inequality). Let X be a smooth, projective surface,
+let E be a torsion-free sheaf of OX-modules, of rank r. If E is semistable with respect to a
+movable curve class α ∈ Mov(X) \ {0}, then
+(5.1.1) ∆(E ) := 2r ·c2(E ) − (r − 1) ·c2
+1(E ) ≥ 0
+If E is not locally free, then Inequality (
+5.1.1) is strict.
+Remark 5.2. If the sheaf E in Theorem 5.1 is even α-stable, then this theorem can
+be deduced from [ Miy87, 4.7], using the results of Section 3.
+5.1. Preparation for the proof of Theorem 5.1. If X is any normal projective vari-
+ety , if A is any Cartier divisor on X and i ∈ N any number, recall that the func-
+tion m ↦→ hi(
+X, OX(m ·A)
+)
+grows asymptotically at most like mdim X. T o pre-
+pare for the proof of Theorem 5.1, we recall the following standard generalization,
+cf. [MP97, Part I, Lecture III, Prop. 3.3].
+===PDF PAGE 15===
+MOV ABLE CURVES AND SEMISTABLE SHEA VES 15
+Lemma 5.3. Let X be any projective variety, let A, B, C ∈ Div(X) be any three Cartier-
+divisors and i ∈ N be any number. If h i(
+X, OX(m ·A + B)
+)
+grows asymptotically at
+least like m dim X, then h i(
+X, OX(m ·A + B + C)
+)
+has the same asymptotic growth rate,
+(5.3.1) hi(
+X, OX(m ·A + B)
+)
+∼ hi(
+X, OX(m ·A + B + C)
+)
+.
+In particular, taking C = − B it follows that
+mdim X ≲ hi(
+X, OX(m ·A + B)
+)
+∼ hi(
+X, OX(m ·A)
+)
+≲ mdim X,
+so that equality of growth rates holds.
+Proof. W e prove Equation (
+5.3.1) using induction on the dimension of X. If
+dim X = 0, there is nothing to show . Let us therefore assume that dim X > 0, and
+that the claim was shown for all varieties of smaller dimensi on. Now , if P ⊂ X is
+any prime Cartier divisor, consider the ideal sheaf sequenc e
+0 → OX(mA + B) → OX(mA + B + P) → OX(mA + B + P)|P → 0.
+The following excerpt of the long exact cohomology sequence ,
+≲mdim X− 1
+  
+Hi− 1(
+P, OX(mA + B + P)|P) → Hi(
+OX(mA + B)
+)
+→
+→ Hi(
+OX(mA + B + P)
+)
+→ Hi(
+P, OX(mA + B + P)|P)  
+≲mdim X− 1
+,
+will then show that we have equality of asymptotic growth rat es,
+hi(
+X, OX(m ·A + B)
+)
+∼ hi(
+X, OX(m ·A + B + P)
+)
+.
+The same line of argument, using the sequence
+0 → OX(mA + B − P) → OX(mA + B) → OX(mA + B)|P → 0,
+yields an analogous equality ,
+hi(
+X, OX(m ·A + B)
+)
+∼ hi(
+X, OX(m ·A + B − P)
+)
+.
+In essence, we have shown that the asymptotic growth rate doe s not change when
+adding or subtracting prime divisors. Write C as a difference of two very ample
+prime divisors to conclude. □
+5.2. Proof of Theorem 5.1. The proof roughly follows the line of argument given
+in [Miy87, 4.3] or [ MP97, Part I, Lecture III, 3.9].
+Step 1: Setup. W e argue by contradiction. T o be precise, we assume that the f ol-
+lowing holds.
+Assumption 5.4. There exists a smooth, projective surface X, a movable class α ∈
+Mov(X) \ {0} and an α-semistable, torsion-free sheaf E such that ∆(E ) < 0.
+These assumptions can be simpliﬁed. Recall from [
+HL10, Sect. 3.4] that
+∆(E ) ≥ ∆(E ∗∗) ≥ ∆(E ∗ ⊗ E ∗∗),
+and that the ﬁrst inequality is strict if E is not locally free. Since E ∗ ⊗ E ∗∗ is like-
+wise α-semistable by Theorem 4.2, we are free to replace E by E ∗ ⊗ E ∗∗ throughout
+the argument. Recalling that reﬂexive sheaves are locally f ree in codimension two,
+this amounts to assuming the following.
+Assumption w.l.o.g. 5.5. The sheaf E is locally free and has trivial determinant,
+det E ∼
+= OX.
+===PDF PAGE 16===
+16 DANIEL GREB, STEFAN KEBEKUS, AND THOMAS PETERNELL
+Step 2: Notation. Choose a Cartier divisor H ∈ Div(X) such that both H and H −
+KX are ample. Recalling that α is movable and therefore α2 ≥ 0, it follows from
+the Hodge index theorem that H ·α > 0. The same holds for the intersection with
+H − KX, and we obtain the following inequalities that we note for fu ture reference,
+(5.5.1) µ α
+(
+OX(H)
+)
+> 0 and µ α
+(
+OX(H − KX)
+)
+> 0.
+Set Y := P(E ), and denote the bundle map by π : Y → X. Choose a divisor
+1 ∈ Div(Y) such that OY(1) ∼
+= OP(E )(1).
+Step 3: Conclusion. Recall from the computations of [
+MP97, Part I, Lecture III, 3.6]
+that the assumption ∆(E ) < 0 made in 5.4 implies that 1dim Y > 0. By Riemann-
+Roch,
+(5.5.2) mdim Y ∼ χ
+(
+OY(m ·1)
+)
+=
+dim Y
+∑
+i=0
+(− 1)i ·hi(
+Y, OY(m ·1)
+)
+.
+The Leray spectral sequence implies that hi(
+Y, OY(m ·1)
+)
+= hi(
+X, π∗OY(m ·1)
+)
+,
+which vanishes for i ≥ 3. Equation (
+5.5.2) therefore yields
+(5.5.3) h0(
+Y, OY(m ·1)
+)
+∼ mdim Y or h2(
+Y, OY(m ·1)
+)
+∼ mdim Y.
+The subsequent Steps 5 and 6 will show that neither of these tw o possibilities is
+realised in our setup ﬁnishing the proof.
+Step 5: Growth rate of h 0(· · ·). Assume that h0(
+Y, OY(m ·1)
+)
+grows asymptotically
+like mdim Y. Combining the results obtains so far, this implies the foll owing.
+mdim Y ∼ h0(
+Y, OY(m ·1 − π∗ H)
+)
+Lemma
+5.3
+= h0(
+X, π∗OY(m) ⊗ OX(− H)
+)
+= dimC HomX
+(
+OX(H), Sym m E
+)
+.
+This is absurd. In fact, we have seen in (5.5.1) that the α-slope of the invertible sheaf
+OX(H) is positive. On the other hand, recall from Assumption 5.5 that Sym m E
+has vanishing ﬁrst Chern class. It is thus α-semistable, with µ α(Symm E ) = 0,
+by Corollary 4.3. As we have seen in Corollary 2.18, any morphism OX(H) →
+Symm E is therefore zero. It follows that h0(
+Y, OY(m ·1)
+)
+cannot grow like mdim Y.
+Step 6: Growth rate of h 2(· · ·). W e repeat the argument of Step 5 with minor vari-
+ations. Assuming that h2(
+Y, OY(m ·1)
+)
+grows like mdim Y, we obtain, using again
+Lemma 5.3
+mdim Y ∼ h2(
+Y, OY(m ·1 + π∗ H)
+)
+Lemma 5.3
+= h2(
+X, π∗OY(m) ⊗ OX(H)
+)
+Leray spectral sequence
+= h0(
+X, Sym m E ∗ ⊗ OX(− (H − KX))
+)
+Serre duality
+= dimC HomX
+(
+OX(H − KX), Sym m E ∗)
+.
+As before, recall from (5.5.1) that the α-slope of the invertible sheaf OX(H − KX) is
+positive and observe that Sym m E ∗ is α-semistable with slope µ α(Symm E ∗) = 0.
+It follows that h2(
+Y, OY(m ·1)
+)
+cannot grow like mdim Y. □
+===PDF PAGE 17===
+MOV ABLE CURVES AND SEMISTABLE SHEA VES 17
+6. F LATNESS CRITERIA
+6.1. Flatness. In this section we discuss various ﬂatness results. The rele vant no-
+tion is the following.
+Deﬁnition 6.1 (Flat and projectively ﬂat sheaves) . If Y is any algebraic variety, and
+G is any locally free, analytic sheaf of rank r on the underlyin g complex space Y an, we call
+G ﬂat if it is deﬁned by a representation
+π1(Yan) → Gl(r, C)
+of the topological fundamental group π1(Yan). A locally free, algebraic sheaf on Y is called
+ﬂat if and only if the associated analytic sheaf is ﬂat.
+In a similar vein, call G projectively ﬂat if P(G ) is given by a representation
+π1(Yan) → PGl(r, C).
+W e refer the reader to [
+GKP13] for a discussion of ﬂat sheaves on algebraic
+varieties. Projective ﬂatness is discussed in [ JR13] and in the references quoted
+there.
+6.1.1. Flatness for sheaves on surfaces. Simpson proved in [
+Sim92] an important ﬂat-
+ness criterion for semistable locally free sheaves. In fact , let X be a projective man-
+ifold X of dimension n and let E be a locally free sheaf that is H-semistable for
+some ample divisor H. Suppose further that
+c1(E ) ·Hn− 1 = ( c1(E )2 − c2(E )) ·Hn− 2 = 0.
+Then, E is ﬂat. W e ﬁrst generalise this in case dimX = 2, replacing H by a movable
+class on the surface.
+Theorem 6.2 (Criterion for ﬂatness) . Let X be a smooth, projective surface and α ∈
+Mov(X) a movable class. Let E be any torsion-free coherent sheaf on X with
+(6.2.1) c1(E ) ·α = c1(E )2 − c2(E ) = 0.
+If E is α-semistable and α2 > 0, then E is a locally free, ﬂat sheaf.
+Remark 6.3. The assumptions made in Theorem
+6.2 are necessary . For an example
+where E is α-semistable, where α2 = 0 and where E is not ﬂat, let π : X → Y be
+any ruled surface, let F be any ﬁbre and set α := [ F] and E := OX(F) ⊕ OX(− F)
+Theorem 6.4 (Criterion for projective ﬂatness) . Let X be a smooth, projective surface
+and α ∈ Mov(X) \ {0} be a movable class. Let E be any α-stable, torsion-free coherent
+sheaf on X of rank r. If equality holds in the Bogomolov-Giese ker inequality,
+2r ·c2(E ) = ( r − 1) ·c1(E )2,
+then E is a projectively ﬂat, locally free sheaf that is semistable with respect to every β ∈
+Mov(X). If we assume in addition that c 1(E ) ·α = c1(E )2 = 0, i.e., we assume that
+(6.2.1) holds, then either E or E ∗ is nef.
+6.1.2. Flatness in higher dimensions. W e use the ﬂatness criterion of Theorem 6.2 to
+generalise Theorem 1.19 from [ GKP13].
+Theorem 6.5 (Flatness criterion) . Let X be a normal, projective, Q-factorial variety
+of dimension n with only canonical singularities. Let E be a reﬂexive sheaf on X and
+H ∈ Div(X) an ample divisor. Suppose that E is H-semistable and that there exists a
+desingularisation π : ˜X → X such that the following two equalities hold,
+0 = c1(E ) ·Hn− 1(6.5.1)
+0 = c1
+(
+π[∗]E
+) 2 ·(π∗ H)n− 2 − c2
+(
+π[∗]E
+)
+·(π∗ H)n− 2.(6.5.2)
+===PDF PAGE 18===
+18 DANIEL GREB, STEFAN KEBEKUS, AND THOMAS PETERNELL
+Then, there exists a quasi-´ etale morphismγ : ˆX → X such that γ[∗]E is a locally free, ﬂat
+sheaf on ˆX.
+Remark 6.6. Notice that condition (
+6.5.2) does not depend on the choice of π, see
+[GKP13, 4.4] for the argument. It is essential that two desingulari zations can be
+dominated by a third one.
+Remark 6.7. Theorem
+6.5 holds if X has only klt singularities provided we knew
+that π1(X) ≃ π1(X◦), where X◦ is the locus of quotient singularities.
+Remark 6.8. One might ask whether Theorem 6.5 holds in greater generality , that
+is, for a larger class of singular spaces. What we actually ne eded is the following.
+(6.8.1) A general complete intersection surface S ⊂ X has only rational singular-
+ities.
+(6.8.2) The following Lefschetz-type statement holds true : there exists a closed
+set A ⊂ X of codimension at least three such that π1(S) ≃ π1(X \A).
+(6.8.3) There exists a quasi-´ etale cover ˜X → X such that ˆπ1( ˜Xreg) ≃ ˆπ1( ˜X).
+Corollary 6.9. Let X be a normal Q-factorial projective variety with only canonical sin-
+gularities. Let H ̸= 0 be any nef divisor on X and E = ⨁ Ei a reﬂexive sheaf on X whose
+direct summands are H-stable. If c 1(Ei) = 0 for all i and if there exists a desingularisa-
+tion π : ˜X → X such that π[∗]E is locally free and c 2
+(
+π[∗]E
+)
+= 0, then there exists a
+quasi-´ etale morphismγ : ˆX → X such that γ[∗]E is a ﬂat, locally free sheaf on ˆX.
+Proof. If H0 is any ample divisor, it will follow from Theorem 3.4 that all direct
+summands Ei are stable with respect to (H + ε ·H0), for all sufﬁciently small pos-
+itive ε. More is true. Since c1(Ei) = 0 the bundle E is polystable with respect to
+(H + ε ·H0), and in particular semistable. Now apply Theorem 6.5. □
+6.2. Preparations. The proof of Theorem 6.2 makes use of the following lemmas,
+which might be of independent interest.
+Lemma 6.10. Let X be a smooth, projective surface and ∆ ∈ N1(X)Q a rational divisor
+class. Then, either there exists an integral, ample divisor H such that H ·∆ = 0, or either
+∆ or − ∆ is pseudo-effective.
+Proof. Since X is a surface, divisors and curves coincide, and the interior of the
+movable cone equals the ample cone. Since ∆ is a rational class by assumption,
+the hyperplane
+∆⊥ := {α ∈ N1(X)R |α ·∆ = 0}
+is likewise rational, and rational points are dense there. If ∆⊥ intersects the interior
+of the movable cone at all, the intersection will thus contai n a rational point. In
+other words, there will be integral ample divisors H with H ·∆ = 0.
+Assuming that no such divisor H exists therefore amounts to assuming that the
+function • ·∆ does not have any zeros in Mov (X)◦ and is either strictly positive or
+strictly negative there. As seen in Remark
+2.3 on page 4 , this means that either ∆
+or − ∆ is pseudo-effective. □
+Lemma 6.11. Let X be a smooth, projective surface and ∆ ∈ N1(X)Q a rational,
+pseudo-effective divisor class with ∆2 = 0. Assume that there exists a movable class
+α ∈ Mov(X) \ {0} such that α ·∆ = 0. Then, ∆ is nef.
+Proof. Consider the Zariski decomposition, ∆ = [ P] + [N], where P and N are Q-
+divisors, where P is nef, N = ∑ ai Ni is effective, N2 < 0 unless N = 0, and ﬁnally
+P ·Ni = 0 for all i.
+Observe that the movable (=nef) class α intersects P and N non-negatively . The
+assumption that α ·∆ = 0 therefore gives that α ·P = α ·N = 0. Since α ̸= 0 and
+===PDF PAGE 19===
+MOV ABLE CURVES AND SEMISTABLE SHEA VES 19
+α2 ≥ 0, the Hodge index theorem thus implies that the non-negativ e number P2
+is actually zero. Since 0 = ∆2 = P2 + N2, we obtain that N2 = 0, and hence that
+N = 0. It follows that ∆ = [ P] is nef. □
+6.3. Proof of Theorem 6.2. Using the assumption that α2 > 0, the Hodge index
+theorem asserts that c1(E )2 ≤ 0. Thus, the assumption c1(E )2 = c2(E ), combined
+with the Bogomolov-Gieseker inequality of Theorem 5.1 yields c1(E )2 = c2(E ) =
+0, and taking into account the further assumption made in ( 6.2.1) the Hodge in-
+dex theorem hence asserts that c1(E ) = 0. In particular, equality holds in the
+Bogomolov-Gieseker inequality of Theorem 5.1, and E is therefore locally free.
+Step 1: Proof in case where E is stable. If E is α-stable, Theorem 3.4 and Remark 3.5
+allow to ﬁnd a rational point h′ ∈ [E ]⊥ ∩ Mov(X)◦ ∩ Stab(E ). If H′ is a divisor
+with class h′, [H′] = h′, then H′ is ample, and it follows from classical theorems
+that E is ﬂat, e.g. see [ Sim92, Cor. 3.10]. T o apply Simpson’s theorem, we view E
+as a Higgs bundle with zero Higgs ﬁeld θ = 0 and notice that slope semi-stability
+in our sense implies semi-stability of Higgs bundles. □
+Step 2: Proof in general. Consider a minimal-length Jordan-H ¨ older ﬁltration of E ,
+as discussed in Corollary 2.28,
+0 = E0 ⊊ E1 ⊊ · · ·⊊ Ek = E .
+The proof proceeds by induction on the length of the ﬁltratio n, denoted by k. If
+k = 1, then E is α-stable, and the assertion has been shown in Step 1. W e will
+therefore assume for the remainder of the proof that k > 1, and that the claim has
+already been shown for all α-semistable bundles satisfying Equations ( 6.2.1) that
+admit a shorter Jordan-H ¨ older ﬁltration.
+For brevity of notation write F := Ek− 1 and Q := E /F . W e obtain a sequence
+0 → F → E → Q → 0,
+where F is α-semistable, reﬂexive and therefore locally free, and wher e Q is α-
+stable and torsion-free, and c1(F ) ·α = c1(Q) ·α = 0. As before, the Hodge index
+theorem will thus imply the following.
+(6.12.1) c1(F )2 ≤ 0 and c1(Q)2 ≤ 0, each with equality iff c1(·) = 0.
+W e aim to show that the vanishing (
+6.2.1) holds for F and Q. Since both F and
+Q admit Jordan-H ¨ older ﬁltrations of length less thank, ﬂatness of F and Q then
+follows from the induction hypothesis. The bundle E is then presented as an ex-
+tension of two ﬂat bundles and is therefore ﬂat by [ Sim92, 3.10].
+T o this end, we use the following relations between the Chern classes of F and
+Q,
+0 = c1(E )2 = c1(F )2 + c1(Q)2 + 2 ·c1(F ) ·c1(Q)(6.12.2)
+0 = c2(E ) = c2(F ) + c2(Q) + c1(F ) ·c1(Q)(6.12.3)
+These equations yield
+1
+2 c1(F )2 + 1
+2 c1(Q)2 = c2(F ) + c2(Q) (6.12.2) and ( 6.12.3)
+≥ rank F − 1
+2 rank F  
+non-neg., <1/2
+·c1(F )2 + rank Q− 1
+2 rank Q  
+non-neg., <1/2
+·c1(Q)2 BGI, Theorem 5.1.
+Combined with ( 6.12.1), this shows that c1(F )2 = c1(Q)2 = 0. Applying the
+Bogomolov-Gieseker Inequality , Theorem5.1, once more to F and Q, we see that
+c2(F ) ≥ 0 and c2(Q) ≥ 0, and it follows from ( 6.12.3) that both numbers vanish.
+===PDF PAGE 20===
+20 DANIEL GREB, STEFAN KEBEKUS, AND THOMAS PETERNELL
+The induction hypothesis therefore applies to show that F and Q are ﬂat. As
+noted above, this proves ﬂatness of E . □
+6.4. Proof of Theorem 6.4. Let E be any α-stable, torsion-free sheaf on X such that
+equality holds in the Bogomolov-Gieseker inequality . By Theorem
+5.1, the sheaf E
+is then locally free.
+Step 1: Proof of projective ﬂatness. W e have seen in Theorem
+3.4 that E is stable also
+with respect to a suitable rational class β that is contained in the interior of the
+movable cone. Since X is a surface, the movable cone equals the nef cone, and
+its interior consists of ample classes. Projective ﬂatness is now a consequence of
+a classical theorem, see [ JR13, Thm. 1.1 and Prop. 1.1] for a discussion and for
+further references. This paper also asserts that E is semistable with respect to any
+ample class. Semistability with respect to all classes in Mo v(X) \ {0} then follows
+from Remark 3.2, since Mov (X) is the closure of the ample cone.
+Step 2: Proof of nefness. Assuming that the Equalities ( 6.2.1) hold, we aim to prove
+that E or E ∗ are nef, or equivalently , that Sym r(E ) or Sym r(E ∗) are nef vector
+bundles, where r := rank E , cf. [Laz04, Thm. 6.2.12]. Since both Sym r(E ) ⊗ det E ∗
+and its dual are nef by projective ﬂatness, [ JR13, Sect. 1.3], it sufﬁces to show that
+either det E or det E ∗ is nef.
+T o this end, observe that if there exists an integral, ample d ivisor H such that
+H ·c1(E ) = 0, then Theorem 3.4 allows to ﬁnd a rational point h′ ∈ c1(E )⊥ ∩
+Mov(X)◦ ∩ Stab(E ). Any divisor H′ with class h′ is then ample, and it follows
+from Simpson’s theorem that E is ﬂat, [Sim92, Cor. 3.10]. The class c1(E ) will then
+vanish, and we are done.
+W e will thus assume that no such divisor H exists. One of the divisors det E or
+det E ∗ is then pseudo-effective by Lemma 6.10. Using the assumption that c1(E ) ·
+α = c1(E )2 = 0, nefness now follows from Lemma 6.11. □
+6.5. Proof of Theorem 6.5. Our subsequent proof of Theorem 6.5 will use the fol-
+lowing minimal generalisation of a result in [ GKP13]. The proof is exactly the
+same as the one given there, and therefore omitted.
+Lemma 6.13 (Iterated Bertini-type theorem for bounded families, cf. [
+GKP13,
+Cor. 5.6]) . Let X be a normal, projective variety of dimension dim X ≥ 2. Let E be
+a coherent, reﬂexive sheaf of OX-modules, and let F be a bounded family of locally free
+sheaves. Given an ample line bundle L ∈ Pic(X), a sufﬁciently increasing sequence
+0 ≪ m1 ≪ m2 ≪ · · · ≪ mk and general elements H i of a basepoint-free linear system
+contained in |L ⊗ mi|with associated complete intersection variety S := H1 ∩ · · · ∩Hk,
+then the following holds for all sheaves F ∈ F. The sheaf F is isomorphic to E if and only
+if F |S is isomorphic to E |S. □
+Proof of Theorem 6.5. Let γ : ˆX → X be the ﬁnite, quasi-´ etale cover guaranteed by
+[GKP13, Thm. 1.13], which has the property that any locally free, ﬂa t sheaf deﬁned
+on ˆXan
+reg extends to a locally free, ﬂat sheaf on the whole of ˆX.
+W e may assume H to be sufﬁciently ample in the sense of Mehta-Ramanathan
+and so that Lemma 6.13 may be applied to the linear subsystem γ∗|H| of
+|γ∗(H)|without taking further multiples. Choose a general tuple of hypersurfaces
+D1, . . . , Dn− 2 ∈ |H|and write
+S := D1 ∩ · · · ∩Dn− 2.
+W e recall the classical fact, that in codimension two a varie ty with canonical sin-
+gularities is locally in the Euclidean topology a product of a surface with an
+===PDF PAGE 21===
+MOV ABLE CURVES AND SEMISTABLE SHEA VES 21
+ADE singularity and of a smooth space of dimension (dim X − 2), see for ex-
+ample [ GKKP11, Prop. 9.3]. In particular, the set Z ⊂ X where X is not locally
+a complete intersection is small, codim X Z ≥ 3. Set X◦ := X \Z and note that
+S ⊂ X◦.
+Since S is likewise canonical, it is normal with only ADE singularit ies. In par-
+ticular, S is Q-factorial. By Flenner’s version of the Mehta-Ramanathan t heorem,
+[Fle84, Thm. 1.2], the restriction E |S is semistable with respect to the ample class
+H|S.
+Let ˜Di := π∗(Di) ∈ |π∗ H|and set ˜S := ˜D1 ∩ · · · ∩˜Dn− 2. Then ˜S = π− 1(S) is a
+smooth surface contained in the smooth locus of ˜X. For convenience of notation,
+write
+g := π|S, ˜E := g[∗](E |S) and ˜H := g∗(H|S).
+W e have seen in Proposition2.8 on page 5 that the pull-back sheaf ˜E is stable with
+respect to ˜H. Equations ( 6.5.1) and (6.5.2) then read as follows,
+0 = c1( ˜E ) · ˜H and 0 = c1( ˜E )2 − c2( ˜E ).
+For the second equation, we observe that π[∗](E )|˜S is reﬂexive and thus equals ˜E .
+In particular, Theorem 6.2 implies that ˜E is ﬂat, hence given by a representation
+π1( ˜S) → Gl(r, C). Since S has only canonical singularities, π1( ˜S) ∼
+= π1(S), and
+the induced representation π1(S) → Gl(r, C) deﬁnes a locally free ﬂat sheaf F on
+S such that p∗F ≃ ˜E . It follows that the sheaves F and E |S agree outside a ﬁnite
+set of S. Since E |S is reﬂexive, [
+GKP13, Proposition 5.2], the sheaves F and E |S
+are isomorphic. Since X◦ is a locally complete intersection variety , a Lefschetz-
+type theorem of Goresky-MacPherson [ GM88, II.1.2, Thm. on p. 153] asserts that
+the inclusion ι : S → X◦ induces an isomorphism
+ι∗ : π1(S) → π1(X◦).
+Thus, there exists a locally free, ﬂat sheaf G on X◦ such that G |S ∼
+= E |S. The
+observation that Zariski-open subsets with complement of c odimension at least
+two inside a smooth variety have the same fundamental group as the entire variety
+together with the choice of ˆX implies that the pullback of G to γ− 1(X◦) ∩ ˆXreg
+extends to a locally free, ﬂat sheaf ˆG on the whole of ˆX. Setting ˆS := γ− 1(S) =
+γ∗D1 ∩ . . . ∩ γ∗Dn− 2, we note that
+ˆG |ˆS
+∼
+= (γ|ˆS)∗(E |S) ∼
+=
+(
+γ[∗]E
+)
+|ˆS.
+As the set of all locally free, ﬂat sheaves on ˆX whose rank is equal to rank E is
+bounded by [
+GKP13, Prop. 12.1], we may apply Lemma 6.13 above to conclude
+that γ[∗]E is isomorphic to ˆG , and hence locally free and ﬂat, as claimed. □
+7. C HARACTERISATION OF TORUS QUOTIENTS
+The main result of this section generalises a result for thre e-dimensional vari-
+eties of Shepherd-Barron and Wilson [ SBW94, Cor. of Main Thm], and eliminates
+the a priori assumption on the codimension of the singular lo cus made in [ GKP13,
+Thm. 1.16].
+Theorem 7.1 (Characterisation of torus quotients) . Let X be a normal Q-factorial
+projective variety of dimension n with only canonical singu larities and numerically trivial
+canonical bundle, K X ≡ 0. Assume that there exists a desingularisation π : ˜X → X and
+an ample divisor H ∈ Dix(X) such that c 2( ˜X) ·(π∗H)n− 2 = 0. Then, X is smooth in
+codimension two, there exists an Abelian variety A and a quas i-´ etale morphismγ : A →
+X.
+===PDF PAGE 22===
+22 DANIEL GREB, STEFAN KEBEKUS, AND THOMAS PETERNELL
+Theorem 7.1 is shown below , on the facing page. It follows almost immedia tely
+from the following two lemmas.
+Lemma 7.2. Let π : ˜S → S be a desingularisation of a normal, projective, Q-factorial
+surface S with only rational singularities. Let α ∈ Mov(S) be a movable class with α2 > 0
+and let E be a torsion-free, (π∗α)-semistable, coherent sheaf on ˜S such that
+c1(E ) ·
+(
+π∗α
+)
+= c1(E )2 − c2(E ) = 0.
+Then, π∗E is locally free and ﬂat on S.
+Proof. Write r := rank E . It follows directly from Theorem
+6.2 that E is ﬂat, given
+by a representation ρ : π1( ˜S) → GLr(C). If x ∈ S is any singular point with
+associated ﬁbre F := π− 1(x), then F is simply-connected and E |F, which is given
+by a representation of π1(F), therefore trivial. Consequently , if E ′ is the locally
+free, ﬂat sheaf deﬁned by ρ ◦ (π∗)− 1 : π1(S) → GLr(C), we have E = π∗E ′ and
+E ′ = π∗E . □
+Lemma 7.3. Let X be a normal, projective variety of dimension n ≥ 2 with numerically
+trivial canonical class, K X ≡ 0, that has at most canonical singularities. Let π : ˜X → X
+be any resolution of singularities and H an ample divisor on X . If c 2( ˜X) ·(π∗H)n− 2 = 0,
+then X is smooth in codimension two.
+Proof. W e may assume without loss of generality thatH := OX(H) is very ample.
+Choose a general (n − 2)-tuple of elements Hi ∈ | H | and consider the associ-
+ated complete intersection surface S := ∩ i Hi ⊆ X, which has at worst canonical
+singularities. W e aim to show that X is smooth near S. Write
+NS/X := ( H |S)⊕ n− 2, ˜S := π− 1(S) and πS := π|˜S.
+Since X has canonical singularities, we may write K ˜X = π∗KX + D ≡ D, where D
+is effective and π-exceptional. W e obtain the following equalities of inters ection
+numbers,
+[
+K ˜X|˜S
+]
+·
+[
+N ∗
+˜S/ ˜X
+]
+=
+[
+D|˜S
+]
+·
+[
+N ∗
+˜S/ ˜X
+]
+= −
+[
+D|˜S
+]
+·
+[
+π∗
+SNS/X
+]
+= 0
+and hence
+(7.3.1)
+[
+K ˜S
+]
+·
+[
+N ∗
+˜S/ ˜X
+]
+=
+( [
+K ˜X|˜S
+]
++
+[
+N ˜S/ ˜X
+] )
+·
+[
+N ∗
+˜S/ ˜X
+]
+= −
+[
+N ˜S/ ˜X
+] 2.
+The normal bundle sequence for ˜S in ˜X expresses the relevant second Chern class
+as follows,
+(7.3.2)
+0 = c2
+(
+Ω1
+˜X|˜S
+)
+= c2
+(
+N ∗
+˜S/ ˜X
+)
++ c2
+(
+Ω1
+˜S
+)
++
+[
+K ˜S
+]
+·
+[
+N ∗
+˜S/ ˜X
+]
+= c2
+(
+N ∗
+˜S/ ˜X
+)
++ χtop
+( ˜S
+)
+−
+[
+N ˜S/ ˜X
+] 2 by (
+7.3.1).
+W e now compareπ to a Q-factorial terminalisation ρ : ˆX → X of X, which exists
+by [BCHM10, Cor. 1.4.3]. As the name suggests, ˆX is Q-factorial and has at most
+terminal singularities. Moreover, as X has canonical singularities, ρ is crepant, and
+(7.3.3) K ˆX ∼ Q ρ∗KX ≡ 0.
+Write ˆS := ρ− 1(S) and ρS := ρ|ˆS. Since varieties with terminal singularities are
+smooth in codimension two, the surface ˆS is smooth, and entirely contained in the
+smooth locus of ˆX. As above, compute
+(7.3.4)
+c2
+(
+Ω1
+ˆX|ˆS
+)
+= c2
+(
+N ∗
+ˆS/ ˆX
+)
++ c2
+(
+Ω1
+ˆS
+)
++
+[
+K ˆS
+]
+·
+[
+N ˆS/ ˆX
+]
+= c2
+(
+N ∗
+ˆS/ ˆX
+)
++ χtop
+( ˆS
+)
+−
+[
+N ˆS/ ˆX
+] 2.
+===PDF PAGE 23===
+MOV ABLE CURVES AND SEMISTABLE SHEA VES 23
+It follows from adjunction and from the Q-linear equivalence K ˆX ∼ Q ρ∗KX that
+K ˆS ∼ Q (ρ|ˆS)∗KS, so that ˆS is in fact the minimal resolution of S. Consequently ,
+there exists a birational S-morphism β : ˜S → ˆS, which is a sequence of blowing-
+down (− 1)-curves. This has two consequences. First, there is an inequ ality of
+topological Euler characteristics, χtop
+( ˆS
+)
+≤ χtop
+( ˜S
+)
+. Secondly , we see that
+N ˜S/ ˜X = π∗
+SNS/X = β∗ρ∗
+SNS/X = β∗N ˆS/ ˆX,
+so that the Chern numbers of the normal bundles agree, c2(N ˜S/ ˜X) = c2(N ˆS/ ˆX) and
+[N ˜S/ ˜X]2 = [ N ˆS/ ˆX]2. Comparing (
+7.3.2) and ( 7.3.4), we thus see that c2
+(
+Ω1
+ˆX|ˆS
+)
+≤ 0.
+T o end the argument, let ˇX → ˆX be a strong resolution of singularities, with
+induced map r : ˇX → X, surface ˇS := r− 1(S) ⊆ ˇX and restriction rS := r|ˇS. Since ˇX
+and ˆX are isomorphic along ˆS, we have c2
+(
+Ω1
+ˇX|ˇS
+)
+≤ 0, and Miyaoka’s Chern class
+inequalities, [Miy87, Thm. 1.1], assert that in fact equality holds, c2
+(
+Ω1
+ˇX|ˇS
+)
+= 0.
+T o sum up, we have seen in (7.3.3) that
+c1
+(
+Ω1
+ˇX|ˇS
+)
+=
+[
+K ˇX|ˇS
+]
+=
+[
+K ˆX|ˆS
+]
+≡ 0
+and thus
+c1
+(
+Ω1
+ˇX|ˇS
+)
+·(r∗ H)|ˇS = c1
+(
+Ω1
+ˇX|ˇS
+) 2 − c2
+(
+Ω1
+ˇX|ˇS
+)
+= 0.
+Lemma 7.2 thus applies to show that (rS)∗
+(
+Ω1
+ˇX|ˇS
+)
+is locally free and ﬂat. Set
+Ω[1]
+X :=
+(
+Ω1
+X
+) ∗∗. Since Ω[1]
+X |S is reﬂexive by [GKP13, Prop. 5.2], it necessarily agrees
+with (rS)∗
+(
+Ω1
+ˇX|ˇS
+)
+, showing that both Ω[1]
+X and TX =
+(
+Ω[1]
+X
+) ∗ are locally free near S.
+The Lipman-Zariski theorem for canonical spaces, [ GKKP11, Thm. 6.1] or [ Dru14,
+Thm. 3.8], thus applies, showing that X is smooth near S. □
+Proof of Theorem 7.1. Lemma 7.3 asserts that X is smooth in codimension two.
+Under this additional assumption, Theorem 7.1 has been shown in [ GKP13,
+Thm. 1.16]. □
+REFERENCES
+[BCHM10] Caucher Birkar, Paolo Cascini, Christopher D. Hac on, and James McKernan. Existence of
+minimal models for varieties of log general type. Journal of the AMS , 23:405–468, 2010.
+DOI:10.1090/S0894-0347-09-00649-3. ↑ 22
+[BDPP13] S´ ebastien Boucksom, Jean-Pierre Demailly , Miha i P˘ aun, and Thomas Peternell. The
+pseudo-effective cone of a compact K¨ ahler manifold and varieties of negative Kodaira di-
+mension. J. Algebraic Geom. , 22(2):201–248, 2013. arXiv:math/0405285. ↑ 4
+[CP11] Fr´ ed´ eric Campana and Thomas Peternell. Geometric stability of the cotangent bundle and
+the universal cover of a projective manifold. Bull. Soc. Math. France , 139(1):41–74, 2011. ↑ 2,
+14
+[Dru14] St´ ephane Druel. The Zariski-Lipman conjecture fo r log canonical spaces. Bull. London Math.
+Soc., 46(4):827–835, 2014. ↑ 23
+[Fle84] Hubert Flenner. Restrictions of semistable bundle s on projective varieties. Comment. Math.
+Helv., 59(4):635–650, 1984. ↑ 6, 21
+[GKKP11] Daniel Greb, Stefan Kebekus, S´ andor J. Kov ´ acs, and Thomas Peternell. Differential forms
+on log canonical spaces. Inst. Hautes ´Etudes Sci. Publ. Math. , 114(1):87–169, November 2011.
+DOI:10.1007/s10240-011-0036-0 An extended version with additional graphics is available
+as arXiv:1003.2913. ↑ 21, 23
+[GKP13] Daniel Greb, Stefan Kebekus, and Thomas Peternell. ´Etale fundamental groups of
+Kawamata log terminal spaces, ﬂat sheaves, and quotients of Abelian varieties. Preprint
+arXiv:1307.5718, July 2013. ↑ 2, 3, 6, 17, 18, 20, 21, 23
+[GKP14] Daniel Greb, Stefan Kebekus, and Thomas Peternell. Reﬂexive differential forms on
+singular spaces. Geometry and cohomology . J. Reine Angew. Math. , 697:57–89, 2014.
+DOI:10.1515/crelle-2012-0097. Preprint arXiv:1202.3243. ↑ 2, 4, 7
+===PDF PAGE 24===
+24 DANIEL GREB, STEFAN KEBEKUS, AND THOMAS PETERNELL
+[GM88] Mark Goresky and Robert D. MacPherson. Stratiﬁed Morse theory , volume 14 of Ergebn-
+isse der Mathematik und ihrer Grenzgebiete (3) [Results in M athematics and Related Areas (3)] .
+Springer-V erlag, Berlin, 1988.↑
+21
+[GRT14] Daniel Greb, Julius Ross, and Matei Toma. Variation of Gieseker Moduli Spaces via Quiver
+GIT, I. Preprint arXiv:1409.7564, September 2014. ↑ 9
+[GT13] Daniel Greb and Matei Toma. Compact moduli spaces for slope-semistable sheaves. Pre-
+print arXiv:1303.2480, September 2013. ↑ 2
+[HL10] Daniel Huybrechts and Manfred Lehn. The geometry of moduli spaces of sheaves . Cambridge
+Mathematical Library . Cambridge University Press, Cambridge, second edition, 2010. ↑ 2,
+8, 15
+[JR13] Priska Jahnke and Ivo Radloff. Semistability of rest ricted tangent bundles and a question
+of I. Biswas. Internat. J. Math., 24(1):1250122, 15, 2013. ↑ 17, 20
+[KM98] J´ anos Koll´ ar and Shigefumi Mori. Birational geometry of algebraic varieties , volume 134 of
+Cambridge T racts in Mathematics. Cambridge University Press, Cambridge, 1998. ↑ 6
+[Kol96] J´ anos Koll´ ar. Rational curves on algebraic varieties , volume 32 of Ergebnisse der Mathematik
+und ihrer Grenzgebiete. 3. Folge. A Series of Modern Surveys in Mathematics. Springer-V erlag,
+Berlin, 1996. ↑ 3, 4
+[Laz04] Robert Lazarsfeld. Positivity in algebraic geometry. II , volume 49 of Ergebnisse der Mathematik
+und ihrer Grenzgebiete. 3. Folge. A Series of Modern Surveys in Mathematics [Results in Mathem-
+atics and Related Areas. 3rd Series. A Series of Modern Surveys in Mathematics]. Springer-V erlag,
+Berlin, 2004. Positivity for vector bundles, and multiplie r ideals. ↑ 20
+[Miy87] Yoichi Miyaoka. The Chern classes and Kodaira dimen sion of a minimal variety . In Al-
+gebraic geometry, Sendai, 1985 , volume 10 of Adv. Stud. Pure Math. , pages 449–476. North-
+Holland, Amsterdam, 1987. ↑ 2, 14, 15, 23
+[MP97] Yoichi Miyaoka and Thomas Peternell. Geometry of higher-dimensional algebraic varieties ,
+volume 26 of DMV Seminar. Birkh ¨ auser V erlag, Basel, 1997.↑ 14, 15, 16
+[Ros68] Hugo Rossi. Picard variety of an isolated singular p oint. Rice Univ. Studies , 54(4):63–73,
+1968. ↑ 14
+[SBW94] Nicholas I. Shepherd-Barron and Pelham M.H. Wilson . Singular threefolds with numeric-
+ally trivial ﬁrst and second Chern classes. J. Algebraic Geom. , 3(2):265–281, 1994. ↑ 3, 21
+[Sim92] Carlos T. Simpson. Higgs bundles and local systems. Inst. Hautes ´Etudes Sci. Publ. Math. ,
+75:5–95, 1992. ↑ 3, 17, 19, 20
+DANIEL GREB , E SSENER SEMINAR F ¨UR ALGEBRAISCHE GEOMETRIE UND ARITHMETIK , FAKULT ¨AT
+F ¨UR MATHEMATIK , UNIVERSIT ¨AT DUISBURG -E SSEN , 45117 E SSEN , G ERMANY
+E-mail address: daniel.greb@uni-due.de
+URL: http://www.esaga.uni-due.de/daniel.greb/
+STEFAN KEBEKUS , M ATHEMATISCHES INSTITUT , A LBERT -L UDWIGS -U NIVERSIT ¨AT FREIBURG ,
+ECKERSTRASSE 1, 79104 F REIBURG IM BREISGAU , G ERMANY , AND UNIVERSITY OF STRASBOURG IN-
+STITUTE FOR ADVANCED STUDY (USIAS), S TRASBOURG , FRANCE
+E-mail address: stefan.kebekus@math.uni-freiburg.de
+URL: http://home.mathematik.uni-freiburg.de/kebekus
+THOMAS PETERNELL , M ATHEMATISCHES INSTITUT , U NIVERSIT ¨AT BAYREUTH , 95440 B AYREUTH ,
+GERMANY
+E-mail address: thomas.peternell@uni-bayreuth.de
+URL: http://btm8x5.mat.uni-bayreuth.de/mathe1

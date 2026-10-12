@@ -1,0 +1,7 @@
+\node[card] (n0) {\heading{1}{sourceでEuler数を保持}{Retain the Euler number at the source}$Q(m)=\chi(S_+,mA|_{S_+}),\quad Q(0)=\chi(W,\mathcal O_W)\ne0$};
+\node[card,below=2.15cm of n0] (n1) {\heading{2}{rank shiftを持つ行列式}{Determinant with its rank shift}$N_i\sim M+m_iA,\quad v(N_i)=\mu_M+s\mu_+$};
+\flow{n0}{n1}{\Tx{係数$(m+1)A$のhard Lefschetzと$-M$の擬有効性}{Hard Lefschetz with $(m+1)A$ and pseudoeffectivity of $-M$}\\[3pt]\Cite{hard-lefschetz}; \Cite{negative-det}};
+\node[card,below=2.15cm of n1] (n2) {\heading{3}{各頂点へ実際の指標を近づける}{Approach vertices by actual characters}$v(N)/r\to0,\quad \langle\eta/r,\lambda\rangle\to\mu_+,\quad 0\in\operatorname{int}P$};
+\flow{n1}{n2}{\Tx{有界arc orderを任意に小さい正規化次数へ移す}{Transfer bounded arc orders to arbitrarily small normalized order}\\[3pt]\Cite{additional-approx}};
+\node[result,below=2.15cm of n2] (n3) {\heading{4}{有限個の有理凸結合を積にする}{Turn a finite rational combination into a product}$0\in\operatorname{conv}\{\eta_i/r_i\}\quad\Longrightarrow\quad H^0(W,rA)^T\ne0$};
+\flow{n2}{n3}{\Tx{分母を払い、指標の和が零となる非零切断の積を取る}{Clear denominators and multiply sections whose characters sum to zero}\\[3pt]\Cite{orders}; \Cite{chi-proof}};

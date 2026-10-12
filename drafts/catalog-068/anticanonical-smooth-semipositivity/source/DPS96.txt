@@ -1,0 +1,328 @@
+
+===PDF PAGE 1===
+Compact K¨ ahler manifolds
+with hermitian semipositive
+anticanonical bundle
+J.-P. Demailly T. Peternell M. Schneider
+1. Main results
+This short note is a continuation of our previous work [DPS93 ] on compact
+K¨ ahler manifoldsX with semipositive Ricci curvature. Our purpose is to state a
+splitting theorem describing the structure of such manifol ds, and to raise some
+related questions. The foundational background will be fou nd in papers by
+Lichnerowicz [Li67], [Li71], and Cheeger-Gromoll [CG71], [CG72]. Recall that
+a Calabi-Yau manifold X is a compact K¨ ahler manifold with c1(X) = 0 and
+ﬁnite fundamental group π1(X), such that the universal covering ˜X satisﬁes
+H 0( ˜X, Ωp
+˜X
+) = 0 for all 1 ≤ p ≤ dim X − 1. A symplectic manifold X is a compact
+K¨ ahler manifold admitting a holomorphic symplectic 2-for m ω (of maximal rank
+everywhere); in particular KX = OX . We denote here as usual
+ΩX = T ⋆
+X , Ωp
+X = Λ pT ⋆
+X , K X = det(T ⋆
+X).
+The following structure theorem generalizes the Bogomolov -Kobayashi-Beauville
+structure theorem for Ricci-ﬂat manifolds ([Bo74a], [Bo74 b], [Ko81], [Be83]) to the
+Ricci semipositive case.
+Structure Theorem. Let X be a compact K¨ ahler manifold with −KX hermitian
+semipositive. Then
+i) The universal covering ˜X admits a holomorphic and isometric splitting
+˜X ≃
+Cq ×
+∏
+Xi
+with Xi being either a Calabi-Yau manifold or a symplectic manifold or a
+manifold with −KXi semipositive and H 0(Xi, Ω⊗ m
+Xi ) = 0 for all m > 0.
+ii) There exists a ﬁnite ´ etale Galois covering ˆX → X such that the Albanese va-
+riety Alb( ˆX) is a q-dimensional torus and the Albanese map α : ˆX → Alb( ˆX)
+is a locally trivial holomorphic ﬁbre bundle whose ﬁbres are products ∏Xi of
+the type described in i), all Xi being simply connected.
+iii) We have π1( ˆX) ≃ Z Z2q and π1(X) is an extension of a ﬁnite group Γ by the
+normal subgroup π1( ˆX). In particular there is an exact sequence
+0 → Z Z2q → π1(X) → Γ → 0,
+and the fundamental group π1(X) is almost abelian.
+1
+===PDF PAGE 2===
+Recall that a line bundle L is said to be hermitian semipositive if it can
+be equipped with a smooth hermitian metric of semipositive c urvature form.
+A suﬃcient condition for hermitian semipositivity is that s ome multiple of L
+is spanned by global sections; on the other hand, the hermiti an semipositivity
+condition implies that L is numerically eﬀective (nef) in the sense of [DPS94],
+which, for X projective algebraic, is equivalent to saying that L · C ≥ 0 for every
+curve C in X. Examples contained in [DPS94] show that all three conditio ns
+are diﬀerent (even for X projective algebraic). By Yau’s solution of the Calabi
+conjecture (see [Au76], [Yau78]), a compact K¨ ahler manifo ld X has a hermitian
+semipositive anticanonical bundle −KX if and only if X admits a K¨ ahler metric
+g with Ricci( g) ≥ 0. The isometric decomposition described in the theorem ref ers
+to such K¨ ahler metrics.
+In view of “standard conjectures” in minimal model theory it is expected that
+projective manifolds X with no nonzero global sections in H 0(X, Ω⊗ m
+X ), m > 0, are
+rationally connected. We hope that most of the above results will continue to hold
+under the weaker assumption that −KX is nef instead of hermitian semipositive.
+However, the technical tools needed to treat this case are st ill missing.
+We would like to thank the DFG-Schwerpunktprogramm “Komple xe Mannig-
+faltigkeiten” and the Institut Universitaire de France for making our work possible.
+2. Bochner formula and holomorphic diﬀerential forms
+Our starting point is the following well-known consequence of the Bochner
+formula.
+Lemma. Let X be a compact n-dimensional K¨ ahler manifold with−KX hermitian
+semipositive. Then every section of Ω⊗ m
+X , m ≥ 1 is parallel with respect to the given
+K¨ ahler metric.
+Proof. The Lemma is an easy consequence of the Bochner formula
+∆(∥ u ∥2) = ∥ ∇ u ∥2 + Q(u),
+where u ∈ H 0(X, Ω⊗ m
+X ) and Q(u) ≥ mλ0 ∥ u ∥2. Here λ0 is the smallest eigenvalue
+of the Ricci curvature tensor. For details see for instance [ Ko83]. Q.E.D.
+The following deﬁnition of a modiﬁed Kodaira dimension κ+(X) is taken from
+Campana [Ca93]. As the usual Kodaira dimension κ(X), this is a birational
+invariant of X. Other similar invariants have also been considered in [BR9 0]
+and [Ma93].
+Deﬁnition. Let Y be a compact complex manifold. We deﬁne
+i) κ+(Y ) = max {κ(det F ) : F is a subsheaf of Ωp
+Y for some p > 0},
+ii) κ++(Y ) = max {κ(det F ) : F is a subsheaf of Ω⊗ m
+Y for some m > 0}.
+Here we let as usual det F = (Λ rF )∗∗, where r = rankF and κ is the usual Iitaka
+dimension of a line bundle.
+2
+===PDF PAGE 3===
+Clearly, we have −∞ ≤ κ(Y ) ≤ κ+(Y ) ≤ κ++(Y ) where κ(Y ) = κ(KY ) is
+the usual Kodaira dimension. It would be interesting to know whether there are
+precise relations between κ+(Y ) and κ++(Y ), as well as with the weighted Kodaira
+dimensions deﬁned by Manivel [Ma93]. The above lemma implie s:
+Proposition. Let X be a compact K¨ ahler manifold with −KX hermitian semipo-
+sitive. Then κ++(X) ≤ 0.
+Proof. Assume κ++(X) > 0. Then we can ﬁnd m > 0 and a subsheaf F ⊂ Ω⊗ m
+X
+with κ(det F ) > 0. Hence there is some µ ∈ I N and s ∈ H 0(X, (det F )µ) with
+s ̸= 0. Since κ(det F ) > 0, s must have zeroes. Hence the induced section
+˜s ∈ H 0(X, Ω⊗ µrm
+X ) has zeroes too, r being the rank of F . This contradicts the
+previous Lemma. Q.E.D.
+Corollary . Let X be a compact K¨ ahler manifold with −KX hermitian semipo-
+sitive. Let φ : X → Y be a surjective holomorphic map to a normal compact
+K¨ ahler space. Then κ(Y ) ≤ 0. (Here κ(Y ) = κ( ˆY ), where ˆY is an arbitrary
+desingularization of Y.)
+Proof. This follows from the inequalities 0 ≥ κ+(X) ≥ κ+(Y ) ≥ κ(Y ). For the
+second inequality, which is easily checked by a pulling-bac k argument, see [Ca93].
+Q.E.D.
+3. Proof of the structure theorem
+We suppose here that X is equipped with a K¨ ahler metric g such that
+Ricci(g) ≥ 0, and we set n = dim
+C X.
+i) Let ( ˜X, g) ≃ ∏(Xi, gi) be the De Rham decomposition of ( ˜X, g), induced by
+a decomposition of the holonomy representation in irreduci ble representations.
+Since the holonomy is contained in U( n), all factors ( Xi, gi) are K¨ ahler manifolds
+with irreducible holonomy and holonomy group Hi ⊂ U(ni), ni = dim Xi. By
+Cheeger-Gromoll [CG71], there is possibly a ﬂat factor X0 = Cq and the other
+factors Xi, i ≥ 1, are compact. Also, the product structure shows that −KXi
+is hermitian semipositive. It suﬃces to prove that κ++(Xi) = 0 implies that Xi
+is a Calabi-Yau manifold or a symplectic manifold. In view of §2, the condition
+κ++(Xi) = 0 means that there is a nonzero section u ∈ H 0(Xi, Ω⊗ m
+Xi ) for some
+m > 0. Since u is parallel by the lemma, it is invariant under the holonomy
+action, and therefore the holonomy group Hi is not the full unitary group U( ni)
+(indeed, the trivial representation does not occur in the de composition of ( Cni )⊗ m
+in irreducible U( ni)-representations, all weights being of length m). By Berger’s
+classiﬁcation of holonomy groups [Bg55] there are only two r emaining possibilities,
+namely Hi = SU( ni) or Hi = Sp( ni/2). The case Hi = SU( ni) leads to Xi being
+a Calabi-Yau manifold. The remaining case Hi = Sp( ni/2) implies that Xi is
+symplectic (see e.g. [Be83]).
+ii) Set X ′= ∏
+i≥ 1 Xi. The group of covering transformations acts on the product
+˜X =
+Cq × X ′ by holomorphic isometries of the form x = ( z, x′) ↦→ (u(z), v(x′)).
+3
+===PDF PAGE 4===
+At this point, the argument is slightly more involved than in Beauville’s paper
+[Be83], because the group G′ of holomorphic isometries of X ′ need not be ﬁnite
+(X ′ may be for instance a projective space); instead, we imitate the proof of
+([CG72], Theorem 9.2) and use the fact that X ′ and G′ = Isom(X ′) are compact.
+Let Eq = Cq × U (q) be the group of unitary motions of Cq. Then π1(X) can
+be seen as a discrete subgroup of Eq × G′. As G′ is compact, the kernel of the
+projection map π1(X) → Eq is ﬁnite and the image of π1(X) in Eq is still discrete
+with compact quotient. This shows that there is a subgroup Γ o f ﬁnite index in
+π1(X) which is isomorphic to a crystallographic subgroup of Cq. By Bieberbach’s
+theorem, the subgroup Γ 0 ⊂ Γ of elements which are translations is a subgroup
+of ﬁnite index. Taking the intersection of all conjugates of Γ0 in π1(X), we ﬁnd a
+normal subgroup Γ 1 ⊂ π1(X) of ﬁnite index, acting by translations on Cq. Then
+ˆX = ˜X/Γ1 is a ﬁbre bundle over the torus Cq/Γ1 with X ′as ﬁbre and π1(X ′) = 1.
+Therefore ˆX is the desired ﬁnite ´ etale covering of X.
+iii) is an immediate consequence of ii), using the homotopy e xact sequence of a
+ﬁbration. Q.E.D.
+Corollary 1. Let X be a compact K¨ ahler manifold with −KX hermitian semi-
+positive. If ˜X is indecomposable and κ+(X) = 0 , then X is Ricci-ﬂat.
+Corollary 2. Let X be a compact K¨ ahler manifold with −KX hermitian semi-
+positive. Then, if ˆX → X is an arbitrary ﬁnite ´ etale covering,
+κ+(X) = −∞ ⇐ ⇒ κ++(X) = −∞
+⇐ ⇒ ∀ ˆX → X, ∀p ≥ 1, H 0( ˆX, Ωp
+ˆX
+) = 0 .
+If κ+(X) = −∞ , then χ(X, OX) = 1 and X is simply connected.
+Proof. The equivalence of all three properties is a direct conseque nce of the
+structure theorem. Now, every ´ etale covering ˆX → X satisﬁes κ+( ˆX) =
+κ+(X) = −∞ , hence χ( ˆX, O ˆX) = χ(X, OX) = 1 (by Hodge symmetry we have
+hp(X, OX) = 0 for p ≥ 1, whilst h0(X, OX) = 1). However, if d is the covering
+degree, the Riemann-Roch formula implies χ( ˆX, O ˆX) = d χ(X, OX), hence d = 1
+and X must be simply connected. Q.E.D.
+4. Related questions for the case -K X nef
+In order to make the structure theorem more explicit, it woul d be necessary
+to characterize more precisely the manifolds for which κ+(X) = −∞ . We expect
+these manifolds to be rationally connected, even when −KX is just supposed to
+be nef.
+Conjecture. Let X be a compact K¨ ahler manifold such that −KX is nef and
+κ+(X) = −∞ . Then X is rationally connected, i.e. any two points of X can be
+joined by a chain of rational curves.
+4
+===PDF PAGE 5===
+Campana even conjectures this to be true without assuming −KX to be nef.
+Another hope we have is that a similar structure theorem migh t also hold in
+the case −KX nef. A small part of it would be to understand better the struc ture
+of the Albanese map. We proved in [DPS93] that the Albanese ma p is surjective
+when dim X ≤ 3, and if dim X ≤ 2 it is well-known that the Albanese map is a
+locally trivial ﬁbration. It is thus natural to state the fol lowing
+Problem. Let X be a compact K¨ ahler manifold with −KX nef. Is the Albanese
+map α : X → Alb(X) a smooth locally trivial ﬁbration ?
+The following simple example shows, even in the case of a loca lly trivial
+ﬁbration, that the structure group of transition automorph isms need not be a
+group of isometries, in contrast with the case −KX hermitian semipositive.
+Example 1 (see [DPS94], Example 1.7) . Let C = C/(Z Z+ Z Zτ ) be an elliptic
+curve, and let E → C be the ﬂat rank 2 bundle associated to the representation
+π1(C) → GL2(C) deﬁned by the monodromy matrices
+(
+1 0
+0 1
+)
+,
+(
+1 1
+0 1
+)
+.
+Then the projectivized bundle X = I P(E) is a ruled surface over C with −KX
+nef and not hermitian semipositive (cf. [DPS94]). In this ca se, the Albanese map
+X → C is a locally trivial I P 1-bundle, but the monodromy group is not relatively
+compact in GL 2(
+C), hence there is no invariant K¨ ahler metric on the ﬁbre.
+Example 2. The following example shows that the picture is unclear even in the
+case of surfaces with κ+(X) = −∞ . Let p = ( p1, . . . , p9) be a conﬁguration of 9
+points in I P2 and let π : Xp → I P2 be the blow-up of I P2 with center p. Here some
+of the points pi may be inﬁnitely near: as usual, this means that the blowing- up
+process is made inductively, each pi being an arbitrary point in the blow-up of I P 2
+at ( p1, . . . , pi− 1). There is always a cubic curve C containing all 9 points ( C is
+even unique if p is general enough). The only assumption we make is that C is
+nonsingular, and we let C = {Q(z0, z1, z2) = 0 } ⊂ I P2, deg Q = 3. Then C is an
+elliptic curve and −KXp = π⋆ O(3) − ∑Ei where Ei = π− 1(pi) are the exceptional
+divisors. Clearly Q deﬁnes a section of −KXp , of divisor equal to the strict
+transform C′ of C, hence −KXp ≃ O (C′), and ( −KXp )2 = ( C′)2 = C2 − 9 = 0.
+Therefore −KXp is always nef.
+It is easy to see that −mKXp may be generated or not by sections according
+to the choice of the 9 points pi. In fact, if p′
+i is the point of C′ lying over pi, we
+have
+−KXp|C′ = π⋆ (O(3))|C′ ⊗ O(−
+∑
+p′
+j) = π⋆
+(
+O(3)|C ⊗ O (−
+∑
+pj)
+)
+.
+Since C′ ≃ C is an elliptic curve and −KXp|C′ has degree 0, there are nonzero
+sections in H 0(C′, −mKXp|C′ ) if and only if Lp = O(3)|C ⊗O (− ∑pj )) is a torsion
+5
+===PDF PAGE 6===
+point in Pic 0(C) of order dividing m. Such sections always extend to Xp. Indeed,
+we may assume that m is exactly the order. Then O(−C′) ⊗ O (−mKXp ) =
+O((m − 1)C′) admits a ﬁltration by its subsheaves O(kC ′), 0 ≤ k ≤ m − 1, and
+the H 1 groups of the graded pieces are H 1(Xp, OXp) = 0 for k = 0 and
+H 1(C′, O(kC ′)|C′) = H 0(C′, O(−kC ′)) = 0 for 0 < k < m.
+Therefore H 1(Xp, O(−C′) ⊗ O(−mKXp )) = 0, as desired. In particular, −KXp is
+hermitian semipositive as soon as Lp is a torsion point in Pic 0(C). In this case,
+there is a polynomial Rm of degree 3 m vanishing of order m at all points pi, such
+that the rational function Rm/Qm deﬁnes an elliptic ﬁbration ϕ : Xp → I P1; in this
+ﬁbration C is a multiple ﬁbre of multiplicity m and we have −mKXp = ϕ⋆ OI P1 (1).
+An interesting question is to understand what happens when Lp is no longer a
+torsion point in Pic 0(C) (this is precisely the situation considered by Ogus [Og76]
+in order to produce a counterexample to the formal principle for inﬁnitesimal
+neighborhoods). In this situation, we may approximate p by a sequence of
+conﬁgurations pm ⊂ C such that the corresponding line bundle Lpm is a torsion
+point of order m (just move a little bit p9 and take a suitable p9,m ∈ C close
+to p9). The sequence of ﬁbrations Xpm → I P1 does not yield a ﬁbration Xp → I P1
+in the limit, but we believe that there might exist instead a h olomorphic foliation
+on Xp. In this foliation, C would be a closed leaf, and the generic leaf would be
+nonclosed and of conformal type C (or possibly C⋆ ). If indeed the foliation exists
+and admits a smooth invariant transversal volume form, then −KXp would still
+be hermitian semipositive. We are thus led to the following q uestion.
+Question. Let X be compact K¨ ahler manifold with −KX nef and X rationally
+connected. Is then −KX automatically hermitian semipositive ? In particular, is
+it always the case that I P2 blown-up in 9 points of a nonsingular cubic curve has
+a semipositive anticanonical bundle ?
+6
+===PDF PAGE 7===
+References
+[Au76] Aubin, T.: Equations du type Monge-Amp` ere sur les vari´ et´ es k¨ ahle-
+riennes compactes. C. R. Acad. Sci. Paris Ser. A 283, 119–121 (1976) ;
+Bull. Sci. Math. 102, 63–95 (1978)
+[Be83] Beauville, A.: Vari´ et´ es k¨ ahleriennes dont la premi` ere classe de Chern
+est nulle. J. Diﬀ. Geom. 18, 775–782 (1983)
+[Bg55] Berger, M.: Sur les groupes d’holonomie des vari´ et´ es ` a connexion aﬃne
+des vari´ et´ es riemanniennes. Bull. Soc. Math. France 83, 279–330
+(1955)
+[Bi63] Bishop, R.: A relation between volume, mean curvature and diameter.
+Amer. Math. Soc. Not. 10, p. 364 (1963)
+[Bo74a] Bogomolov, F.A.: On the decomposition of K¨ ahler manifolds with trivial
+canonical class. Math. USSR Sbornik 22, 580–583 (1974)
+[Bo74b] Bogomolov, F.A.: K¨ ahler manifolds with trivial canonical class. Izves-
+tija Akad. Nauk 38, 11–21 (1974)
+[BR90] Br¨ uckmann, P., Rackwitz, H.-G.: T -symmetrical tensor forms on
+complete intersections. Math. Ann. 288, 627–635 (1990)
+[Ca93] Campana, F.: Fundamental group and positivity of cotangent bundles
+of compact K¨ ahler manifolds.Preprint 1993
+[CG71] Cheeger, J., Gromoll, D.: The splitting theorem for manifolds of
+nonnegative Ricci curvature. J. Diﬀ. Geom. 6, 119–128 (1971)
+[CG72] Cheeger, J., Gromoll, D.: On the structure of complete manifolds of
+nonnegative curvature. Ann. Math. 96, 413–443 (1972)
+[DPS93] Demailly, J.-P., Peternell, T., Schneider, M.: K¨ ahler manifolds with
+numerically eﬀective Ricci class. Compositio Math. 89, 217–240 (1993)
+[DPS94] Demailly, J.-P., Peternell, T., Schneider, M.: Compact complex mani-
+folds with numerically eﬀective tangent bundles. J. Alg. Geom. 3, 295–
+345 (1994)
+[Ko81] Kobayashi, S.: Recent results in complex diﬀerential geometry. Jber.
+dt. Math.-Verein. 83, 147–158 (1981)
+[Ko83] Kobayashi, S.: Topics in complex diﬀerential geometry. In DMV
+Seminar, Vol. 3., Birkh¨ auser 1983
+[Li67] Lichnerowicz, A.: Vari´ et´ es k¨ ahleriennes et premi` ere classe de Chern.
+J. Diﬀ. Geom. 1, 195–224 (1967)
+[Li71] Lichnerowicz, A.: Vari´ et´ es K¨ ahl´ eriennes ` a premi` ere classe de Chern
+non n´ egative et vari´ et´ es riemanniennes ` a courbure de Ricci g´ en´ eralis´ ee
+non n´ egative.J. Diﬀ. Geom. 6, 47–94 (1971)
+[Ma93] Manivel, L.: Birational invariants of algebraic varieties. Preprint
+Institut Fourier no. 257 (1993)
+[Og76] Ogus, A.:The formal Hodge ﬁltration. Invent. Math. 31, 193–228 (1976)
+7
+===PDF PAGE 8===
+[Y au78] Yau, S.T.: On the Ricci curvature of a complex K¨ ahler manifold and
+the complex Monge-Amp` ere equation I. Comm. Pure and Appl. Math.
+31, 339–411 (1978)
+(version of January 5, 1995, printed on May 31, 2007)
+Jean-Pierre Demailly
+Universit´ e de Grenoble I
+Institut Fourier, U.R.A. 188 du C.N.R.S., BP 74
+38402 Saint-Martin d’H` eres, France
+e-mail: demailly@fourier.ujf-grenoble.fr
+Thomas Peternell
+Universit¨ at Bayreuth, Mathematisches Institut
+D-95440 Bayreuth, Deutschland
+e-mail: thomas.peternell@uni-bayreuth.de
+Michael Schneider
+Universit¨ at Bayreuth, Mathematisches Institut
+D-95440 Bayreuth, Deutschland
+e-mail: michael.schneider@uni-bayreuth.de
+8

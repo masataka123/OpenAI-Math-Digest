@@ -1,0 +1,2360 @@
+arXiv:1409.5504v1  [math.AG]  19 Sep 2014
+POSITIVITY OF TWISTED RELATIVE PLURICANONICAL BUNDLES
+AND THEIR DIRECT IMAGES
+MIHAI P ˘AUN AND SHIGEHARU TAKAYAMA
+Contents
+1. Introduction 2
+2. Singular Hermitian metrics on vector bundles 6
+2.1. Prelude 6
+2.2. Singular metrics on trivial bundles 7
+2.3. Global properties 10
+2.4. Metrics on torsion free sheaves 13
+2.5. Griﬃths semi-positivity and weak positivity 14
+3. Positivity of direct image sheaves of adjoint type 19
+3.1. The L2/m metric, absolute version 19
+3.2. The L2/m metric, relative version 20
+3.3. Direct image sheaves of adjoint type and their metric propertie s 22
+4. Positivity of relative pluricanonical bundles 30
+4.1. The log-plurisubharmonicity of the Bergman kernel metric revis ited 30
+4.2. Log-plurisubharmonicity of the m-Bergman kernel metric for m ≥ 2 33
+4.3. A few consequences 37
+5. Positivity of direct image sheaves of pluricanonical type 42
+5.1. Positivity of direct image sheaves of pluricanonical type 42
+5.2. Variants and reﬁnements 43
+References 45
+Abstract. Our main goal in this article is to establish a quantitative ve rsion of the positivity
+properties of twisted relative pluricanonical bundles and their direc t images. Some of the
+important technical points of our proof are an L2/m -extension theorem of Ohsawa-Takegoshi
+type which is derived from the original result by a simple ﬁxed point met hod, and the notion
+of “singular Hermitian metric” on vector bundles, together with an a ppropriate deﬁnition of
+positivity of the associated curvature. Part of this article is based on the joint work of the ﬁrst
+named author with Bo Berndtsson [4, Part A], and it can be seen as an expanded and updated
+version of it.
+Date: September 22, 2014.
+12 MIHAI P ˘AUN AND SHIGEHARU TAKAYAMA
+1. Introduction
+We continue to investigate here the (quantitative version of the) p ositivity properties of
+twisted relative pluricanonical bundles and their direct images. A par ticular case of the main
+result we establish in this paper is as follows.
+Theorem 1.1. Letf :X → Y be a projective surjective morphism of complex manifolds wi th
+connected ﬁbers, and let Y0 ⊂ Y be the maximum Zariski open subset where f is smooth. Let
+L be a holomorphic line bundle on X with a continuous Hermitian metric h with semi-positive
+curvature current. Suppose that the direct image sheaf f⋆(mKX/Y +L) is non-zero for a positive
+integerm. Then
+(1) the line bundle mKX/Y +L admits a singular Hermitian metric h(m) =B− 1
+m with semi-
+positive curvature, and on every ﬁber Xy overy ∈ Y0, the restricted dual Bm|Xy is the twisted m-
+th Bergman kernel metric Bm,y of − (mKXy +L|Xy). In particular, if X is compact,mKX/Y +L
+is pseudo-eﬀective.
+(2) The torsion free sheaf f⋆(mKX/Y + L) admits a singular Hermitian metric gm with
+Griﬃths semi-positive curvature, and gm is continuous on Y0 and 0 < detgm < ∞ on Y0,
+moreovergm on each ﬁber f⋆(mKX/Y +L)y, which is in fact H 0(Xy,mKXy +L|Xy ), with y ∈ Y0
+is the so-called m-th Narashimhan-Simha Hermitian form. In particular, if Y is projective,
+f⋆(mKX/Y +L) is weakly positive at every y ∈ Y0 in the sense of Nakayama [35, V.3.20] .
+We also deal with the case when the metric h is singular. In such a case, the corresponding
+statements become more complicated naturally (see 5.1.2 for examp le). Let us add some
+explanations on the statement being L = OX for simplicity. The weak positivity f⋆(mKX/Y )
+at every point y ∈ Ym for some Zariski open Ym ⊂ Y is known classically if Y is projective,
+by the research of Kawamata [23], Viehweg [46] concerning the Iita ka conjecture, building on
+earlier works by Griﬃths [20] and Fujita [19]. As a corollary of it, the ps eudo-eﬀectivity of
+mKX/Y follows. Actually this ﬁeld has generated many important works, inclu ding the twisted
+case by a semi-ample line bundle L; we will only mention here a few of them [1], [7], [18], [22],
+[24], [25], [26], [28], [29], [32], [33], [34], [47] (and we apologize to the author s we omit ...).
+Our main contributions in the statement above are to provide a quan titative counterpart
+of (1) and (2) above, and to describe the open subset Ym ⊂ Y where these properties behave
+nicely. By this we mean that the semi-positivity property of mKX/Y , as well as the (pointwise)
+weak positivity property of f⋆(mKX/Y ) can be obtained as a consequence of the existence of
+the natural Bergman and Narashimhan-Simha type metrics we cons truct on these sheaves. We
+would also like to stress that the Griﬃths semi-positivity of vector bu ndles or more generally
+torsion free sheaves is in practice stronger than the weak positivit y in algebraic geometry
+(recall for example, a Griﬃths positive vector bundle over a projec tive manifold is ample, but
+the converse is not known; or a nef line bundle is not necessarily semi- positive), and that
+Viehweg’s weak positivity does not imply the curvature semi-positivity of the metric h(m) of
+mKX/Y norgm onf⋆(mKX/Y ). The explicit ﬁberwise description of Bm is crucial in the process
+of construction of the metric gm on f⋆(mKX/Y ).
+The metrics h(m) and gm appeared in Theorem 1.1 are both canonically deﬁned as we shall
+explain next (see §3.1 in general, also [36], [23], [43]). These metrics are deﬁned in a way
+similar to the Bergman kernel metric, but using Lp-spaces instead of L2-spaces, with p = 2/m .3
+To explain this, we let here X be a compact complex manifold with a holomorphic Hermitian
+line bundle (L,h ). Then the m-th Bergman kernel metric Bm on the dual (mKX +L)⋆ is given,
+at every point x ∈ X and for every vector ξx ∈ (mKX +L)⋆
+x, by
+|ξx|= sup |ξx ·u(x)|,
+where the supremum being taken over all u ∈ H 0(X,mKX +L) with
+∥u∥m :=
+( ∫
+X
+(cu ∧
+uh)1/m
+) m/ 2
+≤ 1
+with a constant c ∈ C which makes the pairing cu ∧ uh positive deﬁnite. Then the singular
+Hermitian metric h(m) onmKX +L is deﬁned by the dual metric of the m-th Bergman kernel
+metric, i.e., h(m) =B− 1
+m . Using Bm, we also deﬁne a Hermitian form gm on H 0(X,mKX +L)
+given by
+gm(u,v ) =
+∫
+X
+(− 1)n2/ 2u ∧ v (B− 1
+m )(m− 1)/m h1/m ,
+where n = dimX. When m = 1, g1 is nothing but the canonical L2-pairing
+∫
+X (− 1)n2/ 2u ∧ vh
+on H 0(X,KX +L). Also in general m ≥ 1, letting hm− 1 = (B− 1
+m )(m− 1)/m h1/m be a singular
+Hermitian metric on Lm− 1 = (m − 1)KX +L, gm can be seen as the canonical L2-pairing on
+H 0(X,KX +Lm− 1). Theorem 1.1 asserts that the ﬁberwise metrics h(m)
+y , the pairings gm,y
+respectively, glues together nicely over Y0 and has curvature positivity, and then extends over
+Y across the singularities of f keeping the curvature positivity.
+The main diﬀerences between Theorem 1.1 in its general form and the corresponding previous
+result [3, 4.2] are as follows: (i) the morphism f can be singular, (ii) the direct image sheaf can
+merely be torsion free, and (iii) the subset of Y where the metrics h(m) andgm can be described
+explicitly is given in a very accurate manner. To obtain these propert ies, there are some new
+ingredients which are introduced in this paper. One is the L2/m -version of Ohsawa-Takegoshi’s
+extension theorem for Theorem 1.1(1), another is a notion of singu lar Hermitian metrics on
+vector bundles and torsion free sheaves and its curvature positiv ity/negativity for Theorem
+1.1(2).
+We recall Ohsawa-Takegoshi’sL2-extension theorem [37] (cf. [13, 12.9]) in a very basic set-
+up. Let Ω ⊂ Cn be a ball of radius r and let σ : Ω → C be a holomorphic function on Ω;
+σ ∈ O (Ω), such that sup Ω |σ| ≤ 1, and that the gradient ∂σ of σ is nowhere zero on the set
+V := {σ = 0 }. In particular V is a smooth complex hypersurface in Ω. We denote by ϕ a
+plurisubharmonic function on Ω such that its restriction to V is well-deﬁned (i.e., ϕ |V ̸≡ −∞ ).
+Then Ohsawa-Takegoshi’s theorem states that for any f ∈ O (V ), there exists F ∈ O (Ω) such
+that F |V =f and ∫
+Ω
+|F |2 exp(−ϕ )dλ ≤ C0
+∫
+V
+|f |2 exp(−ϕ ) dλV
+|∂σ |2,
+where C0 is an absolute constant, and where dλ and dλV are the volume form induced from
+the Euclidean metric on Cn. (The right hand side can formally be + ∞ .) Recently, the optimal
+bound of C0 is obtained by B/suppress locki [6] and Guan-Zhou [21]. Then our generalization in the
+set-up above is the following (see 4.2.5).4 MIHAI P ˘AUN AND SHIGEHARU TAKAYAMA
+Proposition 1.2. Letm ≥ 1 be a real number. Then for any f ∈ O (V ), there exists F ∈ O (Ω)
+such that F |V =f and satisfying the L2/m -bound
+∫
+Ω
+|F |2/m exp(−ϕ )dλ ≤ C0
+∫
+V
+|f |2/m exp(−ϕ )dλV
+|∂σ |2,
+whereC0 is the same constant as in the Ohsawa-Takegoshi theorem.
+Once this result is established, the proof of Theorem 1.1(1) runs as follows. For any y ∈ Y0,
+all the elements in H 0(Xy,mKXy +L|Xy ) extend locally near y, thanks to Siu’s invariance
+plurigenera [41] (see also [38]). Thus over Y0 (i.e., on f − 1(Y0) ⊂ X), we can apply [3, 4.2] and
+therefore the logarithm of the m-th Bergman kernel metric has a psh variation. We then use
+the L2/m -extension result to estimate our metric from above by a uniform co nstant. Standard
+results of pluri-potential theory then gives that the metric exten ds, across the singular ﬁbers
+of f , to a semi-positively curved metric on all of X.
+Aiming to understand the metric properties of direct image sheaves f⋆(mKX/Y + L) in
+Theorem 1.1(2), we explore a few aspects of the notion of singular Hermitian metric on vector
+bundles and more generally on torsion free sheaves, in §2. This notion is well understood
+and extremely useful in rank 1, i.e. for line bundles. Motivated by the study of direct image
+sheaves, one would like to develop a similar theory in the context of ve ctor bundles E of
+rank (E) ≥ 2. At ﬁrst glance it may look surprising that there are not so many wo rks dedicated
+to this subject –with the notable exceptions of [9], [3, §3], [39], [40]. The observation which
+is central in the present article is that “in practice” what we actually need is to deﬁne a
+notion of negativity or positivity of a (smooth) Hermitian vector bun dle (E,hE) in order to
+derive some consequences of this property. The positivity in the se nse of Griﬃths has a very
+important property: the bundle ( E,hE) is Griﬃths positive if and only if the dual Hermitian
+bundle (E⋆,hE⋆ ) is Griﬃths negative (unfortunately, the Nakano positivity fails to s atisfy this
+property). It is then easy to see that the Griﬃths semi-positivity o f (E,hE) can be characterized
+as follows. Let u ∈ H 0(Ω,E⋆) be any non-zero section, where Ω ⊂ X is a coordinate open
+subset. The function log |u|h⋆
+E is psh on Ω if and only if ( E,hE) is Griﬃths semi-positive.
+Thus, we are able to formulate this notion without an explicit mention o f the curvature tensor
+associated to (E,hE).
+The above property of (smooth) Hermitian vector bundles is conve rted into the deﬁnition
+of the Griﬃths semi-positivity in the context of singular Hermitian vec tor bundles, see [3, §3].
+By deﬁnition, a singular Hermitian metric hE on the trivial vector bundle E of rank r deﬁned
+on an open set Ω ⊂ Cn is simply a measurable map deﬁned on Ω with values in the space of
+positive semi-deﬁnite r × r-Hermitian matrices, such that 0 < det(hE)< ∞ almost everywhere.
+This later condition is imposed so as to avoid the metric hE to be everywhere degenerate e.g.
+at each point of Ω along some directions in E. If E is non-trivial, a singular Hermitian metric
+hE on E corresponds to a collection of singular Hermitian metrics on each loca l trivialization
+ofE, verifying the usual glueing condition. By the discussion above, we c an deﬁne a notion of
+Griﬃths semi-positivity for ( E,hE). The corresponding Nakano semi-positivity of a singular
+Hermitian metric does not seem to be well-understood yet; neverth eless we refer to [39], [40]
+for the state of arts in this direction.5
+After treating the basic properties of singular Hermitian metrics (o n torsion free sheaves,
+for example), we obtain the following general result 2.5.2 which is conn ected with algebraic
+geometry. In fact we establish a more general Finsler metric versio n 2.5.3, which gives criteria
+for the pointwise bigness and the pointwise weak positivity of a torsio n free sheaf.
+Theorem 1.3. Let Y be a smooth projective variety, and let E be a torsion free sheaf on Y .
+Suppose that E admits a singular Hermitian metric h with Griﬃths semi-positive curvature.
+Then E is weakly positive at y in the sense of Nakayama, for every y ∈ Y where E is locally
+free around y and deth(y)< +∞ .
+Going back to the situation in Theorem 1.1, the basic result is due to Be rndtsson [1, 1.2]:
+it states that the Hermitian metric on f⋆(KX/Y + L)|Y0 obtained as a family of ﬁberwise
+canonical L2-metrics has Nakano semi-positive curvature provided the metric h is smooth
+semi-positive. We then extend this result (but weakening to the sem i-positivity in the sense
+of Griﬃths) to f⋆(KX/Y +L) with possibly singular Hermitian line bundle ( L,h ) with mild
+singular h, for example with trivial multiplier ideal I(h) = OX (see 3.3.5). Finally, regarding
+mKX/Y +L = KX/Y +Lm− 1 as an adjoint type bundle for Lm− 1 = (m − 1)KX/Y +L with
+a singular Hermitian metric hm− 1 as we explained above, we deduce Theorem 1.1(2) from all
+these arguments mentioned above (see 5.2.2).
+The organization of this paper is as follows. We will start with §2 a general discussion
+on singular Hermitian metrics on vector bundles, its curvature prop erties and its geometric
+consequences. The positivity of relative adjoint type bundles KX/Y +L has been studied in [3].
+We then proceed to the positivity of f⋆(KX/Y +L) in §3, the positivity of mKX/Y +L in §4,
+and ﬁnally the positivity of f⋆(mKX/Y +L) in §5. Some variants and reﬁnements of Theorem
+1.1 (1) and (2) will be given in §4.3 and §5.2 respectively.
+Acknowledgments—Part of the questions addressed in this article w ere brought to our at-
+tention by L. Ein and R. Lazarsfeld; we are very grateful to them f or this. The ﬁrst named
+author would also like to thank F. Ambro, Y. Kawamata, J. Koll´ ar, M. Popa and H. Rauﬁ
+for interesting and stimulating discussions about various subjects . The second named author
+would like to thank Professor Noboru Nakayama for answering ques tions. Both authors are
+deeply indebted to Bo Berndtsson for his constant help and encour agements during the prepa-
+ration of the present work and for allowing us to include some unpublis hed material in [4]. This
+research of S. Takayama is supported by Grant-in-Aid for Scientiﬁ c Research (B)23340013.6 MIHAI P ˘AUN AND SHIGEHARU TAKAYAMA
+2. Singular Hermitian metrics on vector bundles
+In this ﬁrst part of our article we introduce a notion of singular Hermitian metric on a vector
+bundle (and more generally, on a torsion free sheaf) and discuss th e corresponding notion of
+positivity/negativity of the associated curvature. There are ear lier attempts to do so, cf. [9],
+[3], [39], [40] to quote only a few.
+It turns out that as soon as the rank of vector bundle is greater t han 1, we have at our disposal
+two notions of positivity: in the sense of Griﬃths and in the sense of N akano, respectively. The
+former corresponds to the type of hypothesis one has in algebraic geometry and has nicer
+functorial properties, whereas the later is important when one wa nts to establish vanishing
+results for higher cohomology. The observation which is central in t he present article is that
+“in practice” what we actually need is to deﬁne a notion of negativity ( or positivity) of a
+Hermitian vector bundle ( E,hE) in order to derive some consequences of this property.
+Our deﬁnition here is tailored in order to be compatible with the notion o f weak positivity
+in algebraic geometry; more precisely, one of the results we want to hold true is that a torsion
+free sheaf which can be endowed with a singular Hermitian metric with s emi-positive curvature
+is automatically weakly positive.
+2.1. Prelude. To start with, let X be a complex manifold, and let E → X be a vector bundle
+of rank r ≥ 1, endowed with a (smooth) Hermitian metric h. We denote by
+Θ h(E) ∈ C ∞
+1, 1
+(
+X, End(E)
+)
+the curvature form of ( E,h ). We refer to [13, Ch. 3, Ch. 10] for basics.
+We recall next two notions of positivity, playing a important role in ana lytic and algebraic
+geometry respectively. The former is the notion of positivity in the s ense of Griﬃths, and the
+later is its (conjectural) counterpart in algebraic geometry.
+Deﬁnition 2.1.1. Let x0 ∈ X be a point, and let ( z1,...,z n) be a system of local coordinates
+on X centered at x0. We consider a local holomorphic frame e1,...,e r of E near x0, such that
+it is orthonormal at x0. The Chern curvature tensor can be locally expressed as follows
+Θ h(E) =
+√
+− 1
+∑
+cjkλµdzj ∧ dzk ⊗ e⋆
+λ ⊗ eµ
+where j,k = 1,...,n and λ,µ = 1,...,r . We say that ( E,h ) is semi-positive in the sense of
+Griﬃths at x0 if ∑
+cj
+kλµξjξkvλvµ ≥ 0
+for every ξ ∈ TX,x 0 and v ∈ Ex0. The Hermitian bundle ( E,h ) is semi-positive in the sense of
+Griﬃths if it satisﬁes the property above at each point of X. If there exists a Hermitian form
+ω on X such that
+Θ h(E) ≥ ω ⊗ IdEnd(E),
+then we say that ( E,h ) is positive (in the sense of Griﬃths). The (semi-)negativity is deﬁne d
+in a similar manner.
+It is well-known (cf. [13, 10.1]) that ( E,h ) is semi-positive if and only if its dual ( E⋆,h⋆) is
+semi-negative in the sense of Griﬃths (we recall that the notion of N akano positivity fails to
+satisfy this important property, although we do not recall the deﬁ nition).7
+Remark 2.1.2. We denote by P(E⋆) the projectivization of the dual of E (we do not follow
+here the Grothendieck’s convention here), and let OP(E⋆ )(1) be the corresponding tautological
+line bundle. The metric h induces a metric on OP(E⋆ )(1) and (almost by deﬁnition) we see
+that if the bundle ( E,h ) is semi-negative, then
+log |v|2
+h
+is plurisubharmonic (psh, for short), for any local holomorphic sec tionv of the bundle OP(E⋆ )(1).
+This remark is crucial from our point of view, since it gives the possibilit y of deﬁning the notion
+of Griﬃths positivity for a bundle ( E,h ) without referring to the curvature tensor!
+On the algebraic geometry side, we recall that a vector bundle E on a projective manifold is
+said to be ample if the associated bundle OP(E)(1) is an ample line bundle on P(E). Then it
+is well-known that if ( E,h ) is positive, then E is ample (see [31, 6.1.25]); the converse, known
+as Griﬃths conjecture, is a long standing and deemed diﬃcult problem .
+According to [15, 6.1], a vector bundle E on a projective manifold X is pseudo-eﬀective if
+OP(E)(1) is a pseudo-eﬀective line bundle, and if the union of all curves C ⊂ P(E) with
+OP(E)(1) ·C < 0 is contained in a union of subvarieties which does not project onto X. It is
+shown that in [15, 6.3] that this property is equivalent to the fact th at E is weakly positive :
+there exist positive integers k0 andm1(k), together with an ample line bundle A such that the
+map
+H 0(
+X,S m(SkE ⊗ A)
+)
+→ Sm(SkE ⊗ A)
+is generically surjective, for any k ≥ k0 and m ≥ m1(k). This notion can be formulated in the
+context of torsion free sheaves, and it is relevant in the following co ntext.
+Theorem 2.1.3. [46] Letf :X → Y be a proper surjective morphism of projective manifolds
+with connected ﬁbers. If m is a positive integer, then the direct image sheaf f⋆(mKX/Y ) is
+weakly positive. Here we denote by mKX/Y the mth tensor power of the relative canonical
+bundle.
+Our goal in what follows is twofold. We deﬁne a metric property of a He rmitian vector
+bundle E which –in the light of Griﬃths conjecture– should correspond to the notion of the
+weak positivity (we will at least show that it implies the weak positivity). Also, our metric
+property should be veriﬁed by the direct images f⋆(mKX/Y ). The candidate we have for this
+is presented in the next subsections; we start with its local version .
+2.2. Singular metrics on trivial bundles. Here we suppose that E =X × Cr is the trivial
+vector bundle of rank r on a complex manifold X. We denote by Hr := {A = (ai
+j)} the set of
+r × r, semi-positive deﬁnite Hermitian matrixes. We endow our manifold X with the Lebesgue
+measure.
+We recall the following notion.
+Deﬁnition 2.2.1. A singular Hermitian metric h on E is a measurable map from X to Hr
+satisfying 0 < deth< +∞ almost everywhere. □8 MIHAI P ˘AUN AND SHIGEHARU TAKAYAMA
+By “convention”, a matrix valued function h = (hij) is measurable (resp. smooth, continuous,
+... ), if all entries hij are measurable (resp. smooth, continuous, ... ). We will identify two
+functions if they coincide almost everywhere (however, there is a r isk of confusion that a dis-
+continuous function can be continuous under this convention, for example). We note that in the
+paper [3, p. 357], one does not requires the condition 0 < deth< +∞ almost everywhere in the
+deﬁnition of a singular Hermitian metric on a vector bundle. However, as it was highlighted in
+[39], [40], this additional condition concerning the determinant is impor tant, as it implies that
+one can deﬁne the notion of curvature tensor associated to a singular Hermitian metric. A
+standard notion of singular Hermitian metrics of line bundles is h =e−ϕ with ϕ ∈ L1
+loc(X, R).
+Our deﬁnition in 2.2.1 requires less in general.
+A local section v of E means an element v ∈ H 0(U,E ) on some open subset U ⊂ X (we
+always assumev to be holomorphic). If h is a singular Hermitian metric and v ∈ H 0(U,E ), then
+|v|h : U → R≥ 0 is a measurable function given by |v|2
+h = tvh
+v = ∑hijvivj (v = t(v1,...,v r)
+is a column vector). Following [3, p. 357], we introduce the curvature positivity/negativity as
+follows.
+Deﬁnition 2.2.2. Let h be a singular Hermitian metric on E.
+(1) h is negatively curved (or h has Griﬃths semi-negative curvature), if for any open subset
+U ⊂ X and any v ∈ H 0(U,E ), log |v|2
+h is psh on U.
+(2)h is a.e. negatively curved, if for any open subset U ⊂ X and any v ∈ H 0(U,E ), there exists
+a psh function ψ on U such that ψ = log |v|2
+h almost everywhere on U (we may say log |v|2
+h is
+a.e. psh on U).
+(3) h is positively curved (or h has Griﬃths semi-positive curvature), if the dual singular
+Hermitian metric h⋆ := th− 1 on the dual vector bundle E⋆ is negatively curved. □
+Whenh is smooth and 0 < deth< +∞ everywhere (i.e. if h is a Hermitian metric in the usual
+sense), the requirement 2.2.2(1) (resp. (3)) is nothing but the cla ssical Griﬃths semi-negativity
+(resp. Griﬃths semi-positivity) of h (see, [39, §2]).
+We have the following remark, which (hopefully) clariﬁes some aspect s of the notion above.
+Remark 2.2.3. (1) If h is negatively curved, then ( hi
+j(x)) ∈ Hr for any x ∈ X as we now
+see. For a constant vector v1 = t(1, 0,..., 0), |v1|2
+h = h1
+1 is semi-positive and psh. Hence it
+is everywhere deﬁned h11 ∈ [0, +∞ ) and locally bounded. For v = t(1, 1, 0,..., 0), we have
+|v|2
+h = h1
+1 +h22 + 2Reh12. For v′ = t(1, √ − 1, 0,..., 0), we have |v′|2
+h = h1
+1 +h22 + 2Imh12.
+Thus by the same token, h12 is everywhere deﬁned, and |h12|2 ≤ h11h22 ≤ 1
+2(h2
+1
+1 +h2
+2
+2).
+(2) The argument in (1) also shows that if h is a.e. negatively curved, there exists a unique
+negatively curved singular Hermitian metric h′ such that h = h′ almost everywhere. With
+a suitable convention, we may need not to distinguish negatively curv ed and a.e. negatively
+curved metrics. In the case of line bundles, we do not need to. It is o nly a diﬀerence ϕ ∈ L1
+loc
+with √
+− 1∂∂ϕ ≥ 0 in the sense of distribution and ϕ psh. We could also deﬁned a.e. positively
+curved singular Hermitian metrics. However in the line bundle case, we suppose every singular
+Hermitian metric h, whose curvature is bounded from below by a continuous form, has an
+upper-semi-continuous local weight, i.e., h =e−ϕ with quasi-psh ϕ . □9
+Remark 2.2.4. (1) Following [39, Theorem 1.3], we will present next here an example of
+negatively curved metric on the trivial rank 2 bundle E = C× C2 on C, for which the curvature
+tensor cannot be deﬁned in a reasonable way around the origin. Ind eed, the coeﬃcients of
+connection matrix corresponding to the next metric
+h =
+(
+1 + |z|2 z
+z |z|2
+)
+are not in L1(C, 0).
+(2) One could deﬁne a singular Hermitian metric h on E by requiring that the map h :
+X → Hr is measurable, such that log det h ∈ L1
+loc(X, R). The line bundle case, this is the
+deﬁnition. However, as the previous example ( h with det h = |z|4) shows it, the curvature
+tensor corresponding to such a metric is not well-deﬁned. □
+We collect some basic local properties. The ﬁrst and most basic one is the following approxi-
+mation result.
+Lemma 2.2.5. [3, 3.1] SupposeX is a polydisc in Cn, and suppose h is a singular Hermitian
+metric on E with negative (resp. positive) curvature. Then, on any smal ler polydisc there
+exists a sequence of smooth Hermitian metrics {hν }ν decreasing (resp. increasing) pointwise to
+h whowe corresponding curvature tensor is Griﬃths negative ( resp. positive).
+In the statement above the sequence {hν}ν is called decreasing in the sense that the sequence
+of functions {|s|2
+hν }ν is decreasing for any constant section s, or equivalently, the matrix corre-
+sponding to each diﬀerence hν − hν+1 is semi-positive deﬁnite. We note that {hν}ν is obtained
+simply by convolution (which is possible that to the hypothesis concer ning X).
+This result is relevant for example in the following context.
+Lemma 2.2.6. [39, Proposition 1.1(ii)] Suppose a singular Hermitian metric h is negatively
+curved. Then log deth ∈ L1
+loc(X, R) and psh.
+Proof. Let {hν}ν be the sequence of metrics approximating h, with the properties stated in
+2.2.5. We deﬁne ϕν := log dethν , the weight of the induced metric on the determinant bundle;
+it is psh (and smooth), and ϕν is decreasing to ϕh := log deth. Thus ϕh is psh and in particular
+ϕh ∈ L1
+loc(X, R). □
+As we have already mentioned in 2.2.3, a negatively curved singular Her mitian metric is well-
+deﬁned in each point of X, thus one can deﬁne the set of its eigenvalues (with respect to any
+smooth positive deﬁnite Hermitian metric). We present in our next st atement a few basic
+properties of these functions.
+Lemma 2.2.7. Leth = (hi
+j) be a singular Hermitian metric on E. Let U ⊂ X be a relatively
+compact open subset.
+(1) Supposeh is negatively curved. Then there exists a constant C >0 such that |hi
+j| ≤ C on
+U for any pair of indices i,j . Let 0 ≤ λ 1(x) ≤ λ 2(x) ≤ ... ≤ λr(x) < +∞ be the eigenvalues
+of h(x) at each point x ∈ X. Then we have λr(x) ≤ rC on U, λ 1(x) ≥ 1
+(rC )r− 1 deth(x) on
+U, and h − 1
+(rC )r− 1 (deth)Ir is a measurable map from U to Hr, where Ir is the r × r identity
+matrix and Hr is the set of semi-positive Hermitian forms.10 MIHAI P ˘AUN AND SHIGEHARU TAKAYAMA
+(2) Suppose h is positively curved. Then there exists a constant C ′> 0 (independent of x ∈
+U \ {deth⋆ = 0 }) such that λ 1(x) ≥ 1
+rC ′ and λr(x) ≤ (rC ′)r− 1 deth(x) on U \ {deth⋆ = 0 },
+where 0 ≤ λ 1(x) ≤ λ 2(x) ≤ ... ≤ λr(x)< +∞ are eigenvalues of h(x) atx ∈ X \ {deth⋆ = 0}.
+Proof. The ﬁrst assertion of (1) is a direct consequence of our remark 2.2 .3. Given a matrix
+A = (aij) ∈ M(r, C), we denote by C := max{|aij|; 1 ≤ i,j ≤ r}, the maximum of the absolute
+value of its entries. Then we have |λ| ≤ rC for any eigenvalue of A. Note det h =λ 1λ 2...λ r ≤
+λ 1(rC )r− 1 at every x ∈ U.
+(2) Take dual and apply (1) as long as det h⋆ ̸= 0. Even if det h⋆(x) = 0, we can say
+λ 1(x) ≥ 1
+rC ′ and λr(x) = (rC ′)r− 1 deth(x) = + ∞ under some convention as in the case of line
+bundles. It can be λ 1(x) = + ∞ in general for x ∈ { deth⋆ = 0}. □
+2.3. Global properties. We consider in this subsection a holomorphic vector bundle E of
+rank r on a complex manifold X.
+Deﬁnition 2.3.1. (1) A singular Hermitian metric h onE is a collection of singular Hermitian
+metrics on local trivializations E|Uλ
+∼= Uλ × Cr satisfying the gluing condition as the one in
+the usual case.
+(2) A singular Hermitian metric h on E is negatively curved (or h has Griﬃths semi-negative
+curvature), if log |v|2
+h is psh for any local section v ofE;h is positively curved (orh has Griﬃths
+semi-positive curvature), if h⋆ = th− 1 deﬁnes a singular Hermitian metric on E⋆ with negative
+curvature.
+(3) A vector bundle E is negatively (resp. positively) curved, if it admits a negatively (resp .
+positively) curved singular Hermitian metric h. Unless explicitly stated otherwise, the metric
+h is allowed to be singular in the sense of (1) of the present deﬁnition. □
+We suppose as an example that X is projective, and E = A ⊕ B, where A is a positive line
+bundle and B is a negative line bundle. As a singular Hermitian metric of E in the weaker
+sense [3, p. 357], we can take a direct sum of Hermitian metric h =hA ⊕ hB with hA ≡ 0 and
+hB smooth and negative curvature. Then h is “negatively curved”. This is a good indication
+that indeed one should add the condition det h> 0 a.e. in the deﬁnition of singular Hermitian
+metric.
+We will start next a systematic study of the properties of negative ly curved vector bundles as
+above. Our ﬁrst statement here concerns the behavior with resp ect to inverse images.
+Lemma 2.3.2. Let f : Y → X be a holomorphic surjective map between two complex mani-
+folds, and let E be a vector bundle on X.
+(1) We assume that E admits a singular Hermitian metric h with negative (resp. positive)
+curvature. Then f⋆h is a singular Hermitian metric on f⋆(E), and it is negatively (resp.
+positive) curved.
+(2) Suppose moreover that f is proper. Let X1 be a non-empty Zariski open subset, and let
+Y1 =f − 1(X1) be its inverse image. We consider h1 a singular Hermitian metric on E1 =E|X1.
+We assume that the singular Hermitian metric f⋆h1 on f⋆E1 extends as a singular Hermitian
+metric hY on the inverse image bundle f⋆E with negative (resp. positive) curvature. Then11
+h1 extends as a singular Hermitian metric on E with negative (resp. positive) curvature. In
+particular, if we have X1 =X then the metric h1 is negative (resp. positive) curved if and only
+if f⋆h1 is.
+We remark that the statement above holds even if we do not assume that the mapf is surjective,
+provided that the pull-back f⋆h is well-deﬁned.
+Proof. We will discuss the negatively curved case.
+(1) Let U be a coordinate open subset in X such that E|U ∼=U × Cr, and U ′ ⊂ a smaller open
+subset so that an approximation result 2.2.5 holds for h. Let {hν} be a decreasing sequence
+towards h as in 2.2.5. We consider an open subset V ⊂ f − 1(U ′) and a non-zero section
+v ∈ H 0(V,f ⋆E). Then the sequence {log |v|2
+f ⋆hν }ν is decreasing to log |v|2
+f ⋆h ̸≡ −∞ . Since f⋆hν
+is smooth and negatively curved, log |v|2
+f ⋆hν is psh. Thus so is its limit log |v|2
+f ⋆h.
+(2) Letu ∈ H 0(U,E ) be any local section. Then f⋆u ∈ H 0(f − 1(U),f ⋆E). Then by assumption,
+log |f⋆u|2
+hY is (a.e.) psh on f − 1(U). In particular log |f⋆u|2
+hY is bounded from above on any
+relatively compact subset of f − 1(U). For any x ∈ U ∩ X1 and a point y ∈ f − 1(x), we have
+|f⋆u|2
+hY (y) = |u|2
+h1(x). Thus we see that the psh function log |u|2
+h1 a-priori deﬁned only on
+U ∩ X1 is bounded from above on U ′ ∩ X1, where U ′ ⊂ U is any relatively compact subset.
+Hence, it can be extend as a psh function on U, so the metric h1 indeed admits an extension
+h on X in such a way that the Hermitian bundle ( E,h ) is negatively curved. □
+The next statements show that the tensor bundles associated to E and the quotient bundles
+of E inherits its positivity properties.
+Lemma 2.3.3. Let (E,hE) is positively curved vector bundle. Then the symmetric powe rSmE
+and the wedge product ΛqE are positively curved.
+Proof. The mechanism of the argument is the same as in 2.2.6 (the proof of [39 , Proposition
+1.1(ii)]), which shows (det E, deth) is positive. Basically the statement is well-known for the
+smooth case, and we are using 2.2.5 in order to obtain the general ca se. We will not provide
+further details here. □
+Lemma 2.3.4. Leth be a singular Hermitian metric on E.
+(1) Let S ⊂ E be a subbundle. Then the restriction hS := h|S deﬁnes a singular Hermitian
+metric on S, and hS is negatively curved if h is.
+(2) Let E → Q be a quotient vector bundle. Suppose that h is positively curved. Then Q has
+a naturally induced singular Hermitian metric hQ with positive curvature.
+We will not present here the arguments for the 2.3.4, since we will dea l with this kind of
+statements in a more general context in 2.4.3. We rather discuss ne xt the connection between
+2.3.1 and the notion of positivity in algebraic geometry.
+Proposition 2.3.5. Letπ : P(E) → X be the projective space bundle, and let π⋆E → O P(E)(1)
+be the universal quotient line bundle. Suppose E admits a positively curved singular Hermitian
+metric h. Then
+(1) The bundle OP(E)(1) has a (naturally induced) singular Hermitian metric g whose curvature
+current is semi-positive.12 MIHAI P ˘AUN AND SHIGEHARU TAKAYAMA
+(2) Let deth be the induced singular Hermitian metric of detE with semi-positive curvature.
+Let U ⊂ P(E) and W ⊂ X be coordinate neighborhoods respectively such that U ⊂ π − 1(W ),
+and regard g|U and deth|W as a function on U and W respectively. Then
+g ≤ Cπ ⋆(deth|W )
+holds on U for a constant C =CU,W > 0.
+(2′) In particular, if deth(x)< +∞ at a point x ∈ X, then the restriction g|P(Ex) is well-deﬁned
+and the multiplier ideal sheaf satisﬁes I(gk|P(Ex)) = OP(Ex) for any k > 0, where P(Ex) =
+π − 1(x). We can express this equality in global terms, namely π(V I(gk)) ⊂ V I((deth)k) holds
+for any k > 0, where V I(gk) ⊂ P(E) is the complex subspace deﬁned by the multiplier ideal
+sheaf I(gk).
+(3) If X is projective, then the inclusion
+B− (OP(E)(1)) ⊂ ∪ k>0V I(gk)
+holds, where B− (OP(E)(1)) is the restricted base locus of OP(E)(1) introduced in [16, §1]. In
+particular,E is pseudo-eﬀective in the sense of [15, 6.1] , and therefore E is weakly positive in
+the sense of Viehweg.
+Proof. (1) We will use the notation O(1) instead of OP(E)(1). Our ﬁrst remark is that π⋆h
+deﬁnes a singular Hermitian metric on π⋆E with positive curvature (cf. 2.3.2). By the property
+2.3.4, the metric g⋆ on O(− 1) induced by the bundle injection O(− 1) → π⋆E⋆ has negative
+curvature, hence
+(
+O(1),g
+)
+is positively curved in the sense of currents, where g is the dual of
+the metric g⋆.
+(2) We may suppose that X is a coordinate open set, and that det E =X × C is trivial. Then
+we write det h =e−ϕ h where ϕh is a psh function. In this case we also have P(E) = X × Pr− 1
+where r = rank E. We consider the set U := X × U0, where U0 ⊂ Pr− 1 is a coordinate
+open set. Since h⋆ and g⋆ are negatively curved, they are bounded in the sense of 2.2.7(1).
+Let x ∈ X be an arbitrary point. The metric g⋆ is deﬁned as the restriction of π⋆h⋆ to a
+1-dimensional linear subspace, therefore we have λ 1(g⋆,p ) ≥ λ 1(π⋆h⋆,p ) for any p ∈ P(Ex) ∩U,
+where λ 1(g⋆,p ) stands for the smallest eigenvalue of g⋆ at p (and λ 1(π⋆h⋆,p ) for π⋆h⋆). We
+haveλ 1(g⋆,p ) = eψ (p), and λ 1(π⋆h⋆,p ) = λ 1(h⋆,x ) ≥ 1
+(rC )r− 1 deth⋆(x) by 2.2.7 (1), where C >0
+is a constant independent of x ∈ X. Thus we have eψ (p) ≥ 1
+(rC )r− 1eϕ h(x) for any p ∈ P(Ex) ∩ U.
+(2′) The ﬁrst assertion is clear from (2). For the second, what we pro ved in (2) above is
+that g = e−ψg1 ≤ (rC )r− 1e−π ⋆ϕ h on P(E) = X × Pr− 1 (up to -irrelevant- choices of local
+trivializations). Since π : P(E) → X is a product, our claim is a consequence of Fubini
+theorem.
+(3) The pseudo-eﬀectivity of E follows from the properties (1)–(2 ′), combined with the usual
+techniques in algebraic/analytic geometry. Then the weak positivity follows from [15, 6.3] as
+a consequence. □
+Remark 2.3.6. It does not seem to be know wether the weak positivity of E implies the
+Griﬃths semi-positivity in the sense of 2.3.1 (this would be a singular ver sion of Griﬃths
+conjecture). □13
+2.4. Metrics on torsion free sheaves. It turns out that very interesting objects, such as
+direct images of adjoint bundles Em := f⋆(mKX/Y +L) do not always have a vector bundle
+structure; nevertheless, we would like to have a notion of “singular Hermitian metric” on Em.
+More generally, we introduce in this subsection a notion of (metric) p ositivity for torsion free
+sheaves. It turns out that the theory is essentially the same as th e vector bundle case.
+Let E be a torsion free (always coherent) sheaf on a complex manifold X. We will denote by
+WE ⊂ X the maximum Zariski open subset of X such that the restriction of E toWE is locally
+free. Then we have codim ( X \WE) ≥ 2, thanks to which the following deﬁnition is meaningful.
+Deﬁnition 2.4.1. (1) A singular Hermitian metric h on E is a singular Hermitian metric on
+the vector bundle E |WE .
+(2) A singular Hermitian metric h on E is negatively curved (resp. a.e. negatively curved), if
+h|WE is negatively curved (resp. a.e. negatively curved) in the sense of 2 .2.2.
+(3) A singular Hermitian metric h on E is positively curved, if there exists a negatively curved
+singular Hermitian metric g on E⋆|WE such that h|WE = (g|WE )⋆.
+(4) E is negatively (resp. positively) curved, if it admits a negatively (resp. positively) curved
+singular Hermitian metric. □
+In what follows, we may equally say that h has Griﬃths semi-positive/negative curvature
+meaning that the sheaf in question has the property (2) or (3) in th e deﬁnition above.
+Remark 2.4.2. (1) If W ′ ⊂ WE is a non-empty Zariski open and h′ is a singular Hermitian
+metric on E |W ′, then h′ can be seen as a singular Hermitian metric on E |WE by assigning the
+(arbitrary) value h′ ≡ 0 on WE \W ′. In particular, there is a natural correspondence between
+the set of singular Hermitian metric on E and the set of singular Hermitian metric on E⋆⋆, via
+E |WE
+∼= E⋆⋆|WE .
+(2) If h is a negatively curved singular Hermitian metric on E, then for any open U ⊂ X and
+anyv ∈ H 0(U, E), log |v|2
+h is psh on U ∩ WE. Because of codim ( X \WE) ≥ 2, log |v|2
+h extends
+as a psh function on U (compare with 2.2.2). Thus in the case under discussion, we have
+unique privileged extension of the metric h, once it is deﬁned on the complement of a set of
+codimension at least two.
+(3) In order to obtain a negatively curved singular Hermitian metric o n E, it is enough to ﬁnd
+an a.e. negatively curved singular Hermitian metric as in 2.2.3(2). In co nclusion, we see that E
+is negatively (resp. positively) curved if and only if its associated dou ble dual E⋆⋆ is negatively
+(resp. positively) curved. □
+Lemma 2.4.3. Leth be a singular Hermitian metric on E.
+(1) Let S ⊂ E be a subsheaf. Then the restriction hS := h|S deﬁnes a singular Hermitian
+metric on S. If h is a.e. negatively curved, then so is hS. In particular S is negatively curved
+if E is, by 2.4.2 (3) .
+(2) Let E → Q be a quotient torsion free sheaf. Suppose that h is positively curved. Then Q
+has a naturally induced singular Hermitian metric hQ with positive curvature.14 MIHAI P ˘AUN AND SHIGEHARU TAKAYAMA
+(3) Let F be a torsion free sheaf, and suppose there exists a sheaf homo morphism a : E → F
+which is generically surjective. Suppose that h is positively curved. Then F has a naturally
+induced singular Hermitian metric hF with positive curvature.
+Proof. (1) By restricting everything on the maximum Zariski open subset w here S is locally
+free, we may assume S is locally free. Let W be a Zariski open subset such that E is locally
+free and S is a subbundle of E. Then hS =h|S deﬁnes a singular Hermitian metric on S over
+W , and hence induces a singular Hermitian metric on S overX by 2.4.2. Let U be an open
+subset and v ∈ H 0(U, S) ⊂ H 0(U, E). Then on U ∩W , |v|2
+hS = |v|2
+h (in the right hand side, |v|2
+h
+is measured as local section of the sheaf E, i.e. v ∈ H 0(U, E)). If h is a.e. negatively curved,
+then log |v|2
+h is a.e. psh on U, and hence hS is a.e. negatively curved.
+(3) By dualyzing the map a, we obtain a sheaf injection F⋆ → E ⋆. Thanks to the point (1), we
+obtain a singular Hermitian metric h⋆|F ⋆ on F⋆ with a.e. negative curvature. The procedure
+described in 2.4.2 allows us to modify h⋆|F ⋆ on a Zariski closed set, such that the result is
+a singular Hermitian metric with negative curvature on F⋆. By taking the dual, we have a
+singular Hermitian metric ( h⋆|F ⋆ )⋆ (not exactly same, but the discrepancies eventually occur
+on a measure zero set only) on F⋆⋆ with positive curvature. We then use 2.4.2 again to obtain
+a singular Hermitian metric on F . □
+2.5. Griﬃths semi-positivity and weak positivity. We show here that a torsion free sheaf
+endowed with a singular Finsler metric with positive curvature with a co ndition on the singular
+locus is weakly positive in the sense of Nakayama . To this end we will ﬁrst recall this notion
+due to Nakayama which is a reﬁnement of the corresponding deﬁnitio n due to Viehweg.
+For a torsion free sheaf F on a variety Y , we denote by Sm(F ) the m-th symmetric tensor
+product of F with the convention that S0(F ) = OY , and let ˆSm(F ) be the double dual of the
+sheaf Sm(F ).
+Deﬁnition 2.5.1. [35, V.3.20] Let Y be a smooth projective variety, and let F be a torsion
+free coherent sheaf on Y . Let A be an auxiliary ample divisor on Y . Then
+(1) F is weakly positive at a point y ∈ Y , if for any integer a> 0, there exists an integer b> 0
+such that ˆSab(F ) ⊗ O Y (bA) is generated by global sections at y.
+(2) F is dd-ample at a point y ∈ Y (“ample modulo double-duals”), if ˆSm(F ) ⊗ O Y (−A) is
+generated by global sections at y for an integer m> 0.
+(3) F is weakly positive (resp. big), if it is weakly positive (resp. dd-ample) at some point. □
+We note that F is weakly positive over a Zariski open subset U ⊂ Y in the sense of Viehweg
+[47, 2.13] implies that F is weakly positive at every point y ∈ U in the sense of Nakayama ([35,
+p. 200, Remark (4)]). Thus the weak positivity in the sense of Viehwe g requires global gener-
+ation property (1) to hold on a Zariski open subset, whereas in the version due to Nakayama
+the property (1) above could be veriﬁed on countable intersection of Zariski open sets only.
+If F is a line bundle, we set Amp ( F ) = {y ∈ Y ; F is dd-ample at y}. The complement
+NAmp (F ) = Y \ Amp (F ) is commonly denoted by B+(F ) and called the augmented base
+locus of F ([17, §1]).15
+The following is a generalization of 2.3.5, and its proof goes along the sa me lines. So we leave
+it to the interested reader (see 2.5.3 for a more general form of th is result).
+Theorem 2.5.2. Let Y be a smooth projective variety, and let E be a torsion free sheaf on
+Y . Suppose that E admits a singular Hermitian metric h with positive curvature. Then E is
+weakly positive at y (in the sense of Nakayama 2.5.1), for every y ∈ Y where E is locally free
+aroundy and deth(y)< +∞ .
+The rest of this subsection is devoted to the proof the following res ult.
+Theorem 2.5.3. LetY be a smooth projective variety, and let F be a torsion free coherent sheaf
+onY . Let P(F ) = Proj ( ⨁
+m≥ 0Sm(F )) be a scheme over Y associated to F , say π : P(F ) → Y ,
+and let OF (1) be the tautological line bundle on P(F ). Let Y1 ⊂ Y be a Zariski open subset on
+which F is locally free (in particular P(F ) is smooth over Y1) and codimY (Y \Y1) ≥ 2. Suppose
+that OF (1)|π − 1(Y1) admits a singular Hermitian metric g with semi-positive curvature, and that
+there exists a point y ∈ Y1 such that I(gk|P(Fy)) = OP(Fy) for any k >0, where P(Fy) = π − 1(y).
+Then
+(1) F is weakly positive at y.
+(2) Assume moreover that there exists an open neighborhood W of y and a K¨ ahler formη on
+W such that √
+− 1Θ g − π⋆η ≥ 0 on π − 1(W ), then F is dd-ample at y. In particular F is big.
+As a preliminary discussion, we recall some facts due to [35, V.3.23]. Le t π : P(F ) → Y be
+the scheme associated to F , together with its tautological line bundle OF (1). Let Y2 ⊂ Y be
+the maximum Zariski open subset of Y such that the restriction F |Y2 is locally free; we have
+W ⊂ Y1 ⊂ Y2. Let P′(F ) → P(F ) be the normalization of the component of P(F ) containing
+π − 1(Y2), and let X → P′(F ) be a birational morphism from a smooth projective variety that
+is an isomorphism over π − 1(Y2). Let µ : X → P′(F ) → P(F ) be the composition, and let
+f =π ◦µ :X → Y . We take a morphism X → P′(F ) so that X \f − 1(Y2) is a divisor. We set
+Z =π − 1(Y1), X 1 =µ − 1(Z) = f − 1(Y1)
+and may regard Z =X1 ⊂ X byµ.
+X
+µ
+− − − → P(F ) ⊃ Z
+f
+
+
+↓
+
+
+↓π
+
+
+↓
+Y
+Y ⊃ Y1
+Denote by L0 = µ⋆OF (1) a line bundle (or a divisor) on X. There exists a natural inclusion
+F → f⋆L0, which is isomorphic over Y2. By [35, III.5.10(3)], there exists an f -exceptional
+eﬀective divisor E such that f⋆OX(m(L0 +E)) ∼= ˆSm(F ) for any integer m >0. We ﬁx such
+a divisor E and let
+L =L0 +E.
+Then 2.5.3 is essentially reduced to the following
+Theorem 2.5.4. In the situation above and under the assumptions in 2.5.3 (2), the line bundle
+L is big and f − 1(y) ⊂ Amp (L).16 MIHAI P ˘AUN AND SHIGEHARU TAKAYAMA
+Proof. The rough outline of our argument goes as follows. By the main result of [17], it is
+enough to prove that we have
+lim inf
+ε→ 0
+volX|V (L +εA)> 0
+for any positive-dimensional analytic set V containing a point x ∈ f − 1(y). If the metric g
+would be known to be globally deﬁned and semi-positively curved on the whole space X, this
+can be shown to hold true by a simple application of the holomorphic Mor se inequalities [13,
+§8]. However, in our current situation g is only deﬁned on X1, so the existence of sections
+allowing us to show the inequality above will be shown in a direct manner, by the L2 theory.
+We start by a few general reduction steps.
+(1) Let us take a point x ∈ X. Assume that there exist an integer ℓx> 0 and a (not necessarily
+ample) line bundle A on X such that the evaluation map to the jet space at x;
+H 0(X, OX (kℓxL +A)) − → O X (kℓxL +A) ⊗ O X/ mk+1
+X,x
+is surjective for any integer k >0. Here in general mX,x stands for the maximal ideal of a point
+x on a variety X. We then can show that x ∈ Amp (L) as follows.
+Due to the jet separation property, for any integer k > 0 and any positive dimensional
+subvarietyV ⊂ X containing x, we have vol X|V (kℓxL +A) ≥ kd, where vol X|V (kℓxL +A) is
+the restricted volume and d = dimV > 0 (by [17, 4.1] for example). Thus
+volX|V (L + 1
+kℓx
+A) ≥ 1/ℓ d
+x
+holds (we remark here that lx is independent of V ).
+Assume on the contrary that x ∈ NAmp (L). Since NAmp ( L) has no isolated points
+([17, 1.1]), there exists a subvariety V ⊂ X of d := dim V > 0, which contains x and is
+an irreducible component of NAmp ( L). By the preceding argument, we infer that we have
+lim infk→∞ volX|V (L + 1
+kℓx
+A) ≥ 1/ℓ d
+x> 0. This contradicts to [17, 5.7].
+(2) We denote by P(Fy) = π − 1(y) ⊂ Z,Xy =f − 1(y) ⊂ X, and the ideal sheaves IP(Fy ) and
+IXy respectively. We will show in (3) below that there exist an integer ℓy > 0 and a line bundle
+A on Y such that the restriction map
+(∗) Jk
+y :H 0(Z, OF(kℓy) ⊗ π⋆A) − → H 0(P(Fy), OF (kℓy) ⊗ π ∗A ⊗ O Z/ Ik+1
+P(Fy))
+is surjective for any integer k >0. Note that the ﬁbration π :Z → Y1 is geometrically simple
+enough so that we have an isomorphism
+H 0(P(Fy), OF (kℓy) ⊗ π ∗A ⊗ O Z/ Ik+1
+P(Fy)) ∼=H 0(P(Fy), OP(Fy)(kℓy)) ⊗ OY,y OY/ mk+1
+Y,y ,
+and a similar isomorphism for f : X1 → Y1. Taking the surjection ( ∗) for granted, we show
+that f − 1(y) = Xy ⊂ Amp (L) as follows.
+We ﬁrst note that every section of OX (kℓyL) ⊗ f⋆A over X1(= Z) extends to a sec-
+tion of OX(kℓyL) ⊗ f⋆A over X, because H 0(Z, OF(kℓy) ⊗ π⋆A) ∼= H 0(Y1,Skℓy(F ) ⊗ A)֒→
+H 0(Y, ˆSkℓy(F ) ⊗ A) ∼= H 0(Y,f⋆(OX(kℓyL)) ⊗ A) ∼= H 0(X, OX (kℓyL) ⊗ f⋆A). Here we need
+to explain the inclusion and the next isomorphism. Since ˆSkℓy(F ) is reﬂexive on Y and lo-
+cally free on Y1 of codim Y (Y \Y1) ≥ 2, we have a natural inclusion H 0(Y1,Skℓy(F ) ⊗ A)֒→
+H 0(Y, ˆSkℓy(F ) ⊗ A). The isomorphisms f⋆(OX (mL)) ∼= ˆSm(F ) for any m> 0 ([35, III.5.10(3)]
+mentioned above) induce H 0(Y, ˆSkℓy(F ) ⊗ A) ∼
+=H 0(Y,f⋆(OX(kℓyL)) ⊗ A).17
+Thus, from ( ∗), the restriction map
+H 0(X, OX (kℓyL) ⊗ f⋆A) − → H 0(Xy, OX(kℓyL) ⊗ f ∗A ⊗ O X/ Ik+1
+Xy )
+is surjective for any k >0. We take an arbitrary point x ∈ Xy and show that x ∈ Amp (L).
+Noting L|Xy
+∼= OP(Fy)(1), the restriction map H 0(Xy, OX (kℓyL)) → O Xy/ mk+1
+Xy,x is surjective
+for any k > 0. Thus, as a combination of the above two types of surjections, t he restriction
+map
+H 0(X, OX (kℓyL) ⊗ f⋆A) − → O X (kℓyL) ⊗ f⋆A ⊗ O X/ mk+1
+X,x
+is surjective for any k >0. Then by (1), we have x ∈ Amp (L).
+(3) Let us prove the surjectivity of ( ∗) in (2). Denote by m = dim Y . We take a local
+coordinate t = (t1,...,t m) centered at y, and let |t| = ( ∑m
+i=1 |ti|2)1/ 2. We take a C ∞ cut-
+oﬀ function ρ : Y → R such that ρ ≡ 1 on a neighborhood of y and supp ρ ⊂ W . We let
+a function φ := (m + 1)ρ log |t|2 : Y → [−∞ , ∞ ). Comparing with the K¨ ahler form η, we
+can ﬁnd an integer ℓy > 0 such that ℓyη + √
+− 1∂∂φ > 0 on W . We then compare with the
+curvature current √ − 1Θ g of OF (1)|Z. Since √ − 1Θ g ≥ π⋆η on π − 1(W ), we can also see that
+ℓy
+√ − 1Θ g + √ − 1∂∂π⋆φ is a semi-positive current on Z. We take an ample line bundle A onY
+such that A ⊗ K − 1
+Y ⊗ ( ˆdetF )− 1 is ample, where ˆdetF is the double dual of ⋀r F and r is the
+rank of F . Let hKY (resp. h ˆdetF ) be a smooth Hermitian metric on KY (resp. ˆdetF ), and let
+hA be a smooth Hermitian metric on A such that hAh− 1
+KYh− 1
+ˆdetF has positive curvature.
+We now take any integer k >0. We consider the following line bundle on Z:
+M(=Mk) := OF (kℓy +r)|Z ⊗ π ∗(
+A ⊗ K − 1
+Y ⊗ ( ˆdetF )− 1)
+|Z.
+We note OF (kℓy) ⊗ π ∗A =KZ ⊗ M onZ. The line bundle M has a singular Hermitian metric
+gM := (gℓyπ ∗e−φ )k ·gr ·π⋆(hAh− 1
+KYh− 1
+ˆdetF )
+of semi-positive curvature. We note that
+√
+− 1Θ gM ≥ r
+√
+− 1Θ g ≥ π ∗η on π − 1(W ),
+which is a strict positivity for the normal direction of P(Fy) in Z. We also note that we
+can take an open ball neighborhood U ⊂ W of y such that I(gℓyk+r) = OP(F ) on π − 1(U), in
+particular
+I(gM ) = OZ on π − 1(U \ {y})
+(asℓy andr are given,U depends only onk). This follows from our assumption I(gℓyk+r|P(Fy)) =
+OP(Fy) and the restriction theorem of multiplier ideals, namely Ohsawa-Take goshi’s extension.
+We also have
+I(gM ) ⊂ I (e−k(m+1)π ∗ log |t|2
+) = Ik(m+1)−m+1
+P(Fy) ⊂ I k+1
+P(Fy) on π − 1(U).
+We take a section σ ∈ H 0(P(Fy), OF (kℓy) ⊗ π ∗A ⊗ O Z/ Ik+1
+P(Fy)). Noting
+H 0(P(Fy), OF (kℓy) ⊗ π ∗A ⊗ O Z/ Ik+1
+P(Fy)) ∼=H 0(P(Fy), OP(Fy)(kℓy)) ⊗ OY,y OY/ mk+1
+Y,y ,
+we have a section σ ′ ∈ H 0(P(F |U), OF (kℓy) ⊗ π ∗A), which is mapped to σ by the restriction
+map
+Jk
+y :H 0(P(F |U), OF (kℓy) ⊗ π⋆A) − → H 0(P(Fy), OF (kℓy) ⊗ π ∗A ⊗ O Z/ Ik+1
+P(Fy)).18 MIHAI P ˘AUN AND SHIGEHARU TAKAYAMA
+The map Jk
+y is deﬁned for sections over P(F |Y ′) for any open Y ′ ⊂ Y containing y. We use
+the same notation Jk
+y for any open Y ′ ⊂ Y . We take a C ∞ cut-oﬀ function λ such that λ ≡ 1
+around y, say on U1 ⊂ U, and supp λ ⊂ U. We consider
+u :=∂((π ∗λ)σ ′) = ∂(π ∗λ) ∧ σ ′,
+which can be seen as an M-valued (n, 1)-form on Z via ( OF (kℓy) ⊗ π ∗A)|Z =KZ ⊗ M, where
+n := dimZ =m +r − 1. Thanks to the observation on the multiplier ideal I(gM ) on π − 1(U),
+we see that u is square integrable with respect to gM and any given complete K¨ ahler metric on
+Z. (Recall that Z ∼=X1 is a Zariski open subset of a smooth projective variety X, in particular
+Z admits a complete K¨ ahler metric, refer [10, 0.2] if one needs. The q uasi-projectivity of Z
+will be more important for a regularization process.) Then by [10, 5.1], we can solve a ∂-
+equation ∂v =u for some v ∈ Ln, 0
+2,loc (Z,M ) (an M-valued (n, 0)-form on Z with locally square
+integrable functions coeﬃcient) and cnv ∧vgM ∈ L1
+loc(Z, R) with cn = (− 1)n2/ 2. Since u ≡ 0 on
+π − 1(U1), v is holomorphic on π − 1(U1). The integrability cnv ∧
+vgM ∈ L1
+loc(Z, R), in particular
+cnv ∧
+ve −kπ ∗φ ∈ L1
+loc(Z, R), implies v|π − 1(U1) ∈ H 0(P(F |U1), OF (kℓy) ⊗ π⋆A ⊗ I k+1
+P(Fy)). Then
+˜σ := (π ∗λ)σ ′ − v ∈ H 0(Z,KZ ⊗ M) = H 0(Z, OF (kℓy) ⊗ π ∗A) and Jk
+y (˜σ) = Jk
+y (σ ′) = σ. This
+proves the surjectivity of ( ∗) in (2). □
+Proof of 2.5.3. We ﬁrst prove (2). By 2.5.4 and [35, V.3.23], our F in (2) is dd-ample at y.
+Then by deﬁnition, F is big.
+(1) Let g be a singular Hermitian metric on OF (1)|π − 1(Y1) in the statement. Let H be an
+ample line bundle on Y with a Hermitian metric hH with positive curvature. Let a> 0 be an
+arbitrary integer. By applying the preceding argument in the proof of 2.5.4 for a line bundle
+OF (a) ⊗ π⋆H overπ − 1(Y1) with a metric ga ·π⋆hH instead of OF (1)|π − 1(Y1) withg, we see that
+ˆSa(F ) ⊗ H is dd-ample at y. Note that we could take a K¨ ahler form η = √
+− 1Θ hH onY . Since
+a> 0 is arbitrary, F is weakly positive at y ([35, p. 200, Remark (3)]). □19
+3. Positivity of direct image sheaves of adjoint type
+3.1. The L2/m metric, absolute version. We recall in this subsection the construction of
+canonical metrics on the bundle mKX +L and the vector space H 0(X,mKX +L), due to
+Narashimhan-Simha’s ([36, §2]). We will deal with the relative version of this metric in the
+next subsection.
+3.1.1. Let X be a compact complex manifold of dim X = n, and L be a holomorphic line
+bundle on X with a singular Hermitian metric h with semi-positive curvature.
+(1) For every u ∈ H 0(X,mKX +L), (cu ∧
+uh)1/m is a real semi-positive 2 n-form on X with
+measurable function coeﬃcients, where c = cn,m = (( − 1)n2/ 2(− 1)n)−m. It is often written as
+|u|2/m h1/m = (cu ∧ uh)1/m . We set
+∥u∥m =
+( ∫
+X
+(cu ∧ uh)1/m
+) m/ 2
+.
+This is called an L2/m -pseudo-norm on H 0(X,mKX +L) (note that ∥u∥p is not an Lp-norm).
+It is a norm (and in fact a metric) only when m = 1. In this case we will refer to ∥ · ∥1
+as the canonicalL2-metric, and set g1(u,v ) =
+∫
+Xcnu ∧ vh the corresponding pairing, where
+cn =cn, 1 = (− 1)n2/ 2. To be more precise, this is deﬁned on a subspace
+Vm = {u ∈ H 0(X,mKX +L); ∥u∥m< ∞} .
+By deﬁnition of ∥u∥m, if h1/m ∈ L1
+loc, then Vm = H 0(X,mKX +L). We will remark in §4.2
+that there exists a coherent ideal sheaf Jm(h1/m ), called an L2/m -multiplier ideal sheaf, such
+thatVm =H 0(X, (mKX +L) ⊗ Jm(h1/m )). Even if our notation does not reﬂects it, this space
+depends on h.
+(2) We consider aC ∞ volume formdV onX (i.e. aC ∞ Hermitian metric on −KX ) and a C ∞
+Hermitian metric h0 on L as reference metrics. Then the quantity cu ∧
+uh0/ (dV )m represents
+a C ∞ semi-positive function on X. For every x ∈ X, we set
+B′
+m(x) = sup
+{cu ∧ uh0
+(dV )m (x); u ∈ H 0(X,mKX +L), ∥u∥m ≤ 1
+}
+.
+We obtain a function B′
+m onX, and set Bm =B′
+m(dV )mh− 1
+0 . Here B′
+m depends on dV andh0,
+but Bm does not. Because of this reason, we often denote by
+Bm(x) = sup {cu ∧ u(x); u ∈ H 0(X,mKX +L), ∥u∥m ≤ 1}.
+This Bm deﬁnes a singular Hermitian metric on the dual ( mKX + L)⋆, and is called the
+(twisted) canonical L2/m metric, or m-th Bergman kernel metric . For every x ∈ X and a
+vectorξx ∈ (mKX +L)⋆
+x, the length with respect to the metric Bm is given by
+|ξx|Bm := sup{|ξx ·u(x)|; u ∈ H 0(X,mKX +L), ∥u∥m ≤ 1},
+whereξx ·u(x) is the duality pairing between ( mKX +L)⋆
+x and (mKX +L)x. The dual metric
+h(m) :=B− 1
+m
+is a singular Hermitian metric on mKX +L, and it is clear that the curvature current of h(m)
+is semi-positive.20 MIHAI P ˘AUN AND SHIGEHARU TAKAYAMA
+(3) We deﬁne the line bundle
+Lm− 1 = (m − 1)KX +L = m − 1
+m (mKX +L) + 1
+mL
+and a singular Hermitian metric
+hm− 1 = (B− 1
+m )(m− 1)/m h1/m .
+The construction above induces a Hermitian form gmNS (gm for short slightly) on the vector
+space H 0(X,mKX +L) as follows
+gmNS (u,v ) =
+∫
+X
+cnu ∧ vhm− 1,
+which is nothing but the canonical L2-metric on H 0(X,KX +Lm− 1) with respect to hm− 1 as
+in (1). This Hermitian form is deﬁned on H 0(X, (KX +Lm− 1) ⊗ I (hm− 1)). In the case m = 1,
+g1NS is nothing but the canonical L2-metricg1 with respect to h0 =h, i.e. ∥ · ∥1 in (1). We may
+call the Hermitian form gmNS on H 0(X,mKX +L) as the (twisted)m-th Narashimhan-Simha
+Hermitian form . In a relative situation f :X → Y , a family of ﬁberwise h(m) (resp. of gmNS )
+will deﬁne a metric on mKX/Y +L (resp. on f∗(mKX/Y +L)).
+(4) We note that, although hm− 1 is “more singular” than h1/m , the inclusion
+H 0(X, (mKX +L) ⊗ I (h)) ⊂ Vm ⊂ H 0(X, (KX +Lm− 1) ⊗ I (hm− 1))
+holds true for any integer m> 0. For the left inclusion, |u|2h ∈ L1
+loc for u ∈ H 0(X,mKX +L)
+implies |u|2/m h1/m ∈ L1
+loc by H¨ older’s inequality. For the right inclusion, it is enough to see
+that cnu ∧
+uhm− 1 ∈ L1
+loc after a local trivialization, where u ∈ Vm ⊂ H 0(X,mKX +L). By
+deﬁnition of B− 1
+m ,
+cnu ∧
+uhm− 1 =cnu ∧ u (B− 1
+m )(m− 1)/m h1/m ≤ Cu(cn,mu ∧ uh)1/m ,
+where Cu is a positive constant depends only on u. The last term is in L1
+loc for u ∈ Vm.
+In particular, if I(h1/m ) = OX , then Vm =H 0(X,mKX +L) and hence Vm =H 0(X, (KX +
+Lm− 1) ⊗ I (hm− 1)) = H 0(X,mKX +L).
+(5) In the case Vm = 0 at the beginning, we formally agree that Bm ≡ 0,h (m) ≡ +∞ ,hm− 1 ≡
++∞ (except for h1NS =h). □
+3.2. The L2/m metric, relative version.
+Set up 3.2.1. Let X and Y be complex manifolds of dim X − dimY =n, and let f :X → Y
+be a projective surjective morphism with connected ﬁbers. Let L be a holomorphic line bundle
+on X with a singular Hermitian metric h with semi-positive curvature. We let Xy the scheme
+theoretic ﬁber of y ∈ Y , Ly :=L|Xy,hy :=h|Xy the restrictions (it can be hy ≡ +∞ ),
+Y0 ⊂ Y
+the maximum Zariski open subset where f is smooth, ∆ := Y \Y0, and let
+Yh = {y ∈ Y0;hy ̸≡ +∞} .
+For every integer m ≥ 1 and y ∈ Yh, we can discuss the Narashimhan-Simha construction on
+the ﬁber Xy with (Ly,hy) as in 3.1.1, and have ﬁberwise objects Vm,y,Bm,y,h (m)
+y ,hm− 1,y,gm,y =
+gmNS,y accordingly (it can be Vm,y = 0). □21
+We remark that the set Yh is Zariski dense in Y , however may not be Zariski open. The
+complementY \Yh is a pluripolar set and hence can be quite diﬀerent from algebraic/ana lytic
+objects. For example, a pluripolar set may not be closed in Hausdorﬀ topology, and can be
+Zariski dense. In any case we adopt the conventions that if hy ≡ +∞ for a point y ∈ Y0 i.e.,
+y ∈ Y0 \Yh, then Vm,y = 0,Bm,y ≡ 0,hm− 1,y ≡ +∞ and so on.
+Remark 3.2.2. It is very important to understand the local expression of the met rics we
+consider above, as they will be needed in order to deduce their exte nsion properties.
+We give here an explicit formulation of the (relative) canonical L2-metric g1NS,X/Y (g1,X/Y
+for short slightly) on f⋆(KX/Y +L)|Y0 with respect to h in 3.2.1. For this purpose, we may
+suppose that Y itself is a coordinate neighborhood.
+(1) Let η ∈ H 0(Y,KY ) be a nowhere vanishing section, trivializing the canonical bundle of
+Y ; in particular we have KY = OYη. We recall that we have
+H 0(Y,f⋆(KX/Y +L)) = H 0(Y, Hom (KY,f⋆(KX +L))),
+and therefore every section u ∈ H 0(Y,f⋆(KX/Y +L)) corresponds to an OY -homomorphism
+u : KY → f⋆(KX +L). We still use the same symbol u for the induced homomorphism u :
+H 0(Y,KY ) → H 0(Y,f⋆(KX +L)) = H 0(X,KX +L). Thus we can write u(η) ∈ H 0(X,KX +L).
+Let {Uλ }λ be a local coordinate system of X. Regarding u(η) as an L-valued top-degree
+holomorphic form on each Uλ , there exists σuλ ∈ H 0(Uλ \f − 1(∆), Ωn
+X ⊗ L) such that we have
+u(η) = σuλ ∧ f⋆η
+on Uλ \f − 1(∆) i.e. we can “divide” u(η) by f⋆η where f⋆η has no zeros. The choice of
+σuλ is not unique (the ambiguity lies in the image of Ω n− 1
+X ⊗ f⋆Ω 1
+Y ), however the restriction
+σuλ |Xy ∈ H 0(Uλ ∩ Xy,KXy +Ly) on each smooth ﬁber Xy (y ∈ Y0) is unique and independent
+of the local frame η. Finally the collection {σuλ }λ , resp. {σuλ |Xy }λ , glue together as a global
+section
+σu ∈ H 0(X \f − 1(∆),KX/Y +L), σ uy ∈ H 0(Xy,KXy +Ly)
+respectively; moreover, the later is the restriction of the former σuy = σu|Xy for y ∈ Y0. This
+construction independent of the reference metrics.
+(2) Then the canonical L2-metricg1NS,X/Y foru,v ∈ H 0(Y,f⋆(KX/Y +L)) at y ∈ Y0 =Y \∆
+is given by the expression
+g1NS,X/Y (u,v )(y) =
+∫
+Xy
+cnσu|Xy ∧
+σv|Xyhy.
+We may write the integrand as ( cnσu ∧ σvh)|Xy by an abuse of notations, where cn = (− 1)n2/ 2.
+The convergence of the last integral depends on u and v. There may be other ways to express
+g1NS,X/Y , for example g1NS,X/Y = {g1NS,X/Y,y }y∈Y0 as a family of ﬁberwise Hermitian forms,
+whereg1NS,X/Y,y is the restriction of g1NS,y on the image of f⋆(KX/Y +L)y inH 0(Xy,KXy +Ly)
+(the latter space can be larger in general), and where g1NS,y is the canonical L2-metric on
+H 0(Xy,KXy +Ly) with respect to hy (it can be g1NS,y (u,u ) = + ∞ for some u ∈ H 0(Xy,KXy +
+Ly)). □22 MIHAI P ˘AUN AND SHIGEHARU TAKAYAMA
+Remark 3.2.3. As a consequence of Ohsawa-Takegoshi’s extension theorem, we h ave the
+inclusion I(hy) ⊂ I (h) · OXy for any y ∈ Y0. The next set we will be interested in would be
+y ∈ Y0 such that
+I(hy) = I(h) · OXy.
+In the algebraic case, this holds for any y in a Zariski open subset ([31, 9.5.35]). We show here
+that this equality holds on a set of full measure on Y (which in general is not Zariski open). To
+this end, it is enough to show that I(h) · OXy ⊂ I (hy) for a.a. y ∈ Y . We may suppose that Y
+is a small coordinate neighborhood. Let U ⊂ X be a local coordinate set, which is isomorphic
+to a polydisk, such that f |U is (conjugate to) the projection to a sub-polydisk. We may assume
+that I(h)|U is generated by a ﬁnite number of holomorphic functions s1,...,s k ∈ H 0(U, OX),
+in particular |si|2h ∈ L1
+loc(U). As these si|Xy generate I(h) · OXy∩U , it is enough to show that
+eachsi|Xy ∈ I (hy)|Xy∩U for a.a.y ∈ f (U). By Fubini’s theorem, |si|Xy|2hy ∈ L1
+loc(Xy ∩ U) for
+a.a.y ∈ f (U), i.e., si|Xy ∈ I (hy)|Xy∩U for a.a.y ∈ f (U).
+Remark 3.2.4. We note that f⋆(KX/Y +L) on Y and the canonical L2-metric g1 =g1NS,X/Y
+on Y0 are invariant under bimeromorphic transform of X. Let µ : X ′ → X be a proper
+bimeromorphic morphism from a complex manifold X ′, f ′ = f ◦µ : X ′ → Y , and let L′ =
+µ⋆L,h ′ =µ⋆h. Then it is easy to see f ′
+⋆(KX ′/Y +L′) = f⋆(KX/Y +L). Suppose that f ′ :X ′ → Y
+is smooth over Y ′
+0 ⊂ Y , and let g′
+1 = g1NS,X ′/Y be the canonical L2-metric with respect to h′
+on f ′
+⋆(KX ′/Y +L′)|Y ′
+0 . Then g1 = g′
+1 on Y0 ∩ Y ′
+0 (one should observe this in the case Y is a
+point, and then the relative case). As a result g1 and g′
+1 deﬁne a singular Hermitian metric of
+f⋆(KX/Y +L)|Y0∪Y ′
+0 . (We do not know if Y ′
+0 ⊂ Y0 holds.)
+3.3. Direct image sheaves of adjoint type and their metric proper ties. In this sub-
+section we show that the direct image sheaves f⋆(KX/Y +L) can be endowed with a singular
+Hermitian metric with semi-positive curvature in the sense we have de ﬁned in 2.3.1. We re-
+mark that in general, the singularities of the metric we construct ca nnot be avoided. The main
+result we obtain here can be seen as a more general and precise for m of [3, 3.5], and it implies
+various notions of weak positivity in algebraic geometry. The set-up and notations in what
+follows are the same as in 3.2.1.
+3.3.1. To start with, we deﬁne the following sets, which play an important ro le for the under-
+standing of the metrics we will deﬁne next. We recall that Y0 ⊂ Y is the set of regular values
+of f , and that Yh = {y ∈ Y0; hy =h|Xy ̸≡ +∞} .
+Y1,h, ext := {y ∈ Yh; H 0(Xy, (KXy +Ly) ⊗ I (hy)) = H 0(Xy,KXy +Ly)},
+Y1, ext := {y ∈ Y0; h0(Xy,KXy +Ly) equals to the rank of f⋆(KX/Y +L)}.
+Y1, free := The largest Zariski open subset such that f⋆(KX/Y +L) is locally free.
+We remark that the set Y1, ext and Y1, free are independent of the metric h and Y1, ext ⊂ Y1, free.
+We have then the following observation.
+Lemma 3.3.2. (1) We have the inclusion Y1,h, ext ⊂ Y1, ext ∩ Yh.
+(2) Lety ∈ Y1,h, ext. Then the equalities
+f⋆(KX/Y +L)y =H 0(Xy,KXy +Ly) = H 0(Xy, (KXy +Ly) ⊗ I (hy))23
+hold. As a consequence of 3.2.2(2), the restriction of the direct image f⋆(KX/Y +L) to the
+set Y1,h, ext can be endowed with the canonical L2-metric g1NS,y with respect to hy. Moreover
+f⋆(KX/Y +L) is locally free aty, and the natural inclusion f⋆((KX/Y +L)⊗I (h)) ⊂ f⋆(KX/Y +L)
+is isomorphic at y. Moreover, the inclusion Y1,h, ext ⊂ Y1, ext holds.
+(3) If the natural inclusion f⋆((KX/Y +L) ⊗ I (h)) ⊂ f⋆(KX/Y +L) is generically isomorphic,
+then Y1,h, ext is not empty and Y \Y1,h, ext has measure zero.
+(4) In conclusion, the sheaf f⋆(KX/Y +L)|Y1, ext can be endowed with the canonical L2-metric
+{g1NS,y }y∈Y1, ext; however, we note that we have detg1NS,y = +∞ if y ∈ Y1, ext \Y1,h, ext.
+Proof. The ﬁrst point (1) will be established at the end of the argument for we give next for
+(2).
+(2) By Ohsawa-Takegoshi, every section u ∈ H 0(Xy,KXy +Ly) admits an extension
+˜u ∈ H 0(XW, (KX/Y +L) ⊗ I (h))
+deﬁned on some neighborhood XW of Xy. In particular the natural induced map
+f⋆
+(
+(KX/Y +L) ⊗ I (h)
+)
+y → H 0(Xy,KXy +Ly)
+is surjective (we note that the left-hand side direct image above is c ontained inf⋆(KX/Y +L)y).
+The cohomology base change theorem implies that f∗(KX/Y +L) is locally free at y, and as a
+consequence the natural inclusion f⋆((KX/Y +L) ⊗ I (h)) ⊂ f⋆(KX/Y +L) is isomorphic at y .
+This argument also shows (1).
+(3) There exists a non-empty Zariski open subset W ⊂ Y such that the inclusion map
+f⋆((KX/Y +L) ⊗ I (h)) ⊂ f⋆(KX/Y +L)
+is isomorphic on W , and such that
+f⋆((KX/Y +L) ⊗ I (h))y =H 0(Xy, (KXy +Ly) ⊗ I (h) · OXy ),f⋆(KX/Y +L)y =H 0(Xy,KXy +Ly)
+for any y ∈ W . Since I(h) · OXy = I(hy) for a.a. y ∈ Y0 in general by 3.2.3, so our assertion
+follows.
+(4) This point follows directly from the preceding ones. □
+We recall next the following result.
+Theorem 3.3.3. [3, 3.5] Let f : X → Y and (L,h ) be as in 3.2.1. Suppose that f is smooth
+and f⋆(KX/Y +L) is locally free. Then the ﬁberwise canonical L2-metrics
+g1NS,y (u,u ) :=
+∫
+Xy
+cnu ∧
+uhy ≤ +∞
+foru ∈ H 0(Xy,KXy +Ly) induces a singular Hermitian metric g1NS,X/Y onf⋆(KX/Y +L) with
+positive curvature.
+The notion of singular Hermitian metric h on a vector bundle E adopted in [3, p. 357] is
+more general than 2.3.1: one only assume that h corresponds locally to a measurable map
+from the base manifold to the space of semi-positive deﬁnite Hermitia n matrices (hence, no
+assumption concerning the determinant metric). The negativity of its curvature is deﬁned by
+the plurisubharmonicity of log |v|2
+h for any local section v ∈ H 0(U,E ). We note that stated24 MIHAI P ˘AUN AND SHIGEHARU TAKAYAMA
+in this way, the notion of singular Hermitian metric makes not much sen se, since any vector
+bundle admits h ≡ 0 as a singular Hermitian metric with negative curvature.
+In our set-up in this paper, the previous result has the following con sequence.
+Theorem 3.3.4. [3, 3.5] Letf :X → Y and (L,h ) be as in 3.2.1. Suppose that f is smooth,
+f⋆(KX/Y +L) is locally free, and that the natural inclusion
+f⋆((KX/Y +L) ⊗ I (h)) ⊂ f⋆(KX/Y +L)
+is generically isomorphic. Then f⋆(KX/Y +L) admits a singular Hermitian metric g1NS,X/Y =
+{g1NS,X/Y,y }y∈Y with positive curvature and satisfying a base change property on Y1, ext, which
+means,g1NS,X/Y,y =g1NS,y holds on every ﬁber f⋆(KX/Y +L)y at y ∈ Y1, ext, where g1NS,y is the
+canonicalL2-metric on f⋆(KX/Y +L)y =H 0(Xy,KXy +Ly) with respect to hy in 3.3.2(4).
+The statement concerning the equality g1NS,X/Y,y = g1NS,y on f⋆(KX/Y +L)y for y ∈ Y1, ext
+is slightly more informative than the original one in [3, 3.5]. We stress on the fact that the
+statement above is implicit in [3], it is not mentioned explicitly.
+Our version of the previous result reads as follows.
+Theorem 3.3.5. Let f : X → Y and (L,h ) be as in 3.2.1. We suppose that the natural
+inclusionf⋆((KX/Y +L) ⊗ I (h)) ⊂ f⋆(KX/Y +L) is generically isomorphic. Then the canonical
+L2-metric g1NS,X/Y on f⋆(KX/Y +L)|Y0∩Y1, free with respect to h has positive curvature by 3.3.4,
+and it extends as a singular Hermitian metric ˜g1NS,X/Y on the torsion free sheaf f⋆(KX/Y +L)
+with positive curvature. In particular ˜g1NS,X/Y has a base change property on Y1, ext.
+The rest of this subsection is devoted to the proof of 3.3.5. We star t by ﬁxing some notations,
+and making some standard reductions. Let
+E :=f⋆(KX/Y +L), resp. g :=g1NS,X/Y ,
+be the direct image of the bundle KX/Y +L, resp. the metric on E|Y0∩Y1, free. Noting that we
+have codim (Y \Y1, free) ≥ 2, it is enough to show that g extends to a singular Hermitian metric
+on E|Y1, free with positive curvature by deﬁnition of curvature positivity of singu lar Hermitian
+metric of torsion free sheaves (see 2.4.2). Thus we may assume fro m the start that E is locally
+free, i.e., Y1, free =Y . We also note that the extension of g is a local question on Y . Moreover,
+we can freely restrict ourselves on a Zariski open subset Y ′′ ⊂ Y with codim (Y \Y ′′) ≥ 2,
+since the extended metric is unique.
+In conclusion, it is enough to consider the following local setting, nea r the general point of
+a codimension 1 subset ∆ ⊂ Y (possibly after taking a modiﬁcation of X along f − 1(∆); such
+operations do not aﬀect E and the metric g, see 3.2.4).
+Set up 3.3.6. Let f : X → Y and (L,h ) be as in 3.2.1. In addition to the assumption in
+3.3.5, let us assume further the following
+(1) The base Y is a unit polydisk in Cm with coordinates t = (t1,...,t m). Let dt =dt1 ∧ ... ∧
+dtm ∈ H 0(Y,KY ) be a global frame of KY .
+(1.i) f is ﬂat, and its discriminant locus ∆ ⊂ Y is given by the equation ∆ = {tm = 0} (or
+∆ = ∅), Y0 =Y \∆,
+(1.ii) the eﬀective divisor f ∗∆ has a normal crossing support, and25
+(1.iii) the morphism Supp f ∗∆ → ∆ is relative normal crossing (see 3.3.7).
+(2) (2.i) E =f⋆(KX/Y +L) ∼
+= O⊕r
+Y , i.e., globally free and trivialized of rank r> 0.
+(2.ii)@For every point y ∈ Y , the naturally induced homomorphism E/ (mY,yE) → H 0(Xy,
+(KX/Y +L) ⊗ O Xy ) is injective, where mY,y ⊂ O Y is the maximal ideal and Xy is the scheme
+theoretic ﬁber of y; Xy is deﬁned by the ideal mY,y OX (see 3.3.8).
+(3) Let g be the canonical L2-metric on E overY0, which is positively curved by 3.3.4.
+We may replace Y by slightly smaller polydisks, or may assume everything is deﬁned over a
+slightly larger polydisk. □
+Deﬁnition 3.3.7. (1) In the set-up 3.3.6 above, by Supp f ∗∆ → ∆ is relative normal cross-
+ing we mean that locally near every point x ∈ X, there exists a local coordinate ( U;z =
+(z1,...,z n+m)) such that f |U is given by t1 = zn+1,...,t m− 1 = zn+m− 1, tm = zbn+m
+n+m
+∏n
+j=1z
+bj
+j
+with non-negative integers bj and bn+m.
+(2) The map f is said to be semi-stable, if moreover f⋆∆ is reduced (in the notations above,
+this simply means that bj ≤ 1). □
+We explain 3.3.6(2.ii) in a slightly general context.
+Lemma 3.3.8. Let f : X → Y be a proper surjective morphism of complex manifolds, F a
+torsion free sheaf on X which is ﬂat over Y , and let E = f∗F be its direct image, which is
+merely torsion free. Then there exists a Zariski closed subs et Z ⊂ Y with codimYZ ≥ 2 such
+that E|Y \Z is locally free, and such that for every point y ∈ Y \Z, the natural homomorphism
+E/ (mY,yE) → H 0(Xy,Fy) is injective, where F |Xy =F ⊗ O Xy .
+Proof. Our assertion is local on Y around complement of some codimension 2 Zariski closed
+subsets of Y . Let m = dim Y ≥ 1. As E is torsion free, we may suppose E is locally
+free on Y by removing codimension 2 subsets in Y . By general results (such as the upper-
+semi-continuity theorem, and the cohomology and base change the orem), there exist Zariski
+closed subsets Z ⊂ Y with codim YZ ≥ 1 such that for every point y ∈ Y \Z, the natural
+map E/ (mY,yE) → H 0(Xy,Fy) is isomorphic. By removing codimension 2 subsets in Y and
+replacing Y , we may suppose that Z is smooth, irreducible and of dim Z =m − 1. In fact, we
+may suppose Z = {s1 = 0} in a coordinate of Y ⊂ (Cm, (s1,...,s m)). Denote by f1 :X1 → Z
+be the induced morphism, where X1 is the scheme theoretic inverse image of Z, namely in
+this case X1 is a divisor in X deﬁned by {f ∗s1 = 0 }. In general F ⊗ O X1 is ﬂat over Z, and
+E1 := (f1)∗(F ⊗ O X1) is a coherent sheaf on Z. If Y is a curve, then Z is a point y ∈ Y and
+E1 =H 0(Xy,Fy).
+We have an exact sequence 0 → F ⊗ O X(−X1) → F → F ⊗ O X1 → 0 on X, and an exact
+sequence 0 → f∗(F ⊗ O X(−X1)) → f∗F → f∗(F ⊗ O X1) on Y . Noting that OX (−X1) =
+f ∗OY (−Z) is an invertible sheaf, the last exact sequence turns to be 0 → O Y (−Z) ⊗ E →
+E → E1. Thus the induced homomorphism E/ (s1E) → E1 is injective. If Y is a curve, we are
+done at this point. We suppose m ≥ 2.
+By removing codimension 1 subsets in Z and replacing Y , we may suppose that E1 is
+locally free on Z, more strongly for every point y ∈ Z, the natural map E1/ (mZ,yE1) →
+H 0(Xy,Fy) is isomorphic, and that the map E′ :=E/ (s1E) → E1 is injective as a vector bundle26 MIHAI P ˘AUN AND SHIGEHARU TAKAYAMA
+homomorphism (not only as a sheaf homomorphism). In particular E′ can be seen as a direct
+summand ofE1 (as we are in local situation). In general the rank of E′ would be strictly smaller
+than that of E1. For every point y ∈ Z, we thus have an injection E′/ (mZ,yE′) → H 0(Xy,Fy) as
+a composition. As E′/ (mZ,yE′) = E/ (mY,yE) (this can be checked by taking a local coordinate),
+our claim is proved. □
+Lemma 3.3.9. In order to prove Theorem 3.3.5, we can further suppose that f is semi-stable
+in addition to 3.3.6.
+Proof. We use the weakly semi-stable reduction (or the semi-stable reduct ion in codimension
+1) ([27, Ch. II] [30, §7.2] [47, §6.4]). Let
+f ∗∆ =
+∑
+j
+bjBj
+be the prime decomposition. Let Y ′ be another copy of a unit polydisk in Cm with coordinates
+t′ = (t′
+1,...,t ′
+m− 1,t ′
+m). Let ℓ be the least common multiple of all bj. Let τ : Y ′ → Y be a
+ramiﬁed covering given by ( t′
+1,...,t ′
+m− 1,t ′
+m) ↦→ (t′
+1,...,t ′
+m− 1, (t′
+m)ℓ), and X ◦ =X × Y Y ′ be the
+ﬁber product. Let ν : X ′ → X ◦ be the normalization, and µ : X ′′ → X ′ be a resolution of
+singularities, which is biholomorphic on the smooth locus of X ′. We encode next the induced
+morphisms in the following diagram.
+X ′′ µ
+− − − → X ′ ν
+− − − → X ◦ =X × Y Y ′ τ ◦
+− − − → X
+f ′′
+
+
+↓ f ′
+
+
+↓ f ◦
+
+
+↓
+
+
+↓f
+Y ′
+Y ′ Y ′ − − − →
+τ
+Y
+We let also τ′′:X ′′→ X be the composition, L′′=τ′′∗L, and h′′=τ′′∗h the induced singular
+Hermitian metric on L′′. We set ∆ ′ = Suppτ⋆∆ = {t′
+m = 0} ⊂ Y ′. The fact that we can take
+a resolution µ :X ′′→ X ′ so that f ′′:X ′′→ Y ′ is semi-stable in codimension 1 is by no means
+“obvious”, but it is established in the references quoted at the beg inning of the proof.
+By [46, Lemma 3.2] [35, V.3.30] (we note that adding L′′=τ′′∗L is harmless), we then have
+a natural inclusion homomorphism
+α :f ′′
+⋆ (KX ′′/Y ′ +L′′) − → τ∗f⋆(KX/Y +L),
+which is isomorphic over Y ′\∆ ′. In particular f ′′
+⋆ (KX ′′/Y ′ +L′′) is locally free over Y ′\∆ ′. The
+natural inclusion f ′′
+⋆ ((KX ′′/Y ′ +L′′) ⊗ I (h′′)) ⊂ f ′′
+⋆ (KX ′′/Y ′ +L′′) is also generically isomorphic,
+and E′′:=f ′′
+⋆ (KX ′′/Y ′ +L′′) admits also the canonical L2-metric g′ =g1NS,X ′′/Y ′ overY ′ \∆ ′
+with respect to h′′(by 3.3.4). Moreover the inclusion α induces an isometry over Y ′ \∆ ′, i.e.,
+g′ = α⋆τ⋆g as a singular Hermitian metric on E′′|Y ′\∆′. In fact, since τ : Y ′ \ ∆ ′ → Y \ ∆
+is locally biholomorphic, the coordinate free description of the L2-metric in 3.2.2 explain the
+isometry.
+By 2.3.2, it is enough to prove that the singular Hermitian metric τ⋆g overY ′ \∆ ′ can be
+extend as a singular Hermitian metric on τ⋆E =τ∗f⋆(KX/Y +L) overY ′ with positive curvature.
+To this end, we use 2.4.3(3), which shows that it is enough to prove th at the singular Hermitian
+metricg′ overY ′\∆ ′ can be extend as a singular Hermitian metric on E′′=f ′′
+⋆ (KX ′′/Y ′ +L′′)
+over Y ′ with positive curvature. Once this is established, we apply 2.4.3(3), w hich shows
+that the extension of g′ with positive curvature induces a singular Hermitian metric g+ on27
+τ⋆E = τ∗f⋆(KX/Y +L) with positive curvature. The metric g+ extends the pull-back τ⋆g,
+because of g′ =α⋆τ⋆g on Y ′ \∆ ′ (and because of the proof or construction of 2.4.3(3)). And
+ﬁnally, in order to extend g′ over Y ′ (by removing codimension two subvarieties of Y ′ and
+localizing again), we may suppose that f ′′is semi-stable and E′′satisﬁes 3.3.6(2). □
+Proposition 3.3.10. Theorem 3.3.5 holds true when f is semi-stable (hence in general, by the
+result above).
+Proof. In what follows, we will assume that the relations (1)–(3) in 3.3.6 are v eriﬁed, and that
+the map f is semi-stable. This will allow us to perform a few explicit computations in order
+to understand the behavior of the metric near ∆.
+By 3.3.4, the metric g⋆ is negatively curved on Y0. Our goal is to extend it on Y with
+negative curvature. We consider any open set U ⊂ Y and a non-zero ξ ∈ H 0(U,E⋆). We may
+assume that U =Y ; then by hypothesis log |ξ|2
+g⋆ is psh on Y0. The conclusion of 3.3.5 is that
+the function log |ξ|2
+g⋆ extends as a psh function on Y . As it is well known (by Hartogs theorem)
+the extension property holds provided that we can show that ther e exists a constant cξ > 0
+such that |ξ|2
+g⋆ <c ξ on Y0 (possibly after shrinking Y ).
+We consider a global frame e1,...,e r ∈ H 0(Y,E ) and we trivialize E = Y × Cr via this
+frame. With respect to this trivialization, the metric g can be written as a matrix valued
+functiong = (gi
+j) on Y0. For every t ∈ Y0, we denote by 0 <λ 1(t) ≤ λ 2(t) ≤ ... ≤ λr(t) ≤ +∞
+the eigenvalues of g(t) = ( gij(t)), see 2.2.7. Then we have λr(t) < +∞ for every t ∈ Y1,h, ext
+by deﬁnition 3.3.1 of h1,h, ext. We shall show in 3.3.11 that there exists a constant c0 > 0
+independent of t ∈ Y0 such that λ 1(t) > c0 for all t ∈ Y0 (including the case λ 1(t) = + ∞ ).
+This implies the existence of a constant cξ > 0 such that |ξ|2
+g⋆ < cξ on Y0, and our claim will
+be proved.
+For a constant vectors = (s1,...,s r) ∈ Cr, we letus = ∑r
+i=1siei ∈ H 0(Y,E ) = H 0(X,KX/Y +
+L). We denote by S2r− 1 = {s ∈ Cr; |s| = ( ∑|si|2)1/ 2 = 1 } the unit sphere. Since e1,...,e r
+generate E overY , us is nowhere vanishing on Y as soon as s ̸= 0, namely us is non-zero in
+E/ (mY,yE) at any y ∈ Y . The map Cr → H 0(X,KX +L) given by
+s ↦→ us ↦→ us(dt) =
+r∑
+i=1
+siei(dt), Cr → H 0(X,KX/Y +L) ∼
+=H 0(X,KX +L)
+is continuous, with respect to the standard topology of Cr and the topology of H 0(X,KX +L)
+of uniform convergence on compact sets (recall 3.2.2 for the mean ing of us(dt)). Then the
+following 3.3.11 shows our claim. □
+Lemma 3.3.11. (cf. [19, 1.12].) Let y ∈ ∆ . Then there exist a neighborhood Wy of y in Y
+and a constant c0 > 0, such that g(us,us)(t) ≥ c0 for any s ∈ S2r− 1 and any t ∈ Wy \∆ .
+Since S2r− 1 is compact, 3.3.11 is a consequence of the next statement.
+Lemma 3.3.12. (cf. [19, 1.11].) In notations above, let y ∈ ∆ and let s0 ∈ S2r− 1. Then there
+exist a neighborhood S(s0) of s0 in S2r− 1, a neighborhood Wy of y in Y and a constant c0 > 0
+such that g(us,us)(t) ≥ c0 for any s ∈ S(s0) and any t ∈ Wy \∆ .28 MIHAI P ˘AUN AND SHIGEHARU TAKAYAMA
+Proof. (1) Let u ∈ H 0(Y,E ), and assume u does not vanish at y. Then we claim that there
+exists a component Bj in f ∗∆ = ∑Bj such that u(dt) ∈ H 0(X,KX +L) does not vanish
+identically along Bj ∩ f − 1(y).
+The isomorphismH 0(X,KX/Y +L) ∼=H 0(X,KX +L) is asH 0(Y, OY )-modules. In particular,
+this will show that u(dt) ∈ H 0(X,KX +L) does not vanish at y ∈ Y as an element of an
+H 0(Y, OY )-module. We have to show that if u(dt) vanishes identically along f − 1(y), then u
+vanishes at y, i.e., u ∈ mY,yE. If m = 1, we can check it by a direct computation as in the
+next paragraph. If m> 1, we cut Y andX by {t1 = 0} (noteX ∩ {t1 = 0} is still smooth) and
+use the induction hypothesis. More precisely, we let Y1 = {t1 = 0 } ⊂ Y,X 1 = f − 1(Y1), and
+let f1 :X1 → Y1 be the induced morphism. We have a restriction map r :H 0(X,KX +L) →
+H 0(X1, (KX +L)|X1) ∼= H 0(X1,KX1 +L|X1) by the adjunction KX|X1 = KX1. The kernel
+is generated by t1. If u(dt) vanishes identically along f − 1(y), then by induction hypothesis,
+the image of u(dt) in H 0(Xy, (KX/Y +L)|Xy ) is zero. Thus by the property 3.3.6(2), we have
+u(dt) ∈ mY,yE.
+Let us suppose m = 1, and let t = t1 be the coordinate function on Y . Suppose that
+u(dt) vanishes identically along f − 1(y), which is now a reduced divisor. We shall show that
+u ∈ H 0(X,KX/Y +L) is divided by f − 1t as a holomorphic section, and obtain a contradiction.
+To see u is divided by f − 1t, it is enough to show that u vanishes identically along f − 1(y) as a
+bundle valued continuous function, and it is enough to show that it va nishes identically along
+the smooth part of f − 1(y) by the continuity. So we take a smooth point x of f − 1(y) and a
+local coordinate ( U;z) around x such that the map f is given by
+(z1,...,z n+1) ↦→ t =zn+1,
+and y = 0 in this coordinates t. With respect to the coordinates ( U;z), (not all, but) a
+representative for the element u can be written as a ( n, 0)-form on U as follows
+u =τdz1 ∧ ... ∧ dzn,
+where τ ∈ H 0(U, OX). By this we mean that we have the equality
+u(dt) = τdz1 ∧ ... ∧ dzn ∧ f⋆(dt) = τdz1 ∧ ... ∧ dzn ∧ dzn+1.
+as top degree forms deﬁned on U. The vanishing of u(dt) along f − 1(y) ∩ U is equivalent to the
+vanishing of τ, as well as of u, along f − 1(y) ∩ U.
+(2) For our nowhere vanishing us0, we take a component
+B =Bj
+in f ∗∆ such that us0(dt) does not vanish identically along B ∩ f − 1(y). We take a general
+point x0 ∈ B ∩ f − 1(y), and a local coordinate ( V ;z = (z1,...,z n+m)) centered at x0 ∈ X
+such that f is given by t = ( t1,...,t m) = f (z) = ( zn+1,...,z n+m) on V . In particular
+(f ∗∆) |V =B|V = {zn+m = 0}. Over V , we may assume that L and h are also trivialized, i.e.,
+L|V ∼= V × C and h = e−ϕ with a (quasi-)psh function ϕ ∈ L1
+loc(V, R). In particular e−ϕ > a
+on V for a constant a> 0 (possibly after shrinking V ).
+(3) For every s ∈ S2r− 1, we have us(dt) ∈ H 0(X,KX +L). Over V , it can be written as
+us(dt)|V =τsVdz1 ∧ ... ∧ dzn+m with τsV ∈ H 0(V, OX ),29
+and hence τsVdz1 ∧... ∧dzn+m =
+(
+σsVdz1 ∧... ∧dzn
+)
+∧f⋆dt. As in 3.2.2, every us ∈ H 0(Y,E ) =
+H 0(Y,f⋆(KX/Y +L)) deﬁnes σst ∈ H 0(Xy,KXy +Ly) for every t ∈ Y0. Remark 3.2.2 also shows
+us|V ∩Xt =
+(
+σsVdz1 ∧ ... ∧ dzn
+)
+|V ∩Xt on V ∩ Xt.
+At the point s0 ∈ S2r− 1, since us0(dt) does not vanish identically along B ∩ f − 1(y) and since
+x0 ∈ B ∩ f − 1(y) is general, we have σs0V (x0) ̸= 0.
+(4) By the continuity of s ↦→ us ↦→ us(dt), we can take an ε-polydisk V (ε) = {z =
+(z1,...,z n+m) ∈ V ; |zi|< εfor any 1 ≤ i ≤ n +m} centered at x0 for some ε > 0 and a
+neighborhood S(s0) of s0 in S2r− 1, such that
+A := inf {|σsV (z)|; s ∈ S(s0), z ∈ V (ε)}> 0.
+We set Wy :=f (V (ε)), which is an open neighborhood of y ∈ Y , since f is ﬂat (in particular
+it is open). Then for any s ∈ S(s0) and any t ∈ Wy \∆, we have∫
+Xt
+(− 1)n2/ 2σs ∧ σsh|Xt ≥ a
+∫
+Xt∩V
+(− 1)n2/ 2σs ∧ σs|Xt∩V
+≥ a
+∫
+z∈Xt∩V (ε)
+A2 dVn = aA2(2πε2)n,
+where dVn = ⋀n
+i=1
+√
+− 1dzi ∧ dzi is an euclidean volume form on Cn. □
+Remark 3.3.13. (1) It may be possible to show f⋆((KX/Y +L) ⊗ I (h)) is Griﬃths semi-
+positive in 3.3.5 without assuming that f⋆((KX/Y +L) ⊗ I (h)) ⊂ f⋆(KX/Y +L) is generically
+isomorphic. However there are some technical diﬃculties. To explain this, suppose Y is a
+disk, and X0 = ∑miXi is the singular ﬁber over 0 ∈ Y . There are diﬃculties to compare
+the ideal IX0, I(h), and div( u) for u ∈ H 0(X, (KX/Y +L) ⊗ I (h)). Embedded components
+of OX/ I(h) are diﬃcult to handle in general. More subtle thing is, because h may have non-
+algebraic/analytic singularities, we cannot reduce to the normal cr ossing situation even after
+a modiﬁcation of the manifold.
+(2) In the proof of 3.3.5, it is not enough to show that, on each line ℓ on Y which is not
+contained in ∆, g1NS,X/Y |ℓ\∆ is bounded as g1NS,X/Y |ℓ\∆ ≥ cℓ by a constant cℓ > 0. We need
+a uniform bound cℓ ≥ c> 0 independent of ℓ. We can not assume dim Y = 1 without special
+attentions.30 MIHAI P ˘AUN AND SHIGEHARU TAKAYAMA
+4. Positivity of relative pluricanonical bundles
+In this part of our article we will provide the necessary tools needed in order to generalize
+Theorem 3.3.5 in the context of pluricanonical bundles. Part of our m otivation is that the
+metric associated to the bundle f⋆(mKX/Y +L) for m ≥ 2 has better regularity properties
+than the one on f⋆(KX/Y +L), and this is important for applications. The path we will
+follow is to write mKX/Y +L = KX/Y +Lm− 1. We endow the bundle Lm− 1 with the metric
+hm− 1 := (B− 1
+m,X/Y )(m− 1)/m h1/m , and then we apply the results of the preceding section with the
+data f and (Lm− 1,hm− 1). Therefore, it is fundamental to understand the relative Bergm an
+type metric Bm,X/Y (as the metric h on L is given).
+To start with, we will consider the case m = 1. In the ﬁrst part of this section we will
+revisit the construction of the Bergman-type metric on KX/Y +L. The proof we present here
+is diﬀerent from the original argument in [3]. It relies on the version of the Ohsawa-Takegoshi
+extension theorem obtained by B/suppress locki [6] and Guan-Zhou [21], combined with an approach
+due to Tsuji. The construction of the metric B− 1
+m,X/Y on mKX/Y +L for m ≥ 2 is treated
+afterwards; to a large extent, it is a consequence of the case m = 1. In both cases, the metric
+is constructed ﬁrst on a Zariski open set which will be explicitly descr ibed here. We show
+that the curvature current corresponding to B− 1
+m,X/Y is semi-positive deﬁnite. The extension of
+this current to the manifold X will be a consequence of the version of the Ohsawa-Takegoshi
+extension theorem we establish here.
+The set-up in this section is as follows: let f :X → Y be a projective surjective morphism
+of complex manifolds with connected ﬁbers, and let L → X be a line bundle, endowed with a
+singular Hermitian metric hL =e−ϕ L whose curvature current is positive.
+4.1. The log-plurisubharmonicity of the Bergman kernel metric r evisited. “Ideally”,
+the relative Bergman kernel metric B1,X/Y on − (KX/Y +L) would be deﬁned as a collection of
+ﬁberwise Bergman kernel metrics B1,y with respect to hy := hL|Xy for Xy smooth (notations
+as in 3.2.1). However, it is not a-priori clear that the resulting metric B1,X/Y is even semi-
+continuous, mainly because the dimension of the space of sections o f the bundle KXy +Ly may
+not be constant as a function of y.
+In order to overcome this phenomena, we ﬁrst deﬁne explicitly B1,X/Y on the set
+Yext =Y1, ext := {y ∈ Y0; h0(Xy,KXy +Ly) equals to the rank of f⋆(KX/Y +L)},
+which is the Zariski open set of regular values y ∈ Y such that every section of KXy +Ly
+extends to the f -inverse image of an open set containing y (as we deﬁned in 3.3.1). Let
+Xext =f − 1(Yext)
+so that in particular the map f : Xext → Yext is a submersion. In [3, pp. 346–367] (or 3.2.1
+here) we have deﬁned the metric B− 1
+1,X/Y on (KX/Y +L)|f − 1(Yext∩Yh). We assign the value + ∞
+on the set Yext \Yh, and in this way B− 1
+1,X/Y is well-deﬁned on Xext.
+The following result was basically established in [3]; we will nevertheless provide here an
+alternative argument which is based on B/suppress locki’s and Guan-Zhou’s version of the Ohsawa-
+Takegoshi extension theorem with optimal constant.31
+Theorem 4.1.1. [3, 0.1] We assume that there exists a point y ∈ Yh such that
+H 0(
+Xy, (KXy +Ly) ⊗ I (hy)
+)
+̸= 0.
+Then the curvature current corresponding to the metric B− 1
+1,X/Y |Xext deﬁned above is positive.
+Moreover, the local weights of this metric are upper semi-co ntinuous, and uniformly bounded
+on X \Xext. Hence, B− 1
+1,X/Y |Xext extends to X in a unique manner, and it endows the bundle
+KX/Y +L with a metric whose curvature current is positive deﬁnite.
+Proof. A ﬁrst observation is that it suﬃces to show that the weights ϕ (1)
+X/Y of B− 1
+1,X/Y |Xext are
+psh. Indeed, by the original argument in [3], the resulting metric ex tends to X, and it has the
+positivity property stated in the last part of Theorem 4.1.1. We rema rk that the extension
+property amounts to prove that sup
+Xext
+ϕ (1)
+X/Y < ∞ . We refer to [3] for a complete argument, based
+on the classical version of the Ohsawa-Takegoshi extension theo rem.
+(i) We ﬁrst show that the weights ϕ (1)
+X/Y of metric B− 1
+1,X/Y |Xext are upper semi-continuous .
+This claim will be a consequence of the fact that B− 1
+1,X/Y |Xext can be written as increasing limit
+of continuous metrics on the bundle ( KX/Y +L)|Xext. Let ( hL,ε =e−ϕ L,ε )ε>0 be an increasing
+sequence of smooth metrics on L, converging pointwise and in L1 to the metric hL. We recall
+that this can be constructed by a global convolution kernel, cf. [1 3]. Actually, the negative
+part of the curvature form associated to ( L,hL,ε ) is uniformly bounded and it converges almost
+everywhere to zero, but we will not use this important information h ere.
+LetB− 1
+1,ε |Xext be the metric on ( KX/Y +L)|Xext whose local weights ϕα,ε are deﬁned as follows
+([3, pp. 346–347]). Given a point x0 ∈ Ωα ⊂ Xext in a coordinate set Ω α we consider the
+expression
+B1,ε (x0) = exp
+(
+ϕα,ε (x0)
+)
+:= sup
+u
+|u′
+α (x0)|2
+∥u∥2
+y0,ε
+,
+where the notations are as follows: y0 :=f (x0) is the projection of x0, u is a global section of
+the bundle KXy0 +Ly0, and ∥·∥·,ε means that we are using the metric hL,ε |Xy0 in deﬁning the L2
+norm ofu. We ﬁx z = (z1,...,z k) andt = (t1,...,t ℓ) coordinates on Ω α andf (Ωα ) respectively.
+The local holomorphic function u′
+α is deﬁned as u′
+αdz =u ∧ dt, where dz =dz1 ∧ ... ∧ dzk and
+dt =dt1 ∧ ... ∧ dtℓ. In other words, B− 1
+1,ε |Xext is deﬁned exactly as B− 1
+1,X/Y |Xext, except that we
+are using the metric hL,ε for the normalization of the sections on the ﬁbers of f .
+The fact that hL,ε is non-singular for each ε> 0, together with the choice of y0 ∈ Yext shows
+that the weights ϕα,ε deﬁned on Ω α are continuous. Given the monotonicity property of the
+family of metrics hL,ε with respect to ε, we infer that we have
+(4.1.1) ϕα,ε ≥ ϕα,ε ′ ≥ ϕ (1)
+α,X/Y
+provided that ε ≥ ε′; we denote by ϕ (1)
+α,X/Y the local weight of the metric B− 1
+1,X/Y |Xext on Ω α
+with respect to the chosen trivializations.
+We show next that we have
+(4.1.2) lim
+ε→ 0
+ϕα,ε =ϕ (1)
+α,X/Y .
+To this end, we will analyze the following two cases.32 MIHAI P ˘AUN AND SHIGEHARU TAKAYAMA
+• We have ϕ (1)
+α,X/Y (x0) = −∞ (indeed this may happen, e.g. if the point y0 belongs to the set
+Yext \Yh). Let uε be a holomorphic section of the bundle KXy0 +Ly0, such that the L2 norm
+∥uε∥2
+y0,ε :=
+∫
+Xy0
+|uε|2e−ϕ L,ε is equal to 1, and such that
+ϕα,ε (x0) = log |u′
+ε,α (x0)|2.
+We claim that limε→ 0 |u′
+ε,α (x0)|2 = 0. If this is not true, then let u∞ be the limit of uε; it is not
+identically zero, given our assumption. Let emε be the maximum of the function ( ˜h/h L,ε )|Xy0 ,
+where ˜h is a smooth, ﬁxed metric on L. If mε → −∞ , then we obtain a contradiction as
+follows. We have ∫
+Xy0
+|uε|2e−ϕ L,ε +mε =emε
+so that by the deﬁnition of mε, we infer∫
+Xy0
+|uε|2e−φ L ≤ emε,
+where e−φ L denotes the smooth metric ˜h. This cannot happen if ε is small enough, because
+(uε) is converging towards a non-identically zero limit.
+Thus, we can assume that lim sup
+ε→ 0
+mε :=m∞ > −∞ ; in other words, y0 ∈ Yh. Then we have
+(4.1.3)
+∫
+Xy0
+|u∞ |2e−ϕ L ≤ 1
+by a standard argument (we apply the dominate convergence theo rem in the complement of
+the support of the multiplier ideal sheaf corresponding to hL|Xy0 ), and this contradicts the fact
+that ϕ (1)
+α,X/Y (x0) = −∞ .
+• Ifϕ (1)
+α,X/Y (x0)> −∞ , then we know a-priori that y0 ∈ Yh, and by the arguments already used
+in the preceding case we have u∞ := limεuε, such that (4.1.3) holds. We easily see that
+ϕ (1)
+α,X/Y (x0) = log |u′
+∞ ,α (x0)|2,
+as if not, the inequality (4.1.1) will be contradicted.
+This concludes the proof of the upper semi-continuity of ϕ (1)
+X/Y .
+(ii) Next we show that ϕ (1)
+X/Y veriﬁes the mean value inequality; at this point we follow the
+approach outlined by H. Tsuji in [45], which appears in the article by Gu an-Zhou [21, §3.5].
+A ﬁrst observation is that it is enough to treat the case dim Y = 1. Given a smooth projective
+family of varietiesf :X → D over the disc of radius 1 in C (so thaty0 will correspond to 0), the
+minimal norm of the extension of twisted canonical forms can be con trolled in an optimal way,
+thanks to the important version of Ohsawa-Takegoshi theorem, recently obtained by B/suppress locki [6]
+and [21]. The result we need states as follows.
+Theorem 4.1.2. [21, Thm 2.2] Given a section u of the bundle (KXy0 +Ly0) ⊗ I (hL|Xy0 ) and
+a positive real number r< 1, there exists a section Ur of KX +L extending u, deﬁned over the
+pre-imagef − 1(Dr) of the disk of radius r such that
+(4.1.4) 1
+πr 2
+∫
+t∈ Dr
+
+
+Ur
+dt
+
+
+
+2
+t
+dλ(t) ≤ ∥ u∥2
+y0.33
+Actually, this result is established in [21] only in the case of a smooth me tric hL; the singular
+version we need here can be derived from it by the usual regularizat ion procedure.
+We consider a particular section u ∈ H 0(
+Xy0,KXy0 +Ly0
+)
+so that we have
+B1,X/Y (x0) = exp
+(
+ϕ (1)
+X/Y (x0)
+)
+= |u′(x0)|2
+∥u∥y0
+.
+We extendu as in Theorem 4.1.2, and thus we obtain the section Ur deﬁned on f − 1(Dr) whose
+L2 norm is satisfying the inequality (4.1.4). Let t → γ(t) be a local section of f , such that
+x0 =γ(0). We infer that we have
+ϕ (1)
+X/Y (x0) ≤ 1
+πr 2
+∫
+t∈ Dr
+ϕ (1)
+X/Y
+(
+γ(t)
+)
+dλ(t)
+thanks to the estimate (4.1.4), combined with the concavity of log an d the fact that the absolute
+value of the holomorphic functions is log-psh.
+In conclusion, we have showed that the weights of the metric B− 1
+1,X/Y |Xext are psh functions. □
+4.2. Log-plurisubharmonicity of the m-Bergman kernel metric for m ≥ 2. We still
+keep the notation f :X → Y and (L,hL =e−ϕ L). We will analyze here some of the properties
+of the metric ( Bm,X/Y )− 1 on the bundle
+mKX/Y +L
+whose ﬁberwise construction was recalled in 3.1.1. As in the case m = 1 treated in the previous
+subsection, we ﬁrst consider the following non-empty Zariski open subset of Y
+Ym, ext := {y ∈ Y0; h0(Xy,mKXy +Ly) equals to the rank of f⋆(mKX/Y +L)},
+where Y0 ⊂ Y is the set of regular values of f . We denote by Yh = {y ∈ Y0; hy ̸≡ +∞} .
+Let ϕ be a psh function on an open set in Cn. The following ideal sheaf Jm(ϕ ) will appear
+in our considerations
+Jm,x (ϕ ) :=
+{
+f ∈ O Cn,x ;
+∫
+(Cn,x )
+|f |
+2
+me−ϕdλ< ∞
+}
+,
+where dλ is the Euclidean volume form. Although we will not use it here, we mentio n the
+result of [8, 3.4], showing that there exists a psh function with analyt ic singularities ψ such
+that we have Jm(ϕ ) = Jm(ψ ). In particular, the ideal Jm(ϕ ) is coherent. Moreover, as in the
+case of the usual multiplier ideal sheaf, the notion above can be for mulated in the case of a
+line bundle endowed with a metric with semi-positive curvature curren t.
+We extend the deﬁnition of ( Bm,X/Y )− 1 to the Zariski open set
+Xm, ext =f − 1(Ym, ext)
+by assigning the value + ∞ on the set f − 1(Ym, ext \Yh); formally, we have the following.
+Deﬁnition 4.2.1. Let bm be a smooth Hermitian metric on − (mKX/Y +L). For every y ∈
+Ym, ext, we can write as Bm,y = (bm|Xy) exp(ϕ (m)
+y ), where either ϕ (m)
+y ∈ L1
+loc(Xy, R) or ϕ (m)
+y ≡
+−∞ on Xy (we are using here the notations in 3.1.1). The latter holds if and only if Vm,y =34 MIHAI P ˘AUN AND SHIGEHARU TAKAYAMA
+H 0(Xy, (mKXy +Ly) ⊗ J m(h1/m
+y )) = 0 (including the case y ∈ Ym, ext \Yh by convention). We
+then deﬁne a function
+ϕ (m)o
+X/Y :X → [−∞ , +∞ ) by ϕ (m)o
+X/Y (x) = ϕ (m)
+y (x) if x ∈ Xy,
+and deﬁne
+Bo
+m,X/Y =bm exp(ϕ (m)o
+X/Y ).
+We remark that the metric Bo
+m,X/Y is so far only deﬁned on Xm, ext ⊂ X.
+By deﬁnition, Bo
+m,X/Y ̸≡ 0 (non-trivial) if and only if there exists y ∈ Yh ∩ Ym, ext such that
+H 0(Xy, (mKXy +Ly)⊗J m(h1/m
+y )) ̸= 0. In the expression above, we have used the identiﬁcation
+KX/Y |Xy
+∼
+= KXy so that bm|Xy becomes a smooth Hermitian metric on − (mKXy +Ly). It is
+not diﬃcult to see Bo
+m,X/Y is independent of the choices of these identiﬁcations, even though
+ϕ (m)o
+X/Y depends on them formally. The choice of a reference metric bm is also not essential. We
+may regard bm as a part of local trivializations, and then we may simply write as Bo
+m,X/Y =
+exp(ϕ (m)o
+X/Y ) and Bo
+m,X/Y |Xy =Bm,y for every y ∈ Ym, ext.
+We recall a result in [3] (compare with [42] and the references ther ein for related results).
+Theorem 4.2.2. [3, 4.2] We assume that the map f :X → Y is smooth, Ym, ext =Y , and that
+there exists a point y ∈ Yh such that
+H 0(Xy, (mKXy +Ly) ⊗ J m(h1/m
+y )) ̸= 0.
+Then the dual of the relative m-Bergman kernel metric: (Bo
+m,X/Y )− 1 in 4.2.1 deﬁnes a singular
+Hermitian metric on mKX/Y +L whose associated curvature current is semi-positive. More over,
+the local weights ϕ (m)o
+X/Y of this metric are upper semi-continuous.
+Remark 4.2.3. We take this opportunity to point out two imprecisions in the formulation [3,
+4.2]. In the ﬁrst place, it must be of course assumed that the metric (Bo
+m,X/Y )− 1 (called the
+relative NS-metric in [3]) is not identically + ∞ . Secondly, the assumption that f⋆(mKX/Y +L)
+is locally free should be replaced by Ym, ext = Y . Just before [3, 4.2], it is stated that these
+two conditions are equivalent, but this is not the case. In fact, the property of being locally
+free concerns the direct image f⋆(mKX/Y +L) as a sheaf: the stalks of this sheaf consists of
+sections over the ﬁbers of f that do extend to neighboring ﬁbers, and local freeness means that
+this space of extendable sections has everywhere the same rank. We remark that the direct
+imagef⋆(mKX/Y +L) is torsion free, hence locally free if the dimension of the base is equa l to
+one. For the proof of [3, 4.2] we need the stronger property Ym, ext =Y , saying that all sections
+extend locally to neighboring ﬁbers.
+This distinction between local freeness and the condition Ym, ext =Y is precisely the heart of
+the question of invariance of plurigenera for smooth projective fa milies over one dimensional
+base, where the local freeness is automatic, and Ym, ext =Y is exactly what is to be proved. □
+Remark 4.2.4. We highlight here some of the new diﬃculties in the proof of 4.2.2 (along t he
+line given in 4.1.1 for m = 1) speciﬁc to the case m ≥ 2; as for the complete argument, we
+refer to [3, 4.2].35
+In the ﬁrst place, the upper semi-continuity of the metric ( Bo
+m,X/Y )− 1 follows mutatis mu-
+tandis from the arguments in §4.1, by using a monotone approximation of the metric hL with
+non-singular metrics. Hence we provide no further details about th is point here.
+In order to check the mean value inequality, we cannot argue as in th e case m = 1, i.e. by
+using an extension with minimal L2/m norm. The reason is very simple: it may happen that
+some section u of the sheaf ( mKXy +Ly) ⊗ J m(h1/m
+y ) does not admits any extension locally
+near Xy which moreover is L2/m -integrable with respect to the metric h1/m
+L . We would have
+such an extension e.g. if the variety of zeros corresponding to the multiplier ideal of h1/m
+L is
+f -vertical, but we do not want/need to impose this additional require ment. Also, we remark
+that even a-posteriori the existence of the metric ( Bo
+m,X/Y )− 1 does not implies the existence of
+an extension belonging to the ideal Jm(h1/m
+L ), despite of the fact that we know (by the choice
+of the set Ym, ext) that some extension exists. □
+We now show that the metric ( Bo
+m,X/Y )− 1 extends across the set X \Xm, ext; it is our main
+result in this section. Prior to this, we give a proof of Proposition 1.2, as it plays an important
+role in our arguments.
+4.2.5. Proof of 1.2: The L2/m version of the Ohsawa-Takegoshi theorem. We recall brieﬂy the
+set-up in Proposition 1.2. Let Ω ⊂ Cn be a ball of radius r and let σ : Ω → C be a holomorphic
+function, such that sup Ω |σ| ≤ 1; moreover, we assume that the gradient ∂σ of σ is nowhere
+zero on the set V := {σ = 0 }. We denote by ϕ a plurisubharmonic function on Ω, such that
+its restriction to V is well-deﬁned (i.e., ϕ |V ̸≡ −∞ ).
+Let u be a holomorphic function on V with the property that∫
+V
+|u|2/m exp(−ϕ )dλV
+|∂σ |2 = 1.
+The question is to ﬁnd an extension of u to Ω, whose L2/m norm is bounded by the quantity
+above, modulo a universal constant. We may suppose m> 1.
+We begin with some reductions. In the ﬁrst place we can assume that the function ϕ is
+smooth, and that the functions σ (respectivelyu) can be extended in a neighbourhood of Ω (of
+V insideV ∩ Ω, respectively). Once the result is established under these additio nal assumptions,
+the general case follows by approximations and standard normal f amilies arguments.
+We can then clearly ﬁnd some holomorphic F1 in Ω that extends u and satisﬁes∫
+Ω
+|F1|2/m exp(−ϕ )dλ ≤ A< ∞ .
+We then apply the Ohsawa-Takegoshi theorem with weight
+ϕ 1 =ϕ + (1 − 1/m ) log |F1|2
+and obtain a new extension F2 of f satisfying
+∫
+Ω
+|F2|2
+|F1|2− 2/m exp(−ϕ )dλ ≤ C0
+∫
+V
+|u|2
+|F1|2− 2/m exp(−ϕ ) dλV
+|∂σ |2 =C0.
+H¨ older’s inequality gives that
+∫
+Ω
+|F2|2/m exp(−ϕ )dλ
+∫
+Ω
+|F2|2/m
+|F1|(2− 2/m )/m |F1|(2− 2/m )/m exp(−ϕ )dλ ≤36 MIHAI P ˘AUN AND SHIGEHARU TAKAYAMA
+≤
+( ∫
+Ω
+|F2|2
+|F1|2− 2/m exp(−ϕ )dλ
+) 1/m ( ∫
+Ω
+|F1|2/m exp(−ϕ )dλ
+) (m− 1)/m
+which is smaller than
+C 1/m
+0 A(m− 1)/m =A(C0/A )1/m =:A1.
+If A>C 0, then A1 <A . We can then repeat the same argument with F1 replaced by F2, etc,
+and get a decreasing sequence of constants Ak, such that
+Ak+1 =Ak(C0/A k)1/m
+for k ≥ 0. It is easy to see that Ak tends to C0. Indeed, if Ak > rC0 for some r >1, then Ak
+would tend to zero by the relation above. This completes the proof. □
+For further use, we reformulate Proposition 1.2 in terms of diﬀeren tial forms. Since this is
+absolutely immediate, we provide no further explanations. As in 3.1.1( 1), we will denote by
+|u|
+2
+m = (cu ∧ u)1/m for u ∈ H 0(V,mKV ), with an absolute constant c.
+Lemma 4.2.6. Let m be a positive integer, and let u a holomorphic m-canonical form on V
+such that ∫
+V
+|u|
+2
+me−ϕ < ∞ .
+Then there exists a holomorphic m-canonical form U on Ω such that:
+(i) U =u ∧ (dσ)⊗m on V i.e. the form U is an extension of u.
+(ii) The next L2/m bound holds true∫
+Ω
+|U|
+2
+me−ϕ ≤ C0
+∫
+V
+|u|
+2
+me−ϕ,
+whereC0 is the constant in the Ohsawa-Takegoshi extension theorem.
+After this preparation, we can complete the proof of the following r esult.
+Theorem 4.2.7. We assume that there exists a point y ∈ Yh ∩ Ym, ext such that
+H 0(Xy, (mKXy +Ly) ⊗ J m(h1/m
+y )) ̸= 0.
+Then the metric (Bo
+m,X/Y )− 1 on (mKX/Y +L)|f − 1(Ym, ext) obtained in 4.2.2 is not identically +∞ ,
+and it extends as a singular Hermitian metric (Bm,X/Y )− 1 on mKX/Y +L with semi-positive
+curvature current.
+Remark 4.2.8. We ignore whether the equality Bm,X/Y |Xy = Bm,y holds for y ∈ Y0 \Ym, ext.
+This issue will be discussed later in 4.3.5.
+Proof. We recall the expression of Bo
+m,X/Y on a ﬁber of a point y ∈ Ym, ext. Let x ∈ Xy be
+an arbitrary point, and denote by z = (z1,...,z k) respectively t = (t1,...,t ℓ) some local
+coordinates centered at x on an open set Ω, respectively y, and assume L is also trivialized
+on Ω. We consider a section u ∈ H 0(Xy,mKXy +Ly). Then we have ˜u = u ∧ (f ∗dt)⊗m ∈
+H 0(Xy, (mKX +L)|Xy) via the standard identiﬁcation. We write as ˜u = u′(dz)⊗m with u′ ∈
+H 0(Ωy, OXy), where Ω y = Ω ∩ Xy, and then we have
+Bo
+m,X/Y (x) = exp
+(
+ϕ (m)o
+X/Y (x)
+)
+= sup
+∥u∥m,y ≤ 1
+|u′(x)|2,37
+where ∥u∥m,y = (
+∫
+Xy
+|u|2/m h1/m
+y )m/ 2. Thus, our task is to show that the above quantity is
+bounded from above on the open set Xm, ext ⊂ X. Let u be a global section of the bundle
+mKXy +Ly, normalized by the condition
+∫
+Xy
+|u|
+2
+me− 1
+mϕ L ≤ 1.
+By Lemma 4.2.6 we obtain a local m-canonical form ˜U on Ω whose restriction to Ω y is equal
+to ˜u, and such that the next inequality holds
+∫
+Ω
+|˜U |
+2
+me− 1
+mϕ L ≤ C0
+∫
+Ωy
+|u|
+2
+me− 1
+mϕ L ≤ C0,
+whereC0 is an absolute constant. We write as ˜U =U ′(dz)⊗m withU ′ ∈ H 0(Ω, OX ). Let Ω ′ ⊂ Ω
+be the polydisc of poly-radius ( r,...,r ) centered at x. Then by the mean value inequality, we
+have
+|U ′(x)|
+2
+m ≤ 1
+(πr 2)dimX
+∫
+Ω′
+|U ′|
+2
+mdλz ≤ 1
+(πr 2)dimX e
+1
+m supΩ′ϕ L
+∫
+Ω′
+|˜U |
+2
+me− 1
+mϕ L.
+As U ′|Ωy =u′, we thus have
+(♯) |u′(x)|
+2
+m ≤ C,
+where moreover the bound C above does not depend at all on the geometry of the ﬁber Xy, but
+on the ambient manifold X. (A direct application of the mean value inequality for |u′|2/m on
+Ωy would encode the geometry of the ﬁber Xy.) In particular, the metric ( Bo
+m,X/Y )− 1 admits
+an extension to the whole manifold X and its curvature current is semi-positive, so 4.2.7 is
+proved. □
+4.3. A few consequences. We further investigate the positivity of mKX/Y +L and give some
+variants and reﬁnements of 4.2.7. We still keep the notation f : X → Y and (L,hL =e−ϕ L).
+The crucial observation is as follows.
+Remark 4.3.1. The constant “C” in the relation ( ♯) of the proof of 4.2.7 above only depends
+on the sup of the mth-root of the metric of the bundle L and the geometry of the ambient
+manifold X (and not at all on the geometry of the ﬁber Xy). As a consequence we see that
+if we apply the above arguments to a sequence mKX/Y +L when m varies, then the constant
+in question will be uniformly bounded with respect to m, provided that (1 /m )ϕL is bounded
+from above.
+As a consequence of 4.3.1, we obtain the following corollaries (see also [12] and [42] for
+related statements).
+Corollary 4.3.2. Suppose that there exists a very general point w ∈ Y such that we have
+H 0(Xw, (mKXw +Lw) ⊗ J m(h1/m
+w )) ̸= 0.
+Then the bundle mKX/Y +L admits a singular Hermitian metric h(∞ )
+X/Y = exp( −ϕ (∞ )
+X/Y ) with
+semi-positive curvature current, whose restriction to any very general ﬁber Xw of f has the38 MIHAI P ˘AUN AND SHIGEHARU TAKAYAMA
+following (minimality) property: for any integer k >0 and any section v ∈ H 0(
+Xw,kmKXw +
+kLw
+)
+, we have
+|v|
+2
+kme− 1
+mϕ (∞ )
+X/Y ≤
+∫
+Xw
+|v|
+2
+kme− 1
+mϕ L
+up to the identiﬁcation of KX/Y |Xw with KXw.
+In the statement of 4.3.2, we call a point w ∈ Y very general if it is not a critical point of f
+and any section of the bundle k(mKX/Y +L)|Xw extends over the nearby ﬁbers, for any integer
+k >0. By the usual semi-continuity arguments we infer that the set of very general points is
+the complement of a countable union of Zariski closed sets of codime nsion at least one in Y .
+IfhL has a better regularity, every regular value y ∈ Y0 off can be very general. For example,
+if h is continuous, or more generally the multiplier ideal I(hk
+y) = OXy on Xy with y ∈ Y0 for
+any integer k >0, the invariance of plurigenera [41] and [38] verify this.
+Proof of 4.3.2. The proof is an immediate consequence of the arguments of 4.2 .7. Indeed, we
+consider the dual of the km–Bergman metric (twisted by kL) on the bundle k
+(
+mKX/Y +L
+)
+and we know that the weights of its kth-root are uniformly bounded, independently of k (see
+4.3.1). We obtain the metric h(∞ )
+X/Y = exp( −ϕ (∞ )
+X/Y ) by the usual upper envelope construction,
+namely
+ϕ (∞ )
+X/Y := sup⋆
+k≥ 1
+( 1
+kϕ (km)
+X/Y
+)
+.
+□
+Corollary 4.3.2 admits a metric version which we discuss next.
+Corollary 4.3.3. Suppose that X is projective, and that there exists a very general point
+w ∈ Y and a singular Hermitian metric hw = e−ϕ w of the bundle mKXw +Lw with semi-
+positive curvature such that an integrability condition
+eϕ w−ϕ L|Xw ∈ L
+1+ε
+m
+holds locally at each point of Xw, where ε > 0 is a real number. (Here hw does not mean
+hL|Xw.)
+Then the bundle mKX/Y +L admits a singular Hermitian metric with semi-positive curv ature,
+whose restriction to Xw is less singular than the metric hw.
+In the statement of 4.3.3, we call a point w ∈ Y very general , if it is not a critical value of
+f and if any section of the bundle ( kmKX/Y +kL +A)|Xw extends over the nearby ﬁbers,
+for any integer k > 0. Here A is an auxiliary ample line bundle on X, for example, we take
+A = 2(dimX)H and H is a very ample line bundle on X.
+We remark that 4.3.3 is more coherent than 4.3.2, in the sense that we start with a metric on
+a very general ﬁber Xw off , and we produce a metric deﬁned on X. Even if we give ourselves
+a section on a very general ﬁber, the object we are able to produc e (via 4.3.2) will be in general
+a metric, which is not necessarily algebraic (i.e., it is constructed by se ctions of the bundle),
+as one would hope or guess.39
+We ﬁrst writee−ϕ w as limit of a sequence of algebraic metrics e−ϕ (k)
+w of (kmKX/Y +kL+A)|Xw,
+and then we apply 4.2.7 to construct a sequence of global metrics on
+kmKX/Y +kL +A,
+whose restriction to Xw is comparable with e−ϕ (k)
+w . The metric we seek is obtained by a limit
+process. In order to complete this program we have to control se veral constants which are
+involved in the arguments, and this is possible thanks to the version o f the Ohsawa-Takegoshi
+theorem 1.2. It would be very interesting to give a more direct, sections-less proof of 4.3.3.
+Proof of 4.3.3. The choice of the bundle A → X as above is explained by the following fact we
+borrow from the approximation theorem in [11], or [13, §13].
+We take a smooth Hermitian metric e−ϕ A of A with strictly positive curvature. Associated
+to the metric e−ϕ w on the bundle mKXw +Lw given by hypothesis, we consider the following
+space of sections
+(4.3.1) Vk ⊂ H 0(Xw,kmKXw +kLw +Aw)
+deﬁned by u ∈ V k if and only if
+(4.3.2) ∥u∥2
+w :=
+∫
+Xw
+|u|2 exp(−kϕw − ϕA)dVω < ∞ .
+We denote by e−ϕ (k)
+w the metric on the bundle kmKXw +kLw +Aw induced by an orthonormal
+basis {u(k)
+j }j of Vk endowed with the scalar product corresponding to ∥u∥2
+w. Then it is proved
+in [13, 13.21] that there exists a constant C1 independent of k such that we have
+(4.3.3) kϕw +ϕA ≤ ϕ (k)
+w +C1.
+We remark that the ample bundle A is independent of the particular point w ∈ Y as well as
+on the metric e−ϕ w. This fact is very important for the following arguments.
+The H¨ older inequality shows that the (km)th-root of the sections v ∈ V k are integrable with
+respect to the metric h1/m
+L , as soon as k is large enough. Indeed we have:
+(4.3.4)
+∫
+Xw
+|v|
+2
+kme− kϕ L+ϕ A
+km ≤ ck
+( ∫
+Xw
+|v|2e−kϕ w−ϕ AdVω
+) 1
+km
+,
+where we use the following notation
+c
+km
+km− 1
+k :=
+∫
+Xw
+e
+k
+km− 1 (ϕ w−ϕ L)dVω < ∞ .
+We remark that the last integral is indeed convergent, by the integrability hypothesiseϕ w−ϕ L|Xw ∈
+L
+1+ε
+m , provided that k ≫ 0. In conclusion, we get
+(4.3.5)
+∫
+Xw
+|v|
+2
+kme− kϕ L+ϕ A
+km ≤ C2
+for every section v := u(k)
+j ∈ V k. By deﬁnition, the expression of the constant in the relation
+(4.3.5) is the following
+C2 := sup
+k≫ 0
+ck < ∞ ,
+therefore it is independent of k. By Theorem 4.2.7, for each k large enough we can construct
+the dual of the km-Bergman metric h(km)
+X/Y on the bundle kmKX/Y +kL +A with semi-positive40 MIHAI P ˘AUN AND SHIGEHARU TAKAYAMA
+curvature current. Thanks to the relation (4.3.5), its restriction toXw is less singular than the
+metric ϕ (k)
+w , in the following precise way:
+(4.3.6) ϕ (km)
+X/Y |Xw ≥ ϕ (k)
+w − km logC2;
+(we identify KX/Y withKXw, which is harmless in this context, since the point w is “far” from
+the critical loci of f ). The inequality (4.3.6) combined with (4.3.3) shows furthermore tha t we
+have
+(4.3.7) 1
+kϕ (km)
+X/Y |Xw ≥ ϕw +C4,
+where C4 := −m logC2.
+On the other hand, by 4.3.1 we have an a-priori upper bound
+(4.3.8) 1
+kϕ (km)
+X/Y ≤ C5,
+whereC5 is uniform with respect to k. Then the metric we seek is obtained by the usual upper
+envelope construction, namely
+(4.3.9) ϕ (∞ )
+X/Y := lim sup
+k→∞
+⋆
+( 1
+kϕ (km)
+X/Y
+)
+.
+The local weights
+(
+ϕ (∞ )
+X/Y
+)
+glue together to give a metric for the bundle mKX/Y +L, since the
+auxiliary bundle A used in the approximation process is removed by the normalization fa ctor
+1/k . Moreover, the relation (4.3.7) shows that we have
+(4.3.10) ϕ (∞ )
+X/Y |Xw ≥ ϕw + O(1);
+hence, the local weight ϕ (∞ )
+X/Y restricted to the ﬁber Xw is less singular than the metric e−ϕ w
+and 4.3.3 is proved. □
+Remark 4.3.4. The Corollary 4.3.3 can be immediately adapted to the case where X is only
+assumed to be quasi-projective. Another by-product of the pro of of this result is the case where
+f : X → Y is a projective family over a Stein manifold. The veriﬁcation of these s tatements
+is left to the interested reader.
+Remark 4.3.5. It is certainly worthwhile to understand the behavior of the metric c on-
+structed in 4.2.7 over the exceptional ﬁbers, where it is just deﬁned as the (unique) extension
+of (Bo
+m,X/Y )− 1 (deﬁned overXm, ext =f − 1(Ym, ext)) as a singular Hermitian metric of mKX/Y +L.
+Let us here look at the ﬁbers over a point y ∈ Y where the a-priori extension of the sections
+is not known to be satisﬁed, but such that y is still a regular value of f (i.e., y ∈ Y0 \Ym, ext).
+On the bundle mKXy +Ly we can consider (at least) two natural extremal metrics: the one
+induced by all its global sections satisfying the L2/m integrability condition with respect to hL
+which we denote by h1, and metric corresponding to the subspace of sections which exte nd
+locally near y, denoted by h2. It is clear that we have h1 ≼h2 (h1 is less singular than h2, refer
+[13, 6.3]), as one can see by the comparison between the correspon ding m-Bergman kernels.
+Our claim is
+Claim
+. The metric h(m)
+X/Y =B− 1
+m,X/Y extends over Xy to a metric which is less singular than h2
+i.e., h(m)
+X/Y |Xy ≼h2, at least if the singularities of the weight ϕL are “mild” enough.41
+Indeed, as a consequence of 4.2.7 we have
+ϕ (m)
+X/Y (x) = lim sup
+x′→ x
+ϕ (m)
+X/Y (x′),
+where x′ ∈ Xm, ext in the limit above. In order to establish the result we claim, let us consid er
+a section u ∈ H 0(Xy,mKXy +Ly) which computes the local weight of h2 atx, i.e. ∥u∥m,y = 1
+and
+sup
+∥v∥m,y =1
+|v′(x)|2 = |u′(x)|2
+as in the proof of 4.2.7 ([3, pp. 346–347]). If x′ ∈ X0 is close enough tox andy′ :=f (x′) ∈ Ym, ext,
+then we certainly have
+sup
+∥v∥m,y ′=1
+|v′(x′)|2 ≥ |u′(x′)|2
+∥u∥2
+m,y ′
+(here we use the fact that the section u extends over the ﬁbers near Xy). Hence in order to
+establish the claim above, all that we need is the relation
+lim inf
+y′→ y
+∥u∥m,y ′ ≤ ∥ u∥m,y.
+This last inequality clearly holds at least if ϕL is continuous, and we actually believe that it
+always holds . □42 MIHAI P ˘AUN AND SHIGEHARU TAKAYAMA
+5. Positivity of direct image sheaves of pluricanonical type
+Our aim here is to show 5.1.2; the positivity of direct image sheaves of p luricanonical type:
+f⋆(mKX/Y +L).
+5.1. Positivity of direct image sheaves of pluricanonical type. We shall discuss in the
+setup 3.2.1 throughout this subsection. We further introduce the following subset of Y to make
+statements clearer. For every integer m> 0, we set
+Ym,h := {y ∈ Yh; I(h1/m
+y ) = OXy }.
+We can see Ym,h ⊂ Yℓ,h if m<ℓ in general. Let us see further
+Lemma 5.1.1. (1) If Ym,h is not empty, Y0 \Ym,h has measure zero.
+(2) Y1,h = {y ∈ Yh; I(hy) = OXy } ⊂ (Y1,h, ext ∩ Ym, ext) for every integer m> 0.
+(3) Fory ∈ Yh, y ∈ Ym,h if and only if Jm(h1/m
+y ) = OXy .
+Proof. (1) By Ohsawa-Takegoshi, we have I(h1/m
+y ) ⊂ I (h1/m ) · OXy for every y ∈ Y0. If Ym,h
+is not empty, then f (V I(h1/m )) ⊂ Y is a proper analytic subset, where V I(h1/m ) ⊂ X is
+the complex subspace deﬁned by I(h1/m ). Thus by Fubini, h1/m
+y ∈ L1
+loc on Xy for a.a. y ∈
+Y0 \f (V I(h1/m )).
+(2) It is clear that Y1,h ⊂ Y1,h, ext. Moreover by Siu [41] (see also [38]), if y ∈ Y1,h , the natural
+homomorphism f⋆(mKX/Y +L) → H 0(Xy,mKXy +Ly) is surjective, and hence Y1,h ⊂ Ym, ext.
+(3) We see Jm(h1/m
+y ) ⊂ I (h1/m
+y ), as |u|2h1/m
+y ≤ Cu|u|2/m h1/m
+y for a constant Cu > 0 depends
+only on any given local holomorphic function u. In particular I(h1/m
+y ) = OXy if Jm(h1/m
+y ) =
+OXy . While if I(h1/m
+y ) = OXy , i.e., h1/m
+y ∈ L1
+loc, then Jm(h1/m
+y ) = OXy . □
+We shall convert the positivity of mKX/Y +L to that of f⋆(mKX/Y +L) via 3.3.5. As a
+consequence of 5.1.1, as soon as f⋆(mKX/Y +L) is non-zero and Ym,h ̸= ∅, the assumption in
+4.2.7:H 0(Xy, (mKXy +Ly) ⊗ J m(h1/m
+y )) ̸= 0 for some y ∈ Yh ∩ Ym, ext is satisﬁed. We then can
+apply results in the previous section. The main result in this section is t he following statement.
+Theorem 5.1.2. Suppose that Ym,h = {y ∈ Yh; I(h1/m
+y ) = OXy } is not empty. Then
+f∗(mKX/Y +L) (if it is non-zero) admits a singular Hermitian metric gmNS,X/Y with positive
+curvature and satisfying a base change property on Ym, ext, which means, gmNS,X/Y,y = gmNS,y
+holds on every ﬁber f⋆(mKX/Y +L)y = H 0(Xy,mKXy +Ly) at y ∈ Ym, ext, where gmNS,y is
+the m-th Narashimhan-Simha Hermitian form on H 0(Xy,mKXy +Ly) with respect to hy. In
+particular, if Y is projective, f∗(mKX/Y +L) is weakly positive at every y ∈ Ym, ext ∩ Ym,h in
+the sense of Nakayama.
+Proof. AsYm,h ̸= ∅, the assumption in 4.2.7 is satisﬁed, and then we can put the ﬁberwise m-th
+Narashimhan-Simha Hermitian formgmNS,y onf∗(mKX/Y +L)y =H 0(Xy,mKXy+Ly) for every
+y ∈ Ym, ext. Moreover, by 3.1.1(4), it satisﬁes 0 < detgmNS,y < +∞ for every y ∈ Ym, ext ∩ Ym,h .
+We apply 4.2.7 and have a singular Hermitian metric hm− 1 = (h(m))(m− 1)/m h1/m on Lm− 1 :=
+(m − 1)KX/Y +L with semi-positive curvature, and hm− 1|Xy =hm− 1,y := (h(m)
+y )(m− 1)/m h1/m
+y on
+(m − 1)KXy +Ly for every y ∈ Ym, ext.
+As we remarked in 3.1.1, we have H 0(Xy, (KXy +Lm− 1|Xy) ⊗ I (hm− 1,y )) = H 0(Xy,KXy +
+Lm− 1|Xy) for any y ∈ Ym,h , in particular Ym,h ⊂ Y1,h m− 1, ext holds, where Y1,h m− 1, ext := {y ∈43
+Yhm− 1; H 0(Xy, (KXy +Lm− 1|Xy ) ⊗ I (hm− 1|Xy)) = H 0(Xy,KXy +Lm− 1|Xy)}. Thus, by 3.3.2 for
+(Lm− 1,hm− 1), f⋆(KX/Y +Lm− 1) is locally free and the natural inclusion f⋆((KX/Y +Lm− 1) ⊗
+I(hm− 1)) ⊂ f⋆(KX/Y +Lm− 1) is isomorphic both on a Zariski open subset of Y containing
+Y1,h m− 1, ext(⊃ Ym,h ).
+Then by 3.3.5 for ( Lm− 1,hm− 1) instead of (L,h ),f⋆(KX/Y +Lm− 1) is positively curved with
+the canonical L2-metric with respect to hm− 1. Here the canonical L2-metric is nothing but
+the singular Hermitian metric gm on f∗(mKX/Y +L), more precisely gmNS,X/Y,y = gmNS,y for
+y ∈ Ym, ext.
+The pointwise weak positivity follows from a general result 2.5.2. □
+5.2. Variants and reﬁnements. We will state some corollaries in the rest, and still keep the
+set up 3.2.1. We ﬁrst give a statement of MMP ﬂavor.
+Corollary 5.2.1. Let ∆ be an eﬀective Q-divisor on X such that a pair (X, ∆) is klt. Then
+f∗(OX (⌊m(KX/Y + ∆) ⌋)) has a singular Hermitian metric with positive curvature.
+Here ⌊ • ⌋ is the round down. In this algebraic setting, we can set up a singular H ermitian
+metrich so that h has the so-called algebraic/analytic singularities; ( L,h ) corresponds to a line
+bundle OX (⌊m∆ ⌋) with a singular Hermitian metric obtained by a deﬁning section of ⌊m∆ ⌋.
+In such a case, Yh = {y ∈ Y0; Xy ̸⊂ Supp ∆ } and Ym,h = {y ∈ Yh; ( Xy, 1
+m⌊m∆ y⌋) is klt } are
+Zariski open (where ∆ y = ∆ |Xy is the restriction as a divisor), and hence gmNS,X/Y,y =gmNS,y
+on some Zariski open subset.
+If we pose a stronger regularity assumption on the singular Hermitia n metric h, we can
+obtain a stronger positivity conclusion on the direct image sheaves. For example,
+Corollary 5.2.2. (1) Suppose that Y1,h := {y ∈ Yh; I(hy) = OXy } is not empty. Then for
+every m > 0, the m-th Narashimhan-Simha singular Hermitian metric gm = gmNS,X/Y on
+f⋆(mKX/Y +L) in 5.1.2 satisﬁes 0< detgm < ∞ on Y1,h (which is contained in Ym, ext ∩ Ym,h
+by 5.1.1).
+(2) Suppose h is continuous on f − 1(Y0) ⊂ X. Then the m-th Narashimhan-Simha singular
+Hermitian metric gm on f⋆(mKX/Y +L) in 5.1.2 is continuous and 0 < detgm < ∞ both on
+Y0. In particular, if Y is projective, f⋆(mKX/Y +L) is weakly positive at every y ∈ Y0 in the
+sense of Nakayama.
+Various weak positivities are known for direct images of pluricanonica l type f⋆(mKX/Y )
+after Viehweg. However, according to Nakayama, Viehweg’s metho d (and also Nakayama’s
+method in [35]) can only show the weak positivity at some point y ∈ Y , and do not imply
+weak positivity at all points y ∈ Y0.
+It can be possible to draw several variants from the basic results a bove. For example, we
+have a result with variable m. The following statement (1) is a variant of 4.3.2.
+Corollary 5.2.3. Let f : X → Y be a projective surjective morphism of complex manifolds
+with connected ﬁbers, and let Y0 ⊂ Y be the maximum Zariski open subset where f is smooth.
+Suppose that the Kodaira dimension of general ﬁbers are non- negative:κ(Xy) ≥ 0. Then44 MIHAI P ˘AUN AND SHIGEHARU TAKAYAMA
+(1)KX/Y is pseudo-eﬀective and admits a singular Hermitian metric hX/Y with semi-positive
+curvature and satisfying, for any y ∈ Y0, any integer m> 0, and any u ∈ H 0(Xy,mKXy ),
+(
+|u|2hm
+X/Y |Xy
+) 1/m
+≤
+∫
+Xy
+|u|2/m
+(up to the identiﬁcation of KX/Y |Xy with KXy ).
+(2) For any integer m >0 with f⋆(mKX/Y ) ̸= 0 , f⋆(KX/Y + (m − 1)KX/Y ) endows with a
+canonicalL2-metric g′
+m with respect to hm− 1
+X/Y (of (m − 1)KX/Y with hX/Y in (1)), is positively
+curved, and g′
+m is continuous and 0< detg′
+m< ∞ both on Y0.
+When X is further compact, we can use the notion (from [15, 1.5]) of singula r Hermitian
+metric with minimal singularities, say hmin, of KX/Y with semi-positive curvature, and then
+hmin ≼hX/Y , i.e, hmin is less singular than hX/Y . Then the same conclusion in 5.2.3 holds for
+hmin instead of hX/Y .
+Proof of 5.2.3. We are going to use 4.3.2 with ( L,hL) = ( OX, 1). Noting Siu’s invariance of
+plurigenera [41], every point in Y0 is a very general point in 4.3.2.
+(1) In 4.3.2, m is ﬁxed. We vary m here. For every integer m withf⋆(mKX/Y ) ̸= 0, mKX/Y
+admits a singular Hermitian metric h(m) with semi-positive curvature and satisfying, for any
+y ∈ Y0, any integer k >0, and any v ∈ H 0(Xy,kmKXy),
+(
+|v|2(h(m)|Xy)k) 1/ (km)
+≤
+∫
+Xy
+|v|2/ (km)
+holds (up to the identiﬁcation of KX/Y |Xy withKXy). Here |v|2(h(m)|Xy)k is a function on Xy,
+and |v|2/ (km) is a semi-positive volume form on Xy.
+We consider hX/Y := inf ⋆
+m(h(m))1/m a lower regularized limit (or writing as h(m) = e−ϕ (m)
+on each local coordinate with a weight function, we consider ϕ := sup ⋆
+m( 1
+mϕ (m)) an upper
+regularized limit), where m runs through all integers m> 0 withf⋆(mKX/Y ) ̸= 0. As ( L,hL) =
+(OX, 1) in 4.3.1, an upper bound of ϕ (m) depends only on the geometry of X, and hence for every
+relatively compact set U ⊂ X, there exists a constant CU > 0 such that ϕ (m) ≤ 1
+mCU ≤ CU .
+As a consequence, hX/Y ̸≡ +∞ , namely hX/Y deﬁnes a singular Hermitian metric, and then
+by deﬁnition, hX/Y is less singular than ( h(m))1/m for any integer m> 0 with f⋆(mKX/Y ) ̸= 0.
+(2) We let L = (m − 1)KX/Y with a singular Hermitian metric h =hm− 1
+X/Y . By (1), we have
+H 0(Xy, (KXy +Ly) ⊗ I (hy)) = H 0(Xy,KXy +Ly) for any y ∈ Y0, namely Y1,h, ext = Y0. In
+particular the natural inclusion f⋆((KX/Y +L) ⊗ I (h)) ⊂ f⋆(KX/Y +L) is isomorphic over Y0
+by 3.3.2. We can further apply 3.3.5. □45
+References
+[1] B. Berndtsson, Curvature of vector bundles associated to holomorphic ﬁbra tions, Ann. of Math. 169
+(2009) 531–560.
+[2] B. Berndtsson, An introduction to things ∂, in Analytic and algebraic geometry, 7–76, IAS/Park City
+Math. Ser., vol. 17, Amer. Math. Soc., Providence, RI, 2010.
+[3] B. Berndtsson and M. P˘ aun, Bergman kernels and the pseudoeﬀectivity of relative canon ical bundles ,
+Duke Math. J. 145 (2008) 341–378.
+[4] B. Berndtsson and M. P˘ aun, Bergman kernels and subadjunction , arXiv:1002.4145v1 [math.AG].
+[5] B. Berndtsson and M. P˘ aun, Quantitative extensions of pluricanonical forms and close d positive cur-
+rents, Nagoya Math. J. 205 (2012) 25–65.
+[6] Z. B/suppress locki,Suita conjecture and the Ohsawa-Takegoshi extension theor em, Invent. Math. 193 (2013)
+149–158.
+[7] F. Campana, Orbifolds, special varieties and classiﬁcation theory , Ann. Inst. Fourier Grenoble 54
+(2004) 499–630.
+[8] J. Cao, Ohsawa-Takegoshi extension theorem for compact K¨ ahler ma nifolds and applications ,
+arXiv:1404.6937v1 [mathAG].
+[9] M. A. A. de Cataldo, Singular Hermitian metrics on vector bundles , J. Reine Angew. Math. 502
+(1998) 93–122.
+[10] J.-P. Demailly, Estimations L2 pour l’op´ erateur∂ d’un ﬁbr´ e vectoriel holomorphe semi-positif au-dessus
+d’une vari´ et´ e k¨ ahl´ erienne compl` ete, Ann. Sci. ´Ec. Norm. Sup´ er.15 (1982) 457–511.
+[11] J.-P. Demailly, Regularization of closed positive currents and Intersecti on Theory, J. Algebraic Geom.
+1 (1992) 361–409.
+[12] J.-P. Demailly, Structure theorems for compact K¨ ahler manifolds, in Analytic and algebraic geometry,
+295–370, IAS/Park City Math. Ser., vol. 17, Amer. Math. Soc., Pro vidence, RI, 2010.
+[13] J.-P. Demailly, Regularization of closed positive currents of type (1,1) by the ﬂow of a Chern connection ,
+Actes du Colloque en l’honneur de P. Dolbeault (Juin 1992), ´ edit´ e pa r H. Skoda et J.M. Tr´ epreau,
+Aspects of Mathematics, Vol. E 26, Vieweg, (1994).
+[14] J.-P. Demailly, On the cohomology of pseudoeﬀective line bundles , arXiv:1401.5432v1 [math.CV].
+[15] J.-P. Demailly, T. Peternell and M. Schneider, Pseudo-eﬀective line bundles on compact K¨ ahler man-
+ifolds, Internat. J. Math. 12 (2001) 689–741.
+[16] L. Ein, R. Lazarsfeld, M. Mustat ¸˘ a, M. Nakamaye and M. Popa , Asymptotic invariants of base loci ,
+Ann. Inst. Fourier 56 (2006) 1701–1734.
+[17] L. Ein, R. Lazarsfeld, M. Mustat ¸˘ a, M. Nakamaye and M. Popa , Restricted volumes and base loci of
+linear series, Amer. J. Math. 131 (2009) 607–651.
+[18] O. Fujino, Higher direct images of log canonical divisors , J. Diﬀerential Geom. 66 (2004) 453–479.
+[19] T. Fujita, On K¨ ahler ﬁber spaces over curves, J. Math. Soc. Japan 30 (1978) 779–794.
+[20] Ph. Griﬃths, Periods of integrals on algebraic manifolds, III. Some glob al diﬀerential-geometric prop-
+erties of the period mapping , Inst. Hautes ´Etudes Sci. Publ. Math. 38 (1970) 125–180.
+[21] Q. Guan and X. Zhou, A solution of the L2 extension problem with optimal estimate and applications ,
+to appear in Ann. of Math., arXiv:1310.7169v1 [math.CV].
+[22] A. H¨ oring, Positivity of direct image sheaves - a geometric point of vie w, L’Enseignement Math. 56
+(2010) 87–142.
+[23] Y. Kawamata, Kodaira dimension of algebraic ﬁber spaces over curves , Invent. math. 66 (1982) 57–71.
+[24] Y. Kawamata, Subadjunction of log canonical divisors, II , Amer. J. Math. 120 (1998) 893–899.
+[25] Y. Kawamata, On algebraic ﬁber spaces, in Contemporary Trends in Algebraic Geometry and Algebraic
+Topology, 135–154, Nankai Tracts Math., 5, World Sci. Publ., River Edge, NJ, 2002.
+[26] Y. Kawamata, Semipositivity theorem for reducible algebraic ﬁber space s, Pure Appl. Math. Q. 7
+(2011), Special Issue: In memory of Eckart Viehweg, 1427–1447 .46 MIHAI P ˘AUN AND SHIGEHARU TAKAYAMA
+[27] G. Kempf, F. Knudsen, D. Mumford and B. Saint-Donat, Toroidal embeddings I , Springer LNM 339
+(1973),
+[28] J. Koll´ ar, Higher direct images of dualizing sheaves, I, II , Ann. of Math. (2) 123 (1986) 11–42, 124
+(1986) 171–202.
+[29] J. Koll´ ar,Kodaira’s canonical bundle formula and adjunction , in Flips for 3-folds and 4-folds, 134–162,
+Oxford Lecture Ser. Math. Appl., 35, Oxford Univ. Press, Oxford, 2007.
+[30] J. Koll´ ar and S. Mori, Birational geometry of algebraic varieties , with the collaboration of C. H.
+Clemens and A. Corti, Cambridge Tracts in Mathematics, 134 Cambridge University Press,1998.
+[31] R. Lazarsfeld, Positivity in algebraic geometry, I, II , Ergebnisse der Math. und ihrer Grenzgebiete (3),
+48, 49, Springer-Verlag, Berlin, 2004.
+[32] Ch. Mourougane and S. Takayama, Hodge metrics and the curvature of higher direct images , Ann. Sci.
+´Ec. Norm. Sup´ er.41 (2008) 905–924.
+[33] Ch. Mourougane and S. Takayama, Extension of twisted Hodge metrics for K¨ ahler morphisms , J.
+Diﬀerential Geom. 83 (2009) 131–161.
+[34] N. Nakayama, Hodge ﬁltrations and the higher direct images of canonical s heaves, Invent. Math. 85
+(1986) 217–221.
+[35] N. Nakayama, Zariski-decomposition and abundance , MSJ Memoirs 14, Math. Soc. Japan, 2004.
+[36] M. S. Narashimhan and R. R. Simha, Manifolds with ample canonical class , Invent. math. 5 (1968)
+120–128.
+[37] T. Ohsawa and K. Takegoshi, On the extension of L2 holomorphic functions , Math. Z. 195 (1987)
+197–204.
+[38] M. P˘ aun,Siu’s invariance of plurigenera: A one-tower proof , J. Diﬀerential Geom. 76 (2007) 485–493.
+[39] H. Rauﬁ, Singular hermitian metrics on holomorphic vector bundles , arXiv:1211.2948v3 [math.CV].
+[40] H. Rauﬁ, The Nakano vanishing theorem and a vanishing theorem of Dema illy-Nadel type for holo-
+morphic vector bundles , arXiv:1212.4417v1 [math.CV].
+[41] Y.-T. Siu, Extension of twisted pluricanonical sections with plurisu bharmonic weight and invariance
+of semi-positively twisted plurigenera for manifolds not n ecessarily of general type , Complex Geometry
+(G¨ ottingen, 2000), I. Bauer eds., (2002), Springer, Berline, 22 3–277.
+[42] H. Tsuji, Extension of log pluricanonical forms from subvarieties , math.CV/0511342.
+[43] H. Tsuji, Curvature semipositivity of relative pluricanonical syst ems, arXiv:math/0703729v2
+[math.AG].
+[44] H. Tsuji, Canonical singular hermitian metrics on relative log canon ical bundles , arXiv:1008.1466
+[math.AG].
+[45] H. Tsuji, Personal communication to the ﬁrst named author , 2005.
+[46] E. Viehweg, Weak positivity and the additivity of the Kodaira dimension for certain ﬁbre spaces , In:
+Algebraic Varieties and Analytic Varieties, Advanced Studies in Pure M ath. 1 (1983) 329–353.
+[47] E. Viehweg, Quasi-projecitve moduli for polarized manifolds , Ergebnisse der Math. und ihrer Grenzge-
+biete 3. Folge, Band 30, A Series of Modern Surveys in Mathematics, Springer. (1995).
+Mihai P ˘aun
+Korea Institute for Advanced Study,
+Seoul, 130-722 South KOREA
+E-mail address : paun@kias.re.kr
+Shigeharu Takayama
+Graduate School of Mathematical Sciences, The University o f Tokyo
+3-8-1 Komaba, Tokyo, 153-8914, Japan
+E-mail address : taka@ms.u-tokyo.ac.jp

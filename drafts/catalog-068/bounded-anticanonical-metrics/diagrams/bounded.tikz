@@ -1,0 +1,9 @@
+\node[card] (n0) {\heading{}{Euler仮定と有界半正計量}{Euler premise and bounded semipositive metric}$P=-(K_W+D),\quad\chi(\widetilde W,\mathcal O_{\widetilde W})\ne0$};
+\node[card,below=2.0cm of n0] (n1) {\heading{}{捻り形式の行列式から極大底へ}{Determinants and a maximal base}$N_i\sim_{\mathbb Q}M+m_iP,\quad -M\in\Eff(W),\quad m_i\to\infty$};
+\flow{n0}{n1}{\Tx{hard Lefschetzと負の行列式類の擬有効性}{Hard Lefschetz and pseudoeffectivity of the negative determinant class}\\\Cite{hard-lefschetz}\quad\Cite{cotangent}};
+\node[card,below=2.0cm of n1] (n2) {\heading{}{余項の成分を欠かせる}{A remainder missing a component}$r\pi^*P=f^*V+H,\quad H\ge0$};
+\flow{n1}{n2}{\Tx{新しいpencilを排除し、縦成分の最小比を引く}{Exclude a new pencil and subtract minimal vertical ratios}\\\Cite{fibration}};
+\node[card,below=2.0cm of n2] (n3) {\heading{}{有界な底計量と全非負捻りの消滅}{Bounded base metric and vanishing for every nonnegative twist}$\mathcal G=f_*\mathcal O_S(E),\quad H^{i}(Y,\mathcal G(aV))=0\ (i>0,\ a\ge0)$};
+\flow{n2}{n3}{\Tx{rank one積分の本質的上限、有界性、乗数イデアルの相殺}{Rank-one integral limit, boundedness and multiplier-ideal cancellation}\\\Cite{metric}\quad\Cite{kollar-nadel}};
+\node[result,below=2.0cm of n3] (n4) {\heading{}{零捻りから非消滅を戻す}{Use the zero twist and push sections down}$Q(0)=h^0(Y,\mathcal G)>0\ \Longrightarrow\ H^0(W,arP)\ne0\quad(a>0)$};
+\flow{n3}{n4}{\Tx{正の捻りを選び、例外因子をpushforwardで除く}{Choose a positive twist and remove the exceptional divisor by pushforward}\\\Cite{vanish}};

@@ -1,0 +1,7 @@
+\node[card] (n0) {\heading{1}{極を制御した不変体}{Invariant field with controlled poles}$F=\{u\in\mathbb C(X)^T:bA-(u)_\infty\ \text{pseudoeffective for some }b>0\}\cup\{0\}$};
+\node[card,below=2.15cm of n0] (n1) {\heading{2}{不変rankから有界計量とnef降下}{Invariant rank gives a bounded metric and nef descent}$\tau\in H^0(S,aA_S-g^*L)^T,\quad L\ \text{nef},\quad q(Y)=0$};
+\flow{n0}{n1}{\Tx{比が$F$に入るので全$l\ge1$で不変随伴rank一}{Ratios in $F$ force invariant adjoint rank one for every $l\ge1$}\\[3pt]\Cite{controlled-field}; \Cite{nef-tools}};
+\node[card,below=2.15cm of n1] (n2) {\heading{3}{一点fiber上の非零不変商類}{A nonzero invariant quotient class on one fiber}$\mathcal I(h_J)=\mathcal O_S(-kP_\tau),\quad [s_E(\tau g^*e_L)^{p_0}]\ne0$};
+\flow{n1}{n2}{\Tx{曲率集中と横断方向の非可積分性で商類を非零にする}{Concentrated curvature and transverse nonintegrability detect the class}\\[3pt]\Cite{quotient-extension}};
+\node[result,below=2.15cm of n2] (n3) {\heading{4}{延長・平均・例外因子の除去}{Extend, average, and remove the exceptional factor}$H^0(S,mA_S+E)^T\ne0\quad\Longrightarrow\quad H^0(X,mA)^T\ne0$};
+\flow{n2}{n3}{\Tx{商への全射で持ち上げ、平均しても同じ非零類へ写す}{Lift through the quotient surjection; averaging preserves its nonzero image}\\[3pt]\Cite{extension}; \Cite{quotient-extension}};

@@ -1,0 +1,23 @@
+\node[card] (input) {\heading{}{計量とrankの入力を区別}{Distinguish metric and rank inputs}
+\Tx{滑らかな反標準計量／特異な有限体積と有界目標計量}{Smooth anticanonical metric / singular finite volume and a bounded target}\\
+\Tx{全零次rank／通常または不変の全moment rank}{Full rank at zero / ordinary or invariant ranks at all moments}};
+\node[half,below left=2.0cm and -7.1cm of input] (metric) {\heading{}{非加重の計量降下}{Unweighted metric descent}$-K_Y+A_0,\quad e^{-\Phi}\in L^1_{\rm loc}$\\\Cite{t21}};
+\node[half,right=.65cm of metric] (transfer) {\heading{}{二計量の移送}{Two-metric transfer}$B\ \text{bounded};\ -K_Y+D_Y$\\\Tx{有限体積、許される極}{finite volume, permitted poles}\\\Cite{transfer}};
+\coordinate (ma) at ($(metric.north)+(-3.2,0)$);
+\coordinate (ta) at ($(transfer.north)+(-3.2,0)$);
+\draw[edge] (ma |- input.south)--(ma);
+\draw[edge] (ta |- input.south)--(ta);
+\node[branchreason,anchor=west] at ($(ma)+(0.35,.85)$) {\Tx{全rank 1と全valuation}{Full rank one and all valuations}\\\Cite{l22}};
+\node[branchreason,anchor=west] at ($(ta)+(0.35,.85)$) {\Tx{零次と高次momentを分ける}{Separate zeroth and high moments}\\\Cite{transfer}};
+\node[half,below=3.3cm of metric] (contraction) {\heading{}{条件を保つ縮約}{Contraction preserving the premises}$\dim W<\dim Z$\\\Tx{一般切断＋全可除随伴rank}{Generic section + all divisible adjoint ranks}\\\Cite{t41}};
+\node[half,below=3.3cm of transfer] (allowed) {\heading{}{許容極の非消滅}{Allowed-pole nonvanishing}$H^0(V,aL+cD)\ne0$\\\Cite{t61}};
+\coordinate (ca) at ($(contraction.north)+(-3.2,0)$);
+\coordinate (aa) at ($(allowed.north)+(-3.2,0)$);
+\draw[edge] (ta |- transfer.south)--++(0,-.7)-| (ca);
+\draw[edge] (ta |- transfer.south)--(aa);
+\node[branchreason,anchor=west] at ($(ca)+(.35,1.05)$) {\Tx{支持類、水平補間、切断比}{Supporting class, interpolation, ratios}\\\Cite{rank-restoration}};
+\node[branchreason,anchor=west] at ($(aa)+(.35,1.05)$) {\Tx{最大系と次元帰納法}{Maximal systems and dimension induction}\\\Cite{induction}};
+\node[half,below=2.0cm of allowed] (invariant) {\heading{}{自然不変切断}{Naturally invariant section}$H^0(V,-mK_V)^T\ne0$\\\Cite{t71}};
+\coordinate (ia) at ($(invariant.north)+(-3.2,0)$);
+\draw[edge] (aa |- allowed.south)--(ia);
+\node[branchreason,anchor=west] at ($(ia)+(.35,.9)$) {\Tx{商のrank構成とD=0}{Quotient ranks and D=0}\\\Cite{quotient}};

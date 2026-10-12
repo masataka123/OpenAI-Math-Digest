@@ -1,0 +1,7 @@
+\node[card] (n0) {\heading{1}{有限個を除き素因子を底へ送る}{Send all but finitely many primes to one base}$P\subset\mathbb C(V),\quad p^\diamond=\pi_*f^*,\quad p^\diamond[J]^T=0$};
+\node[card,below=2.15cm of n0] (n1) {\heading{2}{加重可積分性と消える境界}{Weighted integrability and a disappearing boundary}$|s_J|^2e^{-\varphi}\in L^1,\quad D_0=\Psi_-,\quad p^\diamond[D_0]^T=0$};
+\flow{n0}{n1}{\Tx{全零次rankの特異直像計量と、係数$<1$の加重近似}{Singular full rank-one metric and weighted approximation with coefficients $<1$}\\[3pt]\Cite{pt-metric}; \Cite{weighted-approx}};
+\node[card,below=2.15cm of n1] (n2) {\heading{3}{指標方向も含む近傍で有限生成}{Finite generation in a neighborhood including characters}$[D_0]^T\in\operatorname{int}\operatorname{conv}\{U_i^T\},\quad R^T=\mathbb C[u_1,\ldots,u_b]$};
+\flow{n1}{n2}{\Tx{随伴環の有限生成、weight-zero射影、Gordanの補題}{Adjoint finite generation, weight-zero projection, and Gordan's lemma}\\[3pt]\Cite{adjoint-fg}; \Cite{cone-ring}};
+\node[result,below=2.15cm of n2] (n3) {\heading{4}{次数の等式から有効有限錐へ}{From equality of degrees to a finite effective cone}$p^\diamond[R_0]^T\in\operatorname{cone}\{p^\diamond[\operatorname{div}(u_i)]^T\}$};
+\flow{n2}{n3}{\Tx{$D_0+tR_0$の次数を表し、消える補正を除き有限例外を加える}{Express the degree of $D_0+tR_0$, remove the correction, add finite exceptions}\\[3pt]\Cite{cone-ring}};

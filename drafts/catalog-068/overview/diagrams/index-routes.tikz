@@ -1,0 +1,11 @@
+\tikzset{card/.append style={text width=17.1cm},half/.append style={text width=7.8cm},branchreason/.append style={text width=7.3cm}}
+\node[card] (index) {\heading{02}{自然反標準作用の零次までの指数}{Natural anticanonical index including zero}
+$I_T(m)=P(m)\ (a\mid m>0),\quad P(0)=I_T(0)$\\\Cite{b-index}};
+\node[half,below left=3.1cm and -8.45cm of index] (coh) {\heading{04}{選択した指標の移送}{Transfer for the chosen character}
+$H^0(X,mP)^T\ne0$\\\Tx{自然指数＋Hard Lefschetz＋Th.1.1}{Natural index + Hard Lefschetz + Th.1.1}\\\Cite{d-natural}};
+\node[half,right=.65cm of coh] (boundary) {\heading{06}{誤差除去と自然不変性}{Error removal and natural invariance}
+$H^0(X,-mK_X)^T\ne0$\\\Tx{不変の比を保つ最大系}{Maximal systems preserving invariant ratios}\\\Cite{f-natural}};
+\coordinate (l) at ($(coh.north)+(-3.8,0)$);\coordinate (r) at ($(boundary.north)+(-3.8,0)$);
+\draw[edge] (l |- index.south)--(l);\draw[edge] (r |- index.south)--(r);
+\node[branchreason,anchor=west] at ($(l)+(.35,1.4)$) {\Tx{零次値から非有界な不変コホモロジー}{Zero value gives unbounded invariant cohomology}\\\Cite{b-index}\\\Cite{d-natural}};
+\node[branchreason,anchor=west] at ($(r)+(.35,1.4)$) {\Tx{零次値と$(m+1)L$の形式}{Zero value and forms with $(m+1)L$}\\\Cite{b-index}\\\Cite{f-natural}};

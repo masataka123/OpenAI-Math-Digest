@@ -1,0 +1,7 @@
+\node[card] (n0) {\heading{}{有限体積の供給側と有界な目標側}{Finite-volume donor and bounded target}$A=-K_V+D,\quad \int_V|s_D|_{h_A}^2<\infty;\quad (L,h_L)\ \text{bounded}$\\$H^0(V,\Omega_V^j)=0\quad(j>0)$};
+\node[card,below=2.2cm of n0] (n1) {\heading{}{形式から行列式因子へ}{From forms to determinant divisors}$N_i\sim M+m_iL,\quad m_i\to\infty,\quad -M+kD\ \text{pseudoeffective}$};
+\node[card,below=2.2cm of n1] (n2) {\heading{}{最大許容系で小さい底とrankを得る}{A maximal admissible system gives a smaller base and rank one}$aL+cD-P\ \text{pseudoeffective};\quad \dim Y<\dim V$\\$\rho\ \text{has no horizontal poles},\quad h^0(J+p^*D+m k p^*L)=1$};
+\node[result,below=2.2cm of n2] (n3) {\heading{}{二計量移送後に帰納法を適用}{Induct after transferring both metrics}$(B,h_B)\ \text{bounded},\quad \int_Y|s_{D_Y}|^2<\infty$\\$H^0(Y,aB+cD_Y)\ne0\ \Longrightarrow\ H^0(V,a^{\prime}L+c^{\prime}D)\ne0$};
+\flow{n0}{n1}{\Tx{Riemann--Roch・hard Lefschetz・行列式と有限体積の余接評価}{Use Riemann--Roch, hard Lefschetz, determinants and the finite-volume cotangent bound}\\[4pt]\Cite{finite-volume}};
+\flow{n1}{n2}{\Tx{許容系の比の最大性から水平切断と零次を含むrankを作る}{Maximality of admissible ratios gives a horizontal section and ranks including zero}\\[4pt]\Cite{induction}};
+\flow{n2}{n3}{\Tx{実乗数イデアル付き直像の正値性と許される極の台を保つ}{Retain positivity with the actual multiplier ideal and the permitted polar support}\\[4pt]\Cite{transfer}};

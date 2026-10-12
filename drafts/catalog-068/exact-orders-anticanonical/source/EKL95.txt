@@ -1,0 +1,947 @@
+
+===PDF PAGE 1===
+arXiv:alg-geom/9408003v1  9 Aug 1994
+LOCAL POSITIVITY OF AMPLE LINE BUNDLES
+Lawrence Ein 1
+Oliver K ¨uchle2
+Robert Lazarsfeld 3
+Introduction
+The purpose of this paper is to establish a lower bound on the S eshadri constants
+measuring the local positivity of an ample line bundle at a ge neral point of a complex
+projective variety of arbitrary dimension.
+Let X be an irreducible complex projective variety, and let L be a nef line bun-
+dle on X. Demailly [De2] has introduced a very interesting invarian t which in eﬀect
+measures how positive L is locally near a given smooth point x ∈ X. This Seshadri
+constant ǫ(L, x) ∈ R may be deﬁned as follows. Consider the blowing up
+f : Y = Bl x(X) − → X
+of X at x, and denote by E = f − 1(x) ⊂ Y the exceptional divisor. Then f ∗ L is a nef
+line bundle on Y , and we put
+ǫ(L, x) = sup {ǫ ≥ 0 | f ∗ L − ǫ ·E is nef } .
+Here f ∗ L − ǫE is considered as an R-divisor on Y , and to say that it is nef means
+simply that f ∗ L ·C′ ≥ ǫE ·C′ for every irreducible curve C′ ⊂ Y . For example, if L
+is very ample, then ǫ(L, x) ≥ 1 for every smooth point x ∈ X. Seshadri’s criterion (cf.
+[Ha], Chapter 1) states that L is ample if and only if there is a positive number ǫ > 0
+such that ǫ(L, x) ≥ ǫ for every x ∈ X. We refer to §1 below, as well as [De2], §6, for
+alternative characterizations and further properties of S eshadri constants.
+It was shown by an elementary argument in [EL] that if S is a smooth projective
+surface, and L is an ample line bundle on S, then ǫ(L, x) ≥ 1 for all except perhaps
+countably many x ∈ S. This suggested the somewhat surprising possibility that t here
+could be a similar lower bound on the local positivity of an am ple line bundle at a
+general point of an irreducible projective variety of any di mension. Our main result
+shows that this is indeed the case:
+1Partially supported by NSF Grant DMS 93-02512
+2Supported by Deutsche Forschungsgemeinschaft
+3Partially supported by NSF Grant DMS 94-00815
+1
+
+===PDF PAGE 2===
+Theorem 1. Let L be a nef and big line bundle on an irreducible projective vari ety X
+of dimension n. Then
+ǫ(L, x) ≥ 1
+n
+for all x ∈ X outside a countable union of proper closed subvarieties of X. Moreover
+if L is ample, then given any δ > 0 the locus
+{
+x ∈ X
+⏐
+⏐
+⏐
+⏐ ǫ(L, x) > 1
+n + δ
+}
+contains a Zariski-open dense set.
+More generally, we prove that if there exists a countable uni on B ⊂ X of proper closed
+subvarieties, plus a real number α > 0 such that for 1 ≤ r ≤ n:
+∫
+Y
+c1(L)r ≥ (r ·α )r ∀ r-dimensional Y ⊂ X with Y ̸⊂ B ,
+then ǫ(L, x) ≥ α for all suﬃciently general x ∈ X. Examples constructed by Miranda
+show that given any b > 0, there exist X, L and x such that 0 < ǫ(L, x) < b. In other
+words, there cannot be a bound (independent of X and L) that holds at every point.
+On the other hand, it is unlikely that the particular constan t appearing in Theorem 1
+is optimal. In fact, it is natural to conjecture that in the se tting of the Theorem one
+should have ǫ(L, x) ≥ 1 for a very general point x ∈ X.
+Recent interest in Seshadri constants stems in part from the fact that they govern
+an elementary method for producing sections of adjoint bund les. Our bounds then
+imply the following, which complements the non-vanishing t heorems of Koll´ ar ([Ko1]
+§3):
+Corollary 2. Let L be a nef line bundle on a smooth projective variety X of dimension
+n ≥ 2, and given an integer s ≥ 0 suppose that
+∫
+Y
+c1(L)r ≥ (r(n + s))r
+for every r-dimensional subvariety Y ⊆ X not contained in some ﬁxed countable union
+B ⊂ X of proper subvarieties. Then the adjoint series |OX (KX + L)| generates s-jets
+at a general point x ∈ X, i.e. the evaluation map
+H 0(X, OX(KX + L)) − → H 0(X, OX(KX + L) ⊗ O X / Is+1
+x )
+2
+
+===PDF PAGE 3===
+is surjective. In particular,
+h0(X, OX(KX + L)) ≥
+(n + s
+n
+)
+.
+It follows for example that if A is ample, then OX (KX + (ns + n2)A) generates s-jets
+at almost all points x ∈ X. We remark that contrary to what one might expect from
+extrapolating the well-known conjectures of Fujita [Fu] on global generation and very
+ampleness, there cannot exist a linear function f (s) (depending on n, but independent
+of X and A) such that OX (KX + f (s)A) generates s-jets for s ≫ 0 at every point of
+X (Remark 1.7).
+Similarly:
+Corollary 3. Suppose that L is a nef and big line bundle on a smooth projective
+variety X of dimension n ≥ 2. Then for all m ≥ 2n2, the linear series |KX + mL| is
+birationally very ample, i.e. the corresponding rational m ap
+φ |KX +mL| : X /axisshort/axisshort/arrowaxisright P
+maps X birationally onto its image.
+For example, suppose that X is a smooth minimal variety of general type, i.e. KX is
+nef and big. Then the pluricanonical rational maps
+φ |mK| : X /axisshort/axisshort/arrowaxisright P
+are birational onto their images for m > 2n2. This extends (with somewhat weaker
+numbers) results of Ando [An] in the cases n ≤ 5. More generally, if X is a general
+type minimal n-fold of global index r, then |mrKX| is again birationally very ample
+when m > 2n2 (Corollary 4.6). As above, one also has an analogue of Coroll ary 3 for
+the linear series |KX + L| involving intersection numbers of L with subvarieties of X.
+The proof of Theorem 1 draws inspiration from two sources: ﬁr st, the arguments
+used in [Nad], [Ca] and [KoMM] to prove boundedness of Fano ma nifolds of Picard
+number one; and secondly, some of the geometric ideas occuri ng in [Be], [Nak] and
+especialy [Fa]. Roughly speaking, if Theorem 1 fails then gi ven a general point x ∈ X
+there exists a curve Cx ⊂ X through x such that
+multx(Cx)
+(L ·Cx) > n.
+3
+
+===PDF PAGE 4===
+We start by ﬁxing a divisor Ex ∈ | kL| for k ≫ 0 with suitably large multiplicity at
+x. If we could arrange that Cx ̸⊂ Ex, then one arrives right away at a contradiction
+by estimating Ex ·Cx in terms of multiplicities at x. Unfortunately it doesn’t seem
+to be immediate that one can do so. Instead, we use a gap constr uction to show that
+for an appropriate choice of y = y(x), we can at least control the diﬀerence of the
+multiplicities of Ex at y and at a general point of Cy. The principal new ingredient
+is then an argument showing that we can rechoose the divisors Ex in such a way as
+to ensure that Cy ̸⊂ Ex while keeping the multiplicity mult y(Ex) of Ex at y fairly
+large, and then we are done. Stated somewhat informally, the main lemma here is the
+following:
+Suppose that {Zt ⊆ Vt}t∈ T is a family of subvarieties of a
+smooth variety X, parametrized by a smooth aﬃne variety T ,
+and assume that ∪ t∈ T Vt is dense in X. Suppose also given a
+family {Et}t∈ T ∈ |L| of divisors in a ﬁxed linear series on X,
+with
+a = multZt (Et) and b = multVt(Et)
+for general t ∈ T . Then one can ﬁnd another family of divisors
+{E′
+t}t∈ T ∈ |L| such that
+Vt ⊈ E′
+t and mult Zt(E′
+t) ≥ a − b
+for general t ∈ T .
+We refer to Proposition 2.3 for the precise statement and pro of. Denoting by {st} ∈
+Γ(X, L) the family of sections deﬁning Et, the idea is to construct E′
+t as the divisor of
+the section Dst ∈ Γ(X, L), where D is a general diﬀerential operator of order b in t. For
+divisors on projective space (and other compactiﬁcations o f group varieties), the process
+of diﬀerentiating in order to arrive at a proper intersectio n plays an important role e.g.
+in [Be] and [Fa]. Our observation here is that the same idea wo rks in a deformation-
+theoretic context, and we hope that the lemma may ﬁnd other ap plications in the
+future.
+Concerning the organization of the paper, we start in §1 with a quick review of
+general facts about Seshadri constants. In §2 we discuss multiplicities in a family of
+divisors, and show in particular that by diﬀerentiating in p arameter directions one can
+lower the multiplicity of such a family along a covering fami ly of subvarieties. The
+proof of the main result occupies §3, and ﬁnally we give some elementary applications
+in §4.
+We have proﬁtted from discussions with F. Campana, V. Ma¸ sek , A. Nadel and
+G. Xu. Nadel in particular stressed some years ago the releva nce of techniques from
+4
+
+===PDF PAGE 5===
+diophantine approximation and transcendence theory to arg uments of this type. We
+are especially endebted to M. Nakamaye for helping us to unde rstand some of these
+arithmetically motivated ideas. In particular, the crucia l Proposition 2.3 was inspired
+by a proof Nakamaye showed us of Dyson’s lemma concerning sin gularities of curves
+in P1 × P1.
+§0. Notation and Conventions.
+(0.1). We work throughout over the complex numbers C.
+(0.2). We will say that a property holds at a general point of a variety X if it
+holds for a non-empty Zariski-open subset of X. It holds at a very general point if it
+is satisﬁed oﬀ the union of countably many proper closed subv arieties of X.
+(0.3). If X is a projective variety of dimension n, and L is a line bundle on X,
+we denote by Ln ∈ Z the top self-intersection number of L. Given a subvariety Z ⊂ X
+of dimension r, Lr ·Z indicates the degree
+∫
+Z c1(L)r ∈ Z. Recall that a line bundle L
+is numerically eﬀective or nef if L ·C ≥ 0 for all eﬀective curves C ⊆ X. Kleiman’s
+criterion ([Ha], Chapter1) implies that a line bundle is nef if and only if it lies in the
+closure of the ample cone in the N´ eron - Severi vector space N S(X)R. Recall also that
+a nef line bundle L is big if and only if Ln > 0. Similar deﬁnitions and remarks hold
+for (numerical equivalence classes of) Q-Cartier Q-divisors on X.
+(0.4). For varieties X and T , pr1 : X × T − → X, pr 2 : X × T − → T denote the
+projections. If Z − → T is a mapping, Zt denotes the ﬁbre of Z over t ∈ T . Given a
+Zariski-closed subset (or subscheme) Z ⊂ X × T , we consider the ﬁbre Zt of pr2 as a
+subset (or subscheme) of X. Similarly, Zx ⊂ T is the ﬁbre of Z over x ∈ X. If V ⊂ X
+is a subvariety, IV ⊂ O X denotes its ideal sheaf.
+§1. Seshadri Constants.
+In this section, we recall brieﬂy some of the basic facts abou t Seshadri constants.
+We start with a
+Deﬁnition 1.1. ([De2]) Let X be a projective variety, x ∈ X a point and L a nef line
+bundle on X. Then the Seshadri constant of L at x is the real number
+ǫ(L, x) := inf
+C∋ x
+{
+L ·C
+multx(C)
+}
+,
+where the inﬁmum is taken over all reduced and irreducible cu rves C ⊂ X passing
+5
+
+===PDF PAGE 6===
+through x. (We remark that it is enough here that L be a Q-Cartier Q-divisor.)
+It is elementary (and standard) that (1.1) is equivalent to t he alternative deﬁnition
+given in the Introduction:
+Lemma 1.2. Let X be a projective variety, L a nef line bundle on X, and x ∈ X a
+smooth point. Let
+f : Y = Blx(X) − → X
+be the blowing up of X at x, and denote by E = f − 1(x) ⊂ Y the exceptional divisor.
+Then
+ǫ(L, x) = sup {ǫ ≥ 0 | f ∗ L − ǫ ·E is nef } . □
+Note that the supremum in the deﬁnition is actually a maximum .
+There are interesting characterizations of Seshadri const ants involving the gener-
+ation of jets. Recall that given a line bundle B on a smooth variety X, and an integer
+s ≥ 0, we say that the linear series |B|generates s-jets at x ∈ X if the evaluation map
+H 0(X, OX(B)) − → H 0(X, OX(B) ⊗ O X / Is+1
+x )
+is surjective, where Ix denotes the ideal sheaf of x. The following Proposition — which
+is a variant of [De2], Theorem 6.4 — shows in eﬀect that comput ing the Seshadri
+constant ǫ(L, x) is equivalent to ﬁnding a linear function f (s) such that the adjoint
+series |KX + f (s)L|generates s-jets at x for all s ≫ 0.
+Proposition 1.3. Let L be a nef and big line bundle on a smooth projective variety
+X of dimension n.
+(1.3.1). If
+r > s
+ǫ(L, x) + n
+ǫ(L, x) ,
+then |KX + rL| generates s-jets at x ∈ X. The same statement holds if r = s + n
+ǫ(L, x)
+and Ln > ǫ(L, x)n.
+(1.3.2). Conversely, suppose there is a real number ǫ > 0 plus a constant c ∈ R such
+that |KX + rL| generates s-jets at x ∈ X for all s ≫ 0 whenever
+r > s
+ǫ + c.
+Then ǫ(L, x) ≥ ǫ.
+6
+
+===PDF PAGE 7===
+Proof. (1). ([De2], Prop. 6.8.) This is a standard application of Ka wamata-Viehweg
+vanishing for nef and big line bundles. In brief, let f : Y = Bl x(X) − → X be the
+blowing-up of X at x, with exceptional divisor E ⊂ Y . It suﬃces to show that
+(*) H 1(X, OX(KX + rL) ⊗ I s+1
+x ) = H 1(Y, OX(KY + rf ∗ L − (s + n)E)) = 0 .
+Setting ǫ = ǫ(L, x), one has the numerical equivalence
+rf ∗ L − (s + n)E ≡ s + n
+ǫ (f ∗ L − ǫE) + (r − s + n
+ǫ )f ∗ L.
+Hence rf ∗ L − (s + n)E is big and nef, and (*) follows from Vanishing.
+(2). Let C ∋ x be a reduced and irreducible curve with mult x(C) = m. Fix s ≫ 0
+and let r be the least integer > (s/ǫ ) + c. The geometrical interpretation of the fact
+that |KX + rL|generates s-jets at x is that we can ﬁnd a divisor Dx ∈ |KX + rL|, with
+multx(Dx) = s, having an arbitrarily prescribed tangent cone at x. In particular, we
+can choose Dx such that the tangent cones to Dx and C at x meet properly, and since
+C is irreducible it follows that Dx and C themselves meet properly. Then
+C ·(KX + rL) ≥ multx(C) ·multx(Dx) = m ·s,
+and hence C ·L
+m ≥ s
+r − C ·KX
+rm .
+Since r ≤ (s/ǫ ) + c + 1 the claim follows by letting s → ∞ . □
+Our main result (Theorem 3.1) will give a lower bound on the Se shadri constant of
+a nef and big line bundle at a very general point, i.e. a bound w hich holds oﬀ the union
+of countably many proper subvarieties. However the followi ng Lemma shows that at
+least for ample line bundles, one then obtains a statement va lid on a Zariski-open set:
+Lemma 1.4. Let L be an ample line bundle on an irreducible projective variety X.
+Suppose that there is a positive rational number B > 0 and a smooth point y ∈ X for
+which one knows that ǫ(L, y) > B . Then the locus
+{
+x ∈ X
+⏐
+⏐
+⏐
+⏐ ǫ(L, x) > B
+}
+contains a Zariski-open dense set.
+Proof. Given a smooth point x ∈ X, let
+fx : Yx = Bl x(X) − → X
+7
+
+===PDF PAGE 8===
+be the blowing-up of X at x, with exceptional divisor Ex ⊂ Yx. Consider the Q-divisor
+Mx =def f ∗
+x L − B ·Ex
+on Yx. It follows from the hypothesis and characterization (1.2) of Seshadri constants
+that f ∗
+y L − ǫ(L, y) ·Ey is nef, and hence My is ample. Since ampleness is an open
+condition in a ﬂat family of line bundles, there exists a non- empty Zariski-open subset
+U ⊂ X of smooth points of X such that Mx is ample whenever x ∈ U . But by (1.2)
+again, the ampleness of Mx implies that ǫ(L, x) > B . □
+Finally, for the convenience of the reader we recall from [EL ], §3, the examples
+of Miranda showing that the Seshadri constants of an ample li ne bundle can take on
+arbitrarily small positive values.
+Proposition 1.5. (Miranda) Given any positive number b > 0, there exist a projec-
+tive variety X and an ample line bundle L on X such that
+0 < ǫ(L, x) < b
+for all x in a codimension two subset V ⊂ X.
+Sketch of Proof. We ﬁrst construct a line bundle N on a surface S having the required
+property. To this end, start with a reduced and irreducible p lane curve C ⊂ P2 of
+degree d ≫ 0 with a point y ∈ C of multiplicity m > 1
+b . Fix a second integral curve
+C′ ⊂ P2 of degree d meeting C transversely. Provided that d is suﬃciently large, we
+can assume by taking C′ generally enough that all the curves in the pencil spanned
+by C and C′ are reduced and irreducible. Blow up the base-points of this pencil to
+obtain a surface S, admitting a map f : S − → P1 with irreducible ﬁbres, among them
+C ⊂ S. Observe that any of the exceptional divisors over P2 gives rise to a section
+Γ ⊂ S of f which meets C transversely at one point. Fix an integer a ≥ 2, and put
+N = aC + Γ. It follows from the Nakai criterion that N is ample. But N ·C = 1
+whereas mult y(C) = m > 1
+b , so ǫ(N, y) < b . As Viehweg pointed out, this gives rise
+automatically to higher dimensional examples. In fact, tak e for instance X = S × Pn− 2
+and L = pr∗
+1(N ) ⊗ pr∗
+2(OP(1)). By considering the evident curve in S × { z}, one sees
+that
+ǫ(L, (y, z)) ≤ ǫ(S, y) < b for all z ∈ Pn− 2.
+Thus it suﬃces to take V = {y} × Pn− 2. □
+Remark 1.6. We do not know whether Seshadri constants can become arbitra rily
+small on a codimension one subset of X. It is shown in [EL] that this cannot happen
+when X is a surface.
+8
+
+===PDF PAGE 9===
+Remark 1.7. A well-known conjecture of Fujita [Fu] asserts that if L is an ample line
+bundle on a smooth projective variety X of dimension n, then OX (KX + (n + 1)L) is
+free and OX (KX + (n + 2)L) is very ample. Extrapolating, one might be tempted to
+hope that for all s ≥ 0:
+(*) |KX + (n + s + 1)L| separates s-jets at every point x ∈ X.
+However (1.3.2) and (1.5) show that (*) is not true in general . In fact, there cannot
+exist a linear function f (s) (depending on n but independent of X and L) such that
+|KX + f (s)L| generates s-jets at all x ∈ X. However when X is a surface, it follows
+from [BS] or [De1] that there exists a quadratic function f (s) such that |KX + f (s)L|
+separates s-jets at every x ∈ X. (Cf. [La], §7.)
+Remark 1.8. Let X be a projective variety of dimension n, L a nef line bundle on X,
+and x ∈ X a smooth point. Then
+ǫ(L, x) ≤
+n
+√
+(Ln) for every x ∈ X.
+In fact, if f : Y = Bl x(X) − → X is the blowing up of x, with exceptional divisor E,
+then ( f ∗ L − ǫ(L, x) ·E)n ≥ 0. As an interesting example, suppose that X is a simple
+abelian variety, and L is a principal polarization on X. Then Nakamaye has shown
+that ǫ(L, x) ≥ 1 for all x. Therefore one has the inequality:
+(1.8.1) 1 ≤ ǫ(L, x) ≤
+n√
+n! ≈ n
+e .
+Since X is homogeneous, ǫ(L, x) is independent of x ∈ X, so there is a real number
+ǫ(L) satisfying (1.8.1) canonically attached to a principally polarized abelian variety
+(X, L). However it is not obvious to us what the value of this invari ant is, even for
+Jacobians or very general p.p.a.v.’s. Note that if C ⊂ X is any curve, then L ·C ≥ n.
+Hence (1.8.1) implies that the curves computing ǫ(L, x) in (1.1) cannot be smooth.
+§2. Multiplicity Lemmas.
+This section is devoted to some preliminary results concern ing multiplicity loci in
+a family of divisors. Proposition 2.3 — which allows one to re duce the multiplicity of
+a family of divisors along a covering family of subvarieties — is the crucial ingredient
+in the proof of our main Theorem. It is in this section that we m ake essential use of
+the fact that we are working in characteristic zero.
+We start with some notation. If M is a smooth variety, and E is an eﬀective
+divisor on M , then the function x ↦→ multx(E) is Zariski upper-semicontinuous on M .
+Given an irreducible subvariety Z ⊂ M , by mult Z(E) we mean the value of mult x(E)
+9
+
+===PDF PAGE 10===
+at a general point x ∈ Z. We refer to (0.4) for notation and conventions concerning
+projections from products, and ﬁbres of morphisms.
+The ﬁrst lemma allows one to make ﬁbrewise calculations of mu ltiplicities. It is
+certainly a well-known fact, but we include a proof for the co nvenience of the reader.
+Lemma 2.1. Let X and T be smooth irreducible varieties, and suppose that Z ⊂ X × T
+is an irreducible subvariety which dominates T (under projection to the second factor).
+Let E ⊂ X × T be any eﬀective divisor. Then for a general point t ∈ T , and any
+irreducible component Wt ⊆ Zt of the ﬁbre Zt, we have:
+multWt(Et) = mult Z(E).
+Proof. Consider more generally a mapping f : M − → T of smooth varieties, and
+suppose that V ⊂ M is a smooth subvariety dominating T . Assume given an eﬀective
+divisor E ⊂ M with mult V (E) = a. We will show that for a general point t ∈ T , and
+any irreducible component Wt ⊆ Vt:
+(*) mult Wt(Et) = a.
+The Lemma then follows by taking M to be an open subset of X × T on which Z is
+smooth, and setting V = Z ∩ M .
+To prove (*), note ﬁrst that for b ≤ a the section s ∈ Γ(M, OM (E)) deﬁning E
+lies in the subspace
+Γ(M, OM (E) ⊗ I b
+V ) ⊆ Γ(M, OM (E)).
+Hence s determines a section
+δb(s) ∈ Γ(V, Ib
+V / Ib+1
+V (E)) = Γ( V, Sym b(N ∗
+V /M)(E))
+of a twist of the bth symmetric power of the conormal bundle to V in M . (One thinks
+of δb(s) as giving the bth order terms in the Taylor expansion of s in directions normal
+to V .) One checks e.g. by a calculation in local coordinates that δb(s) = 0 for b < a
+whereas δa(s) ̸= 0. Now ﬁx a point t ∈ T lying in the open subset of T over which the
+mappings M − → T and V − → T are smooth, and let st = s|Mt ∈ Γ(Mt, OMt(Et)) be
+the restriction of s to Mt, so that st is the section deﬁning Et. Then
+δb(s)|Vt = δb(st) ∈ Γ(Vt, Sym b(N ∗
+Vt/Mt)(Et)).
+But since V − → T is dominating, a non-zero section of a locally free sheaf on V restricts
+to a non-zero section on each irreducible component Wt ⊆ Vt of a general ﬁbre. Hence
+10
+
+===PDF PAGE 11===
+δb(st) = 0 for b < a and δa(st) ̸= 0 ∈ Γ(Wt, OWt(Et)) for general t ∈ T . But as we
+have just seen, this implies that mult Wt(Et) = a, as claimed. □
+Remark 2.2. Some readers may prefer to see the argument phrased in a more c oncrete
+manner. In the situation of (2.1) it is enough to show that for suﬃciently general
+t ∈ T , and for any component Wt ⊂ Zt, there exists at least one point x ∈ Wt such
+that mult x(Et) = mult (x,t)(E). Now since Z dominates T , given general points t ∈ T
+and x ∈ Wt ⊂ Zt we can ﬁnd a local analytic section of the projection Z − → T , say
+σ : U − → Z, deﬁned in a (classical) neighborhood U of t in T , whose image passes
+through the point ( x, t). Replacing T by U , and working analytically, we can assume
+given a holomorphic mapping p : T − → X, and we are reduced to proving that
+(*) mult p(t)(Et) = mult (p(t),t)(E)
+for general t ∈ T . But this follows easily from an explicit calculation in loc al holomor-
+phic coordinates. [Choose coordinates x and t on X and T , and suppose p is given by
+p = p(t). Deﬁning y = x − p(t), expand a local equation for E as a Taylor series in y
+and t.]
+We now come to the main result of this section.
+Proposition 2.3. Let X and T be smooth irreducible varieties, with T aﬃne, and
+suppose that
+Z ⊆ V ⊆ X × T
+are irreducible subvarieties such that V dominates X. Let L be a line bundle on X,
+and suppose given on X × T a divisor
+E ∈ |pr∗
+1(L)|.
+Write
+ℓ = multZ(E), k = multV (E).
+Then there exists a divisor
+E′ ∈ |pr∗
+1(L)|
+on X × T having the property that
+multZ (E′) ≥ ℓ − k, and V ⊈ Supp(E′).
+Let σ ∈ Γ(X × T, pr ∗
+1(L)) be the section deﬁning E. In a word, the plan is to obtain
+E′ as the divisor of a section
+σ ′ = Dσ ∈ Γ(X × T, pr ∗
+1(L)),
+11
+
+===PDF PAGE 12===
+where D is a general diﬀerential operator of order ≤ k on T . So we begin with some
+remarks about diﬀerentiating sections of the line bundle pr∗
+1(L) in parameter directions.
+Let Dk
+T be the (locally free) sheaf of diﬀerential operators of orde r ≤ k on T .
+Then sections of Dk
+T act naturally on the space Γ( X × T, pr ∗
+1(L)) of sections of pr∗
+1(L).
+Naively this comes about as follows. Choose local coordinat es x and t on X and T ,
+and let gα,β(x) be the transition functions of L with respect to a suitable open covering
+of X. Then sections of pr∗
+1(L) are given by collections of functions σ = {sα(x, t)} such
+that sα(x, t) = gα,β(x)sβ(x, t). If D is a diﬀerential operator in the t-variables, then
+Dsα(x, t) = gα,β(x)Dsβ(x, t).
+Therefore the {Dsα(x, t)} patch together to deﬁne a section Dσ ∈ Γ(X × T, pr ∗
+1(L)).
+To say the same thing in a more invariant fashion, let Dk
+X× T (pr∗
+1(L)) denote the
+sheaf of diﬀerential operators of order ≤ k on pr∗
+1(L), i.e.
+Dk
+X× T (pr∗
+1(L)) = P k
+X× T (pr∗
+1(L))∗ ⊗ pr∗
+1(L),
+where P k
+X× T (pr∗
+1(L)) is the sheaf of principal parts associated to pr∗
+1(L). Observe that
+there is a canonical inclusion of vector bundles
+(*) pr∗
+2(Dk
+T )֒D k
+X× T (pr∗
+1(L)).
+In fact, it follows from the construction of bundles of princ ipal parts plus the projection
+formula that one has an isomorphism:
+P k
+X× T /X(pr∗
+1(L)) = pr∗
+2(P k
+T (OT )) ⊗ pr∗
+1(L),
+and then (*) is deduced from the surjection
+P k
+X× T (pr∗
+1(L)) − → P k
+X× T /X(pr∗
+1(L)).
+On the other hand, a section σ ∈ Γ(X × T, pr ∗
+1(L)) gives rise to a vector bundle map
+Dk
+X× T (pr∗
+1(L)) − → pr∗
+1(L),
+and hence by composition a homomorphism
+jσ : pr∗
+2(Dk
+T ) − → pr∗
+1(L).
+Given D ∈ Γ(T, Dk
+T ),
+Dσ ∈ Γ(X × T, pr ∗
+1(L))
+12
+
+===PDF PAGE 13===
+is just the image of pr∗
+2(D) ∈ Γ(X × T, pr ∗
+2(Dk
+T )) under the map on sections determined
+by jσ.
+Proof of Proposition 2.3. Since T is aﬃne, the vector bundle Dk
+T is globally gener-
+ated. Choose ﬁnitely many diﬀerential operators
+Dα ∈ Γ(T, Dk
+T )
+which span Dk
+T at every point of T . Let σ ∈ Γ(X × T, pr ∗
+1(L)) be the section deﬁning
+the given divisor E, and consider the algebraic subset
+X × T ⊃ B =
+{
+(x, t)
+⏐
+⏐ Dασ (x, t) = 0 ∀ α
+}
+cut out by the common zeroes of all the sections Dασ ∈ Γ(X × T, pr ∗
+1(L)).
+We assert that
+(*) V ⊈ B.
+To verify this, we study the ﬁrst projection
+pr1 : X × T − → X.
+Fix any point x ∈ X, and consider the ﬁbre Ex ⊂ T of E over x. Assume that Ex ̸= T
+(which will certainly hold for general x), so that Ex is a divisor on T . Given t ∈ T , it
+follows from the fact that the Dα generate Dk
+T at t that
+(x, t) ∈ B ⇐ ⇒ multt(Ex) > k.
+On the other hand, since V dominates X, Lemma 2.1 applies to pr1 and we conclude
+that
+multt(Ex) = mult V (E) = k
+for suﬃciently general ( x, t) ∈ V . This proves (*).
+It follows from (*) that if D ∈ Γ(T, Dk
+T ) is a suﬃciently general C-linear combi-
+nation of the Dα, then
+σ ′ =def Dσ ∈ Γ(X × T, pr ∗
+1(L))
+does not vanish on V . On the other hand, a diﬀerential operator of order ≤ k decreases
+multiplicities by at most k. Therefore if E′ is the divisor of σ ′, then mult Z (E′) ≥ ℓ− k,
+as required. □
+§3. The Main Theorem.
+The purpose of this section is to prove:
+13
+
+===PDF PAGE 14===
+Theorem 3.1. Let L be a nef line bundle on an n-dimensional irreducible projective
+variety X. Suppose there exists a countable union B ⊂ X of proper subvarieties of X
+plus a positive real number α > 0 such that
+(3.1.1) ( L)r ·Y ≥ (r ·α )r
+for every irreducible subvariety Y ⊂ X of dimension r (1 ≤ r ≤ n) with Y ̸⊆ B . Then
+ǫ(L, x) ≥ α
+for all x ∈ X outside the union of countably many proper subvarieties of X.
+Observe that (3.1.1) implies that L is big. Recall also that a line bundle B is big if and
+only if there exists an ample divisor A and an eﬀective divisor E such that aB = A + E
+for some a ≫ 0 (cf. [Mo],(1.9)). Hence given a nef and big line bundle L on X, the
+restriction of L to Y ̸⊂ E is again big, and hence the inequality (3.1.1) automaticall y
+holds with α = 1
+n . Therefore (3.1) implies the ﬁrst statement of Theorem 1 fro m the
+Introduction, and Lemma 1.4 yields the second assertion. Si milarly, Corollary 2 follows
+from (3.1) and the second statement in (1.3.1). We will prove Corollary 3 in §4.
+(3.2). Turning to the proof of Theorem 3.1, we start with some preliminary
+remarks and reductions. First, the statement is clear if dim X = 1. Therefore we may
+– and do – assume inductively that the Theorem is known for all varieties of dimension
+< n.
+Note next that there is no loss of generality in supposing tha t X is smooth. In
+fact, let
+f : X ′ − → X
+be a resolution of singularities, and set L′ = f ∗ L, so that L′ is a nef line bundle on
+X ′. Suppose that Y ⊂ X is an r-dimensional subvariety of X, not contained in the
+fundamental locus of f . If Y ′ ⊂ X ′ is the proper transform of Y , then ( L)r ·Y =
+(L′)r ·Y ′. Simililarly, if x ∈ X is a point over which f is an isomorphism, then one
+sees from (1.1) that
+ǫ(L, x) = ǫ(L′, x′).
+Thus it suﬃces to prove the theorem for X ′, so we will henceforth assume that X is
+smooth.
+(3.3). Let β > 0 be a real number and let x ∈ X be a point at which ǫ(L, x) < β .
+Then there exists a reduced irreducible curve Cx ⊂ X with
+β ·multx(Cx) > (L ·Cx).
+14
+
+===PDF PAGE 15===
+Observe that the set of all pairs
+{
+(C, x)
+⏐
+⏐
+⏐
+⏐ C ⊂ X an integral curve , β ·multx(C) > (C ·L)
+}
+is parametrized by countably many irreducible quasi-proje ctive varieties. This is a
+consequence of the existence of Hilbert schemes, plus the fa ct that in a ﬂat family of
+curves, it is a constructible condition to be reduced and irr educible (cf. [Jo], (4.10)).
+It follows to begin with that the set
+Uβ =def
+{
+x ∈ X
+⏐
+⏐
+⏐
+⏐ ǫ(L, x) < β
+}
+can be expressed as a countable union of locally closed subse ts of X. Therefore to prove
+the Theorem, it is enough to show that Uα does not contain a Zariski-open subset of
+X. By the same token, it is even suﬃcient to show that for any sma ll rational δ > 0
+the set Uα− δ does not contain a Zariski-open subset. Indeed,
+Uα =
+⋃
+δ∈ Q+
+Uα− δ,
+and the latter is a countable union.
+We ﬁx now δ ≪ α and set γ = α − δ. So the issue is to show that Uγ does not
+contain a Zariski-open subset.
+(3.4). Assume to the contrary that Uγ does contain a Zariski-open subset, i.e.
+that there exists a Zariski-open subset U ⊆ X such that
+ǫ(L, x) < γ < α
+for every x ∈ U . Then for every x ∈ U there exists a reduced irreducible curve Cx ⊂ X
+passing through x such that γ ·multx(Cx) > (L ·Cx). We will say that Cx is a Seshadri-
+exceptional curve based at x.
+It follows from the discussion in (3.3) that there is an irred ucible family of Seshadri
+exceptional curves whose base-points sweep out an open subs et of X. More precisely,
+there exists an irreducible quasi-projective variety T , a dominant morphism
+g : T − → X,
+plus an irreducible subvariety
+C ⊂ X × T,
+15
+
+===PDF PAGE 16===
+ﬂat over T , such that for every t ∈ T the ﬁbre Ct is a Seshadri-exceptional curve based
+at g(t) ∈ X. In other words, Ct ⊂ X is a reduced irreducible curve, passing through
+g(t), with
+γ ·multg(t)Ct > (L ·Ct).
+Replacing T ﬁrst by a suitable subvariety, and then by an open subset we ca n – and
+do – assume that T is smooth and aﬃne, and that g : T − → X is quasi-ﬁnite. Write
+Γ ⊂ X × T
+for the graph of g, and as in (0.4) given a subset Z ⊂ X × T , denote by Zt ⊂ X the
+ﬁbre of Z over t ∈ T , viewed as a subset of X.
+(3.5). We next consider a construction analogous to one used by Koll´ ar, Miyaoka
+and Mori in their proof [KoMM] of the boundedness of Fano vari eties of Picard number
+one.
+Lemma 3.5.1. Let Z ⊂ X × T be an irreducible closed subvariety dominating both X
+and T . Then one can construct an irreducible closed subvariety
+CZ ⊂ X × T
+having the following properties:
+(3.5.2) Z ⊆ CZ and dim CZ ≤ dim Z + 1.
+(3.5.3) For generic t ∈ T , the ﬁbre (CZ )t ⊂ X has the form
+(CZ )t = closure
+( ⋃
+s∈ St
+Cs
+)
+,
+where St ⊂ g− 1(Zt) is a closed subset of T which dominates Zt.
+In other words, for general t ∈ T , ( CZ )t is the closure of all the points on a family of
+Seshadri exceptional curves {Cs}s∈ St based at a dense constructible subset of Zt.
+Proof. First, let
+S′ = (g × idT )− 1(Z) ⊆ T × T.
+The hypothesis that Z dominates X implies that S′ ̸= ∅. Fix an irreducible component
+S1 of S′ whose image under g × idT dominates Z. Then dim S1 = dim Z since g is
+quasi-ﬁnite. Next, letting π : C − → T denote the projection of C ⊂ X × T onto the
+second factor, put
+V1 = (π × idT )− 1(S1) ⊆ X × T × T.
+16
+
+===PDF PAGE 17===
+Very concretely, V1 may be described as the set
+V1 =
+{
+(x, s, t)
+⏐
+⏐ x ∈ Cs, g (s) ∈ Zt, (s, t) ∈ S1
+}
+.
+The ﬁbres of the projection p : V1 − → S1 are irreducible curves, and hence V1 is
+irreducible, with
+dim V1 = dim S1 + 1.
+Note also that p admits a section σ : S1 − → V1 given by σ (s, t) = ( g(s), s, t).
+Consider now the projection pr13 : X × T × T − → X × T onto the ﬁrst and third
+factors, and set
+V = pr13(V1) ⊆ X × T.
+Then V is an irreducible constructible subset of X × T , and V contains an open subset
+of Z [viz. an open subset of ( pr13 ◦ σ )(S1)]. Given t ∈ T , let
+St = g− 1(Zt) ∩ (S1)t,
+where by ( S1)t we mean the ﬁbre of S1 ⊂ T × T over the second factor. Then by
+construction, for every t ∈ T : Vt = ∪ s∈ StCs. Finally, put
+CZ = closure( V ) ⊆ X × T.
+Then property (3.5.2) is clear. As for (3.5.3), it follows fr om the remark that if V ⊆
+X × T is an irreducible constructible subset dominating T , then for general t ∈ T :
+closure(Vt) = (closure( V ))t.
+This completes the proof of (3.5.1). □
+(3.6). The inductive hypothesis is now used to prove:
+Lemma 3.6.1. Let Z ⊂ X × T be a proper irreducible subvariety dominating both X
+and T , and consider the variety CZ ⊆ X × T constructed in (3.5). Then Z is a proper
+subvariety of CZ .
+Proof. Assume to the contrary that CZ = Z, and ﬁx a very general point t ∈ T .
+Given a general point x ∈ Zt, it follows from (3.5.3) that there exists a Seshadri
+exceptional curve Cs based at x such that Cs lies in Zt = (CZ )t. But this means that
+the restriction L|Zt of L to Zt has small Seshadri constant at a general point, i.e.:
+ǫ(L|Zt, x) < γ
+17
+
+===PDF PAGE 18===
+for a dense open set of points x ∈ Zt. But every component of Zt has dimension < n.
+Therefore the induction hypothesis will give a contradicti on once we show that L|Wt
+satisﬁes (3.1.1) for any irreducible component Wt ⊂ Zt. Since the morphism Z − → X
+is dominating, for suﬃciently general t ∈ T no component Wt of Zt lies entirely in B.
+Hence for very general t ∈ T , B ∩ Wt is a countable union of proper subvarieties of Wt.
+On the other hand, if Y ⊆ Wt is a subvariety of dimension r not lying in B ∩ Wt, then
+(L|Wt)r ·Y = Lr ·Y ≥ (r ·γ)r.
+Hence (3.1.1) holds for L|Wt, as required. □
+(3.7). Much as in [KoMM], (3.5.1) will be used to construct a c hain of irreducible
+subvarieties Zi ⊆ X × T , as follows. Start with
+Z0 = Γ = graph( g) , Z 1 = C ⊆ X × T,
+and then for 1 < i ≤ n − 1 apply (3.5.1) inductively to form
+Zi+1 = CZi ⊂ X × T.
+It follows from (3.6.1) that Zi ⊊ Zi+1, and consequently Zi has relative dimension i
+over T . In particular, Zn = X × T . Thus we have a chain
+(3.7.1) Γ = Z0 ⊂ Z1 ⊂ · · · ⊂ Zn− 1 ⊂ Zn = X × T
+of irreducible subvarieties of X × T .
+(3.8). We now come to the second construction, inspired by Na del [Nad], Campana
+[Ca] and the gap arguments used in connection with zero estim ates (cf. [Be], [Fa],
+[Nak]). The idea is to choose a family of divisors Et ∈ | kL| (k ≫ 0) having high
+multiplicity at g(t) ∈ X, and to study the multiplicities of Et along the subvarieties
+(Zi)t deﬁned in (3.7).
+We start with a pointwise description. Since ( Ln) ≥ (αn )n > (γn)n, a standard
+parameter count shows that if k ≫ 0, then given any point x ∈ X there exists a divisor
+Ex ∈ |kL| with mult x(Ex) > kγn.
+In fact, by Riemann-Roch
+h0(OX(kL)) = kn (Ln)
+n! + o(kn),
+18
+
+===PDF PAGE 19===
+whereas it is (kγn)n
+n! +o(kn) conditions to impose multiplicity [ kγn + 1] at a given point.
+In particular, we may apply this with x = g(t) to construct a divisor Et having high
+multiplicity at the base of the Seshadri-exceptional curve Ct.
+These remarks globalize in the following manner. Put b = [kγn + 1], and consider
+the projections pr1 : X × T − → X, pr2 : X × T − → T . Then for k ≫ 0 the torsion-free
+OT -module
+F = pr2,∗ (pr∗
+1(kL) ⊗ I b
+Γ)
+has positive rank, where IΓ ⊂ O X× T denotes the ideal sheaf of Γ. As T is aﬃne, F is
+globally generated. We ﬁx a non-sero section σ ∈ Γ(T, F ), and since
+Γ(T, F ) = Γ( X × T, pr ∗
+1(kL) ⊗ I b
+Γ),
+σ gives rise to a divisor
+E ∈ |OX× T (pr∗
+1(kL))| with mult Γ(E) > kγn.
+(3.9). Consider now the multiplicities
+multZi (E)
+of E along the sets Zi appearing in (3.7.1). We have
+multZ0 (E) = mult Γ(E) > kγn , multZn (E) = mult (X× T )(E) = 0 .
+It follows that there is at least one index i (0 ≤ i ≤ n − 1) such that
+multZi(E) − multZi+1 (E) > kγ.
+The heart of the argument is that we can now apply Propostion 2 .3 to produce a new
+divisor, not containing Zi+1, with relatively high multiplicity along Zi.
+Speciﬁcally, since Zi+1 dominates X, Proposition 2.3 implies the existence of a
+divisor
+E′ ∈ |OX× T ( pr∗
+1(kL) ) |
+such that
+multZi(E′) > kγ , Z i+1 ̸⊆ Supp(E′).
+Fix a general point t ∈ T , and consider the divisor E′
+t ∈ |kL| on X. Then E′
+t does not
+contain any component of ( Zi+1)t, whereas it follows from Lemma 2.1 that
+multWt(E′
+t) = mult Zi (E′) > kγ
+19
+
+===PDF PAGE 20===
+for any irreducible component Wt of ( Zi)t.
+Consider ﬁnally a general point x ∈ Wt for some irreducible component Wt ⊂
+(Zi)t. Then
+multx(E′
+t) > kγ.
+On the other hand, it follows from property (3.5.3) of the con struction (3.5.1) of Zi+1
+that there is a Seshadri exceptional curve Cs ⊂ (Zi+1)t based at x such that
+Cs ̸⊆ Supp(E′
+t).
+Then Cs meets E′
+t properly, and we ﬁnd:
+k(L ·Cs) = E′
+t ·Cs ≥ multx(E′
+t) ·multx(Cs)
+> kγ ·multx(Cs).
+This contradicts the fact that Cs is Seshadri exceptional, and completes the proof of
+Theorem 3.1.
+§4. Applications.
+In this section we give some simple applications of the main T heorem.
+We begin with a criterion for birationality which, together with (3.1), implies
+Corollary 3 from the Introduction.
+Lemma 4.1. Let X be a smooth projective variety of dimension n ≥ 2 and L a nef
+and big line bundle on X. Suppose that there exists a countable union V ⊂ X of
+proper subvarieties such that ǫ(L, x) ≥ 2n for all x ∈ X − V . Then the adjoint bundle
+OX (KX + L) is birationally very ample, i.e. the corresponding rationa l mapping
+φ |KX +L| : X /axisshort/axisshort/arrowaxisright P
+maps X birationally onto its image.
+Proof. We start with a general remark. Suppose that X is an irreducible projective
+variety and B is a line bundle on X, with H 0(X, B) ̸= 0, deﬁning a rational mapping
+φ = φ |B| : X /axisshort/axisshort/arrowaxisright P.
+Then we claim that φ is birational onto its image if and only if there exists a coun table
+union V ⊂ X of proper subvarieties such that φ is deﬁned and one-to-one on X − V .
+20
+
+===PDF PAGE 21===
+In fact, there exists in any event a Zariski-open subset U ⊂ X (which in general may
+be empty) on which φ is deﬁned and one-to-one. The stated condition implies that
+U ̸= ∅, and so φ is generically one-to-one over its image, hence birational .
+Returning to the situation of the Lemma, take B = KX + L. We will prove
+momentarily that for any two distinct points x, y ∈ X − V one has the the vanishing
+(*) H 1(X, OX(KX + L) ⊗ I x ⊗ I y) = 0 .
+But this means exactly that φ |KX +L| is deﬁned and one-to-one on X − V , and hence is
+birational onto its image, as claimed. As for (*), let f : Y − → X be the blowing up of
+X at x and y, and denote by Ex, Ey ⊂ Y the exceptional divisors. Since ǫ(L, x) ≥ 2n
+and ǫ(L, y) ≥ 2n by hypothesis, it is a consequence of (1.2) that the Q-divisors
+1
+2 f ∗ L − nEx, 1
+2 f ∗ L − nEy
+are nef. Therefore f ∗ L − nEx − nEy is nef. Moreover, since n ≥ 2 we have Ln ≥
+(2n)n > 2nn by (1.8), and so f ∗ L − nEx − nEy is also big. Then just as in (1.3), (*)
+follows from vanishing on Y . □
+In the rest of this section we outline how these results can be generalized in the
+context of Q-divisors. To begin with, note:
+Remark 4.2. Suppose that X is an irreducible projective variety, and L is a nef Q-
+Cartier Q-divisor on X satisfying the numerical hypotheses (3.1.1). Then ǫ(L, x) ≥ α
+for all smooth x ∈ X outside the union of countably many proper subvarieties.
+In fact, choose a positive integer m > 0 such that mL is a Cartier divisor. Since
+ǫ(mL, x) = m ·ǫ(L, x) for all x ∈ X, the assertion follows from (3.1).
+We will henceforth deal with the following set-up:
+Assumptions 4.3. X is a smooth irreducible projective variety of dimension n ≥ 2,
+and L is a nef and big Q-divisor on X. We suppose that ∆ is a fractional Q-divisor
+on X (i.e. ⌞∆⌟ = 0) with normal crossing support. Finally we assume that N is an
+integral divisor on X satisfying the numerical equivalence N ≡ L + ∆.
+Arguing much as in the proof of (1.3.1), but using Kawamata-V iehweg vanishing
+for Q-divisors, one then ﬁnds ﬁrst of all:
+21
+
+===PDF PAGE 22===
+Proposition 4.4. In the situation of (4.3) suppose that L satisﬁes the numerical hy-
+pothesis (3.1.1) of Theorem 3.1. If
+α ≥ n + s,
+then |KX + N | generates s-jets at a very general point x /∈ Supp(∆). □
+The case s = 0 is proven (in more generality, and with slightly weaker nu merical
+hypotheses) by Koll´ ar in [Ko1], §3. As in [Ko2], §8, this implies for example that if
+X is a smooth projective variety with generically large algeb raic fundamental group,
+and L is any big line bundle on X, then H 0(X, OX(KX + L)) ̸= 0. It would be
+interesting to know whether one can use the cases s > 0 of Proposition 4.4 (or the
+birationality statement of Proposition 4.5 below) to obtai n further information under
+suitable hypotheses on L. We note that it follows from [Ko2], Lemma 8.2, that if X
+has generically large algebraic fundamental group, and L is an ample line bundle on
+X, then given any α > 0 there exists an ´ etale covering m : X ′ − → X such that m∗ L
+satisﬁes the hypotheses of Theorem 3.1. However it is not imm ediately clear how to
+pass to useful information on X beyond the non-vanishing established by Koll´ ar.
+Arguing as in (4.1) one ﬁnds similarly:
+Proposition 4.5. In the set-up of (4.3), suppose that ǫ(L, x) ≥ 2n for a very general
+point x ∈ X. Then OX (KX + N ) is birationally very ample. □
+In view of Remark 4.2, this applies in particular if L satisﬁes the numerical hypotheses
+of (3.1.1) with α ≥ 2n.
+Finally, we give a simple application of (4.5) to pluricanon ical maps of minimal
+varieties:
+Corollary 4.6. Let X be a minimal n-fold of general type having (global) index r,
+i.e. assume that X has only terminal singularities, that KX is nef and big, and that
+rKX is Cartier. Then the pluricanonical series |mrKX| is birationally very ample for
+m ≥ 2n2 + 1.
+Sketch of Proof. Let f : Y − → X be a log resolution of X. Since X has only
+terminal singularities, we can write
+KY + ∆ ≡ f ∗ KX + P,
+where ∆ is a fractional divisor (i.e. ⌞∆⌟ = ∅) with normal crossing support, and P is
+integral, eﬀective and f -exceptional. Hence
+KY + ∆ + (mr − 1)f ∗ KX ≡ f ∗ (mrKX ) + P.
+22
+
+===PDF PAGE 23===
+By (3.1), ǫ(f ∗ OX (rKX), y) ≥ 1
+n for very general y ∈ Y . Hence if m > 2n2, then
+ǫ((mr − 1)f ∗ KX) ≥ mr − 1
+nr ≥ 2n + r − 1
+nr ,
+and it follows from (4.5) applied to N ≡ ∆ + ( mr − 1)f ∗ KX that the linear series
+|f ∗ (mrKX) + P | is birationally very ample on Y . But since P is f -exceptional,
+H 0(Y, OY (f ∗ (mrKX) + P )) = H 0(Y, OY (f ∗ (mrKX))) = H 0(X, OX(mrKX)).
+Therefore |mrKX| is birationally very ample on X. □
+References
+[An] T. Ando, Pluricanonical systems of algebraic varieties of general t ype of dimension ≤ 5,
+Algebraic Geometry, Sendai 1985, Adv. Stud. Pure Math., vol. 10 , T. Oda (ed.) (1987),
+1-10.
+[BS] M.C. Beltrametti and A.J. Sommese, Zero cycles and k-th order embeddings of smooth
+projective surfaces (with an appendix by Lothar G¨ ottsche) , in: 1988 Cortona proceedings on
+projective surfaces and their classiﬁcation, ed. by F. Catane se, Sympos. Math. 32, Academic
+Press, London (1992).
+[Be] D. Bertrand, Lemmes de z´ eros et nombres transcendants , S´ eminaire Bourbaki 652, Ast´ e-
+risque 145-146 (1987), 21-44.
+[Ca] F. Campana, Une version g´ eom´ etrique g´ en´ eralis´ ee du th´ eor` eme duproduit de Nadel , Bull.
+Soc. math. France 119 (1991), 479-493.
+[De1] J.-P. Demailly, A numerical criterion for very ample line bundles , J. Diﬀ. Geom. 37 (1993),
+323-374.
+[De2] J.-P. Demailly, Singular Hermitian metrics on positive line bundles , in: Complex Algebraic
+Varieties, Proceedings, 1990, Lect. Notes in Math. 1507 (Springer 1992).
+[EL] L. Ein and R. Lazarsfeld, Seshadri constants on smooth surfaces , Journ´ ees de G´ eometrie
+Alg´ ebrique d’Orsay, Ast´ erisque218 (1993), 177-186.
+[Fa] G. Faltings, Diophantine approximation on Abelian varieties , Ann. of Math. 133 (1991),
+549-576.
+[Fu] T. Fujita, On polarized manifolds whose adjoint bundles are not semipo sitive, Algebraic
+Geometry, Sendai 1985, Adv. Stud. Pure Math., vol. 10, T. Oda (e d.) (1987), 167-178.
+[Ha] R. Hartshorne, Ample subvarieties of algebraic varieties , Lecture Notes in Math. 156 (Sprin-
+ger 1970).
+23
+
+===PDF PAGE 24===
+[Jo] J.-P. Jouanolou, Th´ eor` eme de Bertini et applications (Birkh¨ auser 1983).
+[Ko1] J. Koll´ ar, Eﬀective base point freeness , Math. Ann. 296 (1993), 595-605.
+[Ko2] J. Koll´ ar, Shafarevich maps and plurigenera of algebraic varieties , Invent. math. 113 (1993),
+177-215.
+[KoMM] J. Koll´ ar, Y. Miyaoka and S. Mori, Rational curves on Fano varieties , Classiﬁcation of
+irregular Varieties, Proceedings Trento, 1990, Lecture Notes in M ath. 1515 (Springer 1992),
+100-105.
+[La] R. Lazarsfeld, Lectures on linear series , Park City/IAS Math. Series vol. 3 (to appear).
+[Mo] S. Mori, Classiﬁcation of higher dimensional varieties , Algebraic Geometry, Bowdoin 1985,
+Proc. Symp. Pure Math. vol. 46 (1987), 269-344.
+[Nad] A.M. Nadel, The boundedness of degree of Fano varieties with Picard numb er one , Journal
+of the AMS 4 (1991), 681-692.
+[Nak] M. Nakamaye, Multiplicity estimates and the product theorem , to appear in Bull. Soc. math.
+France.
+Lawrence EIN
+Department of Mathematics
+University of Illinois at Chicago
+Chicago, IL 60680
+e-mail: U22425%UICVM.BITNET
+Oliver K ¨UCHLE and Robert LAZARSFELD
+Department of Mathematics
+University of California, Los Angeles
+Los Angeles, CA 90024
+e-mail: kuechle@math.ucla.edu and rkl@math.ucla.edu
+24

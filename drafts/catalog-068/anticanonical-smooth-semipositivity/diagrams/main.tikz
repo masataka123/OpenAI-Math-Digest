@@ -1,0 +1,7 @@
+\node[card] (n0) {\heading{}{幾何学的帰着}{Geometric reduction}$\widetilde X=\mathbf C^a\times F\times Z,\quad T\curvearrowright Z$};
+\node[card,below=2.4cm of n0] (n1) {\heading{}{通常の有限体積定理}{Ordinary finite-volume theorem}$H^0(S,aA+bD_S)\ne0\quad(a>0,b\ge0)$};
+\node[card,below=2.4cm of n1] (n2) {\heading{}{自然不変切断の持上げ}{Lift a naturally invariant section}$0\ne s_Z\in H^0(Z,-mK_Z)^T$};
+\node[result,below=2.4cm of n2] (n3) {\heading{}{降下と有限ノルム}{Descent and finite norm}$H^0(X,-m\deg(\nu)K_X)\ne0$};
+\flow{n0}{n1}{\Tx{無形式の底に二つの計量を移す}{Transfer two metrics to a no-forms base}\\[5pt]\Cite{volume}; \Cite{invariant}};
+\flow{n1}{n2}{\Tx{不変直像の直交商と不変な持上げ}{Orthogonal invariant quotient and invariant lifting}\\[5pt]\Cite{smooth}; \Cite{ber09}};
+\flow{n2}{n3}{\Tx{deck不変の標準枠を掛け、指数を被覆次数倍する}{Multiply deck-invariant frames; multiply exponent by cover degree}\\[5pt]\Cite{structure}; \Cite{norm}};

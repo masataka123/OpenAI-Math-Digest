@@ -1,0 +1,2495 @@
+
+===PDF PAGE 1===
+arXiv:1009.3188v2  [math.AG]  3 Feb 2012
+NEW OUTLOOK ON THE MINIMAL MODEL PROGRAM, I
+PAOLO CASCINI AND VLADIMIR LAZI ´C
+Abstract. We give a new and self-contained proof of the ﬁnite generation of
+adjoint rings with big boundaries. As a consequence, we show that t he canonical
+ring of a smooth projective variety is ﬁnitely generated.
+Contents
+1. Introduction 1
+2. Preliminary results 3
+2.1. Notation and conventions 3
+2.2. Convex geometry and Diophantine approximation 6
+2.3. Nakayama-Zariski decomposition 8
+2.4. Divisorial rings 10
+3. Lifting sections 13
+4. BS
+A(V ) is a rational polytope 20
+5. Eﬀective non-vanishing 29
+6. Finite generation 38
+References 43
+1. Introduction
+The main goal of this paper is to provide a new proof of the following th eorem
+while avoiding techniques of the Minimal Model Program.
+Theorem 1.1. Let X be a smooth projective variety and let ∆ be a Q-divisor with
+simple normal crossings such that ⌊∆⌋ = 0.
+Then the log canonical ring R(X, K X + ∆) is ﬁnitely generated.
+Part of this work was written while the second author was a PhD stud ent of A. Corti, who
+inﬂuenced ideas developed here immensely. Part of the paper start ed as a collaboration with
+J. M cKernan. We would like to express our gratitude to both of them for t heir encouragement,
+support and continuous inspiration. We thank F. Ambro, C. Hacon, J. Hausen, A.-S. Kaloghiros,
+A. Lopez, K. Matsuki, and M. Reid for many useful comments. We ar e particularly grateful to the
+referees who helped to improve the presentation of the paper con siderably.
+The ﬁrst author was partially supported by an EPSRC grant. The se cond author is grateful
+for support from the University of Cambridge, the Max-Planck-In stitut f¨ ur Mathematik, and the
+Institut Fourier.
+1
+
+===PDF PAGE 2===
+This work supersedes [Laz09], where the results of this paper were ﬁrst proved
+without the Minimal Model Program by the second author. Several arguments here
+follow closely those in [Laz09] and, based on these methods, we obta in a streamlined
+proof which is almost entirely self-contained. We even prove a lifting s tatement
+for adjoint bundles without relying on asymptotic multiplier ideals, ass uming only
+Kawamata-Viehweg vanishing and some elementary arithmetic – this is Theorem
+3.4, which slightly generalises the lifting theorem from [HM10].
+The results presented here were originally proved by extensive use of methods of
+the Minimal Model Program in [BCHM10, HM10], and an analytic proof of ﬁnite
+generation of the canonical ring for varieties of general type is an nounced in [Siu08].
+By contrast, in this paper we avoid the following tools which are commo nly used
+in the Minimal Model Program: Mori’s bend and break, which relies on me thods
+in positive characteristic [Mor82], the Cone and Contraction theore m [KM98], the
+theory of asymptotic multiplier ideals, which was necessary to prove the existence
+of ﬂips in [HM10]. Moreover, contrary to classical Minimal Model Pro gram, we do
+not need to work with singular varieties.
+In [CL10], Corti and the second author recently proved that the C one and Con-
+traction theorem, and the main result of [BCHM10], follow quickly fro m one of our
+main results, Theorem A. Therefore, this paper and [CL10] togeth er give a com-
+pletely new organisation of the Minimal Model Program.
+We now brieﬂy describe the strategy of the proof. As part of the in duction, we
+prove the following two theorems.
+Theorem A. Let X be a smooth projective variety of dimension n. Let B1, . . . , B k
+be Q-divisors on X such that ⌊Bi⌋ = 0 for all i, and such that the support of∑k
+i=1 Bi has simple normal crossings. Let A be an ample Q-divisor on X, and
+denote Di = KX + A + Bi for every i.
+Then the adjoint ring
+R(X; D1, . . . , D k) =
+⨁
+(m1,...,m k)∈ Nk
+H 0(
+X, OX
+(
+⌊∑miDi⌋
+))
+is ﬁnitely generated.
+Theorem B. Let (X, ∑p
+i=1 Si) be a log smooth projective pair of dimension n, where
+S1, . . . , S p are distinct prime divisors. Let V = ∑p
+i=1 RSi ⊆ DivR(X), let L(V ) =
+{B = ∑biSi ∈ V |0 ≤ bi ≤ 1 for all i}, and let A be an ample Q-divisor on X.
+Then
+EA(V ) = {B ∈ L (V ) | |KX + A + B|R ̸= ∅}
+is a rational polytope.
+Note that all the results in this paper hold, with the same proofs, wh en varieties
+are projective over aﬃne varieties. For deﬁnitions of various term s involved in the
+2
+
+===PDF PAGE 3===
+statements of the theorems, see Section 2. In the sequel, “Theo rem A n” stands for
+“Theorem A in dimension n,” and so forth.
+In Section 2 we lay the foundation for the remainder of the paper: w e discuss basic
+properties of asymptotic invariants of divisors, convex geometry and Diophantine
+approximation, and we introduce divisorial rings graded by monoids o f higher rank
+and present basic consequences of ﬁnite generation of these ring s. Basic references
+for asymptotic invariants of divisors are [Nak04, ELM +06]. The ﬁrst systematic
+use of Diophantine approximation in the Minimal Model Program was init iated by
+Shokurov in [Sho03], and our arguments at several places in this pap er are inspired
+by some of the techniques introduced there.
+In Section 3 we give a simpliﬁed proof of a version of the lifting lemma fro m
+[HM10]. The proof in [HM10] is based on methods initiated in [Siu98], which also
+inspired a systematic use of multiplier ideals. We want to emphasise tha t our proof,
+even though ultimately following the same path, is much simpler and use s only
+Kawamata-Viehweg vanishing and some elementary arithmetic.
+In Section 4 we prove that one of the sets which naturally appears in the theory
+is a rational polytope. Some steps in the proof are close in spirit to Ha con’s ideas in
+the proof of [HK10, Theorem 9.16]. The proof is an application of the lif ting result
+from Section 3.
+In Section 5 we prove Theorem B n, assuming Theorems A n− 1 and B n− 1. Cer-
+tain steps of the proof here are similar to [BCHM10, Section 6], and th ey rely on
+Nakayama’s techniques from [Nak04]. Lemma 5.3 was obtained in [P˘ au 08] by ana-
+lytic methods, without assuming Theorems A n− 1 and B n− 1. We remark here that
+several arguments of this section can be made somewhat shorter if one were to as-
+sume some facts about lengths of extremal rays, similarly as in [BCH M10]; however,
+we are deliberately making the proofs a bit longer by proving everyth ing “from
+scratch”, especially since one of the aims of this paper is to provide t he basis for
+simpler proofs of the foundational results of the Minimal Model Pro gram [CL10].
+Finally, in Section 6, we prove Theorem A n, assuming Theorems A n− 1 and B n,
+therefore completing the induction step. This part of the proof is c lose in spirit
+to that of the ﬁnite generation of the restricted ring when the gra ding is by the
+non-negative integers, see [Cor07, Lemma 2.3.6].
+The papers [Cor11] and [CL11] give an introduction to some of the ideas presented
+in this work.
+2. Preliminary results
+2.1. Notation and conventions. In this paper all algebraic varieties are deﬁned
+over C. We denote by R+ and Q+ the sets of non-negative real and rational numbers.
+For any x, y ∈ RN , we denote by [ x, y ] and ( x, y ) the closed and open segments
+joining x and y. Given subsets A, B ⊆ RN , the Minkowski sum of A and B is
+A + B = {a + b |a ∈ A, b ∈ B}.
+3
+
+===PDF PAGE 4===
+We denote by C the topological closure of a set C ⊆ RN .
+Let X be a smooth projective variety and R ∈ { Z, Q, R}. We denote by Div R(X)
+the group of R-divisors on X, and ∼ R and ≡ denote R-linear and numerical equiv-
+alence of R-divisors. If A = ∑aiCi and B = ∑biCi are two R-divisors on X, then
+⌊A⌋ = ∑⌊ai⌋Ci is the round-down of A, ⌈A⌉ = ∑⌈ai⌉Ci is the round-up of A,
+{A} = A − ⌊ A⌋ is the fractional part of A, ∥A∥ = max
+i
+{|ai|} is the sup-norm of A,
+and
+A ∧ B =
+∑
+min{ai, b i}Ci.
+Given D ∈ DivR(X) and x ∈ X, mult x D is the order of vanishing of D at x. If S
+is a prime divisor, mult S D is the order of vanishing of D at the generic point of S.
+In this paper, a log pair (X, ∆) consists of a smooth variety X and an R-divisor
+∆ ≥ 0. We say that ( X, ∆) is log smooth if Supp ∆ has simple normal crossings. A
+projective birational morphism f : Y − → X is a log resolution of the pair ( X, ∆) if
+Y is smooth, Exc f is a divisor and the support of f − 1
+∗ ∆ + Exc f has simple normal
+crossings.
+Deﬁnition 2.1. Let ( X, ∆) be a log pair with ⌊∆⌋ = 0. Then ( X, ∆) has klt
+(respectively canonical, terminal ) singularities if for every log resolution f : Y − →
+X, if we write E = KY + f − 1
+∗ ∆ − f ∗(KX + ∆), we have ⌈E⌉ ≥ 0 (respectively
+E ≥ 0; E ≥ 0 and Supp E = Exc f ). Note that if ( X, ∆) is terminal, then for every
+R-divisor G, the pair ( X, ∆ + εG) is also terminal for every 0 ≤ ε ≪ 1.
+The following result is standard.
+Lemma 2.2. Let (X, S + B) be a log smooth projective pair, where S is a prime
+divisor and B is a Q-divisor such that ⌊B⌋ = 0 and S ⊈ Supp B. Then there exist
+a log resolution f : Y − → X of (X, S + B) and Q-divisors C, E ≥ 0 on Y with no
+common components, such that the components of C are disjoint, E is f -exceptional,
+and if T = f − 1
+∗ S, then
+KY + T + C = f ∗(KX + S + B) + E.
+Proof. By [KM98, Proposition 2.36], there exist a log resolution f : Y − → X which
+is a sequence of blow-ups along intersections of components of B, and Q-divisors
+C, E ≥ 0 on Y with no common components, such that the components of C are
+disjoint, E is f -exceptional, and
+KY + C = f ∗(KX + B) + E.
+Since ( X, S + B) is log smooth, it follows that if some components of B intersect,
+then no irreducible component of their intersection is contained in S. Thus T = f ∗S,
+and the lemma follows. □
+4
+
+===PDF PAGE 5===
+If X is a smooth projective variety, and if D is an integral divisor on X, we denote
+by Bs |D| the base locus of D. If D is an R-divisor on X, we denote
+|D|R = {D′ ≥ 0 |D ∼ R D′} and B(D) =
+⋂
+D′∈|D|R
+Supp D′,
+and we call B(D) the stable base locus of D. We set B(D) = X if |D|R = ∅.
+The following result shows that this is compatible with the usual deﬁnit ion, see
+[BCHM10, Lemma 3.5.3].
+Lemma 2.3. Let X be a smooth projective variety and let D be a Q-divisor. Then
+B(D) = ⋂
+q Bs |qD| for all q suﬃciently divisible.
+Proof. Fix a point x ∈ X \B(D). Then there exist an R-divisor F ≥ 0, real numbers
+r1, . . . , r k and rational functions f1, . . . , f k ∈ k(X) such that F = D + ∑k
+i=1 ri(fi)
+and x / ∈ Supp F . Let W ⊆ DivR(X) be the subspace spanned by the components
+of D and all ( fi). Let W0 ⊆ W be the subspace of divisors R-linearly equivalent
+to zero, and note that W0 is a rational subspace of W . Consider the quotient map
+π : W − → W/W 0. Then the set {G ∈ π − 1(π(D)) | G ≥ 0} is not empty as it
+contains F , and it is cut out from W by rational hyperplanes. Thus, it contains a
+Q-divisor D′ ≥ 0 such that D ∼ Q D′ and x /∈ Supp D′. □
+Deﬁnition 2.4. Let ( X, S + ∑p
+i=1 Si) be a log smooth projective pair, where S and
+all Si are distinct prime divisors, let V = ∑p
+i=1 RSi ⊆ DivR(X), and let A be a
+Q-divisor on X. We deﬁne
+L(V ) = {B = ∑biSi ∈ V |0 ≤ bi ≤ 1 for all i},
+EA(V ) = {B ∈ L (V ) | |KX + A + B|R ̸= ∅},
+BS
+A(V ) = {B ∈ L (V ) |S ⊈ B(KX + S + A + B)}.
+If D is an integral divisor, Fix |D|and Mob( D) denote the ﬁxed and mobile parts
+of D. Hence |D|= |Mob(D)|+ Fix|D|, and the base locus of |Mob(D)|contains no
+divisors. More generally, if V is any linear system on X, Fix( V ) denotes the ﬁxed
+divisor of V . If S is a prime divisor on X such that S ⊈ Bs |D|, then |D|S denotes
+the image of the linear system |D| under restriction to S.
+Deﬁnition 2.5. Let X be a smooth projective variety and let S be a smooth prime
+divisor. Let C and D be Q-divisors on X such that |C|Q ̸= ∅, |D|Q ̸= ∅ and
+S ⊈ B(D). Then by Lemma 2.3, we may deﬁne
+Fix(C) = lim inf 1
+k Fix |kC | and FixS(D) = lim inf 1
+k Fix |kD|S
+for all k suﬃciently divisible.
+5
+
+===PDF PAGE 6===
+2.2. Convex geometry and Diophantine approximation.
+Deﬁnition 2.6. Let C ⊆ RN be a convex set. A subset F ⊆ C is a face of C if F
+is convex, and whenever tu + (1 − t)v ∈ F for some u, v ∈ C and 0 < t < 1, then
+u, v ∈ F . Note that C is itself a face of C. We say that x ∈ C is an extreme point of
+C if {x} is a face of C. For y ∈ C , the minimal face of C which contains y is denoted
+by face( C, y ). It is a well known fact that any compact convex set C ⊆ RN is the
+convex hull of its extreme points.
+A polytope in RN is a compact set which is the intersection of ﬁnitely many half
+spaces; equivalently, it is the convex hull of ﬁnitely many points in RN . A polytope
+is rational if it is an intersection of ﬁnitely many rational half spaces; equivalent ly,
+it is the convex hull of ﬁnitely many rational points in RN . A rational polyhedral
+cone in RN is a convex cone spanned by ﬁnitely many rational vectors.
+Remark 2.7. Given a smooth projective variety X, we often consider subspaces
+V ⊆ DivR(X) which are spanned by a ﬁnite set of prime divisors. Thus, these
+divisors implicitly deﬁne an isomorphism between V and RN for some N.
+With notation from Deﬁnition 2.4, L(V ) is a rational polytope. Also, the set
+of rational points is dense in BS
+A(V ). Indeed, if B = ∑biSi ∈ B S
+A(V ), then B +∑
+bi<1
+εiSi ∈ B S
+A(V ) for all 0 ≤ εi ≪ 1.
+Lemma 2.8. Let P be a compact convex set in RN , and ﬁx any norm ∥ · ∥ on RN .
+Then P is a polytope if and only if for every point x ∈ P there exists a real number
+δ = δ(x, P) > 0, such that for every y ∈ RN with 0 < ∥x − y∥ < δ, if (x, y ) ∩ P ̸ = ∅,
+then y ∈ P .
+Proof. Suppose that P is a polytope and let x ∈ P . Let F1, . . . , F k be the set of all
+the faces of P which do not contain x. Then it is enough to deﬁne
+δ(x, P) = min {∥x − y∥ | y ∈ Fi for some i = 1, . . . , k }.
+Conversely, assume that P is not a polytope, and let xn be an inﬁnite sequence
+of distinct extreme points of P. Since P is compact, by passing to a subsequence
+we may assume that there exists x = lim
+n→∞
+xn ∈ P . For any real number δ > 0
+pick k ∈ N such that 0 < ∥x − xk∥ < δ , and set x′ = x + t(xk − x) for some
+1 < t < δ/ ∥x − xk∥. Then 0 < ∥x − x′∥ < δ and ∅ ̸= (x, x k) ⊆ (x, x ′) ∩ P , but x′ /∈ P
+since xk is an extreme point of P. This proves the lemma. □
+Remark 2.9. With assumptions from Lemma 2.8, assume additionally that P does
+not contain the origin, and let C = R+P. Then the same proof shows that C is
+a polyhedral cone if and only if for every point x ∈ C there exists a real number
+δ = δ(x, C) > 0, such that for every y ∈ RN with 0 < ∥x − y∥ < δ, if ( x, y ) ∩ C ̸ = ∅,
+then y ∈ C .
+6
+
+===PDF PAGE 7===
+Lemma 2.10. Let P ⊆ RN be a polytope which does not contain the origin, and
+let D = R+P. Let Σ ∈ D\{ 0} and let Σm ∈ RN be a sequence of distinct points
+such that lim
+m→∞
+Σm = Σ. Let S ∈ RN \{0}, let cm ≥ 0 be a bounded sequence of real
+numbers, and set Γm = Σ m − cmS. Assume that (Σ, Γm) ∩ D ̸ = ∅ for every m ∈ N.
+Then, there exists Pm ∈ [Σm, Γm] ∩ D for inﬁnitely many m. If additionally
+Pm = Γ m and (Σm, Γm) ∩ D = ∅ for all m, then after passing to a subsequence, we
+have lim
+m→∞
+Γm = Σ.
+Proof. Fix any norm ∥ · ∥on RN . By passing to a subsequence we may assume that
+there is a constant c ≥ 0 such that c = lim
+m→∞
+cm. Assume ﬁrst that c = 0. Then
+lim
+m→∞
+Γm = Σ, and since D is a polyhedral cone, Remark 2.9 implies that Γ m ∈ D
+for m ≫ 0 and the lemma follows.
+Thus, from now on we assume that c > 0. First we consider the case when
+there are inﬁnitely many m such that Σ m ∈ Σ + RS. Then there is a ﬁxed point
+Pm = P ∈ (Σ, Γm) ∩ D for all m ≫ 0. Since lim
+m→∞
+Σm = Σ, it follows that P ∈
+[Σm, Γm]∩D for all m and the ﬁrst claim follows. For the second claim, if additionally
+(Σm, Γm)∩D = ∅, then P = Σ m since P ̸= Γ m by deﬁnition of P , and we immediately
+get a contradiction.
+Therefore, we may assume that Σ m /∈ Σ + RS for all m. By Remark 2.9 there
+exist points Qm ∈ (Σ, Γm) ∩ D and a constant 0 < d < c such that ∥Qm − Σ∥ =
+d for all m ≫ 0. After passing to a subsequence, we may assume that there exis ts
+lim
+m→ ∞
+Qm = Q ∈ D . Note that Q ∈ [Σ, Σ − cS]. For every m, as
+Γm = cm
+c Σ − cm
+c (Σ − cS) + Σm,
+Γm belongs to the aﬃne 2-plane {t1Σ + t2(Σ − cS) + t3Σm |ti ∈ R, t 1 + t2 + t3 = 1},
+and since d < c , for all m ≫ 0 there exist Pm ∈ [Σm, Γm] such that Qm ∈ [Pm, Q ].
+It is easy to see that lim
+m→∞
+Pm = Q and by Remark 2.9 it follows that Pm ∈ D for
+m ≫ 0, as claimed.
+Now assume additionally that Pm = Γ m and (Σ m, Γm) ∩ D = ∅, and observe that
+lim
+m→∞
+Γm = Σ − cS ̸= Σ. Denote Γ = Σ − c
+2 S ∈ D and Rm = Γ m + c
+2S; note
+that Rm ∈ (Σm, Γm) for m ≫ 0, and thus Rm /∈ D . Let δ = δ(Γ, D) > 0, whose
+existence is guaranteed by Remark 2.9, and pick m ≫ 0 such that ∥Rm − Γ∥ =
+∥Γm − (Σ − cS)∥ < δ and Rm /∈ D . Then the segments [Σ , Γm] and [ Rm, Γ] intersect
+at a point R′
+m ̸= Γ, and we have R′
+m ∈ D since [Γ m, Σ] = [ Pm, Σ] ⊆ D . But then
+Rm ∈ D by Remark 2.9, a contradiction. Thus c = 0 and lim
+m→∞
+Γm = Σ. □
+Lemma 2.11 (Gordan’s Lemma) . Let C ⊆ RN be a rational polyhedral cone. Then
+C ∩ ZN is a ﬁnitely generated monoid.
+Proof. See [Ful93, §1.2]. □
+7
+
+===PDF PAGE 8===
+Deﬁnition 2.12. Let C ⊆ RN be a convex set and let Φ : C − → R be a function.
+Then Φ is convex if Φ
+(
+tx + (1 − t)y
+)
+≤ tΦ(x) + (1 − t)Φ(y) for any x, y ∈ C and any
+t ∈ [0, 1]. If C is a rational polytope, then Φ is rationally piecewise aﬃne if there
+exists a ﬁnite decomposition C = ⋃ℓ
+i=1 Ci into rational polytopes such that Φ |Ci is a
+rational aﬃne map for all i. If C is a cone, then Φ is homogeneous of degree one if
+Φ(tx) = tΦ(x) for any x ∈ C and t ∈ R+.
+Lemma 2.13. Let H ⊆ RN be a rational aﬃne hyperplane which does not contain
+the origin, and let P ⊆ H be a rational polytope. Let PQ = P ∩ QN , and let
+f : PQ − → R be a bounded convex function. Assume that there exist x1, . . . , x q ∈ P Q
+with f (xi) ∈ Q for all i, and that for any x ∈ P Q there exists (r1, . . . , r q) ∈ Rq
++ such
+that x = ∑rixi and f (x) = ∑rif (xi).
+Then f can be extended to a rational piecewise aﬃne function on P.
+Proof. Since P ⊆ H , for any x ∈ P Q and (r1, . . . , r q) ∈ Rq
++ such that x = ∑rixi, we
+have ∑ri = 1. Pick C ∈ Q+ such that − C ≤ f (x) ≤ C for all x ∈ P Q.
+Let Q ⊆ RN +1 be the convex hull of all the points
+(
+xi, f (xi)
+)
+and ( xi, C ), and set
+Q′ = {(x, y ) ∈ P Q × R |f (x) ≤ y ≤ C}. Since f is convex, and all
+(
+xi, f (xi)
+)
+and
+(xi, C ) are contained in Q′, it follows that Q ∩ QN +1 ⊆ Q ′. Now, ﬁx ( u, v ) ∈ Q ′.
+Then there exists t ∈ [0, 1] such that v = tf (u) + (1 − t)C, and as u ∈ P Q, there
+exist ri ∈ R+ such that ∑ri = 1, u = ∑rixi and f (u) = ∑rif (xi). Therefore
+(u, v ) = ∑tri
+(
+xi, f (xi)
+)
++ ∑(1 − t)ri(xi, C ),
+and hence ( u, v ) ∈ Q . This yields Q ∩ QN +1 = Q′∩ QN +1, and in particular Q =
+Q′.
+Deﬁne F : P − → [− C, C ] as
+F (x) = min {y ∈ [− C, C ] |(x, y ) ∈ Q} .
+Then F extends f , and it is rational piecewise aﬃne as Q is a rational polytope. □
+We use the following result from Diophantine approximation.
+Lemma 2.14. Let ∥ · ∥ be a norm on RN , let P ⊆ RN be a rational polytope and
+let x ∈ P . Fix a positive integer k and a positive real number ε.
+Then there are ﬁnitely many xi ∈ P and positive integers ki divisible by k, such
+that kixi/k are integral, ∥x − xi∥ < ε/k i, and x is a convex linear combination of xi.
+Proof. See [BCHM10, Lemma 3.7.7]. □
+2.3. Nakayama-Zariski decomposition. We need several deﬁnitions and results
+from [Nak04].
+Deﬁnition 2.15. Let X be a smooth projective variety, let A be an ample R-divisor,
+and let Γ be a prime divisor. If D ∈ DivR(X) is a big divisor, deﬁne
+oΓ(D) = inf {multΓ D′ |D′ ∈ |D|R}.
+8
+
+===PDF PAGE 9===
+If D ∈ DivR(X) is pseudo-eﬀective, set
+σΓ(D) = lim
+ε→ 0
+oΓ(D + εA) and Nσ (D) = ∑
+Γ σΓ(D) ·Γ,
+where the sum runs over all prime divisors Γ on X.
+Lemma 2.16. Let X be a smooth projective variety, let A be an ample R-divisor,
+let D be a pseudo-eﬀective R-divisor, and let Γ be a prime divisor. Then σΓ(D)
+exists as a limit, it is independent of the choice of A, it depends only on the nu-
+merical equivalence class of D, and σΓ(D) = oΓ(D) if D is big. The function σΓ
+is homogeneous of degree one, convex and lower semi-continu ous on the cone of
+pseudo-eﬀective divisors on X, and it is continuous on the cone of big divisors. For
+every pseudo-eﬀective R-divisor E we have σΓ(D) = lim
+ε→ 0
+σΓ(D + εE).
+Furthermore, Nσ (D) is an R-divisor on X, D − Nσ (D) is pseudo-eﬀective, and
+for any R-divisor 0 ≤ F ≤ Nσ (D) we have Nσ (D − F ) = Nσ (D) − F .
+Proof. See [Nak04, §III.1]. □
+Remark 2.17. Let X be a smooth projective variety, let Dm be a sequence of
+pseudo-eﬀective R-divisors which converge to an R-divisor D, and let Γ be a prime
+divisor on X. Then the sequence σΓ(Dm) is bounded. Indeed, pick k ≫ 0 such
+that D − kΓ is not pseudo-eﬀective, and assume that σΓ(Dm) > k for inﬁnitely
+many m. Then Dm − kΓ is pseudo-eﬀective for inﬁnitely many m by Lemma 2.16,
+a contradiction.
+Remark 2.18. Let X be a smooth projective variety, let D be a pseudo-eﬀective R-
+divisor, let A be an ample R-divisor, and let x ∈ X \⋃
+ε>0 B(D+εA). Let f : Y → X
+be the blowup of X along x with the exceptional divisor E. Then σE(f ∗D) = 0. To
+see this, observe that E ⊈ B(f ∗D + εf ∗A), and thus oE(f ∗D + εf ∗A) = 0. Letting
+ε → 0, we conclude by Lemma 2.16.
+Lemma 2.19. Let X be a smooth projective variety, let D be a pseudo-eﬀective
+R-divisor, and let A be an ample Q-divisor.
+If D ̸≡ Nσ (D), then there exist a positive integer k and a positive rational number
+β such that kA is integral and
+h0(X, OX (⌊mD⌋ + kA)) > βm for all m ≫ 0.
+Proof. Replacing D by D − Nσ (D), we may assume that Nσ (D) = 0. Now apply
+[Nak04, Theorem V.1.11]. □
+Lemma 2.20. Let X be a smooth projective variety, let D be a pseudo-eﬀective R-
+divisor on X, and let Γ1, . . . , Γℓ be distinct prime divisors such that σΓi(D) > 0 for
+all i.
+Then for any γj ∈ R+ we have σΓi(∑ℓ
+j=1 γjΓj) = γi for every i. In particular, if
+D ≥ 0 and if σΓ(D) > 0 for every component Γ of D, then D = Nσ (D).
+9
+
+===PDF PAGE 10===
+Proof. This is [Nak04, Proposition III.1.10]. □
+Lemma 2.21. Let X be a smooth projective variety and let Γ be a prime divisor.
+Let D be a pseudo-eﬀective R-divisor and let A be an ample R-divisor.
+(i) If σΓ(D) = 0 , then Γ ⊈ B(D + A).
+(ii) If σΓ(D) > 0, then Γ ⊆ B(D + εA) for 0 < ε ≪ 1.
+Proof. For (i), note that σΓ(D + 1
+2A) ≤ σΓ(D) = 0. By Lemma 2.16 there exists
+0 ≤ D′ ∼ R D + 1
+2 A such that γ = multΓ D′ ≪ 1, and in particular 1
+2A + γΓ is ample.
+Pick A′ ∼ R
+1
+2A + γΓ such that A′ ≥ 0 and mult Γ A′ = 0. Then
+D + A ∼ R D′ − γΓ + A′ ≥ 0 and mult Γ(D′ − γΓ + A′) = 0 .
+This proves the ﬁrst claim. The second claim follows from 0 < σ Γ(D) = lim
+ε→ 0
+oΓ(D +
+εA), since then oΓ(D + εA) > 0 for 0 < ε ≪ 1. □
+2.4. Divisorial rings. Now we establish properties of ﬁnite generation of (diviso-
+rial) graded rings that we use in the paper.
+Deﬁnition 2.22. Let X be a smooth projective variety and let S ⊆ DivQ(X) be a
+ﬁnitely generated monoid. Then
+R(X, S) =
+⨁
+D∈S
+H 0(
+X, OX
+(
+⌊D⌋)
+)
+is a divisorial S-graded ring. If D1, . . . , D ℓ are generators of S and if Di ∼ Q ki(KX +
+∆i), where ∆ i ≥ 0 and ki ∈ Q+ for every i, the algebra R(X, S) is an adjoint ring
+associated to S; furthermore, the adjoint ring associated to the sequence D1, . . . , D ℓ
+is
+R(X; D1, . . . , D ℓ) =
+⨁
+(m1,...,m ℓ)∈ Nℓ
+H 0(
+X, OX (⌊∑miDi⌋)
+)
+.
+Note that then there is a natural projection map R(X; D1, . . . , D ℓ) − → R(X, S).
+If C ⊆ DivR(X) is a rational polyhedral cone, then Lemma 2.11 implies that
+S = C ∩ Div(X) is a ﬁnitely generated monoid, and we deﬁne the algebra R(X, C),
+an adjoint ring associated to C, to be R(X, S).
+Deﬁnition 2.23. Let ( X, S + D) be a projective pair, where X is smooth, S is a
+smooth prime divisor and D ≥ 0 is integral, and ﬁx η ∈ H 0(X, OX (S)) such that
+div η = S. From the exact sequence
+0 − → H 0(X, OX (D − S))
+·η
+− → H 0(X, OX(D))
+ρS
+− → H 0(S, OS(D))
+we deﬁne res S H 0(X, OX (D)) = Im( ρS), and for σ ∈ H 0(X, OX (D)), denote σ|S =
+ρS(σ). Note that
+Ker(ρS) = H 0(X, OX (D − S)) ·η,
+and that res S H 0(X, OX (D)) = 0 if and only if S ⊆ Bs |D|.
+10
+
+===PDF PAGE 11===
+If S ⊆ DivQ(X) is a monoid generated by divisors D1, . . . , D ℓ, the restriction of
+R(X, S) to S is the S-graded ring
+resS R(X, S) =
+⨁
+D∈S
+resS H 0(
+X, OX (⌊D⌋)
+)
+,
+and similarly for res S R(X; D1, . . . , D ℓ).
+Deﬁnition 2.24. Let S ⊆ Zr be a ﬁnitely generated monoid and let R = ⨁
+s∈S Rs
+be an S-graded algebra. If S ′ ⊆ S is a ﬁnitely generated submonoid, then R′ =⨁
+s∈S ′ Rs is a Veronese subring of R. If there exists a subgroup L ⊂ Zr of ﬁnite
+index such that S ′ = S ∩ L, then R′ is a Veronese subring of ﬁnite index of R.
+Lemma 2.25. Let S ⊆ Zr be a ﬁnitely generated monoid and let R = ⨁
+s∈S Rs be
+an S-graded algebra. Let S ′ ⊆ S be a ﬁnitely generated submonoid and let R′ =⨁
+s∈S ′ Rs.
+(i) If R is ﬁnitely generated over R0, then R′ is ﬁnitely generated over R0.
+(ii) If R0 is Noetherian, R′ is a Veronese subring of ﬁnite index of R, and R′ is
+ﬁnitely generated over R0, then R is ﬁnitely generated over R0.
+Proof. See [ADHL10, Proposition 1.2.2, Proposition 1.2.4]. □
+Corollary 2.26. Let f : Y − → X be a birational map between smooth projective
+varieties. Let D1, . . . , D ℓ ∈ DivQ(X) and D′
+1, . . . , D ′
+ℓ ∈ DivQ(Y ), and assume that
+there exist positive rational numbers ri and f -exceptional Q-divisors Ei ≥ 0 such
+that D′
+i ∼ Q rif ∗Di + Ei for every i. Let S be a smooth prime divisor on X and let
+T = f − 1
+∗ S.
+Then the ring R = R(X; D1, . . . , D ℓ) is ﬁnitely generated if and only if the ring
+R′ = R(Y ; D′
+1, . . . , D ′
+ℓ) is ﬁnitely generated, and the ring resS R is ﬁnitely generated
+if and only if the ring resT R′ is ﬁnitely generated.
+Proof. Let k be a positive integer such that all kDi, kriD′
+i and kEi are integral, and
+such that kD′
+i ∼ krif ∗Di + kEi for all i. Then the rings R(X; kr1D1, . . . , kr ℓDℓ) and
+R(Y ; kD′
+1, . . . , kD ′
+ℓ) are Veronese subrings of ﬁnite index of R and R′, respectively,
+and they are both isomorphic to R(Y ; kr1f ∗D1 + kE1, . . . , kr ℓf ∗Dℓ + kEℓ). We
+conclude by Lemma 2.25. The same argument works for restricted r ings. □
+Lemma 2.27. Let X be a smooth projective variety, let D1, . . . , D ℓ ∈ DivQ(X), and
+denote C = ∑ℓ
+i=1 R+Di ⊆ DivR(X).
+(i) If R(X, C) is ﬁnitely generated, then R(X; D1, . . . , D ℓ) is ﬁnitely generated.
+(ii) Let S be a smooth prime divisor on X. If resS R(X, C) is ﬁnitely generated,
+then resS R(X; D1, . . . , D ℓ) is ﬁnitely generated.
+Proof. We only show (i), since (ii) is analogous. Let k be a positive integer such that
+D′
+i = kDi ∈ Div(X) for all i. The monoid S = ∑ℓ
+i=1 ND′
+i ⊆ Div(X) is a submonoid
+of C ∩ Div(X), and thus R(X, S) is ﬁnitely generated by Lemma 2.25(i). But then
+11
+
+===PDF PAGE 12===
+R(X; D′
+1, . . . , D ′
+ℓ) is ﬁnitely generated by [ADHL10, Proposition 1.2.6], and ﬁnally
+R(X; D1, . . . , D ℓ) is ﬁnitely generated by Lemma 2.25(ii). □
+A stronger version of the following result can be found in [ELM +06], see [CL10,
+Theorem 3.5]. Here we prove it as a consequence of Lemma 2.13.
+Lemma 2.28. Let X be a smooth projective variety and let D1, . . . , D ℓ ∈ DivQ(X)
+be such that |Di|Q ̸= ∅ for each i. Let V ⊆ DivR(X) be the subspace spanned by the
+components of D1, . . . , D ℓ, and let P ⊆ V be the convex hull of D1, . . . , D ℓ. Assume
+that the ring R(X; D1, . . . , D ℓ) is ﬁnitely generated. Then:
+(i) Fix extends to a rational piecewise aﬃne function on P;
+(ii) there exists a positive integer k such that for every D ∈ P and every m ∈ N,
+if m
+k D ∈ Div(X), then Fix(D) = 1
+m Fix |mD|.
+Proof. Pick a prime divisor S ∈ Div(X) \V and a rational function η ∈ k(X) such
+that mult S div η = 1. Then, setting D′
+i = Di + div η ∼ Q Di, we have mult S D′
+i = 1
+and R(X; D1, . . . , D ℓ) ≃ R(X; D′
+1, . . . , D ′
+ℓ). If P ′ ⊆ DivR(X) is the convex hull of
+D′
+1, . . . , D ′
+ℓ, it suﬃces to prove claims (i) and (ii) on P ′. Therefore, after replacing
+Di by D′
+i, we may assume that P belongs to a rational aﬃne hyperplane which does
+not contain the origin. Denote PQ = P ∩ DivQ(X).
+Fix a prime divisor G ∈ V . For all D ∈ P Q and all m ∈ N suﬃciently divisible,
+let ϕ m(D) = 1
+m multG Fix |mD|, and set ϕ (D) = mult G Fix(D). Then, in order to
+show (i), it suﬃces to prove that ϕ is rational piecewise aﬃne.
+For every D ∈ P Q, the ring R(X, D ) is ﬁnitely generated by Lemma 2.25(i), and so
+by [Bou89, III.1.2], there exists a positive integer d such that R(X, dD ) is generated
+by H 0(X, OX (dD)). Thus
+(1) ϕ (D) = ϕ d(D), and in particular ϕ (D) ∈ Q.
+If σ1, . . . , σ q are generators of R(X; D1, . . . , D ℓ), then there are Gi ∈ P and mi ∈ Q+
+such that σi ∈ H 0(
+X, OX (⌊miGi⌋)
+)
+. Fix D ∈ P Q. Let m be a suﬃciently divisible
+positive integer such that mD ∈ ∑NDi ∩ Div(X), and let σ ∈ H 0(X, OX (mD)) be
+such that
+(2) ϕ m(D) = 1
+m multG div σ.
+Then σ is a polynomial in σi, thus there are α i ∈ N such that mD = ∑α imiGi and
+(3) mult G div σ =
+∑
+α i multG div σi.
+Denote tm,i = α imi
+m , and note that mult G div σi ≥ ϕ (miGi) = miϕ (Gi). Then by (2)
+and (3) we have
+D =
+∑
+tm,i Gi and ϕ (D) = inf
+m∈ N
+ϕ m(D) ≥ inf
+m∈ N
+∑
+tm,i ϕ (Gi).
+12
+
+===PDF PAGE 13===
+However, for all ti ∈ Q+ with D = ∑tiGi, by convexity we have ∑tiϕ (Gi) ≥ ϕ (D).
+Therefore
+ϕ (D) = inf
+∑
+tiϕ (Gi),
+where the inﬁmum is taken over all ( t1, . . . , t q) ∈ Rq
++ such that D = ∑tiGi. By
+compactness, there exists ( r1, . . . , r q) ∈ Rq
++ such that D = ∑riGi and ϕ (D) =∑riϕ (Gi). Thus, ϕ is rational piecewise aﬃne by Lemma 2.13, and (i) follows.
+Now we show (ii). After decomposing P, we may assume that Fix is rational linear
+on R+P. By Lemma 2.11, the monoid S = R+P ∩ Div(X) is ﬁnitely generated, and
+let F1, . . . , F p be its generators. By (1), there exists a positive integer k such that
+Fix(Fi) = 1
+k Fix |kFi| for all i. Let D ∈ P ∩ DivQ(X), and let m, α i ∈ N be such
+that m
+k D = ∑α iFi ∈ S . Then by (i) and by convexity we have
+∑α i Fix(Fi) = m
+k Fix(D) ≤ 1
+k Fix |mD| ≤ 1
+k
+∑α i Fix |kFi|= ∑α i Fix(Fi),
+and hence all inequalities are equalities. This completes the proof. □
+The following result will be used in the proof of Theorem 1.1.
+Theorem 2.29. Let (X, ∆) be a projective klt pair of dimension n, where ∆ is a
+Q-divisor. Then there exist a projective klt pair (Y, Γ) of dimension at most n and
+positive integers p and q such that the divisors p(KX +∆) and q(KY +Γ) are integral,
+KY + Γ is big and
+R(X, p (KX + ∆)) ≃ R(Y, q (KY + Γ)).
+Proof. See [FM00, Theorem 5.2]. □
+3. Lifting sections
+In this section, we prove a slight generalization of the lifting theorem by Hacon
+and M cKernan [HM10], see Theorem 3.4.
+We will need the following easy consequence of Kawamata-Viehweg va nishing:
+Lemma 3.1. Let (X, B ) be a log smooth projective pair of dimension n, where B is
+a Q-divisor such that ⌊B⌋ = 0. Let A be a nef and big Q-divisor.
+(i) Let S be a smooth prime divisor such that S ⊈ Supp B. If G ∈ Div(X) is
+such that G ∼ Q KX + S + A + B, then |G|S|= |G|S.
+(ii) Let f : X − → Y be a birational morphism to a projective variety Y , and let
+U ⊆ X be an open set such that f|U is an isomorphism and U intersects at
+most one irreducible component of B. Let H ′ be a very ample divisor on Y
+and let H = f ∗H ′. If F ∈ Div(X) is such that F ∼ Q KX + (n+ 1)H + A+ B,
+then |F | is basepoint free at every point of U.
+Proof. Considering the exact sequence
+0 − → O X (G − S) − → O X (G) − → O S(G) − → 0,
+13
+
+===PDF PAGE 14===
+Kawamata-Viehweg vanishing implies H 1(X, OX (G − S)) = 0. In particular, the
+map H 0(X, OX (G)) − → H 0(S, OS(G)) is surjective. This proves (i).
+We prove (ii) by induction on n. Let x ∈ U be a closed point, and pick a general
+element T ∈ |H| which contains x. Then by the assumptions on U, it follows that
+(X, T + B) is log smooth, and since F|T ∼ Q KT + nH|T + A|T + B|T , by induction
+F|T is free at x. Considering the exact sequence
+0 − → O X (F − T ) − → O X(F ) − → O T (F ) − → 0,
+Kawamata-Viehweg vanishing implies that H 1(X, OX (F − T )) = 0. In particular,
+the map H 0(X, OX (F )) − → H 0(T, OT (F )) is surjective, and (ii) follows. □
+Lemma 3.2. Let (X, S + B) be a projective pair, where X is smooth, S is a smooth
+prime divisor and B is a Q-divisor such that S ⊈ Supp B. Let A be a nef and big
+Q-divisor on X. Assume that D ∈ Div(X) is such that D ∼ Q KX + S + A + B, and
+let Σ ∈ |D|S|. Let Φ ∈ DivQ(S) be such that the pair (S, Φ) is klt and B|S ≤ Σ + Φ.
+Then Σ ∈ |D|S.
+Proof. Let f : Y − → X be a log resolution of the pair ( X, S + B), and write
+T = f − 1
+∗ S. Then there are Q-divisors Γ ≥ 0 and E ≥ 0 on Y with no common
+components such that T ⊈ Supp Γ, E is f -exceptional, and
+KY + T + Γ = f ∗(KX + S + B) + E.
+Let C = Γ − E and
+(4) G = f ∗D − ⌊ C⌋ = f ∗D − ⌊ Γ⌋ + ⌈E⌉.
+Then
+G − (KY + T + {C}) ∼ Q f ∗(KX + S + A + B) − (KY + T + C) = f ∗A
+is nef and big, and Lemma 3.1(i) implies that
+(5) |G|T |= |G|T .
+Moreover, since E ≥ 0 is f -exceptional, we have
+|G|T + ⌊Γ⌋|T = |f ∗D − ⌊ Γ⌋ + ⌈E⌉|T + ⌊Γ⌋|T(6)
+⊆ | f ∗D + ⌈E⌉|T = |f ∗D|T + ⌈E⌉|T .
+Denote g = f|T : T − → S. Then
+KT + C|T = g∗(KS + B|S) and KT + Ψ = g∗(KS + Φ),
+for some Q-divisor Ψ on T , and note that ⌊Ψ⌋ ≤ 0 since ( S, Φ) is klt. Therefore
+(7) g∗(B|S − Φ) = C|T − Ψ.
+14
+
+===PDF PAGE 15===
+By assumption we have that B|S ≤ Σ + Φ, that g∗Σ is integral, and that the support
+of C + T has normal crossings, so this together with (7) gives
+g∗Σ ≥ g∗Σ + ⌊Ψ⌋ = ⌊g∗Σ + Ψ⌋ ≥ ⌊ g∗(B|S − Φ) + Ψ⌋
+= ⌊C|T ⌋ = ⌊C⌋|T = (f ∗D)|T − G|T .
+Denote
+R = G|T − (f ∗D)|T + g∗Σ.
+Then R ≥ 0 by the above, and g∗Σ ∈ | (f ∗D)|T | implies R ∈ | G|T | = |G|T by (5).
+Therefore R + ⌊Γ⌋|T ∈ |f ∗D|T + ⌈E⌉|T by (6), and this together with (4) yields
+g∗Σ = R + (f ∗D)|T − G|T = R + ⌊Γ⌋|T − ⌈ E⌉|T ∈ |f ∗D|T ,
+hence the claim follows. □
+Lemma 3.3. Let (X, S + B + D) be a log smooth projective pair, where S is a
+prime divisor, B is a Q-divisor such that ⌊B⌋ = 0 and S ⊈ Supp B, and D ≥ 0 is
+a Q-divisor such that D and S + B have no common components. Let P be a nef
+Q-divisor and denote ∆ = S + B + P . Assume that
+KX + ∆ ∼ Q D.
+Let k be a positive integer such that kP and kB are integral, and write Ω = ( B+P )|S.
+Then there is a very ample divisor H such that for all divisors Σ ∈ |k(KS + Ω)|
+and U ∈ |H|S|, and for every positive integer l we have
+lΣ + U ∈ |lk(KX + ∆) + H|S.
+Proof. For any m ≥ 0, let lm = ⌊m
+k ⌋ and rm = m − lmk ∈ { 0, 1, . . . , k − 1}, deﬁne
+Bm = ⌈mB⌉ − ⌈ (m − 1)B⌉, and set Pm = kP if rm = 0, and otherwise Pm = 0. Let
+Dm =
+m∑
+i=1
+(KX + S + Pi + Bi) = m(KX + S) + lmkP + ⌈mB⌉,
+and note that Dm is integral and
+(8) Dm = lmk(KX + ∆) + Drm.
+By Serre vanishing, we can pick a very ample divisor H on X such that:
+(i) Dj + H is ample and basepoint free for every 0 ≤ j ≤ k − 1,
+(ii) |Dk + H|S = |(Dk + H)|S|.
+We claim that for all divisors Σ ∈ |k(KS + Ω)| and Um ∈ |(Drm + H)|S| we have
+lmΣ + Um ∈ |Dm + H|S.
+The case rm = 0 immediately implies the lemma.
+We prove the claim by induction on m. The case m = k is covered by (ii). Now
+let m > k , and pick a rational number 0 < δ ≪ 1 such that Drm− 1 + H + δBm is
+ample. Note that 0 ≤ Bm ≤ ⌈ B⌉, that ( X, S + B + D) is log smooth, and that
+15
+
+===PDF PAGE 16===
+D and S + B have no common components. Thus, there exists a rational numbe r
+0 < ε ≪ 1 such that, if we deﬁne
+(9) F = (1 − εδ)Bm + lm− 1kεD,
+then ( X, S + F ) is log smooth, ⌊F ⌋ = 0 and S ⊈ Supp F . In particular, if W is a
+general element of the free linear system |(Drm− 1 + H)|S| and
+(10) Φ = F|S + (1 − ε)W,
+then ( S, Φ) is klt.
+By induction, there is a divisor Υ ∈ |Dm− 1 + H| such that S ⊈ Supp Υ and
+Υ|S = lm− 1Σ + W.
+Denoting C = (1 − ε)Υ + F , by (9) we have
+(11) C ∼ Q (1 − ε)(Dm− 1 + H) + (1 − εδ)Bm + lm− 1kεD,
+and (10) yields
+(12) C|S = (1 − ε)Υ|S + F|S ≤ lm− 1Σ + Φ ≤ (lmΣ + Um) + Φ.
+By the choice of δ and since Pm is nef, the Q-divisor
+(13) A = ε(Drm− 1 + H + δBm) + Pm
+is ample. Then by (8), (13) and (11) we have
+Dm + H = KX + S + Dm− 1 + Bm + Pm + H
+= KX + S + (1 − ε)Dm− 1 + lm− 1kε(KX + ∆) + εDrm− 1 + Bm + Pm + H
+∼ Q KX + S + A + (1 − ε)Dm− 1 + lm− 1kεD + (1 − εδ)Bm + (1 − ε)H
+∼ Q KX + S + A + C,
+and thus lmΣ + Um ∈ |Dm + H|S by (12) and Lemma 3.2. □
+Theorem 3.4. Let (X, S + B) be a log smooth projective pair, where S is a prime
+divisor, and B is a Q-divisor such that S ⊈ Supp B and ⌊B⌋ = 0 . Let A be an
+ample Q-divisor on X and denote ∆ = S + A + B. Let C ≥ 0 be a Q-divisor on
+S such that (S, C ) is canonical, and let m be a positive integer such that mA, mB
+and mC are integral.
+Assume that there exists a positive integer q ≫ 0 such that qA is very ample,
+S ̸⊆ Bs |qm(KX + ∆ + 1
+m A)| and
+C ≤ B|S − B|S ∧ 1
+qm Fix |qm(KX + ∆ + 1
+mA)|S.
+Then
+|m(KS + A|S + C)|+ m(B|S − C) ⊆ | m(KX + ∆)|S.
+In particular, if |m(KS + A|S + C)| ̸= ∅, then |m(KX + ∆)|S ̸= ∅, and
+Fix |m(KS + A|S + C)|+ m(B|S − C) ≥ Fix |m(KX + ∆)|S ≥ m FixS(KX + ∆).
+16
+
+===PDF PAGE 17===
+Proof. Let f : Y − → X be a log resolution of the pair ( X, S + B) and of the linear
+system |qm(KX + ∆ + 1
+m A)|, and write T = f − 1
+∗ S. Then there are Q-divisors
+B′, E ≥ 0 on Y with no common components, such that E is f -exceptional and
+KY + T + B′ = f ∗(KX + S + B) + E.
+Note that
+KT + B′
+|T = g∗(KS + B|S) + E|T ,
+and since ( Y, T + B′ + E) is log smooth and B′ and E do not have common com-
+ponents, it follows that B′
+|T and E|T do not have common components, and in
+particular, E|T is g-exceptional and g∗B′
+|T = B|S. Let Γ = T + f ∗A + B′, and deﬁne
+Fq = 1
+qm Fix |qm(KY + Γ + 1
+mf ∗A)|, B ′
+q = B′ − B′ ∧ Fq, Γq = T + B′
+q + f ∗A.
+Since ( Y, T + B′ + Fq) is log smooth, Mob
+(
+qm(KY + Γ + 1
+m f ∗A)
+)
+is basepoint free,
+and T ⊈ B(KY + Γ + 1
+m f ∗A), by Bertini’s theorem there exists a Q-divisor D ≥ 0
+such that
+KY + Γq + 1
+m f ∗A ∼ Q D,
+the pair ( Y, T + B′
+q + D) is log smooth, and D does not contain any component of
+T + B′
+q. Let g = f|T : T − → S. Since ( S, C ) is canonical, there is a g-exceptional
+Q-divisor F ≥ 0 on T such that
+KT + C ′ = g∗(KS + C) + F,
+where C ′ = g− 1
+∗ C. We claim that C ′ ≤ B′
+q|T . Assuming the claim, let us show how
+it implies the theorem.
+By Lemma 3.3, there exists a very ample divisor H on Y such that for all divisors
+Σ′ ∈ |qm(KT + (B′
+q + (1 + 1
+m)f ∗A)|T )|and U ∈ |H|T |, and for every positive integer
+p we have
+pΣ′ + U ∈ |pqm(KY + Γq + 1
+mf ∗A) + H|T .
+Pick an f -exceptional Q-divisor G ≥ 0 such that ⌊B′ + 1
+m G⌋ = 0 and f ∗A − G is
+ample. In particular, ( T, (B′ + 1
+m G)|T ) is klt. Let W1 ∈ |q(f ∗A)|T | and W2 ∈ |H|T |
+be general sections. Pick a positive integer k ≫ 0 such that, if we denote l = kq,
+W = kW1 + W2 and Φ = B′
+|T + 1
+mG|T + 1
+l W , then the Q-divisor
+(14) A0 = 1
+m(f ∗A − G) − m − 1
+ml H
+is ample and the pair ( T, Φ) is klt.
+Fix Σ ∈ |m(KS + A|S + C)|. Since C ′ ≤ B′
+q|T by the claim, it is easy to check that
+qg ∗Σ + qm(F + B′
+q|T − C ′) + W1 ∈ |qm(KT + (B′
+q + (1 + 1
+m )f ∗A)|T )|.
+Then, by the choice of H, there exists Υ ∈ |lm(KY + Γq + 1
+mf ∗A) + H| such that
+T ⊈ Supp Υ and
+Υ|T = lg∗Σ + lm(F + B′
+q|T − C ′) + W.
+17
+
+===PDF PAGE 18===
+Denoting
+(15) B0 = m − 1
+ml Υ + (m − 1)(Γ − Γq) + B′ + 1
+mG,
+relations (14) and (15) imply
+m(KY + Γ) = KY + T + (m − 1)(KY + Γ + 1
+m f ∗A) + 1
+m f ∗A + B′(16)
+∼ Q KY + T + m− 1
+ml Υ + (m − 1)(Γ − Γq) + 1
+m f ∗A − m− 1
+ml H + B′
+= KY + T + A0 + B0.
+Noting that Γ − Γq = B′ − B′
+q, we have
+B0|T = m− 1
+m g∗Σ + (m − 1)
+(
+F + B′
+q|T − C ′ + (Γ − Γq)|T
+)
+(17)
++ m− 1
+ml W + B′
+|T + 1
+mG|T ≤ g∗Σ + m(F + B′
+|T − C ′) + Φ,
+and since g∗Σ + m(F + B′
+|T − C ′) ∈ |m(KY + Γ)|T |, by (16), (17) and Lemma 3.2
+we obtain
+g∗Σ + m(F + B′
+|T − C ′) ∈ |m(KY + Γ)|T .
+Pushing forward by g yields Σ+ m(B|S − C) ∈ |m(KX +∆)|S and the lemma follows.
+Now we prove the claim stated above. Since Mob
+(
+qm(KY + Γ + 1
+mf ∗A)
+)
+is
+basepoint free and T is not a component of Fq, it follows that 1
+qm Fix |qm(KY + Γ +
+1
+mf ∗A)|T = Fq|T and
+B′
+q|T = B′
+|T − (B′ ∧ Fq)|T = B′
+|T − B′
+|T ∧ 1
+qm Fix |qm(KY + Γ + 1
+mf ∗A)|T .
+Furthermore, we have
+g∗ Fix |qm(KY + Γ + 1
+mf ∗A)|T = Fix |qm(KX + ∆ + 1
+mA)|S,
+so
+g∗C ′ = C ≤ B|S − B|S ∧ 1
+qm Fix |qm(KX + ∆ + 1
+mA)|S = g∗B′
+q|T .
+Therefore C ′ ≤ B′
+q|T , since B′
+q|T ≥ 0 and C ′ = g− 1
+∗ C. □
+We immediately obtain the lifting theorem from [HM10].
+Corollary 3.5. Let (X, S + B) be a log smooth projective pair, where S is a prime
+divisor, and B is a Q-divisor such that S ⊈ Supp B, ⌊B⌋ = 0 and (S, B |S) is
+canonical. Let A be an ample Q-divisor on X and denote ∆ = S + A + B. Let
+m be a positive integer such that mA and mB are integral, and such that S ̸⊆
+Bs |m(KX + ∆)|. Denote Φm = B|S − B|S ∧ 1
+m Fix |m(KX + ∆)|S.
+Then
+|m(KS + A|S + Φm)|+ m(B|S − Φm) = |m(KX + ∆)|S.
+Proof. Since Φ m ≤ B|S − B|S ∧ 1
+qm Fix |qm(KX + ∆ + 1
+mA)|S for any positive integer
+q, the inclusion |m(KS + A|S + Φ m)| + m(B|S − Φm) ⊆ | m(KX + ∆) |S follows
+from Theorem 3.4, whereas the reverse inclusion is implied by m(B|S − Φm) ≤
+Fix |m(KX + ∆)|S. □
+18
+
+===PDF PAGE 19===
+Lemma 3.6. Let X be a smooth projective variety and let S be a smooth prime
+divisor on X. Let D be a Q-divisor such that S ⊈ B(D), and let A be an ample
+Q-divisor. Then
+1
+q Fix |q(D + A)|S ≤ FixS(D)
+for any suﬃciently divisible positive integer q.
+Proof. Let P be a prime divisor on S and let γ = mult P FixS(D). It is enough to
+show that
+multP
+1
+q Fix |q(D + A)|S ≤ γ
+for some suﬃciently divisible positive integer q.
+Assume ﬁrst that γ > 0. Let ε > 0 be a rational number such that εD + A is
+ample, and pick a positive integer m such that
+1 − ε
+m multP Fix |mD|S ≤ γ.
+Let q be a suﬃciently divisible positive integer such that the divisor q(εD + A) is
+very ample, and such that m divides q(1 − ε). Then
+1
+q multP Fix |q(D + A)|S = 1
+q multP Fix |q(1 − ε)D + q(εD + A)|S
+≤ 1
+q multP Fix |q(1 − ε)D|S ≤ 1 − ε
+m multP Fix |mD|S ≤ γ.
+Now assume that γ = 0. Let n = dim X and let H be a very ample divisor on X.
+Pick a positive integer q such that qA and qD are integral, and such that
+(18) C = qA − KX − S − nH
+is ample. Then there exists a Q-divisor D′ ≥ 0 such that D′ ∼ Q D, S ̸⊆ Supp D′
+and mult P (D′
+|S) < 1
+q . Let f : Y − → X be a log resolution of ( X, S + D′) which is
+obtained as a sequence of blowups along smooth centres. Let T = f − 1
+∗ S, and let
+E ≥ 0 be the f -exceptional integral divisor such that
+KY + T = f ∗(KX + S) + E.
+Then, denoting F = qf ∗(D + A) − ⌊ qf ∗D′⌋ + E, by (18) we have
+F ∼ Q qf ∗A + {qf ∗D′} + E = KY + T + f ∗(nH + C) + {qf ∗D′},
+and in particular |F|T | = |F |T by Lemma 3.1(i). Denote g = f|T : T − → S and
+let P ′ = g− 1
+∗ P . Since F|T ∼ Q KT + g∗(nH|S) + g∗(C|S) + {qf ∗D′}|T and g is an
+isomorphism at the generic point of P ′, Lemma 3.1(ii) implies that the base locus
+of |F|T | does not contain P ′. In particular, if V ∈ | F | is a general element, then
+P ⊈ Supp f∗V .
+19
+
+===PDF PAGE 20===
+Let U = V + ⌊qf ∗D′⌋ ∈ |qf ∗(D + A) + E|. Since E is f -exceptional, this implies
+that f∗U ∈ |q(D + A)|, and since f∗⌊qf ∗D′⌋ ≤ qD ′, we have
+multP (f∗U)|S = multP (f∗V )|S + multP (f∗⌊qf ∗D′⌋)|S ≤ multP qD ′
+|S < 1.
+Thus, mult P (f∗U)|S = 0 and the lemma follows. □
+4. BS
+A(V ) is a rational polytope
+In this section, we prove several results which will be used in Section s 5 and 6 to
+deduce the non-vanishing theorem and the ﬁnite generation of the restricted ring.
+We introduce a function Φ which is naturally related to the lifting theorem 3.4.
+More precisely, with the same notation as in Setup 4.1, given a Q-divisor B ∈
+BS
+A(V ), a suﬃciently divisible positive integer m and a section Σ ∈ |m(KS + A|S +
+Φ(B))|, we can lift Σ + m(B|S − Φ(B)) to X as a section of |m(KX + S + A + B)|.
+Using Diophantine approximation we prove that BS
+A(V ) is a rational polytope and
+that, modulo some additional technical assumptions, the function Φ(B) is rational
+piecewise linear. This latter fact implies that the restricted ring is ﬁnit ely generated:
+it shows that the ring in question is in fact an adjoint ring on a variety o f lower
+dimension, thus we are able to apply induction, see Lemma 6.2.
+In all results of this section we work in the following setup, and we writ e “Setup
+4.1n” to denote “Setup 4.1 in dimension n.”
+Setup 4.1. We assume Theorem A n− 1 and Theorem B n− 1. Let ( X, S + ∑p
+i=1 Si) be
+a log smooth projective pair of dimension n, where S and all Si are distinct prime
+divisors. Let V = ∑p
+i=1 RSi ⊆ DivR(X), let A be an ample Q-divisor on X, and let
+W ⊆ DivR(S) be the subspace spanned by the components of ∑Si|S.
+The set EA|S (W ) is a rational polytope by Theorem B n− 1. If E1, . . . , E d are its
+extreme points, the ring R(S; KS + A|S + E1, . . . , K S + A|S + Ed) is ﬁnitely generated
+by Theorem A n− 1. Therefore, if we set
+F(E) = Fix(KS + A|S + E)
+for a Q-divisor E ∈ E A|S (W ), then Lemma 2.28 implies that F extends to a rational
+piecewise aﬃne function on EA|S (W ), and there exists a positive integer k with the
+property that
+(19) F(E) = 1
+m Fix |m(KS + A|S + E)|
+for every E ∈ E A|S (W ) and every m ∈ N such that mA/k and mE/k are integral.
+We deﬁne the set
+F = {E ∈ E A|S (W ) |E ∧ F(E) = 0 }.
+Then F is a subset of EA|S (W ) deﬁned by ﬁnitely many linear equalities and in-
+equalities. Thus, there are ﬁnitely many rational polytopes Fi such that F = ⋃
+i Fi.
+20
+
+===PDF PAGE 21===
+For a Q-divisor B ∈ B S
+A(V ), set
+FS(B) = FixS(KX + S + A + B),
+and for every positive integer m such that mA, mB are integral and S ⊈ Bs |m(KX +
+S + A + B)|, denote
+Φm(B) = B|S − B|S ∧ 1
+m Fix |m(KX + S + A + B)|S.
+Let Φ(B) = B|S − B|S ∧ FS(B), and note that Φ(B) = lim sup Φ m(B).
+Lemma 4.2. Let the assumptions of Setup 4.1 n hold. If B ∈ B S
+A(V ), then Φm(B) ∈
+EA|S (W ) and Φm(B) ∧ F(Φm(B)) = 0 . In particular, if BS
+A(V ) ̸= ∅, then F ̸ = ∅.
+Proof. Clearly Φ m(B) ∈ E A|S (W ). For the second claim, note that since m(B|S −
+Φm(B)) ≤ Fix |m(KX + S + A + B)|S, we have
+|m(KS + A|S + Φm(B))|+ m(B|S − Φm(B)) ⊇ | m(KX + S + A + B)|S,
+so
+(20) Fix |m(KS + A|S + Φm(B))|+ m(B|S − Φm(B)) ≤ Fix |m(KX + S + A + B)|S.
+If T is a component of Φ m(B), then by deﬁnition
+multT Φm(B) = mult T B|S − 1
+m multT Fix |m(KX + S + A + B)|S,
+which together with (20) gives mult T Fix |m(KS + A|S + Φ m(B))| = 0. Hence
+multT Fix |km(KS + A|S + Φm(B))|= 0 for every k ∈ N, which implies
+Φm(B) ∧ 1
+km Fix |km(KS + A|S + Φm(B))|= 0.
+Letting k − → ∞ yields the lemma. □
+The main result of this section is:
+Theorem 4.3. Let the assumptions of Setup 4.1 n hold. Let G be a rational polytope
+contained in the interior of L(V ), and assume that (S, G |S) is terminal for every
+G ∈ G . Denote P = G ∩ B S
+A(V ). Then
+(i) P is a rational polytope,
+(ii) Φ extends to a rational piecewise aﬃne function on P, and there exists a
+positive integer ℓ with the property that Φ(P ) = Φ m(P ) for every P ∈ P and
+every positive integer m such that mP/ℓ is integral.
+We describe brieﬂy the strategy of the proof. The goal of the con struction is to
+show that the subgraph of Φ is a ﬁnite union of convex rational polytopes, which
+in itself does not have to be convex. Indeed, the function B|S ∧ FS(B) is not a
+convex function since it is deﬁned as the minimum of two convex funct ions. This
+is one of the technical obstacles in the proof of Theorem 4.3, and it is addressed
+in Step 3. The main point there is to show that the locus where it is convex is
+a rational polytope. This requires working in the space Div R(X) × DivR(S), and
+21
+
+===PDF PAGE 22===
+it is essentially dealt with in Lemma 4.4. Then part (i) of Theorem 4.3 follow s
+immediately by projecting this subgraph onto Div R(X).
+The fact that BS
+A(V ) is a rational polytope is an easy, but technical consequence.
+The details are discussed in Corollary 4.6.
+Lemma 4.4. Let the assumptions of Setup 4.1 n hold. Let G be a rational polytope
+contained in the interior of L(V ), and assume that (S, G |S) is terminal for every
+G ∈ G . Fix a rational polytope Fi in the decomposition F = ⋃
+i Fi and let
+Q′
+i = {(G, F ) ∈ DivQ(X) × DivQ(S) |G ∈ G ∩ B S
+A(V ), F ∈ F i, F ≤ Φ(G)}.
+Then the convex hull of Q′
+i is a rational polytope.
+Proof. Step 1. Let Qi be the convex hull of Q′
+i. We ﬁrst prove that Q′
+i is dense in
+Qi.
+To this end, ﬁx ( G0, F 0), (G1, F 1) ∈ Q ′
+i, and for a rational number 0 ≤ t ≤ 1 set
+Gt = (1 − t)G0 + tG1 ∈ P and Ft = (1 − t)F0 + tF1 ∈ F i.
+It suﬃces to show that ( Gt, F t) ∈ Q ′
+i, i.e. that Ft ≤ Φ(Gt) for every t.
+Let T be a prime divisor in W . If mult T Ft = 0 for some 0 < t < 1, then since
+multT F0 ≥ 0 and mult T F1 ≥ 0 we must have mult T Ft = 0 for all rational t ∈ [0, 1],
+and in particular mult T Ft ≤ multT Φ(Gt).
+Otherwise, we have mult T Ft > 0 for all 0 < t < 1, and it follows from the
+deﬁnition of Fi and by continuity of F that
+(21) mult T F(Ft) = 0 for all t ∈ [0, 1].
+Let m be a positive integer such that mGj/k and mFj/k are integral for j ∈ { 0, 1}.
+By Lemma 3.6, we have 1
+q Fix |q(KX + S + A + Gj + 1
+m A)|S ≤ FS(Gj) for any
+suﬃciently divisible positive integer q. Since F(Fj) = 1
+m Fix |m(KS + A|S + Fj)| by
+assumption, Theorem 3.4 implies
+m F(Fj) + m(Gj|S − Fj) ≥ m FS(Gj),
+and therefore mult T
+(
+Gj|S − FS(Pj)
+)
+≥ multT Fj by (21). Hence,
+multT Ft ≤ multT
+(
+Gt|S − FS(Gt)
+)
+≤ multT Φ(Gt)
+for all t by convexity of the function FS.
+Step 2. Let
+Ci = {(G, F ) ∈ G × F i |F ≤ G|S}.
+Note that Ci is a rational polytope and Qi ⊆ C i. Fix a rational number 0 < ε ≪ 1
+such that D + 1
+4 A is ample for any D ∈ V with ∥D∥ < ε, and ε(KX +S +A+B)+ 1
+4A
+is ample for any B ∈ L (V ). In the next two steps, we prove the following:
+22
+
+===PDF PAGE 23===
+Claim 4.5. Suppose we are given (B, C ) ∈ Qi and (Γ, Ψ) ∈ face
+(
+Ci, (B, C )
+)
+. As-
+sume that there exist a positive integer m and a rational number 0 < φ ≤ 1 such
+that mA/k , mΓ/k and mΨ/k are integral, and ∥Γ − B∥ < φε
+2m and ∥Ψ − C∥ < φε
+2m .
+Assume that for any prime divisor T on S we have
+multT (B|S − C) > φ or multT (B|S − C) ≤ multT (Γ|S − Ψ).
+Then (Γ, Ψ) ∈ Q ′
+i.
+Step 3. Since ( B, C ) ∈
+Qi, and Q′
+i is dense in Qi by Step 1, for every δ > 0 there
+exists a point ( Bδ, C δ) ∈ Q ′
+i such that ∥B − Bδ∥ < δ
+2 and ∥C − Cδ∥ < δ
+2 . Let us
+show that S ⊈ B(KX + S + A + Γ + 1
+2m A), and that for all prime divisors T on S
+and for all 0 < δ < ε
+m, we have
+(22) mult T FixS(KX + S + A + Γ + 1
+2m A) ≤ multT
+(
+Γ|S − Ψ
+)
++ multT F(Cδ) + δ.
+To this end, note that since ∥Γ − Bδ∥ ≤ ∥ Γ − B∥ + ∥B − Bδ∥ ≤ ε
+m , the Q-divisors
+H = Γ − Bδ + 1
+4m A and G = ε
+m (KX + S + A + Bδ) + 1
+4m A
+are ample. By assumption and by Lemma 3.6, there exists a positive int eger q such
+that S ⊈ Bs |q(KX + S + A + Bδ)|,
+(23) 1
+q Fix |q(KS + A|S + Cδ)|= F(Cδ),
+and
+(24) 1
+q Fix |q(KX + S + A + Bδ + H + 1
+4m A)|S ≤ FixS(KX + S + A + Bδ + 1
+4mA).
+By Lemma 3.6, there is an integer w ≫ 0 such that
+1
+wq Fix |wq(KX + S + A + Bδ + 1
+q A)|S ≤ FS(Bδ),
+so, as ( Bδ, C δ) ∈ Q ′
+i, we have
+Cδ ≤ Φ(Bδ) ≤ Bδ|S − Bδ|S ∧ 1
+wq Fix |wq(KX + S + A + Bδ + 1
+q A)|S.
+Hence Theorem 3.4 and (23) imply
+(25) FS(Bδ) ≤ Bδ|S − Cδ + F(Cδ).
+As Γ+ 1
+2m A = Bδ+H + 1
+4mA, we have B(KX +S+A+Γ+ 1
+2mA) ⊆ B(KX +S+A+Bδ),
+and so S ⊈ B(KX + S + A + Γ + 1
+2m A). Then (24) and (25) yield
+FixS(KX + S + A + Γ + 1
+2mA) ≤ 1
+q Fix |q(KX + S + A + Bδ + H + 1
+4mA)|S
+≤ FixS
+(
+(1 − ε
+m )(KX + S + A + Bδ) + G
+)
+≤
+(
+1 − ε
+m
+)
+FS(Bδ) ≤ (1 − ε
+m )(Bδ|S − Cδ) + F(Cδ),
+and since (1 − ε
+m) multT (Bδ|S − Cδ) ≤ (1 − ε
+m ) multT (B|S − C) + δ by assumption,
+to prove (22) it is enough to show that
+(
+1 − ε
+m
+)
+multT (B|S − C) ≤ multT (Γ|S − Ψ).
+23
+
+===PDF PAGE 24===
+This is obvious if mult T (B|S − C) ≤ multT (Γ|S − Ψ). Otherwise, by assumption
+φ < multT (B|S − C) ≤ multT (Γ|S − Ψ) + φε
+m , and so
+(1 − ε
+m ) multT (B|S − C) ≤ multT (Γ|S − Ψ) + φε
+m − ε
+m multT (B|S − C)
+= multT (Γ|S − Ψ) − ε
+m
+(
+multT (B|S − C) − φ
+)
+≤ multT (Γ|S − Ψ).
+Step 4. Having proved (22), we ﬁnish the proof of Claim 4.5. If T is a component
+of Ψ, then T is a component of C as (Γ , Ψ) ∈ face
+(
+Ci, (B, C )
+)
+. Thus T ⊆ Supp Cδ
+for δ ≪ 1, and so mult T F(Cδ) = 0 since Cδ ∈ F i. Hence, letting δ − → 0 in (22), we
+get
+(26) Γ |S ∧ FixS(KX + S + A + Γ + 1
+2mA) ≤ Γ|S − Ψ.
+By Lemma 3.6, there exists a positive integer ℓ such that
+(27) 1
+ℓ Fix |ℓ(KX + S + A + Γ + 1
+mA)|S ≤ FixS(KX + S + A + Γ + 1
+2mA).
+Thus, (26) and (27) give Ψ ≤ Γ|S − Γ|S ∧ 1
+ℓ Fix |ℓ(KX + S + A + Γ + 1
+mA)|S. Then
+Theorem 3.4 implies that Γ ∈ B S
+A(V ) as Ψ ∈ E A|S (W ), and furthermore, since
+F(Ψ) = 1
+m Fix |m(KS + A|S + Ψ)| by assumption,
+(28) m F(Ψ) + m(Γ|S − Ψ) ≥ m FS(Γ).
+Since Ψ ∈ F i, we have Ψ ∧ F(Ψ) = 0, so (28) yields Γ |S − Ψ ≥ Γ|S ∧ FS(Γ), and
+ﬁnally Ψ ≤ Φ(Γ). This proves Claim 4.5.
+Step 5. We now show that Qi is compact and that every extreme point of Qi is
+rational.
+By abuse of notation, let ∥ · ∥ denote also the sup-norm on Div R(X) × DivR(S).
+Fix a point ( B, C ) ∈ Qi, and let Π be the set of prime divisors T on S such that
+multT (B|S − C) > 0. If Π ̸= ∅, pick a positive rational number
+φ < min{multT (B|S − C) |T ∈ Π} ≤ 1,
+and set φ = 1 if Π = ∅. By Lemma 2.14, there exist ﬁnitely many points (Γ j, Ψj) ∈
+face
+(
+Ci, (B, C )
+)
+and positive integers mj divisible by k, such that mjA/k , mjΓj/k
+and mjΨj/k are integral, ( B, C ) is a convex linear combination of all (Γ j, Ψj), and
+∥(B, C ) − (Γj, Ψj)∥ < φε
+2mj
+.
+If T is a prime divisor on S such that T / ∈ Π, then mult T (Γj|S − Ψj) = 0 as
+(Γj, Ψj) ∈ face
+(
+Ci, (B, C )
+)
+, so Claim 4.5 implies (Γ j, Ψj) ∈ Q ′
+i for all j, hence
+(B, C ) ∈ Q i. This shows that Qi is closed and that all of its extreme points are
+rational.
+Step 6. Finally we show that Qi is a rational polytope.
+24
+
+===PDF PAGE 25===
+To this end, assume for a contradiction that Qi is not a polytope. Then, by Step
+5 there exist inﬁnitely many distinct rational extreme points vn = ( Bn, C n) of Qi,
+with n ∈ N. Since Qi is compact and Ci is a rational polytope, by passing to a
+subsequence there exist v∞ = ( B∞ , C ∞ ) ∈ Q i and a positive dimensional face V of
+Ci such that
+(29) v∞ = lim
+n→∞
+vn and face( Ci, v n) = V for all n ∈ N.
+In particular, v∞ ∈ V . Let Π ∞ be the set of all prime divisors T on S such that
+multT (B∞| S − C∞ ) > 0. If Π ∞ ̸= ∅, pick a positive rational number
+φ < min{multT (B∞| S − C∞ ) |T ∈ Π∞ } ≤ 1,
+and set φ = 1 if Π ∞ = ∅. Then, by Lemma 2.14 there exist v′
+∞ ∈ face(Ci, v ∞ ), and
+a positive integer m divisible by k, such that m
+k v′
+∞ is integral and ∥v∞ − v′
+∞ ∥ < φε
+2m .
+As above, by Claim 4.5 we have v′
+∞ ∈ Q i. Pick j ≫ 0 so that
+(30) ∥vj − v′
+∞ ∥ ≤ ∥ vj − v∞ ∥ + ∥v∞ − v′
+∞ ∥ < φε
+2m,
+and that mult T (Bj|S − Cj) > φ if T ∈ Π∞ . Note that vj is contained in the relative
+interior of V by (29), and v′
+∞ ∈ face(Ci, v ∞ ) ⊆ V . Therefore, there exists a positive
+integer m′ ≫ 0 divisible by k, such that m+m′
+k vj is integral, and such that if we
+deﬁne
+v′
+j = m + m′
+m′ vj − m
+m′v′
+∞ ∈ vj + R+(vj − v′
+∞ ),
+then v′
+j ∈ V . Note that m′
+k v′
+j is integral,
+(31) vj = m′
+m + m′v′
+j + m
+m + m′v′
+∞ ,
+and
+(32) ∥v′
+j − vj∥ = m
+m′∥vj − v′
+∞ ∥ < φε
+2m′
+by (30). Furthermore, if v′
+∞ = (B′
+∞ , C ′
+∞ ), v′
+j = ( B′
+j, C ′
+j), and if T is a prime divisor
+on S such that T / ∈ Π∞ , then mult T (B′
+∞| S − C ′
+∞ ) = 0 as v′
+∞ ∈ face(Ci, v ∞ ), hence
+(31) gives
+(33) mult T (Bj|S − Cj) = m′
+m + m′ multT (B′
+j|S − C ′
+j) ≤ multT (B′
+j|S − C ′
+j).
+Therefore, v′
+j ∈ Q i by (32), (33) and by Claim 4.5, and since vj belongs to the interior
+of [ v′
+j, v ′
+∞ ], we have that vj is not an extreme point of Qi. This is a contradiction
+which proves the lemma. □
+Finally, we can proceed to the proof of Theorem 4.3.
+25
+
+===PDF PAGE 26===
+Proof of Theorem 4.3. Step 1. In this step we prove (i). For every i, set
+Q′
+i = {(P, F ) ∈ DivQ(X) × DivQ(S) |P ∈ P , F ∈ F i, F ≤ Φ(P )},
+and let Qi be the convex hull of Q′
+i. Then each Qi is a rational polytope by Lemma
+4.4.
+Let Pi ⊆ V be the image of Qi through the ﬁrst projection, and denote PQ =
+P ∩ DivQ(X). For any P ∈ P Q and for any suﬃciently divisible positive integer m,
+we have
+(
+P, Φm(P )
+)
+∈ ⋃
+i Qi by Lemma 4.2. Hence P ∈ ⋃
+i Pi, and compactness
+implies
+(34)
+(
+P, Φ(P )
+)
+∈
+⋃
+i
+Qi.
+Therefore PQ ⊆ ⋃
+i Pi, and since PQ is dense in P by Remark 2.7, we have P ⊆ ⋃
+i Pi.
+The reverse inclusion follows by the deﬁnition of the sets Q′
+i, and this proves (i).
+Step 2. For (ii), denote PS = S + PQ, and note that PS lies in the hyperplane
+S + V ⊆ RS + V . Fix a prime divisor T ∈ W , and consider the map ΦT : PS − →
+[− 1, 0] deﬁned by
+ΦT (S + P ) = − multT Φ(P ) for every P ∈ P Q.
+Let RT be the closure of the set
+R′
+T = {S + P ∈ P S |ΦT (S + P ) ̸= 0} ⊆ P S.
+Note that the condition ΦT (S +P ) ̸= 0 implies ΦT (S +P ) = − multT
+(
+P|S − FS(P )
+)
+,
+and since FS is a convex map on P, the set RT is convex, and ΦT is convex on RT .
+Step 3. We ﬁrst show that RT is a union of some of the sets S + Pi, and therefore
+that it is a rational polytope since it is convex.
+To this end, ﬁx P ∈ P Q such that S + P ∈ R ′
+T . Then
+(
+P, Φ(P )
+)
+∈ Q i for some i
+by (34), and since mult T Φ(P ) ̸= 0, we have
+(35) mult T C > 0 for every point ( B, C ) in the relative interior of Qi.
+Therefore, the deﬁnition of F yields
+(36) mult T F(C) = 0 for all ( B, C ) ∈ Q ′
+i.
+Now, pick ( B, C ) ∈ Q ′
+i, and let m be a positive integer such that mB/k and mC/k
+are integral. By Lemma 3.6, we have 1
+q Fix |q(KX + S + A + B + 1
+mA)|S ≤ FS(B) for
+any suﬃciently divisible positive integer q. Since F(C) = 1
+m Fix |m(KS + A|S + C)|
+by (19), Theorem 3.4 implies
+m F(C) + m(B|S − C) ≥ m FS(B),
+and hence mult T
+(
+B|S − FS(B)
+)
+≥ multT C ≥ 0 by (36).
+Therefore, for every Q-divisor B ∈ P i we have
+(37) ΦT (S + B) = − multT
+(
+B|S − FS(B)
+)
+≤ − multT C.
+26
+
+===PDF PAGE 27===
+For any Q-divisor B in the relative interior of Pi there exists a Q-divisor C ∈ F i such
+that (B, C ) is in the relative interior of Qi, hence for such B we have ΦT (S + B) ̸= 0
+by (35) and (37), that is S + B ∈ R ′
+T . Therefore S + Pi ⊆ R T , and RT is a union
+of some of the sets S + Pi.
+Step 4. Next we prove that ΦT extends to a rational piecewise aﬃne map on RT ,
+and in particular that it is continuous on RT .
+To this end, let ( Pj, F j) be the extreme points of all Qi for which S + Pi ⊆ R T .
+Since Qi is the convex hull of Q′
+i, it follows that ( Pj, F j) ∈ ⋃Q′
+i, and in particular
+(38) mult T Fj ≤ multT Φ(Pj) = − ΦT (S + Pj).
+Fix P ∈ P Q such that S + P ∈ R T . Then
+(
+P, Φ(P )
+)
+∈ Q i for some i by (34), hence
+there exist rj ∈ R+ such that
+∑
+rj = 1 and
+(
+P, Φ(P )
+)
+=
+∑
+rj(Pj, F j).
+Thus ΦT (S + P ) = − multT Φ(P ) = − ∑rj multT Fj, so by convexity of ΦT and by
+(38) we have
+∑
+rjΦT (S + Pj) ≥ ΦT (S + P ) = −
+∑
+rj multT Fj ≥
+∑
+rjΦT (S + Pj).
+Therefore ΦT (S+Pj) = − multT Fj ∈ Q for any j, and ΦT (S+P ) = ∑rjΦT (S+Pj).
+By Lemma 2.13, ΦT extends to a rational piecewise aﬃne map on RT .
+Step 5. Note that FS is convex on P. Thus, by deﬁnition, ΦT extends to a continuous
+map in the relative interior of S + P. This, together with Step 4, implies that ΦT
+extends to a rational piecewise aﬃne map on P for every prime divisor T ∈ W , and
+hence so does Φ, which shows the ﬁrst claim in (ii).
+Step 6. Finally, we show the second claim in (ii). From Step 5, in particular, we ha ve
+Φ(P ) ∈ DivQ(S) for every P ∈ P Q, and by subdividing P, we may assume that Φ
+extends to a rational aﬃne map on P. By Lemma 2.11, the monoid R+PS ∩ Div(X)
+is ﬁnitely generated, and let qi(S + Qi) be its generators for some qi ∈ Q+ and
+Qi ∈ P Q. Pick a positive integer w such that wqiΦ(Qi) ∈ Div(S) for every i, and
+set ℓ = wk.
+Fix B ∈ P Q and a positive integer m such that m
+ℓ B ∈ Div(X). If α i ∈ N are
+such that m
+ℓ (S + B) = ∑α iqi(S + Qi), then m
+ℓ = ∑α iqi, and therefore m
+ℓ Φ(B) =∑α iqiΦ(Qi) since Φ is an aﬃne map. Hence m
+k Φ(B) = ∑α iwqiΦ(Qi) ∈ Div(S),
+so F(Φ(B)) = 1
+m Fix |m(KS + A|S + Φ(B))| by (19). In particular,
+(39) Φ(B) ∧ Fix |m(KS + A|S + Φ(B))|= 0
+by the deﬁnition of F , as
+(
+B, Φ(B)
+)
+∈ ⋃
+i Qi by (34). By Lemma 3.6, there exists a
+positive integer q such that Φ(B) ≤ B|S − B|S ∧ 1
+qm Fix |qm(KX + S + A+ B + 1
+mA)|S,
+27
+
+===PDF PAGE 28===
+and thus Theorem 3.4 gives
+Fix |m(KS + A|S + Φ(B))|+ m(B|S − Φ(B)) ≥ Fix |m(KX + S + A + B)|S
+≥ m(B|S ∧ 1
+m Fix |m(KX + S + A + B)|S) = m(B|S − Φm(B)).
+This together with (39) implies Φ m(B) ≥ Φ(B). But, by deﬁnition, Φ(B) ≥ Φm(B),
+and (ii) follows. □
+Corollary 4.6. Assume Theorem A n− 1 and Theorem B n− 1.
+Let (X, S + ∑p
+i=1 Si) be a log smooth projective pair of dimension n, where S and
+all Si are distinct prime divisors. Let V = ∑p
+i=1 RSi ⊆ DivR(X) and let A be an
+ample Q-divisor on X. Then:
+(i) BS
+A(V ) is a rational polytope,
+(ii) BS
+A(V ) = {B ∈ L (V ) |σS(KX + S + A + B) = 0 }.
+Proof. We ﬁrst prove (i). Fix B ∈
+BS
+A(V ), and let Bm ∈ BS
+A(V ) be a sequence of
+distinct points such that lim
+m→∞
+Bm = B. It is enough to show that B ∈ B S
+A(V ), and
+that for some m there exists B′
+m ∈ B S
+A(V ) such that Bm ∈ (B, B ′
+m): indeed, since B
+is arbitrary, this implies that BS
+A(V ) is closed, and that around every point there are
+only ﬁnitely many extreme points of BS
+A(V ). The strategy of the proof is to reduce
+to the situation where B is in the interior of L(V ) and ( S, B |S) is terminal, and then
+to conclude by Theorem 4.3.
+Let G ∈ V be a Q-divisor such that B − G is contained in the interior of L(V ),
+and that A + G is ample. Denote BG = B − G, BG
+m = Bm − G and AG = A + G,
+and observe that BG and BG
+m belong to BS
+AG(V ) for m ≫ 0. By Lemma 2.2, there
+exist a log resolution f : Y − → X of ( X, S + BG) and Q-divisors C, E ≥ 0 on Y
+with no common components, such that the components of C are disjoint, ⌊C⌋ = 0,
+T = f − 1
+∗ S ⊈ Supp C, and
+KY + T + C = f ∗(KX + S + BG) + E.
+We may then write
+KY + T + Cm = f ∗(KX + S + BG
+m) + Em,
+where Cm, E m ≥ 0 are Q-divisors on Y with no common components, ⌊Cm⌋ = 0,
+T ⊈ Supp Cm, and note that lim
+m→∞
+Cm = C. Let V ◦ ⊆ DivR(Y ) be the subspace
+spanned by the components of C and by all f -exceptional prime divisors. Then
+there exists an f -exceptional Q-divisor F ≥ 0 such that f ∗AG − F is ample, C + F
+lies in the interior of L(V ◦) and ( T, (C + F )|T ) is terminal. Denote A◦ = f ∗AG − F ,
+C ◦ = C + F and C ◦
+m = Cm + F for all m, and observe that C ◦ and C ◦
+m belong to
+BT
+A◦ (V ◦) for m ≫ 0.
+There exists a positive rational number η such that ( T, Θ|T ) is terminal for every
+Θ ∈ L (V ◦) with ∥Θ − C ◦∥ ≤ η. Let P = {Θ ∈ L (V ◦) | ∥Θ − C ◦∥ ≤ η}, and
+28
+
+===PDF PAGE 29===
+note that P is a rational polytope since we are working with the sup-norm. Thus
+P ′ = P ∩ B T
+A◦ (V ◦) is a rational polytope by Theorem 4.3. In particular, it is closed,
+so C ◦ and C ◦
+m belong to BT
+A◦ (V ◦) for m ≫ 0. Therefore, BG = f∗C ◦ and BG
+m = f∗C ◦
+m
+belong to BS
+AG(V ) for m ≫ 0, and hence B, B m ∈ B S
+A(V ).
+Since P ′ is a polytope, by Lemma 2.8 for inﬁnitely many m there exist C ′
+m ∈ P ′
+such that C ◦
+m ∈ (C ◦, C ′
+m). Then BG
+m ∈ (BG, f ∗C ′
+m), and note that f∗C ′
+m ∈ B S
+AG(V ).
+If we denote B′
+m = f∗C ′
+m + G, then Bm ∈ (B, B ′
+m) and S ⊈ B(KX + S + A + B′
+m)
+since KX + S + A + B′
+m = KX + S + AG + f∗C ′
+m. Again by Lemma 2.8 applied to
+the polytope L(V ) and the point B ∈ L (V ), we can assume that B′
+m ∈ L (V ) by
+choosing C ′
+m closer to C ◦. Hence B′
+m ∈ B S
+A(V ), and this proves (i).
+Now we prove (ii). Denoting Q = {B ∈ L (V ) |σS(KX + S + A + B) = 0 }, then
+clearly Q ⊇ B S
+A(V ). For the reverse inclusion, ﬁx B ∈ Q , and let H be a very ample
+divisor such that ( X, S + ∑p
+i=1 Si + H) is log smooth and H ⊈ Supp(S + ∑p
+i=1 Si).
+Let VH = RH + V ⊆ DivR(X), and note that σS(KX + S + A + B + tH) ≤
+σS(KX + S + A + B) = 0 for t > 0. Then B + tH ∈ B S
+A(VH) for any 0 < t < 1 by
+Lemma 2.21(i), hence B ∈ B S
+A(VH) since BS
+A(VH) is closed by the ﬁrst part of the
+proof. Therefore B ∈ B S
+A(V ). □
+5. Effective non-vanishing
+In this section we prove that Theorem A n− 1 and Theorem B n− 1 imply Theorem
+Bn. We ﬁrst sketch the idea of the proof. We consider the set
+PA(V ) = {B ∈ L (V ) |KX + A + B ≡ D for some R-divisor D ≥ 0},
+and prove that it is a rational polytope. Once we know that PA(V ) is a rational
+polytope, it is a straightforward application of the Kawamata-Viehw eg vanishing to
+show that this set coincides with EA(V ), see Lemma 5.1.
+In order to show that PA(V ) is a rational polytope, we ﬁrst show that if an
+adjoint divisor KX + A + B is pseudo-eﬀective, then it is numerically equivalent
+to an eﬀective divisor, which in particular implies that the set PA(V ) is compact.
+This statement is usually referred to as “non-vanishing.” We may ass ume that
+KX + A + B ̸≡ Nσ (KX + A + B), and the claim is a consequence of Corollary 4.6,
+see Lemma 5.3.
+Then, we show that PA(V ) is a polytope (rationality of this polytope is easy):
+we assume for contradiction that there are inﬁnitely many exteme p oints Bm of
+PA(V ), and by compactness and by passing to a subsequence we can ass ume that
+they converge to a point B ∈ P A(V ). We can then derive a contradiction if we can
+show that for some m ≫ 0 there is a point B′
+m ∈ P A(V ) such that Bm ∈ (B, B ′
+m).
+This is straightforward when KX + A + B ≡ Nσ (KX + A + B), and the diﬃcult
+case is when KX + A + B ̸≡ Nσ (KX + A + B). We consider the cones
+C = R+(KX + A + PA(V )) and CS = R+(KX + S + A + BS
+A(V )) ⊆ C
+29
+
+===PDF PAGE 30===
+for some prime divisor S, and note that CS is a rational polyhedral cone by Corollary
+4.6. We proceed in two steps.
+First, non-vanishing implies that there exists an R-divisor F ≥ 0 such that KX +
+A + B ∼ R F . We then ﬁnd a divisor Λ ≥ 0, whose support is contained in the
+support of Nσ (KX + A + B), and a positive real number µ such that
+Σ = (1 + µ)(KX + A + B) − Λ = (1 + µ)(KX + A + B − 1
+1+µ Λ) ∈ C S
+for some prime divisor S contained in the support of F . Then it is easy to ﬁnd
+rational numbers εm which converge to 1 such that the divisors
+Σm = (1 + µ)(KX + A + Bm) − εmΛ = (1 + µ)(KX + A + Bm − εm
+1+µ Λ)
+are pseudo-eﬀective. Much of the proof of Theorem 5.5 is devoted to proving these
+facts. Note that even though the divisor B − 1
+1+µ Λ belongs to L(V ), that is not
+necessarily the case with divisors Bm − εm
+1+µ Λ.
+Second, in order to show that there is a point Bm ∈ (B, B ′
+m) as above, it suﬃces
+to ﬁnd a pseudo-eﬀective divisor Σ ′
+m for some m ≫ 0 such that Σ m ∈ (Σ, Σ′
+m), and
+this is done in Lemma 5.4, using the fact that CS is a rational polyhedral cone.
+We start with the following lemma which uses ideas from Shokurov’s pro of of the
+classical non-vanishing theorem.
+Lemma 5.1. Let (X, B ) be a log smooth pair, where B is a Q-divisor such that
+⌊B⌋ = 0 . Let A be a nef and big Q-divisor, and assume that there exists an R-
+divisor D ≥ 0 such that KX + A + B ≡ D.
+Then there exists a Q-divisor D′ ≥ 0 such that KX + A + B ∼ Q D′.
+Proof. Let V ⊆ Div(X)R be the vector space spanned by the components of KX, A,
+B and D, and let φ : V − → N 1(X)R be the linear map sending an R-divisor to its
+numerical class. Since φ − 1(φ(KX + A + B)) is a rational aﬃne subspace of V , we
+can assume that D ≥ 0 is a Q-divisor.
+First assume that ( X, B + D) is log smooth. Let m be a positive integer such
+that m(A + B) and mD are integral. Denoting F = ( m − 1)D + B, L = m(KX +
+A + B) − ⌊ F ⌋ and L′ = mD − ⌊ F ⌋, we have
+L ≡ L′ = D − B + {F } ≡ KX + A + {F }.
+Thus, Kawamata-Viehweg vanishing implies that hi(X, OX (L)) = hi(X, OX(L′)) =
+0 for all i > 0, and since the Euler characteristic is a numerical invariant, this yie lds
+h0(X, OX (L)) = h0(X, OX (L′)). As mD is integral and ⌊B⌋ = 0, it follows that
+L′ = mD − ⌊ (m − 1)D + B⌋ = ⌈D − B⌉ ≥ 0,
+and thus h0(
+X, OX (m(KX + A + B))
+)
+= h0(X, OX(L + ⌊F ⌋)) ≥ h0(X, OX (L)) =
+h0(X, OX (L′)) > 0.
+In the general case, let f : Y − → X be a log resolution of ( X, B + D). Then there
+exist Q-divisors B′, E ≥ 0 with no common components such that E is f -exceptional
+30
+
+===PDF PAGE 31===
+and KY + B′ = f ∗(KX + B) + E. Therefore KY + f ∗A + B′ ≡ f ∗D + E ≥ 0, so
+by above there exists a Q-divisor D◦ ≥ 0 such that KY + f ∗A + B′ ∼ Q D◦. Hence
+KX + A + B ∼ Q f∗D◦ ≥ 0. □
+Lemma 5.2. Let X be a smooth projective variety of dimension n and let x ∈ X. Let
+D ∈ Div(X) and assume that s is a positive integer such that h0(X, OX (D)) >
+( s+n
+n
+)
+.
+Then there exists D′ ∈ |D| such that multx D′ > s.
+Proof. Let m ⊆ O X be the ideal sheaf of x. Then we have
+h0(X, OX/ ms+1) = dim C C[x1, . . . , x n]/ (x1, . . . , x n)s+1 =
+( s + n
+n
+)
+,
+hence h0(X, OX (D)) > h 0(X, OX / ms+1). Therefore the exact sequence
+0 − → ms+1 ⊗ O X(D) − → O X(D) − → (OX/ ms+1) ⊗ O X (D) ≃ O X / ms+1 − → 0
+yields h0(
+X, ms+1 ⊗ O X (D)
+)
+> 0, so there exists a divisor D′ ∈ |D|with multiplicity
+at least s + 1 at x. □
+Lemma 5.3. Assume Theorem A n− 1 and Theorem B n− 1.
+Let (X, B ) be a log smooth pair of dimension n, where B is an R-divisor such
+that ⌊B⌋ = 0. Let A be an ample Q-divisor on X, and assume that KX + A + B is
+a pseudo-eﬀective R-divisor such that KX + A + B ̸≡ Nσ (KX + A + B).
+Then there exists an R-divisor F ≥ 0 such that KX + A + B ∼ R F .
+Proof. By Lemma 2.19, we have h0(X, OX (⌊mk(KX + A + B)⌋ + kA)) >
+( nk+n
+n
+)
+for
+any suﬃciently divisible positive integers m and k. Fix a point x ∈ X \⋃
+ε>0 B(KX +
+A + B + εA). Then, by Lemma 5.2 there exists an R-divisor G ≥ 0 such that
+G ∼ R mk(KX + A + B) + kA and mult x G > nk , so setting D = 1
+mk G, we have
+(40) D ∼ R KX + A + B + 1
+mA and mult x D > n
+m.
+For any t ∈ [0, m ], deﬁne At = m− t
+m A and Ψ t = B + tD, so that
+(41) (1 + t)(KX + A + B) ∼ R KX + A + B + t
+(
+D − 1
+m A
+)
+= KX + At + Ψt.
+Let f : Y − → X be a log resolution of ( X, B + D) constructed by ﬁrst blowing up
+X at x. Then for every t ∈ [0, m ], there exist R-divisors Ct, E t ≥ 0 with no common
+components such that Et is f -exceptional and
+(42) KY + Ct = f ∗(KX + Ψt) + Et.
+The exceptional divisor of the initial blowup gives a prime divisor P ⊆ Y such that
+multP (KY − f ∗KX) = n − 1, mult P f ∗Ψt = mult x Ψt, and P / ∈ Supp Nσ (f ∗(KX +
+A + B)) by Remark 2.18. Since mult x Ψm > n by (40), it follows from (42) that
+(43) mult P Em = 0 and mult P Cm > 1.
+31
+
+===PDF PAGE 32===
+Note that ⌊C0⌋ = 0, and denote
+Bt = Ct − Ct ∧ Nσ (KY + f ∗At + Ct).
+Observe that by (41) and (42) we have
+Nσ (KY + f ∗At + Ct) = Nσ
+(
+f ∗(KX + At + Ψt)
+)
++ Et
+= (1 + t)Nσ
+(
+f ∗(KX + A + B)
+)
++ Et,
+hence Bt is a continuous function in t. Moreover P ⊈ Supp Nσ (KY + f ∗Am + Bm) by
+the choice of x and by (43), and in particular mult P Bm > 1. Pick 0 < ε ≪ 1 such
+that mult P Bm− ε > 1, and let H ≥ 0 be an f -exceptional Q-divisor on Y such that
+⌊B0 + H⌋ = 0 and f ∗Am− ε − H is ample. Then there exists a minimal λ < m − ε
+such that ⌊Bλ + H⌋ ̸= 0, and let S ⊆ ⌊ Bλ + H⌋ be a prime divisor. Since ⌊H⌋ = 0,
+we have S ⊆ Supp Bλ . As Bλ ∧ Nσ (KY + f ∗Aλ + Bλ ) = 0 by Lemma 2.16, we deduce
+that S ⊈ Supp Nσ (KY + f ∗Aλ + Bλ ).
+Let A′ = f ∗Aλ − H = f ∗( m− ε− λ
+m A) + (f ∗Am− ε − H). Then A′ is ample, and since
+σS(KY + A′ + Bλ + H) = σS(KY + f ∗Aλ + Bλ ) = 0 by what we proved above,
+Corollary 4.6 implies that S ⊈ B(KY + A′ + Bλ + H) = B(KY + f ∗Aλ + Bλ ). In
+particular, there exists an R-divisor F ′ ≥ 0 such that KY + f ∗Aλ + Bλ ∼ R F ′, and
+thus, by (41) and (42),
+KX + ∆ ∼ R
+1
+1 + λ f∗(KY + f ∗Aλ + Cλ ) ∼ R
+1
+1 + λ f∗(F ′ + Cλ − Bλ ) ≥ 0.
+This ﬁnishes the proof. □
+Lemma 5.4. Assume Theorem A n− 1 and Theorem B n− 1.
+Let (X, S + ∑p
+i=1 Si) be a log smooth projective pair of dimension n, where S
+and the Si are distinct prime divisors. Let A be an ample Q-divisor on X, let
+W = RS + ∑p
+i=1 RSi ⊆ DivR(X), and assume Υ ∈ L (W ) and 0 ≤ Σ ∈ W are such
+that
+multS Υ = 1 , multS Σ > 0, σ S(KX + A + Υ) = 0 and KX + A + Υ ∼ R Σ.
+Let Υm ∈ W be a sequence such that KX + A + Υ m are pseudo-eﬀective and
+lim
+m→∞
+Υm = Υ.
+Then for inﬁnitely many m there exist Υ′
+m ∈ W such that Υm ∈ (Υ, Υ′
+m) and
+KX + A + Υ′
+m are pseudo-eﬀective.
+Proof. Step 1. Denote
+Σm = Σ + Υ m − Υ.
+Then Σ m ∼ R KX + A + Υm is pseudo-eﬀective by assumption, and hence so is
+Γm = Σ m − σS(Σm) ·S.
+32
+
+===PDF PAGE 33===
+In Step 2, we will construct a rational polytope P which does not contain the origin,
+and the rational polyhedral cone D = R+P ⊆ W such that every element of D is
+pseudo-eﬀective and, after passing to a subsequence,
+(44) Γ m ∈ D for all m > 0, and lim
+m→∞
+Γm = Σ.
+This immediately implies the lemma: indeed, Remark 2.9 applied to D and to the
+point Σ ∈ D shows that for any m ≫ 0 there exist Ψ m ∈ D and 0 < µ m < 1 such
+that Γ m = µ mΣ + (1 − µ m)Ψm. Then Ψ m is pseudo-eﬀective, and thus so is the
+R-divisor
+Σ′
+m = Ψ m + 1
+1 − µ m
+(Σm − Γm) = Ψ m + σS(Σm)
+1 − µ m
+S.
+Let Υ ′
+m = 1
+1− µ m
+(Υm − µ mΥ) ∈ W . Then it is easy to check that Υ m ∈ (Υ, Υ′
+m) and
+KX + A + Υ′
+m ∼ R Σ′
+m, and we are done.
+Step 2. In this step, we construct a rational polytope D with required properties.
+Denote V = ∑p
+i=1 RSi ⊆ DivR(X). Let Z = ∑
+multSj Υ=0
+Sj − ∑
+multSi Υ=1
+Si, and pick a
+rational number 0 < ε ≪ 1 such that the Q-divisor A′ = A − εZ is ample. Setting
+Υ′ = Υ − S + εZ, we have
+(45) Υ ′ ∈
+p∑
+i=1
+[εSi, (1 − ε)Si]
+and
+(46) KX + S + A′ + Υ′ ∼ R Σ.
+By Corollary 4.6, BS
+A′(V ) is a rational polytope, and denote
+P = Σ − Υ′ + BS
+A′(V ) and D = R+P ⊆ W.
+Then P is a rational polytope and D is a rational polyhedral cone. Since σS(KX +
+S + A′ + Υ′) = σS(Σ) = σS(KX + A + Υ) = 0 by assumption, Corollary 4.6 implies
+that Υ ′ ∈ B S
+A′(V ), and therefore Σ ∈ P . By the deﬁnition of P and by (46), for
+every D ∈ P there exists B ∈ B S
+A′(V ) such that
+D = Σ − Υ′ + B ∼ R KX + S + A′ + B.
+Since mult S Υ′ = multS B = 0, this implies mult S D = multS Σ > 0 and, in particu-
+lar, P does not contain the origin. Moreover, by the deﬁnition of BS
+A′(V ), every D
+is pseudo-eﬀective, hence every element of D is pseudo-eﬀective.
+Now we prove (44). Let λ m = mult S Γm/ multS Σ ∈ R, and for every m choose
+0 < β m ≪ 1 such that βmλ m < 1 and βm∥Γm − λ mΣ∥ < ε . Set δm = βmλ m and
+tm = (1 − δm)/ (1 − δm + βm), and note that 0 < t m < 1. We ﬁrst show that
+(47) tmΣ + (1 − tm)Γm ∈ D .
+33
+
+===PDF PAGE 34===
+To this end, denote Rm = Υ ′+ βmΓm − δmΣ, and note that by the choice of βm and
+δm we have mult S Rm = 0. Furthermore, since ∥βmΓm − δmΣ∥ < ε, by (45) we have
+Rm ∈ L (V ). Then (46) implies
+tmΣ + (1 − tm)Γm = 1
+1 − δm + βm
+(Σ − Υ′ + Rm)(48)
+∼ R
+1
+1 − δm + βm
+(KX + S + A′ + Rm),(49)
+and observe that by assumption and by deﬁnition of Γ m, we have
+(50) σS
+(
+tmΣ + (1 − tm)Γm
+)
+≤ tmσS(Σ) + (1 − tm)σS(Γm) = 0 .
+Therefore Rm ∈ B S
+A′(V ) by Corollary 4.6, by (49), and by (50), hence (48) and the
+deﬁnition of D imply (47).
+In particular, (Σ , Γm)∩D ̸ = ∅. By Remark 2.17, the sequence σS(Σm) is bounded.
+Therefore, by Lemma 2.10 and after passing to a subsequence we m ay assume that
+there exists Pm ∈ [Σm, Γm] ∩ D for every m. By the deﬁnition of D, there exists
+rm ∈ R+ and Bm ∈ B S
+A′(V ) such that Pm = rm(KX +S +A′+Bm), hence σS(Pm) = 0
+by Corollary 4.6. Thus, the deﬁnition of Γ m implies Pm = Γ m, and (Σ m, Γm) ∩
+D = ∅. Then (44) follows from Lemma 2.10 again applied to D, and the proof is
+complete. □
+Theorem 5.5. Theorem An− 1 and Theorem B n− 1 imply Theorem B n.
+Proof. Let
+PA(V ) = {B ∈ L (V ) |KX + A + B ≡ D for some R-divisor D ≥ 0}.
+We claim that PA(V ) is a rational polytope. Assuming this, let B1, . . . , B q be the
+extreme points of PA(V ), and choose ε > 0 such that A + εBi is ample for every
+i. Since KX + A + Bi = KX + (A + εBi) + (1 − ε)Bi and ⌊(1 − ε)Bi⌋ = 0, Lemma
+5.1 implies that there exist Q-divisors Di ≥ 0 such that KX + A + Bi ∼ Q Di. Thus
+Bi ∈ E A(V ) for every i, and therefore PA(V ) ⊆ E A(V ) as EA(V ) is convex. Since
+obviously EA(V ) ⊆ P A(V ), the theorem follows.
+Now we prove that PA(V ) is a rational polytope in several steps.
+Step 1. In this step we show that PA(V ) is closed. To this end, ﬁx B ∈
+PA(V )
+and denote ∆ = A + B. In particular, KX + ∆ is pseudo-eﬀective. If KX + ∆ ≡
+Nσ (KX +∆), then it follows immediately that B ∈ P A(V ). If KX +∆ ̸≡ Nσ (KX +∆),
+assume ﬁrst that ⌊B⌋ = 0. Then by Lemma 5.3 there exists an R-divisor F ≥ 0
+such that KX + ∆ ∼ R F , and in particular B ∈ P A(V ). If ⌊B⌋ ̸= 0, pick a Q-divisor
+0 ≤ G ∈ V such that A + G is ample and ⌊B − G⌋ = 0. Then B − G ∈ P A+G(V )
+by above, and hence B ∈ P A(V ). This implies that PA(V ) is compact.
+Step 2. We next show that PA(V ) is a polytope. Assume for contradiction that
+PA(V ) is not a polytope. Then there exists an inﬁnite sequence of distinct extreme
+points Bm ∈ P A(V ). By compactness and by passing to a subsequence we can
+34
+
+===PDF PAGE 35===
+assume that there is a point B ∈ P A(V ) such that lim
+m→∞
+Bm = B. Therefore, in
+order to derive a contradiction, it is enough to prove the following.
+Claim 5.6. Fix B ∈ P A(V ), and let Bm ∈ P A(V ) be a sequence of distinct points
+such that lim
+m→∞
+Bm = B. Then for inﬁnitely many m there exist B′
+m ∈ P A(V ) such
+that Bm ∈ (B, B ′
+m).
+We remark that it is enough to ﬁnd one such m, however the use of Lemma 2.8
+in Step 5 shows that we need this stronger version of the claim.
+We prove the claim in the following three steps. In Steps 3 and 4 we ass ume that
+⌊B⌋ = 0, and in Step 5 we reduce the general case to this one.
+Step 3. In this step we assume that ⌊B⌋ = 0 and
+(51) KX + A + B ̸≡ Nσ (KX + A + B).
+By Lemma 5.3, there exists an R-divisor F ≥ 0 such that
+(52) KX + A + B ∼ R F.
+We ﬁrst prove Claim 5.6 under an additional assumption that F ∈ V , and treat the
+general case at the end of Step 3.
+For any t ≥ 0, deﬁne
+(53) Φ t = B + tF,
+so that by (52),
+(54) (1 + t)(KX + A + B) ∼ R KX + A + B + tF = KX + A + Φt.
+Note that ⌊Φ0⌋ = 0 and
+(55) Nσ (KX + A + Φt) = (1 + t)Nσ (KX + A + B) = (1 + t)Nσ (F ).
+Thus, if we denote
+(56) Υ t = Φ t − Φt ∧ Nσ (KX + A + Φt),
+then Υ t is a continuous function in t. Write F = ∑ℓ
+j=1 fjFj, where Fj are prime
+divisors and fj > 0 for all j. Since F ̸≡ Nσ (F ) by (51) and (52), Lemma 2.20 implies
+that there exists j ∈ { 1, . . . , ℓ } such that σFj (F ) = 0. Thus, by (53), (55) and (56),
+multFj Υt = multFj B + tfj,
+so there exists a minimal µ > 0 such that ⌊Υµ ⌋ ̸ = 0. Note that ⌊Υµ ⌋ ⊆ Supp F ,
+but Fj is not necessarily a component of ⌊Υµ ⌋. Let S ⊆ ⌊ Υµ ⌋ be a prime divisor.
+Observe that
+(57) σS(KX + A + Υµ ) = 0
+35
+
+===PDF PAGE 36===
+by (56), and
+σS
+(
+(1 + µ)F
+)
+= σS(KX + A + Φµ ) = mult S Φµ − multS Υµ(58)
+= multS B + µ multS F − 1 < µ multS F
+by (53), (55) and (56). Let Σ = (1 + µ)F − Φµ ∧ Nσ
+(
+(1 + µ)F
+)
+. Then we have
+(59) Σ ≥ 0 and KX + A + Υµ ∼ R Σ
+by (55) and (56), and moreover,
+(60) mult S Σ ≥ (1 + µ) multS F − σS
+(
+(1 + µ)F
+)
+> multS F ≥ 0
+by (58). For every m ∈ N, deﬁne Φ µ,m = Bm + µ(F + Bm − B). Then
+(61) lim
+m→∞
+Φµ,m = Φ µ and (1 + µ)(KX + A + Bm) ∼ R KX + A + Φµ,m
+by assumption, and by (53) and (52). Let
+Λ = Φ µ ∧ Nσ (KX + A + Φµ ) and Λ m = Φ µ,m ∧
+∑
+Z⊆ Supp Λ
+σZ(KX + A + Φµ,m ) ·Z.
+Note that 0 ≤ Λm ≤ Nσ (KX + A + Φµ,m ), and therefore KX + A + Φµ,m − Λm is
+pseudo-eﬀective by Lemma 2.16. By Lemma 2.16 again, we have Λ ≤ lim inf
+m→∞
+Λm,
+and in particular, Supp Λ m = Supp Λ for m ≫ 0. Thus, there exists an increasing
+sequence of rational numbers εm > 0 such that lim
+m→∞
+εm = 1 and Λ m ≥ εmΛ.
+Deﬁne Υ µ,m = Φ µ,m − εmΛ. Note that
+(62) KX + A + Υµ,m is pseudo-eﬀective and lim
+m→∞
+Υµ,m = Φ µ − Λ = Υ µ
+by (61) and (56). Therefore, by (57), (59), (60), (62) and Lem ma 5.4, and by passing
+to a subsequence, for every m there exist Υ ′
+m ∈ V and 0 < α m ≪ 1 such that
+KX + A + Υ′
+m is pseudo-eﬀective and Υ µ,m = α mΥµ + (1 − α m)Υ′
+m.
+Setting B′
+m = 1
+1− α m
+(Bm − α mB), we have Bm = α mB + (1 − α m)B′
+m, and an easy
+calculation involving (53), (61) and (62) shows that
+KX + A + B′
+m ∼ R
+1
+1 + µ
+(
+KX + A + Υ′
+m + εm − α m
+1 − α m
+Λ
+)
+.
+In particular, KX + A + B′
+m is pseudo-eﬀective for m ≫ 0. Since L(V ) is a rational
+polytope, Lemma 2.8 yields B′
+m ∈ L (V ) for m ≫ 0, which proves Claim 5.6 under
+the additional assumption that F ∈ V .
+To show the general case, let f : Y − → X be a log resolution of ( X, B + F ). Then
+there are R-divisors C, E ≥ 0 on Y with no common components and Cm, E m ≥ 0
+on Y with no common components such that E and Em are f -exceptional and
+KY + C = f ∗(KX + B) + E and KY + Cm = f ∗(KX + Bm) + Em.
+36
+
+===PDF PAGE 37===
+Note that lim
+m→∞
+Cm = C. Let G ≥ 0 be an f -exceptional Q-divisor on Y such that A◦
+is ample, ⌊C ◦⌋ = 0, and ⌊C ◦
+m⌋ = 0 for all m ≫ 0, where A◦ = f ∗A − G, C ◦ = C + G
+and C ◦
+m = Cm + G. Denoting F ◦ = f ∗F + E ≥ 0, we have
+f∗C ◦ = B, f ∗C ◦
+m = Bm, and KY + A◦ + C ◦ ∼ R F ◦.
+Let V ◦ ⊆ DivR(Y ) be the vector space spanned by the components of ∑p
+i=1 f − 1
+∗ Si +
+f − 1
+∗ F plus all exceptional prime divisors, and note that F ◦ ∈ V ◦. By what we proved
+above, for inﬁnitely many m there exist C ′
+m ∈ P A◦ (V ◦) such that C ◦
+m ∈ (C ◦, C ′
+m).
+Note that Supp C ′
+m is a subset of ∑p
+i=1 f − 1
+∗ Si plus all exceptional prime divisors, and
+denote B′
+m = f∗C ′
+m ∈ L (V ). Then Bm ∈ (B, B ′
+m), and KX +A+B′
+m = f∗(KY +A◦ +
+C ′
+m) is numerically equivalent to an eﬀective divisor, hence B′
+m ∈ P A(V ), ﬁnishing
+the proof of Claim 5.6 when ⌊B⌋ = 0 and KX + A + B ̸≡ Nσ (KX + A + B).
+Step 4. Now assume that ⌊B⌋ = 0 and KX + A + B ≡ Nσ (KX + A + B). Let Dm ≥ 0
+be R-divisors such that KX + A + Bm ≡ Dm. By Lemma 2.21(ii), there exists an
+ample R-divisor H such that
+Supp Nσ (KX + A + B) ⊆ B(KX + A + B + H),
+and as H + (KX + A + B − Dm) ≡ H + (B − Bm) is ample for all m ≫ 0, by passing
+to a subsequence we may assume that
+Supp Nσ (KX + A + B) ⊆ B
+(
+Dm + H + (KX + A + B − Dm)
+)
+(63)
+⊆ B(Dm) ⊆ Supp Dm
+for all m. For m ∈ N and t > 1, denote Cm,t = B + t(Bm − B), and observe that
+(64) Bm = 1
+t Cm,t + t − 1
+t B
+and
+(65) KX + A + Cm,t ≡ tDm − (t − 1)(KX + A + B) ≡ tDm − (t − 1)Nσ (KX + A + B).
+Since L(V ) is a polytope and B ∈ L (V ), pick δ = δ(B, L(V )) > 0 as in Lemma 2.8.
+By passing to a subsequence we may assume that ∥Bm − B∥ ≤ δ/ 2 for every m, and
+as ∥Cm,t − B∥ = t∥Bm − B∥, Lemma 2.8 gives Cm,t ∈ L (V ) for all m and 1 < t < 2.
+Fix m. By (63) there exists 1 < t m < 2 such that tmDm− (tm− 1)Nσ (KX +A+B) ≥
+0, and denote B′
+m = Cm,t m. Then (65) implies B′
+m ∈ P A(V ), and thus (64) proves
+Claim 5.6.
+Step 5. Now we treat the general case of Claim 5.6. Pick δ = δ(B, L(V )) as in
+Lemma 2.8. By passing to a subsequence, we may choose a Q-divisor 0 ≤ G ∈ V such
+that A◦ is ample, ⌊B◦⌋ = 0 and all ⌊B◦
+m⌋ = 0, where A◦ = A + G, B◦ = B − G and
+B◦
+m = Bm− G. By Steps 3 and 4, for inﬁnitely many m there exist Fm ∈ P A◦ (V ) such
+that B◦
+m ∈ (B◦, F m). In particular, setting B′
+m = Fm + G, we have Bm ∈ (B, B ′
+m).
+Since B − B′
+m = B◦ − Fm, we may assume that ∥B − B′
+m∥ ≤ δ for m ≫ 0 by choosing
+Fm closer to B◦ if necessary. Therefore, by Lemma 2.8 applied to the polytope L(V )
+37
+
+===PDF PAGE 38===
+and the point B ∈ L (V ), we have B′
+m ∈ L (V ) for m ≫ 0, and thus B′
+m ∈ P A(V )
+since KX + A + B′
+m = KX + A◦ + Fm is numerically equivalent to an eﬀective divisor.
+This ﬁnishes the proof of Claim 5.6.
+Step 6. Therefore PA(V ) is a polytope, and we ﬁnally show that it is a rational
+polytope. Let B1, . . . , B q be the extreme points of PA(V ). Then there exist R-
+divisors Di ≥ 0 such that KX + A + Bi ≡ Di for all i. Let W ⊆ DivR(X) be the
+vector space spanned by V and by the components of KX +A and ∑q
+i=1 Di. Note that
+for every τ = ( t1, . . . , t q) ∈ Rq
++ such that ∑ti = 1, we have Bτ = ∑tiBi ∈ P A(V )
+and KX + A + Bτ ≡ ∑tiDi ∈ W . Let φ : W − → N 1(X)R be the linear map sending
+an R-divisor to its numerical class. Then W0 = φ − 1(0) is a rational subspace of W
+and
+PA(V ) = {B ∈ L (V ) |B = − KX − A + D + R, where 0 ≤ D ∈ W, R ∈ W0}.
+Therefore, PA(V ) is cut out from L(V ) ⊆ W by ﬁnitely many rational half-spaces,
+and thus is a rational polytope. □
+6. Finite generation
+In this section, we prove that Theorem A n− 1 and Theorem B n imply Theorem
+An; as an immediate consequence, we obtain Theorem 1.1.
+Lemma 6.1. Let (X, ∑p
+i=1 Si) be a log smooth projective pair, let C ⊆ ∑p
+i=1 R+Si ⊆
+DivR(X) be a rational polyhedral cone, and let C = ⋃p
+j=1 Cj be a rational polyhedral
+decomposition. Denote S = C ∩ Div(X) and Sj = Cj ∩ Div(X) for all j. Assume
+that:
+(i) there exists M > 0 such that, if ∑α iSi ∈ C j for some j and some α i ∈ N
+with ∑α i ≥ M, then ∑α iSi − Sj ∈ C ;
+(ii) the ring resSj R(X, Sj) is ﬁnitely generated for every j = 1, . . . , p .
+Then the divisorial ring R(X, S) is ﬁnitely generated.
+Proof. For every i = 1, . . . , p , let σi ∈ H 0(X, OX(Si)) be a section such that div σi =
+Si. Let R ⊆ R(X; S1, . . . , S p) be the ring spanned by R(X, S) and σ1, . . . , σ p, and
+note that R is graded by ∑p
+i=1 NSi. By Lemma 2.25(i), it is enough to show that
+R is ﬁnitely generated.
+For any α = (α 1, . . . , α p) ∈ Np, denote Dα = ∑α iSi and deg( α ) = ∑α i, and for
+a section σ ∈ H 0(X, OX (Dα )), set deg( σ) = deg( α ). By (ii), for each j = 1 , . . . , p
+there exists a ﬁnite set Hj ⊆ R(X, Sj) such that
+(66) res Sj R(X, Sj) is generated by the set {σ|Sj |σ ∈ H j}.
+Since the vector space H 0(X, OX(Dα )) is ﬁnite-dimensional for every α ∈ Np, there
+is a ﬁnite set H ⊆ R such that
+(67) {σ1, . . . , σ p} ∪ H 1 ∪ · · · ∪ Hp ⊆ H ,
+38
+
+===PDF PAGE 39===
+and
+(68) H 0(X, OX (Dα )) ⊆ C[H] for every α ∈ Np with Dα ∈ S and deg( α ) ≤ M,
+where C[H] is the C-algebra generated by the elements of H. Observe that C[H] ⊆
+R, and it suﬃces to show that R ⊆ C[H].
+Let χ ∈ R. By deﬁnition of R, we may write χ = ∑
+i σ
+λ 1,i
+1 . . . σ
+λ p,i
+p χ i, where
+χ i ∈ H 0(X, OX(Dα i)) for some Dα i ∈ S and λ j,i ∈ N. Thus, it is enough to show
+that χ i ∈ C[H], and after replacing χ by χ i we may assume that
+χ ∈ H 0(X, OX (Dα )) for some Dα ∈ S .
+The proof is by induction on deg χ . If deg χ ≤ M, then χ ∈ C[H] by (68). Now
+assume deg χ > M . Then there exists 1 ≤ j ≤ p such that Dα ∈ S j, and so by (66)
+and (67) there are θ1, . . . , θ z ∈ H and a polynomial ϕ ∈ C[X1, . . . , X z] such that
+χ |Sj = ϕ (θ1|Sj , . . . , θ z|Sj ). Therefore, from the exact sequence
+0 − → H 0(X, OX (Dα − Sj))
+·σ j
+− → H 0(X, OX (Dα )) − → H 0(Sj, OSj (Dα ))
+we obtain
+χ − ϕ (θ1, . . . , θ z) = σj ·χ ′ for some χ ′ ∈ H 0(X, OX (Dα − Sj)).
+Note that Dα − Sj ∈ S by (i), and since deg χ ′ < deg χ , by induction we have
+χ ′ ∈ C[H]. Therefore χ = σj ·χ ′ + ϕ (θ1, . . . , θ z) ∈ C[H], and we are done. □
+Lemma 6.2. Assume Theorem A n− 1 and Theorem B n− 1.
+Let (X, S + ∑p
+i=1 Si) be a log smooth projective pair of dimension n, where S
+and all Si are distinct prime divisors. Let V = ∑p
+i=1 RSi ⊆ DivR(X), let A be
+an ample Q-divisor on X, let B1, . . . , B m ∈ E S+A(V ) be Q-divisors, and denote
+Di = KX + S + A + Bi.
+Then the ring resS R(X; D1, . . . , D m) is ﬁnitely generated.
+Proof. We ﬁrst prove the lemma under an additional assumption that all Bi lie in
+the interior of L(V ) and that all ( S, B i|S) are terminal, and then treat the general
+case at the end of the proof.
+Let G ⊆ E S+A(V ) be the convex hull of all Bi. Then G is contained in the interior
+of L(V ), and ( S, G |S) is terminal for every G ∈ G . Denote
+F = R+(KX + S + A + G).
+Then, by Lemma 2.27 it suﬃces to prove that res S R(X, F ) is ﬁnitely generated.
+Let W ⊆ DivR(S) be the subspace spanned by the components of all Si|S, and let
+Φm and Φ be the functions deﬁned in Setup 4.1. By Theorem 4.3, P = G ∩ B S
+A(V )
+is a rational polytope, and Φ extends to a rational piecewise aﬃne function on
+P. Thus, there exists a ﬁnite decomposition P = ⋃Pi into rational polytopes
+such that Φ is rational aﬃne on each Pi. Denote C = R+(KX + S + A + P) and
+Ci = R+(KX + S + A + Pi), and note that C = ⋃Ci. Since res S H 0(X, OX(D)) = 0
+for every D ∈ F \ C , and as C is a rational polyhedral cone, it suﬃces to show
+39
+
+===PDF PAGE 40===
+that res S R(X, C) is ﬁnitely generated, and therefore, to prove that res S R(X, Ci) is
+ﬁnitely generated for each i. Hence, after replacing G by Pi, we can assume that Φ
+is rational aﬃne on G.
+By Lemma 2.11, there exist Gi ∈ G ∩ DivQ(X) and gi ∈ Q+, with i = 1 , . . . , q ,
+such that Fi = gi(KX + S + A + Gi) are generators of F ∩ Div(X). By Theorem 4.3,
+there exists a positive integer ℓ such that Φ m(G) = Φ(G) for every G ∈ G ∩ DivQ(X)
+and every m ∈ N such that m
+ℓ G ∈ Div(X). Pick a positive integer k such that all
+kgi
+ℓ ∈ N and kgi
+ℓ Gi ∈ Div(X). For each nonzero α = (α 1, . . . , α q) ∈ Nq, denote
+gα =
+∑
+α igi, G α = 1
+gα
+∑
+α igiGi, F α =
+∑
+α iFi = gα (KX + S + A + Gα ),
+and note that kgα
+ℓ Gα ∈ Div(X) and Φ(Gα ) = 1
+gα
+∑α igiΦ(Gi). Then, by Corollary
+3.5 we have
+resS H 0(X, OX (mkFα )) = H 0(
+S, OS(mkgα (KS + A|S + Φmkgα (Gα )))
+)
+= H 0(
+S, OS(mkgα (KS + A|S + Φ(Gα )))
+)
+for all α ∈ Nq and m ∈ N, and thus
+resS R(X; kF1, . . . , kF q) = R(S; kg1F ′
+1, . . . , kg qF ′
+q),
+where F ′
+i = KS + A|S + Φ(Gi). Since the last ring is a Veronese subring of the ad-
+joint ring R(S; F ′
+1, . . . , F ′
+q), it is ﬁnitely generated by Theorem A n− 1 and by Lemma
+2.25(i). Therefore res S R(X; F1, . . . , F q) is ﬁnitely generated by Lemma 2.25(ii), and
+since there is the natural projection of this ring onto res S R(X, F ), this proves the
+lemma under the additional assumption that all Bi lie in the interior of L(V ) and
+that all ( S, B i|S) are terminal.
+In the general case, for every i pick a Q-divisor Gi ∈ V such that A − Gi is ample
+and Bi + Gi is in the interior of L(V ). Let A′ be an ample Q-divisor such that every
+A − Gi − A′ is also ample, and pick Q-divisors Ai ≥ 0 such that Ai ∼ Q A − Gi − A′,
+⌊Ai⌋ = 0, ( X, S +∑p
+i=1 Si +∑m
+i=1 Ai) is log smooth, and the support of ∑m
+i=1 Ai does
+not contain any of the divisors S, S 1, . . . , S p. Let V ′ ⊆ DivR(X) be the vector space
+spanned by V and by the components of ∑m
+i=1 Ai. Let ε > 0 be a rational number
+such that A′′= A′− ε ∑m
+i=1 Ai is ample, and such that B′
+i = Bi + Gi + Ai + ε ∑m
+i=1 Ai
+is in the interior of L(V ′) for every i.
+Let B ≥ 0 be a Q-divisor such that ⌊B⌋ = 0 and B ≥ B′
+i for all i. By Lemma
+2.2, there exists a log resolution f : Y − → X such that
+KY + T + C = f ∗(KX + S + B) + E,
+where the Q-divisors C, E ≥ 0 have no common components, E is f -exceptional,
+⌊C⌋ = 0, the components of C are disjoint, and T = f − 1
+∗ S ⊈ Supp C. Then there
+are Q-divisors 0 ≤ Ci ≤ C and f -exceptional Q-divisors Ei ≥ 0 such that
+KY + T + Ci = f ∗(KX + S + B′
+i) + Ei,
+40
+
+===PDF PAGE 41===
+and in particular, all pairs ( T, C i|T ) are terminal. Let V ◦ be the subspace of Div R(Y )
+spanned by the components of C and by all f -exceptional prime divisors. There
+exists a Q-divisor F ≥ 0 on Y such that A◦ is ample, every C ◦
+i is in the interior of
+L(V ◦), and every pair ( T, C ◦
+i|T ) is terminal, where A◦ = f ∗A′′− F and C ◦
+i = Ci + F .
+Denoting D◦
+i = KY + T + A◦ + C ◦
+i , it follows that
+D◦
+i ∼ Q f ∗Di + Ei.
+Then the ring res T R(Y ; D◦
+1, . . . , D ◦
+m) is ﬁnitely generated by the special case that we
+proved above, so res S R(X; D1, . . . , D m) is ﬁnitely generated by Corollary 2.26. □
+Theorem 6.3. Theorem An− 1 and Theorem B n imply Theorem A n.
+Proof. We ﬁrst assume that there exist Q-divisors Fi ≥ 0 such that
+(69)
+(
+X, ∑
+i(Bi + Fi)
+)
+is log smooth and KX + A + Bi ∼ Q Fi for every i.
+We reduce the general case to this one at the end of the proof.
+Let W be the subspace of Div R(X) spanned by the components of all Bi and Fi,
+and let S1, . . . , S p be the prime divisors in W . Denote by T = {(t1, . . . , t k) | ti ≥
+0, ∑ti = 1} ⊆ Rk the standard simplex, and for each τ = (t1, . . . , t k) ∈ T , set
+(70) Bτ =
+k∑
+i=1
+tiBi and Fτ =
+k∑
+i=1
+tiFi ∼ R KX + A + Bτ.
+Denote
+B = {Fτ + B |τ ∈ T , 0 ≤ B ∈ W, B τ + B ∈ L (W )} ⊆ W,
+and for every j = 1, . . . , p , let
+Bj = {Fτ + B |τ ∈ T , 0 ≤ B ∈ W, B τ + B ∈ L (W ), S j ⊆ ⌊ Bτ + B⌋} ⊆ W.
+Then B and Bj are rational polytopes, and thus C = R+B and Cj = R+Bj are
+rational polyhedral cones. Denote S = C ∩ Div(X) and Sj = Cj ∩ Div(X). We claim
+that:
+(i) C = ⋃p
+j=1 Cj,
+(ii) there exists M > 0 such that, if ∑α iSi ∈ C j for some j and some α i ∈ N
+with ∑α i ≥ M, then ∑α iSi − Sj ∈ C ;
+(iii) the ring res Sj R(X, Sj) is ﬁnitely generated for every j = 1, . . . , p .
+This claim readily implies the theorem: indeed, Lemma 6.1 then shows tha t R(X, S)
+is ﬁnitely generated. Let d be a positive integer such that F ′
+i = dFi are integral
+divisors for i = 1 , . . . , k . Pick divisors F ′
+k+1, . . . , F ′
+m such that F ′
+1, . . . , F ′
+m are gen-
+erators of S. Then R(X; F ′
+1, . . . , F ′
+m) is ﬁnitely generated by Lemma 2.27, and
+so is R(X; F ′
+1, . . . , F ′
+k) by Lemma 2.25(i). Finally, Lemma 2.25(ii) implies that
+R(X; F1, . . . , F k) is ﬁnitely generated, and therefore so is R(X; D1, . . . , D k) by (69)
+and by Corollary 2.26.
+41
+
+===PDF PAGE 42===
+We now prove the claim. In order to see (i), ﬁx G ∈ C\{ 0}. Then, by deﬁnition
+of C, there exist τ ∈ T , 0 ≤ B ∈ W and r > 0 such that Bτ + B ∈ L (W ) and
+G = r(Fτ + B). Setting
+λ = max{t ≥ 1 |Bτ + tB + (t − 1)Fτ ∈ L (W )}
+and B′ = λB + (λ − 1)Fτ, we have
+λG = r(Fτ + B′),
+and there exists j0 such that Sj0 ⊆ ⌊ Bτ + B′⌋. Therefore G ∈ C j0, which proves (i).
+For (ii), note ﬁrst that there exists ε > 0 such that ∥Bi∥ ≤ 1 − ε for all i, and
+thus
+(71) ∥Bτ∥ ≤ 1 − ε for any τ ∈ T .
+Since the polytopes Bj ⊆ W are compact, there is a positive constant C such that
+∥Ψ∥ ≤ C for any Ψ ∈ ⋃p
+j=1 Bj, and denote M = pC/ε . For some j ∈ { 1, . . . , p }, let
+G = ∑α iSi ∈ S j be such that ∑α i ≥ M. Since p∥G∥ ≥ ∑α i, we have
+∥G∥ ≥ M
+p = C
+ε .
+By deﬁnition of Cj and of C, we may write G = rG′ with G′ ∈ B j, ∥G′∥ ≤ C and
+r > 0. In particular,
+(72) r = ∥G∥
+∥G′∥ ≥ 1
+ε.
+Furthermore, G′ = Fτ +B for some τ ∈ T and 0 ≤ B ∈ W such that Bτ +B ∈ L (W )
+and Sj ⊆ ⌊ Bτ + B⌋. Therefore, by (71) and (72) we have
+multSj B = 1 − multSj Bτ ≥ ε ≥ 1
+r ,
+and thus
+G − Sj = r
+(
+Fτ + B − 1
+r Sj
+)
+∈ C .
+Finally, to show (iii), ﬁx j ∈ { 1, . . . , p }, and let {E1, . . . , E ℓ} be a set of generators
+of Sj. Then, by deﬁnition of Sj and by (70), for every i = 1 , . . . , ℓ , there exist
+ki ∈ Q+, τi ∈ T ∩ Qk and 0 ≤ Bi ∈ W such that Bτi + Bi ∈ L (W ), Sj ⊆ ⌊ Bτi + Bi⌋
+and
+Ei = ki(Fτi + Bi) ∼ Q ki(KX + A + Bτi + Bi).
+Denote E′
+i = KX + A + Bτi + Bi. Then the ring res Sj R(X; E′
+1, . . . , E ′
+ℓ) is ﬁnitely
+generated by Lemma 6.2, and thus so is res Sj R(X; E1, . . . , E ℓ) by Corollary 2.26.
+Since there is the natural projection res Sj R(X; E1, . . . , E ℓ) − → resSj R(X, Sj), this
+completes the proof under the additional assumption that (69) ho lds.
+We now prove the general case. Let V be the subspace of Div R(X) spanned
+by the components of all Bi, let P ⊆ V be the convex hull of all Bi, and denote
+R = R+(KX + A + P). Then, by Lemma 2.27 it suﬃces to show that R(X, R) is
+42
+
+===PDF PAGE 43===
+ﬁnitely generated. By Theorem B n, PE = P ∩ E A(V ) is a rational polytope, and
+denote RE = R+(KX + A + PE ). Since H 0(X, OX (D)) = 0 for every integral divisor
+D ∈ R \ R E, the ring R(X, R) is ﬁnitely generated if and only if R(X, RE ) is.
+By Lemma 2.11, the monoid RE ∩ Div(X) is ﬁnitely generated, and let Ri be its
+generators for i = 1 , . . . , ℓ . Then there exist pi ∈ Q+ and Pi ∈ P E ∩ DivQ(X) such
+that Ri = pi(KX + A + Pi). By construction, ⌊Pi⌋ = 0 and there exist Q-divisors
+Gi ≥ 0 such that
+KX + A + Pi ∼ Q Gi
+for all i. Let f : Y − → X be a log resolution of
+(
+X, ∑
+i(Pi + Gi)
+)
+. For every i,
+there are Q-divisors Ci, E i ≥ 0 on Y with no common components such that Ei is
+f -exceptional and
+KY + Ci = f ∗(KX + Pi) + Ei.
+Note that ⌊Ci⌋ = 0, and denote F ◦
+i = pi(f ∗Gi + Ei) ≥ 0. Let H ≥ 0 be an f -
+exceptional Q-divisor on Y such that A◦ is ample and ⌊C ◦
+i ⌋ = 0 for all i, where
+A◦ = f ∗A − H is ample and C ◦
+i = Ci + H, and denote D◦
+i = KY + A◦ + C ◦
+i . Then
+piD◦
+i ∼ Q f ∗Ri + piEi ∼ Q F ◦
+i .
+This last relation implies two things: ﬁrst, it follows from what we prove d above and
+by Lemma 2.25 that the adjoint ring R(Y ; D◦
+1, . . . , D ◦
+ℓ) is ﬁnitely generated. Second,
+the ring R(X; R1, . . . , R ℓ) is then ﬁnitely generated by Corollary 2.26. Since there
+is the natural projection map R(X; R1, . . . , R ℓ) − → R(X, RE ), the ring R(X, RE) is
+ﬁnitely generated, and we are done. □
+Finally, we have:
+Proof of Theorem 1.1. By Theorem 2.29, there exist a projective klt pair ( Y, Γ) and
+positive integers p and q such that p(KX + ∆) and q(KY + Γ) are integral, KY + Γ is
+big and R(X, p (KX + ∆)) ≃ R(Y, q (KY + Γ)). Write KY + Γ ∼ Q A + B, where A is
+an ample Q-divisor and B ≥ 0. Let f : Y ′ − → Y be a log resolution of ( Y, Γ+ B), let
+Γ′, E ≥ 0 be Q-divisors such that E is f -exceptional and KY ′ +Γ ′ = f ∗(KY +Γ)+ E,
+and let H ≥ 0 be an f -exceptional Q-divisor such that A′ = f ∗A − H is ample. Pick
+a rational number 0 < ε ≪ 1 such that if C = Γ ′ + εf ∗B + εH, then ⌊C⌋ = 0, and
+note that KY ′ + C + εA′ ∼ Q (ε + 1)f ∗(KY + Γ) + E. Then the ring R(Y, K Y + Γ) is
+ﬁnitely generated by Theorem A and Corollary 2.26, and thus so is R(X, K X + ∆)
+by Lemma 2.25. □
+References
+[ADHL10] I. Arzhantsev, U. Derenthal, J. Hausen, and A. Laface , Cox Rings , arXiv:1003.4229v1.
+[BCHM10] C. Birkar, P. Cascini, C. Hacon, and J. M cKernan, Existence of minimal models for
+varieties of log general type , J. Amer. Math. Soc. 23 (2010), no. 2, 405–468.
+[Bou89] N. Bourbaki, Commutative algebra. Chapters 1–7 , Elements of Mathematics, Springer-
+Verlag, Berlin, 1989.
+43
+
+===PDF PAGE 44===
+[CL10] A. Corti and V. Lazi´ c, New outlook on the Minimal Model Program, II ,
+arXiv:1005.0614v2.
+[CL11] P. Cascini and V. Lazi´ c, The Minimal Model Program Revisited , to appear in Contri-
+butions to Algebraic Geometry (P. Pragacz, ed.), EMS Publishing Hou se.
+[Cor07] A. Corti, 3-fold ﬂips after Shokurov , Flips for 3-folds and 4-folds (A. Corti, ed.), Oxford
+University Press, 2007, pp. 13–40.
+[Cor11] , Finite generation of adjoint rings after Lazi´ c: an introdu ction, Classiﬁcation
+of Algebraic Varieties (C. Faber, G. van der Geer, and E. Looijenga , eds.), EMS Series
+of Congress Reports, EMS Publishing House, 2011, pp. 197–220.
+[ELM+06] L. Ein, R. Lazarsfeld, M. Mustat ¸˘ a, M. Nakamaye, and M. Popa, Asymptotic invariants
+of base loci , Ann. Inst. Fourier (Grenoble) 56 (2006), no. 6, 1701–1734.
+[FM00] O. Fujino and S. Mori, A canonical bundle formula , J. Diﬀerential Geom. 56 (2000),
+no. 1, 167–188.
+[Ful93] W. Fulton, Introduction to toric varieties , Princeton University Press, 1993.
+[HK10] C. Hacon and S. Kov´ acs, Classiﬁcation of Higher Dimensional Algebraic Varieties ,
+Oberwolfach Seminars, vol. 41, Birkh¨ auser, Basel, 2010.
+[HM10] C. Hacon and J. M cKernan, Existence of minimal models for varieties of log general
+type II , J. Amer. Math. Soc. 23 (2010), no. 2, 469–490.
+[KM98] J. Koll´ ar and S. Mori, Birational Geometry of Algebraic Varieties , Cambridge Tracts
+in Mathematics, vol. 134, Cambridge University Press, 1998.
+[Laz09] V. Lazi´ c, Adjoint rings are ﬁnitely generated , arXiv:0905.2707v3.
+[Mor82] S. Mori, Threefolds whose canonical bundles are not numerically eﬀe ctive, Ann. of
+Math. (2) 116 (1982), no. 1, 133–176.
+[Nak04] N. Nakayama, Zariski-decomposition and abundance , MSJ Memoirs, vol. 14, Mathe-
+matical Society of Japan, Tokyo, 2004.
+[P˘ au08] M. P˘ aun, Relative critical exponents, non-vanishing and metrics wi th minimal singu-
+larities, arXiv:0807.3109v1.
+[Sho03] V. V. Shokurov, Prelimiting ﬂips , Proc. Steklov Inst. of Math. 240 (2003), 82–219.
+[Siu98] Y.-T. Siu, Invariance of plurigenera , Invent. Math. 134 (1998), no. 3, 661–673.
+[Siu08] , Finite generation of canonical ring by analytic method , Sci. China Ser. A 51
+(2008), no. 4, 481–502.
+Department of Mathematics, Imperial College London, 180 Qu een’s Gate, Lon-
+don SW7 2AZ, UK
+E-mail address : p.cascini@imperial.ac.uk
+Mathematisches Institut, Universit ¨at Bayreuth, 95440 Bayreuth, Germany
+E-mail address : vladimir.lazic@uni-bayreuth.de
+44

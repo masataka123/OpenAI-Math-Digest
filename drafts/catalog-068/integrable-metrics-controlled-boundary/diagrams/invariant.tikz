@@ -1,0 +1,7 @@
+\node[card] (n0) {\heading{1}{自然な作用と非零のEuler数}{Natural action and nonzero Euler number}$\chi(X,\mathcal O_X)\ne0,\quad L=-K_X\ \text{smoothly semipositive}$};
+\node[card,below=2.0cm of n0] (n1) {\heading{2}{不変twisted formと行列式}{Invariant forms and determinants}$\sigma_j\in H^0(X,A+m_jL)^T\setminus\{0\}$};
+\flow{n0}{n1}{\Tx{零点値付き指数と係数 $(m+1)L$ のhard Lefschetz}{Index with its zero value and hard Lefschetz for $(m+1)L$}\\[3pt]\Cite{invariant-forms}};
+\node[card,below=2.0cm of n1] (n2) {\heading{3}{不変比の底と可積分補正}{Invariant-ratio base and integrable correction}$V\geq f^*M,\quad F_0+\epsilon M\sim_{\mathbb Q}G\geq0$};
+\flow{n1}{n2}{\Tx{invariant rank一、曲率の核、全valuationの可積分性}{Invariant rank one, curvature kernel and integrability at all valuations}\\[3pt]\Cite{invariant-base}};
+\node[result,below=2.0cm of n2] (n3) {\heading{4}{指標を保った帰還}{Return retaining the character}$(\sigma_2/\sigma_1)^a f^*u\in H^0(X,mL)^T\setminus\{0\}$};
+\flow{n2}{n3}{\Tx{底の関数は不変、補正は例外的}{Base functions are invariant and the correction is exceptional}\\[3pt]\Cite{return}};

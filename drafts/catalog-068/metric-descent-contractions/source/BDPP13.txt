@@ -1,0 +1,1921 @@
+arXiv:math/0405285v1  [math.AG]  14 May 2004
+The pseudo-eﬀective cone of a
+compact K¨ ahler manifold and
+varieties of negative Kodaira dimension
+S´ ebastien Boucksom1 Jean-Pierre Demailly 2
+Mihai Paun 3 Thomas Peternell 4
+1Universit´ e de Paris VII 2Universit´ e de Grenoble I, BP 74
+Institut de Math´ ematiques Institut Fourier
+175 rue du Chevaleret UMR 5582 du CNRS
+75013 Paris, France 38402 Saint-Martin d’H` eres, France
+3Universit´ e de Strasbourg 4Universit¨ at Bayreuth
+D´ epartement de Math´ ematiques Mathematisches Institut
+67084 Strasbourg, France D-95440 Bayreuth, Deutschland
+Abstract. We prove that a holomorphic line bundle on a projective manif old is
+pseudo-eﬀective if and only if its degree on any member of a co vering family of curves
+is non-negative. This is a consequence of a duality statemen t between the cone of
+pseudo-eﬀective divisors and the cone of “movable curves”, which is obtained from
+a general theory of movable intersections and approximate Z ariski decomposition for
+closed positive (1, 1)-currents. As a corollary, a projective manifold has a pseud o-
+eﬀective canonical bundle if and only if it is is not uniruled . We also prove that a
+4-fold with a canonical bundle which is pseudo-eﬀective and of numerical class zero in
+restriction to curves of a covering family, has non negative Kodaira dimension.
+§0 Introduction
+One of the major open problems in the classiﬁcation theory of projective or compact
+K¨ ahler manifolds is the following geometric description of varieties of negative Kodaira
+dimension.
+0.1 Conjecture. A projective (or compact K¨ ahler) manifoldX has Kodaira dimension
+κ(X) = −∞ if and only if X is uniruled.
+One direction is trivial, namely X uniruled implies κ(X) = −∞ . Also, the con-
+jecture is known to be true for projective threefolds by [Mo8 8] and for non-algebraic
+K¨ ahler threefolds by [Pe01], with the possible exception of simple threefolds (recall that
+a variety is said to be simple if there is no compact positive d imensional subvariety
+through a very general point of X). In the case of projective manifolds, the problem
+can be split into two more tractable parts :
+A. If the canonical bundle KX is not pseudo-eﬀective, i.e. not contained in the closure
+of the cone spanned by classes of eﬀective divisors, then X is uniruled.
+B. If KX is pseudo-eﬀective, then κ(X) ≥ 0.2 The pseudo-eﬀective cone of compact K¨ ahler manifolds
+In the K¨ ahler case, the statements should be essentially th e same, except that
+eﬀective divisors have to be replaced by closed positive (1 , 1)-currents.
+In this paper we give a positive answer to (A) for projective m anifolds of any
+dimension, and a partial answer to (B) for 4-folds. Part (A) f ollows in fact from a
+much more general fact which describes the geometry of the ps eudo-eﬀective cone.
+0.2 Theorem. A line bundle L on a projective manifold X is pseudo-eﬀective if and
+only if L ·C ≥ 0 for all irreducible curves C which move in a family covering X.
+In other words, the dual cone to the pseudo-eﬀective cone is t he closure of the cone
+of “movable” curves. This should be compared with the dualit y between the nef cone
+and the cone of eﬀective curves.
+0.3 Corollary (Solution of (A)) . LetX be a projective manifold. If KX is not pseudo-
+eﬀective, then X is covered by rational curves.
+In fact, if KX is not pseudo-eﬀective, then by (0.2) there exists a coverin g family
+(Ct) of curves with KX ·Ct < 0, so that (0.3) follows by a well-known characteristic p
+argument of Miyaoka and Mori [MM86] (the so called bend-and- break lemma essentially
+amounts to deform the Ct so that they break into pieces, one of which is a rational
+curve).
+In the K¨ ahler case both a suitable analogue to (0.2) and the t heorem of Miyaoka-
+Mori are unknown. It should also be mentioned that the dualit y statement following
+(0.2) is actually (0.2) for R-divisors. The proof is based on a use of “approximate
+Zariski decompositions” and an estimate for an intersectio n number related to this
+decomposition. A major tool is the volume of an R-divisor which distinguishes big
+divisors (positive volume) from divisors on the boundary of the pseudo-eﬀective cone
+(volume 0).
+Concerning (B) we prove the following weaker statement.
+0.4 Theorem. Let X be a smooth projective 4-fold. Assume that KX is pseudo-
+eﬀective and there is a covering family (Ct) of curves such that KX ·Ct = 0 . Then
+κ(X) ≥ 0.
+One important ingredient of the proof of (0.4) is the quotien t deﬁned by the family
+(Ct). In order to obtain the full answer to Problem (B) in dimensi on 4, we would still
+need to prove that KX is eﬀective if KX is positive on all covering families of curves.
+In fact, in that case, KX should be big, i.e. of maximal Kodaira dimension.
+§1 Positive cones in the spaces of divisors and of curves
+In this section we introduce the relevant cones, both in the p rojective and K¨ ahler
+contexts – in the latter case, divisors and curves should sim ply be replaced by positive
+currents of bidimension (n − 1,n − 1) and (1, 1), respectively. We implicitly use that all
+(De Rham, resp. Dolbeault) cohomology groups under conside ration can be computed
+in terms of smooth forms or currents, since in both cases we ge t resolutions of the same
+sheaf of locally constant functions (resp. of holomorphic s ections).
+1.1 Deﬁnition. LetX be a compact K¨ ahler manifold.§1 Positive cones in the spaces of divisors and of curves 3
+(i) The K¨ ahler cone is the set K ⊂ H 1, 1
+R (X) of classes {ω } of K¨ ahler forms(this is
+an open convex cone ).
+(ii) The pseudo-eﬀective cone is the set E ⊂ H 1, 1
+R (X) of classes {T } of closed positive
+currents of type (1, 1) ( this is a closed convex cone ). Clearly E ⊃ K.
+(iii) The Neron-Severi space is deﬁned by
+NSR(X) :=
+(
+H 1, 1
+R (X) ∩ H 2(X, Z)/ tors
+)
+⊗ Z R.
+(iv) We set
+KNS = K ∩ NS R(X), ENS = E ∩ NS R(X).
+Algebraic geometers tend to restrict themselves to the alge braic cones generated by
+ample divisors and eﬀective divisors, respectively. Using L2 estimates for ∂, one can
+show the following expected relations between the algebrai c and transcendental cones
+(see [De90], [De92]).
+1.2 Proposition. In a projective manifold X, ENS is the closure of the convex cone
+generated by eﬀective divisors, and
+KNS is the closure of the cone generated by nef
+R-divisors.
+By extension, we will say that K is the cone of nef (1, 1)-cohomology classes (even
+though they are not necessarily integral). We now turn ourse lves to cones in cohomo-
+logy of bidegree ( n − 1,n − 1).
+1.3 Deﬁnition. LetX be a compact K¨ ahler manifold.
+(i) We deﬁne N to be the (closed) convex cone in H n− 1,n − 1
+R (X) generated by classes
+of positive currents T of type (n − 1,n − 1) ( i.e., of bidimension (1, 1)).
+(ii) We deﬁne the cone M ⊂ H n− 1,n − 1
+R (X) of movable classes to be the closure of
+the convex cone generated by classes of currents of the form
+µ ⋆ (˜ω 1 ∧ ... ∧ ˜ω n− 1)
+where µ : ˜X → X is an arbitrary modiﬁcation (one could just restrict oneself to
+compositions of blow-ups with smooth centers ), and the ˜ω j are K¨ ahler forms on ˜X.
+Clearly M ⊂ N.
+(iii) Correspondingly, we introduce the intersections
+NNS = N ∩ N1(X), MNS = M ∩ N1(X),
+in the space of integral bidimension (1, 1)-classes
+N1(X) := (H n− 1,n − 1
+R (X) ∩ H 2n− 2(X, Z)/ tors) ⊗ Z R.
+(iv) IfX is projective, we deﬁne NE(X) to be the convex cone generated by all eﬀective
+curves. Clearly NE(X) ⊂ NNS.4 The pseudo-eﬀective cone of compact K¨ ahler manifolds
+(v) If X is projective, we say that C is a strongly movable curve if
+C =µ ⋆ ( ˜A1 ∩ ... ∩ ˜An− 1)
+for suitable very ample divisors ˜Aj on ˜X, where µ : ˜X → X is a modiﬁcation.
+We let SME(X) to be the convex cone generated by all strongly movable (eﬀective)
+curves. Clearly
+SME(X) ⊂ MNS.
+(vi) We say that C is a movable curve ifC =Ct0 is a member of an analytic family
+(Ct)t∈ S such that ⋃
+t∈ SCt =X and, as such, is a reduced irreducible 1-cycle. We
+let ME(X) to be the convex cone generated by all movable (eﬀective) curves.
+The upshot of this deﬁnition lies in the following easy obser vation.
+1.4 Proposition. LetX be a compact K¨ ahler manifold. Consider the Poincar´ e duality
+pairing
+H 1, 1
+R (X) × H n− 1,n − 1
+R (X) − → R, (α,β ) ↦− →
+∫
+X
+α ∧ β.
+Then the duality pairing takes nonnegative values
+(i) for all pairs (α,β ) ∈
+K × N;
+(ii) for all pairs (α,β ) ∈ E × M.
+(iii) for all pairs (α,β ) where α ∈ E and β = [Ct] ∈ ME(X) is the class of a movable
+curve.
+Proof. (i) is obvious. In order to prove (ii), we may assume that β =µ ⋆ (˜ω 1 ∧... ∧ ˜ω n− 1)
+for some modiﬁcation µ : ˜X → X, whereα = {T } is the class of a positive (1, 1)-current
+on X and ˜ω j are K¨ ahler forms on ˜X. Then
+∫
+X
+α ∧ β =
+∫
+X
+T ∧ µ ⋆ (˜ω 1 ∧ ... ∧ ˜ω n− 1) =
+∫
+X
+µ ∗T ∧ ˜ω 1 ∧ ... ∧ ˜ω n− 1 ⩾ 0.
+Here, we have used the fact that a closed positive (1 , 1)-currentT always has a pull-back
+µ ⋆T , which follows from the fact that if T = i∂∂ϕ locally for some plurisubharmonic
+function in X, we can set µ ⋆T = i∂∂(ϕ ◦µ ). For (iii), we suppose α = {T } and
+β = {[Ct]}. Then we take an open covering ( Uj) on X such that T = i∂∂ϕ j with
+suitable plurisubharmonic functions ϕ j onUj. If we select a smooth partition of unity∑θj = 1 subordinate to ( Uj), we then get
+∫
+X
+α ∧ β =
+∫
+Ct
+T|Ct =
+∑
+j
+∫
+Ct∩ Uj
+θji∂∂ϕ j|Ct ⩾ 0.
+For this to make sense, it should be noticed that T|Ct is a well deﬁned closed positive
+(1, 1)-current (i.e. measure) on Ct for almost every t ∈ S, in the sense of Lebesgue
+measure. This is true only because ( Ct) covers X, thus ϕ j|Ct is not identically −∞ for
+almost every t ∈ S. The equality in the last formula is then shown by a regulariz ation
+argument for T , writing T = limTk with Tk = α +i∂∂ψ k and a decreasing sequence
+of smooth almost plurisubharmonic potentials ψ k ↓ ψ such that the Levi forms have§2 Main results and conjectures 5
+a uniform lower bound i∂∂ψ k ⩾ −Cω (such a sequence exists by [De92]). Then,
+writingα =i∂∂v j for some smooth potential vj onUj, we have T =i∂∂ϕ j onUj with
+ϕ j =vj +ψ , and this is the decreasing limit of the smooth approximatio nsϕ j,k =vj +ψ k
+on Uj. Hence Tk|Ct → T|Ct for the weak topology of measures on Ct.
+If C is a convex cone in a ﬁnite dimensional vector space E, we denote by C∨ the
+dual cone, i.e. the set of linear forms u ∈ E⋆ which take nonnegative values on all
+elements of C. By the Hahn-Banach theorem, we always have C∨∨ = C.
+Proposition 1.4 leads to the natural question whether the co nes ( K, N) and ( E, M)
+are dual under Poincar´ e duality. This question is addressed in the next section. Before
+doing so, we observe that the algebraic and transcendental c ones of ( n − 1,n − 1)
+cohomology classes are related by the following equalities (similar to what we already
+noticed for (1, 1)-classes, see Prop. 1.2).
+1.5 Theorem. LetX be a projective manifold. Then
+(i) NE(X) = NNS.
+(ii) SME(X) = ME(X) = MNS.
+Proof. (i) It is a standard result of algebraic geometry (see e.g. [ Ha70]), that the cone
+of eﬀective cone NE( X) is dual to the cone KNS of nef divisors, hence
+NNS ⊃ NE(X) = K∨.
+On the other hand, (1.4) (i) implies that NNS ⊂ K∨ , so we must have equality and (i)
+follows.
+Similarly, (ii) requires a duality statement which will be e stablished only in the next
+sections, so we postpone the proof.
+§2 Main results and conjectures
+First, the already mentioned duality between nef divisors a nd eﬀective curves ex-
+tends to the K¨ ahler case and to transcendental classes. Mor e precisely, [DPa03] gives
+2.1 Theorem (Demailly-Paun, 2001) . If X is K¨ ahler, then the cones K ⊂ H 1, 1
+R (X)
+and N ⊂ H n− 1,n − 1
+R (X) are dual by Poincar´ e duality, and N is the closed convex cone
+generated by classes [Y ] ∧ ω p− 1 where Y ⊂ X ranges over p-dimensional analytic
+subsets, p = 1, 2,...,n , and ω ranges over K¨ ahler forms.
+Proof. Indeed, Prop. 1.4 shows that the dual cone K∨ contains N which itself contains
+the cone N′ of all classes of the form {[Y ]∧ω p− 1}. The main result of [DPa03] conversely
+shows that the dual of ( N′)∨ is equal to K, so we must have
+K∨ = N′ = N.
+The main new result of this paper is the following characteri zation of pseudo-
+eﬀective classes (in which the “only if” part already follow s from 1.4 (iii)).6 The pseudo-eﬀective cone of compact K¨ ahler manifolds
+2.2 Theorem. If X is projective, then a class α ∈ NSR(X) is pseudo-eﬀective if (and
+only if ) it is in the dual cone of the cone SME(X) of strongly movable curves.
+In other words, a line bundle L is pseudo-eﬀective if (and only if) L ·C ⩾ 0 for
+all movable curves , i.e., L ·C ⩾ 0 for every very generic curve C (not contained
+in a countable union of algebraic subvarieties). In fact, by deﬁnition of SME( X),
+it is enough to consider only those curves C which are images of generic complete
+intersection of very ample divisors on some variety ˜X, under a modiﬁcation µ : ˜X → X.
+By a standard blowing-up argument, it also follows that a lin e bundle L on a normal
+Moishezon variety is pseudo-eﬀective if and only if L ·C ≥ 0 for every movable curve C.
+The K¨ ahler analogue should be :
+2.3 Conjecture. For an arbitrary compact K¨ ahler manifold X, the cones E and M
+are dual.
+The relation between the various cones of movable curves and currents in (1.5) is
+now a rather direct consequence of Theorem 2.2. In fact, usin g ideas hinted in [DPS96],
+we can say a little bit more. Given an irreducible curve C ⊂ X, we consider its normal
+“bundle” NC = Hom( I/ I2, OC), where I is the ideal sheaf of C. If C is a general
+member of a covering family ( Ct), then NC is nef. Now [DPS96] says that the dual
+cone of the pseudo-eﬀective cone of X contains the closed cone spanned by curves with
+nef normal bundle, which in turn contains the cone of movable curves. In this way we
+get :
+2.4 Theorem. LetX be a projective manifold. Then the following cones coincide .
+(i) the cone MNS = M ∩ N1(X) ;
+(ii) the closed cone
+SME(X) of strongly movable curves ;
+(iii) the closed cone ME(X) of movable curves ;
+(iv) the closed cone MEnef (X) of curves with nef normal bundle.
+Proof. We have already seen that
+SME(X) ⊂ ME(X) ⊂ MEnef (X) ⊂ (ENS)
+∨
+and
+SME(X) ⊂ ME(X) ⊂ MNS ⊂ (ENS)
+∨
+by 1.4 (iii). Now Theorem 2.2 implies ( MNS)∨ = SME(X), and 2.4 follows.
+2.5 Corollary . LetX be a projective manifold and L a line bundle on X.
+(i) L is pseudo-eﬀective if and only if L ·C ≥ 0 for all curves C with nef normal sheaf
+NC.
+(ii) If L is big, then L ·C >0 for all curves C with nef normal sheaf NC.
+2.5 (i) strenghtens results from [PSS99]. It is however not y et clear whether MNS =
+M ∩ N1(X) is equal to the closed cone of curves with ample normal bundle (although
+we certainly expect this to be true).§3 Zariski decomposition and movable intersections 7
+The most important special case of Theorem 2.2 is
+2.6 Theorem. If X is a projective manifold and is not uniruled, then KX is pseudo-
+eﬀective, i.e. KX ∈ ENS.
+Proof. This is merely a restatement of Corollary 0.3, which was pro ved in the intro-
+duction (as a consequence of the results of [MM86]).
+Theorem 2.6 can be generalized as follows.
+2.7 Theorem. LetX be a projective manifold (or a normal projective variety ). Let
+F ⊂ TX be a coherent subsheaf. If det F∗ is not pseudo-eﬀective, then X is uniruled.
+In other words, if X is not uniruled and Ω1
+X → G is generically surjective, then det G
+is pseudo-eﬀective.
+Proof. In fact, since det F∗ is not pseudo-eﬀective, there exists by (2.2) a covering
+family (Ct) such that c1(F) ·Ct > 0. Hence X is uniruled by [Mi87], [SB92].
+2.8. Problems.
+(1) Does 2.7 generalize to subsheaves F ⊂ T ⊗ m
+X ?
+(2) Suppose in 2.7 that only κ(det F∗ ) = −∞ . Is X still uniruled ? What can be said
+if c1(F∗ ) is on the boundary of the pseudo-eﬀective cone ?
+Turning to varieties with pseudo-eﬀective canonical bundl es, we have the
+2.9 Conjecture (special case of the “abundance conjecture”) . If KX is pseudo-
+eﬀective, then κ(X) ⩾ 0.
+In the last section we will prove this in dimension 4 under the additional assumption
+that there is a covering family of curves ( Ct) such that KX ·Ct = 0.
+§3 Zariski decomposition and movable intersections
+Let X be compact K¨ ahler and letα ∈ E◦ be in the interior of the pseudo–eﬀective
+cone. In analogy with the algebraic context such a class α is called “big”, and it can
+then be represented by a K¨ ahler currentT , i.e. a closed positive (1 , 1)-currentT such
+that T ⩾δω for some smooth hermitian metric ω and a constant δ ≪ 1.
+3.1 Theorem (Demailly [De92], [Bou02b, 3.1.24] . If T is a K¨ ahler current, then one
+can write T = lim Tm for a sequence of K¨ ahler currents Tm which have logarithmic
+poles with coeﬃcients in 1
+m Z, i.e. there are modiﬁcations µ m :Xm → X such that
+µ ⋆
+mTm = [Em] +βm
+where Em is an eﬀective Q-divisor on Xm with coeﬃcients in 1
+m Z (the “ﬁxed part” )
+and βm is a closed semi-positive form (the “movable part” ).
+Proof. Since this result has already been studied extensively, we just recall the main
+idea. Locally we can write T = i∂∂ϕ for some strictly plurisubharmonic potential ϕ .
+By a Bergman kernel trick and the Ohsawa-Takegoshi L2 extension theorem, we get8 The pseudo-eﬀective cone of compact K¨ ahler manifolds
+local approximations
+ϕ = limϕ m, ϕ m(z) = 1
+2m log
+∑
+ℓ
+|gℓ,m (z)|2
+where (gℓ,m ) is a Hilbert basis of the space of holomorphic functions whi ch are L2 with
+respect to the weight e− 2mϕ . This Hilbert basis is also a family of local generators of
+the globally deﬁned multiplier ideal sheaf I(mT ) = I(mϕ ). Then µ m : Xm → X is
+obtained by blowing-up this ideal sheaf, so that
+µ ⋆
+mI(mT ) = O(−mEm).
+We should notice that by approximating T − 1
+mω instead of T , we can replace βm
+by βm + 1
+mµ ⋆ω which is a big class on Xm ; by playing with the multiplicities of the
+components of the exceptional divisor, we could even achiev e that βm is a K¨ ahler class
+on Xm, but this will not be needed here.
+The more familiar algebraic analogue would be to take α =c1(L) with a big line
+bundle L and to blow-up the base locus of |mL|, m ≫ 1, to get a Q-divisor decompo-
+sition
+µ ⋆
+mL ∼ Em +Dm, E m eﬀective, D m free.
+Such a blow-up is usually referred to as a “log resolution” of the linear system |mL|,
+and we say that Em +Dm is an approximate Zariski decomposition of L. We will also
+use this terminology for K¨ ahler currents with logarithmic poles.
+3.2 Deﬁnition. We deﬁne the volume, or movable self-intersection of a big class
+α ∈ E◦ to be
+Vol(α ) = sup
+T ∈ α
+∫
+˜X
+β n > 0
+where the supremum is taken over all K¨ ahler currents T ∈ α with logarithmic poles,
+and µ ⋆T = [E] +β with respect to some modiﬁcation µ : ˜X → X.
+By Fujita [Fuj94] and Demailly-Ein-Lazarsfeld [DEL00], if L is a big line bundle,
+we have
+Vol(c1(L)) = lim
+m→ +∞
+Dn
+m = lim
+m→ +∞
+n!
+mnh0(X,mL ),
+and in these terms, we get the following statement.
+3.3 Proposition. LetL be a big line bundle on the projective manifold X. Let ǫ> 0.
+Then there exists a modiﬁcation µ :Xǫ → X and a decomposition µ ∗ (L) = E +β with
+E an eﬀective Q-divisor and β a big and nef Q-divisor such that
+Vol(L) − ε ⩽ Vol(β ) ⩽ Vol(L).
+It is very useful to observe that the supremum in Deﬁnition 3. 2 can actually be
+computed by a collection of currents whose singularities sa tisfy a ﬁltering property.§3 Zariski decomposition and movable intersections 9
+Namely, ifT1 =α +i∂∂ϕ 1 andT2 =α +i∂∂ϕ 2 are two K¨ ahler currents with logarithmic
+poles in the class of α , then
+(3. 4) T =α +i∂∂ϕ, ϕ = max(ϕ 1,ϕ 2)
+is again a K¨ ahler current with weaker singularities than T1 and T2. One could deﬁne
+as well
+(3. 4′) T =α +i∂
+∂ϕ, ϕ = 1
+2m log(e2mϕ 1 +e2mϕ 2 ),
+where m = lcm(m1,m 2) is the lowest common multiple of the denominators occuring
+in T1, T2. Now, take a simultaneous log-resolution µ m : Xm → X for which the
+singularities of T1 and T2 are resolved as Q-divisors E1 and E2. Then clearly the
+associated divisor in the decomposition µ ⋆
+mT = [E] +β is given by E = min(E1,E 2).
+By doing so, the volume
+∫
+Xm
+β n gets increased, as we shall see in the proof of Theorem
+3.5 below.
+3.5 Theorem (Boucksom [Bou02b]). LetX be a compact K¨ ahler manifold. We denote
+here by H k,k
+⩾0 (X) the cone of cohomology classes of type (k,k ) which have non-negative
+intersection with all closed semi-positive smooth forms of bidegree (n − k,n − k).
+(i) For each integer k = 1, 2,...,n , there exists a canonical “movable intersection
+product”
+E × · · · ×E → H k,k
+⩾0 (X), (α 1,...,α k) ↦→ ⟨ α 1 ·α 2 · · ·α k− 1 ·α k⟩
+such that Vol(α ) = ⟨α n⟩ whenever α is a big class.
+(ii) The product is increasing, homogeneous of degree 1 and superadditive in each ar-
+gument, i.e.
+⟨α 1 · · ·(α ′
+j +α ′′
+j ) · · ·α k⟩ ⩾ ⟨α 1 · · ·α ′
+j · · ·α k⟩ + ⟨α 1 · · ·α ′′
+j · · ·α k⟩.
+It coincides with the ordinary intersection product when th eα j ∈
+K are nef classes.
+(iii) The movable intersection product satisﬁes the Teissier-Ho vanskii inequalities
+⟨α 1 ·α 2 · · ·α n⟩ ⩾ (⟨α n
+1 ⟩)1/n ... (⟨α n
+n⟩)1/n (with ⟨α n
+j ⟩ = Vol(α j) ).
+(iv) Fork = 1, the above “product” reduces to a (non linear ) projection operator
+E → E1, α → ⟨ α ⟩
+onto a certain convex subcone E1 of E such that
+K ⊂ E1 ⊂ E. Moreover, there is
+a “divisorial Zariski decomposition ”
+α = {N (α )} + ⟨α ⟩
+where N (α ) is a uniquely deﬁned eﬀective divisor which is called the “ne gative
+divisorial part” of α . The map α ↦→ N (α ) is homogeneous and subadditive, and
+N (α ) = 0 if and only if α ∈ E1.10 The pseudo-eﬀective cone of compact K¨ ahler manifolds
+(v) The components of N (α ) always consist of divisors whose cohomology classes are
+linearly independent, especially N (α ) has at most ρ = rank Z NS(X) components.
+Proof. We essentially repeat the arguments developped in [Bou02b ], with some simpli-
+ﬁcations arising from the fact that X is supposed to be K¨ ahler from the start.
+(i) First assume that all classes α j are big, i.e. α j ∈ E◦ . Fix a smooth closed ( n−k,n −k)
+semi-positive form u on X. We select K¨ ahler currentsTj ∈ α j with logarithmic poles,
+and a simultaneous log-resolution µ : ˜X → X such that
+µ ⋆Tj = [Ej] +βj.
+We consider the direct image current µ ⋆ (β1 ∧... ∧βk) (which is a closed positive current
+of bidegree (k,k ) on X) and the corresponding integrals
+∫
+˜X
+β1 ∧ ... ∧ βk ∧ µ ⋆u ⩾ 0.
+If we change the representative Tj with another current T ′
+j, we may always take a
+simultaneous log-resolution such that µ ⋆T ′
+j = [E′
+j] + β ′
+j, and by using (3 . 4′) we can
+always assume that E′
+j ⩽ Ej. Then Dj = Ej − E′
+j is an eﬀective divisor and we ﬁnd
+[Ej] +βj ≡ [E′
+j] +β ′
+j , hence β ′
+j ≡ βj + [Dj]. A substitution in the integral implies
+∫
+˜X
+β ′
+1 ∧ β2 ∧ ... ∧ βk ∧ µ ⋆u
+=
+∫
+˜X
+β1 ∧ β2 ∧ ... ∧ βk ∧ µ ⋆u +
+∫
+˜X
+[D1] ∧ β2 ∧ ... ∧ βk ∧ µ ⋆u
+⩾
+∫
+˜X
+β1 ∧ β2 ∧ ... ∧ βk ∧ µ ⋆u.
+Similarly, we can replace successively all forms βj by the β ′
+j , and by doing so, we ﬁnd
+∫
+˜X
+β ′
+1 ∧ β ′
+2 ∧ ... ∧ β ′
+k ∧ µ ⋆u ⩾
+∫
+˜X
+β1 ∧ β2 ∧ ... ∧ βk ∧ µ ⋆u.
+We claim that the closed positive currents µ ⋆ (β1 ∧ ... ∧ βk) are uniformly bounded in
+mass. In fact, if ω is a K¨ ahler metric in X, there exists a constant Cj ⩾ 0 such that
+Cj{ω } − α j is a K¨ ahler class. HenceCjω − Tj ≡ γj for some K¨ ahler formγj onX. By
+pulling back with µ , we ﬁnd Cjµ ⋆ω − ([Ej] +βj) ≡ µ ⋆γj, hence
+βj ≡ Cjµ ⋆ω − ([Ej] +µ ⋆γj).
+By performing again a substitution in the integrals, we ﬁnd
+∫
+˜X
+β1 ∧ ... ∧ βk ∧ µ ⋆u ⩽C1...C k
+∫
+˜X
+µ ⋆ω k ∧ µ ⋆u =C1...C k
+∫
+X
+ω k ∧ u
+and this is true especially for u = ω n− k. We can now arrange that for each of the
+integrals associated with a countable dense family of forms u, the supremum is achieved§3 Zariski decomposition and movable intersections 11
+by a sequence of currents (µ m)⋆ (β1,m ∧... ∧βk,m ) obtained as direct images by a suitable
+sequence of modiﬁcations µ m : ˜Xm → X. By extracting a subsequence, we can achieve
+that this sequence is weakly convergent and we set
+⟨α 1 ·α 2 · · ·α k⟩ = lim ↑
+m→ +∞
+{(µ m)⋆ (β1,m ∧ β2,m ∧ ... ∧ βk,m )}
+(the monotonicity is not in terms of the currents themselves , but in terms of the
+integrals obtained when we evaluate against a smooth closed semi-positive form u). By
+evaluating against a basis of positive classes {u} ∈ H n− k,n − k(X), we infer by Poincar´ e
+duality that the class of ⟨α 1 ·α 2 · · ·α k⟩ is uniquely deﬁned (although, in general, the
+representing current is not unique).
+(ii) It is indeed clear from the deﬁnition that the movable in tersection product is
+homogeneous, increasing and superadditive in each argumen t, at least when the α j’s
+are in E◦ . However, we can extend the product to the closed cone E by monotonicity,
+by setting
+⟨α 1 ·α 2 · · ·α k⟩ = lim ↓
+δ↓0
+⟨(α 1 +δω ) ·(α 2 +δω ) · · ·(α k +δω )⟩
+for arbitrary classes α j ∈ E (again, monotonicity occurs only where we evaluate against
+closed semi-positive forms u). By weak compactness, the movable intersection product
+can always be represented by a closed positive current of bid egree (k,k ).
+(iii) The Teissier-Hovanskii inequalities are a direct con sequence of the fact that they
+hold true for nef classes, so we just have to apply them to the c lasses βj,m on ˜Xm and
+pass to the limit.
+(iv) When k = 1 and α ∈ E0, we have
+α = lim
+m→ +∞
+{(µ m)⋆Tm} = lim
+m→ +∞
+(µ m)⋆ [Em] + {(µ m)⋆βm}
+and ⟨α ⟩ = lim m→ +∞ {(µ m)⋆βm} by deﬁnition. However, the images Fm = (µ m)⋆Em
+are eﬀective Q-divisors in X, and the ﬁltering property implies that Fm is a decreasing
+sequence. It must therefore converge to a (uniquely deﬁned) limitF = limFm :=N (α )
+which is an eﬀective R-divisor, and we get the asserted decomposition in the limit .
+Since N (α ) = α − ⟨ α ⟩ we easily see that N (α ) is subadditive and that N (α ) = 0
+if α is the class of a smooth semi-positive form. When α is no longer a big class, we
+deﬁne
+⟨α ⟩ = lim
+δ↓0
+↓ ⟨α +δω ⟩, N (α ) = lim
+δ↓0
+↑N (α +δω )
+(the subadditivity of N implies N (α + (δ +ε)ω ) ⩽N (α +δω )). The divisorial Zariski
+decomposition follows except maybe for the fact that N (α ) might be a convergent
+countable sum of divisors. However, this will be ruled out wh en (v) is proved. As N (• )
+is subadditive and homogeneous, the set E1 = {α ∈ E ; N (α ) = 0 } is a closed convex
+cone, and we ﬁnd that α ↦→ ⟨ α ⟩ is a projection of E onto E1 (according to [Bou02b], E1
+consists of those pseudo-eﬀective classes which are “nef in codimension 1”).
+(v) Let α ∈ E◦ , and assume that N (α ) contains linearly dependent components Fj.
+Then already all currents T ∈ α should be such that µ ⋆T = [E] +β where F = µ ⋆E12 The pseudo-eﬀective cone of compact K¨ ahler manifolds
+contains those linearly dependent components. Write F = ∑λ jFj,λ j > 0 and assume
+that ∑
+j∈ J
+cjFj ≡ 0
+for a certain non trivial linear combination. Then some of th e coeﬃcients cj must be
+negative (and some other positive). Then E is numerically equivalent to
+E′ ≡ E +tµ ⋆
+( ∑
+λ jFj
+)
+,
+and by choosing t> 0 appropriate, we obtain an eﬀective divisor E′ which has a zero
+coeﬃcient on one of the components µ ⋆Fj0 . By replacing E with min(E,E ′) via (3. 4′),
+we eliminate the component µ ⋆Fj0 . This is a contradiction since N (α ) was supposed
+to contain Fj0 .
+3.6 Deﬁnition. For a class α ∈ H 1, 1
+R (X), we deﬁne the numerical dimension ν(α )
+to be ν(α ) = −∞ if α is not pseudo-eﬀective, and
+ν(α ) = max {p ∈ N ; ⟨α p⟩ ̸= 0}, ν (α ) ∈ { 0, 1,...,n }
+if α is pseudo-eﬀective.
+By the results of [DP03], a class is big ( α ∈ E◦ ) if and only if ν(α ) = n. Classes of
+numerical dimension 0 can be described much more precisely, again following Boucksom
+[Bou02b].
+3.7 Theorem. LetX be a compact K¨ ahler manifold. Then the subset D0 of irreducible
+divisors D in X such that ν(D) = 0 is countable, and these divisors are rigid as well
+as their multiples. If α ∈ E is a pseudo-eﬀective class of numerical dimension 0, then
+α is numerically equivalent to an eﬀective R-divisor D = ∑
+j∈ Jλ jDj, for some ﬁnite
+subset (Dj)j∈ J ⊂ D0 such that the cohomology classes {Dj} are linearly independent
+and some λ j > 0. If such a linear combination is of numerical dimension 0, then so is
+any other linear combination of the same divisors.
+Proof. It is immediate from the deﬁnition that a pseudo-eﬀective c lass is of numerical
+dimension 0 if and only if ⟨α ⟩ = 0, in other words if α = N (α ). Thus α ≡ ∑λ jDj
+as described in 3.7, and since λ j⟨Dj⟩ ⩽ ⟨α ⟩, the divisors Dj must themselves have
+numerical dimension 0. There is at most one such divisor D in any given cohomology
+class in NS (X) ∩ E ⊂ H 2(X, Z), otherwise two such divisors D ≡ D′ would yield
+a blow-up µ : ˜X → X resolving the intersection, and by taking min( µ ⋆D,µ ⋆D′) via
+(3. 4′), we would ﬁnd µ ⋆D ≡ E +β , β ̸= 0, so that {D} would not be of numerical
+dimension 0. This implies that there are at most countably ma ny divisors of numerical
+dimension 0, and that these divisors are rigid as well as thei r multiples.
+The above general concept of numerical dimension leads to a v ery natural formula-
+tion of the abundance conjecture for non-minimal (K¨ ahler) varieties.
+3.8 Generalized abundance conjecture. For an arbitrary compact K¨ ahler mani-
+fold X, the Kodaira dimension should be equal to the numerical dime nsion :
+κ(X) = ν(X) := ν(c1(KX)).§4 The orthogonality estimate 13
+This appears to be a fairly strong statement. In fact, it is no t diﬃcult to show that
+the generalized abundance conjecture would contain the Cn,m conjectures.
+3.9 Remark. Using the Iitaka ﬁbration, it is immediate to see that κ(X) ≤ ν(X).
+3.10 Remark. It is known that abundance holds in case ν(X) = −∞ (if KX is not
+pseudo-eﬀective, no multiple of KX can have sections), or in case ν(X) = n. The
+latter follows from the solution of the Grauert-Riemenschn eider conjecture in the form
+proven in [De85] (see also [DPa03]).
+In the remaining cases, the most tractable situation is prob ably the case when
+ν(X) = 0. In fact Theorem 3.7 then gives KX ≡ ∑λ jDj for some eﬀective divisor
+with numerically independent components, ν(Dj ) = 0. It follows that the λ j are
+rational and therefore
+(∗) KX ∼
+∑
+λ jDj +F where λ j ∈ Q+, ν(Dj ) = 0 and F ∈ Pic0(X).
+Especially, if we assume additionally that q(X) = h0, 1(X) is zero, then mKX is lin-
+early equivalent to an integral divisor for some multiple m, and it follows immediately
+that κ(X) = 0. The case of a general projective (or compact K¨ ahler) ma nifold with
+ν(X) = 0 and positive irregularity q(X)> 0 would be interesting to understand.
+The preceeding remarks at least give a proof up to dimension 4 :
+3.11 Proposition. LetX be a smooth projective n-fold with n ≤ 4. If ν(X) = 0 , then
+κ(X) = 0 .
+Proof. The proof is given in (9.1) in a slightly more general situat ion.
+We will come back to abundance on 4-folds in sect. 9.
+§4 The orthogonality estimate
+The goal of this section is to show that, in an appropriate sen se, approximate Zariski
+decompositions are almost orthogonal.
+4.1 Theorem. Let X be a projective manifold, and let α = {T } ∈ E◦
+NS be a big class
+represented by a K¨ ahler currentT . Consider an approximate Zariski decomposition
+µ ⋆
+mTm = [Em] + [Dm]
+Then
+(Dn− 1
+m ·Em)2 ⩽ 20 (Cω )n(
+Vol(α ) − Dn
+m
+)
+whereω =c1(H) is a K¨ ahler form andC ⩾ 0 is a constant such that ±α is dominated
+by Cω (i.e., Cω ± α is nef ).
+Proof. For every t ∈ [0, 1], we have
+Vol(α ) = Vol(Em +Dm) ⩾ Vol(tEm +Dm).14 The pseudo-eﬀective cone of compact K¨ ahler manifolds
+Now, by our choice of C, we can write Em as a diﬀerence of two nef divisors
+Em =µ ⋆α − Dm =µ ⋆
+m(α +Cω ) − (Dm +Cµ ⋆
+mω ).
+4.2 Lemma. For all nef R-divisors A, B we have
+Vol(A − B) ⩾An − nAn− 1 ·B
+as soon as the right hand side is positive.
+Proof. In case A and B are integral (Cartier) divisors, this is a consequence of th e
+holomorphic Mores inequalities, [De01,8.4]. If A and B are Q-Cartier, we conclude by
+the homogeneity of the volume. The general case of R-divisors follows by approximation
+using the upper semi-continuity of the volume [Bou02b, 3.1. 26].
+4.3 Remark. We hope that Lemma 4.2 also holds true on an arbitrary K¨ ahler mani-
+fold for arbitrary nef (non necessarily integral) classes. This would follow from a
+generalization of holomorphic Morse inequalities to non in tegral classes. However the
+proof of such a result seems technically much more involved t han in the case of integral
+classes.
+4.4 Lemma. Letβ1,...,β n andβ ′
+1,...,β ′
+n be nef classes on a compact K¨ ahler manifold
+˜X such that each diﬀerence β ′
+j − βj is pseudo-eﬀective. Then the n-th intersection
+products satisfy
+β1 · · ·βn ⩽β ′
+1 · · ·β ′
+n.
+Proof. We can proceed step by step and replace just one βj by β ′
+j ≡ βj +Tj where
+Tj is a closed positive (1 , 1)-current and the other classes β ′
+k =βk, k ̸=j are limits of
+K¨ ahler forms. The inequality is then obvious.
+End of proof of Theorem 4.1. In order to exploit the lower bound of the volume, we
+write
+tEm +Dm =A − B, A =Dm +tµ ⋆
+m(α +Cω ), B =t(Dm +Cµ ⋆
+mω ).
+By our choice of the constant C, both A and B are nef. Lemma 4.2 and the binomial
+formula imply
+Vol(tEm +Dm) ⩾An − nAn− 1 ·B
+=Dn
+m +ntD n− 1
+m ·µ ⋆
+m(α +Cω ) +
+n∑
+k=2
+tk
+( n
+k
+)
+Dn− k
+m ·µ ⋆
+m(α +Cω )k
+− ntD n− 1
+m ·(Dm +Cµ ⋆
+mω )
+− nt2
+n− 1∑
+k=1
+tk− 1
+( n − 1
+k
+)
+Dn− 1− k
+m ·µ ⋆
+m(α +Cω )k ·(Dm +Cµ ⋆
+mω ).
+Now, we use the obvious inequalities
+Dm ⩽µ ⋆
+m(Cω ), µ ⋆
+m(α +Cω ) ⩽ 2µ ⋆
+m(Cω ), D m +Cµ ⋆
+mω ⩽ 2µ ⋆
+m(Cω )§5 Proof of the duality theorem 15
+in which all members are nef (and where the inequality ⩽ means that the diﬀerence
+of classes is pseudo-eﬀective). We use Lemma 4.4 to bound the last summation in the
+estimate of the volume, and in this way we get
+Vol(tEm +Dm) ⩾Dn
+m +ntDn− 1
+m ·Em − nt2
+n− 1∑
+k=1
+2k+1tk− 1
+( n − 1
+k
+)
+(Cω )n.
+We will always take t smaller than 1 / 10n so that the last summation is bounded by
+4(n − 1)(1 + 1/ 5n)n− 2< 4ne1/ 5< 5n. This implies
+Vol(tEm +Dm) ⩾Dn
+m +ntD n− 1
+m ·Em − 5n2t2(Cω )n.
+Now, the choice t = 1
+10n (Dn− 1
+m ·Em)((Cω )n)− 1 gives by substituting
+1
+20
+(Dn− 1
+m ·Em)2
+(Cω )n ⩽ Vol(Em +Dm) − Dn
+m ⩽ Vol(α ) − Dn
+m
+(and we have indeed t ⩽ 1
+10n by Lemma 4.4), whence Theorem 4.1. Of course, the
+constant 20 is certainly not optimal.
+4.5 Corollary . If α ∈ ENS, then the divisorial Zariski decomposition α =N (α ) + ⟨α ⟩
+is such that
+⟨α n− 1⟩ ·N (α ) = 0.
+Proof. By replacing α byα +δc1(H), one sees that it is suﬃcient to consider the case
+where α is big. Then the orthogonality estimate implies
+(µ m)⋆ (Dn− 1
+m ) ·(µ m)⋆Em =Dn− 1
+m ·(µ m)⋆ (µ m)⋆Em ⩽Dn− 1
+m ·Em ⩽C(Vol(α ) − Dn
+m)1/ 2.
+Since ⟨α n− 1⟩ = lim(µ m)⋆ (Dn− 1
+m ), N (α ) = lim(µ m)⋆Em and lim Dn
+m = Vol(α ), we get
+the desired conclusion in the limit.
+§5 Proof of the duality theorem
+We want to prove that ENS and SME(X) are dual (Theorem 2.2). By 1.4 (iii) we
+have in any case
+ENS ⊂ (SME(X))
+∨
+.
+If the inclusion is strict, there is an element α ∈ ∂ENS on the boundary of ENS which
+is in the interior of SME( X)∨ .
+Letω =c1(H) be an ample class. Since α ∈ ∂ENS, the class α +δω is big for every
+δ >0, and since α ∈ ((SME(X))∨ )◦ we still have α − εω ∈ (SME(X))∨ forε> 0 small.
+Therefore
+(5. 1) α ·Γ ⩾εω ·Γ
+for every movable curve Γ. We are going to contradict (5.1). S ince α +δω is big, we
+have an approximate Zariski decomposition
+µ ⋆
+δ (α +δω ) = Eδ +Dδ.16 The pseudo-eﬀective cone of compact K¨ ahler manifolds
+We pick Γ = (µ δ)⋆ (Dn− 1
+δ ). By the Hovanskii-Teissier concavity inequality
+ω ·Γ ⩾ (ω n)1/n (Dn
+δ )(n− 1)/n .
+On the other hand
+α ·Γ = α ·(µ δ)⋆ (Dn− 1
+δ )
+=µ ⋆
+δα ·Dn− 1
+δ ⩽µ ⋆
+δ (α +δω ) ·Dn− 1
+δ
+= (Eδ +Dδ) ·Dn− 1
+δ =Dn
+δ +Dn− 1
+δ ·Eδ.
+By the orthogonality estimate, we ﬁnd
+α ·Γ
+ω ·Γ ⩽ Dn
+δ +
+(
+20(Cω )n(Vol(α +δω ) − Dn
+δ )
+) 1/ 2
+(ω n)1/n (Dn
+δ )(n− 1)/n
+⩽C′(Dn
+δ )1/n +C′′(Vol(α +δω ) − Dn
+δ )1/ 2
+(Dn
+δ )(n− 1)/n .
+However, since α ∈ ∂ENS, the class α cannot be big so
+lim
+δ→ 0
+Dn
+δ = Vol(α ) = 0.
+We can also takeDδ to approximate Vol(α +δω ) in such a way that (Vol(α +δω )−Dn
+δ )1/ 2
+tends to 0 much faster than Dn
+δ . Notice that Dn
+δ ⩾δnω n, so in fact it is enough to take
+Vol(α +δω ) − Dn
+δ ⩽δ2n.
+This is the desired contradiction by (5.1).
+5.2 Remark. If holomorphic Morse inequalities were known also in the K¨ a hler case,
+we would infer by the same proof that “ α not pseudo-eﬀective” implies the existence
+of a blow-up µ : ˜X → X and a K¨ ahler metric ˜ω on ˜X such that α ·µ ⋆ (˜ω )n− 1 < 0.
+In the special case when α =KX is not pseudo-eﬀective, we would expect the K¨ ahler
+manifoldX to be covered by rational curves. The main trouble is that cha racteristicp
+techniques are no longer available. On the other hand it is te mpting to approach the
+question via techniques of symplectic geometry :
+5.3 Question. Let (M,ω ) be a compact real symplectic manifold. Fix an almost
+complex structure J compatible with ω , and for this structure, assume that
+c1(M ) ·ω n− 1> 0. Does it follow that M is covered by rational J-pseudoholomorphic
+curves ?§6 Non nef loci 17
+§6 Non nef loci
+Following [Bou02b], we introduce the concept of non-nef loc us of an arbitrary
+pseudo-eﬀective class. The details diﬀer a little bit here ( and are substantially simpler)
+because the scope is limited to compact K¨ ahler manifolds.
+6.1 Deﬁnition. LetX be a compact K¨ ahler manifold,ω a K¨ ahler metric, andα ∈ E
+a pseudo-eﬀective class. We deﬁne the non-nef locus of α to be
+Lnnef (α ) =
+⋃
+δ>0
+⋂
+T
+µ (|E|)
+for all log resolutions µ ⋆T = [E] +β of positive currents T ∈ {α +δω } with logarithmic
+singularities, µ : ˜X → X, and µ (|E|) is the set-theoretic image of the support of E.
+It should be noticed that the union in the above deﬁnition can be restricted to any
+sequence δk converging to 0, hence Lnnef (α ) is either an analytic set or a countable
+union of analytic sets. The results of [De92] and [Bou02b] sh ow that
+(6. 1′) Lnnef (α ) =
+⋃
+δ>0
+⋂
+T
+E+(T )
+where T runs over the set α [−δω ] of all d-closed real (1 , 1)-currents T ∈ α such that
+T ⩾ −δω , and E+(T ) denotes the locus where the Lelong numbers of T are strictly
+positive. The latter deﬁnition (6 . 1′) works even in the non K¨ ahler case, taking ω
+an arbitrary positive hermitian form on X. By [Bou02b], there is always a current
+Tmin which achieves minimum singularities and minimum Lelong nu mbers among all
+members of α [−δω ], hence ⋂
+T E+(T ) = E+(Tmin).
+6.2 Theorem. Letα ∈ E be a pseudo-eﬀective class. Then Lnnef (α ) contains the union
+of all irreducible algebraic curves C such that α ·C <0.
+Proof. If C is an irreducible curve not contained in Lnnef (α ), the deﬁnition implies that
+for every δ > 0 we can choose a positive current T ∈ { α +δω } and a log-resolution
+µ ⋆T = [E] +β such that C ̸⊂ µ (|E|). Let ˜C be the strict transform of C in ˜X, so that
+C =µ ⋆ ˜C. We then ﬁnd
+(α +δω ) ·C = ([E] +β ) · ˜C ⩾ 0
+since β ⩾ 0 and ˜C ̸⊂ |E|. This is true for all δ >0 and the claim follows.
+6.3 Remark. One may wonder, at least when X is projective and α ∈ ENS, whether
+Lnnef (α ) is actually equal to the union of curves C such thatL·C <0 (or the “countable
+Zariski closure” of such a union). Unfortunately, this is no t true, even on surfaces. The
+following simple example was shown to us by E. Viehweg. Let Y be a complex algebraic
+surface possessing a big line bundle F with a curve C such that F ·C <0 as its base
+locus (e.g. F = π ⋆ O(1) + E for the blow-up π : Y → P2 of P2 in one point, and
+C =E = exceptional divisor). Then take ﬁnitely many points pj ∈ C, 1 ⩽j ⩽N , and
+blow-up these points to get a modiﬁcation µ :X → Y . We select
+L =µ ⋆F + ˆC + 2
+∑
+Ej =µ ⋆ (F +C) +
+∑
+Ej18 The pseudo-eﬀective cone of compact K¨ ahler manifolds
+where ˆC is the strict transform of C and Ej = µ − 1(pj). It is clear that the non nef
+locus of α =c1(L) must be equal to ˆC ∪ ⋃Ej, although
+L · ˆC = (F +C) ·C +N >0
+forN large. This example shows that the set of α -negative curves is not the appropriate
+tool to understand the non nef locus.
+§7 Pseudo-eﬀective vector bundles
+In this section we consider pseudo-eﬀective and almost nef v ector bundles as intro-
+duced in [DPS00]. As an application, we obtain interesting i nformations concerning
+the tangent bundle of Calabi-Yau manifolds. First we recall the relevant deﬁnitions.
+7.1 Deﬁnition. Let X be a compact K¨ ahler manifold and E a holomorphic vector
+bundle on X. Then E is said to be pseudo-eﬀective if the line bundle OP(E)(1) is pseudo-
+eﬀective on the projectivized bundle P(E) of hyperplanes of E, and if the projection
+π (Lnnef (OP(E)(1))) of the non-nef locus of OP(E)(1) onto X does not cover all of X.
+This deﬁnition would even make sense on a general compact com plex manifold,
+using the general deﬁnition of the non-nef locus in [Bou02b] . On the other hand,
+the following proposition gives an algebraic characteriza tion of pseudo-eﬀective vector
+bundles in the projective case.
+7.2 Proposition. LetX be a projective manifold. A holomorphic vector bundle E on
+X is pseudo-eﬀective if and only if for any given ample line bun dle A on X and any
+positive integers m0, p0, the vector bundle
+Sp((SmE) ⊗ A)
+is generically generated (i.e. generated by its global sections on the complement X ∖Zm,p
+of some algebraic set Zm,p ̸=X) for some [resp. every ] m ≥ m0 and p ≥ p0.
+Proof. If global sections as in the statement of 7.2 exist, they can be used to deﬁne
+a singular hermitian metric hm,p on OP(E)(1) which has poles contained in π − 1(Zm,p )
+and whose curvature form satisﬁes Θ hm,p (OP(E)(1)) ⩾ − 1
+mπ ∗ Θ(A). Hence, by selecting
+suitable integers m =M (m0,p 0) and p =P (m0,p 0), we ﬁnd that OP(E)(1) is pseudo-
+eﬀective (its ﬁrst Chern class is a limit of pseudo-eﬀective classes), and that
+π (Lnnef (OP(E)(1))) ⊂
+⋃
+m0
+⋂
+p0
+Zm,p ⊊X.
+Conversely, assume that OP(E)(1) is pseudo-eﬀective and admits singular hermitian
+metrics hδ such that Θ hδ (OP(E)(1)) ⩾ −δ˜ω and π (Sing(hδ)) ⊂ Zδ ⊊ X (for some
+K¨ ahler metric˜ω on P(E) and arbitrary small δ >0). We can actually take ω = Θ(A)
+and ˜ω = ε0Θh0 (OP(E)(1)) +π ∗ω with a given smooth hermitian metric h0 on E and
+ε0 ≪ 1. An easy calculation shows that the linear combination h′
+δ = h1/ (1+δε 0)
+δ hδε 0
+0
+yields a metric on OP(E)(1) such that
+Θh′
+δ
+(OP(E)(1)) ⩾ −δπ ∗ Θ(A).§7 Pseudo-eﬀective vector bundles 19
+By taking δ = 1/ 2m and multiplying by m, we ﬁnd
+Θ(OP(E)(m) ⊗ π ∗A) ⩾ 1
+2π ∗ Θ(A)
+for some metric on OP(E)(m) ⊗ π ∗A which is smooth over π − 1(X ∖Zδ). The standard
+theory of L2 estimates for bundle-valued ∂-operators can be used to produce the re-
+quired sections, after we multiply Θ( A) by a suﬃciently large integer p to compensate
+the curvature of −KX . The sections possibly still have to vanish along the poles o f
+the metric, but they are unrestricted on ﬁbers of P(SmE) → X which do not meet the
+singularities.
+Note that if E is pseudo-eﬀective, then OP(E)(1) is pseudo-eﬀective and E is almost
+nef in the following sense which is just the straightforward gen eralization from the line
+bundle case.
+7.3 Deﬁnition. LetX be a projective manifold and E a vector bundle on X. Then E
+is said to be almost nef, if there is a countable family Ai of proper subvarieties of X
+such that E|C is nef for all C ̸⊂ ⋃
+iAi. Alternatively, E is almost nef if there is no
+covering family of curves such that E is non-nef on the general member of the family.
+Observe thatE is almost nef if and only if OP(E)(1) is almost nef and OP(E)(1) is nef
+on the general member of any family of curves in P(E) whose images cover X. Hence
+Theorem 2.2 yields
+7.4 Corollary . Let X be a projective manifold and E a holomorphic vector bundle
+on X. If E is almost nef, then OP(E)(1) is pseudo-eﬀective. Thus for some [or any ]
+ample line bundle A, there are positive numbers m0 and p0 such that
+H 0(X,S p((SmE) ⊗ A)) ̸= 0
+for all m ≥ m0 and p ≥ p0.
+One should notice that it makes a big diﬀerence to assert just the existence of a
+non zero section, and to assert the existence of suﬃciently m any sections guaranteeing
+that the ﬁbers are generically generated. It is therefore na tural to raise the following
+question.
+7.5 Question. LetX be a projective manifold and E a vector bundle on X. Suppose
+that E is almost nef. Is E always pseudo-eﬀective in the sense of Deﬁnition 7. 1 ?
+This was stated as a theorem in [DPS01, 6.3], but the proof giv en there was incom-
+plete. The result now appears quite doubtful to us. However, we give below a positive
+answer to Question 7.5 in case of a rank 2 − bundle E with c1(E) = 0 (conjectured in
+[DPS01]), and then apply it to the study of tangent bundles of K3-surfaces.
+7.6 Theorem. LetE be an almost nef vector bundle of rank at most 3 on a projective
+manifold X. Suppose that detE ≡ 0. Then E is numerically ﬂat.
+Proof. Recall (cf. [DPS94]) that a vector bundle E is said to be numerically ﬂat if it is
+nef as well as its dual (or, equivalently, if E is nef and det E numerically trivial); also,20 The pseudo-eﬀective cone of compact K¨ ahler manifolds
+E is numerically ﬂat if and only if E admits a ﬁltration by subbundles such that the
+graded pieces are unitary ﬂat vector bundles. By [Ko87, p.11 5], E is unitary ﬂat as
+soon as E is stable for some polarization and c1(E) = c2(E) = 0.
+Under our assumptions, E is necessarily semi-stable since semi-stability with resp ect
+to a polarization H can be tested against a generic complete intersection curve , and
+we know that E is nef, hence numerically ﬂat, on such a curve. Therefore (se e also
+[DPS01, 6.8]) we can assume without loss of generality that d imX = 2 and that E
+is stable with respect to all polarizations, and it is enough to show in that case that
+c2(E) = 0. Since E is almost nef, E is nef, hence numerically ﬂat, on all curves except
+for at most a countable number of curves, say (Γ j)j∈ N.
+First suppose that E has rank 2 . Then the line bundle O(1) on P(E) is immediately
+seen to be nef on all but a countable number of curves. In fact, the only curves on which
+O(1) is negative are the sections over the curves Γ j with negative self-intersection in
+P(E|Γj). Now take a general hyperplane section H on P(E). ThenH does not contain
+any of these bad curves and therefore O(1) is nef on H. Hence
+c1(O(1))2 ·H ≥ 0.
+Now - up to a multiple - H is of the form H = O(1) ⊗ π ∗ (G) so that
+c1(O(1))3 +c1(O(1))2 ·π ∗ (G) ≥ 0.
+Sincec1(O(1))3 =c1(E)2 − c2(E) = −c2(E) and c1(O(1))2 ·π ∗ (G) = c1(E) ·G = 0, we
+conclude c2(E) = 0.
+If E has rank 3, we need to argue more carefully, because now O(1) is non-nef on the
+surfaces Sj = P(E|Cj) so that O(1) might be non-nef on a general hyperplane section
+H. We will however show that this can be avoided by choosing care fully the linear
+system |H|. To be more precise we ﬁx G ample on X and look for
+H ∈ |O(1) +π ∗ (mG)|
+with m ≫ 0, so that O(1) is nef on H ∩ Sj for all j. Given that O(1)|H and we can
+argue as in the previous case to obtain c2(E) = 0. Of course for a general choice of H,
+all curves H ∩Sj will be irreducible (but possibly singular since Cj might be singular).
+Now ﬁx j and set ˜C = H ∩ Sj, a section over C = Cj. Let V ⊂ EC be the maximal
+ample subsheaf (see [PS02]). Then we obtain a vector bundle s equence
+0 → V → EC → F → 0
+and we may assume that F has rank 2, because otherwise O(1) is not nef only on one
+curve over C. Now ˜C induces an exact sequence
+0 → OC(−mG) → F → F ′ → 0
+and therefore O(1)|˜C is nef iﬀ c1(F ′) ≥ 0. This translates into c1(F ) +m(G ·C) ≥ 0.
+Now let t0 be the nef value of E with respect to G, i.e. E(t0G) is nef but not ample.
+Then F (t0G) is nef, too, so that c1(F ) ≥ − 2t0(G ·C). In total
+c1(F ′) ≥ (m − 2t0)(G ·C),§8 Partial nef reduction 21
+hence we choose m ≥ 2t0 and for this choice O(1)|H is nef.
+As a corollary we obtain
+7.7 Theorem. LetX be a projective K3-surface or a Calabi-Yau 3-fold. Then the t an-
+gent bundle TX is not almost nef, and there exists a covering family (Ct) of (generically
+irreducible) curves such that TX |Ct is not nef for general t.
+In other words, if c1(X) = 0 and TX is almost nef, then a ﬁnite ´ etale cover of X
+is abelian. One should compare this with Miyaoka’s theorem t hat TX |C is nef for a
+smooth curve C cut out by hyperplane sections of suﬃciently large degree. N ote also
+that TX |C being not nef is equivalent to say that TX |C is not semi-stable. We expect
+that (7.7) holds in general for Calabi-Yau manifolds of any d imension.
+Proof. Assume that TX is almost nef. Then by 7.6, TX is numerically ﬂat. In particular
+c2(X) = 0 and hence X is an ´ etale quotient of a torus.
+We will now improve (7.7) for K3-surfaces; namely if X is a projective K3-surface,
+then already OP(TX )(1) should be non-pseudo-eﬀective. In other words, let A be a ﬁxed
+ample divisor on X. Then for all positive integers m there exists a positive integer p
+such that
+H 0(X,S p((SmTX) ⊗ A)) = 0.
+This has been veriﬁed in [DPS00] for the general quartic in P3 and below for any
+K3-surface.
+7.8 Theorem. Let X be a projective K3-surface and L = OP(TX )(1). Then L is not
+pseudo-eﬀective.
+Proof. Suppose that L is pseudo-eﬀective and consider the divisorial Zariski dec ompo-
+sition ([Bou02b], cf. also 3.5 (iv))
+L =N +Z
+with N an eﬀective R-divisor and Z nef in codimension 1. Write N = aL +π ∗ (N ′)
+and Z =bL +π ∗ (Z ′). Let H be very ample on S. By restricting to a general curve C
+in |HH|and observing that TX |C is numerically ﬂat, we see that L|π − 1(C) is nef (but
+not ample), hence
+N ′ ·C = 0.
+Thus N ′ = 0 since H is arbitrary. If a > 0, then some mL would be eﬀective, i.e.
+SmTX would have a section, which is known not to be the case. Hence a = 0 and L
+is nef in codimension 1 so that L can be negative only on ﬁnitely many curves. This
+contradicts 7.7.
+§8 Partial nef reduction
+In this section we construct reduction maps for pseudo-eﬀec tive line bundle which
+are zero on large families of curves. This will be applied in t he next section in connection
+with the abundance problem.
+8.1 Notation. Let (Ct)t∈ T be a covering family of (generically irreducible) curves (i n
+particular T is irreducible and compact). Then ( Ct) is said to be a connecting family22 The pseudo-eﬀective cone of compact K¨ ahler manifolds
+if and only if two general x,y can be joined by a chain of Ct. We also say that X is
+(Ct)-connected.
+Using Campana’s reduction theory [Ca81,94], we obtain imme diately
+8.2 Theorem. Let X be a projective manifold and L a pseudo-eﬀective line bundle
+on X. Let (Ct) be a covering family with L ·Ct = 0 . Then there exists an almost
+holomorphic surjective meromorphic map f :X
+>Y such that the general (compact)
+ﬁber of f is (Ct)-connected. f is called the partial nef reduction of L with respect to
+(Ct).
+8.3 Deﬁnition. LetL be a pseudo-eﬀective line bundle on X. The minimal number
+which can be realised as dimY with a partial nef reduction f : X > Y with respect
+to L is denoted p(L). If there is no covering family (Ct) with L ·Ct = 0 , then we set
+p(L) = dimX.
+8.4 Remark. p(L) = 0 if and only if there exists a connecting family ( Ct) such that
+L ·Ct = 0. If moreover L is nef, then p(L) = 0 if and only if L ≡ 0 [Workshop].
+8.5 Proposition. Let X be a projective manifold, L a pseudo-eﬀective line bundle
+and (Ct) a connecting family. If L ·Ct = 0, then κ(L) ≤ 0.
+Proof. Supposing the contrary we may assume that h0(L) ≥ 2. Let C = Ct be a
+general member of our family. Then we ﬁnd a non-zero s ∈ H 0(L) such that s|C = 0.
+If A ⊂ X is any algebraic set, we let G(A) be the union of all y which can be joined
+withA by a single Ct. Now the general Ct through a general point must be irreducible,
+henceG(C) is generically ﬁlled up by irreducible Ct, and we conclude that s|G(C) = 0.
+Deﬁne Gk(C) = G(Gk− 1(C)). Then by induction we obtain s|Gk(C) = 0 for all k.
+Since (Ct) is connecting, we have G∞ =X, hence s = 0. Therefore h0(L) ≤ 1.
+It is also interesting to look at covering families ( Ct) of ample curves. Here “am-
+ple” means that the dual of the conormal sheaf modulo torsion is ample (say on the
+normalization). Then we have the same result as in (8.5) whic h is prepared by
+8.6 Lemma. Let X be a projective manifold, C ⊂ X an irreducible curve with
+normalization f : ˜C → C and ideal sheaf I. Let L be a line bundle on X. Then there
+exists a positive number c such that for all t ≥ 0:
+h0(X,L t) ≤
+ct∑
+k=0
+h0(f ∗ (Sk(I/ I2/ tor) ⊗ Lt)).
+Proof. Easy adaptation of the proof of (2.1) in [PSS99].
+8.7 Corollary . Let X be a projective manifold and C ⊂ X be an irreducible curve
+with normalisation f : ˜C → C such that f ∗ (I/ I2)∗ is ample. Let L a line bundle with
+L ·Ct = 0. Then κ(L) ≤ 0. In particular this holds for the general member of an ample
+covering family.
+Proof. By (8.5) it suﬃces to show that
+h0(f ∗ (Sk(I/ I2/ tor) ⊗ Lt)) = 0§9 Towards abundance 23
+for all k ≥ 1. This is however clear since by assumption f ∗ (I/ I2)∗ is an ample bundle.
+8.8 Corollary . Let X be a smooth projective threefold with KX pseudo-eﬀective. If
+there is a ample covering family or a connecting family (Ct) such that KX ·Ct = 0 ,
+then κ(X) = 0 .
+Proof. By (8.5) resp. (8.7) we have κ(X) ≤ 0. Suppose that κ(X) = −∞ . Then X is
+uniruled by Miyaoka’s theorem. Thus KX is not pseudo-eﬀective.
+Although we will not need it later, we will construct a nef red uction for pseudo-
+eﬀective line bundles, generalizing to a certain extent the result of [Workshop] for nef
+line bundle (however the result is weaker). A diﬀerent type o f reduction was constructed
+in [Ts00],[Ec02].
+8.9 Theorem. Let L be a pseudo-eﬀective line bundle on a projective manifold X.
+Then there exists an almost holomorphic meromorphic map f :X
+>Y such that
+(i) general points on the general ﬁber of F can be connected by a chain of L-trivial
+irreducible curves.
+(ii) if x ∈ X is general and C is an irreducible curve through x with dimf (C) > 0,
+then L ·C >0.
+Proof. The argument is rather standard: start with a covering L-trivial family (Ct) and
+build the nef partial quotient h : X > Z (if the family does not exist, put f = id).
+Now take another covering L-trivial family (Bs) (if this does not exist, just stop) with
+partial nef reduction g. For general z ∈ Z let Fz be the set of all x ∈ X which can be
+joined with the ﬁber Xz by a chain of curves Bs. In other words, Fz is the closure of
+g− 1(g(Xz)). Now the Fz deﬁne a covering family (of higher-dimensional subvarieti es)
+which deﬁnes by Campana’s theorem a new reduction map. After ﬁnitely many steps
+we arrive at the map we are looking for.
+Finally we show that covering families which are interior po ints in the movable cone
+are connecting:
+8.10 Theorem. LetX be a projective manifold and (Ct) a covering family. Suppose
+that [Ct] is an interior point of the movable cone M. Then (Ct) is connecting.
+Proof. Let f : X
+> Z be the reduction of the family ( Ct). If the family is not
+connecting, then dim Z >0. Let π : ˜X → X be a modiﬁcation such that the induced
+map ˜f : ˜X → Z is holomorphic. Let A be very ample on Z and put L =π ∗ ( ˜f ∗ (A))∗∗ .
+ThenL is an eﬀective line bundle on X withL ·Ct = 0 since L is trivial on the general
+ﬁber of f , this map being almost holomorphic. Hence [ Ct] must be on the boundary
+of M.
+The converse of (8.10) is of course false: consider the famil y of lines l in P2 and
+let X be the blow-up of some point in P2. Let ( Ct) be the closure of the family of
+preimages of general lines. This is a connecting family, but if E is the exceptional
+divior, then E ·Ct = 0. So ( Ct) cannot be in the interior of M.24 The pseudo-eﬀective cone of compact K¨ ahler manifolds
+§9 Towards abundance
+In this section we prove that a smooth projective 4-fold X withKX pseudo-eﬀective
+and with the additional property that KX is 0 on some covering family of curves, has
+κ(X) ≥ 0. In the remaining case that KX is positive on all covering families of curves
+one expects that KX is big.
+9.1 Proposition. Let X be a smooth projective 4-fold with KX pseudo-eﬀective.
+Suppose that there exists a dominant rational map f :X
+>Y to a projective manifold
+Y with κ(Y ) ≥ 0 ( and 0< dimY < 4). Then κ(X) ≥ 0.
+Proof. We may assume f holomorphic with general ﬁber F . If κ(F ) = −∞ , then F
+would be uniruled, hence X would be uniruled. Hence κ(F ) ≥ 0. Now Cn,n − 3,Cn,n − 2
+and Cn,n − 1 hold true, see e.g. [Mo87] for further references. This give s
+κ(X) ≥ κ(F ) +κ(Y ) ≥ 0.
+9.2 Corollary . Let X be a smooth projective 4-fold with KX pseudo-eﬀective. Let
+f : X > Y be a dominant rational map (0 < dimY < 4) with Y not rationally
+connected. Then κ(X) ≥ 0.
+Proof. If dim Y ≤ 2, this is immediate from (9.1). So let dim Y = 3. Since we
+may assume κ(Y ) = −∞ , the threefold Y is uniruled. Let h :Y >Z be the rational
+quotient; we may assume that h is holomorphic and Z smooth. Since Y is not rationally
+connected, dim Z ≥ 1. Then q(Z) ≥ 1, otherwise Z would be rational and hence Y
+rationally connected by Colliot-Th´ el` ene [CT86], see also Graber-Harris-Starr [GHS03],
+and we conclude by (9.1).
+9.3 Conclusion. In order to prove κ(X) ≥ 0 in case of a dominant rational map
+f : X4 > Y , we may assume that Y is a rational curve, a rational surface or a
+rationally connected 3-fold.
+9.4 Proposition. Let X be a smooth projective 4-fold with KX pseudo-eﬀective. If
+p(KX) = 1 , then κ(X) ≥ 0.
+Proof. By assumption we have a covering family ( Ct) with KX ·Ct = 0, whose partial
+nef reduction is a holomorphic map f :X → Y to a curve Y . By (9.3) we may assume
+Y = P1. We already saw that κ(F ) ≥ 0, however by (8.5) we even have κ(F ) = 0.
+Choose m such that h0(mKF ) ̸= 0 for the general ﬁber F of f . Thus f∗ (mKX ) is a
+line bundle on Y , and we can write
+(∗) mKX =f ∗ (A) +
+∑
+aiFi +E
+whereFi are ﬁber components and E surjects ontoY withh0(OX (E)) = 1. The divisor
+E comes from the fact that F is not necessarily minimal; actually E|F = mKF . We
+will get rid of E by the following construction. Let Y0 ⊂ Y be the largest open set
+such that f is smooth over Y0; let X0 = f − 1(Y0). By [KM92] we have a birational
+modelf ′
+0 :X ′
+0
+>Y0 via a sequence of relative contractions and relative ﬂips su ch that§9 Towards abundance 25
+the ﬁbers F ′ of f ′
+0 are minimal, hence nKF ′ = OF ′ for suitable n. Now compactify.
+Thus we may assume that the general ﬁber of f is minimal, paying the price that X
+might have terminal singularities. However these singular ities don’t play any role since
+below we will argue on a general surface in X, which automatically does not meet the
+singular locus of X, this set being of dimension at most 1.
+In particular we have E = 0 in ( ∗). By enlarging m we may also assume that the
+support of ∑aiFi does not contain any ﬁber and also that mKX is Cartier. Now
+let S ⊂ X be a surface cut out by 2 general hyperplane sections. Let L = mKX |S.
+Denoting Gi =Fi|S and g =f |S, we obtain from ( ∗)
+(∗∗) L =g∗ (A) +
+∑
+aiGi.
+On the other hand, we consider the divisorial Zariski decomp osition L ≡ N +Z con-
+structed in [Bou02b]; see (3.5). Here N is an eﬀective R-divisor covering the non-nef
+locus of L andZ is an R-divisor which is nef in codimension 1. Let l be a general ﬁber
+of g. Then L ·l = 0 and thus
+N ·l =Z ·l = 0.
+SoN is contained in ﬁbers of g andZ =f ∗ (OY (a)), [Workshop,2.11]; moreover a ≥ 0.
+Comparing with ( ∗∗) we get Z =f ∗ (A) and thus A is nef. Hence ( ∗) gives κ(X) ≥ 0.
+9.5 Remark. Proposition 9.4 also holds in dimension 5. In fact, in view of (Cn, 1), only
+two things to be observed. The ﬁrst is that κ(F ) ≥ 0. But this follows from (9.9) below.
+The second is that in case of 4-dimensional ﬁbers we cannot ap ply [KM92]. However
+it is not really necessary to use [KM92]. We can also argue as f ollows. Let E′ =E|S.
+Then necessarily E′ ⊂ N so that g∗ (A) + ∑aiGi = N ′ +Z is pseudo-eﬀective, too,
+and we conclude as in (9.4).
+The same remark also applies to the next proposition (9.6).
+9.6 Proposition. Let X be a smooth projective 4-fold with KX pseudo-eﬀective. If
+p(KX) = 2 , then κ(X) ≥ 0.
+Proof. By (9.3) we may assume that we have a holomorphic partial nef reduction
+f :X → Y = P2. Again κ(F ) = 0 for the general ﬁber F . Then for a suitable large m
+we have a decomposition
+(∗) mKX =f ∗ (A) +
+∑
+aiFi +E1 − E2 +D
+where the support of ∑aiFi does not contain the support of any divisor of the form
+f − 1(C), but f (Fi) is 1-dimensional for all i, where Ei are eﬀective with dim f (Ei) = 0,
+and where D is eﬀective, projecting onto Y with D|F = mKF for the general ﬁber.
+The divisor E2 arises from the fact that f∗ (kKX) might not be locally free, but only
+torsion free.
+WritingA = OY (a), we are going to prove that a ≥ 0. Let l ⊂ Y be a general line and
+Xl = f − 1(l). Let g = f |Xl, A′ = A|l, F ′
+i = Fi ·Xl, D′ = D ·Xl and L = mKX |Xl.
+Then ( ∗) gives
+L =g∗ (A′) +
+∑
+aiF ′
+i +D′.26 The pseudo-eﬀective cone of compact K¨ ahler manifolds
+Passing to a suitable model for Xl → l as in the proof of (9.4), we may assume that
+D′ = 0. Now consider Boucksom’s divisorial Zariski decomposit ion L = N +Z as in
+the proof of (9.4). Then we conclude as before that Z =g∗(A′) and that N = ∑aiF ′
+i .
+Hence A′ is nef and thus a ≥ 0 (this can also be veriﬁed easily without using the
+divisorial Zariski decomposition).
+Going back to (∗), the only remaining diﬃculty is the presence of the negativ e summand
+E2. This requires the following considerations. We write
+f∗ (mKX ) = IZ ⊗ O(a)
+with a ﬁnite set Z; being deﬁned by IZ =f∗ (OX (E2)).
+In a ﬁrst step we claim that IZ ⊗ O(a) is pseudo-eﬀective in the sense that N (Ik
+Z ⊗
+O(ka + 1)) has sections for large k and N. Let σ : ˆY → Y be a birational map with
+ˆY smooth and ˆX the normalization of the ﬁber product X × Y ˆY with induces maps
+τ : ˆX− → X and ˆf : ˆX → ˆY such that ˆf is ﬂat, in particular equidimensional. Adopting
+the arguments from above, ˆf∗τ∗ (mKX ) is a pseudo-eﬀective line bundle. Now
+σ ∗ ˆf∗τ∗ (mKX) = f∗τ∗τ∗ (mKX ) = f∗ (mKX ),
+hence IZ ⊗ O(a) is clearly pseudo-eﬀective.
+Let x ∈ Y = P2 be general and let ρ : ˜Y → Y be the blow-up of x, inducing a P1−
+bundleπ : ˜Y → P1. LetF be a ﬁber of π, i.e. a line in P2. Then the pseudo-eﬀectivity
+of IZ ⊗ O(a) yields
+H 1(F, IZ ⊗ O(a)|F ) = 0
+from which we get the vanishing R1π ∗ (IZ ⊗ ρ∗ (O(a)) = 0 . Thus we have an exact
+sequence
+0− → π ∗ (IZ ⊗ ρ∗ (O(a)))− → π ∗ (ρ∗ (O(a)))− → OR− → 0
+where R ≃ Z.
+Now suppose H 0(IZ ⊗ O(a)) = 0 (otherwise we are done). Since π ∗ (ρ∗ (O(a)) = Sa(O ⊕
+O(1)), we deduce by taking H 0 that
+l(Z) = a(a + 1)
+2
+(and H 1(IZ ⊗ O(a)) = 0).
+If we let Zm be the subspace deﬁned by Im
+Z, we obtain in completely the same way
+(considering Im
+Z ⊗ O(ma) and assuming H 0(Im
+Z ⊗ O(ma)) = 0) that
+l(Zm) = ma(ma + 1)
+2 .
+Now consider the case that Z is reduced. Then l(Z2) = 3 l(Z) and l(Z3) = 10 l(Z).
+On the other hand, we can compute l(Zi) by the above formula, and this produces a
+contradiction. So Z cannot be reduced.§9 Towards abundance 27
+To deal with the general case, choose a deformation ( Zt) of Z = Z0 such that Zt is
+reduced for t ̸= 0. Then clearly IZt ⊗ O(a) is pseudo-eﬀective. Now we apply to Zt the
+above considerations and obtain a contradiction.
+9.7 Proposition. Let X be a smooth projective 4-fold with KX pseudo-eﬀective. If
+p(KX) = 3 , then κ(X) ≥ 0.
+Proof. Here any reduction is an elliptic ﬁbration. We choose a holo morphic birational
+model f :X− → Y (with X and Y smooth), such that
+(a) f is smooth over Y0 and Y \Y0 is a divisor with simple normal crossings only;
+(b) the j− function extends to a holomorphic map J :Y − → P1.
+By the ﬁrst property, f∗ (KX) is locally free [Ko86], and we obtain the well-known
+formula of Q− divisors
+(∗) KX =f ∗ (KY + ∆) +E
+Here E is an eﬀective divisor such that f∗ (OX (E)) = OY . Moreover
+∆ = ∆ 1 + ∆2
+with
+∆1 =
+∑
+(1 − 1
+mi
+)Fi +
+∑
+ak
+and
+∆2 ∼ 1
+12J ∗ (O(1)).
+Here Fi are the components over which we have multiple ﬁbers and Dk are the other
+divisor components over which there singular ﬁbers. The ak ∈ 1
+12 N according to Ko-
+daira’s list. Then by a general choice of the divisor ∆ 2, the pair ( Y, ∆1 + ∆2) is klt.
+Now KY + ∆ is pseudo-eﬀective. In fact, by Theorem 2.2 it suﬃces to sh ow that
+KY + ∆ ·Ct ≥ 0 for every covering family of curves. But this is checked ver y easily
+as in (9.4/9.6). Hence the log Minimal Model Program [Ko92] i n dimension 3 implies
+that KY + ∆ is eﬀective. Hence κ(X) ≥ 0 by (*).
+In order to attack the case p(KX) = 0, i.e. there is a connecting family ( Ct) with
+KX ·Ct = 0, we prove a more general result.
+9.8 Theorem. LetX be a projective manifold of any dimension n, (Ct) a connecting
+family and L pseudo-eﬀective. If L ·Ct = 0, then there exists a line bundle L′ withL ≡
+L′ andκ(L′) = 0 . More generally, if L ≡ N +Z is the divisorial Zariski decomposition,
+then Z = 0.
+9.9 Corollary . LetX be a projective manifold with q(X) = 0 such that KX is pseudo-
+eﬀective. If p(KX) = 0 , i.e. there is a connecting family (Ct) such that KX ·Ct = 0 ,
+then κ(X) = 0 .
+First we derive 9.9 from 9.8.28 The pseudo-eﬀective cone of compact K¨ ahler manifolds
+Proof of 9.9. Applying (9.8), mKX is eﬀective up to some numerically trivial line
+bundleG. Since we may assume q(X) = 0, the line bundle G is trivial after ﬁnite ´ etale
+cover, hence κ(X) ≥ 0. By 8.5 we get κ(X) = 0.
+Proof of 9.8.
+First notice that suﬃces to prove the statement on the Zarisk i decomposition; then
+the ﬁrst statement follows from [Bou02b], see (3.7). In fact , then L ≡ N and N is an
+eﬀective Q− divisor.
+(I) In a ﬁrst step we assume that dim T =n − 1 resp. we can ﬁnd a connecting (n − 1)-
+dimensional subfamily.
+Let
+L =N1 +Z1
+be the divisorial Zariski decomposition of L withN1 eﬀective andZ1 nef in codimension
+1 (as real divisors).
+We consider the graph p0 : C0 → X with projection q0 : C0 → T ; we may assume T
+smooth and C0 normal. Let π : C → C0 be a desingularisation and put p = p0 ◦π ,
+q =q0 ◦π .
+Nowp∗ (Z1) might not be nef in codimension 1, so that we decompose p∗ (Z1) = ˜N +Z
+and put N =p∗ (N1) + ˜N . We end up with
+p∗ (L) = N +Z
+and this is the divisorial Zariski decomposition of p∗ (L). This equation holds up to the
+pull-back of a topologically trivial R-line bundle on X. Notice that N does not meet
+the general ﬁber of q since L ·Ct = 0. This decomposition can be rewritten as follows
+(∗) p∗ (L) =
+∑
+aiFi +
+∑
+bjBj +q∗ (N ′) +q∗ (A) − E′
+where Fi are ﬁbered over q(Fi) by parts of reducible 1-dimensional ﬁbers, the Bj are
+irreducible components of the exceptional locus of π with codim q(Bj) ≥ 2, where N ′
+is R-eﬀective, where E′ is eﬀective with codim( q(E′)) ≥ 2 and ﬁnally Z = q∗ (A). In
+particular A is nef in codimension 1. The coeﬃcients ai,b j are positive and real a
+priori.
+First we verify the decomposition
+(∗∗) N =
+∑
+aiFi +
+∑
+bjBj +q∗ (N ′).
+In fact, since p∗
+0(N1) ·q− 1(t) = 0 for general t, we can decompose the eﬀective R divisor
+p∗
+0N1 into the components F ′
+j with codim q0(F ′
+j) = 1 but the F ′
+j contain only parts of
+ﬁbers, and the other components which then consist only of fu ll ﬁbers of q0. Therefore
+we can write
+p∗
+0(N1) =
+∑
+a′
+iF ′
+i +q∗
+0 (N ′)§9 Towards abundance 29
+and then
+p∗N1 =
+∑
+a′
+iFi +
+∑
+cjBj +q∗ (N ′)
+with cj ≥ 0. Then ( ∗∗) follows by adding and decomposing ˜N ; notice here that ˜N
+cannot contain multisections of q since p∗ (L) ·q− 1(t) = 0.
+To get the decomposition ( ∗), consider ﬁrst a line bundle B over C which is q-nef in
+codimension 1 with B ·q− 1(t) = 0 for general t. This means that B is q-nef over a
+Zariski open subset in T whose complement has codimension at least 2. Then B deﬁnes
+a section in R1q∗ (OC) over a Zariski open aﬃne set T0 ⊂ T such that codim(T \T0) ≥ 2.
+Since R1q∗ (OC) is a direct sum of a torsion sheaf supported in codimension a t least 2
+and a reﬂexive sheaf ([Ko86]), s extends to a section of R1q∗ (OC) on all of T (possibly
+ﬁrst enlarge T0). By the Leray spectral sequence we obtain a topologically t rivial line
+bundleG on C such thatB|q− 1(t) = G|q− 1(t) for general t. Thus, possibly substituting
+B byB ⊗ G∗ , we may assume that B|q− 1(t) is trivial for general t. Now consider the
+canonical map q∗q∗ (B) → B to obtain a decomposition of type ( ∗) for B, namely
+B = q∗ (B′) +E, where E is a not necessarily eﬀective divisor whose components Ek
+satisfy codim q(Ek) ≥ 2.
+Going back to our case, we would like to apply this to B =Z. However Z ∈ H 1, 1
+Q (C)⊗ R
+is not a Q-divisor. Therefore we approximate Z by Q-divisors Zj ∈ H 1, 1
+Q (C) such that
+Zj ·q− 1(t) = 0 for general t. This is possible since the linear subspace {A|A·q− 1(t) = 0 }
+is rationally deﬁned. Now apply the previous consideration s to Zj; but ﬁrst we have to
+make sure that the Zj are q-nef in codimension 1. This can be achieved by requiring
+that the Zj are 0 on the components of general reducible ﬁbers. Now apply ing our
+previous considerations, it follows that Zj = q∗ (Z ′
+j) + Ej with divisors Ej whose
+components Ek,j satisfy codim q(Ek,j ) ≥ 2. Then let Z ′ be the limit of the Zj; we
+obtain Z = q∗ (Z ′) + E′. Since Z is nef in codimension 1, we conclude that −E′ is
+eﬀective. This ﬁnally establishes ( ∗) (possibly we have to pass from L to mL in order
+to avoid multiple components in ∑aiFi).
+We also notice that the coeﬃcients ai in (∗) must be rational. In fact, by ( ∗), ∑aiFi is
+rational and by Boucksom [Bou02b, 2.1.15]; see (3.7), the Fi are linearly independent.
+(I.a) First suppose that deg p = 1. Then our claim comes down to prove that
+Z = 0. (∗∗∗)
+Since deg p = 1, the map p is birational; let E denote the exceptional locus. Then
+two curves from the family ( Ct) can only meet at points in p(E). Since (Ct) is connect-
+ing, E projects onto T , i.e. q(E) = T . To be more precise, we pick some component
+Ei projecting onto T . Thus every t is contained in some subvariety
+T (x) := q(p− 1(x) ∩ Ei),
+i.e. every Ct passes through a point x ∈ p(Ei) and through each such x there exists an
+at least 1-dimensional subfamily ( Ct). Notice that T (x) might not be irreducible, so30 The pseudo-eﬀective cone of compact K¨ ahler manifolds
+that for general x ∈ p(Ei) we pick an irreducible component such that (taking closure )
+we obtain a compact family which we again denote ( T (x)).
+Now consider x ∈ p(Ei) general and let Sx ⊂ q− 1(T (x)) be the irreducible component
+mapping onto T (x). By restricting
+p∗ (L) =
+∑
+aiFi +
+∑
+bjBj +q∗ (N ′ +A)
+to Sx ⊂ q− 1(T (x)) we obtain
+A|T (x) ≡ N ′|T (x) ≡ 0
+(cut by a general hyperplane section in T (x)). If T (x) = T , then N ′ and A are
+numerically trivial and ( ∗∗∗) holds.
+So suppose dim T (x) < dimT . If the family ( T (x)) is connecting, then we ﬁnd con-
+necting families of curves, say ( Cs) such that
+N ′ +A ·Cs = 0,
+hence N ′ +A is Q-eﬀective by induction and ( ∗∗∗) holds.
+If (T (x)) is not connecting, then we form the quotient g : T
+> W . We can choose
+x,x ′ ∈ p(E) such thatT (x)∩T (x′) = ∅. SinceCt1 ∩Ct2 ⊂ p(E) for all choices tj ∈ T , we
+conclude that x andx′ cannot be connected by chains of Ct’s. This is a contradiction.
+(b) Now let deg p ≥ 2. Take a general Ct. Then through the general x ∈ Ct there is at
+least one other Ct′. Therefore we obtain a 1-dimensional family ( Cs)s∈ Tt through Ct.
+To be more precise, let D ⊂ X be the subspace over which p has positive dimensional
+ﬁbers. Then let
+Tt ⊂ q(p− 1(Ct \D))
+be the union of all irreducible components of dimension 1 who se q− images still have
+dimension 1. Putting things together, we obtain a family ( Tt), however the general Tt
+might be reducible. We claim that the family ( Tt) is connecting. In fact, take t1,t 2 ∈ T
+general. Then we can join the curves Ct1 and Ct2 by an odd number of irreducible
+curve Csj, 1 ≤ j ≤ 2n − 1. So Ct1 ∩ Cs1 ̸= ∅, Cs1 ∩ Cs2 ̸= ∅ etc. Thus s1 ∈ Tt1 ∩ Ts2
+so that Tt1 ∩ Ts2 ̸= ∅. Moreover s3 ∈ Ts2 ∩ Ts4 so that Ts2 ∩ Ts4 ̸= ∅. Continuing,
+ﬁnally Ts2n− 2 ∩ Tt2 ̸= ∅, so that t1 and t2 can be joined by chains of Ts. Thus (Tt) is
+connecting.
+LetSt ⊂ Ct be the corresponding surface over Tt resp. an irreducible component. Then
+p∗ (L) is numerically trivial on the general ﬁber of q|St and also on some multi-section.
+Thereforeq∗ (N ′ +A)|St = 0 due to the following remark (+), hence ( N ′ +A) ·Tt = 0.
+Let L =N ′ +A be a pseudo-eﬀective line bundle over a smooth projective su rface or
+threefold T with N an eﬀective R-divisor and A nef in codimension 1. Assume that
+there is a map g :T → W to the smooth curve W . Then L is numerically Q-eﬀective.
+In fact, N = ∑riF ′
+i with ﬁber components F ′
+i andA is numerically trivial on all ﬁbers
+sinceA is nef in codimension 1. Thus A ≡ g∗ (A′) with A′ nef on W . This proves (+).§9 Towards abundance 31
+Now we apply induction if the general Tt is irreducible resp. Lemma 9.10 if the general
+Tt is reducible and obtain that A = 0, hence Z = 0.
+(II) If there is no connecting ( n − 1)-dimensional subfamily, we choose some ( n − 1)-
+dimensional subfamily C0 over T0 ⊂ T . Now consider the p-preimages of the Ct cor-
+responding to t ̸∈ T0. Then we obtain a connecting family of multi-sections on whi ch
+q∗ (N ′ +A) is numerically trivial and, taking q-images, a connecting family in T0 on
+whichN ′ +A is numerically trivial. Then argue by induction as in (I.b).
+9.10 Lemma. If Theorem 9.8 holds in dimension at most n, then it also holds in
+dimension ≤ n for arbitrary covering connecting families (Ct) with the general Ct being
+reducible: if L is pseudo-eﬀective and L ·Cj
+t = 0 on every movable component Ct, then
+Z = 0 in the divisorial Zariski decomposition.
+Proof. Let ( Ct)t∈ T be a connecting family of reducible curves with graph p : C → X
+and q : C → T. Let
+C =
+l⋃
+i
+Ci
+be the decomposition into irreducible components and set pi =p|Ci,q i =q|Ci. Some Ci
+might still have generically reducible q-ﬁbers, so we pass to the normalisation ˜Ci− → Ci.
+Let ˜Ci,j be the decomposition into irreducible components; then eve ry ˜Ci,j deﬁnes a
+family of generically irreducible curves on X. In total we obtain ﬁnitely many families
+ˆCk− → Sk of generically irreducible curves, not all of them covering possibly.
+Pick one of the covering families, say ˆC1. Let f :X >X1 be the associated quotient
+(with X1 smooth). Since we are allowed to blow up, we may assume f holomorphic
+from the beginning. If ˆC1 happens to be connecting, i.e. dim X1 = 0, then (9.8) gives
+our claim for the given line bundle L. So suppose dim X1 > 0. Our plan is to proceed
+by induction on dim X. Thus consider the induced family ˜Ct = f∗ (Ct) (for t generic;
+then take closure in the cycle space). Obviously ( ˜Ct) is connecting. By (9.8) and (8.5)
+- possibly after tensoring with a topologically trivial lin e bundle as in the proof of (9.8)
+- we have κ(L|F ) = 0 for suitable m and the general ﬁber F of f. Thus f∗ (mL) has
+rank 1. Choosing m suﬃciently divisible, we obtain
+mL =f ∗ (L1) +E1 − E2,
+where Ej are eﬀective, the components of E1 either consists of parts of ﬁbers of f
+or project onto subvarieties of codimension at least 2 in X1 and the components of
+E2 also project onto subvarieties of codimension at 2 in X1. By passing to a suitable
+model of f (blow up X and Y ), we may assume that f∗ (mL) is locally free, hence
+E2 = 0. Now by cutting down to movable curves, we conclude as in 9.4/9 .6 that L1 is
+pseudo-eﬀective. In order to apply induction we still need t o show that L · ˜Cj
+t = 0 for
+the movable components. This is however clear:
+0 = mL ·Cj
+t =E1 ·Cj
+t +L′ · ˜Cj
+t,
+so that E1 ·Cj
+t =L′ · ˜Cj
+t = 0.32 The pseudo-eﬀective cone of compact K¨ ahler manifolds
+Hence we can apply induction: if L1 =N1 +Z1 is the divisorial Zariski decomposition,
+then Z1 = 0. Thus the same holds for L.
+Combining everything in this section we ﬁnally obtain
+9.11 Theorem. Let X be a smooth projective 4-fold (or a normal projective 4-fold
+with only canonical singularities). If KX is pseudo-eﬀective and if there is a covering
+family (Ct) of curves such that KX ·Ct = 0, then κ(X) ≥ 0.
+The remaining task is to consider 4-folds X with KX pseudo-eﬀective such that
+KX ·C >0 for every curve C passing through a very general point of X, i.e. p(KX ) = 0.
+In that case one expects that X is of general type. It is easy to see that every proper
+subvarietyS ofX passing through a very general point of X is of general type, i.e. its
+desingularisation is of general type; see 9.12 below. But it is not at all clear whether
+KX|S is big, which is of course still not enough to conclude.
+9.12 Proposition. LetX be a smooth projective 4-fold with p(KX) = 0 . Then every
+proper subvariety S ⊂ X through a very general point of X is of general type.
+Proof. Supposing the contrary, we ﬁnd a covering family ( St) of subvarieties such that
+the generalSt, hence every St, is not of general type. Consider the desingularised graph
+p : C → X of this family; by passing to a subfamily we may assume p generically ﬁnite.
+Denoting q : C → T the parametrising projection, the general ﬁber ˆSt is a smooth
+variety of dimension at most 3 and not of general type. Using a minimal model if
+κ( ˆSt) = 0, we ﬁnd in ˆSt a covering family of curves intersection K ˆSt
+trivially. Thus we
+ﬁnd a covering family ( Cs) in C, all members being in q-ﬁbers such that KC ·Cs = 0.
+Since KC = p∗ (KX) + E with E eﬀective, we get KX ·p∗ (Cs) ≤ 0, a contradiction.
+Using the Iitaka ﬁbration we obtain
+9.13 Proposition. Let X be a smooth projective 4-fold with p(KX ) = 0 . Then
+κ(X) ̸= 1, 2, 3.
+§10 Appendix: towards transcendental Morse inequalities
+As already pointed out, for the general case of the conjectur e 2.3 a transcendental
+version of the holomorphic Morse inequalities would be need ed. The expected state-
+ments are contained in the following conjecture
+10.1 Conjecture. LetX be a compact complex manifold, and n = dimX.
+(i) Let α be a closed, (1, 1)-form on X. We denote by X(α, ≤ 1) the set of points
+x ∈ X such that α x has at most one negative eigenvalue. If
+∫
+X(α, ≤ 1)α n > 0, the
+class {α } contains a K¨ ahler current and
+Vol(α ) ≥
+∫
+X(α, ≤ 1)
+α n.
+(ii) Let {α } and {β } be nef cohomology classes of type (1, 1) on X satisfying the§10 Appendix: towards transcendental Morse inequalities 33
+inequalityα n − nα n− 1 ·β >0. Then {α − β } contains a K¨ ahler current and
+Vol(α − β ) ≥ α n − nα n− 1 ·β.
+Remarks about the conjecture. If α = c1(L) for some holomorphic line bundle
+L on X, then the inequality ( ∗∗) was established in [Bou02a] as a consequence of the
+results of [De85]. In general, (ii) is a consequence of (i). I n fact, if α andβ are smooth
+positive deﬁnite (1, 1)-forms and
+λ 1 ≥ ... ≥ λ n > 0
+are the eigenvalues of β with respect to α , then X(α − β, ≤ 1) = {x ∈ X ; λ 2(x)< 1}
+and
+1X(α − β, ≤ 1)(α − β )n = 1X(α − β, ≤ 1)(1 − λ 1)... (1 − λ n) ⩾ 1 − (λ 1 +... +λ n)
+everywhere on X. This is proved by an easy induction on n. An integration on X
+yields inequality (ii). In case α andβ are just nef but not necessarily positive deﬁnite,
+we argue by considering (α +εω ) − (β +εω ) with a positive hermitian form ω andε> 0
+small.
+The full force of the conjecture is not needed here. First of a ll, we need only the
+case when X is compact K¨ ahler. Let us consider a big class {α }, and a sequence of
+K¨ ahler currentsTm ∈ {α } with logarithmic poles, such that there exists a modiﬁcatio n
+µ m :Xm ↦→ X, with the properties
+(10. 2′) µ ∗
+mTm = βm + [Em] where βm is a semi-positive (1 , 1)-form, and Em is an
+eﬀective Q-divisor on Xm.
+(10. 2′′) Vol( {α }) = lim m↦→∞
+∫
+Xβ n
+m.
+(see Deﬁnition 3.2).
+A ﬁrst trivial observation is that the following uniform upp er bound for c1(Em)
+holds.
+10.3 Lemma. Letω be a K¨ ahler metric onX, such that {ω − α } contains a smooth,
+positive representative. Then for each m ∈ Z+, the (1, 1)-class µ ∗
+m{ω } − c1(Em) on
+Xm is nef.
+Proof. If γ is a smooth positive representative in {ω − α }, then µ ⋆
+mγ +βm is a smooth
+semi-positive representative of µ ∗
+m{ω } − c1(Em).
+A second remark is that in order to prove the duality statemen t 2.3 for projective
+manifolds, it is enough to establish the estimate
+(∗) Vol( ω − A) ≥
+∫
+X
+ω n − n
+∫
+X
+ω n− 1 ∧ c1(A)34 The pseudo-eﬀective cone of compact K¨ ahler manifolds
+where ω is a K¨ ahler metric, and A is an ample line bundle on X. Indeed, if {α } is a
+big cohomology class, we use the above notations and we can wr ite
+βm +tEm =βm +tµ ∗
+mA − t(µ ∗
+mA − Em)
+whereA is an ample line bundle on X such thatc1(A)−{ α } contains a smooth, positive
+representative. The arguments of the proof of 4.1 will give t he orthogonality estimate,
+provided that we are able to establish ( ∗).
+In this direction, we can get only a weaker statement with a su boptimal constant cn.
+10.4 Theorem (analogue of Lemma 4.2). Let X be a projective manifold of
+dimension n. Then there exists a constant cn depending only on dimension (actually
+one can take cn = (n + 1)2/ 4 ), such that the inequality
+Vol(ω − A) ≥
+∫
+X
+ω n − cn
+∫
+X
+ω n− 1 ∧ c1(A)
+holds for every K¨ ahler metricω and every ample line bundle A on X.
+Proof. Without loss of generality, we can assume that A is very ample (otherwise
+multiplyω andA by a large positive integer). Pick generic sections σ 0,σ 1,...,σ n ∈ |A|
+so that one gets a ﬁnite map
+F :X → Pn
+C, x ↦→ [σ 0(x) : σ 1(x) : ... :σ n(x)].
+We let θ = F ∗ω FS ∈ c1(A) be the pull-back of the Fubini-Study metric on Pn
+C (in
+particular θ ⩾ 0 everywhere on X), and put
+ψ = log |σ 0|2
+|σ 0|2 + |σ 1|2 +... + |σ n|2.
+We also use the standard notation dc = i
+4π (∂ − ∂) so that ddc = i
+2π∂∂. Then
+ddcψ = [H] − θ
+whereH is the hyperplane section σ 0 = 0 and [H] is the current of integration over H
+(for simplicity, we may further assume that H is smooth and reduced, although this is
+not required in what follows). The set Uε = {ψ ⩽ 2 logε} is an ε-tubular neighborhood
+of H. Take a convex increasing function χ : R → R such that χ (t) = t for t ⩾ 0 and
+χ (t) = constant on some interval ] − ∞ ,t 0]. We put ψ ε =ψ − 2 logε and
+α ε :=ddcχ (ψ ε) +θ = (1 − χ ′(ψ ε))θ +χ ′′(ψ ε)dψ ε ∧ dcψ ε ⩾ 0.
+Thanks to our choice of χ , this is a smooth form with support in Uε. In particular, we
+ﬁnd ∫
+Uε
+α n
+ε =
+∫
+Uε
+α ε ∧ θn− 1 =
+∫
+X
+θn =c1(A)n.§10 Appendix: towards transcendental Morse inequalities 35
+It follows from these equalities that we have lim ε→ 0α ε = [H] in the weak topology
+of currents. Now, for each choice of positive parameters ε,δ , we consider the Monge-
+Amp` ere equation
+(10. 5) ( ω +i∂
+∂ϕ ε)n = (1 − δ)ω n +δ
+∫
+Xω n
+c1(A)n α n
+ε.
+By the theorem of S.-T. Yau [Yau78], there exists a smooth sol ution ϕ ε, unique up
+to normalization by an additive constant, such that ω ε := ω +i∂
+∂ϕ ε > 0. Since∫
+Xω ε ∧ ω n− 1 =
+∫
+Xω n remains bounded, we can extract a weak limit T out of the
+family ω ε ; then T is a closed positive current, and the arguments in [Bou02a] s how
+that its absolutely continuous part satisﬁes
+∫
+X
+T n
+ac ≥ (1 − δ)
+∫
+X
+ω n.
+We are going to use the same ideas as in [DPa03], in order to est imate the singularity
+of the current T on the hypersurface H. For this, we estimate the integral
+∫
+Uε
+ω ε ∧θn− 1
+on the tubular neighborhood Uε of H. Let us denote by ρ1 ⩽... ⩽ρn the eigenvalues
+of ω ε with respect to α ε, computed on the open set U ′
+ε ⊂ Uε where α ε is positive
+deﬁnite. The Monge-Amp` ere equation (10.5) implies
+ρ1ρ2...ρ n ⩾δ
+∫
+Xω n
+c1(A)n.
+On the other hand, we ﬁnd ω ε ⩾ρ1α ε on U ′
+ε, hence
+(10. 6)
+∫
+Uε
+ω ε ∧ θn− 1 ⩾
+∫
+U ′
+ε
+ρ1α ε ∧ θn− 1 ⩾δ
+∫
+Xω n
+c1(A)n
+∫
+U ′
+ε
+1
+ρ2...ρ n
+α ε ∧ θn− 1.
+In order to estimate the last integral in the right hand side, we apply the Cauchy-
+Schwarz inequality to get
+(10. 7)
+( ∫
+U ′ε
+(α n
+ε )1/ 2(α ε ∧ θn− 1)1/ 2
+) 2
+⩽
+∫
+U ′ε
+ρ2...ρ nα n
+ε
+∫
+U ′ε
+1
+ρ2...ρ n
+α ε ∧ θn− 1.
+By deﬁnition of the eigenvalues ρj, we have
+(10. 8)
+∫
+U ′
+ε
+ρ2...ρ nα n
+ε ⩽n
+∫
+X
+ω n− 1
+ε ∧ α ε =n
+∫
+X
+ω n− 1 ∧ c1(A).
+On the other hand, an explicit calculation shows that
+α n
+ε ⩾n(1 − χ ′(ψ ε))n− 1χ ′′(ψ ε)dψ ε ∧ dcψ ε ∧ θn− 1,
+α ε ∧ θn− 1 ⩾χ ′′(ψ ε)dψ ε ∧ dcψ ε ∧ θn− 1,
+hence
+∫
+U ′
+ε
+(α n
+ε )1/ 2(α ε ∧ θn− 1)1/ 2 ⩾n1/ 2
+∫
+X
+(1 − χ ′(ψ ε))(n− 1)/ 2χ ′′(ψ ε)dψ ε ∧ dcψ ε ∧ θn− 136 The pseudo-eﬀective cone of compact K¨ ahler manifolds
+(we can integrate on X since the integrand is zero anyway outside U ′
+ε). Now, we have
+n + 1
+2 (1 − χ ′(ψ ε))(n− 1)/ 2χ ′′(ψ ε)dψ ε ∧ dcψ ε
+= −d
+(
+(1 − χ ′(ψ ε))(n+1)/ 2dcψ ε
+)
++ (1 − χ ′(ψ ε))(n+1)/ 2ddcψ ε
+= −d
+(
+(1 − χ ′(ψ ε))(n+1)/ 2dcψ ε
+)
++ [H] − (1 − χ ′(ψ ε))(n+1)/ 2θ
+and from this we infer
+n + 1
+2
+∫
+X
+(1 − χ ′(ψ ε))(n− 1)/ 2χ ′′(ψ ε)dψ ε ∧ dcψ ε ∧ θn− 1
+=
+∫
+X
+[H] ∧ θn− 1 −
+∫
+X
+(1 − χ ′(ψ ε))(n+1)/ 2θn
+→ c1(A)n as ε → 0.
+We thus obtain
+(10. 9)
+∫
+U ′
+ε
+(α n
+ε )1/ 2(α ε ∧ θn− 1)1/ 2 ⩾ 2√
+n
+n + 1c1(A)n − o(1) as ε → 0.
+The reader will notice, and this looks at ﬁrst a bit surprisin g, that the ﬁnal lower bound
+does not depend at all on the choice of χ . This seems to indicate that our estimates
+are essentially optimal and will be hard to improve. Putting together (10.7), (10.8)
+and (10.9) we ﬁnd the lower bound
+(10. 10)
+∫
+U ′
+ε
+1
+ρ2...ρ n
+α ε ∧ θn− 1 ⩾ 4δ
+(n + 1)2
+(c1(A)n)2
+∫
+Xω n− 1 ∧ c1(A) − o(1).
+Finally, (10.6) and (10.10) yield
+∫
+Uε
+ω ε ∧ θn− 1 ⩾ 4δ
+(n + 1)2
+∫
+Xω n
+∫
+Xω n− 1 ∧ c1(A)c1(A)n − o(1).
+As ⋂Uε = H, the standard support theorems for currents imply that the w eak limit
+T = limω ε carries a divisorial component c[H] with
+∫
+X
+c[H] ∧ θn− 1 ⩾ 4δ
+(n + 1)2
+∫
+Xω n
+∫
+Xω n− 1 ∧ c1(A)c1(A)n.
+Therefore, as [H] ≡ θ ∈ c1(A), we infer
+c ⩾ 4δ
+(n + 1)2
+∫
+Xω n
+∫
+Xω n− 1 ∧ c1(A).
+The diﬀerenceT −c[H] is still a positive current and has the same absolutely cont inuous
+part as T . Hence
+Vol(T − c[H]) ⩾
+∫
+X
+T n
+ac ⩾ (1 − δ)
+∫
+X
+ω n.§10 Appendix: towards transcendental Morse inequalities 37
+The speciﬁc choice
+δ = (n + 1)2
+4
+∫
+Xω n− 1 ∧ c1(A)∫
+Xω n
+givesc ⩾ 1, hence
+Vol(T − [H]) ⩾
+∫
+X
+ω n − (n + 1)2
+4
+∫
+X
+ω n− 1 ∧ c1(A).
+Theorem 10.4 follows from this estimate.
+10.11 Remark. By using similar methods, we could also obtain an estimate fo r the
+volume of the diﬀerence of two K¨ ahler classes on a general compact K¨ ahler manifold, by
+using the technique of concentrating the mass on the diagona l of X × X (see [DPa03]).
+However, the constant c implied by this technique also depends on the curvature of th e
+tangent bundle of X.
+We show below that the answer to conjecture 10.1 is positive a t least when X
+is a compact hyperk¨ ahler manifold ( = compact irreducible h olomorphic symplectic
+manifold). The same proof would work for a compact K¨ ahler ma nifold which is a limit
+by deformation of projective manifolds with Picard number ρ =h1, 1.
+10.12 Theorem. Let X be a compact hyperk¨ ahler manifold, and let α be a closed,
+(1, 1)-form on X. Then we have
+Vol(α ) ≥
+∫
+X(α, ≤ 1)
+α n.
+Proof. We follow closely the approach of D. Huybrechts in [Huy02], page 44. Consider
+X ↦→ Def(X) the universal deformation of X, such that X0 = X. If β ∈ H 2(X, R) is
+a real cohomology class, then we denote by Sβ the set of points t ∈ Def(X) such that
+the restriction β|Xt is of (1, 1)-type.
+Next, we take a sequence of rational classes {α k} ∈ H 2(X, Q), such that α k → α
+on X as k ↦→ ∞ . As {α k} → { α }, the hypersurface Sα k converge to Sα ; in particular,
+we can take tk ∈ Sα k such that tk → 0. In this way, the rational (1 , 1)-forms α k|Xtk
+will converge to our form α on X.
+We have
+Vol(α ) ≥ lim sup
+k↦→∞
+Vol(α k|Xtk
+) ≥
+≥ lim sup
+k↦→∞
+∫
+Xtk (α tk , ≤ 1)
+α n
+tk
+=
+∫
+X(α, ≤ 1)
+α n
+where the ﬁrst inequality is a consequence of the semi-conti nuity of the volume obtained
+in [Bou02b], and the second one is a consequence of the conver gence statement above.
+10.13 Corollary . IfX be a compact hyperk¨ ahler manifold, or more generally, a lim it
+by deformation of projective manifolds with Picard number ρ =h1, 1, then the cones E
+and M are dual.38 The pseudo-eﬀective cone of compact K¨ ahler manifolds
+References
+[Bou02a] Boucksom, S.: On the volume of a big line bundle; Intern. J. Math. 13 (2002), 1043–
+1063.
+[Bou02b] Boucksom, S.: Cˆ ones positifs des vari´ et´ es complexes compactes;Thesis, Grenoble 2002.
+[Ca81] Campana, F.: Cor´ eduction alg´ ebrique d’un espace analytique faiblement k¨ ahl´ erien com-
+pact; Inv. Math. 63 (1981) 187–223.
+[Ca94] Campana, F.: Remarques sur le revˆ etement universel des vari´ et´ es K¨ ahleriennes com-
+pactes. Bull. Soc. Math. France. 122 (1994) 255-284.
+[CP91] Campana, F.; Peternell, Th.: Algebraicity of the ample cone of projective varieties. J.
+f. reine u. angew. Math. 407 (1991) 160-166.
+[CP01] Campana, F.; Peternell, Th.: The Kodaira dimension of Kummer threefolds. Bull. Soc.
+Math. France 129, 357-359 (2001).
+[CT86] Colliot-Th´ el` ene, J.L.:Arithm´ etique des vari´ et´ es rationnelles et probl` emes birationnels;
+Proc. Intl. Cong. Math. 1986, 641-653.
+[De85] Demailly, J.-P.: Champs magn´ etiques et in´ egalit´ es de Morse pour lad′′-cohomologie;
+Ann. Inst. Fourier (Grenoble) 35 (1985) 189–229.
+[De90] Demailly, J.-P.: Singular hermitian metrics on positive line bundles; Proceedings of the
+Bayreuth conference “Complex algebraic varieties”, April 2-6, 1 990, edited by K. Hulek,
+T. Peternell, M. Schneider, F. Schreyer, Lecture Notes in Math. n ◦ 1507, Springer-Verlag,
+1992, 87–104.
+[De92] Demailly, J.-P.: Regularization of closed positive currents and intersecti on theory; J.
+Alg. Geom. 1 (1992), 361-409.
+[DEL00] Demailly, J.P.; Ein, L.; Lazarsfeld,R.: A subadditivity property of multiplier ideals.
+Michigan Math. J. 48 (2000), 137-156 .
+[DPa03] Demailly, J.P.; Paun, M.: Numerical characterization of the K¨ ahler cone of a compact
+K¨ ahler manifold.math.AG/0105176 (2001), to appear in Annals of Math., 2003 .
+[DPS94] Demailly, J.-P.; Peternell, Th.; Schneider, M.: Compact complex manifolds with numer-
+ically eﬀective tangent bundles; J. Alg. Geom. 3 (1994) 295–345.
+[DPS96] Demailly, J.-P.; Peternell, Th.; Schneider, M.: Holomorphic line bundles with partially
+vanishing cohomology; Israel Math. Conf. Proc. vol. 9 (1996) 165–198.
+[DPS00] Demailly, J.-P.: Peternell, Th.; Schneider, M.; Pseudo-eﬀective line bundles on compact
+K¨ ahler manifolds;Intern. J. Math. 6 (2001) 689-741.
+[Ec02] Eckl, T.: Tsuji’s numerical trivial ﬁbrations. math.AG/0202279 (2002).
+[F uj94] Fujita, T.; Approximating Zariski decomposition of big line bundles; Kodai Math. J. 17
+(1994), 1–3.
+[GHS03] Graber, T.; Harris, J.; Starr, J.: Families of rationally connected varieties; Journal AMS
+16 (2003), 57-67.
+[KMM87] Kawamata, Y.; Matsuki, K.; Matsuda, K.: Introduction to the minimal model program;
+Adv. Stud. Pure Math. 10 (1987), 283-360.
+[KM92] Koll´ ar, J.; Mori, S.: Classiﬁcation of three-dimensional ﬂips; Journal AMS 5 (1992),
+533-703.
+[Ko86] Koll´ ar, J.: Higher direct images of dualizing sheaves II ; Ann. Math. 124, (1986),
+171-202.
+[Ko87] Kobayashi, S.: Diﬀerential geometry of complex vector bundles; Princeton Univ. Press,
+1987.
+[Ko92] Kolla´ r, J. et al.: Flips and abundance for algebraic 3-folds; Ast´ erisque211, Soc. Math.
+France 1992.
+[La00] Lazarsfeld, R.: Ampleness modulo the branch locus of the bundle associated t o a bran-
+ched covering; Comm. Alg. 28 (2000), 5598-5599.
+[Mi87] Miyaoka, Y.: The Chern classes and Kodaira dimension of a minimal variety ; Adv.
+Stud. Pure Math. 10, 449 - 476 (1987) .
+[Mi88] Miyaoka, Y.: On the Kodaira dimension of minimal threefolds; Math. Ann. 281,
+325-332 (1988).39
+[Mi88a] Miyaoka, Y.: Abundance conjecture for 3-folds: case ν = 1 ; Comp. Math. 68, 203-220
+(1988).
+[MM86] Miyaoka, Y.; Mori, S.: A numerical criteria for uniruledness; Ann. Math. 124 (1986)
+65–69.
+[Mo87] Mori, S.: Classiﬁcation of higherdimensional varieties; Proc. Symp. Pure Math. 46
+269-331 (1987).
+[Mo88] Mori, S.: Flip theorem and existence of minimal models of 3-folds; J. Amer. Math. Soc.
+1 (1988) 177–353.
+[Na87] Nakayama, N.:On Weierstrass models; Alg. Geom. and Comm. Algebra. Vol. in honour
+of Nagata, vol. 2, Kinokuniya, Tokyo 1988, 405–431.
+[Pa98] Paun, M.: Sur l’eﬀectivit´ e num´ erique des images inverses de ﬁbr´ esen droites; Math.
+Ann. 310 (1998) 411–421.
+[Pe01] Peternell, Th.: Towards a Mori theory on compact K¨ ahler 3-folds, III; Bull. Soc. Math.
+France 129, 339-356 (2001).
+[PSS99] Peternell, Th.; Schneider, M.; Sommese, A.J.: Kodaira dimension of subvarieties. Intl.
+J. Math. 10 (1999) 1065–1079.
+[PS02] Peternell, Th.; Sommese, A.J.: Ample vector bundles and branched coverings II. To
+appear in the volume of the Fano conference, Torino 2002.
+[SB92] Shepherd-Barron, N.: Miyaoka’s theorems on the generic semi-negativity of TX . Ast´ e-
+risque 211 (1992) 103–114.
+[Ts00] Tsuji, H.: Numerically trivial ﬁbrations. math.AG/0001023 (2000).
+[W orkshop]Bauer, T. et al.: A reduction map for nef line bundles; Complex Geometry, vol. in
+honour of H. Grauert, Springer (2002), 27–36.
+[Yau78] Yau, S.-T.: On the Ricci curvature of a complex K¨ ahler manifold and the c omplex
+Monge–Amp` ere equation; Comm. Pure Appl. Math. 31 (1978), 339–411.
+(version of May 14, 2004, printed on October 22, 2018)
+S´ ebastien Boucksom,Universit´ e de Paris VII, boucksom@math.jussieu.fr
+Jean-Pierre Demailly, Universit´ e de Grenoble I, demailly@fourier.ujf-grenoble.fr
+Mihai Paun, Universit´ e de Strasbourg I, paun@math.u-strasbg.fr
+Thomas Peternell, Universit¨ at Bayreuth, Thomas.Peternell@uni-bayreuth.de

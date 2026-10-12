@@ -1,0 +1,7 @@
+\node[card] (n0) {\heading{}{零次の全随伴rankを固定}{Fix full adjoint rank at zero}$\operatorname{rk}g_*\mathcal O_Z(K_{Z/X})=1,\quad L=-K_X$};
+\node[card,below=2.2cm of n0] (n1) {\heading{}{積分密度を直像ノルムにする}{Identify the density with a direct-image norm}$g_*\pi^*\Omega_h=H\,dV_y,\quad -\log H\ \text{psh}$};
+\node[card,below=2.2cm of n1] (n2) {\heading{}{全valuationで補正を制御}{Control the correction at every valuation}$A_0=\sum_Q\max\{0,\min_{E\mapsto Q}((1+a_E)/e_E-1)\}Q$\\$f^*A_0\ \text{exceptional},\quad \gamma_F>-1$};
+\node[result,below=2.2cm of n2] (n3) {\heading{}{非加重可積分な半正値計量}{Obtain an unweighted integrable semipositive metric}$\Phi=-\log H+\sum_Qa_Q\log|t_Q|^2,\quad e^{-\Phi}\in L^1_{\rm loc}$\\\Tx{追加のpatch下界から通常開集合上の狭義正値性}{The extra patch lower bound gives strictness on an ordinary open}};
+\flow{n0}{n1}{\Tx{Jacobian生成元が全直像を生成し、滑らかな直像正値性を適用}{The Jacobian generates the entire direct image; apply smooth positivity}\\[4pt]\Cite{ber}};
+\flow{n1}{n2}{\Tx{分岐次数で補正を選び、full toroidal boundaryでsub-kltを示す}{Use ramification orders and the full toroidal boundary to prove sub-klt}\\[4pt]\Cite{l22}};
+\flow{n2}{n3}{\Tx{密度の下界でpsh延長、指数の下界で積分を制御}{Extend the psh weight using density lower bounds; integrate using discrepancy bounds}\\[4pt]\Cite{metric-proof}};

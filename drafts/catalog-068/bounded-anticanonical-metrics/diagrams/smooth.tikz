@@ -1,0 +1,5 @@
+\node[card] (n0) {\heading{}{有限被覆でmonodromyを保持}{Retain monodromy on a finite cover}$\widetilde X=\mathbb C^q\times B\times Z,\quad K_B\simeq\mathcal O_B$};
+\node[card,below=2.0cm of n0] (n1) {\heading{}{自然不変切断を降下}{Descend a naturally invariant section}$0\ne s_Z\in H^0(Z,-mK_Z)^T\ \Longrightarrow\ 0\ne s\in H^0(X^{\prime},-mK_{X^{\prime}})$};
+\flow{n0}{n1}{\Tx{不変な標準枠とトーラス不変性でdeck作用を消す}{Invariant canonical frames and torus invariance cancel the deck action}\\\Cite{structure}\quad\Cite{invariant}};
+\node[result,below=2.0cm of n1] (n2) {\heading{}{有限étale normを取る}{Take the finite étale norm}$d=\deg(X^{\prime}/X),\quad 0\ne\operatorname{Nm}(s)\in H^0(X,-mdK_X)$};
+\flow{n1}{n2}{\Tx{各sheet上の切断を積にし、非零切断を保つ}{Multiply over the sheets, preserving nonzero sections}\\\Cite{norm}\quad\Cite{smooth}};

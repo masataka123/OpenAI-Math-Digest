@@ -1,0 +1,1510 @@
+
+===PDF PAGE 1===
+arXiv:math/0703344v4  [math.AG]  21 Jan 2008
+Bergman kernels
+and the pseudoeﬀectivity of
+relative canonical bundles
+-I-
+Bo BERNDTSSON 1 Mihai P ˘AUN2
+1Chalmers University of Technology 2Universit´ e Henri Poincar´ e
+Departement of Mathematics Institut ´Elie Cartan
+S-41296 G¨ oteborg 54000 Nancy
+Abstract. The main result of the present article is a (practically opti mal) criterion
+for the pseudoeﬀectivity of the twisted relative canonical bundles of surjective projective
+maps. Our theorem has several applications in algebraic geo metry; to start with, we ob-
+tain the natural analytic generalization of some semiposit ivity results due to E. Viehweg
+and F. Campana. As a byproduct, we give a simple and direct pro of of a recent result
+due to C. Hacon–J. McKernan and S. Takayama concerning the ex tension of twisted
+pluricanonical forms. More applications will be oﬀered in t he sequel of this article.
+§0 Introduction
+In this article our primary goal is to establish some positiv ity results concerning the
+twisted relative canonical bundle of projective morphisms .
+LetX andY be non-singular projective manifolds, and let p :X → Y be a surjective
+projective map, whose relative dimension is equal to n. Consider also a line bundle L
+over X, endowed with a -possibly singular- metric h = e− φ , such that the curvature
+current is semipositive. We denote by I(h) the multiplier ideal sheaf of h (see e.g. [10],
+[21], [25]). Let Xy be the ﬁber of p over a point y ∈ Y , such that y is not a critical
+value of p. We also assume at ﬁrst that the restriction of the metric φ to Xy is not
+identically −∞ . Under these circumstances, the space of ( n, 0) forms L-valued on Xy
+which belong to the multiplier ideal sheaf of the restrictio n of the metric h is endowed
+with a natural L2–metric as follows
+∥u∥2
+y :=
+∫
+Xy
+cnu ∧
+u exp(−φ)
+(we use the standard abuse of notation in the relation above) . Let us consider an
+orthonormal basis ( u(y)
+j ) of the space H 0(
+Xy, (KXy +L) ⊗ I (h)
+)
+, endowed with the
+L2 metric above. The relative canonical bundle of p is denoted KX/Y :=KX − p∗KY .
+Recall that the bundles KXy and KX/Y |Xy are isomorphic. Via this identiﬁcation
+(which will be detailed in the paragraph 1) the sections abov e can be used to deﬁne
+===PDF PAGE 2===
+2 Bergman kernels and the pseudoeﬀectivity of relative canonic al bundles
+a metric on the bundle KX/Y + L restricted to the ﬁber Xy, called the Bergman
+kernel metric . This deﬁnition immediately extends also to ﬁbers such that the metric
+φ is identically equal to −∞ on the ﬁber. In this case the Bergman kernel vanishes
+identically on the ﬁber, and the Bergman kernel metric is als o equal to −∞ there.
+Let Y 0 ⊂ Y be the Zariski open set of points that are not critical values of p in Y ,
+and let X 0 ⊂ X be the inverse image of Y 0 with respect to p. As y varies in Y 0, the
+above construction deﬁnes the relative Bergman kernel metric on the KX/Y +L over
+X 0.
+Then we have the next result, which gives a pseudoeﬀectivity criterion for the bundle
+KX/Y +L.
+0.1 Theorem. Let p :X → Y be a surjective projective map between smooth mani-
+folds, and let (L,h ) be a holomorphic line bundle endowed with a metric h such that:
+(1) the curvature current of (L,h ) is semi-positive on X, i.e. Θh(L) ≥ 0;
+(2) H 0(
+Xy, (KXy +L) ⊗ I (h)
+)
+̸= 0 for some y ∈ Y 0.
+Then the relative Bergman kernel metric of the bundle KX/Y +L|X 0 is not identically
+−∞ . It has semipositive curvature current and extends across X \X 0 to a metric with
+semipositive curvature current on all of X.
+Several versions of the theorem above were established by th e ﬁrst author in his
+series of articles on the plurisubharmonic variation of the Bergman kernels (see [1],
+[2], [3] and also [22] for the ﬁrst results in this direction) . Let us point out the main
+improvements we have got in the present article. In the ﬁrst p lace, we allow the metric
+h to be singular. Secondly, the map p is not supposed to be a smooth ﬁbration–this will
+be crucial for the applications, as we will see in a moment. Th e way we are dealing with
+the singularities ofp is by a careful estimate of the local weight of the ﬁberwise Be rgman
+kernel metric near the singular points: the Ohsawa-Takegos hi extension theorem shows
+that its local weights are uniformly bounded as we are gettin g close to the singular loci
+of p. These local weights are plurisubharmonic in X0, so it follows from classical
+pluripotential theory that they extend uniquely to plurisu bharmonic functions across
+X \X0. This means that the relative Bergman kernel metric extends uniquely to a
+metric with semipositive curvature current across X \X0.
+A similar result has been announced by H. Tsuji in [31] and [31 b]. His idea of proof
+is based on an interesting reduction to the case of a locally t rivial ﬁbration (and then
+use of the results from [2]), but the somehow sketchy argumen t does not seem to be
+quite complete.
+One aspect of theorem 0.1 can be seen as a ”global” version of t he Ohsawa-Takegoshi
+theorem: indeed, if Y is just a small polydisk, then under the hypothesis (1) and (2 )
+above the theorem of Ohsawa-Takegoshi shows the existence o f a section of the adjoint
+bundle extending the one we have on the central ﬁber, thus we g et more than the
+pseudo-eﬀectivity of the adjoint bundle. In the case under c onsideration, the base Y
+is compact and simple examples show that we cannot expect suc h a statement, but
+the theorem 0.1 implies that the metric version (i.e. replac ing eﬀectivity by pseudo-
+eﬀectivity) still holds.
+===PDF PAGE 3===
+§0 Introduction 3
+Assume that E is a pseudoeﬀective line bundle on a projective manifold X, in the
+sense that E carries a (possibly singular) metric with semipositive cur vature. Then as
+a consequence of the L2 theory, there exists an ample line bundle A on X such that
+H 0 (X,mE +A) ̸= 0, for all m ≫ 0 (see e.g. [10]). In this context, as a ﬁrst application
+of the theorem 0.1 we have the next statement.
+0.2 Corollary . Let p : X → Y be a projective surjective map between non-singular
+manifoldsX andY . Let (L,h L) be a pseudo-eﬀective line bundle over X. Assume that
+for some y ∈ Y , not a critical value of p, we have H 0(
+Xy, (KXy +L)⊗I (hL)
+)
+̸= 0. Then
+for any ample line bundle A → Y which is positive enough we have H 0(
+X,m (KX/Y +
+L) +p∗A
+)
+̸= 0, for all m ≥ 0.
+Of course, the content of the above statement is that the posi tivity we have to add to
+the bundle m(KX/Y +L) in order to make it eﬀective comes from Y . A particular case
+of this result can be derived from the work of F. Campana (see [ 6]); also, it is consistent
+with the semi-positivity results obtained by T. Fujita, Y. K awamata, J. Koll´ ar and E.
+Viehweg (see [15], [19], [20], [37] as well as the references therein).
+Let us explain in a few words how the corollary is derived from theorem 0.1. We
+have the decomposition
+m(KX/Y +L) +p∗A =KX + (m − 1)(KX/Y +L) +L +p∗ (A − KY ).
+We denote by hB the metric obtained in the theorem 1; we use it to endow the bun dle
+(m − 1)(KX/Y +L) +L +p∗ (A − KY ) with the metric hm− 1
+B ⊗ hL ⊗ hp∗ (A− KY ) where
+A → Y is assumed to be positive enough, to compensate for the possi ble negativity of
+the canonical bundle of Y (for the precise positivity properties of A, see the paragraph
+3). Now by hypothesis there exists uy ∈ H 0(
+Xy, (KXy +L) ⊗ I (h)
+)
+and if we denote by
+uA some section of p∗A, then the section u⊗ m
+y ⊗ uA satisﬁes the integrability properties
+needed in order to extend it over X by using once again the Ohsawa-Takegoshi theorem.
+The fact that the metric hB is explicitely given over a Zariski dense open set is crucial
+here.
+In Corollary 0.2 we prove the existence of global sections to m(KX/Y +L) + A,
+assuming the existence of sections to ( KX/Y +L) ⊗ I (h) over at least some ﬁber. It
+is natural to ask what happens if we only assume from the start existence of certain
+sections over ﬁbers to multiples of KX/Y +L. In section 4 we prove a version of Theorem
+0.1 for the Narasimhan-Simha metric, see [26] , which is an analog of the Bergman
+kernel metric for multiples of the canonical bundle, recent ly reviewed by Tsuji [32],
+[32a] and [32b]. This generalizes a classical result of Kawa mata [18] for the nontwisted
+case and will be developed further in the sequel to this paper [4].
+The proofs in section 4 are still based on the same positivity results for direct
+image bundles from [3] as the proof of Theorem 0.1, but requir e an additional twist.
+In particular, we need (weaker) versions of the results from [3] for nonsmooth metrics.
+These are discussed in section 3 - hopefully they are also of s ome independent interest.
+To introduce the next application, let us recall the notion o f restricted volume (see
+[5], [14]). Let E → X be a holomorphic line bundle. If V ⊂ X is an irreducible
+===PDF PAGE 4===
+4 Bergman kernels and the pseudoeﬀectivity of relative canonic al bundles
+d-dimensional sub-manifold, let us denote by
+H 0(X|V,mE ) := Im(H 0(X,mE ) → H 0(V,mE V )),
+and let h0(X|V,mE ) be the dimension of this space. Then the restricted volume o f E
+to V is
+VolV (X,L ) := lim sup d!
+mdh0(X|V,mL ))
+The deﬁnition of a maximal center is slightly more involved, and it will not be
+recalled here (see e.g. [16], [30] and also the paragraph 6 of this article). Let us just
+mention that given an eﬀective Q–divisor D = ∑
+jνjZj, the maximal centers of the
+pair (X,D ) are the higher codimensional analog of the irreducible com ponentsZj above
+such that νj = 1.
+The corollary above can be used to provide a rather simple pro of of the next state-
+ment due to S. Takayama ([30], see also [16] and [32]), which i s crucial in the investi-
+gation of the properties of the pluricanonical series.
+0.3 Theorem ([29], [30], [16]) . Let X be a non-singular projective manifold, such
+that KX is pseudo-eﬀective. Let L be a line bundle which can be written as L =A +D
+where A is Q-ample and D is a Q-eﬀective divisor. Assume that V is an irreducible
+maximal center of (X,D ) such that there exists a section of some multiple of KX +L
+vanishing on some ample divisor and which is not identically zero when restricted to
+V . Then
+VolV (X,K X +L) ≥ Vol(V ).
+Even if our proof goes along the same lines as the previous one s, the exposition is
+substantially simpliﬁed by the use of the corollary 0.2,whi ch allows us to bypass the
+use of Kawamata’s subadjunction theorem [19].
+There are 2 major ingredients needed in the proof of 0.3. The ﬁ rst one is the
+technique invented by Y.-T. Siu to prove the invariance of pl urigenera, see [33], [34].
+The version which will be used here is due to S. Takayama, but w e will oﬀer a simpler
+proof, in the same spirit as in [28]. The second one is simply t he corollary 0.2.
+Let us explain vaguely how the two techniques combine to prov e the theorem. First,
+if the maximal center V is a hypersurface, then the theorem 0.3 is a consequence of th e
+invariance of plurigenera techniques. If V has higher codimension, one is lead to reduce
+to the divisor case by using a modiﬁcation µ :Y → X. We consider the restriction of
+the map µ to a well-chosen exceptional divisor S which maps onto V . We know how
+to extend twisted pluricanonical sections on S. The crucial result which allows us to
+inject the space of pluricanonical sections on V to a space of twisted pluricanonical
+sections on S is precisely Corollary 0.2 - the injection map is given by mul tiplication
+with a section of a twisted relative canonical bundle KS/V +B, whose existence is
+guaranteed by Corollary 0.2.
+Acknowledgements. The second named author would like to thank F. Campana, Y.
+Kawamata, S. Takayama and E. Viehweg for very interesting di scussions concerning
+various aspects of this work; he would equally like to expres s his gratitude to his friends
+===PDF PAGE 5===
+§1 Relative Bergman kernels 5
+and colleagues at the Institute ´Elie Cartan (Nancy) for the nice atmosphere during the
+“groupe de travail” where topics like the extension of pluri canonical forms were exten-
+sively analyzed. We also would like to thank the referees for detailed and constructive
+criticism of the original manuscript.
+§1 Relative Bergman kernels
+Let p : X ↦→ Y be a surjective holomorphic map with compact n-dimensional ﬁbers,
+onto a complex manifold Y . At ﬁrst we will also assume that the map p deﬁnes a
+smooth ﬁbration, i e that the diﬀerential dp is surjective at each point, so that the
+ﬁbers
+Xy :=p− 1(y)
+are smooth manifolds. Let ( L,φ ) be a Hermitian holomorphic line bundle over the
+total space X. For each y in Y we let
+Ey =H 0(Xy,L |Xy +KXy )
+be the space of global holomorphic L-valued (n, 0)-forms on Xy. The Hermitian metric
+φ on L induces a Hilbert norm Hy on Ey by
+(1. 1) ∥u∥2
+y =
+∫
+Xy
+cnu ∧
+ue− φ.
+Near a point in Y we can choose local coordinates t = (t1,...t m), which deﬁne a
+local (m, 0)-form, dt =dt1 ∧ ... ∧ dtm, that trivializes the canonical bundle of Y , KY .
+A choice of such form gives a natural map from forms, u, on the ﬁbers Xy to sections,
+˜u, of KX overXy by
+˜u =u ∧ p∗ (dt) = u ∧ dt,
+where in the last equality we abuse notation slightly by thin king of t as a function on
+X. When dealing with forms on X we will mostly use the notation dt, but we will
+recurr to p∗ (dt) for emphasis occasionally.
+Conversely, given a local section ˜ u of KX we can write ˜u = u ∧ dt locally. The
+restriction of u to ﬁbers is then uniquely deﬁned and thus deﬁnes a form on KXy .
+We will call u the trace of ˜u on KXy . Altogether the correspondence between u and
+˜u gives us an identiﬁcation between forms on a ﬁber and restric tions of sections to
+KX to the ﬁber. This identiﬁcation clearly depends on the choic e of dt, but the map
+(u,dt ) ↦→ u ∧ dt is an invariantly deﬁned isomorphism
+KXy +p∗ (KY )|Xy ↦→ KX|Xy,
+for any y. Hence we also get an isomorphism
+KXy ↦→ (KX − p∗ (KY ))|Xy =KX/Y |Xy,
+===PDF PAGE 6===
+6 Bergman kernels and the pseudoeﬀectivity of relative canonic al bundles
+where KX/Y = (KX − p∗ (KY )) is the relative canonical bundle of p. If t is any choice
+of local coordinates on Y , then the isomorphism is given by
+u ↦→ u ∧ p∗ (dt)/dt.
+The Hilbert norm (1.1) therefore deﬁnes a norm on sections of L +KX/Y overXy.
+For any y in Y we now deﬁne the Bergman kernel for this norm by
+By =
+∑
+uj ⊗ uj,
+for any choice of orthonormal basis ( uj) of the space of sections of ( L +KX/Y )|Xy . It
+is well known that this deﬁnition is independent of the choic e of orthonormal basis. In
+the manifold case, that we are dealing with here, the Bergman kernel is not a function,
+but logBy deﬁnes a metric on ( L +KX/Y )|Xy in the sense that
+u ⊗ u/B y
+is a well deﬁned function if u is a section of L +KX/Y overXy. Alternately, we could
+choose an arbitrary smooth metric, χ , on (L +KX/Y )|Xy . Then Bye− χ =:eξ is a well
+deﬁned global function on Xy. Hence
+logBy =ξ +χ
+is also a metric on ( L +KX/Y )|Xy .
+As y varies, we get a metric on the line bundle L +KX/Y over all of X. We will
+refer to this metric as the relative Bergman kernel metric an d write B =eψ , with the
+understanding that ψ is a metric which is represented by diﬀerent local functions , given
+diﬀerent local trivializations.
+In the classical case of domains in Cn there is a well known extremal characterization
+of the Bergman kernel as
+B(x) = sup
+∥h∥≤ 1
+|h(x)|2.
+We will use repeatedly a variant of this in our setting. Choos e local coordinates x near
+a point in a ﬁber Xy. Then dx/dt is a local frame for KX/Y . Choose also some local
+trivialization, e, of L near the same point. With respect to these local frames ψ is
+represented by a function ψ ′, and any section ˜u/dt =u ∧ p∗ (dt)/dt to L +KX/Y over
+Xy can be written
+˜u/dt =u′(x)dx/dt ⊗ e.
+Then
+eψ ′(x) = sup
+∥u∥y≤ 1
+|u′(x)|2.
+The proof of this is exactly as in the classical case. It is of p aramount importance
+that, since our local trivializations are given by dx/dt , the coeﬃcient that enters in the
+extremal characterization is the coeﬃcient of ˜u (and not any coeﬃcient of u). It is the
+presence of the factor p∗ (dt) - which vanishes on the singular locus of p - in ˜u that will
+allow us to control the Bergman kernel metric near the singul ar locus.
+===PDF PAGE 7===
+§1 Relative Bergman kernels 7
+Our ﬁrst result, Theorem 0.1, says that if φ is a, possibly singular, metric of non-
+negative curvature on L, then ψ is a metric of nonnegative curvature of L +KX/Y -
+unless B is identically 0. More precisely, ψ is semipositive over the Zariski open set
+where p is a smooth ﬁbration, and extends in a unique way to a semiposi tive metric
+over the singular ﬁbers.
+To start explaining the proof of this, let us ﬁrst assume that φ is smooth, and that
+p deﬁnes a smooth ﬁbration, i e that dp is surjective everywhere. Theorem 0.1 is then
+an easy consequence of Theorem 1.2 in [3]. This theorem says t hat the Hilbert norms
+∥ · ∥y onEy deﬁne a semipositively curved Hermitian metric on a vector b undleE over
+Y , with ﬁbers Ey. The complex structure on E is such that a local section of E
+y ↦→ uy
+is holomorphic if and only if the associated sections
+y ↦→ ˜uy =uy ∧ dt
+to KX are holomorphic, and hence deﬁne holomorphic sections ˜ u/dt to KX/Y . ( The
+bundleE is the direct image p∗ (L +KX/Y ) of L +KX/Y under the map p.) The precise
+statement of Theorem 1.2 in [3] is that E with the L2- Hermitian metric is (weakly)
+Nakano positive, but the weaker property of Griﬃths positiv ity is all we use here.
+Choose local coordinates ( t,z ) near a point in X, with respect to which the map
+p is the trivial ﬁbration ( t,z ) ↦→ t. These local coordinates give us local frames, dt
+and dt ∧ dz for p∗ (KY ) and KX respectively, and hence the local frame dt ∧ dz/dt for
+KX/Y . With respect to this frame, ψ is given by a function ψ ′, and we need to prove
+that this function is plurisubharmonic. This means that
+ψ ′(t,h (t))
+is plurisubharmonic of t if (t,h (t)) is any local holomorphic map.
+We now use the same local coordinates, and the map h, to deﬁne a local holomorphic
+section of the dual bundle of E,E∗ . Let uy be an element in Ey, and let
+uy ∧ p∗ (dt)/dt
+be the associated element in KX/Y +L. With respect to the trivializations
+uy ∧ p∗ (dt)/dt =u′(t,z )(dz ∧ dt)/dt ⊗ e.
+We put
+ξy(uy) = u′(t,h (t)).
+Ifuy depends holomorphically on y, then u′ is a holomorphic function of t andz, so it
+follows that y ↦→ ξy is a holomorphic section of E∗ . By the extremal characterization
+of Bergman kernels
+∥ξy∥2 = sup
+∥u∥≤ 1
+|u′(t,h (t))|2 =eψ ′(t,h (t)).
+===PDF PAGE 8===
+8 Bergman kernels and the pseudoeﬀectivity of relative canonic al bundles
+Since the logarithm of the norm of any section of the dual of a G riﬃths positive bundle
+is plurisubharmonic, it follows that ψ ′ is plurisubharmonic, which is what we wanted
+to prove.
+This proves Theorem 0.1 in the smooth case, i e when both the me tric φ and the
+ﬁbrationp are smooth. Let us now still assume that φ is smooth but relax the assump-
+tion on p, so that p is a general surjective holomorphic map. Then the degenerac y
+locus of p is an analytic subvariety W of X and p(W ) is an analytic subvariety of Y .
+By Sard’s theorem p(W ) has zero measure in Y , so it is a proper subvariety, W ′ of
+Y . Outside of p− 1(W ′), p is a smooth ﬁbration, and by the previous discussion, ψ
+has semipositive curvature there. We want to prove that ψ extends to a semipositive
+metric across p− 1(W ′). Since p− 1(W ′) is pluripolar, it suﬃces for this to prove that ψ
+stays locally bounded from above. The next lemma is the cruci al step.
+1.1 Lemma. LetD be a polydisk in Cn+m, and let φ be a plurisubharmonic function
+in D. Let
+p :D ↦→ V
+be a holomorphic map from D to a bounded open set in Cm. Assume 0 is a regular
+value of p and let D0 := p− 1(0). Let u be a holomorphic (n, 0)-form on D0. Let
+˜u =u ∧ p∗ (dt) wheret = (t1,...t m) are standard coordinates on Cm and write
+˜u =u′dz,
+where z = (z1,...z n+m) are standard coordinates on Cn+m. Then there is a constant
+CK such that for any compact subset K of D and z in D0 ∩ K,
+|u′(z)|2 ≤ CK
+∫
+D0
+[u,u ]e− φ.
+Proof. By the Ohsawa-Takegoshi extension theorem there is a holom orphic (n +m, 0)-
+form ˜U in D such that
+˜U = ˜u
+on D0 and ∫
+D
+|˜U |2e− φ ≤ C
+∫
+D0
+[u,u ]e− φ,
+where the constant C only depends on the sup-norm of p. (See section 5, Theorem
+5.1, and the comments immediately after that theorem for an a ppropriate version of
+the Ohsawa-Takegoshi extension theorem.) Since φ is locally bounded from above it
+follows that ∫
+K
+|˜U |2 ≤ C′
+∫
+D0
+[u,u ]e− φ.
+The lemma now follows from the meanvalue inequality applied to ˜U .
+1.2 Remark. The main point in the lemma is that the constant CK does not blow
+up as we approach a singular ﬁber - the Ohsawa-Takegoshi theo rem implies that the
+===PDF PAGE 9===
+§1 Relative Bergman kernels 9
+ﬁberwise Bergman kernel automatically has the right normal ization to extend over the
+singular ﬁbers of p.
+If we choose local coordinates and local trivializations ne ar a point on a singular ﬁber
+ofp it follows immediately from the lemma, together with the ext remal characterization
+of Bergman kernels, that the relative Bergman kernel stays b ounded near a singular
+ﬁber. Hence the metric ψ extends (uniquely!) to a semipositive metric on L +KX/Y .
+(Notice that the Bergman kernel is not identically equal to 0 since by assumption
+KX/Y +L has some section over some ﬁber in X0.)
+1.3 Remark. Two examples may serve to illustrate what happens near the si ngular
+locus. Let us ﬁrst look at the case when X is the blow-up of Y at a point, and, say, L
+is trivial. Then
+s :=p∗ (dt)/dt
+deﬁnes a global holomorphic section of the relative canonon ical bundle KX/Y (s does
+not depend on the choice of local frame dt). Since s vanishes to order (n − 1) precisely
+on the exceptional divisor D, we see that
+KX/Y = (n − 1)(D),
+and that hD := |s|2 deﬁnes a singular pseudoeﬀective metric on KX/Y . We claim
+that hD equals the relative Bergman kernel metric in this case. To se e this, note that
+outside of the singular locus the ﬁbers Xy are just points, and elements, u, in Ey are
+just numbers. Then
+˜u/dt =u ∧ p∗ (dt)/dt =u′dx/dt,
+and to compute the Bergman kernel of this zero-dimensional ﬁ ber we need to take the
+supremum of |u′|2 over all u of modulus 1. Clearly this equals |s′|2 where
+s =s′dx/dt,
+proving our claim. A very similar argument applies, and the s ame conclusion holds, in
+the more general situation of a map p with a ﬁnite number of preimages over a generic
+point in the base.
+The second example illustrates what happens when the dimens ion of the ﬁber does
+not jump at the singular locus. The perhaps simplest such exa mple is when n =m = 1
+and p(z1,z 2) = z2
+1 − z3
+2. Then the ﬁber D0 = {z2
+1 =z3
+2} can be parametrized by
+λ ↦→ (λ 3,λ 2),
+and any holomorphic form u on D0 can be written
+u =h(λ)dλ,
+with h holomorphic oﬀ 0. Then u has ﬁnite L2-norm on D0 if and only if h extends
+holomorphically across 0. On the other hand
+dp = 2z1dz1 − 3z2
+2dz2,
+===PDF PAGE 10===
+10 Bergman kernels and the pseudoeﬀectivity of relative canoni cal bundles
+and
+dλ = (1/z 2)dz1 − (z1/z 2
+2 )dz2,
+so we get
+˜u =u ∧ dp = −λ 2h(λ)dz1 ∧ dz2.
+Therfore ˜u′ is ﬁnite at the origin if and only if h has a pole of order at most 2 at 0.
+Since by the extremal characterization of Bergman kernels, the Bergman kernel at the
+origin equals
+sup |˜u′(0)|2/ ∥u∥2,
+we see that Bergman kernels tend to be small - not big - on singu lar ﬁbers.
+It now remains to relax the condition that φ be smooth to obtain the full proof of
+Theorem 0.1. We may again assume that p is a smooth ﬁbration, since the general
+case then follows from Lemma 1.1 by the same argument as befor e. We then need to
+approximate φ by a sequence of smooth semipositive metrics. It is here that we use
+the assumption that p :X ↦→ Y is projective, which permits us to reduce the problem
+to the Stein case. This is the object of the next section.
+§2 Stein and projective ﬁbrations
+We will now discuss the proof of Theorem 0.1 in the general cas e. First, since X is
+assumed to be projective, we can remove a divisor and get a Ste in submanifold. On this
+Stein manifold the line bundle L has a holomorphic section. Removing the zero divisor
+of this section we get a smaller Stein submanifold over which L is trivial. We will prove
+that the relative Bergman kernel metric for this Stein subma nifold has nonnegative
+curvature. But, since divisors are removable for L2− holomorphic functions, the relative
+Bergman kernel metrics for X and for the Stein submanifold are identical, so Theorem
+0.1 follows.
+We ﬁrst consider a smooth Stein ﬁbration over a domain W in Cm. By this we mean
+that we are given a Stein manifold D of dimension n +m, together with a holomorphic
+surjective mapp fromD toW whose derivativedp is everywhere of maximal rank. Then
+the ﬁbers Dt =p− 1(t) are n-dimensional Stein manifolds. Let φ be a plurisubharmonic
+function on the total space D.
+We let Et be the space of global holomorphic ( n, 0)-formsu onDt that lie in L2 in
+the sense that
+∥u∥2
+t =
+∫
+Dt
+cnu ∧ ¯ue− φ < ∞ .
+This is now, in general, an inﬁnite dimensional space, but we can still deﬁne its Bergman
+kernel
+Bt =
+∑
+uj ⊗ ¯uj,
+and a metric B = eψ on KD/W = KD as in the previous section. If u lies in Et we
+write ˜u =u ∧ dt and
+˜u =u′dz,
+===PDF PAGE 11===
+§2 Stein and projective ﬁbrations 11
+given local coordinates on D. We then have, by the extremal characterization of
+Bergman kernels, that
+eψ (z) = sup |u′(z)|2,
+with respect to the induced local trivializations, where th e supremum is taken over all
+forms u of norm at most 1.
+2.1 Theorem. In the above situation, the relative Bergman kernel metric h as nonneg-
+ative curvature, i e
+i∂∂ψ ≥ 0,
+if the Bergman kernel is not identically 0.
+The strategy of the proof is as follows. We ﬁrst prove the theo rem in a ’good’
+situation, where the weight function φ is smooth and the Stein manifold is of very
+special type. It is then clear that the relative Bergman kern el is continuous, so to
+prove that it is plurisubharmonic it suﬃces to verify subhar monicity on complex lines.
+This means in particular that we may assume the base is one dim ensional. (This is
+because the complex structure on our bundle E restricted to a complex line in the base
+coincides with the structure we get if we ﬁrst restrict the ﬁb ration X ↦→ Y to the line
+and then construct our vector bundle from there.) Finally, t he general case is reduced
+to the ’good’ case.
+Since D is Stein it has a smooth strictly plurisubharmonic exhausti on, ρ. Let
+Dc = {ρ < c}. By Sard’s lemma, Dc is smoothly bounded and strictly pseudoconvex
+for all choices of c outside a closed set of measure 0.
+Let c be one such noncritical value and let Cc be the set of all t in the disk such
+that c is critical for the restriction of ρ to Dc
+t :=Dc ∩ p− 1(t).
+2.2 Lemma. Cc is a closed subset of ∆ of zero measure.
+Proof. Let t =τ +iσ . Note that a point x is critical for the restriction of ρ toDt if and
+only if dρ,dτ anddσ are linearily dependent at x (here we view t as a function on X).
+Ifx is not critical for ρ onX,dρ is not 0 at x, so dρ|x must be a linear combination of
+dτ anddσ . This in turn means that dτ anddσ are linearily dependent on the kernel of
+dρ, so that the restriction of p to∂Dρ(x) has a critical point at x. The lemma therefore
+follows from Sard’s lemma applied to the restriction of p to ∂Dρ(x).
+Take t0 in ∆. We shall prove that the ﬁberwise Bergman kernel for Dc is log-
+plurisubharmonic in Dc ∩ p− 1(V ), if V is a suﬃciently small neighbourhood of t0.
+2.3 Lemma. There is a holomorphic tangent vector ﬁeld, f , to D such that
+dp(f ) = ∂/∂t.
+Proof. Such a ﬁeld is easily found locally by choosing local coordi nates with respect to
+which the ﬁbration is trivial, and a nonholomorphic ﬁeld f ′ is then obtained globally
+by a partition of unity. Let w = ∂f ′. Then w is a ∂-closed (0, 1)-form with values in
+the subbundle of the holomorphic tangent bundle of D consisting vectors tangent to
+ﬁbers ( i e the kernel of dp). Since D is Stein, w =∂g , where g is a ﬁeld with values in
+===PDF PAGE 12===
+12 Bergman kernels and the pseudoeﬀectivity of relative canoni cal bundles
+the same subbundle. Replacing f ′ byf =f ′ − g we get a holomorphic tangent vector
+ﬁeld on D satisfying the claim in the lemma.
+Let Ω := Dc+1/ 2
+t0 , and consider the ﬂow of our ﬁeld f from the lemma above. The
+ﬂow after time t − t0 maps Ω to a domain in Dt, which contains Dc
+t and is contained
+in Dc+1
+t if t lies in V , a small enough neighbourhood of t0. Let ˜Ω be the image of Ω
+under the ﬂow for t in V .
+We now follow the arguments from [2]. Since there is a ﬁberpre serving biholo-
+morphism between Ω × V and ˜Ω, it ﬁrst follows that the Bergman kernel for ˜Ω is
+logplurisubharmonic, by the argument from [2], section 2. ( In [2], this is proved for the
+product of domains in Euclidean space, but the same argument s apply for products
+of a domain with a manifold, provided we consider ( n, 0)-forms instead of functions.)
+We then replace our weight function φ by φj, where φj form a sequence of plurisub-
+harmonic weights, all equal to φ in Dc, and tending to inﬁnity outside the closure of
+Dc.
+To prove the logplurisubharmonicity of the Bergman kernel i nDc ∩p− 1(V ) we shall
+use the following version of Lemma 3.1 from [2].
+2.4 Lemma. Let G0 and G1 be Stein manifolds, with G0 compactly included in G1.
+Letφj be a sequence of continuous weight functions in G1 such that φj =φ in G0 and
+φj increases to inﬁnity almost everywhere in G1 \G0. Let Bj be the Bergman kernel
+for the space Aj of holomorphic (n, 0)-forms u in G1 with Hilbert norm
+cn
+∫
+G1
+u ∧ ¯ue − φ j.
+Then for any z inG0, Bj(z,z ) increases to B(z,z ), the Bergman kernel for the closure
+of the space A1 in the space A of holomorphic (n, 0)-forms u in G0 with Hilbert norm
+cn
+∫
+G0
+u ∧ ¯ue − φ.
+Proof. From the extremal characterization of Bergman kernels it i s clear that Bj
+increases, and it is also clear that Bj ≤ B. To prove the opposite inequality, we take
+a form u in A1 with norm at most 1 in A, which almost realizes the supremum in the
+extremal characterization. By monotone convergence, the n orm of u inAj tends to the
+norm of u in A as j tends to inﬁnity. Hence lim Bj(z,z ) ≥ B(z,z ).
+We now apply this Lemma 2.4 to the domains Dc
+t inside of ˜Ω, with weight functions
+φj =φ +ψj, with ψj being a sequence of plurisubharmonic functions all equal to 0 in
+Dc
+t and increasing to inﬁnity in ˜Ω outside the closure of Dc
+t (suitable convex functions
+of ρ will do for ψj). We claim that if t is taken outside of the exceptional set Cc of
+Lemma 2.2, then the any form on Dc
+t can be approximated by forms on ˜Ωt, so that the
+Bergman kernel B of Lemma 2.4 equals the Bergman kernel on Dc
+t .
+This claim follows from the next lemma, which is a variant of L emma 3.4 from [2].
+The version here is however substantially simpler since we h ave taken care to have all
+the domains involved smoothly bounded, by avoiding critica l values of ρ. This permits
+us to bypass a nontrivial result of Bruna and Burgues that was used in [2].
+===PDF PAGE 13===
+§2 Stein and projective ﬁbrations 13
+2.5 Lemma. Let ρ be a smooth plurisubharmonic exhaustion function in an n-
+dimensional Stein manifold G, and put Gc = {ρ<c }. Let u be a holomorphic form of
+bidegree (n, 0) in G0, such that
+cn
+∫
+G0
+u ∧ ¯ue − φ < ∞ ,
+where φ is a plurisubharmonic weight function on G. Assume that 0 is not a critical
+value of ρ, and take c > 0. Then u can be approximated in L2-norm on G0 by a
+sequence of (n, 0)-forms that extend holomorphically to Gc.
+Proof. Since, for any small ǫ > 0, Gǫ is Runge with respect to Gc, it suﬃces to
+approximate u by forms holomorphic in some small neighbourhood of ¯G0. For this,
+we ﬁrst approximate u by v, smooth in a neighbourhood of ¯G0, with ¯∂v small, by
+decomposing u = ∑uj, where u0 has compact support in G0, and each of the other
+uj is supported in a small neighbourhood of a boundary point. We may assume that
+these small neighbourhoods of boundary points are starshap ed, and then approximate
+the corresponding uj byvj obtained from a small dilation (this is where we use that 0
+is noncritical). Putting v0 =u0 and v = ∑vj it follows that v approximates u in L2
+and that ¯∂v is small in a neighbourhood of G0. To obtain a holomorphic approximant
+we ﬁnally solve a ¯∂-equation in Gǫ.
+Consider now the sequence of Bergman kernels on ˜Ωt for the weightsφj . By Lemma
+2.4 they form an increasing sequence that on each Dc
+t converges to the Bergman kernel
+on Dc
+t , with weight φ for the space of holomorphic forms that can be approximated
+by forms holomorphic on ˜Ωt. Since the Bergman kernels on ˜Ωt for the weights φj
+are nonnegatively curved, the upper semicontinuous reular isation of the limit is also
+a nonnegatively curved metric (on KD), that we denote eΨc. On the other hand,
+when t is outside of Cc, Lemma 2.5 says that any holomorphic form on Dc
+t can be
+approximated by forms holomorphic in ˜Ωt, so outside of p− 1(Cc) the limit is just
+the ﬁberwise Bergman kernel on Dc
+t . It is not hard to check (by a normal family
+argument) that the ﬁberwise Bergman kernels are already upp ersemicontinuous outside
+ofp− 1(Cc), soeΨc is just the ﬁberwise Bergman kernel on Dc
+t there, in particular almost
+everywhere.
+Summing up, we have proved that, overV , the relative Bergman kernel metric on Dc
+is nonnegatively curved outside of p− 1(Cc) and extends (uniquely) to a nonnegatively
+curved metric, Ψ c across p− 1(Cc). Since V is a small neighbourhood of an arbitrary
+point in the disk, the same thing holds on all of Dc. Let eψ c be the ﬁberwise Bergman
+kernel for all t in ∆. A normal family argument shows that
+ψc ≥ Ψc,
+and, as we know, equality holds outside Cc. Moreover we claim that
+ψc+ǫ ≤ Ψc,
+for ǫ >0. This follows since if t lies in ∆ and ǫ′< ǫis noncritical for ρ on the ﬁber
+overt, then
+ψc+ǫ ≤ ψc+ǫ′
+= Ψc+ǫ′
+≤ Ψc.
+===PDF PAGE 14===
+14 Bergman kernels and the pseudoeﬀectivity of relative canoni cal bundles
+Bothψc and Ψc decrease with c, so they must have the same limit as c tends to inﬁnity.
+Since Ψc is nonnegatively curved for all c this limit is nonnegatively curved.
+However, for each t, the limit of eψ c asc tends to inﬁnity on the ﬁber over t, equals
+the Bergman kernel for Dt. (To see this, note ﬁrst that the limit must be larger than the
+Bergman kernel for Dt since the Bergman kernel is a decreasing function of the doma in.
+The opposite inequality follows from the extremal characte rization of Bergman kernels,
+since the extremals for each domain Dc
+t have a subsequence that converges weakly in
+L2 to a form of norm at most 1.)
+This proves Theorem 2.1 when φ is smooth. Finally, to remove the assumption
+that φ be smooth we again consider regular values c of the exhaustion function. A
+general plurisubharmonic φ can now be written as a decreasing limit of smooth strictly
+plurisubharmonic φν in a neighbourhood of the closure of Dc. Applying Theorem 2.1
+toDc with the weight φν , we see that the corresponding Bergman kernels are plurisub -
+harmonic and decrease to the Bergman kernel for the weight φ. Hence the limit is again
+plurisubharmonic, and letting c tend to inﬁnity we see that ψ is plurisubharmonic or
+identically equal to −∞ in D. Note that there is no need to take upper semicontin-
+uous regularizations - it follows from the argument above th at the ﬁberwise Bergman
+kernels as they are give us an uppersemicontinuous metric. T his is of course under
+the assumption in Theorem 2.1, that the ﬁbration p be smooth. We loose the explicit
+character of our metric when we extend across the singularit ies of the ﬁbration using
+Lemma 1.1.
+Notice also that it may well happen that the limit of the seque nce of Bergman kernel
+on Dc
+t as c tends to inﬁnity is equal to 0. This happens precisely when th ere are no
+nontrivialL2 holomorphic forms on the ﬁber Dt. If on some ﬁber there is a nontrivial
+L2 holomorphic form, then the Bergman kernel on that ﬁber is not identically 0, so the
+relative Bergman kernel metric is a nonnegatively curved (s ingular) metric.
+Thus, by the discussion at the beginning of this section, the proof of the theorem
+0.1 is also ﬁnished
+§3 Positivity of the direct image bundle.
+As noted in section 1, positivity of the relative Bergman ker nel metric (i. e.
+plurisubharmonicity of the Bergman kernel) follows in the s mooth case from the (Grif-
+ﬁths) semipositivity of the direct image bundle
+E =p∗ (KX/Y +L).
+A priori, the positivity of E is however a stronger statement: It implies plurisubhar-
+monicity of any function log |ξ|2, for ξ any holomorphic section of the dual bundle
+E∗ , whereas plurisubharmonicity of Bergman kernels correspo nds to the special case
+of point evaluations. In this section we shall prove a varian t of this stronger statement
+when the metric on L is not necessarily smooth, and also show that it corresponds to
+a stronger positivity condition on the Bergman kernel.
+To start with we shall discuss the perhaps not completely sta ndard notion of a
+singular metric on a vector bundle (see also de Cataldo, [7]) . By this we basically
+mean a measurable map from the base, Y , to the space of nonnegative hermitian forms
+===PDF PAGE 15===
+§3 Positivity of the direct image bundle. 15
+on the ﬁber. We do however need to allow the hermitian form to t ake the value ∞ for
+some vectors at some points in the base. We say that |ξ|2 is a quadratic form with
+values in [0, ∞ ] on a vector space V if |ξ|2 is a nonnegative quadratic form in the usual
+sense on a subspace V0 of V and |ξ|2 = ∞ for any vector not in V0. Given a singular
+metric,h, the norm function |ξ|2
+h is a measurable function from the total space of E to
+[0, ∞ ], whose restriction to any ﬁber is a quadratic form in the sen se just described.
+Deﬁnition 3.1 A singular metric h is negatively curved, if log |ξ|2
+h is plurisubharmonic
+on the total space of E.
+Hence, a negatively curved metric is upper semicontinuous, in particular locally
+bounded from above, so it is a quadratic form in the usual sens e on any ﬁber. Note
+that the deﬁnition means that a metric is negatively curved i f and only if log |ξ(p)|2 is
+plurisubharmonic for any choice of local holomorphic secti on of E. Since log( v1 +v2)
+is plurisubharmonic if log v1 and log v2 are plurisubharmonic, it follows that a sum of
+negatively curved metrics is negatively curved.
+Any choice of h induces a dual metric h∗ on the dual bundle E∗ . Then h∗ is also
+an hermitian form on each ﬁber, possibly taking the value ∞ on some vectors.
+Deﬁnition 3.2 A singular metric h is positively curved, if h∗ is negatively curved.
+Note that if h is smooth, then h is positive if and only if
+Θh ≥ 0
+in the sense of Griﬃths.
+3.1 Proposition. Let E be a trivial holomorphic vector bundle over a polydisk U ,
+equipped with a singular metric denoted by h. If h is negatively curved over U , then over
+any smaller polydisk there is a sequence of smooth, strictly negatively curved metrics,
+hν , decreasing pointwise toh. Similarily, a positively curved metric can be approximate d
+from below by smooth strictly positively curved metrics on s maller polydisks.
+Proof. Assume h is negatively curved. By adding a small multiple of a trivial metric
+( this does not destroy the property of being negatively curv ed) we may assume h is
+strictly positive. Let
+hν (p) =
+∫
+χν (p − q)h(q),
+where χν is an approximate identity. Then
+|ξ|2
+hν =
+∫
+χν (p − q)|ξ|2
+h
+and it follows easily that hν is a smooth negatively curved metric. Then multiply
+by e|p|2/ν to get strict positivity. The corresponding statement for p ositively curved
+metrics follows by taking duals.
+We will next give another criterion for positivity of a bundl e. Since the property is
+local we continue to assume that E is a trivial bundle over a polydisk, U . Given (E,h )
+we consider the bundle of unit balls
+Ω = {(p,z ) ∈ U × CN ; |z|2
+h(p) ≤ 1}.
+===PDF PAGE 16===
+16 Bergman kernels and the pseudoeﬀectivity of relative canoni cal bundles
+The next preliminary statement will be very useful in what fo llows.
+3.2 Proposition. Assume h is smooth and strictly positively curved, and let (p0,z 0)
+be a point on ∂Ω. Then there is a local holomorphic section of E nearp0, s, such that
+s(p0) = z0 and s takes values in Ω.
+Proof. First choose s holomorphic so that s(p0) = z0 and D′s = 0 at p0, where D′ is
+the (1, 0) part of the Chern connection of h. Then, if Θ h is the curvature of h,
+i∂ ¯∂ log |s|2 = −⟨ Θhs,s ⟩h/ |s|2
+h< 0.
+This means that there is a second degree holomorphic polynom ial,q(p), such that
+log |s|2
+h − 2 Req
+has a local maximum at p = p0. Then se− q satisﬁes the conclusion of the above
+proposition.
+The main use of the positivity assumption for bundles E in this section and the next
+one will be to convert plurisubharmonic functions on the tot al space of this bundle on
+plurisubharmonic functions on the base. The precise statem ent is the following ( see
+also Demailly [12]):
+3.3 Proposition. Let V (p,z ) be a continuous plurisubharmonic function deﬁned in
+some neighbourhood of Ω intersected with the ﬁber E0. Put
+V ∗ (p) = sup
+z∈ Ωp
+V.
+If h is positively curved, then V ∗ is plurisubharmonic of p. Conversely, if V ∗ is
+plurisubharmonic of p for any continuous plurisubharmonic V , then h is positively
+curved.
+Proof. We prove ﬁrst the converse. Let ξ(p) be a local holomorphic section of E∗ . Put
+V (p,z ) = log( |ξ(p) ·z|2 +ǫ).
+By assmption V ∗ is plurisubharmonic. Letting ǫ go to 0, we see that log |ξ|2
+h∗ is
+plurisbharmonic. Hence E∗ is negatively curved, so E is positively curved.
+Now assume that E is positively curved, and let hν be sequence of smooth strictly
+positively curved metrics increasing to h. Let Ω ν be the corresponding bundles of unit
+balls. Then Ω ν decreases to Ω, so the corresponding functions
+V ∗
+ν (p) = sup
+z∈ (Ων )p
+V
+decrease to V ∗ . Hence it is enough to prove our claim for the metrics hν ; in other
+words we may assume that h is smooth and strictly positively curved. To prove that
+V ∗ is plurisubharmonic we can take the base dimension m = 1, and moreover V to
+===PDF PAGE 17===
+§3 Positivity of the direct image bundle. 17
+be strictly plurisubharmonic. We ﬁrst claim that V ∗ has no local maximum. For this,
+assume to get a contradiction that 0 is a local maximum for V ∗ . Say
+V ∗ (0) = V (0,z 0).
+Take a local holomorphic section of E near 0, satisfying the conclusion of Proposition
+2. Then V (p,s (p)) is strictly subharmonic of p and has a local maximum for p = 0,
+which is impossible.
+Hence V ∗ satisﬁes the maximum principle, and it follows that V ∗ + Req(p) also
+satisﬁes the maximum principle if q is any holomorphic polynomial. Thus V ∗ is sub-
+harmonic.
+Let us now return to the special case of vector bundles, E, that arise as the direct
+image of KX/Y +L, where L is a line bundle over X, ﬁbered over Y . Let
+B(x,x ′) = By(x,x ′) =
+∑
+uj(x) ⊗ ¯u(x′),
+be the (relative) Bergman kernel deﬁned at the beginning of s ection 1, but now consid-
+ered also outside of the diagonal. The plurisubharmonicity of logB(x,x ) is equivalent
+to saying that if x(y) is a local holomorphic section of the ﬁbration X ↦→ Y , and if a(y)
+is a local holomorphic section of − (KX/Y +L), then
+|a(y)|2B(x(y),x (y))
+is plurisubharmonic in y. Now choose for some N >0, N holomorphic sections of the
+ﬁbration xj(y), and N holomorphic sections of − (KX/Y +L), aj(y), and consider the
+quadratic form ∑
+aj ¯akB(xj,x k) =: B⟨a,a ⟩.
+3.4 Proposition. If E is positively curved with respect to the L2-metric (1.1), then
+for any N >0 and any local sections as above
+B⟨a,a ⟩
+is a plurisubharmonic function of y. Conversely, if this holds for N equal to the rank
+of E, then the L2-metric of E is positively curved.
+Proof: Given local sections xj(y) and aj(y) as above, let
+ξy =
+∑
+aj(y)evxj (y),
+with evx denoting the evaluation functional at x. Then ξ is a holomorphic section
+of the dual bundle, and it is easily veriﬁed that B⟨a,a ⟩ = |ξ|2. Hence B⟨a,a ⟩ is
+plurisubharmonic if E is positively curved. Conversely, if N is the rank of E and if
+xj(y) are chosen to be in general position for y close to y0, then any local section of
+E∗ can be obtained in this manner. Hence E∗ is negatively curved, so E is positively
+curved.
+===PDF PAGE 18===
+18 Bergman kernels and the pseudoeﬀectivity of relative canoni cal bundles
+We state now the following generalization of the theorem 0.1 , which will play an im-
+portant role in the next part of the paper. (It also motivates the notions introduced
+and analyzed during this section.)
+Theorem 3.5. Let p : X ↦→ Y be a smooth holomorphic ﬁbration, and let L be a
+pseudoeﬀective line bundle over X. Assume that
+E =p∗ (KX/Y +L)
+is locally free. Then E is positively curved in the sense of Deﬁnition 3.2.
+Proof. By the previous proposition we just need to check that B⟨a,a ⟩ is plurisubhar-
+monic for any choice of sections xj andaj. By the proof of that proposition, this means
+that |ξ|2 is plurisubharmonic. For the case of one single section xj this follows from
+Theorem 0.1, as explained immediately before the statement of proposition 3.4. The
+case of an N -tuple of sections is proved in the same way: all the steps in t he proof for
+N = 1 work in the same way for general N .
+§4 The Narasimhan-Simha metric
+The Narasimhan-Simha metric is a metric on (possibly twiste d) multiples of the canon-
+ical bundle, mKX , see e.g. Narasimhan-Simha [26], Kawamata [18] and Tsuji [3 2b] in
+a more general context. It is deﬁned in a way similar to the Ber gman kernel metric,
+but using Lp- spaces instead of L2, with p = 2/m .
+IfX is a compact complex manifold with a holomorphic hermitian l ine bundle (L,φ ),
+the Narasimhan-Simha metric (we will call it NS metric in the sequel) for mKX +L is
+deﬁned as the dual of the next metric on − (mKX +L):
+∥ξ∥2 := sup |σ (x) ·ξ|2
+the sup being taken over all sections σ to mKX +L such that
+∫
+X
+|σ ∧ ¯σ |1/m e− φ/m ≤ 1
+and ξ is some vector in − (mKX +L)x.
+This deﬁnes hm as a metric on mKX +L. The point of this deﬁnition is that the
+quantity |σ ∧ ¯σ |1/m transforms as a measure on X (in the case of L trivial), so its
+integral can be deﬁned without choosing any metric on KX. In the relative situation,
+when the manifold X is ﬁbered over Y , we deﬁne relative NS metrics in a similar way
+as in section 1, identifying KXy with KX/Y restricted to Xy, and get a metric on
+mKX/Y +L.
+We shall now see that the methods of the previous section also give positivity results
+for the relative NS metric. For this we will use a family of L2-metrics indexed by the
+sections to mKX +L, deﬁned by
+∥σ ∥2
+u =
+∫
+X
+|σ |2/ |u|2− 2/m e− φ/m
+===PDF PAGE 19===
+§4 The Narasimhan-Simha metric 19
+for sections σ to mKX +L. Thus the Lp-norm occuring in the deﬁnition of the NS
+metric equals the ’diagonal’ metric ∥σ ∥2
+σ . This family of metrics seems to be quite
+interesting in their own right and play e.g. a fundamental ro le in Siu’s proof of the
+invariance of plurigenera.
+Let us now ﬁrst consider an abstract model of the situation ab ove: Take E → U to
+be a trivial vector bundle of rank N , with an hermitian metric h, positive over
+U = {(t,w );t ∈ C, |t|< 1,w ∈ CN }.
+Choosing a trivialization, we can take
+E =U × CN = {(t,w,z ); (t,w ) ∈ U,z ∈ CN }.
+Let
+∆ = {(t,w,z );w =z},
+and
+Ω∆ = Ω ∩ ∆ = {(t,z,z ); ∥z∥2
+h(z) ≤ 1}.
+We state now the next result, analog to the proposition 5.3 of the preceding section;
+it has a major rˆ ole in our investigation of the convexity pro perties of the NS metric.
+4.1 Proposition. Assume V (t,w,z ) is continuous and plurisubharmonic on E. Put
+V ◦ (t) = sup
+Ω∆,t
+V,
+where
+Ω∆,t = {(t,z,z ); |z|2
+h(z) ≤ 1}.
+Then V ◦ is subharmonic.
+Proof. Again, we may assume h is smooth, strictly positively curved, V strictly
+plurisubharmonic, and it suﬃces to prove that V ◦ has no local maximum. Assume
+to the contrary that 0 is a local maximum point for V ◦ , and say
+V ◦ (0) = V (0,z 0,z 0).
+Let s be the local holomorphic section from Proposition 5.2, and p ut
+C =graf (s) ∩ ∆.
+Since the graf of s has dimension N + 1 and ∆ has codimension N , the dimension of
+C is at least 1. Moreover
+(0,z 0,z 0) ∈ C ⊂ Ω∆.
+Thus V has a local maximum on C, which contradicts the strict plurisubharmonicity
+assumption.
+As a consequence of the previous considerations, we obtain t he next statement which
+is a ”twisted version” of the theorem 1 in the paper [18] by Y. K awamata. In this
+===PDF PAGE 20===
+20 Bergman kernels and the pseudoeﬀectivity of relative canoni cal bundles
+corollary we assume as a hypothesis that the direct image of mKX/Y +L under p is
+locally free, i e that for any ﬁber of p, any holomorphic section of ( mKX/Y +L)|Xy
+over the ﬁber, extends holomorphically to some neighbourho od of the ﬁber. That this
+hypothesis is satisﬁed for L trivial (orL having a semipositive smooth metric) is exactly
+the invariance of (twisted) plurigenera.
+4.2 Corollary . Let p : X → Y be a smooth projective ﬁbration and let L be a holo-
+morphic line bundle over X endowed with a semipositively curved, possibly singular,
+metric. Assume that the direct image of mKX/Y +L under the map p is locally free.
+Then the relative (and twisted) NS metric on mKX/Y +L has semipositive curvature
+current.
+Proof. We will assume that in fact X is ﬁbered over the unit disk (see the comments
+before the proof of the theorem 2.1 concerning the general ca se) and let F be the direct
+image of mKX/Y +L. Since F is locally trivial it can be thought of as
+F =D × CN.
+Now let E be this bundle, pulled back over the total space of F under the projection
+of F to D. Then
+E =D × CN
+w × CN
+z ,
+and we consider E as a bundle over U := D × CN
+w . Now, a point u = (t,w ) in U
+is a vector in F , ie a global section of mKXt +L over Xt. Then |u|2− 2/m e− φ/m is a
+metric on (m − 1)KXt +L overXt and induces a hermitian metric on Eu. Since u is
+holomorphic as a function of t and w the metric |u|2− 2/m e− φ/m is pseudoeﬀective on
+(m − 1)KXt +L considered as a bundle over X × CN
+w . Hence, by Theorem 3.5, the
+induced hermitian metric on E is positively curved . We can then apply Proposition
+4.1 to
+Vǫ(t,w,z ) = log( |s(p) ·z|2 +ǫ),
+withs now equal to a section of E∗ giving point evaluations. By Proposition 4.1 V ◦
+ǫ is
+plurisubharmonic. Hence V ◦ := limV ◦
+ǫ asǫ goes to zero is also plurisubharmonic. But
+V ◦ is precisely the NS metric.
+Remark. In the fundamental article [18] of Y. Kawamata, the convexit y properties of
+the NS metric are derived via the cyclic cover trick and subtl e results in Hodge theory.
+In our proof we replace the cyclic covers by twisting the base with the space of all global
+holomorphic sections. More precisely, we have considered t he product of the base ∆
+with the space of sections H 0(
+X,mK X/ ∆ +L
+)
+; next, we have used the additional
+parameters to deﬁne a metric on the bundle we are interested i n. Moreover, one can
+see that given a map p : X → Y the above construction has no global meaning, but
+nevertheless we can use this local construction in order to d erive (global!) properties
+of the NS metric, as indicated in the corollary above. Let us a lso mention that a more
+general version of the above statement will be given in the pa per [4]: we will work in
+the context of the singular metrics and surjective projecti ve maps.
+Finally we mention one more consequence of the argument we ju st used, where for
+simplicity we take L to be tivial. Let X be one ﬁxed projective manifold and consider
+===PDF PAGE 21===
+§5 Proof of the corollary 0.2 21
+the line bundle m1KX over X. Let m0 be a positive integer and let u be a global
+holomorphic section of m0KX; we use u to deﬁne a metric on ( m1 − 1)KX as follows
+|σ |2
+u = |σ |2/ |u|2(m1− 1)/m 0
+and corresponding L2-metrics
+∥σ ∥2
+u :=
+∫
+X
+|σ |2
+u
+on H 0(X,m 1KX). Let Bu(z) be the corresponding Bergman kernel.
+4.3 Proposition. Let p : Γ(X,m 0KX) × X → X be the projection on the second
+factor and consider the bundle p⋆ (m1KX ). Then the Bergman kernel Bu(z) deﬁnes a
+pseudoeﬀective metric on p⋆ (m1KX). (Intuitively: it depends plurisubharmonically on
+u and z together.) In particular, let
+Z = {(u,z ) ∈ Γ(X,m 0KX) × X;Bu(z) = 0 }.
+Then either Z is all of Γ(X,m 0KX ) × X or Z is pluripolar in Γ(X,m 0KX) × X
+Proof. Let p be the projection map from Γ( X,m 0KX) × X to Γ(X,m 0KX ). This is
+a trivial ﬁbration with ﬁber X over Γ(X,m 0KX) and its relative canonical bundle is
+equal to the inverse image of KX. The norms
+|σ |2
+u = |σ |2/ |u|2(m1− 1)/m 0
+deﬁne a pseudoeﬀective metric on ( m1 − 1)KX, so by Theorem 0.1 the Bergman kernel
+(metric) is either identically 0 or pseudoeﬀective. In the l atter case it can vanish only
+on a pluripolar set, therefore the theorem is proved.
+§5 Proof of the corollary 0.2
+Before going into the details of the proof, we would like to me ntion the next result of
+F. Campana (see [6]); it is a generalization of E. Viehweg–ty pe semi-positivity theorems
+(see e.g. [36]; in connection with this, see also the paper [1 9] of Y. Kawamata)
+Theorem ([6]). Let p : X → Y be a projective surjective map with connected ﬁbers
+between non-singular manifolds X and Y . Let L be a line bundle on X, whose ﬁrst
+Chern class contains an eﬀective Q–divisor, which has trivial multiplier ideal sheaf
+when restricted to the general ﬁber of p. Then p∗
+(
+m(KX/Y +L)
+)
+is weakly positive,
+for any positive and enough divisible integer m.
+We do not intend to explain here the notion of weak positivity introduced by
+E. Viehweg in [37], [38]; however, let us point out a conseque nce of the previous result
+which is stated in the paper [9].
+Theorem ([9]). Under the above assumptions, for any Q–ample divisor AY → Y
+some large enough multiple of the line bundle KX/Y +L +p∗AY is eﬀective.
+===PDF PAGE 22===
+22 Bergman kernels and the pseudoeﬀectivity of relative canoni cal bundles
+Therefore, our corollary 0.2 can be seen as a generalization and/or eﬀective version
+of the result above (since there is no hypothesis on the multi plier sheaf in our statement
+and moreover we are able to control the restriction over some generic ﬁber of the sections
+produced by the theorem above).
+Next, we are going to explain the proof of 0.2. As we have alrea dy mentioned, our
+arguments rely heavily on the theorem 0.1, and on the next ver sion of the Ohsawa-
+Takegoshi theorem, proved by L. Manivel (see [13], [23], [27 ] and the references quoted
+there).
+5.1 Theorem ([23]). Let X be a projective or Stein n-dimensional manifold, and
+let Z ⊂ X be the zero set of a holomorphic section s ∈ H 0(X,E ) of a vector bundle
+E → X; the subset Z is assumed to be non-singular, of codimension r = rank(E). Let
+(F,h ) be a line bundle on X, endowed with a (possibly singular) metric h, such that:
+(1) Θh(F ) + √
+− 1∂∂ log |s|2 ≥ 0 as current on X;
+(2) Θh(F ) +
+√
+− 1∂∂ log |s|2 ≥ 1/α ⟨Θ(E)s,s ⟩
+|s|2 for some α ≥ 1;
+(3) |s|2 ≤ exp(−α ) on X, and the restriction of the metric h on Z is well deﬁned.
+Then every section u ∈ H 0(
+Z, (KX +F|Z) ⊗ I (h|Z )
+)
+admits an extension ˜u to X such
+that
+∫
+X
+˜u ∧ ˜u exp(−ϕF )
+|s|2r(− log |s|)2 ≤ Cα
+∫
+Z
+|u|2 exp(−ϕF )dVZ
+| ∧r (ds)|2 ,
+whereh =e− ϕ F , provided the right hand side is ﬁnite.
+Notice that the integrand in the integral over Z here is independent of the metric
+chosen.
+We will often use the Theorem 5.1 in the following situation: (E,h E) is a holo-
+morphic line bundle with a smooth hermitian metric (remark t hat we do not require
+any curvature conditions for it) and Z is a hypersurface deﬁned by a section s to E.
+(F ′,h F ′) is another holomorphic hermitian line bundle over X with a possibly singular
+metric with semipositive curvature current, such that
+Θh(F ′) ≥ ǫΘh(E)
+in the sense of currents. Then F := E +F ′ endowed with the product metric hEhF ′
+satisﬁes the curvature assumptions in Theorem 5.1 if α is large enough. Hence any
+section of
+(KX +F )|Z
+that is square integrable over Z extends to a section of KX +F over all of X. Note
+also that by adjunction ( KX +E)|Z =KZ, so we are extending sections to KZ +F ′,
+and that the integrability assumption means that
+∫
+Z
+cnu ∧ ¯u exp(−ϕ ′
+F )< ∞ .
+===PDF PAGE 23===
+§5 Proof of the corollary 0.2 23
+Also, in the papers quoted above, the metric h is non-singular; however, since the man-
+ifoldX above is projective, one can derive 5.1 from the smooth case, by a regularization
+argument. We refer to [34], [35] and [24] for the details conc erning the regularization
+process. Remark also that the only additional conditions ne eded in order to allow sin-
+gular metrics are the integrability, and the generic ﬁniten ess of the restriction to the
+manifold we want to extend our form.
+The bundle we are interested in can be decomposed as follows:
+m(KX/Y +L) +p∗A =KX + (m − 1)(KX/Y +L) +L +p∗ (A − KY )
+(the bundle A will be chosen in a moment). Our goal is to show that it is eﬀect ive
+by extending (a multiple of) the section 0 ̸= u ∈ H 0(
+Xy, (KXy +L) ⊗ I (h)
+)
+whose
+existence is given by the hypothesis.
+We denote by hB the metric on KX/Y +L given by the theorem 1; the fact which
+will be crucial in what follows is that for any positive integ er k, we have
+|uk|2
+h⊗ k
+B
+≤ O (1)
+uniformly on Xy, just by the construction of the metric hB.
+We choose now the bundle AY → Y positive enough such that:
+(a) H 0(Y,A Y ) ̸= 0;
+(b) The point y ∈ Y is the common zero set of the sections ( sj) of a ample line bundle
+B → Y and AY − KY ≥ 2B, in the sense that the diﬀerence is an ample line
+bundle.
+The bundle (m − 1)(KX/Y +L) +L +p∗ (AY − KY ) is endowed with the metric
+hm :=h⊗ (m− 1)
+B ⊗ hL ⊗ hAY − KY ;
+its curvature is semi-positive on X, and the restriction to Xy is well deﬁned. The
+section we want to extend is um := u⊗ m ⊗ sp∗AY , where sp∗AY is the pull-back of some
+non-zero section given by the property (a) above. By the prop erty (b) the positivity
+conditions in the extension theorem of Ohsawa-Takegoshi ar e satisﬁed with the bundle
+F given by
+F = (m − 1)(KX/Y +L) +L +p∗ (AY − KY )
+since
+Θhm
+(
+(m − 1)(KX/Y +L) +L +p∗(AY − KY )
+)
++
+√
+− 1∂∂ log |s|2 ≥ p∗ Θ(AY − KY − B).
+The right hand side semi-positive and it dominates the bundl eB; thus the requirements
+(1), (2) and (3) are veriﬁed.
+Now the integrability condition is obviously ok, since we ha ve
+∫
+Xy
+|um|2
+hmdV ≤ C
+∫
+Xy
+|u|2
+hLdV < ∞
+===PDF PAGE 24===
+24 Bergman kernels and the pseudoeﬀectivity of relative canoni cal bundles
+(the ﬁrst inequality comes from the fact that the section u is pointwise bounded with
+respect to the ﬁberwise L2 metrichB, and the second inequality is just the hypothesis).
+Therefore, by the Ohsawa-Takegoshi theorem we can extend th e section um overX
+and the corollary 0.2 is proved.
+Remark. In fact, we have just proved more than the corollary 0.2 state s. Indeed, we
+have shown that given u ∈ H 0(
+Xy, (KXy +L) ⊗ I (h)
+)
+, then the section u⊗ m ⊗ sp∗AY
+extends over all of X for any positive integer m.
+§6 Maximal centers and asymptotic extensions
+In this paragraph we give a complete proof of the theorem 0.3. We have already
+mentioned that this result is not new, but we feel that the arg uments which will be
+used here (which are mainly analytic) could be very useful in other problems in algebraic
+geometry.
+To start with, we would like to recall the notions of restricted volume and maximal
+center of a line bundle, respectively of a Q-divisor.
+Deﬁnition. Let E → X be a line bundle, and let V ⊂ X be an d-dimensional subset
+(which could be singular, but reduced and irreducible). We d eﬁne
+H 0(X|V,mE ) := Im(H 0(X,mE ) → H 0(V,mE V )),
+and let h0(X|V,mE ) be the dimension of this space. Then the restricted volume of E
+to V is
+VolV (E) := lim sup d!
+mdh0(X|V,mL ).
+If the line bundle E is numerically eﬀective, then we have Vol V (E) = Ed ·V ; this is a
+consequence of the Riemann-Roch theorem (see [5] and also [1 4]). This notion turned
+out to be very useful to deal with the linear systems which do h ave base-points, and one
+of the most spectacular result in the theory is the theorem 0. 3 which will be discussed
+next. For further properties and consequences, we refer to [ 14].
+Let D be an eﬀective Q-divisor on X. We denote by I(D) the multiplier ideal sheaf
+associated to D (see e.g. [11], [25]). To introduce the notion of maximal cen ter of the
+pair (X,D ), let us assume that we have the decomposition D =S +D′, where S is a
+smooth hypersurface, and D′ is an eﬀective Q-divisor which does not contain S in its
+support. Then the adjunction formula gives KX +D|S =KS +D′
+|S, in particular the
+diﬀerence KX +D|S − KS is an eﬀective Q-divisor on S. As we will see in a moment,
+a maximal center is a substitute in codimension greater than 1 of the hypersurface S
+above. We recall the following notions.
+Deﬁnition.
+===PDF PAGE 25===
+§6 Maximal centers and asymptotic extensions 25
+1. We say that the pair (X,D ) is klt at x ∈ X if I(D)x = OX,x ; the support of the
+quotient OX/ I(D) is denoted by Nklt(X,D ).
+2. The log-canonical threshold of the pair (X,D ) at x is the rational number
+lctx(X,D ) := sup {t ∈ Q+/ I(tD)x = OX,x }
+3. We denote by MC(X,D ) the set of irreducible components V of Nklt(X,D ) such
+that the log-canonical threshold of (X,D ) at the generic point of V is equal to 1. The
+elements of this set are called maximal centers of (X,D ).
+We refer to the references [11], [19], [21] for a more extensi ve presentation and some
+properties of the notions introduced above; here we will con tent ourself to recall some
+standard facts which will be needed in what follows.
+• Given a point x ∈ X, by a slight perturbation of the divisor D we can assume that
+there is at most one element of the set MC(X,D ) containing x.
+• If the maximal center V is a divisor, then we have the decomposition D =V +D′,
+where D′ is an eﬀective Q-divisor, such that V is not contained in the support of D′.
+• Assume now that the codimension of V is at least 2, and assume that there exist an
+ample Q-line bundle A → X such that L :=A +D is a genuine line bundle on X. In
+this context we have the next “concentration” lemma of Kawam ata-Shokurov, see e.g.
+[30].
+6.1 Lemma ([30]). Let L = A +D be a line bundle, where A and D are Q-divisors
+ample and eﬀective, respectively. We assume that V ∈ MC (X,D ) is of codimension at
+least 2. Then there exist (another) decomposition L =A + ˜D such that:
+(A) V ∈ MC (X, ˜D).
+(B) There exist µ :Y → X a sequence of blow-ups, such that we have
+(6. 1) µ ∗ (KX +L) = KY +S +
+∑
+j
+νjEj
+whereS and Ej are in normal crossings, and the next properties hold:
+(B.1)S is a smooth, µ -contractible hypersurface of Y , such that µ (S) = V ;
+(B.2) If for some index j we have V ⊂ µ (Ej), then the corresponding multiplicity νj is
+strictly less than 1.
+(B.3) If the multiplicity νj is a negative number, then the corresponding divisor Ej is
+contracted by µ .
+(B.4) Some of the Ej is ample on Y , and the corresponding coeﬃcient is positive and
+strictly less than 1.
+Remark that if we don’t need the property that a unique exceptional divisor with
+multiplicity 1 in the decomposition above dominates V , all the other facts in the
+lemma are immediate consequences of the fact that V is the maximal center of ( X,D ).
+However, this property will simplify the arguments of the pr oof of the next corollary.
+===PDF PAGE 26===
+26 Bergman kernels and the pseudoeﬀectivity of relative canoni cal bundles
+We have divided the proof of 0.3 into two parts: the ﬁrst one us es techniques developed
+in connection with the invariance of plurigenera, and the se cond one uses the semi-
+positivity of the relative canonical bundles (corollary 0. 2).
+§6.1 Invariance of Plurigenera techniques
+The next result is due to S. Takayama in [30]; his proof follow very closely the tech-
+niques introduced by Y.-T. Siu in [34]. Rather than reproduc ing here his arguments,
+we will use a more direct approach taken from [28] (see also th e papers [8], [30] and
+[36] for other variations and further results on this theme) . The version which is best
+adapted for our proof of 0.3 is the following.
+6.1.1 Theorem ([30], [36]). Let Z ⊂ X be a non-singular hypersurface and let
+L =A +D be a big line bundle, where A andD are Q-line bundles ample and eﬀective,
+respectively. Let AX be a line bundle on X, endowed with a smooth metric hAX whose
+curvature is semi-positive. Assume that D does not contain Z in its support and that
+I(D|Z ) = OV . Then for all m ∈ Z+, the restriction morphism
+H 0(
+X,m (KX +Z +L) +AX
+)
+→ H 0(
+Z, (m(KX +Z +L) +AX)|Z
+)
+is surjective.
+The proof of this theorem is given in the last subsection in or der not to break the
+general argument.
+§6.2 End of the proof of 0.3
+Let µ :Y → X be a log-resolution of the pair ( X,D ), such that the properties in the
+lemma 6.1 are satisﬁed. We can re-write the relation (6.1) as follows
+(6. 2. 1) µ ∗ (KX +L) = KY +S +DY − EY
+where DY,E Y are eﬀective divisors and EY is contracted by µ .
+If we denote by Dh
+Y the “horizontal” part of the divisor DY , (i.e. the components
+of DY whose projection on X containV ) then by the property ( B2) of the lemma, we
+have [Dh
+Y ] = 0 (we recall that the integral part, respectively the frac tional part of a
+divisor is obtained by considering the integral part, respe ctively the fractional part of
+its coeﬃcients).
+We restrict the above equality to S and use adjunction to get
+µ ∗ (KX +L)|S =KS +DY − EY.
+Next we subtract the inverse image of KV and split the Q–divisors DY and EY ac-
+cording to their integral/fractional parts; the above rela tion becomes
+(6. 2. 2) µ ∗ (KX +L − KV )|S − [DY ] − [−EY ]|S =KS/V + {DY } + {−EY }|S.
+===PDF PAGE 27===
+§6 Maximal centers and asymptotic extensions 27
+We consider the Q-bundle G := {DY } + {−EY }|S. According with the notations in
+the lemma 6.1, we have
+G =
+∑
+j
+(νj − [νj])Ej
+and we can endow it with the canonical singular metric (obser ve in the ﬁrst place that
+G is a genuine line bundle, by the relation (6.2.2) above). Alo ng the next few lines, we
+will highlight some of its metric properties, needed in what will follow.
+(G1)The multiplier ideal sheaf of the metric is trivial. Indeed, this is an obvious
+consequence of the “normal crossings” condition and the fac t that the coeﬃcients
+G are in (0, 1) (since the divisors Ej are disjoint).
+(G2)Givenv ∈ V generic, we haveH 0(Sv,K Sv +G) ̸= 0.Indeed, by the relation (6. 2. 2)
+and the property (B2) of the lemma 6.1, the bundle KSv +G|Sv is isomorphic with
+− [−EY ]Sv , so our claim is that this line bundle has at least a non-zero s ection. It
+is the case since − [−EY ] has a section whose restriction to S is non-trivial (recall
+the property (B.2)), and so will be the further restriction o f this section of some
+generic ﬁber.
+(G3)The line bundle G is big. To see this, we recall that the property ( B4) says that
+some of the Ej in the decomposition (1) is ample on S and that the corresponding
+coeﬃcient νj belongs to (0, 1); therefore, the ample part is not lost when we take
+νj − [νj] in the construction of G.
+In conclusion, we have shown that we are in good position to ap ply our corollary 0.2:
+for any positive integer m, we get a non-trivial section ψm ∈ H 0(
+S,µ ∗AX +m(KS/V +
+G)|S)
+)
+, where AX denotes here some positive enough but ﬁxed line bundle on X. The
+multiplication with ψm will deﬁne an injective map
+(6. 2. 3) Ψ m :H 0(V,mK V ) → H 0(
+S,µ ∗AX +m(KY +S +G)|S
+)
+as follows: Ψ m(τ) = µ ∗τ ⊗ ψm.
+The result proved in the preceding paragraph 6.1 come now int o the picture: the
+sections in the image of the morphism Ψ m can be extended to Y thanks to the theorem
+6.1.1. Indeed, the line bundle G is big (see ( G3) above) and the multiplier ideal of the
+restriction of its eﬀective part to S is trivial (by the same argument as in ( G1)).
+Let un consider now a section u ∈ H 0(V,mK V ). By the discussion above, there exists
+a section ˜u ∈ H 0(
+Y,µ ∗AX +m(KY +S +G)
+)
+such that ˜u|S = Ψm
+(
+u
+)
+. We denote
+bysm[DY ] the canonical section of the bundle m[DY ], and then we have ˜u ⊗ sm[DY ] ∈
+H 0(
+Y,µ ∗AX +m(µ ∗ (KX +L) − [−EY ])
+)
+by the deﬁnition of G and the equality (6.2.1).
+We recall now that every hypersurface in the support of the Q-divisor EY is con-
+tracted by µ , therefore Hartogs type arguments show that
+(6. 2. 4) ˜u ⊗ sm[DY ] =µ ∗ (
+Jm(u)
+)
+⊗ s− m[− EY ]
+for some section Jm(u) ∈ H 0(
+X,A X +m(KX +L)
+)
+. In conclusion, we have deﬁned an
+injective linear map
+Jm :H 0(V,mK V ) → H 0(
+X|V,A X +m(KX +L)
+)
+.
+===PDF PAGE 28===
+28 Bergman kernels and the pseudoeﬀectivity of relative canoni cal bundles
+By hypothesis there exists a section u ∈ H 0(X,m 0(KX + L) − AX ) such that
+u|V ̸= 0. Then by a multiplication with the section u, the above relation show the
+existence of a injective map
+J ′
+m :H 0(V,mK V ) → H 0(
+X|V, (m +m0)(KX +L)
+)
+and this clearly implies the theorem 0.3, since the non-eﬀec tive integer m0 will disap-
+pear as m → ∞ ).
+Remark. As we have already mentioned in beginning the section 5, the v ersion of
+the corollary 0.2 needed above can also be obtained by the gen eralization due to F.
+Campana of some semi-positivity results of E. Viehweg. Howe ver, we prefer to apply
+our result, not just because the technique needed to prove it is by far lighter, but also
+it provides an eﬀective link between the canonical series of the manifolds V and X,
+respectively (see the comments page 15).
+§6.3 Proof of Theorem 6.1.1
+We ﬁnally give the proof of Theorem 6.1.1.
+Let us ﬁx an ample line bundle B → X, positive enough so that the next conditions
+hold true.
+• For each 0 ≤ p ≤ m − 1, the bundle p(KX +Z +L) +B is generated by its global
+sections, which we denote by ( s(p)
+j );
+•• Any section section of the bundle m(KX +Z +L) +AX +B|Z admits an extension
+to X.
+Letu ∈ H 0(
+Z,m (KX +Z +L) +AX |Z
+)
+be the section we want to extend. We consider
+the following statement:
+(
+Pk,p
+)
+: The sections uk ⊗ s(p)
+j ∈ H 0(
+Z, (km +p)(KX +Z +L) +kAX +B|Z
+)
+extend
+to X, for each k ∈ Z+, 0 ≤ p ≤ m − 1 and j = 1,...,N p.
+If we can show that Pk,p is true for any k and p, then another application of the
+extension theorem of Ohsawa–Takegoshi will end the proof; t he argument goes as
+follows.
+Let ˜u(km)
+j ∈ H 0(
+X,km (KX +Z +L) +kAX +B
+)
+be an extension of uk ⊗ s(0)
+j . We
+takek ≫ 0, so that
+m − 1
+mk B <A,
+in the sense that the diﬀerence is ample (we recall that L = A +D). Let hA be a
+smooth, positively curved metric on A − m− 1
+mk B.
+We apply now the extension theorem 5.1 with F := (m − 1)(KX +Z +L) +L +AX +Z;
+a metric h on F is constructed as follows:
+===PDF PAGE 29===
+§6 Maximal centers and asymptotic extensions 29
+(1) on the factor ( m − 1)(KX +Z +L) +L +AX we take the algebraic metric given
+by the family of sections ˜u(k)
+j (more precisely, we take the m − 1
+mk ’th root of this
+metric) multiplied with the canonical singular metric on D twisted the metrics hA
+on A − m − 1
+mk B and h1/m
+AX on 1/mA X respectively;
+(2) we take an arbitrary, smooth metric hZ on the bundle associated to the divisor Z.
+With our choice of the bundle F , the section u we want to extend become a section
+of the adjoint bundle KX +F|Z and the positivity requirements (1) and (2) in the
+extension theorem are satisﬁed since we have
+Θh(F ) +
+√
+− 1∂∂ log |s|2
+hZ ≥ ΘhA(A − m − 1
+mk B)> 0
+(in the notation above, s is the canonical section of the bundle O(Z)). Remark that
+the curvature of the bundle O(Z) does not aﬀect in any way the (1 , 1)–form above,
+since it cancel out by the Poincar´ e-Lelong identity. Also, by an appropriate choice of
+the constant α in the extension theorem and a rescaling of the section s, the conditions
+(2) and (3) will be satisﬁed as well.
+Concerning the integrability of u, remark that we have
+∫
+Z
+|u|2 exp(−ϕD)
+( ∑
+j |˜u(km)|2) m− 1
+mk
+=
+∫
+Z
+|u|2 exp(−ϕD)
+( ∑
+j |u⊗ km ⊗ s(0)
+j |2) m− 1
+mk
+≤ C
+∫
+Z
+exp(−ϕD)
+and this last integral converge by the hypothesis concernin g the multiplier ideal sheaf
+of the restriction of D to Z.
+Thus, it is enough to check the property Pk,p . For this, we will use an inductive
+procedure; the ﬁrst steps are as follows.
+(1) For each j = 1,...,N 0, the section u ⊗ s(0)
+j ∈ H 0(
+Z,m (KX +Z +L) +AX +B|Z
+)
+admits an extension ˜u(m)
+j ∈ H 0(
+X,m (KX +Z +L) +AX +B
+)
+, by the property ••.
+(2) We use the sections ( ˜u(m)
+j ) to construct a metric on m(KX +Z +L) +AX +B;
+we multiply it with the (positively curved) metric of L induced by A et D; thus, we
+obtain a metric on the bundle m(KX +Z +L) +L +AX +B.
+(3) Let F :=m(KX +Z +L) +L +AX +B +Z; for each j = 1,...,N 1 let us consider
+the section u ⊗ s(1)
+j ∈ H 0(
+Z, (KX +F )|Z
+)
+. It is integrable with respect to the metric
+produced at (2), since
+∫
+Z
+∥u ⊗ s(1)
+j ∥2
+∑
+q ∥u ⊗ s(0)
+q ∥2
+exp(−ϕD)dV < ∞
+again by hypothesis and •.
+(4) We apply the extension theorem (as above, we take an arbit rary smooth metric on
+O(Z)) and we get ( ˜u(m+1)
+j ) ∈ H 0(
+X, (m + 1)(KX +Z +L) +AX +B
+)
+whose restriction
+on Z is precisely u ⊗ s(1)
+j .
+===PDF PAGE 30===
+30 Bergman kernels and the pseudoeﬀectivity of relative canoni cal bundles
+Now the assertion Pk,p will be obtained by iterating the procedure (1)-(4) several
+times. Indeed, assume that the proposition Pk,p has been checked, and consider the
+set of global sections
+(˜u(km+p)
+j ) ∈ H 0(
+X, (km +p)(KX +Z +L) +kAX +B
+)
+which extend uk ⊗ s(p)
+j . The metric associated to them twisted with the metric of
+L induce a metric on the bundle ( km +p)(KX +Z +L) + L +kAX +B. Now if
+p < m− 1, we can consider the family of sections uk ⊗ s(p+1)
+j ∈ H 0(Z,K X +F|Z),
+where F := (km +p)(KX +Z +L) +L +kAX +B +Z. Each of them is integrable
+with respect to the previous metric (by the same arguments as in (3) above) and the
+extension theorem 3.1 show that Pk,p +1 is veriﬁed. In the remaining case p =m − 1,
+we will consider the bundle F as above twisted with AX and its corresponding metric.
+OverZ, the section we will consider are uk+1 ⊗ s(0)
+j ∈ H 0(Z,K X +F ); the rest of the
+proof goes along the same lines, thus we skip it.
+===PDF PAGE 31===
+References 31
+References
+[1] Berndtsson, B.: Positivity of direct image bundles and convexity on the spac e of Kahler metrics
+math arXiv: math.CV/0608385.
+[2] Berndtsson, B.: Subharmonicity properties of the Bergman kernel and some ot her functions
+associated to pseudoconvex domains; (math arXiv:mathCV 0505469, to appear in Ann Inst
+Fourier).
+[3] Berndtsson, B.: Curvature of Vector bundles associated to holomorphic ﬁbra tions; to appear in
+Ann. of Maths. (2007).
+[4] Berndtsson, B., P˘ aun, M.: Bergman kernels and the pseudo-eﬀectivity of the relative c anonical
+bundles –Part two–; in preparation.
+[5] Boucksom, S.: On the volume of a big line bundle; Intern. J. Math. 13 (2002), 1043–1063.
+[6] Campana, F.: Special varieties, orbifolds and classiﬁcation theory; Ann. Inst. Fourier 54 (2004),
+499–665.
+[7] de Cataldo, M.A.: Singular hermitian metrics on vector bundles J. Reine Angew. Math. 502
+(1998), 93-122.
+[8] Claudon, B.: Invariance for multiples of the twisted canonical bundle math.AG/0511736, to
+appear in Annales de l’Institut Fourier.
+[9] Debarre, O.: Syst` emes pluricanoniques sur les vari´ et´ es de type g´ en´eral; s´ eminaire Bourbaki
+970, 2006-2007.
+[10] Demailly, J.-P.: Singular hermitian metrics on positive line bundles; Proceedings of the Bay-
+reuth conference Complex algebraic varieties, April 2- 6, 1990, edited by K. Hulek, T. Peternell,
+M. Schneider, F. Schreyer, Lecture Notes in Math. 1507, Springer-Verlag, 1992.
+[11] Demailly, J.-P.: A numerical criterion for very ample line bundles; J. Diﬀerential Geom. 37
+(1993), 323-374.
+[12] Demailly, J-P.: Pseudoconvex-concave duality and regularization of curre nts; Several complex
+variables (Berkeley, CA, 1995–1996), 233–271, Math. Sci. Res . Inst. Publ., 37, Cambridge
+Univ. Press, Cambridge, 1999..
+[13] Demailly, J.-P.: On the Ohsawa-Takegoshi-Manivel extension theorem; Proceedings of the Con-
+ference in honour of the 85th birthday of Pierre Lelong, Paris, Sep tember 1997, Progress in
+Mathematics, Birkauser, 1999.
+[14] Ein, L. et al : Restricted volumes and base loci of linear series; available at math.AG/0607221.
+[15] Fujita, T.: On K¨ ahler ﬁbre spaces over curves; J. Math. Soc. Japan 30 (1978), 779794.
+[16] C. D. Hacon, J. McKernan: Boundedness of pluricanonical maps of varieties of general type;
+Invent. Math. Volume 166, Number 1 / October, 2006, 1-25.
+[17] Kawamata, Y.: Minimal models and the Kodaira dimension of algebraic ﬁbre s paces; Journ.
+Reine Angew. Math. 363 (1985) 1-46.
+[18] Kawamata, Y.: Kodaira dimension of algebraic ﬁber spaces over curves; Invent. Math. 66 (1982)
+no. 1, 57–71.
+[19] Kawamata, Y.: Subadjunction of log canonical divisors; Amer. J. Math. 120 (1998) 893–899.
+[20] Koll´ ar, J.:Subadditivity of the Kodaira dimension: Fibres of general t ype; Algebraic geometry,
+Sendai 1985, Advanced Studies in Pure Math. 10 (1987) 361398.
+[21] Lazarsfeld, R.: Positivity in Algebraic Geometry; Springer, Ergebnisse der Mathematik und
+ihrer Grenzgebiete.
+[22] Maitani F., Yamaguchi H.: Variation of Bergman metrics on Riemann surfaces; Mathematische
+Annalen Volume 330, Number 3 / November, 2004, 477-489.
+[23] Manivel, L.: Un th´ eor` eme de prolongement L2 de sections holomorphes d’ un ﬁbr´ e hermitien;
+Math. Zeitschrift 212 (1993), 107-122.
+[24] McNeal J., Varolin D.: Analytic inversion of adjunction: L2 extension theorems with gain;
+Ann. Inst. Fourier (Grenoble) 57 (2007), no. 3, 703–718.
+[25] Nadel, A.M.: Multiplier ideal sheaves and K¨ ahler-Einstein metrics of p ositive scalar curvature;
+Ann. of Math. 132 (1990), 549596.
+[26] Narasimhan, M. S.; Simha, R. R.; Manifolds with ample canonical class. ; Invent. Math. 5
+(1968) 120–128. .
+===PDF PAGE 32===
+32 Bergman kernels and the pseudoeﬀectivity of relative canoni cal bundles
+[27] Ohsawa, T., Takegoshi, K. : On the extension of L2 holomorphic functions; Math. Z., 195
+(1987), 197–204.
+[28] P˘ aun, M.:Siu’s Invariance of Plurigenera: a One-Tower Proof ; preprint 2005, to appear in J.
+Diﬀ. Geom. .
+[29] Takayama, S: On the Invariance and Lower Semi–Continuity of Plurigenera of Algebraic Va-
+rieties; J. Algebraic Geom. 16 (2007), no. 1, 1–18.
+[30] Takayama, S: Pluricanonical systems on algebraic varieties of general t ype; Invent. Math. Vol-
+ume 165, Number 3 / September, 2005, 551-587.
+[31] Tsuji, H.: Variation of Bergman kernels of adjoint line bundles; math.CV/0511342 .
+[31b] Tsuji, H.: Dynamical construction of K¨ ahler-Einstein metrics; math.AG/0606023 .
+[32] Tsuji, H.: Pluricanonical systems of projective varieties of general type I; Osaka J of Math 43-4
+(2006), 967-995.
+[32a] Tsuji, H.: Pluricanonical systems of projective varieties of general type II; Osaka J of Math
+44-3 (2007), 723-734.
+[32b] Tsuji, H.: Curvature semipositivity of relative pluricanonical syst ems; math.AG/0703729.
+[33] Siu, Y.-T.: Invariance of Plurigenera; Inv. Math., 134 (1998), 661-673.
+[34] Siu, Y.-T.: Extension of twisted pluricanonical sections with plurisu bharmonic weight and in-
+variance of semipositively twisted plurigenera for manifo lds not necessarily of general type;
+Complex geometry (G¨ ottingen,2000), 223–277, Springer, Berlin, 2002.
+[35] Siu, Y.-T.: Multiplier ideal sheaves in complex and algebraic geometry ; Sci. China Ser. A 48 ,
+2005.
+[36] Varolin, D.: A Takayama-type extension theorem; math.CV/0607323, to appear in Comp. Math.
+[37] Viehweg, E.: Weak positivity and the additivity of the Kodaira dimension for certain ﬁbre
+spaces; Algebraic Varieties and Analytic Varieties, Advanced Studies in Pure Math. 1 (1983)
+329353.
+[38] Viehweg, E.: Quasi-Projective Moduli for Polarized Manifolds; Springer-Verlag, Berlin, Hei-
+delberg, New York, 1995 as: Ergebnisse der Mathematik und ihrer G renzgebiete, 3. Folge, Band
+30.
+(version of January 21, 2008, printed on November 2, 2018)
+Bo Berndtsson, bob@math.chalmers.se
+Mihai P˘ aun, paun@iecn.u-nancy.fr

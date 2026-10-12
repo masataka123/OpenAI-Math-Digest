@@ -1,0 +1,1790 @@
+{
+  "ja": {
+    "pages": 111,
+    "chapters": [
+      {
+        "title": "滑らかな半正値性の下での反標準束の非消滅",
+        "page": 3
+      },
+      {
+        "title": "Anticanonical nonvanishing from smooth semipositivity",
+        "page": 16
+      },
+      {
+        "title": "Invariant anticanonical indices and conversion of twisted differentials",
+        "page": 28
+      },
+      {
+        "title": "Bounded anticanonical metrics on klt pairs and torus quotients",
+        "page": 40
+      },
+      {
+        "title": "Cohomological transfer and equivariant anticanonical sections",
+        "page": 49
+      },
+      {
+        "title": "Metric descent and rank-preserving contractions",
+        "page": 64
+      },
+      {
+        "title": "Integrable metrics and effectivity with controlled boundary",
+        "page": 79
+      },
+      {
+        "title": "Exact orders and invariant anticanonical linear systems",
+        "page": 93
+      }
+    ],
+    "externalLinks": 517,
+    "internalLinks": 62,
+    "pageStarts": [
+      {
+        "page": 1,
+        "textStart": "OpenAI Math Digest\nCATALOGUE 068\n滑らかな半正値性の下での反標準束\nの非消滅\n総括・論文間のつながりと7篇の証明概説\n独立した非公式の読解ガイド · 日本語版\n収録版: 2026-10-12\n制作: Masataka Iwai · 大阪大学\nAI生"
+      },
+      {
+        "page": 2,
+        "textStart": "目次\n総括に続き、公式カタログ順で全7篇の解説を収録しています。目次・引用はクリックできます。横長の\n表は紙面向けの項目一覧に組み直し、主張と参照先を保持しています。\n原論文の参照版: fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb\n00 · カ"
+      },
+      {
+        "page": 3,
+        "textStart": "カタログ068 · 総括\nWeb版を読む ↗\nCATALOGUE 068\n滑らかな半正値性の下での反標準束の非消滅\nAnticanonical nonvanishing under smooth semipositivity\n公式順の7稿、計270ページを扱う。共通する問いは反標"
+      },
+      {
+        "page": 4,
+        "textStart": "カタログ 068 · 2026-10-12 確認の固定参照版\n#\n01\n論文・概説\nAnticanonical nonvanishing from smooth semipositivity →\n図中の略称: Smooth semipositivity\nSeptember 26,"
+      },
+      {
+        "page": 5,
+        "textStart": "#\n02\n論文・概説\nInvariant anticanonical indices and conversion of twisted differentials →\n図中の略称: Invariant anticanonical indices\nSeptember 26, 20"
+      },
+      {
+        "page": 6,
+        "textStart": "#\n03\n論文・概説\nBounded anticanonical metrics on klt pairs and torus quotients →\n図中の略称: Bounded anticanonical metrics\nSeptember 26, 2026 · 20 ページ"
+      },
+      {
+        "page": 7,
+        "textStart": "#\n04\n論文・概説\nCohomological transfer and equivariant anticanonical sections →\n図中の略称: Cohomological transfer\nSeptember 26, 2026 · 43 ページ\n原論文（Git"
+      },
+      {
+        "page": 8,
+        "textStart": "#\n06\n論文・概説\nIntegrable metrics and effectivity with controlled boundary →\n図中の略称: Controlled boundary\nSeptember 26, 2026 · 45 ページ\n原論文（GitHub） "
+      },
+      {
+        "page": 9,
+        "textStart": "#\n07\n論文・概説\nExact orders and invariant anticanonical linear systems →\n図中の略称: Exact orders\nSeptember 26, 2026 · 41 ページ\n原論文（GitHub） ↗\n主に何を主張するか"
+      },
+      {
+        "page": 10,
+        "textStart": "OpenAI26c OpenAI — Bounded anticanonical metrics on klt pairs and torus quotients. 極大\n底と縦係数の最小値から有界計量を作る。安定トーラス商で自然線形化を保ち、商の切断を全域\nへ延長する。 Sep"
+      },
+      {
+        "page": 11,
+        "textStart": "02の指数定理は、自然反標準作用について、ある整数のすべての正の倍数で不変Euler指数が多項式と\nなり、その定数項が実際の零次指数であることを主張する。指数定理自体はprojectivityや半正値性を仮\n定しない。04・06で切断を取り出す際に、非零の零次指数、smooth "
+      },
+      {
+        "page": 12,
+        "textStart": "まず07内で構成した全直像の零次rank 1と水平strict patchを05のtoroidal体積定理へ渡す。得られる\nのは 上の非加重可積分計量と例外的な補正である。06の有限生成定理を二つの有理方向へ\n共通の補正・分母で適用し、実際の二重次数付き因子環の境界ray生成元を"
+      },
+      {
+        "page": 13,
+        "textStart": "供給元の結果\nAnticanonical nonvanishing from smooth semipositivity · [OpenAI26a, Theorem 2.1; Lemma 2.2,\npp. 5, 8]\n利用先・使用箇所\nCohomological transfer"
+      },
+      {
+        "page": 14,
+        "textStart": "供給元の結果\nMetric descent and rank-preserving contractions · [OpenAI26e, Theorem 2.1, p. 7]\n利用先・使用箇所\nIntegrable metrics and effectivity with con"
+      },
+      {
+        "page": 15,
+        "textStart": "04は、底からの曲率下界と消えるregularization errorから、高次の底コホモロジーを消す独立の調和的\n機構も示す。[OpenAI26d, Theorem 7.2, pp. 17–19] 07の追加出力は、高次全消滅より弱い\n, とfaithful作用・同変very"
+      },
+      {
+        "page": 16,
+        "textStart": "068 / 01\nWeb版を読む ↗\nCATALOGUE 068 · PAPER 01 / 7 概説\nAnticanonical nonvanishing from smooth\nsemipositivity\n有限随伴体積による帰納法と、自然線形化の不変切断\nOpenAI, An"
+      },
+      {
+        "page": 17,
+        "textStart": "の重みは有界でなくてよい。一方は上下両側に局所有界である。結論はの正の冪の有理切\n断で、極を上に限るというものであり、の一様性は含まない。\nTheorem 1.2 · p. 3\n図の矢印に付した引用\n略号のない定理・補題・節・式番号は本原稿 Anticanonical nonva"
+      },
+      {
+        "page": 18,
+        "textStart": "Theorem 1.1 — 主定理の証明概略\n証明対象：Theorem 1.1 · p. 2\n証明の道筋。 有限被覆の普遍被覆を分解し、残る因子のトーラス作用を保持する。Theorem 1.2は通常\nの非消滅を与え、Theorem 7.2が自然作用に不変な切断へ進める。最後に有限"
+      },
+      {
+        "page": 19,
+        "textStart": "1. 被覆の分解はモノドロミーを消さない\n構造定理により、適切な有限étale被覆の普遍被覆は となる。はRicci平坦で標準\n束に平行な非消滅枠があり、は正次数の正則形式を持たずが滑らかに半正値である。原稿は\ndeck群を有限指数で取り直し、への作用を消してへの像の閉包を連結c"
+      },
+      {
+        "page": 20,
+        "textStart": "通常の非消滅の帰納法\n図を拡大 ↗TeXソース ↓\n1. 有限体積からsupporting movable class上の非負接束へ\nは擬有効だがbigではないため、錐双対性から非零movable class で となる\nものを選べる。有限体積はLemma 4.1の相対Bergm"
+      },
+      {
+        "page": 21,
+        "textStart": "2. 一つの行列式と、全ての切断比を支配する底\n無正次数形式より 。Riemann–Rochの多項式 は定数項が であり、大き\nな で消えない。有界重みは を保証し、Hard Lefschetzは固定したへの写像\nを無限個与える。generic spanのtailを安定化して行列"
+      },
+      {
+        "page": 22,
+        "textStart": "Proposition 5.1 — 二計量の移送\nは滑らかな連結複素射影多様体、はnormal projectiveとし、 、\nは射影双有理、 は全射等次元で一般ファイバーは連結とする。と置\nく。 はTheorem 1.2の計量条件を満たす（無形式の仮定はここでは不要）。ある\nと"
+      },
+      {
+        "page": 23,
+        "textStart": "二計量の移送\n図を拡大 ↗TeXソース ↓\n1. 等次元normal modelで縦の次数を正規化する\nの分母を払って と置く。底の標準有理切断で\nを割ったは全素因子で非負の次数を持ち、normalityにより正則になる。各の上で少なくとも一成分\nにはが消えない。等次元性はnor"
+      },
+      {
+        "page": 24,
+        "textStart": "とする。rank oneによりBergman計量からのpsh性が得られる。では、境界補正を加えた計\n量の随伴測度が となり有限体積を保つ。一方 \nは の重みになる。の有界性から で下界を得る。が消えない成分での評価\nは をと独立にし、で割った極限で境界項を消す。これが上下両側の有"
+      },
+      {
+        "page": 25,
+        "textStart": "不変切断への移送\n図を拡大 ↗TeXソース ↓\n1. 有理商で不変部分だけのrank oneを得る\nを使っての作用を代数トーラスへ延長し、自然線形化で-不変と-不変を一致させ\nる。Rosenlicht商の一般ファイバーには稠密な軌道がある。可換性により不変な基本ベクトル場の外積\n"
+      },
+      {
+        "page": 26,
+        "textStart": "2. smooth direct imageの直交商として正値性を得る\n平均した は滑らか・半正値・不変である。smooth locus上の随伴直像はBerndtssonの定理によ\nり 半正値となる。compact averagingは不変部分への正則直交射影なので、その一次元部"
+      },
+      {
+        "page": 27,
+        "textStart": "編集側は固定版の主要主張、§§2・4–7の証明本文、外部8原典の上記入力結果の記述と適用箇所を照合\nした。§3のモデル準備は原稿の記述を読んだが、flattening・等変解消・Rosenlicht商・Yau定理の元論\n文までは今回別途照合していない。外部定理の全証明、psh e"
+      },
+      {
+        "page": 28,
+        "textStart": "068 / 02\nWeb版を読む ↗\nCATALOGUE 068 · PAPER 02 / 7 概説\nInvariant anticanonical indices and\nconversion of twisted differentials\n零次の値を保つ二つの議論を、形式の"
+      },
+      {
+        "page": 29,
+        "textStart": "Theorem 1.2 — 擬有効誤差の除去\nは滑らかな連結複素射影多様体、は滑らかな半正値Hermitian計量を持つとする。\nを擬有効Cartier因子とし、狭義増大する正整数列に対して \nと仮定する。このときある整数で となる。が有効であること、の\n有理連結性、Euler標"
+      },
+      {
+        "page": 30,
+        "textStart": "LMPTX23 Vladimir Lazić; Shin-ichi Matsumura; Thomas Peternell; Nikolaos Tsakanikas; Zhixin Xie — The\nNonvanishing Problem for varieties with"
+      },
+      {
+        "page": 31,
+        "textStart": "二つの独立な主結果の接続\n図を拡大 ↗TeXソース ↓\n1. 不変Euler指数から固定次数の不変形式へ\n有限被覆の普遍被覆を とし、はRicci平坦、は無正次数形式のcompact factorとす\nる。残余作用はcompact torus を通る。Hodge対称性から （ ）"
+      },
+      {
+        "page": 32,
+        "textStart": "2. 形式を降下してから擬有効誤差を作る\n不変標準枠を掛けるProposition 5.1により、不変形式は上の へ単射で移る。\nならgeneric spanの固定した行列式を取り、cotangent tensor内で飽和した線束を得る。nef性\nで が擬有効となり、 と置けば、"
+      },
+      {
+        "page": 33,
+        "textStart": "局所化と削除面の相殺\n図を拡大 ↗TeXソース ↓\n1. 固定成分公式を全ての可除指数の多項式へ\n固定成分 で、法接束のcharactersを、形式的Chern rootsをとする。自然反標準character\nは であり、局所寄与は \n一つの整数方向で分母をpolarizeする"
+      },
+      {
+        "page": 34,
+        "textStart": "2. 自然線形化が削除面へのretractionを与える\n、 とする。 なら、\n（ ）、 （それ以外）が同じaffine空間に属す。これはを用いる箇所である。\n、 は からへのretractionで、線分homotopyは\nを固定する。従って で、包除原理による多項式定数項は\nと"
+      },
+      {
+        "page": 35,
+        "textStart": "固定擬有効誤差の除去\n図を拡大 ↗TeXソース ↓\n1. 最大の支配された底と縦次数の正規化\n上で が擬有効（は底上のample divisor）となる有理写像のうち、底の次元\nが最大のものを選ぶ。函数体も相対代数閉にする。が擬有効なら、の二つの切断比はに\n属する。そうでなければ"
+      },
+      {
+        "page": 36,
+        "textStart": "2. rank oneの積分から有界最大値計量へ\nは有効例外因子で、標準切断をとする。最大性は全に対し\nのgeneric rankを1にする。rankが大きければ、十分な底のample twistで二つの切\n断を作り、その比を押し下げることで最大性に反する。\nの局所枠に対し、sm"
+      },
+      {
+        "page": 37,
+        "textStart": "Proposition 5.1 — 不変twisted formsの降下\nを上記の有限被覆とし、 、deck群はに平行移動、に自明、に\ncompact torus を通って作用するとする。と のdeck不変標準枠を選ぶと、全、\nについて単射 \nが存在する。さらにある固定で右辺は非"
+      },
+      {
+        "page": 38,
+        "textStart": "1. 自然作用が二つのtensor因子で一致する\n不変標準枠の積をとする。不変形式を へ送ると、微分形式と反標準束の双方の自然作用\nがdeck作用と一致するため降下できる。射影による形式の引戻しは単射で、枠とのtensorは可逆、局所\n被覆も非消滅を保つ。の射影性により降下した正"
+      },
+      {
+        "page": 39,
+        "textStart": "編集側は原稿pp.1–17の主張と証明、固定成分公式の原典（スキャンの誌面540/PDF11、誌面562–\n565/PDF18–21）、Berndtsson・Fujino・Demailly–Kollár・DPS・LMPTXの入力記述と使用箇所、01\nの被覆・normを照合した。H"
+      },
+      {
+        "page": 40,
+        "textStart": "068 / 03\nWeb版を読む ↗\nCATALOGUE 068 · PAPER 03 / 7 概説\nBounded anticanonical metrics on klt\npairs and torus quotients\n有界計量を底へ移し、零捻りのEuler特性から切断を"
+      },
+      {
+        "page": 41,
+        "textStart": "Corollary 4.1 — 滑らかな射影多様体への帰結\nを滑らかな連結複素射影多様体とする。が滑らかな半正計量を持つなら、ある整数\nについて である。\nCorollary 4.1 · p. 18\n図の矢印に付した引用\n略号のない定理・補題・節・式番号は本原稿 Bounded "
+      },
+      {
+        "page": 42,
+        "textStart": "有界計量から零捻りを経由して正のCartier倍数の切断へ\n図を拡大 ↗TeXソース ↓\n1. Euler仮定を無限個の捻り形式へ移す\nはの多項式で、 で非零である。したがって無限個の正整数で非零コホモ\nロジーを持ち、部分列で次数を固定できる。有界計量の正の冪は乗数イデアルが自明"
+      },
+      {
+        "page": 43,
+        "textStart": "2. 新しいpencilを排除し、縦成分の最小比を引く\nと連結ファイバーを持つ のうち、ある とample に対し が擬\n有効となるものから最大を選ぶ。と例外因子で支配され、一般ファイバー上で非定数となる\npencilがあれば底を大きくできるため、そのようなpencilはない。正"
+      },
+      {
+        "page": 44,
+        "textStart": "3. Theorem 1.2 の証明 — 自然線形化を保つ商\n証明対象：Theorem 1.2 · p. 2\n証明の道筋。 補助ample線形化で完全な安定商を選ぶが、降下するのは元の自然反標準束である。軌道\n上限計量を有界にし、Theorem 1.1の切断を全ての欠落因子を越え"
+      },
+      {
+        "page": 45,
+        "textStart": "Propositions 3.2–3.3 · pp. 13–14Remark 3.6 · p. 18\n2. 軌道上限の有界性を先に証明する\n上の弱重み不等式を、代数弧に沿う移動持上げの位数へ変換する。位数の凸性と原点近傍の重み計算\nから極がないと分かる。作用グラフのコンパクト化と"
+      },
+      {
+        "page": 46,
+        "textStart": "残留トーラスmonodromyを処理し有限normで元の多様体へ戻す\n図を拡大 ↗TeXソース ↓\n1. 不変な標準枠と切断をテンソルする\n同伴原稿の構造定理は、有限étale被覆の普遍被覆を とし、前二因子の不変標準枠\nと、上の代数的トーラスに含まれる残留monodromyを保"
+      },
+      {
+        "page": 47,
+        "textStart": "5. どの論文が、どの段階を担うか\n入力\nDPS01・LMPTX23\n利用箇所\nLemma 2.1、pp. 5–6\n使用内容・確認範囲\nhard Lefschetzと飽和cotangent tensor部分層の負のChern類。入力の記述と適用仮定を直接照合。\n入力\nPT14\n利"
+      },
+      {
+        "page": 48,
+        "textStart": "入力\nAnticanonical nonvanishing from smooth semipositivity\n利用箇所\nCorollary 4.1、p. 18\n使用内容・確認範囲\nTheorem 2.1の自然monodromyとLemma 2.2のnorm。帰結への入力であり"
+      },
+      {
+        "page": 49,
+        "textStart": "068 / 04\nWeb版を読む ↗\nCATALOGUE 068 · PAPER 04 / 7 概説\nCohomological transfer and equivariant\nanticanonical sections\n指標を保って固定誤差を除き、不変切断をmonodrom"
+      },
+      {
+        "page": 50,
+        "textStart": "Theorem 7.2 — kernel条件による高次直像の消滅\nを滑らかな連結射影複素多様体の間の全射とする。は滑らかな半正Hermitian計量\nを持つ線束、その曲率をとする。上の線束には、局所重みがpshである正定値連続\nHermitian計量があると仮定する。submer"
+      },
+      {
+        "page": 51,
+        "textStart": "Fujisawa15 Taro Fujisawa — A remark on the decomposition theorem for direct images of canonical\nsheaves tensorized with semipositive vector "
+      },
+      {
+        "page": 52,
+        "textStart": "指定線形化の切断から二つの計量と固定イデアルを経て誤差を除く\n図を拡大 ↗TeXソース ↓\n1. 切断比の共通体から相対切断を作る\nと置く。 に対する は線形化も保持する。\n同じ固定切断を分子・分母に掛けると、内側の指数に対応する不変切断比の体は共通になる。独立な比\nから射影的な"
+      },
+      {
+        "page": 53,
+        "textStart": "2. 零次数を含む不変rank oneを確保する\nには自然な不変Jacobian切断がある。の指標がずれても、このJacobianの自\n然作用は変えない。全で \nとなる。下界はから来る。二つの独立な不変切断があれば底のample捻りで大域化し、入力と\nの冪を掛けて同じの倍数の不変"
+      },
+      {
+        "page": 54,
+        "textStart": "3. Proposition 2.2 の証明 — 正の連続最大値計量\n証明対象：Proposition 2.2 · pp. 6–8\nProposition 2.2 — 因子的正規化と最大値計量\nを滑らかな連結射影多様体、 を滑らかな半正計量を持つ線束とする。\n、 、 で、 は正規"
+      },
+      {
+        "page": 55,
+        "textStart": "正規等次元性と不変直交商を使い連続最大値を正のpsh計量にする\n図を拡大 ↗TeXソース ↓\n1. 正規化と等次元性で連続性を得る\n各底素因子上での最小正規化位数を引き、分母を消してと注入を作る。零因子は各底素因子上の少な\nくとも一成分を欠く。局所枠の像をとすると、 はprope"
+      },
+      {
+        "page": 56,
+        "textStart": "滑らかな一般ファイバー上では全台を持ち、局所一様収束が成り立つ。したがって最大値の負対数は\npshとなる。\n[Ber09, Theorem 1.2, 誌面 p. 533 / PDF p. 3]Proposition 2.2 · pp. 6–8\n3. 余次元2の零を排除し、全結論を"
+      },
+      {
+        "page": 57,
+        "textStart": "自然指数の実際の零値からhard Lefschetzと行列式で移送の入力へ\n図を拡大 ↗TeXソース ↓\n1. 実際の零値を持つ指数多項式を使う\n連結トーラスは恒等写像とホモトピックに作用するので、Hodge分解を通してに自明に作\n用する。従って自然不変指数の零値は である。同伴"
+      },
+      {
+        "page": 58,
+        "textStart": "証明の道筋。 有限被覆構造は の普遍被覆と残留compact torus作用を与える。に\nCorollary 4.3を適用し、不変標準枠を付けて降下させる。\ncompact monodromyに対する不変切断から有限normで元のXへ\n図を拡大 ↗TeXソース ↓\n1. comp"
+      },
+      {
+        "page": 59,
+        "textStart": "6. Theorem 7.2 の証明 — 連続捻りを通した調和的制限\n証明対象：Theorem 7.2 · pp. 17–19\n証明の道筋。 連続な底計量を一様近似し、Bochnerエネルギーが消える極限を取る。kernel条件が極限\n形式に底の標準余接因子を強制するため、非零の"
+      },
+      {
+        "page": 60,
+        "textStart": "Bochner–Kodaira恒等式から を得る。 の弱極限は正則で、\nが元の類を表す。固定参照計量の有限rank調和射影が、弱極限で同じ類を保持することを保\n証する。\nLemma 7.1 · p. 17[Dem12, Theorem I.5.21, pp. 43–44]Theo"
+      },
+      {
+        "page": 61,
+        "textStart": "7. どの論文が、どの段階を担うか\n入力\nBer09\n利用箇所\nProposition 2.2、p. 7\n役割・確認範囲\n滑らかな随伴積分の半正性。定理記述と不変直交商の使用を照合。\n入力\nPT14\n利用箇所\n§3、pp. 9–10\n役割・確認範囲\n特異な零次数係数の直像計量。g"
+      },
+      {
+        "page": 62,
+        "textStart": "入力\nInvariant anticanonical indices and conversion of twisted differentials\n利用箇所\nProposition 4.1 → Corollary 4.3、pp. 10–12\n役割・確認範囲\nTheorem 1."
+      },
+      {
+        "page": 63,
+        "textStart": "編集側ではTheorem 1.1・Corollary 1.2の仮定と全結論、Proposition 2.2・Corollary 4.3、§§2–4と\n§14.1の証明本文を読解した。入力原稿の自然指数・構造・norm、および上記解析定理の記述と適用を\n照合した。Nadelの記述確"
+      },
+      {
+        "page": 64,
+        "textStart": "068 / 05\nWeb版を読む ↗\nCATALOGUE 068 · PAPER 05 / 7 概説\nMetric descent and rank-preserving\ncontractions\n零次随伴rank、二つの計量、縮約後の切断比\n本原稿は、反標準計量を底へ降ろす操作"
+      },
+      {
+        "page": 65,
+        "textStart": "さらにが滑らかで随伴直像のbase changeが成り立つ非空Zariski開集合を取る。ある非\n空通常開集合 、Kähler形式、 について が 上で成\nり立てば、構成した計量はの非空通常開集合上で曲率が狭義正となる。これは大域的なKähler\n下界ではない。\nTheorem "
+      },
+      {
+        "page": 66,
+        "textStart": "Theorem 7.1 — 自然線形化での不変反標準切断\nを滑らかな連結射影複素多様体で （すべての ）とし、 が滑らかな半\n正値Hermitian計量を持つとする。に作用する各代数的トーラスに対して、ある整数が\n存在し、自然な反標準作用について\nとなる。 や、指標で捻った任意の"
+      },
+      {
+        "page": 67,
+        "textStart": "各引用に結果番号とページを付します。誌面番号とPDF内の位置が異なる場合は両方を示します。GitHubの閲覧リンクで\nはページ位置への自動移動を前提としません。\n2. Theorem 4.1 — 主定理の証明概略\n証明対象：Theorem 4.1 · p. 16\n証明の道筋。 計"
+      },
+      {
+        "page": 68,
+        "textStart": "計量降下、rank保存、許容極、不変切断の接続\n図を拡大 ↗TeXソース ↓\n1. 二種類の底計量と二つの出口\nTheorem 2.1は全零次随伴rankが1のとき、明示的なを用いて 上に非加重可積分な計量を\n作る。一方Lemmas 3.1–3.2は、有限体積を与える線束と切断を"
+      },
+      {
+        "page": 69,
+        "textStart": "2. 非消滅への経路\nTheorem 7.1の商の一般ファイバーでは、作用の無限小ベクトル場の外積が不変切断を与え、不変な切\n断比は商の函数体へ降りる。これが零次を含む不変随伴rank 1を供給する。移送後の底にTheorem 6.1\nを適用し、元の許容境界がであることから極が残"
+      },
+      {
+        "page": 70,
+        "textStart": "全零次rankとtoroidal次数から非加重可積分な計量を得る\n図を拡大 ↗TeXソース ↓\n1. 例外台とすべてのvaluation\nなら 上のすべての素因子はで、 上例外的である。同次元性により垂直素因子は底の\n素因子を支配するため、補正の台が高余次元の影に隠れない。 と置"
+      },
+      {
+        "page": 71,
+        "textStart": "2. 積分密度を計量と同定して延長する\nと置く。全直像のrank 1とJacobian切断が、滑らかな開集合上で\nを与えるため、はその直像線束のノルムになる。滑らかな直像正値性に\nより はpshである。任意の部分線束への制限を正値とした議論ではない。\n補正後の重みは である。分岐"
+      },
+      {
+        "page": 72,
+        "textStart": "垂直最小値、水平補間、切断比の制御によるrank保存\n図を拡大 ↗TeXソース ↓\n1. 正規化した切断と許容極\n一般切断をtoroidal同次元モデルで と書く。の係数は各垂直成分の重\n複度で割った次数の最小値で、、各底素因子の上にはの係数が0の成分がある。そのような成\n分がす"
+      },
+      {
+        "page": 73,
+        "textStart": "2. 零次数の系から小さい底を選ぶ\nがbigなら上の出口に入る。そうでなければ錐双対性により非零movable類を選び、\nとする。に の一般有効代表を加えた有効klt境界へorbifold余接\n商の非負性を適用し、として余接tensor内の線束について を得る。 、\nRieman"
+      },
+      {
+        "page": 74,
+        "textStart": "捻った形式から一般切断を作り二計量を小さい底へ移す\n図を拡大 ↗TeXソース ↓\n1. 捻った形式を有効因子へ変える\nの有界重みは全冪の乗数イデアルを自明にする。正次数形式がないことから、したがって\nは定数項が非零の多項式である。無限に大きい指数で非零のコホモロジーをhard\nL"
+      },
+      {
+        "page": 75,
+        "textStart": "2. 最大許容系でrankを強制する\nがある について擬有効になる系を許容とする。積を取っても許容なので\n像次元最大の系が選べる。像が全次元ならはbigで終わる。そうでなければ小さい連結ファイ\nバー底を取り、許容系の比はへ入る。\nの三指数関係の水平部分から極のない一般切断を作る。"
+      },
+      {
+        "page": 76,
+        "textStart": "自然な作用場の外積、二計量移送、許容極の除去\n図を拡大 ↗TeXソース ↓\n1. 商の上で零次からrankを作る\ncompact real formで計量の重みを平均する。作用が自明ならTheorem 6.1を, \nで適用する。そうでなければの滑らかな射影商モデルを取る。トーラス"
+      },
+      {
+        "page": 77,
+        "textStart": "2. 許容境界が零であることを最後に使う\n商が点なら作用場の全外積が既に大域切断を与える。正次元なら二計量移送を適用し、正次数形式のな\nい底でTheorem 6.1を使う。得た切断を戻す操作は底函数による乗法なので自然不変性を保つ。元の境\n界が であるため、極は例外台へ消え、滑ら"
+      },
+      {
+        "page": 78,
+        "textStart": "編集側では、上記四定理の仮定・量化・全結論、§§2–4、Proposition 5.3、§6.2、§7.1の主要段階を照\n合した。BerndtssonのTheorem 1.2と曲率式、DPSのTheorem 2.1.1、Campana–PăunのTheorem\n1.3、HPSのT"
+      },
+      {
+        "page": 79,
+        "textStart": "068 / 06\nWeb版を読む ↗\nCATALOGUE 068 · PAPER 06 / 7 概説\nIntegrable metrics and effectivity with\ncontrolled boundary\n可積分性をklt境界へ変え、例外的な補正を消して反標準切断"
+      },
+      {
+        "page": 80,
+        "textStart": "は有限生成代数となる。ここではの有効性は仮定しない。\nTheorem 4.3 · pp. 9–10\nTheorem 5.1 — 一つの固定擬有効誤差の除去\nを滑らかな連結射影複素多様体、をsmoothly semipositiveとする。を固定した擬\n有効Cartier因子とする"
+      },
+      {
+        "page": 81,
+        "textStart": "OpenAI26b OpenAI — Invariant anticanonical indices and conversion of twisted differentials：零点での値\nを保持する不変指数。2026-09-26。\nOpenAI26e OpenAI — Me"
+      },
+      {
+        "page": 82,
+        "textStart": "主結果間の通常変換の全体図\n図を拡大 ↗TeXソース ↓\n1. 固定するものと底で変換するもの\n行列式は一つの擬有効誤差を固定し、Iitaka体は全てのの比を一つの底へ集める。底の垂直最小値\nと、rank一の直像が与える の計量は別の役割を持ち、Theorem 1.1で合流する。"
+      },
+      {
+        "page": 83,
+        "textStart": "3. Theorem 1.1 の証明 — 重み付き近似から支持付き非消滅へ\n証明対象：Theorem 1.1 · p. 2\n証明の道筋。 近似の固定部から境界とJacobianを引いた符号付き因子を作り、その正部をbig klt境界\nに組み込む。非消滅の入力はこの有効境界であり、"
+      },
+      {
+        "page": 84,
+        "textStart": "Lemma 2.1; Theorem 2.2 · pp. 5–7\n2. ampleの余地にを入れ、補正だけを残す\nがampleとなる小さい有理数を取り、一般の自由因子と小係数のample代表を加えて\nを作る。すると はklt、 はbig、 は擬有効である。big-\nboundar"
+      },
+      {
+        "page": 85,
+        "textStart": "1. 一つの共通摂動を許す計量\nLemma 4.1では体積判定、strong openness、小指数可積分性とHölder不等式を用い、元の計量とbig\n計量を小さい有理係数で混合する。全体でstrictな下界とframeの可積分性が両立し、有限個のを滑ら\nかな計量で加減できる"
+      },
+      {
+        "page": 86,
+        "textStart": "固定誤差から反標準切断への全体経路\n図を拡大 ↗TeXソース ↓\n1. 比の体・垂直最小値・rank一\n平坦化を経て を準備し、底の余次元2以上へ写る素因子が例外的になるようにする。最\n終的な滑らかなの平坦性は主張しない。 に対し、同じ線形系の比が底の\n体に入ることから\nを得る。"
+      },
+      {
+        "page": 87,
+        "textStart": "2. strict計量を作り、補正の極を消す\nと から、 に底の正曲率を支配する特異計量がある。smooth\nsemipositive計量との小さい混合により、と全空間上の を得る。直像の乗数\nイデアル付き包含は同型なので、Păun–Takayamaの延長定理が通常の直像へ適用で"
+      },
+      {
+        "page": 88,
+        "textStart": "tensorから固定誤差を経る変換\n図を拡大 ↗TeXソース ↓\n1. 一つの行列式を固定する\nの像の一般点でのspanを飽和してとし、 を取る。原稿は\ngeneric tangent nefnessのcotangent部分束版を使ってを擬有効とする。有限個の元からなる\n一般基底"
+      },
+      {
+        "page": 89,
+        "textStart": "証明の道筋。 零点の値を保持する不変指数から不変形式を作る。通常変換へ渡すのではなく、不変比の\n体と不変有理切断を保持し、補正を底の不変関数で行う。\n不変指数から指標を保った帰還\n図を拡大 ↗TeXソース ↓\n1. 不変指数から底の曲率へ\n連結トーラスの作用は に自明で、指数の零"
+      },
+      {
+        "page": 90,
+        "textStart": "Proposition 9.1 · p. 32\n2. 全valuationを検査し、不変な切断を戻す\n別のsimplicial toroidalモデルを用い、 と垂直最小値\nを取る。 であり、は擬有効。不変直像の滑らかな直交商計量から体積密度を得る。補正\nは を満たす。解消 上で"
+      },
+      {
+        "page": 91,
+        "textStart": "入力\nPăun–Takayamaの特異直像\n利用先\nTheorem 5.1\n役割・確認範囲\nにより一般同型の仮定が成立。記述と適用を照合。\n入力\nInvariant anticanonical indices\n利用先\nProposition 9.1 → Theorem 9.2\n役"
+      },
+      {
+        "page": 92,
+        "textStart": "上記は著者の主張と証明の構成の紹介である。編集側では§§2–5.5および§9の記述・証明本文を読み、\nBCHM、Corti–Lazić、Păun–Takayamaと同カタログの直接入力の記述・使用箇所を照合した。\ngeneric tangent nefnessの入力とhard L"
+      },
+      {
+        "page": 93,
+        "textStart": "068 / 07\nWeb版を読む ↗\nCATALOGUE 068 · PAPER 07 / 7 概説\nExact orders and invariant anticanonical\nlinear systems\n有限生成環の境界rayで次数零を達成し、軌道次数から不変指標を得る"
+      },
+      {
+        "page": 94,
+        "textStart": "Theorem 1.2 — 自然な反標準線形化の不変切断\nを滑らかな連結射影複素多様体、をsmoothly semipositiveとし、すべてので\nを仮定する。に作用する任意の代数トーラスについて、自然な反標準線形化\nに対し、ある正整数で となる。\nTheorem 1.2 · "
+      },
+      {
+        "page": 95,
+        "textStart": "Proposition 12.1 — 制御された不変素因子を含む有限錐\nを滑らかな連結有理連結射影複素多様体とし、は滑らかな半正値計量を持つとす\nる。に代数的トーラスが作用し、には自然線形化を与える。このとき内に、不変\n有効有理因子の類で生成される有理多面錐が存在し、ある整数で "
+      },
+      {
+        "page": 96,
+        "textStart": "2. Theorem 1.1 の証明 — nullな極の体から厳密達成へ\n証明対象：Theorem 1.1 · p. 3\n証明の道筋。 nullな極を持つ有理関数を一つの相対代数閉な体にまとめる。その底にrank一の体積計量\nと有限生成環を作る。二つの固定因子で元の列を表し、境界"
+      },
+      {
+        "page": 97,
+        "textStart": "1. 曲率のnull条件が全rank一を保証する\nは体である。モニック方程式の係数の極が代数的元の極を抑\nえるので、は相対代数閉で有限生成となる。 、 を取る。底のvery ample系の\n比の極を一つのnull因子で抑えると となる。 の一般ファイバー上の任意の切\n断をJaco"
+      },
+      {
+        "page": 98,
+        "textStart": "3. Proposition 2.2 の証明 — 補正を消してからvaluationを比較\nする\n証明対象：Proposition 2.2 · pp. 7–8\nProposition 2.2 — 境界生成元の双有理な帰還\nを滑らかな整射影複素多様体、を正規射影多様体、 を双有理射"
+      },
+      {
+        "page": 99,
+        "textStart": "境界生成元の選択と例外補正の除去\n図を拡大 ↗TeXソース ↓\n1. 有限個の実際の生成元から選ぶ\n、 とし、分母を除いて を 環の次数 の切断とする。各\n切断を生成元の単項式の和で書くと、和のvaluation以下の単項式が少なくとも一つある。境界ray外の\n生成元は第一次数を"
+      },
+      {
+        "page": 100,
+        "textStart": "2. 補正のvaluationを零と仮定しない\nと置く。生成元の切断不等式と垂直最小値から を得る。\n水平係数の非負性は入力列の極限から従う。これをで押し下げると補正が消え、\nとなる。ここで初めて中心付きvaluationの非負性を使い、と\n結ぶ。高次モデル上の例外補正が正のva"
+      },
+      {
+        "page": 101,
+        "textStart": "軌道次数から不変切断へ\n図を拡大 ↗TeXソース ↓\n1. sourceの極端な重みを形式へ上げる\n切断への左作用を とする。余指標のsource 上の自然なの重みをとすれ\nば、非零の有効な余指標ではである。半正計量の軌道上の対数ノルムの凹性によりは固定成分の\n最大重みとなる。局"
+      },
+      {
+        "page": 102,
+        "textStart": "2. 行列式rankのshiftを保持する\n像の一般点でのspanのrankをとし、その行列式をの中で飽和してを固定する。原稿は\nCalabi–Yau計量と部分束の曲率評価からを示す。基底の成分を固定して残りを変える\nと、 の固有切断の重みは となる。上の の重み を用いると\nは"
+      },
+      {
+        "page": 103,
+        "textStart": "形式弧へのexact attainmentの適用\n図を拡大 ↗TeXソース ↓\n1. null条件と中心を確認する\nではは擬有効錐上非負、 だから となる。 では定義から\n。generic arcは を与え、 の像は零またはである。閉点の像で局所環が\nへ入り、単元の次数が零となる"
+      },
+      {
+        "page": 104,
+        "textStart": "sourceの最大指標、固定次数、頂点近似から不変積へ\n図を拡大 ↗TeXソース ↓\n1. 非零Euler数をsourceの係数に残す\n固定成分上の のfiber characterの凸包をとする。非零cocharacter に対し、source成分\nの重み はnef性とattr"
+      },
+      {
+        "page": 105,
+        "textStart": "2. 行列式のrank shiftが固定arc orderになる\n形式のgeneric spanのrankを、飽和行列式をとする。余接tensorへの包含とnef反標準性からは\n擬有効であり、 では自明束として処理する。固定した有限個の基底形式で補ってwedgeを取り、\nを得る。"
+      },
+      {
+        "page": 106,
+        "textStart": "制御された不変体からnefな底と非零不変商類へ\n図を拡大 ↗TeXソース ↓\n1. 不変体が全正指数の不変rankを強制する\nを、ある で が擬有効になる不変有理関数と零からなる体とする。極の不等式と連結\nトーラスの有限軌道の自明性により、は相対代数閉で有限生成である。底の作用は"
+      },
+      {
+        "page": 107,
+        "textStart": "2. 有界計量、nef reduction、局所的な極\nLemma 8.2ではsmoothな係数計量とcompact平均の直交商を使い、高次momentの極限からの有界\n半正値計量を得る。 は を与える。Lemma 8.3でnef reductionをflat modelへ移し、"
+      },
+      {
+        "page": 108,
+        "textStart": "制御された極の体、消える境界、多重次数不変環\n図を拡大 ↗TeXソース ↓\n1. 有限個を除く素因子を同じ底から引く\n制御された素因子上だけに極を持つ関数の体をとする。有理連結性は を与える。制御さ\nれた素因子の類の有限個の基底を選ぶと、残りの素因子を含む主因子関係の関数はに入り"
+      },
+      {
+        "page": 109,
+        "textStart": "Controlled boundaryのTheorem 2.2は、 の係数をすべて1未満にし、\nを と例外台に支持させる。従って である。この等式は通常Picard群だけの等\n式ではなく、標準不変有理切断の押下げによって指標成分も零になる。近似定理の通常有理線形同値を\nそのまま同"
+      },
+      {
+        "page": 110,
+        "textStart": "入力\nControlled boundary, Theorem 4.3\n利用箇所\n§§3.2–4、Theorem 1.1\n役割・必要条件\n二つの有理因子方向に共通のを選び、実際の因子の環を有限生成にする。\n入力\nDPSのhard Lefschetz\n利用箇所\n§7.1、Theor"
+      },
+      {
+        "page": 111,
+        "textStart": "10. 原典を読む入口と確認範囲\nLemma 2.1 · pp. 5–6 — 有限生成環から境界rayの元を実際に選ぶ。\nProposition 2.2 · pp. 7–8 — 例外補正をpushforwardで消した後にvaluationを比較する。\nLemmas 3.1–3."
+      }
+    ],
+    "internalDestinations": [
+      {
+        "page": 2,
+        "destination": "catalog-068"
+      },
+      {
+        "page": 2,
+        "destination": "catalog-068"
+      },
+      {
+        "page": 2,
+        "destination": "anticanonical-smooth-semipositivity"
+      },
+      {
+        "page": 2,
+        "destination": "anticanonical-smooth-semipositivity"
+      },
+      {
+        "page": 2,
+        "destination": "invariant-anticanonical-indices"
+      },
+      {
+        "page": 2,
+        "destination": "invariant-anticanonical-indices"
+      },
+      {
+        "page": 2,
+        "destination": "bounded-anticanonical-metrics"
+      },
+      {
+        "page": 2,
+        "destination": "bounded-anticanonical-metrics"
+      },
+      {
+        "page": 2,
+        "destination": "cohomological-transfer"
+      },
+      {
+        "page": 2,
+        "destination": "cohomological-transfer"
+      },
+      {
+        "page": 2,
+        "destination": "metric-descent-contractions"
+      },
+      {
+        "page": 2,
+        "destination": "metric-descent-contractions"
+      },
+      {
+        "page": 2,
+        "destination": "integrable-metrics-controlled-boundary"
+      },
+      {
+        "page": 2,
+        "destination": "integrable-metrics-controlled-boundary"
+      },
+      {
+        "page": 2,
+        "destination": "exact-orders-anticanonical"
+      },
+      {
+        "page": 2,
+        "destination": "exact-orders-anticanonical"
+      },
+      {
+        "page": 4,
+        "destination": "anticanonical-smooth-semipositivity"
+      },
+      {
+        "page": 4,
+        "destination": "anticanonical-smooth-semipositivity"
+      },
+      {
+        "page": 5,
+        "destination": "invariant-anticanonical-indices"
+      },
+      {
+        "page": 5,
+        "destination": "invariant-anticanonical-indices"
+      },
+      {
+        "page": 6,
+        "destination": "bounded-anticanonical-metrics"
+      },
+      {
+        "page": 6,
+        "destination": "bounded-anticanonical-metrics"
+      },
+      {
+        "page": 7,
+        "destination": "cohomological-transfer"
+      },
+      {
+        "page": 7,
+        "destination": "cohomological-transfer"
+      },
+      {
+        "page": 7,
+        "destination": "metric-descent-contractions"
+      },
+      {
+        "page": 7,
+        "destination": "metric-descent-contractions"
+      },
+      {
+        "page": 8,
+        "destination": "integrable-metrics-controlled-boundary"
+      },
+      {
+        "page": 8,
+        "destination": "integrable-metrics-controlled-boundary"
+      },
+      {
+        "page": 9,
+        "destination": "exact-orders-anticanonical"
+      },
+      {
+        "page": 9,
+        "destination": "exact-orders-anticanonical"
+      },
+      {
+        "page": 12,
+        "destination": "anticanonical-smooth-semipositivity--proof-overview"
+      },
+      {
+        "page": 12,
+        "destination": "invariant-anticanonical-indices--proof-3"
+      },
+      {
+        "page": 12,
+        "destination": "anticanonical-smooth-semipositivity--proof-overview"
+      },
+      {
+        "page": 12,
+        "destination": "bounded-anticanonical-metrics--proof-3"
+      },
+      {
+        "page": 13,
+        "destination": "anticanonical-smooth-semipositivity--proof-overview"
+      },
+      {
+        "page": 13,
+        "destination": "cohomological-transfer--proof-4"
+      },
+      {
+        "page": 13,
+        "destination": "invariant-anticanonical-indices--proof-1"
+      },
+      {
+        "page": 13,
+        "destination": "cohomological-transfer--proof-3"
+      },
+      {
+        "page": 13,
+        "destination": "invariant-anticanonical-indices--proof-1"
+      },
+      {
+        "page": 13,
+        "destination": "integrable-metrics-controlled-boundary--proof-5"
+      },
+      {
+        "page": 14,
+        "destination": "metric-descent-contractions--proof-1"
+      },
+      {
+        "page": 14,
+        "destination": "integrable-metrics-controlled-boundary--proof-3"
+      },
+      {
+        "page": 14,
+        "destination": "metric-descent-contractions--proof-1"
+      },
+      {
+        "page": 14,
+        "destination": "exact-orders-anticanonical--proof-1"
+      },
+      {
+        "page": 14,
+        "destination": "integrable-metrics-controlled-boundary--proof-2"
+      },
+      {
+        "page": 14,
+        "destination": "exact-orders-anticanonical--proof-1"
+      },
+      {
+        "page": 14,
+        "destination": "integrable-metrics-controlled-boundary--proof-1"
+      },
+      {
+        "page": 14,
+        "destination": "exact-orders-anticanonical--proof-7"
+      },
+      {
+        "page": 19,
+        "destination": "anticanonical-smooth-semipositivity--theorem-1-2"
+      },
+      {
+        "page": 32,
+        "destination": "invariant-anticanonical-indices--theorem-1-1"
+      },
+      {
+        "page": 34,
+        "destination": "invariant-anticanonical-indices--theorem-1-2"
+      },
+      {
+        "page": 51,
+        "destination": "cohomological-transfer--proof-2"
+      },
+      {
+        "page": 51,
+        "destination": "cohomological-transfer--proof-3"
+      },
+      {
+        "page": 51,
+        "destination": "cohomological-transfer--proof-4"
+      },
+      {
+        "page": 81,
+        "destination": "integrable-metrics-controlled-boundary--theorem-5-1"
+      },
+      {
+        "page": 82,
+        "destination": "integrable-metrics-controlled-boundary--proof-1"
+      },
+      {
+        "page": 82,
+        "destination": "integrable-metrics-controlled-boundary--proof-1"
+      },
+      {
+        "page": 82,
+        "destination": "integrable-metrics-controlled-boundary--proof-3"
+      },
+      {
+        "page": 82,
+        "destination": "integrable-metrics-controlled-boundary--proof-4"
+      },
+      {
+        "page": 82,
+        "destination": "integrable-metrics-controlled-boundary--theorem-4-3"
+      },
+      {
+        "page": 82,
+        "destination": "integrable-metrics-controlled-boundary--theorem-9-2"
+      },
+      {
+        "page": 82,
+        "destination": "integrable-metrics-controlled-boundary--proof-5"
+      }
+    ],
+    "uniqueExternalUrls": [
+      "https://annals.math.princeton.edu/1968/87-3/p07",
+      "https://annals.math.princeton.edu/wp-content/uploads/annals-v169-n2-p04.pdf",
+      "https://annals.math.princeton.edu/wp-content/uploads/annals-v169-n2-p04.pdf#page=3",
+      "https://arxiv.org/pdf/1005.0614v3",
+      "https://arxiv.org/pdf/1005.0614v3#page=5",
+      "https://arxiv.org/pdf/1009.3188v2",
+      "https://arxiv.org/pdf/1009.3188v2#page=2",
+      "https://arxiv.org/pdf/1109.4382v3",
+      "https://arxiv.org/pdf/1109.4382v3#page=1",
+      "https://arxiv.org/pdf/1210.2092v3",
+      "https://arxiv.org/pdf/1210.2092v3#page=3",
+      "https://arxiv.org/pdf/1408.4308v2",
+      "https://arxiv.org/pdf/1408.4308v2#page=8",
+      "https://arxiv.org/pdf/1409.5504v1",
+      "https://arxiv.org/pdf/1409.5504v1#page=20",
+      "https://arxiv.org/pdf/1409.5504v1#page=24",
+      "https://arxiv.org/pdf/1512.03887v1",
+      "https://arxiv.org/pdf/1512.03887v1#page=1",
+      "https://arxiv.org/pdf/1607.04684v1",
+      "https://arxiv.org/pdf/1607.04684v1#page=2",
+      "https://arxiv.org/pdf/1703.00292v2",
+      "https://arxiv.org/pdf/1703.00292v2#page=2",
+      "https://arxiv.org/pdf/1703.03175v4",
+      "https://arxiv.org/pdf/1703.03175v4#page=5",
+      "https://arxiv.org/pdf/1810.12733v1",
+      "https://arxiv.org/pdf/1810.12733v1#page=1",
+      "https://arxiv.org/pdf/alg-geom/9408003v1",
+      "https://arxiv.org/pdf/alg-geom/9408003v1#page=14",
+      "https://arxiv.org/pdf/math/0006205v2",
+      "https://arxiv.org/pdf/math/0006205v2#page=8",
+      "https://arxiv.org/pdf/math/0405285v1",
+      "https://arxiv.org/pdf/math/0405285v1#page=6",
+      "https://arxiv.org/pdf/math/0511225v2",
+      "https://arxiv.org/pdf/math/0511225v2#page=14",
+      "https://arxiv.org/pdf/math/0511225v2#page=3",
+      "https://arxiv.org/pdf/math/0610203v2",
+      "https://arxiv.org/pdf/math/0610203v2#page=13",
+      "https://arxiv.org/pdf/math/0703344v4",
+      "https://arxiv.org/pdf/math/0703344v4#page=2",
+      "https://arxiv.org/pdf/math/9910118v3",
+      "https://arxiv.org/pdf/math/9910118v3#page=7",
+      "https://ems.press/content/serial-article-files/31138",
+      "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/overview.pdf",
+      "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Anticanonical-nonvanishing-from-smooth-semipositivity-September-26-2026/main.pdf",
+      "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Bounded-anticanonical-metrics-on-klt-pairs-and-torus-quotients-September-26-2026/main.pdf",
+      "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Cohomological-transfer-and-equivariant-anticanonical-sections-September-26-2026/main.pdf",
+      "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026/main.pdf",
+      "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Integrable-metrics-and-effectivity-with-controlled-boundary-September-26-2026/main.pdf",
+      "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Invariant-anticanonical-indices-and-conversion-of-twisted-differentials-September-26-2026/main.pdf",
+      "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Metric-descent-and-rank-preserving-contractions-September-26-2026/main.pdf",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/anticanonical-smooth-semipositivity/invariant.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/anticanonical-smooth-semipositivity/invariant.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/anticanonical-smooth-semipositivity/main.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/anticanonical-smooth-semipositivity/main.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/anticanonical-smooth-semipositivity/transfer.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/anticanonical-smooth-semipositivity/transfer.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/anticanonical-smooth-semipositivity/volume.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/anticanonical-smooth-semipositivity/volume.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/bounded-anticanonical-metrics/bounded.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/bounded-anticanonical-metrics/bounded.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/bounded-anticanonical-metrics/invariant.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/bounded-anticanonical-metrics/invariant.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/bounded-anticanonical-metrics/smooth.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/bounded-anticanonical-metrics/smooth.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/cohomological-transfer/kernel.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/cohomological-transfer/kernel.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/cohomological-transfer/maximum.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/cohomological-transfer/maximum.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/cohomological-transfer/natural.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/cohomological-transfer/natural.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/cohomological-transfer/smooth.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/cohomological-transfer/smooth.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/cohomological-transfer/transfer.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/cohomological-transfer/transfer.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/exact-orders-anticanonical/arc.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/exact-orders-anticanonical/arc.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/exact-orders-anticanonical/controlled-cone.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/exact-orders-anticanonical/controlled-cone.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/exact-orders-anticanonical/endpoint.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/exact-orders-anticanonical/endpoint.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/exact-orders-anticanonical/euler-polytope.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/exact-orders-anticanonical/euler-polytope.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/exact-orders-anticanonical/exact.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/exact-orders-anticanonical/exact.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/exact-orders-anticanonical/invariant-extension.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/exact-orders-anticanonical/invariant-extension.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/exact-orders-anticanonical/invariant.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/exact-orders-anticanonical/invariant.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/integrable-metrics-controlled-boundary/boundary.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/integrable-metrics-controlled-boundary/boundary.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/integrable-metrics-controlled-boundary/conversion.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/integrable-metrics-controlled-boundary/conversion.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/integrable-metrics-controlled-boundary/invariant.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/integrable-metrics-controlled-boundary/invariant.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/integrable-metrics-controlled-boundary/overview.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/integrable-metrics-controlled-boundary/overview.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/integrable-metrics-controlled-boundary/ring.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/integrable-metrics-controlled-boundary/ring.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/integrable-metrics-controlled-boundary/tensor.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/integrable-metrics-controlled-boundary/tensor.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/invariant-anticanonical-indices/conversion.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/invariant-anticanonical-indices/conversion.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/invariant-anticanonical-indices/descent.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/invariant-anticanonical-indices/descent.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/invariant-anticanonical-indices/index.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/invariant-anticanonical-indices/index.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/invariant-anticanonical-indices/overview.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/invariant-anticanonical-indices/overview.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/metric-descent-contractions/allowed-poles.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/metric-descent-contractions/allowed-poles.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/metric-descent-contractions/contraction.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/metric-descent-contractions/contraction.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/metric-descent-contractions/invariant.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/metric-descent-contractions/invariant.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/metric-descent-contractions/metric.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/metric-descent-contractions/metric.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/metric-descent-contractions/overview.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/metric-descent-contractions/overview.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/overview/exact-routes.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/overview/exact-routes.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/overview/index-routes.ja.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/overview/index-routes.ja.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/ja/catalog/068/",
+      "https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/anticanonical-smooth-semipositivity/",
+      "https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/bounded-anticanonical-metrics/",
+      "https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/cohomological-transfer/",
+      "https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/exact-orders-anticanonical/",
+      "https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/integrable-metrics-controlled-boundary/",
+      "https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/invariant-anticanonical-indices/",
+      "https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/metric-descent-contractions/",
+      "https://people.math.harvard.edu/~mpopa/papers/HPS.pdf",
+      "https://people.math.harvard.edu/~mpopa/papers/HPS.pdf#page=31",
+      "https://webhomes.maths.ed.ac.uk/~v1ranick/papers/as2.pdf",
+      "https://webhomes.maths.ed.ac.uk/~v1ranick/papers/as2.pdf#page=11",
+      "https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/agbook.pdf",
+      "https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/agbook.pdf#page=43",
+      "https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/analmeth.pdf",
+      "https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/analmeth.pdf#page=38",
+      "https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/dps4.pdf",
+      "https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/dps4.pdf#page=1",
+      "https://www.numdam.org/item/10.1007/s10240-019-00105-w.pdf",
+      "https://www.numdam.org/item/10.1007/s10240-019-00105-w.pdf#page=2",
+      "https://www.numdam.org/item/10.1007/s10240-019-00105-w.pdf#page=3"
+    ]
+  },
+  "en": {
+    "pages": 119,
+    "chapters": [
+      {
+        "title": "Anticanonical nonvanishing under smooth semipositivity",
+        "page": 3
+      },
+      {
+        "title": "Anticanonical nonvanishing from smooth semipositivity",
+        "page": 19
+      },
+      {
+        "title": "Invariant anticanonical indices and conversion of twisted differentials",
+        "page": 31
+      },
+      {
+        "title": "Bounded anticanonical metrics on klt pairs and torus quotients",
+        "page": 43
+      },
+      {
+        "title": "Cohomological transfer and equivariant anticanonical sections",
+        "page": 54
+      },
+      {
+        "title": "Metric descent and rank-preserving contractions",
+        "page": 71
+      },
+      {
+        "title": "Integrable metrics and effectivity with controlled boundary",
+        "page": 86
+      },
+      {
+        "title": "Exact orders and invariant anticanonical linear systems",
+        "page": 100
+      }
+    ],
+    "externalLinks": 527,
+    "internalLinks": 61,
+    "pageStarts": [
+      {
+        "page": 1,
+        "textStart": "OpenAI Math Digest\nCATALOGUE 068\nAnticanonical nonvanishing\nunder smooth semipositivity\nCatalogue synthesis & 7 proof overviews\nIndependent "
+      },
+      {
+        "page": 2,
+        "textStart": "Contents\nThe synthesis comes first, followed by all 7 overviews in official catalogue order. The contents\nand citations are clickable. Wide "
+      },
+      {
+        "page": 3,
+        "textStart": "Catalogue 068 · Synthesis\nRead on the website ↗\nCATALOGUE 068\nAnticanonical nonvanishing under\nsmooth semipositivity\nThe seven manuscripts, "
+      },
+      {
+        "page": 4,
+        "textStart": "Catalogue 068 · 2026-10-12 checked source snapshot\n#\n01\nManuscript and overview\nAnticanonical nonvanishing from smooth semipositivity →\nShor"
+      },
+      {
+        "page": 5,
+        "textStart": "#\n02\nManuscript and overview\nInvariant anticanonical indices and conversion of twisted differentials →\nShort name: Invariant anticanonical i"
+      },
+      {
+        "page": 6,
+        "textStart": "#\n03\nManuscript and overview\nBounded anticanonical metrics on klt pairs and torus quotients →\nShort name: Bounded anticanonical metrics\nSept"
+      },
+      {
+        "page": 7,
+        "textStart": "#\n04\nManuscript and overview\nCohomological transfer and equivariant anticanonical sections →\nShort name: Cohomological transfer\nSeptember 26"
+      },
+      {
+        "page": 8,
+        "textStart": "#\n05\nManuscript and overview\nMetric descent and rank-preserving contractions →\nShort name: Metric descent\nSeptember 26, 2026 · 76 pages\nOrig"
+      },
+      {
+        "page": 9,
+        "textStart": "#\n06\nManuscript and overview\nIntegrable metrics and effectivity with controlled boundary →\nShort name: Controlled boundary\nSeptember 26, 202"
+      },
+      {
+        "page": 10,
+        "textStart": "#\n07\nManuscript and overview\nExact orders and invariant anticanonical linear systems →\nShort name: Exact orders\nSeptember 26, 2026 · 41 page"
+      },
+      {
+        "page": 11,
+        "textStart": "OpenAI26b OpenAI — Invariant anticanonical indices and conversion of twisted\ndifferentials. Connects independent localization/deleted-face a"
+      },
+      {
+        "page": 12,
+        "textStart": "Branching uses of the invariant index\nThe natural index and two downstream uses\nOpen figure ↗TeX source ↓\nFor the natural anticanonical acti"
+      },
+      {
+        "page": 13,
+        "textStart": "Metric descent and finite generation meet at exact\nattainment\nUnweighted metrics and finite generation give exact order zero\nOpen figure ↗Te"
+      },
+      {
+        "page": 14,
+        "textStart": "Metric descent from 05 is also used in the alternative route of 06 §5.3, separate from its main\nweighted support-control route. Weighted and"
+      },
+      {
+        "page": 15,
+        "textStart": "Input result\nAnticanonical nonvanishing from smooth semipositivity · [OpenAI26a, Theorem 2.1; Lemma 2.2,\npp. 5, 8]\nRecipient and use\nCohomol"
+      },
+      {
+        "page": 16,
+        "textStart": "Input result\nMetric descent and rank-preserving contractions · [OpenAI26e, Theorem 2.1, p. 7]\nRecipient and use\nIntegrable metrics and effec"
+      },
+      {
+        "page": 17,
+        "textStart": "Input result\nIntegrable metrics and effectivity with controlled boundary · [OpenAI26f, Theorem 2.2, pp. 6–7]\nRecipient and use\nExact orders "
+      },
+      {
+        "page": 18,
+        "textStart": "Each article is a reading guide based on checking hypotheses and conclusions, selected core\nproof passages, and the statements and uses of d"
+      },
+      {
+        "page": 19,
+        "textStart": "068 / 01\nRead on the website ↗\nCATALOGUE 068 · PAPER 01 / 7 Overview\nAnticanonical nonvanishing from smooth\nsemipositivity\nFinite-adjoint-vo"
+      },
+      {
+        "page": 20,
+        "textStart": "If a line bundle  has a semipositive singular Hermitian metric with locally bounded\nweights, there are integers  with \nThe weights of  need "
+      },
+      {
+        "page": 21,
+        "textStart": "BDPP Sébastien Boucksom; Jean-Pierre Demailly; Mihai Păun; Thomas Peternell — The pseudo-effective\ncone of a compact Kähler manifold and var"
+      },
+      {
+        "page": 22,
+        "textStart": "1. The cover retains monodromy\nThe structure theorem gives a finite étale cover  with universal cover . The\nRicci-flat factor  has a paralle"
+      },
+      {
+        "page": 23,
+        "textStart": "Ordinary nonvanishing by induction\nOpen figure ↗TeX source ↓\n1. Finite volume controls the tangent slope on a supporting face\nSince  is pseu"
+      },
+      {
+        "page": 24,
+        "textStart": "2. One determinant and a base controlling every section ratio\nThe no-forms assumption gives . The Riemann–Roch polynomial  has\nconstant term"
+      },
+      {
+        "page": 25,
+        "textStart": "Proposition 5.1 — Two-metric transfer\nLet  be smooth connected projective complex varieties and  normal projective.\nLet  and  be projective "
+      },
+      {
+        "page": 26,
+        "textStart": "Two-metric transfer\nOpen figure ↗TeX source ↓\n1. Normalize vertical orders on the equidimensional normal model\nClear denominators in  and pu"
+      },
+      {
+        "page": 27,
+        "textStart": "Rank one identifies a Bergman weight and gives psh representatives of . For , a boundary\ncorrection  yields an adjoint measure equal to , pr"
+      },
+      {
+        "page": 28,
+        "textStart": "Transfer producing invariant sections\nOpen figure ↗TeX source ↓\n1. A rational quotient gives rank one only in the invariant part\nThe vanishi"
+      },
+      {
+        "page": 29,
+        "textStart": "2. Positivity comes from an orthogonal quotient of the smooth direct image\nAverage the smooth semipositive metrics to make them -invariant. "
+      },
+      {
+        "page": 30,
+        "textStart": "Proposition 7.1 · pp. 23–24 — Invariant direct-image positivity requiring smooth\ncoefficients.\nTheorem 7.2 · pp. 24–25 — Construction of nat"
+      },
+      {
+        "page": 31,
+        "textStart": "068 / 02\nRead on the website ↗\nCATALOGUE 068 · PAPER 02 / 7 Overview\nInvariant anticanonical indices and\nconversion of twisted differentials"
+      },
+      {
+        "page": 32,
+        "textStart": "Theorem 1.2 — Pseudoeffective-error conversion\nLet  be smooth connected projective over , and suppose  has a smooth\nsemipositive Hermitian m"
+      },
+      {
+        "page": 33,
+        "textStart": "ASin68 Michael F. Atiyah; Isadore M. Singer — The index of elliptic operators. III: Cohomological fixed-\npoint formula and Riemann–Roch for "
+      },
+      {
+        "page": 34,
+        "textStart": "Connecting the two independent main results\nOpen figure ↗TeX source ↓\n1. From invariant Euler index to invariant forms of one degree\nWrite t"
+      },
+      {
+        "page": 35,
+        "textStart": "2. Descend forms before constructing the pseudoeffective error\nMultiplication by invariant canonical frames in Proposition 5.1 injects these"
+      },
+      {
+        "page": 36,
+        "textStart": "Localization and cancellation of deleted faces\nOpen figure ↗TeX source ↓\n1. Fixed-component localization gives all divisible exponents\nFor a"
+      },
+      {
+        "page": 37,
+        "textStart": "§2.2, (2.2)–(2.4) · pp. 7–8Lemmas 2.1–2.2 · pp. 4–6[ASeg68, Theorem 2.12, print p. 540 / PDF p. 11]\n[ASin68, Theorems 3.9, 4.3, print pp. 56"
+      },
+      {
+        "page": 38,
+        "textStart": "Removing the fixed pseudoeffective error\nOpen figure ↗TeX source ↓\n1. A maximal dominated base and normalized vertical orders\nChoose a ratio"
+      },
+      {
+        "page": 39,
+        "textStart": "2. Rank-one integrals converge to a bounded maximum metric\nThe anticanonical identity gives an effective exceptional divisor \nand its canoni"
+      },
+      {
+        "page": 40,
+        "textStart": "Proposition 5.1 — Descent of invariant twisted forms\nLet  be the finite cover above, with . The deck group acts by\ntranslations on , trivial"
+      },
+      {
+        "page": 41,
+        "textStart": "1. Natural actions agree on both tensor factors\nLet  be the product of the invariant canonical frames. Send an invariant form  to .\nThe natu"
+      },
+      {
+        "page": 42,
+        "textStart": "§3.2, (3.8)–(3.10) · pp. 12–13 — Maximum metric and two-sided boundary bounds\n§3.3, (3.11)–(3.12) · pp. 13–14 — Vanishing including k=0 and "
+      },
+      {
+        "page": 43,
+        "textStart": "068 / 03\nRead on the website ↗\nCATALOGUE 068 · PAPER 03 / 7 Overview\nBounded anticanonical metrics on klt\npairs and torus quotients\nTransfer"
+      },
+      {
+        "page": 44,
+        "textStart": "Invariance refers to the natural linearization of  induced by the differential.\nThe exponent may depend on the action; this is not a stateme"
+      },
+      {
+        "page": 45,
+        "textStart": "2. Proof of Theorem 1.1 — A maximal base and the zero\ntwist\nProof target：Theorem 1.1 · p. 2\nProof route. The Euler premise supplies twisted "
+      },
+      {
+        "page": 46,
+        "textStart": "1. Produce unbounded twisted differentials\nThe polynomial  is nonzero at zero. Nonzero cohomology therefore occurs\nfor infinitely many posit"
+      },
+      {
+        "page": 47,
+        "textStart": "positively from below even toward a missing base divisor. The opposite estimate follows from\nproperness. Psh extension gives a locally bound"
+      },
+      {
+        "page": 48,
+        "textStart": "A bounded quotient metric gives a naturally invariant section\nOpen figure ↗TeX source ↓\n1. Separate the auxiliary GIT linearization from the"
+      },
+      {
+        "page": 49,
+        "textStart": "infimum of a psh function independent of imaginary exponential coordinates, hence is psh by\nKiselman's principle. Slice bounds, the disc tes"
+      },
+      {
+        "page": 50,
+        "textStart": "Handle residual torus monodromy and descend by finite norm\nOpen figure ↗TeX source ↓\n1. Tensor invariant canonical frames with the section\nT"
+      },
+      {
+        "page": 51,
+        "textStart": "5. Which papers supply which steps\nInput\nDPS01 and LMPTX23\nUsed at\nLemma 2.1, pp. 5–6\nRole and checking scope\nHard Lefschetz and the negativ"
+      },
+      {
+        "page": 52,
+        "textStart": "Input\nDWZZ19\nUsed at\nProposition 3.5, pp. 16–17\nRole and checking scope\nPsh infimum over tube fibers; boundedness comes separately from Lemm"
+      },
+      {
+        "page": 53,
+        "textStart": "The full external proofs were not independently verified. GIT, Luna slices, the finite-morphism\ndiscrepancy formula, Skoda's foundational re"
+      },
+      {
+        "page": 54,
+        "textStart": "068 / 04\nRead on the website ↗\nCATALOGUE 068 · PAPER 04 / 7 Overview\nCohomological transfer and equivariant\nanticanonical sections\nRemove a "
+      },
+      {
+        "page": 55,
+        "textStart": "Corollary 1.2 — Nonvanishing under smooth semipositivity\nFor every smooth connected complex projective variety  with smoothly semipositive \n"
+      },
+      {
+        "page": 56,
+        "textStart": "OpenAI26a OpenAI — Anticanonical nonvanishing from smooth semipositivity: Finite-cover structure\nretaining residual monodromy and the finite"
+      },
+      {
+        "page": 57,
+        "textStart": "Remove the error with two metrics and a fixed ideal, preserving the specified linearization\nOpen figure ↗TeX source ↓\n1. Build a relative se"
+      },
+      {
+        "page": 58,
+        "textStart": "§3, common ratio field and relative section · pp. 8–9\n2. Obtain invariant rank one, including degree zero\nThe effective divisor  has its nat"
+      },
+      {
+        "page": 59,
+        "textStart": "The sheaf  contains , so . Its Euler polynomial is\nnot zero and gives a section for some . Pull back, multiply by , remove the exceptional\nc"
+      },
+      {
+        "page": 60,
+        "textStart": "Use normal equidimensionality and an invariant quotient to obtain a positive psh maximum metric\nOpen figure ↗TeX source ↓\n1. Normalize divis"
+      },
+      {
+        "page": 61,
+        "textStart": "On smooth general fibers, the measure has full support and convergence is locally uniform. The\nnegative logarithm of the maximum is therefor"
+      },
+      {
+        "page": 62,
+        "textStart": "The actual natural index at zero supplies transfer inputs by hard Lefschetz and determinants\nOpen figure ↗TeX source ↓\n1. Use the index poly"
+      },
+      {
+        "page": 63,
+        "textStart": "5. Proof of Corollary 1.2 — Descend invariant sections\nProof target：Corollary 1.2 · p. 2\nProof route. The finite-cover structure gives the u"
+      },
+      {
+        "page": 64,
+        "textStart": "2. Take a norm to the original variety\nFor , the finite étale norm sends the section to a nonzero section of .\nCommon powers and the cover d"
+      },
+      {
+        "page": 65,
+        "textStart": "From continuous base weights to higher-direct-image vanishing\nOpen figure ↗TeX source ↓\n1. Uniform approximation retains the curvature-null "
+      },
+      {
+        "page": 66,
+        "textStart": "2. Restrict the distributional Chern equation to a general fiber\nZero curvature energy makes every positive-curvature holomorphic covector a"
+      },
+      {
+        "page": 67,
+        "textStart": "7. Which papers supply which steps\nInput\nBer09\nUsed at\nProposition 2.2, p. 7\nRole and checking scope\nSmooth adjoint integral positivity. The"
+      },
+      {
+        "page": 68,
+        "textStart": "Input\nFujisawa15; Dem12\nUsed at\nTheorem 7.2, pp.17–19\nRole and checking scope\nUniform smoothing and derived decomposition for a smooth Nakan"
+      },
+      {
+        "page": 69,
+        "textStart": "8. Return to the sources\n§3, common ratio field and relative section · pp. 8–9 — Build a common ratio field while\nretaining the character.\nP"
+      },
+      {
+        "page": 70,
+        "textStart": "Theorem 5.2 · p. 13Theorem 11.1 · p. 27Proposition 14.1 · p. 41\nOpenAI Math Digest · 068\n068 / 04 70"
+      },
+      {
+        "page": 71,
+        "textStart": "068 / 05\nRead on the website ↗\nCATALOGUE 068 · PAPER 05 / 7 Overview\nMetric descent and rank-preserving\ncontractions\nAdjoint rank at exponen"
+      },
+      {
+        "page": 72,
+        "textStart": "is an effective rational divisor of finite support, and  is -exceptional. The rational line\nbundle  has a semipositive singular Hermitian me"
+      },
+      {
+        "page": 73,
+        "textStart": "The same holds for a rational line bundle , with  clearing its denominator. Here  need\nnot be anticanonical.\nTheorem 6.1 · p. 34\nTheorem 7.1"
+      },
+      {
+        "page": 74,
+        "textStart": "Ou23 Wenhao Ou — On generic nefness of tangent sheaves: Relative pseudoeffectivity in Druel’s\nformulation and algebraicity of foliations, us"
+      },
+      {
+        "page": 75,
+        "textStart": "Connections among metric descent, rank preservation, allowed poles and invariant sections\nOpen figure ↗TeX source ↓\n1. Two base metrics and "
+      },
+      {
+        "page": 76,
+        "textStart": "2. The route to nonvanishing\nOn the generic quotient fiber in Theorem 7.1, a wedge of infinitesimal action fields gives an\ninvariant section"
+      },
+      {
+        "page": 77,
+        "textStart": "Full rank at exponent zero and toroidal orders produce an unweighted integrable metric\nOpen figure ↗TeX source ↓\n1. Exceptional support and "
+      },
+      {
+        "page": 78,
+        "textStart": "2. Identify the integrated density and extend its metric\nWrite . Full rank one and the Jacobian section identify \n on a smooth open, so  is "
+      },
+      {
+        "page": 79,
+        "textStart": "Vertical minima, horizontal interpolation and section ratios preserve the ranks\nOpen figure ↗TeX source ↓\n1. Normalize the section and locat"
+      },
+      {
+        "page": 80,
+        "textStart": "2. Choose a smaller base from zero-degree systems\nIf  is big, the preceding exit applies. Otherwise cone duality supplies a nonzero movable\n"
+      },
+      {
+        "page": 81,
+        "textStart": "5. Proof of Theorem 6.1 — Dimension induction retaining\ntwo metrics\nProof target：Theorem 6.1 · p. 34\nRefer to the statement above. We follow"
+      },
+      {
+        "page": 82,
+        "textStart": "Finite weighted volume produces effective approximants to  whose subtraction\nby  is sub-klt. Relative pseudoeffectivity of foliations and sl"
+      },
+      {
+        "page": 83,
+        "textStart": "6. Proof of Theorem 7.1 — From the invariant quotient to a\nregular section\nProof target：Theorem 7.1 · p. 38\nRefer to the statement above. We"
+      },
+      {
+        "page": 84,
+        "textStart": "Ratios of invariant adjoint sections are quotient functions. The sections  supply nonzero\nelements at all , including zero, so the invariant"
+      },
+      {
+        "page": 85,
+        "textStart": "8. Return to the sources\nLemma 2.2 · pp. 8–9 — Check all valuations, including boundary intersections, and\nexceptional support.\n§§2.2–2.3; ("
+      },
+      {
+        "page": 86,
+        "textStart": "068 / 06\nRead on the website ↗\nCATALOGUE 068 · PAPER 06 / 7 Overview\nIntegrable metrics and effectivity with\ncontrolled boundary\nTurn integr"
+      },
+      {
+        "page": 87,
+        "textStart": "Theorem 4.3 — Finite generation near a correction divisor\nLet  be smooth projective of positive dimension and  a rational divisor. Suppose \n"
+      },
+      {
+        "page": 88,
+        "textStart": "References on the arrows\nUnprefixed theorem, lemma, section and equation numbers refer to Integrable metrics and effectivity with\ncontrolled"
+      },
+      {
+        "page": 89,
+        "textStart": "Overview of ordinary conversion among the main results\nOpen figure ↗TeX source ↓\n1. What remains fixed and what is converted on the base\nThe"
+      },
+      {
+        "page": 90,
+        "textStart": "3. Proof of Theorem 1.1 — From weighted approximation to\nsupported nonvanishing\nProof target：Theorem 1.1 · p. 2\nProof route. Subtract the bo"
+      },
+      {
+        "page": 91,
+        "textStart": "1. Integrability gives strict coefficient inequalities\nSubtract a small ample rational divisor  from the metric and resolve  into its\nfixed "
+      },
+      {
+        "page": 92,
+        "textStart": "Unweighted integrability and finite generation\nOpen figure ↗TeX source ↓\n1. A metric allowing one common perturbation\nLemma 4.1 uses the vol"
+      },
+      {
+        "page": 93,
+        "textStart": "5. Proof of Theorem 5.1 — Collecting the error in one Iitaka\nfield\nProof target：Theorem 5.1 · p. 11\nProof route. One Iitaka base for  expres"
+      },
+      {
+        "page": 94,
+        "textStart": "The horizontal part is nonnegative. The divisor  formed from \n is pseudoeffective by dividing a fixed effective error\nby  and taking limits."
+      },
+      {
+        "page": 95,
+        "textStart": "Conversion through one fixed determinant error\nOpen figure ↗TeX source ↓\n1. Fix one determinant\nSaturate the generic span of the images of  "
+      },
+      {
+        "page": 96,
+        "textStart": "7. Proof of Theorem 9.2 — Retaining an invariant rational\nsection throughout\nProof target：Theorem 9.2 · pp. 32–35\nProof route. The invariant"
+      },
+      {
+        "page": 97,
+        "textStart": "algebraic closure remains invariant by connectedness. Lemma 9.3 and semipositive linear\nalgebra put the curvature kernel in the vertical dir"
+      },
+      {
+        "page": 98,
+        "textStart": "Input\nCorti–Lazić adjoint rings\nApplication\nTheorem 4.3\nRole and checking scope\nFinite generation with a common ample part and klt boundarie"
+      },
+      {
+        "page": 99,
+        "textStart": "9. Return to the sources\nLemma 2.1; Theorem 2.2 · pp. 5–7 — From weighted integrability to strict coefficient\nbounds.\nTheorem 1.1 (proof); L"
+      },
+      {
+        "page": 100,
+        "textStart": "068 / 07\nRead on the website ↗\nCATALOGUE 068 · PAPER 07 / 7 Overview\nExact orders and invariant anticanonical\nlinear systems\nAttain zero ord"
+      },
+      {
+        "page": 101,
+        "textStart": "Then there is a rational divisor  with  and . Pseudoeffectivity of \n, vanishing irregularity, and an Euler-characteristic condition are not "
+      },
+      {
+        "page": 102,
+        "textStart": "Theorem 11.1 — Removing a fixed pseudoeffective equivariant error\nLet  be smooth connected projective over , with  and smoothly semipositive"
+      },
+      {
+        "page": 103,
+        "textStart": "EKL95 Lawrence Ein; Oliver Küchle; Robert Lazarsfeld — Local positivity of ample line bundles: Seshadri\nlower bound at very general points. "
+      },
+      {
+        "page": 104,
+        "textStart": "The full exact-attainment route\nOpen figure ↗TeX source ↓\n1. The curvature-null condition forces full rank one\nThe set  is a field. The pole"
+      },
+      {
+        "page": 105,
+        "textStart": "Prepare an equidimensional toroidal model  by birational modifications without\nextending the field. Metric descent, Theorem 2.1, uses full r"
+      },
+      {
+        "page": 106,
+        "textStart": "Proposition 2.2 — Birational return of a boundary generator\nLet  be smooth integral projective complex varieties,  normal projective, \nbirat"
+      },
+      {
+        "page": 107,
+        "textStart": "1. Select among finitely many actual generators\nWrite , , and clear denominators so that  is a section in bidegree \n. Express each section a"
+      },
+      {
+        "page": 108,
+        "textStart": "From orbit orders to invariant sections\nOpen figure ↗TeX source ↓\n1. Lift an extremal source weight to forms\nUse the left action . If  is th"
+      },
+      {
+        "page": 109,
+        "textStart": "is bounded. Effectivity and the intersection inequality give . This construction uses\nTheorem 1.1 for arbitrary fixed , without requiring  p"
+      },
+      {
+        "page": 110,
+        "textStart": "Applying exact attainment to a formal arc\nOpen figure ↗TeX source ↓\n1. Verify the null condition and the center\nFor ,  is nonnegative on the"
+      },
+      {
+        "page": 111,
+        "textStart": "See Proposition 10.1 above. With weaker cohomological assumptions than Theorem 1.2, the\noriginal proof uses the approximate arc transfer of "
+      },
+      {
+        "page": 112,
+        "textStart": "§10, (10.1)–(10.2) · pp. 25–27[DPS01, Theorem 2.1.1; Corollary 2.1.2, p. 8]\n2. The determinant-rank shift becomes a fixed arc order\nLet  be "
+      },
+      {
+        "page": 113,
+        "textStart": "A controlled invariant field, nef descent, and a nonzero invariant quotient\nOpen figure ↗TeX source ↓\n1. The invariant field forces rank one"
+      },
+      {
+        "page": 114,
+        "textStart": "2. A bounded metric, nef reduction, and an isolated pole\nLemma 8.2 uses smooth coefficient metrics and the orthogonal quotient given by comp"
+      },
+      {
+        "page": 115,
+        "textStart": "Controlled polar field, disappearing boundary, and a multigraded invariant ring\nOpen figure ↗TeX source ↓\n1. Pull back all but finitely many"
+      },
+      {
+        "page": 116,
+        "textStart": "2. Weighted approximation gives a disappearing correction\nMix an anticanonically dominated ample base metric with the smooth metric by a sma"
+      },
+      {
+        "page": 117,
+        "textStart": "9. Which papers supply which steps\nInput\nMetric descent, Theorem 2.1\nApplication\n§3.2; Theorem 1.1\nRole and hypotheses\nFull adjoint rank one"
+      },
+      {
+        "page": 118,
+        "textStart": "Additional outputs and the limits of this account\nProposition 10.1, Theorem 11.1 and Proposition 12.1 are stated and explained above. The\nfo"
+      },
+      {
+        "page": 119,
+        "textStart": "checks the stated inputs and uses of CDM17 quotient extension, CL12 multigraded adjoint finite\ngeneration, Leh15 numerical pullback, EKL95 S"
+      }
+    ],
+    "internalDestinations": [
+      {
+        "page": 2,
+        "destination": "catalog-068"
+      },
+      {
+        "page": 2,
+        "destination": "catalog-068"
+      },
+      {
+        "page": 2,
+        "destination": "anticanonical-smooth-semipositivity"
+      },
+      {
+        "page": 2,
+        "destination": "anticanonical-smooth-semipositivity"
+      },
+      {
+        "page": 2,
+        "destination": "invariant-anticanonical-indices"
+      },
+      {
+        "page": 2,
+        "destination": "invariant-anticanonical-indices"
+      },
+      {
+        "page": 2,
+        "destination": "bounded-anticanonical-metrics"
+      },
+      {
+        "page": 2,
+        "destination": "bounded-anticanonical-metrics"
+      },
+      {
+        "page": 2,
+        "destination": "cohomological-transfer"
+      },
+      {
+        "page": 2,
+        "destination": "cohomological-transfer"
+      },
+      {
+        "page": 2,
+        "destination": "metric-descent-contractions"
+      },
+      {
+        "page": 2,
+        "destination": "metric-descent-contractions"
+      },
+      {
+        "page": 2,
+        "destination": "integrable-metrics-controlled-boundary"
+      },
+      {
+        "page": 2,
+        "destination": "integrable-metrics-controlled-boundary"
+      },
+      {
+        "page": 2,
+        "destination": "exact-orders-anticanonical"
+      },
+      {
+        "page": 2,
+        "destination": "exact-orders-anticanonical"
+      },
+      {
+        "page": 4,
+        "destination": "anticanonical-smooth-semipositivity"
+      },
+      {
+        "page": 4,
+        "destination": "anticanonical-smooth-semipositivity"
+      },
+      {
+        "page": 5,
+        "destination": "invariant-anticanonical-indices"
+      },
+      {
+        "page": 5,
+        "destination": "invariant-anticanonical-indices"
+      },
+      {
+        "page": 6,
+        "destination": "bounded-anticanonical-metrics"
+      },
+      {
+        "page": 6,
+        "destination": "bounded-anticanonical-metrics"
+      },
+      {
+        "page": 7,
+        "destination": "cohomological-transfer"
+      },
+      {
+        "page": 7,
+        "destination": "cohomological-transfer"
+      },
+      {
+        "page": 8,
+        "destination": "metric-descent-contractions"
+      },
+      {
+        "page": 8,
+        "destination": "metric-descent-contractions"
+      },
+      {
+        "page": 9,
+        "destination": "integrable-metrics-controlled-boundary"
+      },
+      {
+        "page": 9,
+        "destination": "integrable-metrics-controlled-boundary"
+      },
+      {
+        "page": 10,
+        "destination": "exact-orders-anticanonical"
+      },
+      {
+        "page": 10,
+        "destination": "exact-orders-anticanonical"
+      },
+      {
+        "page": 14,
+        "destination": "anticanonical-smooth-semipositivity--proof-overview"
+      },
+      {
+        "page": 14,
+        "destination": "invariant-anticanonical-indices--proof-3"
+      },
+      {
+        "page": 14,
+        "destination": "anticanonical-smooth-semipositivity--proof-overview"
+      },
+      {
+        "page": 14,
+        "destination": "bounded-anticanonical-metrics--proof-3"
+      },
+      {
+        "page": 15,
+        "destination": "anticanonical-smooth-semipositivity--proof-overview"
+      },
+      {
+        "page": 15,
+        "destination": "cohomological-transfer--proof-4"
+      },
+      {
+        "page": 15,
+        "destination": "invariant-anticanonical-indices--proof-1"
+      },
+      {
+        "page": 15,
+        "destination": "cohomological-transfer--proof-3"
+      },
+      {
+        "page": 15,
+        "destination": "invariant-anticanonical-indices--proof-1"
+      },
+      {
+        "page": 15,
+        "destination": "integrable-metrics-controlled-boundary--proof-5"
+      },
+      {
+        "page": 16,
+        "destination": "metric-descent-contractions--proof-1"
+      },
+      {
+        "page": 16,
+        "destination": "integrable-metrics-controlled-boundary--proof-3"
+      },
+      {
+        "page": 16,
+        "destination": "metric-descent-contractions--proof-1"
+      },
+      {
+        "page": 16,
+        "destination": "exact-orders-anticanonical--proof-1"
+      },
+      {
+        "page": 16,
+        "destination": "integrable-metrics-controlled-boundary--proof-2"
+      },
+      {
+        "page": 16,
+        "destination": "exact-orders-anticanonical--proof-1"
+      },
+      {
+        "page": 17,
+        "destination": "integrable-metrics-controlled-boundary--proof-1"
+      },
+      {
+        "page": 17,
+        "destination": "exact-orders-anticanonical--proof-7"
+      },
+      {
+        "page": 22,
+        "destination": "anticanonical-smooth-semipositivity--theorem-1-2"
+      },
+      {
+        "page": 35,
+        "destination": "invariant-anticanonical-indices--theorem-1-1"
+      },
+      {
+        "page": 37,
+        "destination": "invariant-anticanonical-indices--theorem-1-2"
+      },
+      {
+        "page": 56,
+        "destination": "cohomological-transfer--proof-2"
+      },
+      {
+        "page": 56,
+        "destination": "cohomological-transfer--proof-3"
+      },
+      {
+        "page": 56,
+        "destination": "cohomological-transfer--proof-4"
+      },
+      {
+        "page": 88,
+        "destination": "integrable-metrics-controlled-boundary--theorem-5-1"
+      },
+      {
+        "page": 89,
+        "destination": "integrable-metrics-controlled-boundary--proof-1"
+      },
+      {
+        "page": 89,
+        "destination": "integrable-metrics-controlled-boundary--proof-3"
+      },
+      {
+        "page": 89,
+        "destination": "integrable-metrics-controlled-boundary--proof-4"
+      },
+      {
+        "page": 89,
+        "destination": "integrable-metrics-controlled-boundary--theorem-4-3"
+      },
+      {
+        "page": 89,
+        "destination": "integrable-metrics-controlled-boundary--theorem-9-2"
+      },
+      {
+        "page": 89,
+        "destination": "integrable-metrics-controlled-boundary--proof-5"
+      }
+    ],
+    "uniqueExternalUrls": [
+      "https://annals.math.princeton.edu/1968/87-3/p07",
+      "https://annals.math.princeton.edu/wp-content/uploads/annals-v169-n2-p04.pdf",
+      "https://annals.math.princeton.edu/wp-content/uploads/annals-v169-n2-p04.pdf#page=3",
+      "https://arxiv.org/pdf/1005.0614v3",
+      "https://arxiv.org/pdf/1005.0614v3#page=5",
+      "https://arxiv.org/pdf/1009.3188v2",
+      "https://arxiv.org/pdf/1009.3188v2#page=2",
+      "https://arxiv.org/pdf/1109.4382v3",
+      "https://arxiv.org/pdf/1109.4382v3#page=1",
+      "https://arxiv.org/pdf/1210.2092v3",
+      "https://arxiv.org/pdf/1210.2092v3#page=3",
+      "https://arxiv.org/pdf/1408.4308v2",
+      "https://arxiv.org/pdf/1408.4308v2#page=8",
+      "https://arxiv.org/pdf/1409.5504v1",
+      "https://arxiv.org/pdf/1409.5504v1#page=20",
+      "https://arxiv.org/pdf/1409.5504v1#page=24",
+      "https://arxiv.org/pdf/1512.03887v1",
+      "https://arxiv.org/pdf/1512.03887v1#page=1",
+      "https://arxiv.org/pdf/1607.04684v1",
+      "https://arxiv.org/pdf/1607.04684v1#page=2",
+      "https://arxiv.org/pdf/1703.00292v2",
+      "https://arxiv.org/pdf/1703.00292v2#page=2",
+      "https://arxiv.org/pdf/1703.03175v4",
+      "https://arxiv.org/pdf/1703.03175v4#page=5",
+      "https://arxiv.org/pdf/1810.12733v1",
+      "https://arxiv.org/pdf/1810.12733v1#page=1",
+      "https://arxiv.org/pdf/alg-geom/9408003v1",
+      "https://arxiv.org/pdf/alg-geom/9408003v1#page=14",
+      "https://arxiv.org/pdf/math/0006205v2",
+      "https://arxiv.org/pdf/math/0006205v2#page=8",
+      "https://arxiv.org/pdf/math/0405285v1",
+      "https://arxiv.org/pdf/math/0405285v1#page=6",
+      "https://arxiv.org/pdf/math/0511225v2",
+      "https://arxiv.org/pdf/math/0511225v2#page=14",
+      "https://arxiv.org/pdf/math/0511225v2#page=3",
+      "https://arxiv.org/pdf/math/0610203v2",
+      "https://arxiv.org/pdf/math/0610203v2#page=13",
+      "https://arxiv.org/pdf/math/0703344v4",
+      "https://arxiv.org/pdf/math/0703344v4#page=2",
+      "https://arxiv.org/pdf/math/9910118v3",
+      "https://arxiv.org/pdf/math/9910118v3#page=7",
+      "https://ems.press/content/serial-article-files/31138",
+      "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/overview.pdf",
+      "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Anticanonical-nonvanishing-from-smooth-semipositivity-September-26-2026/main.pdf",
+      "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Bounded-anticanonical-metrics-on-klt-pairs-and-torus-quotients-September-26-2026/main.pdf",
+      "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Cohomological-transfer-and-equivariant-anticanonical-sections-September-26-2026/main.pdf",
+      "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026/main.pdf",
+      "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Integrable-metrics-and-effectivity-with-controlled-boundary-September-26-2026/main.pdf",
+      "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Invariant-anticanonical-indices-and-conversion-of-twisted-differentials-September-26-2026/main.pdf",
+      "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Metric-descent-and-rank-preserving-contractions-September-26-2026/main.pdf",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/anticanonical-smooth-semipositivity/invariant.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/anticanonical-smooth-semipositivity/invariant.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/anticanonical-smooth-semipositivity/main.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/anticanonical-smooth-semipositivity/main.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/anticanonical-smooth-semipositivity/transfer.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/anticanonical-smooth-semipositivity/transfer.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/anticanonical-smooth-semipositivity/volume.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/anticanonical-smooth-semipositivity/volume.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/bounded-anticanonical-metrics/bounded.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/bounded-anticanonical-metrics/bounded.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/bounded-anticanonical-metrics/invariant.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/bounded-anticanonical-metrics/invariant.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/bounded-anticanonical-metrics/smooth.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/bounded-anticanonical-metrics/smooth.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/cohomological-transfer/kernel.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/cohomological-transfer/kernel.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/cohomological-transfer/maximum.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/cohomological-transfer/maximum.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/cohomological-transfer/natural.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/cohomological-transfer/natural.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/cohomological-transfer/smooth.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/cohomological-transfer/smooth.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/cohomological-transfer/transfer.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/cohomological-transfer/transfer.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/exact-orders-anticanonical/arc.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/exact-orders-anticanonical/arc.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/exact-orders-anticanonical/controlled-cone.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/exact-orders-anticanonical/controlled-cone.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/exact-orders-anticanonical/endpoint.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/exact-orders-anticanonical/endpoint.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/exact-orders-anticanonical/euler-polytope.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/exact-orders-anticanonical/euler-polytope.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/exact-orders-anticanonical/exact.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/exact-orders-anticanonical/exact.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/exact-orders-anticanonical/invariant-extension.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/exact-orders-anticanonical/invariant-extension.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/exact-orders-anticanonical/invariant.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/exact-orders-anticanonical/invariant.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/integrable-metrics-controlled-boundary/boundary.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/integrable-metrics-controlled-boundary/boundary.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/integrable-metrics-controlled-boundary/conversion.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/integrable-metrics-controlled-boundary/conversion.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/integrable-metrics-controlled-boundary/invariant.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/integrable-metrics-controlled-boundary/invariant.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/integrable-metrics-controlled-boundary/overview.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/integrable-metrics-controlled-boundary/overview.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/integrable-metrics-controlled-boundary/ring.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/integrable-metrics-controlled-boundary/ring.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/integrable-metrics-controlled-boundary/tensor.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/integrable-metrics-controlled-boundary/tensor.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/invariant-anticanonical-indices/conversion.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/invariant-anticanonical-indices/conversion.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/invariant-anticanonical-indices/descent.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/invariant-anticanonical-indices/descent.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/invariant-anticanonical-indices/index.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/invariant-anticanonical-indices/index.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/invariant-anticanonical-indices/overview.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/invariant-anticanonical-indices/overview.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/metric-descent-contractions/allowed-poles.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/metric-descent-contractions/allowed-poles.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/metric-descent-contractions/contraction.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/metric-descent-contractions/contraction.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/metric-descent-contractions/invariant.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/metric-descent-contractions/invariant.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/metric-descent-contractions/metric.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/metric-descent-contractions/metric.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/metric-descent-contractions/overview.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/metric-descent-contractions/overview.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/overview/exact-routes.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/overview/exact-routes.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/overview/index-routes.en.svg",
+      "https://masataka123.github.io/OpenAI-Math-Digest/diagrams/catalog-068/overview/index-routes.en.tex",
+      "https://masataka123.github.io/OpenAI-Math-Digest/en/catalog/068/",
+      "https://masataka123.github.io/OpenAI-Math-Digest/en/papers/anticanonical-smooth-semipositivity/",
+      "https://masataka123.github.io/OpenAI-Math-Digest/en/papers/bounded-anticanonical-metrics/",
+      "https://masataka123.github.io/OpenAI-Math-Digest/en/papers/cohomological-transfer/",
+      "https://masataka123.github.io/OpenAI-Math-Digest/en/papers/exact-orders-anticanonical/",
+      "https://masataka123.github.io/OpenAI-Math-Digest/en/papers/integrable-metrics-controlled-boundary/",
+      "https://masataka123.github.io/OpenAI-Math-Digest/en/papers/invariant-anticanonical-indices/",
+      "https://masataka123.github.io/OpenAI-Math-Digest/en/papers/metric-descent-contractions/",
+      "https://people.math.harvard.edu/~mpopa/papers/HPS.pdf",
+      "https://people.math.harvard.edu/~mpopa/papers/HPS.pdf#page=31",
+      "https://webhomes.maths.ed.ac.uk/~v1ranick/papers/as2.pdf",
+      "https://webhomes.maths.ed.ac.uk/~v1ranick/papers/as2.pdf#page=11",
+      "https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/agbook.pdf",
+      "https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/agbook.pdf#page=43",
+      "https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/analmeth.pdf",
+      "https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/analmeth.pdf#page=38",
+      "https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/dps4.pdf",
+      "https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/dps4.pdf#page=1",
+      "https://www.numdam.org/item/10.1007/s10240-019-00105-w.pdf",
+      "https://www.numdam.org/item/10.1007/s10240-019-00105-w.pdf#page=2",
+      "https://www.numdam.org/item/10.1007/s10240-019-00105-w.pdf#page=3"
+    ]
+  }
+}

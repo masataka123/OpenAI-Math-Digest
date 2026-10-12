@@ -1,0 +1,7 @@
+\node[card] (n0) {\heading{1}{重み付き計量}{Weighted metric}$\Theta_h\geq\omega,\quad |s_C|^2e^{-\varphi}\in L^1_{\rm loc}$};
+\node[card,below=2.0cm of n0] (n1) {\heading{2}{符号付き近似}{Signed approximation}$\Psi=G/r-\sigma^*C-K_{Y^\prime/Y},\quad \operatorname{coeff}\Psi<1$};
+\flow{n0}{n1}{\Tx{固定部・Jacobian・境界の次数を比較}{Compare fixed, Jacobian and boundary orders}\\[3pt]\Cite{approximation}};
+\node[card,below=2.0cm of n1] (n2) {\heading{3}{big klt境界}{Big klt boundary}$K_{Y^\prime}+\Delta_t\sim_{\mathbb Q}\Psi^-+t\sigma^*M$};
+\flow{n1}{n2}{\Tx{小さい有理数 $t>0$ でample部分に $tM$ を吸収}{Absorb $tM$ in the ample reserve for small rational $t>0$}\\[3pt]\Cite{boundary-proof}};
+\node[result,below=2.0cm of n2] (n3) {\heading{4}{補正の台を保持}{Keep the support}$M+C^\prime\sim_{\mathbb Q}D\geq0,\quad C^\prime=\sigma_*\Psi^-/t$};
+\flow{n2}{n3}{\Tx{非消滅、合理的回復、pushforward}{Nonvanishing, rational recovery and pushforward}\\[3pt]\Cite{bchm}};

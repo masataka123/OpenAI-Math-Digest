@@ -1,0 +1,7 @@
+\node[card] (n0) {\heading{1}{境界に近づく切断}{Sections approaching a boundary ray}$s_j=f_jx^{a_j}y^{b_j},\quad a_j/(a_j+b_j)\to0$};
+\node[card,below=2.0cm of n0] (n1) {\heading{2}{一つの境界生成元}{One generator on the boundary ray}$r x^0 y^b,\quad v(r)/(\epsilon kb)\leq-v(D_0)$};
+\flow{n0}{n1}{\Tx{和のvaluation以下の単項式を選ぶ}{Choose a monomial of valuation no greater than that of the sum}\\[3pt]\Cite{generator}};
+\node[card,below=2.0cm of n1] (n2) {\heading{3}{補正込みで有効}{Effectivity with correction}$p^*D_0+f^*(\operatorname{div}(h_*)+A/\epsilon)\geq0$};
+\flow{n1}{n2}{\Tx{垂直最小値と水平係数の極限を使う}{Use vertical minima and limits of horizontal coefficients}\\[3pt]\Cite{endpoint}};
+\node[result,below=2.0cm of n2] (n3) {\heading{4}{pushforward後の零値}{Zero value after pushforward}$N=D_0+\operatorname{div}(h_*)\geq0,\quad 0\leq v(N)\leq0$};
+\flow{n2}{n3}{\Tx{$p_*f^*A=0$ で除去してから中心付きvaluationを使う}{Remove $A$ by $p_*f^*A=0$, then use centeredness}\\[3pt]\Cite{endpoint}};

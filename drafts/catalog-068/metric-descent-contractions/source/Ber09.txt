@@ -1,0 +1,1229 @@
+arXiv:math/0511225v2  [math.CV]  20 Aug 2007
+CURV ATURE OF VECTOR BUNDLES ASSOCIATED TO HOLOMORPHIC
+FIBRATIONS.
+BO BERNDTSSON
+ABSTRACT . Let L be a (semi)-positive line bundle over a Kähler manifold, X, ﬁbered over a
+complex manifold Y . Assuming the ﬁbers are compact and non-singular we prove th at the her-
+mitian vector bundle E over Y whose ﬁbers over points y are the spaces of global sections over
+Xy to L ⊗ KX/Y endowed with the L2-metric is (semi)-positive in the sense of Nakano. We
+also discuss various applications, among them a partial res ult on a conjecture of Grifﬁths on the
+positivity of ample bundles. This is a revised and much expan ded version of a previous preprint
+with the title “ Bergman kernels and the curvature of vector bundles”.
+1. I NTRODUCTION
+Let us ﬁrst consider a domain D = U × Ω in Cm × Cn and a function φ , plurisubharmonic
+in D. We also assume for simplicity that φ is smooth up to the boundary . Then, for each t
+in U, φ t(·) := φ (t, ·) is plurisubharmonic in Ω and we denote by A2
+t the Bergman spaces of
+holomorphic functions in Ω with norm
+∥h∥2 = ∥h∥2
+t =
+∫
+Ω
+|h|2e−φ t
+.
+The spacesA2
+t are then all equal as vector spaces but have norms that vary witht. The - inﬁnite
+rank - vector bundleE overU with ﬁberEt =A2
+t is therefore trivial as a bundle but is equipped
+with a nontrivial metric. The ﬁrst result of this paper is the following theorem.
+Theorem 1.1. Ifφ is (strictly) plurisubharmonic, then the hermitian bundle (E, ∥·∥t) is (strictly)
+positive in the sense of Nakano.
+Of the two main differential geometric notions of positivity (see section 2, where these matters
+are reviewed in the slightly non standard setting of bundles of inﬁnite rank), positivity in the
+sense of Nakano is the stronger one and implies the weaker pro perty of positivity in the sense
+of Grifﬁths. On the other hand the Grifﬁths notion of positiv ity has nicer functorial properties
+and implies in particular that the dual bundle is negative (i n the sense of Grifﬁths). This latter
+property is in turn equivalent to the condition that if ξ is any nonvanishing local holomorphic
+section of the dual bundle, then the function
+log ∥ξ ∥2
+is plurisubharmonic. We can obtain such holomorphic sectio ns to the dual bundle from point
+evaluations. More precisely, letf be a holomorphic map from U to Ω and deﬁneξt by is action
+on a local section ofE
+⟨ξt,h t⟩ =ht(f (t)).
+12
+Since the right hand side here is a holomorphic function of t,ξ is indeed a holomorphic section
+ofE∗. The norm ofξ at a point is given by
+∥ξt∥2 = sup
+∥ht∥≤ 1
+|ht(f (t))|2 =Kt(f (t),f (t)),
+whereKt(z,z ) is the Bergman kernel function for A2
+t . It therefore follows from Theorem 1.1
+that logKt(z,z ) is plurisubharmonic (or identically equal to −∞ ) in D, which is the starting
+point of the results in [1]. The point here is of course that logKt(z,z ) is plurisubharmonic with
+respect to the parametert, and even with respect to all the variables (t,z ) jointly.
+In [1] it is proved that this subharmonicity property of the B ergman kernel persists if D is a
+general pseudoconvex domain in Cm × Cn, for general plurisubharmonic weight functions. In
+this case the spacesA2
+t are the Bergman spaces for the slices ofD,Dt = {z; (t,z ) lies in D}.
+This more general case should also lead to a positively curved vector bundle. The main problem
+in proving such an extension of Theorem 1.1 is not to prove the inequalities involved, but rather
+to deﬁne the right notion of vector bundle in this case. In gen eral, the spaces A2
+t will not be
+identical as vector spaces, so the bundle in question is not locally trivial.
+There is however a natural analog of Theorem 1.1 for holomorp hic ﬁbrations with compact
+ﬁbers. Consider a complex manifold X of dimensionn +m which is smoothly ﬁbered over an-
+other connected complexm-dimensional manifoldY . There is then a holomorphic map,p, from
+X toY with surjective differential, and all the ﬁbers Xt = p− 1(t) are assumed compact. This
+implies, see [31], that the ﬁbers are all diffeomorphic, but they are in general not biholomorphic
+to each other. We next need a substitute for the assumption on pseudoconvexity in Theorem 1.1.
+What ﬁrst comes to mind is that X be a projective ﬁbration, i e that there be a strictly positiv e
+line bundle onX. This would mean thatX contains a divisorA such thatX \ A is Stein, so that
+we would be almost in the Stein case, which is quite similar to the case in Theorem 1.1. It turns
+out however that all we need to assume is thatX be Kähler.
+LetL be a holomorphic, hermitian line bundle over the total space X. Our substitute for the
+Bergman spacesA2
+t is now the space of global sections over each ﬁber toL ⊗ KXt,
+Et = Γ(Xt,L |Xt ⊗ KXt),
+whereKXt is the canonical bundle of, i e the bundle of forms of bidegree (n, 0) on, each ﬁber.
+We assume that L is semipositive so that the hermitian metric on L has nonnegative curvature
+form. Fix a point y inY and choose local coordinates t = (t1,...t m) neary witht(y) = 0 . We
+consider the coordinates as functions onX by identifyingt witht ◦p, and letdt =dt1 ∧...dt m.
+The canonical bundle of a ﬁberXt can then be identiﬁed with the restriction ofKX, the canonical
+bundle of the total space, toXt by mapping a local sectionu toKXt tou ∧dt. This map is clearly
+injective, and it is also surjective since any sectionw toKX can locally be written
+w =u ∧dt,
+and the restriction ofu toXt is independent of the choice ofu. With this identiﬁcation, any global
+holomorphic section ofL ⊗ KXt over a ﬁber can be holomorphically extended to a holomorphic
+section of L ⊗ KXs, for s near t. When L is trivial this follows from the Kähler assumption,
+by invariance of Hodge numbers, see [31]. When L is semipositive it follows from a variant of
+the Ohsawa-Takegoshi extension theorem, that we discuss inan appendix . Starting from a basis3
+for Γ(Xt,L |Xt ⊗ KXt) we therefore get a local holomorphic frame for E, so E has a natural
+structure as a holomorphic vector bundle. Moreover, elemen ts ofEt can be naturally integrated
+over the ﬁber and we obtain in this way a metric, ∥ · ∥onE in complete analogy with the plane
+case. We then get the same conclusion as before:
+Theorem 1.2. If the total space X is Kähler and L is (semi)positive over X, then (E, ∥ · ∥) is
+(semi)positive in the sense of Nakano.
+This can be compared to results of Fujita, [13], Kawamata, [23] and Kollár, [24], who proved
+positivity properties for E when L is trivial and X projective. Kawamata also extended these
+results to multiples of the canonical bundle. Related work i s also due to Tsuji, see [28] and the
+references therein. The proofs in these papers are based on r esults of Grifﬁths on variations of
+Hodge structures, whereas our proofs use techniques related to Hörmander-likeL2-estimates for
+¯∂ . This seems to be the main novelty in our approach. Among the advantages are that this permits
+us to work directly in the twisted context (i e with nontrivialL), it gives Nakano positivity and not
+just Grifﬁths positivity and it also works in the noncompact case (like Theorem 1.1). Moreover
+it gives explicit interesting lower bound for the curvature operator; see section 6.
+After a ﬁrst version of this paper was posted on the ArXiv, Tsuji also announced a version of
+Theorem 1.2 in [29]. In this paper he indicates a proof that E is Grifﬁths positive, assuming the
+ﬁbrations is projective, by a reduction to the case of a locally trivial ﬁbration.
+Theorems 1.1 and 1.2 have applications, or at least illustra tions, in a number of different
+contexts. One concerns subharmonicity properties of Bergman kernels depending on a parameter,
+which follow from Theorem 1.1 as explained above, see [1]. Th is can be seen as a complex
+version of the Brunn-Minkowski inequality. The link to Brunn-Minkowski theory lies in the fact
+that the inverse of the volume of a domain in Rn is the Bergman kernel for the space of constant
+functions on the domain. The classical Brunn-Minkowski ine quality is therefore a convexity
+property, with respect to parameters, of the Bergman kernel for the nullspace of the d-operator,
+whereas here we have plurisubharmonicity of the Bergman ker nel for the nullspace of the ¯∂ -
+operator.
+Just like in the case of Theorem 1.1, Theorem 1.2 also has as a c onsequence a result on
+plurisubharmonicity of a Bergman kernel. In this case howev er, the Bergman kernel is not a
+function, but transforms as a metric on the relative canonical bundle of the ﬁbration
+KX/Y :=KX ⊗ p∗(KY )− 1,
+twisted with L. In forthcoming work with Mihai Paun, [4] and [5], we show how Theorem
+1.2 implies that this Bergman kernel has semipositive curva ture or is identically equal to 0. In
+particularL+KX/Y is pseudoeffective if it has a nontrivial square integrableholomorphic section
+over at least one ﬁber. We also extend this result to the case whenL has a singular metric and the
+mapp is not necessarily a smooth ﬁbration. Moreover, these methods can be extended to twisted
+multiples of the canonical bundle, generalising to the twisted case the work of Kawamata quoted
+above.
+Not surprisingly, the curvature of the bundleE in Theorem 1.2 can be zero at some point and
+in some direction only if the curvature of the line bundle L also degenerates. In section 5 we
+prove a result that indicates that conditions for degeneracy of the curvature ofE are much more4
+restrictive than that: When X is a product, null vectors for the curvature can only come fro m
+inﬁnitesimal automorphisms of the ﬁber.
+In section 6 we discuss some, largely philosophical, relations between Theorem 1.2 and recent
+work on the variation of Kähler metrics. This corresponds tothe case whenX is a productU ×Z
+with one-dimensional base U, and when L is the pull-back of a bundle on Z under the second
+projection map. The variation of the metric onL that we get from the ﬁbration then gives a path
+in the space of Kähler metrics on Z and the lower bound that we get for the curvature operator
+in this case is precisely the Toepliz operator deﬁned by the geodesic curvature of this path. This
+theme is further developed in [3].
+Another example of the situation in Theorem 1.2 arises naturally if we start with a (ﬁnite rank)
+holomorphic vector bundleV overY and let P(V ) be the associated bundle of projective spaces
+of the dual bundle V ∗. This is then clearly an - even locally trivial - holomorphic ﬁbration and
+there is a naturally deﬁned line bundleL over the total space
+L =OP(V )(1),
+that restricts to the hyperplane section bundle over each ﬁb er. The global holomorphic sections
+of this bundle over each ﬁber are now the linear forms on V ∗, i e the elements of V . To obtain
+sections to our bundle E deﬁned above, we take tensor products with the canonical bun dle. We
+therefore replaceL by
+Lr+1 =OP(V )(r + 1)
+(withr being the rank ofV ). Since the canonical bundle of a ﬁber isO(−r) we see that on each
+ﬁberL ⊗ KXt =O(1) so its space of global sections is again equal toVt. Deﬁne as before
+Et = Γ(Xt,L r+1|Xt ⊗ KXt).
+One can then verify that, globally,E is isomorphic toV ⊗ detV . The condition thatL is positive
+is now equivalent toOP(V )(1) being positive which is the same as saying that V is ample in the
+sense of Hartshorne, [16]. We therefore obtain (in section 7 ) the following result as a corollary
+of Theorem 1.2.
+Theorem 1.3. LetV be a (ﬁnite rank) holomorphic vector bundle over a complex manifold which
+is ample in the sense of Hartshorne. Then V ⊗ detV has a smooth hermitian metric which is
+strictly positive in the sense of Nakano.
+ReplacingOP(V )(r + 1) byOP(V )(r +m), we also get thatSm(V ) ⊗ detV is Nakano-positive
+for any non-negativem, whereSm(V ) is them:th symmetric power ofV .
+It is a well known conjecture of Grifﬁths, [14], that an ample vector bundle is positive in the
+sense of Grifﬁths. Theorem 1.3 can perhaps be seen as indirect evidence for this conjecture, since
+by a a theorem of Demailly, [10],V ⊗ detV is Nakano positive ifV itself is Grifﬁths positive. It
+seems that not so much is known about Grifﬁths’ conjecture in general, except that it does hold
+whenY is a compact curve (see [30], [7]).
+After the ﬁrst version of this mansucript was completed I received a preprint by C Mourougane
+and S Takayama, [22]. There they prove that V ⊗ detV is positive in the sense of Grifﬁths,
+assuming the base manifold is projective. The method of proof is quite different from this paper,
+as is the metric they ﬁnd.5
+We end this introduction with a brief discussion of the proof s. The proof of Theorem 1.1 is
+based on regarding the bundle E as a holomorphic subbundle of the hermitian bundle F with
+ﬁbers
+Ft =L2(Ω,e −φ t
+) =: L2
+t.
+By deﬁnition, the curvature ofF is a (1, 1)-form
+∑
+ΘF
+jkdtj ∧d¯tk
+whose coefﬁcients are operators onFt. By direct and simple computation,
+ΘF
+is the operator of multiplication with∂t ¯∂tφ , so it is positive as soon asφ is plurisubharmonic oft
+forz ﬁxed. By a formula of Grifﬁths, the curvature of the holomorphic subbundleE is obtained
+from the curvature of F by subtracting the second fundamental form ofE, and the crux of the
+proof is to control this term by the curvature ofF . For this we note that the second fundamental
+form is given by the square of the norm of an element in the orthogonal complement ofA2
+t inL2
+t .
+This element is therefore the minimal solution of a certain ¯∂ -equation, and the needed inequality
+follows from an application of Hörmander’sL2-estimate.
+We have not been able to generalize this proof to the situation of Theorem 1.2. The proof does
+generalize to the case of a holomorphically trivial ﬁbratio n, but in the general case we have not
+been able to ﬁnd a natural complex structure on the space of al l (not necessarily holomorphic)
+(n, 0) forms, extending the complex structure on E. We therefore compute directly the Chern
+connection of the bundle E itself, and compute the curvature from there, much as one pro ves
+Grifﬁths’ formula. In these computations appears also the Kodaira-Spencer class of the ﬁbration,
+[31]. This class plays somewhat the role of another second fu ndamental form, but this time of
+a quotient bundle, arising when we restrict (n, 0)-forms to the ﬁber. The Kodaira-Spencer class
+therefore turns out to give a positive contribution to the cu rvature. This proof could also be
+adapted to give Theorem 1.1 by using ﬁberwise complete Kähle r metrics, but we have chosen
+not to do so since the ﬁrst proof seems conceptually clearer.
+Finally, I would like to thank Sebastien Boucksom for pointing out the relation between The-
+orem 1.1 and the Grifﬁths conjecture, Jean-Pierre Demailly for encouraging me to treat also the
+case of a general non-trivial ﬁbration and Yum-Tong Siu and Mihai Paun for helpful discussions.
+Last but not least, thanks are due to Hiroshi Yamaguchi, whose work on plurisubharmonicity of
+the Robin function [32] and Bergman kernels, [21] was an impo rtant source of inspiration for
+this work.
+2. C URVATURE OF FINITE AND INFINITE RANK BUNDLES
+LetE be a holomorphic vector bundle with a hermitian metric over a complex manifold Y .
+By deﬁnition this means that there is a holomorphic projection mapp fromE toY and that every
+point inY has a neighbourhoodU such thatp− 1(U) is isomorphic toU ×W , whereW is a vector
+space equipped with a smoothly varying hermitian metric. In our applications it is important to
+be able to allow this vector space to have inﬁnite dimension, in which case we assume that the
+metrics are also complete, so that the ﬁbers are Hilbert spaces.6
+Lett = (t1,...t m) be a system of local coordinates on Y . The Chern connection, Dtj is now
+given by a collection of differential operators acting on smooth sections toU ×W and satisfying
+∂tj (u,v ) = (Dtju,v ) + (u, ¯∂tjv),
+with ∂tj = ∂/∂ tj and ¯∂tj = ∂/∂ ¯tj. The curvature of the Chern connection is a (1, 1)-form of
+operators
+ΘE =
+∑
+ΘE
+jkdtj ∧d¯tk,
+where the coefﬁcients ΘE
+jk are densily deﬁned operators on W . By deﬁnition these coefﬁcients
+are the commutators
+ΘE
+jk = [Dtj, ¯∂tk ].
+The vector bundle is said to be positive in the sense of Grifﬁths if for any sectionu toW and any
+vectorv in Cm
+∑
+(ΘE
+jku,u )vj ¯vk ≥ δ ∥u∥2|v|2
+for some positiveδ .E is said to be positive in the sense of Nakano if for anym-tuple (u1,...u m)
+of sections toW ∑
+(ΘE
+jkuj,u k) ≥ δ
+∑
+∥uj∥2
+Takinguj =uvj we see that Nakano positivity implies positivity in the sense of Grifﬁths.
+The dual bundle ofE is the vector bundleE∗ whose ﬁber at a pointt inY is the Hilbert space
+dual of Et. There is therefore a natural antilinear isometry between E∗ and E, which we will
+denote byJ. If u is a local section of E,ξ is a local section of E∗, and ⟨·, ·⟩denotes the pairing
+betweenE∗ andE we have
+⟨ξ,u ⟩ = (u,Jξ ).
+Under the natural holomorphic structure onE∗ we then have
+¯∂tjξ =J − 1DtjJξ,
+and the Chern connection onE∗ is given by
+D∗
+tjξ =J − 1 ¯∂tjJξ.
+It follows that
+¯∂tj ⟨ξ,u ⟩ = ⟨ ¯∂tjξ,u ⟩ + ⟨ξ, ¯∂tju⟩,
+and
+∂tj ⟨ξ,u ⟩ = ⟨D∗
+tjξ,u ⟩ + ⟨ξ,D tju⟩,
+and hence
+0 =
+[
+∂tj, ¯∂tk
+]
+⟨ξ,u ⟩ = ⟨ΘE∗
+jkξ,u ⟩ + ⟨ξ, ΘE
+jku⟩,
+if we let ΘE∗
+be the curvature ofE∗. If ξj is anr-tuple of sections toE∗, anduj =Jξj, we thus
+see that ∑
+(ΘE∗
+jkξj,ξ k) = −
+∑
+(ΘE
+jkuk,u j).
+Notice that the order betweenuk anduj in the right hand side is opposite to the order between the
+ξ s in the left hand side. Therefore E∗ is negative in the sense of Grifﬁths iffE is positive in the
+sense of Grifﬁths, but we can not draw the same conclusion in the the case of Nakano positivity.7
+Ifu is a holomorphic section ofE we also ﬁnd that
+∂ 2
+∂tj∂ ¯tk
+(u,u ) = (Dtju,D tku) − (ΘE
+jku,u )
+and it follows after a short computation thatE is (strictly) negative in the sense of Grifﬁths if and
+only if log ∥u∥2 is (strictly) plurisubharmonic for any nonvanishing holomorphic sectionu.
+We next brieﬂy recapitulate the Grifﬁths formula for the cur vature of a subbundle. Assume
+E is a holomorphic subbundle of the bundle F , and letπ be the ﬁberwise orthogonal projection
+fromF toE. We also let π ⊥ be the orthogonal projection on the orthogonal complement o fE.
+By the deﬁnition of Chern connection we have
+DE =πD F.
+Let ¯∂tjπ be deﬁned by
+(2.1) ¯∂tj (πu ) = ( ¯∂tjπ )u +π ( ¯∂tju).
+Computing the commutators occuring in the deﬁnition of curvature we see that
+(2.2) ΘE
+jku = − ( ¯∂tkπ )DF
+tju +π ΘF
+jku,
+ifu is a section ofE. By (2.1) ( ¯∂π )v = 0 ifv is a section ofE, so
+(2.3) ( ¯∂π )DFu = ( ¯∂π )π ⊥DFu.
+Sinceππ ⊥ = 0 it also follows that
+( ¯∂π )π ⊥DFu = −π ¯∂ (π ⊥DFu).
+Hence, ifv is also a section ofE,
+(( ¯∂tkπ )DF
+tju,v ) = − ( ¯∂tk (π ⊥DF
+tju),v ) =
+= ((π ⊥DF
+tju),D F
+tkv) = (π ⊥ (DF
+tju),π ⊥ (DF
+tkv)).
+Combining with (2.2) we ﬁnally get that ifu andv are both sections toE then
+(2.4) (ΘF
+jku,v ) = (π ⊥ (DF
+tju),π ⊥ (DF
+tkv)) + (ΘE
+jku,v ),
+and thus ∑
+(ΘF
+jkuj,u k) = ∥π ⊥
+∑
+DF
+tjuj∥2 +
+∑
+(ΘE
+jkuj,u k).
+which is the starting point for the proof of Theorem 1.1.
+For the proof of Theorem 1.2 we ﬁnally describe another way ofcomputing the curvature form
+of a vector bundle. Fix a pointy inY and choose local coordinatest centered aty. Any pointu0
+in the ﬁberE0 overy can be extended to a holomorphic sectionu ofE near 0. Modifyingu by a
+linear combination ∑tjvj for suitably chosen local holomorphic sectionsvj we can also arrange
+things so thatDu = 0 att = 0. Letu andv be two local sections with this property and compute
+∂ ¯tk∂tj (u,v ) = ∂ ¯tk (Dtju,v ) = (∂ ¯tkDtju,v ) = − (ΘE
+jku,v ).
+Letuj me anm-tuple of holomorphic sections toE, satisfyingDuj = 0 at 0. Put
+Tu =
+∑
+(uj,u k) ˆdtj ∧d¯tk.8
+Here ˆdtj ∧d¯tk denotes the wedge product of all dti andd¯ti exceptdtj andd¯tk, multiplied by a
+constant of absolute value 1, chosen so thatTu is a positive form. Then
+(2.5) i∂ ¯∂T u = −
+∑
+(ΘE
+jkuj,u k)dVt,
+soE is Nakano-positive at a given point if and only if this expression is negative for any choice
+of holomorphic sectionsuj satisfyingDuj = 0 at the point.
+3. T HE PROOF OF THEOREM 1.1
+We consider the setup described before the statement of Theo rem 1.1 in the introduction.
+Thus E is the vector bundle over U whose ﬁbers are the Bergman spaces A2
+t equipped with
+the weighted L2 metrics induced by L2(Ω,e −φ t
+). We also let F be the vector bundle with ﬁber
+L2(Ω,e −φ t
+), so thatE is a trivial subbundle of the trivial bundleF with a metric induced from a
+nontrivial metric onF . From the deﬁnition of the Chern connection we see that
+DF
+tj =∂tj − φ j,
+where the last term in the right hand side should be interpret ed as the operator of multiplication
+by the (smooth) function −φ j = −∂tjφ t. (In the sequel we use the letters j,k for indices of the
+t-variables,and the lettersλ,µ for indices of thez-variables.) For the curvature ofF we therefore
+get
+ΘF
+jk =φ jk,
+the operator of multiplication with the complex Hessian ofφ with respect to thet-variables. We
+shall now apply formula (2.4), so letuj be smooth sections toE. This means thatuj are functions
+that depend smoothly on t and holomorphically on z. To verify the positivity of E in the sense
+of Nakano we need to estimate from below the curvature ofE acting on thek-tupleu,
+∑
+(ΘE
+jkuj,u k).
+By (2.4) this means that we need to estimate from above
+∑
+(π ⊥ (φ juj),π ⊥ (φ kuk)) = ∥π ⊥ (
+∑
+φ juj)∥2.
+Putw =π ⊥ (∑φ juj). For ﬁxedt,w solves the ¯∂z-equation
+¯∂w =
+∑
+ujφ jλd¯zλ,
+since theujs are holomorphic inz. Moreover, sincew lies in the orthogonal complement ofA2,
+w is the minimal solution to this equation.
+We shall next apply Hörmander’s weightedL2-estimates for the ¯∂ -equation. The precise form
+of these estimates that we need says that if f is a ¯∂ -closed form in a psedudoconvex domain Ω,
+and if ψ is a smooth strictly plurisubharmonic weight function, the n the minimal solution w to
+the equation ¯∂v =f satisﬁes ∫
+Ω
+|w|2e−ψ ≤
+∫
+Ω
+∑
+ψ λµ fλ ¯fµe−ψ,
+where (ψ λµ ) is the inverse of the complex Hessian ofψ (see [9]).9
+In our case this means that∫
+Ω
+|w|2e−φ t
+≤
+∫
+Ω
+∑
+φ λµ φ jλujφ kµuke−φ t
+.
+Inserting this estimate in formula (2.4) together with the formula for the curvature ofF we ﬁnd
+(3.1)
+∑
+(ΘE
+jkuj,u k) ≥
+∫
+Ω
+∑
+jk
+(
+φ jk −
+∑
+λµ
+φ λµ φ jλ ¯φ kµ
+)
+uj ¯uke−φ t
+.
+We claim that the expression
+Djk =:
+(
+φ jk −
+∑
+λµ
+φ λµ φ jλ ¯φ kµ
+)
+,
+in the integrand is a positive deﬁnite matrix at any ﬁxed point . In the proof of this, we may by a
+linear change of variables int of course assume that the vectoru thatD acts on equals (1, 0... 0).
+The positivity ofD then follows from a computation in [26], but we will give the short argument
+here too. Let Φ = i∂ ¯∂φ where the ∂ ¯∂ -operator acts on t1 and the z-variables, the remaining
+t-variables being ﬁxed. Then
+Φ = Φ 11 +iα ∧d¯t1 +idt1 ∧ ¯α + Φ′,
+where Φ11 is of bidegree (1, 1) int1,α is of bidegree (1, 0) inz, and Φ′is of bidegree (1, 1) inz.
+Then
+Φn+1 = Φn+1/ (n + 1)! = Φ 1, 1 ∧ Φ′
+n − iα ∧ ¯α ∧ Φ′
+n− 1 ∧idt1 ∧d¯t1.
+Both sides of this equation are forms of maximal degree that c an be written as certain coefﬁ-
+cients multiplied by the Euclidean volume form of Cn+1. The coefﬁcient of the left hand side
+is the determinant of the complex Hessian of φ with respect tot1 andz together. Similarily, the
+coefﬁcient of the ﬁrst term on the right hand side is φ 11 times the Hessian of φ with respect to
+thez-variables only. Finally, the coefﬁcient of the last term on the right hand side is the norm of
+the (0, 1) form inz
+¯∂z∂t1φ
+measured in the metric deﬁned byΦ′, multiplied by the volume form of the same metric. Dividing
+by the coefﬁcient of Φ′
+n we thus see that the matrix D acting on a vector u as above equals the
+Hessian ofφ with respect tot1 andz divided by the Hessian ofφ with respect to thez-variables
+only. This expression is therefore positive so the proof of Theorem 1.1 is complete.
+4. K ÄHLER FIBRATIONS WITH COMPACT FIBERS
+LetX be a Kähler manifold of dimensionm +n, ﬁbered over a complexm-dimensional man-
+ifoldY . This means that we have a holomorphic map p fromX toY with surjective differential
+at all points. All our computations will be local, so we may as well assume thatY =U is a ball
+or polydisk in Cm. For eacht inU we let
+Xt =p− 1(t)
+be the ﬁber ofX overt. We shall assume that all ﬁbers are compact.10
+Next, we let L be a holomorphic hermitian line bundle over X. Our standing assumption on
+L is that it is semipositive, i e that it is equipped with a smoot h hermitian metric of nonnegative
+curvature. For each ﬁberXt we are interested in the space of holomorphicL-valued (n, 0)-forms
+onXt,
+Γ(Xt,L |Xt ⊗ KXt) =: Et.
+For eacht,Et is a ﬁnite dimensional vector space and we claim that
+E :=
+⋃
+{t} ×Et
+has a natural structure as a holomorphic vector bundles.
+To see this we need to study howEt varies witht. First note thatKXt is isomorphic toKX|Xt,
+the restriction of the canonical bundle of the total space toXt, via the map that sends a sectionu
+toKXt to
+˜u :=u ∧dt,
+wheredt =dt1 ∧...dt m. It is clear that this map is injective. Conversely, any loca l section ˜u to
+KX can be locally represented as ˜u := u ∧dt, and even though u is not uniquely determined,
+the restriction of u to each ﬁber is uniquely determined. We thus have two ways of t hinking of
+an element u inEt: as a holomorphic L-valued (n, 0)-form on Xt or as a section ˜u = u ∧ dt
+toKX overXt. It turns out to be convenient for the computations later on t o have yet another
+interpretation: as the restriction of an (n, 0),u′, on X toXt (here we understand by restriction
+the pullback toXt under the inclusion map fromXt toX). Clearly,u′is not uniquely determined
+byu. Indeed u′ restricts to 0 on Xt0 precisely when u′∧dt = 0 vanishes for t = t0, which in
+turn is equivalent to saying that
+u′ =
+∑
+γj ∧dtj.
+We will refer to a choice of u′as a representative ofu. When t varies, a smooth section of E is
+then represented by a smooth (n, 0)-form on X. To avoid too cumbersome notation we will in
+the sequel use the same letter to denote an element inEt and any representative of it.
+The semipositivity of L, and the assumption that X is Kähler, implies that any holomorphic
+sectionu toKXt for one ﬁxedt can be locally extended in the sense that there is a holomorph ic
+section ˜u toKX overp− 1(W ) for some neighbourhoodW oft whose restriction toXt maps tou
+under the isomorphism above. In caseL is trivial this follows from the fact that Hodge numbers
+are locally constant, see [31]. For general semipositive bu ndles L it follows from a result of
+Ohsawa-Takegoshi type, that will be discussed in an appendix.
+Taking a basis forEt for one ﬁxedt and extending as above we therefore get a local frame for
+the bundleE. We deﬁne a complex structure on E by saying that an (n, 0)-form overp− 1(W ),
+u, whose restriction to each ﬁber is holomorphic, deﬁnes a holomorphic section ofE ifu ∧dt is
+a holomorphic section ofKX. The frame we have constructed is therefore holomorphic.
+Note that this means that u is holomorphic if and only if ¯∂u ∧dt = 0 , which means that ¯∂u
+can be written
+(4.1) ¯∂u =
+∑
+ηj ∧dtj,
+withηj smooth forms of bidegree (n − 1, 1). Again, theηj are not uniquely determined, but their
+restrictions to ﬁbers are.11
+Remark: Even though we will not use it, it is worth mentioning the conn ection between the
+formsηj and the Kodaira-Spencer map of the ﬁbration, see [31], [18].
+The Kodaira-Spencer map at a point t in the base, is a map from the holomorphic tangent
+space ofU to the ﬁrst Dolbeault cohomology group,
+H 0, 1(Xt,T 1, 0(Xt)),
+of Xt with values in the holomorphic tangent space of Xt, i e, as t varies it is a (1, 0)-form,∑θjdtj onU with values in H 0, 1(Xt,T 1, 0(Xt)).The classes θj can be represented by ¯∂ -closed
+(0, 1)-forms, ϑ j, on Xt whose coefﬁcients are vector ﬁelds of type (1, 0) tangent to the ﬁber.
+Such representatives can be found as follows. Let Vj be some choice of smooth (1, 0) vector
+ﬁelds onX, such thatdp(Vj) = ∂/∂t j. Thendp( ¯∂Vj) = 0 so ¯∂V j are ¯∂ -closed forms with values
+in the bundle of vectors tangent to ﬁbers. It is not hard to che ck that they represent the classes
+θj, e g using the deﬁnition in [18].
+Letting the vectorﬁeld in the coefﬁcients ofϑ j act on forms by contraction we obtain maps
+v ↦→ ϑ j⌋v
+from (p,q )-forms onXt to (p − 1,q + 1)-forms. We claim that the forms
+ηj,
+restricted to ﬁbers Xt, is what we obtain when we let these map operate on u. Different repre-
+sentatives ofu correspond to different representatives of the same cohomology class.
+To prove the claim, we need to verify that ηj = ϑ j⌋u on each ﬁber, where ϑ j is some repre-
+sentative onXt of the class θj. Let ˆdtj be the wedge product of all differentials dtk, exceptdtj,
+with the right ordering, and let ˜u =u ∧dt. Then
+Vj⌋˜u = (Vj⌋u) ∧dt +u ∧ ˆdtj.
+Hence
+¯∂V j⌋˜u = ( ¯∂ (Vj⌋u)) ∧dt +ηj ∧dt.
+Since ¯∂V j⌋dt = ¯∂ (Vj⌋dt) = 0 , it follows that
+( ¯∂V j⌋u) ∧dt = ( ¯∂ (Vj⌋u)) ∧dt +ηj ∧dt.
+Therefore
+¯∂V j⌋u = ¯∂ (Vj⌋u) +ηj
+on ﬁbers, which proves our claim. □
+Let nowu be a smooth local section of E. This means that u can be represented by a smooth
+L-valued form of bidegree (n, 0) overp− 1(W ) for some W open in U, such that the restriction
+ofu to each ﬁber is holomorphic. Then ¯∂u ∧dt ∧d¯t = 0, so
+¯∂u =
+∑
+d¯tj ∧νj +
+∑
+ηj ∧dtj,
+whereνj deﬁne sections toE. We deﬁne the (0, 1)-part of the connectionD onE by letting
+D0, 1u =
+∑
+νjd¯tj.12
+Sometimes we write
+νj = ¯∂tju
+with the understanding that this refers to the ¯∂ operator onE. Note that D0, 1u = 0 fort =t0 if
+and only if each νj vanishes when restricted toXt0, i e if ¯∂u ∧dt = 0, which is consistent with
+the deﬁnition of holomorphicity given earlier. Note also th at if we choose another (n, 0)-form
+u′to represent the same section of E, thenu − u′vanishes when restricted to each ﬁber. Hence
+u − u′ = ∑aj ∧dtj and it follows thatD0, 1 is well deﬁned.
+The bundleE has a naturally deﬁned hermitian metric, induced by the metric onL. To deﬁne
+the metric, let ut be an element of Et. Locally, with respect to a local trivialization of L, ut is
+given by a scalar valued(n, 0)-form,u′, and the metric onL is given by a smooth weight function
+φ ′. Put
+[ut,u t] = cnu′∧
+u′e−φ ′
+,
+withcn =in2
+is chosen to make this (n,n )-form positive. Clearly this deﬁnition is independent
+of the trivialization, so [ut,u t] is globally deﬁned. The metric onEt is now deﬁned as
+∥ut∥2 =
+∫
+Xt
+[ut,u t],
+and the associated scalar product is
+(4.2) (ut,v t)t =
+∫
+Xt
+[ut,v t].
+In the sequel we will, abusively, write [u,v ] = cnu ∧ ¯ve−φ . When t varies we suppress the
+dependence on t and get a smooth hermitian metric on E. For local sections u andv toE the
+scalar product is then a function oft and it will be convenient to write this function as
+(u,v ) = p∗([u,v ]) = p∗(cnu ∧ ¯ve−φ ),
+whereu andv are forms on X that represent the sections. Here p∗ denotes the direct image, or
+push-forward, of a form, deﬁned by
+∫
+U
+p∗(α ) ∧β =
+∫
+X
+α ∧p∗(β ),
+ifα is a form onX andβ is a form onU.
+With the metric and the ¯∂ operator deﬁned on E we can now proceed to ﬁnd the (1, 0)-part
+of the Chern connection. Let u be a form on X with values in L. Locally, with respect to
+a trivialization of L, u is given by a scalar valued form u′ and the metric on L is given by a
+functionφ ′. Let
+∂φ ′
+u′ =eφ ′
+∂ (e−φ ′
+u′).
+One easily veriﬁes that this expression is invariantly deﬁn ed, and we will, somewhat abusively,
+write∂φ ′
+u′ = ∂φu, using φ to indicate the metric on L. Let now in particular u be of bidegree
+(n, 0) and such that the restrictions ofu to ﬁbers are holomorphic. As∂φu is of bidegree(n+1, 0)
+we can write
+∂φu =
+∑
+dtj ∧µ j,13
+where µ j are smooth (n, 0)-forms whose restrictions to ﬁbers are uniquely deﬁned. The se re-
+strictions are in general not holomorphic so we let
+P (µ j)
+be the orthogonal projection ofµ j on the space of holomorphic forms on each ﬁber.
+Lemma 4.1. The (1, 0)-part of the Chern connection on E is given by
+D1, 0u =
+∑
+P (µ j)dtj.
+Proof. Even though it will follow implicitly from the proof below, we will ﬁrst prove thatD1, 0u
+is well deﬁned, i e independent of the choice of representati ve of u. Let therefore u be a form
+that restricts to 0 onXt fort in some open set. Then we can writeu = ∑γj ∧dtj there. Hence
+∂φu =
+∑
+∂φγj ∧dtj,
+soµ j = ∂φγj on any ﬁber. It then follows from the deﬁnition of the scalar p roduct on Xt, and
+Stokes theorem, that µ j is orthogonal to all holomorphic forms on the ﬁber. In other w ords,
+P (µ j) = 0 , soD1, 0u = 0, which is what we wanted to prove.
+To prove the lemma it sufﬁces, by the deﬁnition of Chern connection, to verify that
+(4.3) ∂tj (u,v ) = (P (µ j),v ) + (u, ¯∂tjv) = (µ j,v ) + (u, ¯∂tjv)
+ifu andv are smooth sections toE. But
+∂ (u,v ) = ∂p ∗([u,v ]) =
+=cn(p∗(∂φu ∧ ¯ve −φ ) + (− 1)np∗(u ∧ ¯∂ve −φ )) =
+cn(p∗(
+∑
+µ j ∧ ¯v ∧dtje−φ ) +p∗(u ∧ ¯νj ∧dtje−φ )).
+This equals ∑
+((µ j,v ) + (u,ν j))dtj,
+so we have proved 4.2. □
+We will writeP (µ j) = Dtju. We are now ready to verify the Nakano positivity of the bundle
+E. For this we will use the recipe given at the end of section 2. L et uj be an m-tuple of
+holomorphic sections toE that satisfyD1, 0uj = 0 at a given point that we take to be equal to 0.
+Let
+Tu =
+∑
+(uj,u k) ˆdtj ∧d¯tk.
+Here ˆdtj ∧d¯tk denotes the product of all differentials dti andd¯ti, exceptdtj andd¯tk multiplied
+by a number of modulus 1, so thatTu is nonnegative. We need to verify that
+i∂ ¯∂T u
+is negative. Represent theujs by smooth forms onX, and put
+ˆu =
+∑
+uj ∧ ˆdtj.14
+Then, withN =n +m − 1,
+Tu =cNp∗(ˆu ∧
+ˆue −φ )
+Thus
+¯∂T u =cN (p∗( ¯∂ ˆu ∧ ˆue−φ ) + (− 1)Np∗(ˆu ∧∂φ ˆue−φ )).
+Since eachuj is holomorphic we have seen that
+¯∂u j =
+∑
+ηl
+j ∧dtl.
+Therefore each term in the form
+p∗( ¯∂ ˆu ∧ ˆue−φ )
+contains a factor dt. On the other hand, the push forward of an (n +m − 1,n +m)-form is of
+bidegree (m − 1,m ), so we conclude that
+p∗( ¯∂ ˆu ∧ ˆue−φ ) = 0.
+Thus
+∂ ¯∂T u =cN ((− 1)Np∗(∂φ ˆu ∧∂φ ˆue−φ ) +p∗(ˆu ∧ ¯∂∂ φ ˆu))
+We rewrite the last term, using
+¯∂∂ φ +∂φ ¯∂ =∂ ¯∂φ.
+Since
+p∗(ˆu ∧ ¯∂ ˆue−φ )
+vanishes identically we ﬁnd that
+(− 1)Np∗(ˆu ∧∂φ ¯∂ ˆue−φ ) +p∗( ¯∂ ˆu ∧ ¯∂ ˆue−φ ) = 0,
+so all in all
+(4.4) ∂ ¯∂T u =
+cN
+(
+(− 1)Np∗(∂φ ˆu ∧
+∂φ ˆue−φ ) − p∗(ˆu ∧ ˆu ∧∂ ¯∂φe −φ ) + (− 1)Np∗( ¯∂ ˆu ∧ ¯∂ ˆue−φ )
+)
+.
+So far, the computations hold for any choice of representati ve of our sections uj. We shall next
+choose our representatives in a careful way.
+Proposition 4.2. Letu be a section of E over an open set U containing the origin, such that
+D0, 1u = 0,
+inU and
+D1, 0u = 0
+att = 0. Then u can be represented by a smooth (n, 0)-form, still denoted u, such that
+(4.5) ¯∂u =
+∑
+ηk ∧dtk,
+whereηk is primitive onX0, i e satisﬁes ηk ∧ω = 0 onX0, and furthermore
+(4.6) ∂φu ∧ ˆdtj = 0,
+att = 0 for allj.
+To prove the proposition we need two lemmas.15
+Lemma 4.3. Letu be an (n, 0)-form onX, representing a holomorphic section of E, and write
+¯∂u =
+∑
+ηk ∧dtk.
+Thenηk ∧ω are ¯∂ -exact on any ﬁber .
+Proof. Sinceu ∧ω is of bidegree (n + 1, 1) we can write locally
+u ∧ω =
+∑
+uk ∧dtk.
+The coefﬁcients uk here are not unique, but their restrictions to ﬁbers are uniq ue. This follows
+since ∑uk ∧dtk = 0 implies
+∑
+uk ∧dtk ∧ ˆdtk =uk ∧dt = 0,
+which implies thatuk vanishes when restricted to any ﬁber.
+Hence in particularuk are well deﬁned global forms on any ﬁber. Moreover
+∑
+ηk ∧ω ∧dtk = ¯∂u ∧ω =
+∑ ¯∂u k ∧dtk,
+so ∑
+(ηk ∧ω − ¯∂u k) ∧dtk = 0.
+Again, wedging with ˆdtk, we see that
+ηk ∧ω = ¯∂u k
+on ﬁbers, soηk ∧ω is exact on ﬁbers. □
+Lemma 4.4. Letµ be an (n, 0)-form on a compactn-dimensional Kähler manifoldZ, with values
+in a hermitian holomorphic line bundle L. Assume µ is orthogonal to the space of holomorphic
+L-valued forms under the scalar product (4.2). Let ξ be a ¯∂ -exact (n, 2)-form onZ, with values
+inL. Then there is an L-valued formγ of bidegree (n − 1, 0) such that
+∂φγ =µ,
+and
+¯∂γ ∧ω =ξ.
+Proof. Sinceξ is exact we can solve ¯∂χ =ξ . Thenµ − ¯∂ ∗χ is orthogonal to holomorphic forms,
+so we can solve
+¯∂ ∗α =µ − ¯∂ ∗χ,
+with ¯∂α = 0. This follows since the range of ¯∂ ∗ is closed on a compact manifold. Letα ′ =α +χ ,
+so
+µ = ¯∂ ∗α ′
+and ¯∂α ′ = ξ . Write α ′ = γ ∧ω , whereω is the Kahler form. Then γ satisﬁes the conditions in
+the lemma (possibly up to a sign). □16
+We are now ready to prove the proposition 4.2.
+Recall thatu can in any case be represented by a form satisfying
+¯∂u =
+∑
+ηk ∧dtk,
+overU and
+∂φu =
+∑
+µ k ∧dtk,
+where the restriction of µ k is orthogonal to holomorphic forms on X0. By Lemmas 4.3 and 4.4
+there are formsγk onX0 such that
+µ k =∂φγk
+and
+¯∂γ k ∧ω =ηk ∧ω
+onX0. Extend γk smoothly to a neighbourhood of X0 ( i e ﬁnd a form that restricts to γk), and
+put
+u′ =u −
+∑
+γk ∧dtk.
+Thenu′is a form of bidegree (n, 0) that represents the same section ofE asu. Then
+∂φu′∧ ˆdtj =∂φu ∧ ˆdtj − ∂φγj ∧dt = (µ j − ∂φγj) ∧dt = 0
+att = 0, since
+µ j =∂φγj
+onX0. Moreover
+¯∂u ′ =
+∑
+(ηk − ¯∂γ k) ∧dtk,
+and
+((ηk − ¯∂γ k) ∧ω = 0
+onX0. Henceu′satisﬁes all the requirements and the propositions is proved.
+We now return to the proof of Theorem 1.2. Note that with the choice of representatives of our
+sectionsuj furnished by Proposition 4.2, formula 4.4 simpliﬁes att = 0 to
+(4.7) ∂ ¯∂T u =cN
+(
+−p∗(ˆu ∧
+ˆu ∧∂ ¯∂φe −φ ) + (− 1)Np∗( ¯∂ ˆu ∧ ¯∂ ˆue−φ )
+)
+.
+The ﬁrst term on the right hand side obviously gives a (semi)n egative contribution toi∂ ¯∂T . To
+analyse the last term write
+¯∂u j =
+∑
+ηk
+j ∧dtk,
+and
+¯∂ ˆu =
+∑
+ηj
+j ∧dt =:η ∧dt.
+Then the last term equals
+cn
+∫
+X0
+η ∧ ¯η e−φ dVt.17
+In general the quadratic form inη appearing here is indeﬁnite. In our case however, all theηk
+j are
+primitive onX0, and it is well known that
+cnη ∧ ¯η = −|η |2
+if η is primitive. (This is easily checked by hand at a point by cho osing coordinates that are
+orthogonal at the point.) Hence
+cn
+∫
+X0
+η ∧ ¯ηe −φ dVt = −
+∫
+X0
+|η |2dVt.
+and we get
+(4.8) i∂ ¯∂T =cN
+(
+−p∗(ˆu ∧
+ˆu ∧i∂ ¯∂φe −φ )
+)
+−
+∫
+X0
+|η |2dVt.
+By 4.4, this means that i∂ ¯∂T u ≤ 0, so E is at least seminegative in the sense of Nakano. If
+i∂ ¯∂φ is strictly positive, it is clear that the curvature term alone gives a strictly negative contribu-
+tion toi∂ ¯∂T . ThereforeE is strictly positive ifL is strictly positive so we have proved Theorem
+1.2. In the next section we shall see that even when L is only semipositive, equality can hold in
+our estimates only in very special cases.
+We want to add one remark on the relation between the proof of T heorem 1.2 in this section
+and the proof of Theorem 1.1 in section 3. The proof in section 3 is easily adapted to the case
+of a trivial ﬁbration (so thatX is a global product). It may then seem that the proof here is quite
+different since it does not use the Hörmander-Kodaira L2-estimates at all. The two proofs are
+however really quite similar, the difference being that in t his section we basically reprove the
+special case of theL2-estimates that we need as we go along.
+5. S EMIPOSITIVE VECTOR BUNDLES .
+In this section we will discuss when equality holds in the inequalities of Theorem 1.2, i e when
+the bundle E is not strictly positive. As we have already seen in the last s ection, this can only
+happen if the line bundle L is not strictly positive. More precisely, provided the comp onentsuj
+of ˆu are chosen to satisfy the conditions in Proposition 4.2, equality holds if and only if
+η = 0
+and
+ˆu ∧ ¯
+ˆu ∧i∂ ¯∂φ = 0,
+and sincei∂ ¯∂φ ≥ 0, the last condition is equivalent to
+(5.1) ˆu ∧i∂ ¯∂φ = 0.
+For simplicity we assume from now that the base domain U is one-dimensional, so that we
+do not need to discuss degeneracy in different directions, a nd that the ﬁbration we consider is
+locally holomorphically trivial, i e thatX =U ×Z, whereZ is a compactn-dimensional complex
+manifold. Moreover, we assume that the curvature of our metr icφ onL, ΘL, is strictly positive
+along each ﬁberXt ≃ Z. Then we can also assume that we have chosen our Kähler metricω on
+X so thatω t :=ω |Xt =iΘL|Xt on each ﬁber.18
+Since X now is a global product we can decompose ΘL according to its degree in t and z,
+wherez is a ny local coordinate on Z. In particular, there is a well deﬁned (0, 1)-formθL onX
+such thatdt ∧θL is the component of ΘL of degree 1 indt. Expressed in invariant language,
+θL =δ∂/∂t ΘL,
+whereδ ·means contraction with a vector ﬁeld. Using the formulas
+(5.2) ∂δ V +δV∂ = LV,
+where L is the holomorphic Lie derivative, and
+(5.3) ¯∂δ V +δV ¯∂ = 0,
+ifV is a holomorhic vector ﬁeld we see thatθL is ¯∂ -closed onX, and that
+∂θ L = L∂/∂t ΘL
+onX. On the other hand, on each ﬁberXt there is a unique (1, 0) vector ﬁeldVt, deﬁned by
+δVtω t =θL.
+Our key obeservation is contained in the next lemma.
+Lemma 5.1. Assume that for some u ̸= 0 inE0, (ΘEu,u ) = 0 . Then V0 is a holomorphic vector
+ﬁeld onX0.
+Proof. Since the baseU is one dimensional, ˆu =u and sinceX =Z × U is a global product we
+can decompose
+u =u0 +dt ∧v,
+where u0 does not contain dt, i e δ∂/∂t u0 = 0 . Here u is chosen to satisfy the conditions of
+proposition 4.2,
+¯∂u =η ∧dt,
+whereη ∧ω = 0 onX0, and
+∂φu = 0
+fort = 0 . Since u is holomorphic on X0, ¯∂u 0 = 0 , soη = ¯∂v onX0. But we have seen above
+that ifu is a null vector for the curvature of E att = 0, thenη = 0 so the restriction of v toX0
+is a holomorphic (n − 1, 0)-form.
+We also know from (5.1) that
+u ∧ ΘL = 0
+fort = 0. Applyingδ∂/∂t , we get that
+v ∧ ΘL + (− 1)nu ∧θL = 0
+fort = 0. Restricting toX0
+v ∧ ΘL = (− 1)n+1u ∧δV0ΘL
+onX0. But,u ∧ ΘL = 0 onX0 (for reasons of bidegree) so
+δV0u ∧ ΘL + (− 1)nu ∧δV0ΘL = 0.
+Hencev equalsδV0u onX0, soδV0u is a holomorphic form on X0. Since u is also holomorphic
+it follows that V0 must be holomorphic too, except possibly where u vanishes. But since V19
+is smooth, V must actually be holomorphic everywhere by Riemann’s theor em on removable
+singularities. □
+This lemma could also have been proved using the approach via L2-estimates. It is then
+strongly related to the following proposition that we state explicitly since we feel it has an inde-
+pendent interest.
+Proposition 5.2. LetL be a positive line bundle over a compact complex manifoldZ. GiveZ the
+Kähler metric deﬁned by the curvature form of L. Let µ be the L2-minimal solution to ¯∂µ =f ,
+wheref is anL-valued (n, 1)-form onZ. Then equality holds in Hörmander’s estimate, i e∫
+Z
+|µ |2 =
+∫
+Z
+|f |2
+if and only if γ = ∗f is a holomorphic form.
+Proof. Letφ be the metric onL. By Lemma 4.4
+µ =∂φγ,
+for some ¯∂ -closed (n − 1, 0)-formγ . Thus∫
+Z
+|µ |2 =
+∫
+Z
+f ∧ ¯γe −φ ≤ ∥f ∥∥γ ∥,
+with equality only if ∗f is proportional toγ . By the Hörmander-Kodaira-Nakano identity∫
+Z
+γ ∧ ¯γ ∧i∂ ¯∂φe −φ +
+∫
+Z
+|¯∂γ |2 =
+∫
+Z
+|µ |2.
+The ﬁrst term on left hand side here is the norm squared ofγ so it follows that
+∥γ ∥2 ≤ ∥µ ∥2,
+with equality only if ¯∂γ = 0, and combined with our previous estimate
+∥µ ∥2 ≤ ∥f ∥2
+with equality only if ¯∂γ = 0 and ∗f is proportional to γ . Hence ∗f must be holomorphic. The
+argument is easily seen to be reversible. □
+We are now ready to state the main theorem of this section.
+Theorem 5.3. Assume thatZ has no nonzero global holomorphic vector ﬁeld. Suppose that
+(i)X is locally a product U × Z whereU is an open set in C,
+(ii)L is semipositive on X,
+and that
+(iii) L restricted to each ﬁber is strictly positive. Let ω t the Kähler metric be the ﬁber Xt
+induced by the curvature of L. Then, if for each t inU there is some element ut inEt such that
+(ΘEut,u t) = 0,
+it follows that
+ω t =ω 0
+fort inU.20
+Proof. By Lemma 5.1 the restriction ofθL to each ﬁberXt is zero. Hence
+∂θ L = L∂/∂t ΘL
+also vanishes on ﬁbers, which means that
+d
+dtω t = 0.
+□
+6. T HE SPACE OF KÄHLER METRICS .
+In this section we will specify the situation even more, and a ssume that X = U × Z is a
+product, and that moreover the line bundleL is the pullback of a bundle onZ under the projection
+on the second factor. Intuitively this means that not only are all ﬁbers the same, but also the line
+bundle on them, so it is only the metric that varies. Fix one me tricφ 0 onL, that we can take to
+be the pullback of a metric on the bundle onZ, i e independent of thet-variable. Then any other
+metric onL can be written
+φ =φ 0 +ψ,
+whereψ is a function on X. We also continue to assume that U is a domain in C. Let u be an
+element inEt.
+In this situation we have an explicit lower bound for the curvature form operating onu, gener-
+alizing 3.1:
+(6.1) (ΘEu,u ) ≥
+∫
+Xt
+(
+ψ t¯t − |¯∂zψ t|2
+φ
+)
+[u,u ].
+Here the expression |f |φ means the norm of the formf with respect to the metricω :=i∂ ¯∂zφ on
+Xt. This can be proved, either by adapting the method of section 3 - note that we may replace
+anyt-derivative ofφ by the corresponding derivative ofψ sinceφ 0 is independent oft - or from
+the more complicated proof in section 4. To see how it followsfrom the formulas in section 4 we
+again decompose
+u =u0 +dt ∧v
+like in the previous section, and also write
+i∂ ¯∂φ =ω − 2Reidt ∧ ¯∂ψ t +ψ t¯tidt ∧d¯t.
+Then
+cNu ∧ ¯u ∧i∂ ¯∂φ =
+(
+ψ t¯tcnu0 ∧ ¯u0 +cn− 1v ∧ ¯v ∧ω − 2Re ¯∂ψ t ∧u0 ∧ ¯v
+)
+∧idt ∧d¯t.
+By Cauchy’s inequality
+2Re ¯∂ψ t ∧u0 ∧ ¯v ≤ cn− 1v ∧ ¯v ∧ω + |¯∂ψ t|2
+φcnu0 ∧ ¯u0
+so
+cNu ∧ ¯u ∧i∂ ¯∂φ ≥
+(
+ψ t¯t − |¯∂ψ t|2
+φ
+)
+cnu0 ∧ ¯u0,
+and (6.1) follows from (4.8) and (2.5). Notice that we have us ed nowhere that Θ is positive on
+the total space X, just that the restriction to ﬁbers are positive. Therefore (6.1) holds for any21
+metric onL which is strictly positive along the ﬁbers, even though of course this does not imply
+thatE is positive in general.
+The expression occuring in the integrand in 6.1,
+C(ψ ) =
+(
+ψ t¯t − |¯∂zψ t|2
+φ
+)
+plays a crucial role in the recent work on variations of Kähler metrics on compact manifolds, see
+[26], [20], [11], [12],[25] and [8], to quote just a few. Fixi ng a line bundleL onZ, these papers
+consider the space K(L) of all Kähler metrics whose Kähler form is cohomologous to the Chern
+class ofL. This means precisely that the Kähler form can be written
+i∂ ¯∂φ =i∂ ¯∂φ 0 +i∂ ¯∂ψ,
+for some functionψ . and so the set up we described above, where ψ depends ont, corresponds
+to a path in K(L).
+The tangent space of K(L) at a pointφ is a space of functions ˙ψ and a Riemannian metric on
+the tangent space is given by theL2-norm
+|˙ψ |2 =
+∫
+Z
+|˙ψ |2(i∂ ¯∂φ )n/n !.
+In this way, K(L) becomes an inﬁnite-dimensional Riemannian manifold.
+Now consider our spaceX above and letU = {|Ret|< 1} be a strip, and consider functions
+ψ that depend only on Ret. Then
+4C(ψ ) = ¨ψ − |¯∂z ˙ψ |2
+φ
+if we use dots to denote derivatives with respect to Ret. The link between Theorem 1.2 and the
+papers quoted above lies in the fact that, by the results in [2 6], the right hand side here is the
+geodesic curvature of the path in K(L) determined byψ .
+A basic idea in the papers quoted above is to consider the spaces
+Et = Γ(Xt,K Xt ⊗ L)
+with the inducedL2-metric as a ﬁnite dimensional approximation or “quantization” of the man-
+ifold Z with metric φ t = φ 0 +ψ (t, ·). (Actually this is not quite true. In the papers quoted
+above one does not take the tensor product with the canonicalbundle, but instead integrates with
+respect to the volume element (i∂ ¯∂φ t)n/n !.) Here one also replaces L byLk - withk− 1 playing
+the role of Planck’s constant - and studies the asymptotic behaviour ask goes to inﬁnity.
+Under this “quantization” map, functions,χ , onZ correspond to the induced Toepliz operator,
+Tχ , onEt. This Toepliz operator is deﬁned by
+(Tχu,u )Et =
+∫
+{t}×Z
+χ [u,u ],
+if u is any element in Et. Note that the right hand side in our estimate for the curvatu re (6.1)
+equals ( 4 times) (Tχu,u ), withχ equal to the geodesic curvature of the path in K. Thus the in-
+equality 6.1 can be formulated as saying that “the curvatureof the quantization is greater than the
+quantization of the curvature”, i e that the curvature operator of the vector bundle corresponding
+to a path in K(L) is greater than the Toepliz operator deﬁned by the geodesic c urvature of the22
+path. Moreover, Theorem 5.3 implies that ifZ has no nonzero global holomorphic vector ﬁelds,
+then equality holds only for a constant path.
+7. B UNDLES OF PROJECTIVE SPACES
+Let V be a holomorphic vector bundle of ﬁnite rank r over a complex manifold Y , and let
+V ∗ be its dual bundle. We let P(V ) be the ﬁber bundle over Y whose ﬁber at each point t of
+the base is the projective space of lines in V ∗
+t , P(V ∗
+t ). Then P(V ) is a holomorphically locally
+trivial ﬁbration. There is a naturally deﬁned line bundle OP(V )(1) over P(V ) whose restriction
+to any ﬁber P(V ∗
+t ) is the hyperplane section bundle (see [19]). One way to deﬁne this bundle
+is to ﬁrst consider the tautological line bundle OP(V )(− 1). The total space of this line bundle,
+with the zero section removed, is just the total space of V ∗ with the zero section removed, and
+the projection to P(V ) is the map that sends a nonzero point in V ∗
+t to its image in P(V ∗
+t ). The
+bundleOP(V )(1) is then deﬁned as the dual of OP(V )(− 1). The global holomorphic sections of
+this bundle over any ﬁber are in one to one correspondence wit h the linear forms on V ∗
+t , i e the
+elements of V . More generally, OP(V )(1)l = OP(V )(l) has as global holomorphic sections over
+each ﬁber the homogenuous polynomials onV ∗
+t of degreel, i e the elemets of thel:th symmetric
+power ofV . We shall apply Theorem 1.2 to the line bundles
+L(l) =: OP(V )(l).
+LetE(l) be the vector bundle whose ﬁber over a pointt inY is the space of global holomorphic
+sections ofL(l) ⊗ KP(V ∗
+t ). Ifl<r there is only the zero section, so we assume from now on that
+l is greater than or equal tor.
+We claim that
+E(r) = det V,
+the determinant bundle ofV . To see this, note thatL(r) ⊗KP(V ∗
+t ) is trivial on each ﬁber, since the
+canonical bundle of (r − 1)-dimensional projective space isO(−r). The space of global sections
+is therefore one dimensional. A convenient basis element is
+r∑
+1
+zj ˆdzj,
+if zj are coordinates on V ∗
+t . Here ˆdzj is the wedge product of all differentials dzk exceptdzj
+with a sign chosen so that dzj ∧ ˆdzj = dz1 ∧...dz r. If we make a linear change of coordinates
+onV ∗
+t , this basis element gets multiplied with the determinant ofthe matrix giving the change of
+coordinates, so the bundle of sections must transform as the determinant ofV . Since
+L(r + 1) ⊗ KP(V ∗
+t ) =OP(V )(1) ⊗ L(r) ⊗ KP(V ∗
+t ),
+it also follows that
+E(r + 1) = V ⊗ detV.
+In the same way
+E(r +m) = Sm(V ) ⊗ detV,
+whereSm(V ) is themth symmetric power ofV .23
+Let us now assume that V is ample in the sense of Hartshorne, see [16]. By a theorem of
+Hartshorne, [16], V is ample if and only if L(1) is ample, i e has a metric with strictly positive
+curvature. Theorem 1.2 then implies that the L2-metric on each of the bundles E(r +m) for
+m ≥ 0 has curvature which is strictly positive in the sense of Nakano, so we obtain:
+Theorem 7.1. LetV be a vector bundle (of ﬁnite rank) over a complex manifold. As sumeV is
+ample in the sense of Hartshorne. Then for any m ≥ 0 the bundle
+Sm(V ) ⊗ detV
+has an hermitian metric with curvature which is (strictly) p ositive in the sense of Nakano.
+8. A PPENDIX
+In this section we will state and prove an extension result of Ohsawa-Takegoshi type which
+in particular implies that the bundles E that we have discussed in this paper really are vector
+bundles. The proof follows the method of [2]. See also [27] for a closely related result.
+Theorem 8.1. LetX be a Kähler manifold ﬁbered over the unit ballU in Cm, with compact ﬁbers
+Xt. Let L be a holomorphic line bundle on X with a smooth hermitian metric with semipositive
+curvature. Letu be a holomorphic section of KX0 ⊗ L overX0 such that∫
+X0
+[u,u ] ≤ 1.
+Then there is a holomorphic section, ˜u toKX overX such that ˜u =u ∧dt fort = 0 and∫
+X
+[˜u, ˜u] ≤ C
+whereC is an absolute constant.
+Proof. We assume m = 1 . The general case follows in the same way, extending with res pect
+to one variable at the time. At ﬁrst we also assume that the met ric on L is smooth. The proof
+follows closely the method in [2] so we will be somewhat sketchy.
+Letf = u ∧ [X0]/ (2πi ), where [X0] is the current of integration on X0. Then ¯∂f = 0 and
+ifv is any solution to ¯∂v = f then ˜u = tv is a section of KX ⊗ L that extends u in the sense
+described. To ﬁnd av withL2-estimates we need to estimate∫
+X
+(f,α )
+for any compactly supported test form α of bidegree (n + 1, 1) onX. For α given, decompose
+α =α 1 +α 2, whereα 1 is ¯∂ -closed, andα 2 is orthogonal to the kernel of ¯∂ . This means that α 2
+can be written
+α 2 = ¯∂ ∗β
+for some β . By the regularity of the ¯∂ -Neumann problem α i andβ are all smooth up to the
+boundary. We ﬁrst claim that
+(8.1)
+∫
+(f,α 2) = 0.24
+This is not surprising sincef is ¯∂ -closed, but it is not quite evident sincef is not inL2. To prove
+it, extend u smoothly to X. Then ¯∂u ∧d¯t = 0 fort = 0 . Let χ be a smooth cut-off function
+equal to one near the origin in R, and put
+χ ǫ (t) = χ (|t|2/ǫ ).
+Then
+f =χ ǫf = ¯∂ (u ∧ dt
+t )χ ǫ − ¯∂u ∧ dt
+t χ ǫ =
+= ¯∂ (u ∧ dt
+t χ ǫ) − u ∧ dt
+t ∧ ¯∂χ ǫ − ¯∂u ∧ dt
+t χ ǫ =:I +II +III.
+Clearly the scalar product between I and α 2 vanishes. It is also clear that the scalar product
+between III andα 2 goes to zero as ǫ goes to zero. The scalar product between II and α 2 equals,
+up to signs ∫
+χ ′( ¯∂u ∧dt ∧d¯t,β )/ǫ,
+which is easily seen to tend to zero as well since ¯∂u ∧d¯t vanishes fort = 0. Hence 8.1 follows.
+Therefore
+|
+∫
+X
+(f,α )|2 = |
+∫
+X
+(f,α 1)|2 ≤
+∫
+X0
+γ ∧ ¯γe −φ,
+where γ is the Hodge-* of α 1. The form γ satiﬁes ω ∧ γ = α 1 and ¯∂ ∗α = ¯∂ ∗α 1 = ∂φγ . To
+estimate this we apply the Siu ∂ ¯∂ -Bochner formula ( see [2]): If w is any nonnegative function
+smooth up to the boundary ofX, then
+(8.2) −
+∫
+i∂ ¯∂w ∧cnγ ∧ ¯γe −φ +
+∫
+i∂ ¯∂φ ∧cnγ ∧ ¯γe −φw ≤
+≤ 2cnRe
+∫
+¯∂∂ φγ ∧ ¯γe −φw = 2
+∫
+|¯∂ ∗α |2w + 2Re
+∫
+( ¯∂ ∗α,∂w ∧γ ).
+Now choosew = (1/ 2π ) log(1/ |t|2). (Although w is not smooth it can be approximated by the
+smooth functions (1/ 2π ) log(1/ (|t|2 +ǫ)), so formula (8.2) still holds.) If i∂ ¯∂φ is nonnegative
+we then ﬁnd that∫
+X0
+γ ∧ ¯γe −φ ≤ C
+∫
+|¯∂ ∗α |2(log(1/ |t|2 + 1/ |t|) +C
+∫
+X
+idt ∧d¯t ∧γ ∧ ¯γe −φ (1/ |t|).
+To take care of the last term we repeat the last argument once m ore, this time choosing w =
+(1 − |t|) and ﬁnally obtain an estimate
+|
+∫
+X
+(f,α )|2 ≤ C
+∫
+|¯∂ ∗α |2(1/ |t|).
+This implies that there is some functionv onX such that∫
+X
+(f,α ) =
+∫
+(v, ¯∂ ∗α ),
+for all test formsα , and satisfying ∫
+|v|2|t| ≤C.25
+Then ˜u :=tv satisﬁes the conclusion of the theorem.
+□
+REFERENCES
+[1] B ERNDTSSON ,B: Subharmonicity properties of the Bergman kernel and some ot her functions associated
+to pseudoconvex domains., Ann. Inst. Fourier (Grenoble) 56 (2006), no. 6, 1633–1662. .
+[2] B ERNDTSSON , B: The extension theorem of Ohsawa-T akegoshi and the theorem o f Donnelly-Fefferman.,
+Ann. Inst. Fourier (Grenoble) 46 (1996), no. 4, 1083–1094.
+[3] B ERNDTSSON , B: Positivity of direct image bundles and convexity on the spac e of Kahler metrics ,
+arXiv:math/0608385.
+[4] B ERNDTSSON , B AND PAUN M: Bergman kernels and the pseudoeffectivity of relative cano nical bundles,
+arXiv:math/0703344 .
+[5] B ERNDTSSON , B AND PAUN M: in preparation,
+[6] LiebH J B RASCAMP AND E H L IEB: On extensions of the Brunn-Minkowski and Prékopa-Leindler theo-
+rems, including inequalities for log concave functions, an d with an application to the diffusion equation. , J.
+Functional Analysis 22 (1976), no. 4, 366–389..
+[7] F C AMPANA AND H F LENNER : A characterization of ample vector bundles over a curve , Math Ann 287,
+(1990), pp 571-575.
+[8] C HEN , X. X AND TIAN , G.: Geometry of Kähler metrics and F oliations by Holomorphic Di scs, ArXiv
+math.DG/0507148.
+[9] J P D EMAILLY : Estimations L2 pour l’opérateur ¯∂ d’un ﬁbré vectoriel holomorphe semi-positif au-dessus
+d’une variété kählérienne complète. , Ann. Sci. École Norm. Sup. (4) 15 (1982) no. 3, 457–511..
+[10] D EMAILLY , J.-P.; S KODA , H.: Relations entre les notions de positivités de P . A. Grifﬁths et de S. Nakano
+pour les ﬁbrés vectoriels., Séminaire Pierre Lelong-Henri Skoda (Analyse). Années 19 78/79 , pp. 304–309,
+Lecture Notes in Math., 822, Springer, Berlin, 1980. .
+[11] D ONALDSON , S. K.: Scalar curvature and projective embeddings. I. , J. Differential Geom. 59 (2001),
+no. 3, 479–522.
+[12] D ONALDSON , S. K.: Scalar curvature and projective embeddings. II. , Q. J. Math. 56 (2005), no. 3,
+345–356..
+[13] F UJITA , T: , .
+[14] P H GRIFFITHS : Hermitian differential geometry, Chern classes and positi ve vector bundles , in Global
+Analysis, papers in Honor of K Kodaira, University of Tokyo press and Princeton University press, 1969.
+[15] P H GRIFFITHS AND J HARRIS : Principles of Algebraic Geometry , John Wiley and sons, 1978.
+[16] R H ARTSHORNE : Ample vector bundles, Publ Math Inst Hautes Etod Sci, 29 (1966) pp 63 94.
+[17] L H ÖRMANDER : L2-estimates and existence theorems for the ¯∂- operator, Acta Math 113 (1965).
+[18] K ULIKOV, V S AND KURCHANOV , P F: Complex algebraic varieties: periods of integrals and Hodg e
+structures , Algebraic geometry, III, 1–217, 263–270, Encyclopaedia M ath. Sci., 36, Springer, Berlin,
+1998..
+[19] R L AZARSFELD : Positivity in algebraic geometry. I. Classical setting: li ne bundles and linear series. ,
+Springer-Verlag, Berlin, 2004. .
+[20] M ABUCHI , T OSHIKI : K-energy maps integrating Futaki invariants , Tohoku Math. J. (2) 38 (1986), no.
+4, 575–593..
+[21] M AITANI F AND YAMAGUCHI H: V ariation of Bergman metrics on Riemann surfaces. , Math. Ann. 330
+(2004), no. 3.
+[22] C M OUROUGANE AND S TAKAYAMA : A positivity property of ample vector bundles , preprint -05.
+[23] K AWAMATA, YUJIRO : Kodaira dimension of algebraic ﬁber spaces over curves., Invent. Math. 66 (1982),
+no. 1, 57–71. .26
+[24] K OLLÁR , J: Higher direct images of dualizing sheaves. I , Ann. of Math. (2) 123 (1986), no. 1, 11–42.
+[25] P HONG D H AND STURM J: The Monge-Ampere operator and geodesics in the space of Kähl er potentials,
+ArXiv math. DG/0504157.
+[26] S EMMES , S: Complex Monge-Ampère and symplectic manifolds. , Amer. J. Math. 114 (1992), no. 3,
+495–550.
+[27] S IU, Y-T: Extension of twisted pluricanonical sections with plurisu bharmonic weight and invariance of
+semipositively twisted plurigenera for manifolds not nece ssarily of of general type , Complex Geometry
+(Göttingen, 2000), 223-277, Springer, Berlin 2002.
+[28] T SUJI , H: Kobayashi hyperbolicity of certain moduli spaces and varia tion of Bergman kernels , preprint,
+March 2005.
+[29] T SUJI , H: V ariation of Bergman kernels of adjoint line bundles , arXiv:math/0511342.
+[30] H U MEUMURA : Moduli spaces of the stable vector bundles over Abelian surf aces, Nagoya Math J 77
+(1980) pp 47-60.
+[31] V OISIN C: Hodge theory and complex algebraic geometry. I., Cambridge Studies in Advanced Mathemat-
+ics, 76. Cambridge University Press, Cambridge, 2002.
+[32] Y AMAGUCHI , H: V ariations of pseudoconvex domains overCn, Michigan Math J 36 -89 pp 415-457.
+B B ERNDTSSON :DEPARTMENT OF MATHEMATICS , C HALMERS UNIVERSITY OF TECHNOLOGY AND THE
+UNIVERSITY OF GÖTEBORG , S-412 96 GÖTEBORG, SWEDEN,,
+E-mail address: bob@math.chalmers.se

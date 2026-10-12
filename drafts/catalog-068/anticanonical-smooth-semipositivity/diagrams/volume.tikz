@@ -1,0 +1,7 @@
+\node[card] (n0) {\heading{}{非消滅の否定から支持面}{Failure of nonvanishing gives a supporting face}$L\cdot\alpha=D\cdot\alpha=0,\quad\mu_{\min,\alpha}(T_Z)\ge0$};
+\node[card,below=2.4cm of n0] (n1) {\heading{}{固定した行列式と無限のtwists}{One determinant with unbounded twists}$s_i\in H^0(Z,M+m_iL),\quad m_i\longrightarrow\infty$};
+\node[card,below=2.4cm of n1] (n2) {\heading{}{切断比を支配する小さい底}{A smaller base controls all section ratios}$\dim S<\dim Z,\quad\rho:\ \text{\Tx{水平極なし}{no horizontal poles}};\quad\operatorname{rank}=1$};
+\node[result,below=2.4cm of n2] (n3) {\heading{}{次元帰納法と許可された極}{Induction and permitted poles}$H^0(S,aA+bD_S)\ne0\Longrightarrow H^0(Z,akL+cD)\ne0$};
+\flow{n0}{n1}{\Tx{有界重みで乗数イデアルが自明、Hard Lefschetzとtail安定化}{Bounded weights trivialize multiplier ideals; stabilize the tail span}\\[5pt]\Cite{dps01}; \Cite{determinant}};
+\flow{n1}{n2}{\Tx{最大系と補間から水平極なし・全次数rank one}{Maximality and interpolation give no horizontal poles and rank one}\\[5pt]\Cite{maximal}};
+\flow{n2}{n3}{\Tx{零次・高次積分で二計量を移し、次元を下げる}{Transfer two metrics by zeroth and high moments, then induct}\\[5pt]\Cite{transfer}; \Cite{induction}};

@@ -1,0 +1,7 @@
+\node[card] (n0) {\heading{}{自然反標準character}{Natural anticanonical character}$w=\sum_i\nu_i,\qquad [t^0]\text{ in the fixed-component formula}$};
+\node[card,below=2.7cm of n0] (n1) {\heading{}{polarizationと重み付き計数}{Polarization and weighted counts}$D=\{x_i\ge0:\sum\alpha_ix_i=-w\},\quad A=\bigcup_{i\in I}(D\cap\{x_i=0\})$};
+\node[card,below=2.7cm of n1] (n2) {\heading{}{削除面へのretraction}{Retraction onto deleted faces}$u_i=\pm1,\quad r(x)=u+t(x)(x-u),\quad\chi(D)-\chi(A)=0\ (I\ne\varnothing)$};
+\node[result,below=2.7cm of n2] (n3) {\heading{}{多項式の零次項と実際の零次値}{Polynomial endpoint equals the actual index at zero}$I_T(m)=P(m)\ (a\mid m>0),\quad P(0)=I_T(0)$};
+\flow{n0}{n1}{\Tx{compact群の固定成分公式、有限次数でChern rootsを展開}{Fixed-component formula; truncate the Chern-root expansion}\\[5pt]\Cite{aseg68}; \Cite{localization}};
+\flow{n1}{n2}{\Tx{自然characterの和が外点uを同じaffine空間に置く}{The character sum places the exterior point u in the same affine space}\\[5pt]\Cite{weighted}};
+\flow{n2}{n3}{\Tx{全可除指数の計数と包除原理、m=0で許されるのはb=0}{Count every divisible exponent; inclusion-exclusion matches b=0 at m=0}\\[5pt]\Cite{weighted}; \Cite{localization}};

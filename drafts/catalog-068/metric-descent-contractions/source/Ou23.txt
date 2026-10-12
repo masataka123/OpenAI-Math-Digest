@@ -1,0 +1,1076 @@
+arXiv:1703.03175v4  [math.AG]  2 Aug 2021
+ON GENERIC NEFNESS OF T ANGENT SHEA VES
+WENHAO OU
+ABSTRACT . W e show that the tangent bundle of a projective manifold wit h nef
+anticanonical class is generically nef. That is, its restri ction to a curve cut out by
+general sufﬁciently ample divisors is a nef vector bundle. T his conﬁrms a conjec-
+ture of Peternell. As a consequence, the second Chern class o f such a manifold has
+non-negative intersections with ample divisors. W e also in vestigate under which
+conditions these positivities are strict, and answer a ques tion of Yau.
+CONTENTS
+1. Introduction 1
+2. Preliminary 4
+3. Positivity of tangent sheaves 6
+4. An orbifold version of generic nefness 8
+5. Relation with rational connectedness 10
+6. Equality conditions of Miyaoka inequality 11
+7. Proof of the classiﬁcation theorem 18
+Reference 21
+1. I NTRODUCTION
+From the viewpoint of the minimal model program, complex pro jective mani-
+folds X could be birationally classiﬁed according to the sign of the canonical class
+KX. It is natural to ask how far we can lift the positivity (or the negativity) of KX
+to the cotangent sheaf Ω1
+X. The following two theorems were due to Miyaoka (See
+[Miy87, Corollary 6.4]).
+Theorem 1.1. Let X be a complex projective manifold such that K X is pseudoeffective.
+Then the sheaf Ω1
+X is generically nef. That is, Ω1
+X|C is a nef vector bundle for any Mehta-
+Ramanathan-general curve C.
+Theorem 1.2. Let X be a complex projective manifold of dimension n such tha t KX is nef.
+Then for any ample divisors H 1, ..., Hn− 2, we have
+c2(Ω1
+X) ·H1 · · · · ·Hn− 2 ⩾ 0,
+where c2 stands for the second Chern class.
+A Mehta-Ramanathan-general curve C is the complete intersection of n − 1 suf-
+ﬁciently ample divisors in general positions, where n is the dimension of X. In
+2010 Mathematics Subject Classiﬁcation. 14E99.
+1this paper, we are interested in complex projective varieti es with nef anticanoni-
+cal class − KX. These varieties have been broadly studied, e.g. [DPS93], [ DPS94],
+[DPS96], [ Zha96], [ P˘ au97], [ DPS01], [ Zha05], [ P˘ au12], [ Pet12], [ CDP15], [ CH17]
+and [Cao19]. Based on their works, we prove the following theorem.
+Theorem 1.3. Let X be a complex projective variety of dimension at least 2 with Q-
+factorial log canonical singularities. Assume that that − KX is nef. Then the reﬂexive
+tangent sheaf T X is generically nef. That is, T X|C is a nef vector bundle for a Mehta-
+Ramanathan-general curve C.
+Theorem 1.3 was conjectured by Peternell in [ Pet12, Conjecture 1.5]. Further-
+more, if C is the intersection of n − 1 sufﬁciently ample divisors of the same class,
+then Cao (see [ Cao13, Theorem 1.2]) and Guenancia (see [ Gue16, Theorem C])
+proved the nefness of TX|C independently by analytic methods.
+W e note that Theorem 1.3 does not hold if we only assume that − KX is pseu-
+doeffective. The following example could be found in [ DPS01, Example 4.14]. Let
+Y be a curve of genus g ⩾ 2 and let L be a line bundle on Y of degree smaller
+than 2 − 3g. Let X = P(OY ⊕ L) be a surface and let f : X → Y be the natural
+projection. Then, on the one hand, − KX is effective. On the other hand, we have a
+natural surjective morphism TX → p∗TY. Since Ω1
+Y is ample, we deduce that TX|C
+is not nef if C ⊆ X is a general very ample divisor.
+W e also remark that on cannot replace a Mehta-Ramanathan-general curve by a
+movable curve in Theorem
+1.3. Actually , it was shown in [ BDPP13, Theorem 7.7]
+that if X is a K3-surface or a Calabi-Y au threefold, then there is a dom inant family
+of curves (Ct)t∈ T such that TX|Ct is not nef for general t ∈ T.
+For movable curves, we prove the following theorem, which im plies Theorem
+1.3 by using Mehta-Ramanathan theorem (see [ MR82, Theorem 6.1]).
+Theorem 1.4. Let X be a complex projective variety with Q-factorial log canonical sin-
+gularities. Assume that − KX is nef. Let α be a movable class of curves. Then for any
+non-zero torsion-free quotient sheaf Q of T X, we have α ·c1(Q) ⩾ 0, where c 1 stands for
+the ﬁrst Chern class.
+As a corollary , we can obtain the following result, which ext ends [ Xie04, The-
+orem 1.2] to varieties of any dimension. It can be viewed as a d ual version of
+Theorem 1.2.
+Corollary 1.5. Let X be a normal complex projective variety of dimension n wi th nef
+anticanonical class − KX. Assume that X has Q-factorial log canonical singularities and
+is smooth in codimension 2. Then for any nef divisors H 1, ..., Hn− 2, we have
+c2(TX) ·H1 · · · · ·Hn− 2 ⩾ 0.
+An orbifold version of Theorem 1.1 was established in [ CP15, Theorem 2.1]: if
+(X, ∆) is a projective Q-factorial log canonical pair with KX + D pseudoeffective,
+then the orbifold cotangent sheaf Ω1(X, ∆) is π -generically nef for any adapted
+Kawamata ﬁnite cover π : Z → X. In our situation, we can also prove the follow-
+ing orbifold version of Theorem 1.3.
+Theorem 1.6. Let (X, ∆) be a complex projective Q-factorial log canonical pair such that
+− (KX + ∆) is nef. Then the orbifold tangent sheaf T (X, ∆) is π -generically nef for any
+adapted Kawamata ﬁnite cover π : Z → X.
+2It is natural to ask under which conditions the positivities in the theorems above
+are strict. In the second part of the paper, we prove the the following two theorems.
+Theorem 1.7. Let X be a smooth projective complex manifold of dimension n ⩾ 2 with
+nef anticanonical class − KX. Then the following properties are equivalent:
+(1) X is rationally connected;
+(2) T X is generically ample, that is, T X|C is an ample vector bundle for any Mehta-
+Ramanathan-general curve C.
+The next theorem was pointed out to the author by Junyan Cao, a nd the idea of
+the proof goes back to Andreas Höring.
+Theorem 1.8. Let X be a smooth complex projective manifold of dimension n w ith nef
+anticanonical class − KX. Then the following properties are equivalent:
+(1) there are ample divisors H 1, ..., Hn− 2 such that
+c2(TX) ·H1 · · · · ·Hn− 2 = 0;
+(2) there is a ﬁnite étale cover ˜X → X such that ˜X is either isomorphic to an abelian
+variety or isomorphic to a P1-bundle over an abelian variety.
+This theorem answers a question of Y au in the case of projecti ve manifolds (see
+[
+Y au93, Problem 66]). W e note that one could not expect theP1-bundle to be trivial,
+see for example [ DPS94, Example 3.5].
+There are two main ingredients for the proof of Theorem 1.4. The ﬁrst one is the
+following theorem on algebraicity of foliations, due to Cam pana and P˘ aun (See
+[CP19, Theorem 1.1]).
+Theorem 1.9. Let X be a projective manifold. Let α be any movable curve class. Let
+F ⊂ TX be a foliation. Assume that the slope, with respect to α , of any non-zero torsion-
+free quotient of F is strictly positive. Then F is algebraically integrable. That is, F is the
+foliation induced by some rational dominant map f : X /axisshort/axisshort/arrowaxisrightY. Moreover, general leaves
+of F are rationally connected.
+Another crucial theorem is the following one, which is a reﬁn ed version of a
+theorem of Chen and Zhang (see [ CZ13, Main Theorem]).
+Theorem 1.10. Let (X, D) be a projective Q-factorial log canonical pair with − (KX + D)
+nef. Let f : X /axisshort/axisshort/arrowaxisrightY be a rational dominant map with 0 < dim Y < dim X. Let F be
+the foliation induced by f . Then K F − KX − Dver is pseudo-effective, where D ver is the
+vertical part of D over Y, and K F is the canonical class of F .
+W e recall that, if f : X /axisshort/axisshort/arrowaxisrightY is a rational dominant map between two varieties
+and if ∆ is a prime divisor in X, then ∆ is said to be horizontal over Y if its strict
+transform in the graph of f dominates Y. Otherwise, ∆ is said to be vertical over
+Y.
+Let us sketch the proof of the Theorem 1.4. Our idea is inspired by Peternell’s
+proof in the case of rational surfaces (see [ Pet12, Theorem 5.9]). W e assume by
+contradiction that there is some movable class α and some torsion-free quotient
+TX → Q such that α ·c1(Q) < 0. Then we can ﬁnd a suitable subsheaf, namely
+F , in the Harder-Narasimhan semistable ﬁltration of TX such that α ·c1(T/F ) is
+negative, and that F is a foliation on X. In particular,
+α ·KF < α ·KX.
+3Moreover, by using Theorem 1.9, we can show that F is induced by a rational
+dominant map f : X /axisshort/axisshort/arrowaxisrightY. Then from Theorem 1.10, we obtain that
+C ·KF ⩾ C ·KX.
+This is a contradiction.
+The present paper is organized as follows. After recalling s ome basic results in
+Section 2, we will prove Theorem 1.10, Theorem 1.4, Theorem 1.3 and Corollary
+1.5 successively in Section 3. The orbifold case will be treated in Section 4. Finally ,
+we will prove Theorem 1.7 and Theorem 1.8 from Section 5 to Section 7.
+Acknowledgment. The author would like to express his gratitude to Stéphane
+Druel and Burt T otaro for reading the preliminary version of this paper and warm
+encouragement. He is grateful to Junyan Cao for pointing out Theorem 1.8 to him.
+He would also like to thank Jun Li, Chen Jiang, Claire V oisin, Yuan W ang and Jian
+Xiao for general discussions.
+2. P RELIMINARY
+W e ﬁrst collect some notation and elementary result in this section. Throughout
+this paper, we will work over C, the ﬁeld of complex numbers.
+2.1. Slope semistability and Harder-Narasimhan ﬁltrations. Let X be a normal
+projective variety and let α be a movable curve class. Assume that either X is
+Q-factorial or α is the class of a complete intersection of basepoint-free Ca rtier
+divisors. Then for any torsion-free coherent sheaf E of positive rank on X, the
+slope of E with respect to α is the number
+µ α (E) = α ·c1(E)
+rank E .
+The maximal slope is deﬁned as follows,
+µ α ,max (E) = sup{µ α (F) |F is a non-zero saturated subsheaf of E}.
+The supremum is in fact a maximum. The sheaf E is called α -semistable (or just
+semistable if there is no ambiguity) if µ α ,max (E) = µ α (E). If E is not semistable,
+then there is a unique maximal subsheaf F of E such that µ α ,max (E) = µ α (F). This
+F is called the maximal destabilizing subsheaf and is automat ically semistable.
+There is a unique ﬁltration, called the Harder-Narasimhan s emistable ﬁltration,
+of saturated subsheaves,
+0 = E0 ⊊ E1 ⊊ · · ·⊊ Er = E
+such that Ei/Ei− 1 is the maximal destabilizing subsheaf of E/Ei− 1 for all i ∈
+{1, ..., r} and that the sequence (µ α (Ei/Ei− 1))i∈{ 1,...,r} is strictly decreasing.
+The minimal slope is deﬁned as follows,
+µ α ,min (E) = inf{µ α (Q) |Q is a non-zero torsion-free quotient sheaf of E}.
+This inﬁmum is also a minimum. Indeed, we have µ α ,min(E) = µ α (E/Er− 1), where
+Er− 1 is the saturated subsheaf deﬁned in the Harder-Narasimhan ﬁ ltration above.
+Lemma 2.1. Let X be a normal projective variety and let α be a movable curve class in X.
+Assume that either X is Q-factorial or α is the complete intersection class of basepoint-free
+4Cartier divisors. Let E be a non-zero torsion-free sheaf on X such that µ α (E) ⩾ 0 and
+µ α ,min(E) < 0. Let
+0 = E0 ⊊ E1 ⊊ · · ·⊊ Er = E
+be the Harder-Narasimhan semistable ﬁltration with respec t to α . Then there is some
+k ∈ { 1, ..., r − 1} such that µ α (E/Ek) < 0 and µ α ,min (Ek) = µ α (Ek/Ek− 1) > 0.
+Proof. W e have µ α (E/Er− 1) = µ α ,min (E) < 0. Let k be the smallest integer in
+{0, ..., r − 1} such that µ α (E/Ek) < 0. Since µ α (E) ⩾ 0, we know that k ⩾ 1. W e
+consider the following exact sequence
+0 → Ek/Ek− 1 → E/Ek− 1 → E/Ek → 0.
+By the deﬁnition of k, we have µ α (E/Ek− 1) ⩾ 0. Thus µ α (Ek/Ek− 1) > 0. □
+2.2. Foliations and relative tangent sheaves. Let X be a normal variety of dimen-
+sion at least 2 and let TX = ( Ω1
+X)∗ be the reﬂexive tangent sheaf. A foliation F on
+X is a saturated subsheaf of TX which is closed under Lie brackets. The canonical
+class KF of F is a W eil divisor such that
+OX(− KF ) ∼
+= det F ,
+where det F is the reﬂexive hull of the top wedge product of F . W e say that F is
+algebraically integrable if the dimension of the Zariski cl osure of a general leaf of
+F is equal to the rank of F .
+Typical examples of foliations are relative tangent sheave s. W e consider a ra-
+tional dominant map f : X /axisshort/axisshort/arrowaxisrightY between normal varieties. Let V be the smooth
+locus of Y. Let U be a non-empty smooth open subset of X such that f |U is regular
+and f (U) ⊂ V. The relative tangent sheaf TU/V of f |U : U → V is deﬁned as the
+kernel of the natural differential map
+d f |U : TU → f ∗TV.
+There is a unique saturated subsheaf TX/Y of the reﬂexive tangent sheaf TX such
+that TX/Y|U = TU/V. W e call TX/Y the relative tangent sheaf of f : X /axisshort/axisshort/arrowaxisrightY. It is a
+foliation on X. W e note that a foliation is algebraically integrable if and only if it is
+induced by some rational dominant map (see e.g. [
+AD13, Lemma 3.2]).
+The following proposition extends [ CP19, Theorem 1.1] to singular varieties.
+Proposition 2.2. Let X be a projective normal Q-factorial variety. Let α be a movable
+curve class. Assume that F is a saturated subsheaf of T X such that
+(1) µ α ,min (F ) > 0,
+(2) 2µ α ,min(F ) > µ α ,max (TX/F ).
+Then F is an algebraically integrable foliation. Moreover, gener al leaves of F are ratio-
+nally connected.
+Proof. Let r : X′ → X be a resolution of singularities, and let α ′ = r∗α be the nu-
+merical pull-back such that
+α ′·β ′ = α ·r∗β ′
+for any divisor class β ′on X′(see [
+GKP14, Construction A.15]). Since α is movable,
+so is α ′ by [GKP14, Lemma A.17].
+If F ′ is the saturated subsheaf of TX′ induced by F , then
+µ α ′,min(F ′) = µ α ,min(F ) > 0,
+5and
+2µ α ′,min (F ′) = 2µ α ,min(F ) > µ α ,max (TX/F ) = µ α ′,max (TX′/F ′).
+Hence F ′ is an algebraically integrable foliation by [ CP19, Theorem 1.4]. More-
+over, general leaves of F ′ are rationally connected. The proposition then follows
+from the property that F ∼
+= (r∗F ′)∗∗. □
+3. P OSITIVITY OF TANGENT SHEAVES
+In this section, we will successively prove Theorem
+1.10, Theorem 1.4, Theorem
+1.3 and Corollary 1.5. W e will need the following statement, which is a special case
+of a result of Druel (see [ Dru17, Proposition 4.1]).
+Proposition 3.1. Let f : X → Y be a surjective morphism between normal projective
+varieties. Assume that X is Q-factorial. Let ∆ be an effective Q-divisor in X. Assume that
+the pair (F, ∆|F) is log canonical, where F is a general ﬁber of f . If there is som e positive
+integer m such that m (KX + ∆) is Cartier and that h 0(F, OF(m(KX + ∆)|F)) > 0, then
+KF + ∆ is pseudo-effective, where F is the foliation induced by f .
+Proof of Theorem 1.10. There is a log resolution π : Z → X of (X, D) such that the
+induced map g : Z → Y is a morphism. By blowing up Y and Z if necessary , we
+may assume that Y is smooth. W e write
+KZ + DZ ∼ Q π ∗(KX + D) + E,
+where DZ and E are effective Q-divisors without common components. Moreover
+E has π -exceptional support. Since (X, D) is log canonical, so is the pair (Z, DZ).
+Z
+g
+↓↓
+π →→ X
+Y
+Let L be an ample divisor in Z and let δ > 0 be a rational number. Then
+− π ∗(KX + D) + δ L is ample. W e can then choose an effective Q-divisor
+A ∼ Q − π ∗(KX + D) + δ L
+such that (Z, DZ + A) is a log canonical. W e have
+KZ + DZ + A ∼ Q E + δ L.
+Let ∆ = DZ + A − π − 1
+∗ Dver. Then ∆ is effective, and we have
+KZ + ∆ ∼ Q E + δ L − π − 1
+∗ Dver. (3.1)
+Let G be a general ﬁber of g. W e claim that m(KZ + ∆)|G has non-zero global
+sections for large enough and sufﬁciently divisible intege r m. Indeed, by the pre-
+vious equation, we have
+(KZ + ∆)|G ∼ Q (E + δ L − π − 1
+∗ Dver)|G ∼ Q (E + δ L)|G.
+The right-hand-side above is a big divisor. Hence m(KZ + ∆)|G has non-zero
+global sections for large enough and sufﬁciently divisible integer m.
+6By Proposition 3.1, we obtain that KG + ∆ is pseudoeffective, where G is the
+foliation induced by g. Hence
+E + δ L + (KG − KZ − π − 1
+∗ Dver) ∼ Q E + δ L − π − 1
+∗ Dver + (KG − KZ)
+∼ Q KZ + ∆ + (KG − KZ)
+∼ Q KG + ∆
+is pseudoeffective.
+Since this is true for arbitrary δ > 0, we obtain that
+E + (KG − KZ − π − 1
+∗ Dver)
+is pseudoeffective. Thus
+KF − KX − Dver = π ∗(E + (KG − KZ − π − 1
+∗ Dver))
+is pseudoeffective. □
+Proof of Theorem 1.4. Assume by contradiction that µ α ,min (TX) < 0. In particular,
+TX is not α -semistable. Let
+0 = E0 ⊊ E1 ⊊ · · ·⊊ Er = TX
+with r ⩾ 2 be the Harder-Narasimhan semistable ﬁltration. Then by Le mma 2.1,
+there is some k ∈ { 1, ..., r − 1} such that µ α (TX/Ek) < 0 and
+µ α ,min (Ek) = µ α (Ek/Ek− 1) > 0.
+W e have the following inequality ,
+2µ α ,min(Ek) = 2µ α (Ek/Ek− 1) > µ α (Ek/Ek− 1)
+> µ α (Ek+1/Ek) = µ α ,max (TX/Ek).
+Hence Ek is an algebraically integrable foliation by Proposition 2.2. W e denote Ek
+by F . Then
+α ·KF < α ·KX
+for µ α (TX/Ek) < 0.
+Since F is algebraically integrable, there is a rational dominant m ap f : X /axisshort/axisshort/arrowaxisrightY
+such that F is induced by f . Moreover, since F is a non-zero proper subsheaf, we
+have 0 < dim Y < dim X. Hence Theorem 1.10 shows that
+α ·KF ⩾ α ·KX.
+This is a contradiction. □
+Proof of Theorem 1.3. Let C be a Mehta-Ramanathan-general curve. Let
+0 = E0 ⊊ E1 ⊊ · · ·⊊ Er = TX
+be the Harder-Narasimhan ﬁltration with respect to the clas s α of C. Then, by
+Mehta-Ramanathan Theorem (see [ MR82, Theorem 6.1]), the restriction
+0 = E0|C ⊊ E1|C ⊊ · · ·⊊ Er|C = TX|C
+is the Harder-Narasimhan ﬁltration for TX|C. In particular, we have
+µ min (TX|C) = µ α ,min(TX) ⩾ 0.
+Thus TX|C is nef. □
+7T o prove Corollary 1.5, we ﬁrst recall that a non-zero torsion-free sheaf E on
+a projective manifold X of dimension n is said to be generically (H1, ..., Hn− 2)-
+semipositive for some ample divisors H1, ..., Hn− 2 if for each nef divisor D, we
+have µ α ,min (E) ⩾ 0, where α is the class of D ·H1 · · · · ·Hn− 2. In particular, if E
+is generically nef, then it is generically (H1, ..., Hn− 2)-semipositive for any ample
+divisors H1, ..., Hn− 2.
+Proof of Corollary 1.5. By Theorem 1.4, we see that the tangent sheaf TX is gener-
+ically (H1, ..., Hn− 2)-semipositive. Since − KX is nef, Miyaoka inequality (see
+[Miy87, Theorem 6.1]) shows that
+c2(TX) ·H1 · · · · ·Hn− 2 ⩾ 0.
+□
+4. A N ORBIFOLD VERSION OF GENERIC NEFNESS
+In this section, we will prove Theorem 1.6. W e refer to [CP15, Section 1] for de-
+tailed notion of orbifolds. Let (X, D) be a projective Q-factorial log canonical pair
+of dimension n, where D is an effective Q-divisor. Let π : Z → X be a Kawamata ﬁ-
+nite cover adapted to (X, D). Let H1, ..., Hn− 1 be ample divisors in X. Then the orb-
+ifold cotangent sheaf Ω1(X, D) (respectively the orbifold tangent sheaf T(X, D))
+is said to be π -generically semipositive with respect to H1, ..., Hn− 1 if for any non-
+zero torsion-free quotient Q of π ∗Ω1(X, D) (respectively of π ∗T(X, D)), we have
+c1(Q) ·π ∗ H1 · · · · ·π ∗ Hn− 1 ⩾ 0.
+W e say that Ω1(X, D) (respectively T(X, D)) is π -generically nef if it is π -
+generically semipositive with respect to any ample divisor s H1, ..., Hn− 1 in X. In
+particular, if D is an integral divisor and if π is the identity map, then π -generic
+nefness is the same as generic nefness by Mehta-Ramanathan t heorem.
+In order to prove Theorem 1.6, we will need the following version of [ CP19,
+Theorem 1.4] for singular spaces.
+Theorem 4.1. Let (X, D) be a projective Q-factorial log canonical pair. Let π : Z → X
+be a ﬁnite cover adapted to (X, D). Let H 1, ..., Hn− 1 be very ample divisors in X and let
+α be the class of π ∗ H1 · · · · ·π ∗ Hn− 1. Assume that there is a saturated subsheaf G of
+π ∗T(X, D) such that
+(1) G is G-invariant, where G is the Galois group of π .
+(2) µ α ,min (G) > 0,
+(3) 2µ α ,min(G) > µ α ,max (π ∗T(X, D)/G).
+Then the saturation of G in (π ∗TX)∗∗ deﬁnes an algebraically integrable foliation F on
+X. Moreover, G is the saturation of (π ∗F )∗∗ ∩ π ∗T(X, D) in π ∗T(X, D).
+Proof. Let r : X′ → X be a log resolution of (X, D) which is an isomorphism over
+the smooth locus U of (X, D). Let Z′ be the normalization of Z × X X′. Then the
+natural morphism π ′: Z′ → X′ is an adapted ﬁnite cover of (X′, D′), where D′ =
+r− 1∗ D. Let U′ = r− 1(U), V = π − 1(U) and V′ = π ′−1(U′).
+Z′
+π ′
+↓↓
+→→ Z
+π
+↓↓
+X′ r →→ X
+8There is a unique G-invariant saturated subsheaf G ′ of π ′∗T(X′, D′) such that
+G ′|V ′ is isomorphic to G|V . Let
+α ′ = ( π ′◦ r)∗ H1 · · · · ·(π ′◦ r)∗ Hn− 1.
+W e haveµ α ′,min(G ′) = µ α ,min (G) > 0 and
+µ α ′,max (π ′∗T(X′, D′)/G ′) = µ α ,max (π ∗T(X, D)/G).
+Hence by [ CP19, Theorem 1.4], the saturation of G ′ in π ′∗TX′ deﬁnes an alge-
+braically integrable foliation F ′ on X′. Moreover, G ′ is the saturation of π ′∗F ′ ∩
+π ′∗T(X′, D′) in π ′∗T(X′, D′) (see [ CP19, Corollary 5.9]). Let F be the saturation
+of the natural image of r∗F ′ in TX. Then F is an algebraically integrable foliation
+and G is the saturation of (π ∗F )∗∗ ∩ π ∗T(X, D) in π ∗T(X, D). □
+Now we will prove Theorem 1.6.
+Proof of Theorem 1.6. The proof is similar to the one of Theorem 1.3. Assume the
+opposite. Then there are very ample divisors H1, ..., Hn− 1 such that T(X, D) is
+not π -generically semipositive with respect to H1, ..., Hn− 1. Let α be the class of
+π ∗ H1 · · · · ·π ∗ Hn− 1.
+By applying Lemma 2.1 to π ∗T(X, D), we can ﬁnd a saturated subsheaf G of
+π ∗T(X, D) such that µ α ,min(G) > 0 and that µ α (π ∗T(X, D)/G) < 0. From the
+uniqueness of Harder-Narasimhan ﬁltration, we know that G, as a component in
+the Harder-Narasimhan ﬁltration, is invariant under the Ga lois group of π . More-
+over, as in the proof of Theorem 1.4, we have
+2µ α ,min(G) > µ α ,max (π ∗T(X, D)/G).
+By Theorem 4.1, the saturation of G in (π ∗TX)∗∗ deﬁnes an algebraically integrable
+foliation F on X. Assume that F is the relative tangent sheaf of some dominant
+rational map f : X /axisshort/axisshort/arrowaxisrightY.
+Then, on the one hand, by Theorem 1.10, we have
+α ·π ∗(KF − KX − Dver) ⩾ 0,
+where Dver is the vertical part of D over Y.
+On the other hand, by Theorem 4.1, the sheaf G is the saturation of the intersec-
+tion (π ∗F )∗∗ ∩ π ∗T(X, D) in π ∗T(X, D). By [ Cla17, Prop. 2.17], we have
+det G ∼
+= OZ(π ∗(− KF − Dhor )),
+where Dhor is the horizontal part of D over Y. Thus
+det (π ∗T(X, D)/G) ∼
+= OZ(π ∗(KF − KX − Dver)),
+and we have
+α ·c1(π ∗T(X, D)/G) = α ·π ∗(KF − KX − Dver) ⩾ 0.
+Since µ α (π ∗T(X, D)/G) < 0 by the construction of G, we obtain a contradiction.
+□
+95. R ELATION WITH RATIONAL CONNECTEDNESS
+The aim of this section is to prove Theorem 1.7. W e will need the following
+lemma.
+Lemma 5.1. Let X be a smooth projective variety and let δ be a cycle of pure dimension
+k. Assume that for any ample divisors H 1, ..., Hk, we have δ ·H1 · · · · ·Hk ⩾ 0. Then the
+following two conditions are equivalent:
+(1) there are ample divisors H 1, ..., Hk such that δ ·H1 · · · · ·Hk = 0;
+(2) for any ample divisors H 1, ..., Hk, we have δ ·H1 · · · · ·Hk = 0;
+(3) for any nef divisors H 1, ..., Hk, we have δ ·H1 · · · · ·Hk = 0.
+Proof. Since every nef divisor is a limit of ample ( Q-)divisors, by continuity , we see
+that (2) implies (3). Hence we only need to prove that (1) impl ies (2). Let H1, ..., Hk
+be ample divisors such that δ ·H1 · · · · ·Hk = 0, and let A1, ..., Ak be any ample
+divisors. W e need to prove that δ ·A1 · · · · ·Ak = 0.
+Let m > 0 be a natural number such that mH1 − A1 is still an ample divisor.
+Then we have
+0 ⩽ δ ·(mH1 − A1) · · · · ·Hk
+= m(δ ·H1 · · · · ·Hk) − (δ ·A1 ·H2 · · · · ·Hk)
+= − δ ·A1 ·H2 · · · · ·Hk
+⩽ 0.
+Thus δ ·A1 ·H2 · · · · ·Hk = 0. By repeating this procedure k − 1 more times, we
+can obtain that δ ·A1 · · · · ·Ak = 0. □
+Now we can prove Theorem
+1.7.
+Proof of Theorem 1.7. First we assume that X is rationally connected. Assume by
+contradiction that TX is not generically ample. Then there is a Mehta-Ramanathan-
+general curve C such that TX|C is nef but not ample. By [Har71, Theorem 2.4], there
+is a non-zero quotient bundle of TX|C of degree zero. Thus, by Mehta-Ramanathan
+theorem (see [ MR82, Theorem 6.1]), we have µ α ,min (TX) = 0, where α is the class
+of C. This implies that there is a surjective morphism TX → Q such that Q is a non-
+zero torsion-free sheaf and that α ·c1(Q) = 0. W e note that Q is generically nef as
+well and hence c1(Q) ·H1 · · · · ·Hn− 1 ⩾ 0 for any ample divisors H1, ..., Hn− 1. Thus
+by Lemma 5.1, c1(Q) ·H1 · · · · ·Hn− 1 = 0 for any ample divisors H1, ..., Hn− 1. This
+shows that c1(Q) is numerically zero. Since X is rationally connected, it is simply
+connected. Therefore, we have det Q ∼
+= OX. The injective morphism Q∗ → Ω1
+X
+then induces a non-zero morphism OX → Ωk
+X, where k is the rank of Q. This is a
+contradiction, since h0(X, Ωk
+X) = 0 (see [
+Kol96, Corollary IV .3.8]).
+Now we assume that X is not rationally connected. Then, by [ Zha05, Corollary
+1], there is a dominant rational map f : X /axisshort/axisshort/arrowaxisrightY such that Y is smooth with Kodaira
+dimension κ (Y) = 0 and that general ﬁbers of f are proper, rationally connected.
+Since X is not rationally connected, Y has positive dimension d. There is some
+positive integer m such that h0(Y, OY(mKY)) ̸= 0. Thus h0(X, (Ω1
+X)⊗ md) ̸= 0.
+Let C be a Mehta-Ramanathan-general curve and let α be the class of C. Then
+µ α ,max (Ω1
+X) ⩾ 0 by [CP11, Corollary 5.11]. This implies that µ α ,min (TX) ⩽ 0. Hence
+TX|C is not ample by Mehta-Ramanathan theorem. □
+10Remark 5.2. Theorem 1.7 does not hold without assuming the smoothness of X. For
+example, let G be the group Z/2Z and let E be an elliptic curve with an action of G
+such that E/G = P1. W e also endow P1 with the canonical action of G (g.[a : b] =
+[a : − b] if g is the generator of G). Then G acts on the product E × P1 diagonally
+and the quotient map E × P1 → (E × P1)/G = X is étale in codimension 1. W e
+see that X is singular and − KX is nef. In addition, as in [ GKP14, Remark and
+Question 3.8], we have h0(X, ((Ω1
+X)⊗ 2)∗∗) > 0. This implies that µ α ,min (TX) ⩽ 0
+for any ample class α .
+6. E QUALITY CONDITIONS OF MIYAOKA INEQUALITY
+As mentioned before the proof of Corollary 1.5, a non-zero torsion-free sheaf E
+on a projective manifold X of dimension n is said to be generically (H1, ..., Hn− 2)-
+semipositive for some ample divisors H1, ..., Hn− 2 if for each nef divisor D, we
+have µ α ,min (E) ⩾ 0, where α is the class of D ·H1 · · · · ·Hn− 2.
+In [Miy87, Theorem 6.1], Miyaoka proved that if c1(E) is nef and if E is gener-
+ically (H1, ..., Hn− 2)-semipositive, then c2(E) ·H1 · · · · ·Hn− 2 ⩾ 0. As a conse-
+quence, if c1(E) is nef and if E is generically nef, then c2(E) ·H1 · · · · ·Hn− 2 ⩾ 0 for
+any ample divisors H1, ..., Hn− 2.
+In this section, we will study the equality conditions of the se inequalities. This
+is crucial for the proof of Theorem 1.8. W e will assume that E is generically nef
+and that c1(E) is nef. By Lemma 5.1, the equality c2(E) ·H1 · · · · ·Hn− 2 = 0 holds
+for some ample divisors H1, ..., Hn− 2 if and only if c2(E) ·H1 · · · · ·Hn− 2 = 0 for
+any ample divisors H1, ..., Hn− 2. Thus, in order to study the equality conditions,
+we may assume that c2(E) ·Hn− 2 = 0 for some ample divisor H.
+Our idea is to look into the details in Miyaoka’s proof, and st udy every inequal-
+ity inside. W e will discuss following the numerical dimensi on ν (c1(E)) of c1(E).
+Recall that the numerical dimension ν of a nef divisor N is the largest integer such
+that Nν +1 ≡ 0.
+6.1. Case of ν (c1(E)) ⩾ 2. W e ﬁrst consider the case when c1(E) has numerical
+dimension at least 2, and show the following proposition.
+Proposition 6.1. Let X be a smooth projective variety of dimension n ⩾ 2. Let E be
+a non-zero torsion-free sheaf of rank at least 2 on X which is generically (H1, ..., Hn− 2)-
+semipositive for some ample divisors H 1, ..., Hn− 2. Assume that c 1(E) is nef with numer-
+ical dimension at least 2. Let α be the class of c 1(E) ·H1 · · ·Hn− 2. If c 2(E) ·H1 · · · · ·
+Hn− 2 = 0, then the Harder-Narasimhan ﬁltration of E with respect to α is of the form
+0 ⊊ E1 ⊊ E,
+such that
+(1) E 1 is an invertible sheaf such that c 1(E1) ≡ c1(E);
+(2) c 1(E/E1) ≡ 0;
+(3) c 2(E/E1) ·H1 · · · · ·Hn− 2 = 0.
+For the proof of the proposition, we need the following lemma .
+Lemma 6.2. Let X be a smooth projective variety of dimension n ⩾ 2. Let E be a non-zero
+torsion-free sheaf on X which is generically (H1, ..., Hn− 2)-semipositive for some ample
+divisors H 1, ..., Hn− 2. Assume that c 1(E) is nef and
+c2(E) ·H1 · · · · ·Hn− 2 = 0.
+11Let 0 → F → E → Q → 0 be an exact sequence of non-zero torsion-free sheaves. If
+c1(Q) ≡ 0, then F is generically (H1, ..., Hn− 2)-semipositive, and
+c2(Q) ·H1 · · · · ·Hn− 2 = c2(F) ·H1 · · · · ·Hn− 2 = 0.
+Proof. Since c1(Q) ≡ 0, we have c1(E/G) ≡ c1(F/G) for any saturated subsheaf
+G of F. This implies that F is generically (H1, ..., Hn− 2)-semipositive and c1(F) ≡
+c1(E) is nef. W e have
+c2(E) = c2(F) + c2(Q) + c1(F) ·c1(Q) ≡ c2(F) + c2(Q).
+W e note that Q is also generically (H1, ..., Hn− 2)-semipositive. By Miyaoka in-
+equality (see [Miy87, Theorem 6.1]), c2(F) ·H1 · · · · ·Hn− 2 ⩾ 0 and c2(Q) ·H1 · · · · ·
+Hn− 2 ⩾ 0. W e obtain that
+0 = c2(E) ·H1 · · · · ·Hn− 2 = c2(F) ·H1 · · · · ·Hn− 2 + c2(Q) ·H1 · · · · ·Hn− 2 ⩾ 0.
+This implies that
+c2(Q) ·H1 · · · · ·Hn− 2 = c2(F) ·H1 · · · · ·Hn− 2 = 0.
+□
+Proof of Proposition 6.1 . Since c1(E) is nef and has numerical dimension at least 2,
+c1(E)2 ·H1 · · · · ·Hn− 2 > 0. In particular, the class α is not zero. Since c2(E) ·H1 ·
+· · · ·Hn− 2 = 0, and since E has rank at least 2, Bogomolov-Gieseker inequality for
+semistable sheaves (see [ Miy87, Corollary 4.7]) shows that E is not α -semistable.
+Let
+0 = E0 ⊊ E1 ⊊ · · ·⊊ Er = E
+be the Harder-Narasimhan semistable ﬁltration. W e note tha t (1) implies (2), and
+hence (3) by Lemma 6.2. Therefore, we only need to prove that the ﬁltration has
+length r = 2 and satisﬁes property (1).
+Without loss of generality , we may assume that H1, ..., Hn− 2 are effective very
+ample divisors in general position. Let S be the intersection surface of H1, ..., Hn− 2.
+For simplicity , we let Gi = Ei/Ei− 1 and ri = rank Gi for i = 1, ..., r. W e have
+2c2(E) ·S = (
+r
+∑
+i=1
+2c2(Gi) + ∑
+1⩽i<j⩽r
+2c1(Gi)c1(Gj)) ·S
+= (
+r
+∑
+i=1
+2c2(Gi) + c1(E)2 −
+r
+∑
+i=1
+c1(Gi)2) ·S.
+Since each Gi is α -semistable, Bogomolov-Gieseker inequality (see [ Miy87,
+Corollary 4.7]) shows that
+2c2(E) ·S ⩾ (
+r
+∑
+i=1
+ri − 1
+ri
+c1(Gi)2 + c1(E)2 −
+r
+∑
+i=1
+c1(Gi)2) ·S
+= ( c1(E)2 −
+r
+∑
+i=1
+1
+ri
+c1(Gi)2) ·S.
+Since c1(E)2 ·S > 0, Hodge index theorem on S shows that
+(c1(E)2 ·S)(c1(Gi)2 ·S) ⩽ (c1(E) ·c1(Gi) ·S)2.
+12Therefore,
+c1(Gi)2 ·S ⩽ (c1(E) ·c1(Gi) ·S)2
+c1(E)2 ·S . (6.1)
+W e let
+ai = c1(E) ·c1(Gi) ·S
+ric1(E)2 ·S .
+By the deﬁnition of Harder-Narashimhan ﬁltration, we see th at a1 > · · ·> ar.
+Moreover, we note that ∑r
+i=1 riai = 1 and ai ⩾ 0 for all i. Hence ai ⩽ 1 for all i. The
+inequality (6.1) becomes
+c1(Gi)2 ·S ⩽ r2
+i a2
+i c1(E)2 ·S.
+Therefore, we have
+2c2(E) ·S ⩾ (c1(E)2 −
+r
+∑
+i=1
+1
+ri
+c1(Gi)2) ·S
+⩾ (c1(E)2 −
+r
+∑
+i=1
+1
+ri
+·r2
+i a2
+i c1(E)2) ·S
+= ( c1(E)2 −
+r
+∑
+i=1
+ria2
+i c1(E)2) ·S
+= ( 1 −
+r
+∑
+i=1
+ria2
+i )c1(E)2 ·S
+⩾ (1 −
+r
+∑
+i=1
+riaia1)c1(E)2 ·S
+= ( 1 − a1)c1(E)2 ·S.
+By assumption, c2(E) ·S = 0 and c1(E)2 ·S > 0. Since a1 ⩽ 1, the inequality
+above shows that a1 = 1. W e recall that ∑r
+i=1 riai = 1, ai ⩾ 0 for all i and a1 >
+· · ·> ar. Hence we can only have r = 2, r1 = 1 and a2 = 0.
+It remains to prove that c1(E/E1) ≡ 0. On the one hand, we have
+c1(E/E1) ·c1(E) ·S = c1(E)2 ·S − c1(E1) ·c1(E) ·S = 0.
+Since c2(E1) = 0, we obtain that
+0 = c2(E) ·S = ( c1(E1) ·c1(E/E1) + c2(E/E1)) ·S
+= ( c1(E) ·c1(E/E1) − c1(E/E1)2 + c2(E/E1)) ·S
+= ( − c1(E/E1)2 + c2(E/E1)) ·S.
+Since E/E1 = G2 is semistable, Bogomolov-Gieseker inequality shows that
+c2(E/E1) ·S ⩾ r2 − 1
+2r2
+c1(E/E1)2 ·S.
+Therefore, we have
+0 = ( − c1(E/E1)2 + c2(E/E1)) ·S ⩾ (− 1 + r2 − 1
+2r2
+)c1(E/E1)2 ·S,
+which implies that c1(E/E1)2 ·S ⩾ 0.
+On the other hand, from Lefschetz theorem, we see that the sym metric bilinear
+form q(δ , δ ′) = δ ·δ ′ ·S deﬁned on N1(X), the space of real numerical divisors
+13classes, is nondegenerate. By Hodge index theorem, q has exactly one positive
+eigenvalue. W e also haveq(c1(E), c1(E)) > 0, and q(c1(E), c1(E/E1)) = 0. Hence,
+by Sylvester theorem,
+c1(E/E1)2 ·S = q(c1(E/E1), c1(E/E1)) ⩽ 0,
+and the equality holds if and only if c1(E/E1) ≡ 0. This completes the proof of the
+proposition. □
+6.2. Case of ν (c1(E)) = 1. Next we will consider the case when ν (c1(E)) = 1. In
+this case, E is semistable with respect to the class c1(E) ·Hn− 2, and the Harder-
+Narasimhan ﬁltration with respect to this class does not pro vide any further infor-
+mation. Instead, we will use curve classes of the form (c1(E) + ǫ H)n− 1 with ǫ > 0,
+and prove the following proposition.
+Proposition 6.3. Let X be a smooth projective variety of dimension n ⩾ 2. Let E be a
+non-zero torsion-free sheaf such that c 1(E) is nef with numerical dimension 1, and that E
+is generically nef. Assume that c 2(E) ·Hn− 2 = 0 for some ample divisor H. Then there is
+a ﬁltration
+0 = E0 ⊊ E1 ⊊ · · ·⊊ Er = E
+such that
+(1) for each ǫ > 0 small enough, it is the Harder-Narasimhan ﬁltration with re spect
+to the class
+α ǫ = ( c1(E) + ǫ H)n− 1.
+(2) c 1(Ek/Ek− 1) is nef and numerically proportional to c 1(E) for any k = 1, ..., r;
+(3) c 2(Ek/Ek− 1) ·(c1(E) + ǫ H)n− 2 = 0 for any k = 1, ..., r and any ǫ > 0 small
+enough.
+The proof of the proposition consists of several steps. The e xistence of common
+Harder-Narasimhan ﬁltration follows from the following le mma.
+Lemma 6.4. Let X be a normal projective Q-factorial variety of dimension n ⩾ 2. Let
+D1, ..., Dn− 1 be nef divisors and let H be an ample divisors. Let E be a torsio n-free sheaf
+on X. Then there is a ﬁltration
+0 = E0 ⊊ E1 ⊊ · · ·⊊ Er = E
+such that for any ǫ > 0 small enough, it is the Harder-Narasimhan ﬁltration with re spect
+to the class of (D1 + ǫ H) · · · · ·(Dn− 1 + ǫ H).
+Proof. See [
+KMM04, Lemma 6.5]. □
+The second and the third properties in Proposition 6.3 are consequences of the
+two lemmas below .
+Lemma 6.5. Let X be a smooth projective variety of dimension n ⩾ 2. Let E be a non-zero
+torsion-free sheaf. Let H 1, ..., Hn− 2 be ample divisors and let D be a nef divisor such that
+the class α of D ·H1 · · · · ·Hn− 2 is not zero. Assume that
+(i) c 1(E)2 ·H1 · · · · ·Hn− 2 = c2(E) ·H1 · · · · ·Hn− 2 = 0;
+(ii) there is a ﬁltration of saturated subsheaves
+0 = E0 ⊊ E1 ⊊ · · ·⊊ Er = E
+such that E k/Ek− 1 is α -semistable and that
+c1(Ek/Ek− 1)2 ·H1 · · · · ·Hn− 2 ⩽ 0
+14for each k = 1, ..., r.
+Then we have
+c1(Ek/Ek− 1)2 ·H1 · · · · ·Hn− 2 = c2(Ek/Ek− 1) ·H1 · · · · ·Hn− 2 = 0.
+Proof. Let S = H1 · · · · ·Hn− 2. Then we have
+0 = 2c2(E) ·S = (
+r
+∑
+k=1
+2c2(Ek/Ek− 1) + ∑
+1⩽j<k⩽r
+2c1(Ej/Ej− 1) ·c1(Ek/Ek− 1)) ·S.
+Since each Ek/Ek− 1 is also α -semistable, by Bogomolov-Gieseker inequality , we
+deduce that
+0 ⩾ (
+r
+∑
+k=1
+dk − 1
+dk
+c1(Ek/Ek− 1)2 + ∑
+1⩽j<k⩽r
+2c1(Ej/Ej− 1) ·c1(Ek/Ek− 1)) ·S
+= ( c1(E)2 −
+r
+∑
+k=1
+1
+dk
+c1(Ek/Ek− 1)2) ·S
+= −
+r
+∑
+k=1
+( 1
+dk
+c1(Ek/Ek− 1)2 ·S)
+⩾ 0,
+where dk is the rank of Ek/Ek− 1. Therefore, all of the inequalities above are equal-
+ities. W e conclude hence
+c1(Ek/Ek− 1)2 ·S = 0,
+and
+c2(Ek/Ek− 1) ·S = dk − 1
+2dk
+c1(Ek/Ek− 1)2 ·S = 0,
+for each k = 1, ..., r. □
+Lemma 6.6. Let X be a smooth projective variety of dimension n ⩾ 2. Let E be a
+non-zero torsion-free sheaf such that c 1(E) is nef with numerical dimension 1 and that
+c2(E) ·Hn− 2 = 0 for some ample an ample divisor H. Assume that there is a ﬁltra tion of
+saturated subsheaves
+0 = E0 ⊊ E1 ⊊ · · ·⊊ Er = E
+which satisﬁes the following two conditions:
+(i) for each ǫ > 0 small enough and each k = 1, ..., r, the sheaf E k/Ek− 1 is semistable
+with respect to the class
+α ǫ = ( c1(E) + ǫ H)n− 1;
+(ii) for each ǫ > 0 small enough and each k = 1, ..., r,
+µ α ǫ (Ek/Ek− 1) ⩾ 0.
+Then c1(Ek/Ek− 1) is nef and numerically proportional to c 1(E) for any k = 1, ..., r .
+Proof. W e can assume thatH is very ample. Let S be the surface cut out by general
+members of the linear system of H. Since c1(E) has numerical dimension 1, we
+have c1(E)i ·Hn− i = 0 for i ⩾ 2. Thus, for each ǫ > 0,
+α ǫ =
+(n − 1
+2
+)
+ǫ n− 2 ·(c1(E) + ǫ
+(n− 1
+2 )
+H) ·S.
+15T o simplify , we letβ η be the curve class
+β η = ( c1(E) + η H) ·S
+for any η > 0. Then for any η > 0 small enough and any k = 1, ..., r, condition
+(i) implies that Ek/Ek− 1 is semistable with respect to β η and condition (ii) implies
+that µ β η (Ek/Ek− 1) ⩾ 0. In particular, if we tend η to zero, then we obtain that
+c1(Ek/Ek− 1) ·c1(E) ·S ⩾ 0
+for any k = 1, ..., r. Since c1(E) = ∑r
+k=1 c1(Ek/Ek− 1) and c1(E)2 ·S = 0, this shows
+that
+c1(Ek/Ek− 1) ·c1(E) ·S = 0.
+From Lefschetz theorem, the symmetric bilinear form q(δ , δ ′) = δ ·δ ′·S deﬁned
+on N1(X) is nondegenerate, where N1(X) is the space of real numerical divisors
+classes. By Hodge index theorem, q has exactly one positive eigenvalue. Since
+c1(E) ̸≡ 0, the condition
+q(c1(Ek/Ek− 1), c1(E)) = q(c1(E), c1(E)) = 0
+implies that q(c1(Ek/Ek− 1), c1(Ek/Ek− 1)) ⩽ 0 by Sylvester theorem.
+Since each Ek/Ek− 1 is semistable with respect to the class α ǫ for ǫ > 0 small
+enough, by Lemma 6.5, we obtain that
+q(c1(Ek/Ek− 1), c1(Ek/Ek− 1)) = 0.
+Thus, by Lemma 6.7 below ,c1(Ek/Ek− 1) is numerically proportional to c1(E) for
+any k = 1, ..., r. Moreover, it is nef since µ α ǫ (Ek/Ek− 1) ⩾ 0 for ǫ > 0 small enough.
+□
+Lemma 6.7. Let q(·, ·) be a nondegenerate symmetric bilinear form of signature (1, m) on
+a real vector space V. Let ⃗x,⃗y ∈ V be two vectors. Assume that q(⃗x, ⃗x) = 0, q(⃗x,⃗y) = 0
+and q(⃗y,⃗y) = 0. Then ⃗x and ⃗y are linear dependent.
+Proof. If m = 0, then q is deﬁnite and ⃗x = ⃗y = ⃗0. W e assume then that m > 0. By
+Sylvester theorem, there is an orthogonal basis (⃗e,⃗e1, ...,⃗em) of V such that q(⃗e,⃗e) =
+1 and that q(⃗ei,⃗ei) = − 1 for all i = 1, ..., m.
+Let (a, b1, ..., bm) and (a′, b′
+1, ..., b′
+m) be the coordinates of ⃗x and ⃗y respectively .
+Then by assumption, we have
+a2 = b2
+1 + · · ·b2
+m, a′2 = b′2
+1 + · · ·b′2
+m, and aa′ = b1b′
+1 + · · ·bmb′
+m.
+Thus we have
+(aa′)2 = ( b1b′
+1 + · · ·+ bmb′
+m)2 = ( b2
+1 + · · ·b2
+m)(b′2
+1 + · · ·b′2
+m).
+From the equality condition of Cauchy inequality , this show s that (b1, ..., bm)
+and (b′
+1, ..., b′
+m) are linearly dependent. W e then deduce that (a, b1, ..., bm) and
+(a′, b′
+1, ..., b′m) are linearly dependent. □
+Now we can deduce Proposition
+6.3.
+Proof of Proposition 6.3. Let
+0 = E0 ⊊ E1 ⊊ · · ·⊊ Er = E
+be the common Harder-Narasimhan ﬁltration with respect the classes α ǫ for all
+ǫ > 0 small enough (see Lemma 6.4). Then this ﬁltration satisﬁes the property (1).
+16Since E is generically nef, µ α ǫ ,min(E) ⩾ 0 for any ǫ > 0. Thus for each ǫ > 0 small
+enough and each k = 1, ..., r, we have
+µ α ǫ (Ek/Ek− 1) ⩾ µ α ǫ (Er/Er− 1) = µ α ǫ ,min(E) ⩾ 0.
+The property (2) then follows from Lemma 6.6. In particular, we deduce that
+c1(Ek/Ek− 1)2 ·Hn− 2 = 0 for each k = 1, ..., r. Thus the property (3) follows from
+Lemma 6.5. □
+For each semistable component Ek/Ek− 1 in Proposition 6.3, we note that the
+equality holds in the Bogomolov-Gieseker inequality . It then follows from [Nak04,
+Theorem IV .4.1] that the reﬂexive hull (Ek/Ek− 1)∗∗ is a numerically projectively
+ﬂat vector bundle. Particularly , we will need the following property for these
+sheaves.
+Lemma 6.8. Let X be a smooth projective variety of dimension n > 1 and H an ample
+divisor. Let E be a (Hn− 1)-semistable torsion-free sheaf of rank r. Assume that
+(c2(E) − r − 1
+2r c1(E)2) ·Hn− 2 = 0.
+Then for any rational curve C in X, the intersection number C ·c1(E) is an integer divis-
+ible by r.
+Proof. By Lemma
+6.9 below , we may assume that E is reﬂexive. Then [ Nak04,
+Theorem IV .4.1] implies that E is locally free. Moreover, there is a ﬁltration of
+subbundles
+0 = E0 ⊊ E1 ⊊ · · ·⊊ Er = E
+such that each quotient Ei/Ei− 1 is a hermitian projectively ﬂat vector bundle.
+Moreover, we have
+1
+ri
+c1(Ei/Ei− 1) ≡ 1
+r c1(E), (6.2)
+where ri = rank Ei/Ei− 1. W e also note that the projectivized bundle P(Ei/Ei− 1)
+is induced by some PGL-representation of the fundamental gr oup π 1(X) (see
+[Nak04, Corollary IV .4.3]).
+Let ρ : P1 → X be the morphism induced by the normalization of C. Since
+P1 is simply connected, it follows that there is a line bundle Li on P1 such that
+ρ ∗(Ei/Ei− 1) ∼
+= L⊕ ri
+i . Hence there is an integer ai such that
+C ·c1(Ei/Ei− 1) = riai.
+In addition, the equation (
+6.2) implies that ai is independent of i. W e denote this
+constant integer by a, then we have C ·c1(E) = ra. □
+The following lemma might be well-known to experts. For the r eader’s conve-
+nience, we recall brieﬂy the proof here.
+Lemma 6.9. Let X be a smooth projective variety of dimension n ⩾ 2. Let E be a torsion-
+free sheaf on X. Then for any ample divisors H 1, ..., Hn− 2, we have
+c2(E) ·H1 · · · · ·Hn− 2 ⩾ c2(E∗∗) ·H1 · · · · ·Hn− 2.
+Moreover, the equality holds if and only if E is locally free i n codimension 2.
+17Proof. W e may assume that H1, ..., Hn− 2 are effective sufﬁciently ample divisors in
+general positions. Let S be their intersection. Since X is smooth, there is a ﬁnite
+free resolution of E as follows,
+0 → Fk → · · · → F0 → E.
+Since S is in general position, we may assume that E|S is still torsion-free, and that
+0 → Fk|S → · · · → F0|S → E|S
+is again a free resolution. Hence
+c2(E) ·H1 · · · · ·Hn− 2 = c2(E|S).
+By the same argument, we may assume that E∗∗|S is still reﬂexive and is iso-
+morphic to (E|S)∗∗. Moreover, we may also assume that
+c2(E∗∗) ·H1 · · · · ·Hn− 2 = c2(E∗∗|S) = c2((E|S)∗∗).
+By [Meg92, Lemma 10.9], we have
+c2((E|S)∗∗) ⩾ c2(E|S),
+and the equality holds if and only if E|S is locally free. Since S is in general posi-
+tion, the sheaf E|S is locally free if and only E is locally free in codimension 2. This
+completes the proof of the lemma. □
+6.3. Case of ν (c1(E)) = 0. W e will ﬁnish this section with the case when
+ν (c1(E)) = 0. W e have the following result.
+Lemma 6.10. Let X be a smooth projective variety of dimension n ⩾ 2. Let E be a non-
+zero torsion-free sheaf such that c 1(E) ≡ 0 and that E is generically nef. If we assume
+further that c 2(E) ·Hn− 2 = 0 for some ample divisor H, then the reﬂexive hull E ∗∗ is a
+ﬂat vector bundle.
+Proof. W e note that E is semistable with respect to the class Hn− 1. Moreover, the
+equality holds in the Bogomolov-Gieseker inequality . It then follows from [
+Nak04,
+Theorem IV .4.1] thatE∗∗ is a numerically ﬂat vector bundle (see [DPS94, Deﬁnition
+1.17 and Theorem 1.18]). Hence it is a ﬂat vector bundle, see [ Sim92, Section 3]. □
+7. P ROOF OF THE CLASSIFICATION THEOREM
+W e will ﬁnish the proof of Theorem 1.8 in this section.
+Proposition 7.1. Let X be a smooth projective variety of dimension n ⩾ 2 with nef anti-
+canonical class − KX. Assume that c 2(TX) ·Hn− 2 = 0 for some ample divisor H. Assume
+further that there is some non-zero torsion-free quotient T X → Q such that c 1(Q) ≡ 0
+and rank Q = k. Then the augmented irregularity ˜q(X) is at least equal to k.
+W e recall that the irregularity of a smooth projective varie ty X is q(X) =
+h1(X, OX). It is equal to the dimension of the Albanese variety of X. The aug-
+mented irregularity is deﬁned as
+˜q(X) = sup{q( ˜X) | ˜X → X is a ﬁnite étale cover }.
+W e will ﬁrst prove that ˜q(X) is not zero under the assumption of Proposition 7.1.
+Lemma 7.2. Under the condition of Proposition 7.1, we have ˜q(X) ̸= 0.
+18Proof. Assume by contradiction that ˜q(X) = 0. Then by [ P˘ au97, Theorem 2], X has
+ﬁnite fundamental group. By replacing X by some ﬁnite étale cover if necessary ,
+we may assume that X is simply connected.
+By Theorem 1.3, TX is generically nef. Thus so is the quotient Q. From Lemma
+6.2, we deduce that c2(Q) ·Hn− 2 = 0. By Lemma 6.10, the reﬂexive hull Q∗∗
+is a ﬂat locally free sheaf. Since X is simply connected, this implies that Q∗∗ is
+isomorphic to a direct sum of copies of OX. W e obtain then a non-zero morphism
+OX → Ω1
+X. This shows that q(X) = h0(X, Ω1
+X) ⩾ 1, which is a contradiction. □
+Now we will prove Proposition 7.1.
+Proof of Proposition 7.1. By replacing X by some ﬁnite étale cover if necessary , we
+may assume that the Albanese morphism f : X → A induces an isomorphism of
+fundamental groups (see [P˘ au97, Theorem 2]). Then [ Cao19, Theorem 1.2] implies
+that f is an isotrivial ﬁbration and every ﬁber of f is simply connected. As a
+consequence, we have
+˜q(X) = q(X) = dim A = q.
+Assume by contradiction that the proposition does not hold. Then we must
+have n ⩾ k > q. There is an exact sequence
+0 → TX/A → TX → f ∗TA → 0.
+Let F be a general ﬁber of f and let i : F → X be the natural injection. Then
+˜q(F) = 0 as F is simply connected.
+If dim F = 1, then q = dim A = n − 1, and we can only have n = k = q + 1. In
+particular, TX = Q and c1(X) ≡ 0. This shows that F is an elliptic curve, which is
+a contradiction. Hence we have dim F ⩾ 2.
+W e note that F is a smooth projective manifold with nef anticanonical clas s
+− KF. Hence TF is generically nef by Theorem 1.3. By restricting the exact sequence
+above to F, we can obtain an exact sequence
+0 → TF → TX|F → (OF)q → 0.
+In particular, we have c2(TF) = i∗c2(TX). Since F is numerically equivalent to
+the complete intersection of nef divisors, by Corollary 1.5 and Lemma 5.1, the
+vanishing condition on c2(TX) implies that
+c2(TF) ·(H|F)n− q− 2 = c2(TX|F) ·(H|F)n− q− 2 = c2(TX) ·Hn− q− 2 ·F = 0.
+Since F is a general ﬁber, we may assume that Q|F is torsion-free and that
+c1(Q|F) = i∗c1(Q) ≡ 0.
+W e note that the induced morphism TF → Q|F is non-zero for k > q. Let R be its
+image. W e claim that c1(R) ≡ 0. Let β = ( H|F)n− 1− q be a curve class in F. Then
+µ β (R) ⩾ 0 for TF is generically nef. Moreover, by applying Theorem 1.4 to the
+class of β in X, we have
+µ β ,max (Q|F) ⩾ µ β ,min(Q|F) ⩾ 0.
+However, since c1(Q|F) ≡ 0, we must have
+µ β ,max (Q|F) = µ β ,min(Q|F) = µ β (Q|F) = 0.
+Thus the condition µ β (R) ⩾ 0 implies that µ β (R) = 0 as R is a subsheaf of Q|F.
+Since R is a quotient of TF, it is generically nef, and hence c1(R) ≡ 0 by Lemma
+195.1. Thanks to Lemma 7.2, we obtain that ˜q(F) > 0. This is a contradiction as F is
+simply connected. □
+Now we can conclude Theorem 1.8.
+Proof of Theorem 1.8. Since the second Chern class of an abelian variety is zero, we
+see that (2) implies (1) in the theorem. W e will prove that (1) implies (2). The case
+when n = 1 is trivial. W e assume from now on that n ⩾ 2. If KX ≡ 0, then by
+Beauville-Bogomolov decomposition theorem (see [ Bea83, Théorème 1]), there is
+a ﬁnite étale cover X′ → X such that X′ is isomorphic to a product of irreducible
+holomorphic symplectic manifolds, Calabi-Y au manifolds a nd an abelian variety .
+The vanishing condition (1) on c2(TX) then implies that X′ is an abelian variety .
+W e will now assume that KX ̸≡ 0. Then X is uniruled. By replacing X by
+some ﬁnite étale cover if necessary , we may assume that the Al banese morphism
+f : X → A induces an isomorphism of fundamental groups (see [ P˘ au97, Theorem
+2]). Then [ Cao19, Theorem 1.2] implies that f is an isotrivial ﬁbration and every
+ﬁber of f is simply connected. As a consequence, we have
+˜q(X) = q(X) = dim A = q.
+Since X is uniruled, f is not an isomorphism. Moreover, the ﬁbers of f are unir-
+uled.
+Let H be an ample divisor in X. By Lemma 5.1, we have c2(TX) ·Hn− 2 = 0.
+Thanks to Theorem 1.4, we know that TX is generically (H, ..., H)-semipositive.
+First we assume that K2
+X ·Hn− 2 ̸= 0, that is, − KX has numerical dimension at
+least 2. Then by Proposition
+6.1, there is a torsion-free quotient TX → Q such
+that c1(Q) ≡ 0 and rank Q = n − 1. Hence by Proposition 7.1, the augmented
+irregularity of X satisﬁes q ⩾ n − 1. Since we have assume that f : X → A is not
+an isomorphism, we have q = n − 1. Then f : X → A is a P1-bundle.
+Now we assume that K2
+X ·Hn− 2 = 0. Since − KX ̸≡ 0, this means that − KX has
+numerical dimension 1. Let
+0 ⊊ E1 ⊊ · · ·⊊ Er = TX
+be the common Harder-Narasimhan ﬁltration with respect to
+(− KX + ǫ H)n− 1
+for all ǫ > 0, as in Proposition
+6.3.
+Since X is uniruled, there is an elementary contradiction g : X → Y of some
+KX-negative extremal ray R. W e assume that R is generated by a rational curve C
+of minimal degree with respect to − KX. By Lemma 6.8, for each k = 1, ..., r, there
+is some integer ak such that
+C ·c1(Ek/Ek− 1) = lkak,
+where lk = rank (Ek/Ek− 1). W e note that ak ⩾ 0 for all k since c1(Ek/Ek− 1) is nef.
+Hence we have
+− C ·KX =
+r
+∑
+k=1
+lkak.
+W e will discuss two cases. In the ﬁrst case, we assume that
+- either there is some k such that lk ⩾ 2 and ak ̸= 0,
+- or there are k ̸= k′ such that ak ̸= 0 and ak′ ̸= 0.
+20The assumptions above imply that − C ·KX ⩾ 2, that is, the length of R is at least
+2. Moreover, since the numerical dimension of − KX is 1, and since − KX is ample
+on every ﬁber of the elementary contraction g, we obtain that every ﬁber of g has
+dimension at most 1. By [ Wi´ s91, Theorem 1.1], we have dim Y < n. Since every
+ﬁber of g has dimension at most 1, we obtain that dim Y = n − 1. In addition, g is
+a conic bundle and Y is smooth by [ And84, Theorem 3]. Since the length of R is at
+least 2, we obtain that g is smooth. This implies that g∗(K2
+X) ≡ − 4KY (see [
+Miy83,
+Section 4.11]), and thus KY ≡ 0. Since g has relative dimension 1 and since KY ≡ 0,
+we have c2(TX) ≡ g∗c2(TY). The vanishing condition on c2(TX) then shows that
+c2(TY) ·H′
+1 · · ·H′
+n− 3 = 0 for any ample divisors H′
+1, ..., H′
+n− 3 on Y if dim Y ⩾ 2.
+Hence, there is a ﬁnite étale cover Y′ → Y such that Y′ is an abelian variety . As a
+consequence, X × Y Y′ is a P1-bundle over an abelian variety .
+W e will now study the remaining case. The sum − C ·KX = ∑r
+k=1 lkak satisﬁes
+both of the following two conditions:
+(i) for all k, if ak ̸= 0, then lk = 1;
+(ii) there is at most one k such that ak ̸= 0.
+From the deﬁnition of Harder-Narasimhan ﬁltration, the con dition (ii) above im-
+plies that the ﬁltration has length r ⩽ 2. Since KX ̸≡ 0, we can only have r = 2
+and c1(E/E1) ≡ 0. The condition (i) above then implies that rank E1 = 1. Thus,
+by Proposition 7.1, the augmented irregularity of X is at least n − 1. W e conclude
+then f : X → A is a P1-bundle. □
+REFERENCE
+[AD13] Carolina Araujo and Stéphane Druel. On Fano foliatio ns. Adv. Math., 238:70–118, 2013.
+[And84] Tetsuya Ando. On the extremal ray of higher-dimensi onal varieties. Proc. Japan Acad. Ser. A
+Math. Sci., 60(6):205–208, 1984.
+[BDPP13] Sébastien Boucksom, Jean-Pierre Demailly , Mihai P˘ aun, and Thomas Peternell. The pseudo-
+effective cone of a compact Kähler manifold and varieties of negative Kodaira dimension. J.
+Algebraic Geom., 22(2):201–248, 2013.
+[Bea83] Arnaud Beauville. Variétés Kähleriennes dont la pr emière classe de Chern est nulle. J. Dif-
+ferential Geom., 18(4):755–782, 1983.
+[Cao13] Junyan Cao. A remark on compact Kähler manifolds wit h nef anticanonical bundles and its
+applications. arXiv preprint arXiv:1305.4397, 2013.
+[Cao19] Junyan Cao. Albanese maps of projective manifolds w ith nef anticanonical bundles. Ann.
+Sci. Éc. Norm. Supér. (4) , 52:1137–1154, 2019.
+[CDP15] Fédéric Campana, Jean-Pierre Demailly , and Thomas Peternell. Rationally connected mani-
+folds and semipositivity of the Ricci curvature. In Recent advances in algebraic geometry , vol-
+ume 417 of London Math. Soc. Lecture Note Ser. , pages 71–91. Cambridge Univ . Press, Cam-
+bridge, 2015.
+[CH17] Junyan Cao and Andreas Höring. Manifolds with nef ant icanonical bundle. J. Reine Angew.
+Math., 724:203–244, 2017.
+[Cla17] Benoît Claudon. Positivité du cotangent logarithm ique et conjecture de Shafarevich-
+Viehweg. Astérisque, 390:27–63, 2017. Séminaire Bourbaki 2015/2016, no. 1105.
+[CP11] Frédéric Campana and Thomas Peternell. Geometric st ability of the cotangent bundle and
+the universal cover of a projective manifold. Bull. Soc. Math. France , 139(1):41–74, 2011. With
+an appendix by Matei Toma.
+[CP15] Frédéric Campana and Mihai P˘ aun. Orbifold generic s emi-positivity: an application to fam-
+ilies of canonically polarized manifolds. Ann. Inst. Fourier (Grenoble) , 65(2):835–861, 2015.
+[CP19] Frédéric Campana and Mihai P˘ aun. Foliations with po sitive slopes and birational stability
+of orbifold cotangent bundles. Publ. Math. Inst. Hautes Études Sci. , 129:1–49, 2019.
+[CZ13] Meng Chen and Qi Zhang. On a question of Demailly-Pete rnell-Schneider. J. Eur. Math. Soc.
+(JEMS), 15(5):1853–1858, 2013.
+21[DPS93] Jean-Pierre Demailly , Thomas Peternell, and Micha el Schneider. Kähler manifolds with nu-
+merically effective Ricci class. Compositio Math., 89(2):217–240, 1993.
+[DPS94] Jean-Pierre Demailly , Thomas Peternell, and Micha el Schneider. Compact complex mani-
+folds with numerically effective tangent bundles. J. Algebraic Geom. , 3(2):295–345, 1994.
+[DPS96] Jean-Pierre Demailly , Thomas Peternell, and Micha el Schneider. Compact Kähler manifolds
+with Hermitian semipositive anticanonical bundle. Compositio Math., 101(2):217–224, 1996.
+[DPS01] Jean-Pierre Demailly , Thomas Peternell, and Micha el Schneider. Pseudo-effective line bun-
+dles on compact Kähler manifolds. Internat. J. Math., 12(6):689–741, 2001.
+[Dru17] Stéphane Druel. On foliations with nef anti-canoni cal bundle. T rans. Amer. Math. Soc. ,
+369(11):7765–7787, 2017.
+[GKP14] Daniel Greb, Stefan Kebekus, and Thomas Peternell. Reﬂexive differential forms on singular
+spaces. Geometry and cohomology .J. Reine Angew. Math., 697:57–89, 2014.
+[Gue16] Henri Guenancia. Semistability of the tangent shea f of singular varieties. Algebr. Geom. ,
+3(5):508–542, 2016.
+[Har71] Robin Hartshorne. Ample vector bundles on curves. Nagoya Math. J. , 43:73–89, 1971.
+[KMM04] Sean Keel, Kenji Matsuki, and James M cKernan. Corrections to: “Log abundance theorem
+for threefolds” [Duke Math. J. 75 (1994), no. 1, 99–119; mr1284817]. Duke Math. J., 122(3):625–
+630, 2004.
+[Kol96] János Kollár. Rational curves on algebraic varieties , volume 32 of Ergebnisse der Mathematik und
+ihrer Grenzgebiete. 3. Folge. A Series of Modern Surveys in M athematics. Springer-V erlag, Berlin,
+1996.
+[Meg92] Gábor Megyesi. Chern classes of Q-sheaves. In Flips and abundance for algebraic threefolds. A
+summer seminar at the University of Utah, Salt Lake City, 199 1, chapter 10, pages 115–126. Paris:
+Société Mathématique de France, Astérisque. 211, 1992.
+[Miy83] Masayoshi Miyanishi. Algebraic methods in the theo ry of algebraic threefolds—
+surrounding the works of Iskovskikh, Mori and Sarkisov . In Algebraic varieties and analytic
+varieties (Tokyo, 1981) , volume 1 of Adv. Stud. Pure Math. , pages 69–99. North-Holland, Am-
+sterdam, 1983.
+[Miy87] Yoichi Miyaoka. The Chern classes and Kodaira dimen sion of a minimal variety . InAlgebraic
+geometry, Sendai, 1985 , volume 10 of Adv. Stud. Pure Math. , pages 449–476. North-Holland,
+Amsterdam, 1987.
+[MR82] V . B. Mehta and A. Ramanathan. Semistable sheaves on p rojective varieties and their restric-
+tion to curves. Math. Ann., 258(3):213–224, 1981/82.
+[Nak04] Noboru Nakayama. Zariski-decomposition and abundance , volume 14 of MSJ Memoirs. Mathe-
+matical Society of Japan, Tokyo, 2004.
+[P˘ au97] Mihai P˘ aun. Sur le groupe fondamental des variété s kählériennes compactes à classe de
+Ricci numériquement effective. C. R. Acad. Sci. Paris Sér. I Math. , 324(11):1249–1254, 1997.
+[P˘ au12] Mihai P˘ aun. Relative adjoint transcendental cla sses and Albanese maps of compact Kaehler
+manifolds with nef Ricci curvature. arXiv preprint arXiv:1209.2195, 2012.
+[Pet12] Thomas Peternell. Varieties with generically nef t angent bundles. J. Eur. Math. Soc. (JEMS) ,
+14(2):571–603, 2012.
+[Sim92] Carlos T. Simpson. Higgs bundles and local systems. Inst. Hautes Études Sci. Publ. Math. ,
+(75):5–95, 1992.
+[Wi´ s91] Jarosław A. Wi´ sniewski. On contractions of extre mal rays of Fano manifolds. J. Reine Angew.
+Math., 417:141–157, 1991.
+[Xie04] Qihong Xie. On pseudo-effectivity of the second Che rn classes for smooth threefolds.
+Manuscripta Math., 115(1):101–116, 2004.
+[Yau93] Shing-Tung Yau. Open problems in geometry . In Differential geometry: partial differential equa-
+tions on manifolds (Los Angeles, CA, 1990) , volume 54 of Proc. Sympos. Pure Math., pages 1–28.
+Amer. Math. Soc., Providence, RI, 1993.
+[Zha96] Qi Zhang. On projective manifolds with nef anticano nical bundles. J. Reine Angew. Math. ,
+478:57–60, 1996.
+[Zha05] Qi Zhang. On projective varieties with nef anticano nical divisors. Math. Ann. , 332(3):697–
+703, 2005.
+WENHAO OU, I NSTITUTE OF MATHEMATICS , A CADEMY OF MATHEMATICS AND SYSTEMS SCI -
+ENCE , C HINESE ACADEMY OF SCIENCES , B EIJING , 100190, C HINA
+Email address: wenhaoou@amss.ac.cn
+22

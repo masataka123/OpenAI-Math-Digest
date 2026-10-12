@@ -1,0 +1,7 @@
+\node[card] (n0) {\heading{}{二つの一般ファイバー条件}{Two generic-fiber conditions}$H^0(Y_\eta,pL_Y)^T\ne0,\quad h^0(Y_\eta,E_Y+mL_Y)^T=1$};
+\node[card,below=2.2cm of n0] (n1) {\heading{}{垂直最小値と二計量}{Vertical minima and two metrics}$\operatorname{div}(s)/p=H+f_0^*V,\quad H\ge0$\\$K_Z+B^++M\sim_{\mathbb Q}B^-,\quad \operatorname{Supp}B^-\subset G$};
+\node[card,below=2.2cm of n1] (n2) {\heading{}{支持類と零次数の系}{Supporting class and zero-degree systems}$V\cdot\beta=G\cdot\beta=0,\quad D_j\sim m_jV+N,\quad D_j\cdot\beta=0$};
+\node[result,below=2.2cm of n2] (n3) {\heading{}{水平補間とrankの復元}{Horizontal interpolation and rank restoration}$\dim W<\dim Z,\quad \text{generic invariant section}$\\$\text{all adjoint ratios}\in\mathbb C(W)\ \Longrightarrow\ \text{rank}=1$};
+\flow{n0}{n1}{\Tx{切断の冪で零次rankを得て、正規化・不変直交商を使う}{Use powers of the section for rank at zero, normalization and an invariant orthogonal quotient}\\[4pt]\Cite{normalization}};
+\flow{n1}{n2}{\Tx{有効なら大域切断。そうでなければ余接傾きと形式から系を作る}{Effectivity gives a global section; otherwise cotangent slopes and forms give the systems}\\[4pt]\Cite{support}};
+\flow{n2}{n3}{\Tx{三指数関係の水平等式、G外の極の禁止、最大系の比を使う}{Use horizontal three-index equality, exclude poles off G, and control maximal-system ratios}\\[4pt]\Cite{rank-restoration}};

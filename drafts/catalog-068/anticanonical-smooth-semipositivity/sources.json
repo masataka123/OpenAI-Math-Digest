@@ -1,0 +1,396 @@
+{
+  "catalogId": "068",
+  "paperId": "anticanonical-smooth-semipositivity",
+  "title": "Anticanonical nonvanishing from smooth semipositivity",
+  "displayName": "Anticanonical nonvanishing from smooth semipositivity",
+  "authors": "OpenAI",
+  "version": "September 26, 2026",
+  "sourceCommit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Anticanonical-nonvanishing-from-smooth-semipositivity-September-26-2026/main.pdf",
+  "downloadUrl": "https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Anticanonical-nonvanishing-from-smooth-semipositivity-September-26-2026/main.pdf",
+  "pdfPages": 27,
+  "sha256": "ff5a08aaa3d9ad2315fa2e8afac88e60f1764b27b17609ee321a4a3d0e14b796",
+  "checkedOn": "2026-10-12",
+  "checkedLocations": [
+    {
+      "printedPage": "1",
+      "pdfPage": 1
+    },
+    {
+      "printedPage": "2",
+      "pdfPage": 2
+    },
+    {
+      "printedPage": "3",
+      "pdfPage": 3
+    },
+    {
+      "printedPage": "4",
+      "pdfPage": 4
+    },
+    {
+      "printedPage": "5",
+      "pdfPage": 5
+    },
+    {
+      "printedPage": "6",
+      "pdfPage": 6
+    },
+    {
+      "printedPage": "7",
+      "pdfPage": 7
+    },
+    {
+      "printedPage": "8",
+      "pdfPage": 8
+    },
+    {
+      "printedPage": "9",
+      "pdfPage": 9
+    },
+    {
+      "printedPage": "10",
+      "pdfPage": 10
+    },
+    {
+      "printedPage": "11",
+      "pdfPage": 11
+    },
+    {
+      "printedPage": "12",
+      "pdfPage": 12
+    },
+    {
+      "printedPage": "13",
+      "pdfPage": 13
+    },
+    {
+      "printedPage": "14",
+      "pdfPage": 14
+    },
+    {
+      "printedPage": "15",
+      "pdfPage": 15
+    },
+    {
+      "printedPage": "16",
+      "pdfPage": 16
+    },
+    {
+      "printedPage": "17",
+      "pdfPage": 17
+    },
+    {
+      "printedPage": "18",
+      "pdfPage": 18
+    },
+    {
+      "printedPage": "19",
+      "pdfPage": 19
+    },
+    {
+      "printedPage": "20",
+      "pdfPage": 20
+    },
+    {
+      "printedPage": "21",
+      "pdfPage": 21
+    },
+    {
+      "printedPage": "22",
+      "pdfPage": 22
+    },
+    {
+      "printedPage": "23",
+      "pdfPage": 23
+    },
+    {
+      "printedPage": "24",
+      "pdfPage": 24
+    },
+    {
+      "printedPage": "25",
+      "pdfPage": 25
+    },
+    {
+      "printedPage": "26",
+      "pdfPage": 26
+    },
+    {
+      "printedPage": "27",
+      "pdfPage": 27
+    }
+  ],
+  "statements": [
+    {
+      "result": "Theorem 1.1",
+      "pages": "2",
+      "checked": "hypotheses, all stated conclusions and quantifiers checked against fixed PDF"
+    },
+    {
+      "result": "Theorem 1.2",
+      "pages": "3",
+      "checked": "hypotheses, all stated conclusions and quantifiers checked against fixed PDF"
+    },
+    {
+      "result": "Theorem 2.1",
+      "pages": "5",
+      "checked": "hypotheses, all stated conclusions and quantifiers checked against fixed PDF"
+    },
+    {
+      "result": "Theorem 4.2",
+      "pages": "13–14",
+      "checked": "hypotheses, all stated conclusions and quantifiers checked against fixed PDF"
+    },
+    {
+      "result": "Proposition 5.1",
+      "pages": "15–16",
+      "checked": "hypotheses, all stated conclusions and quantifiers checked against fixed PDF"
+    },
+    {
+      "result": "Lemma 6.2",
+      "pages": "20–22",
+      "checked": "hypotheses, all stated conclusions and quantifiers checked against fixed PDF"
+    },
+    {
+      "result": "Proposition 7.1",
+      "pages": "23",
+      "checked": "hypotheses, all stated conclusions and quantifiers checked against fixed PDF"
+    },
+    {
+      "result": "Theorem 7.2",
+      "pages": "24",
+      "checked": "hypotheses, all stated conclusions and quantifiers checked against fixed PDF"
+    }
+  ],
+  "proofPassages": [
+    {
+      "pages": "5–8",
+      "scope": "structure, finite-index lattice, natural torus action and norm"
+    },
+    {
+      "pages": "11–15",
+      "scope": "ramification-corrected Bergman metric and supporting movable class"
+    },
+    {
+      "pages": "15–23",
+      "scope": "two-metric transfer, moment bounds, ratio field and ordinary induction"
+    },
+    {
+      "pages": "23–26",
+      "scope": "smooth orthogonal invariant projection, rational quotient and norm descent"
+    }
+  ],
+  "dependencies": [
+    {
+      "source": "BP08",
+      "result": "Theorem 0.1",
+      "pages": "2",
+      "role": "Relative Bergman metric with singular coefficients, in Lemma 4.1 and Proposition 5.1.",
+      "kind": "direct",
+      "checking": "input statement and use checked"
+    },
+    {
+      "source": "Ber09",
+      "result": "Theorem 1.2",
+      "pages": "3",
+      "role": "Smooth direct-image L² metric; used on the invariant orthogonal summand.",
+      "kind": "direct",
+      "checking": "input statement and use checked"
+    },
+    {
+      "source": "DPS01",
+      "result": "Theorem 2.1.1",
+      "pages": "8",
+      "role": "Hard Lefschetz with multiplier ideals produces twisted forms.",
+      "kind": "direct",
+      "checking": "input statement and use checked"
+    },
+    {
+      "source": "CP19",
+      "result": "Theorem 1.1",
+      "pages": "2",
+      "role": "Algebraic integrability of foliations of positive minimum movable slope.",
+      "kind": "direct",
+      "checking": "input statement and use checked"
+    },
+    {
+      "source": "DPS96",
+      "result": "Structure Theorem",
+      "pages": "1",
+      "role": "Isometric universal-cover splitting and finite-cover structure; author-manuscript pagination differs from published p.218.",
+      "kind": "direct",
+      "checking": "input statement and use checked"
+    },
+    {
+      "source": "CDP",
+      "result": "Theorem 1.4",
+      "pages": "3",
+      "role": "Structure theorem including rational connectedness of residual factors.",
+      "kind": "direct",
+      "checking": "input statement and use checked"
+    },
+    {
+      "source": "GKP",
+      "result": "Corollary 2.27; Theorem 4.2",
+      "pages": "8, 12",
+      "role": "HN filtrations and tensor slopes for real boundary movable classes.",
+      "kind": "direct",
+      "checking": "input statement and use checked"
+    },
+    {
+      "source": "BDPP",
+      "result": "Theorems 2.2, 2.4",
+      "pages": "6",
+      "role": "Duality of pseudoeffective divisors and movable curves.",
+      "kind": "direct",
+      "checking": "input statement and use checked"
+    }
+  ],
+  "externalSources": [
+    {
+      "id": "BP08",
+      "authors": "Bo Berndtsson; Mihai Păun",
+      "title": "Bergman kernels and the pseudoeffectivity of relative canonical bundles",
+      "displayName": "Bergman kernels and the pseudoeffectivity of relative canonical bundles",
+      "version": "arXiv:math/0703344v4, 2008-01-21",
+      "sourceUrl": "https://arxiv.org/pdf/math/0703344v4",
+      "pdfPages": 32,
+      "sha256": "07889a1bdf7e13e8a00d6a358efb922fcbc3ba1d0576c3f137cd7fdd3002ac2e",
+      "checkedLocations": [
+        {
+          "printedPage": "2",
+          "pdfPage": 2
+        }
+      ],
+      "checking": "statement and application in main manuscript checked; proof not recursively audited"
+    },
+    {
+      "id": "Ber09",
+      "authors": "Bo Berndtsson",
+      "title": "Curvature of vector bundles associated to holomorphic fibrations",
+      "displayName": "Curvature of vector bundles associated to holomorphic fibrations",
+      "version": "arXiv:math/0511225v2, 2007-08-20; published 2009",
+      "sourceUrl": "https://arxiv.org/pdf/math/0511225v2",
+      "pdfPages": 26,
+      "sha256": "79e7ea512237d2e8f386b68aee8635858559a8354780ca190fa0a2220e53a8ed",
+      "checkedLocations": [
+        {
+          "printedPage": "3",
+          "pdfPage": 3
+        }
+      ],
+      "checking": "statement and application in main manuscript checked; proof not recursively audited"
+    },
+    {
+      "id": "DPS01",
+      "authors": "Jean-Pierre Demailly; Thomas Peternell; Michael Schneider",
+      "title": "Pseudo-effective line bundles on compact Kähler manifolds",
+      "displayName": "Pseudo-effective line bundles on compact Kähler manifolds",
+      "version": "arXiv:math/0006205v2, 2000-10-10; published 2001",
+      "sourceUrl": "https://arxiv.org/pdf/math/0006205v2",
+      "pdfPages": 49,
+      "sha256": "50709e54ee90dc7d43a9f6b583137a525bdf2195563e0b30535de970545dfa9a",
+      "checkedLocations": [
+        {
+          "printedPage": "8",
+          "pdfPage": 8
+        }
+      ],
+      "checking": "statement and application in main manuscript checked; proof not recursively audited"
+    },
+    {
+      "id": "CP19",
+      "authors": "Frédéric Campana; Mihai Păun",
+      "title": "Foliations with positive slopes and birational stability of orbifold cotangent bundles",
+      "displayName": "Foliations with positive slopes and birational stability of orbifold cotangent bundles",
+      "version": "Published version, 2019, 49 pages",
+      "sourceUrl": "https://www.numdam.org/item/10.1007/s10240-019-00105-w.pdf",
+      "pdfPages": 49,
+      "sha256": "e5d8221d5e18e2f65fc0960e5fca792066d74c29393a0fd04d7fbb7cf58d31fd",
+      "checkedLocations": [
+        {
+          "printedPage": "2",
+          "pdfPage": 2
+        }
+      ],
+      "checking": "statement and application in main manuscript checked; proof not recursively audited"
+    },
+    {
+      "id": "DPS96",
+      "authors": "Jean-Pierre Demailly; Thomas Peternell; Michael Schneider",
+      "title": "Compact Kähler manifolds with hermitian semipositive anticanonical bundle",
+      "displayName": "Compact Kähler manifolds with hermitian semipositive anticanonical bundle",
+      "version": "Undated author manuscript, 8 pages; published 1996",
+      "sourceUrl": "https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/dps4.pdf",
+      "pdfPages": 8,
+      "sha256": "c6620a5b89df04d489aa75f6cee4ca88c9e5132ec14758ec0477f0511bc4f48e",
+      "checkedLocations": [
+        {
+          "printedPage": "1",
+          "pdfPage": 1
+        }
+      ],
+      "checking": "statement and application in main manuscript checked; proof not recursively audited"
+    },
+    {
+      "id": "CDP",
+      "authors": "Frédéric Campana; Jean-Pierre Demailly; Thomas Peternell",
+      "title": "Rationally connected manifolds and semipositivity of the Ricci curvature",
+      "displayName": "Rationally connected manifolds and semipositivity of the Ricci curvature",
+      "version": "arXiv:1210.2092v3, 2018-02-05",
+      "sourceUrl": "https://arxiv.org/pdf/1210.2092v3",
+      "pdfPages": 19,
+      "sha256": "35e1cc0d90ed7fccfc2c39991d5572a80f270b8cdae87404e6e3ba5eb6e0b96f",
+      "checkedLocations": [
+        {
+          "printedPage": "3",
+          "pdfPage": 3
+        }
+      ],
+      "checking": "statement and application in main manuscript checked; proof not recursively audited"
+    },
+    {
+      "id": "GKP",
+      "authors": "Daniel Greb; Stefan Kebekus; Thomas Peternell",
+      "title": "Movable curves and semistable sheaves",
+      "displayName": "Movable curves and semistable sheaves",
+      "version": "arXiv:1408.4308v2, 2015-04-15",
+      "sourceUrl": "https://arxiv.org/pdf/1408.4308v2",
+      "pdfPages": 24,
+      "sha256": "19024e41d62f6371e33d1344a95a50c7392f49368d31454ec7c9cb434e3c2afe",
+      "checkedLocations": [
+        {
+          "printedPage": "8",
+          "pdfPage": 8
+        },
+        {
+          "printedPage": "12",
+          "pdfPage": 12
+        }
+      ],
+      "checking": "statement and application in main manuscript checked; proof not recursively audited"
+    },
+    {
+      "id": "BDPP",
+      "authors": "Sébastien Boucksom; Jean-Pierre Demailly; Mihai Păun; Thomas Peternell",
+      "title": "The pseudo-effective cone of a compact Kähler manifold and varieties of negative Kodaira dimension",
+      "displayName": "The pseudo-effective cone of a compact Kähler manifold and varieties of negative Kodaira dimension",
+      "version": "arXiv:math/0405285v1, 2004",
+      "sourceUrl": "https://arxiv.org/pdf/math/0405285v1",
+      "pdfPages": 39,
+      "sha256": "0a05e3644b784c3821eaf079b3fccd1744183ae67e9793f3d599315c53002b3c",
+      "checkedLocations": [
+        {
+          "printedPage": "6",
+          "pdfPage": 6
+        }
+      ],
+      "checking": "statement and application in main manuscript checked; proof not recursively audited"
+    }
+  ],
+  "unresolved": [
+    "External proofs not recursively verified. Yau prescribed-Ricci theorem, flattening/equivariant model preparation and Rosenlicht quotient are used as standard inputs; their original statements were not separately checked in this draft.",
+    "The psh envelope extension and birational common-denominator arguments were read and traced but not independently reproved. No expert peer review or formal verification."
+  ]
+}

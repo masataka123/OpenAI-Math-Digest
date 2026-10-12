@@ -1,0 +1,66 @@
+{
+  "presentation": {
+    "paperId": "bounded-anticanonical-metrics",
+    "displayName": "Bounded anticanonical metrics",
+    "result": "Theorems 1.1–1.2 · p. 2; Corollary 4.1 · p. 18",
+    "claim": {
+      "ja": "有効有理境界を持つ射影的Q-factorial klt対で、nefな反対数標準因子の解消上に局所有界半正計量がありχ(O)≠0なら正のCartier倍数が非消滅。smooth RCでは任意トーラスの自然不変切断を得る。",
+      "en": "A nef anti-log-canonical divisor on a projective Q-factorial klt pair with effective rational boundary has a nonzero Cartier multiple if its resolution has a bounded semipositive metric and nonzero Euler characteristic. Smooth RC varieties yield naturally invariant torus sections."
+    },
+    "role": {
+      "ja": "極大底と縦係数の最小値から有界計量を作る。安定トーラス商で自然線形化を保ち、商の切断を全域へ延長する。",
+      "en": "A maximal base and minimal vertical coefficients produce bounded metrics. A stable torus quotient preserves natural linearization and extends quotient sections globally."
+    }
+  },
+  "connections": [
+    {
+      "id": "smooth-structure-to-bounded-corollary",
+      "from": {
+        "paperId": "anticanonical-smooth-semipositivity",
+        "result": "Theorem 2.1",
+        "pages": "5",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Anticanonical-nonvanishing-from-smooth-semipositivity-September-26-2026/main.pdf"
+      },
+      "to": {
+        "paperId": "bounded-anticanonical-metrics",
+        "result": "Corollary 4.1, proof",
+        "pages": "18",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Bounded-anticanonical-metrics-on-klt-pairs-and-torus-quotients-September-26-2026/main.pdf"
+      },
+      "role": "Residual compact torus monodromy and invariant canonical frames permit descent of Theorem1.2 natural invariant section.",
+      "hypotheses": "smooth connected projective X with smooth semipositive -K; rationally connected factor inherits metric; natural action",
+      "kind": "consequence",
+      "checking": "2026-10-12 papers_03_04: supplier statement and recipient proof passage read directly in fixed PDFs; supplier full proof not independently verified.",
+      "unresolved": []
+    },
+    {
+      "id": "smooth-norm-to-bounded-corollary",
+      "from": {
+        "paperId": "anticanonical-smooth-semipositivity",
+        "result": "Lemma 2.2",
+        "pages": "8–9",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Anticanonical-nonvanishing-from-smooth-semipositivity-September-26-2026/main.pdf"
+      },
+      "to": {
+        "paperId": "bounded-anticanonical-metrics",
+        "result": "Corollary 4.1, proof",
+        "pages": "18",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Bounded-anticanonical-metrics-on-klt-pairs-and-torus-quotients-September-26-2026/main.pdf"
+      },
+      "role": "Nonzero section on finite étale cover returns as degree-multiplied nonzero section.",
+      "hypotheses": "finite étale connected cover and pulled-back anticanonical line",
+      "kind": "consequence",
+      "checking": "2026-10-12 papers_03_04: supplier statement and recipient proof passage read directly in fixed PDFs; supplier full proof not independently verified.",
+      "unresolved": []
+    }
+  ],
+  "comparisonNotes": [
+    "The companion main nonvanishing theorem is not used; only its independent structure and norm statements are inputs.",
+    "03 bounded klt route and04 chosen-character transfer are alternative proofs of the common smooth conclusion; no direct 03–04 dependency found in the core passages read."
+  ],
+  "scope": "Main proof route. Alternative mechanisms elsewhere in04 remain outside this article; do not infer no dependencies there."
+}

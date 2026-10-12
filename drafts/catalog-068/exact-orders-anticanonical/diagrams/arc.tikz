@@ -1,0 +1,5 @@
+\node[card] (n0) {\heading{1}{genericな形式弧}{A generic formal arc}$\gamma:\operatorname{Spec}F[[t]]\to X,\quad -M\ \text{pseudoeffective}$};
+\node[card,below=2.0cm of n0] (n1) {\heading{2}{中心付きvaluationとnull条件}{Centered valuation and null condition}$\mathbb C(X)\hookrightarrow F((t)),\quad 0\leq\ell(N_j)=\ell(M)\leq0$};
+\flow{n0}{n1}{\Tx{非零valuationを正規化、零valuationも許す}{Normalize a nonzero valuation; retain the zero valuation case}\\[3pt]\Cite{arc}};
+\node[result,below=2.0cm of n1] (n2) {\heading{3}{整数因子で零次数}{Zero order for an integral divisor}$N\sim_{\mathbb Q}L,\ v_\gamma(N)=0\quad\Longrightarrow\quad D=rN\sim rL$};
+\flow{n1}{n2}{\Tx{Theorem 1.1を適用し共通分母を除く}{Apply Theorem 1.1 and clear a common denominator}\\[3pt]\Cite{exact}};

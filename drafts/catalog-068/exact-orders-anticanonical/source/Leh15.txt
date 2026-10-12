@@ -1,0 +1,606 @@
+
+===PDF PAGE 1===
+arXiv:1109.4382v3  [math.AG]  12 Jan 2012
+NUMERICAL TRIVIALITY AND PULLBACKS
+BRIAN LEHMANN
+Abstract. Let f : X → Z be a surjective morphism of smooth complex
+projective varieties with connected ﬁbers. Suppose that L is a pseudo-
+eﬀective divisor that is f -numerically trivial. We show that there is a
+divisor D on Z such that L ≡ f ∗ D.
+1. Introduction
+We consider the following question:
+Question 1.1. Letf :X → Z be a surjective morphism of smooth complex
+projective varieties with connected ﬁbers. Suppose that L is a pseudo-
+eﬀective R-Cartier divisor that is numerically trivial on the ﬁbers of f . Is L
+numerically equivalent to the pull-back of a divisor on Z?
+When L is not pseudo-eﬀective the answer is an emphatic “no.” Thus
+it is perhaps surprising that there is a positive answer for p seudo-eﬀective
+divisors. The analogue of Question 1.1 for Q-linear equivalence is well un-
+derstood, with the most general statements due to [Nak04]. O ur goal is to
+show that similar theorems hold true in the numerical case.
+The most restrictive situation is to ask that L be numerically trivial on
+every ﬁber of f . In this case L is actually numerically equivalent to the
+pullback of a divisor on Z:
+Theorem 1.2. Let f : X → Z be a surjective morphism with connected
+ﬁbers from a normal complex projective variety X to a Q-factorial normal
+complex projective variety Y . Suppose that L is a pseudo-eﬀective R-Cartier
+divisor that is f -numerically trivial. Then there is some R-Cartier divisor
+D on Z such that L ≡ f ∗D.
+Again, the pseudo-eﬀectiveness of L is crucial: the dimension of the space
+of divisors that are f -numerically trivial will generally be larger than the
+dimension of N 1(Z).
+For applications it is more useful to require that L be numerically triv-
+ial only on a general ﬁber of f . To handle this case we need a systematic
+way of discounting the non-trivial behavior along special ﬁ bers. For sur-
+faces the behavior of special ﬁbers is captured by the Zarisk i decomposition.
+The analogous construction in higher dimensions is the divi sorial Zarkiski
+2010 Mathematics Subject Classiﬁcation. Primary 14C20.
+The author is supported by NSF Award 1004363.
+1
+
+===PDF PAGE 2===
+2 BRIAN LEHMANN
+decomposition of [Nak04] and [Bou04]. Given a pseudo-eﬀecti ve R-Cartier
+divisor L, the divisorial Zariski decomposition
+L =Pσ (L) +Nσ (L)
+expressesL as the sum of a “movable part” Pσ (L) and a “ﬁxed part” Nσ (L)
+(see Deﬁnition 2.7). The following theorem is a numerical an alogue of
+[Nak04] V.2.26 Corollary.
+Theorem 1.3. Let f : X → Z be a surjective morphism of normal com-
+plex projective varieties with connected ﬁbers. Suppose th at L is a pseudo-
+eﬀective R-Cartier divisor such that L|F ≡ 0 for a general ﬁber F of f .
+Then there is a smooth birational model φ : Y → X, a map g : Y → Z ′
+birationally equivalent to f , and an R-Cartier divisor D on Z ′ such that
+Pσ (φ ∗L) ≡ Pσ (g∗D).
+The most general situation is to ask that ν(L|F ) = 0 on a general ﬁber
+F , where ν denotes the numerical dimension of [Nak04] and [BDPP04].
+Theorem 1.3 also holds with this weaker condition on L.
+To apply these results, one must ﬁnd a morphism f : X → Z such that
+L is numerically trivial along the ﬁbers. [BCE +02], [Eck05], and [Leh11]
+show that such maps can be constructed by taking the quotient of X by
+subvarieties along which L is numerically trivial. In fact, there is a maximal
+ﬁbration such that L is numerically trivial (properly interpreted) along the
+ﬁbers. Theorems 1.2 and 1.3 pair naturally with the reductio n map theory
+developed in these papers.
+1.1. Outline. The ﬁrst step in the proofs is to construct a candidate diviso r
+D on the baseZ. We accomplish this by cutting down by very ample divisors
+to obtain a generically ﬁnite map f :W → Z. We then use facts about ﬁnite
+maps to “push down” L|W to obtain D.
+The next step is to compare L and f ∗D using numerical analogues of
+results of [Nak04]. This is achieved by cutting down to the su rface case. An
+important conceptual point is that a numerical class in N 1(X) is determined
+“in codimension 1”: a divisor class is determined by its inte rsections with
+curves avoiding a countable union of closed subsets of codim ension at least
+2.
+Section 2 is devoted to preliminaries: surfaces, the diviso rial Zariski de-
+composition, the numerical dimension, and exceptional div isors. Section 3
+analyzes generically ﬁnite maps. Sections 4 and 5 prove Theo rems 1.2 and
+1.3 respectively.
+I thank B. Bhatt, A.M. Fulger, and Y. Gongyo for some helpful c onver-
+sations.
+2. Preliminaries
+We work over the base ﬁeld C. All varieties are irreducible and reduced.
+
+===PDF PAGE 3===
+NUMERICAL TRIVIALITY AND PULLBACKS 3
+2.1. Notation. We will use the standard notations ∼, ∼ Q, ∼ R, and ≡ to
+denote respectively linear equivalence, Q-linear equivalence, R-linear equiv-
+alence, and numerical equivalence.
+Deﬁnition 2.1. Suppose that f :X → Z is a morphism of normal projec-
+tive varieties. We say that
+• A curve C on X is f -vertical if f ∗H ·C = 0 for some ample Cartier
+divisor H on Z (and similarly for a curve class α ∈ N1(X)).
+• An R-Cartier divisor L on X is f -numerically trivial if it has van-
+ishing intersection with every f -vertical curve class.
+Suppose that f : X → Z is a surjective morphism of normal projective
+varieties. By [Ray72] there is a birational model ψ : T → Z such that for
+the normalization W of the main component of X × Z T the induced map
+g :W → T is ﬂat. We say that g :W → T is a ﬂattening of f .
+2.2. Surfaces. We begin by considering Question 1.1 for surfaces. For sur-
+faces, the Zariski decomposition is the key tool.
+Theorem 2.2 ([Zar64],[Fuj79]). Let S be a smooth projective surface and
+let L be a pseudo-eﬀective R-Cartier divisor on S. There is a unique de-
+composition
+L =P +N
+whereP is a nef divisor and N is an eﬀective divisor satisfying
+(1) P ·N = 0.
+(2) If N ̸= 0, the intersection matrix deﬁned by the components of N is
+negative deﬁnite.
+We will use this theorem to describe how a divisor L behaves along special
+ﬁbers of an L-trivial morphism. The following lemma is well-known.
+Lemma 2.3. Letf :S → C be a surjective morphism with connected ﬁbers
+from a smooth projective surface S to a smooth projective curve C. Let L be
+a pseudo-eﬀective R-Cartier divisor on S such that L ·F = 0 for a general
+ﬁberF of f .
+(1) If L ·D = 0 for every f -vertical curve D, then L is nef.
+(2) IfL ·D ̸= 0 for some f -vertical curve D contained in a ﬁber F0, then
+there is an f -vertical curve G contained in F0 satisfying L ·G< 0.
+We recall the proof for convenience.
+Proof. LetL =P +N be the Zariski decomposition of L. Since P is nef and
+P ·F ≤ L ·F = 0, P has vanishing intersection with every f -vertical curve.
+Note that N is an (eﬀective) f -vertical curve since N ·F =L ·F = 0.
+We ﬁrst show (2). By assumption N must have some components con-
+tained in F0. Recall that the self-intersection matrix of the component s
+of N is negative-deﬁnite. In fact, since f -vertical curves in diﬀerent ﬁbers
+do not intersect, the same is true just for the components con tained in F0.
+
+===PDF PAGE 4===
+4 BRIAN LEHMANN
+Thus, there is an eﬀective curve G supported on Supp(N ) ∩ Supp(F0) with
+0 > N ·G = L ·G. The same argument shows that in (1) we must have
+N = 0 so that L is nef. □
+The following is a special case of a theorem of [Pet08].
+Lemma 2.4 (cf. [Pet08],Theorem 6.8) . Let f : S → C be a surjective
+morphism with connected ﬁbers from a smooth projective surf ace S to a
+smooth projective curve C. Suppose that L is an f -numerically trivial nef
+R-Cartier divisor. Then L ≡ αF for some α ≥ 0 whereF denotes a general
+ﬁber of f .
+Proof. Suppose the theorem fails. There is a divisor D such that D ·L< 0
+andD ·F >0. The latter condition implies that D isf -big so that D +f ∗H
+is pseudo-eﬀective for some ample divisor H onC. But (D +mf ∗H) ·L< 0,
+a contradiction. □
+Corollary 2.5. Letf :S → C be a surjective morphism from an irreducible
+projective surface S to a smooth projective curve C with connected ﬁbers.
+Suppose that L is a pseudo-eﬀective R-Cartier divisor on S such that L·C =
+0 for every f -vertical curve C. Then L ≡ f ∗D for some R-Cartier divisor
+D on T .
+Proof. WhenS is smooth this follows from Lemmas 2.3 and 2.4. In general
+we pass to a resolution φ : S′ → S. Applying the smooth case to φ ∗L we
+ﬁnd a divisor D such that φ ∗L ≡ (f ◦φ)∗D. Thus L ≡ f ∗D. □
+2.3. Divisorial Zariski decompositions. We next recall the divisorial
+Zariski decomposition. This notion was introduced by [Nak0 4] and [Bou04]
+as a higher-dimensional analogue of the Zariski decomposit ion for surfaces.
+Deﬁnition 2.6. LetX be a smooth projective variety and let L be a pseudo-
+eﬀective R-Cartier divisor on X. Fix an ample divisor A on X. Given a
+prime divisor Γ on X, we deﬁne
+σΓ(L) = lim
+ǫ→ 0
+min{multΓ(L′)|L′ ≥ 0 and L′ ∼ QL +ǫA}.
+This deﬁnition is independent of the choice of A.
+[Nak04] shows that for any pseudo-eﬀective divisor L there are only
+ﬁnitely many prime divisors Γ with σΓ(L) > 0. Thus we can make the
+following deﬁnition.
+Deﬁnition 2.7. LetX be a smooth projective variety and let L be a pseudo-
+eﬀective R-Cartier divisor. We deﬁne:
+Nσ (L) =
+∑
+σΓ(L)Γ Pσ (L) = L − Nσ (L)
+The decomposition L = Pσ (L) + Nσ (L) is called the divisorial Zariski de-
+composition of L.
+We need the following properties of the divisorial Zariski d ecomposition.
+
+===PDF PAGE 5===
+NUMERICAL TRIVIALITY AND PULLBACKS 5
+Lemma 2.8 ([Nak04], III.1.4 Lemma, V.1.3 Theorem, and III.2.5 Lemma) .
+LetX be a smooth projective variety and let L be a pseudo-eﬀective R-Cartier
+divisor. Then
+(1) Nσ (L) is eﬀective.
+(2) For any prime divisor Γ of X, the restriction Pσ (L)|Γ is pseudo-
+eﬀective.
+(3) If φ : Y → X is a birational map from a smooth projective variety
+Y , then Nσ (φ ∗L) ≥ φ ∗Nσ (L).
+The following is a numerical analogue of [Nak04] III.5.2 Lem ma.
+Lemma 2.9 ([Leh11], Lemma 4.4) . Let f : X → Z be a surjective mor-
+phism from a smooth projective variety to a normal projectiv e variety with
+connected ﬁbers. Suppose that L is an R-Cartier divisor such that L|F ≡ 0
+on the general ﬁber F of f . If Θ is a prime divisor on Z such that L|F ̸≡ 0
+for a general ﬁber F over Θ, then there is some prime divisor Γ on X such
+that f (Γ) = Θ and L|Γ is not pseudo-eﬀective.
+Proof. The surface case is Lemma 2.3 (2). The general case is proved b y
+cutting down by general very ample divisors on X and Z to reduce to the
+surface case. □
+Corollary 2.10. Let f : X → Z be a surjective morphism from a smooth
+projective variety to a normal projective variety with conn ected ﬁbers. Sup-
+pose that L is an R-Cartier divisor such that L|F ≡ 0 on the general ﬁber F
+of f . Then there is a subset V ⊂ Z that is a countable union of closed sets
+of codimension 2 such that Pσ (L)|F ≡ 0 for every ﬁber F not lying above V .
+Proof. SinceL ≥ Pσ (L), we see that Pσ (L)|F ≡ 0 for a general ﬁber F off .
+The conclusion follows from Lemma 2.9 combined with Lemma 2. 8 (2). □
+2.4. Numerical dimension. The numerical dimension is a numerical mea-
+sure of positivity that is closely related to the divisorial Zariski decomposi-
+tion. We will use the deﬁnition of [Nak04].
+Deﬁnition 2.11. Let X be a normal projective variety and let L be a
+pseudo-eﬀective R-Cartier divisor on X. For an ample divisor A set
+ν(L,A ) = max
+{
+k ∈ Z≥ 0
+⏐
+⏐
+⏐
+⏐lim sup
+m→∞
+h0(X, ⌊mL⌋ +A)
+mk > 0
+}
+and deﬁne
+ν(L) = max
+A ample
+{ν(L,A )}.
+Lemma 2.12. LetX be a normal projective variety and let L be a pseudo-
+eﬀective R-Cartier divisor. Then
+(1) If φ : Y → X is a birational map from a normal projective variety
+Y , then ν(φ ∗L) = ν(L).
+(2) If X is smooth then ν(L) = 0 iﬀ Pσ (L) ≡ 0.
+
+===PDF PAGE 6===
+6 BRIAN LEHMANN
+2.5. Exceptional divisors.
+Deﬁnition 2.13. Let f : X → Z be a surjective morphism of normal
+projective varieties. An R-Cartier divisor E on X is
+• f -vertical if no component of Supp( E) dominates Z.
+• f -horizontal otherwise.
+We next identify two diﬀerent ways a divisor can be “exception al” for a
+morphism.
+Deﬁnition 2.14. Let f : X → Z be a surjective morphism of normal
+projective varieties. An f -vertical R-Cartier divisor E on X is
+• f -exceptional if every component Ei of Supp(E) satisﬁes
+codimf (Ei) ≥ 2.
+• f -degenerate if for every prime divisor Θ ⊂ Z there is a prime divisor
+Γ ⊂ X with f (Γ) = Θ and Γ ̸⊂ Supp(E).
+Lemma 2.15 (cf. [Nak04] III.5.8 Lemma) . Let f : X → Z be a surjective
+morphism of smooth projective varieties with connected ﬁbe rs. Suppose that
+L is an eﬀective f -vertical R-Cartier divisor. There is an eﬀective R-Cartier
+divisor D on Z and an eﬀective f -exceptional divisor E on X such that
+L +E =f ∗D +F
+whereF is an eﬀective f -degenerate divisor.
+Proof. WriteL = Lexc +Lf t where Lexc is the part of L supported on the
+f -exceptional locus and Lf t is the rest.
+Suppose that {Θi}r
+i=1 are the prime divisors on Z contained in the image
+f (Supp(L)). To Θ i assign the constant βi deﬁned by
+βi = min
+Γ a prime divisor on X
+with f (Γ)=Θi
+multΓ(Lf t)
+multΓ(f ∗Θi).
+Set D = ∑n
+i=1βiΘi. There is some f -exceptional divisor E such that F :=
+L +E − f ∗D is an eﬀective f -vertical divisor. Furthermore, by construction
+we know that for each Θ there is a prime component Γ of X such that
+f (Γ) = Θ but Γ ̸⊂ Supp(F ). □
+As demonstrated by Nakayama, the divisorial Zariski decomp osition gives
+a useful language for understanding f -degenerate divisors.
+Lemma 2.16 ([GL11], Lemma 2.16) . Let f : X → Z be a surjective mor-
+phism from a smooth projective variety to a normal projectiv e variety and let
+D be an eﬀective f -degenerate R-Cartier divisor. For any pseudo-eﬀective
+R-Cartier divisor L on Z we have D ≤ Nσ (f ∗L +D).
+
+===PDF PAGE 7===
+NUMERICAL TRIVIALITY AND PULLBACKS 7
+3. Generically Finite Maps
+In this section we study the behavior of divisors over generi cally ﬁnite
+morphisms. Such morphisms are a composition of a birational map and a
+ﬁnite map and can be understood by addressing each separatel y. The fol-
+lowing lemma is a well-known consequence of the Negativity o f Contraction
+lemma.
+Lemma 3.1. Let f : X → Z be a birational morphism from a normal
+projective variety X to a Q-factorial normal projective variety Z. Suppose
+that L is an R-Cartier divisor on X such that L is f -numerically trivial.
+Then L ≡ f ∗D for some R-Cartier divisor D on Z.
+Proof. Suppose that φ : X ′ → X is a resolution of X. Note that φ ∗L is
+(f ◦φ)-numerically trivial. If we can ﬁnd a D so that φ ∗L ≡ (f ◦φ)∗D then
+also L ≡ f ∗D. Thus we may assume that X is smooth.
+Write L ≡ f ∗f∗L +E for some f -exceptional divisor E. We can write
+E = E+ − E− for some eﬀective divisors E+,E − with disjoint support.
+Since L is f -numerically trivial, we have E+ ≡ f E− . However, [Nak04]
+III.5.1 Lemma implies that any non-zero f -exceptional divisor has negative
+intersection with somef -vertical curve that deforms to cover a divisor. Since
+the supports of E+ and E− do not share any component we must have
+E+ =E− = 0. □
+Lemma 3.2. Let f : X → Z be a surjective ﬁnite morphism of normal
+projective varieties and let L be an R-Cartier divisor on X. Let {Ti}k
+i=1 be
+a collection of irreducible curves on X. Suppose that there are constants α i
+such that
+L ·C = (degf |C)α i
+for every curve C on X with f (C) = f (Ti). Then there is an R-Cartier
+divisor D on Z such that L ·Ti =f ∗D ·Ti for every i. In particular, if the
+numerical classes of the Ti spanN1(X) then L ≡ f ∗D.
+Proof. Let h :W → Z denote the Galois closure of f with Galois group G.
+We let p :W → X denote the map to X. We ﬁrst show that the R-Cartier
+divisor
+LG := 1
+|G|
+∑
+g∈ G
+g(p∗L)
+is numerically equivalent to h∗D for some R-Cartier divisor D on Z. For a
+positive integer m, let Lm = ∑
+g∈ Gg(⌊mp∗L⌋). Since Lm isG-invariant, we
+can ﬁnd a Cartier divisor Dm on Z such that h∗Dm = Lm. Note that the
+numerical classes of 1
+m|G|Dm converge; choose D to be an R-Cartier divisor
+representing this class. Then
+h∗D ≡ lim
+m→∞
+1
+m|G|Dm =LG.
+
+===PDF PAGE 8===
+8 BRIAN LEHMANN
+Note that if C is a curve on W such that p(C) = Ti then LG ·C =p∗L ·C
+by the assumption on the intersection numbers of L. Thus L ·Ti =f ∗D ·Ti
+for each i. □
+Lemma 3.3. Let f : X → Z be a surjective generically ﬁnite map from a
+smooth projective varietyX to a Q-factorial normal projective variety Z. Let
+L be an R-Cartier divisor on X and let {Ti}k
+i=1 be a collection of irreducible
+curves on X. Suppose that there are constants α i with
+L ·C = (degf |C)α i
+for every curve C on X with f (C) = f (Ti).
+(1) Suppose that for each i the image f (Ti) is a curve lying in the open
+locus on Z over which f is ﬂat. Then there is an R-Cartier divisor
+D on Z such that L ·Ti =f ∗D ·Ti for every i.
+(2) Suppose that the numerical classes of the Ti span N1(X) and that
+L ·C = 0 for every f -vertical curve C. Then L ≡ f ∗D for some
+R-Cartier divisor D on Z.
+Proof. Choose a normal birational model φ : X ′ → X and a normal bira-
+tional model µ :Z ′ → Z so that we have a morphism f ′ :X ′ → Z ′ ﬂattening
+f . We may assume that φ and µ are isomorphisms on the locus over which
+f is ﬂat. For each i choose an irreducible curve T ′
+i on X ′ lying above Ti.
+We ﬁrst prove (1). Suppose that C is a curve on X ′ such that f ′(C) =
+f ′(T ′
+i ). Since f (φ(T ′
+i )) is a curve,
+φ ∗L ·C = (degφ|C)(degf |φ (C))α i
+= (degf ′|C )(degµ |f ′(C))α i
+= (degf ′|C )(degµ |f ′(T ′
+i ))α i.
+Setα ′
+i = (degµ |f ′(T ′
+i ))α i. The set of curves {T ′
+i } and the divisor φ ∗L satisfy
+the hypotheses of Lemma 3.2 for the ﬁnite map f ′ and the constants α ′
+i.
+Lemma 3.2 yields a divisor DZ ′ on Z ′ such that φ ∗L ·T ′
+i = f ′∗DZ ′ ·T ′
+i for
+everyi. Since the Ti lie over the locus on which f is ﬂat, f ′(T ′
+i ) avoids the
+µ -exceptional locus. Thus, setting D =µ ∗DZ ′, we obtain L ·Ti =f ∗D ·Ti
+for every i.
+We next prove (2). Applying Lemma 3.1 to φ, we can ﬁnd ﬁnitely many
+irreducibleφ-vertical curves {S′
+j}r
+j=1so that the span of the numerical classes
+of the T ′
+i and S′
+j is all of N1(X ′).
+Suppose that C is a curve on X ′ such that f ′(C) = f ′(T ′
+i ). If f (φ(T ′
+i ))
+is a curve, then as before set α ′
+j = (deg µ |f ′(T ′
+j ))α j. If f (φ(T ′
+i )) is a point,
+then C is also ( µ ◦f ′)-vertical. Since φ ∗L has vanishing intersection with
+everyµ ◦f ′-vertical curve, φ ∗L ·C = 0 = φ ∗L ·T ′
+i . Set α ′
+i = 0. Similarly, set
+β ′
+j = 0 for every S′
+j.
+The set of curves {T ′
+i } ∪ {S′
+j} and the divisor φ ∗L satisfy the hypotheses
+of Lemma 3.2 for the ﬁnite map f ′ and the constants α ′
+i,β ′
+j . The result of
+the lemma indicates that there is a divisor DZ ′ onZ ′ so that f ′∗DZ ′ ≡ φ ∗L.
+
+===PDF PAGE 9===
+NUMERICAL TRIVIALITY AND PULLBACKS 9
+Since DZ ′ is µ -numerically trivial, Lemma 3.1 yields a divisor D on Z such
+that µ ∗D ≡ DZ ′. Thus f ∗D ≡ L. □
+4. Numerical Triviality on Every Fiber
+In this section we give the proof of Theorem 1.2. We start by re calling
+an example demonstrating that the pseudo-eﬀectiveness of L is necessary in
+order to have any hope of relating L to divisors on the base.
+Example 4.1. Let E be an elliptic curve without complex multiplication
+and consider the surface S =E × E with ﬁrst projection π :S → E. Recall
+that N 1(S) is generated by the ﬁbers F1,F 2 of the two projections and the
+diagonal ∆. In particular, the subspace of π -trivial divisors is generated by
+F1 and ∆ − F2. Since this space has larger dimension than N 1(E), most
+π -trivial divisors will not be numerically equivalent to pul l-backs from E.
+The ﬁrst step in the proof is to show that numerical equivalen ce of divisors
+can be detected against curves which are intersections of ve ry ample divisors.
+Proposition 4.2. Suppose that X is a normal projective variety of dimen-
+sionn. Fix a set of ample Cartier divisors H = {H1,...,H r} whose numer-
+ical classes span N 1(X). Then the intersection products Hn− 1 spanN1(X).
+Proof. We ﬁrst show that any irreducible curve C on X is contained in an
+irreducible surface S that is the complete intersection of members of the
+linear systems |miHi| for some suﬃciently large mi. For a ﬁxed curve C
+and ample divisor H ∈ H , choose m suﬃciently large so that h1(X, IC ⊗
+OX(mH)) = 0 and OX (mH) is globally generated. Then IC ⊗ O X (mH)
+is globally generated away from C. Furthermore, for suﬃciently large m
+the corresponding linear system is not composite with a penc il. Thus, the
+Bertini theorems show that the general member of this linear system is
+irreducible and is normal away from C. Arguing inductively, we construct
+the surface S.
+Now suppose that L is a divisor on X such that L ·α = 0 for every
+elementα in the span of Hn− 1. Consider an irreducible curve C on X and
+the corresponding irreducible surface S. We know that L|S ·H|S = 0 for any
+ample divisor H ∈ H . Furthermore L|2
+S = 0 since the Hi span N 1(X). The
+Hodge Index Theorem (applied to a resolution of S) implies that L|S ≡ 0,
+and in particular, L·C = 0. Since C is arbitrary,L is numerically trivial. □
+We now turn to the proof of Theorem 1.2.
+Proof of 1.2: Suppose that φ :X ′ → X is a resolution of X. Note that φ ∗L
+is (f ◦φ)-numerically trivial. If we can ﬁnd a D so that φ ∗L ≡ (f ◦φ)∗D
+then also L ≡ f ∗D. Thus we may assume that X is smooth.
+We next show that for a curve R through a very general point of Z there
+is some constant α R such that
+(†) L ·C = (degf |C)α R
+
+===PDF PAGE 10===
+10 BRIAN LEHMANN
+for every curve C onX withf (C) = R. Let R′ denote the normalization of
+R and consider the normalization Y ofX × ZR′. Since R goes through a very
+general point of Z we may assume that the pullback of L to every component
+of Y is pseudo-eﬀective and that only one component of Y dominates S′.
+Consider two curves C and C ′ on Y with f (C) = f (C ′) = R′. By cutting
+down Y by very ample divisors, we can ﬁnd a chain of normal surfaces Si
+connecting C to C ′, all of which map surjectively to R′ under f . We may
+ensure that L|Si is pseudo-eﬀective for every i.
+Applying Corollary 2.5 to the surface Si, we see that there is some divisor
+Di onR′ such that L|Si ≡ f ∗Di. For i ≥ 1 let C ′
+i denote the curve Si ∩Si+1.
+Since C ′
+i dominates R′, we have
+deg(Di) deg(f |C′
+i
+) = L ·C ′
+i = deg(Di+1) deg(f |C′
+i
+).
+Thus there is one ﬁxed D1 so that L|Si ≡ f ∗D1 for every i. Fixing C and
+letting C ′ vary, we see that the constant α R = deg(D1) satisﬁes the desired
+condition for every curve above R.
+Let W ⊂ X denote a smooth very general intersection of very ample
+divisors such that the mapf :W → Z is generically ﬁnite andL|W is pseudo-
+eﬀective. Certainly L|W has vanishing intersection with any f -vertical curve
+on W . Furthermore, Proposition 4.2 shows that we can choose a ﬁni te
+collection of curves Ti through very general points whose numerical classes
+span N1(X). In particular ( †) holds over the Ti. Lemma 3.3 (2) yields a
+divisor D on Z such that L|W ≡ f ∗D.
+Apply Proposition 4.2 to X to ﬁnd a collection of irreducible curves Ci
+on X that are not f -vertical and whose numerical classes span N1(X). For
+each i choose an irreducible curve C W
+i on W such that f (Ci) = f (C W
+i ).
+Since
+L ·Ci = (degf |Ci)α f (Ci)
+= (degf |Ci) L ·C W
+i
+degf |CW
+i
+= (f ∗D ·C W
+i ) degf |Ci
+degf |CW
+i
+=f ∗D ·Ci
+we see that L ≡ f ∗D. □
+5. Numerical Triviality on a General Fiber
+In this section we prove Theorem 1.3. In fact, we will address the more
+general situation where ν(L|F ) = 0 for a general ﬁber F . The following
+examples show that Theorem 1.3 is optimal in some sense.
+Example 5.1. Let f : S → C be a morphism from a smooth surface to a
+smooth curve. Suppose that L is an eﬀective f -degenerate divisor. Then L
+is not numerically equivalent to the pull-back of a divisor o n the base. This
+
+===PDF PAGE 11===
+NUMERICAL TRIVIALITY AND PULLBACKS 11
+is still true on higher birational models of f . One must pass to the positive
+part Pσ (L) = 0.
+Example 5.2. LetD be a big divisor on a smooth variety X and letφ :Y →
+X be a blow-up along a smooth center along which D has positive asymptotic
+valuation. Then Pσ (φ ∗D) < φ∗Pσ (D) is not numerically equivalent to a
+pull-back of a divisor on X. One must pass to the ﬂattening id :Y → Y .
+The following is a stronger version of Theorem 1.3.
+Theorem 5.3. Let f :X → Z be a surjective morphism of normal projec-
+tive varieties with connected ﬁbers. Suppose that L is a pseudo-eﬀective R-
+Cartier divisor such that ν(L|F ) = 0 for a general ﬁber F off . Then there is
+a smooth birational model φ :Y → X, a map g :Y → Z ′ birationally equiv-
+alent to f , and an R-Cartier divisor D onZ ′ such that Pσ (φ ∗L) ≡ Pσ (g∗D).
+Proof. By passing to a resolution we may assume that X is smooth.
+Choose a normal birational model µ : X ′ → X, a smooth birational
+model Z ′ of Z, and a morphism f ′ :X ′ → Z ′ ﬂattening f . Let ψ :Y → X ′
+denote a smooth model. We let g denote the composition f ′ ◦ψ and let φ
+denote the composition µ ◦ψ . Note that every g-exceptional divisor is also
+φ-exceptional.
+Since ν(φ ∗L|F ) = 0 for a general ﬁber F of g, we have
+φ ∗L|F ≡ Nσ (φ ∗L|F ) ≤ Nσ (φ ∗L)|F.
+In particular Pσ (φ ∗L)|F ≡ 0 for a general ﬁber F .
+By Corollary 2.10, there is a subset V ⊂ Z ′ that is a countable union of
+codimension 2 subsets such that Pσ (φ ∗L) is numerically trivial along every
+ﬁber not over V . In particular, suppose that the curve R ⊂ Z ′ avoids V
+andPσ (φ ∗L) is pseudo-eﬀective when restricted to the ﬁber over R. By the
+same argument as in the proof of Theorem 1.2, there is some con stant α R
+such that
+(*) Pσ (φ ∗L) ·C = deg(g|C ) ·α R
+for every curve C with g(C) = R.
+We next apply the generically ﬁnite case to construct a divis orD1. Choose
+a smooth very general intersection W of very ample divisors on the smooth
+varietyY so that the map g|W : W → Z is generically ﬁnite. By choosing
+W very generically we may assume that the divisor Pσ (φ ∗L)|W is pseudo-
+eﬀective.
+Consider the subspace of N1(W ) generated by irreducible curves C that
+avoidg− 1(V ) and run through a very general point of W . We may choose
+a ﬁnite collection of irreducible curves {Ti} satisyﬁng these two properties
+whose numerical classes span this subspace. Thus there are c onstantsα i so
+that
+Pσ (φ ∗L)|W ·C = deg(g|C ) ·α i
+for every curve C with g(C) = g(Ti). Applying Lemma 3.3 (1), we ﬁnd a
+divisor D1 on Z ′ with Pσ (φ ∗L) ·Ti = g∗D1 ·Ti for every i. Furthermore
+
+===PDF PAGE 12===
+12 BRIAN LEHMANN
+Pσ (φ ∗L) ·C =g∗D1 ·C for any curve C through a very general point of W
+such that g(C) avoids V , since C is numerically equivalent to a sum of the
+Ti.
+We next relate Pσ (φ ∗L) and g∗D1. Recall that µ (f ′− 1V ) is a countable
+union of codimension 2 subvarieties in X. By Proposition 4.2 we may choose
+curvesSX
+i avoiding this locus and running through a very general point of
+X whose numerical classes form a basis for N1(X). Let {Si} consist of the
+strict transforms of these curves on Y . Since the Si are generic, for each we
+may choose a curve SW
+i ⊂ W going through a very general point and such
+that g(SW
+i ) = g(Si) avoids V . This guarantees that L ·SW
+i = g∗D1 ·SW
+i .
+By construction Pσ (φ ∗L) ·SW
+i and Pσ (φ ∗L) ·Si can be compared using (*).
+Arguing as in the proof of Theorem 1.2, we see that Pσ (φ ∗L) ·Si =g∗D1 ·Si
+for every i. This proves that
+φ ∗Pσ (φ ∗L) ≡ φ ∗g∗D1.
+Choose eﬀective φ-exceptional divisors E and F with no common compo-
+nents such that
+Pσ (φ ∗L) +E ≡ g∗D1 +F.
+Note that since f : X → Z is generically ﬂat, no φ-exceptional divisor
+dominates Z ′. In particular F is g-vertical, so we may apply Lemma 2.15
+to F to ﬁnd
+F =g∗D2 +Fdeg − Fexc
+where Fdeg is g-degenerate and Fexc is g-exceptional. Set D = D1 +D2.
+Then
+(**) Pσ (φ ∗L) +E +Fexc ≡ g∗D +Fdeg.
+Since Fdeg is g-degenerate, Lemma 2.16 shows Pσ (g∗D +Fdeg) = Pσ (g∗D).
+Similarly, since (E +Fexc) is φ-exceptional,
+Pσ (φ ∗L) ≤ Pσ (Pσ (φ ∗L) +E +Fexc)
+≤ Pσ (φ ∗L +E +Fexc)
+=Pσ (φ ∗L) by Lemma 2.16.
+Taking the positive part of both sides of (**) yields Pσ (φ ∗L) ≡ Pσ (g∗D). □
+References
+[BCE+02] T. Bauer, F. Campana, T. Eckl, S. Kebekus, T. Peternell, S . Rams, T. Szem-
+berg, and L. Woltzlas, A reduction map for nef line bundles , Complex Geometry
+(G¨ ottingen, 2000), Springer, Berlin, 2002, pp. 27–36.
+[BDPP04] S. Boucksom, J.P. Demailly, M. Pˇ aun, and T. Petern ell, The
+pseudo-eﬀective cone of a compact K¨ ahler manifold and vari-
+eties of negative Kodaira dimension , 2004, http://www-fourier.ujf-
+grenoble.fr/∼demailly/manuscripts/coneduality.pdf, submitted to J. A lg.
+Geometry.
+[Bou04] S. Boucksom, Divisorial Zariski decompositions on compact complex manif olds,
+Ann. Sci. ´Ecole Norm. Sup. 37 (2004), no. 4, 45–76.
+
+===PDF PAGE 13===
+NUMERICAL TRIVIALITY AND PULLBACKS 13
+[Eck05] T. Eckl, Numerically trival foliations, Iitaka ﬁbrations, and the n umerical di-
+mension, 2005, arXiv:math/0508340v1.
+[Fuj79] T. Fujita, On Zariski problem , Proc. Japan Acad. Ser. A Math. Sci. 55 (1979),
+no. 3, 106–110.
+[GL11] Y. Gongyo and B. Lehmann, Reduction maps and minimal model theory , 2011,
+arXiv:1103.1605v1.
+[Leh11] B. Lehmann, On Eckl’s pseudo-eﬀective reduction map , 2011,
+arXiv:1103.1073v1 [math.AG].
+[Nak04] N. Nakayama, Zariski-decomposition and abundance , MSJ Memoirs, vol. 14,
+Mathematical Society of Japan, Tokyo, 2004.
+[Pet08] T. Peternell, Varieties with generically nef tangent bundles , 2008,
+arXiv:0807.0982v1 [math.AG].
+[Ray72] M. Raynaud, Flat modules in algebraic geometry , Comp. Math. 24 (1972),
+11–31.
+[Zar64] O. Zariski, The theorem of Riemann-Roch for high multiples of an eﬀective
+divisor on an algebraic surface , Ann. of Math. 76 (1964), no. 2, 560–615.
+Department of Mathematics, Rice University, Houston, TX 77 005
+E-mail address : blehmann@rice.edu

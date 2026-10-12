@@ -1,0 +1,290 @@
+{
+  "catalogId": "068",
+  "paperId": "bounded-anticanonical-metrics",
+  "title": "Bounded anticanonical metrics on klt pairs and torus quotients",
+  "displayName": "Bounded anticanonical metrics",
+  "authors": "OpenAI",
+  "version": "2026-09-26",
+  "sourceCommit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Bounded-anticanonical-metrics-on-klt-pairs-and-torus-quotients-September-26-2026/main.pdf",
+  "downloadUrl": "https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Bounded-anticanonical-metrics-on-klt-pairs-and-torus-quotients-September-26-2026/main.pdf",
+  "pdfPages": 20,
+  "sha256": "2420934378c18da636bae46c45903c4029b88121cebe88a8402117e148838d64",
+  "checkedOn": "2026-10-12",
+  "checkedLocations": [
+    {
+      "printedPage": "1",
+      "pdfPage": 1
+    },
+    {
+      "printedPage": "2",
+      "pdfPage": 2
+    },
+    {
+      "printedPage": "3",
+      "pdfPage": 3
+    },
+    {
+      "printedPage": "4",
+      "pdfPage": 4
+    },
+    {
+      "printedPage": "5",
+      "pdfPage": 5
+    },
+    {
+      "printedPage": "6",
+      "pdfPage": 6
+    },
+    {
+      "printedPage": "7",
+      "pdfPage": 7
+    },
+    {
+      "printedPage": "8",
+      "pdfPage": 8
+    },
+    {
+      "printedPage": "9",
+      "pdfPage": 9
+    },
+    {
+      "printedPage": "10",
+      "pdfPage": 10
+    },
+    {
+      "printedPage": "11",
+      "pdfPage": 11
+    },
+    {
+      "printedPage": "12",
+      "pdfPage": 12
+    },
+    {
+      "printedPage": "13",
+      "pdfPage": 13
+    },
+    {
+      "printedPage": "14",
+      "pdfPage": 14
+    },
+    {
+      "printedPage": "15",
+      "pdfPage": 15
+    },
+    {
+      "printedPage": "16",
+      "pdfPage": 16
+    },
+    {
+      "printedPage": "17",
+      "pdfPage": 17
+    },
+    {
+      "printedPage": "18",
+      "pdfPage": 18
+    },
+    {
+      "printedPage": "19",
+      "pdfPage": 19
+    },
+    {
+      "printedPage": "20",
+      "pdfPage": 20
+    }
+  ],
+  "statements": [
+    {
+      "result": "Theorem 1.1",
+      "pages": "2",
+      "hypotheses": "projective Q-factorial klt (W,D), effective rational D, P=-(KW+D) nef, bounded semipositive pullback metric, chi(resolution,O) !=0",
+      "conclusion": "exists m>0 with mP Cartier and H0(W,mP)!=0",
+      "checking": "full hypothesis/quantifier comparison"
+    },
+    {
+      "result": "Theorem 1.2",
+      "pages": "2",
+      "hypotheses": "smooth RC projective Z, smooth semipositive -KZ; every algebraic torus action",
+      "conclusion": "for each action exists m>0 with natural H0(Z,-mKZ)^T !=0",
+      "checking": "natural versus shifted linearization distinguished"
+    },
+    {
+      "result": "Corollary 4.1",
+      "pages": "18",
+      "hypotheses": "smooth connected complex projective X, smooth semipositive -KX",
+      "conclusion": "exists m>0 H0(X,-mKX)!=0",
+      "checking": "finite cover and degree d norm compared"
+    }
+  ],
+  "proofPassages": [
+    {
+      "section": "§§2.1–2.7",
+      "pages": "5–12",
+      "read": "Euler polynomial; positive unbounded twisting exponents; maximal dominated fibration; horizontal affine divisors and minimum vertical coefficients; discrepancy rounding and rank one for all a>=0; essential-supremum limit; small mixed metric; multiplier ideal O(-aH); vanishing at a=0; exceptional pushforward."
+    },
+    {
+      "section": "§§3.1–3.5",
+      "pages": "12–18",
+      "read": "weight convention; ample/character perturbation only for GIT; stabilizer boundary and natural identity; convex arc orders; graph compactification for uniformity; orbit supremum metric and finite-slice descent; Euler premise and extension across every omitted divisor."
+    },
+    {
+      "section": "§4",
+      "pages": "18",
+      "read": "invariant product frame on universal cover; deck descent; finite étale norm"
+    }
+  ],
+  "externalSources": [
+    {
+      "id": "DPS01",
+      "displayName": "Pseudo-effective line bundles on compact Kähler manifolds",
+      "authors": "Jean-Pierre Demailly; Thomas Peternell; Michael Schneider",
+      "version": "arXiv:math/0006205v2, 10 October 2000",
+      "sourceUrl": "https://arxiv.org/pdf/math/0006205v2",
+      "pdfPages": 49,
+      "checkedLocations": [
+        {
+          "printedPage": "8",
+          "pdfPage": 8
+        }
+      ],
+      "checking": "Result statement read in primary PDF via web tool; applied passage read in manuscript; external proof not independently verified.",
+      "sha256": null,
+      "hashNote": "Web PDF text inspection; no downloaded local external file."
+    },
+    {
+      "id": "LMPTX23",
+      "displayName": "The Nonvanishing Problem for varieties with nef anticanonical bundle",
+      "authors": "Vladimir Lazić; Shin-ichi Matsumura; Thomas Peternell; Nikolaos Tsakanikas; Zhixin Xie",
+      "version": "Documenta Mathematica 28 (2023), 1393–1440",
+      "sourceUrl": "https://ems.press/content/serial-article-files/31138",
+      "pdfPages": 48,
+      "checkedLocations": [
+        {
+          "printedPage": "1409",
+          "pdfPage": 17
+        }
+      ],
+      "checking": "Result statement read in primary PDF via web tool; applied passage read in manuscript; external proof not independently verified.",
+      "sha256": null,
+      "hashNote": "Web PDF text inspection; no downloaded local external file."
+    },
+    {
+      "id": "PT14",
+      "displayName": "Positivity of twisted relative pluricanonical bundles and their direct images",
+      "authors": "Mihai Păun; Shigeharu Takayama",
+      "version": "arXiv:1409.5504v1",
+      "sourceUrl": "https://arxiv.org/pdf/1409.5504v1",
+      "pdfPages": 46,
+      "checkedLocations": [
+        {
+          "printedPage": "24",
+          "pdfPage": 24
+        }
+      ],
+      "checking": "Result statement read in primary PDF via web tool; applied passage read in manuscript; external proof not independently verified.",
+      "sha256": null,
+      "hashNote": "Web PDF text inspection; no downloaded local external file."
+    },
+    {
+      "id": "Fuj16",
+      "displayName": "Kollár–Nadel type vanishing theorem",
+      "authors": "Osamu Fujino",
+      "version": "arXiv:1607.04684v1, manuscript version 0.01 (10 July 2016)",
+      "sourceUrl": "https://arxiv.org/pdf/1607.04684v1",
+      "pdfPages": 4,
+      "checkedLocations": [
+        {
+          "printedPage": "2",
+          "pdfPage": 2
+        }
+      ],
+      "checking": "Result statement read in primary PDF via web tool; applied passage read in manuscript; external proof not independently verified.",
+      "sha256": null,
+      "hashNote": "Web PDF text inspection; no downloaded local external file."
+    },
+    {
+      "id": "DWZZ19",
+      "displayName": "A new proof of Kiselman’s minimum principle for plurisubharmonic functions",
+      "authors": "Fusheng Deng; Zhiwei Wang; Liyou Zhang; Xiangyu Zhou",
+      "version": "arXiv:1810.12733v1, 30 October 2018",
+      "sourceUrl": "https://arxiv.org/pdf/1810.12733v1",
+      "pdfPages": 4,
+      "checkedLocations": [
+        {
+          "printedPage": "1",
+          "pdfPage": 1
+        }
+      ],
+      "checking": "Result statement read in primary PDF via web tool; applied passage read in manuscript; external proof not independently verified.",
+      "sha256": null,
+      "hashNote": "Web PDF text inspection; no downloaded local external file."
+    },
+    {
+      "id": "OpenAI26a",
+      "displayName": "Anticanonical nonvanishing from smooth semipositivity",
+      "authors": "OpenAI",
+      "version": "2026-09-26; commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Anticanonical-nonvanishing-from-smooth-semipositivity-September-26-2026/main.pdf",
+      "pdfPages": 27,
+      "checkedLocations": [
+        {
+          "printedPage": "5",
+          "pdfPage": 5
+        },
+        {
+          "printedPage": "8",
+          "pdfPage": 8
+        },
+        {
+          "printedPage": "9",
+          "pdfPage": 9
+        }
+      ],
+      "checking": "Theorem 2.1 statement p5 and Lemma2.2 p8 read; application compared to Cor4.1 p18."
+    }
+  ],
+  "dependencies": [
+    {
+      "from": "DPS01",
+      "to": "Theorem 1.1",
+      "kind": "direct",
+      "checking": "Result statement read in primary PDF via web tool; applied passage read in manuscript; external proof not independently verified."
+    },
+    {
+      "from": "LMPTX23",
+      "to": "Theorem 1.1",
+      "kind": "direct",
+      "checking": "Result statement read in primary PDF via web tool; applied passage read in manuscript; external proof not independently verified."
+    },
+    {
+      "from": "PT14",
+      "to": "Theorem 1.1",
+      "kind": "direct",
+      "checking": "Result statement read in primary PDF via web tool; applied passage read in manuscript; external proof not independently verified."
+    },
+    {
+      "from": "Fuj16",
+      "to": "Theorem 1.1",
+      "kind": "direct",
+      "checking": "Result statement read in primary PDF via web tool; applied passage read in manuscript; external proof not independently verified."
+    },
+    {
+      "from": "DWZZ19",
+      "to": "Theorem 1.2",
+      "kind": "direct",
+      "checking": "Result statement read in primary PDF via web tool; applied passage read in manuscript; external proof not independently verified."
+    },
+    {
+      "from": "OpenAI26a",
+      "to": "Corollary 4.1",
+      "kind": "consequence",
+      "checking": "Theorem 2.1 statement p5 and Lemma2.2 p8 read; application compared to Cor4.1 p18."
+    }
+  ],
+  "unresolved": [
+    "Full external proofs are not independently verified.",
+    "Luna slices, GIT perturbation and finite discrepancy theorem cited in §3 were read in the manuscript but their original literature has not been directly inspected in this draft.",
+    "The use of Skoda small-exponent integrability and psh removable singularities was read in §§2.6–2.7; original foundational references not separately inspected."
+  ],
+  "checkingScope": "Proof passage reading and selected direct-input statement/application comparison; not an independent proof verification."
+}

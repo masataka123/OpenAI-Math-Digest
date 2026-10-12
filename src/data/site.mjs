@@ -5,6 +5,7 @@ import inventory042 from '../../coordination/catalog-042/inventory.json' with { 
 import inventory051 from '../../coordination/catalog-051/inventory.json' with { type: 'json' };
 import inventory057 from '../../coordination/catalog-057/inventory.json' with { type: 'json' };
 import inventory063 from '../../coordination/catalog-063/inventory.json' with { type: 'json' };
+import inventory068 from '../../coordination/catalog-068/inventory.json' with { type: 'json' };
 import subjectSource from './catalog-subjects.json' with { type: 'json' };
 export const text = (ja, en) => ({ ja, en });
 export const languages = ['ja', 'en'];
@@ -24,7 +25,7 @@ const fieldTranslations = [
     "id": "algebraic-complex-geometry",
     "ja": "代数幾何学・複素幾何学",
     "catalogIds": [
-      "033", "034", "038", "042", "051", "057", "063"
+      "033", "034", "038", "042", "051", "057", "063", "068"
     ]
   },
   {
@@ -153,6 +154,10 @@ export const papers = [...inventory033.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '063', sourceCommit: inventory063.sourceCommit,
  title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
  pages: entry.pdfPages, order: entry.order, featured: true,
+})), ...inventory068.manuscripts.map(entry => ({
+ id: entry.paperId, catalogId: '068', sourceCommit: inventory068.sourceCommit,
+ title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
+ pages: entry.pdfPages, order: entry.order, featured: true,
 }))];
 export const catalogs = [{
  id: '033', sourceCommit: inventory033.sourceCommit,
@@ -201,6 +206,13 @@ export const catalogs = [{
   description: text('一般化向井不等式と等号の場合の分類を、point descendant・量子乗法・最小有理曲線族の接続から読む。', 'Follow point descendants, quantum multiplication, and minimal rational curves through the generalized Mukai inequality and its equality case.'),
   paperIds: inventory063.manuscripts.map(p => p.paperId),
   overviewSectionIds: ['papers', 'connections', 'sources'],
+}, {
+  id: '068', sourceCommit: inventory068.sourceCommit, mode: 'multi',
+  title: text(inventory068.titleJa, inventory068.overviewTitle),
+  contentsTitle: inventory068.contentsTitle,
+  description: text('反標準束の非消滅を、不変指数・計量降下・不変切断の構成へ結ぶ7篇の証明から読む。', 'Follow seven proofs connecting anticanonical nonvanishing with invariant indices, metric descent, and invariant sections.'),
+  paperIds: inventory068.manuscripts.map(p => p.paperId),
+  overviewSectionIds: ['papers', 'diagram-sources', 'index-routes', 'exact-routes', 'connections', 'sources'],
 }];
 export const paperSource = paper => `https://github.com/openai/math/blob/${paper.sourceCommit ?? sourceCommit}/preprints/${paper.path}`;
 export const catalogsForField = id => fields.find(field => field.id === id).catalogIds.map(id => catalogs.find(catalog => catalog.id === id));
