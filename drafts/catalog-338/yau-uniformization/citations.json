@@ -1,0 +1,468 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "author-key",
+  "catalogId": "338",
+  "sources": {
+    "P": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "displayName": "Uniformization of complete Kähler manifolds with positive bisectional curvature",
+      "pagination": "same"
+    },
+    "CZ05": {
+      "recordFile": "sources.json",
+      "recordId": "CZ05",
+      "guideRole": {
+        "ja": "初期計量の平均スカラー曲率の線形減衰。中心に依存する定数を許す",
+        "en": "Linear averaged scalar-curvature decay for the initial metric, allowing a center-dependent constant"
+      }
+    },
+    "Dem82": {
+      "recordFile": "sources.json",
+      "recordId": "Dem82",
+      "guideRole": {
+        "ja": "GriffithsからNakanoへの正値性と重み付き∂̄解法。jet補間・歪み評価に使う",
+        "en": "Griffiths-to-Nakano positivity and weighted ∂̄ estimates for jet interpolation and distortion"
+      }
+    },
+    "LT20": {
+      "recordFile": "sources.json",
+      "recordId": "LT20",
+      "guideRole": {
+        "ja": "各完備Hermitian近似上での短時間存在。無限位数のbounded geometryを確認して適用",
+        "en": "Short-time existence on each complete Hermitian approximation with bounded geometry of infinite order"
+      }
+    },
+    "Chu16": {
+      "recordFile": "sources.json",
+      "recordId": "Chu16",
+      "guideRole": {
+        "ja": "変換Hessianの一様放物型評価。局所的な計量の両側評価を高階評価へつなぐ",
+        "en": "Uniformly parabolic transformed-Hessian estimates converting local two-sided metric bounds into regularity"
+      }
+    },
+    "BR03": {
+      "recordFile": "sources.json",
+      "recordId": "BR03",
+      "guideRole": {
+        "ja": "正定値な円周上の行列をH*Hに分解。境界まで滑らかなHとH⁻¹を円板変形に使う",
+        "en": "Factorization of a positive boundary matrix as H*H with H and H⁻¹ holomorphic and smooth up to the circle"
+      }
+    },
+    "FL14": {
+      "recordFile": "sources.json",
+      "recordId": "FL14",
+      "guideRole": {
+        "ja": "発散ゼロの斉次ベクトル場のshear分解。全Oka定理を適用せず、有限jet実現に使う代数的入力の参照",
+        "en": "Shear decomposition of divergence-free homogeneous fields; an algebraic input to finite-jet realization, not an application of the full Oka theorem"
+      }
+    }
+  },
+  "citations": {
+    "main": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "conventions": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§1.3",
+          "printed": "5",
+          "pdf": "5"
+        }
+      ]
+    },
+    "initial": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 2.1; §2.1",
+          "printed": "6–8",
+          "pdf": "6–8"
+        }
+      ]
+    },
+    "flow": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 3.1; §§3.1–3.3",
+          "printed": "12–16",
+          "pdf": "12–16"
+        }
+      ]
+    },
+    "comparison": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 3.3; proof",
+          "printed": "18–20",
+          "pdf": "18–20"
+        }
+      ]
+    },
+    "majorant": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 3.4; §3.6",
+          "printed": "19–22",
+          "pdf": "19–22"
+        }
+      ]
+    },
+    "envelope": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§4; Lemma 4.1",
+          "printed": "22–23",
+          "pdf": "22–23"
+        }
+      ]
+    },
+    "disc": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 5.1",
+          "printed": "31–32",
+          "pdf": "31–32"
+        }
+      ]
+    },
+    "deformation": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 5.2; §§5.3–5.5",
+          "printed": "34–41",
+          "pdf": "34–41"
+        }
+      ]
+    },
+    "ellipsoid": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 6.1; Proposition 6.2",
+          "printed": "42–47",
+          "pdf": "42–47"
+        }
+      ]
+    },
+    "joint": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 6.3",
+          "printed": "48",
+          "pdf": "48"
+        }
+      ]
+    },
+    "harnack": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 7.1; proof",
+          "printed": "49–50",
+          "pdf": "49–50"
+        }
+      ]
+    },
+    "distortion": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 7.3; proof",
+          "printed": "52–54",
+          "pdf": "52–54"
+        }
+      ]
+    },
+    "windows": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Propositions 7.4–7.5; proofs",
+          "printed": "55–58",
+          "pdf": "55–58"
+        }
+      ]
+    },
+    "charts": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 7.7; proof",
+          "printed": "59–61",
+          "pdf": "59–61"
+        }
+      ]
+    },
+    "models": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 8.1",
+          "printed": "62",
+          "pdf": "62"
+        }
+      ]
+    },
+    "jets": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 8.2",
+          "printed": "63",
+          "pdf": "63"
+        }
+      ]
+    },
+    "degree": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 8.4; proof",
+          "printed": "68–69",
+          "pdf": "68–69"
+        }
+      ]
+    },
+    "parameters": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§9.1, (9.1)–(9.7)",
+          "printed": "69–70",
+          "pdf": "69–70"
+        }
+      ]
+    },
+    "convergence": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 9.1",
+          "printed": "71",
+          "pdf": "71"
+        }
+      ]
+    },
+    "coordinates": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 9.2",
+          "printed": "71",
+          "pdf": "71"
+        }
+      ]
+    },
+    "coordinate-proof": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§9.3, (9.10)–(9.14)",
+          "printed": "71–73",
+          "pdf": "71–73"
+        }
+      ]
+    },
+    "surjective": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§9.4; proof of Theorem 1.1",
+          "printed": "73–74",
+          "pdf": "73–74"
+        }
+      ]
+    },
+    "cz": {
+      "source": "CZ05",
+      "locations": [
+        {
+          "result": "Theorem 2",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "nakano": {
+      "source": "Dem82",
+      "locations": [
+        {
+          "result": "Theorem 2.6",
+          "printed": "467",
+          "pdf": "12"
+        }
+      ]
+    },
+    "l2": {
+      "source": "Dem82",
+      "locations": [
+        {
+          "result": "Theorem 5.1",
+          "printed": "475",
+          "pdf": "20"
+        }
+      ]
+    },
+    "lt": {
+      "source": "LT20",
+      "locations": [
+        {
+          "result": "Definition 2.1; Lemma 2.1",
+          "printed": "6",
+          "pdf": "6"
+        }
+      ]
+    },
+    "chu": {
+      "source": "Chu16",
+      "locations": [
+        {
+          "result": "Theorem 5.1 and hypotheses H1–H3",
+          "printed": "14–15",
+          "pdf": "14–15"
+        }
+      ]
+    },
+    "factor": {
+      "source": "BR03",
+      "locations": [
+        {
+          "result": "Theorem 2.1",
+          "printed": "887",
+          "pdf": "4"
+        }
+      ]
+    },
+    "shears": {
+      "source": "FL14",
+      "locations": [
+        {
+          "result": "Proof of Theorem 3.1 (divergence-free shears)",
+          "printed": "8–9",
+          "pdf": "8–9"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ],
+  "articleGuides": {
+    ".": {
+      "selfSource": "P",
+      "externalSources": [
+        "CZ05",
+        "Dem82",
+        "LT20",
+        "Chu16",
+        "BR03",
+        "FL14"
+      ],
+      "proofTargets": [
+        "main",
+        "joint",
+        "coordinates"
+      ],
+      "mainResults": [
+        "main"
+      ],
+      "statements": {
+        "main": "theorem-1-1",
+        "joint": "theorem-6-3",
+        "coordinates": "proposition-9-2"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "main",
+          "conclusion": "全次元n≥1でMからC^n全体への双正則写像",
+          "anchor": "proof-overview-step-5"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "flow",
+          "purpose": {
+            "ja": "近似の局所極限と完備性を後で示す順序",
+            "en": "Local limits of approximations, before positive-time completeness."
+          }
+        },
+        {
+          "citation": "comparison",
+          "purpose": {
+            "ja": "χ重みと非線形比較の体積形式の相殺",
+            "en": "The χ weight and volume-form cancellation in nonlinear comparison."
+          }
+        },
+        {
+          "citation": "deformation",
+          "purpose": {
+            "ja": "面積罰則と境界定数の区別、極限の順序",
+            "en": "Area penalties, boundary-dependent constants and the order of limits."
+          }
+        },
+        {
+          "citation": "ellipsoid",
+          "purpose": {
+            "ja": "共通baseを保つ接触からスカラー不等式へ",
+            "en": "Common-base contacts and the scalar inequality."
+          }
+        },
+        {
+          "citation": "windows",
+          "purpose": {
+            "ja": "Harnack等号の局所極限とループ収縮",
+            "en": "Local Harnack-equality limits and loop contraction."
+          }
+        },
+        {
+          "citation": "charts",
+          "purpose": {
+            "ja": "コンパクトに共通の収縮指数",
+            "en": "One contraction exponent for all fixed compact sets."
+          }
+        },
+        {
+          "citation": "degree",
+          "purpose": {
+            "ja": "前向き合成の次数を部分列上で制御",
+            "en": "Subsequential control of forward degrees."
+          }
+        },
+        {
+          "citation": "coordinate-proof",
+          "purpose": {
+            "ja": "局所一様収束、単射、微分の非特異性、球包含",
+            "en": "Locally uniform convergence, injectivity, nonsingularity and ball inclusion."
+          }
+        },
+        {
+          "citation": "surjective",
+          "purpose": {
+            "ja": "最大球半径の背理法で全射性を得る",
+            "en": "The maximal-ball contradiction giving surjectivity."
+          }
+        }
+      ]
+    }
+  }
+}

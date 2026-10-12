@@ -1,0 +1,589 @@
+{
+  "paperId": "yau-uniformization",
+  "title": "Uniformization of complete Kähler manifolds with positive bisectional curvature",
+  "version": "September 23, 2026",
+  "sourceCommit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Uniformization-of-complete-Kahler-manifolds-with-positive-bisectional-curvature-September-23-2026/paper.pdf",
+  "downloadUrl": "https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Uniformization-of-complete-Kahler-manifolds-with-positive-bisectional-curvature-September-23-2026/paper.pdf",
+  "pdfPages": 77,
+  "sha256": "2960f958368ee0ab8b9b2dd15b236d634b64595f29812035e12e2c705b207cdb",
+  "catalogId": "338",
+  "displayName": "Uniformization of complete Kähler manifolds with positive bisectional curvature",
+  "authors": "OpenAI",
+  "checkedOn": "2026-10-12",
+  "owner": "catalog-338-hq",
+  "checkingScope": "原典の選択した証明本文・主要接続と6外部文献の入力記述を自己点検。全証明の独立検証ではない。",
+  "checkedLocations": [
+    {
+      "printedPage": "2",
+      "pdfPage": 2
+    },
+    {
+      "printedPage": "5",
+      "pdfPage": 5
+    },
+    {
+      "printedPage": "6",
+      "pdfPage": 6
+    },
+    {
+      "printedPage": "7",
+      "pdfPage": 7
+    },
+    {
+      "printedPage": "12",
+      "pdfPage": 12
+    },
+    {
+      "printedPage": "13",
+      "pdfPage": 13
+    },
+    {
+      "printedPage": "15",
+      "pdfPage": 15
+    },
+    {
+      "printedPage": "16",
+      "pdfPage": 16
+    },
+    {
+      "printedPage": "18",
+      "pdfPage": 18
+    },
+    {
+      "printedPage": "19",
+      "pdfPage": 19
+    },
+    {
+      "printedPage": "20",
+      "pdfPage": 20
+    },
+    {
+      "printedPage": "22",
+      "pdfPage": 22
+    },
+    {
+      "printedPage": "23",
+      "pdfPage": 23
+    },
+    {
+      "printedPage": "31",
+      "pdfPage": 31
+    },
+    {
+      "printedPage": "32",
+      "pdfPage": 32
+    },
+    {
+      "printedPage": "33",
+      "pdfPage": 33
+    },
+    {
+      "printedPage": "34",
+      "pdfPage": 34
+    },
+    {
+      "printedPage": "35",
+      "pdfPage": 35
+    },
+    {
+      "printedPage": "38",
+      "pdfPage": 38
+    },
+    {
+      "printedPage": "39",
+      "pdfPage": 39
+    },
+    {
+      "printedPage": "40",
+      "pdfPage": 40
+    },
+    {
+      "printedPage": "41",
+      "pdfPage": 41
+    },
+    {
+      "printedPage": "42",
+      "pdfPage": 42
+    },
+    {
+      "printedPage": "43",
+      "pdfPage": 43
+    },
+    {
+      "printedPage": "44",
+      "pdfPage": 44
+    },
+    {
+      "printedPage": "45",
+      "pdfPage": 45
+    },
+    {
+      "printedPage": "46",
+      "pdfPage": 46
+    },
+    {
+      "printedPage": "47",
+      "pdfPage": 47
+    },
+    {
+      "printedPage": "48",
+      "pdfPage": 48
+    },
+    {
+      "printedPage": "49",
+      "pdfPage": 49
+    },
+    {
+      "printedPage": "50",
+      "pdfPage": 50
+    },
+    {
+      "printedPage": "52",
+      "pdfPage": 52
+    },
+    {
+      "printedPage": "53",
+      "pdfPage": 53
+    },
+    {
+      "printedPage": "54",
+      "pdfPage": 54
+    },
+    {
+      "printedPage": "55",
+      "pdfPage": 55
+    },
+    {
+      "printedPage": "56",
+      "pdfPage": 56
+    },
+    {
+      "printedPage": "57",
+      "pdfPage": 57
+    },
+    {
+      "printedPage": "58",
+      "pdfPage": 58
+    },
+    {
+      "printedPage": "59",
+      "pdfPage": 59
+    },
+    {
+      "printedPage": "60",
+      "pdfPage": 60
+    },
+    {
+      "printedPage": "61",
+      "pdfPage": 61
+    },
+    {
+      "printedPage": "62",
+      "pdfPage": 62
+    },
+    {
+      "printedPage": "63",
+      "pdfPage": 63
+    },
+    {
+      "printedPage": "67",
+      "pdfPage": 67
+    },
+    {
+      "printedPage": "68",
+      "pdfPage": 68
+    },
+    {
+      "printedPage": "69",
+      "pdfPage": 69
+    },
+    {
+      "printedPage": "70",
+      "pdfPage": 70
+    },
+    {
+      "printedPage": "71",
+      "pdfPage": 71
+    },
+    {
+      "printedPage": "72",
+      "pdfPage": 72
+    },
+    {
+      "printedPage": "73",
+      "pdfPage": 73
+    },
+    {
+      "printedPage": "74",
+      "pdfPage": 74
+    }
+  ],
+  "statements": [
+    {
+      "result": "Theorem 1.1",
+      "pages": "2",
+      "hypotheses": "Connected noncompact complex M, dim_C M=n>=1, admits smooth complete Kähler g with pointwise strictly positive holomorphic bisectional curvature.",
+      "conclusion": "M is biholomorphic to C^n.",
+      "checking": "仮定・量化・全結論・非仮定（上界、体積成長、位相）を照合。"
+    },
+    {
+      "result": "Theorem 6.3",
+      "pages": "48",
+      "hypotheses": "Flow of Theorem 3.1, N(x,xi,t)=|xi|^2_(h_t^{-1}); v is the lower semicontinuous disc envelope for a finite horizon T.",
+      "conclusion": "N(x,xi,exp(w+bar w)) is psh on T*^(1,0)M x C; v=N for all 0<t<T, every finite T.",
+      "checking": "楕円体→比較原理→生の円板不等式→pshの接続を照合。"
+    },
+    {
+      "result": "Proposition 9.2",
+      "pages": "71",
+      "hypotheses": "Charts of Proposition 7.7 and models of Proposition 8.1 with the parameter order in §9.1; 0<gamma<gamma prime<min(sigma/2,1).",
+      "conclusion": "Locally uniform corrected-coordinate limit is injective holomorphic, fixes o at 0, is biholomorphic onto open Omega; forward smallness on every compact of Omega and inverse-ball inclusion.",
+      "checking": "各結論とpp.71–73の証明箇所を照合。"
+    }
+  ],
+  "proofPassages": [
+    {
+      "pages": "5–8, 12",
+      "section": "§§1.3,2.1; Proposition 2.1",
+      "read": "曲率規約、有限jet補間、平均曲率の用途。Hodge熱の全解析は未検証。"
+    },
+    {
+      "pages": "12–13, 15–16, 18–20, 22",
+      "section": "Theorem 3.1; Proposition 3.3",
+      "read": "近似・局所C∞極限、χ重み、余因子評価、Gronwall、majorant構成の終端。"
+    },
+    {
+      "pages": "22–23, 31–35, 38–48",
+      "section": "§§4–6 selected passages",
+      "read": "円板包絡、変形係数の依存、負部分除去、逆向き時計、Schur補元、共通baseの接触、F0=0。"
+    },
+    {
+      "pages": "49–50, 52–61",
+      "section": "§7 selected passages",
+      "read": "Harnackから完備性、静的歪み、Ricci窓、局所滑らか極限でループ収縮、L1_psh極限と共通指数。"
+    },
+    {
+      "pages": "62–63, 67–74",
+      "section": "§§8–9 selected passages",
+      "read": "volume jet、shear実現、homological式、bad成分の次数損失、誤差tube内逆反復、単射・非特異性・全射。"
+    }
+  ],
+  "unresolved": [
+    "Hodge heat/self-adjointness/finite propagation inputs in §2.2 and all associated external statements were not independently rechecked.",
+    "Full proofs and all constants of disc compactness and deformation (especially pp.24–30,36–37), transformed-Hessian continuation, and simultaneous-contact regularization were not independently verified.",
+    "Rate-order, macro-grid and alignment details in §§8.2–8.4 (pp.64–66) were not fully audited; Proposition 8.1 is an author-proved input, not an editorially certified theorem.",
+    "External PDE textbook regularity, heat-kernel/mean-value estimates, rough complex-coordinate and local Ricci-flow derivative results have not all been checked in their original sources.",
+    "No expert independent review or complete independent proof verification; site/PDF visual verification belongs to stage 2."
+  ],
+  "externalSources": [
+    {
+      "id": "CZ05",
+      "displayName": "Volume growth and curvature decay of positively curved Kähler manifolds",
+      "authors": "Bing-Long Chen; Xi-Ping Zhu",
+      "version": "arXiv:math/0211374v1 (2002); journal publication 2005",
+      "sourceUrl": "https://arxiv.org/pdf/math/0211374v1",
+      "checkedLocations": [
+        {
+          "printedPage": "2",
+          "pdfPage": 2
+        }
+      ],
+      "checkedResults": "Theorem 2",
+      "checking": "入力の記述と本稿の使用箇所を照合。外部結果の全証明は対象外。",
+      "pdfPages": 44,
+      "sha256": "4135ff5a007011ef472410dd553931182332cae556b465207dd4f1cbd2346054",
+      "localFile": "coordination/catalog-338/evidence/chen-zhu.pdf"
+    },
+    {
+      "id": "Dem82",
+      "displayName": "Estimations L² pour l’opérateur ∂̄ d’un fibré vectoriel holomorphe semi-positif au-dessus d’une variété kählérienne complète",
+      "authors": "Jean-Pierre Demailly",
+      "version": "Ann. Sci. École Norm. Sup. (4) 15 (1982), 457–511; Numdam scan",
+      "sourceUrl": "https://www.numdam.org/item/10.24033/asens.1434.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "467",
+          "pdfPage": 12
+        },
+        {
+          "printedPage": "475",
+          "pdfPage": 20
+        }
+      ],
+      "checkedResults": "Theorems 2.6 and 5.1",
+      "checking": "入力の記述と本稿の使用箇所を照合。外部結果の全証明は対象外。",
+      "pdfPages": 56,
+      "sha256": "93635b23a48eca63c83ab3223806955036199eaf7f74c323c330cff894feb649",
+      "localFile": "coordination/catalog-338/evidence/demailly.pdf"
+    },
+    {
+      "id": "LT20",
+      "displayName": "Chern–Ricci flows on noncompact complex manifolds",
+      "authors": "Man-Chun Lee; Luen-Fai Tam",
+      "version": "arXiv:1708.00141v2; journal publication 2020",
+      "sourceUrl": "https://arxiv.org/pdf/1708.00141v2",
+      "checkedLocations": [
+        {
+          "printedPage": "6",
+          "pdfPage": 6
+        }
+      ],
+      "checkedResults": "Definition 2.1 and Lemma 2.1",
+      "checking": "入力の記述と本稿の使用箇所を照合。外部結果の全証明は対象外。",
+      "pdfPages": 33,
+      "sha256": "345fcfea5686fcc5102c9f739debaf89b83a787cb89f75b69360e7610dc90761",
+      "localFile": "coordination/catalog-338/evidence/lee-tam.pdf"
+    },
+    {
+      "id": "Chu16",
+      "displayName": "C²,α regularities and estimates for nonlinear elliptic and parabolic equations in geometry",
+      "authors": "Jianchun Chu",
+      "version": "arXiv:1410.3354v3; journal publication 2016",
+      "sourceUrl": "https://arxiv.org/pdf/1410.3354v3",
+      "checkedLocations": [
+        {
+          "printedPage": "14",
+          "pdfPage": 14
+        },
+        {
+          "printedPage": "15",
+          "pdfPage": 15
+        }
+      ],
+      "checkedResults": "Theorem 5.1",
+      "checking": "入力の記述と本稿の使用箇所を照合。外部結果の全証明は対象外。",
+      "pdfPages": 22,
+      "sha256": "8f98df6b9889931fba6d95d3fd0e97c5167e920c4d37b7423873cd69769e3a18",
+      "localFile": "coordination/catalog-338/evidence/chu.pdf"
+    },
+    {
+      "id": "BR03",
+      "displayName": "Quasi-isometric vector bundles and bounded factorization of holomorphic matrices",
+      "authors": "Bo Berndtsson; Jean-Pierre Rosay",
+      "version": "Ann. Inst. Fourier 53 (2003), 885–901; Numdam scan",
+      "sourceUrl": "https://www.numdam.org/item/10.5802/aif.1964.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "887",
+          "pdfPage": 4
+        }
+      ],
+      "checkedResults": "Theorem 2.1",
+      "checking": "入力の記述と本稿の使用箇所を照合。外部結果の全証明は対象外。",
+      "pdfPages": 18,
+      "sha256": "cab069c28aafcc0af05fd16e4a9dab3658a0637317076695940ced7982d247ef",
+      "localFile": "coordination/catalog-338/evidence/berndtsson-rosay.pdf"
+    },
+    {
+      "id": "FL14",
+      "displayName": "Oka properties of groups of holomorphic and algebraic automorphisms of complex affine space",
+      "authors": "Franc Forstnerič; Finnur Lárusson",
+      "version": "arXiv:1402.4342v3 (2017-03-29); journal publication 2014",
+      "sourceUrl": "https://arxiv.org/pdf/1402.4342v3",
+      "checkedLocations": [
+        {
+          "printedPage": "8",
+          "pdfPage": 8
+        },
+        {
+          "printedPage": "9",
+          "pdfPage": 9
+        }
+      ],
+      "checkedResults": "Proof of Theorem 3.1",
+      "checking": "入力の記述と本稿の使用箇所を照合。外部結果の全証明は対象外。",
+      "pdfPages": 16,
+      "sha256": "252a8e00814dbb591d0751ff5d70814a9ae78f8dfba09cd45b1e6627a211b971",
+      "localFile": "coordination/catalog-338/evidence/forstneric-larusson.pdf"
+    }
+  ],
+  "dependencies": [
+    {
+      "id": "weighted-jets",
+      "from": {
+        "paperId": "Dem82",
+        "result": "Theorems 2.6 and 5.1",
+        "pages": "467, 475",
+        "version": "Ann. Sci. École Norm. Sup. (4) 15 (1982), 457–511; Numdam scan",
+        "sourceUrl": "https://www.numdam.org/item/10.24033/asens.1434.pdf"
+      },
+      "to": {
+        "paperId": "yau-uniformization",
+        "result": "Proposition 2.1; §2.1",
+        "pages": "7",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Uniformization-of-complete-Kahler-manifolds-with-positive-bisectional-curvature-September-23-2026/paper.pdf"
+      },
+      "role": "Nakano coefficient-bundle positivity and weighted ∂bar solve finite jets.",
+      "hypotheses": "Complete initial Kähler metric; Griffiths positivity of E; compact-supported source; sufficiently positive weight with logarithmic poles.",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-use-compared; not full independent proof verification",
+        "owner": "catalog-338-hq (self-check)",
+        "date": "2026-10-12",
+        "record": "../yau-uniformization/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../yau-uniformization/article.ja.md#dependencies",
+        "en": "../yau-uniformization/article.en.md#dependencies"
+      },
+      "unresolved": []
+    },
+    {
+      "id": "average-curvature",
+      "from": {
+        "paperId": "CZ05",
+        "result": "Theorem 2",
+        "pages": "2",
+        "version": "arXiv:math/0211374v1 (2002); journal publication 2005",
+        "sourceUrl": "https://arxiv.org/pdf/math/0211374v1"
+      },
+      "to": {
+        "paperId": "yau-uniformization",
+        "result": "Proposition 2.1(v)",
+        "pages": "12",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Uniformization-of-complete-Kahler-manifolds-with-positive-bisectional-curvature-September-23-2026/paper.pdf"
+      },
+      "role": "Averaged curvature bound with fixed-center constant, also derived with the manuscript cutoffs.",
+      "hypotheses": "Complete noncompact Kähler g, positive bisectional curvature; no center uniformity asserted.",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-use-compared; not full independent proof verification",
+        "owner": "catalog-338-hq (self-check)",
+        "date": "2026-10-12",
+        "record": "../yau-uniformization/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../yau-uniformization/article.ja.md#dependencies",
+        "en": "../yau-uniformization/article.en.md#dependencies"
+      },
+      "unresolved": []
+    },
+    {
+      "id": "short-flow",
+      "from": {
+        "paperId": "LT20",
+        "result": "Definition 2.1; Lemma 2.1",
+        "pages": "6",
+        "version": "arXiv:1708.00141v2; journal publication 2020",
+        "sourceUrl": "https://arxiv.org/pdf/1708.00141v2"
+      },
+      "to": {
+        "paperId": "yau-uniformization",
+        "result": "§3.1",
+        "pages": "13",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Uniformization-of-complete-Kahler-manifolds-with-positive-bisectional-curvature-September-23-2026/paper.pdf"
+      },
+      "role": "Short-time existence on each Hermitian approximation.",
+      "hypotheses": "Complete alpha_L and bounded geometry of infinite order for each fixed L.",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-use-compared; not full independent proof verification",
+        "owner": "catalog-338-hq (self-check)",
+        "date": "2026-10-12",
+        "record": "../yau-uniformization/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../yau-uniformization/article.ja.md#dependencies",
+        "en": "../yau-uniformization/article.en.md#dependencies"
+      },
+      "unresolved": []
+    },
+    {
+      "id": "local-regularity",
+      "from": {
+        "paperId": "Chu16",
+        "result": "Theorem 5.1",
+        "pages": "14–15",
+        "version": "arXiv:1410.3354v3; journal publication 2016",
+        "sourceUrl": "https://arxiv.org/pdf/1410.3354v3"
+      },
+      "to": {
+        "paperId": "yau-uniformization",
+        "result": "§§3.2–3.3",
+        "pages": "15",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Uniformization-of-complete-Kahler-manifolds-with-positive-bisectional-curvature-September-23-2026/paper.pdf"
+      },
+      "role": "Transformed-Hessian regularity for continuation and local smooth limit.",
+      "hypotheses": "Two-sided metric bounds give a compact positive matrix range; concavity, ellipticity and Hölder coefficient bounds.",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-use-compared; not full independent proof verification",
+        "owner": "catalog-338-hq (self-check)",
+        "date": "2026-10-12",
+        "record": "../yau-uniformization/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../yau-uniformization/article.ja.md#dependencies",
+        "en": "../yau-uniformization/article.en.md#dependencies"
+      },
+      "unresolved": []
+    },
+    {
+      "id": "boundary-factor",
+      "from": {
+        "paperId": "BR03",
+        "result": "Theorem 2.1",
+        "pages": "887",
+        "version": "Ann. Inst. Fourier 53 (2003), 885–901; Numdam scan",
+        "sourceUrl": "https://www.numdam.org/item/10.5802/aif.1964.pdf"
+      },
+      "to": {
+        "paperId": "yau-uniformization",
+        "result": "Lemma 4.6; §5.3",
+        "pages": "39",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Uniformization-of-complete-Kahler-manifolds-with-positive-bisectional-curvature-September-23-2026/paper.pdf"
+      },
+      "role": "Smooth holomorphic factorization of positive boundary matrices.",
+      "hypotheses": "Positive definite smooth matrix on circle; inverses holomorphic; quantitative seminorm control added in manuscript.",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-use-compared; not full independent proof verification",
+        "owner": "catalog-338-hq (self-check)",
+        "date": "2026-10-12",
+        "record": "../yau-uniformization/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../yau-uniformization/article.ja.md#dependencies",
+        "en": "../yau-uniformization/article.en.md#dependencies"
+      },
+      "unresolved": []
+    },
+    {
+      "id": "shear-jets",
+      "from": {
+        "paperId": "FL14",
+        "result": "Proof of Theorem 3.1",
+        "pages": "8–9",
+        "version": "arXiv:1402.4342v3 (2017-03-29); journal publication 2014",
+        "sourceUrl": "https://arxiv.org/pdf/1402.4342v3"
+      },
+      "to": {
+        "paperId": "yau-uniformization",
+        "result": "Lemma 8.2",
+        "pages": "63",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Uniformization-of-complete-Kahler-manifolds-with-positive-bisectional-curvature-September-23-2026/paper.pdf"
+      },
+      "role": "Divergence-free shear decomposition used in finite constant-volume jet realization.",
+      "hypotheses": "Fixed degree homogeneous divergence-free vector field; n>=2 in external source, n=1 treated directly in manuscript.",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-use-compared; not full independent proof verification",
+        "owner": "catalog-338-hq (self-check)",
+        "date": "2026-10-12",
+        "record": "../yau-uniformization/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../yau-uniformization/article.ja.md#dependencies",
+        "en": "../yau-uniformization/article.en.md#dependencies"
+      },
+      "unresolved": []
+    }
+  ]
+}

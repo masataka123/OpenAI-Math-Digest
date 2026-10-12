@@ -1,0 +1,15 @@
+node:internal/fs/promises:697
+  return new FileHandle(await PromisePrototypeThen(
+                        ^
+
+Error: ENOENT: no such file or directory, open 'dist/ja/catalog/033/index.html'
+    at async open (node:internal/fs/promises:697:25)
+    at async readFile (node:internal/fs/promises:1348:14)
+    at async file:///Users/iwai/Desktop/GitHub/OpenAI-Math-Digest/scripts/build-catalog-pdf.mjs:49:23 {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'dist/ja/catalog/033/index.html'
+}
+
+Node.js v24.19.0

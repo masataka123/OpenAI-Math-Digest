@@ -1,0 +1,16 @@
+\node[card] (a) {\heading{1}{jet共役と二つのraw座標列}{Jet conjugacy and two raw-coordinate regimes}
+$J_d(H_{k+1}F_k)=J_d(G_kH_k),\quad \zeta_k=H_kz_k$\\
+$z_k=f_{s_k}(x)\quad\text{\Tx{または}{or}}\quad z_k=F_{s_a,s_k}(z),\quad |z|\le e^{-\gamma s_a}$};
+\node[card,below=1.8cm of a] (b) {\heading{2}{有効な球内の逆反復}{Backward iteration inside valid balls}
+$|\zeta_{k+1}-G_k\zeta_k|\le e^{-10s_k}$\\
+$\operatorname{Lip}(G_k^{-1}|_{B(e^{-\nu s_{k+1}})})\le e^{\Delta s_k}$};
+\flow{a}{b}{\Tx{$\nu$、jet次数$d$、macro幅$h$、遅い開始時刻の順に固定}{Fix $\nu$, jet order $d$, macro width $h$, then a late start}\\\Cite{parameters}};
+\node[card,below=1.65cm of b] (c) {\heading{3}{局所一様極限と誤差評価}{Locally uniform limit and error control}
+$\xi_k=\lim_{l\to\infty}G_{k,l}^{-1}\zeta_l,\quad |\xi_k-\zeta_k|\le e^{-6s_k}$\\
+$\xi_{k+1}=G_k\xi_k,\qquad \Psi=G_{0,k}^{-1}\xi_k$};
+\flow{b}{c}{\Tx{誤差の総和と比較線分の球内包含を同時に帰納}{Induct simultaneously on the error sum and containment of segments}\\\Cite{convergence}};
+\node[result,below=1.8cm of c] (d) {\heading{4}{単射・非特異性と像の評価}{Injectivity, nonsingularity and image estimates}
+$\Psi:M\overset{\sim}{\longrightarrow}\Omega,\quad \Psi(o)=0$\\
+$\sup_K|G_{0,k}|\le e^{-(\sigma/2)s_k}\quad(K\Subset\Omega)$\\
+$G_{0,k}^{-1}(B(e^{-\gamma's_k}))\subset\Omega$};
+\flow{c}{d}{\Tx{初期計量で点を分離。微分の下界と縮小写像で逆像の球を確保}{Separate points in $g$; differential lower bounds and a contraction map}\\\Cite{coordinate-proof}};

@@ -1,0 +1,24 @@
+\node[card] (a) {\heading{1}{初期の完備Kähler計量}{Complete initial Kähler metric}
+$\mathrm{HBC}_g>0,\quad \frac{\int_{B_g(o,L)}R_g\,dV_g}{\operatorname{Vol}_g B_g(o,L)}\le C/L$\\
+\Tx{重み・有限jet補間・複素Hessianを制御したexhaustion}{Weights, finite-jet interpolation, controlled complex-Hessian exhaustion}};
+\node[card,below=2.1cm of a] (b) {\heading{2}{局所極限の流れとスカラー比較}{Local-limit flow and scalar comparison}
+$0<h_t\le g,\quad \rho=\log(\det g/\det h_t)$\\
+\Tx{$0\le v\le\rho$の非線形劣解は零。完備性はまだ使わない。}{Nonlinear subsolutions $0\le v\le\rho$ vanish, before completeness.}};
+\flow{a}{b}{\Tx{完備Hermitian近似を作り、固定コンパクトで滑らかに極限へ}{Complete Hermitian approximations; smooth limits on fixed compacts}\\
+\Cite{lt}\quad\Cite{chu}\\\Cite{flow}\quad\Cite{comparison}};
+\node[card,below=1.8cm of b] (c) {\heading{3}{共同psh性から幾何へ}{Joint positivity gives geometry}
+$N(x,\xi,e^{w+\bar w})\ \mathrm{psh}$\\
+\Tx{Harnack評価 $\longrightarrow$ 正時間の完備性・単連結性}{Harnack inequalities $\longrightarrow$ completeness and simple connectivity}};
+\flow{b}{c}{\Tx{円板包絡の行列式差を比較で消す。その後にHarnackを積分}{Eliminate the envelope determinant deficit; then integrate Harnack}\\\Cite{joint}\quad\Cite{harnack}\\\Cite{windows}};
+\node[card,below=1.7cm of c] (d) {\heading{4}{共通指数で縮む逆chart}{Inverse charts with one contraction exponent}
+$s=\rho(o,t),\quad \sup_K|f_s|\le e^{-\sigma s}\quad(\sigma>0)$\\
+$|\det F'_{s,u}(0)|=e^{-(u-s)/2}$};
+\flow{c}{d}{\Tx{静的歪みで全方向を制御。単連結性で続け、psh極限で指数を統一}{Static distortion controls all directions; continuation and psh limits}\\\Cite{distortion}\quad\Cite{charts}};
+\node[card,below=1.7cm of d] (e) {\heading{5}{補正座標と前向き次数}{Corrected coordinates and forward degrees}
+$\Psi=\lim_lG_{0,l}^{-1}H_lf_{s_l}:M\overset{\sim}{\longrightarrow}\Omega$\\
+$\deg G_{0,k}\le Ds_k$\quad\Tx{（非有界部分列）}{(an unbounded subsequence)}};
+\flow{d}{e}{\Tx{volume jetを正規化し、逆反復の誤差とbad区間の次数を管理}{Normalize volume jets; control backward errors and bad-step degrees}\\\Cite{models}\quad\Cite{coordinates}\quad\Cite{degree}};
+\node[result,below=1.7cm of e] (f) {\heading{6}{全射性で主定理を閉じる}{Surjectivity completes the theorem}
+$\sup_{B(R_2)}|G_{0,k}|<e^{-\gamma's_k}\ \Longrightarrow\ B(R_2)\subset\Omega$\\
+$\Omega=\mathbb C^n,\qquad M\simeq_{\mathrm{bihol}}\mathbb C^n$};
+\flow{e}{f}{\Tx{像内の小ささ・球包含・前向き次数で有限の最大球半径を排除}{Smallness, ball inclusion and forward degrees exclude a finite radius}\\\Cite{surjective}};

@@ -6,6 +6,7 @@ import inventory051 from '../../coordination/catalog-051/inventory.json' with { 
 import inventory057 from '../../coordination/catalog-057/inventory.json' with { type: 'json' };
 import inventory063 from '../../coordination/catalog-063/inventory.json' with { type: 'json' };
 import inventory068 from '../../coordination/catalog-068/inventory.json' with { type: 'json' };
+import inventory338 from '../../coordination/catalog-338/inventory.json' with { type: 'json' };
 import subjectSource from './catalog-subjects.json' with { type: 'json' };
 export const text = (ja, en) => ({ ja, en });
 export const languages = ['ja', 'en'];
@@ -96,7 +97,7 @@ const fieldTranslations = [
   {
     "id": "differential-geometry",
     "ja": "微分幾何学",
-    "catalogIds": []
+    "catalogIds": ["338"]
   },
   {
     "id": "partial-differential-equations",
@@ -158,6 +159,10 @@ export const papers = [...inventory033.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '068', sourceCommit: inventory068.sourceCommit,
  title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
  pages: entry.pdfPages, order: entry.order, featured: true,
+})), ...inventory338.manuscripts.map(entry => ({
+ id: entry.paperId, catalogId: '338', sourceCommit: inventory338.sourceCommit,
+ title: entry.title, path: entry.sourceUrl.split('/preprints/')[1], version: entry.version,
+ pages: entry.pdfPages, order: entry.order, featured: true,
 }))];
 export const catalogs = [{
  id: '033', sourceCommit: inventory033.sourceCommit,
@@ -213,6 +218,13 @@ export const catalogs = [{
   description: text('反標準束の非消滅を、不変指数・計量降下・不変切断の構成へ結ぶ7篇の証明から読む。', 'Follow seven proofs connecting anticanonical nonvanishing with invariant indices, metric descent, and invariant sections.'),
   paperIds: inventory068.manuscripts.map(p => p.paperId),
   overviewSectionIds: ['papers', 'diagram-sources', 'index-routes', 'exact-routes', 'connections', 'sources'],
+}, {
+  id: '338', sourceCommit: inventory338.sourceCommit, mode: 'single',
+  title: text(inventory338.titleJa, inventory338.overviewTitle),
+  contentsTitle: inventory338.contentsTitle,
+  description: text('正の正則二断面曲率から双正則一意化へ至る解析・縮小座標・全射性の接続を読む。', 'Follow the analytic estimates, shrinking coordinates, and surjectivity argument toward biholomorphic uniformization under positive bisectional curvature.'),
+  paperIds: inventory338.manuscripts.map(p => p.paperId),
+  overviewSectionIds: ['papers', 'guide', 'sources'],
 }];
 export const paperSource = paper => `https://github.com/openai/math/blob/${paper.sourceCommit ?? sourceCommit}/preprints/${paper.path}`;
 export const catalogsForField = id => fields.find(field => field.id === id).catalogIds.map(id => catalogs.find(catalog => catalog.id === id));

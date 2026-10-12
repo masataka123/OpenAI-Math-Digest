@@ -1,0 +1,199 @@
+{
+  "catalogId": "338",
+  "productionVersion": "1.4",
+  "checkingScope": "Single manuscript; no within-catalogue pair exists. Six external statement/use connections selected; other external connections remain unaudited as listed in article sources. Historical antecedents are not direct edges.",
+  "omittedSections": [
+    {
+      "section": "catalogue relationship diagram, classification cards, selector",
+      "reason": "One manuscript. Its internal convergence and branching are shown in the article overview diagram; duplicating that diagram at the catalogue entrance adds no article-selection information."
+    }
+  ],
+  "connections": [
+    {
+      "id": "weighted-jets",
+      "from": {
+        "paperId": "Dem82",
+        "result": "Theorems 2.6 and 5.1",
+        "pages": "467, 475",
+        "version": "Ann. Sci. École Norm. Sup. (4) 15 (1982), 457–511; Numdam scan",
+        "sourceUrl": "https://www.numdam.org/item/10.24033/asens.1434.pdf"
+      },
+      "to": {
+        "paperId": "yau-uniformization",
+        "result": "Proposition 2.1; §2.1",
+        "pages": "7",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Uniformization-of-complete-Kahler-manifolds-with-positive-bisectional-curvature-September-23-2026/paper.pdf"
+      },
+      "role": "Nakano coefficient-bundle positivity and weighted ∂bar solve finite jets.",
+      "hypotheses": "Complete initial Kähler metric; Griffiths positivity of E; compact-supported source; sufficiently positive weight with logarithmic poles.",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-use-compared; not full independent proof verification",
+        "owner": "catalog-338-hq (self-check)",
+        "date": "2026-10-12",
+        "record": "../yau-uniformization/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../yau-uniformization/article.ja.md#dependencies",
+        "en": "../yau-uniformization/article.en.md#dependencies"
+      },
+      "unresolved": []
+    },
+    {
+      "id": "average-curvature",
+      "from": {
+        "paperId": "CZ05",
+        "result": "Theorem 2",
+        "pages": "2",
+        "version": "arXiv:math/0211374v1 (2002); journal publication 2005",
+        "sourceUrl": "https://arxiv.org/pdf/math/0211374v1"
+      },
+      "to": {
+        "paperId": "yau-uniformization",
+        "result": "Proposition 2.1(v)",
+        "pages": "12",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Uniformization-of-complete-Kahler-manifolds-with-positive-bisectional-curvature-September-23-2026/paper.pdf"
+      },
+      "role": "Averaged curvature bound with fixed-center constant, also derived with the manuscript cutoffs.",
+      "hypotheses": "Complete noncompact Kähler g, positive bisectional curvature; no center uniformity asserted.",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-use-compared; not full independent proof verification",
+        "owner": "catalog-338-hq (self-check)",
+        "date": "2026-10-12",
+        "record": "../yau-uniformization/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../yau-uniformization/article.ja.md#dependencies",
+        "en": "../yau-uniformization/article.en.md#dependencies"
+      },
+      "unresolved": []
+    },
+    {
+      "id": "short-flow",
+      "from": {
+        "paperId": "LT20",
+        "result": "Definition 2.1; Lemma 2.1",
+        "pages": "6",
+        "version": "arXiv:1708.00141v2; journal publication 2020",
+        "sourceUrl": "https://arxiv.org/pdf/1708.00141v2"
+      },
+      "to": {
+        "paperId": "yau-uniformization",
+        "result": "§3.1",
+        "pages": "13",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Uniformization-of-complete-Kahler-manifolds-with-positive-bisectional-curvature-September-23-2026/paper.pdf"
+      },
+      "role": "Short-time existence on each Hermitian approximation.",
+      "hypotheses": "Complete alpha_L and bounded geometry of infinite order for each fixed L.",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-use-compared; not full independent proof verification",
+        "owner": "catalog-338-hq (self-check)",
+        "date": "2026-10-12",
+        "record": "../yau-uniformization/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../yau-uniformization/article.ja.md#dependencies",
+        "en": "../yau-uniformization/article.en.md#dependencies"
+      },
+      "unresolved": []
+    },
+    {
+      "id": "local-regularity",
+      "from": {
+        "paperId": "Chu16",
+        "result": "Theorem 5.1",
+        "pages": "14–15",
+        "version": "arXiv:1410.3354v3; journal publication 2016",
+        "sourceUrl": "https://arxiv.org/pdf/1410.3354v3"
+      },
+      "to": {
+        "paperId": "yau-uniformization",
+        "result": "§§3.2–3.3",
+        "pages": "15",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Uniformization-of-complete-Kahler-manifolds-with-positive-bisectional-curvature-September-23-2026/paper.pdf"
+      },
+      "role": "Transformed-Hessian regularity for continuation and local smooth limit.",
+      "hypotheses": "Two-sided metric bounds give a compact positive matrix range; concavity, ellipticity and Hölder coefficient bounds.",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-use-compared; not full independent proof verification",
+        "owner": "catalog-338-hq (self-check)",
+        "date": "2026-10-12",
+        "record": "../yau-uniformization/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../yau-uniformization/article.ja.md#dependencies",
+        "en": "../yau-uniformization/article.en.md#dependencies"
+      },
+      "unresolved": []
+    },
+    {
+      "id": "boundary-factor",
+      "from": {
+        "paperId": "BR03",
+        "result": "Theorem 2.1",
+        "pages": "887",
+        "version": "Ann. Inst. Fourier 53 (2003), 885–901; Numdam scan",
+        "sourceUrl": "https://www.numdam.org/item/10.5802/aif.1964.pdf"
+      },
+      "to": {
+        "paperId": "yau-uniformization",
+        "result": "Lemma 4.6; §5.3",
+        "pages": "39",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Uniformization-of-complete-Kahler-manifolds-with-positive-bisectional-curvature-September-23-2026/paper.pdf"
+      },
+      "role": "Smooth holomorphic factorization of positive boundary matrices.",
+      "hypotheses": "Positive definite smooth matrix on circle; inverses holomorphic; quantitative seminorm control added in manuscript.",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-use-compared; not full independent proof verification",
+        "owner": "catalog-338-hq (self-check)",
+        "date": "2026-10-12",
+        "record": "../yau-uniformization/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../yau-uniformization/article.ja.md#dependencies",
+        "en": "../yau-uniformization/article.en.md#dependencies"
+      },
+      "unresolved": []
+    },
+    {
+      "id": "shear-jets",
+      "from": {
+        "paperId": "FL14",
+        "result": "Proof of Theorem 3.1",
+        "pages": "8–9",
+        "version": "arXiv:1402.4342v3 (2017-03-29); journal publication 2014",
+        "sourceUrl": "https://arxiv.org/pdf/1402.4342v3"
+      },
+      "to": {
+        "paperId": "yau-uniformization",
+        "result": "Lemma 8.2",
+        "pages": "63",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Uniformization-of-complete-Kahler-manifolds-with-positive-bisectional-curvature-September-23-2026/paper.pdf"
+      },
+      "role": "Divergence-free shear decomposition used in finite constant-volume jet realization.",
+      "hypotheses": "Fixed degree homogeneous divergence-free vector field; n>=2 in external source, n=1 treated directly in manuscript.",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-use-compared; not full independent proof verification",
+        "owner": "catalog-338-hq (self-check)",
+        "date": "2026-10-12",
+        "record": "../yau-uniformization/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../yau-uniformization/article.ja.md#dependencies",
+        "en": "../yau-uniformization/article.en.md#dependencies"
+      },
+      "unresolved": []
+    }
+  ]
+}

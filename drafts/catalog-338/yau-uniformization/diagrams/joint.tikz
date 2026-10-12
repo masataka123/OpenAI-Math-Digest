@@ -1,0 +1,19 @@
+\node[card] (a) {\heading{1}{双対ノルムの円板包絡}{Disc envelope of the dual norm}
+$N(y,0)\le v(y,t)\le N(y,t),\qquad N=|\xi|_{h_t^{-1}}^2$\\
+\Tx{境界の壁 $j$ と面積罰則 $\varepsilon\mathcal E$ で局所化}{Localize with boundary walls $j$ and area penalty $\varepsilon\mathcal E$}};
+\node[card,below=2.0cm of a] (b) {\heading{2}{下側試験のSchur補元を制御}{Control the Schur complement of lower tests}
+$W=\begin{pmatrix}A&B\\B^*&C\end{pmatrix},\ C>0$\\
+$K\ge0,\quad K\ge A-BC^{-1}B^*,\quad \phi_t\ge\operatorname{tr}(C^{\mathsf T}K)$};
+\flow{a}{b}{\Tx{境界因子分解と後ろ向きの時計変形。罰則誤差の係数は境界依存}{Boundary factorization and a backward clock; boundary-dependent error}\\\Cite{factor}\\\Cite{disc}\quad\Cite{deformation}};
+\node[card,below=1.9cm of b] (c) {\heading{3}{fiber楕円体の行列式差}{Determinant deficit of fiber ellipsoids}
+$B=\arg\max_{\xi^*D\xi\le v}\log\det D,\quad b_t=h_t^{-\mathsf T}$\\
+$\mathcal L=\log\det B,\quad 0\le F_0=\log\det b_t-\mathcal L\le\rho$};
+\flow{b}{c}{\Tx{共通baseの接触を足す。垂直正値性を保って極限を順に取る}{Sum common-base contacts; retain vertical positivity through limits}\\\Cite{ellipsoid}};
+\node[card,below=1.65cm of c] (d) {\heading{4}{非線形比較の適用}{Apply nonlinear scalar comparison}
+$\partial_tF_0\le e^{-F_0}\Delta_{h_t}F_0+(1-e^{-F_0})R_{h_t}$\\
+$F_0=0,\qquad B=b_t,\qquad v=N$};
+\flow{c}{d}{\Tx{$\ell_t=\Delta_h\ell=R_h$を引き、$0\le F_0\le\rho$の比較で零に}{Subtract $\ell_t=\Delta_h\ell=R_h$; comparison forces the deficit to zero}\\\Cite{comparison}\quad\Cite{joint}};
+\node[result,below=1.65cm of d] (f) {\heading{5}{生の円板不等式から共同psh性へ}{Raw disc inequalities give joint positivity}
+$v\le v^{\rm raw}\le N\ \Longrightarrow\ v^{\rm raw}=N$\\
+$(x,\xi,w)\longmapsto N(x,\xi,e^{w+\bar w})\quad\mathrm{psh}$};
+\flow{d}{f}{\Tx{全許容円板でsubmean不等式。有限時間上限は任意}{Submean inequality for every admissible disc; arbitrary finite horizons}\\\Cite{joint}};
