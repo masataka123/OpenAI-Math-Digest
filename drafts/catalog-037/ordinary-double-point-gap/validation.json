@@ -1,0 +1,37 @@
+{
+  "stage": 1,
+  "status": "first-draft handoff; HQ content/display review separate",
+  "checkedOn": "2026-10-12T20:31:28.234763+09:00",
+  "citations": {
+    "command": "node scripts/sync-citations.mjs --check --text-only --registry drafts/catalog-037/ordinary-double-point-gap/citations.json",
+    "result": "passed, 1 registry / 4 files",
+    "bilingualCitationMarkers": 65,
+    "bilingualProofTargets": 4,
+    "bilingualIntermediateStatementBlocks": 2
+  },
+  "diagrams": {
+    "tikz": 4,
+    "tex": 8,
+    "svg": 8,
+    "manifestFiles": 24,
+    "manifestHashes": "all matched",
+    "xelatex": "no overfull boxes or missing characters",
+    "visualCheck": "Japanese and English four diagrams inspected; gutter arrows, labels and cards do not overlap; dvisvgm right-side empty viewport trimmed reproducibly",
+    "evidence": "qa/*.png"
+  },
+  "deferred": [
+    "public asset equality check: copies are prohibited in stage 1",
+    "site integration and publication build",
+    "bilingual booklet PDFs",
+    "PC/mobile shared-site comparison is performed by HQ and recorded in coordination/catalog-037"
+  ],
+  "postDraftEdits": [
+    {
+      "start": "2026-10-12T20:32:39+09:00",
+      "end": "2026-10-12T20:34:21+09:00",
+      "minutes": 1.7,
+      "scope": "saturation diagram: primitive facet supports and differentiability-point qualification, as in manuscript p. 35",
+      "validation": "bilingual TeX/SVG regenerated; both saturation PNGs visually checked with no clipping or overlap; citation text-only check passed during rendering"
+    }
+  ]
+}

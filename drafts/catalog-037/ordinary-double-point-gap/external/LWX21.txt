@@ -1,0 +1,2347 @@
+                                          Algebraicity of the Metric Tangent Cones and Equivariant
+                                                                  K-stability
+                                                                 Chi Li, Xiaowei Wang and Chenyang Xu
+
+
+                                                                                     Abstract
+                                              We prove two new results on the K-polystability of Q-Fano varieties based on purely
+                                          algebro-geometric arguments. The first one says that any K-semistable log Fano cone has a
+                                          special degeneration to a uniquely determined K-polystable log Fano cone. As a corollary, we
+arXiv:1805.03393v2 [math.AG] 8 Jan 2021
+
+
+
+
+                                          combine it with the differential-geometric results to complete the proof of Donaldson-Sun’s
+                                          Conjecture which says that the metric tangent cone of any point appearing on a Gromov-
+                                          Hausdorff limit of Kähler-Einstein Fano manifolds depends only on the algebraic structure
+                                          of the singularity. The second result says that for any log Fano variety with a torus action,
+                                          K-polystability is equivalent to equivariant K-polystability, that is, to check K-polystability,
+                                          it is sufficient to check special test configurations which are equivariant under the torus
+                                          action.
+
+
+                                          Contents
+                                          1 Introduction                                                                                  1
+                                            1.1 Main results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    2
+
+                                          2 Preliminaries                                                                                 4
+                                            2.1 Normalized volumes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .        4
+                                            2.2 K-stability of log Fano cones . . . . . . . . . . . . . . . . . . . . . . . . . . .       6
+
+                                          3 Case of log Fano pairs                                                                       13
+                                            3.1 K-semistable degeneration of K-semistable log Fano pair . . . . . . . . . . . .          13
+                                            3.2 Common degenerations of log Fano pairs . . . . . . . . . . . . . . . . . . . . .         15
+                                            3.3 Proof of main results for log Fano pairs . . . . . . . . . . . . . . . . . . . . .       21
+
+                                          4 General case of log Fano cones                                                               22
+                                            4.1 Common degenerations of log Fano cones . . . . . . . . . . . . . . . . . . . .           22
+                                            4.2 Vanishing Futaki invariants and special degenerations . . . . . . . . . . . . .          24
+                                            4.3 Completion of the proofs of main theorems for log Fano cones . . . . . . . . .           26
+
+                                          A Ding-polystability of Ricci-flat Kähler cones                                               26
+
+
+                                          1    Introduction
+                                          We work over the field C of complex numbers. This paper is a sequel to the works in
+                                          [Li17b, LX20, LX18]. Together with the previous works, we complete the proof of Donaldson-
+                                          Sun’s Conjecture [DS17, Conjecture 3.22] (see Theorem 1.1), which says that as an affine
+                                          variety, the metric tangent cone C := Co (M∞ , d∞ ) of any point o on a Gromov-Hausdorff
+                                          (GH) limit (M∞ , d∞ ) of a sequence of Kähler-Einstein Fano manifolds only depends on the
+                                          algebraic structure of the singularity and is independent of the metric structure. Previously
+                                          in [LX18] we proved that the intermediate semistable cone W in Donaldson-Sun’s work (see
+                                          [DS17]) only depends on the algebraic structure.
+                                              Our strategy is to systematically use minimizers of the normalized volume functional
+                                          (defined in [Li18]) to characterize valuations associated to metric tangent cones. Aiming
+                                          at a vast generalization of the original differential geometric approach, we try to algebraize
+                                          the construction of [DS17] by giving a completely local definition of a two-step degeneration
+
+                                                                                          1
+      process for an arbitrary klt singularity. This has been done under suitable assumptions about
+      the minimizer of the normalized volume. In fact, these assumptions yield the first step of
+      the degeneration and our current note draws a complete picture of the second step in the
+      degeneration. In particular, with the help of the metric structures, we now have a rather
+      satisfactory understanding of this process for those singularities appearing on the GH-limit
+      M∞ . We will give more details in the following discussion.
+
+      1.1     Main results
+      For the first step of the degeneration, in [LX18], we showed that the valuation considered
+      in [DS17], whose original definition depends on the metric, is a minimizer of the normalized
+      volume (see 2.3) and such a minimizer is uniquely determined by the underlying algebraic
+      structure. In fact, we proved in [LX18] that for any klt singularity (X, x), the real valuation
+      v ∈ ValX,x that minimizes the normalized volume functional and satisfies the following two
+      conditions is unique up to rescaling: (a) v is quasi-monomial; (b) v has a finitely generated
+      associated graded ring. These two conditions are satisfied by the valuation constructed via
+      Kähler-Einstein metric structure in [DS17]. So this result allows us to recover the semistable
+      cone W , which is defined by the associated graded ring of v, by using the minimizing valuation
+      and hence verifies the first part of [DS17, Conjecture 3.22]. Note that it was conjectured in
+      [Li17b] that minimizing valuations always satisfy these two conditions. 1
+          We know that the semistable cone W degenerates to the metric tangent cone C and is
+      K-semistable (see [DS17] and [LX18, Theorem 5.5]). In the current paper, we complete the
+      picture by showing that the metric tangent cone C is the unique K-polystable degeneration
+      of W . In particular, this implies that C depends only on the algebraic structure of W , which
+      itself only depends on the algebraic structure of o ∈ M∞ .
+      Theorem 1.1 ([DS17, Conjecture 3.22]). The metric tangent cone C of o ∈ M∞ on a GH-
+      limit of Kähler-Einstein Fano manifolds depends only on the algebraic structure of o ∈ M∞ .
+          As in [DS17], the assumption on M∞ can be weakened, e.g. M∞ is a GH-limit of a se-
+      quence of projective manifolds X with fixed volumes, bounded Ricci curvature and diameter.
+      All arguments extend verbatim. One can expect Theorem 1.1 will significantly simplify the
+      determination of metric tangent cones in examples (see e.g. [HS17]).
+          Since a Fano cone singularity (C, ξ) with a Ricci-flat Kähler cone metric is aways K-
+      polystable (see [CS19, Theorem 7.1] and also Corollary A.4), once knowing that W depends
+      only on the algebraic structure of o ∈ M∞ , Theorem 1.1 is just a consequence of the following
+      more general result by letting (X, D, ξ0 ) = (W, ∅, ξ0 ):
+      Theorem 1.2 (Existence and uniqueness of K-polystable degenerations: log Fano cones).
+      Given a K-semistable log Fano cone singularity (X, D, ξ0 ), there always exists a special test
+      configuration (X , D, ξ0 ; η) that degenerates (X, D, ξ0 ) to a K-polystable log Fano cone singu-
+      larity (X0 , D0 , ξ0 ). Furthermore, such (X0 , D0 , ξ0 ) is uniquely determined by (X, D, ξ0 ) up
+      to isomorphism.
+          If we restrict ourselves to the quasi-regular case of log Fano cones, then we obtain the
+      following result for log Fano varieties.
+      Theorem 1.3 (Existence and uniqueness of K-polystable degenerations: log Fano varieties).
+      Given a K-semistable log Fano variety (S, B), there always exists a special test configuration
+      (S, B) that degenerates (S, B) to a K-polystable pair (S0 , B0 ). Furthermore, such log Fano
+      pair (S0 , B0 ) is uniquely determined by (S, B) up to isomorphism.
+         We note that for the special case of Q-Gorenstein smoothable Fano varieties, this was
+      proved in [LWX19, 7.1] based on an analytic results on the existence and uniqueness of
+      Gromov-Hausdorff limit for a flat family of Fano Kähler-Einstein manifolds (see also [SSY16]).
+      We emphasize here that our proof of Theorem 1.2 is new and uses only algebro-geometric
+      arguments. Moreover, our techniques also give rise to an equivariant criterion for testing
+      K-polystability.
+   1
+     After the submission of this paper, the quasi-monomial property has been proved in [Xu20]. More recently,
+the uniqueness of minimizers (up to rescaling) is proved in [XZ20] unconditionally.
+
+
+
+
+                                                      2
+      Theorem 1.4 (T -equivariant K-stability=K-stability). Let (S, B) be a log Fano variety
+      with an action by a torus group T ∼  = (C∗ )d . Then (S, B) is K-polystable if and only if it is
+      T -equivariantly K-polystable, that is for all T -equivariant special test configuration (S, B),
+      the generalized Futaki invariant Fut(S, B) ≥ 0, and the equality holds only when the test
+      configuration is a product, i.e. (S, B) ∼
+                                              = (S, B) × A1 .
+           Note that Theorem 1.4 is proved for smooth Fano manifolds in [DS16] for general reductive
+      group actions using analytic approach. Our result works for any singular Q-Fano varieties.
+      This combined the work [IS17] allows one to effectively check the K-stability of Q-Fano
+      T -varieties of complexity one. 2
+           We will first deal with the quasi-regular case i.e. Theorem 1.3. The key technical result
+      in its proof is Theorem 3.2, which says that if (S (i) , B (i) )(i = 1, 2) are two special test con-
+                                                                          (i)    (i)
+      figurations of the log Fano pair (S, B) with central fibres (S0 , B0 ) and vanishing Futaki
+                                                                                           (i) (i)
+      invariants, then there exist special test configurations (S ′(i) , B ′(i) ) of (S0 , B0 ) such that
+         ′(i)   ′(i)
+      (S , B ) have isomorphic central fibers. In practice, we will work on the cones: we first
+      take the cone over (S, B) to get a log Fano cone (X, D), and then take cones over (S (i) , B (i) )
+      to get test configurations (X (i) , D(i) ) of (X, D). Then we just need to find a common degen-
+                                           (i)    (i)
+      eration of the central fibre of (X0 , D0 ). To construct such test configurations, we aim at
+      constructing a (C ) -equivariant family (X, D) of log Fano cones over C2 , such that if taking
+                           ∗ 2
+
+      the base change over C × {1} (resp {1} × C), we get back the test configuration (X (1) , D(1) )
+      (resp. (X (2) , D2 )). Then the special fiber (X, D) ×C2 {(0, 0)} gives a common degeneration
+                                                                                     (2)
+      of (X (i) , D(i) ). This family (X, D) is obtained by using a divisor Ek over (X (2) , D(2) ) to
+                                                        (2)
+      degenerate (X (2) , D(2) ), where the divisor Ek is a birational transform of Ek × C and Ek
+                                                                                         (2)
+      belongs to a sequence of special divisors {Ek } (k ≥ 1) over X. To see Ek induces a degen-
+                                                                             (2)          (2)  (2)
+      eration, one needs to show that there is a birational model Yk → (Xk , Dk ) such that
+                                           (2)    (2)
+      the only exceptional divisor of Yk /Xk is Ek for k ≫ 1. This is a subtle property, and we
+      prove it by combining the tools of Minimal Model Program (MMP) with a careful analysis
+      of normalized volumes functional (see Section 3.2.1 for a more detailed explanation for this
+      step).
+           The following commutative diagram shows some relation between different objects in this
+      proof. The symbols ‘ ’ means the degeneration under a special test configuration and ‘99K’
+      means taking a C∗ -quotient. See (21) for the more detailed diagram.
+
+                                                                                                                                      (2)            (2)
+                                (2)                                    (2)                                                     (X ,D )
+                           (X0 , D0◗ ) o o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ (X, D)                                                                                                                                                            (1)
+                                     O                                     ◗◗
+                                                                                         ◗(                                                                                                                                  ♠ ♠ OO
+                                        O                                                                                                         (2)                    (2)                                  v♠    ♠
+                                           O                                                   (2)                       (2) (S ,B )                                                                                                 O
+                                              O                                         (S0 , B0 ) o o/ o/ o/ o/ (S, B)                                                                                                                 O
+                                                 O                                                         O                                                                           O                                                 O
+                                                    O                                                         O                                                                           O                                                 O (1) (1)
+                   (X ′(2) ,D ′(2) ) O                                  (S ′(2) ,B′(2) ) O                                                                                                    O (S (1) ,B(1) )                                O (X ,D )
+                                                        O                                                         O                                                                              O                                               O
+                                                           O                                         ′
+                                                                                                                   ′                                                           (1)                        (1)                                          O
+                                                              O                            (S        0 , B0 )
+                                                                                                                                o     / o      / o       o /     / o      (S0 , B0 h◗ )                                                                    O
+                                                                 O                         ♠   6                                         ′(1)                   ′(1)                                                                                         O
+                                                                                    ♠                                          (S                       ,B                  )                                        ◗◗
+                                                                                                                                                                                                                                                                 O
+                                                                    O      ♠                                                                                                                                                 ◗                    
+                                   ′
+                                                        ′♠                                                                                                                                                                     (1)                                 (1)
+                             (X0 , D0 )                                   o o / o /  o /    / o   / o   o /           o /  o /    o /      / o      / o      o /      / o   / o  / o / o               o / o /   / o / o o /  (X0 , D0 ) .
+                                                                                                                                          ′(1)                       ′(1)
+                                                                                                                           (X                ,D                )
+
+
+
+          To confirm Donaldson-Sun’s Conjecture (see [DS17, Conjecture 3.22]), we then use some
+      approximation approach to treat the case of a general log Fano cone, i.e. including the irreg-
+      ular case. However, the common degenerations are a priori only weakly special (Definition
+      2.16). So we extend [LX14, Theorem 4] to (possibly irregular) log Fano cones, proving that
+      for K-polystable log Fano cones, weakly special test configurations with vanishing Futaki
+      invariants must already be special. To apply this to metric tangent cones which are Ricci-
+      flat Kähler cones, we use the result of Colins-Székelyhidi [CS19] about the K-polystability
+      of Ricci-flat Kähler cones. Since we need to allow more general test configurations than just
+      special test configurations, we provide a proof of this fact (see Remark A.2) in Appendix A
+      by adapting the argument of Berman in [Ber15] to our setting.
+  2
+   After the submission of the paper, the equivalence between equivariant K-stability and K-stability has been
+completely solved in [Zhu20].
+
+
+
+                                                                                                                                          3
+    We now sketch the organization of the paper. More details will be given at the beginning
+of each section. In 2.1, we recall basic tools in our arguments including normalized volumes,
+normalized multiplies and Kollár components. In section 2.2, we recall the notions of log Fano
+cones, their test configurations and K-stability. We also discuss how to get test configurations
+using models over log Fano cones. In the quasi-regular case, we are reduced to the K-stability
+of log Fano pairs. In section 3, we prove our main results in the case of log Fano pairs. In
+section 3.1, we prove a lemma about special degenerations of K-semistable log Fano pairs
+with zero Futaki invariants. In section 3.2, we prove the main technical result (Theorem 3.2)
+on common special degenerations of special degenerations with zero Futaki invariants. In
+section 3.3, we finish the proof of main results for log Fano pairs. In section 4, we deal with
+the general case of log Fano cones. In 4.1, we obtain common weakly special degenerations
+for log Fano cones with vanishing generalized Futaki invariants. In 4.2, we show that these
+weakly special test configurations are indeed special test configurations. We generalize the
+last step of results in [LX20] to the case of log Fano cones. We complete the proof of
+Theorem 1.2 and Donaldson-Sun’s conjecuture in section 4.3. In the appendix, we prove
+the analytic result that Ricci-flat Kähler cones are Ding-polystable among Q-Gorenstein test
+configurations. This result could substitute results in section 4.2 to complete the proof of
+Theorem 1.1.
+
+Acknowledgement: We would like thank Yuchen Liu for pointing out an inaccuracy in
+the previous version of the preprint and the anonymous referees for many helpful comments.
+CL is partially supported by NSF (DMS-1405936 and DMS-1810867) and an Alfred P. Sloan
+research fellowship. XW is partially supported by a Collaboration Grants for Mathemati-
+cians from Simons Foundation:281299 and NSF:DMS-1609335. CX is partially supported
+by ‘Chinese National Science Fund for Distinguished Young Scholars (11425101)’. Part of
+the work was done when XW was visiting IHES and CX is visiting Institut Henri Poincaré
+(partially sponsored by ‘the Poincaré Chair’), to which they want to thank the inspiring
+research environment.
+
+Notation and Conventiones: We follow the standard notation in [KM98, Kol13]. In
+this paper, a variety is a reduced, separated and finite type scheme over C, that is allowed
+to be reducible. We call a pair (S, B) a log Fano variety if (S, B) has klt singularities, and
+−(KS + B) is ample.
+
+
+2     Preliminaries
+2.1    Normalized volumes
+In this section, we recall the definition of the normalized volume of valuations centered at a
+klt singularity x ∈ (X, D). This is introduced in [Li18]. For readers’ convenience, we discuss
+some basic properties which will be needed later.
+Definition 2.1. Let X = SpecC (R) be an irreducible affine variety and x ∈ X a closed
+point. We denote by ValX,x the space of real valuations v : R → R≥0 ∪ {+∞} that satisfy
+the following conditions: for any f, g ∈ R:
+(1) v(f g) = v(f ) + v(g); (2) v(f + g) ≥ min{v(f ), v(g)}; (3) v(0) = +∞, v(C∗ ) = 0; (4)
+v(f ) > 0 if f (x) = 0.
+    For any v ∈ ValX,x and m ∈ R, its m-th valuation ideal is defined as am (v) := am (v, X) =
+{f ∈ R; v(f ) ≥ m}.
+    We remark that ValX,x is also called the ‘non-archimedean link’ around x ∈ X in some
+literatures.
+    For any m > 0, am (v) is a primary ideal associated to the maximal ideal mx . We will
+denote its Hilbert-Samuel multiplicity by mult(am ). If Λ = v(R) ⊂ R≥0 denotes the valuative
+semigroup of v, then {am (v); m ∈ Λ} is a Λ-graded sequence of ideals. In other words, they
+satisfy, for any m, m′ ∈ Γ, (i) : am′ (v) ⊆ am (v) if m′ ≥ m and (ii) : am (v) · am′ (v) ⊆
+am+m′ (v). Note that {am (v); m ∈ Z} is also a Z-graded sequence of ideals.
+
+
+
+
+                                               4
+Definition-Proposition 2.2 ([ELS03, LM09]). Let X be an irreducible variety of dimension
+n. For any v ∈ ValX,x , the volume of v is the following well-defined quantity:
+
+                                dimC (R/am (v))       mult(am )
+             vol(v) =    lim                    = lim           =: mult(a• ).               (2)
+                        m→+∞        mn /n!       m→+∞   mn
+
+    Now we assume (X, D) is a log pair such that KX + D is Q-Cartier. For any divisorial
+valuation v = ordS where S is a prime divisor on a normal variety Y with a proper birational
+morphism µ : Y → X, the log discrepancy of ordS is defined as A(X,D) (ordS ) = ordS (KY −
+µ∗ (KX + D)) + 1. By [JM12] and [BFFU15], there is a canonical way to extend the log
+discrepancy to become a lower semicontinuous function A(X,D) : ValX,x → R ∪ {+∞}.
+Definition-Proposition 2.3 (see [Li18, Theorem 1.1]). Assume x ∈ (X, D) is a klt singu-
+larity. For any v ∈ ValX,x , its normalized volume volc (X,D,x) (v) is defined as:
+                               
+              c                   A(X,D) (v)n · vol(v), if A(X,D) (v) < +∞;
+              vol(X,D,x) (v) =                                                      (3)
+                                  +∞,                    if A(X,D) (v) = +∞.
+
+                                   c
+For simplicity, we will just write vol(v) if the singularity x ∈ (X, D) is clear. This quantity
+                          c          c
+is a rescaling invariant: vol(λv) = vol(v) for any λ > 0.
+    The volume of a klt singularity x ∈ (X, D) is defined to be the following positive number
+
+                               vol(x, X, D) =     inf      c (X,D,x) (v).
+                                                           vol                              (4)
+                                                v∈ValX,x
+
+
+                                                                c (X,D,x) among all v ∈ ValX,x
+    It has been shown that there always exists a minimizer v of vol
+in [Blu18]. The expected properties of the minimizers are formulated in the Stable Degener-
+ation Conjecture ([Li18, Conjecture 6.1], [LX18, Conjecture 1.2]). The case of cone singular-
+ities over Fano varieties was studied in [Li17b, LL19]. The general case was systematically
+studied in [LX20] under the assumption that the minimizer is a divisorial valuation and in
+[LX18] under the assumption that the minimizer is a higher rank quasi-monomial valuation.
+    We will need a relation between the normalized volume and the normalized multiplicity
+of a graded sequence of ideals.
+Proposition 2.4 ([Liu18]). If x ∈ (X, D) is an n-dimensional klt singularity, then we have
+
+                         vol(x, X, D) = inf mult(b• ) · lctn (X, D; b• ),
+                                          b•
+
+where b• runs over all graded sequence of primary ideals cosupported at x.
+   We now state some central results from our previous works and refer to the next section for
+the notations of log Fano cones (see Definition 2.12) and their K-stability (see e.g. Definition
+2.23).
+Theorem 2.5 ([Li17b, LL19, LX20, LX18]). Let (X, D, ξ) be a log Fano cone singularity.
+Then it is K-semistable if and only if the valuation wtξ induced by ξ is a minimizer of
+c (X,D,x) on ValX,x .
+vol
+   We will also use the following notion frequently:
+Definition 2.6. Let (X, D, x) be a klt singularity. A prime divisor S over (X, D, x) is
+called a Kollár component over (X, D, x), if there exists a projective birational morphism
+µ : Y → X such that (i) µ is an isomorphism over X \ {x} and the exceptional divisor
+S = µ−1 (x) is irreducible and Q-Cartier; (ii) −S is µ-ample; (iii) (Y, µ−1
+                                                                         ∗ D + S) is plt.
+
+   For any Kollár component, we define its different ∆S by the following equality:
+
+                                KS + ∆S = (KY + S + µ−1
+                                                     ∗ D)|S .
+
+It is easy to see that (S, ∆S ) is a log Fano pair.
+    The relevance of Kollár components to the minimization of normalized volume is con-
+tained in the following result:
+
+
+
+                                                  5
+Theorem 2.7 ([LX20, Theorem 1.2, 1.3]). Let (X, D, x) be a klt singularity. Assume that
+                              c (X,D,x) . Then we can find a sequence of Kollár components
+v0 ∈ ValX,x is a minimizer of vol
+Sk and constants ck > 0, such that
+
+                  ck · ordSk → v0    and    c
+                                            vol(ord       c
+                                                   Sk ) → vol(v) as k → +∞.
+
+Moreover, if v0 is divisorial, then v0 = c · ordS for some c > 0 and a Kollár component S
+satisfying the condition that the log Fano pair (S, ∆S ) is K-semistable.
+   In the above theorem, when v0 is a divisorial minimizer, then [Blu18] also shows it yields
+a Kollár component. In the case of K-semistable log Fano cones, the approximation stated in
+the above theorem can be realized concretely by perturbing the Reeb vector field to rational
+ones.
+
+2.2    K-stability of log Fano cones
+In this section, we recall the definition of a log Fano cone singularity and its K-stability, by
+essentially following [CS18, CS19] and [LX18, Section 2.5]. Denote by T a complex torus
+which is isomorphic to (C∗ )r .
+
+Test configurations
+Definition 2.8. Let X be an n-dimensional reduced affine variety which is not necessarily
+irreducible. We say that a T -action on X is good if it is effective and there is a closed T -fixed
+point x ∈ X (called the vertex) that is in the closure of any T -orbit. By a T -singularity in
+this paper, we always mean an affine variety X with a good T -action. If D is a T -invariant
+R-divisor on X we say that (X, D) is a pair with a good T -action.
+   Let N = Hom(C∗ , T ) be the co-weight lattice and M = N ∗ the weight lattice. If X =
+SpecC (R) is a T -variety, then there is a weight space decomposition:
+                             M
+                       R=        Rα where Γ = {α ∈ M | Rα 6= 0} ⊂ M.                 (5)
+                            α∈Γ
+
+The action being good implies R0 = C. We will call any element ξ in the Lie algebra
+NR := N ⊗ R a coweight vector (or abbreviated as a vector). We will denote by hξi the
+subtorus of T generated by ξ, i.e. the subtorus corresponding to the minimal linear Q-linear
+subspace V ⊂ N ⊗ Q such that V ⊗ R contains ξ.
+     If T acts on a smooth variety X, then ξ will give a vector field on X. For example, if we
+consider the multiplication of C∗ on C, then the coweight vector 1 ∈ Z yields the vector field
+t∂t .
+Definition 2.9. The Reeb cone of X with respect to a good T -action is the following set:
+
+                       NR+ := {ξ ∈ NR | hα, ξi > 0 for any α ∈ Γ\{0}} .                        (6)
+
+Any vector ξ ∈ NR+ will be called a Reeb vector on the T -variety X.
+Definition 2.10. For any ξ ∈ NR+ , we define its volume as:
+                                                 P
+                                                    hξ,αi≤k dimC (Rα )
+                   volX (ξ) := volX,x (ξ) = lim                        .
+                                           k→∞           k n /n!
+
+    The limit in the above definition was known to exist by using the multivariable Hilbert
+series as in [CS18, Proof of Theorem 4.10] (see also [MSY08]). If (X, x) is a normal affine
+T -variety, then each ξ ∈ NR+ corresponds to a valuation wtξ ∈ ValX,x which is defined as:
+                                  (                                   )
+                                               X
+                    wtξ (f ) = min hα, ξi; f =    fα with fα 6= 0 ∈ Rα .                 (7)
+                                                    α
+
+Note that in this case volX (ξ) in Definition 2.10 is just the volume of the valuation wtξ .
+   One key property of the volume function is the following.
+
+
+                                                6
+Lemma 2.11 (see [CS18, MSY08, LX18]). The function ξ 7→ volX,x (ξ) is smooth and strictly
+convex on NR+ .
+
+Proof. The smoothness was proved in [CS18, Theorem 4.10] where volX (ξ) was interpreted as
+the leading coefficient of the expansion of the so-called index character, (which also appeared
+in the earlier work of Martelli-Sparks-Yau (see [MSY08, (6.10)]).
+    The strict convexity of volX,x follows from [LX18, Section 3.2]. In fact, if we let Y → X
+be the normalization of X, the T -action can be lifted to Y . Denote the preimage of x to be
+{yi }i , then we know yi are on pairwise distinct components Yi of Y , and the T -action on
+each Yi is good. We claim that the following identity holds true:
+                                                X
+                                   volX,x (ξ) =     volY,yi (ξ).
+                                                   i
+
+Indeed, since ξ 7→ volX,x (ξ) and ξ 7→ volY,yi (ξ) are continuous, we just need to verify the
+identity when ξ is rational. Any rational ξ generates a C∗ -action and vol(ξ) reduces to the
+degree of an ample orbifold line bundle (see [CS18, Proposition 4.3] and [MSY08, 5.3]). The
+identity follows from the fact that the degree of the orbifold line bundle is the sum of its
+degrees on irreducible components.
+   Thus we may assume X to be normal. Then [LX18, Proposition 3.10], which generalizes
+the convexity result from [MSY08], says that ξ 7→ volX,x (ξ) is a strictly convex function for
+ξ ∈ NR+ .
+
+
+Definition 2.12 (Log Fano cone singularity). Let (X, D) be an affine pair with a good T
+action. Assume (X, D) is normal with klt singularities. Then for any ξ ∈ NR+ , we call
+the triple (X, D, ξ) a log Fano cone structure that is polarized by ξ. If hξi ∼
+                                                                              = C∗ which is
+equivalent to saying that ξ is a multiple of a vector in NQ+ , then we call (X, D, ξ) quasi-
+regular. Otherwise, we call it irregular.
+Definition 2.13 (Quotient in the quasi-regular case). In the quasi-regular case, we can take
+the quotient (S, B) of (X \ {x}, D \ {x}) by the C∗ -group hξi generated by ξ in the sense of
+a Seifert C∗ -bundle, and we will denote by (X, D)/hξi. More precisely, assume ξ ∈ 1l N , and
+we write
+                                                
+                               M        M              M ξ
+                           R=                Rα  :=     Rk .
+                                 k=0   hξ,αi=k/l          k=0
+
+                             L
+Then we take S = Proj( k=0 Rkξ ). By [Kol04, Section 4], π : X \ {x} → S is a Seifert
+C∗ -bundle,
+      P       with the quotient X \ {x} → (S, B1 ) where B1 is the branch divisor. Write
+D =     i a i D i . Since each Di is Cm -invariant, Di is the pull back of a divisor
+                                                                               P ai Ei on S
+and the multiplicity of Di along π ∗ (Ei ) is denoted by mi . Define B2 =        i mi Ei . Let
+B = B1 + B2 . Then π ∗ (KS + B) = (KX + D)|X\{x} since π ∗ (KX + B1 ) = KX\{x} (see
+[Kol04, Corollary 41]) and π ∗ (B1 ) = D|X\{x} .
+    The quotient (S, B) is a log Fano variety, because we assume that (X, D) is klt at x (see
+[Kol04, 42] or [Kol13, Lemma 3.1]).
+Definition 2.14 (Test configuration). Let (X, D, ξ0 ) be a log Fano cone singularity with a
+torus group T action (see Definition 2.12). A T -equivariant test configuration (or simply
+called a test configuration) of (X, D, ξ0 ) is a quadruple (X , D, ξ0 ; η) with a map π : (X , D) →
+C satisfying the following conditions:
+ (1) X is an affine variety and π : X → C is a flat family. D is a divisor on X with Supp(D)
+     not containing any component of a fiber of π.
+ (2) η is a holomorphic vector field that generates a C∗ -action on (X , D) such that π is C∗ -
+     equivariant and π∗ η = −t∂t . As a consequence, there is an isomorphism φ : (X , D) ×C
+     C∗ ∼= (X, D) × C∗ .
+ (3) The torus T acts on (X , D) fiberwise and commutes with the C∗ -action generated by
+                                                                                                 φ
+     η, and coincides with the action on the first factor when restricted to (X , D) ×C C∗ ∼
+                                                                                           =
+     (X, D) × C∗ .
+
+
+                                                   7
+    A test configuration (X , D, ξ0 ; η) is called a product one if there is a T -equivariant iso-
+morphism (X , D) ∼  = (X, D) × C and η = η0 − t∂t where η0 is a coweight vector of T and t∂t
+is the canonical lifting of t∂t on C through the second projection. In this case, we will denote
+(X , D, ξ0 ; η) by
+                             (X × C, D × C, ξ0 ; η) =: (XC , DC , ξ0 ; η).
+   A normal test configuration (X , D, ξ0 ; η) is called Q-Gorenstein if KX + D is Q-Cartier.
+    According to the above definition, a test configuration (X , D, ξ0 ; η) of the log Fano cone
+(X, D, ξ0 ) is a T̃ := T × C∗ -equivariant degeneration of (X, D) where the C∗ -action is gen-
+erated by −η. If it is not a product test configuration, then its central fibre X0 admits an
+effective T̃ -action, whose Lie algebra is generated by the LieL
+                                                               algebra of T and η.
+    Moreover if we assume X = Spec(R) and decompse R = α Rα into weight spaces with
+respect to the fiberwise T -action, condition (1) in the above definition implies that each
+weight piece Rα is a flat C[t]-module. As a consequence X and X0 have the same weight
+cone and Reeb cone with respect to the fiberwise T -action. In particular, ξ0 is contained in
+the Reeb cone of X0 under the T -action.
+Remark 2.15. Any test configuration can be T × C∗ -equivariantly embedded into CN × C
+(for N ≫ 1) and our definition is the same as the definition given in [CS18, Definition 5.1].
+The choice of sign in the identity π∗ (η) = −t∂t in Definition 2.14 is compatible with our
+later arguments and calculations.
+   Because KX +D is Q-Cartier, by the structure theory of T -varieties, there exists a T ×C∗ -
+equivariant nowhere-vanishing section s ∈ |m(KX +D)| (see [LS13, Proposition 4.4], and also
+[MSY08, 2.7]). For any b ∈ R and ξ + bη ∈ NR ⊕ R, define:
+
+                                                     1 Lξ+bη s
+                                     A(ξ + bη) :=              ,
+                                                     m   s
+where Lξ+bη is the Lie derivative of s with respect to the vector field associated to ξ + bη.
+Note that this is a linear function.
+    If (X , D, ξ0 ; η) is any Q-Gorenstein test configuration of an n-dimensional log Fano cone
+(X, D, ξ0 ), we will denote:
+                                              A(ξ0 )η − A(η)ξ0
+                                    Tξ0 (η) =                  .                             (8)
+                                                      n
+Definition 2.16 (Weakly special and special test configurations). In the notations we used
+before, we define a weakly special test configuration (resp. special test configuration) of
+(X, D, ξ0 ) to be a Q-Gorenstein test configuration (X , D, ξ0 ; η) with central fiber (X0 , D0 )
+satisfying that:
+ (4) (X , D + X0 ) has log canonical singularities (resp. (X0 , D0 ) has klt singularities).
+In this case, we say that (X0 , D0 ) is a weakly special degeneration (resp. special degeneration)
+of (X, D).
+    Note that by inversion of adjunction, being special implies being weakly special.
+    For simplicity, we will just say that (X , D) is a Q-Gorenstein (or weakly special, special)
+test configuration if ξ0 and η are clear. We also say that (X, D, ξ0 ) degenerates to (X0 , D0 , ξ0 )
+(or simply to (X0 , D0 )).
+
+Test configuration and filtration
+In [BHJ17, Section 2.5], a filtration viewpoint for test configurations is developed. Here we
+will mainly work with data over the vertex of the cone which brings more flexibility when
+applying the minimal model program. In this section, we will discuss these ideas and modify
+them to fit into our context.
+Lemma 2.17. Given a normal T -equivariant test configuration (X , D, ξ0 ; η) of (X, D), we
+can find a Z-graded sequence of ideals {a• } of R (see (5)) such that
+  1. ak = R for k ≤ 0;
+                                                  L
+  2. ak is a homogeneous ideal for any k ∈ Z: ak = α ak ∩ Rα for any k ∈ Z;
+                                       L
+  3. the extended Rees algebra Rees := k∈Z t−k ak satisfies Spec(Rees) = X .
+
+
+                                                 8
+Moreover, if η is in the Reeb cone of X0 with respect to T̃ = T × C∗ , then ak is primary for
+k > 0.
+                                                                                   L
+Proof. Recall by the definition of the test configuration, X = Spec(R) where R =       Rα and
+each Rα is a flat C[t]-module. For any f ∈ OX , we could denote by f¯ its pull back from the
+                                      ∗ ∼
+first factor of X × C∗ . Since X
+                               L×CC = X ×−k  C∗ , we could mimic the construction in [BHJ17,
+Section 2.5] by defining
+                   L      ak = α f ∈ Rα |t f¯ ∈ Rα , and then we form the extended Rees
+algebra Rees = k∈Z ak t−k . We claim Rees is finitely genrated. In fact, by construction,
+we have the injective morphism Rees → R. Conversely     Pusing the weight decomposition with
+respect to the C∗ -action, any F ∈ Rα is of the form k t−k f¯k for some {fk } ⊂ Rα . So we
+have R ∼ = Rees, which in particular implies that Rees is finitely generated.
+    Since R is a flat C[t]-algebra, that means a0 = R which implies that ak = R for k ≤ 0.
+This is the first property. The second property follows from that the C∗ -action generated by
+η commutes with T .
+    Finally, if η is in the Reeb cone, then hη, αi > 0 for any α ∈ Γ\{0} (see (5)). Thus for
+any α 6= 0 and f ∈ Rα , the order of f vanishing along (t = 0) is hη, αi > 0, which implies
+for any k, f m ∈ ak for m ≫ 0.
+
+Remark 2.18. Since the Reeb cone with respect to T is open, for any given test configuration,
+one can always perturb ξ0 to be a rational Reeb vector ξ0′ ∈ NQ+ . Our choice of the sign for
+η with π∗ (η) = −t∂t means that the weight η on the function t has weight 1. For m ≫ 1
+sufficiently divisible, mξ0′ +η is an integral vector in the Reeb cone with respect to T̃ = T ×C∗ .
+See e.g. Example 2.19.
+    We give a way of obtaining test configurations using models. It generalizes the construc-
+tion of special test configurations via Kollár components as discussed in [LX18, 2.2.1].
+Example 2.19. First, we give an example from [LX20, Example 7.1.2] which will illustrate
+the construction. We refer to [LX18, 2.2.1] for more general constructions.
+Consider the 3-dimensional Ad singularity
+
+                    X = {z12 + z22 + z32 + z4d+1 = 0} ⊂ C4                     with       d > 3.
+                  P
+Set D = ∅, ξ0 = 3i=1 (d + 1)zi ∂zi + 2z4 ∂z4 which generates the natural C∗ -action on X, and
+set the vertex to be x = (0, 0, 0, 0). Then (X, ξ0 ) is a log Fano cone.
+    Consider the filtered blow µ : Y → X which is given by the strict transform of X under
+the weighted blowup of C4 with weights (2, 2, 2, 1). The exceptional divisor is given by E =
+{Z12 + Z22 + Z32 = 0} ⊂ P(2, 2, 2, 1) ∼ = P(1, 1, 1, 1) = P3 . We see that E ∼= P(1, 1, 2) with
+                      1
+the different ∆E = 2 D∞ where D∞ = {Z4 = 0} ∩ E = P2 ∩ E. Note that E is a Kollár
+component.
+    We can also consider the special test configuration given by
+
+               X = {(t; z1 , z2 , z3 , z4 ); z12 + z22 + z32 + td−3 z4d+1 = 0} ⊂ C4 × C,
+                   P3                                   ∗
+and η = −t∂t + 2     i=1 zi ∂zi + z4 ∂z4 generates the C -action
+
+                      (τ, (t; z1 , z2 , z3 , z4 )) 7→ (τ −1 t, τ 2 z1 , τ 2 z2 , τ 2 z3 , τ z4 ).
+
+Since we assume d > 3, the central fibre X0 = {z12 + z22 + z32 = 0} ⊂ C4 is isomorphic to
+(C2 /Z2 ) × C and admits a (C∗ )2 -action generated by ξ0 and η. Note that η|X0 is in the Reeb
+cone of X0 with respect to (C∗ )2 and
+
+                                  (E, ∆E ) = (X0 \ {0})/(C∗ = hηi).
+
+Moreover in this example the log Fano pair (E, ∆E ) admits an orbifold Kähler-Einstein
+metric and is hence K-polystable. So by [LX20, LX18, XZ20], ordE is the unique minimizer
+   c X,x .
+of vol
+Definition 2.20. Let (X, D, ξ0 ) be a log Fano cone singularity. Let µ : Y → X be a T -
+equivariant proper birational morphism from a normal model Y , which is an isomorphism
+outside X \ {x} with a T -equivariant
+                               L      integral Weil divisor E supported on Ex(µ) such that
+−E is ample. Denote by R := k∈Z t−k bk , where bk = µ∗ (OY (−kE)).
+
+
+                                                          9
+    Then (X , D, ξ0 ; η) is a test configuration associated to the model µ : Y → X, where X :=
+Spec(R) andP D is the cycle (with Q-coefficients) degeneration of D. More precisely, if we
+write D = ai Di , where Di are prime divisors with the corresponding   L ideal IDi , then we can
+define Di onP X to be the divisor corresponding to the ideal IDi := k∈Z (bk ∩ IDi )t−k ⊂ R,
+and let D = ai Di .
+   Conversely, starting with a normal test configuration (X , D, ξ0 ; η) and assuming η is in
+the Reeb cone of X0 , we take the primary ideals ak as in Lemma 2.17, and then take the
+normalized filtered blow up (see [TW89, Chapter 1] for the definition) µ : Y → X induced
+by a• = {ak }k∈Z with an exceptional divisor E.
+Lemma 2.21. The above two constructions give equivalence between normal test configura-
+tions (X , D, ξ0 ; η) with η in the Reeb cone and models µ : Y → X satisfying the conditions
+in Definition 2.20. Moreover,
+  1. (X , D, ξ0 ; η) is a special test configuration if and only if µ : Y → X yields a Kollár
+     component; and
+  2. (X , D, ξ0 ; η) is weakly special if and only if (Y, E + µ−1
+                                                               ∗ D) is log canonical.
+
+Proof. If we start with a normal test configuration (X , D, ξ0 ; η), then we get a graded se-
+quence of primary ideals {a• } by Lemma 2.17. If we take the filtered blow up of {a• } and
+get E as above,L  then we claim it is normal and the algebra {bk = µ∗ (OY (−kE))} is the same
+as the algebra
+             L k=0 ak .L
+    In fact,    k=0 ak ⊂     k=0 bk is a subalgebra,
+                                               L      but the latter is integral over the former.
+Thus it suffices to verify that the R-algebra k=0 ak is integrally closed. Similar to the proof
+of [Laz04, 9.6.6], this follows from the fact that to check whether a function f is contained
+in ak suffices to only check it at the P
+                                       divisorial valuation along the the special fiber X0 . More
+precisely, let the special fiber X0 = mi Ei where Ei are the prime divisors, then
+                                                                    M
+                 a homogeneous element f ∈ the normal closure             ak
+                                                                    k=0
+            ⇔ f satisfies an equation f m + a1 f m−1 + · · · + am = 0 with ai ∈ aik ,
+
+which implies the vanishing order of f along Ei is at least kmi as the element in aj have
+vanishing order along Ei at least jmi by the definition. Then we conclude f ∈ ak . L
+    If we start with a normal model µ : Y → X and E as in Definition 2.20, then k=0 bk
+is a Lnormal algebra where bk = µ∗ (OY (−kE)), then we can easily show the Rees alge-
+              −k
+bra     k∈Z t                                    L configuration (X , D, ξ0 ; η) is normal. If
+                 bk is normal, thus the induced test
+                                         ∼
+we take
+      L   the  filtered blow up  then Y  =  Proj(  k=0 bk ) as −E is ample, and the divisor
+Proj( k=0 bk /bk+1 ) ⊂ Y yields E.
+    To prove the second part of the statement, let v : A1C ⊂ X corresponds to the section
+of vertices. Consider the C∗ -action given by η in the data of the test configuration, then
+(S = ProjC[t] Rees, B) is the base of the C∗ -quotient of (X \ v(A1C ), D \ v(A1C )) as a Seifert
+bundle (see [Kol04]), i.e., we remember the codimension one orbifold structure and put it
+into B. Over the special fiber, we have
+                                 M                   M
+                      S0 ∼= Proj     ak /ak+1 ∼
+                                              = Proj     bk /bk+1 ∼
+                                                                  = E.
+                                  k=0                  k=0
+
+If (X , D + X0 ) is log canonical, then X0 is reduced and (X0 , D0 ) is semi-log-canonical.
+Thus E = S0 is reduced and (S0 , B0 := B|S0 ) is semi-log-canonical. Moreover, if we write
+KE + DE = (KY + E + µ−1    ∗ D)|E , then DE is sent to B0 under the isomorphism between E
+and S0 . Thus by inversion of adjunction, (Y, E + µ−1
+                                                    ∗ D) is log canonical.
+    For the converse, assume (E, DE ) is log canonical, it suffices to show that bk /bk+1 =
+H 0 (E, OE (−kE)) for any positive integer k, as this implies that (X0 , D0 ) is the orbifold
+cone over (E, DE ) induced by the ample (Q-Cartier) integral Weil divisor −E. First, since
+the test configuration is Q-Gorenstein, −KE − DE ∼Q λE|E for some λ > 0 . Therefore, E
+and KY + E + µ−1  ∗ D are anti-ample over X,
+
+              −(k + 1)E = KY + E + µ−1                          −1
+                                    ∗ D − (k + 1)E − (KY + E + µ∗ D),
+
+
+
+
+                                               10
+we conclude that R1 µ∗ OY (−(k + 1)E) = 0 by the Kawamata-Viehweg Vanishing Theorem,
+then we can apply µ∗ to the following exact sequence
+
+                   0 → OY (−(k + 1)|E ) → OY (−kE) → OE ((−kE)|E ) → 0.
+
+If we specialize the argument to the plt case, we obtain that E is indeed a Kollár component.
+
+
+Generalized Futaki invariants and K-stability
+We define the generalized Futaki invariant for Q-Gorenstein test configuration using the
+volume function. One can easily show this definition is the same as the one in [CS18].
+However, the formula in Definition 2.22 is more convenient to use for the current paper.
+Definition 2.22 (Generalized Futaki invariant). For any Q-Gorenstein test configuration
+(X , D, ξ0 ; η) of (X, D, ξ0 ) with the central fibre denoted by (X0 , D0 , ξ0 ), its generalized Futaki
+invariant is defined as
+
+                                                    DTξ0 (η) volX0 (ξ0 )
+                            Fut(X , D, ξ0 ; η) :=                          ,
+                                                         volX0 (ξ0 )
+
+where we used Tξ0 (η) in (8) and the directional derivative
+
+                                                   d
+                         DTξ0 (η) volX0 (ξ0 ) :=          volX0 (ξ0 + ǫTξ0 (η)).
+                                                   dǫ ǫ=0
+
+Since generalized Futaki invariant defined above only depends on the data on the central fiber,
+we will also denote it by Fut(X0 , D0 , ξ0 ; η).
+   Next, we will introduce the notions of K-stability. We note that in the definition, we only
+look at special test configurations, in the spirit of [Tia97].
+Definition 2.23 (K-stability). We say that (X, D, ξ0 ) is K-semistable, if for any special test
+configuration (X , D, ξ0 ; η), we have Fut(X , D, ξ0 ; η) is nonnegative.
+   We say that (X, D, ξ0 ) is K-polystable, if it is K-semistable, and any special test config-
+uration (X , D, ξ0 ; η) with Fut(X , D, ξ0 ; η) = 0 is a product test configuration.
+   If (X , D, ξ0 ; η) is a special test configuration, we know A(ξ0 ) = A(X0 ,D0 ) (wtξ0 ) > 0. Then
+we see the following identity holds:
+
+                                             d      c X (wtξ +ǫη ) ·     1
+                    DTξ0 (η) volX0 (ξ0 ) =          vol 0   0                   ,                   (9)
+                                             dǫ ǫ=0                  nA(ξ0 )n−1
+
+where we use the rescaling invariance of the normalized volume and A(ξ0 ) = A(ξ0 + t · Tξ0 (η))
+for t ≪ 1 (see (8)) As a consequence, we can rewrite the Futaki invariant of a special test
+configuration in the following way:
+
+                                            c X0 (wtξ0 ) ·              1
+                   Fut(X , D, ξ0 ; η) := Dη vol                                        .           (10)
+                                                              nA(ξ0 )n−1 · volX0 (ξ0 )
+
+This shows that it differs from the one in [LX18, Definition 2.26] by a positive constant. It
+also differs from Collins-Székelyhidi’s definition by a constant.
+Remark 2.24. Obviously to define the K-stability notions, we can also consider more general
+test configurations than the special ones. In [LX14] we proved that for the K-stability of log
+Fano varieties, to test on all test configurations is equivalent to only test on special test
+configurations.
+    For log Fano cone singularities, results like [LX14] are not completely known. Neverthe-
+less, later in this paper, we have to deal with weakly special test configurations, as they will
+naturally appear in our argument. Thus we need to prove a statement (see Proposition 4.3)
+similar to [LX14, Theorem 4], which says that for log Fano cone singularities, our definition
+of K-semistability is also equivalent to test on all weakly special test configurations.
+    Compared to the other literatures, all test configurations are considered in [CS18], whereas
+in [CS19, LX18] K-stability notions are only tested on special test configurations.
+
+                                                    11
+   We will need the following simple fact, which follows from the definition of the generalized
+Futaki invariant applied to product test configurations:
+Lemma 2.25. Assume that the log Fano cone (X, D, ξ0 ) admits a torus action by T ′ ∼
+                                                                                               ′
+                                                                                      = (C∗ )r
+that commutes with hξ0 i. Let N ′ be the coweight lattice of T ′ . Then the function
+
+                                      η 7→ Fut(XC , DC , ξ0 ; η)
+
+is linear with respect to η ∈ NR′ .
+
+Log Fano varieties
+In the below, we will specialize previous definitions to the case of quasi-regular log Fano
+cones, which correspond to Fano projective varieties.
+Definition 2.26. Assume (S, B) is a log Fano variety. A test configuration of (S, B, −(KS +
+B)) is a quadruple (S, B, L; η) with a map π : (S, B) → C that satisfies the following condi-
+tions:
+ (1) L is a π-ample Q-line bundle and π : S → C is a flat family and Supp(B) does not
+     contain any component of the fiber. We denote the central fiber by (S0 , B0 , L0 ).
+ (2) There is a C∗ -action (with coweight η) on (S, B) such that π is C∗ -equivariant where
+     C∗ acts on the base C by multiplication and there is a C∗ -equivariant isomorphism
+     φ : (S, B, L) ×C C∗ ∼
+                         = (S, B, −(KS + B)) × C∗ , where C∗ -trivially acts on the first factor
+     of (S, B, −(KS + B)) × C∗ .
+Most of the time, as in the literature, we omit η in the quadruple and simply denote the test
+configuration by (S, B, L).
+   Such a test configuration is called Q-Gorenstein if S is normal,
+
+                       KS + B is Q-Cartier        and     L ∼Q −(KS + B).
+
+In this case, we usually just write the test configuration as (S, B; η) or simply as (S, B).
+    A Q-Gorenstein test configuration is called special if (S0 , B0 ) is a log Fano pair with klt
+singularities. In this case, we say that (S0 , B0 ) is a special degeneration of (S, B).
+    A test configuration (S, B, L; η) is called a product one if there is an isomorphism
+
+                (S, B, L) ∼
+                          = (S, B, −(KS + B)) × C            such that η = η0 + t∂t
+
+where η0 is a coweight vector on some torus group T acting on (S, B) and t∂t is the coweight
+corresponding to the C∗ factor. In this case, we will denote (S, B, L; η) simply by (SC , BC ; η).
+    For a test configuration of a log Fano variety, by trivially adding a copy over {∞}, we
+can take the intersection formula (see [Wan12, Oda13]) of the generalized Futaki invariant
+as the definition. More precisely, for any test configuration of (S, B), we can glue it with
+a trivial family of (S, B) × P1 \ {0} along (S, B) × C∗ to get (S̄, B̄) over P1 and denote by
+L̄ ∼Q −(KS̄/P1 + B).
+Definition 2.27 (Generalized Futaki invariants). For any Q-Gorenstein test configuration
+(S, B, L; η) of (S, B), we define the generalized Futaki invariant
+
+                                        L̄·n
+              Fut(S, B; η) := −                           where n = dim S + 1.
+                                  n(−(KS + B))·n−1
+   By the intersection formula (see [Wan12, Oda13]), the above definition of the generalized
+Futaki invariants coincides with the one in [Don02].
+Definition 2.28 (K-stability, see [Tia97, Don02, LX14]). We say that (S, B) is K-semistable,
+if the generalized Futaki invariant Fut(S, B; η) is nonnegative for any special test configura-
+tions. We say that (S, B) is K-polystable, if it is K-semistable, and any special test configu-
+ration (S, B, L; η) with Fut(S, B, L; η) = 0 is a product test configuration.
+Remark 2.29. We choose to work specifically on Q-Gorenstein test configurations (S, B, L),
+since it fits into our study on log Fano cones. By [LX14], we know for a log Fano variety,
+working on this intermediate generality of test configurations yields the same stability notions
+as working either only on special test configurations or on all test configurations.
+
+                                                 12
+    Given a Q-Gorenstein test configuration (S, B, L; η), by choosing λ such that λ(KS +B) is
+Cartier, we can get a Q-Gorenstein test configuration (X , D, ξ0 ; η) of (X, D) := C(S, B, −λ(KS +
+B)) by letting (X , D) = C(S, B; −λL), ξ0 = u∂u the canonical rescaling vector on X where
+u is an affine coordinate on the line bundle λL, and letting η also denote its canonical lifting
+from S to X that corresponds to the pull back of pluri-log-canonical forms (see [Li17b, Page
+3186-3187].
+Lemma 2.30 (see [CS18, Theorem 4] and [Li17b, Lemma 6.20]). Notations as above. If
+(S, B; η) is a Q-Gorenstein test configuration, then
+
+                                     Fut(S, B; η) = Fut(X , D, ξ0 ; η).
+
+Proof. With the above choice of ξ0 , A(ξ0 ) = λ−1 . Since η is the canonical lifting, we have
+A(η) = 0 so that Tξ0 (η) = A(ξ0)    λ−1
+                            n η = n η (see (8)). So we get:
+
+                             λ−1 dvolX0 (ξ0 + tη)                  wm          λn−1 L̄·n
+    DTξ0 (η) volX0 (ξ0 ) =                            = λ−1 lim  n
+                                                                            =−           ,
+                              n         dt                 m→+∞ m /(n − 1)!       n
+                                                  t=0
+
+where wm is the weight of the hηi action on H 0 (S0 , −mλ(KS0 + B0 )). The second identity
+follows from [CS18, Theorem 4] (see also the calculation in [Li17b, Proof of Lemma 6.20]). For
+the last identity, see [BHJ17, Theorem 5.3]. Dividing both sides by volX0 (ξ0 ) = λn−1 (−(KS +
+B))·n−1 we get the identity.
+
+    The above lemma says that the definition 2.27 is compatible with the generalized Futaki
+invariants for log Fano cones in Definition 2.22. Thus Definition 2.23 specializes to Definition
+2.28. It is well known that if we have a product test configuration induced by a vector
+field coming from a C∗ -action on (S, B), then the generalized Futaki invariant defined above
+becomes the classical Futaki invariant. It also follows from Lemma 2.25 that
+Lemma 2.31. Assume a log Fano variety (S, B) admits a torus action by T ∼      = (C∗ )r . Let
+N be the coweight lattice of T . Then the Futaki invariant η 7→ Fut(S × C, B × C; η) is linear
+with respect to η ∈ NR .
+
+
+3     Case of log Fano pairs
+In this section, we will focus on the stability of log Fano pairs. More concretely we will
+construct a common degeneration of two K-semistable degenerations of a log Fano variety,
+as well as investigate the equivariant K-stability for a torus action. Even in this case of log
+Fano varieties, we find it more flexible to work on the associated log Fano cones in order to
+use a combination of techniques from the minimal model program and results on normalized
+volumes. The study will be generalized to log Fano cones later. However, we believe that
+treating the case of log Fano pairs first will help the reader to more easily get the main idea.
+
+3.1     K-semistable degeneration of K-semistable log Fano pair
+We will need the following lemma which allows us to reduce a two-step equivariant degener-
+ation to a single equivariant degeneration. The idea of its proof is similar to the one used in
+[LX20, Section 6]. In fact, the proof is a mimic of the argument in the classical GIT situation,
+but replacing Kempf’s instability theorem [Kem78, Corollary 4.5] by [LX20, Theorem 1.4].
+Lemma 3.1. Let (S, B, η) be a special test configuration of a K-semistable log Fano va-
+riety (S, B) with central fiber (S0 , B0 ). Suppose that Fut(S, B) = 0. Then (S0 , B0 ) is a
+K-semistable log Fano variety.
+
+Proof. By [LX20, Theorem E], if a log Fano pair admits a torus action, then to test its
+K-semistability it suffices to consider torus equivariant test configurations. Therefore, if
+(S0 , B0 ) is not K-semistable, then there is an equivariant special test configuration (S ′ , B ′ ) :=
+(S ′ , B ′ , η ′ ) with respect to the C∗ -action corresponding to η such that
+
+                                             Fut(S ′ , B ′ , η ′ ) < 0.
+
+We denote by (S0′ , B0′ ) the central fiber of (S ′ , B ′ , η ′ ).
+
+                                                        13
+     We can assume (S, B) (resp. (S ′ , B ′ )) is C∗ -equivariantly embedded into PN × C × {0}
+(resp. PN × {0} × C). By abuse of notations, we denote η : C∗ → SL(N + 1) (resp.
+η ′ : C∗ → SL(N + 1)) to be the 1-parameter subgroup (1-PS) generated by η (resp. η ′ ).
+Then η commutes with η ′ , or equivalently [η, η ′ ] = 0. Let Θ = mB for some sufficiently
+divisible positive integer m such that Θ is integral.
+  Hilb(S, Θ) ∈ HN,P,p := {(Hilb(S), Hilb(Θ)) ∈ Hilb(PN , P ) × Hilb(PN , p) | Θ ⊂ S ⊂ PN }
+                                                                                        (11)
+where P (k) = h0 (OS (k)) and p(k) = h0 (OΘ (k)) for k ≫ 1 are the Hilbert polynomials for
+(S, Θ) ⊂ PN × PN . The SL(N + 1)-action on PN induces an action on HN,P,p. We then have
+the following convergence:
+                               Hilb(S0 , Θ∗0 ) = lim η(t) · Hilb(S, Θ).
+                                                     t→0
+
+We remark Θ0 := mB0 is not necessarily the same as the scheme Θ∗0 due to the possible
+appearance of embedded points on Θ∗0 . However, we have the inclusion of the ideal sheaves
+IΘ∗0 ⊂ IΘ0 , with the support of the cokernel being of codimension at least two on S0 . We
+can similarly define p′ (k) = h0 (OΘ0 (k)) and have the following convergence:
+                                                                                  ′
+                        Hilb(S0′ , Θ′0 ) = lim η ′ (t) · Hilb(S0 , Θ0 ) ⊂ HN,P,p
+                                           t→0
+                        Hilb(S0′ , Θ′∗         ′                 ∗
+                                    0 ) = lim η (t) · Hilb(S0 , Θ0 ) ⊂ H
+                                                                         N,P,p
+                                                                               .
+                                            t→0
+
+Therefore, we have the inclusion of the ideal sheaves IΘ′∗      0
+                                                                  ⊂ IΘ′0 , and the codimension of the
+support of the cokernel is at least two on S0′ .
+    Our goal now is to construct a new test configuration (S ′′ , B ′′ ) of (S, B) with a special
+fiber (S0′ , B0′ ) such that Fut(S ′′ , B ′′ ) < 0, contradicting to our assumption that (S, B) is
+K-semistable.
+    Notice that the action of C∗ × C∗ ∼          = hηi × hη ′ i < SL(N + 1)2 on HN,P,p induces a
+  ∗     ∗
+C × C -equivariant map
+                           φ : C∗ × C∗        −−−−−→        HN,P,p
+                                                                                                (12)
+                                (η, η ′ )       7−→       ′
+                                                     (η, η ) · Hilb(S, Θ)
+which may be regarded as a rational map φ : P1 × P1 99K HN,P,p . By extending φ to the
+closure the its graph:
+                                                                          φ̂
+                    (P1 × P1 ) × HN,P,p ⊃ G := graph(φ) −−−−−−−−−→ HN,P,p ,
+we obtain the following diagram
+
+                                                    ❥❥❥4 G ❑❑❑                                  (13)
+                                                ❥❥❥❥
+                                           τ̂ ❥❥❥❥
+                                                               ❑❑ φ̂
+                                                                 ❑❑
+                                      ❥❥❥                   f      ❑❑
+                                    ❥❥                               ❑%
+                              ❥❥❥❥
+                                                               φ
+                             ❥ τ
+                         C∗       / C∗ × C∗         / P1 × P1 ❴ ❴ ❴/ HN,P,p ,
+                            ❥
+                                                                        8
+
+                                                     (η,η ′ )·Hilb(S,Θ)
+
+where f is a (C∗ × C∗ )-equivariant blow-up, φ(0, 0) = Hilb(S0′ , Θ′∗
+                                                                   0 ) and
+
+                                    τ : C∗        −−−−−→       C∗ × C∗
+                                                                                                (14)
+                                         t          7−→         (tk , t)
+is a 1-PS with k ≫ 1 and τ̂ its lift. Then τ̂ satisfies
+                        φ̂ ◦ τ̂ (0) = lim φ̂ ◦ τ̂ (t) = φ(0, 0) = Hilb(S0′ , Θ′∗
+                                                                              0 ).
+                                     t→0
+
+  Let (S , Θ̃ ) be the flat family obtained by pulling pack the universal family (S Hilb , B Hilb) →
+          ′′   ′′
+ N,P,p                         1
+H     via τ̂ , and let B ′′ := m Θ̃′′ . Then (S ′′ , B ′′ ) is a special test configuration and we have
+                       Fut(S ′′ , B ′′ ) = Fut(S0′ , B0′ ; kη + η ′ )
+                                        = Fut(S0′ , B0′ ; kη) + Fut(S0′ , B0′ ; η ′ )
+                                        = Fut(S0 , B0 ; kη) + Fut(S0′ , B0′ ; η ′ )
+                                        = k · Fut(S, B) + Fut(S ′ , B ′ )
+                                        = 0 + Fut(S ′ , B ′ ) < 0,
+
+                                                      14
+where we used the linearity of the Futaki invariant (cf. Lemma 2.31) in the second identity.
+Hence (S ′′ , B ′′ ) is the test configuration we are looking for and our proof is completed.
+
+3.2     Common degenerations of log Fano pairs
+3.2.1    A common degeneration result and outline of proof
+The main technical theorem of this section is the following.
+Theorem 3.2. Let (S, B) be an (n − 1)-dimensional K-semistable log Fano variety. If there
+                                                                                             (1)  (1)
+are special test configurations (S (i) , B (i) ) (i = 1, 2) of (S, B) with central fibers (S0 , B0 )
+        (2)     (2)
+and (S0 , B0 ) such that Fut(S (i) , B (i) ) = 0, then there are two special test configura-
+                              (i)  (i)
+tions (S ′(i) , B ′(i) ) of (S0 , B0 ) with isomorphic central log Fano fibers (S0′ , B0′ ) such that
+      ′(i)    ′(i)
+Fut(S , B ) = 0.
+  We remark that Theorem 3.2 should be regarded as an analogy of a corresponding state-
+ment in classical geometric invariant theory (GIT) (see e.g. [New78, Theorem 3.5]). As an
+immediate consequence we have the following:
+                                                                           (1)   (1)
+Corollary 3.3. In the above notion, if we assume further that (S0 , B0 ) is K-polystable,
+                                                (2)  (2)
+then there is a special test configuration of (S0 , B0 ) with generalized Futaki invariant 0
+                                   (1)   (1)
+and central fiber isomorphic to (S0 , B0 ).
+    To make our proof of Theorem 3.2 in 3.2.2 more accessible, we first give an outline of the
+argument. We will use notations introduced in previous sections.
+    Motivated by the works in [Li17b, LL19, LX20], we consider the normalized volume
+          c (X,D,x) (·) defined on the valuation space ValX,x over the vertex x of the cone
+function vol
+(X, D) = C(S, B; −λ(KS +B)) for a sufficiently divisible λ > 0. Then (S (1) , B (1) ) determines
+a “ray” of valuations, temporarily denoted by {wǫ }0≤ǫ≪1 , emanating from the canonical
+valuation w0 = ordS (S also denotes the divisor obtained by blowing up the vertex). Indeed,
+by Lemma 3.4 below, when k ≫ 1, w1/k = ak · ordEk , where ak > 0 and Ek is a Kollár
+component over (X, D, x) (see Lemma 3.4). Moreover we know that the generalized Futaki
+invariant Fut(S (1) , B (1) ) is the derivative of the normalized volume at w0 along this ray.
+    By taking cones similar as before, {(S (i) , B (i) )}i=1,2 induce special degenerations of
+(X, D), which will be denoted by {(X (i) , D(i) )}i=1,2 . Note that Ek × C∗ determines a diviso-
+rial valuation over X × C∗ and hence over (X (2) , D(2) ). As we mentioned in the introduction,
+                                               (2)                                               (2)
+our main goal is to construct a model Yk → X (2) with a (prime) exceptional divisor Ek
+given by Ek × C∗ , such that it satisfies (Yk , Ek ) ×C C∗ ∼
+                                                (2)  (2)
+                                                               = (Yk , Ek ) × C∗ , where the isomor-
+phism is compatible with the equivariant isomorphism of the second special test configuration.
+Based on the results from the minimal model program (MMP) (see [BCHM10]), this would
+be true if we could find a graded sequence of ideals A• and a positive real number c′k such
+that the following two conditions are simultaneously satisfied:
+
+             (X (2) , D(2) + c′k A• ) is klt   and A(Ek × C; X (2) , D(2) + c′k A• ) < 1,       (✿)
+
+where A(Ek × C; X (2) , D(2) + c′k A• ) is the log discrepancy of (the birational transform of)
+Ek × C with respect to the triple (X (2) , D(2) + c′k A• ). Note that this way of applying MMP
+is also a major ingredient in the study of some related problems in [Blu18, LX20, LX18] .
+    To construct such a graded sequence A• of ideals, we look at the graded sequence of
+valuation ideals {a• } of ordEk and its equivariant degeneration along the second special test
+configuration (X (2) , D(2) ). The resulting graded sequence of ideals over X (2) will be denoted
+by A• . We claim for k ≫ 1, A• is exactly what we are looking for. Indeed, as we will
+show (see Claim 3.6), the assumptions that (S, B) is K-semistable and Fut(S (1) , B (1) ) = 0
+guarantee the existence of c′k satisfying the two conditions in (✿). This is possible thanks to
+the interaction between K-semistability and minimization of normalized volumes/normalized
+multiplicities.
+                                                               (2)     (2)
+    Applying the relative Rees algebra construction to Ek ⊂ Yk /C, and then taking a
+quotient by the natural rescaling C∗ -action, one can obtain a family over C2 , whose restriction
+                                                                                         (1)  (1)
+to C × {t} for t 6= 0 is the same as (S (1) , B (1) ) and it gives a degeneration of (S0 , B0 )
+when restricted to C × {0}. On the other hand, over {0} × C, one get a degeneration of
+
+
+                                                   15
+  (2)   (2)                                                                      (i)   (i)
+(S0 , B0 ). Therefore, we obtain that the two log Fano varieties (S0 , B0 ) (i = 1, 2),
+which are special fibers of the two special test configurations (S (i) , B (i) ) (i = 1, 2) with
+Fut(S (i) , B (i) ) = 0 (i = 1, 2), indeed admit degenerations with isomorphic special fibers (see
+Theorem 3.2).
+
+3.2.2    Proof of Theorem 3.2
+                                                                     (1)   (1)           (2)   (2)
+As (S (i) , B (i) ) (i = 1, 2) are special test configurations, (S0 , B0 ) and (S0 , B0 ) are
+log Fano varieties. Consider the cone (X, D) = C(S, B; −λ(KS + B)) over S and similarly
+   (i)   (i)           (i)  (i)             (i)
+(X0 , D0 ) = C(S0 , B0 ; −λ(KS (i) +B0 ))(i = 1, 2) for some sufficiently divisble λ. Denote
+                                      0
+                                                 (i)
+the corresponding degeneration of X to X0 over C to be X (i) , then we get special test
+configurations (X (i) , D(i) , ξ0 ; η (i) ) of (X, D, ξ0 ), where D(i) is the cone over B (i) and ξ0 is
+from the natural C∗ -action on the cone.
+                                                                           (1)
+    From [BHJ17, Definition 4.4], we know that the central fiber S0 of the special degen-
+eration S (1) induces a valuation w′ := q · ordF for some divisor F over S. Let ordS denote
+the canonical divisorial valuation associated to the exceptional divisor, which is isomorphic
+to S, obtained by blowing up the vertex x. Assume µ : S̃ → S is a birational morphism such
+that the divisor F is on S̃ and (S̃, F ) is log smooth. Let X̃ → X be the resolution given by
+the total space of the line bundle of µ∗ (λ(−KX − B)) over S̃. Then following [Li17b, Page
+                                                   (1)
+3181-3182], we denote by a1 = −λ(A(S,B)×C (S0 ) − 1) and let wǫ be the quasi-monomial
+valuation on the model (X̃, S̃ + F̃ ) with weight (1 + ǫa1 , ǫq) with respect to S̃ and the pull
+back F̃ of F by X̃ → S̃ (see [Li17b, Definition 6.12]). We choose ǫ∗ such that 1 + ǫa1 > 0
+for any ǫ ∈ [0, ǫ∗ ). Then wǫ is centered at the vertex x of X. By [Li17b, Proposition 6.16],
+we have the identity:
+                    A(X,D) (vk ) = kA(X,D) (w1/k ) = k · A(X,D) (ordS ) = k · λ−1 .                  (15)
+   For N ∋ k ≫ 1, let vk = k ·w1/k . Then vk = d·ordEk is a multiple of a divisorial valuation
+ordEk for some d ∈ Z>0 . As a valuation, we can describe vk explicitly as follows (see [Li17b,
+(57)]). For any f ∈ H 0 (S, −mλ(KS + B)),
+                                     vk (f ) = km + ordS (1) (f¯).                                   (16)
+                                                          0
+
+
+where f¯ is the meromorphic section of mL → S obtained by pulling back f via the map
+                              (1)                             p1
+                          (S\S0 , mL) ∼
+                                      = (S × C∗ , m · p∗1 L) −→ (S, mL).
+Note that vk can also be defined as the restriction of wtkξ0 −η from C(X (1) ) to C(X) by using
+                                         (1)
+the C∗ -equivariant isomorphism X (1) \X0 ∼  = X × C∗ (see [Li17b, page 3184-3185]).
+Lemma 3.4. Notations as above, for k ≫ 1, the divisor Ek corresponding to vk is a Kollár
+component with an associated model Yk → (X, D). Moreover, the special test configuration
+(X (1) , D(1) ) is given by the special test configuration associated to Ek (in the sense of Def-
+inition 2.20) up to a base change. In particular (S (1) , B (1) ) can be recovered by the model
+Ek → Yk → (X, D).
+
+Proof. For simplicity, we denote L = −λ(KS + B). By [BHJ17, Proposition 2.15] (see also
+Lemma 2.17), we know that X (1) is given by
+                                                     
+                           M M
+               SpecC[t]           t−j F j H 0 (S, mL) =: SpecC[t] (R(1) )
+                              m∈N    j∈Z
+
+where F j H 0 (S, mL) is given by:
+                                       
+                      F j H 0 (S, mL) = s ∈ H 0 (S, mL) | t−j s̄ ∈ H 0 (S, mL) .
+              (1)
+Therefore X0        is isomorphic to
+                                                               !
+                               M M
+                         Spec        j 0
+                                     F H (S, mL)/F j+1
+                                                       H (S, mL)  ,
+                                                        0
+
+                              j∈N   m∈N
+
+
+
+                                                  16
+                            (1)
+and the (C∗ )2 -action on X0 is induced by the two gradings.
+    On the other hand, f ∈ F j H 0 (S, mλ(−KS − B)) if and only if ordS (1) (f¯) ≥ j which by
+                                                                       0
+[Li17b, (57)] is equivalent to
+
+                           vk (f ) =     mk + ordS (1) (f¯) ≥ mk + j .
+                                                        0
+
+
+In other words, the valuation ideal ap (vk ) of vk = d · ordEk is determined by:
+
+    f ∈ H 0 (S, mλ(−KS − B)) ∩ ap (vk ) if and only if f ∈ F p−mk H 0 (S, mλ(−KS − B)).
+
+   Since vk ∈ ValX,x is C∗ -invariant, we have the identity:
+                          MM
+                grvk R =           F p−mk H 0 (S, mL)/F p+1−mk H 0 (S, mL).
+                           p∈dZ m
+
+
+Let ξ k1 := ξ0 − k1 η. For an element
+
+                             f¯ ∈ F j H 0 (S, mL)/F j+1 H 0 (S, mL),
+
+its weight vector is α = (m, −j) and hξ k1 , αi = m + kj . Thus
+
+                                  Proj(grordE R) ∼
+                                                 = Proj(grvk R)
+                                               k
+
+
+                     (1)
+is the quotient of X0  by the C∗ -action generated by ξ k1 (see Definition 2.13). So we have:
+                (1)  (1)        
+(Ek , Bk ) := (X0 , D0 )\{x(1) } /hξ k1 i (where x(1) is the vertex and Bk includes the orbifold
+                                                        (1)   (1)
+locus) and Ek can be extracted over X. Since (X0 , D0 ) has klt singularities, (Ek , Bk ) is a
+log Fano variety which has klt singularities and hence is a Kollár component over X by the
+inversion of adjunction.
+    To see that last statement, note that we can rewrite R(1) as:
+                                  MM
+                        R(1) =            t−j amk+j (vk ) ∩ H 0 (S, mL),
+                                     j∈Z m∈N
+                                     MM
+                                 =             t−p+mk ap (vk ) ∩ H 0 (S, mL),
+                                     p∈Z m∈N
+
+which is isomorphic to the extended Rees algebra of a• (vk ):
+                      MM                                   M
+                              t−p ap (vk ) ∩ H 0 (S, mL) =    t−p ap (vk ).                (17)
+                        p∈Z m∈N                                 p∈Z
+
+
+Indeed, it is easy to verify that the map t−p+mk f 7→ t−p f for any f ∈ ap ∩ H 0 (S, mL) is an
+isomorphism of the two algebras. On the other hand, the extended Rees algebra of ordEk is
+given by:
+                            M                    M     p
+                               u−q aq (ordEk ) =    u− d ap (vk ).
+                           q∈Z                      p∈dZ
+
+
+From this we see that X (1) = Y ×C,t7→td C where Y is the test configuration associated to
+ordEk in the sense of Definition 2.20.
+                                                                                (1)
+    In the proof of Lemma 3.4, there is a rank 2 torus (C∗ )2 acting on X0 , such that if we let
+                                          (1)        (1)
+ξ0 be the coweight vector (1, 0), then X0 /hξ0 i ∼= S0 , and the action by the coweight (0, 1)
+                               (1)
+is induced by the action on S0 from the test configurational S (1) structure. We construct
+a ray ξǫ = ξ0 − ǫη, where η corresponds the action with coweight (0, 1). Then any ξǫ gives
+                                        (1)
+a quasi-monomial valuation wtǫ on X0 (see (7)). Moreover, for ǫ ∈ [0, ǫ∗ ), it also induces
+a sequence of quasi-monomial valuations wǫ in X which is contained in ValX,x (see [LX18,
+Proof of Theorem 3.5]). Our proof in Lemma 3.4 just gives a verification of the divisorial
+valuation, which can be easily extended to the general case.
+
+
+                                                   17
+    Furthermore, as proved in [Li17b, Lemma 6.20] or [LX18, Section 2.4], if we define f (ǫ) :=
+c ǫ ), then it is a smooth convex function on [0, ǫ∗ ) with 0 < ǫ∗ ≪ 1 such that f (0) = vol(v)
+vol(w                                                                                    c
+and
+                                          d c                  d c
+                          f ′ (0)   =        volX (wǫ )      =    volX0 (wtǫ )
+                                          dǫ             ǫ=0   dǫ              ǫ=0
+                                          d       c X (ξ0 − ǫη)
+                                    =            vol   0
+                                          dǫ ǫ=0
+                                    = C · Fut(X (1) , D(1) , ξ0 ; η (1) ),
+
+where the last identity follows from (10) and the constant
+
+                                    C = n · AX0 (wtξ0 )n−1 · vol(ξ0 ) > 0.
+
+Lemma 3.5. For k sufficiently large, the model Yk → X extracting Ek can be degenerated
+                                    (2)
+along X (2) to obtain a model µ : Yk → X (2) over C with an exceptional divisor Ek such that
+the following properties hold true:
+  1. There is the following isomorphism which is equivariant with respect to the C∗ -action
+     generated by η (2) :
+                                 (2)  (2)
+                               (Yk , Ek ) ×C C∗ ∼
+                                                = (Yk , Ek ) × C∗ .
+         (2)                 (2)        (2)
+  2. (Yk , µ−1
+             ∗ D
+                 (2)
+                     + Ek + (Yk )t ) is log canonical for any t ∈ C (i.e., in the terminology
+                                   (2)              (2)
+     of [Kol17, Definition 2.2], (Yk , µ−1
+                                        ∗ D
+                                             (2)
+                                                 + Ek ) a locally stable family over A1C ).
+
+Proof. For a fixed sufficiently large k, denote by Ik the m-primary ideal over x ∈ X induced
+by Ek which is the push forward of O(−mEk ) for a fixed sufficiently divisible m. Let
+
+                                        ck = lct(Ik ; X, D) =: lct(Ik )
+
+be its log canonical threshold. Then because Ek is a Kollár component, we have:
+                               
+                                1     c                         n
+                            f      = vol(ordEk ) = mult(Ik ) · ck .
+                                k
+
+Note that because of the rescaling invariance of the normalized multiplicities mult(Ik ) ·
+lctn (Ik ), we can replace Ik by its powers and the normalized multiplicities do not change, so
+we do not specifically denote m.
+
+   Since f ′ (0) = C · Fut(X (1) , D(1) , ξ0 ; η) = 0, we have
+                                                           
+                                          1                   1
+                                    f           = f (0) + O     .
+                                          k                  k2
+
+   Fix k, for each l ≥ 1, as in [LX20, Lemma 4.1], we can construct a graded sequence of
+ideals A• = {Al } on X (2) such that
+
+               Al ⊗C[t] C[t, t−1 ] ∼
+                                   = Ikl [t, t−1 ]    and Al ⊗C[t] (C[t]/(t)) ∼
+                                                                              = in(Ikl ),
+
+where {in(Ikl )} is the graded sequence of ideals consisting of initial ideals of the sequence
+                                          (2)
+{Ikl }l for the C∗ -degeneration of X to X0 . To simplify the notations, we just denote
+
+                                         bk,• = {bk,l }l = {in(Ikl )}.
+
+
+Claim 3.6. For any ǫ > 0, we can find k sufficiently large and δ sufficiently small satisfying:
+                                                                                 (2)   (2)
+                A(Ek ; X, D + c′k Ik ) < ǫ/2           and       c′k < lct(bk,• ; X0 , D0 )   (18)
+
+with c′k := ck (1 − δ).
+
+
+
+                                                       18
+Proof of Claim 3.6. To prove the claim, we first note that, by using A(Ek , X, D + ck Ik ) = 0
+and identity (15):
+                      A(Ek ; X, D + (1 − δ)ck Ik ) = δ · A(X,D) (Ek ) = δ · k · A(X,D) (ordS ).
+                                                                    (2)           (2)
+On the other hand, since (X0 , D0 ) is K-semistable by Lemma 3.1, we know that f (0) =
+            (2)  (2)
+vol(x(2) , X0 , D0 ) (see Theorem 2.5), where x(2) is the vertex. Therefore,
+                                                                                                             (2)           (2)
+                                                         f (0) ≤                   lct(bk,• ; X0 , D0 )n · mult(bk,• )
+                                                               ≤                   cnk · mult(Ik )
+                                                                                                        
+                                                                                         1                 1
+                                                                         =         f         = f (0) + O      ,
+                                                                                         k                k2
+where we have used Proposition 2.4 for the first inequality, and the non-increasing of log
+canonical thresholds under specialization as well as mult(bk,• ) = mult(Ik ) for the second
+inequality.
+   We get the inequality:
+                                       (2) (2)            1/n
+                          lct(bk,• ; X0 , D0 )      f (0)
+                                               ≥                .
+                                     ck            f (1/k)
+                                        1
+Since (1 + O( k12 )) n is also of the order (1 + O( k12 )), for any fixed ǫ, there exists K0 ≫ 0 such
+that for any k ≥ K0 ,
+                                         1/n
+                                   f (0)                        ǫ
+                                               ≥1−                       .
+                                  f (1/k)              4k · AX,D (ordS )
+Now if we choose δ to be:
+                                                      ǫ
+                                         δ=                       ,
+                                            2k · A(X,D) (ordS )
+                                                                                 (2)           (2)
+then c′k = (1 − δ) · ck < lct(bk,• ; X0 , D0 ) and
+                                                               A(Ek , X, D + (1 − δ)ck Ik ) = ǫ/2.                                                                                                                  (19)
+
+
+    We may assume ǫ is less than 1. It follows from Claim 3.6 that
+                                                                                                                                                                                                    (2)
+    A(Ek × C; X (2) , D(2) + c′k A• ) < ǫ/2                                                               and                    c′k < lct(A• ; X (2) , D(2) + X0 ),                                                (20)
+where we used the inversion of adjunction for the second inequality. We can then apply
+                                                                          (2)
+[BCHM10, Corollary 1.4.3] to precisely extract an irreducible divisor Ek to obtain a bira-
+                        (2)
+tional morphism µ : Yk → X (2) whose restriction over X × C∗ is the divisor Ek × C∗ and
+    (2)
+−Ek is ample over X (2) .
+                    (2)                     (2)  (2)
+    Moreover, as (Yk , µ∗−1 D(2) + (1 − ǫ)Ek + Y0 ) is log canonical, by ACC of log canonical
+thresholds ([HMX14, Theorem 1.1]), we may choose ǫ to be sufficiently small and independent
+                  (2)              (2)     (2)
+of k such that (Yk , µ−1∗ D
+                            (2)
+                                + Ek + Y0 ) is log canonical.
+                                                                                                                             (2)
+     There is a C∗ × C∗ = hξ0 i × hη (2) i-action on X0 . Note that [ξ0 , η (2) ] = 0. The ideals
+{bk,• } is (C∗ )2 -equivariant. In fact, by definition it is clearly equivariant with respect to
+hη (2) i. It is also equivariant with respect to the first factor because Ek is hξ0 i-invariant and
+X (2) is hξ0 i-equivariant.
+
+                                                                                              (2)             (2)
+               (2)                                   (2)    (X (2) ,D (2) )←−Y                      ←−E                  k             k
+          (X0 , D0P ) o o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ (X, D) o                                                                                                        Yk ← Ek   (21)
+                    O                                   PP
+                                                                                                                                                           ♥  ♥ ♥ O
+                       O                                       P(                                                                                                   O
+                          O                                        (2)             (2) o(S
+                                                                                                      (2)
+                                                                                                                ,B(2) )                               v♥ ♥              O
+                             O                                (S0 , B0 )                     o /      o /      / o       / o  / o (S, B)                                  O
+                                O                                        O                                                           O                                     O
+                                   O                                        O                                                            O                                    O (1) (1)
+  (X ′(2) ,D ′(2) ) O                                 (S ′(2) ,B′(2) ) O                                                                    O (S (1) ,B(1) )                    O (X ,D )←Yk ←Ek =Ek ×A1
+                                      O                                         O                                                               O                                   O
+                                         O                                      ′                                                                                                      O
+                                            O                         ′               o                                           (1)               (1)
+                                               O                  (S
+                                                                    6 0 , B0 ) ′(1) ′(1)(S0 , B0hP )P
+                                                                                         o /      o /       o /     o /                                                                      O
+                                                                                                                                                                                                O
+                                                  O           ♥   ♥                  (S                   ,B                 )                            PP                                      O
+                                       O ♥ ♥ ♥                                                                                                                                     
+                  ′                                  ′ o o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/ o/                                          (1)                                  (1)
+            (X0 , D0 )                                                                       ′(1)                       ′(1)
+                                                                                                                                                              (X0 , D0 ) o Yk,0 ← Ek .
+                                                                           (X          ,D          )
+
+
+
+                                                                                                           19
+    Now we apply the family version of the construction first introduced in [LX20, Section
+                                    (2)                                  (2)
+2.4], to conclude that the model Yk → X (2) with relative anti-ample Ek over X (2) yields a
+                   (2)
+degeneration of X      which gives a family (X, D) over C , whose restriction over (C∗ )2 ⊂ C2
+                                                         2
+
+is isomorphic to (X, D) × (C∗ )2 . More precisely, if we assume X (2) = SpecC[s] (R(2) ) and
+define the extended Rees algebra:
+                                 M
+                            R=        am (ordEk )s−m ⊂ R(2) [s, s−1 ],                     (22)
+                                   m∈Z
+
+
+where as before am (ordEk ) = {f ∈ R(2) , ordEk (f ) ≥ m}. Then X = SpecC[t,s] (R) and D is
+                                                                (2)               (2)      (2)
+the divisor on X induced by D(2) . Using the fact that (Yk , µ−1
+                                                              ∗ D
+                                                                  (2)
+                                                                      + Ek + (Yk )t ) is log
+canonical for any t ∈ C (see Lemma 3.5.2), we know that (X, D+X×C2 ({t}×C))×C2 (C×{0})
+is log canonical (see Lemma 2.21).
+   Using the basic property of the Rees algebra (see e.g. [LX20, Section 4.1]), we see that
+
+                            (X, D) ×C2 (C × {1}) ∼
+                                                 = (X (2) , D(2) ).
+
+Moreover, we claim that:
+
+                            (X, D) ×C2 ({1} × C) ∼
+                                                 = (X (1) , D(1) ).
+
+This holds true if the morphism am (ordEk ) = µ∗ O(−mEk ) → am (ordEk ) = ( µ|Yk )∗ O(−mEk )
+is surjective which follows from the vanishing R1 µ∗ (−mEk ) = 0.
+    The restrictions of (X, D) over the two axes C × {0} and {0} × C respectively give test
+                   (1)   (1)           (2)   (2)
+configurations (X0 , D0 ) and (X0 , D0 ) with the same central fiber (X0′ , D0′ ). We know
+these two test configurations are indeed weakly special because (X, D + X ×C2 ({0} × C)) ×C2
+(C × {0}).
+    The hξ0 i-action on (X, D) extends naturally to (X, D) over C2 . Moreover, KX + D is
+Q-Cartier and admits a (C∗ )2 -equivariant nowhere-vanishing section s ∈ |m(KX + D)|. Then
+we can take the quotient of the action (X, D) by the hξ0 i-action to get a pair (S, B).      e Its
+restrictions over the two axes C × {0} and {0} × C respectively give test configurations
+   (1)     (1)       (2)   (2)
+(S0 , B0 ) and (S0 , B0 ) with the same central fiber (S0′ , B0′ ). Because the generalized
+Futaki invariants are defined by the intersection numbers, we know the generalized Futaki
+invariant of the test configuration (S, B)×e C2 (C×{0}) degenerating (S (1) , B (1) ) to (S0′ , B0′ ) is
+                                                                          0    0
+                               e ×C2 (C × {t}) (t 6= 0) all have generalized Futaki invariants 0,
+0 since the nearby fibers (S, B)
+and the same is true for the test configuration (S, B)e ×C2 ({0} × C) degenerating (S (2) , B (2) )
+                                                                                          0        0
+       ′     ′
+to (S0 , B0 ).
+    Then the central fiber (S0′ , B0′ ) will automatically be a log Fano variety since otherwise
+it follows from [LX14, Theorem 7] that we can construct a special test configuration of
+   (1)     (1)
+(S0 , B0 ) with a strictly negative Futaki invariant, which contradicts to the K-semistability
+       (1)     (1)
+of (S0 , B0 ) by Lemma 3.1.
+    Thus this completes the proof of Theorem 3.2.
+
+3.2.3    Application to torus-equivariant K-polystability
+Lemma 3.7. Assume (S, B) is an (n − 1)-dimensional K-semistable log Fano pair. Let
+(S, B) be a special test configuration with central fibre (S0 , B0 ) such that Fut(S, B) = 0. If S
+admits a torus TS ∼= (C∗ )d−1 -action, then (S, B) and (S0 , B0 ) admits a common K-semistable
+degeneration (S1 , B1 ) with a TS × C∗ ∼= (C∗ )d -action, which extends the TS -action on (S, B)
+              ∗
+as well the C -action on (S0 , B0 ).
+
+Proof. By Lemma 3.1, we know (S0 , B0 ) is K-semistable. Fix a sufficiently divisible λ. By
+Lemma 3.4, for k ≫ 1, the special degeneration induces a Kollár component Ek over the
+cone
+                     Ek → Yk → (X, D) = C(S, B; −λ(KS + B)).
+The cone (X, D) admits a T ∼ = TS ×C∗ -action, where the first factor TS -action is induced from
+the TS -action on (S, B) and the second factor C∗ -action comes from the natural rescaling on
+the cone (X, D).
+
+                                                  20
+    Consider the valuation ideal Ik = am (ordEk ) for m ≫ 1, and its equivariant degeneration
+{bk,l }l of {Ikl } on the fiber of XCd := X × Cd over 0 ∈ Cd with respect the T -action given
+by bg                        g                                                        d
+      k,l . That is to say, bk,l is a T -equivariant ideal on XCd which is flat over C , whose
+                                        ∗ d       d     l              d
+restriction over in 1 = (1, ..., 1) ∈ (C ) ⊂ C is Ik , and over 0 ∈ C is bk,l .
+    Then as before, we know there is a smooth function f on [0, ǫ∗ ) with 0 < ǫ∗ ≪ 1 such
+that                        
+                             1
+                         f       = mult(Ik ) · lct(Ik )n   and f ′ (0) = 0.
+                             k
+Then by exactly the same argument as in Claim 3.6, we know that for any ǫ > 0, we can
+pick k ≫ 1 and c′k such that
+                  A(Ek , X, D + c′k Ik ) < ǫ      and       c′k < lct(bk,• ; X0 , D0 ).
+   Therefore, we can construct a T -equivariant birational model µd : Yk → XCd which over
+1 yields Yk → X, and Ex(µd ) = E is an irreducible divisor which is anti-ample over XCd .
+For any point t ∈ Cd , we can find the coordinate hyperplanes H1 , ..., Hd passing through t.
+                                            Pd
+By inversion of adjunction, (XCd , DCd + i=1 Hi + c′k · bg  k,l ) is log canonical, which implies
+                −1        ∗
+                            Pd
+that (Yk , E + µ∗ DCd + µ     i=1 Hi ) is log canonical by ACC of log canonical thresholds (see
+[HMX14]) as before. This implies that for any t ∈ Cd , any component of the fiber (Yk )t is of
+                                                                             Pd
+dimension dim(X) by [dFKX17, Proposition 39] as it is contained in µ∗ i=1 Hi . Moreover,
+(Yk )t → X is birational, since if (Yk )t has another component, then it is contained in E and
+   Pd
+µ∗ i=1 Hi , thus violates [dFKX17, Proposition 39] again.
+   Denote by ai = µd ∗ OYk (−iE). For any j ∈ N, we have an exact sequence
+                          0 → OYk (−(i + 1)E) → OYk (−iE) → Qi → 0
+for a sheaf Qi supported on E. Since E is Q-Cartier, we know Qi is Cohen-Macaulay (see
+[KM98, Proof of Proposition 5.26]), thus it is flat over Cd as it is equi-dimensional. By the
+vanishing theorem, we can pushforward the above exact sequence by µd to get
+                                 0 → ai+1 → ai → µd ∗ (Qi ) → 0.
+                      ∗    j
+Since for any t ∈ C , R (µd )t ∗ (Qi )t = 0 for any j > 0, by base change theorem (see e.g.
+[Har77, Theorem III.12.11]), this implies
+             µd ∗ (Qi ) ⊗ k(t) = µd ∗ (Qi ⊗ k(t)) = (µd )t ∗ (−iEt )/(µd )t ∗ (−(i + 1)Et )
+and we inductively get ai ⊗ k(t) = (µd )t ∗ O(Yk )t (−iEt ) for all i ∈ N. Then we can take the
+                                               L
+relative extended k[t1 , ..., td ]-Rees algebra i∈Z ai · t−i , which yields is T̃ -equivariant family
+Xd+1 over Cd+1 . The above discussion says the construction commutes with any base change,
+i.e. for a any t ∈ Cd , if we consider the base change Xd+1 ×Cd+1 ({t} × C), we get exactly
+the degeneration induced by (Yk )t → X. In particular, we can choose (X1 , D1 ) to be the
+fiber over 0 ∈ Cd+1 and (S1 , B1 ) is its C∗ -quotient. And (S1 , B1 ) is K-semistable, since it is
+a special degeneration of (S, B) with generalized Futaki invariant 0.
+
+3.3    Proof of main results for log Fano pairs
+Proof of Theorem 1.3. Given a K-semistable log Fano pair (S (0) , B (0) ) := (S, B). If it is not
+K-polystable, then by [LX14] we know it has special degenerations to log Fano pairs which
+are not isomorphic to (S, B), with generalized Futaki invariant 0. Let (S p , B p ) be a log
+Fano pair, which among all possible special degenerations of (S, B), admits a faithful torus
+action of the maximal dimension. We claim (S p , B p ) is K-polystable. If this is not true, by
+Lemma 3.7, (S p , B p ) has a K-semistable degeneration (S (1) , B (1) ) which admits a faithful
+torus action of a larger dimension. However, by the proof of Lemma 3.1, we can indeed
+degenerate (S, B) to (S (1) , B (1) ), which is a contradiction.
+    The uniqueness directly follows from Theorem 3.2, as any test configuration (S, B)
+which degenerates (S, B) to a K-polystable log Fano pair (S0 , B0 ) automatically satisfies
+Fut(S, B) = 0.
+
+Proof of Theorem 1.4. It is known from [LX20] that to check K-semistablity, we only need
+to check the T -equivariant special test configurations. Then from K-semistability to K-
+polystability, it follows from Lemma 3.7.
+
+                                                  21
+4     General case of log Fano cones
+In Section 4.1, we will generalize the techniques in Section 3 to the case of log Fano cones.
+This allows us to get weakly special test configurations with isomorphic central fibres and
+generalized Futaki invariants 0, under similar assumption as in Theorem 3.2. In Section 4.2,
+we prove that these weakly special test configurations are indeed special. We prove this fact
+by generalizing the last step in [LX14] to the setting of log Fano cone singularities, including
+the irregular case. We complete the proof of Donaldson-Sun’s conjecture (Theorem 1.1) and
+Theorem 1.2 on existence/uniqueness of K-polystable degenerations in Section 4.3.
+
+4.1     Common degenerations of log Fano cones
+Fix a K-semistable log Fano cone (X, D, ξ0 ) with a torus action by T ∼     = (C∗ )r . Then wtξ0
+                    c                                         (i)  (i)     (i)
+is a minimizer of volX,D by Theorem 2.5. Assume that (X , D , ξ0 ; η ) (i = 1, 2) are two
+                                            (i)   (i)
+special degenerations of (X, D, ξ0 ) to (X0 , D0 , ξ0 ), (i = 1, 2) respectively. Recall that ξ0
+on X (i) is just given by the natural extension of ξ0 on X × C∗ . By assumption η (i) has an
+integral coweight which can be written as the form (·, 1) with respect to the decomposition
+                                                             (i)  (i)
+of T̃ := T × C∗ ∼= (C∗ )r+1 . Note that the central fibers (X0 , D0 ) (i = 1, 2) admit T̃ -actions
+                         (i)
+generated by T and hη i.
+
+Theorem 4.1. Let (X, D, ξ0 ) be a K-semstable log Fano cone. With the notations in the
+above paragraph, assume Fut(X (1) , D(1) , ξ0 ; η (1) ) = 0 and Fut(X (2) ,D(2) , ξ0 ; η (2) )= 0. Then
+                                                                                                                           (i)     (i)
+there are weakly special test configurations (X ′(i) , D′(i) , ξ0 ; η ′(i) ) of X0 , D0 , ξ0                                             (i = 1, 2)
+                                                                        ′(i)        ′(i)              ′(i)
+with isomorphic central fibers such that Fut(X                                 ,D          , ξ0 ; η          ) = 0 for i = 1, 2.
+    We follow a similar strategy as in Section 3.1.
+                                         (1)       (1)
+Proof. We first claim that (X0 , D0 , ξ0 ) is K-semistable. If not, then there is a special test
+                 ′′(1) ′′(1)
+configuration (X0 , D0 , ξ0 ; η ′′(1) ) with
+                                                       ′′(1)        ′′(1)
+                                          Fut(X0               , D0         , ξ0 ; η ′′(1) ) < 0,
+                           (1)    (1)                       ′′(1)       ′′(1)
+which degenerates (X0 , D0 , ξ0 ) to (X0 , D0 , ξ0 ). Then we claim there is a test configu-
+          ′′(1) ′′(1)                                                                   ′′(1) ′′(1)
+ration (X˜0 , D̃0 , ξ0 ; kη (1) +η ′′(1) ) for some k ≫ 0 degenerating (X, D, ξ0 ) to (X0 , D0 , ξ0 )
+with the generalized Futaki invariant
+                                   ′′(1)          ′′(1)
+                           Fut(X˜0         , D̃0          , ξ0 ; kη (1) + η ′′(1) )
+                                                                                              ′′(1)          ′′(1)
+                       =   k · Fut(X (1) , D(1) , ξ0 ; η (1) ) + Fut(X0                               , D0           , ξ0 ; η ′′(1) )
+                       <   0,
+
+which is contradictory to our assumption (X, D, ξ0 ) is K-semistable. Here we used the
+linearity of the generalized Futaki invariant from Lemma 2.25 as in the log Fano cone case.
+                         (1)                                                     ′′(1)
+Denote by σ : A1 → X˜0 the section of vertices and similarly σ ′′ : A1 → X˜0 . To see the
+                                                                       +
+existence of such test a configuration we fix a rational vector ξ0′ ∈ NQ , and take the quotient,
+           (1)   (1)             ′′(1)         ′′(1)
+we get (S0 , B0 ) and (S0 , B0 ) which give special test configurations of the log Fano
+                                                        (1)   (1)
+pairs obtained as the hξ0′ i-quotients of (X, D) and (X0 , D0 ). Since [η (1) , η ′′(1) ] = 0, the
+proof of Lemma 3.1 shows that there is a test configuration that degenerates the hξ0′ i-quotient
+                       ′′(1)   ′′(1)                                            ′′(1)     ′′(1)
+of (X, D) to that of (X0 , D0 ). Then we can take the cone back to get (X˜0 , D̃0 , ξ0 ).
+(Also see [LX18, Section 4.2] for a direct construction.)
+     Applying the diophantine approximation (cf. [LX18, Lemma 2.7]) of the coordinates of
+ξ0 , we can choose a sequence of integral vectors {ξ˜k } such that |ξ˜k −kξ0 | ≤ A for any constant
+A > 0 where k is an infinite sequence of increasing positive integers. Consider the Kollár
+component Ek determined by ξ˜k + η (1) over x ∈ (X, D) (it is a Kollár component by Lemma
+3.4). Let Ik = am (ordEk ) for a sufficiently divisible m depending on k. Let ck = lct(Ik ; X, D)
+and consider:
+                                 1      c                           n
+                              f ( ) = vol(ord   Ek ) = mult(Ik ) · ck .
+                                 k
+
+
+                                                                      22
+Let T̃ = hξ0 , η (1) i ∼
+                       = (C∗ )r+1 be the torus generated by ξ0 and η (1) , and Ñ = Hom(C∗ , T̃ ) be
+the coweight lattice of T̃ .
+              (1)      (1)
+   Since (X0 , D0 , ξ0 ) is K-semistable,
+
+                                          c
+                                          vol(ξ)    c (1) (1) (wtξ )
+                                                 := vol(X ,D )
+                                                             0         0
+
+
+
+is a smooth function of ξ ∈ ÑR+ and obtains the minimum at ξ0 (see Theorem 2.5). By (10),
+this also implies that for any rational vector η1 ∈ ÑR ,
+
+                  c
+                d vol(wtξ0 +tη1 )                (1)     (1)
+                                      = C · Fut(X0 × C, D0 × C, ξ0 ; η1 ) = 0                           (23)
+                      dt          t=0
+
+   By Taylor’s Remainder Theorem there is a neighborhood U of ξ0 ∈ ÑR and a positive
+constant C > 0 (independent of ξ) such that, for any ξ ∈ U , we have the inequality:
+
+                               c 0 ) ≤ vol(ξ)
+                               vol(ξ   c        c 0 ) + C|ξ − ξ0 |2 .
+                                              ≤ vol(ξ
+
+                     c 1 ξ˜k + 1 η (1) ) by the rescaling invariance of the normalized volume.
+Note that f ( k1 ) = vol( k    k
+          1       1 (1)
+Because   k ξ̃k + k η   − ξ0 ≤ C ′ k −1 for C ′ > 0 independent of k, there exists K0 ≫ 1 such
+that for any k ≥ K0 , f ( k1 ) = f (0) + O( k12 ).
+    Then the same argument as in the case of the log Fano varieties using [BCHM10, Corollary
+                                           (2)                                            (2)
+1.4.3], shows that we can find µ(2) : Yk → X (2) a morphism over C with a divisor Ek such
+          (2)                            (2)   (2)
+that −Ek is ample over X (2) and (Yk , Ek )×C C∗ = (Yk , Ek )×C∗ where the isomorphism is
+equivariant with respect to the C∗ -action generated by η (2) . Moreover, fixed any arbitrarily
+small ǫ, we can choose k sufficiently large such that the log discrepancy of Ek with respect to
+                                                  (2) (2)
+(X, D + (1 − δ)ck · Ik ) is less than ǫ, and (X0 , D0 + (1 − δ)ck · in(Ik )) is log canonical for a
+suitable choice of small δ (see (18)). The it follows from the ACC of log canonical thresholds
+                          (2)   (2)                    (2)
+(see [HMX14]) that (Yk , Ek + (µ(2) )−1          2
+                                             ∗ D + (Yk )t ) is log canonical for any t ∈ C.
+    The relative extended Rees algebra gives a family (X, D) over C2 , such that over C ×
+{t} (resp. {t} × C) (t 6= 0), it gives a family which is isomorphic to (X (1) , D(1) ) (resp.
+(X (2) , D(2) )). The family (X, D) admits a (C∗ )r+2 -action.
+    By Lemma 2.21, we get weakly special test configurations
+                                                                 (i)       (i)
+                          (X ′(i) , D′(i) , ξ0 ; η ′(i) ) of (X0 , D0 , ξ0 ) (i = 1, 2)
+
+with an isomorphic central fiber (X0′ , D0′ , ξ0 ).
+   We claim that the generalized Futaki invariants Fut(X ′(i) , D′(i) , ξ0 ; η ′(i) ) are 0. Indeed,
+by the construction,
+
+                             (X, D, ξ0 ; η (1) )           ∼
+                                                           = (X (1) , D(1) , ξ0 ; η (1) ).
+                                                   C×{t}
+
+It follows from our assumption that
+                                                                       (1)       (1)
+                      Fut(X (1) , D(1) , ξ0 ; η (1) ) = Fut(X0 , D0 , ξ0 ; η (1) ) = 0.
+
+By the flatness of the weighted piece and (C∗ )2 equivariance, we get for any t,
+
+                                volX (1) (ξ0 + tη (1) ) = volX0′ (ξ0 + tη (1) ),
+                                      0
+
+
+which implies that Fut(X0′ , D0′ , ξ0 ; η (1) ) = 0 (see (23)). Similarly, we have Fut(X0′ , D0′ , ξ0 ; η (2) ) =
+0.
+
+
+   By the above result, we obtain two weakly special test configurations (X ′(i) , D′(i) , ξ0 ; η ′(i) )
+                                 ′(1)  ′(1)          ′(2) ′(2)
+with isomorphic central fibres (X0 , D0 , ξ0 ) ∼
+                                               = (X0 , D0 , ξ0 ) and zero generalized Futaki
+invariants. In the next subsection, we are going to show that (X ′(i) , D′(i) , ξ0 ; η ′(i) ) are indeed
+special test configurations.
+
+
+
+                                                           23
+4.2    Vanishing Futaki invariants and special degenerations
+We will prove Proposition 4.3, which says to test K-(semi, poly)stability of a log Fano cone,
+although in our definition we only require to test on all special degenerations, it is indeed
+the same to test on all weakly special test configurations. A tool we will use is to write the
+generalized Futaki invariant of a weakly special configuration as the derivative of the leading
+coefficient of the index character (see [MSY08, CS18, CS19]).
+    If there are two T -equivariant weakly special test configurations
+         (X (i) = Spec(R(i) ), D(i) , ξ0 ; η)     of a K-semistable log Fano cone (X, D, ξ0 ),
+with Fut(X (i) , D(i) , ξ0 ; η) = 0, by Lemma 2.17, we know X (i) is associated to a graded
+                       (i)
+sequence of ideals a• which we can assume to be primary (see Remark 2.18) as
+                               Fut(X (i) , D(i) , ξ0 ; mξ0′ + η)
+                          = Fut(X (i) , D(i) , ξ0 ; mξ0′ ) + Fut(X (i) , D(i) , ξ0 ; η)
+                          = 0,
+where Fut(X (i) , D(i) , ξ0 ; ξ0′ ) = 0 follows from the K-semistability of (X, D). Moreover, since
+the test configuration is weakly special, by Lemma 2.21 there is indeed a birational mor-
+phism µi : Y i → X (i = 1, 2) with a reduced exceptional divisor E i such that (Y i , E i +
+                                         (i)
+(µi )∗−1 D) is log canonical and ak = µi∗ (−kE i ). Therefore, we can take a normalized graph
+µg : Y g → X of Y 1 99K           2                     g       i
+                            Y over X with pi : Y → Y . Then for any pair (a, b) such that
+ −ap∗1 (E 1 ) − bp∗2 (E 2 ) is integral, by Definition 2.20,  we can consider the test configuration
+                                             ∗    1   ∗   2
+Ya,b of (X, D, ξ0 ) induced by −ap1 (E ) − bp2 (E ) .
+    We apply the T -equivariant index character (see [CS18, Section 4] for more details) for
+any ξ ∈ ÑR+ ⊂ ÑR ∼   = Rr+1 where ÑR+ is the Reeb cone of the T̃ = T × C∗ -action and t ∈ C
+with the real part ℜ(t) > 0, and define:
+                                                    X
+                                   F (a, b; ξ, t) =   e−tα(ξ) dim Rα
+                                                                   a,b
+                                                                       (v),                      (24)
+                                                  α∈t̃+
+                                                      R
+
+
+where Ra,b is the ring of the special fiber of Ya,b .
+  Now if we fix a prime integral vector ξ ∈ t+  R ∩ N such that
+
+                     hξi-quotient of (X (i) , D(i) ) = (S (i) , B (i) , L(i) ) (i = 1, 2)
+give test configurations of the hξi-quotient (S, B) of (X, D) with polarizations Li . Then the
+quotient of Ya,b by hξi is given by the normalized graph Sa,b of S (1) 99K S (2) with morphisms
+φi : Sa,b → S (i) and the polarization is given by aφ∗1 L(1) + bφ∗2 L(2) .
+   The following statement essentially follows from [CS18, Theorem 4.10].
+Proposition 4.2. For a fixed ξ ∈ ÑR+ the index character F (a, b; ξ, t) has a meromorphic
+extension to C with poles along the imaginary axis. Near t = 0 it has a Laurent series
+expansion:
+                                       a0 (a, b; ξ)n! a1 (a, b; ξ)(n − 1)!
+                      F (a, b; ξ, t) =               +                     + ··· ,          (25)
+                                           tn+1                 tn
+where a0 (a, b; ξ) is a polynomial of (a, b) whose coefficients depends smoothly on ξ ∈ ÑR+ .
+
+Proof. It follows from [CS18, Proposition 4.3] that when ξ is rational, then a0 coincides
+with the leading term of the total weight on the test configuration Sa,b constructed from the
+quotient log Fano pair. Since it can be represented by an intersection formula, in particular,
+it is a polynomial of a and b by [Wan12, Oda13].
+     Denote by s = r + 1. By the proof of [CS18, Theorem 4.10], we know
+                                         e−t(ξ1 α1 +···ξs αs ) · HNa,b (e−tξ1 , ...e−tξs )
+                      F (a, b; ξ, t) =                                                     ,
+                                              ΠNj=1 (1 − e
+                                                              −t(ξ1 w1j +···+ξs wsj ) )
+
+
+where ξ = (ξ1 , ..., ξs ) ∈ ÑR+ , (α1 , ..., αs ) ∈ Zs and wij (1 ≤ i ≤ s, 1 ≤ j ≤ N ) are real
+numbers. The leading term of the Laurent expansion is the same as the leading term of
+                                           HNa,b (1, ..., 1)
+                                                                        .
+                                   ΠN
+                                    j=1 (1 − e−t(ξ1 w1j +···+ξs wsj ) )
+
+                                                       24
+Since a, b only appear in the part HNab (1, ..., 1) which does not depend on ξ, and from the
+case that ξ is rational, we know that HNa,b (1, ..., 1) is a polynomial of (a, b), which implies
+a0 is a polynomial of (a, b).
+   With all these preparations, we can prove Proposition 4.3 which is a generalization of
+[LX14, Theorem 4] from the quasi-regular case to the general case of an arbitrary log Fano
+cone singularity. Although we expect the full results of special degeneration in [LX14] can
+be extended, here we only need the last step of the argument.
+Proposition 4.3. Let (X , D, ξ0 ; η) be a weakly special test configuration of a log Fano cone
+singularity (X, D, ξ0 ). Then we can find a special test configuration (X ′ , D′ , ξ0 ; η ′ ) and a
+positive integer m such that
+                                Fut(X ′ , D′ , ξ0 ; η ′ ) ≤ m · Fut(X , D, ξ0 ; η),
+and the strict inequality holds if (X , D, ξ0 ; η) is not a special test configuration.
+Proof. By Lemma 2.21, the weakly special test configuration is induced by a T -equivariant
+morphism µ : Y → X, such that the reduced exceptional divisor E is anti-ample over X and
+(Y, E +µ−1                                                                              −1
+          ∗ D) is log canonical. Suppose (X , D, ξ0 ; η) is not special, then (Y, E +µ∗ D) is not
+plt. Therefore, by [LX20, Proposition 2.10], we can find a T -equivariant Kollár component S
+over x ∈ (X, D) such that its log discrepancy with respect to (Y, E + µ−1     ∗ D) is 0. Denote by
+µ′ : Y ′ → X the plt blow extracting precisely S. So by Lemma 2.21 again, it gives a special
+test configuration (X ′ , D′ , ξ0 ; η ′ ) and the base change factor m (which we omit from now on)
+corresponds to a multiple such that the coefficient of S in the pull back of mE is integral.
+     Let Y g be the normalized graph Y 99K Y ′ and p : Y g → Y , p′ : Y g → Y ′ the natural
+morphisms. Then for any pair of positive integers (a, b), the divisor bp∗ E + ap′∗ S are anti-
+ample, and therefore induces a test configuration Xa,b by Lemma 2.21. We take a0 (a, b, ξ)
+as in Proposition 4.2.
+     Now we claim that
+        DTξ0 (η) a0 (1, 0, ξ0 ) = Fut(X , D, ξ0 ; η) > Fut(X ′ , D′ , ξ0 ; η ′ ) = DTξ0 (η) a0 (0, 1, ξ0 ).
+    To see this we write:
+                       p∗ (KY + E + µ−1      ′∗             ′ −1
+                                     ∗ D) = p (KY ′ + S + (µ∗ )  D) + G,
+and since the log discrepancy AY,E+µ−1    ∗ D
+                                              (S) = 0, the negativity lemma (see [KM98, Lemma
+3.39]) implies that G ≥ 0.
+    For any irreducible component Ei in Supp(G), denote by ci its coefficient in G. In par-
+ticular, from our assumption that X is not a special test configuration, for some component
+E0 contained in Supp(E), its coefficient c0 is positive. Let Fi be divisor on X0 given by the
+orbifold cone C(Ei , −E|Ei ).
+    We take the previous construction for the two test configurations X and X ′ . By Propo-
+sition 4.2, for a fixed ξ0 , if we define
+                                     f (t; ξ0 ) = DTξ0 (η) a0 (1 − t, t; ξ0 ),
+then the difference of the generalized Futaki invariant is of the form
+                                                                  Z 1
+                                                                      d
+                 Fut(X ′ , D′ , ξ0 ; η ′ ) − Fut(X , D, ξ0 ; η) =       f (t; ξ0 ) dt.
+                                                                   0 dt
+   The integrand is smooth in [0, 1], and the proof of [LX14, Proposition 5] shows that it is
+non-positive when ξ0 is rational. Thus it is non-positive. We claim its value at 0 is
+                 d                        1      X
+                   f (t; ξ0 )     =−                ci · volFi (wtξ0 ) < 0.             (26)
+                dt            t=0    volX (wtξ0 ) i
+In fact to see (26), when ξ0 is rational, we can compute on the quotient log Fano pair, and
+this is given in [LX14, Page 217]. Since both sides are smooth functions on ξ0 , we know that
+they must be equal to each other.
+
+    An immediate consequence is the following.
+Corollary 4.4. For a K-semistable log Fano cone singularity (X, D, ξ), if it has a weakly
+special test configuration (X , D, ξ0 ; η) with the generalized Futaki invariant being 0, then it
+is a special test configuration, i.e., the central fiber is klt.
+
+                                                       25
+4.3    Completion of the proofs of main theorems for log Fano cones
+Proof of Theorem 1.2. The proof follows the same structure as the proof of Theorem 1.3, so
+we will only outline the steps.
+    We first prove the existence of K-polystable degenerations. Let (X p , Dp , ξ0 ) be a log Fano
+cone which admits a maximal dimensional torus T p -action among all K-semistable special
+degeneration of (X, D, ξ0 ). By definition, T p contains T . If (X p , Dp , ξ0 ) is not K-polystable,
+it admits a T -equivariant degeneration to a non-isomorphic log Fano cone (X (1) , D(1) , ξ0 )
+under a special test configuration with generalized Futaki invariant 0. Similar to the proof of
+Lemma 3.7, this indeed implies that there is a T p -equivariant degeneration of (X p , Dp , ξ0 ) to
+(X (2) , D(2) , ξ0 ) under a special test configuration of generalized Futaki invariant 0. Moreover,
+(X (2) , D(2) , ξ0 ) admits an action by a torus whose dimension is equal to dim(T p ) + 1. By
+the proof of Theorem 4.1, (X (2) , D(2) , ξ0 ) is also a K-semistable special degeneration of
+(X, D, ξ0 ), which is a contradiction.
+    To see the uniqueness, by Corollary 4.4, we can replace the word “weakly special” by
+“special” in the statement of Theorem 4.1. Recall that by definition special degenerations
+of K-polystable log Fano cone with zero generalized Futaki invariants must be product. So
+the uniqueness of K-polystable degeneration follows.
+
+Proof of Theorem 1.1. It is shown in [DS17] that there is a special test configuration (W, ξ0 ; η)
+of the intermediate cone (W, ξ0 ) with central fibre (C, ξ0 ). Because C admits a Ricci-flat
+Kähler cone metric, we know C is K-polystable (see [CS19, Theorem 1.1] or Corollary A.4).
+In particular, Fut(W, ξ0 ; η) = 0. Moreover by [LX18, Theorem 1.4], we know that W is
+K-semistable and is uniquely determined by the algebraic germ (M∞ , o).
+    Assume W specially degenerates to another K-polystable Fano cone C ′ by a special test
+configuration (W ′ , ξ0 ; η ′ ) with Fut(W ′ , ξ0 ; η ′ ) = 0. Then Theorem 4.1 implies that C and
+C ′ degenerates to a Fano cone C ′′ by special test configurations with generalized Futaki
+invariants 0. This implies C ∼     = C ′′ ∼
+                                          = C ′ by the polystability of C and C ′ .
+
+
+
+A      Ding-polystability of Ricci-flat Kähler cones
+In the proof of Theorem 1.1 above, we rely on the result proved in [CS19] which says that
+that for a Fano cone singularity with a Ricci-flat Kähler cone metric, the generalized Futaki
+invariant Fut(X , ξ0 ; η) > 0 for any non-product special test configuration. However, as
+we have seen, in our argument (see e.g. the proof of Theorem 4.1), more general test
+configuration will show up. Therefore in this appendix, we want to discuss the proof of a
+more general statement, namely for any non-product Q-Gorenstein test configuration, the
+corresponding Ding invariant is positive (see Theorem A.3). This can be used to slightly
+modify the proof of Theorem 1.1 (see Remark A.5). We point out that our proof of Theorem
+A.3 follows the general strategy in [Ber15] and is slightly different from [CS19]. For simplicity
+of notations, in this appendix we will restrict to the case that the boundary divisor D = ∅
+which suffices for proving the main application of our results in Theorem 1.1.
+Definition A.1 (Ding-stability). We say that (X, ξ0 ) is Ding-semistable, if for any Q-
+Gorenstein test configuration (X , ξ0 ; η) of (X, ξ0 ) with central fibre (X0 , ξ0 ), its Berman-Ding
+invariant, denoted by DNA (X , ξ0 ; η) is nonnegative, where
+
+                                         DTξ0 (η) volX0 (ξ0 )
+                   DNA (X , ξ0 ; η) :=                          + lct(X ; X0 ) − 1.             (27)
+                                              vol(ξ0 )
+
+We say that (X, ξ0 ) is Ding-polystable, if it is Ding-semistable, and any Q-Gorenstein test
+configuration (X , ξ0 ; η) with DNA (X , ξ0 ; η) = 0 is a product test configuration.
+    We will show in (44) that the DNA -invariant in (27) is equal to the slope of a Ding-type
+functional (see Definition A.9) along a subgeodesic ray associated to the test configuration.
+Following the notations of [BHJ17] in the log Fano case, we will use DNA to denote such
+slope functional, since it can be viewed as a functional on the space of non-Archimedean
+metrics (associated to test configurations).
+
+
+
+
+                                                    26
+Remark A.2. We immediately see that DNA (X , ξ0 ; η) = Fut(X , ξ0 ; η) if and only if the
+test configuration is weakly special, and Ding-semistability (resp. Ding-polystability) implies
+K-semistability (resp. K-polystability). It has been proved that in the log Fano pair case, they
+are equivalent [BHJ17, Fuj19]. Following [Ber15], it will become clear that the notions of
+Ding-stability fit better with our calculation.
+Theorem A.3. Assume (X, ξ0 ) admits a Ricci-flat Käler cone metric. Then (X, ξ0 ) is
+Ding-polystable among Q-Gorenstein test configurations.
+Corollary A.4. Assume (X, ξ0 ) admits a Ricci-flat Kähler cone metric. Then (X, ξ0 ) is
+K-polystable among all weakly special test configurations.
+Remark A.5. Corollary A.4 could yield an alternative argument in one step of the proof of
+Theorem 1.1. More precisely, with notations in the proof of Theorem 1.1, let C and C ′ be
+two K-polystable degenerations of W . Then the degenerations of C and C ′ to C ′′ obtained
+via Theorem 4.1 are weakly special with zero Futaki invariant. We can skip Proposition
+4.3 but replace [CS19, Theorem 1.1] by the stronger statement Corollary A.4, which directly
+implies there is no non-product weakly special test configurations of C and C ′ with zero Futaki
+invariant. Then we conclude immediately that C ∼    = C ′′ ∼
+                                                           = C ′.
+    Let (X, ξ0 ) be a Fano cone singularity with the vertex point o. Recall that this implies
+that X is a normal affine variety with at worst klt singularities. Moreover there is a good T
+action where T ∼ = (C∗ )r and ξ0 ∈ NR+ . On X there exists a T -equivariant nowhere-vanishing
+holomorphic m-pluricanonical form s ∈ | − mKX |. Such holomorphic form can be solved
+uniquely up to a constant as in [MSY08, 2.7]. In the following, we will use the following
+volume form on X associated to s:
+                                                       1/m
+                                           √ mn2
+                                 dVX =      −1    s ∧ s̄     .                            (28)
+                                                                               P      ∂
+    Assume that (X, ξ0 ) is equivariantly embedded into (CN , ξ0 ) with ξ0 = i ai zi ∂z i
+                                                                                          with
+                                                                N
+ai ∈ R>0 . Fix √a reference smooth Kähler cone metric on C whose associated Reeb vec-
+tor field r∂r − −1J(r∂r ) = 2ξ0 . By its rescaling property such a radius function is C 0 -
+                PN
+comparable to i=1 |zi |2/ai . The restriction ωX := ωCN |X is a Kähler cone metric on X.
+Moreover 2Im(ξ0 ) = J(r∂r ) is the Reeb vector field of ωCN and ωX . Since T acts on X, T
+also acts on the set of functions on X by τ ◦ f (x) = f (τ −1 x) for any τ ∈ T and x ∈ X. For
+convenience, we denote X ◦ = X \ {o} where o is the vertex of X and define:
+Definition A.6. Denote by P SH(X, ξ0 ) the set of bounded real functions ϕ on X ◦ that
+satisfies:
+ (1) ϕ ◦ τ = ϕ for any τ ∈ hξ0 i;
+      2
+ (2) rϕ := r2 eϕ is a proper plurisubharmonic function on X.
+   We can think of functions in P SH(X, ξ0 ) as transversal Kähler potentials as in [DS17].
+More precisely, because ∂r generates a R+ -action (R+ = {a ∈ R; a > 0}) on X ◦ without fixed
+points, if the link of X is defined as Y := {r = 1} ∩ X, then Y = X ◦ /R+ and X ◦ ∼
+                                                                                  = Y × R+ .
+We set:                           √
+                                    −1 ¯                 1
+                             χ=        (∂ − ∂) log r2 = − Jd log r2 ,                   (29)
+                                    2                    2
+and define:
+Definition A.7. Denote by P SH(Y, ξ0 ) the set of bounded real function ϕ on Y that satisfies:
+ (1) ϕ ◦ τ = 0 for τ ∈ exp(R · Im(ξ0 )).
+                                                  √
+ (2) ϕ is upper semicontinuous on Y and (dχ + −1∂ ∂ϕ)    ¯      ≥ 0, where the positivity is in
+                                                             Y
+      the sense of currents.
+    Here we identify the function on Y with its pull back to X ◦ ∼
+                                                                 = Y × R+ via the projection
+to the first factor. There is an isomorphism P SH(X, ξ0 ) ∼
+                                                          = P SH(Y, ξ0 ) by sending ϕ 7→ ϕ|Y .
+We will use these two equivalent descriptions in the following discussion.
+                                 2
+Definition A.8. We say that rϕ      := r2 eϕ where ϕ ∈ P SH(X, ξ0 ) is a radius function of a
+Ricci-flat Kähler cone metric on (X, ξ0 ) if ϕ is smooth on X reg and there exists a constant
+C > 0 such that                     √
+                                   ( −1∂ ∂r¯ 2 )n = C · dVX .                             (30)
+                                              ϕ
+
+
+                                              27
+    If we take Lr∂r on both sides, we get: Lr∂r dVX = 2ndVX , which is also equivalent to
+Lξ0 s = mns. If we write
+
+             dVX = 2r2n−1 dr ∧ ΩY ,      or equivalently       ΩY := 2−1 r1−2n i∂r dVX ,   (31)
+
+then L∂r ΩY = 0. On the other hand, a direct computation shows that:
+                                                                  
+                 √                    √                      1
+                       ¯ 2     2             ¯      2
+                   −1∂ ∂rϕ = rϕ (dχ + −1∂ ∂ϕ) + drϕ ∧ χ − Jdϕ ,                            (32)
+                                                             2
+Then it is easy to verify that the equation (30) is equivalent to:
+                                    √
+                            (dχ +        ¯ n−1 ∧ χ = C · e−nϕ ΩY .
+                                     −1∂ ∂ϕ)                                               (33)
+                                                     n
+   The equation (30) is the Euler-Lagrange equation for the following Ding-type functional:
+Definition A.9 (see [CS19, LX18]). For any function ϕ ∈ P SH(X, ξ0 ), define:
+                                     Z          
+                                             2
+                  D(ϕ) = E(ϕ) − log      e−rϕ dV =: E(ϕ) + G(ϕ)                            (34)
+                                                X
+
+where E(ϕ) is defined by its variations:
+                                                           Z
+                                          1                           2 √
+               δE(ϕ) · δϕ = −                                                 ¯ 2 )n .
+                                                               (δϕ)e−rϕ ( −1∂ ∂rϕ
+                                (n − 1)!(2π)n volX (ξ0 )   X
+
+   Using the identity (32), one can verify that:
+                                             Z
+                                     n                   √
+               δE(ϕ) · δϕ = −                                 ¯ n−1 ∧ χ.
+                                                (δϕ)(dχ + −1∂ ∂ϕ)                          (35)
+                                   n
+                               (2π) vol(ξ0 ) Y
+As in the standard Kähler case, a consequence of this description is the following explicit
+expression of E(ϕ) (see [DS17]):
+
+                             1        XZ
+                                      n−1
+                                                   √
+              E(ϕ) = −                      ϕ(dχ +      ¯ i ∧ (dχ)n−1−i ∧ χ.
+                                                    −1∂ ∂ϕ)                                (36)
+                       (2π)n vol(ξ0 ) i=0 Y
+
+In the similar vein, using (31) we have the identity:
+                                       Z            
+                                              −nϕ
+                          G(ϕ) = − log      e     ΩY − log(n − 1)!.                        (37)
+                                            Y
+
+We will study the asymptotic of E(ϕt ). In the following we will denote D := {z ∈ Z; |z| ≤ 1},
+D∗ = D \ {0} and S 1 = {z ∈ D; |z| = 1}. We will always identify the functions on X with
+functions on X × D or X × D∗ by pulling back via the projection to the first factor.
+Proposition A.10 (see [LX18, Lemma 5.10]). Let ϕ(x, t) = ϕ(x, |t|) : X × D∗ → R be
+a upper √semicontinuous function such that ϕt := ϕ(·, |t|) ∈ P SH(X, ξ0 ) for each t ∈ D∗ .
+Assume −1∂ ∂(r   ¯ 2 eϕ ) ≥ 0 over X × D∗ in the sense of currents. Then the following identity
+holds:
+                                                          Z
+    √     ∂2                                  1                     √
+      −1        E(ϕt )dt ∧ dt̄ = −                                        ¯ 2 eϕ ))n+1 e−rϕ2
+                                                                   ( −1∂ ∂(r
+         ∂t∂ t̄                                  n
+                                    (n + 1)!(2π) vol(ξ0 ) X×D∗ /D∗
+                                                  Z
+                                          1                       √
+                               = −                                     ¯ n ∧ χ.
+                                                            (dχ + −1∂ ∂ϕ)
+                                        n
+                                    (2π) vol(ξ0 ) Y ×D∗ /D∗
+
+In particular, E(ϕt ) is concave in − log |t|2 .
+
+Proof. The proof of the first identity is the same as the proof as in [LX18, Lemma 5.10].
+The second identity follows from the first one and using the following identity on X × D∗ to
+calculate:
+                   √                      √
+                          ¯ 2 = r2 (dχ + −1∂ ∂ϕ)
+                     −1∂ ∂r                     ¯ + dr2 ∧ (χ − 1 Jdϕ).
+                            ϕ    ϕ                      ϕ
+                                                                  2
+
+
+
+                                                    28
+   Now assume that (X , ξ0 ; η) is a Q-Gorenstein test configuration of X. Because η com-
+mutes with ξ0 and generates a C∗ -action, we can assume that X is embedded into CN × C
+and the embedding
+             P is equivariant      with respect to the T × C∗ -action generated by {ξ0 , η}. If
+                      ∂
+we write η = i bi zi ∂zi with bi ∈ Z and let σ(t) : C∗ → GL(N, C) be the one-parameter
+subgroup generated by the vector field η. Then σ(t)(zi ) = tbi zi and we let
+
+                                  r(t)2 := σ(t)∗ (r2 ) =: r2 eϕ̃(t) .
+
+   The asymptotic of E(ϕ̃t ) can be easily calculated:
+Proposition A.11 (see [LX18, Proposition 5.13]). We have the following identity:
+
+                                             E(ϕ̃t )           Dη vol(ξ0 )
+                                   lim                     =               .                (38)
+                                   t→0 − log |t|2               vol(ξ0 )
+
+Proof. We
+        Prefer to [LX18]      for details. Here we just sketch the key ingredients. Let ξǫ =
+                          ∂
+ξ + ǫη = i (ai + ǫbi )zi ∂z i
+                              and rǫ be a radius function for ξǫ . Then we have:
+                                                       Z
+                                         1                        2 √
+                           vol(ξǫ ) =                                     ¯ 2 )n .
+                                                               e−rǫ ( −1∂ ∂r                (39)
+                                                                            ǫ
+                                      n!(2π)n          X0
+
+Taking derivative with respect to ǫ in the above volume formula, we can derive:
+                                                  Z
+                                           1              2 √
+                   Dη vol(ξ0 ) =                     θe−r ( −1∂ ∂r¯ 2 )n ,
+                                         n
+                                    (2π) (n − 1)! X0
+
+where we have denoted θ := η(log r2 ). We can then calculate (see [MSY08, Appendix C] or
+[LX18, Lemma 5.11]):
+                                                    Z
+           d                            1                         √
+                    E(ϕ̃t ) =                           ˙ −r(t)2 ( −1∂ ∂r(t)
+                                                       ϕ̃e              ¯      2 n
+                                                                                )
+                 2
+      d(− log |t| )                       n
+                              (n − 1)!(2π) vol(ξ0 ) X
+                                                    Z
+                                        1                           ∗ 2    √
+                            =                          σ(t)∗ (θ)e−σ r σ ∗ ( −1∂ ∂r ¯ 2 )n
+                                          n
+                              (n − 1)!(2π) vol(ξ0 ) X
+                                                    Z
+                                        1                    2 √
+                            =                           θe−r ( −1∂ ∂r ¯ 2 )n .
+                              (n − 1)!(2π)n vol(ξ0 ) Xt
+
+As explained in [LX18, Proof of Proposition 5.12], the last expression converges as t → 0 to
+Dη vol(ξ0 )/vol(ξ0 ).
+   By Proposition A.10 E(ϕ̃t ) is concave in − log |t|2 . So the statement follows from the
+above discussion and the following identity for concave functions:
+
+                                         d                               E(ϕ̃t )
+                            lim                   E(ϕ̃t ) = lim
+                            t→0 d(− log |t|2 )                    t→0 − log |t|2
+
+
+
+
+   We need the following basic result from [DS17] which generalizes Berndtsson’s result to
+the Kähler cone setting.
+Theorem A.12 ([DS17], see also [BBEGZ19, Ber15]). Let ϕ(x, t) = ϕ(x, |t|) : X × D∗ → R
+be an upper√ semicontinuous   function such that ϕt := ϕ(·, t) ∈ P SH(X, ξ0 ) for each t ∈ D∗ .
+                ¯
+Assume −1∂ ∂(r e ) ≥ 0 over X × D∗ in the sense of currents. Then G(ϕt ) is convex in
+                   2 ϕ
+
+− log |t|2 . Moreover, if G(ϕt ) is affine in − log |t|2 , then there exists a holomorphic vector
+field η0 on X commuting with ξ such that rϕt = σt∗ rϕ0 where σt = exp(log |t| · η0 ).
+    Let (X , ξ0 ; η) be a Q-Gorenstein test configuration of X with the projection map π :
+X → C. Let Xt := π −1 (t) be the fiber over {t} and ot the vertex point of Xt . Denote
+X ◦ = X \ {ot ; t ∈ C}. In the following discussion, we denote by R2 the function obtained by
+restricting r2 , considered as a function on CN ×C, to X via a fixed the equivariant embedding
+X → CN × C: R2 = r2 X .
+Definition A.13. Denote by P SH( X |D , ξ0 ) the set of bounded real functions Φ on X ◦ |D
+that satisfies:
+
+
+                                                       29
+ (1) τ ◦ Φ = Φ for any τ ∈ T ;
+      2
+ (2) RΦ := R2 eΦ is a proper plurisubharmonic function on X |D .
+   As before, we can think of functions in P SH(X |D ,√ξ0 ) as transversal Kähler potentials
+on X |D . If we also denote by χ the restriction of χ = 2−1 (∂¯ − ∂) log R2 = − 12 Jd log R2 to
+Y := {R = 1} ∩ X , the we can similarly define P SH(Y, ξ0 ) as Definition A.7.
+   Moreover, using the equivariant isomorphism ι : X |D∗ ∼ = X × D∗ , we can associate to any
+                                                        ∗
+Φ ∈ P SH( X |D ) plurisubharmonic function ϕ on X × D and hence a path ϕt ∈ P SH(X, ξ0 )
+             2
+such that RΦ   = ι∗ (rϕ
+                      2
+                        ). As an example, the path asssociated to Φ = 0 and is given by ϕ̃t .
+Proposition A.14. Assume Φ ∈ P SH(X , ξ0 ) and let ϕt ∈ P SH(X, ξ0 ) be the associated
+path. Then G(ϕt ) is subharmonic in t and its Lelong number at t = 0 is given by 1 −
+lct(X , X0 ).
+              2
+Proof. Since RΦ = ι∗ (r2 eϕ ) is plurisubharmonic over X |D∗ ∼
+                                                             = X × D∗ . Applying Theorem
+A.12, we get G(ϕt ) is subharmonic in t. To see that it’s subharmonic over D, we just need
+to show that G(ϕt ) is uniformly bounded from above. Because Φ bounded, we know that
+
+                                              |G(ϕt ) − G(ϕ̃t )| ≤ C.
+
+So we just need to show that G(ϕ̃t ) is uniformly bounded from above.
+   Because η preserves the global section s ∈ |mKX |: Lη s = 0. As a consequence, dVXt =
+√ mn2           1/m
+   −1     s ∧ s̄       satisfies σt∗ dVXt = dVX1 = dVX . So we have:
+                            Xt
+                                   Z                                 Z                       
+                                                ∗ 2                                     2
+            G(ϕ̃t ) = − log               e−σ(t) r (σ ∗ dVXt ) = − log               e−r dVXt       .
+                                      X                                         Xt
+
+Because Lr∂r dVXt = 2ndVXt , we can write dVXt = 2r2n−1 dr ∧ ΩYt and calculate:
+            Z                          Z
+                    2
+                 e−r dVXt = (n − 1)!       ΩY
+              Xt                        Yt
+                                   Z                         Z
+                                                 2
+                          = Cn ·              e−r dVXt ≤ Cn           dVXt ,                            (40)
+                                                 {r≤1}∩Xt                            {r≤1}∩Xt
+
+
+where Cn = R 1 e−r(n−1)!
+                   2 2n−1
+                    r     dr 2
+                               .
+                 0
+     Now the upper boundedness of G(ϕ̃t ) can be seen in two ways. For one way, one can
+resolve the singularity of {r ≤ 1} ∩ (X |D ) and estimate the integral using the method as in
+[Li17a, Proof of Lemma 3.7] or [BJ17]. The other approximation approachPis the following.
+                                                                                           ∂
+Recall that r2 is the radius function associated to the vector field ξ0 = i ai zi ∂z           . Now
+                                          (k)
+                                                   P     (k)    ∂        (k)           (k)
+                                                                                             i
+
+we choose a sequence of vector fields ξ         = i ai zi ∂zi with ai ∈ Q and ai → ai as
+k → +∞. Choose a sequence of new radius function r(k) = rξ(k) such that r(k) is uniformly
+                                  P               (k)
+C 0 -comparable to the functions N  i=1 |zi |
+                                              2/(ai )
+                                                      . Then there exist C1 , C2 > 0 such that, for
+any ǫ > 0, we have: C1 (r(k) )1−ǫ ≤ r ≤ C2 (r(k) )1+ǫ for k ≫ 1. So we get:
+                       Z                   Z
+                                  dVXt ≤ n                 −1
+                                                              o   dVXt .
+                                                               (1−ǫ)
+                                 {r≤1}∩Xt             r (k) ≤C1        ∩Xt
+
+           (k)
+Because a is rational, we can taking quotient of X by the C∗ -action generated by ξ (k) =
+P (k) i
+  i ai ∂z i and reduces to the log Fano case considered in [Ber15] in which case the upper
+boundedness of G(ϕ̃t ) was shown.
+    Finally we need to calculate the Lelong number of G(ϕ̃t ) with respect to t. According to
+[Ber15], the Lelong number of G(t) is equal to the infimum of c such that
+             Z                                  Z
+                  −G−(1−c) log |t|2                  2              2
+                e                   idτ ∧ dτ̄ =   e−r −(1−c) log |t| dVX < +∞.
+                 U                                     X |D
+
+   We have the following identity:
+            Z                                       Z
+                   −r 2 −(1−c) log |τ |2                                        2               2
+                 e                       dVX = Cn ·                         e−r −(1−c) log |τ | dVX .   (41)
+                     X |D                                     X |D ∩{r≤1}
+
+
+                                                        30
+                    2
+Because e−1 ≤ e−r ≤ 1 is a bounded function, the right-hand-side of (41) is integrable if
+and only if 1 − c < lct(X ∩ {r ≤ 1}, X0 ∩ {r ≤ 1}). Using the rescaling symmetry as used in
+(40), we see that lct(X ∩ {r ≤ 1}, X0 ∩ {r ≤ 1}) = lct(X , X0 ). So we are done.
+
+
+   Assume r2 eϕKE with ϕKE ∈ P SH(X, ξ0 ) is a radius function of a Ricci-flat Kähler cone
+metric on (X, ξ0 ). Let (X , ξ0 ; η) be a test configuration of (X, ξ0 ). We construct a geodesic
+ray associated to (X , ξ0 ; η) by solving the homogeneous Monge-Ampère equation:
+                       √
+                     ( −1∂ ∂(R ¯ 2 eΦ ))n+1 = 0 on X |D , Φ|X×S 1 = ϕKE .                    (42)
+
+Using transversal point of view, this equation is equivalent to the following equation:
+                        √
+                  (dχ + −1∂ ∂Φ)¯ n ∧ χ = 0 on Y|D , Φ|
+                                                           Y ×S 1 = ϕKE |Y .                (43)
+
+   By considering the envelope (or its equivalent formulation on X |D )
+                     
+            Φ := sup Ψ ∈ P SH(Y|D , ξ0 ) : Ψ ≤ ϕKE |Y on ∂(Y|D ) = Y × S 1 ,
+
+then the following result can be proved in exactly the same way as in [Ber15, Proposition
+2.7] by using the transversal Kähler structures of (Y, ξ0 ). Note that this kind of extension
+has also been used in [DS17] (see also [CS19, HL18]).
+Proposition A.15 (see [Ber15, Proposition                 locally bounded such that R2 eΦ has
+                                          √ 2.7]).2 ΦΦ isn+1
+                                               ¯
+positive curvature current and satisfies ( −1∂ ∂(R e ))       = 0 on X |D .
+   Finally we can give the proof of Theorem A.3.
+
+Proof of Theorem A.3. Let Φ be the geodesic ray emanating from ϕKE √     that is determined by
+(X , ξ0 ). Let ϕt be the associated path in P SH(X, ξ0 ). Then because ( −1∂ ∂(R¯ 2 eΦ ))n+1 =
+0, E(ϕt ) is affine in t by Proposition A.10. G(ϕt ) is subharmonic in t by Proposition A.14.
+So D(t) := D(ϕt ) is subharmonic over D. Because D(t) depends only |t|, D(t) is convex in
+− log |t|2 . Because D(ϕt ) ≥ D(ϕKE ) for any t ∈ D, we see that D(t) is a non-decreasing
+function in − log |t|2 .
+    By Proposition A.11 and Proposition A.14, we have:
+
+                   D(t)           Dη vol(ξ0 )
+             lim              =               − (1 − lct(X , X0 )) = DNA (X , ξ0 ; η).      (44)
+             t→0 − log |t|2        vol(ξ0 )
+
+If DNA (X , ξ0 ; η) = 0, then because D(t) is convex and non-decreasing in − log |t|2 , we see
+that D(t) is affine and hence G(ϕt ) is affine. So by Theorem A.12, there exists holomorphic
+vector field η0 such that ϕt = (σt )∗ ϕKE where σt = exp(log |t|η0 ). The rest of the argument
+is the same as [Ber15, Proposition 3.3] as extended to the Ricci-flat cone setting in [CS19].
+
+
+
+References
+[BBEGZ19] R. Berman, S. Boucksom, P. Eyssidieux, V. Guedj and A. Zeriahi; Kähler-
+    Einstein metrics and the Kähler-Ricci flow on log Fano varieties, J. Reine Angew. Math.,
+    751 (2019), 27-89.
+[BCHM10] C. Birkar, P. Cascini, C. D. Hacon, and J. Mc Kernan; Existence of minimal
+    models for varieties of log general type, J. Amer. Math. Soc. 23 (2010), 405-468.
+[Ber15] R. Berman; K-polystability of Q-Fano varieties admitting Kähler-Einstein metrics;
+     Invent. Math., 203 (2015), no. 3, 973-1025.
+[BFFU15] S. Boucksom, T. de Fernex, C. Favre and S. Urbinati; Valuation spaces and
+    multiplier ideals on singular varieties, Recent advances in algebraic geometry, 29-51,
+    London Math. Soc. Lecture Note Ser., 417, Cambridge Univ. Press, Cambridge, 2015.
+[BHJ17] S. Boucksom, T. Hisamoto and M. Jonsson; Uniform K-stability; Duistermaat-
+    Heckman measures and singularities of pairs, Ann. Inst. Fourier (Grenoble) 67 (2017),
+    no. 2, 743–841.
+
+
+                                                   31
+[BJ17] S. Boucksom and M. Jonsson; Tropical and non-Archimedean limits of degenerating
+    families of volume forms, J. Éc. polytech. Math. 4 (2017), 87-139.
+[Blu18] H. Blum; Existence of valuations with smallest normalized volume, Compos. Math.
+     154 (2018), no. 4, 820–849.
+[CS18] T. Collins and G. Székelyhidi; K-Semistability for irregular Sasakian manifolds, J.
+    Diff. Geom. 109 (2018), no. 1, 81–109.
+[CS19] T. Collins and G. Székelyhidi; Sasaki-Einstein metrics and K-stability, Geom. Topol.,
+    23 (2019), no. 3, 1339-1413.
+[dFKX17] T. de Fenex, J. Kollár and C. Xu; The dual complex of singularities. Higher
+    dimensional algebraic geometry—in honour of Professor Yujiro Kawamata’s sixtieth
+    birthday, 103–129, Adv. Stud. Pure Math., 74, Math. Soc. Japan, Tokyo, 2017.
+[Don02] S. Donaldson; Scalar curvature and stability of toric varieties, J. Differential Geom.
+    62 (2002), no. 2, 289-349.
+[DS16] V. Datar and G. Székelyhidi; Kähler-Einstein metrics along the smooth continuity
+    method, Geom. Funct. Anal., 26 (2016), no. 4, 975–1010.
+[DS17] S. Donaldson and S. Sun; Gromov-Hausdorff limits of Kähler manifolds and algebraic
+    geometry, II, J. Differential Geom. 107 (2017), no. 2, 327–371.
+[ELS03] L. Ein, R. Lazarsfeld and K. E. Smith; Uniform approximation of Abhyankar val-
+    uation ideals in smooth function fields, Amer. J. Math. 125 (2003), no. 2, 409-440.
+[Fuj19] K. Fujita; A valuative criterion for uniform K-stability of Q-Fano varieties, J. Reine
+     Angew. Math., 751 (2019), 309-338.
+[Har77] R. Hartshorne; Algebraic geometry. Graduate Texts in Mathematics, No. 52.
+    Springer-Verlag, New York-Heidelberg, 1977. xvi+496 pp.
+[HL18] W. He and J. Li; Geometric pluripotential theory on Sasaki manifold, to appear in
+    J. Geom. Anal., arXiv:1803.00687.
+[HMX14] C. Hacon, J. Mc Kernan and C, Xu; ACC for log canonical thresholds, Annals of
+   Math. 180 (2014), no. 2, 523-571.
+[HS17] H. Hein and S. Sun; Calabi-Yau manifolds with isolated conical singularities, Inst.
+    Hautes Études Sci. Publ. Math. 126 (2017), no. 1, 73-130.
+[IS17] N. Ilten and H. Süss; K-stability for Fano manifolds with torus action of complexity
+     1, Duke Math. J. 166 (2017), no. 1, 177-204.
+[JM12] M. Jonsson and M. Mustaţă; Valuations and asymptotic invariants for sequences of
+    ideals, Ann. Inst. Fourier (Grenoble) 62 (2012), no. 6, 2145-2209.
+[Kem78] G. Kempf; Instability in invariant theory, Ann. of Math., 108 (1978), no. 2, 299-
+    316.
+[KM98] J. Kollár and S. Mori; Birational geometry of algebraic varieties, Cambridge Tracts
+   in Math. 134, Cambridge Univ. Press, Cambridge, 1998.
+[Kol04] J. Kollár; Seifert Gm -bundles, arXiv:0404386.
+[Kol13] J. Kollár; Singularities of the Minimal Model Program, Cambridge Tracts in Math.
+     200, Cambridge Univ. Press, Cambridge, 2013.
+[Kol17] J. Kollár; Families of varieties of general type, book to appear, 2017. See
+     https://web.math.princeton.edu/~kollar/book/modbook20170720-hyper.pdf
+[Laz04] R. Lazarsfeld; Positivity in algebraic geometry. II. Positivity for vector bundles, and
+    multiplier ideals. Ergebnisse der Mathematik und ihrer Grenzgebiete. 3. Folge. A Series
+    of Modern Surveys in Mathematics, 49. Springer-Verlag, Berlin, 2004.
+[LM09] R. Lazarsfeld and M. Mustaţă; Convex bodies associated to linear series, Ann. Sci.
+    éc. Norm. Supér. 42 (2009), no. 5, p. 783-835.
+[Li17a] C. Li, Yau-Tian-Donaldson correspondence for K-semistable Fano manifolds, J.
+     Reine Angew. Math., 733 (2017), 55-85.
+[Li17b] C. Li; K-semistability is equivariant volume minimization, Duke Math. J. 166 (2017),
+     no. 16, 3147–3218.
+
+
+                                              32
+[Li18] C. Li; Minimizing normalized volumes of valuations, Math. Zeit. 289 (2018), no. 1-2,
+     491-513.
+[Liu18] Y. Liu; The volume of singular Kähler-Einstein Fano varieties, Compos. Math. 154
+     (2018), no. 6, 1131-1158.
+[LL19] C. Li, and Y. Liu; Kähler-Einstein metrics and volume minimization, Adv. Math.
+    341 (2019), 440-492.
+[LS13] A. Liendo and H. Süss; Normal singularities with torus actions, Tohoku Math. J.,
+    Second Series, 65 (2013), no. 1, 105-130.
+[LWX19] C. Li, X. Wang and C. Xu; On proper moduli spaces of smoothable Kähler-Einstein
+   varieties, Duke Math J., 168 (2019), no. 8, 1387-1459.
+[LX14] C. Li and C. Xu; Special test configurations and K-stability of Fano varieties, Ann.
+    of Math. (2) 180 (2014), no. 1, 197-232.
+[LX18] C. Li and C. Xu; Stability of Valuations: Higher Rational Rank, Peking Math. J. 1
+    (2018), no. 1, 1-79.
+[LX20] C. Li and C. Xu; Stability of Valuations and Kollár Components, J. Euro. Math.
+    Soc. (JEMS), 22 (2020), no. 8, 2573-2627.
+[MSY08] D. Martelli, J. Sparks and S.-T. Yau; Sasaki-Einstein manifolds and volume min-
+   imisation, Commu. Math. Phys. 280 (2008), no. 3, 611-673.
+[Mus02] M. Mustaţă; On multiplicities of graded sequences of ideals, J. Algebra 256 (2002),
+    no. 1, 229-249.
+[New78] P. Newstead; Introduction to moduli problems and orbit spaces. Tata Institute
+    of Fundamental Research Lectures on Mathematics and Physics, 51. Tata Institute of
+    Fundamental Research, Bombay; by the Narosa Publishing House, New Delhi, 1978.
+[Oda13] Y. Odaka; A generalization of the Ross-Thomas slope theory, Osaka J. Math. 50
+    (2013), no. 1, 171-185.
+[SSY16] C. Spotti, S. Sun and C. Yao; Existence and deformations of Kähler-Einstein metrics
+    on smoothable Q-Fano varieties, Duke Math. J. 165 (2016), no. 16, 3043–3083.
+[Tia97] G. Tian; Kähler-Einstein metrics with positive scalar curvature, Invent. Math. 130
+     (1997), no. 1, 239-265.
+[TW89] M. Tomari and K. Watanabe; Filtered rings, filtered blowing-ups and normal two-
+   dimensional singularities with “star-shaped” resolution, Publ. Res. Inst. Math. Sci. 25
+   (1989), no. 5, 681-740.
+[Wan12] X. Wang; Height and GIT weight, Math. Res. Lett. 19 (2012), no. 4, 909-926.
+[Xu20] C. Xu; A minimizing valuation is quasi-monomial, Ann. of Math. (2) 191 (2020),
+    no.3, 1003-1030.
+[XZ20] C. Xu and Z. Zhuang; Uniqueness of the minimizer of the normalized volume func-
+    tion, arXiv:2005.08303.
+[Zhu20] Z. Zhuang;    Optimal       destabilizing   centers   and   equivariant   K-stability,
+    arXiv:2004.09413.
+
+
+Chi Li, Purdue University.
+li2285@purdue.edu
+Xiaowei Wang, Rutgers University at Newark.
+xiaowwan@rutgers.edu
+Chenyang Xu, Beijing International Center for Mathematical Research.
+cyxu@math.pku.edu.cn
+Department of Mathematics, Massachusetts Institute of Technology.
+cyxu@math.mit.edu
+Current address: Department of Mathematics, Princeton University.
+chenyang@princeton.edu
+
+
+
+                                             33
+

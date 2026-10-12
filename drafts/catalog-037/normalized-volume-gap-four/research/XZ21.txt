@@ -1,0 +1,1051 @@
+                                                 UNIQUENESS OF THE MINIMIZER OF THE NORMALIZED
+                                                                VOLUME FUNCTION
+
+                                                                        CHENYANG XU AND ZIQUAN ZHUANG
+arXiv:2005.08303v1 [math.AG] 17 May 2020
+
+
+
+
+                                                  Abstract. We confirm a conjecture of Chi Li which says that the minimizer of the
+                                                  normalized volume function for a klt singularity is unique up to rescaling. This is achieved
+                                                  by defining stability thresholds for valuations, and then showing that a valuation is a
+                                                  minimizer if and only if it is K-semistable, and that K-semistable valuation is unique
+                                                  up to rescaling. As applications, we prove a finite degree formula for volumes of klt
+                                                  singularities and an effective bound of the local fundamental group of a klt singularity.
+
+                                                                                    1. Introduction
+                                              Throughout this paper, we work over an algebraically closed field k of characteristic
+                                           0. Given a klt singularity x ∈ (X, ∆), Chi Li introduced in [Li18] the normalized volume
+                                                    c X,∆ on the space ValX,x of real valuations on the function field K(X) of X that
+                                           function vol
+                                           are centered on x. Motivated by the study of K-stability of Fano varieties, the minimizing
+                                                        c X,∆ is conjectured to have a number of deep geometric properties, which
+                                           valuation of vol
+                                           together comprise the so-called Stable Degeneration Conjecture, see [Li18, LX18].
+                                              There has been a lot of progress on the solution of different parts of the Stable Degener-
+                                           ation Conjecture in [Blu18, Li17, LX18, LX16, Xu20]. In particular, it has been known that
+                                           a minimizing valuation exists (see [Blu18]) and it is always quasi-monomial (see [Xu20]).
+                                           1.1. Main Theorems. In this paper, we aim to solve another part of the Stable Degen-
+                                           eration Conjecture, namely, the uniqueness of the minimizing valuation, as conjectured
+                                           in [Li18, Conjecture 7.1.2].
+                                           Theorem 1.1. Let x ∈ (X, ∆) be a klt singularity, then up to rescaling, there is a unique
+                                                                                          c X,∆ .
+                                           minimizer v0 of the normalized volume function vol
+                                              We remark that our proof of the theorem does not rely on the fact that the minimizer
+                                           is quasi-monomial.
+                                              An immediate consequence is the following, which is the local version of the K-semistable
+                                           case of [Zhu20, Theorem 1.1].
+                                           Corollary 1.2. If a klt singularity x ∈ (X, ∆) admits a group G-action, then any mini-
+                                                       c X,∆ is G-invariant.
+                                           mizer v0 of vol
+                                            Another direct consequence is the finite degree formula for normalized volumes.
+                                                                                                                     
+                                           Theorem 1.3 (Finite degree formula). Let f : y ∈ (Y, ∆Y ) → x ∈ (X, ∆) be a finite
+                                           Galois morphism between klt singularities such that f ∗ (KX + ∆) = KY + ∆Y . Then
+                                                                   c X, ∆) · deg(f ) = vol(y,
+                                                                   vol(x,                   c Y, ∆Y ).
+                                             CX is partially supported by the NSF (No. 1901849).
+                                                                                               1
+2                          CHENYANG XU AND ZIQUAN ZHUANG
+
+        c X, ∆) denotes the volume of the klt singularity x ∈ (X, ∆), see Definition
+  Here vol(x,
+2.5. We apply this to obtain the following effective bound of the local fundamental group.
+Corollary 1.4. Let x ∈ (X, ∆) be the germ of a klt singularity, then the order of the
+fundamental group of the smooth locus satisfies
+                                      sm           nn
+                            #|π1 (x, X )| ≤            ,
+                                               c X, ∆)
+                                              vol(x,
+where the equality holds if and only if ∆ = 0 and x ∈ X is étale locally isomorphic to
+Cn /G where the action of G ∼= π1 (x, X sm ) is fixed point free in codimension one.
+  Combining Corollary 1.4 with the results from [Liu18, BJ20] relating local and global
+volumes of Fano varieties, we also have the following theorem.
+Theorem 1.5. Let (X, ∆) be a log Fano variety. Then for any x ∈ (X, ∆), if we denote
+by π1loc (x, X sm ) the local fundamental group of the smooth locus of the germ x ∈ (X, ∆),
+we have the inequality
+                                                         (n + 1)n
+                          #|π1loc (x, X sm )| ≤                       n .
+                                                δ(X, ∆)n · − (KX + ∆)
+In particular, the Cartier index of X is bounded from above by the right hand side of the
+above inequality.
+  Here δ(X, ∆) denotes the stability threshold of the log Fano pair (X, ∆), see [FO18,
+Definition 0.2] or [BJ20].
+Remark 1.6. An interesting application of Theorem 1.5 is that it gives a new proof of the
+boundedness of K-semistable Fano varieties of a fixed dimension and with volume bounded
+from below. This was originally proved in [Jia17] as a consequence of the boundedness
+results proved in [Bir19]. Applying Theorem 1.5, we only need the fact the Fano varieties
+with fixed Cartier index form a bounded family, which was first proved in [HMX14,
+Corollary 1.8].
+1.2. Outline of the proof. Given a klt singularity x ∈ (X = Spec(R), ∆), the unique-
+                                             c X,∆ is proved in [LX18] under the assumption
+ness of the minimizer v (up to rescaling) of vol
+that the graded rings associated to the minimizers are finitely generated. The finite gener-
+ation assumption is used to give a degeneration of the singularity (X, ∆) to a K-semistable
+log Fano cone (X0 , ∆0 , ξv ), where X0 = Spec(grv (R)), ∆0 the degeneration of ∆, and ξv
+is the Reeb vector induced by v. This degeneration picture allows one to degenerate any
+minimizer to X0 , and use the strict convexity of the volume function to conclude that ξv
+is the unique T -equivariant minimizer on (X0 , ∆0 ) (see [Xu18, Page 823]).
+   The main aim of this paper is to prove uniqueness of the minimizer without assuming
+the finite generation property, which still remains a major challenge. For this purpose,
+a key new input, introduced in Section 3.1, is the K-semistability of a general valuation
+v0 ∈ ValX,x centered at a klt singularity x ∈ (X, ∆). More generally, we will define the
+stability threshold δ(v0 ) of a valuation v0 with finite log discrepancy. This is done by
+introducing a local version of basis type divisors. Roughly speaking, a basis type divisor
+with respect to the chosen valuation v0 is (up to a suitable rescaling factor) a divisor of
+the form {f1 = 0} + · · · + {fN = 0} where the images of fi form a basis of OX,x /am (v0 )
+        UNIQUENESS OF THE MINIMIZER OF THE NORMALIZED VOLUME FUNCTION                      3
+
+(for some integer m; here a• (v0 ) denotes the valuation ideals) that is compatible with the
+filtration induced by v0 . Given another valuation v ∈ ValX,x , we apply the key technical
+observation from [AZ20] to find basis type divisors that are compatible with both v0
+and v. This allows us to define the S-invariant and δ-invariant of a valuation v0 with
+respect to another valuation v and to eventually define the local analogue of the stability
+notions from the global setting. To justify our definition, when v0 is given by a Kollár
+component S, we will show that ordS is K-semistable as a valuation if and only if (S, ∆S )
+is K-semistable as a log Fano pair (see Theorem 3.6).
+   With these new definitions, in the second step we show in Section 3.2 that a K-
+semistable valuation is always a minimizer, and up to scaling there is a unique K-
+semistable valuation. The observation here is that the log canonical thresholds (lct)
+of basis type divisors with respect to a K-semistable valuation v0 is asymptotically com-
+puted by v0 . On the other hand, the asymptotic expected vanishing order of these basis
+type divisors along a valuation v is at least volX,∆ (v)−1/n , with equality when v = v0 .
+Through the identity
+                               c X,∆ (v)1/n =      AX,∆ (v)
+                               vol                             ,
+                                                volX,∆ (v)−1/n
+minimizing the normalized volume vol  c X,∆ (v) can be thought of as finding valuations that
+compute the lct of basis type divisors. In particular, this implies that K-semistable
+                               c X,∆ and the uniqueness then follows from an analysis of
+valuations are minimizers of vol
+the equality condition.
+   In the last step, we show that a minimizing valuation v0 is always K-semistable in
+Section 3.3. To circumvent the finite generation assumption of grv0 R in [LX18], we will
+generalize the derivative argument from [Li17]. Intuitively, given two valuations v0 , v ∈
+ValX,x , we would like to draw a ray between them in the valuation space and use the
+                                     c X,∆ at the minimizer v0 to prove its K-semistability.
+nonnegativity of the derivative of vol
+When v0 and v are quasi-monomial with respect to a common stratum, a natural candidate
+is given by the line joining them in the corresponding dual complex. However, it is
+unclear to us how to write down such a ray in general. Our idea is to instead construct
+a family of graded sequences of ideals that interpolates the valuation ideals of the two
+given valuations. Combining the derivative formula from [Li17] and an analysis of the
+log canonical thresholds and multiplicities of these “mixed” ideal sequences, we can then
+show that if v0 is a minimizer, then δ(v0 ) ≥ 1, i.e. v0 is K-semistable.
+Acknowledgement: We want to thank Yuchen Liu for discussions, especially for showing
+us the preprint [Liu20]. We also would like to thank Harold Blum for helpful comments.
+
+                                    2. Preliminaries
+Notation and Conventions: We follow the notation as in [KM98, Laz04, Kol13].
+   We say x ∈ (X = Spec(R), ∆) is a singularity if R is a local ring of essentially finite
+type over k, ∆ is an effective divisor on X and x ∈ X is the unique closed point.
+   A filtration F • on a finite dimensional vector space V is a decreasing sequence F t V
+                                            ′
+(t ∈ R) of subspaces satisfying F t V ⊆ F t V whenever t ≥ t′ . It is called an N-filtration
+if F 0 V = V and F t V = F ⌈t⌉ V for all t ∈ R. For any filtration F on V , we define its
+induced N-filtration FN• by setting FNt V := F ⌈t⌉ V .
+4                             CHENYANG XU AND ZIQUAN ZHUANG
+
+    A projective klt pair (X, ∆) is called a log Fano pair if −KX − ∆ is ample.
+2.1. Graded sequence of ideals. Let (R, m) be a local ring of essentially finite type over
+k∼= R/m. A graded sequence of ideals (see [JM12]) is a sequence of ideals a• = (am )m∈N
+such that am · an ⊆ am+n . We call it decreasing if am+1 ⊆ am for all m ∈ N. A graded
+sequence b• of ideals is said to be linearly bounded by another one a• , if there is a positive
+integer C such that such that
+                                          bCm ⊂ am
+for any m ∈ N. A finite subset {f1 , ..., fN } of R \ {0} is said to be compatible with a
+decreasing graded sequence a• of ideals if for all m ∈ N, the nonzero images f¯i of fi in
+R/am are linearly independent.
+   The following lemma is a local version of [AZ20, Lemma 3.1].
+Lemma 2.1. Let (R, m) be a local ring of essentially finite type over k ∼
+                                                                        = R/m, let a• and
+b• be two decreasing graded sequences of m-primary ideals and let m ∈ N. Then there exist
+some fi ∈ R \ {0} (1 ≤ i ≤ N) whose images in R/am form a basis such that {f1 , ..., fN }
+is compatible with both a• and b• .
+Proof. Let V := R/am which is a finite dimensional linear space. Then V has two filtra-
+tions given by
+                    Far• V := (ar + am )/am      and Fbs• V := (bs + am )/am .
+By [AZ20, Lemma 3.1], there exists a basis f¯i (1 ≤ i ≤ N) of V that is compatible
+with both filtrations Fa• and Fb• . We can lift each f¯i to some element fi ∈ R such
+that {f1 , · · · , fN } is compatible with b• (it suffices to lift each f¯i ∈ Fbs• V \ Fbs+1
+                                                                                          •
+                                                                                             V to some
+                                         ¯
+fi ∈ bs ). On the other hand, since fi is compatible with Fa• , any such lift is automatically
+compatible with a• (i.e. for all r ≤ m, fi ∈ ar if and only if f¯i ∈ Far• V ).                       
+2.2. The space of valuations.
+2.2.1. Valuations. Let X be a variety defined over k. A real valuation of its function field
+K(X) is a non-constant map v : K(X)∗ → R, satisfying:
+      • v(f g) = v(f ) + v(g);
+      • v(f + g) ≥ min{v(f ), v(g)};
+      • v(k ∗ ) = 0.
+We set v(0) = +∞. A valuation v gives rise to a valuation ring
+                                 Ov := {f ∈ K(X) | v(f ) ≥ 0}.
+We say a valuation v is centered at a scheme-theoretic point x = cX (v) ∈ X if we have a
+local inclusion OX,x ֒→ Ov of local rings. Notice that the center of a valuation, if exists,
+is unique since X is separated. Denote by ValX the set of real valuations of K(X) that
+admits a center on X. For a closed point x ∈ X, we further denote by ValX,x the set of
+real valuations of k(X) centered at x ∈ X.
+   For each valuation v ∈ ValX,x and any positive integer m, we define the valuation ideal
+                                am (v) := {f ∈ OX,x | v(f ) ≥ m}.
+It is clear that a• = {am }m∈N form a decreasing graded sequence of mx -primary ideals.
+        UNIQUENESS OF THE MINIMIZER OF THE NORMALIZED VOLUME FUNCTION                        5
+
+  Let (X, ∆) be a pair. We denote by
+                                 AX,∆ : ValX → R ∪ {+∞}
+the log discrepancy function of valuations as in [JM12] and [BdFFU15, Theorem 3.1]
+which extends the standard definition of log discrepancies from divisors to all valuations
+in ValX . It is possible that AX,∆ (v) = +∞ for some v ∈ ValX , see e.g. [JM12, Remark
+5.12]. We denote by Val∗X the set of valuations v ∈ ValX with AX,∆ (v) < +∞ and set
+Val∗X,x = Val∗X ∩ ValX,x for a closed point x ∈ X. Note that AX,∆ is strictly positive on
+ValX if and only if (X, ∆) is klt.
+Proposition 2.2. Let x ∈ (X, ∆) be a klt singularity and let v0 , v1 ∈ Val∗X,x . Then the
+graded sequences a• (v0 ) and a• (v1 ) of valuation ideals are linearly bounded by each other.
+Proof. This is a direct consequence of the Izumi type inequalities (see e.g. [Li18, Theorem
+3.1]), which says that a• (vi ) and {mm
+                                      x }m∈N are linearly bounded by each other.          
+Definition 2.3 (Kollár Components). Let x ∈ (X, ∆) be a klt singularity. A prime
+divisor S over (X, ∆) is a Kollár component if there is a birational morphism π : Y → X
+such that π is an isomorphism over X \ {x}, S is a prime divisor on Y , π(S) = {x}, −S
+is Q-Cartier and π-ample, and (Y, π∗−1 ∆ + S) is plt. The map π : Y → X is called the
+plt blowup associated to the Kollár component S. By adjunction (see [Kol13, Definition
+4.2]) we may write
+                             (KY + π∗−1 ∆ + S)|S = KS + ∆S ,
+where (S, ∆S ) is a log Fano pair.
+2.2.2. Local volumes.
+Definition 2.4. Let X be an n-dimensional normal variety and let x ∈ X be a closed
+point. Following [ELS03] we define the volume of a valuation v ∈ ValX,x as
+                                                        ℓ(OX,x /am (v))
+                        vol(v) = volX,x (v) = lim sup                   .
+                                               m→∞         mn /n!
+where ℓ(·) denotes the length of the Artinian module.
+  Thanks to the works of [ELS03, LM09, Cut13], the above limsup is actually a limit.
+   The following invariant, which was first defined in [Li18], plays a key role in our study
+of local stability.
+Definition 2.5 ([Li18]). Let x ∈ (X, ∆) be an n-dimensional klt singularity. The nor-
+                                        c (X,∆),x : ValX,x → (0, +∞) is defined as
+malized volume function of valuations vol
+                                  (
+                 c                  AX,∆ (v)n · volX,x (v), if v ∈ Val∗X,x ;
+                 vol(X,∆),x (v) =
+                                    +∞,                          / Val∗X,x .
+                                                            if v ∈
+
+We often denote it by volc X,∆ or vol
+                                   c when x ∈ (X, ∆) is clear from the context. The
+volume of a klt singularity (x ∈ (X, ∆)) is defined as
+                            c X, ∆) :=
+                            vol(x,            inf      c (X,∆),x (v).
+                                                       vol
+                                            v∈ValX,x
+6                           CHENYANG XU AND ZIQUAN ZHUANG
+
+   It has been known that the above infimum is indeed a minimum by [Blu18] and that
+the minimizing valuations are always quasi-monomial by [Xu20]. The study of vol   c X,∆ is
+closely related to K-stability of log Fano pairs, guided by the so-called Stable Degenera-
+tion Conjecture as formulated in [Li18, Conjecture 7.1] and [LX18, Conjecture 1.2]. See
+[LLX20] for more background. Our Theorem 1.1 settles one part of this conjecture.
+   The following theorem from [LX18] motivates some of our arguments, although we do
+not need it in our proof.
+Theorem 2.6. Let x ∈ (X = Spec(R), ∆) be a klt singularity, and v m a minimizer
+   c X,∆ . Assume the associated grade ring grvm (R) is finitely generated. Denote by
+of vol
+X0 = Spec(grvm (R)) with the cone vertex o, ∆0 the degeneration of ∆ on X0 , ξv the Reeb
+orbit induced by v. Then o ∈ (X0 , ∆0 , ξv ) is a K-semistable log Fano cone.
+  Note that the finite generation assumption always holds when v is a divisorial valuation
+by [LX16, Blu18].
+2.3. Log canonical thresholds.
+Definition 2.7. Given a klt pair (X, ∆) and a non-zero ideal a on X, the log canonical
+threshold lct(X, ∆; a) of a with respect to (X, ∆) is defined to be
+                                                                            AX,∆ (v)
+         lct(X, ∆; a) = max{t ≥ 0 | (X, ∆ + at ) is log canonical} = inf ∗           .
+                                                                     v∈ValX  v(a)
+   For a graded sequence a• = {am }m∈N of non-zero ideals on a klt pair (X, ∆), we can
+also define its log canonical threshold to be
+                 lct(X, ∆; a• ) := lim sup m · lct(X, ∆; am ) ∈ R>0 ∪ {+∞}.
+                                    m
+
+    It is proved in [Liu18, Theorem 27] that
+(2.1)                   c X, ∆) = inf lct(X, ∆; a• )n · mult(a• ),
+                        vol(x,
+                                        a•
+
+where the infimum runs through all graded ideal sequences a• of mx -primary ideals, and
+lct(X, ∆; a• )n · mult(a• ) is set to be +∞ if lct(X, ∆; a• ) = +∞.
+
+                          3. K-semistability of a valuation
+   This is the main section of this paper. We will first define the notion of K-semistability
+for valuations. Then we will show that for valuations, being K-semistable is the same as
+being minimizer of the normalized volume function, and such a K-semistable valuation is
+unique up to rescaling.
+3.1. Definition of K-semistability for a valuation. In this subsection, we introduce
+a local version of S-invariant on the product of the valuation space Val∗X,x × Val∗X,x and
+use it to define the δ-invariant of valuations, which then naturally give the notion of
+K-semistability of a valuation.
+   Let x ∈ (X = Spec(R), ∆) be a klt singularity. Fix a valuation v0 ∈ Val∗X,x . By
+Proposition 2.2, for any valuation v ∈ Val∗X,x , the graded sequences of ideals a• (v) and
+a• (v0 ) are linearly bounded by each other. By Lemma 2.1, for any m ∈ N there exist some
+f1 , ..., fNm ∈ R (where Nm = ℓ(R/am (v0 ))) which are compatible with both a• (v0 ) and
+         UNIQUENESS OF THE MINIMIZER OF THE NORMALIZED VOLUME FUNCTION                          7
+
+a• (v) such that their images f¯i form a basis of Rm := R/am (v0 ). We call such {f1 , ..., fNm }
+an (m, v)-basis (with respect to v0 ). The valuation v induces a filtration Fv on Rm such
+that an element f¯ ∈ Rm is contained in Fvλ Rm (λ ∈ R) if and only if there exists a
+lifting f ∈ R of f¯ such that v(f ) ≥ λ. (For a similar filtration in the global setting, see
+[BX19, 5.1.1]).
+Lemma-Definition 3.1. The limit
+                                                       ℓ(Fvm Rm )
+                                    vol(v0 ; v) := lim
+                                                    m→∞ mn /n!
+
+exists. Moreover, we have vol(v0 ; v/t) = 0 for all t ≫ 0.
+Proof. From the definition we have Fvm Rm = (am (v) + am (v0 ))/am (v0 ) ∼
+                                                                         = am (v)/(am (v) ∩
+am (v0 )), hence
+                  ℓ(Fvm Rm ) = ℓ(R/(am (v) ∩ am (v0 ))) − ℓ(R/am (v)),
+thus by [LM09, Theorem 3.8] we obtain
+                        1
+(3.1)            lim          ℓ(Fvm Rm ) = mult(a• (v) ∩ a• (v0 )) − mult(a• (v)).
+                 m→∞ mn /n!
+
+   Since a• (v0 ) and a• (v) are linearly bounded by each other, we have aCm (v) ⊆ am (v0 )
+for some constant C > 0. Thus FvCm Rm = 0 and
+                                                  ℓ(Fvtm Rm )
+                              vol(v0 ; v/t) = lim             =0
+                                             m→∞    mn /n!
+for all t ≥ C.                                                                                 
+                                                               P m
+  Analogous to the global log Fano case, we set Sem (v0 ; v) = N i=1 ⌊v(fi )⌋, which doesn’t
+depend on the choice of fi ; indeed it is not hard to check that
+                                    +∞
+                                    X                                  +∞
+                                                                       X
+                   Sem (v0 ; v) =         i · ℓ(Fvi Rm /Fvi+1 Rm ) =         ℓ(Fvi Rm ).
+                                    i=0                                i=1
+
+We then define
+                                           AX,∆ (v0 ) e
+                              Sm (v0 ; v) :=             · Sm (v0 ; v),
+                                           e
+                                           Sm (v0 ; v0 )
+                                                        Z
+                                    n + 1 AX,∆ (v0 ) ∞
+                       S(v0 ; v) :=      ·                  vol(v0 ; v/t)dt.
+                                      n     vol(v0 ) 0
+Remark 3.2. In the global non-Archimedean setting, a similar construction named the
+(logarithmic) relative volume of two norms is given in [BJ18, Section 3]. However, we
+measure ‘the relative volume’ by taking a quotient instead of a difference.
+Lemma 3.3. For any v0 , v ∈ Val∗X,x , we have S(v0 ; v) = limm→∞ Sm (v0 ; v). Moreover,
+the function t 7→ vol(v0 ; v/t) is continuous.
+                                                            ¯ By [LM09, Lemma 3.9],
+Proof. We can embed (X, ∆) into a projective variety (X̄, ∆).
+we can find a sufficiently ample line bundle L such that the natural map
+(3.2)                     H 0 (X̄, Lm ) → H 0(X̄, Lm ⊗ OX /a2Cm (v))
+8                             CHENYANG XU AND ZIQUAN ZHUANG
+
+is surjective for all m ∈ N, where C is a positive integer such that aCm (v) ⊆ am (v0 ) and
+aCm (v0 ) ⊆ am (v) for all m ∈ N. Note that this implies that the restriction map
+(3.3)             h : H 0 (X̄, Lm ) → H 0 (X̄, Lm ⊗ OX /am (v0 )) ∼
+                                                                  = R/am (v0 )
+is also surjective, where the last isomorphism is given by a trivialization of L near x. For
+such L,
+                    Wm := H 0 (X̄, Lm ⊗ am (v0 )) and Vm := H 0 (X̄, Lm )
+defines two graded linear series W• , V• that contain ample series. The valuation v induces
+a filtration Fv on both V• and W• by setting Fvλ Vm = {s ∈ H 0 (X̄, Lm ) | v(s) ≥ λ} and
+FvλWm = Wm ∩ FvλVm .
+   Through (3.3), the image of Fv induces a filtration F1 on Rm := R/am (v0 ). We claim
+that it is the same as the filtration Fv• on Rm . Indeed, given an element f ∈ Fvλ Vm , it is
+clear that its image f¯ ∈ Rm lies in Fvλ Rm . Conversely, if 0 6= f¯ ∈ Fvλ Rm , then it can be
+lifted to some f ∈ R with v(f ) ≥ λ. Since
+                           H 0 (X̄, Lm ) → H 0 (X̄, Lm ⊗ OX /aCm (v))
+is a surjective, there exists some s ∈ Fvλ Vm such that s and f has the same image in
+R/aCm (v). As aCm (v) ⊆ am (v0 ), we see that the restriction of s in Rm gives f¯. This
+proves the claim.
+   Let Wmt = Fvtm Wm and Vmt = Fvtm Vm . Then from the above claim we have ℓ(Fvtm Rm ) =
+dim Vmt − dim Wmt , hence
+                                vol(v0 ; v/t) = vol(V•t ) − vol(W•t ),
+which, by [BJ20, Proposition 2.3], is continuous in t when 0 ≤ t ≤ C since vol(V•C ) ≥
+vol(W•C ) > 0 by (3.2); on the other hand, vol(v0 ; v/t) = 0 when t ≥ C as in Lemma 3.1,
+thus the function t 7→ vol(v0 ; v/t) is continuous everywhere.
+  We next prove S(v0 ; v) = limm→∞ Sm (v0 ; v). We claim that
+                                                 Z ∞
+                                  Sem (v0 ; v)
+(3.4)                        lim               =      vol(v0 ; v/t)dt.
+                            m→∞ mn+1 /n!          0
+By definition, this is equivalent to
+                                P∞          i       Z ∞
+                                  i=1 ℓ(Fv Rm )
+(3.5)                     lim                    =       vol(v0 ; v/t)dt.
+                         m→∞       mn+1 /n!          0
+                    ⌈tm⌉
+Let ψm (t) = ℓ(Fm    v     Rm )
+                        n /n!   . Then we may rewrite the expression in the above limit as
+R∞
+ 0
+     ψm (t)dt. Notice that limm→∞ ψm (t) = vol(v0 ; v/t) and ψm (t) = 0 for all t ≥ C
+and all m ∈ N. The equality (3.5) now follows from the dominated convergence theorem.
+   It is clear that vol(v0 ; v0 /t) = max{(1 − tn )vol(v0 ), 0} for all t ≥ 0, thus taking v = v0
+in (3.4) we get
+                                 Z ∞                        Z 1
+              Sem (v0 ; v0 )                                                            n
+         lim     n+1
+                              =      vol(v0 ; v0 /t)dt =        (1 − tn )vol(v0 )dt =      vol(v0 ),
+        m→∞ m         /n!         0                          0                         n+1
+hence                                                                    R∞
+                        Sm (v0 ; v)            Sem (v0 ; v)      n + 1 0 vol(v0 ; v/t)dt
+                 lim                = lim                    =         ·                  .
+                m→∞ AX,∆ (v0 )         m→∞ S   em (v0 ; v0 )       n          vol(v0 )
+In other words, S(v0 ; v) = limm→∞ Sm (v0 ; v).                                                      
+         UNIQUENESS OF THE MINIMIZER OF THE NORMALIZED VOLUME FUNCTION                         9
+
+Definition 3.4. A valuation v0 ∈ Val∗X,x is said to be K-semistable if AX,∆ (v) ≥ S(v0 ; v)
+for all v ∈ Val∗X,x . We also define the stability threshold δ(v0 ) of a valuation v0 ∈ Val∗X,x
+                                              AX,∆ (v)
+as δ(v0 ) = inf v δ(v0 ; v) where δ(v0 ; v) = S(v0 ;v)
+                                                       and the infimum runs over all valuations
+         ∗
+v ∈ ValX,x .
+Remark 3.5. The notion of K-semistable valuation has been previously defined for valua-
+tions which are quasi-monomial, and whose associated graded rings are finitely generated
+(see [Xu18, Page 819] or [LLX20, Theorem 4.14]). Whereas it is known that minimizers of
+c X,∆ are quasi-monomial by [Xu20], the finite generation of the associated graded rings
+vol
+remains open. Therefore, while Definition 3.4 is conjecturally equivalent to the previous
+definition, we circumvent the issue of finite generation.
+   From the definition it is clear that δ(v0 ) = δ(λ · v0 ), thus v0 is K-semistable if and only
+if λv0 is K-semistable for some λ > 0. In the special case of divisorial valuations induced
+by Kollár components, we have the following equivalent characterization, which serves as
+the motivation of our definition.
+Theorem 3.6. Let S be a Kollár component over x ∈ (X, ∆) (see Definition 2.3). Then
+we have δ(ordS ) ≥ min{1, δ(S, ∆S )} and the valuation ordS is K-semistable if and only if
+the log Fano pair (S, ∆S ) is K-semistable.
+Proof. Let v0 = ordS and let v ∈ Val∗X,x . We know there is an ample Q-divisor L ∼Q −S|S
+on S such that the short exact sequences
+                   0 → OY (−(m + 1)S) → OY (−mS) → OS (mL) → 0
+hold (see e.g. [Kol13, Section 4.1]), where by convention OS (mL) := OS (⌊mL⌋). Since
+R1 π∗ OY (−mS) = 0 for all m ≥ 0 by Kawamata-Viehweg vanishing, we get isomorphisms
+                                 am /am+1 ∼= H 0 (S, mL)
+where am := am (ordS ). After identifying ⊕m∈N am /am+1 with R(S, L) := ⊕m∈N H 0 (S, mL),
+the valuation v induces a filtration Fv on the section ring R(S, L).
+  We claim that
+(3.6)                           S(v0 ; v) = AX,∆ (v0 ) · S(L; Fv ),
+where S(L; Fv ) denotes the S-invariant of a filtration as in [BJ20, Section 2.5-2.6] (we will
+also use its approximated versions Sm (L; Fv ) from loc. cit.). To see this, we note that
+                          ∞ X
+                          X m                      m
+                                                   X
+            e
+            Sm (v0 ; v) =         i
+                               ℓ(Fv (aj−1 /aj )) =    j · h0 (S, jL) · Sj (L; (Fv )N ).
+                        i=1 j=1                      j=1
+
+By [BJ20, Corollary 2.12], we have Sj (L; (Fv )N ) → S(L; (Fv )N ) = S(L; Fv ) (j → ∞),
+                              j n−1
+thus as h0 (S, jL) = (Ln−1 ) (n−1)! + O(j n−2), we obtain
+
+                               Sem (v0 ; v)
+                          lim               = n(Ln−1 ) · S(L; Fv ).
+                         m→∞ mn+1 /(n + 1)!
+
+Thus
+                         S(v0 ; v)       Sem (v0 ; v)    S(L; Fv )
+                                   = lim               =            .
+                         AX,∆ (v0 ) m→∞ Sem (v0 ; v0 )   S(L; Fv0 )
+10                          CHENYANG XU AND ZIQUAN ZHUANG
+
+On the other hand, it is clear from the definition that S(L; Fv0 ) = 1 (the filtration Fv0
+satisfies Fvj0 H 0 (S, mL) = H 0 (S, mL) if j ≤ m and Fvj0 H 0 (S, mL) = 0 when j ≥ m + 1),
+which proves (3.6).
+  Since −(KS + ∆S ) ∼Q −(KY + π∗−1 ∆ + S)|S ∼ AX,∆ (v0 ) · L, we may rewrite (3.6) as
+(3.7)                         S(v0 ; v) = S(−(KS + ∆S ); Fv ).
+Let m ∈ N be a sufficiently divisible integer and let f1 , · · · , fN ∈ aAm (where A :=
+AX,∆ (v0 )) be the lift of a basis {f¯i } of H 0 (S, −m(KS + ∆S )) = H 0 (S, mAL). Let
+                                                                N
+                               0               1 X
+                  N := dim H (S, mAL) and D =        {fi = 0}.
+                                              mN i=1
+
+Then we have π ∗ D = A·S + D e where D|
+                                      e S is an m-basis type Q-divisor of the log Fano pair
+(S, ∆S ) (see [FO18, BJ20]). Let δm := min{1, δm (S, ∆S )}. From the definition of stability
+                                               e S ) is lc, thus (Y, S + π −1 ∆ + δm D)
+thresholds, we know that the pair (S, ∆S + δm D|                                     e is also
+                                                                          ∗
+lc by inversion of adjunction. We have
+                      KY + S + π∗−1 ∆ + δm D ≥ π ∗ (KX + ∆ + δm D),
+hence (X, ∆ + δm D) is lc, which implies that AX,∆ (v) ≥ δm · v(D) for any v ∈ Val∗X,x and
+any D as above.
+  If we choose f¯i to be compatible with the filtration Fv , then v(D) = Sm (−(KS +∆S ); Fv )
+and we obtain
+                            AX,∆ (v) ≥ δm · Sm (−(KS + ∆S ); Fv ).
+Letting m → ∞, we deduce δ(v0 ) ≥ min{1, δ(S, ∆S )} using (3.7). In particular, if (S, ∆S )
+is K-semistable, then v0 = ordS is K-semistable.
+   Conversely, if v0 is K-semistable, then we have
+                              AX,∆ (v) ≥ S(−(KS + ∆S ); Fv )
+for any v ∈ Val∗X,x . Let c := v(a• (v0 )). We may shift the filtration Fv by c to get
+a new filtration F on R(S, L), i.e., F λ H 0 (S, mL) := Fvλ+cm H 0(S, mL). It satisfies
+F 0H 0 (S, mL) = H 0 (S, mL) as v(am ) ≥ cm for all m ∈ N. By [BJ20, Corollary 2.10],
+there exists some ǫm with limm→∞ ǫm = 1 such that for all m ∈ N and any v ∈ Val∗X,x ,
+          ǫm · Sm (−(KS + ∆S ); F ) ≤ S(−(KS + ∆S ); F )
+                                    = S(−(KS + ∆S ); Fv ) − AX,∆ (v0 ) · v(a• (v0 ))
+                                    ≤ AX,∆ (v) − AX,∆ (v0 ) · v(a• (v0 )) .
+                                                           e as before, this means that
+For sufficiently divisible integer m and with {fi }, D and D
+          −1
+(Y, S + π∗ ∆ + ǫm D)e is lc. By adjunction we see that (S, ∆S + ǫm D|
+                                                                    e S ) is lc. Since D|
+                                                                                       eS
+can be any m-basis type Q-divisor of (S, ∆S ), we conclude that δm (S, ∆S ) ≥ ǫm . Letting
+m → ∞ we obtain δ(S, ∆S ) ≥ 1, i.e. (S, ∆S ) is K-semistable.                           
+
+   In general, if (S, ∆S ) is not K-semistable, then the inequality in Theorem 3.6 could be
+strict.
+         UNIQUENESS OF THE MINIMIZER OF THE NORMALIZED VOLUME FUNCTION                        11
+
+3.2. K-semistable valuation is the unique minimizer. In this subsection, we show
+                                                                                      c X,∆
+that if Val∗X,x contains a K-semistable valuation, then it is the unique minimizer of vol
+up to rescaling.
+Theorem 3.7. Let x ∈ (X = Spec(R), ∆) be a klt singularity and let v0 ∈ Val∗X,x .
+Assume that v0 is K-semistable. Then
+                            c X,∆ , i.e., vol(x,
+   (1) v0 is a minimizer of vol           c X, ∆) = vol(v c 0 );
+   (2) if v1 ∈ Val∗ is another minimizer of vol c X,∆ , then v1 = λv0 for some λ > 0.
+                   X,x
+
+  For the proof we need some auxiliary calculation. For each valuation v ∈ Val∗X,x and
+every integer m > 0, we set
+                                            Xm
+                              wm (v) := min     ⌊v(fi )⌋
+                                                       i=1
+where the minimum runs over all f1 , · · · , fm ∈ R \ {0} that are compatible with a• (v).
+Clearly the minimum is achieved by some f1 , · · · , fm that are compatible with a• (v), if
+and only if for the unique integer r satisfying ℓ(R/ar+1 (v)) > m ≥ ℓ(R/ar (v)), f1 , · · · , fm
+span R/ar (v) and form a linearly independent set in R/ar+1 (v).
+Lemma 3.8. We have
+                                                                      1/n
+                                    wm (v)       n              n!
+                              lim     n+1     =     ·                         .
+                             m→∞ m     n        n+1           vol(v)
+Proof. Let a• = a• (v). From the above description we have
+                                        r−1
+                                        X
+                         0 ≤ wm (v) −         i · ℓ(ai /ai+1 ) ≤ r · ℓ(ar /ar+1 )
+                                        i=0
+
+for all integers r, m > 0 with ℓ(R/ar ) ≤ m < ℓ(R/ar+1 ). Note that this implies
+                                          m
+                                    lim n     = vol(v).
+                                   r→∞ r /n!
+
+We also have limr→∞ ℓ(ar /a
+                         rn
+                           r+1 )
+                                 = 0 and
+                   Pr                                            P
+                    i=0 i · ℓ(ai /ai+1 )       r · ℓ(R/ar+1) − ri=0 ℓ(R/ai )
+               lim                       = lim
+              r→∞       r n+1 /n!          r→∞            r n+1 /n!
+                                                     
+                                                    1
+                                         = 1−           vol(v).
+                                                n+1
+Thus limr→∞ rwn+1
+               m (v)
+                  /n!
+                         n
+                      = n+1 vol(v) and
+                                                                    1/n
+               wm (v)            wm (v) r n /n!   r      n        n!
+          lim     n+1 = lim            ·        · 1/n =     ·               .
+         m→∞ m n         r→∞ r n+1 /n!     m     m      n+1     vol(v)
+                                                                                              
+                                                                c X,∆ , i.e. vol(v)
+Proof of Theorem 3.7. We first prove that v0 is a minimizer of vol           c        c 0)
+                                                                                    ≥ vol(v
+                           ∗
+for every valuation v ∈ ValX,x . Without loss of generality we may assume that AX,∆ (v0 ) =
+12                             CHENYANG XU AND ZIQUAN ZHUANG
+
+AX,∆ (v) = 1. Let m ∈ N and let f1 , · · · , fNm be an (m, v)-basis with respect to v0 (where
+Nm = ℓ(R/am (v0 ))). Since v0 is K-semistable, we have
+
+(3.8)                                1 = AX,∆ (v) ≥ S(v0 ; v).
+
+From the definition it is clear that Sem (v0 ; v0 ) = wNm (v0 ) and Sem (v0 ; v) ≥ wNm (v), hence
+by Lemma 3.8 we get
+                                                                                 n1
+                                          wNm (v)                     vol(v0 )
+                          S(v0 ; v) ≥ lim          =                                    .
+                                     m→∞ wNm (v0 )                    vol(v)
+
+Combined with (3.8) we immediately have
+
+                               c
+                               vol(v)                       c 0 ),
+                                      = vol(v) ≥ vol(v0 ) = vol(v
+
+                                                 c X,∆ .
+i.e. v0 minimizes the normalized volume function vol
+   Now assume vol(v0 ) = vol(v). We claim that
+
+(3.9)                     vol(v0 ) = vol(v) = mult(a• (v0 ) ∩ a• (v)).
+
+Suppose this is not the case, then vol(v0 ; v) > 0 by (3.1). Thus by the continuity part of
+Lemma 3.3, there exists some ǫ > 0 such that
+                                                              (1+2ǫ)m
+                                   v                     ℓ(Fv          (R/am (v0 )))
+                 γ := vol v0 ;                = lim                                  > 0.
+                                 1 + 2ǫ          m→∞                  mn /n!
+
+For each m ∈ N, let km be the unique integer k determined by
+
+                               ℓ(R/ak−1(v)) ≤ Nm < ℓ(R/ak (v)).
+
+Since vol(v0 ) = vol(v), we have limm→∞ kmm = 1 and thus km < (1 + ǫ)m for sufficiently
+large m. Let g1 , · · · , gNm ∈ R \ {0} be a sequence that’s compatible with a• (v) such that
+                                                       Nm
+                                                       X
+                                       wNm (v) =              ⌊v(gi )⌋.
+                                                        i=1
+
+Then by construction we have v(gi ) ≤ km for all 1 ≤ i ≤ Nm and the inequality
+                                                 Nm
+                                                 X
+                                Sem (v0 ; v) =         ⌊v(fi )⌋ ≥ wNm (v)
+                                                 i=1
+
+can be upgraded as
+                       Nm
+                       X                                 Nm
+                                                         X
+                              min{⌊v(fi )⌋, km } ≥             ⌊v(gi )⌋ = wNm (v).
+                        i=1                              i=1
+           UNIQUENESS OF THE MINIMIZER OF THE NORMALIZED VOLUME FUNCTION                               13
+
+In particular, for sufficiently large m we get
+  Nm
+  X                   ∞
+                      X
+         ⌊v(fi )⌋ =         j · ℓ(Fvj Rm /Fvj+1Rm )
+   i=1                j=0
+                      X∞
+                 ≥          min{j, km } · ℓ(Fvj Rm /Fvj+1Rm ) + ((1 + 2ǫ)m − km ) · ℓ(Fv(1+2ǫ)m Rm )
+                      j=0
+                      X∞
+                                             j      j+1           γmn
+                 ≥          min{j, km } · ℓ(Fv Rm /Fv Rm ) + ǫm ·
+                      j=0
+                                                                          n!
+                      Nm
+                      X                            ǫγmn+1
+                 =          min{⌊v(fi )⌋, km } +
+                      i=1
+                                                     n!
+                          ǫγmn+1
+            ≥ wNm (v) +          ,
+                             n!
+                                     P
+where Rm = R/am (v0 ). Dividing by ⌊v0 (fi )⌋ = Sem (v0 ; v0 ) = wNm (v0 ) = O(mn+1 ) and
+letting m → ∞, we obtain
+                                                                          1
+                                 Sem (v0 ; v)       wNm (v)        vol(v0 ) n
+            1 ≥ S(v0 ; v) = lim               > lim            =
+                            m→∞ Sem (v0 ; v0 ) m→∞ wNm (v0 )       vol(v)
+where the last equality follows from Lemma 3.8, hence vol(v) > vol(v0 ), a contradiction.
+This proves the claim (3.9). By the following Lemma 3.9, it implies v = v0 and we are
+done.                                                                                  
+  The following result, which is an improvement of [LX16, Proposition 2.7], is used in the
+above proof.
+Lemma 3.9. Let x ∈ X = Spec(R) be a singularity and let v0 , v1 ∈ Val∗X,x . Assume that
+                              vol(v0 ) = vol(v1 ) = mult(a• (v0 ) ∩ a• (v1 )) > 0.
+Then v0 = v1 .
+Proof. We prove by contradiction. Assume that v0 (f ) 6= v1 (f ) for some f ∈ R. Without
+loss of generality we may assume that v0 (f ) = ℓ0 > ℓ1 = v1 (f ). Replacing f by f k for
+some k ∈ N we may further assume that ℓ0 ≥ ℓ1 + 1. For v ∈ Val∗X,x and r ≥ 0, let
+ar (v) = {f ∈ R | v(f ) ≥ r}. Let br = ar (v0 ) ∩ ar (v1 ) and cr = ar (v0 ) ∩ a2r (v1 ) where r ≥ 0.
+   For every m ∈ N and every s ∈ bm , we have v0 (f m s) = m · v0 (f ) + v0 (s) ≥ m(ℓ0 + 1),
+thus multiplication by f m induces a map
+                                    fm
+                               bm −→ am(ℓ0 +1) (v0 ) → am(ℓ0 +1) (v0 )/bm(ℓ0 +1)
+whose kernel is contained in cm (since v1 (f m s) ≥ m(ℓ0 + 1) implies v1 (s) ≥ m(ℓ0 + 1) −
+mℓ1 ≥ 2m). It follows that
+(3.10)                              ℓ(am(ℓ0 +1) (v0 )/bm(ℓ0 +1) ) ≥ ℓ(bm /cm )
+for all m ∈ N. By [LX16, Proposition 2.7], there exists some 0 6= g ∈ mx such that
+ℓ2 = v1 (g) > v0 (g) > 0. For every m ∈ N and every s ∈ cm , we then have
+                                 v1 (g m s) = m · v1 (g) + v1 (s) ≥ m(ℓ2 + 2),
+14                           CHENYANG XU AND ZIQUAN ZHUANG
+
+thus multiplication by g m induces a map
+                            gm
+                        cm −→ am(ℓ2 +2) (v1 ) → am(ℓ2 +2) (v1 )/bm(ℓ2 +2)
+whose kernel is contained in b2m (if v0 (g m s) ≥ m(ℓ2 + 2) then as v0 (g) ≤ ℓ2 we get
+v0 (s) ≥ 2m). It follows that
+(3.11)                      ℓ(am(ℓ2 +2) (v1 )/bm(ℓ2 +2) ) ≥ ℓ(cm /b2m )
+for all m ∈ N. Combining (3.10) and (3.11) we see that
+               (ℓ0 + 1)n (mult(b• ) − vol(v0 )) + (ℓ2 + 2)n (mult(b• ) − vol(v1 ))
+                    ℓ(am(ℓ0 +1) (v0 )/bm(ℓ0 +1) )        ℓ(am(ℓ2 +2) (v1 )/bm(ℓ2 +2) )
+             = lim               n
+                                                  + lim
+              m→∞             m /n!                 m→∞            mn /n!
+                    ℓ(bm /cm ) + ℓ(cm /b2m )            ℓ(bm /b2m )
+             ≥ lim              n
+                                                 = lim
+              m→∞            m /n!                 m→∞    mn /n!
+             =(2n − 1)mult(b• ) > 0,
+which contradicts our assumption. Thus v0 (f ) = v1 (f ) for all f ∈ R as desired.         
+
+3.3. Every minimizer is K-semistable. In this subsection, we show that every val-
+uation that minimizes the normalized volume function is K-semistable. Combined with
+Theorem 3.7, this proves the uniqueness of the minimizer.
+Theorem 3.10. Let x ∈ (X = Spec(R), ∆) be a klt singularity and let v0 ∈ Val∗X,x be a
+                                            c X,∆ . Then v0 is K-semistable.
+minimizer of the normalized volume function vol
+   In other words, we will show that AX,∆ (v) ≥ S(v0 ; v) for every valuation v ∈ Val∗X,x .
+Inspired by the argument of [Li17], we consider a family b•,t (t ∈ R≥0 ) of graded sequences
+of ideals that interpolate the valuation ideal sequences of v0 and v, defined as follows: we
+set b•,0 = a• (v0 ); when t > 0, we set
+                                           m
+                                           X
+(3.12)                            bm,t =         am−i (v0 ) ∩ ai (tv).
+                                           i=0
+
+Roughly speaking, the ideal bm,t is generated by elements f ∈ R with v0 (f ) + t · v(f ) ≥ m.
+By (2.1), we have
+                                              c 0 ) = lct(b•,0 )n · mult(b•,0 ).
+                  lct(b•,t )n · mult(b•,t ) ≥ vol(v
+To relate this to the K-semistability of v0 , the idea is to take the derivative of the above
+normalized multiplicities at t = 0, which was a technique introduced in [Li17]. To do so
+we analyze the log canonical thresholds and multiplicities of b•,t .
+
+3.3.1. Log canonical threshold of summation. We first establish an inequality for the log
+canonical thresholds of graded sequences of ideals. Given two graded sequences of ideals
+a• and b• , we define c• := a• ⊞ b• by setting
+                                                       m
+                                                       X
+                                 cm = (a ⊞ b)m =             ai ∩ bm−i .
+                                                       i=0
+          UNIQUENESS OF THE MINIMIZER OF THE NORMALIZED VOLUME FUNCTION                                       15
+
+It is easy to verify that c• is also a graded sequence of ideals. Note that our definition
+differs from the usual sum of ideal sequences (see e.g. [Mus02]) since we use intersections
+of ideals rather than taking product.
+Theorem 3.11. Under the above notation, assume a• and b• are graded sequences of
+mx -primary ideals. Then we have
+                                     lct(c• ) ≤ lct(a• ) + lct(b• ).
+   We denote by J (at ) the multiplier ideal of a fractional ideal and similarly by J (at• ) the
+asymptotic multiplier ideal of a graded sequence of ideals a• with exponent t (see [Laz04]
+for details). The above inequality will follow from a summation formula of multiplier
+ideals.
+Lemma 3.12. For any two graded sequences of ideals a• , b• and any t > 0, we have
+                                    X
+(3.13)                   J (ct• ) ⊆    J (aλ• ) ∩ J (bµ• )
+                                             λ+µ=t
+
+where c• = a• ⊞ b• .
+Proof. We follow the proof of [Tak06, Proposition 4.10]. Let m be a sufficiently large
+                                               t/m
+and divisible integer such that J (ct• ) = J (cm ). By the summation formula of multiplier
+ideals (see [Tak06, Theorem 0.1(2)]), which says that for any two ideals a and b,
+                                               X
+                             J (a + b)t =           J (at1 · bt2 ),
+                                                   t1 +t2 =t
+
+we have
+                                           !t/m                                                     !
+                           m
+                           X                                   X               m
+                                                                               Y
+       J (ct/m
+           m ) = J
+                                 ai ∩ bm−i      =                        J         (ai ∩ bm−i )ti       .
+                            i=0                          t0 +···+tm =t/m       i=0
+
+                                                     m!/i
+(The right hand side is a finite sum.) Since ai ⊆ am! , each individual term in the above
+right hand side is contained in
+                                 !               !
+                        Ym              Ym   iti            
+                              ti                        λ/m!
+                    J       ai ⊆ J         am! = J am!
+                                             m!
+                                                               ⊆ J (aλ• )
+                           i=0               i=0
+            Pm                                                                                Pm
+where λ = i=0 iti .PBy symmetry, it is also contained in J (bµ• ) where µ =                      i=0 (m − i)ti .
+Note that λ + µ = m                 t
+                     i=0 mti = m · m = t, thus every
+                              m
+                                              !
+                             Y
+                         J      (ai ∩ bm−i )ti ⊆ J (aλ• ) ∩ J (bµ• )
+                                  i=0
+
+is contained in the right hand side of (3.13). This completes the proof.                                      
+Proof of Theorem 3.11. Let α = lct(a• ), β = lct(b• ) and let t = α + β. For any λ, µ ≥ 0
+with λ + µ = t we have either λ ≥ α or µ ≥ β, therefore J (aλ• ) ∩ J (bµ• ) ⊆ mx . By Lemma
+3.12 we see that J (ct• ) ⊆ mx and hence lct(c• ) ≤ t = lct(a• ) + lct(b• ).              
+16                            CHENYANG XU AND ZIQUAN ZHUANG
+
+3.3.2. Multiplicities of a family of graded sequences of ideals. We next derive a formula
+for the multiplicities of b•,t .
+                                               R∞                tdu
+Lemma 3.13. mult(b•,t ) = vol(v0 ) − (n + 1) 0 vol(v0 ; v/u) (1+tu) n+2 .
+
+
+Proof. By definition, we have
+                                                           ℓ(R/bm,t )
+                                 mult(b•,t ) = lim                    .
+                                                    m→∞      mn /n!
+However, to derive the statement of the lemma, it is better to use a different formula,
+which follows from the above equality:
+                                             Pm
+                                              j=1 ℓ(R/bj,t )
+(3.14)                     mult(b•,t ) = lim  n+1
+                                                             .
+                                        m→∞ m     /(n + 1)!
+For ease of notation, let a• = a• (v0 ). We have
+                                      ℓ
+                                    X                
+                 aj−ℓ−1 ∩ aℓ+1 (tv) ∩   aj−i ∩ ai (tv) = aj−ℓ ∩ aℓ+1 (tv)
+                                              i=0
+
+for all 0 ≤ ℓ < j and we get short exact sequences
+              aj−ℓ−1 ∩ aℓ+1 (tv)          R                     R
+         0→                      → Pℓ                  → Pℓ+1                → 0.
+               aj−ℓ ∩ aℓ+1 (tv)     i=0 aj−i ∩ ai (tv)    i=0 aj−i ∩ ai (tv)
+
+Thus from the definition of b•,t , we get
+                                                    j
+                                                    X
+                       ℓ(R/bj,t ) = ℓ(R/aj ) −            ℓ(Fvi/t (aj−i /aj−i+1)).
+                                                    i=1
+
+Summing over j = 0, 1, · · · , m we obtain
+                m
+                X                   m
+                                    X                     X
+                      ℓ(R/bj,t) =          ℓ(R/aj ) −             ℓ(Fvi/t (aj−i /aj−i+1 ))
+                j=0                 j=1                 1≤i≤j≤m
+                                    Xm                  Xm
+                               =           ℓ(R/aj ) −         ℓ(Fvi/t (R/am−i+1 ))
+                                     j=1                i=1
+
+Combining with (3.14), we deduce that
+                                                                       Wm
+(3.15)                  mult(b•,t ) = vol(v0 ) − (n + 1) · lim        n+1
+                                                                 m→∞ m    /n!
+                P        i/t
+where Wm := m     i=1 ℓ(Fv (R/am−i+1 )). To analyze the limit in the above expression, we
+set (c.f. the proof of Lemma 3.3 or the argument in [Li17, Section 4.1.1])
+                                    ⌈my⌉/t
+                              ℓ(Fv           (R/am−⌈my⌉+1 ))
+                  φm (y) =
+                                             mn /n!
+                                    ⌈my⌉/t
+                              ℓ(Fv    (R/am−⌈my⌉+1 )) (m − ⌈my⌉ + 1)n
+                          =                          ·
+                                (m − ⌈my⌉ + 1)n /n!         mn
+        UNIQUENESS OF THE MINIMIZER OF THE NORMALIZED VOLUME FUNCTION                        17
+
+where 0 < y < 1. It is not hard to check that
+                                                     
+                                                 y
+                            lim φm (y) = g              (1 − y)n
+                           m→∞               t(1 − y)
+where g(u) = vol(v0 ; v/u), hence by the dominated convergence theorem we have
+                                 Z 1
+                 Wm
+          lim            = lim       φm (y)dy
+         m→∞ mn+1 /n!       m→∞ 0
+                            Z 1                          Z ∞
+                                       y             n                  tdu
+                         =     g              (1 − y) dy =     g(u)             .
+                             0     t(1 − y)                 0       (1 + tu)n+2
+Together with (3.15) this implies the statement of the lemma.                                
+  We are now ready to give the proof of Theorem 3.10.
+Proof of Theorem 3.10. Let v ∈ Val∗X,x . Up to rescaling, we may assume that AX,∆ (v0 ) =
+AX,∆ (v) = 1. Define b•,t (t ≥ 0) as in (3.12), and let
+                                   f (t) := (1 + t)n · mult(b•,t ).
+                c 0 ). By Theorem 3.11 we have
+Clearly f (0) = vol(v
+                                                         AX,∆ (v0 )     AX,∆ (v)
+           lct(b•,t ) ≤ lct(a• (v0 )) + lct(a• (tv)) ≤                +           ≤ 1 + t.
+                                                         v0 (a• (v0 )) v(a• (tv))
+Hence for all t ≥ 0,
+                                                            c 0 ) = f (0),
+                        f (t) ≥ lct(b•,t )n · mult(b•,t ) ≥ vol(v
+where the second inequality follows from (2.1) and the assumption that v0 is a minimizer
+   c X,∆ . Thus f ′ (0) ≥ 0. Using Lemma 3.13, we find
+of vol
+                                                      Z ∞
+                        ′
+                       f (0) = n · vol(v0 ) − (n + 1)     vol(v0 ; v/u)du,
+                                                           0
+thus                                          R∞
+                                     n + 1 0 vol(v0 ; v/u)du
+                    AX,∆ (v) = 1 ≥          ·                  = S(v0 ; v).
+                                        n          vol(v0 )
+Since v ∈ Val∗X,x is arbitrary, it follows that v0 is K-semistable.                          
+Remark 3.14. If we combine together Theorems 3.6, 3.7 and 3.10, we get a proof of the
+fact that a Kollár component is a minimizer if and only if it is K-semistable, which was
+first established in [Li17, LX16]. While in the proof of Theorem 3.10, we still use a version
+of the derivative formula introduced in [Li17], we do not need it for the converse.
+
+                                        4. Applications
+  In this section, we prove the results mentioned in the introduction.
+Proof of Theorem 1.1. By [Blu18] (see also [Xu20, Remark 3.8]), there exists v0 ∈ Val∗X,x
+            c 0 ) = vol(x,
+such that vol(v       c X, ∆). By Theorem 3.10, v0 is K-semistable, thus by Theorem
+3.7, it is the unique minimizer of the normalized volume function up to scaling.       
+18                            CHENYANG XU AND ZIQUAN ZHUANG
+
+Proof of Corollary 1.2. If v0 is a minimizer of vol c X,∆ , then for any g ∈ G, the valuation
+                                     −1                           c X,∆ . By Theorem 1.1, we
+g · v0 defined by (g · v0)(s) = v0 (g · s) is also a minimizer of vol
+have g · v0 = λv0 for some λ > 0; but since AX,∆ (v0 ) = AX,∆ (g · v0 ), we must have λ = 1,
+hence v0 = g · v0 is G-invariant.                                                           
+
+     Theorem 1.3 is then an easy consequence of Corollary 1.2.
+
+Proof of Theorem 1.3. Let G = Aut(Y /X) be the Galois group. By Corollary 1.2, the
+                c Y,∆ is G-invariant, hence vol(y,
+minimizer v0 of vol                                      c G (y, Y, ∆Y ), where
+                                            c Y, ∆Y ) = vol
+                        Y
+
+
+                             c G (x, X, ∆) :=
+                             vol                  inf      c (X,∆),x (v)
+                                                           vol
+                                                v∈ValG
+                                                     X,x
+
+
+as the infimum runs over all valuations v ∈ ValX,x that are invariant under the G-action.
+                                      c G (y, Y, ∆Y ) = |G| · vol(x,
+   By [LX19, Theorem 2.7(1)], we get vol                      c X, ∆) (in loc. cit. it is
+assumed that ∆Y = 0 and f is étale in codimension one, but the proof applies in general
+since these assumptions are only used to guarantee that ∆ = 0). Thus
+                  c Y, ∆Y ) = |G| · vol(x,
+                  vol(y,            c X, ∆) = deg(f ) · vol(x,
+                                                        c X, ∆).
+
+                                                                                           
+
+   In fact, the above argument implies the finite degree formula for any quasi-étale (i.e.
+étale in codimension one) finite morphism Y → X, as we can pass to the Galois closure
+of Y /X, which is also quasi-étale. However, if there is a branched divisor, then the pull
+back of KX + ∆ to the Galois closure of Y /X might have negative coefficients.
+
+Proof of Corollary 1.4. For the germ of a klt singularity (X, ∆), by [Xu14, Bra20] (see
+also [TX17]), the fundamental group π1 (x, X sm ) of the smooth locus X sm of is finite.
+   Let f : (Y, y) → (X, x) be the universal cover of X sm and let ∆Y = f ∗ ∆. Then we have
+KY +∆Y = f ∗ (KX +∆), hence by Theorem 1.3 we get vol(y,c Y, ∆Y ) = deg(f )·vol(x,
+                                                                               c X, ∆).
+By [LX19, Theorem A.4], we also have vol(y,c Y, ∆Y ) ≤ n with equality if and only if
+                                                             n
+
+y ∈ X is smooth and ∆Y = 0. It follows that
+                                                                 nn
+                            deg(f ) = #|π1 (x, X sm )| ≤
+                                                            c X, ∆)
+                                                            vol(x,
+                                                  
+and the equality holds if and only if y ∈ (Y, ∆Y ) ∼= (0 ∈ Cn ) (étale locally), i.e., ∆ = 0
+and (x ∈ X) is étale locally isomorphic to C /G where G ∼
+                                             n
+                                                          = π1 (x, X sm ) and the action of
+G is fixed point free in codimension one.                                                  
+
+Proof of Theorem 1.5. By [BJ20, Theorem D], we have
+                                    n
+                 c X, ∆) ≥        n
+                vol(x,                  · δ(X, ∆)n · (−(KX + ∆))n .
+                                 n+1
+Thus the result follows immediately from Corollary 1.4.                                    
+          UNIQUENESS OF THE MINIMIZER OF THE NORMALIZED VOLUME FUNCTION                                   19
+
+                                              References
+       [AZ20] Hamid Ahmadinezhad and Ziquan Zhuang, K-stability of Fano varieties via admissible flags
+                (2020). arXiv:2003.13788.
+[BdFFU15] S. Boucksom, T. de Fernex, C. Favre, and S. Urbinati, Valuation spaces and multiplier ideals
+                on singular varieties, Recent advances in algebraic geometry, 2015, pp. 29–51.
+       [Bir19] Caucher Birkar, Anti-pluricanonical systems on Fano varieties, Ann. of Math. (2) 190 (2019),
+                no. 2, 345–463.
+        [BJ20] Harold Blum and Mattias Jonsson, Thresholds, valuations, and K-stability, Adv. Math. 365
+                (2020), 107062.
+        [BJ18] Sébastien Boucksom and Mattias Jonsson, A non-Archimedean approach to K-stability
+                (2018). arXiv:1805.11160.
+      [Blu18] Harold Blum, Existence of valuations with smallest normalized volume, Compos. Math. 154
+                (2018), no. 4, 820–849.
+     [Bra20] Lukas Braun, The local fundamental group of a Kawamata log terminal singularity is finite
+                (2020). arXiv:2004.00522.
+      [BX19] Harold Blum and Chenyang Xu, Uniqueness of K-polystable degenerations of Fano varieties,
+                Ann. of Math. (2) 190 (2019), no. 2, 609–656.
+     [Cut13] Steven Dale Cutkosky, Multiplicities associated to graded families of ideals, Algebra Number
+                Theory 7 (2013), no. 9, 2059–2083.
+    [ELS03] Lawrence Ein, Robert Lazarsfeld, and Karen E. Smith, Uniform approximation of Abhyankar
+                valuation ideals in smooth function fields, Amer. J. Math. 125 (2003), no. 2, 409–440.
+       [FO18] Kento Fujita and Yuji Odaka, On the K-stability of Fano varieties and anticanonical divisors,
+                Tohoku Math. J. (2) 70 (2018), no. 4, 511–521.
+  [HMX14] Christopher D. Hacon, James McKernan, and Chenyang Xu, ACC for log canonical thresh-
+                olds, Ann. of Math. (2) 180 (2014), no. 2, 523–571.
+       [Jia17] Chen Jiang, Boundedness of Q-Fano varieties with degrees and alpha-invariants bounded
+                from below, To appear in Ann. Sci. Éc. Norm. Supér. (4) (2017). arXiv:1705.02740 .
+      [JM12] Mattias Jonsson and Mircea Mustaţă, Valuations and asymptotic invariants for sequences of
+                ideals, Ann. Inst. Fourier (Grenoble) 62 (2012), no. 6, 2145–2209 (2013).
+     [KM98] János Kollár and Shigefumi Mori, Birational geometry of algebraic varieties, Cambridge
+                Tracts in Mathematics, vol. 134, Cambridge University Press, Cambridge, 1998. With the
+                collaboration of C. H. Clemens and A. Corti, Translated from the 1998 Japanese original.
+      [Kol13] János Kollár, Singularities of the minimal model program, Cambridge Tracts in Mathematics,
+                vol. 200, Cambridge University Press, Cambridge, 2013. With a collaboration of Sándor
+                Kovács.
+     [Laz04] Robert Lazarsfeld, Positivity in algebraic geometry. II, Ergebnisse der Mathematik und ihrer
+                Grenzgebiete. 3. Folge. A Series of Modern Surveys in Mathematics [Results in Mathematics
+                and Related Areas. 3rd Series. A Series of Modern Surveys in Mathematics], vol. 49, Springer-
+                Verlag, Berlin, 2004. Positivity for vector bundles, and multiplier ideals.
+         [Li17] Chi Li, K-semistability is equivariant volume minimization, Duke Math. J. 166 (2017), no. 16,
+                3147–3218.
+         [Li18]         , Minimizing normalized volumes of valuations, Math. Z. 289 (2018), no. 1-2, 491–
+                513.
+      [Liu18] Yuchen Liu, The volume of singular Kähler-Einstein Fano varieties, Compos. Math. 154
+                (2018), no. 6, 1131–1158.
+      [Liu20]           , The volume of a valuation is log convex (2020). Preprint.
+   [LLX20] Chi Li, Yuchen Liu, and Chenyang Xu, A guided tour to normalized volumes, Geometry
+                Analysis, In Honor of Gang Tian’s 60th Birthday, 2020, pp. 167–219.
+      [LM09] Robert Lazarsfeld and Mircea Mustaţă, Convex bodies associated to linear series, Ann. Sci.
+                Éc. Norm. Supér. (4) 42 (2009), no. 5, 783–835.
+       [LX16] Chi Li and Chenyang Xu, Stability of Valuations and Kollár Components, To appear in J.
+                Euro Math. Soc. (2016). arXiv:1604.05398.
+20                                CHENYANG XU AND ZIQUAN ZHUANG
+
+       [LX18]          , Stability of Valuations: Higher Rational Rank, Peking Math. J. 1 (2018), no. 1, 1–79.
+       [LX19] Yuchen Liu and Chenyang Xu, K-stability of cubic threefolds, Duke Math. J. 168 (2019),
+               no. 11, 2029–2073.
+     [Mus02] Mircea Mustaţǎ, The multiplier ideals of a sum of ideals, Trans. Amer. Math. Soc. 354
+               (2002), no. 1, 205–217.
+      [Tak06] Shunsuke Takagi, Formulas for multiplier ideals on singular varieties, Amer. J. Math. 128
+               (2006), no. 6, 1345–1362.
+       [TX17] Zhiyu Tian and Chenyang Xu, Finiteness of fundamental groups, Compos. Math. 153 (2017),
+               no. 2, 257–273.
+        [Xu14] Chenyang Xu, Finiteness of algebraic fundamental groups, Compos. Math. 150 (2014), no. 3,
+               409–414.
+        [Xu18]         , Interaction between singularity theory and the minimal model program, Proceed-
+               ings of the International Congress of Mathematicians—Rio de Janeiro 2018. Vol. II. Invited
+               lectures, 2018, pp. 807–830.
+        [Xu20]         , A minimizing valuation is quasi-monomial, Ann. of Math. (2) 191 (2020), no. 3,
+               1003–1030.
+      [Zhu20] Ziquan Zhuang, Optimal destabilizing centers and equivariant K-stability (2020).
+               arXiv:2004.09413.
+
+     Department of Mathematics, MIT, Cambridge, MA, 02139.
+     E-mail address: cyxu@mit.edu
+
+     BICMR, Peking University, Beijing, 100871.
+     E-mail address: cyxu@math.pku.edu.edu
+
+     Department of Mathematics, MIT, Cambridge, MA, 02139.
+     E-mail address: ziquan@mit.edu
+

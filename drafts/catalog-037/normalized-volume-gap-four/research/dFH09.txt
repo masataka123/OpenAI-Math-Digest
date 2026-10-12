@@ -1,0 +1,1024 @@
+                                                              SINGULARITIES ON NORMAL VARIETIES
+
+                                                                TOMMASO DE FERNEX AND CHRISTOPHER D. HACON
+
+
+                                                   Abstract. In this paper we generalize the definitions of singularities of pairs and mul-
+arXiv:0805.1767v2 [math.AG] 25 Oct 2008
+
+
+
+
+                                                   tiplier ideal sheaves to pairs on arbitrary normal varieties, without any assumption on
+                                                   the variety being Q-Gorenstein or the pair being log Q-Gorenstein. The main features
+                                                   of the theory extend to this setting in a natural way.
+
+
+
+
+                                                                                     1. Introduction
+                                             The theory of singularities of pairs and multiplier ideal sheaves has become a core
+                                          part of the study of higher dimensional algebraic varieties (e.g., see [Kol2, KM, Laz2,
+                                          EM] for an overview of the theory and various applications). In fact, pairs naturally
+                                          arise in a geometrically meaningful way in a variety of instances: as boundaries of open
+                                          varieties, markings on varieties in moduli problems, discriminants and orbifold structures
+                                          of morphisms, base schemes of rational maps, and inductive tools in higher dimensional
+                                          geometry.
+                                             The main purpose of this paper is to investigate possible extensions of the theory to
+                                          settings which are more general than the ones in which it has been introduced and studied.
+                                          Our priority, naturally, is to perform this generalization in such a way that the essential
+                                          features are preserved.
+                                             Given a Q-Gorenstein variety X, several invariants have been defined via resolution
+                                          of singularities. A key ingredient in their definition is the relative canonical divisor of a
+                                          resolution f : Y → X, that is, the exceptional Q-divisor KY /X := KY − f ∗ KX (here we
+                                          fix KY so that f∗ KY = KX ). The difficulty in extending the definitions of such invariants
+                                          to arbitrary normal varieties arises as soon as KX is not Q-Cartier, as it is unclear in
+                                          this case what should be its pullback. One way around the problem is to perturb KX by
+                                          adding a boundary, that is, and effective Q-divisor ∆ such that KX + ∆ is Q-Cartier. This
+                                          also gives rise to a pair (X, ∆), but the boundary itself may have no particular geometric
+                                          meaning, and it is not clear a priori that there exists a natural choice for ∆.
+                                             Our approach to the problem is different and more direct. We introduce a notion of
+                                          pullback of (Weil) Q-divisors which agrees with the usual one for Q-Cartier Q-divisors.
+                                          In this way we are able to define relative canonical divisors KY /X := KY + f ∗ (−KX ) and
+                                          KY−/X := KY − f ∗ KX for any proper birational morphism f : Y → X of normal varieties.
+                                          These are exceptional R-divisors that coincide when KX is Q-Cartier, but may be different
+                                          otherwise. We also define a suitable approximation of KY−/X via Q-divisors Km,Y /X (for
+                                          m ≥ 1), that we call limiting relative canonical divisors. Using these notions, we generalize
+                                          the definitions of multiplier ideals and singularities of pairs to pairs of the form (X, Z),
+                                             2000 Mathematics Subject Classification. Primary 14B05; Secondary 14J17, 14E15.
+                                             Key words and phrases. Divisorial valuation, relative canonical divisor, singularities of pairs, multiplier
+                                          ideals.
+                                             The first author was partially supported by NSF research grant no: 0548325. The second author was
+                                          partially supported by NSF research grant no: 0456363 and an AMS Centennial fellowship.
+
+                                                                                                1
+2                     TOMMASO DE FERNEX AND CHRISTOPHER D. HACON
+                                                   P
+where X is an arbitrary normal variety and Z =         bk · Zk is an effective formal linear
+combination of proper closed subschemes of X.
+  The multiplier ideal sheaf J(X, Z) of (X, Z) is defined, in our generality, as the unique
+maximal element in the collection of ideal sheaves
+                                                  −1
+                          (fm )∗ OYm (⌈Km,Ym /X − fm  (Z)⌉) m≥1 ,
+where for every m the morphism fm : Ym → X is a ‘high enough’ log resolution of (X, Z)
+depending on m. The core result of the paper is that J(X, Z) can be realized as the
+multiplier ideal sheaf of a suitable log Q-Gorenstein pair.
+Theorem 1.1. For any pair (X, Z) as above, there is a boundary ∆ on X such that
+                                   J(X, Z) = J((X, ∆); Z).
+    In particular, we deduce the surprising fact that the set of ideal sheaves
+                           {J((X, ∆); Z) | ∆ is a boundary on X}
+has a unique maximal element, namely J(X, Z). A posteriori, one can take this maximal
+element as the definition of J(X, Z). Using this result, all the main properties related to
+multiplier ideals, such as vanishing theorems, connectedness properties, and basic inversion
+of adjunction statements, extend immediately to the general setting.
+   In order to generalize the notions of log terminal and log canonical singularities, we
+impose log discrepancy conditions with respect to the limiting relative canonical divisors
+Km,Y /X . In a similar vein, we have the following result.
+Theorem 1.2. A pair (X, Z) is log terminal (resp., log canonical) if and only if there is
+a boundary ∆ on X such that ((X, ∆); Z) is log terminal (resp., log canonical).
+   We immediately deduce, for instance, that as in the Q-Gorenstein case a normal variety
+with log terminal singularities (resp., with Cohen–Macaulay log canonical singularities) has
+rational singularities (resp., Du Bois singularities). Kawamata’s subadjunction theorem
+is also generalized to our context. In fact, we observe that minimal log canonical centers
+(which in general are not known to be Q-Gorenstein) are log terminal; this provides in
+particular a natural setting for the theory developed in this paper. Finally, we check that
+in dimension two our notions of log terminal and log canonical singularities agree with
+those of numerically log terminal and numerically log canonical singularities, which in
+particular implies that they are always Q-Gorenstein.
+   By contrast, our definition of terminal and canonical singularities uses log discrepancy
+conditions with respect to the relative canonical divisor KY /X . When Z is a Q-Cartier Q-
+divisor, we extend to this setting the following characterization of canonical singularities.
+Proposition 1.3. If Z is a Q-Cartier Q-divisor, then (X, Z) is canonical if and only if
+for any sufficiently divisible m ≥ 1 and for every sufficiently high log resolution f : Y → X
+there is an inclusion OX (m(KX + Z)) · OY ⊆ OY (m(KY + ZY )) as sub-OX -modules of the
+constant sheaf of rational functions, where ZY is the proper transform of Z.
+   Using this property, the main features of canonical singularities, such as the deformation
+invariance properties of plurigenera (for singular varieties of general type), of canonical
+singularities and of numerical Kodaira dimension easily extend to the more general setting.
+   We expect that the larger freedom in defining these notions of singularities should
+have interesting applications. In the (log) Q-Gorenstein setting many applications rely on
+                           SINGULARITIES ON NORMAL VARIETIES                                  3
+
+multiplier ideals and their vanishing theorems, and it is encouraging that these powerful
+methods extend to our setting.
+   The original motivation of this research comes from a question posed by Valery Alexeev
+during the AIM Workshop [AIM06], which asks whether it is possible to generalize the
+definitions of singularities of pairs in a wider context than the usual one. The question
+itself was motivated by an example, due to Paul Hacking, of a flat family of pairs (St , Dt ),
+where St is a smooth surface and Dt is an effective divisor, that specializes to a pair
+(S0 , D0 ), where S0 is a singular surface and the ideal sheaf of D0 acquires an embedded
+prime at the singularity of S0 .
+   The example brings to light an important issue: namely that often, in the literature,
+pairs (X, Z) have been intended in a combined way, both geometrically (as in one of the
+situations previously described) and as a correction to the possible failure of KX being
+Q-Cartier—by incorporating a boundary ∆ into Z, so to speak. We insist in this paper
+to keep the two things separated.
+   The question of defining multiplier ideals in the generality treated in this paper arises
+naturally also in connection with the generalized test ideal introduced by Hara and Yoshida
+[HY] (see also [HT]) using the Frobenius action in positive characteristics, as the latter
+can be defined without any (log) Q-Gorenstein assumption. In the (log) Q-Gorenstein
+setting, multiplier ideals reduce, for sufficiently large characteristics, to the corresponding
+generalized test ideals (see [Smi, Har, HY, Tkg]). It follows by independent results of
+Hara and Blickle (see [Bli]) that, in the toric setting, the same happens without any
+(log) Q-Gorenstein assumption for the multiplier ideals defined in this paper. It would be
+interesting to see if this property holds in general; this question was raised by Hara.
+   In the first two sections of the paper we work over an arbitrary field; starting from
+Section 4 we will restrict the setting to varieties over an algebraically closed field of char-
+acteristic zero. A divisor on a normal variety X will be understood to be a Weil divisor,
+unless otherwise specified.
+
+1.1. Acknowledgments. The authors would like to thank Lawrence Ein and Karen
+Smith for useful conversations, and Manuel Blickle, Nobuo Hara, Karl Schwede and Shun-
+suke Takagi for useful comments. The authors are very grateful to the referee for many
+valuable suggestions, comments and corrections.
+
+                              2. Valuations of Q-divisors
+   Let X be a normal variety. A divisorial valuation v on X is a discrete valuation of the
+function field of X of the form v = q valF where q ∈ Z+ and F is a prime divisor over X,
+that is, on a normal variety X ′ with a given birational morphism µ : X ′ → X.
+   Throughout this section, we fix a divisorial valuation v of X. If D is a Cartier divisor
+on X, then the valuation v(D) of D is given by q times the coefficient of F in the divisor
+µ∗ D. The valuation v(Z) of a proper closed subscheme Z ⊂ X is given by
+                 v(Z) = v(IZ ) := min{v(φ) | φ ∈ IZ (U ), U ∩ cX (v) 6= ∅},
+whereP IZ ⊆ OX is the ideal sheaf of Z. This definition extends toP
+                                                                  formal R-linear
+                                                                              P combina-
+tions ak ·Zk of proper closed subschemes Zk ⊂ X by setting v( ak ·Zk ) :=         ak ·v(Zk ).
+   More generally, let I ⊂ K be a finitely generated sub-OX -module of the constant sheaf
+of rational functions K = KX on X. For short, we will refer to I as a (coherent) fractional
+ideal sheaf on X.
+4                    TOMMASO DE FERNEX AND CHRISTOPHER D. HACON
+
+Definition 2.1. The valuation v(I) of a non-zero fractional ideal sheaf I ⊂ K along v is
+given by
+                      v(I) := min{v(φ) | φ ∈ I(U ), U ∩ cX (v) 6= ∅}.
+                                                       P
+                                      combination I = ak · Ik of fractional ideal sheaves
+The valuation v(I) of a formal linear P
+Ik ⊂ K along v is defined by v(I) :=    ak · v(Ik ).
+   If I and I′ are fractional ideal sheaves on X with I ⊆ I′ , then v(I) ≥ v(I′ ). In the case of
+ideal sheaves, this definition coincides with the one previously given, and if D is a Cartier
+divisor, then v(D) = v(OX (−D)).
+   Consider now an arbitrary divisor D on X.
+Definition 2.2. The ♮-valuation (or natural valuation) along v of a divisor D on X is
+                                    v ♮ (D) := v(OX (−D)).
+   Clearly, we have v ♮ (D) = v(D) for any Cartier divisor D. Note also that, as OX (D) ·
+OX (−D) ⊆ OX , we have that v ♮ (−D) + v ♮ (D) ≥ 0.
+   In general the ♮-valuation of divisors is not linear with respect to the group structure
+of Div(X), as the next example shows.
+Example 2.3. Let X = {xy = z 2 } ⊂ C3 , and let v = valE , where E is the exceptional
+divisor of the blow up of X at the origin. Then, for any two lines L, M ⊂ X (passing
+through the origin), we have v ♮ (L) = v ♮ (M ) = v ♮ (L + M ) = 1, and thus v ♮ (L + M ) 6=
+v ♮ (L) + v ♮ (M ). In particular, v ♮ (2L) = v ♮ (L). Note also that v ♮ (−L) = 0.
+Lemma 2.4. Let C be a Cartier divisor on X. Then v ♮ (C + D) = v(C) + v ♮ (D) for every
+divisor D on X.
+Proof. Since OX (−C) is locally generated by one rational function, one can check that
+OX (−C − D) = OX (−C) · OX (−D), and the assertion follows.                         
+Definition 2.5. To any non-trivial fractional ideal sheaf I on X, we associate the divisor
+                                         X
+                              div(I) :=       valE (I) · E,
+                                             E⊂X
+
+where the sum is taken over all prime divisors E on X. Equivalently, div(I) is the divisor
+on X for which OX (− div(I)) = I∨∨ . In particular, div(OX (−D)) = D for any divisor D.
+We call div(I) the divisorial part of I.
+    Consider now a birational morphism f : Y → X from a normal variety Y .
+Definition 2.6. For any divisor D on X, the ♮-pullback (or natural pullback) of D to Y
+is given by
+                                f ♮ D := div(OX (−D) · OY ).
+                         P ♮
+In other words, f ♮ D =    valE (D) · E, where the sum is taken over all prime divisors E
+on Y . In particular, OY (−f ♮D) = (OX (−D) · OY )∨∨ .
+Lemma 2.7. Let f : Y → X and g : V → Y be two birational morphisms              of normal
+varieties. Then, for every divisor D on X, the divisor (f g)♮ D − g♮ f ♮ D is effective and
+                                                                                         
+g-exceptional. Moreover, if OX (−D) · OY is an invertible sheaf, then (f g)♮ D = g♮ f ♮ D .
+                          SINGULARITIES ON NORMAL VARIETIES                                5
+
+Proof. By Lemma 2.4, we have
+                                                                        
+                   (f g)♮ (C + D) − g♮ f ♮ (C + D) = (f g)♮ D − g♮ f ♮ D
+for every Cartier divisor C. Therefore, after restricting to an open quasi-projective subset
+and replacing D with C+D for some Cartier divisor C ≥ D, we may assume without loss of
+generality that D is effective. Then it suffices to observe that OX (−D) · OY ⊆ OY (−f ♮ D),
+with equality holding at the generic point of every codimension one subvariety of Y . For
+the last assertion, we first remark that the condition that OX (−D) · OY is an invertible
+sheaf remains unchanged if we multiply OX (−D) by an invertible sheaf OX (−C), and that
+OX (−D) · OY = OY (−f ♮ D) if OX (−D) · OY is locally principal.                          
+
+  By the homogeneity of valuations and pullbacks of Cartier divisors it is very natural to
+extend this definition by setting
+                                  v(mD)                   f ∗ (mD)
+(1)                     v(D) :=            and f ∗ D :=
+                                    m                          m
+for any Q-Cartier Q-divisor D on X, where m is any non-zero integer such that mD is
+a Cartier divisor. In general, however, ♮-valuations and ♮-pullbacks of arbitrary divisors
+do not enjoy a similar homogeneity property, as pointed out in Example 2.3. In fact,
+the case of a line on a quadric cone is an example of a Q-Cartier divisor D for which
+v ♮ (D) 6= v(D), where the valuation on the right side is intended as defined above. This
+problem is resolved by giving relevance to the asymptotic nature of the definitions given
+in (1) for Q-Cartier Q-divisors.
+Lemma 2.8. For every divisor D on X and every m ∈ Z+ , we have m · v ♮ (D) ≥ v ♮ (mD),
+and
+                    v ♮ (kD)           v ♮ (kD)       v ♮ (k!D)
+                inf          = lim inf          = lim           ∈ R.
+                k≥1      k      k→∞         k    k→∞       k!
+Proof. If φ1 , . . . , φm ∈ OX (−D)(U
+                               Q      ) for some open set U ⊆ X, thenQdiv(φi ) ≥ D on U for
+each i, and therefore div( φi ) ≥ mD on U , which means that           φi ∈ OX (−mD)(U ).
+This implies that OX (−D)m ⊆ OX (−mD), and thus m · v(OX (−D)) ≥ v(OX (−mD)),
+which proves the first assertion of the lemma. Both equalities in the display of the lemma
+follow from this inequality, and the fact that the infimum is not −∞ follows from the fact
+that, if X is quasi-projective, then D ≥ C for some Cartier divisor C. In general, one
+reduces to the quasi-projective case by restricting to an affine open neighborhood of the
+generic point of the center of v in X.                                                   
+Definition 2.9. Let D be a Q-divisor on X. The valuation along v of D is
+                                             v ♮ (k!D)
+                                v(D) := lim            ∈ R.
+                                         k→∞      k!
+If f : Y → X is a birational morphism from a normal variety Y , then the pullback of D to
+Y is                                      X
+                                 f ∗ D :=   valE (D) · E,
+where the sum is taken over all prime divisors E on Y .
+Proposition 2.10. Let D be a Q-divisor on X, let v be a divisorial valuation on X, and
+let f : Y → X be a birational morphism from a normal variety Y . If D is Q-Cartier, then
+6                   TOMMASO DE FERNEX AND CHRISTOPHER D. HACON
+
+the definition of valuation v(D) and of pullback f ∗ D given in Definition 2.9 agrees with
+the one given in (1). In general, if D is an arbitrary Q-divisor, then
+                v(C + D) = v(C) + v(D)     and   f ∗ (C + D) = f ∗ C + f ∗ D
+for any Q-Cartier Q-divisor C on X.
+Proof. For clarity, we momentarily denote by v ′ (D) the valuation of a Q-divisor D as
+defined in Definition 2.9. Let C and D be Q-divisors, with C Q-Cartier. We have
+v ♮ (mC) = v(mC) for every m ∈ Z such that mC is a Cartier divisor, and therefore,
+observing that k!C is a Cartier divisor for every k ≫ 0, we get
+                        v ♮ (k!C + k!D)        v(k!C) + v ♮ (k!D)
+        v ′ (C + D) = lim               = lim                     = v(C) + v ′ (D)
+                    k→∞         k!         k→∞         k!
+by Proposition 2.4. In particular, if D is Q-Cartier, then we have v ′ (D) = v(D). The
+analogous statements on pullbacks follows from these.                               
+Remark 2.11. We have v(D) ≤ v ♮ (D) and f ∗ D ≤ f ♮ D for every divisor D on X. Moreover,
+we have f ♮ (−D) ≥ −f ♮D, and hence f ∗ (−D) ≥ −f ∗ D, for every D. The following example
+implies that, in general, the last inequality may be strict.
+    The following example was found in a conversation with Lawrence Ein.
+Example 2.12. Let Y 99K Y + be a flip and f : Y → X be the flipping contraction, with
+X normal and affine. Let v be any divisorial valuation on X whose center C in Y is a
+positive dimensional subset of a fiber of f . Let H ⊂ Y be a general hyperplane section,
+and let D = f∗ H. Note that D contains f (C), but H does not contain C. If H + is the
+proper transform of H on Y + and f + : Y + → X is the contraction induced on Y + , then
+                         M                   M
+                             OX (−mD) =          f∗+ OY + (−mH + )
+                            m≥0            m≥0
+
+is finitely generated as an OX -module, since −H + is f + -ample. Therefore v(D) = v(qD)/q
+for a sufficiently divisible q ≥ 1. As the ideal sheaf OX (−qD) · OY vanishes along C, it
+follows that v(D) > 0. On the other hand, since OX (mD) · OY = OY (mH) if m ≥ 1, we
+have v(−D) = 0, and hence, in particular, v(−D) 6= −v(D).
+Remark 2.13. If f : Y → X and g : V → Y are birational
+                                                     morphisms of normal varieties,
+                                         ∗     ∗ ∗
+then it follows from Lemma 2.7 that (f g) D − g f D is effective and g-exceptional for
+every Q-divisor D on X.
+
+                             3. Relative canonical divisors
+   We recall that a canonical divisor KX on a normal variety X is, by definition, the
+(componentwise) closure of any canonical divisor of the regular locus of X. We also recall
+that X is said to be Q-Gorenstein if some (equivalently, every) canonical divisor KX is
+Q-Cartier.
+   We consider a proper birational morphism f : Y → X of normal varieties. Push-forward
+along f gives a bijection between the canonical divisors of Y and those of X. Moreover,
+if KY and KY′ are two canonical divisors on Y , then f∗ KY − f∗ KY′ is a principal divisor
+and KY − KY′ = f ∗ (f∗ KY − f∗ KY′ ).
+   Throughout the section, we fix a canonical divisor KY on Y , and let KX = f∗ KY . The
+standard notion of relative canonical Q-divisor (given in the case when KX is Q-Cartier)
+admits two generalizations to non Q-Gorenstein varieties, corresponding to whether one
+                           SINGULARITIES ON NORMAL VARIETIES                                 7
+
+pulls back KX or −KX . As we keep into consideration what the main features of the theory
+of singularities of pairs are, and wish to preserve these in our generalization, it turns out
+that there are two different sides of the theory, each of which requires a different approach,
+a phenomenon that disappears in the Q-Gorenstein case (cf. Remarks 3.3 and 8.5).
+   When dealing with the generalization of multiplier and adjoint ideal sheaves, as well as
+of log canonical and log terminal singularities, we will rely on the following notion.
+Definition 3.1. For every m ≥ 1, the m-th limiting relative canonical Q-divisor Km,Y /X
+of Y over X is
+                           Km,Y /X := KY − m 1
+                                               · f ♮ (mKX ).
+   On the contrary, in order to extend the definitions of canonical and terminal singulari-
+ties, we consider the following definition.
+Definition 3.2. The relative canonical R-divisor KY /X of Y over X is
+                                 KY /X := KY + f ∗ (−KX ).
+   Note that the definitions of Km,Y /X and KY /X do not depend on the choice of KY .
+Moreover, if X is Q-Gorenstein, then KY /X is the usual relative canonical Q-divisor, and
+it is equal to Km,Y /X for every m ≥ 1 such that mKX is Cartier.
+Remark 3.3. It follows by Lemma 2.8 and Remark 2.11 that Km,Y /X ≤ Kmq,Y /X ≤ KY /X
+for all m, q ≥ 1. In particular, taking the limsup of the coefficients of the components of
+the Q-divisors Km,Y /X , one obtains the R-divisor KY−/X := KY − f ∗ KX , which satisfies
+KY−/X ≤ KY /X . Clearly the two divisors coincide if X is Q-Gorenstein, but in general they
+may be different, as the following example shows.
+Example 3.4. With the same notation as in Example 2.12, suppose that −KY is f -ample.
+Then a positive multiple −mKY of −KY is linearly equivalent to a general hyperplane
+section H of Y . We fix KX = f∗ KY , and let D = f∗ H. Note that B := D − mKX is a
+principal divisor, and hence it is Cartier. Then for every birational morphism g : X ′ → X
+factoring through Y and extracting a divisor with center in Y equal to C (cf. Exam-
+ple 2.12), we have
+                g∗ (−mKX ) = g∗ B + g∗ (−D) 6= g∗ B − g∗ D = −g∗ (mKX )
+by Proposition 2.10 and Example 2.12. This implies that g∗ (−KX ) 6= −g∗ KX , since the
+pullback is by definition homogeneous (with respect to positive multiples) on all divisors.
+                                                   −
+In particular, in this example we have KX ′ /X 6= KX ′ /X .
+
+
+Lemma 3.5. Let m be a positive integer, and let f : Y → X be a proper birational
+morphism from a normal variety Y such that mKY is Cartier and OX (−mKX ) · OY is
+invertible. Then for every proper birational morphism g : V → Y from a normal variety
+V we have
+                            Km,V /X = Km,V /Y + g∗ Km,Y /X ,
+
+Proof. Note that f ♮(mKX ) is a Cartier divisor on Y , and thus
+                                                                                      
+ Km,V /X = KV − m 1
+                     · (f g)♮ (mKX ) = KV − m1
+                                               · g♮ f ♮ (mKX ) = KV − m
+                                                                      1
+                                                                        · g∗ f ♮ (mKX )
+by Lemma 2.7. Since mKY is Cartier, we also have
+                          1
+           Km,V /Y = KV − m · g♮ (mKY ) = KV − m
+                                               1
+                                                 · g∗ (mKY ) = KV − g∗ KY ,
+8                    TOMMASO DE FERNEX AND CHRISTOPHER D. HACON
+
+and moreover
+                                                                          
+            g∗ Km,Y /X = g∗ KY − m
+                                 1
+                                   · f ♮ (mKX ) = g∗ KY − m
+                                                          1
+                                                            · g∗ f ♮ (mKX ) .
+The lemma follows.                                                                            
+Remark 3.6. Similarly, Remark 2.13 implies that given proper birational morphisms of
+normal varieties f : Y → X and g : V → Y with Y Q-Gorenstein, we have KV /X ≥
+KV /Y + g∗ KY /X and the difference is g-exceptional.
+   A different approach to deal with varieties that are not Q-Gorenstein, largely followed
+in the last decades, is to introduce a ‘boundary’. The trick is to ‘perturb’ a canonical
+divisor KX of X to make it Q-Cartier.
+Definition 3.7. An effective Q-divisor ∆ is a boundary on X if KX + ∆ is a Q-Cartier
+Q-divisor for some (equivalently, for any) canonical divisor KX of X. If ∆ is a boundary,
+then we refer to the pair (X, ∆) as a log variety (or variety with boundary).
+Definition 3.8. Let ∆ be a boundary on X, and let ∆Y be the proper transform of ∆
+on Y . The log relative canonical Q-divisor of (Y, ∆Y ) over (X, ∆) is given by
+             KY∆/X := KY + ∆Y − f ∗ (KX + ∆) = KY + ∆Y + f ∗ (−KX − ∆).
+
+  If X is Q-Gorenstein and ∆ = 0, then KY0 /X = KY /X = Km,Y /X for all sufficiently
+divisible m ≥ 1, and KY∆/X depends on ∆ but not on the choice of KX .
+
+Remark 3.9. For every boundary ∆ on X and every m ≥ 1 such that m(KX + ∆) is
+Cartier, we have
+       Km,Y /X = KY∆/X − m
+                         1
+                           · f ♮ (−m∆) − ∆Y        and KY /X = KY∆/X + f ∗ ∆ − ∆Y .
+Indeed we have f ∗ (−KX ) = f ∗ (−KX −∆+∆) = −f ∗ (KX +∆)+f ∗ ∆ by Proposition 2.10,
+and similarly f ♮ (mKX ) = f ♮(m(KX + ∆) − m∆) = m · f ∗ (KX + ∆) + f ♮(−m∆) by
+Lemma 2.4. In particular, if m is any positive integer such that m(KX + ∆) is a Cartier
+divisor, then KY∆/X ≤ Km,Y /X .
+
+                              4. Multiplier ideal sheaves
+   For the reminder of this paper, we work over an algebraically closed field of characteristic
+zero. WeP  consider pairs of the form (X, I), where X is a normal quasi-projective variety
+and I = ak · Ik is a formal R-linear combination of non-zero fractional ideal sheavesP       on
+X. If each Ik is an ideal sheaf, Zk ⊂ X the subscheme defined by Ik , and Z =           ak · Zk
+is the corresponding formal linear combination, then we identify the pairs (X, I) and
+(X, Z). More generally, we allow hybrid notation by considering pairs (X, W + J), where
+W is a formal linear combination of proper closed subschemes and J is a formal linear
+combination of fractional ideal sheaves. If ∆ is a boundary on X, then we consider log
+pairs of the form ((X, ∆); I) (or more generally
+                                             P of the form ((X, ∆); W + J)).
+   Given a formal linear combination Z =         ak · Zk on X, if f : Y → X is a morphism
+such that the scheme theoretic inverse  image  f −1 (Z ) is a Cartier divisor for every k, then
+                                 P                    k
+                       −1                −1
+for short we denote f (Z) := ak · f (Zk ).
+Definition 4.1. Consider a pair (X, I) as above. A log resolution of (X, I) is a proper
+birational morphism f : Y → X from a smooth variety Y such that for every k the sheaf
+Ik · OY is the invertible sheaf of a divisor Ek on Y , the exceptional locus Ex(f ) of f is also
+                           SINGULARITIES ON NORMAL VARIETIES                                9
+                                                                      S
+a divisor, and Ex(f ) ∪ E has simple normal crossing, where E := Supp(Ek ). If ∆ is a
+boundary on X, then a log resolution of the log pair ((X, ∆); I) is given by a log resolution
+f : Y → X of (X, I) such that Ex(f )∪ E ∪ Supp(f ∗ (KX + ∆)) has simple normal crossings.
+Theorem 4.2 ([Hir]). Let (X, I) be a pair as above, where X is a normal quasi-projective
+variety defined over an algebraically closed field of characteristic zero. Then there exists
+a log resolution of (X, I). If ∆ is a boundary on X, then there exists a log resolution of
+singularities of ((X, ∆); I).
+Proof.PLet C be a Cartier divisor on X such that OX (C) · Ik ⊆ OX for every k, and let
+W = ak ·Wk , where Wk ⊂ X is the subscheme defined by the ideal sheaf OX (C)·Ik . Then
+any log resolution of the pair (X, W + Supp(C)) (respectively, of ((X, ∆); W + Supp(C)))
+is a log resolution of (X, I) (respectively, of ((X, ∆); I)). This reduces the theorem to the
+original version due to Hironaka.                                                          
+Definition 4.3. We say that Z, or (X, Z), is effective if ak ≥ 0 for all k. If ∆ is a
+boundary on X, then we say that the log pair ((X, ∆); Z) is effective if so is Z.
+   Consider now an arbitrary effective pair (X, Z). Because of the possible failure of
+functoriality for composition of pullback of arbitrary Q-divisors (cf. Lemma 2.7), the
+definition of multiplier ideal sheaf of (X, Z) requires some preparation.
+   We fix a canonical divisor KX on X. For any fixed integer m ≥ 1, we consider a log
+resolution f : Y → X of the pair (X, Z + OX (−mKX )), and define
+                         Jm (X, Z) := f∗ OY (⌈Km,Y /X − f −1 (Z)⌉).
+When Z = 0, we denote this sheaf by Jm (X).
+  The proof of the next proposition is similar to the proof of the analogous properties for
+multiplier ideals in the Q-Gorenstein case; we give it for completeness.
+Proposition 4.4. The sheaf Jm (X, Z) is a (coherent) sheaf of ideals on X, and its defi-
+nition is independent of the choice of f .
+  We start with two lemmas.
+Lemma 4.5. Let f : Y → X be a proper birational morphism from a smooth variety Y to
+a normal variety X, let P and N be effective divisors on Y without common components,
+and suppose that P is f -exceptional. Then f∗ OY (P − N ) = f∗ OY (−N ).
+Proof. By a lemma of Fujita, which gives the vanishing f∗ OP (P ) = 0 (see [KMM,
+Lemma 1-3-2]), and hence f∗ OP (P − N ) = 0.                                  
+Lemma 4.6. Let g : Y ′ → Y be a proper birational morphism of smooth varieties, and let
+D be an effective R-divisor on Y with simple normal crossing support. Then
+                                                           
+                           g∗ OY ′ KY ′ /Y + ⌈g∗ D⌉ = OY ⌈D⌉ .
+Proof. See [Laz2, Lemma 9.2.19 and Remark 9.2.10].                                         
+Proof of Proposition 4.4. Let f ′ : Y ′ → X be another log-resolution of (X, Z +
+OX (−mKX )). Since we can always compare f and f ′ with a common resolution, we may
+assume, without loss of generality, that f ′ factors through f and a morphism g : Y ′ → Y .
+By Lemma 3.5, we have Km,Y ′ /X = KY ′ /Y + g∗ Km,Y /X , and hence
+                                                                                        
+   (f g)∗ OY ′ ⌈Km,Y ′ /X − (f g)−1 (Z)⌉ = f∗ g∗ OY ′ KY ′ /Y + ⌈g∗ (Km,Y /X − f −1 (Z))⌉ .
+10                   TOMMASO DE FERNEX AND CHRISTOPHER D. HACON
+
+Therefore, by Lemma 4.6, we obtain
+                                                                             
+            (f g)∗ OY ′ ⌈Km,Y ′ /X − (f g)−1 (Z)⌉ = f∗ OY ⌈Km,Y /X − f −1 (Z)⌉ .
+This proves the independence of the definition from the choice of f . The fact that Jm (X, Z)
+is a sheaf of ideals follows from Lemma 4.5.                                               
+Proposition 4.7. The set of ideal sheaves {Jm (X, Z)}m≥1 has a unique maximal element.
+Proof. We have Jm (X, Z) ⊆ Jmq (X, Z) for all m, q ≥ 1. Indeed, by Proposition 4.4, this
+inclusion can be verified for any choice of m and q by taking a log resolution f : Y → X
+of (X, Z + OX (−mKX ) + OX (−mqKX )) and applying the first formula in Remark 3.3.
+Therefore, by the Noetherian property of X, the set of ideal sheaves {Jm (X, Z)}m≥1 has
+a unique maximal element.                                                              
+Definition 4.8. Let (X, Z) be an effective pair. The unique maximal element of
+{Jm (X, Z)}m≥1 is called the multiplier ideal sheaf of (X, Z), and is denoted by J(X, Z).
+If Z is trivial, then we denote the corresponding multiplier ideal sheaf by J(X).
+  Note that J(X, Z) = Jm (X, Z) for all sufficiently divisible m ≥ 1. If X is Q-Gorenstein,
+then this definition of multiplier ideal sheaf agrees with the usual one.
+  We close this section with some basic properties of multiplier ideals.
+                              P
+Proposition 4.9. Let Z =         bk · Zk be an effective linear combination of proper closed
+subschemes of a normal variety X.
+                P
+   (a) If Z ′ = b′k · Zk′ with b′k ≥ bk and IZk′ ⊆ IZk for all k, then J(X, Z ′ ) ⊆ J(X, Z).
+   (b) There is an ǫ > 0 such that J(X, (1 + t)Z) = J(X, Z) for all 0 < t ≤ ǫ.
+Proof. We can fix m such that J(X, Z) = Jm (X, Z) and J(X, Z ′ ) = Jm (X, Z ′ ). The first
+property is then immediate from the definition of these ideal sheaves. Regarding (b), we
+observe that Jm (X, Z) = Jm (X, (1 + t)Z) for all 0 < t ≪ 1. Thus the property follows by
+the chain of inclusions
+                 Jm (X, (1 + t)Z) ⊆ J(X, (1 + t)Z) ⊆ J(X, Z) = Jm (X, Z),
+the second of which holding by part (a).                                                    
+Remark 4.10. One can define the jumping numbers of an effective pair (X, Z) in a similar
+fashion as in the Q-Gorenstein case, by declaring that a number µ > 0 is a jumping
+number of an effective pair (X, Z) if J(X, λZ) 6= J(X, µZ) for all 0 ≤ λ < µ. It would be
+interesting to study the properties of these numbers. For instance, is the set of jumping
+numbers of an effective pair a discrete set of rational numbers?
+
+                        5. First properties and applications
+   As we will see below, it turns out that multiplier ideals (as defined in the previous
+section) can actually be realized as multiplier ideals of suitable log pairs. Using this fact,
+we will see that the main features of the theory automatically extend to our setting.
+Definition 5.1. Let (X, Z) be an effective pair, and fix an integer m ≥ 2. Given a
+log resolution f : Y → X of (X, Z + OX (−mKX )), a boundary ∆ on X is said to be
+m-compatible for (X, Z) with respect to f if:
+     (i) m∆ is integral and ⌊∆⌋ = 0,
+    (ii) no component of ∆ is contained in the support of Z,
+   (iii) f is a log resolution for the log pair ((X, ∆); Z + OX (−mKX )), and
+                           SINGULARITIES ON NORMAL VARIETIES                             11
+
+  (iv) KY∆/X = Km,Y /X .
+The pair (X, Z) is said to admit m-compatible boundaries if there are m-compatible bound-
+aries with respect to any sufficiently high log resolution of (X, OX (−mKX ) + Z).
+  This definition is motivated by the following useful property.
+Proposition 5.2. If (X, Z) is an effective pair and m ≥ 2 is such that J(X, Z) =
+Jm (X, Z), then we have
+                              J(X, Z) = J((X, ∆); Z)
+for any m-compatible boundary ∆, where J((X, ∆); Z) is the multiplier ideal sheaf of the
+log pair ((X, ∆); Z) as defined in [Laz2, Definition 9.3.56].
+Proof. It suffices to observe that if ∆ has no common components with Z and ⌊∆⌋ = 0,
+then
+    J((X, ∆); Z) = f∗ OY (⌈KY − g∗ (KX + ∆) − f −1 (Z)⌉) = f∗ OY (⌈KY∆/X − f −1 (Z)⌉)
+for any log resolution f of ((X, ∆); Z).                                                 
+Remark 5.3. In general, if (X, Z) is an effective pair and ∆ is a boundary on X, then
+J((X, ∆); Z) ⊆ J(X, Z). Indeed, if m ≥ 1 such that m(KX + ∆) is a Cartier divisor and
+J(X, Z) = Jm (X, Z), then the inclusion follows from the last formula in Remark 3.9.
+Theorem 5.4. Every effective pair (X, Z) admits m-compatible boundaries for any m ≥ 2.
+Proof. Let D be an effective divisor such that KX − D is Cartier, and let f : Y → X be a
+log resolution of (X, OX (−mKX ) + OX (−mD)), and let E = f ♮ (mD), so that OX (−mD) ·
+OY = OY (−E). Since
+           f ♮ (mKX ) = f ♮ (m(KX − D) + mD) = m · f ∗ (KX − D) + f ♮ (mD),
+we have
+                           Km,Y /X = KY − f ∗ (KX − D) − m
+                                                         1
+                                                           E.
+Let L be an invertible sheaf on X such that L ⊗ OX (−mD) is globally generated, and let
+G be a general element in the linear system {L ∈ |L| | L − mD ≥ 0}. Then G = M + mD
+and f ∗ G = MY + E, where M is an effective divisor and MY is its proper transform. As
+G varies, MY moves in a base point free linear system. In particular, we can assume that
+M is a reduced divisor with no common components with D or Z. We let
+                                                1
+                                           ∆ := m M.
+                                                             1
+Note that m∆ is integral, ⌊∆⌋ = 0, and KX +∆ = KX −D+ m        G is Q-Cartier. Moreover, by
+choosing G general, we can also assume that f is a log resolution for ((X, ∆); OX (−mKX )).
+The fact that ∆ is m-compatible follows then by the computation
+                    KY∆/X = KY + ∆Y − f ∗ (KX + ∆)
+                           = KY + ∆Y − f ∗ (KX + ∆ − m
+                                                     1      1 ∗
+                                                       G) − m f G
+                           = KY − f ∗ (KX − D) − m
+                                                 1
+                                                   E.
+                                                                                         
+   We deduce the following fact. A posteriori, one can use this corollary as the definition
+of J(X, Z).
+12                    TOMMASO DE FERNEX AND CHRISTOPHER D. HACON
+
+Corollary 5.5. For any effective pair (X, Z), the set of ideal sheaves
+                            {J((X, ∆); Z) | ∆ is a boundary on X}
+has a unique maximal element, namely J(X, Z).
+     Using m-compatible boundaries, we obtain the following generic restriction result.
+Proposition 5.6. Let (X, Z) be an effective pair. If H ⊂ X is a general hyperplane
+section, then J(X, Z) · OH = J(H, Z|H ).
+Proof. If ∆ is a boundary on X with no common components with H, then ∆|H is a bound-
+ary on H, and we have J((X, ∆), Z) · OH = J((H, ∆|H ), Z|H ) (cf. [Laz2, Example 9.5.9]).
+Suppose that ∆ is a m-compatible boundary on X for some m sufficiently divisible. By
+Remark 5.3 applied on H, we see immediately that J(X, Z) · OH ⊆ J(H, Z|H ). To get an
+equality, we need to show that the restriction ∆|H of ∆ to H is also m-compatible, if H
+is sufficiently general.
+   To this end, we fix a canonical divisor K0 on X. Working locally on X, we may assume
+that K0 is effective. Assume that H is general with respect to Z, ∆ and K0 . Then we
+replace K0 by KX := K0 −H +H0 , where H0 is another general hyperplane section linearly
+equivalent to H. Note that KH := (KX + H)|H is a canonical divisor on X.
+   We claim that
+(2)                OX (−m(KX + H)) · OH = OH (−mKH ) for all m ≥ 0.
+For short, let B := m(KX +H) = mK0 +mH0 . Note that H has been chosen generally with
+respect to B. Let g : X ′ → X be a resolution of singularities of X. Let B ′ be the proper
+transform of B. We can assume that the pullback of H to X ′ coincides with its proper
+transform H ′ , and moreover that B ′ |H ′ is the proper transform of B|H . Note also that,
+since B is effective, g∗ OX ′ (−B ′ ) = OX (−B), and similarly, g∗ OH ′ (−B ′ |H ′ ) = OH (−B|H ).
+On X ′ we have the exact sequence
+               0 → OX ′ (−B ′ ) ⊗ g∗ OX (−H) → OX ′ (−B ′ ) → OH ′ (−B ′ |H ′ ) → 0.
+Since H is generic, the map R1 g∗ OX ′ (−B ′ ) ⊗ OX (−H) → R1 g∗ OX ′ (−B ′ ) is injective.
+Therefore, taking direct images, we obtain a surjection OX (−B) → OH (−B|H ), which
+shows that (2) holds.
+   We take a log resolution f : Y → X of (X, Z + OX (−mKX ) + H). Let H e be the proper
+transform of H. Since ∆ is a m-compatible boundary, we can assume that KY∆/X =
+Km,Y /X . On the other hand, using (2) we see that
+                                     Km,Y /X |He = Km,H/H
+                                                      e   .
+Since adjunction in the log Q-Gorenstein case implies that
+                                                     ∆|
+                                       KY∆/X |He = K e H ,
+                                                     H/H
+
+we conclude that ∆|H is a m-compatible boundary for (H, Z|H ) (the other defining con-
+ditions of m-compatible being easily verified). This concludes the proof of the proposi-
+tion.                                                                                 
+  The existence of m-compatible boundaries allows us to deduce immediately many other
+properties of multiplier ideal sheaves. We start with Skoda’s theorem, which extends to
+our setting in a straightforward manner.
+                           SINGULARITIES ON NORMAL VARIETIES                               13
+
+Corollary 5.7. If a ⊆ OX be a non-zero ideal sheaf on an n-dimensional normal variety
+X, then for every integer m ≥ n
+                             J(X, am ) = am+1−n · J(X, an−1 ).
+Proof. After fixing an m-compatible boundary, the result follows from [Laz2, Varia-
+tion 9.6.39].                                                                    
+   The main application, however, is the following extension of Nadel’s vanishing theorem
+([EV, Nad1, Nad2]; see also [Laz2, Section 9.4]).
+CorollaryP5.8. Let (X, Z) be an effective pair, where X is a projective normal variety
+and Z =      ak · Zk . Let m ≥ 2 be an integer such that J(X, Z) = Jm (X, Z), and let ∆
+be an m-compatible boundary for (X, Z). For each k, let Bk be a Cartier divisor such
+that OX (Bk ) ⊗ IZP
+                  k
+                    is globally
+                               generated, and suppose that L is a Cartier divisor such that
+L − KX + ∆ + ak Bk is nef and big. Then
+                                                
+                           H i OX (L) ⊗ J(X, Z) = 0 for i > 0.
+Proof. It follows by Proposition 5.2 and [Laz2, Theorem 9.4.17].                           
+  As in the log Q-Gorenstein case (cf. [Laz2, Section 9.4.E]), one obtains the following.
+Corollary 5.9. With the same notation and assumptions as in Corollary 5.8, let A be
+a very ample Cartier divisor on X. Then the sheaf OX (L + kA) ⊗ J(X, Z) is globally
+generated for every integer k ≥ dim X + 1.
+  The existence of m-compatible boundaries also implies the following relative vanishing.
+Corollary 5.10. Let X be a normal quasi-projective variety. Then for any integer m ≥ 2
+and every sufficiently high log resolution f : Y → X of the pair (X, OX (−mKX )) we have
+                                                
+                            Ri f∗ OY ⌈Km,Y /X ⌉ = 0 for i > 0.
+  We close the section with a generalization of Shokurov–Kollár’s connectedness lemma
+[Kol1, Sho].
+Corollary 5.11. With the same notation and assumptions as in Corollary 5.8, let
+                                 X                           X
+            Km,Y /X − f −1 (Z) =   ei Ei = A − B where A =       ei Ei .
+                                                                   ei >−1
+
+Assume that ⌈A⌉ is exceptional, (i.e., that all divisorial components of Z appear with
+coefficient less than 1). Then Supp(B) is connected in a neighborhood of any fiber of f .
+If moreover B is irreducible and reduced, then f (B) is normal.
+Proof. By Theorem 5.4 and Proposition 5.2, we reduce to the log Q-Gorenstein case, where
+the result is well known (cf. [Kol2, Theorem 7.4] or [Kaw4, Theorem 1.6]).            
+
+            6. Asymptotic constructions and adjoint ideal sheaves
+   This section is devoted to a discussion of asymptotic multiplier ideal sheaves and adjoint
+ideal sheaves. As in the last two sections, we work over an algebraically closed field of
+characteristic zero.
+   Let D be a divisor on a normal variety X, and for every n ≥ 1 let Bn ⊂ X denote the
+base scheme of the linear system |nD|. We suppose that |n0 D| =    6 ∅ for some n0 ≥ 1, and
+let N = n0 · Z+ . As in the usual case (cf. [Laz2, Chapter 11]), for any given c > 0 the set
+14                   TOMMASO DE FERNEX AND CHRISTOPHER D. HACON
+
+of multiplier ideal sheaves {J(X, nc · Bn )}n∈N has a unique maximal element (which does
+not depend on the choice of n0 ).
+Definition 6.1. The unique maximal element of {J(X, nc · Bn )}n∈N is denoted by J(X, c ·
+kDk), and is called the asymptotic multiplier ideal sheaf of D with weight c.
+  Note that if m is sufficiently divisible and ∆ is an m-compatible boundary for (X, Bn0 ),
+then J(X, kDk) = J((X, ∆); kDk). We deduce the following property (cf. [Laz2, Theo-
+rem 11.1.8 and Remark 11.1.13]).
+Proposition 6.2. With the above notation, suppose that J(X) = OX (i.e., X is ‘log
+terminal’, see Definition 7.1 below). Then J(X, kDk) contains the ideal sheaf of the base
+scheme of |D|. In particular, we obtain
+                                                            
+                         H 0 OX (D) · J(X, kDk) ∼= H 0 OX (D) .
+  We next define the adjoint ideal sheaf of an effective pair (X, Z) along an effective
+Cartier divisor H. We fix a log resolution f : Y → X of (X, Z + OX (−mKX )) such
+that all components of the proper transform HY of H on Y are disconnected; if ∆ is
+a given boundary on X, then we also suppose that f is a log resolution of the log pair
+((X, ∆); Z + OX (−mH)). Then we consider the ideal sheaf
+                                                                        
+               adjm,H (X, Z) := f∗ OY ⌈Km,Y /X − f −1 (Z) − f ∗ H + HY ⌉ .
+Again, one can check that adjm,H (X, Z) is a (coherent) sheaf of ideals on X, that its defini-
+tion is independent of the choice of f and that the set of ideal sheaves {adjm,H (X, Z)}m≥1
+has a unique maximal element.
+Definition 6.3. The maximal element of {adjm,H (X, Z)}m≥1 is called the adjoint ideal
+sheaf of the pair (X, Z) along H, and is denoted by adjH (X, Z).
+Remark 6.4. If ∆ is an m-compatible boundary for some m sufficiently divisible, then
+adjH (X, Z) = adjH ((X, ∆); Z).
+Proposition 6.5. Suppose that H is a normal Cartier divisor on X with no components
+contained in the support of Z, and let ∆ be an m-compatible boundary for (X, Z + H) for
+a sufficiently divisible m. Then the adjoint ideal adjH (X, Z) sits in the exact sequence
+            0 → J(X, Z) ⊗ OX (−H) → adjH (X, Z) → J((H, ∆|H ); Z|H ) → 0.
+Proof. If ∆ is an m-compatible boundary for (X, Z + H) for a sufficiently divisible m,
+then J(X, Z) = J((X, ∆); Z) and adjH (X, Z) = adjH ((X, ∆); Z). Therefore the result
+follows from the log Q-Gorenstein case, in which case it is well known (see, for example,
+the arguments in [Tak, Proposition 2.4]).                                              
+Remark 6.6. One can try to apply adjunction directly, without adding the boundary
+divisor, by fixing a canonical divisor KX on X such that KX + H had order zero along the
+components of H. Then KH := (KX + H)|H is a canonical divisor on H (cf. Remark 5.47
+in [KM]). However, OX (−m(KX + H)) · OH may in general be strictly contained in
+OH (−mKH ) if KX + H is not Q-Cartier. This reflects the fact that in general, no matter
+how one chooses ∆ on X, J((H, ∆|H ); Z|H ) may be strictly smaller than J(H, Z|H ), as it
+happens in the following example.
+Example 6.7. As in [Kaw2, Example 4.3], we consider an extremal flipping contraction
+φ : X ′ → X on a normal Q-factorial threefold X ′ with terminal singularities. We assume
+                           SINGULARITIES ON NORMAL VARIETIES                                15
+
+that X is affine, and let 0 ∈ X be the image of the exceptional locus of φ. Let H ⊂ X
+be a general hyperplane section through 0, and let H ′ = f −1 (H) ⊂ X ′ . We assume
+that H and H ′ are normal Q-factorial surfaces with log terminal singularities (this is the
+case, for instance, if φ is the contraction in Francia’s flip [Fra]). Note that φ restricts
+to a divisorial contraction ψ : H ′ → H. Let C be an irreducible component of Ex(ψ).
+Let ∆ be any boundary on X not containing H in its support, and let ∆′ be its proper
+transform on X ′ . Then ∆′ · C = −KX ′ · C > 0. It follows that valC (∆|H ) is positive and
+independent of the choice of ∆. This implies that there is a δ > 0, independent of ∆, such
+that if Z = {0} ⊂ H, then lc((H, ∆|H ); Z) ≤ lc(H, Z) − δ. Therefore we can fix c > 0,
+independent of ∆, such that J((H, ∆|H ); cZ) 6= OH but J(H, cZ) = OH .
+  We immediately obtain the following inversion of adjunction statement.
+Corollary 6.8. In the same assumptions as in Proposition 6.5, we have adjH (X, Z) = OX
+in a neighborhood of H if and only if J((H, ∆|H ); Z|H ) = OH .
+Remark 6.9. The corollary above should be compared with the following well known
+statement: If S ⊂ X is a normal Cartier divisor (in fact, it suffices to assume that S
+is Cartier in codimension 2) on a normal variety and B is an effective divisor such that
+KX + S + B is Q-Cartier, then (X, S + B) is purely log terminal with respect to S if and
+only if (S, B|S ) is Kawamata log terminal (see for example [KM, Theorem 5.50]).
+  We also obtain the following vanishing theorem for adjoint ideals.
+Corollary 6.10. With the same assumptions as in Corollary 5.8, let H be a general
+hyperplane section of X. Then
+                                                 
+                     H i OX (L + H) ⊗ adjH (X, Z) = 0 for i > 0.
+Proof. We have
+                                               
+                           H i OX (L) ⊗ J(X, Z) = 0 for i > 0
+by Corollary 5.8. Observe that the restriction ∆|H of ∆ to H is a boundary on H.
+Moreover,
+P          the sheaves OH (Bk |H ) ⊗ IZk |H are globally generated, and (L − (KX + ∆ +
+  ak Bk ))|H is nef and big. By adjunction, this implies that
+                                                     X            
+                         (L + H)|H − KH + ∆|H +          ak Bk |H
+
+is nef and big, and hence we have
+                                                      
+                   H i OH (L + H) ⊗ J((H, ∆|H ), Z|H ) = 0      for i > 0.
+The assertion then follows by Proposition 6.5.                                              
+Remark 6.11. In fact it suffices to assume that H is a normal
+                                                          P Cartier divisor that is not
+contained in the augmented base locus of L − (KX + ∆ + ak Bk ).
+
+                 7. Log terminal and log canonical singularities
+   In this section we extend the definitions of log terminal and log canonical singularities
+of pairs to the general setting, and discuss some generalizations to this context of certain
+results on rational and log terminal singularities due, respectively, to Elkik and Kawamata.
+   Let (X, Z) be an effective pair over and algebraically closed field of characteristic zero.
+16                    TOMMASO DE FERNEX AND CHRISTOPHER D. HACON
+
+Definition 7.1. Let X ′ → X be a proper birational morphism with X ′ normal, and let
+F be a prime divisor on X ′ . For any integer m ≥ 1, we define the m-th limiting log
+discrepancy of (X, Z) to be
+                        am,F (X, Z) := ordF (Km,X ′ /X ) + 1 − valF (Z).
+The pair (X, Z) is said to be log canonical (resp., log terminal) if there is an integer m0
+such that am,F (X, Z) ≥ 0 (resp., > 0) for every prime divisor F over X and m = m0 (and
+hence for any positive multiple m of m0 ). (X, Z) is said to be strictly log canonical if it is
+log canonical but not log terminal. If X is log terminal, then the log canonical threshold
+of (X, Z) is
+                     lc(X, Z) := sup{t > 0 | (X, tZ) is log terminal}.
+  Clearly these notions coincide with the usual ones when X is Q-Gorenstein, and in
+general, if (X, Z) is log terminal, then it is log canonical.
+Proposition 7.2. An effective pair (X, Z) is log canonical (resp., log terminal) if and
+only if there is a boundary ∆ such that ((X, ∆); Z) is log canonical (resp., log terminal).
+Proof. If there is a boundary ∆ such that ((X, ∆); Z) is log canonical (resp., log terminal),
+then it follows by Remark 3.9 that (X, Z) is log canonical (resp., log terminal). Conversely,
+assume that (X, Z) is log canonical (resp., log terminal), and let m0 be as in Definition 7.1.
+By Theorem 5.4, there is an m0 -compatible boundary ∆ for (X, Z). Given any prime divi-
+sor F over X, we can assume that F is a divisor over a sufficiently high log resolution Y of
+(X, Z + OX (−m0 KX )). Then KY∆/X = Km0 ,Y /X , and hence am0 ((X, ∆); Z) = am0 (X, Z).
+It follows that ((X, ∆); Z) is log canonical (resp., log terminal).                         
+  The next corollary shows the relation between our notion of log canonical singularities
+and Nakayama’s notion of admissible singularities (see [Nak, Defintion VII.1.2]); we are
+grateful to Hara, Schwede and Takagi for bringing Nakayama’s notion to our attention.
+Corollary 7.3. An effective pair (X, Z) is log terminal if and only if it has admissible
+singularities in the sense of Nakayama.
+Proof. If follows by comparing [Nak, Lemma VII.1.3] with Proposition 7.2 and the fact
+that our notion is local.                                                          
+Remark 7.4. In general, taking an arbitrary boundary ∆, if ((X, ∆); Z) is log terminal
+(resp., log canonical), then so is (X, Z). In particular, if (X, ∆) is log terminal, then
+lc((X, ∆); Z) ≤ lc(X, Z).
+Corollary 7.5. Let (X, Z) be a log canonical (resp., log terminal) effective pair. If H ⊂ X
+is a general hyperplane section, then (H, Z|H ) is log canonical (resp., log terminal).
+Proof. Since ((X, ∆); Z) is log canonical (resp., log terminal) for some boundary ∆, so is
+((H, ∆|H ); Z|H ), and hence (H, Z|H ).                                                 
+Corollary 7.6. An effective pair (X, Z) is log terminal if and only if J(X, Z) = OX .
+Moreover, if X is log terminal, then
+                           lc(X, Z) = sup{t > 0 | J(X, tZ) = OX }.
+     We next address the extension of Elkik’s theorem on rational singularities [Elk].
+Corollary 7.7. Let X be a normal variety with log terminal singularities. Then X has
+rational singularities.
+                           SINGULARITIES ON NORMAL VARIETIES                               17
+
+Proof. The proof follows from [KM, Theorem 5.22] as there exists a boundary ∆ such that
+J(X, ∆) = OX .                                                                       
+
+  Similarly, the analogous result on Du Bois singularities due to Kovács, Schwede and
+Smith [KSS, Theorem 1.2] generalizes as follows.
+Corollary 7.8. Let X be a normal Cohen–Macaulay variety with log canonical singular-
+ities. Then X has Du Bois singularities.
+  We also obtain the following generalization of [Sch, Theorem 5.5], which was kindly
+brought to our attention by Karl Schwede.
+Corollary 7.9. Let (X, Z) be an effective pair with log canonical singularities, and suppose
+that X is log terminal. Then the multiplier ideal J(X, Z) defines a scheme with Du Bois
+singularities.
+   In [Kaw1], Kawamata proves an important result on the singularities of minimal log
+canonical centers, which in particular implies that such centers have rational singularities.
+It follows immediately that, in the setting and terminology of Theorem 1 in [Kaw1],
+‘minimal log canonical centers’ are normal varieties with log terminal singularities. In
+particular this appears to be a natural setting for the theory developed in this paper, as
+in general ‘minimal log canonical centers’ are not known to be Q-Gorenstein (even when
+the ambient variety is smooth).
+   In fact, Kawamata’s subadjunction theorem extends to our general setting.
+Definition 7.10. Let (X, Z) be an effective strictly log canonical pair, and let m0 be
+as in Definition 7.1. A subvariety W ⊂ X is said to be a log canonical center of (X, Z)
+if for every multiple m of m0 there is a exceptional prime divisor E over X such that
+cX (E) = W and am,E (X, Z) = 0. A log canonical center is said to be minimal if it is so
+with respect to inclusions.
+Proposition 7.11. Let W ⊆ X is a minimal log canonical center for an effective strictly
+log canonical pair (X, Z). Then for any sufficiently divisible m, there is an effective m-
+compatible boundary ∆ such that W is a minimal log canonical center for ((X, ∆); Z).
+Proof. Let m0 as in Definition 7.1, and for every integer k > 0, let ∆k be a km0 -compatible
+boundary for (X, Z). Note that, for every k, the pair ((X, ∆k ); Z) is log canonical and
+W is a log canonical center for ((X, ∆k ); Z). Moreover, for every k ≥ n ≥ 1 we have
+aF ((X, ∆k ); Z) ≥ aF ((X, ∆n ); Z) for any divisor F over X. It follows that, if Wk denotes
+the set of log canonical centers of ((X, ∆k ); Z), then Wk ⊆ Wn for every k ≥ n ≥ 1. Since
+a strictly log canonical log pair has only finitely many log canonical centers, the sequence
+of sets {Wk } stabilizes, and therefore W is a minimal log canonical center of ((X, ∆k ); Z),
+for k ≫ 1.                                                                                 
+Corollary 7.12. Let (X, Z) be an effective strictly log canonical pair on a log terminal
+variety X. Then every minimal log canonical center of (X, Z) is a normal variety with
+log terminal (and hence rational) singularities.
+Proof. Let W be a minimal log canonical center. By Proposition 7.11, we can fix an m-
+compatible boundary ∆ such that W is a minimal log canonical center of ((X, ∆), Z). It
+follows by [Kaw1] that there is a boundary ∆W on W such that (W, ∆W ) is log terminal,
+and this implies that W is log terminal.                                            
+18                   TOMMASO DE FERNEX AND CHRISTOPHER D. HACON
+
+   We close this section with a discussion on surface singularities. As explained in [KM,
+Notation 4.1], one can define the notions of numerically log terminal and numerically log
+canonical singularities for arbitrary normal surfaces, using the perfect pairing on the rela-
+tive Néron–Severi space of a resolution. Here we show that a normal surface is log terminal
+(resp., log canonical) if and only if it is numerically log terminal (resp., numerically log
+canonical).
+Proposition 7.13. A normal surface X is log terminal if and only if is numerically log
+terminal.
+Proof. By [KM, Proposition 4.11], X is numerically log terminal if and only if it is Q-
+factorial and log terminal. On the other hand, if X is log terminal, then by Proposition 7.2
+there is a boundary ∆ such that (X, ∆) is log terminal, and hence numerically log terminal.
+Again by [KM, Proposition 4.11], this implies that X is Q-factorial.                      
+Proposition 7.14. A normal surface X is log canonical if and only if is numerically log
+canonical.
+Proof. If X is numerically log canonical, then it is Q-Gorenstein (cf. [KM, Notation 4.1]),
+and hence log canonical. Conversely, suppose that X is log canonical in the generality
+introduced in this section. We fix a canonical divisor KX on X and a sufficiently divisible
+m ≥ 1. Let f : Y → X be a log resolution of (X, OX (−mKX )), and write OX (−mKX ) ·
+OY = OY (−A) where A is a divisor on Y . Let K    PY be the canonical divisor on Y such that
+f∗ KY = KX . Note that −A is f -nef. Let E = Ei be the reduced exceptional divisor of
+f . Since X is log canonical, it follows that if m is sufficiently divisible then the Q-divisor
+                                                            1
+                            F := Km,Y /X + E = KY + E − m     A
+                                               P
+is an effective exceptional Q-divisor. Let N = ai Ei be characterized by KY ≡f N . We
+have
+                                                    1
+                                    N + E − F ≡f m    A.
+In particular −(N + E − F ) is f -nef, and since it is exceptional, we conclude that N +
+E − F ≥ 0 by the Negativity Lemma ([KM, Lemma 3.39]). This implies that ai ≥ −1 for
+all i, an hence that X is numerically log canonical.                                   
+Corollary 7.15. Let X be a normal surface with log terminal (resp., log canonical) sin-
+gularities. Then X is Q-factorial (resp., Q-Gorenstein).
+
+                      8. Terminal and canonical singularities
+   In this section we deal with the generalization of canonical and terminal singularities,
+and discuss the corresponding extensions of invariance properties of singularities, pluri-
+genera and numerical Kodaira dimensions established in the Q-Gorenstein case in works
+of Siu, Kawamata and Nakayama. Throughout the section, the ground field is assumed
+to be an algebraically closed field of characteristic zero.
+   Consider a pair (X, Z), where X is a normal variety and Z is an effective formal linear
+combination of proper closed subschemes of X.
+Definition 8.1. Let X ′ → X be a proper birational morphism with X ′ normal, and let
+F be a prime divisor on X ′ . The log-discrepancy of a prime divisor F over X with respect
+to (X, Z) is
+                        aF (X, Z) := ordF (KX ′ /X ) + 1 − valF (Z).
+                            SINGULARITIES ON NORMAL VARIETIES                                  19
+
+The pair (X, Z) is said to be canonical (resp., terminal) if aF (X, Z) ≥ 1 (resp., > 1) for
+every exceptional prime divisor F over X.
+   Of course these notions coincide with the familiar ones in the Q-Gorenstein case. Canon-
+ical singularities admit the following characterization (which is well known in the Q-
+Gorenstein case).
+                                                                              P
+Proposition 8.2. Let X be a normal variety, and suppose that Z =                 ak · Zk is an
+effective formal Q-linear combination of effective Cartier divisors Zk on X. Then the pair
+(X, Z) is canonical if and only if for all sufficiently divisible m ≥ 1 (in particular, we ask
+                                                                                             
+that mak ∈ Z for every k), and for every log resolution f : Y → X of X, Z + OX (mKX ) ,
+there is an inclusion
+                                                                    
+                        OX m(KX + Z) · OY ⊆ OY m(KY + ZY )
+as sub-OY -modules of KY , where ZY is the proper transform of Z (as usual, the canonical
+divisors KX and KY are chosen so that f∗ KY = KX ).
+Proof. Note that f −1 (Z) = f ∗ Z = −f ∗ (−Z), once we think of Z and f −1 (Z) as Q-Cartier
+Q-divisors. If (X, Z) is canonical, and m and f are chosen as in the statement, then we
+see that
+  m(KY + ZY ) + f ♮(−m(KX + Z)) ≥ m(KY + ZY ) + f ∗ (−m(KX + Z))
+                       = m(KY + ZY + f ∗ (−KX − Z)) = m(KY /X + ZY − f −1 (Z)) ≥ 0
+by Remark 2.11 and Proposition 2.10, and hence we get an inclusion as asserted. Con-
+versely, suppose that (X, Z) is not canonical, and fix any log resolution f : Y → X of
+(X, Z). Then the R-divisor KY + ZY + f ∗ (−KX − Z) is not effective. Since f ∗ (−KX − Z)
+                                             1
+is the componentwise limit of the Q-divisors m ·f ♮ (−m(KX +Z)), we can find a sufficiently
+                                                 1
+large (and divisible) m such that KY + ZY + m        · f ♮ (−m(KX + Z)) is not effective. By
+further blowing up, we may assume that f is a log resolution of (X, Z + OX (mKX )). Then
+the assertion follows.                                                                     
+  As an application, we show that deformation invariance of canonical singularities, pluri-
+genera, and numerical Kodaira dimension also holds in this more general context.
+  We start with the extension of Kawamata’s theorem on the deformation invariance of
+canonical singularities [Kaw2].
+Theorem 8.3. Let f : X → C be a flat morphism from a variety to a smooth curve such
+that, for some point 0 ∈ C, the fiber X0 = f −1 (0) is a normal variety with only canonical
+singularities. Then (X, X0 ) is canonical in a neighborhood of X0 , and so are all fibers of
+f over a neighborhood of 0.
+Proof. The proof follows the arguments of [Kaw3]. By shrinking X near X0 , we can
+assume that X is normal (cf. [Gro, Corollary 5.12.7]). We may also assume that X0 is
+affine. Let m > 0 be a sufficiently divisible integer and let µ : Y → X be a log resolution
+of (X, X0 + OX (mKX )) which restricts to a log resolution of (X0 , OX0 mKX0 ) . Let
+{s1 , . . . , sk } be a generating set of sections of OX0 (mKX0 ). Let Y0 be the strict transform
+of X0 . By Proposition 8.2, there is an inclusion
+                              OX0 (mKX0 ) · OY0 ⊆ OY0 (mKY0 ).
+One sees that there are corresponding sections s̃i of OY0 (mKY0 ) which push forward to
+the sections si of OX0 (mKX0 ). By Theorem A of [Kaw3], after possibly restricting over a
+20                      TOMMASO DE FERNEX AND CHRISTOPHER D. HACON
+
+
+neighborhood of 0 ∈ C, these sections extend to sections S̃i of OY (m(KY + Y0 )). Push-
+ing forward, we obtain sections Si of OX m(KX + X0 ) that restrict    to si . It follows by
+Nakayama’s Lemma that the Si are generators
+                                                of OX  m(K X
+                                                             +  X0 ) at each point of X0 .
+Thus the inclusion µ∗ OY m(KY + Y0 ) ⊆ OX m(KX + X0 ) is an equality in a neighbor-
+hood of X0 . Therefore, after restricting to such neighborhood, there is an inclusion
+                                                                 
+                      OX m(KX + X0 ) · OY ⊆ OY m(KY + Y0 ) ,
+and hence (X, X0 ) is canonical.                                                                          
+   Similarly, we have the following extension of the invariance of plurigenera (in the general
+type case) and of numerical Kodaira dimension for varieties with canonical singularities
+[Siu, Kaw2, Nak].
+Theorem 8.4. Let f : X → S be a projective flat morphism of varieties whose fibers
+Xt = f −1 (t) are normal varieties with canonical singularities for every t ∈ S. Then the
+following properties hold:
+    (a) The numerical Kodaira dimension ν(Xt ) is constant on t ∈ S. In particular, if one
+        fiber X0 is of general type, then so are the other fibers.
+    (b) Suppose additionally that the generic fiber Xη is a variety of general type. Then
+        the plurigenera Pm (Xt ) is constant on t ∈ S for any positive integer m.
+Proof. The proof is similar to those of Theorems 1.3 and 1.2’ of [Kaw3], after we remark
+that Kodaira’s lemma (cf. [Laz1, Proposition 2.2.6]) holds for (not necessarily Cartier)
+divisors on a normal projective variety.                                              
+Remark 8.5. Canonical singularities on a Q-Gorenstein normal variety are obviously purely
+log terminal. However, it remains unclear whether an analogous implication still holds if
+the singularities are not Q-Gorenstein (cf. Remark 3.3). In fact, in this generality we do
+not even know if canonical singularities are rational (in particular, Cohen–Macaulay) or
+log canonical.
+
+                                              References
+[AIM06] Problems raised during the Workshop on “Numerical invariants of singularities and higher-
+        dimensional algebraic varieties”, American Institute of Mathematics, Palo Alto, August 2006.
+        Available at www.aimath.org/WWN/singularvariety/problemsV1.pdf
+[Bli]   M. Blickle, Multiplier ideals and modules on toric varieties. Math. Z. 248 (2004), 113–121.
+[EM]    L. Ein and M. Mustaţă, Invariants of singularities of pairs. International Congress of Mathemati-
+        cians. Vol. II, 583–602, Eur. Math. Soc., Zrich, 2006.
+[Elk]   R. Elkik, Rationalité des singularités canoniques. Invent. Math. 64 (1981), 1–6.
+[EV]    H. Esnault and E. Viehweg, Dyson’s lemma for polynomials in several variables (and the theorem
+        of Roth). Invent. Math. 78 (1984), 445–490.
+[Fra]   P. Francia, Some remarks on minimal models. I. Compositio Math. 40 (1980), 301–313.
+[Gro]   A. Grothendieck, Éleménts de géométrie algébrique. IV. Étude locale des schémas et des mor-
+        phismes de schémas. II. Inst. Hautes Études Sci. Publ. Math. (1965), no. 24, 231.
+[Har]   N. Hara, Geometric interpretation of tight closure and test ideals. Trans. Amer. Math. Soc. 353
+        (2001), 1885–1906.
+[HT]    N. Hara and S. Takagi, On a generalization of test ideals. Nagoya Math. J. 175 (2004), 59–74.
+[HY]    N. Hara and K.-I. Yoshida, A generalization of tight closure and multiplier ideals. Trans. Amer.
+        Math. Soc. 355 (2003), 3143–3174.
+[Hir]   H. Hironaka, Resolution of singularities of an algebraic variety over a field of characteristic zero.
+        I, II. Ann. Math. 79 (1964), 109–203, 205–326.
+[Kaw1] Y. Kawamata, Subadjunction of log canonical divisors. II. Amer. J. Math. 120 (1998), 893–899.
+[Kaw2] Y. Kawamata, Deformations of canonical singularities. J. Amer. Math. Soc. 12 (1999), 85–92.
+                              SINGULARITIES ON NORMAL VARIETIES                                       21
+
+[Kaw3] Y. Kawamata, On the extension problem of pluricanonical forms. Pragacz, Piotr (ed.) et al.,
+       Algebraic geometry: Hirzebruch 70. Proceedings of the algebraic geometry conference in honor
+       of F. Hirzebruch’s 70th birthday, Stefan Banach International Mathematical Center, Warszawa,
+       Poland, May 11-16, 1998. Providence, RI: American Mathematical Society. Contemp. Math. 241
+       (1999), 193–207.
+[Kaw4] Y. Kawamata, On Fujita’s freeness conjecture for 3-folds and 4-folds. Math. Ann. 308 (1997),
+       no. 3, 491–505.
+[KMM] Y. Kawamata, K. Matsuda and K. Matsuki, Introduction to the minimal model problem. Alge-
+       braic Geometry, Sendai, 1985, 283–360, Adv. Stud. Pure Math., 10, North-Holland, Amsterdam,
+       1987.
+[Kol1] J. Kollár, Flips and abundance for algebraic threefolds. A summer seminar at the University of
+       Utah (Salk Lake City, 1991). Astérisque 211, 1992.
+[Kol2] J. Kollár, Singularities of pairs. Algebraic geometry—Santa Cruz 1995, 221–287, Proc. Sympos.
+       Pure Math., 62, Part 1, Amer. Math. Soc., Providence, RI, 1997.
+[KM]   J. Kollár and S. Mori, Birational Geometry of Algebraic Varieties. With the collaboration of C.
+       H. Clemens and A. Corti. Cambridge Tracts in Mathematics, 134. Cambridge University Press,
+       Cambridge, 1998.
+[KSS]  S. Kovács, K. Schwede and K. E. Smith, Cohen-Macaulay semi-log canonical singularities are Du
+       Bois. Preprint, available as arXiv:0801.1541.
+[Laz1] R. Lazarsfeld, Positivity in Algebraic Geometry. I. Classical Setting: Line Bundles and Linear
+       Series. Ergebnisse der Mathematik und ihrer Grenzgebiete. 3. Folge. A Series of Modern Surveys
+       in Mathematics, 48. Springer-Verlag, Berlin, 2004.
+[Laz2] R. Lazarsfeld, Positivity in Algebraic Geometry. II. Positivity for Vector Bundles, and Multiplier
+       Ideals. Ergebnisse der Mathematik und ihrer Grenzgebiete. 3. Folge. A Series of Modern Surveys
+       in Mathematics, 49. Springer-Verlag, Berlin, 2004.
+[Nad1] A. Nadel, Multiplier ideal sheaves and existence of Kähler-Einstein metrics of positive scalar
+       curvature. Proc. Nat. Acad. Sci. U.S.A. 86 (1989), 7299–7300.
+[Nad2] A. Nadel, Multiplier ideal sheaves and Kähler-Einstein metrics of positive scalar curvature. Ann.
+       of Math. 132 (1990), 549–596.
+[Nak]  N. Nakayama, Zariski-Decomposition and Abundance. MSJ Memoirs, 14. Mathematical Society
+       of Japan, Tokyo, 2004.
+[Sho]  V. V. Shokurov, Three-dimensional log perestroikas. (Russian) With an appendix in English by
+       Yujiro Kawamata. Izv. Ross. Akad. Nauk Ser. Mat. 56 (1992), 105–203; translation in Russian
+       Acad. Sci. Izv. Math. 40 (1993), 95–202.
+[Sch]  K. Schwede, A simple characterization of Du Bois singularities. Compos. Math. 143 (2007), 813–
+       828.
+[Siu]  Y.-T. Siu, Invariance of plurigenera. Invent. Math. 134 (1998), 661–673.
+[Smi]  K. E. Smith, The multiplier ideal is a universal test ideal. Comm. Algebra 28 (2000), 5915–5929,
+       Special issue in honor of Robin Hartshorne.
+[Tkg]  S. Takagi, An interpretation of multiplier ideals via tight closure. J. Algebraic Geom. 13 (2004),
+       393–415.
+[Tak]  S. Takayama, Pluricanonical systems on algebraic varieties of general type. Invent. Math. 165
+       (2006), 551–587.
+
+  Department of Mathematics, University of Utah, 155 South 1400 East, Salt Lake City,
+UT 48112-0090, USA
+  E-mail address: defernex@math.utah.edu
+
+  Department of Mathematics, University of Utah, 155 South 1400 East, Salt Lake City,
+UT 48112-0090, USA
+  E-mail address: hacon@math.utah.edu
+

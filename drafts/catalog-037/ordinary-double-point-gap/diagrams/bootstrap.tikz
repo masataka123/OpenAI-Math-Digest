@@ -1,0 +1,21 @@
+\node[card] (start) {\heading{1}{二filtrationで別の作用を作る}{Two filtrations give another action}
+$\bar S=\operatorname{gr}_T S,\quad D=\bar S/(\bar v),\quad G=\operatorname{gr}_W S=D[v]$.\\
+$\operatorname{Hilb}_W G(z)=(1-z)^{-n},\qquad \text{\Tx{非自明なstabilizer}{nontrivial stabilizer}}\ \mu_h, h\ge2$.};
+\node[card,below=2.5cm of start] (slice) {\heading{2}{同次元の特異klt slice}{A singular klt slice of the same dimension}
+$\dim Y=n,\quad\lambda_Y\ \text{\Tx{のcharacter}{has character}}\ -1,\quad\ell=u(\lambda_Y)>0$.\\
+$A_C(w)\le N\ell+A_Y(u),\qquad\operatorname{vol}(w)\le\ell^{-n}$.};
+\flow{start}{slice}{\Tx{Reesのcanonical formを比較；非klt・smoothの場合を排除}{Compare Rees canonical forms; exclude non-klt and smooth slices}\\\Cite{filter}\quad\Cite{slice}};
+\node[card,below=2.7cm of slice] (character) {\heading{3}{一つのcharacterだけを数える}{Count only one character}
+$u_*=\text{\Tx{不変なminimizer}{invariant minimizer}},\quad A'=A_Y(u_*),\quad\sigma=\operatorname{vol}(u_*)$.\\
+$\dim(R/\mathfrak a_t)_{\chi}=\dfrac{\sigma}{h}\dfrac{t^n}{n!}+o(t^n)$,\\[3pt]
+$\operatorname{vol}(w)\le\displaystyle\min_{0\le x\le1}\left\{\ell^{-n}x^n+(1-x)^n\sigma/h\right\}$.};
+\flow{slice}{character}{\Tx{minimizerの一意性、$\lambda_Y$による文字間単射、colengthの分割}{Uniqueness, character injections via $\lambda_Y$, and colength splitting}\\\Cite{unique}\quad\Cite{character}};
+\node[card,below=2.6cm of character] (comparison) {\heading{4}{未証明の同次元上界を使わない}{Use only the definition of the supremum}
+$d(o,C)\le (N/n)^n+(A'/n)^n\sigma/h$\\
+$\hphantom{d(o,C)}=p_n/2+d(y,Y)/h\le(p_n+M_n)/2$.\\
+\Tx{$Y$が特異kltなので$d(y,Y)\le M_n$。}{Since $Y$ is singular klt, $d(y,Y)\le M_n$.}};
+\flow{character}{comparison}{\Tx{最適化とHölder、$h\ge2$}{Optimize, apply Hölder and use $h\ge2$}\\\Cite{optimization}};
+\node[result,below=2.5cm of comparison] (end) {\heading{5}{supremumを閉じる}{Close the supremum inequality}
+$d_i\to M_n,\quad d_i\le(p_n+M_n)/2\quad\Longrightarrow\quad M_n\le p_n$.\\
+\Tx{近似gradingは各円錐ごとに選ぶ。supremumの達成は不要。}{Choose approximating gradings separately on each cone. The supremum need not be attained.}};
+\flow{comparison}{end}{\Tx{$d_i>p_n$では小stabilizerの枝を排除して極限へ}{For $d_i>p_n$, exclude the small-stabilizer branch and take the limit}\\\Cite{small-statement}\quad\Cite{bootstrap}};

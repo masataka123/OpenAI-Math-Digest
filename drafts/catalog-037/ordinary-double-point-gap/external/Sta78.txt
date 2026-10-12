@@ -1,0 +1,1286 @@
+ADVANCES         IN MATHEMATICS         28, 57-83      (1978)
+
+
+
+
+                          Hilbert         Functions             of Graded               Algebras*
+
+                                              RICHARD             P.   STANLEY
+
+
+                   Department       of Mathematics,        Massachusetts         Institute     of Technology,
+                                          Cambridge,       Massachusetts         02139
+
+
+
+                                                    1. INTRODUCTION
+
+   Let R be a Noetherian    commutative     ring with identity, graded by the non-
+negative integers N. Thus the additive group of R has a direct-sum            decom-
+position   R = R, + R, + ..., where RiRi C R,+j and 1 E R, . If in addition
+R, is a field K, so that R is a k-algebra, we will say that R is a G-akebra. The
+assumption that R is Noetherian      implies that a G-algebra is finitely generated
+(as an algebra over k) and that each R, is a finite-dimensional         vector space
+over k. The Hilbe-rtfunction of R is defined by
+
+                                  H(R, n) = dim, Rn ,                             for        nfzN.
+
+Thus in particular      H(R, 0) = 1. Our object will be to see what kind of con-
+ditions the structure of R imposes on the Hilbert function H, and conversely
+what we can deduce about R from knowledge               of H. Although     much of what
+we say can be extended to more general rings, for simplicity              we will restrict
+ourselves to G-algebras      as defined above.
+    This paper is partially expository        in nature. Many results about Hilbert
+functions     have been previously     obtained, though frequently       they have been
+stated in an obscure or cumbersome fashion. The most striking of these results
+are due to F. S. Macaulay. Our primary new results are Theorem 4.4 and its
+applications.    We show that if a G-algebra         R is a Cohen-Macaulay           integral
+domain, then the question of whether or not R is Gorenstein                 is completely
+determined      by the Hilbert function of R. This allows us to determine when
+rings arising in certain ways are Gorenstein,          e.g., the ring of invariants of a
+finite group or of a torus acting in the usual way on a polynomial             ring over a
+field of characteristic   zero.
+    The following notation and terminology        will be fixed throughout      this paper.
+Let R be a G-algebra. An element x of R is said to be homogeneous                  if x E R,
+for some n 3 0, and we write deg x = n. In particular,                deg 0 is arbitrary.
+Since R is finitely generated and graded, there exists a finite set of homogeneous
+generators for R. Fix such a set yr , ya ,..., ys . We can assume that no yi E R, ,
+
+   * Supported         in part    by   NSF    Grant     P36739.
+
+                                                                  57
+                                                                                    OOOl-8408/78/0281-00.57$05.00/O
+                                                                                 Copyright    0 1978    by Academic   Press, Inc.
+                                                                         All   rights of reproduction      in any form reserved.
+58                             RICHARD       P.   STANLEY
+
+
+ so degyi = ei 3 1. Let A = K[Y,,..., Y,] be a polynomial ring over R in s
+independent variables Y1 , .. ., Y, . If we define deg Yi = ei , then A has the
+structure A = A, + A, + ... of a G-algebra, with Yi E A,, . There is a
+canonical surjection A 2 R defined by p(Y,) = yi . Moreover, p is degree
+preserving, i.e., p(A,) C R, . Define the Poincare’ series F(R, h) of R to be the
+formal power series
+
+                       F(R, X) = f          H(R, n) hn E Z[[h]].
+                                     ?L=O
+
+
+
+This power       series is not to be confused with the power               series
+CrZo [dim, Tor,s(K, k)]A”, which is sometimes also called the PoincarC series
+of R and which has (almost) no connection with F(R, h). It is a consequence
+of the Hilbert syzygy theorem (which implies that R has a finite free resolution
+as an A-module) or otherwise (e.g., [l, Theorem 1I.11 or [26, Theorem 4.21)
+that we can write F(R, h) in the form
+
+                           F(R, X) =             P(R 4
+                                            I-I;=, (1 - w    ’
+                                                                               (1)
+
+where P(R, X) is a polynomial in h with integer coefficients, i.e., P(R, X) E HP].
+Moreover, if d denotes the Krull dimension of R, then d is the order to which
+h = 1 is a pole of F(R, h). Thus d is the unique integer for which
+lim,,,( 1 - h)d F(R, h) is a nonzero, noninfinite complex number. (In evaluating
+this limit, and in similar instances throughout this paper, we are regarding
+F(R, h) as a rational function of X.) A proof is essentially given in [l, Chap. 111
+or [26, Theorem 5.51. Thus H(R, n) uniquely determines d = dim R. This
+is a simple instance of the interplay between the structure of R and the behavior
+of H(R, n). A special case of obvious interest is when each ei = 1, so that A
+has its “usual” grading. In this case H(R, n) is a polynomial for n sufficiently
+large (the Hilbert polynomial of R), and the degree of this polynomial is d - 1.
+If one can choose each e, = 1 (i.e., if R is generated as a k-algebra by R,),
+then we will call R a standard G-algebra. If R is standard, we assume that
+each yi has been chosen to be in R, , so that each ei = 1.
+   Given a standard G-algebra R, we frequently will need to choose a system
+of parameters of R, or a maximal homogeneous R-sequence, consisting of
+homogeneous elements of degree one. This can always be done if K is infinite.
+If k is finite, we will always be able to reduce our arguments to the case where
+K is infinite by use of the next result. The proof is routine and essentially well
+known, and will be omitted.
+
+    1.1. LEMMA. Let R be a G-algebra with R, = k, and let K be an extension
+fieZd of k. Let Q = R ol, K, sothat Q is a G-algebra over K in an obviousway.
+ Then:
+                                       HILBERT FUNCTIONS                                   59
+
+          (i)    dimIi   = dimQ;
+       (ii) depth R = depth Q, where the depth of a G-algebra S is the length
+of the longest homogeneous     regular sequence contained in S. (See Section 3 for a
+discussion of regular sequences.)
+       (iii) R is Cohen-Macaulay     if and only if Q is Cohen-Macaulay     (this
+follows from (i) and (ii) since a G-algebra S is Cohen-Macaulay   if and only if
+ dim S = depth S).
+        (iv)     R is Gorenstein   if and only if Q is Gorenstein.
+         (v)     R is a complete intersection   if and only tf Q is a complete intersection.
+        (vi)     R is a hypersurface   if and o&y if Q is a hypersurface.
+       (vii)     R and Q have the same Hilbert         function,     i.e., H(R, n) = H(Q, n)
+forallnEN.           1
+
+
+
+                2. HILBERT   FUNCTIONS AND ORDER IDEALS OF MONOMIALS
+
+   In this section we consider what can be said about the Hilbert             function
+of an arbitrary     G-algebra   (as defined in the previous section). To this end,
+let Y1 ,..., Y, be indeterminates.    A nonvoid set M of monomials       Y> ... Y: in
+the variables Y, ,..., Y, is said to be an order ideal of monomials if, whenever
+m E M and m’ divides m, then m’ E M. Equivalently,           if YI’ ... Y: E M and
+0 < bi < ai, then Y,bl ... Yp’ E M. In particular,     since M is assumed nonvoid,
+ 1EM.
+   Recall the notation of Section 1 (which we will be using throughout               this
+paper): R is a G-algebra      with homogeneous    generators yr , ya ,..., ys, and we
+have a surjection d4 = k[ Yi ,..., Y,] 1 R given by p( Yi) = yi . The following
+result is essentially due to Macaulay [19].
+
+   2.1. THEOREM.          There exists an order ideal M of monomials in the variables
+ Y 1 >...I I’, ) such that the elements p(m), m E M, form a k-basis for R.
+
+    Proof.   Let @ denote the set of all monomials      in the variables Yi ,..., Y, .
+Define a linear ordering of the elements of @ as follows. If u = Y? ... Y,“s and
+v = Yi’...Y,:,        then u <v   if either (I) Cai <Cbi,         or (2) Cai =Cbi
+and for some j satisfying 1 < j < s, we have a, = 6, , a,?-, = b,?-, ,..., aj+l =
+by+1 > and aj < bj (This is just “reverse lexicographic     order.“)
+    It is easy to see that (@, <) forms an ordered semigroup (under multiplica-
+tion). In particular,
+
+                             U<V~UW<VW                 for all w E @.                      (2)
+   Now define a sequence ui , ua ,... (possibly finite or infinite)  of elements
+of @ as follows. First, ui = 1. Once ur , ua ,..., ui have been defined, let ui+i
+60                               RICHARD           P. STANLEY
+
+
+ be the least element of @ (in the linear ordering we have just defined) so that
+lwl     PW--3 P@i+d are linearly independent (over k) in R. If u~+~ does not
+ exist, the sequence terminates with ui .
+    Let M = {ur , ua ,... }. We claim that M is the desired order ideal of monomials.
+ Clearly p(uJ, P(f&.. is a basis for R, so we have only to show M is an order
+ ideal. Suppose not. Then for some u, v E 0 we have u E M, v j u, v $ &I. Since
+ v $ M, we have a linear dependence relation
+
+                                     P(v) = 1 %P(%>,                               (3)
+where ui E @, ui < v, and oli E k. Let u = VW. Multiplying (3) by p(w), we
+obtain p(u) = C ‘yip(uiw). By (2), each uiw < u = VW. This contradicts the
+fact that u E M and completes the proof. 1
+    From Theorem 2.1 we deduce the following result. Given positive integers
+el ,..., e, , a function H: N + N is the Hilbert function of some G-algebra
+generated by elements of degrees e, ,..., e, if and only if there is an order ideal
+M of monomials in variables Yr ,... , Y, , where deg Yi = ei , such that H(n) =
+card{u EM: deg u = n}. This condition is not very edifying since given H,
+it is by no means apparent whether the desired order idea1 M exists. If, however,
+each e, = 1, it is possible to give an explicit numerical characterization of
+valid Hilbert functions H. We will merely state this result here. The difficult
+part of the proof was first obtained by Macaulay [19], with subsequent simplifica-
+tions and generalizations by Sperner [27], Whipple [39], and Clements and
+Lindstrom [5] (see [8, Sect. 81 f or a survey of this subject). The explicit numerical
+form in which we state the result first appeared in [33] and is also considered
+in [34].
+   A finite or infinite sequence (ka , k, ,... ) of nonnegative integers is said to be
+an O-sequence if there exists an order ideal M of monomials in variables
+ Yl , yz >..., Y, , with each deg Yi = 1, such that k, = card{u E M: deg u = n}.
+In particular, k, = 1. If h and i are positive integers, then h can be written
+uniquely in the form
+
+                        k =    (yq    +    (;“yJ        +   *a. +   (y!),
+
+
+where tti > n,-r > ... > ni > i 3 1. Following McMullen [22], define
+
+                h<i’ = (y,‘)          + (y+             1) + .. . + (y;).
+
+Also define Oci’ = 0.
+
+  2.2. THEOREM.    Let H: N -+ N and let k be any field. The following four
+conditionsare equivalent.
+                                                 HILBERT   FUNCTIONS                              61
+
+           (i)        There exists a standard          G-algebra   R with R, = k and with   Hilbert
+function         H.
+       (ii)           (H(O), H(l),   H(2),...)     is an O-sequence.
+      (iii)           H(0)   = 1 and for aZZ n 2 I, H(n + 1) < H(n)<n>.
+       (iv) Let s = H(l), and for each n > 0, let M, be the jirst (in the linear
+ordering defined above) H(n) monomials of degree n in the variables YI ,..., Y, .
+DeJine M = Un=,, M, . Then M is an order ideal of monomials.     1
+
+    Remark.    The implication     (i) -> ( ii ) in Theorem    2.2 follows from Theorem
+2.1. The implication     (ii) 3 (i) is easy: given an O-sequence           (H(O), H(l),...),
+let M be an order ideal of monomials               in the variabIes Yi , Ya ,..., Y, , with
+each deg Yi = I, such that H(n) = card{u E M: deg u = n}. Let I be the
+ideal of A = k[Y, ,..., Y,] generated by all monomials not in M. Then R = A/I
+is a standard G-algebra with R, = k and with Hilbert function H. The equiva-
+lence of (iii) and (iv) is a simple counting            argument;   while the implication
+(iv) 3 (ii) is trivial. The difficult       part of Theorem        2.2 is the implication
+(ii) =- (iv). As mentioned      above, we are referring the reader to the literature
+for the proof that (ii) 3 (iv).
+    To clarify Theorem      2.2, we present a few examples.
+
+      (a) Let us use condition       (iv) to check whether (1, 3, 4, 5, 7) is an O-
+sequence. Writing       x = Yi , y = Y, , z = Ys , we have M0 = {l}, MI =
+{x, y, z}, n/r, = {x2, xy, y2, xz>, MS = (x3, x2y, xy”, y3, x2x}, Md = {ti, x3y, x2y2,
+xy3, y4, x32, ~“yz}. Now xyz divides an element of M4 but xyz $ M3. Hence
+(1, 3, 4, 5, 7) is not an O-sequence. It follows that a standard G-algebra cannot
+have a Hilbert function H satisfying H(3) = 5 and H(4) = 7.
+     (b) We have 152 = (i) + (3 + (3 + (i). Hence 152’5> = (‘3 + (3 +
+(3 + (3 = 247. It follows from Theorem 2.2 that if R is a standard G-algebra
+with H(R, 5) = 152, then H(R, 6) < 247, and this result is best possible.
+       (c) As a somewhat more general application    of Theorem 2.2, we remark
+that the following   result is a simple consequence of the equivalence of (i) and
+(iii) (or of (i) and (iv)). Suppose R is a standard G-algebra and that for some
+m > 1, we have H(m) < m. It then follows that H(n) 3 H(n + 1) for all
+71 3 m.
+
+
+                                                  3. R-SEQUENCES
+
+   Recall that a sequence 0,) 0, ,..., 0, of elements of a Noetherian        ring R is a
+regular sequence or an R-sequence if (0, , 8, ,..., B,)R # R and if Bi is not a zero-
+divisor modulo (0, ,..., Bi-i) for i = 1, 2 ,..., r. If R is a G-algebra, we say that
+an R-sequence     & , 8, ,..., 0, is homogeneous if each Bi is homogeneous.               If
+e1 ,...I 8, are homogeneous         elements     of a G-algebra,         the    condition
+62                                 RICHARD    P. STANLEY
+
+
+(4 , 4 ,..., 4)R f R is equivalent to deg Oi > 0 for i = 1, 2 ,..., r. We base
+our analysis of the relationship      between R-sequences      and Hilbert   functions
+on the following     simple result (Theorem       3.1). First observe that if I is a
+homogeneous     ideal (or subring)    of a G-algebra    R, then I inherits a grading
+I = I, + II + I, + ... from R given by I, = In R, . We can then define
+H(I, n) = dim, I, and F(I, h) = C,“=, H(I, n)h”. Similarly         the quotient     ring
+R/I inherits a grading from R, and H(R/I, n) and F(R/I, h) are always defined
+with respect to this “quotient     grading.”
+
+
+     3.1. THEOREM.     Let R be a G-algebra,       and let 0 be a homogeneous
+                                                                           element
+of   R of degree f   > 0. Then
+                        FcR x) = F(W),         4 - WAnn         44
+                           3                     1 - IV
+
+where Ann 0 = (x E R: x0 = O}.
+
+   Proof.  For n 3 0 we have H((O), n + f) = dim,(OR,)                         = dim, R, -
+dim,(R,   n Ann 0) = H(R, n) - H(Ann 0, n), so
+
+                         F((O), h) = Af[F(R, h) - F(Ann        0, A)].                         (5)
+
+On the other hand,      it is clear that for any homogeneous           ideal I of R,
+
+                             F(R, A) = F(I, A) + F(R/I, A).                                    (6)
+Putting    I = (0) in (6) and combining      with (5), we obtain       the desired   result.     1
+
+   3.2. COROLLARY.    Let R be a G-algebra. Let 0, , Or ,..., Or be a sequence of
+nonzero homogeneous    elements of R of positive degree, say deg Oi = fi > 0.
+Let S be the quotient ring R/(0, , O2 ,..., O,), endowed with the natural “quotient
+grading.”  If Cr aSAn and Cr b,Xn are two power series with real coefficients,
+de$ne Cr a,hn < Cy b,hfi if a, < b, for all n >, 0. Then
+
+
+                            F(R, A) < F(S, h)/fi       (1 - A?.                                (7)
+
+Equality   holds in (7) if and only if 0, ,..., Or is an R-sequence.
+
+    Proof.   Since 0, ,..., 0, is an R-sequence      if and only if 0, is a non-zero-
+ divisor in R and 0, ,..., 0, is an R/(0,)-sequence,     the proof reduces immediately
+to the case r = 1. Thus assume S = R/(O) where deg 0 = f. We wish to prove
+F(R 4 < F(S, A)/(1 - V, with equality if and only if 0 is not a zero-divisor
+in R. But this is immediate       from Theorem       3.1, since Ann 0 = 0 if and only
+ if 0 is not a zero-divisor.    1
+                                  HILBERT    FUNCTIONS                                   63
+
+   Note that Corollary     3.2 implies that if 0, , 8, ,..., Br is a homogeneous          R-
+sequence in a G-algebra       R, then any permutation       of o1 , 0, ,..., 8r is also an
+R-sequence.     This is the “graded      analog”  of the corresponding         well-known
+result for local rings (see, e.g., [16, Theorem    1191).
+   As an immediate consequence of Corollary 3.2 and the fact that a G-algebra
+R is Cohen-Macaulay       if and only if some (equivalently,      every) homogeneous
+system of parameters is an R-sequence, we obtain the following characterization
+of Cohen-Macaulay       G-algebras:     Let R be a G-algebra,        let 0, ,..., ed be a
+homogeneous      system of parameters withfi     = deg 0: , and let S = R/(0, ,,.., 0,).
+Then R is Cohen-Macaulay         if and only if
+
+
+                           F(R, h) = F(S, X)/h           (1 - hf’).
+
+
+   A “direct”   proof that equality holds in (7) when 8, , t$ ,..., 0r is an R-sequence
+is as follows.  Let B be a set of homogeneous        elements of R whose images in
+S = R/(0, , O3,..., 8,) form a k-basis for S. It is easily seen that since 0, , 8, ,..., 8,
+is an R-sequence, R is a free module over the polynomial subring k[8, , 8, ,..., or],
+and that B is a set of free generators for this module. (This is essentially a
+well-known     property     of homogeneous     R-sequences    in G-algebras,      though
+an explicit statement is difficult to find in the literature.     For the special case
+when 0, , 8a ,..., 19, is a system of parameters, see [13, p. 10361 or [26, Proposi-
+tion 6.81.) Hence if M is the set of all monomials         in the e,‘s, then a K-basis
+for R consists of all elements bm, where b E B and m E M. Therefore
+
+                           F(R, h) = c      1 hdegbn
+
+
+                                                                                         (8)
+
+
+                                    = F(S, h)/fi         (1 -   X’$
+                                                 i=l
+
+Equation     (8) is implicit in the work of Macaulay [18, Sect. 911. He deals only
+with standard gradings, and he also assumes that the R-sequence 0, , 8, ,..., 8,
+is a system of parameters all of degree one (so that R is a Cohen-Macaulay
+ring), but his method of proof easily extends to the more general (8). Some
+results on local rings similar to Theorem         3.1 and Corollary 3.2 can be found
+in [2] and [12]. These papers contain a number of interesting             results about
+Hilbert functions of local rings, but we will not discuss them here.
+    Corollary 3.2 allows us to compute the Poincare series F(R, X) of a G-algebra R
+which is a complete intersection.       Let yi , e, = deg yi , A = K[Y, ,..., YJ, and
+A 2 R be as in Section 1. Then R is a complete intersection             if and only if
+kerp is generated by an A-sequence,         which can be chosen to be homogeneous.
+
+607/28/1-s
+64                                RICHARD P. STANLEY
+
+Since F(A, A) = lm:=,       (1 - Xet), we obtain    as a special case of Corollary     3.2
+the following result.
+
+   3.3. COROLLARY. Let k beanyfield. Let A = k[Y, ,..., YJ, with deg Yi = ei .
+                               A-sequencewith deg ej = fj . Let R be the complete
+Let 0, ,..., 13,.be a homogeneous
+intersectionR = A/(& ,..., O,), with the quotientgrading. Then
+
+                           F(R,
+                             A)= n:=~   (1- A”)
+                                 r-I;=, (1 - A%) . 1
+
+   If A (and therefore R) is standard (i.e., ei = 1) then given any positive
+integers fi ,..., fT with r <, s, we can find a homogeneous     A-sequence 0, ,..., 0,.
+with deg 0, = fj . For instance, take 0, = Yp. Hence we obtain a complete
+characterization    of the possible Poincare series of a standard G-algebra which
+is a complete intersection.
+
+   3.4. COROLLARY. Let k be any Jield. A power seriesF(h) is the Poincare’series
+of a standard G-algebra R satisfying (a) R, = k, (b) dim R = d, and (c) R is a
+completeintersection,if and only ifF(h) has theform
+
+                      F(q= l-g-1(1+ x+ x2+ ---+ AU‘)
+                                            (1 - h)d               ’
+
+wheret is any nonnegativeintegerandg, , g, ,,.., gt arearbitrary positive integers. 1
+    Corollary 3.4 is another result essentially given by Macaulay [18, Sect. 581.
+Griibner [9, p. 1641 obtains a result equivalent to Corollary 3.4, but his treatment
+is rather cumbersome since he deals with H(R, n) rather than F(R, A).
+   It is natural to ask to what extent one can find converses to Corollaries       3.3
+and 3.4. More specifically, if a G-algebra R has the Hilbert function of a com-
+plete intersection,  under what circumstances     can we conclude that R actually
+is a complete intersection ? We give two very weak results along these lines,
+and some examples to show that not much more can be expected.
+
+  3.5. THEOREM. Let R be a G-algebra generated(as an algebra over k) by
+the nonzero homogeneous     elementsyl ,..., ys of positive degreese, ,..., e, . Then
+theyi’s are algebraicallyindependentover k ifandonly ifF(R, A) = l/ni*r      (1 ---he<).
+
+    Proof. Since yr ,..., ys generate R, the set iVI of monomials           in yr ,..., ys
+spans R as a vector space over k. Since EmEM hdesm = I/&                   (1 - XQ), it
+follows that F(R, h) = l/l’&        (1 - hi) if and only if the elements of M are
+linearly independent,  i.e., if and only if theyi’s are algebraically independent.       1
+
+  3.6. THEOREM. Let R bea standardCohen-Macaulay G-algebra. Thefollowing
+conditionsare equivalent:
+                                             HILBERT   FUNCTIONS                    65
+
+           (i)   For some integm f > 0,
+
+                                                  1 +/\+Xs+‘.‘+hf
+                                      F(R, A) =
+                                                         (1 - X)d
+whered = dim R.
+          (ii)   H(R,       1) = I + dim R.
+      (iii)R is a hypersurface, i.e., R E k[k; , Y2 ,..., kwdfl]/(B), for some nonzero
+homogeneous 8 E k[Y, , Y2 ,..., Yd+J of degree greater than one.
+
+   Proof.        (i) a (ii). Trivial.
+      (ii) + (iii). By L emma 1.1, we may assumek is infinite. Thus R possesses
+a system of parameters 0, , 8, ,..., dd all homogeneousof degree 1 (see, e.g.,
+[l, p. 69, Example 161) where d = dim R. Since R is Cohen-Macaulay,
+0r , 0, ,..., ed is an R-sequence. Let S = R/(0, , Oz ,..., 0,). Since H(R, 1) =
+I + d, S is generated as a k-algebra by a single element X. Since dim S = 0
+and S is graded, we have SE k[x]/(xf+l) for somef 3 0. Hence S is a hyper-
+surface, and it follows that R is also a hypersurface.
+          (iii) a (i).      This is a special caseof Corollary 3.3. 1
+
+   3.7. EXAMPLE.  Let R, = k[x,y]/(x2, y”) and R, = k[x,y]/(x3, xy,y2), each
+with the standard grading (deg x = degy = 1). Then F(Rl , A) = F(R, , A) =
+1 + 2h + X2. Moreover, R, is a complete intersection but R, is not even
+Gorenstein.
+
+   3.8. EXAMPLE.   Let G be the subgroup of GL(3, C) generated by the two
+diagonal matrices with diagonals (--I, -1, 1) and (1, 1, i), where i2 = -1.
+(Thus G is Abelian of order 8.) Let G act on the polynomial ring R = C[x, y, z]
+in the obvious way, and let RG be the fixed ring. RF is generatedas a @-algebra
+by the monomials x2, xy, y2, and zl. If we let deg x = degy = deg z = I,
+then F(RG, h) = l&l - h2)3.However, RG is not isomorphic to a polynomial
+ring in three variables, each of degree two. This provides a counterexample
+to a conjecture of Mallows and Sloane [21].
+
+   3.9. EXAMPLE.     Let R = k[x, , x2 , x3 , x4 , x5 , x6 , x,1/1, where I = (xr~~ -
+X2X4,%%          -   x3x4        x12Xa
+                             9 X2X6
+                         - x3x5,        - X5X6X,    ) Xl 3 - x3xe,+), with the standard
+grading (deg xi = 1). Then R is a normal Gorenstein integral domain, but is not
+a complete intersection. However, R has the Poincart series of a complete
+intersection, viz., F(R, A) = (1 + X)3/(1 - X)*.
+   As a further consequenceof Corollary 3.2, we can characterize the Hilbert
+function of standard Cohen-Macaulay G-algebras. More generally, we have
+the following result, which was first explicitly stated in [33, Theorem 21.
+66                                    RICHARD    P. STANLEY
+
+
+   3.10. COROLLARY.     Let H(n) be a function from N to N. Let r be a nonnegative
+integer, and let k be any field. The following two conditions are equivalent:
+     (i) There exists a standard G-algebra R with R, = k such that R contains
+a homogeneous R-sequence of length r and H(n) is the Hilbert function of R.
+      (ii)   (ho, , 4, , 4, ,-)     is an O-sequence, where
+
+
+                                  (1 - h)rF(R,   A) = f hi?.
+                                                        i=O
+
+
+
+    Proof. Assume (i). By Lemma 1.l, we may assume k is infinite. Thus
+we can find a homogeneous R-sequence 0, ,..., 0, such that deg Bi = 1. Then (ii)
+follows from Corollary 3.2 and Theorem 2.2 (applied to the ring R/(0, ,..., f3,)).
+    Assume (ii). Let S be a standard G-algebra with So = k and H(S, n) = h,, .
+The existence of S is guaranteed by Theorem 2.2. Let R = S[x, ,..., x,.],
+with deg xi = 1. Then R is the desired standard G-algebra and (x1 ,..., x,)
+is the desired R-sequence.     a
+
+  Suppose R is a G-algebra of dimension d. Since R is Cohen-Macaulay       if
+and only if R contains a homogeneous R-sequence of length d, we obtain from
+Corollary 3.10 the following result.
+
+  3.11. COROLLARY.       Let H(n) be a function from N to N, and let dE N. Let
+k be any Jield. The following two conditions are equivalent.
+
+     (i) There exists a Cohen-Macaulay standard G-algebra R with R, = k,
+with dim R = d, and with Hilbert function H.
+     (ii) The power series (1 - h)e C,“=, H(n)X” is a polynomial in A, say
+ho + h,h + *** + h,h”. Moreover, (ho, h, ,..., h,) is an O-sequence. 1
+
+   Corollary 3.11 is another result essentially due to Macaulay [18, Sect. 91;
+ 19, p. 5521. It also follows from [26, Corollary 6.91. It was used in [34] to prove
+the “Upper-Bound          Conjecture for Spheres.” As a simpleminded example
+of its use, let R be the standard G-algebra R = k[x, y, z]/(xy, XX). Then
+dim R = 2 and (1 - h)2 F(R, A) = 1 + X - h2. Hence R is not Cohen-
+Macaulay (since h, < 0).
+   If F(h) = Cz=o H(n)h” is a power series and r E N, then (1 - h)‘F(h) =
+C,“=, (VrWWn,        where V is the backward-da@rence operator, defined by
+VH(n) = H(n) - H(n - 1) (with th e convention H(n) = 0 if n < 0). Thus
+ Corollary 3.11 implies that if R is a standard G-algebra of depth at least r
+(recall that depth R is the length of the longest homogeneous R-sequence in R)
+and Hilbert function H, then VrH(n) 3 0 for all n E N. For instance, if R
+is an integral domain, then either R = k or depth R > 1. In the latter case
+we have H(0) < H(1) < H(2) < a... This is easy to see directly since multi-
+                                      HILBERT    FUNCTIONS                          67
+
+plication by a homogeneous  non-zero-divisor of degree one is a monomorphism
+from R, into Ii,,, . If R is normal, then either dim R < 1 or depth R > 2.
+Thus in the latter case V2H(R, n) >, 0.
+
+
+                                 4.     GORENSTEIN       RINGS
+
+
+   We now wish to examine what can be said about the Hilbert function of a
+Gorenstein     G-algebra.    Our first result gives a necessary (but by no means
+sufficient)  condition    for a function    H: N + N to be the Hilbert    function
+of a Gorenstein G-algebra. The special case that R is standard is due to Macaulay
+[18, Sect. 701.
+
+   4.1. THEOREM.      Let R be a Gorenstein G-algebra of Krull dimension d. Then
+for some integer p, F(R, 1/h) = (- l)d PF(R, h) (as rational functions of A).
+
+    First proof.    Let 8, ,..., 0, be a homogeneous       R-sequence   (which   exists
+since R is Cohen-Macaulay),           say with deg Bi = fi . Let S = R/(0, ,..., 0,).
+Then S is a O-dimensional       Gorenstein G-algebra, say S = S, + S, + .‘. + S, ,
+where S, # 0. It follows from Corollary              3.2 that F(R, h) = (ho + h,h f
+ ... + h,As)/&       (1 - Aft), where hi = dim, Si . Now since S is O-dimensional
+Gorenstein,      S, is the socle of S, i.e., S,5 = {x E S: x(S, + ... I S,) = 0},
+and dim, S, = 1. Let y be a nonzero element of S, . If 0 < i < s, define a
+pairing   Si X SsPi + K by (x1, x2) b 01 if xrxa = ay. It is well known and
+easily proved that this is a perfect pairing, so in particular      hi = hsPj . Hence
+F(R, I/h) = (- l)d PF(R, h), where p = C fi - s. 1
+
+   Second proof.     Our second proof, while not quite as simple as the first
+proof, has the advantage that it can be generalized to algebras graded by certain
+semigroups other than N. We shall require such a generalization      in Section 6.
+   Let -4, 1, , ei , s be as in Section 1. Then R has a minimal free resolution
+as an d-module     which looks like
+
+                  O-M~-t...-n~2--tM~~M~-tR-t0,                                      (9)
+
+where h = s - d since R is Cohen-Macaulay.             We can choose (9) so that
+each Mi is a graded (free) A-module       and all homomorphisms    preserve degree.
+Suppose in doing so M, has free homogeneous            generators Xi, , Xi, ,..., Xiaj
+with deg Xii = gij . Thus /3,, = 1 and g,,, = 0. Since R is Gorenstein,      Mk s L4
+so /3, = 1. Moreover,    a result of Buchsbaum      and Eisenbud [3, Theorem       1.51
+shows that there is a pairing        n/ri @ M,,Pj -+ M,, e A which       induces an
+isomorphism    Mi -+ n/r,*_, = Hom,(Mh-j      , A) (so pi = ,f3&. One easily sees
+that in the present situation this pairing can be chosen to preserve degree.
+Let us abbreviate g = g,, . It follows that the generators Xij and X1l+i,j can
+be labeled so that gij + g,-,,j = g, for 1 <j < & = &            .
+68                             RICHARD      P.   STANLEY
+
+
+   We can define a PoincarC series F(M, , A) (using the graded module structure
+of A&) just as was done for G-algebras. It follows that
+
+
+
+
+Now using a well-known      property     of exact sequences we obtain from (9) that
+
+           F(R, A) = F(M, , A) - F(M, , A) + *** + (-l)“F(M,          , A).      (11)
+Substituting (10) into (11) y’reId s an explicit expression for F(R, A). Using
+the result gij + gh-i,j = g, we see that F(R, I/h) = (-1)“~~ AD8’(R, A), where
+p = C ei -g. Since R is Cohen-Macaulay, we have d = s - h, and the proof
+follows. 1
+   It is natural to askfor other restrictions on the Hilbert function of a Gorenstein
+G-algebra besides Theorem 4.1. Let us restrict our attention to standard
+G-algebras R. Since a rational function F(h) is the Poincare series of some
+standard Gorenstein G-algebra of dimension d if and only if (1 - A)dF(h)
+is the Poincare series of some O-dimensional standard Gorenstein G-algebra,
+it sufficesto consider the casedim R = 0. Thus we have the following problem:
+   Problem.   What sequences(h, , h, ,..., h,), with h, # 0, satisfy hi = H(R, i)
+for some O-dimensional standard Gorenstein G-algebra R? (We call such a
+sequencea Gorenstein sequence.)
+   By Theorem 2.2, we have that a Gorenstein sequence(ha, h, ,..., h,) is an
+O-sequence; while by Theorem 4.1 we have hi = /z-i . These two conditions
+are by no means sufficient. For instance, the sequence (1, 3, 5,4, 5, 3, 1)
+satisfies both conditions, but by Theorem 4.2 below is not a Gorenstein
+sequence. This writer [33, Conjecture 21, and, independently, Iarrobino,
+conjectured that (A,, h, ,..., h,) is a Gorenstein sequenceif and only if hi = /r-i
+and (ha, h, - h, , ha - h, ,..., h, - h,-,) is an O-sequence, where t = [s/2].
+In Example 4.3, we show that this conjecture, or even the weaker conjecture
+that the numbers hi - hi-, are nonnegative for 1 < i < t, is false. First we
+show that the above conjecture is true if h, < 3.
+
+   4.2. THEOREM.    Let h = (h, , h, ,...,h,) be a sequence of nonnegative integers
+with h, < 3 and h, # 0. Then h is a Gorenstein sequence if and only if the following
+two conditions are satisjied:
+
+      (i) hi = h,-, for 0 < i < s, and
+     (ii) (h, , h, - h, , h, - h, ,.. ., ht - h,-J is an O-sequence, where t = [s/2].
+   Proof. Buchsbaum and Eisenbud [3, Proposition 3.31 have shown (though
+they state it slightly differently) that there is a one-to-one correspondence
+between (a) Hilbert functions H(R, n) of standard Gorenstein G-algebras R
+                                     HILBERT              FUNCTIONS                             69
+
+satisfying dim R = d and H(R, 1) < d + 3, and (b) sequences rr < r2 <
+ ... < r2m+1 of integers, either all even or all odd, satisfying yi + r2m+l-i > 0
+for 1 < i < 2m and ri + ri # 0 for any i, j. This correspondence is given by
+
+
+
+
+where u = Ctm”” ri and where we take (t) = 0 if a < 6. If we take d = 0
+above, then for some s > 0 we will have H(R, S) + 0 and H(R, n) = 0 for
+12> s (since H is the Hilbert function of a O-dimensional G-algebra). We
+want to show that the sequences h, = H(R, O),..., h, = H(R, S) which arise in
+this way from all possible sequences rr < ... < r2m+l satisfying (b) above are
+just the sequences satisfying (i) and (ii).
+    Now for any integer c 3 0 we have
+
+                            2 (2+;-c)x” =&
+                            n=0
+
+
+keeping our convention that (i) = 0 if a < b. Condition (b) on the ri)s ensures
+that Q(u - yi) 3 0, Q(u + ri) 3 0, and u > 0. Hence with d = 0 we obtain
+
+                            goWC
+                               4An
+                                 =W)l(l
+                                    - h13,
+where
+                                     2m+1                          2rnfl
+                 P(h)   =     1 _     1        hQ'"-Ti'       +      c       A+("+4   -   A".
+
+                                      i=l                             i=l
+
+Let
+
+                                                  P(h) = i                  a$,
+                                                                  i=O
+
+                                                                  0-l
+                                    P(X)/(l - A) = c bJi,
+                                                                  i=O
+
+                                                                  o-2
+                                  P(X)/(l - A)2 = 1 CiAi.
+                                                  izO
+
+The conditions on the ri’s imply that the ai’s are integers satisfying the
+following: (A,) a, = 1; (A,) ai = --aUhi ; (A3) for some j < r = [a/2],
+a, = a2 = *.* zz aj = 0, while Ci=, a, < 0 if j < b < T; (A4) if u is odd, then
+70                                    RICHARD    P.   STANLEY
+
+
+c;=,(T- i + Q)q= 0; and (AJ if u is even, then xi=,, (T - i)a, = 0.
+(Conditions (A4) and (A5) merely guarantee that P(X) is divisible by (1 - h)2.)
+Conversely, given integers a,, a, ,..., a, satisfying (AI)-(&),     we obtain a set
+of ri’s satisfying (b) by defining a, of the ri’s to be equal to 2j - u whenever
+aj > 0.
+   Now 3 = &, ai . Hence from (AI)-(&)                it follows that the allowable
+sequences b, ,..., b,-, are characterized by the conditions: (B,) b, = 1; (B,)
+bi = b,-l-i ; (B3) for some j < T’ = [*(u - I)], 4 = b, = .. . = b, = 1,
+while bi < 0 if j < i < T’; (BJ i f (T is odd, then +bTs + xil;;I’ bi = 0; and
+(BJ if u is even, then Cd, bi = 0.
+   Now ci = xi=, bi . Hence from (II,)-(&)           it follows that the allowable
+sequences c, ,..., coe2 have one of the following two forms (depending on whether
+u is even or odd):
+
+  1, 2, 3,..., j, ci+l, cjf2 ,..., cs ,0, -c8 ,..., --c~+~, -cj+l,       -j ,..., -3,    -2,    -1;
+     1, 2, 3 ,..., j, c~+~, c~+~,..., ca , -cg ,..., ---c~+~ , --c~+~ , -j ,..., -3,    -2,    -1;
+
+where j 3 cj+r 3 ci+s >, *.. > c, > 0. But by Theorem 2.2, a function
+H: N + N satisfying H(1) < 2 is the Hilbert function of a standard G-algebra
+ifandonlyifforsomej~O,H(i)=i+lfori~jandH(j)3H(j+1)3
+H(j + 2) 3 .... Since our allowable Hilbert functions H(R, n) are given by
+H(R, a) = ‘&, c( , the proof follows.           1
+
+   4.3. EXAMPLE.       We now show that Theorem 4.2 is false if we remove the
+condition that h, < 3. Let S be any O-dimensional G-algebra (not necessarily
+standard or Gorenstein), say S = S, + S, + ..* + S, , with S, # 0. Let
+E = Hom,(S, K). E has the structure of an S-module in the usual way, viz.,
+W)(Y) = +@Y), w h ere x E S, y E S, 4 E E. (In fact, E is the injective envelope
+of k, regarded as the residue class field of S.) Let R = S x E, endowed with
+componentwise addition and the multiplication (x, 4) . (y, 4) = (xy, x# + ~4).
+Then R is a O-dimensional Gorenstein K-algebra (see, e.g., [25, Corollary 6J).
+Moreover, R can be graded so that its Hilbert function satisfies H(R, n) =
+H(S, n) + H(S, s + 1 - n), 0 < n < s + 1, and H(R, n) = 0 if n > s + 1.
+Finally, R will be standard if and only if S is standard and the socle of S is S, .
+Now pick S = K[x, y, z]/(x, y, z)~, with the standard grading. Then S is a
+O-dimensional standard G-algebra whose PoincarC series is 1 + 3X + 6h2 + 10h3
+and whose socle is S, . Hence R = S x E is a O-dimensional standard
+Gorenstein       G-algebra with Poincare series F(R, A) = 1 + 13X + 12h2 +
+13h3 + X. This provides the desired counterexample. More generally, taking
+As-= Hx, Y, 4/(x, y, e, we obtain a Gorenstein sequence (h, , Jzr ,..., h,)
+satisfying h, > h, > ... > ht , where t = [s/2].
+    As a very special case of the problem of characterizing Gorenstein sequences,
+we raise the following question. Given an integer n > 0, what is the least
+                                  HILBERT     FUNCTIONS                                    71
+
+integer f(n) for which (1, n,f(n), n, 1) is a Gorenstein  sequence? We can
+show f(n) = n if n < 5, but no other values of f(n) seem to be known. It
+can be shown that f(n) has order of growth n2/3. More precisely,
+
+                3 6213 < lim inff(n)n-V3       < lim ~upf(n)n-~/~        < 62/3.
+
+Presumably    limf(n)n-2/3   exists, and it would be interesting    to find this limit.
+   We now turn to the problem of finding some kind of converse to Theorem 4.1.
+More specifically, if R is a G-algebra      of dimension   d such that F(R, l/h) =
+(- l)d hpF(R, X) for some p E Z, then under what circumstances can we conclude
+R is Gorenstein?      The ring R, of Example 3.7 shows that it is not sufficient
+to assume that R is Cohen-Macaulay.          Somewhat surprisingly,      it is sufficient
+to assume that R is a Cohen-Macaulay            integral domain. This is the chief
+new result of this paper.
+
+    4.4. THEOREM.   Let R be a G-algebra. Suppose that R is a Cohen-Macaulay
+integral domain of Krull dimension d. Then R is Gorenstein zy and only if for some
+p EZ, F(R, l/h) = (-l)d   AoF(R, A).
+
+   Proof.  The “only if” part follows from Theorem         4.1. To prove the “if”
+part, assume that R is any d-dimensional        Cohen-Macaulay     integral domain
+and a G-algebra.    Let KR be the canonical module of R. Using the notation
+of Section 1, we then have KR = Extied(R, A). (This can be taken as the
+definition of KR .) Recall that R is Gorenstein   if and only if KR E R.
+   We first prove that KR can be graded (as an R-module)          so that for some
+qE&
+                          F(K, , A) = (- 1)” hqF(R, I/h).                      (12)
+
+Let the exact sequence 0 + M,, -% .~.%M,%M,,-%              R+O     be as in
+the second proof to Theorem    4.1, and preserve the meaning of Xij , gij , pi
+from this proof. Let * denote the functor Hom,(--,    A). Applying   * to (9)
+and using the fact that ExtAi(R, A) = 0 if i # s - d (since R is Cohen-
+Macaulay), we obtain
+
+            O-M,*%M,*-                  %* ... 222 fig,*
+                                                              ---+KR+O                   (13)
+
+as a minimal free resolution  of KR . Now as A-modules   we have Mi* E Mi.
+Let X6 , Xi*2 ,..., X& be the basis of Mi* dual to the basis X-,., , Xi, ,..., X&
+of Mi . If we define deg X$ = -gij , then the homomorphisms          Q* will be
+degree preserving. With respect to this grading, KR (= coker qh*) will obtain
+the structure of a graded A-module     and will keep the same grading when
+considered as an R-module.   From (13) we have
+
+        F(K,,     A) = F(M,*,   A) - F(M;-,       , A) + 1.. + (-l)hF(M,,*,        X).   (14)
+72                                 RICHARD       P. STANLEY
+
+
+Moreover,   since deg X$       = -gij     , we have
+
+
+                         F(ib&*,   A) =         ; x-O/i /fi (1 - P,).          (15)
+                                             ( j=l     1 t=1
+
+Comparing       (14) and (15) with      (10) and (1 l), we obtain F(K, , A) =
+(-l)d    PF(R, I/h), where Q = -1 ei . This proves (12).
+     For convenience, let us shift the grading of KR so that the least degree of a
+nonzero element is 0. (KR will have an element of least degree since it is finitely
+generated     as an R-module.)    Now suppose that F(R, l/A) = (- l)d PF(R, A)
+for some p E Z. Since H(R, 0) = 1, it follows from (12) and our “shift”      of KR
+that the elements of KR of degree 0 form a vector space over K of dimension
+one. Let x be a nonzero element of KR of degree 0. We now invoke the result
+ [ll, Corollary 6.71 that since R is an integral domain, KR is isomorphic     to an
+ideal of R. (In [ll] it is assumed that R is local, but the argument for graded
+algebras is almost identical. Also, [ll] states only that KR is isomorphic      to a
+fractional ideal of R, but we can multiply KR by a suitable element of R so that
+KR becomes an ideal.) Let us identify KR with this ideal. Now by (12),
+F(K, ,4 = WC 4, or equivalently,         KR and R have the same Hilbert function.
+Since R is a domain, dim, xR, = dim, R, = H(R, n) = H(K, , rz). But by
+the definition of a graded R-module,      xR, C (KR)n, the nth homogeneous      part
+of KR. Hence since dim, xR, = H(K, , n), we have xR, = (KR)n . Thus
+R=xR        =KR, so R is Gorenstein.       1
+
+   Remark. There is a generalization of Eq. (12) valid for any G-algebra  R.
+Let s = dim A, d = dim R, and 6 = depth R. Then there is a natural grading
+of the modules Ei = ExtAi(R, A) such that
+                   d-8
+                   & (-l)iF(En-d+i,             A) = (-l)dX4%(R, l/X).
+
+
+   It is natural to ask if the hypothesis    in Theorem 4.4 that R is a Cohen-
+Macaulay integral domain can be weakened. It does not appear that a significant
+weakening is possible; the next example shows that we cannot merely assume
+that R is a reduced Cohen-Macaulay        G-algebra.
+
+   4.5. EXAMPLE.    Let R = k[x, y, Z, w]/(xw, yw, xyz),       with  the standard
+grading.   Then R is a reduced       Cohen-Macaulay     G-algebra   and F(R, A) =
+(1 + 2h + P)/(l - X)z. However, R is not Gorenstein.
+   As a curious consequence     of Theorem     4.4, let S be a O-dimensional    G-
+algebra which is not Gorenstein but which satisfiesF(S,    l/X) = (- I)d PF(S, X).
+For instance, S = k[x, y-j/($, xy, y2). It then follows from Theorem      4.4 that
+S is not isomorphic    to a G-algebra   R which is an integral domain, module
+a homogeneous R-sequence. This suggests that it may be of interest to investigate
+                                    HILBERT FUNCTIONS                                         73
+
+the question:      what Noetherian    rings are isomorphic          to integral domains R
+modulo R-sequences ?
+   We now discuss how the condition               F(R, l/h) = (- l)d ApF(R, A) can be
+reformulated     in terms of the Hilbert function H(R, n), in the special case that
+degF(R, h) < 0. If R is a G-algebra,            then the general form (1) of F(R, A)
+implies     that there exist nonzero       distinct    complex      numbers     01~) a2 ,..., 01,)~
+(necessarily roots of unity) and polynomials          Z’r , Pz ,..., P7,bE Q[x] such that
+                                              hl
+                                  H(R,   n) = c P,(n) q                                     (16)
+                                                 i=l
+
+for all suJfEentZy large integers       n. The condition      degF(R, A) < 0 (i.e.,
+deg P(R A) < el + e2+ ... + e, , in the notation           of (1)) is equivalent   to
+saying that (16) holds for aZZn 3 0. For instance, if R is standard then m = 1,
+01~ = 1, and PI(n) is the Hilbert   polynomial    of R. We have H(R, n) = PI(n)
+for all n > 0 if and only if deg F(R, h) < 0. We state without        proof a result
+of Popoviciu   [24] (see [31, Proposition    5.21 for further discussion and con-
+sequences).
+
+   4.6. THEOREM (Popoviciu).       Let 0~~,..., 01, be distinct nonzero complex numbers,
+and let PI ,..., P,, be polynomials with complex coe$Gnts.           Define for all n E Z,
+H(n) = CL, P,(n),,“.     Let F(X) = cz=, H(n)X”, F(h) = Cz=‘=, H(--n)X”.            Then,
+as rational functions of A, we have F’(h) = -F( I /A). 1
+
+    4.7. COROLLARY. Preserve the notation    of Theorem 4.6. Let d = m +
+CL, deg Pi . Then F( l/h) = (-l)”  AoF    for some p E Z if and on.@ if p 3 1,
+ H(-I)     = H(-2)  = ... = H(--p f 1) = 0 and H(n) = (-1)-l       H(--p - n)
+foralZnEn.        1
+
+      Suppose that R is a d-dimensional    G-algebra and a Cohen-Macaulay   integral
+domain such that (16) holds for all n E N. Thus (16) defines H(R, n) for all
+n E Z. It follows from Theorem          4.4 and Corollary 4.7 that R is Gorenstein
+if and only if for some integer p >, 1, we have H(R, -1) = H(R, -2) =
+ . . . _ H(R, -p + 1) = 0 and H(R, n) = (--1)-l          H(R, -p - n) for all n E Z.
+
+
+
+                   5. SOME EXAMPLES        OF GORENSTEIN G-ALGEBRAS
+
+    Theorem   4.4 is a powerful tool in proving certain rings are Gorenstein.
+In this section we shall give several applications of Theorem 4.4. These will
+include simple proofs of known results, and some new results.
+
+  a. ,VumericaZ semigroups.  A numerical semigroup is a subsemigroup  r of the
+additive semigroup lV such that 0 E r and N - r is finite. (Any subsemigroup
+74                                  RICHARD   P.   STANLEY
+
+
+of N with 0 is isomorphic         to a numerical   semigroup.)  If I’ is a numerical
+semigroup, the conductorc = c(r) of ris defined by c = max{n E N: n - 1 $ r}.
+If K is a field, K[r] denotes the subalgebra of K[x] generated by all monomials P,
+01E r. (Thus the monomials         xoL in fact form a K-basis for k[r].)  Since K[r]
+is a one-dimensional     integral domain, it is Cohen-Macaulay.
+
+  5.1. THEOREM   (Herzog   and Kunz [lo]).   Let r be a numerical semigroup
+with conductorc. Then the following two conditionsare equivalent:
+        (i)   h[r] is Gorenstein,
+       (ii)   forallO<i<c-l,wehaveiErifandonlyifc-1-i$I’.
+   Proof. If we define deg x = 1, then k[r]                 becomes a G-algebra.    We have
+already observed that K[r] is a Cohen-Macaulay              integral domain, so Theorem 4.4
+applies. Write R = K[r]. Then
+
+                          F(R, A) = C hj = -&                -
+                                    jw
+                                                                    ia-
+Then
+
+                            -F(R,     l/h) = &          + 1 A-i.
+                                                          iEN
+                                                          iw
+
+The least degree of any term of F(R, A) is 0, while the least degree of any term
+of -F(R, l/h) is -(c - 1). Thus if F(R, I/h) = -A°F(R, A), then p = 1 - c
+and
+
+                         -- 1        C Xi =   &         +    C      AC-l-i.
+                         1-A         iON                      ioN
+                                    iW                       ier
+
+
+Hence F(R, l/A) = --hldCF(R, A) if and only if (ii) holds, and the proof follows
+from Theorem 4.4. 1
+
+   b. Schubert varieties. Let 0 < a, < a, ... < ad be integers,                 and let R
+be the homogeneous         coordinate    ring of the Schubert         variety Q(a, ... ad)
+(defined over a field K). For definitions,        see [15, Chap. XIV],        [17] or [35].
+R is a (standard) G-algebra, and it is known that R is a Cohen-Macaulay             integral
+domain (see [17, Sect. 51). Moreover,          the “postulational    formula”     of Hodge
+and Littlewood    [15, Chap. XIV, Sect. 91 gives an explicit expression for H(R, n)
+in terms of a determinant.      Unfortunately,    it is difficult to apply Theorem        4.4
+directly to this expression for H(R, n). If, however, the proof of the postulational
+formula is examined, one obtains an alternative description of H(R, n), as follows.
+Define bi = ai - i, and let P(b, ... bd) = {(i, j): 0 < i < d, 1 <j < b,-i}.
+Define a partial ordering on P(b, ... bd) by (i, j) < (i’,f) if i > i’ and j > j’.
+                                                         HILBERT      FUNCTIONS                                        75
+
+For instance, if d = 9 and (a0 , a, ,..., a,) = (0, 1,2,4, 5, 8,9, 12, 14, 15), then
+(b, >b, ,..., b,) = (0, 0, 0, 1, 1, 3, 3, 5, 6, 6) and P(b,b, ... b,) is depicted in
+Fig. 1. By examining the proof of the postulational formula [15, Chap. XI\;,
+Sect. 91, one can prove the following:
+
+
+
+
+                      FIG.       1.    The   partially      ordered    set P(0,   0, 0, 1, 1, 3, 3, 5, 6, 6).
+
+
+     5.2.            Let R be the homogeneous coordinate ring of the Schubert
+              THEOREM.
+variety Q(a,a,  ... ad), defined over a field k. Let bi = ai - i. Then H(R, n)
+is equal to the number of order-preserving    maps u: P(b,b, .‘. bd) + (0, l,..., n>.
+(The statement that o is “order preserving” means: x < y in P(b,b, ... bd) implies
+44          \( 49.)          I
+   In the terminology of [28], H(R, n) is equal to the number of plane partitions
+whose shapeis contained in (6, , b,-, ,..., b,) and whoselargest part is at most n.
+Such plane partitions were studied prior to Hodge and Littlewood by
+MacMahon, and his formula for GF(p,p, ‘.*p, , n) [20, Sect. X], in the case
+x = 1, is equivalent to the postulational formula (assuming the validity of
+Theorem 5.2). For further aspectsof Theorem 5.2, see[35].
+   Now supposeP is any finite partially ordered set with p elements, and let
+F(P, n) be the number of order-preserving maps a: P - (0, I,..., n}. It is
+easily seenthat r(P, n) is a polynomial in n of degreep. We deduceimmediately
+from [29, Propositions lg.l(iii) and 19.31 the following result (our I’(P, n)
+is sZ(P; n $ 1) in the terminology of [29]):
+
+     5.3. THEOREM.                     Let P be a finite partially ordered set with p elements, and
+let p be a positive                   integer. The following two conditions are equivalent:
+
+      (i) r(P, -1) = r(P, -2) = *.. = r(P,                                          -p   + 1) = 0 and           F(P, n) =
+(- l)p F(P, -p - n) for all n E Z.
+            (ii)   Every maximal                chain of P has p -                1 elements.     1
+   Combining Theorem 4.4, Corollary 4.7, Theorem 5.2, Theorem 5.3, and
+the fact that the homogeneouscoordinate ring of a Schubert variety is a Cohen-
+Macaulay integral domain, we obtain:
+76                              RICHARD     P. STANLEY
+
+   5.4. THEOREM. Let R be the homogeneous coordinate ring of the Schubert
+variety SZ(a,a, -.- ad), defined over afield k. Let b, = ai - i. Then R is Gorenstein
+;f and only if all maximal chains of the partially      ordered set P(b,b, ..* bd) have
+the same length.    1
+
+   For instance, every maximal chain of the partially ordered set P(0, 0, 0, 1, 1,
+3, 3, 5, 6, 6) of Fig. 1 has length 6. Hence the homogeneouscoordinate ring
+of Q(0, 1,2,4, 5, 8,9, 12, 14, 15) is Gorenstein. The determination of which
+Q(a,a, *.. ad) are Gorenstein was first accomplished by Svanes [36, (5.5.5)].
+Although his condition is stated differently from ours, it is of courseequivalent.
+   In a manner similar to the above, one can treat the problem, first solved by
+Svanes [36, Theorem 5.5.61, of which of the “determinantal varieties” are
+Gorenstein. We omit the details.
+  c. Invariants of j&e groups.        We now cometo an application of Theorem 4.4
+which has not previously been proved by other means. Let k be a field of
+characteristic 0, and let H be a finite subgroupof GL(m, k). H actson the polyno-
+mial ring R = k[x, , x2 ,..., xln] in the obvious way; let RH denote the fixed ring.
+
+   5.5. THEOREM. Let X be an indeterminate.         Then    RH is Gorenstein    if and
+only the following identity holds in the $eld k(h):
+
+                                                      det h
+                     c         l          rzzx-7 c                                 (17)
+                     haH det(l -   w            hEHdet(1 - hh) ’
+
+where r is the number of pseudorejlections    in H. (An element of H is a pseudo-
+reflection if it has precisely one eigenvalue not equal to 1.)
+   Sketch of proof.  RH is clearly a domain, and by a theorem of Hochster
+and Eagon [13, Proposition 131RH is Cohen-Macaulay. If we define deg xi = 1,
+then Rx becomesa G-algebra. Hence we can apply Theorem 4.4. A result of
+Molien [23], [4, Sect. 2271statesthat
+
+                                                      1
+                        F(RH, 4 = &          zH det(l- - Ah) -
+
+If we apply Theorem 4.4 directly to (18), we obtain (17) for some integer r.
+The value of I can be obtained by expanding both sidesof (17) in a Laurent
+expansion about h = 1. The routine details are omitted. B
+
+  5.6. COROLLARY (Watanabe [37, Th eorem 11). If H C SL(m, k), then RH is
+Gorenstein.
+
+  Proof.   If H C SL(m, k),     then r = 0 and each det h = 1. Hence (17)
+holds. [
+                                      HILBERT        FUNCTIONS                       77
+
+   5.7. COROLLARY       (Watanabe       [38, Theorem I]). If H contains     no pseudo-
+rejlections   and RH is Gorenstein,      then H C SL(m, k).
+
+  Pyoof. Given the hypothesis, then (17) holds with Y = 0. Now set X = 0
+in (17). We obtain 1ir-I 1 = ChEH(det h). Since each det h is a root of unity,
+we must have det h = 1. 1
+
+
+                                6. RINGS            GRADED   BY IV"
+
+
+   Let s be a positive integer, and let di = N”, regarded as an additive monoid
+(a monoid is a semigroup with identity).
+   By a D-graded ring, we mean a Noetherian commutative ring R with identity
+graded by the semigroup @. In other words, the additive group of R can be
+written as a direct sum R = Cay,@    R, , where R,Re C Ra+e . We shall say that
+a @-graded ring R is a @-algebra if in addition R, = k, a field, so that R is an
+algebra over k. We can refine our definitions of H(R, n) and F(R, A) to the case
+of @-algebras.If 01= (CQ,..., a,) EZ~, let us write xa = ~41*.* xr” and A” =
+jql ... AZ”.Then if R is a @-algebra,define
+
+                             H(R,     cz)= dim, R, ,             a E CD,
+
+                             F(R, A) =          c     H(R, a) 1”.
+                                            CXeQ,
+
+It is a consequenceof the Hilbert syzygy theorem that F(R, h) is a rational
+function of Ar ,..., A, (the point being that in (9) we can take the Mi to be Q-graded
+and all homomorphismsto be degreepreserving with respect to the @-grading).
+   It is natural to consider extending our results about the Poincare series
+F(R, A) to F(R, X), when R is @-graded. Unfortunately we quickly run into
+difficulties becausewe cannot always choosea maximal R-sequencein R which
+is homogeneouswith respect to the @-grading. One result which does carry
+over is Theorem 4.1. We cannot generalize the first proof of Theorem 4.1
+because that depended on choosing a homogeneousmaximal R-sequence.
+ The secondproof, however, can be carried over, becausein the exact sequence
+(9), the modules Mi can be chosen to be Q-graded and all homomorphisms
+can be chosen to preserve degree. Similarly the proof of Theorem 4.4 can
+be carried out for @-gradings.We obtain the following results:
+
+   6.1. THEOREM.         (i) Let R be a Gorenstein D-algebra of Krull dimension d.
+Then    for  some vector a: E ZS, F(R, h) = (-l)d     A~F(R, l/A) (as rational functions
+of&     >'..,A,). Here l/A denotes the substitution of l/A, for Ai, 1 < i < s.
+       (ii) Let R be a Cohen-Macaulay    @-algebra of dimension d. Then the
+canonical module KR of R can be Q-graded (as an R-module) in such a way that
+F(K, , 1) = (-I)dF(R,   l/x).
+78                              RICHARD      P.     STANLEY
+
+
+     (iii) Let R be a @-algebra of dimension d, and suppose that R is also a Cohen-
+Macaulay integral domain. Then R is Gorenstein if and only if for some vector
+a EP, F(R, n) = (-l)d vF(R, l/A). 1
+     There is one additional result about @-algebras which will be useful to us.
+
+   6.2. LEMMA.     Let R be a Cohen-Macaulay @-algebra and an integral domain.
+Then the canonical module KR of R, endowed with the natural grading of Theorem
+6.l(ii), is isomorphic as a @-graded R-module to a @-homogeneous ideal I of R,
+up to a shift in grading. In other words, there is a fixed p E Zs and an R-module
+isomorphism 0: KR + I such that I is an ideal of R generated by elements of various
+R, for 01E @, and B((K,),) = la+,, for all y E Z”, where by dejnition I,, = I r\ A, .
+    Proof. Let T = R - {0}, and let S be the set of nonzero @-homogeneous
+elements of R. Then S-IR C T-II2 and SIR is a Zs-graded R-module in the
+ obvious way. Now T-IK, g Kr-1, g T-‘R since T-IR is a field (and therefore
+ Gorenstein). Hence Ks is isomorphic to an R-submodule of T-IR. After
+ multiplication by a suitable element of T-IR, we obtain an embedding
+ L: Ke + T-lR such that L(X) = 1 for some fixed @-homogeneous element
+X E KR (say of degree a). If YE KR is @-homogeneous of degree /I and
+ L(Y) = y, then yX = Y. Hence y E S-lR and deg y = t!I - 01. Therefore L
+is a degree-preserving embedding of KR into SIR, up to a shift by 01in the
+grading. Multiplying by a suitable @-homogeneous element of R, we obtain
+an embedding of KR into R which is degree preserving up to a shift in grading. 1
+    We now wish to apply Theorem 6.1 to a special class of @-algebras, viz.,
+those generated by monomials. To be precise, let M be a submonoid of @
+( i.e., a subsemigroup containing 0), and let k be a field. By k[M] we mean
+the subalgebra of k[x, ,..., x8] spanned by the monomials xa where (YE M.
+Thus k[M] is the semigroup ring (over k) of M. More generally, if S is any
+subset of @, k[S] will denote the subspace of k[x, ,..., x3] spanned by the
+monomials xa where (II E S. Thus k[S] will be a subring with identity if and
+only if S is a monoid. When M is a monoid, the ring k[M] has an obvious
+@-grading which satisfies
+
+                          H(k[Ml, 4 = 1,                if    ~EM
+                                          z=z0,         if    a$M,
+                          F(k[M],   A) = c          Aa.
+                                             CXCM
+
+
+
+   6.3. THEOREM.     Let M be a submonoid of @ such that R = k[M] is Cohen-
+Macaulay of dimension d. Then in the Laurent expansion of (-l)d F(R, l/n)
+convergent in a deleted neighborhood of the origin, the coefficient of every monomial
+is either zero or one. Let KM denote the set of those a E N” such that the coefficient
+                                       HILBERT   FUNCTIONS                                    79
+
+of A” is one. Then M + KiMC KIM, so that k[K,]                        is an R-module.   In fact,
+k[K,]  = KR , the canonical module of R.
+
+  Proof.    By Lemma 6.2, we know that KR is isomorphic as a Q-graded
+R-module to some@-homogeneousideal I of R, up to a shift in grading. Since
+H(R, a) = 0 or H(R, a) = I for all a E @, it follows that every coefficient of
+F(1, A) is 0 or 1, and thus I is completely determined by F(I, A). Since I is an
+ideal, the set KM of those (YE N” such that H(I, a) = 1 satisfiesM + K,,+, C K, .
+Now by Theorem 6.l(ii) we have F(I, h) = (-l)d @F(R, l/A) for somep E@.
+The choice of p merely amountsto a shift in the grading of I sinceR is a domain,
+and the proof follows. 1
+   Note that Theorem 6.3 gives necessaryconditions for k[M] to be Cohen-
+Macaulay, viz., every coefficient in (- l)dF(R, l/X) is zero or one, and
+M + KM C K,,,, . We do not know whether these conditions are st@cient for R
+to be Cohen-Macaulay.
+
+   Monomial   systems of parameters.   Recently Goto et al. [7] and Goto [6’j
+have studied rings R = k[M], M a finitely generated submonoid of @ (as
+defined above), with the property that there exist vectors CQ, 01~   ,..., 01~EM
+such that ~‘1, x*2,..., xDLd
+                           is a system of parameters  for R. (Goto  et  al. use a
+different but equivalent definition for such rings.) Let us call such a monoid
+M a simpZiciaZ monoid. (Note that these include the numerical semigroups
+of Section 5a.) We show how the techniques of this paper are of value in
+studying the rings k[M] where M is simplicial.
+
+    6.4. THEOREM.   Let M be a simplicial submonoid of @, with x~I,..., xC(d a
+system of parameters for k[M]. The following three conditions are equivalent:
+
+             (i) k[M]   is Cohen-Macaulay,
+      (ii) M is a disjoint union of $nitely         many translates of the j>ee commutative
+monoid alN + ai,N + ... + a,N.
+
+   Equivalently, there exist & , p2 ,..., ,Bt EM             (necessary unique) such that every
+element y of M has a unique representation                    of the form y = /3i + Cj”=, ajaj,
+ajEN.
+
+     (iii) If PcH” and for            some i and j (1 <i<j<d)                 fl+   cui~M   and
+/3 + olj E M, then /3 E M.
+
+  Proof.   (i) 3 (ii). Let S = R/(x”1 ,..,, xQ). Corollary 3.2 extends directly to
+@-gradings when R is @-graded and t?,, 0, ,..., 0,. are @-homogeneous.Thus
+we obtain that
+
+                               F(R, 71) = F(S, A)/fi         (1 - xQ)                       (19)
+                                                       i=l
+
+
+
+607/28/r-6
+80                                 RICHARD   P. STANLEY
+
+
+if and only if x’l,..., xad is an R-sequence, i.e., if and only if R is Cohen-
+Macaulay. Suppose that R is Cohen-Macaulay.         Since H(S, a) < H(R, a) for
+all 01E I%‘“, we have that F(S, h) = xi=, ??i for some distinct /3r ,..., Pt E M.
+Comparing the left- and right-hand sides of (19) yields (ii).
+       (ii) * (i). If (ii) holds, th en with S as above we have that F(S, A) =
+&,      ?Pi and that (19) holds. Hence R is Cohen-Macaulay.
+      (ii) * (iii). Assume (ii), and suppose for p EZ~ that /3 + 01~EM and
+rS + aj E M, say B + ai = P, + I&l a+, , B + orj = /% + Z&l b, , where
+a, , b, E N. Then /& + tii + C b,.or, = 8, + czj + C a+, . By (ii), these repre-
+sentations coincide. In particular, ai > 0, so from 19+ oli = /Ill + C a,+ we
+conclude /3 E M.
+      (iii) 3 (i). Assume that k[M] is not Cohen-Macaulay.         Thus x=1,..., xad
+ is not an R-sequence, so for some i > 1, x ai is a zero-divisor modulo the ideal
+I = (XUl,..., ~‘“-1). (We can take i > 1 rather than i > 1 since k[M] is a domain.)
+ Thus x”iX = Y, where X $ I and YE I. It is easy to see that we can pick X
+ and Y to be monomials. Since YE I, we get an equation x’++~ = x”@, where
+j < i and y, 6 E M. Thus y - 0~~= 6 - oli . Call this element /3. Now /3 # M
+ since otherwise y - c”~E M, which implies XY E I. Moreover p + 0~~= 6 E M
+ and fl + 01, = y E M. Hence (iii) fails. m
+
+    The equivalence of (i) and (iii) in Theorem 6.4 is one of the results of Goto
+et al. [7, Theorem I]. They also give some other conditions equivalent to
+(i), (ii), and (iii) above. They then determine the canonical module RR when
+R is Cohen-Macaulay,        and they state a necessary and sufficient condition
+for R to be Gorenstein. We can do the same by applying Theorem 6.3. Note
+that if
+
+
+
+
+then
+
+               (-l)d   ?,-‘~-*‘-~~(R,    l/h) =
+
+
+We therefore obtain from Theorem 6.3 (after shifting the grading of RR) the
+following result.
+
+
+   6.5. COROLLARY. Let M be a simplicial submonoid of CD,and let ai , /3j be
+as in Theorem6.4. Let R = k[M]. Then the canonical moduleKR is given by
+Wwl , where KM = @:B+/%~%~ + -.. + ar,N for some i}. Moreover,
+R is Gommtein if and only if the pi’s can be labeledso that /J + /3t+1-i = & ,
+l<i<t.         1
+                                  HILBERT   FUNCTIONS                                   81
+
+   Invariants of tori.   Theorem   6.3 suffers from the defect that the description
+of RR is not as explicit as may be desired. For a special class of monoids MC 0
+we can give a much more explicit description of RR . Namely, let E,(y),..., E,.(y)
+be a set of linear forms with integer coefficients in the variables y = (yl ,..., us),
+and Iet
+
+                    M = {a E NJ”: E,(a)      = ... = E,(a)    = 01.                    (20)
+
+Let us call a monoid M of the form (20) a toroidal monoid. Our reason for this
+terminology       stems from the fact that a monoid MC @ is toroidal if and only
+if k[M] is the ring of invariants of some torus GL(1, K)” acting linearly on the
+polynomial      ring k[x, ,..., xs] (see [14, p. 3191). By a theorem of Hochster [14,
+Theorem      I], k[M] is Cohen-Macaulay           if M is toroidal. (We also remark that
+Hochster shows that for a submonoid            Ad of @, k[M] is normal if and only if M
+is isomorphic       to a toroidal monoid.)
+    Let M be a toroidal monoid.            Without    loss of generality we may assume
+that there is a vector a: = (mr ,..., XJ EM satisfying ai > 0 for 1 < i < s.
+(Simply ignore all coordinates         which do not appear in any /3 E M.) We write
+a: > 0 for short. We then call M a positive toroidal monoid. If M is a positive
+toroidal monoid, then dim k[M] is equal to the corank (= number of variables
+minus the rank) of the system E,(y),..., E,(y).
+
+
+   6.6. THEOREM     [30, Theorem  4.11. Let         M   be a positive   toroidal   monoid.
+Let R = k[M],     and let d = dim R. Then
+
+                              (-l)“F(R,     l/n)   = c An,
+                                                      n
+
+where (Y ranges over all vectors (YE M such that (Y > 0.         l
+
+   For some additional    discussion about and generalizations    of this theorem,
+see [31] or [32]. Combining     Theorems  6.3 and 5.6, we obtain:
+
+
+    6.7. THEOREM.    Let M be a positive toroidal monoid, and let R = k[M]. Then
+ the canonical module KR is given by KR = k[K,],       where KM == {a E M: (Y.> O}.
+    Thus R is Gorenstein ;f and only ;f there is a unique “minimal” positive element
+of M, i.e., a unique 01E M such that LY.> 0 and if /3 EM with ,6 > 0, then
+/3 - cxE M. (Equivalent<v, K,,, = OL+ M).        1
+
+   Note that if a: = (1, I,..., 1) E M, then this OLis the minimal positive element
+of M so k[M] is Gorenstein.       This is the toroidal analog of Corollary 5.6.
+   We have mentioned       that a monoid MC N” is isomorphic           to a toroidal
+monoid if and only if k[M] is normal, in which case we call Ma normal monoid.
+It is easily seen [14, p. 3201 that M is normal if and only if the following     con-
+82                                                 RICHARD         P. STANLEY
+
+
+dition is satisfied: If n is a positive integer and if 01,j3, y E M satisfy na = np + y,
+then y = ny’ for some y’ E M. If M is a normal monoid, define
+               KM = {a E M: for all fl E M there is an integer n > 0 and an
+                     element y E M such that nol = /3 + y}.                                                                        (21)
+If M is a positive toroidal monoid it is clear that this definition of KM coincides
+with the definition given in Theorem 6.7. Since a normal monoid is isomorphic
+to a positive toroidal monoid, it follows that if M is normal and R = k[M],
+then KR = k[K,],      with KM defined as in (21). This gives a restatement of
+Theorem 6.7 solely in terms of the abstract structure of M.
+
+
+                                                           REFERENCES
+
+ 1. M. F. ATIYAH            AND I. G. MACDONALD,                       “Introduction           to Commutative             Algebra,”
+    Addison-Wesley,              Reading,       Mass.,      1969.
+ 2. B. BENNETT,        On the characteristic               functions        of a local ring, Ann. of 1Muth.91 (1970),
+    25-87.
+ 3. D. A. BUCHSBAUM                AND D. EISENBUD,               Algebra       structures       for finite free resolutions,
+    and some structure              theorems       for ideals of codimension                 3, Amer. J. Math.            99 (1977).
+    447-485.
+ 4. W. BURNSIDE,           “Theory          of Groups          of Finite        Order,”        2nd ed., Cambridge                 Univ.
+    Press, 1911; reprinted              by Dover,        New York,           1955.
+ 5. G. CLEMENTS AND B. LINDSTRGM,                            A generalization             of a combinatorial            theorem         of
+    Macaulay,       J. Combinatorial             Theory 7 (1969),             230-238.
+ 6. S. GOTO, “Remarks                on Graded        Rings with Application                to Certain      Monoid       Algebras,”
+    preprint.
+ 7. S. GOTO, N. SUZUKI, AND K. WATANABE, “On Affine Semigroup                                              Rings,”      preprint.
+ 8. C. GREENE         AND D. J. KLEITMAN,                   Proof techniques              in the theory         of finite sets, in
+    “MAA        Studies       in Combinatorics”               (G.-C.        Rota, Ed.), Math.              Assoc.      of America,
+    Washington         D.C., to appear.
+ 9. W. GRBBNER,           “Moderne           Algebraische          Geometrie,”           Springer-Verlag,           Vienna,       1949.
+10. J. HERZOG AND E. KUNZ, Die Wertehalbgruppe                                  eines lokalen Rings der Dimension                       1,
+    Ber. Heidelberger           Akad.      Wiss. 1971 II (1971).
+11. J. HERZOG        AND E. KUNZ              (Eds.),     “Der      kanonische          Modul       eines Cohen-Macaulay-
+    Rings,”     Lecture        Notes in Mathematics,                  no. 238, Springer-Verlag,                 Berlin,     1971.
+12. H. HIRONAKA,           Certain        numerical        characters        of singularities,         j. Math.       Kyoto       Uniw.
+     10 (1970),     151-187.
+13. M. HOCHSTER           AND J. A. EAGON,                Cohen-Macaulay                rings, invariant        theory,      and the
+    generic perfection            of determimental            loci, Amer.          J. Math.       93 (1971),       1020-1058.
+14. M. HOCHSTER,             Rings of invariants               of tori, Cohen-Macaulay                     rings generated            by
+    monomials,        and polytopes,           Ann. of Muth.             96 (1972), 318-337.
+15. W. D. HODGE AND D. PEDOE, “Methods                              of Algebraic         Geometry,”         Vol. II, Cambridge
+    Univ. Press, London/New                    York,     1968.
+16. I. KAPLANSKY,          “Commutative              Rings,”       rev. ed., Univ.           of Chicago Press, 1974.
+17. S. L. KLEIMAN           AND D. LAKSOV,             Schubert         calculus,      Amer. Math.          Monthly       79 (1972),
+     1061-1082.
+18. F. S. MACAULAY,              “The Algebraic            Theory        of Modular          Systems,”       Cambridge         Tracts
+    in Mathematics           and Mathematical              Physics, No. 19, Cambridge                    Univ. Press, London,
+     1916.
+                                                     HILBERT        FUNCTIONS                                                           83
+
+19. F. S. MACAULAY,            Some properties               of enumeration           in the theory          of modular         systems,
+    Proc. London Math.              Sot. 26 (1927),             531-555.
+20. P. A. MACMAHON,                  “Combinatory               Analysis,”        Vols. 1-2, Cambridge                   Univ.      Press,
+    London,        1915, 1916; reprinted                by Chelsea, New York,                   1960.
+21. C. L. MALLOWS            AND N. J. A. SLOANE, On the invariants                          of a linear group of order 336,
+    Proc. Cambridge            Philos. Sot. 74 (1973),                   435-440.
+22. P. MCMULLEN,            The number             of faces of simplicial           polytopes,       Israel      1. Math.      9 (1971),
+    559-570.
+23. T. MOLIEN,         Uber die Invarianten                  der Linearen           Substitutionsgruppen,                 S&z. K&zig.
+    Preuss. Akad.         Wz’ss. (1897),         1152-l 156.
+24. T. POPOVICIU,          Studie si cercetari            stiintifice,      Acad. R.P.R. Filiala                Cluj 4 (1953),        8.
+25. I. REITEN, The converse                 to a theorem           of Sharp on Gorenstein                 modules,        Proc. Amer.
+    Math.      Sot. 32 (1972), 417-420.
+26. W. SMOKE, Dimension                    and multiplicity            for graded        algebras,        J. Algebra        21 (1972),
+     1499173.
+27. E. SPERNER, Uber einen kombinatorischen                               Satz von Macaulay              und seine Anwendung
+    auf die Theorie          der Polynomideale,                Abh. Math.          Sem. Univ. Hamburg                 7 (1930), 149-
+     163.
+28. R. STANLEY, Theory              and application             of plane partitions,           Parts 1 and 2, Stud. in Appl.
+    Math.      50 (1971),      167-188,         259-279.
+29. R. STANLEY, Ordered                structures        and partitions,          1Mem. Amer. Math.                Sot. 119 (1972).
+30. R. STANLEY, Linear                homogeneous               diophantine         equations         and magic labelings                 of
+    graphs,      Duke Math.          J. 40 (1973),            607-632.
+31. R. STANLEY,           Combinatorial             reciprocity         theorems,        Advances          in Math.         14 (1974),
+     194-253.
+32. R. STANLEY, Combinatorial                     reciprocity        theorems,       in “Combinatorics”                 (M. Hall, Jr.
+    and J. H. Van Lint, Eds.), Part 2, pp. 107-l 18, Mathematical                                        Centre Tracts,          No. 56,
+    Mathematisch           Centrum,          Amsterdam,            1974.
+33. R. STANLEY, Cohen-Macaulay                        rings and constructible                polytopes,         Bull. Amer. Math.
+    Sot. 81 (1975),         133-135.
+34. R. STANLEY, The upper bound conjecture                               and Cohen-Macaulay                  rings, Stud. in Appl.
+    Math.      54 (1975),      135-142.
+35. R. STANLEY, Some combinatorial                          aspects of the Schubert                calculus,        in “Proc.       Table
+    Ronde,      Combinatoire           et Representation               du Groupe         Symetrique,            Strasbourg        (26-30
+    Avril 1976),”       Lecture       Notes in Mathematics,                   no. 579, pp. 217-251.               Springer,       Berlin,
+     1977.
+36. T. SVANES, Coherent                   cohomology            of Schubert          subschemes            of flag schemes             and
+     applications,      Advances         in Math.        14 (1974), 369-453.
+37. K. WATANABE,             Certain        invariant        subrings        are Gorenstein,            I, Osaka         J. Math.         11
+    (1974),     l-8.
+38. K. WATANABE,             Certain       invariant        subrings        are Gorenstein,           II, Osaka J. Math.                  11
+    (1974),      379-388.
+39. F. WHIPPLE,         On a theorem              due to F. S. Macaulay,                 J. London Math.               Sot. 8 (1928),
+    43 l-437.
+

@@ -1,0 +1,2144 @@
+                                             K-POLYSTABILITY OF Q-FANO VARIETIES ADMITTING
+                                                       KÄHLER-EINSTEIN METRICS
+arXiv:1205.6214v3 [math.DG] 9 Jun 2015
+
+
+
+
+                                                                             ROBERT J. BERMAN
+
+
+                                                 Abstract. It is shown that any, possibly singular, Fano variety X admitting
+                                                 a Kähler-Einstein metric is K-polystable, thus conﬁrming one direction of the
+                                                 Yau-Tian-Donaldson conjecture in the setting of Q-Fano varieties equipped
+                                                 with their anti-canonical polarization. The proof is based on a new formula
+                                                 expressing the Donaldson-Futaki invariants in terms of the slope of the Ding
+                                                 functional along a geodesic ray in the space of all bounded positively curved
+                                                 metrics on the anti-canonical line bundle of X. One consequence is that a toric
+                                                 Fano variety X is K-polystable iﬀ it is K-polystable along toric degenerations
+                                                 iﬀ 0 is the barycenter of the canonical weight polytope P associated to X. The
+                                                 results also extend to the logarithmic setting and in particular to the setting of
+                                                 Kähler-Einstein metrics with edge-cone singularities. Applications to geodesic
+                                                 stability, bounds on the Ricci potential and Perelman’s λ−entropy functional
+                                                 on K−unstable Fano manifolds are also given.
+
+
+
+
+                                                                                   Contents
+                                           1.  Introduction                                                                            1
+                                           2.  Preliminaries                                                                           6
+                                           3.  Proofs of the main results                                                             16
+                                           4.  Ramifications and applications                                                         31
+                                           5.  Outlook on the existence problem for Kähler-Einstein metrics on
+                                               Q−Fano varieties                                                                       36
+                                           References                                                                                 39
+
+
+
+                                                                              1. Introduction
+                                            Let (X, L) be a polarized projective algebraic manifold. i.e. L is an ample
+                                         line bundle over X. According to the fundamental Yau-Tian-Donaldson conjecture
+                                         in Kähler geometry (see the recent survey [63]) the first Chern class c1 (L) con-
+                                         tains a Kähler metric ω with constant scalar curvature if and only if (X, L) is
+                                         K-polystable. This notion of stability is of an algebro-geometric nature and has its
+                                         origin in Geometric Invariant Theory (GIT). It was introduced by Tian [69] and
+                                         in its most general form, due to Donaldson [23] it is formulated in terms of polar-
+                                         ized C∗ −equivariant deformations L → X → C of (X, L) called test configurations
+                                         for the polarized variety (X, L), where X1 = X. Briefly, to any test configuration
+                                         (X , L) one associates a numerical invariant DF (X , L), called the Donaldson-Futaki
+                                         invariant defined in terms of the polarized scheme (X0 , L|X0 ) and X is said to be
+                                         K-polystable if DF (X , L) ≥ 0 with equality if and only if (X , L) is isomorphic to a
+                                         product test configuration (the precise definitions are recalled in section 2.2). The
+                                                                                         1
+test configuration (X , L) thus plays the role of a one-parameter subgroup in GIT
+and the Donaldson-Futaki invariant corresponds to the Hilbert-Mumford weight in
+GIT. Accordingly, the Yau-Tian-Donaldson conjecture is sometimes also referred
+to as the non-linear version of the celebrated Kobayashi-Hitchin correspondence
+between Hermitian Yang-Mills metrics and polystable vector bundles.
+   In the case when the connected component Aut(X)0 containing the identity of
+the the automorphism group is trivial, i.e. X admits no non-trivial holomorphic
+vector fields, it was shown by Stoppa [66] that the existence of a constant scalar
+curvature metric in c1 (L) indeed implies that (X, L) is K-polystable. The case when
+Aut(X)0 is non-trivial leads to highly non-trivial complications, related to the case
+when DF = 0 and was treated by Mabuchi in a series of papers [44, 45] (see also
+[68] where it is shown that if c1 (L) contains an extremal Kähler metric, then (X, L)
+is K-polystable with respect to all test configurations whose C∗ −action commutes
+with a maximal torus of automorphisms). In this note we will be concerned with
+the special case when ω is a Kähler-Einstein metric of positive scalar curvature.
+Equivalently this means that the Ricci curvature of ω is positive and constant:
+                                      Ric ω = ω,
+i.e. L is the anti-canonical line bundle −KX and X is a Fano manifold. In the
+seminal paper of Tian [69] it was shown, in the case when Aut(X)0 is trivial, that
+X is K-stable along all test configurations X with normal central fiber X0 . Here we
+will show that the assumption on Aut(X)0 can be removed, as well as the normality
+assumption on the central fiber X0 . In fact, we will allow X to be a general, possibly
+singular, Fano variety and prove the following
+Theorem 1.1. Let X be a Fano variety admitting a Kähler-Einstein metric. Then
+X is K-polystable.
+    It should be pointed out that, following Li-Xu [42], we assume that the total
+space X of the test configuration is normal to exclude some pathological test-
+configurations that had previously been overlooked in the literature (as explained
+in [42] ). As follows from the results of Ross-Thomas [64] this does not affect the
+notion of K semi-stability. Moreover, by a remark of Stoppa [67] K-polystability
+for all normal test configuration is equivalent to having DF (X , L) ≥ 0 for all test
+configurations with equality iff (X , L) is isomorphic to a product test configuration
+away from a subvariety of codimension at least two.
+    We recall that, by definition, X is a Fano variety if it is normal and the anti-
+canonical divisor −KX is defined as an ample Q−line bundle (such a variety is also
+called a Q−Fano variety in the literature) and, following [4], ω is said to be a Kähler-
+Einstein metric on X if ω is a bona fide Kähler-Einstein metric on the regular locus
+Xreg of X and the volume of ω on Xreg coincides with the top-intersection number
+c1 (−KX )n [X]. The existence of such a metric actually implies that the singularities
+are rather mild in the sense of the Minimal Model Program (MMP) in birational
+geometry [4], more precisely the singularities of X are (Kawamata) log terminal
+(klt, for short). In fact, even if X itself is smooth we will show that the singularity
+structure of the central fiber X0 of a given test configuration for X (or more precisely
+the log canonical threshold of X0 ) plays an important role in the metric analysis of
+the Donaldson-Futaki invariant DF (X , L), through the Lelong number l0 at 0 of
+the L2 − type metric on a certain adjoint direct image sheaf over the base of the test
+configuration. Interestingly, this will single out test configurations X whose central
+                                           2
+fibers have log canonical singularities as the “minimal” ones, in the sense that l0 = 0.
+This appears to give a new metric incarnation of the appearance of log canonical
+singularities in the log MMP (which is reminiscent of the algebro-geometric results
+in [42]; compare Remark 3.1).
+    One motivation for considering singular Kähler-Einstein varieties X is that they
+naturally appear when taking Gromov-Hausdorff limits of smooth Kähler-Einstein
+varieties [27]. This is related to the expectation that one may be able to form
+compact moduli spaces of K-polystable Fano varieties if singular ones are included,
+or more precisely those with log terminal singularities; compare the discussions in
+[54] and [53] (where the surface case is considered).
+    Another motivation for allowing X to be singular comes from the toric setting
+considered in [2], where it was shown that the existence of a Kähler-Einstein metric
+on a toric Fano variety X is equivalent to X being K−polystable with respect to
+toric test configuration. In turn, this latter property is equivalent to the canonical
+rational weight polytope P associated to X having zero as its barycenter. However,
+the question whether the existence of a Kähler-Einstein metric on the toric variety
+X implies that X is K-polystable for general test configurations was left open in
+[2]. Combining the previous theorem with the results in [2] we thus deduce the
+following
+
+Corollary 1.2. A toric Fano variety is K-polystable iff it is K-polystable with
+respect to toric test configurations. In particular, if P is a reflexive lattice polytope,
+then the toric Fano variety XP associated to P is K−polystable if and only if 0 is
+the barycenter of P.
+
+    We recall that reflexive lattice polytopes P (i.e. those for which the dual P ∗ is
+also a lattice polytope) correspond to toric Fano varieties whose singularities are
+Gorenstein, i.e −KX is an ample line bundle (and not only a Q−line bundle). This
+huge class of lattice polytopes plays an important role in string theory, as they
+give rise to many examples of mirror symmetric Calabi-Yau manifolds [1]. Already
+in dimension three there are 4319 isomorphism classes of such polytopes [40] and
+hence including singular Fano varieties leads to many new examples of K-polystable
+and K-unstable Fano threefolds (recall that there are, all in all, only 105 families
+of smooth Fano threefolds).
+    As explained in section 4.3 the theorem above extends to the logarithmic setting
+of Kähler-Einstein metrics on log Fano varieties (X, D), as considered in [4]. In
+particular, this shows that if D is an effective Q−divisor with simple normal cross-
+ings, and coefficients < 1, on a projective manifold X such that the logarithmic first
+Chern class of (X, D) contains a Kähler-Einstein metric ω with edge-cone singular-
+ities along D in the sense of [26, 13, 34], then the pair (X, D) is log K-polystable
+in the sense of [26, 41, 52].
+    The starting point of the proof of Theorem 1.1 is the following result of indepen-
+dent interest, which expresses the Donaldson-Futaki invariant in terms of the Ding
+functional D (see formula 3.1):
+
+Theorem 1.3. Let X be a Fano variety with log terminal singularities, (X , L) a
+test configuration for (X, −KX ) (assumed to have normal total space) and φ a
+locally bounded metric on L with positive curvature current. Setting t := − log |τ |2
+and denoting by φt = ρ(τ )∗ φτ the corresponding ray of locally bounded metrics on
+                                            3
+−KX the following formula holds:
+                                              d
+(1.1)                        DF (X , L) = lim    D(φt ) + q,
+                                          t→∞ dt
+
+where q is a non-negative rational number determined by the polarized scheme
+(X0 , L|X0 ) with the following properties, if X is smooth:
+        • q = 0 iff X is Q−Gorenstein with L isomorphic to −KX /C and X0 is reduced
+          and its normalization has log canonical singularities.
+        • In particular, if X0 is normal then q = 0 iff X0 is reduced and has log
+          canonical singularities (and in particular q = 0 if it has log terminal singu-
+          larities).
+
+   More precisely, we will give an explicit expression for the number q in terms
+of a given log resolution (X , X0 ) (see Theorem 3.11). In order to prove Theorem
+1.1 we apply Theorem 1.3 to a weak geodesic ray φt , emanating from the Kähler-
+Einstein metric on −KX (which is a critical point of the Ding functional). We can
+then exploit a result of Berndtsson [10] (and its generalization to singular Fano
+varieties in [4]) concerning the convexity of the Ding functional D, also using a
+new triviality result for certain flat direct image sheaves, of independent interest
+(Proposition 3.3).
+   As for the proof of Theorem 1.3 it is based on the observation that D(φt ) extends
+to define a singular positively curved metric on a certain line bundle over the base
+C of the given test configuration, that we will accordingly call the Ding line bundle.
+To make the connection to DF (X , L) we use a result of Phong-Ross-Sturm [59]
+which expresses DF (X , L) in terms of the weight over 0 of another line bundle
+η over the base C, involving certain Deligne pairings. This is also closely related
+to the intersection theoretic formulation of the Donaldson-Futaki invariant due to
+Wang [77] and Odaka [51], independently. The error term q in formula 1.1 can then
+be decomposed into two pieces where the first piece is the Lelong number l0 at 0 of
+Ding metric referred to above, which is shown to coincide with the Lelong number
+at 0 of an L2 −type metric on a certain direct image sheaf. The non-negativity of l0
+then follows from the positivity results of Berndtsson-Paun for the L2 −metrics on
+direct images of adjoint line bundles [8, 11]. We show how to express l0 explicitly in
+terms of a certain log canonical threshold of the central fiberX0 (Proposition 3.8).
+Finally, the vanishing properties of q are obtained using inversion of adjunction [38]
+(which can be seen as an algebro-geometric incarnation of the Ohsawa-Takegoshi
+extension theorem in complex analysis [19, 39]).
+   It should be pointed out that the information about the vanishing properties of
+q in Theorem 1.3 are not used in the proof of Theorem 1.1, but they appear to give
+a new link between differential geometry and the MMP (see Remark 3.1). More-
+over, as discussed in section 5, the second point in Theorem 1.3 fits naturally into
+Tian’s program [71] for establishing the existence part of the Yau-Tian-Donaldson
+conjecture - in particular when generalized to the setting of singular Fano varieties
+(compare Corollary 5.1).
+   We also give some applications of Theorem 1.3 to bounds on the Ricci potential
+and Perelman’s λ−entropy functional [55] (see section 4.2), which can be seen as
+analogs of Donaldson’s lower bound on the Calabi functional [24]. In particular, we
+obtain the following
+
+                                            4
+Theorem 1.4. Let X be an n−dimensional Fano manifold and set V := c1 (X)n .
+If X is K−unstable, then Perelman’s λ−entropy functional satisfies
+                                   sup λ(ω) < nV,
+                                  ω∈K(X)
+
+where K(X) denotes the space of all Kähler metrics in c1 (X).
+   As is well-known λ(ω) ≤ nV on the space K(X) and, as recently shown by
+Tian-Zhang [72] in their study of the Kähler-Ricci flow, if a Fano manifold X
+admits a Kähler-Einstein metric ωKE then λ(ωKE ) = nV, or more generally: if
+Mabuchi’s K-energy is bounded from below on K(X), then supremum of λ is equal
+to nV. In the light of the Yau-Tian-Donaldson conjecture it seems thus natural to
+conjecture that X is K−semistable if and only if the supremum of λ is equal to nV
+(the “if direction” is the content of the previous theorem). In fact, a more precise
+version of Theorem 1.4 will be obtained, where the supremum of λ is explicitly
+bounded in terms of minus the supremum of the Donaldson-Futaki invariants over
+all (normalized) destabilizing test configurations for (X, L) (see Cor 4.5).
+   During the revision of the present paper the existence of Kähler-Einstein metrics
+on K-polystable smooth Fano varieties was finally settled by Chen-Donaldson-Sun
+[16] based on a modification of Tian’s original program introduced by Donaldson
+[26], which uses metrics with conical singularities. In fact the proofs in [16] show
+that a Kähler-Einstein metric exists as soon as X is K-polystable with respect to
+special test configurations and hence combining the results in [16] with the main
+result of the present paper yields a new proof - not involving MMP - of the recent
+result of Li-Xu [42], saying that to test the K−polystability of a Fano manifolds
+it is enough to test it on special test configurations. Moreover, one also obtains
+a proof of an analog of a conjecture of Donaldson concerning “geodesic stability”
+saying that either a Fano manifold X admits a Kähler-Einstein metrics, or there
+exists a geodesic ray along which the Ding functional eventually becomes strictly
+decreasing (Theorem 4.1).
+   In section 5 we have included an outlook on the existence problem on singular
+Fano varieties, which is thus the missing piece in the Yau-Tian-Donaldson conjec-
+ture for projective varieties X polarized by −KX . The opposite case of varieties
+polarized by KX was very recently established in [6], building on [51].
+
+1.1. Further relations to previous work. In the case when X is a smooth
+Fano manifold Theorem 1.3 (and its more precise version Theorem 3.11) should be
+compared with previous results of Ding-Tian [21] who considered the case when
+φt is a Bergman geodesic, induced by a fixed embedding in PN by −kKX (and
+a C∗ −action on PN ). In the case when the central fiber X0 is normal the results
+of Ding-Tian say that DF (X , L) is equal to the asymptotic slope of the Mabuchi
+functional (without any further restrictions on the nature of the singularities of X0 ).
+We also recall that in another direction Paul-Tian [56, I, Cor 1.2] and Phong-Ross-
+Sturm [59] considered the case of a general smooth and positively curved metric φ
+on L → X , for a given test configuration (X , L) for a polarized manifold (X, L),
+but assumed that the total space X be smooth and then obtained a formula for
+DF (X , L) as the slope of the Mabuchi functional plus a correction term which
+vanishes if X0 is reduced.
+   It may also be illuminating to compare our proof of Theorem 1.1 with the original
+approach of Tian [69] in the case of a non-singular Fano variety. As shown by Tian
+                                           5
+[69] assuming that the central fiber of test configuration is normal, and using the
+slope formula of Ding-Tian [21] referred to above, the Donaldson-Futaki invariant
+DF is expressed in terms of the asymptotics of Mabuchi’s K-energy functional
+along a one-parameter family φtk of Bergman metrics, i.e. a Bergman geodesic.
+The positivity properties of DF are then determined using that, in the presence of
+a Kähler-Einstein metric, the Mabuchi’s K-energy functional is proper (if there are
+no non-trivial holomorphic vector fields on X), which is the content of deep result
+of Tian [69]. Here we thus show that the Mabuchi functional and the Bergman
+geodesic may be replaced by the Ding functional and a weak (bounded) geodesic,
+respectively, and the properness result with Berndtsson’s convexity result. One
+technical advantage of the Ding functional is that, unlike the Mabuchi functional,
+it is indeed well-defined along a weak geodesic, as previously exploited in [10, 4]
+in the context of the uniqueness problem for Kähler-Einstein metrics. Thus the
+approach in this paper is in line with the programs of Phong-Sturm [60] and Chen-
+Tang [15] for calculating Donaldson-Futaki invariants by using (weak) geodesic rays
+associated to test configurations.
+    In the case when X is a smooth Kähler-Einstein Fano variety with Aut(X)0 triv-
+ial the properness of the Ding functional was shown by Tian [69] as a consequence
+of his properness result for the Mabuchi functional. It was later shown in [61] that
+if center of the group Aut(X)0 is finite then the Ding functional is still proper (in an
+appropriate sense), but the properness in the case of general Kähler-Einstein man-
+ifold is still open. The generalization of the properness result (even when Aut(X)0
+is trivial) to singular Fano varieties and more generally log Fano varieties also ap-
+pears to be a challenging open problem. Anyway, these subtle issues are bypassed
+in the present approach.
+
+Organization. After having recalled some preliminary material in Section 2 the
+formula relating the Donaldson-Futaki invariant (Theorem 1.3 above) to the Ding
+function is established in Section 3 and then used, by exploiting positivity results for
+L2 −type metrics on direct images, to prove Theorem 1.1 concerning K-polystability.
+Section 3.3 also contains a detailed study of the singularities of the L2 −type metrics
+which is of independent interest, but not needed for the proof of Theorem 1.1. In
+section 4.2 various ramifications and applications are given to (i) an analog of
+conjecture of Donaldson (ii) bounds on the Ricci potential and Perelman’s entropy
+functional and (iii) the log Fano setting. The paper is concluded with an outlook
+in Section 5 on the existence problem for Kähler-Einstein metrics on singular Fano
+varieties is given.
+
+Acknowledgments. Thanks to Bo Berndtsson, Sébastien Boucksom, Dennis Eriks-
+son, Yuji Odaka, Julius Ross and Song Sun for helpful discussions and comments.
+In particular, thanks to Tomoyuki Hisamoto and David Witt-Nyström for discus-
+sions on norms of test configurations and the relations to their works [36] and [50]
+(compare Remark 4.4). Finally, thanks to the referees for many useful comments.
+This work was supported by grants from the Swedish Research Council and the
+European Research Council.
+
+                                 2. Preliminaries
+   In this section we will setup the notation and recall the basic tools to be used in
+the proofs of the main results.
+                                           6
+2.1. Kähler-Einstein metrics on Fano varieties and log pairs.
+
+2.1.1. Fano varieties and log pairs. Let X be an n−dimensional normal compact
+projective algbraic variety. In analytic terms normality just means that any holo-
+morphic function f on U ∩ Xreg , where Xreg denotes the regular locus of X and
+U ⊂ X is open, extends holomorphically to U in the strong sense, i.e. f is the re-
+striction to U of holomorphic function in Cm under some local holomorphic embed-
+ding F : U ֒→ Cm (after perhaps shrinking U ). In particular, codim(X −Xreg ) ≥ 2.
+More generally, the corresponding strong extension property holds for any plurisub-
+harmonic (psh, for short) function φ on U (see [6] and references therein for
+a more detailed discussion of pluripotential theory on singular analytic spaces).
+By definition, X is said to be a Fano variety if the anti-canonical line bundle
+−KX := det(T X) defined on the regular locus Xreg of X extends to an ample
+Q−line bundle on X, i.e. there exists a positive integer m such that the mth ten-
+sor power −mKXreg extends to an ample line bundle over X. Since X is normal
+this equivalently means that the anti-canonical divisor −KX of X defines an ample
+Q−line bundle. More generally we will (in particular in Section 4.3) consider log
+pairs (X, D) in the sense of birational geometry [39]: i.e. X is normal and D is a
+Q−divisor on X such that KX + D is a Q−Cartier, i.e. defines a Q−line bundle
+(called the log canonical bundle of (X, D). By definition, a log resolution of a log
+pair (X, D) is a proper birational morphism X ′ → X such that p∗ D + E has simple
+normal crossings, where E is the exceptional divisor of p. Then
+(2.1)                          p∗ (K + D) = KX ′ + D′ ,
+for a Q−divisor D′ on X ′ (by Hironaka’s theorem we may and will assume that p
+is an isomorphism away from p−1 (Xsing ∪ SuppDsing ). A log pair (X, D) is said to
+be log canonical, or lc for short, if the coefficients ci of D′ (along the correspond-
+ing prime divisors) satisfy ci ≤ 1. Similarly, (X, D) is said to be (Kawamata) log
+terminal, or klt for short, if ci < 1. Setting D = 0 these notations also apply to the
+normal variety X, which is thus said to have log canonical (log terminal) singulari-
+ties if (X, 0) is log canonical (log terminal). In practice we will in what follows only
+consider Fano varieties X with log terminal singularities (the corresponding ana-
+lytical characterization will be recalled below), but even if X is smooth the notion
+of log canonical singularities will be important in the study of test configurations
+X for X.
+
+2.1.2. Singular metrics on line bundles and (multi-) sections. Throughout the pa-
+per we will use additive notation for line bundles, as well as metrics. This means
+that a metric k·k on a line bundle L → X is represented by a collection of local
+functions φ(:= {φU }) defined as follows: given a locally trivializing section of L,
+i.e. a local generator sU of the invertible sheaf O(L) on an open subset U ⊂ X we
+                      2
+set φU := − log ksU k , where φU is upper semi-continuous. It will be convenient to
+identify the additive object φ with the metric it represents. Of course, φU depends
+on sU but the curvature current
+                                             i ¯
+                                   ddc φ :=    ∂ ∂φU
+                                            2π
+is globally well-defined on X and represents the first Chern class c1 (L), which
+with our normalizations lies in the integer lattice of H 2 (X, R). We will say that a
+(singular) metric φ is psh (or have positive curvature current), φ ∈ P SH(X, L), if
+                                           7
+φU is always psh (and in particular ddc φ ≥ 0 holds in the sense of currents). By
+the normality of X the injection Xreg ֒→ X alows us to identity P SH(X, L) =
+P SH(Xreg , L) and hence, given a smooth resolution π : X ′ → X, we can also
+identify P SH(X, L) with P SH(X ′ , π ∗ L), using the pull-back π ∗ . We will denote
+by Hb (X, L) the subspace of P SH(X, L) consisting of all locally bounded metrics.
+Fixing φ0 ∈ Hb (X, L) and setting ω0 := ddc φ0 the map φ 7→ v := φ − φ0 thus gives
+an isomorphism between the space Hb (X, L) and the space P SH(X, ω0 ) ∩ L∞ (X)
+of all bounded ω0 −psh functions, i.e. the space of all bounded usc functions v on
+X such that ddc v + ω0 ≥ 0. Similarly, a metric φ will be said to be smooth if φU
+is the restriction to U of a smooth function under a local embedding as above. A
+special class of smooth metrics with strictly positive curvature is given by Bergman
+metrics, i.e. metrics of the form φk /k, where φk is obtained by restricting the
+Fubini-Study metric φF S on PN under a given Kodaira embedding of X in PN
+induced by kL, for some k sufficiently large.
+    In particular, if s is a holomorphic section of L → X then φs := log |s|2 defines
+a singular metric on L with positive curvature current [D], i.e. integration along
+the zero divisor of s (taking multiplicities into account). More generally, it will
+often be convenient to use the terminiology of holomorphic multisections of L,
+which by definition consists of a pair (r, sr ), where r is a positive integer r and
+sr ∈ H 0 (X, rL) and where two pairs (r, sr ) and (r′ , sr′ ), where r′ ≥ r, are identified
+if there exists a positive integer p such that r′ = pr and sr′ = s⊗p     r . Denoting by
+s such an equivalence class φs := 1r log |sr |2 defines a singular metric on L with
+curvature current [D], where D is the Q−divisor defined by the zero-divisor of s
+(i.e. D is, by definition, equal to 1/r times the zero divisor of sr ). Accordingly we
+will occasionally also write φD := φs . More generally, abusing notation slightly, the
+statement “let s be a holomorphic multisection of L” will in the follopwing mean
+that we tacitly fix a pair (r, sr ) defining s and work with the bona fide section sr
+and then make the appropriate scalings by r.
+
+2.1.3. Canonical measures. In the special case when L = −KX any given metric
+on φ ∈ Hb (X, L) induces a measure µφ on X, which may be concretely defined
+as follows: if U is a coordinate chart in Xreg with local holomorphic coordinates
+z1 , ..., zn we let φU be the representation of φ with respect to the local trivialization
+of −KX which is dual to dz := dz1 ∧ · · · ∧ dzn . Then we define the restriction of µφ
+to U ⊂ Xreg as
+                                                2
+                                 µφ = e−φU in dz ∧ dz̄
+This expression is readily verified to be independent of the local coordinates z and
+hence defines a measure µφ on Xreg which we then extend by zero to all of X. Note
+that since −KX is assumed Q−Cartier we may cover X with a finite number of
+open sets V (not necessarily contained in Xreg ) such that the restriction to V of µφ
+                    2
+is given by 1Xreg in αU ∧ αU e−φU , where αU is a trivializing section of KX|U (whose
+restriction to U ∩ Xreg may thus be identified with a holomorphic (n, 0)−form) and
+where φU = − log ksk2 for s the dual of α. The Fano variety X has log terminal
+singularities (as defined above) precisely when the total mass of µφ is finite for
+some and hence any φ ∈ Hb (X, L) (see Lemma 3.7). Abusing notation slightly
+we will often use the suggestive notation e−φ for the measure µφ . This notation
+is compatible with the usual notation used in the context of adjoint bundles: if
+s is a holomorphic section of L + KX → X and φ is a metric on L then |s|2 e−φ
+                                            8
+                          2
+(sometimes written as in s ∧ s̄e−φ ) may be naturally identified with a measure on
+X. In particular, letting L = −KX and taking s to be the canonical section 1
+in the trivial line bundle L + KX gives us back the measure µφ . More generally,
+if (X, D) is a log pair (see section 4.3 below) and φ is a locally bounded metric
+on −(KX + D) then one obtains a measure µ(X,D,φ) on X by using the natural
+identification between −(KX + D) and −KX on the complement of the support
+of D in X and extending by zero to all of X (compare [4]). Abusing notation,
+                                                  2
+we will sometimes write µ(X,D;φ) = e−(φ+log |sD | ) , where sD is the (multi-) section
+cutting out D. These constructions are compatible with taking resolutions p, as
+in 2.1: if φ is a metric on −(KX + D) then p∗ φ is a metric on −(KX ′ + D′ ) and
+p∗ (µ(X ′ ,D′ ;p∗ φ) ) = µ(X,D;φ) .
+    In the relative setting of a morphism π : X → C from a normal Q−Gorenstein
+variety such that π is smooth over C∗ (or more generally, Xτ is reduced and defines
+a variety Xτ with log terminal singularities for τ 6= 0) we denote by KX /C := KX −
+π ∗ KC the relative canonical line bundle (viewed as a Q−line bundle). Denoting
+by τ the standard affine coordinate on C we will use π ∗ dτ to trivialize π ∗ KC over
+X . Accordingly, we will identify an element s ∈ O(U, KX /C ) with a holomorphic
+                                                   ∂
+(n + 1)−form α on U ∩ Xreg (i.e. s = α ⊗ π ∗ ∂τ       ). Moreover, if U = π −1 (V ) for
+        ∗
+V ⊂ C , then the natural isomorphism KX /C|Xτ ≈ KXτ allows us to identify the
+restrictions sτ of s ∈ O(U, KX /C ) to Xτ with a family of holomorphic n−forms on
+Xτ (i.e. α = sτ ∧ π ∗ dτ ). Similarly, replacing KX /C with L + KX /C for a given line
+bundle L → X equipped with a metric φ we will use the symbolic notation |s|2 e−φ
+for the corresponding measures on U ⊂ X and |sτ |2 e−φτ for the corresponding
+family of measures over V ⊂ C∗ .
+
+2.1.4. Kähler-Einstein metrics. Following [4] ω is said to be a Kähler-Einstein met-
+ric on X if it is´ Kähler metric on Xreg with constant Ricci curvature, i.e. Ric ω = ω
+on Xreg and Xreg ω n = c1 (−KX )n . By [4, Lemma 3.6 and Proposition 3.8] this
+equivalently means that the Fano variety X in fact has log terminal singularities
+and ω extends to a Kähler current defined on the whole Fano variety X, such that
+ω is the curvature current of a locally bounded (and in fact continuous) metric φKE
+on the Q−line bundle −KX such that
+                                                   ˆ
+(2.2)                      (ddc φKE )n = V e−φKE /    e−φKE .
+                                                   X
+
+The measure appearing the left hand side above is the Monge-Ampère measure
+of φKE defined in sense of pluripotential theory, i.e. using the Bedford-Taylor
+product between positive closed currents with locally bounded potentials (see [4]
+and references therein for the general singular setting).
+
+2.2. K-polystability and test configurations. Let us start by recalling Donald-
+son’s general definition [23] of K-stability of a polarized variety (X, L) generalizing
+the original definition of Tian [69]. First, a general test configuration (X , L, π, ρ)
+for (X, L) consists of a scheme X with a C∗ −equivariant flat surjective morphism
+π : X → C (where the base C is equipped with its standard C∗ −action) and
+a relatively ample line bundle L → X with a C∗ −action ρ on L and such that
+(X1 , L|X1 ) = (X, rL) for some integer r. In fact, by allowing L to be a Q−line
+bundle we may as well assume that r = 1. More specifically, following [42] we will
+                                          9
+assume that the total space X is normal. Then the morphism π is automatically
+flat [35, Prop 9.7 ]).
+   To simplify the notation we will usually surpress the dependence on π and ρ
+denote a test configuration by (X , L). Occasionally we will use the notation X0 for
+the reduction of the central fiber X0 , i.e. the projective variety X0 underlying the
+scheme theoretic central fiber X0 . For a semi-test configuration we only require that
+L be relatively semi-ample. We recall that the total space X of a test configuration
+may, using the relative linear systems defined by rL for r sufficiently large, be
+equivariantly embedded as a subvariety of PN × C so that rL becomes the pull-
+back of the relative O(1)−hyperplane line bundle over PN × C. We will denote by
+φF S the metric on L obtained by restriction of the fiberwise Fubini-Study metrics
+on PN × {τ } (see [64, Proposition 3.7] and the beginning of Section 5 [24] ).
+   The Donaldson-Futaki invariant DF (X , L) of a test configuration is defined as
+follows: consider the Nk −dimensional space H 0 (X0 , kL|X0 ) over the central fiber X0
+and let wk be the weight of the C∗ −action on the complex line H 0 (X0 , kL|X0 ). Then
+the Donaldson-Futaki invariant of DF (X , L) is defined as minus the sub-leading
+coefficient in the expansion of wk /kNk in powers of 1/k (up to normalization):
+               wk (det H 0 (X0 , kL|X0 ))        11                 1
+                                          = c0 −    DF (X , L) + O( 2 ),
+                        kNk                      k2                k
+where Nk := dim(H 0 (X0 , kL0 ). The polarized variety (X, L) is said to be K-
+semistable if, for any test configuration, DF (X , L) ≥ 0 and K-(poly)stable if more-
+over equality holds iff (X , L) is (equivariantly) isomorphic to (X × C, p∗1 L). We
+also recall that (X, L) is said to be K−unstable if it is not K-semistable, i.e. there
+exists a destabilizing test configuration in the sense that DF (X , L) < 0.
+Example 2.1. Let V be a holomorphic vector field on X of type (1, 0) with a fixed
+lift to L → X. We will say that V generates a C∗ −action on X, denoted by ρ(X,V ) ,
+if d ρ
+  dt (X,V )(e−t/2 ) = etReV , for t ∈ R (in other words the standard additive group
+(C, +) action on X determined by the complex flow of V descends to a multiplicative
+action of C∗ on (X, L) under the homomorphism C → C∗ , t 7→ e−t/2 ). Such a vector
+field V determines a product test configuration (X , L, π, ρ) by setting (X , L, π) =
+(X × C, L =p∗1 L, p2 ) and defining the action ρ : C∗ × X → X by (λ, (x, τ )) 7→
+(ρV (x), λτ ). Note that the original action of ρ(X.V ) on X may be identified with
+the restricted action of ρ on X0 and DF (X , L, ρ) coincides with Futaki’s invariant
+F (X, V ). Since, F (X, V ) = −F (X, V ) a necessary condition for the K-polystability
+of (X, L) is that DF (X , L, ρ) = 0 for any V as above and a necassary condition for
+K-stability is that X admits no holomorphic vector fields as above (since, (X , L, ρ) is
+equivariantly isomorphic to (X , L, ρtriv ), where ρtriv (λ, (x, τ ) = (x, λτ ), iff V = 0).
+   In this paper we will be concerned with test configurations (X , L) for a Fano
+variety with its anti-canonical polarization, i.e. X is a Fano variety and L = −KX
+so that the restriction of L to the complement X ∗ of the central fiber coincides with
+the Q−line bundle defined by the dual of the relative canonical divisor KX ∗ /C :=
+KX ∗ − π ∗ KC .
+2.2.1. Q−Gorenstein and special test configurations. In general, KX /C does not
+extend as a Q−line bundle over the central fiber, but following [42] we say that a
+normal variety X with a C∗ −equivariant surjective morphism π to C is a special test
+configuration for the Fano variety X if X1 = X, the total space X is Q−Gorenstein
+                                            10
+and the central fiber is reduced and irreducible and defines a Fano variety X0 with
+log terminal singularities.
+Lemma 2.2. Let (X , L) be a general test configuration (with a priori non-normal
+total space) for (X, −KX ), where X is a Fano variety. Assume that the central
+fiber X0 is normal. Then X and X0 are both normal Q−Gorenstein varieties and
+L|X0 is isomorphic to −KX0 , i.e. L is isomorphic to −KX /C. Moreover, if X0 has
+log terminal singularities, then so has X . In other words, a test configuration is
+special iff the central fiber is reduced and the underlying variety X0 has log terminal
+singularities.
+Proof. This is essentially well-known, but for completeness we provide a proof
+(thanks to Yuji Odaka for his help in this matter). It follows from general com-
+mutative algebra that if π : X → C is a morphism projective and flat over C,
+with normal fibers, then X is also normal [29, Theorem 1.101 ]. In particular, the
+canonical divisor KX is a well-defined Weil divisor. By assumption −KX and L are
+Q−Cartier and linearly equivalent on X ∗ and hence KX +L is linearly equivalent to
+a Weil Q−divisor D supported in the central fiber. But the central fiber is Cartier
+(since it is cut out by the function π ∗ τ ) and hence, since it is assumed irreducible
+−m(KX + L) is linearly equivalent to a multiple of X0 , which means that −mKX
+is a sum of Cartier divisors, hence Cartier, i.e. X is Q−Gorenstein. More precisely,
+−mKX is linearly equivalent to L modulo a pull back from the base and thus it
+follows from adjunction that the restriction of L to X0 is linearly equivalent to
+−mKX0 , which concludes the proof of the first statement. Finally, if X0 has log
+terminal singularities it follows from inversion of adjunction that X also has log
+terminal singularities [39, Theorem 7.5] (see also the beginning of Section 3).      
+   Since the Donaldson-Futaki is independent of the lift of the C∗ −action on X
+we may and will in the case when L := −KX /C assume that the C∗ −action on
+L := −KX /C is the canonical lift of the C∗ −action on X to −KX /C.
+2.3. Deligne pairings, the energy functional E and the line bundle η. The
+Donaldson-Futaki invariant may also be expressed in terms of Deligne pairings [59]
+(also called intersection bundles [48]). First recall that if π : X → B is a proper
+flat projective morphism of relative dimension n (between normal schemes) and
+L0 , ..., Ln are line bundles over X then the Deligne pairing hL0 , ..., Ln i is a line
+bundle over B, which depends in a multilinear fashion on Li [75, ?] and satisfies
+                        c1 hL0 , ..., Ln i = π∗ (c1 (L0 ) ∧ · · · ∧ c1 (Ln ))
+In particular, if B is a non-singular projective curve then
+(2.3)                            deg hL0 , ..., Ln i = L0 · · · Ln
+In our case X will be a normal variety (defined over C) and B = C. Given Hermitian
+metrics φ0 , ..., φn on L0 , ..., Ln there is a natural Hermitian metric hφ0 , ..., φn i on
+hL0 , ..., Ln i [75] which has the following fundamental properties1:
+     (1) Its curvature is given by
+(2.4)                   ddc hφ0 , ..., φn i = π∗ (ddc φ1 ∧ · · · ∧ ddc φn )
+   1Following [32] the construction in [75] seems to require that π be Cohen-Macaulay in order
+to deﬁne the metric on hL0 , ..., Ln i by induction over the dimension n. Anyway all our arguments
+will be carried out on a non-singular resolution of X where the constructions in [75, 32] apply.
+                                                 11
+    (2) If φ and ψ are metrics in H(L) with hφi and hψi denoting the induced
+        metrics on the top Deligne pairing hL, ..., Li in the absolute case when B
+        is a point, then we have the following “change of metric formula”:
+                               n ˆ
+                               X
+                   hφi − hψi =       (φ − ψ)(ddc φ)n−j ∧ (ddc ψ)j
+                               j=0   X
+
+In order to define hφi for φ merely locally bounded, i.e. in Hb (L), we fix a reference
+metric ψ0 in H(L) and first set
+                                         n ˆ
+                                   1    X
+(2.5)     E(φ) := E(φ, ψ0 ) :=                 (φ − ψ)(ddc φ)n−j ∧ (ddc ψ)j
+                               (n + 1) j=0 X
+
+The functional E(φ, ψ) is well-defined and finite for any φ, ψ ∈ H(L)b , using the
+Bedford-Taylor product between the corresponding currents, and the functional
+E(φ) on Hb (L) coincides with the restriction to Hb (L) of the functional E in [3, 4,
+Section 1.4] defined on the whole space of singular metrics on L with positive
+curvature current. In particular, the functional E(φ) is a primitive for the one-form
+on Hb (L) defined by the Monge-Ampère measure, i.e.
+                  d
+                                                ˆ
+(2.6)                     E(φ0 (1 − t) + φ1 t) = (φ1 − φ0 )(ddc φ0 )n
+                  dt |t=0
+Now, for any φ ∈ Hb (L) we can simply define the corresponding metric hφi on the
+Deligne pairing by
+                             hφi := hψi + (n + 1)E(φ, ψ)
+for any fixed ψ ∈ H(L). It follows immediately from the cocycle formula for E(φ, ψ)
+(which in turn follows from the variational property 2.6) that hφi is independent of
+the choice of ψ and still satisfies the change of metric formula above, i.e.
+
+
+(2.7)                        hφi − hψi = (n + 1)E(φ, ψ)
+Similarly, the first property 1 above also holds in the singular setting of locally
+bounded metrics, by approximation, since the Bedford-Taylor product is local and
+continuous under local decreasing limits.
+Remark 2.3. More generally, by the results in [3] the metric φD can be defined as
+long as φ0 , ..., φn are in the finite energy space E 1 (X, L), but the locally bounded
+setting above will be adequate for our purposes.
+   Let us now come back to the general setting of a test configuration L → X → C
+for a polarized variety (X, L). Under appropriate regularity assumptions it was
+shown in [59] that the Donaldson-Futaki invariant of a test configuration (X , L) is
+the weight over 0 :
+(2.8)                            DF (X , L) = w0 (η)
+of the following Q−line bundle over C :
+(2.9)
+           1
+                                                            , µ := n(−KX ) · Ln−1 /Ln
+                                                          
+η :=             µ hL, ..., Li − (n + 1) −KX /C , L..., L
+      (n + 1)Ln
+                                          12
+where in the case when L = −KX we have µ = n. More precisely, it was shown
+in [59] that, up to natural isomorphisms, the Knudson-Mumford expansion of the
+determinant line bundle det(π∗ (kL)) → C (with fibers det H 0 (Xτ , kLτ )) satisfies
+                                      1                   11        1
+              det(π∗ (kL))/kNk =            hL, ..., Li −    η + O( 2 )
+                                  (n + 1)Ln               k2       k
+and η is thus naturally isomorphic to Tian’s CM-line bundle [56]. The proofs in
+[59] were carried out under the assumption that the total space X and the central
+fiber X0 be non-singular (in particular, there are no multiple fibers), but as pointed
+out in [59] the regularity assumptions can be relaxed. Here we observe that the
+formula 2.8 holds as long as X is Q−Gorenstein as a consequence of the intersection
+theoretic expression for the Donaldson-Futaki invariant recalled in the following
+proposition. The expression involves the “C∗ −equivariant compactification” L̄ →
+X̄ → P1 of L → X → C obtained by using the given C∗ −action ρ on (X , L) to
+identify (X ∗ , L|X ∗ ) with (X ×C, p∗1 L), which trivially extends to (X ×P1 −{0}, p∗1 L)
+so that ρ̄ acts trivially over ∞ ∈ P1 .
+Proposition 2.4. Let (X , L, ρ) be a test configuration (in particular, X is normal)
+and denote by L̄ → X̄ → P1 the corresponding C∗ −equivariant compactification
+over P1 . Then
+(2.10)        (n + 1)Ln (DF (X , L)) = µL̄ · L̄ · · · L̄ + (n + 1)KX̄ /P1 · L̄ · · · L̄,
+where KX̄ /P1 is the relative canonical divisor (viewed as a Weil divisor).
+   The previous formula is shown in [77, Proposition 17] under the assumption that
+X is Q−Gorenstein, so that KX /C is well-defined as a Q−line bundle and in [51,
+Theorem 3.2] for X normal (or more generally, Gorenstein in codimension one. See
+also [42, Proposition 6] for a simple direct proof.
+Proposition 2.5. Let (X , L) be a test configuration such that X is Q−Gorenstein.
+Then DF (X , L) = w0 (η), where η is the Q−line bundle defined by formula 2.9.
+Proof. If KX̄ is well-defined as a Q−Cartier divisor (i.e. as a Q−line bundle) then
+it follows from the previous proposition and the standard push-forward formula
+that
+                             ˆ
+    (n + 1)Ln (DF (X , L)) =     µπ∗ (µ(c1 (L̄)n+1 ) + (n + 1)c1 (KX̄ /P1 ) ∧ c1 (L̄)n ),
+                                 P1
+
+which, according to 2.3 coincides with the degree of the corresponding sum η̄ → P1
+of extended Deligne pairings. But, this is nothing but the weight over 0 of the
+C∗ −action on η|τ =0 . Indeed, if F is a line bundle over P1 equipped with a C∗ −action
+covering the standard action on P1 (viewed as a compactification of C∗ ) acting
+trivially on the line F|∞ , then
+(2.11)                                w0 (F ) = deg(F ),
+                                                                                           
+2.3.1. A singular Kempf-Ness formula for weights involving the Lelong number.
+Next we give a generalization of the Kempf-Ness type formula for the weight appear-
+ing in Geometric Invariant Theory [49], which is essentially equivalent to Lemma
+6 in [59]. Its formulation involves the classical notion of a Lelong number l0 (Φ) at
+zero of a subharmonic function Φ on the unit-disc in C, which may be defined as
+                                              13
+the sup over all numbers λ such that Φ(τ ) ≤ λ log |τ |2 close to τ = 0 (equivalently,
+l0 (Φ) is the mass of curvature current of Φ at the origin:
+                                          ˆ
+(2.12)                           l0 (Φ) =    (ddc Φ).
+                                            {0}
+
+Lemma 2.6. Let F be a line bundle over the unit-disc ∆ in C equipped with a
+C∗ −action ρ compatible with the standard one on ∆ and fix an S 1 −invariant metric
+Φ on F with positive curvature current. Then the weight w0 of the C∗ action on
+the complex line F0 is given by the following formula involving right derivatives:
+                                       d
+(2.13)                   w0 = − lim      log kρ(τ )s1 k2Φ + l0 (Φ)
+                                  t→∞ dt
+
+for t = − log |τ |2 and s1 a fixed element in the complex line F1 .
+Proof. This can be proved exactly as in Lemma 6 in [59], using that l0 (φ) =
+             d
+− limt→∞ dt    φ(e−t/2 ) if φ is subharmonic on ∆ and S 1 −invariant. Alternatively,
+a highbrow proof can be given as follows, using the equivariant compactification
+F̄ → P1 , as in the discussion preceeding Proposition 2.4 (and by extending Φ to a
+metric on F̄ → P, smooth close to ∞ ∈ P1 ) : the section sτ := ρ(τ )s1 defines a trivi-
+                                                                                     2
+alizing holomorphic section of F̄ ´→ C and hence,  setting´ v(τ ) := − log kρ(τ )s1 kΦ on
+C∗ we can decompose deg F̄ = P1 ddc Φ = C∗ ddc v + {0} ddc Φ. But C ddc v(τ ) =
+                                              ´                            ´
+´∞      dv(e−t/2 )
+ −∞ d(      dt     ) = limt→∞ dv(t)/dt − 0, which concludes the proof using formulae
+2.12 and 2.11.                                                                          
+2.4. The Monge-Ampère equation on X and geodesic rays. Next we explain
+how to attach a canonical metric on the line bundle L → X over a test configuration
+to a given metric φ on L → X and the relation to weak geodesic rays. This builds
+on ideas introduced in the work of Phong-Sturm [60, 62] and Chen-Tang [15].
+   Let (X, L) be a polarized normal variety and (X , L, ρ) a test configuration for
+X (recall that X is assumed normal). Denote by M the variety with boundary
+obtained by restricting X to the unit-disc ∆ ⊂ C. Given a locally bounded metric
+φ1 with positive curvature on L we let φ be the metric on L → M defined as the
+following envelope:
+(2.14)                      φ := sup{ψ : ψ ≤ φ1 on ∂M }
+where ψ ranges over all locally bounded metrics with positive curvature form on
+L → M and φ1 is identified with the S 1 −invariant metric on ∂M induced by the
+given metric (since we are not a priori assuming that ψ is continuous the boundary
+condition above means that, locally, lim supzi →z ψ(zi ) ≤ φ1 (z) for any sequence zi
+approaching a boundary point z). Occasionally, we will use the logarithmic real co-
+ordinate t = − log |τ |2 on the punctured disc ∆∗ . We note that since X is identified
+with the fiber X1 of X we can use the action ρ to identify the metrics φτ on Xτ
+with a curve of metric
+(2.15)                      φt := ρ(τ )∗ φτ , t := − log |τ |2
+on L. Next we will show that the metric φ above can be seen as a solution to a
+Dirichlet problem for the Monge-Ampère operator on M. In fact, it will be conve-
+nient to formulate the result for any test configuration:
+Proposition 2.7. Let (X , L) be a test configuration for the polarized variety (X, L)
+with normal total space X . Then the following holds:
+                                            14
+      • φ is S 1 −invariant
+      • φ is locally bounded with positive curvature current and upper semi-continuous
+        in M
+      • φτ → φ1 uniformly as |τ | → 1 (with respect to any fixed trivializing of L
+        close to a given boundary point).
+      • In the interior of M we have that (ddc φ)n+1 = 0 in the sense of pluripo-
+        tential theory.
+Proof. The first point follows immediately from the extremal defining of φ. It will
+be convenient to identify the metric φ1 with a C∗ −invariant metric on L over the
+punctured unit-disc ∆∗ using the action ρ. We will also, abusing notation slightly,
+identify the coordinate τ with the psh function on π ∗ τ on X . Let us first construct
+a barrier, i.e. a continuous metric φ̃ on L with positive curvature current such
+that φ̃ = φ1 on ∂M and φ̃τ → φ1 as |τ | → 1. To this end first observe that for
+ǫ > 0 sufficiently small there exist a continuous metric φU with positive curvature
+on L → U over the open set U := {|τ | ≤ ǫ} ⊂ X . Indeed, we can set φU = φF S for
+the Fubini-Study metric induced by a fixed embedding of X (see the end of section
+2.2). Finally, we set φ̃ := max{φ1 + log |τ |, φU − C} for C sufficiently large so that
+φ̃ = φU − C for |τ | sufficiently small and φ̃ = φ1 + log |τ | for |τ | > ǫ/2. Since φ̃ is a
+candidate for the sup defining φ we conclude that
+(2.16)                            φ ≥ φ̃ ≥ φ1 + log |τ |
+Next, let us show that φ is locally bounded from above or equivalently that there
+exists a constant C ′ such that
+(2.17)                                φ ≤ φF S + C ′
+Accepting this for the moment we deduce that the envelope φ is finite with positive
+curvature current. Moreover, the upper bound also implies that the upper semi-
+continuous regularization φ∗ of φ is a candidate for the sup defining φ, forcing
+φ = φ∗ in the interior of M, i.e. φ is upper semi-continuous there. To prove the
+previous upper bound we note that since any candidate ψ for the sup defining φ
+satisfies ψ ≤ φF S + C on the set E := ∂M it follows from general compactness
+properties of positively curved metrics (or more generally, ω−psh functions) that
+there is a constant C ′ such that ψ ≤ φF S + C ′ on all of M. Indeed, by a simple
+extension argument we may as well assume that u := ψ − φF S extends as an ω−psh
+function to some compactification Xˆ of X for some semi-positive form current ω
+with continuous potentials. But since u ≤ C on the non-pluripolar set E it then
+follows from Cor 5.3 in [30] that u ≤ C ′ on all of X̂ (strictly speaking the variety
+X̂ is assumed non-singular in [30], but we may as well deduce the result by pulling
+back u to a smooth resolution of Xˆ). Alternatively, u can be shown to be bounded
+from above by using the maximum principle to bound it by a solution to a Dirichlet
+type problem for the Laplace operator with respect to a fixed Kähler metric on a
+resolution of M (compare the argument for the upper bound in [62]).
+   Let us next consider the behavior of φ on ∆∗ by identifying φτ with φt as above
+for t ∈ [0, ∞[. Since φ is positively curved and S 1 −invariant it follows that φt is
+convex in t on ]0, ∞[ and in particular the right derivative φ̇(t) with respect to t
+exist and define an increasing function on ]0, ∞[. Hence, φ̇(t) ≤ C1 := φ̇(t1 ) as
+t → 0. Combined with the lower bound 2.16 this means that there exists a constant
+                                                            ′
+CT such that φ̇ ≤ CT for any t ∈ [0, T ] and thus |φt − φt | ≤ CT |t − t′ | for t and t′
+                                            15
+sufficiently small positive numbers. But then it follows that φt converges uniformly
+to the correct boundary values as t → 0 (again using the lower bound 2.16).
+   As for the final point, the vanishing of the Monge-Ampère measure (ddc φ)n+1
+on the regular part of the interior of M is a standard local argument, which follows
+from comparison with the solution of the homogenuous Monge-Ampère equation
+on small balls. Since, the Monge-Ampère measure on a locally bounded metric
+does not charge pluripolar sets and in particular not the singular locus of M this
+concludes the proof.                                                              
+
+   According to the previous proposition the envelope φ thus induces a weak geodesic
+ray φt (formula 2.15) in the space Hb (X, L) of all bounded positively curved metrics,
+starting at a given metric (compare [60]). For much more precise regularity results
+(given suitably smooth data on ∂M ) expressed on a smooth resolution of X we refer
+to the paper [62] and to [15]. However, the point here is that the modest regularity
+results above will be adequate for our purposes and that are valid for any given
+locally bounded positively curved metric φ1 .
+Example 2.8. Given (X, L) and a metric φL in Hb (L) we set (X , L, π) = (X ×
+C, p∗1 L, p2 ) and equip L with the metric φ := p∗1 φL ∈ Hb (L). Then φ is the unique so-
+lution to the Dirichlet problem for the complex Monge-Ampère equation on π −1 (∆)
+with boundary data p∗1 φL . This example fits into the setting above if one equips
+(X , L) with the “trivial” action ρtriv covering the standard C∗ −action on C and
+then the ray φt , as defined by formula 2.15, is constant in t : φt = φL , since ρtriv
+preserves φ. On the other hand, if we are given a non-trivial holomorphic vector
+field V generating a C∗ −action on (X, L), such that the corresponding S 1 −action
+preserves φL , then we can endow (X , L) with the corresponding non-trivial action
+ρ (in the sense of Example 2.1), which still preserves the boundary data. The cor-
+responding ray φt determined by φ and ρ is then given by φt = (etV )∗ φL . Note that
+ρtriv = ρ ◦ ρ(X,−V ) in the notation of Example 2.1 and hence φ is invariant under
+ρ ◦ ρ(X,−V ) in the sense that (ρ ◦ ρ(X,−V ) )∗ φ = φ.
+
+                         3. Proofs of the main results
+   Recall that the Ding functional introduced in [20], in the setting of smooth Fano
+manifolds X, is the functional on the space of all smooth positively curved metrics
+on −KX defined, in our notation, by
+                                     1
+                                                      ˆ
+(3.1)                 D(φ) := −           E(φ) + log      e−φ .
+                                 (−KX )n                X
+It follows immediately from the variational property 2.6 of E that the critical points
+of D are Kähler-Einstein metrics. More generally, the functional D(φ) is well-defined
+and finite on the space Hb (−KX ) of bounded metrics on −KX as long as X has
+log terminal singularities (see Lemma 3.7 for the finiteness of the integral piece).
+Moreover, for any curve φt in Hb (−KX ) such that φ0 is a (singular) Kähler-Einstein
+metric and the right derivative dφ
+                                 dt |t=0+ exists we have
+                                   t
+
+
+
+                                   dD(φt )
+(3.2)                                         ≥0
+                                     dt |t=0+
+as follows from the affine concavity of E and the Kähler-Einstein equation (see [3,
+Formula 6.5]).
+                                           16
+3.0.1. Sketch of the proofs of Theorem 3.11 and Theorem 1.1 in the Q−Gorenstein
+case. First note that in the case when the total space X of the test configura-
+tion is Q−Gorenstein and L = −KX /C (as is, for example, the case for a spe-
+cial test configuration) the line bundle η → C, whose weight w0 (η) over zero
+is equal to DF (X , L) (Section 2.3), is simply given by the top Deligne pairing
+− (−KX )1n (n+1) −KX /C, ..., −KX /C . 2Given a locally bounded metric φ on L → C
+we define the corresponding Ding metric Φ on η as the induced Deligne metric hφi
+plus the function
+                                                ˆ
+(3.3)                          vφ (τ ) := − log   e−φτ
+                                                      Xτ
+(using, as before, additive notation for metrics) on C∗ , which, as will be explained
+in the next section extends to a unique subharmonic function on C. By the change
+of metrics formula 2.7 the Ding metric Φ(τ ) may, as the name suggest, be identi-
+fied with the Ding functional D(φt ) (formula 3.1) along the corresponding ray of
+metric φt on −KX . More generally, when X is Q−Gorenstein and L is a general
+polarization for X → C the idea is to replace η with another line bundle δ, that we
+shall call the Ding line bundle, defined by
+                             1
+                 δ := − n          hL, ..., Li + π ∗ (L + KX /C) → C,
+                         L (n + 1)
+where π ∗ (L + KX /C ) is the corresponding adjoint direct image sheaf. In this more
+general case we define the corresponding Ding metric Φ as the Deligne metric hφi
+plus the natural L2 −type metric on π ∗ (L + KX /C ) induced by φ. Even if δ is, in
+general not isomorphic to η we will show that
+                       (DF (X , L) =) w0 (η) = w0 (δ) + p, p ≥ 0
+where p = 0 iff L is isomorphic to −KX /C. Applying the Kempf-Ness type Lemma
+2.6 to w0 (δ) then gives
+                                       d
+(3.4)                DF (X , L) = lim     D(φt ) + q, q = p + l0 ,
+                                  t→∞ dt
+where l0 is the Lelong number l0 at zero of the Ding metric, which in turn is
+shown to coincides with the non-negative Lelong number of the L2 −type metric on
+π ∗ (L + KX /C ). As a consequence the error term q is non-negative. Finally, taking
+φt to be the geodesic ray associated to (X , L) emanating from a given Kähler-
+Einstein metric and using convexity properties of D(φt ) then proves Theorem 1.1.
+In the case of a general test configuration (X , L) the idea is to apply the previous
+argument to a log resolution of X .
+Remark 3.1. It should be pointed out that, by a recent result of Li-Xu [42] which
+uses recent advances in MMP, a Fano variety X is K-polystable iff it is K-polystable
+for all special test configurations and hence, if one invokes [42], it is enough to con-
+sider special test configurations in the proof of Theorem 1.1. Anyway, as indicated
+above the proof in the general case is not much more involved and combined with
+the existence results in [16] it yields an analytical/differential geometric proof of
+the result of Li-Xu referred to above, at least for X smooth (since it is shown in
+[16] that if a Fano manifold X is K-polystable for all special test configuration,
+   2When making the identiﬁcations between L = −K                 we have to take the lift ρ of the
+                                                           X /C
+C∗ −action on X to be the canonical lift to −K   X /C (compare the beginning of Section 2.2.1).
+                                                 17
+then X admits a Kähler-Einstein metrics). We recall that an important ingredi-
+ent in the proof in [42] is to show that DF (X , L) decreases along a relative MMP
+(first without and then with scaling) which, after an initial base change, modifies
+(X0 , L|X0 ) so that (i) (X , X0 ) has log canonical singularities and (ii) L is isomorphic
+to −KX /C. Interestingly, as we will show (independently of [42]) that (i) holds iff
+l0 = 0 and (ii) holds iff p = 0 and thus the error term q in formula 3.4 achieves it
+minimal value 0 iff (X , L) is a test configuration of the form produced by the MMP
+procedure in [42].
+3.1. The Ding line bundle and the Ding metric. Let (X , L) be a test configu-
+ration for a Fano variety (X, −KX ) and fix an equivariant log resolution p : X ′ → X
+of (X , X0 ) and write L′ := p∗ L. Then (X ′ , L′ ) is a semi-test configuration for
+(X, −KX ). First assume, to fix ideas, that the original Fano variety X is smooth
+with L a line bundle over X and define a the Ding line bundle δ ′ → C by
+                            1
+(3.5)           δ ′ := − n        hL′ , ..., L′ i + π∗′ (L′ + KX ′ /C ) → C,
+                        L (n + 1)
+(when X is smooth the direct image sheaf π∗′ (L′ +KX ′ /C ) is indeed a line bundle, as
+explained below). Given a metric φ on L → X we denote by Φ′ the generalized Ding
+metric on δ ′ , defined as the Deligne metric on the top Deligne pairing of L twisted
+by the L2 −metric on π∗′ (L′ + KX ′ /C ), induced by φ′ := p∗ φ. Note that in general
+L is only assumed to be a Q−line bundle, i.e. rL is a line bundle for some positive
+integer r and then we may simply define π∗′ (L′ + KX ′ /C ) := π∗′ (r(L′ + KX ′ /C )/r
+as a Q−line bundle (which is easily seen to be independent of r) and let Φ′ be the
+metric defined by the corresponding L2/r −norm
+                                        ˆ                 r/2
+                                                         ′
+                           ksτ kL2/r :=      |sτ |2/r e−φτ      ,
+                                 φ
+                                               Xτ
+
+where we have identified the restriction sτ of s ∈ H 0 (X ′ , L′ + KX ′ /C ) with a holo-
+morphic (n, 0)−form on Xτ with values in L′|Xτ (compare the notation in Section
+2.1.3).
+    Turning to the case of a general Fano variety X with log terminal singularities
+first recall that, since the variety X ∗ (:= X − X0 ) has log terminal singularities, we
+have p∗ KX = KX ′ + D∗ on X ′ − X0′ for a (sub) klt Q−divisor D∗ , whose closure
+in X ′ we will denote by D. We can decompose D = D′ − E ′ as a difference of
+effective Q−divisors where E ′ has integral coefficients (but we are not claiming
+that the D′ and E ′ have no common components) . We may and will assume that
+the log resolution is such that the support of D has simple normal crossings and is
+transversal to X0′ . We then define
+                            1
+             δ ′ := −                hL′ , ..., L′ i + π∗′ (L′ + D′ + KX ′ /C ) → C,
+                        Ln (n + 1)
+and denote by Φ′ the corresponding metric on δ ′ , which is defined using the log
+adjoint L2/r −metric on π∗′ (L′ + D′ + KX ′ /C )
+                                        ˆ                              r/2
+                                                            ′
+                         ksτ kL2/r :=          |s′τ |2/r e−(φτ +φD′ )
+                          φ
+                                      Xτ
+To see that π∗ (L +D +KX ′ /C ) is indeed a line bundle over C first note that over C∗ ,
+             ′   ′  ′
+                                                                      0    ′  ′
+where the sheaf is globally free, any fiber may be identified with H (X , E ), where
+                                                18
+X ′ = p∗ X and E ′ is p−exceptional, so that dim H 0 (X ′ , E ′ ) = 1. The extension
+property to all of C then follows from general principles. Indeed, the direct image
+sheaf is clearly torsion-free and since the base is a curve any torsion-free sheaf is
+automatically locally free (indeed, to get a local generator for the sheaf close to
+0 ∈ C one simply takes an element with minimal vanishing order at 0).
+3.2. Positivity/continuity properties of the Ding metric. In this section
+we assume given a Fano variety X (with log terminal singularities) and a locally
+bounded metric φ1 on −KX with positive curvature current. Fixing a test config-
+uration (X , L) for (X, −KX ) and a resolution (X ′ , L′ ), as in the previous section,
+we denote by φ the induced S 1 −invariant locally bounded metric on L → M (⊂ X )
+(compare Section 2.4), by φt the corresponding weak geodesic in Hb (−KX ) and by
+Φ the corresponding Ding type metric on the Ding line bundle δ ′ → ∆.
+   The study of the positivity properties of the Ding metric relies on the following
+fundamental positivity result of Berndtsson-Paun for direct image vector bundles
+(applied the rank one case):
+Lemma 3.2. Let X be a non-singular projective variety with a morphism π : X →
+C which is smooth (i.e. a submersion) over C∗ and a Q−line bundle L → X
+equipped with with a singular metric φ with positive curvature and such that the
+restriction φτ to each fiber Xτ , for τ ∈ C∗ , satisfies e−φτ ∈ L1loc . If π∗ (L+KX /C ) →
+C is defined as a Q−line bundle (i.e. if dim H 0 (L|Xτ + KXτ ) = 1 for τ ∈ C∗ ) then
+the corresponding L2/r −metric on the line bundle π∗ (L + KX /C ) → C has positive
+curvature in the sense of currents (where r is a positive integer such that rL is a
+line bundle).
+Proof. The positivity over C∗ is a special case of the main results in [8, 11] (note
+that by assumption the L2/r −metric is finite over C∗ ). The positivity over a neigh-
+borhood of 0 also follows from the arguments in [11]. But as the latter positivity
+was not stated explicitly in [11] we provide a detailed proof3. Fix a local trivializing
+section of π∗ (r(L + KX /C )) → C over a small neighborhood V of 0 ∈ C. It may
+be identified with a global holomorphic section s of r(L + KX /C ) → X|V with the
+property that τ does not divide s. Fix a local coordinate τ on C and let
+                                  1       2                2/r
+(3.6)                 v(τ ) := − log kskL2/r (= − log ksk 2/r )
+                                  r         φ              Lφ
+
+be the corresponding local weight of the L2/r −metric on the Q−line bundle r1 π∗ (r(L+
+KX /C)). By basic properties of subharmonic functions the positivity in question is
+equivalent to an upper bound on v(τ ) on V or equivalently a lower bound
+                                ˆ
+                        2/r
+(3.7)               ksk 2/r :=       |sτ |2/r e−φτ ≥ ǫ > 0, τ ∈ V
+                            Lφ
+                                       Xτ
+                                 2/r −φ
+where we have identified |s| e        with a family of measures over X ∗ := π −1 (C∗ )
+(as in Section 2.1.3). A subtle point is that the assumptions of the lemma do not
+exclude that the holomorphic section s vanishes identically on the reduction of X0
+(i.e. on the underlying variety); for example, this can happen if X0 has components
+with different multiplicities. On the other hand it follows from a local application
+   3The positivity in question is also a special case of the very general positivity results in [58,
+Theorem 1.1], which appeared during the revision of the present paper, whose proof uses among
+other things, semi-stable reduction.
+                                                19
+of the generalized Ohsawa-Takegoshi extension theorem in [11, Lemma 1.1] that
+there exists a uniform constant C (i.e. independent of τ ) such that
+                     ˆ                 ˆ
+                           2/r −φ
+                        |s| e ≤ C          |sτ |2/r e−φτ , τ ∈ V
+                        V                  Xτ
+
+But since s is non-vanishing over V − {0} this implies the desired lower bound
+3.7.                                                                         
+
+   In particular, by the previous proposition the function vφ (τ ) is subharmonic, i.e
+vφ (e−t/2 ) is convex, as long as φ is psh (as already observed in [3, 10] for X non-
+singular and in [4] in general). Next, we will show that if the curvature of the line
+bundle π∗ (L + KX /C ) vanishes identically, then - in the presence of a C∗ −action
+as in the definition of a test configuration - X has to be a product. This will be
+crucial when considering the case DF (X , L) = 0 in the proof of Theorem 1.1.
+Proposition 3.3. Let X be a Fano variety with log terminal singularities and
+(X , L) a test configuration for (X, −KX ) such that X is Q−Gorenstein and L =
+−KX /C. Assume that L is equipped with an S 1 −invariant locally bounded metric φ
+with positive curvature current such that the induced curvature current of the direct
+image sheaf π∗ (L + KX /C ) vanishes identically on C (or more generally, over some
+neighbourhood of 0 ∈ C). Then X is isomorphic to X × C.
+Proof. First recall that it was shown in [10, Theorem 6.1] in the case of X smooth
+and [4, Theorem 5.1] in the general case, that if vφ (τ ) is harmonic, for τ ∈ ∆∗ (i.e.
+vφ (e−t ) is affine in t), then there is a family of biholomorphic maps F t indexed by
+t ∈ R such that
+(3.8)                            (F t )∗ ddc φt = ddc φ0 ,
+where φt denotes the ray of metric on −KX corresponding to φ, i.e. φt = ρ(τ )∗ φτ ,
+for t = − log |τ |2 (compare Section 2.4). Moreover, as shown in [10, Section 4.1]
+F t = exp (tReV )for a holomorphic (1, 0)−vector field V on X such that the flow
+of its imaginary part ImV preserves ddc φ0 . In fact, in the present setting we even
+have
+(3.9)                                (F t )∗ φt = φ0 ,
+where we have used the same notation F t for the canonical lift of F t to −KX . To
+                                                              t ∗ t    0
+see this first note that the relation 3.8 implies
+                                              ´ −φ that (F ) φ = φ + a(t) for some
+                                 −t
+function a(t) and since vφ (e ) = − log X e          0
+                                                       + a(t) is assumed affine it follows
+that a(t) is also affine, i.e. ´a(t) = at + c for some real numbers a and c. But then it
+follows that vφ (τ ) = − log X e−φ0 + a log |τ |2 + c and hence a is equal to the Lelong
+number l0 of vφ (τ ) at 0. Now, l0 coincides with the mass at 0 of the curvature
+current on π∗ (L + KX /C ) (see formula 2.12) which is assumed to vanish and hence
+a = 0 and since F 0 is the identity this means that c also vanishes, which proves
+3.9. Next, we make the following
+(3.10)              Claim: V generates a C∗ −action ρ(X,V ) on X
+(i.e. the flow of ImV has period 2π). This is obvious if X admits no non-trivial
+holomorphic vector fields (since V = 0 then) and in the general case the claim
+follows from Lemma 3.4 below, by observing that X0 is reduced. Indeed, as ob-
+served above, the Lelong number l0 = 0 and hence it follows from Proposition 3.8
+                                            20
+below that X0 is indeed reduced.4 We will write Fτ := ρ(X,V ) (τ ) for the family of
+biholomorphic maps on X, indexed by τ ∈ C∗ , generated by V (so that Fτ = F t
+for τ = e−t/2 ). Next, we set
+                               Gτ := ρτ ◦ Fτ−1 ; X0 → Xτ
+so that
+(3.11)                                  G∗τ φτ = φ1
+Using an equivariant embedding into PN (see section 2.2) we can identify Gτ with
+a family of holomorphic embeddings
+              Gτ : X → PN , Xτ := Gτ (X), G∗τ O(1) = −KX , τ ∈ C∗
+Since φ is a locally bounded metric on L → X we have that |φ − p∗1 φF S | ≤ C over
+∆, where φF S denotes the Fubini-Study metric on O(1) → PN and p1 the natural
+projection PN × ∆ → PN . Hence, 3.11 gives
+(3.12)                            sup |G∗τ φF S − φ1 | ≤ C
+                                   X
+
+for τ ∈ ∆ . We claim that the corresponding holomorphic map G from X × ∆∗ to
+          ∗
+
+PN × ∆ extends to a holomorphic map X × ∆ → PN × ∆. To see this introduce local
+coordinates on an open set U ⊂ X centered at a given point x0 in X and fix an
+affine piece CN of PN such that G1 (U ) ⊂ CN . Then there exists a bounded subset
+B of CN +1 such that Gτ (U ) ⊂ B for any τ ∈ C∗ . Indeed, by the very definition of
+the Fubini-Study metric φF S the bound 3.12 gives that there exists a constant C ′
+such that |Gτ (z)| ≤ C ′ for any z ∈ U and τ ∈ C∗ and hence B can be taken as as
+ball of radius C ′ . Hence, applying Harthog’s extension theorem (coordinatewise)
+thus gives that G|U×∆∗ extends to a unique holomorphic map of U × ∆ into CN × ∆
+and since the point x0 was arbitrary this proves the claim. Moreover, since X is
+normal and in particular closed and irreducible, it follows that G maps X × ∆
+surjectively onto X ⊂ PN × ∆. We claim that G is a finite map. Since G is, by
+construction, injective on X × ∆∗ it will be enough to prove that the restriction
+of G to X × {0}, that we denote by G0 , defines a finite map from X to PN . To
+this end we note that that G0 pulls back the cohomology class c1 (O(1)) on PN to
+c1 (L)(= c1 (−KX )). Indeed, by construction
+(3.13)                             G∗τ c1 (O(1)) = c1 (L)
+for any τ ∈ C∗ and since Gτ → G0 as τ → 0 (in the sense established above) it
+follows that 3.13 also holds for τ = 0 and hence G0 pulls back a Kähler class on
+Pn to a Kähler class on X. But then G0 has to be finite, since otherwise G0 would
+contract some p- dimensional subvariety Vp of X. This would mean that the p th
+intersection number of c1 (L) with Vp vanishes, contradicting the fact that c1 (L) is
+a Kähler class. All in all this means that G defines a finite birational morphism
+from X × C to X and since X is assumed normal it then follows from Zariski’s Main
+Theorem that G is a biholomorphism, as desired. The same argument also applies
+if τ = 1 is replaced with any τ0 6= 0 such that vφ (τ ) is harmonic for |τ | ≤ |τ0 |. 
+
+   4In fact, one does not have to use the fact that X is reduced if one instead performs a
+                                                       0
+base change followed by a normalization to get a new normal test conﬁguration X ′ with reduced
+central ﬁber to which Lemma 3.4 can be applied; this corresponds to replacing V with mV for
+some positive integer m.
+                                             21
+   The previous proposition can be seen as a partial generalization to singular
+fibrations of a result in [9] (see Theorem 1.2 and the discussion in Section 4.1 in [9]
+where the fibration is assumed to be a submersion, but without any assumptions
+on C∗ −equivariance). In the proof we used the following lemma of independent
+interest:
+Lemma 3.4. Assume given a non-trivial holomorphic vector field V on a normal
+variety X of type (1, 0) with a fixed lift to L → X and a metric φ0 ∈ Hb (L), which
+is invariant under the flow ImV. Then V generates a C∗ −action on X iff there
+exists a (normal) test configuration (X , L, π, ρ) with reduced central fiber X0 such
+that (etReV )∗ φ0 = ρ(τ )∗ φτ , where φτ = φ|Xτ for some φ ∈ Hb (π −1 (∆), L).
+Proof. If V generates a C∗ −action then the test configuration can be taken as a
+product, as explained in Example 2.8. But in order to prove the converse, which is
+what was used in the proof of Proposition 3.3, we will have to show that the total
+space X of the given test configuration is necessarily a product. We will continue
+with the notation from the Proposition 3.3. First observe that the map Gτ above
+is well-defined for τ = e−t/2 ∈ [0, 1[ and set Gt := Ge−t . By the argument above
+the map G0 := limtj →∞ Gt still exists and defines a holomorphic map from X to
+X ⊂ PN , if one uses “normal families” instead of Harthog’s extension theorem, for
+some subsequence tj → ∞ (but we are not claiming that G0 is independent of the
+subsequence at this point).
+   Step 1: X0 is reduced and irreducible, i.e. defined by a variety X0 and G0 is
+finite and generically one-to-one, mapping X1 onto X0 and
+(3.14)                                G∗0 φ0 = φ1
+where φ1 is restricted metric on L|X0 .
+   To prove the first point we decompose the central fiber X0P  , viewed as a divisor
+on the normal variety X , in its irreduicble components: X0 = pi=1 mi Ei , where Ei
+are distinct prime divisors on X (i.e. reduced and irreducible). Since X is assumed
+irreducible it follows that G0 maps X1 onto one of the components of X0 that we
+may take to be the one labeled by i = 1. By the definition of G0 we have the
+following convergence in the sense of currents on PN
+                            lim[Xtj ] = (G0 )∗ [X] = d[E1 ],
+                             tj
+
+where d is the degree of the surjective finite map G0 : X → E1 . But the lhs above is
+also equal to [X0 ] (by basic Pconvergence properties of currents, or using the Chow
+variety) and hence d[E1 ] = pi=1 mi [Ei ], which forces d = m1 and p = 1. Now, X0
+was assumed reduced and hence d = m1 = 1, which implies (by basic properties of
+the degree) that G0 is a finite generally one-to-one map from X1 onto the irreducible
+variety X0 (= E1 ). Next, to prove 3.14 we fix a point x0 ∈ X0 ∩ Xreg ∩ (X0 )reg (i.e.
+x0 ∈ X0 − Z where Z has codimension one in X0 , since X is normal). Then there
+exists a neighbourhood U of x0 in X with holomorphic coordinates centered at x0
+of the form (z, τ ). The relation 3.14 then follows from 3.11 and a simple continuity
+argument at x0 . This means that the two psh metrics G∗0 φ0 and φ1 on L → X
+coincide on the Zariski open subset G−1  0 (X0 − Z) of X and hence everywhere, by
+the local identity principle for psh functions.
+   Step 2: The “pull-back” ρ′ to X of the restricted action of ρ to X0 coincides with
+the flow of V
+                                          22
+   Denote by Y ν the normalization of an irreducible variety Y and by ν the nor-
+malization map ν : Y ν → Y, which is a finite generically injective morphism. By
+the universal property of the normalization G0 lifts to X0ν and hence the lifted map
+Gν0 satisfies Gν∗ ∗
+               0 ν φ0 = φ1 . Moreover, since X is normal it follows from Zariski’s
+main theorem that G0 is an isomorphism and hence X isomorphic to the normal-
+ization of X0 and G0 may be identified with ν. Using the universal property of the
+normalization again this means that the the pull-back G∗0 ρ which is a priori only
+well-defined on a Zariski open subset of X where G0 is holomorphically invertible,
+extends to give a well-defined holomorphic C∗ −action ρ′ on X. To prove that ρ′ is
+generated by V we will use a (singular) Hamiltonian formalism. To a given pair
+(ψ, W ) consisting of a locally bounded psh metric ψ on a line bundle L → Y over
+a complex variety Y and a holomorphic vector field W on Y with a fixed lift to L,
+preserving ψ, we associate a function h(ψ,W ) on Y, that we will call the Hamiltonian:
+                                           d
+                               h(ψ,W ) =           (esW )∗ ψ
+                                           ds |s=0
+in the sense of right derivatives (h(ψ,W ) exists and is finite since ψ is locally psh
+and hence (esW )∗ ψ is convex wrt s). In the particular case when W is the generator
+of a C∗ −action ρ we set h(ψ,ρ) := h(ψ,W ) . We let h, h0 and h1 be the Hamiltonian
+functions on X , X0 and X1 corresponding to (ρ, φ), (ρ|X0 , φ0 ) and (V, φ1 ), respec-
+tively. Note that it follows directly from the definition that h|X0 = h0 . Next we will
+show that
+
+(3.15)                                G∗0 h0 = h1
+To this end first observe that
+(3.16)                            h1 (x) = h(Gt (x)).
+Indeed, under the isomorphism X1 × C∗ → X ∗ , (x, τ ) 7→ xτ := ρ(τ )x determined
+by ρ the action ρ on X ∗ may be identified with the “trivial” action on X1 × C∗
+                                 ∂
+generated by the vector field τ ∂τ  and the metric φ on L may be identified with
+the metric on p1 L suggestively written as φ(x, τ ) := φt (x), where t = − log |τ |2 . In
+               ∗
+
+the present setting we have, by assumption, that φt = exp(tV )∗ φ1 where V also
+determines the map Gt from X1 to Xe−t/2 defined above, which may be identified
+with the map (x, 1) 7→ (exp(−tV )x, e−t/2 ) ∈ X1 × C∗ . Using these identifications
+we may write
+                   d                                   d
+     h(Gt (x)) =           φ(exp(−tV )x, e−(t+s)/2 ) =         φt+s (exp(−tV )x) =
+                   ds |s=0                             ds |s=0
+              d                                 d
+         =       φ1 (exp(t + sV ) exp(−tV )x) =         φ1 (exp(sV )x) =: h1 (x),
+              ds                                ds |s=0
+which proves 3.16. Finally, setting t = ti and letting tt → ∞ gives, since G0 (x) :=
+limtj →∞ Gtj (x) that h1 (x) = h(G0 (x)) and hence h1 (x) = h0 (G0 (x)), proving 3.15.
+All in all, combining the pull-back relations 3.14 and 3.15 reveals that h(φ,V ) =
+h(φ,G∗0 ρ ). But for a fixed metric φ ∈ Hb (X) we have that W 7→ h(φ,W ) is injective
+and hence V is the generator of the C∗ −action G∗0 ρ which proves the claim 3.10.
+The injectivity used above is standard under the regularity assumption that there
+exists a point x ∈ X such that ddc φ is smooth and strictly positive close to x, since
+ddc φ(ImV, ·) = dh(φ,V ) , which may be inverted to determine Im V and hence V. In
+                                            23
+the general case, the injectivity follows from the general formalism in [7] (or from
+Proposition 8.2 in [10]). Anyway, in the application to the proof of Theorem 1.1 φ1
+will be a Kähler-Einstien metric and in particular the regularity assumption above
+holds.                                                                             
+Proposition 3.5. Let (X , L) be a test configuration for a Fano variety (X, −KX )
+with log terminal singularities. Then the Ding metric associated to a weak geodesic
+ray φt as above has the following positivity properties:
+      • Its curvature defines a positive current on ∆ (and in particular the function
+        D(φt ) is convex in t)
+      • If X is Q−Gorenstein, L = −KX /C and the curvature current of the Ding
+        metric vanishes on some disc centered at 0 (i.e. D(φt ) is affine on ]T, ∞[
+        and the Lelong number l0 of the Ding metric vanishes) then X is a product
+        test configuration.
+Proof. First we note that the curvature of the Deligne metric hφi on hL, ..., Li
+is non-negative if φ is psh and vanishes if the corresponding ray φt is a weak
+geodesic, as follows from the push-forward formula 2.4 Alternatively, since hφi is
+locally bounded from above (by the continuity result in Prop 3.6) it is enough to
+consider the holomorphically trivial case over ∆∗ where the result amounts to a
+well-known property of the functional E (see [4]). Combined with the positivity in
+the previous lemma this shows that the Ding metric has positive curvature current.
+More precisely, in the case when X is singular we apply the previous lemma to
+the line bundle p∗ L + D′ → X equipped with the metric p∗ φ + φD′ , where φD′
+is the singular psh metric on the line bundle O(D′ ) induced by D′ which satisfies
+e−φD′ ∈ L1loc , since D′ is klt. The last point follows immediately from the previous
+proposition.                                                                       
+Proposition 3.6. The Ding metric associated to a weak geodesic ray is continuous
+on ∆∗ up to the boundary circle.
+Proof. Let us first verify that if φ is a locally bounded positively curved metric on
+L → X then the Deligne metric hφi on hL, ..., Li → C is locally bounded on ∆ and
+continuous at the boundary of ∆. To this end we first recall that if ψ is a smooth
+metric on L(i.e. the restriction to X of a smooth metric) then it was shown by
+Moriwaki [46, Theorem A] that the corresponding Deligne metric hψi on the top
+Deligne product on hL, ..., Li → C is continuous. But since φ is a locally bounded
+metric on L we have that u := φ − ψ is a bounded function on X and hence it
+follows from the change of metric formula 2.7 that
+                             |hφi − hψi| ≤ c1 (L)n sup |u|
+                                                      X
+
+is bounded (where L denotes the restriction of L to a generic fiber). Hence hφi
+is locally bounded, as desired. Alternatively, the local boundedness of hφi can
+be verified directly by induction over the relative dimension, using the recursive
+definition of hφi [75]. Similarly, the continuity at τ = 1 follows from continuity
+properties at τ = 1 of φτ . Indeed, by Prop 2.7 we have that φτ → φ1 uniformly as
+τ → 1, i.e. φt → φ0 and hence it follows from the change of metrics formula that,
+in a fixed local trivialization close to τ = 1, we have
+                |hρ(τ )φτ i − hφ1 i| ≤ c(L)n sup |(ρ(τ )∗ φτ ) − φ1 | → 0,
+                                                X
+                                           24
+as τ → 1 and moreover vφ (τ ) → vφ (1). This shows in particular that, over ∆∗ , the
+Ding metric Φ(= hφi + vφ ) may be identified with a locally bounded S 1 −invariant
+convex function (by the previous proposition) which is continuous up to ∂∆.       
+3.3. Singularity structure of the Ding metric. We continue with the setup
+and notation in the previous section. We will give a detailed description of the
+singularity of the Ding metric at τ = 0 (which however is not used in the proof of
+Theorem 1.1). The key point is the observation that the Lelong number l0 at 0 of
+L2/r - metrics as above can be expressed in terms the log canonical thresholds of
+the corresponding central fiber. First recall that the complex singularity exponent
+cx (v) at a point x in a complex manifold X of a local psh function v (i.e. defined
+on some neighborhood Ux of x) is defined by
+                     cx (v) := sup c : ∃Ux e−cv ∈ L1 (Ux , dV ) ,
+                                  
+                               c∈R
+
+where dV is a local volume form. When
+                               X                     X
+(3.17)               v = vD :=    ai log |fi |2 D :=   ai D i
+                                     i                     i
+where fi is a local holomorphic function determining a zero prime divisor Di the
+number cx (v) coincides with the log canonical threshold at x, denoted bycx (D), of
+the Q−divisor D :
+(3.18)                                   cx (v) = cx (D)
+(see [39, Proposition 8.2]). The latter number admits a purely algebraic definition
+valid for any log pair (X, D), i.e. without assuming X non-singular:
+                  cx (D) := sup {c : cD is log canonical close to x} ,
+                            c∈R
+
+(compare Section 2.1.1). More generally, given a log pair (X, ∆) and an effective
+Q−Cartier divisor D on X the log canonical threshold of (X, ∆, D), along Z, may
+be defined by
+
+                  cZ (X, ∆, D) := sup {c : ∆ + cD is lc close to Z}
+                                     c∈R
+[39, Definition 8.1]. In particular, by definition, (X, D) is lc iff cX (X, 0, D) ≥ 1. It
+will be convenient to introduce the following analytic counterpart of cZ (X, ∆, D)
+obtained by replacing D with a psh function v defined in a neighborhood of Z :
+              cZ (X, ∆, v) := sup c : ∃UZ e−cv ∈ L1loc (UZ , µ(X,∆;φ0 ) ) ,
+                                  
+                              c∈R
+
+where φ0 is a fixed locally bounded metric on −(KX + ∆) and µ(X,∆;φ0 ) denotes the
+corresponding measure on X (see Section 2.1.3). By the boundedness assumption
+on φ0 the definition above is independent of the choice of φ0 . More generally, v can
+be taken as a metric on a Q−line bundle L → X. The following generalization of
+the identity 3.18 holds:
+Lemma 3.7. Let (X, ∆) be a log pair. For v = vD as in formula 3.17 we have that
+
+                             cZ (X, ∆, v) = cZ (X, ∆, D)
+In particular, (X, ∆) has log terminal singularities iff µ(X,∆;φ0 ) gives finite volume
+to X.
+                                               25
+Proof. This is essentially well-known, but for completeness we provide a proof
+(see [19, 39] for the standard case when X is smooth and ∆ is trivial and [28,
+Lemma 6.8][4, Lemma 3.2] for the last statement of the lemma). First note that
+it follows directly from the definitions that it will be enough to show that e−v ∈
+L1loc (UZ , µ(X,∆;φ0 ) ) iff (X, ∆ + D) is klt (since we may then replace v by cv and
+D by cD and take the sup with respect to c). To this end take a log resolution
+of (X, ∆ + D) and denote by π the corresponding morphism from X ′ to X. De-
+note by ∆′ the divisor on X ′ such that (X ′ , ∆′ ) corresponds to (X, ∆) as in for-
+mula 2.1. Since D is Q−Cartier this means that (X ′ , ∆′ + π ∗ (D)) corresponds to
+(X, ∆ + D). Next, using µ(X,∆;φ0 ) = µ(X ′ ,∆′ ;π∗ φ0 ) gives that v ∈ L1loc (UZ , µ(X,∆;φ0 )
+iff I := π−1 (UZ ) e−((v∆′ +π∗ (D) )−v0 ) dV < ∞ (after perhaps shrinking UZ ) for some
+          ´
+
+volume form dV on X, where v0 is a fixed locally bounded metric on the Q−line
+bundle O(∆′ + π ∗ (D)). But X ′ is smooth and ∆′ + π ∗ (D) has simple normal cross-
+ings and hence it follows from the basic fact that c0 (log |z|2 ) = 1 in C and Fubini’s
+theorem that the the integral I is finite iff the coefficients of ∆′ +π ∗ (D) are < 1 (just
+as in [28, Lemma 6.8][4, Lemma 3.2]) which equivalently means that (X, ∆ + D) is
+klt, as desired.                                                                          
+Proposition 3.8. Assume that X is a normal Q−Gorenstein variety and π : X →
+C a projective morphism over C which is smooth (i.e. a submersion) over C∗ . Let
+L → X be a semi-positive Q−line coinciding with −KX /C over C∗ and φ a locally
+bounded metric on L with positive curvature current. Denote by l0 the Lelong
+number l0 at τ = 0 of the induced L2/r −metric on the line bundle π∗ (L + KX /C) →
+C. Then
+(3.19)                          l0 = 1 − cX0 (X , −∆, X0 )
+where ∆ is the zero-divisor in X of any local trivialization section of π∗ (L +
+KX /C) → C, identified with an element of H 0 (U, L + KX /C ). Moreover, denoting
+by Ei the reduced components of X0 we define the numbers mi and ci by
+                              X                X
+                        X0 =      mi Ei , ∆′ =     ci Ei ,
+                                     i                 i
+the following holds:
+      • If X is smooth and the central fiber X0 has simple normal crossings, then
+                                         mi − 1 − ci
+(3.20)                        l0 = max
+                                     i       mi
+      • If L = −KX /C , then l0 = 0 iff (X , X0 ) is log canonical near X0 iff X0 is
+         reduced and the normalization of X0 has log canonical singularities.
+Proof. Fix a local trivializing section of π∗ (r(L + KX /C )) → C over a neighborhood
+V of 0 ∈ C identified with a global holomorphic section s of r(L + KX /C ) → X|V as
+in the proof of Lemma and denote by v(τ ) the corresponding weight on V (formula
+3.6). By Lemma 3.2 v(τ ) is subharmonic and we denote by l0 the Lelong number
+of v at τ = 0 (as in Lemma 2.6). It will be very useful to represent the Lelong
+number l0 as follows
+                          ˆ                                             
+                                                         2
+(3.21)           l0 = inf l :     e−(v(τ )+(1−l) log |τ | ) idτ ∧ dτ̄ < ∞
+                                 V
+(the equivalence with the ordinary definition follows immediately from c0 (log |τ |2 ) =
+1). Next recall that νφ := |s|2/r e−φ defines a measure on X|V , naturally attached
+                                             26
+to φ (see Section 2.1.3). The measure νφ has the property that for, any continuous
+function g on C,
+                         ˆ            ˆ
+                                 ∗
+(3.22)                       νφ π g =    e−v(τ ) g(τ )idτ ∧ dτ̄
+                           X|V            V
+
+The proof of formula 3.19 is simply a matter of unraveling definitions. First assume,
+to fix ideas, that X is smooth. Then there exists a locally bounded metric ψ on
+−KX and k·k on L such that
+                                                   2
+(3.23)                                νφ = ksk µψ
+where µψ is the measure on X corresponding to ψ (see Section 2.1.3). Indeed,
+fixing holomorphic coordinates w = (w0 , ..., wn ) on U ⊂ X and a trivialization
+sL of L → U the section s of r(L + KX /C ), restricted to U, may be written as
+                     ∂
+s = fU sL ⊗ dw ⊗ π ∗ ∂τ , for a holomorphic function fU on U and thus on U
+                                                       2
+                         νφU = |fU (w)|2/r e−φU (w) in dw ∧ dw̄,
+where, by assumption, φ is bounded on U. This proves formula 3.23 in case X is
+smooth. More generally, if X is Q−Gorenstein, then νφ and µψ are still well-defined
+and by the argument above above the relation 3.23 holds on the regular locus of of
+X and thus everywhere since the two measures do not charge the singular locus of
+                                                                       2
+X . In particular, combining formula 3.22 (for g(τ ) = e−(1−l) log |τ | ) ) and formula
+3.23 gives
+                   ( ˆ                                    )
+                             −(1−l) log |τ |2 )    2
+(3.24)    l0 = inf l :     e                    ksk µψ < ∞ = 1 − cX0 (X , −∆, X0 )
+                          X|V
+
+using in the last equality Lemma 3.7 (applied to the log pair (X , −∆) where ∆
+is the zero-divisor of s and with v = log |τ |2 and D = X0 ) which concludes the
+proof of formula 3.19. Formula 3.20 then follows immediately from basic formula
+for log canonical thresholds of simple normal crossing divisors. For completeness
+we provide a proof: by assumption ∆ + cX0 has simple normal crossings and
+                                       X
+                          −∆ + cX0 =      (−ci + cmi )Ei
+                                              i
+
+and since cX0 (X , ∆, X0 ) is the sup over all c such that the coefficients above are ≤ 1
+we get cX0 (X , ∆, X0 ) = mini 1+c mi which, by formula 3.19, proves the formula in
+                                     i
+
+
+the first point. To prove the second point we apply formula 3.24 to the case where
+∆ = 0 and thus l0 = 0 iff 1−cX0 (X , X0 ) = 0, i.e. iff (X , X0 ) if log canonical. Now, if
+(X , X0 ) is log canonical then it follows that X0 is reduced and, by adjunction, that
+its normalization has log canonical singularities (see [?, 2.7]). Finally, the converse
+follows from “inversion of adjunction”, i.e. from the main result of [38], previously
+conjectured by Shokurov (the special case when X0 has log terminal singularities
+follows from a previous result of Kollar et al [39, Theorem 7.5]).                      
+   Combining the last point in the previous proposition with Lemma 2.2 gives the
+following
+Corollary 3.9. Let (X , L) be a test configuration (with a priori non-normal total
+space X ) for a smooth Fano manifold (X, −KX ) such that the central fiber X0 is
+normal. Then X is Q−Gorenstein with L = −KX /C and l0 = 0 iff the variety X0
+                                              27
+has log canonical singularities. In particular, if X is a special test configuration
+then l0 = 0.
+3.3.1. Interlude on Calabi-Yau degenerations. Before continuing we make a brief
+detour to point out that Proposition 3.8 also has some applicatiotions to the non-
+Fano case when X is Gorenstein and KX is a trivial line bundle and hence the
+generic fiber Xτ is a Calabi-Yau manifold. Then F := π∗ (KX /C ) → C is the Hodge
+line bundle and its curvature ddc v(τ ) (wher v(τ ) is given by formula 3.6) coincides
+with the Weil-Peterson metric ωW P on the punctured base C∗ i.e. the pull-back
+of the Weil-Peterson metric on the moduli space of Calabai-Yau manifolds (see
+[76] and references therein). In this case v(τ ) admits an expansion of the form
+                                       −1
+v(τ ) = l0 log |τ |2 + β log( log |τ |2 ) + O(1) as τ → 0, for some integer β ∈ [0, n],
+                                                    2
+where O(1) denotes a term which is bounded in Cloc     [76, Theorem 4.1]. Accordingly,
+Proposition 3.8 applied to this case says that l0 = c(X , X0 ) and l0 = 0 iff v(τ ) has
+at worst log log singularities, i.e.
+                                                         −1
+(3.25)                        v(τ ) = β log( log |τ |2        ) + O(1)
+iff X0 is reduced and its normalization has log canonical singularities. This observa-
+tion can be used to simplify the proof of Theorem 1.2 in [74] (which answers in the
+affirmative a question of Wang) saying that if the Weil-Peterson metric ωW P on the
+base of the Calabi-Yau fibration π : X ∗ → C∗ as above is not complete as τ → 0,
+then, after a base change, the central fiber X0 may be modified so that X0 is reduced
+and has canonical singularities. The starting point is, following [74], the recent
+advances in the MMP which give that, after a base change, one can assume that
+(X , X0 ) is relatively minimal (i.e. divisorially log terminal, dlt) and in particular
+log canonical. Hence, by Prop 3.8 l0 = 0 i.e. v(τ ) has at worst a log log singularity
+as in formula 3.25. The incompleteness assumption on ωW P = ddc v = βωP + O(1),
+where ωP is the Poincaré form on C∗ thus forces β = 0 and hence v(τ ) is bounded
+as τ → 0. But then one concludes that X0 is irreducible with log terminal singu-
+larities (and hence canonical singularities since KX is assumed Cartier), as desired
+(the last claim is the content of the implication (c) =⇒ (a) in Theorem 1.1 in [74],
+                                                                      2 ´
+whose proof is due to Sebastien Boucksom: by Fatou’s lemma in X0 Ω ∧ Ω < ∞
+for a non-trivial Ω ∈ H 0 (X0 , KX0 ) and adjunction, using the dlt assumption, then
+implies that X0 is irreducible and normal and thus log terminal by Lemma 3.7).
+
+3.4. Expressing the Donaldson-Futaki invariant in terms of the Ding func-
+tional. Consider the following Q−line bundle over C defined in terms of the fixed
+log resolution:
+                          1                       1
+           η ′ := −             hL′ , ..., L′ i + n L′ + KX ′ /C + D′ , L′ ..., L′ ,
+                      (n + 1)Ln                  L
+(recall that L = −KX here so that µ = n in formula 2.9). Then
+(3.26)                                DF (X , L) = w0 (η ′ )
+Indeed, combining Prop 2.4 with the push-forward formula for intersection numbers
+gives
+(n + 1)Ln (DF (X , L)) = np∗ (L̄) · p∗ (L̄) · · · p∗ (L̄) + (n + 1)p∗ KX /P1 · p∗ (L̄) · · · p∗ (L̄),
+                                                 28
+Now, p∗ KX /P1 is equal to KX ′ /P1 + D′ modulo the p−exceptional divisor E ′ , which
+give no contribution to the intersection number above, since p∗ L is trivial on E ′ .
+Formula 3.26 then follows precisely as in the proof of Prop 2.5.
+Lemma 3.10. We have that DF (X , L) = w0 (η ′ ) ≥ w0 (δ ′ )
+Proof. Using DF (X , L) = w0 (η ′ ) and decomposing
+                                                                                      
+                      1
+(3.27)   η′ = δ′ +       K  ′
+                           X /C    + D ′
+                                         + L′
+                                              , L′
+                                                   , ..., L′
+                                                             − π∗
+                                                                 ′
+                                                                   (L′
+                                                                       + K  ′
+                                                                           X /C + D ′
+                                                                                      )
+                     Ln
+                                                  1
+                                                       KX ′ /C + D′ +L′ , L′ , ..., L′ − π∗′ (L′ + KX ′ /C ) + D′ =
+                                                                                                                 
+reveals that it is enough to show that w0        Ln
+             1
+         =       (K ¯′ 1 + D′ + L̄′ ) · L̄′ · · · L̄′ − deg π∗′ (L̄′ + KX¯′ /P1 + D′ ) ≥ 0,
+            Ln X /P
+where we have used the the compactification X̄ ′ of the resolution X ′ and the cor-
+responding extension L̄′ of L′ in the first equality (together with formula 2.11). To
+simplify the notation we consider the case when X is smooth so that D′ = 0, but
+the general case is essentially the same. Note that the formula above involving the
+degrees is invariant under L′ → L′ ⊗ π ′∗ OP1 (m) and hence we may as well assume
+that deg π∗′ (L̄′ + KX¯′ /P1 ) = 0 (this corresponds to a performing an overall twisting
+of the original action ρ on L). But the latter vanishing means that the line bundle
+π∗′ (L̄′ + KX¯′ /P1 ) → P1 admits a global trivializing holomorphic section s, unique
+up to scaling by a non-zero complex constant. In particular, s induces a global
+holomorphic section L̄′ + KX¯′ /P1 → X̄ ′ . This means that L̄′ + KX¯′ /P1 is linearly
+equivalent to an effective divisor E (whose support is contained in the central fiber).
+But then it follows, since L̄′ is relatively semi-ample, that
+(3.28)                (KX¯′ /P1 + L̄′ ) · L̄′ · · · L̄′ = E · L̄′ · · · L̄′ ≥ 0
+which thus concludes the proof.                                                                
+   Now we are ready to prove the following more precise version of Theorem 1.3,
+stated in the introduction:
+Theorem 3.11. Let X be a Fano variety with log terminal singularities and (X , L)
+a test configuration (with normal total space) for (X, −KX ) with φ denoting a
+locally bounded metric on L → X → ∆ with positive curvature current. Then,
+setting φt := ρ(τ )∗ φτ , identified with a ray of metrics on −KX we have
+                                                    d
+(3.29)                           DF (X , L) = lim      D(φt ) + q,
+                                               t→∞ dt
+where q is a non-negative rational number determined by the polarized central fiber
+(X0 , L|X0 ) with the following properties, in the case that X is smooth:
+       • If (X ′ , X0′ ) is a given log resolution of (X , X 0 ) with Ei denoting the reduced
+         components of X0′ , then the following formula holds
+                                     mi − 1 − ci      1 X
+(3.30)                     q = max                + n        ci L′n · Ei ,
+                                  i       mi        L i
+         where mi and ci are the order of vanishing along Ei of X0′ of π ′∗ τ and
+         any given non-trivial meromorphic (multi-)section s′ of L′ + KX ′ /C → X ′ ,
+         respectively, i.e. if ∆′ denotes the zero-divisor of s′ , then
+                                    X               X
+                              X0′ =    mi Ei , ∆′ =     ci Ei
+                                       i                      i
+                                                 29
+      • q = 0 iff X is Q−Gorenstein with L isomorphic to −KX /C and X0 is reduced
+        and its normalization has log canonical singularities.
+Proof. First observe that we may as well assume that φt is a weak geodesic ray.
+Indeed, if ψ t is the ray corresponding to a locally bounded metric ψ on L then
+φ − ψ is uniformly bounded and hence f (t) := f1 (t) − f2 (t) := vφ (e−t/2 ) − vψ (e−t/2 )
+(compare formula 3.3) is bounded as t → ∞. But since fi (t) is convex (by Lemma
+3.2) the limit of dfi (t)/dt as t → ∞ exists (a priori in ]0, ∞]) and since f (t) is
+bounded it follows that the limits of dfi (t)/dt coincide. Similarly, g(t) := E(φt ) −
+E(ψt ) is a difference of convex functions (compare the proof of Prop 3.6) and hence
+the limits of dE(φt )/dt and dE(ψt )/dt coincide and thus so do the limits of dD(φt )/dt
+and dD(ψt )/dt.
+   To simplify the notation we will in the rest of the proof assume that X is smooth
+so that D′ = 0, but the proof in the general case is essentially the same. Fix a
+trivializing section s of π∗′ (L′ + KX ′ /C ) → C. The section s induces an isomor-
+phism between L and −KX ∗/C∗ over X ∗ . In fact, since the formula for DF (X , L)
+is invariant under an overall twist of the action ρ on L we may as well assume
+that s is an invariant section and hence, using the notation in the previous lemma
+deg π∗′ (L̄′ + KX¯′ /P1 ) = 0. We also fix a trivializing (mulit-)section σ1 of the Q−line
+      1
+− Ln (n+1)   hL′ , ..., L′ i|τ =1 . By Lemma 2.6
+                                          d
+                        w(δ ′ ) = − lim       log kρ(τ )S1 k2Φ′ + l0 ,
+                                   t→∞ dt
+                      ′                                                ′    ′
+where S1 = σ1 ⊗ s1 ∈ δ|τ =1 and l0 is the Lelong number of the metric Φ on δ . Now,
+kρ(τ )S1 k2Φ′ = kS1 k2ρ(τ )∗ Φ′ and hence setting φt = ρ(τ )∗ φτ and fixing a metric ψ
+                              |Xτ
+on −KX we can write
+                                             1
+                                                               ˆ
+                        2            2
+       − log kρ(τ )S1 kΦ′ + log kσ1 kψD = − n E(φt , ψ) − log     e−φt := D(φt )
+                                            L                   X
+using the previous identifications and the change of metrics formula for the Deligne
+pairing 2.7. Now, using DF (X , L) = w0 (η ′ ) and the decomposition formula in
+Lemma 3.27 together with formula 3.28 and Lemma 2.6 gives
+                                   d                       1 X
+(3.31)         DF (X , L) = lim      D(φt ) + q, q := l0 + n     ci L′n · Ei ,
+                             t→∞ dt                       L i
+where ci is the order of vanishing of s along Ei , when s is viewed as a global
+holomorpic section of L′ + KX ′ /C → X ′ . Moreover, by the trivializing assumption
+on s the numbers ci above coincide with thouse appearing in the formula for l0 in
+Prop 3.8 and hence formula 3.30 follows. Note that both terms appearing in the
+definition of q above are non-negative and hence q ≥ 0. Indeed, by Prop 3.5 l0 ≥ 0
+and the non-negativity of the second terms follows directly from the definitions
+giving that ci ≥ 0 and L′ is semi-ample. Next note that a general meromorphic
+section of L′ + KX ′ /C → X ′ may be written as f (τ )s′ for f (τ ) a meromorphic
+function, whose vanishing (or pole) order at τ = 0 we denote by m. Since the
+formula for q is invariant under ci → ci + m the case of a general section thus
+follows. Accordingly, in the rest of the proof we will take ci to be the non-negative
+numbers determined by the globally trivializing section s′ .
+   Now, by formula 3.31 q = 0 iff the follows condition holds: l0 = 0 and ci = 0 for
+all index i in the set I defined by the condition L′n · Ei > 0. But by formula 3.30
+                                              30
+the latter condition holds iff mi = 1 and ci = 0 for any i ∈ I, i.e. any i such that
+Ei is not p−exceptional for the log resolution p (since L is assumed relative ample).
+Since X is normal we may, by Hironaka’s theorem, take p to be an isomorphism on
+p−1 (X − Z), where Z is a subvariety of codimension at least two (containing the
+singular locus of X ). Hence, if q = 0 then X0 is reduced at any point in X −Z (using
+that, by the previous argument, mi = 1 for any non p−exceptional Ei ). In other
+words, q = 0 implies that the central fiber X0 , viewed as a divisor on the normal
+variety X , is reduced. But then, since q = 0 also implies that ci = 0 for any i ∈ I
+it also follows that L is isomorphic to −KX /C on X − Z and since the codimension
+of X − Z is at least two L is thus the unique extension of −KX /C from the regular
+locus of X , which, by definition, means that X is Q−Gorenstein. Conversely, if X0
+is reduced and X is Q−Gorenstein, it follows from Prop 3.8 that l0 = 0 and hence
+q = 0.                                                                              
+3.5. Conclusion of the proof of Theorem 1.1. Given a test configuration
+(X , L) for (X, −KX ) Theorem 3.11 gives that for any weak geodesic φt ray em-
+anating from any given metric on L which is associated to (X , L) we have
+                                           d
+                       DF (X , L) = lim      D(φt ) + q, q ≥ 0
+                                     t→∞ dt
+
+Next, by the convexity of D(φt ) the limit in the right hand side above is bounded
+                                        d
+from below by the right derivative dt     D(φt )|t=0+ which, by formula 3.2, is non-
+negative if φ0 is taken as a Kähler-Einstein metric. Thus DF (X , L) ≥ 0 and if
+                                                               d
+DF (X , L) = 0 then it must, since q ≥ 0, be that limt→∞ dt      D(φt ) = 0 and hence
+D(φt ) is affine so that the second point in Prop 3.5 implies that X is isomorphic to
+a product test configuration.
+
+                      4. Ramifications and applications
+4.1. An analog of Donaldson’s conjecture about geodesic stability. Com-
+bining the results above with the very recent existence result in [16] one arrives at
+the following analog of a conjecture of Donaldson [22] (see [14] for partial results
+about Donaldson’s original conjecture):
+Theorem 4.1. Let X be a Fano manifold. Then precisely one of the following two
+alternatives holds:
+    (1) X admits a Kähler-Einstein metric
+    (2) For any given φ0 ∈ Hb (−KX ) there exists a weak geodesic ray φt in Hb (−KX )
+        emenating from φ0 such that the Ding functional D(φt ) is strictly descreas-
+        ing for sufficently large times.
+Proof. If the first alternative holds, then it follows immediately, by the convexity of
+D(φt ) (just as in the proof of Theorem 1.1) that the second alternative cannot hold.
+Now assume that the first alternative does not hold. Then, by the results in [16] X
+is not K-polystable along special test configurations, i.e. there exists a special test
+configuration X such that one of the following alternatives hold (a) DF (X ) < 0 or
+(b) DF (X ) = 0, but X is a not a product test configuration. Now, by Theorem
+3.11 DF (X ) is the large time limit of dD(φt )/dt where φt is any weak geodesic ray
+attached to X . Assuming, to get a contradiction, that alternative above 2 does not
+hold, there exists a sequence of ti → ∞ such that dD(φt )/dt ≥ 0. By the convexity
+of D(φt ) this means that there exists a T > 0 such that dD(φt )/dt ≥ 0 on [T, ∞[.
+                                          31
+In particular, DF (X ) ≥ 0 and hence it must be that alternative (b) holds, i.e.
+DF (X ) = 0 and thus by, convexity, D(φt ) is affine on [T, ∞[. But then it follows
+from Prop 3.5 that X is a product test configuration, which contradicts (b).     
+   In the original conjecture of Donaldson (X, −KX ) is replaced by a general po-
+larized manifold (X, L) and the Ding functional with the Mabuchi functional.
+Moreover, originally Donaldson’s conjecture asked for bona fide geodesic rays φt
+of smooth and stricly positively curved metrics, but in view of the recent theory
+about geodesics one would expect that the best regularity that one can hope for
+is that ω t := ddc φt be locally bounded, if ω 0 is a Kähler form. By the regularity
+results in [62], this is indeed the case in Theorem 4.1 above. Finally it should be
+pointed out that a weaker version of Theorem 4.1 has independently been obtained
+in [18], where it is assumed that X admits no holomorphic vector fields and where
+the “destabilizing” weak geodesic ray φt appearing in item 2 is merely in a finite
+energy class. On the other hand the proof in [18] dos not rely on the results in [16]
+(but rather estimates along the Kähler-Ricci flow).
+4.2. Bounds on the Ricci potential and Perelman’s λ−entropy functional.
+Let now X be a Fano manifold and denote by K(X) the space of all Kähler metrics
+ω in c1 (X) (equivalently, ω = ddc φ for some strictly positively curved´ metric φ on
+−KX ). In this section we will use the normalization V := c1 (X)n := X ω n . Recall
+that the Ricci potential hω is the function´ on X defined by ddc hω = Ric ω − ω
+together with the normalization condition ehω ω n /V = 1, which in terms of the
+                                                           c    n
+previous notation means that hddc φ := hφ := − log( e(dd     φ)
+                                                              ´ /V
+                                                         −φ / e−φ ). Note in particular
+
+that
+                                             1             e−φ
+                       1 − ehω L1 (X,ω) =      (ddc φ)n − ´ −φ ,
+                                            V                e
+where the norm in the right hand side is the total variation norm on the space of
+absolutely continuous probability measures on X.
+   Next, let (X , L) be a test configuration of a polarized manifold (X, L) and define
+its “L∞ −norm” by
+                                             dφt
+(4.1)                       k(X , L)k∞ :=                    ,
+                                              dt |t=0 L∞ (X)
+where φt is the (weak) geodesic determined by X , emanating from any fixed refer-
+ence metric φ0 ∈ H(X, L). The point is that if k(X , L)k∞ 6= 0 then the normalized
+Donaldson-Futaki invariant DF (X , L)/ k(X , L)k∞ is independent of base changes
+of (X , L), induced by τ → τ m (which correspond to reparametrizations of φt , in-
+duced by t 7→ mt). We will be relying on the following lemma which is a special
+case of a very recent result of Hisamoto [36, Theorem 1.1]:
+Lemma 4.2. The number k(X , L)k∞ is well-defined, i.e. it is independent of φ0 .
+   Now we can prove the following theorem using a slight variant of the proof of
+Theorem 1.3; the result can be seen as an analog of Donaldson’s lower bound on
+the Calabi functional [24],
+Theorem 4.3. Let X be a Fano manifold. Then
+                                                       −DF (X , L)
+                     inf     1 − ehω L1 (X,ω) ≥ sup                ,
+                   ω∈K(X)                        (X ,L) k(X , L)k∞
+                                            32
+where (X , L) ranges over all test configurations (X , L) such that k(X , L)k∞ 6= 0.
+Moreover, if equality holds and the infimum is attained at some ω and the supremum
+is attained at (X , L) (with X normal), then (X , L) is isomorphic to a product test
+configuration. In particular,
+                                        n
+                                                               2
+                                   hω ω    1         DF (X , L)
+                            ˆ
+                      inf     hω e        ≥ sup
+                    ω∈K(X)            V    2 (X ,L) k(X , L)k∞
+where the sup ranges over all destabilizing (X , L) (i.e. DF (X , L) > 0) with the
+same same necessary conditions for equality as before. In particular, if X is K-
+unstable then both infimums above are strictly positive.
+Proof. Fix (X , L) and φ0 ∈ H(X, −KX ) and denote by φt the corresponding (weak)
+geodesic. By convexity of the Ding functional, combined with Theorem 1.3 (using
+that q ≥ 0), we have
+(4.2)
+                       e−φ0
+                               t
+       1                       dφ     d                   d
+ˆ
+         (ddc φ0 )n − ´ −φ         ≥ − D(φt )t=0 ≥ − lim     D(φt ) ≥ −DF (X , L).
+  X    V                e   0   dt    dt             t→∞  dt
+Applying Hölder’s inequality with exponents (q, p) = (1, ∞) thus gives
+                                      dφt
+(4.3)              1 − ehω L1 (X,ω)                   ≥ −DF (X , L)
+                                       dt |t=0 L∞ (X)
+and using the independence in the previous lemma then concludes the proof of
+the first inequality of the Theorem. The second inequality then follows immedi-
+ately from the classical Csiszar-Kullback-Pinsker inequality between the relative
+entropy and the total variation norm [17]. As for the equality case it follows,
+just as in the second proof of Theorem 1.1, from the equality cases in 4.2. Fi-
+nally, if X is K−unstable then there exists, by definition, a test configuration such
+that DF (X , L) > 0 and for any such test configuration the inequality 4.3 forces
+k(X , L)k∞ > 0, which concludes the proof.                                         
+   Recall that in the definition of a test configuration (X , L) we have fixed an action
+ρ on L and thus the norm k(X , L)k∞ certainly depends on ρ. Indeed, twisting ρ
+with a character of C∗ shifts the tangent of φt with a constant. On the other hand,
+DF (X , L) is independent of such a twist and hence the previous theorem still holds
+if we replace k(X , L)k∞ with its (smaller) normalized version obtained by replacing
+the L∞ (X)−norm in the definition 4.1 with the quotient norm on the quotient
+space L∞ (X)/R.
+Remark 4.4. As pointed out above Lemma 4.2 is a special case of a general result
+                                               t
+of Hisamoto [36], saying that the measure ( dφ          t
+                                             dt )∗ M A(φ ) on R only depends on the
+test configuration (X , L) and moreover is equal to the limiting normalized weight
+measures for the C∗ −action, as conjectured by Witt-Nyström [50], who settled
+the case of product test configurations. In particular, by [36] all the Lp −norms
+                 t
+k(X , L)kp of dφ                             t
+               dt (integrating against M A(φ )) only depend on (X , L) and coincide
+                                                                    (k)
+with the limits of the corresponding lp −norms of the weights {λi }. In particular,
+letting p → ∞ gives Lemma 4.2. Using this the proof of the previous theorem shows
+that the theorem holds, more generally, when k(X , L)k∞ is replaced by k(X , L)kp
+for p ∈ [1, ∞] and the L1 −norm with the corresponding Lq −norm, where q is the
+Young (Hölder) dual of p. In fact, as shown in [5] a similar argument can be used
+                                           33
+to give a new proof and extend to general Lp −norms Donaldson’s lower bound on
+the Calabi functional [24].
+   Next, we recall that Perelman’s W-functional [55], when restricted to the space
+all pairs (ω, f ) such that ω as in the space K(X) of all Kähler metrics ω in c1 (X)
+and f is a smooth function such that e−f ω n has unit mass, is given by
+                                     ˆ
+                        W (ω, f ) :=    (Rω + |∇f |2 + f )e−f ω n ,
+                                      X
+                                                                    ´
+where Rω is the scalar curvature of ω normalized so that Rω ω = n for any
+ω ∈ c1 (X) (as usual in the Kähler setting where the volume of the metrics is fixed
+we have set Perelman’s parameter τ to be equal to 1/2 and as in [55, 72, 73, 33]
+we have subtraced the universal constant 2n from Perelman’s original definition).
+Then Perelman’s λ−entropy functional on K(X) is defined as
+
+                         λ(ω) =            inf                W (ω, f )
+                                  f ∈C ∞ (X):    e−f ω n =1
+                                             ´
+
+
+[55, 72, 73, 33] and in particular λ(ω) ≤ W (ω, 0) = nV.
+Corollary 4.5. Let X be an n−dimension Fano manifold. Then
+                                                        2
+                                    1         DF (X , L)
+                   sup λ(ω) ≤ nV − sup
+                 ω∈K(X)             2 (X ,L) k(X , L)k∞
+where V = c1 (X)n and (X , L) ranges of all destabilizing test configurations for
+(X, −KX ). In particular, if X is K-unstable then λ ≤ nV − ǫ for some positive
+number ǫ.
+Proof. As explained in [33] λ(ω) + hω ehω ω n ≤ nV (using W (ω, f ) ≤ W (ω, −hω )
+                                   ´
+and one integration by parts) and hence the corollary follows immediately from the
+previous theorem.                                                               
+
+Remark 4.6. The previous inequality was inspired by the result in [73] and its
+extension to general non-invariant Kähler metrics in [33], saying that
+                           sup λ(ω) ≤ nV − sup H(ξ),
+                         ω∈K(X)           ξ∈LieG
+
+with equality if X admits a Kähler-Ricci soliton, where LieG is the Lie algebra of
+a maximal compact subgroup in Aut0 (X)and H is a certain concave functional on
+LieG, defined in [73]. The proof in [33] was based on the convexity of the functional
+vφt , while we here use the convexity of the whole Ding functional.
+4.3. The log Fano setting. Let us briefly recall the more general setting of
+Kähler-Einstein metrics on log Fano varieties [4] and log K-stability [26, 41, 52]. In
+a nutshell, this setting is obtained from the previous one by replacing the canonical
+line bundle KX with the log canonical line bundle K(X,D) := KX + D of a given log
+pair (X, D). For example, (X, D) is said to be a (weak) log Fano variety if −K(X,D)
+is ample (nef and big). A log Kähler-Einstein metric ω associated to (X, D) is, by
+definition, a current ω in c1 (−K(X.D ), defining a Kähler metric on Xreg − D, with
+locally bounded potentials on X and such that
+                                   Ric ω − [D] = ω,
+                                            34
+holds in the sense of currents, where [D] denotes the current of integration defined
+by D. Equivalently [4], this means that ω is the curvature current of a locally
+bounded metric φKE on −K(X,D) satisfying
+                                                                 2
+                            (ddc φKE )n = Ce−(φKE +log |sD | )
+
+(for some constant C) in the sense of pluripotential theory, where we recall that
+              2
+e−(φ+log |sD | ) denotes the measure associated to a metric φ on −K(X,D) ; see section
+2.1.3. The definitions are compatible with log resolutions (as in formula2.1). Hence
+if (X, D) is a weak log Fano variety, then so is (X ′ , D′ ) and φKE is a log Kähler-
+Einstein metric for (X, D) iff p∗ φKE is a log Kähler-Einstein metric for (X ′ , D′ ).
+
+Example 4.7. If (X, D) is log smooth and klt, i.e. X is smooth and D has simple
+normal crossings with coefficents < 1, it follows the regularity results in [13, 31] give
+that any log Kähler-Einstein metric for (X, D) has edge-cone singularities along D.
+Moreover, by [34], if the log Mabuchi functional (or the log Ding functional) for
+(X, D) is proper the metric even admits a complete polyhomogenous expansion
+along D (this is shown in [34] when D has a singular component and the general
+case is anounced in [34]). However, one of the main points of the approach in
+the present paper is that it only relies on very weak regularity properties of the
+metric (the local boundedness of φKE ) and that it is independent of any properness
+assumption.
+
+   The notion of K-stability has also been generalized to the log setting (see [26,
+41, 52]). Briefly, a test configuration for a log Fano variety (X, D) consists of a test
+configuration (X , L) for (X, L) where L = −K(X,D) . The C∗ −action, applied to the
+support of D in X1 , induces a C∗ −invariant divisor D∗ in X ∗ and we denote by D
+its closure in X . The corresponding log Donaldson-Futaki invariant DF (X , L; D)
+was defined in [41] (by imposing linearity it is enough to consider the case when D
+is reduced and irreducible). A direct calculation reveals that, up to normalization,
+the definition in [41] is equivalent to replacing the relative canonical divisor K in
+the intersection theoretic formula 2.10 with the relative log canonical divisor K +D,
+defined as a Weil divisor (compare [52]):
+
+(4.4)         DF (X , L; D) = µL̄ · L̄ · · · L̄ + (n + 1)(K + D) · ·L̄ · · · L̄, ,
+
+where now µ = n(−(KX + D)) · Ln−1 /Ln . We can hence take the latter formula
+as the definition of the invariant DF (X , L; D). Finally, (X, D) is said to be log
+K-polystable if, for any test configuration, DF (X , L; D) ≥ 0 with equality iff the
+test configuration is equivariantly isomorphic to a product test configuration.
+
+Theorem 4.8. Let (X, D) be a log Fano variety admitting a log Kähler-Einstein
+metric, where D is an effective Q−divisor on X. Then (X, D) is log K-polystable.
+
+Proof. The proof given for Theorem 1.1 actually proves Theorem 4.8 as well, since,
+in the case when X is singular, it uses a log resolution to replace X with a pair
+(X ′∗ , D∗ ) and then uses the closure of the divisor D∗ in X ′ .               
+
+  The theorem thus confirms one direction of the log version of the Yau-Tian-
+Donaldson conjecture formulated in [41].
+                                              35
+5. Outlook on the existence problem for Kähler-Einstein metrics on
+                          Q−Fano varieties
+   Very recently the existence of a Kähler-Einstein metric on a K-polystable Fano
+manifold X was finally settled by Donaldson-Chen-Sun [16]. In this section we will
+briefly discuss how some of the results in the present paper may be useful when
+considering the corresponding existence problem on a singular Fano variety. We
+will follow Tian’s original program, which is based on Aubin’s continuity method
+(see the outline in [71] and references therein), but using the Ding functional as a
+replacement for the Mabuchi functional used in [71]. Howeer, it should be empha-
+sized that the recent results in [16] are based on a modification of Tian’s program
+introduced by Donaldson which involves Kähler-Einstein metrics with conical sin-
+gularities (obtained by replacing the smooth form η in Aubin’s equation 5.1 below,
+with the current defined by a suitable anti-canonical Q−divisor D). One motiva-
+tion for using Aubin’s original method here is that Tian’s conjecture on the partial
+C 0 −estimate (see H1 below) has now been proved along Aubin’s continuity method
+when X is smooth (see [65] which builds on[16]) and one can thus hope that it will
+eventually also be established on singular Fano varieties.
+   The main connection to the present paper stems from the following immediate
+consequence of Theorem 3.11 applied to a special test configuration, which, as will
+be explained below, together with two the general hypotheses H1 and H2 gives the
+existence of a Kähler-Einstein metric on a K-stable Fano manifold.
+Corollary 5.1. Let X be a Fano variety with log terminal singularities and X a
+special test configuration for X such that DF (X ) > 0. Fix a smooth and positively
+curved metric φ on −KX /C (more generally, local boundedness is enough) and set
+φt := ρ∗ φτ . Then the Ding functional D and the Mabuchi functional M both tend
+to infinity along φt , as t → ∞.
+                                             d
+Proof. By Theorem 3.11 we have that limt→∞ dt  D(φt ) > 0 and hence D(φt ) → ∞
+which, by the well-known inequality M ≥ D, concludes the proof.              
+   We recall that the Mabuchi functional M admits a natural extension to the
+space Hb (−KX ) taking values in ] − ∞, ∞] such that M(φ) is finite precisely when
+the measure M A(φ) has finite pluricomplex energy and relative entropy [4]. In
+particular, by the regularity results in [62], M(φt ) is finite, for any fixed t, if the
+initial metric φ0 is smooth and hence under the assumption in the previous corollary
+M(φt ) → ∞ tends to infinity as t → ∞. See [60, 15] for related results in the case
+when the total space X is assumed smooth.
+   After recalling Tian’s program in the smooth setting with an eye towards the
+singular case we will comment on further complications arising when considering
+the existence problem on general Q- Fano varieties.
+
+5.1. The case of a smooth Fano variety X. The starting point of Tian’s pro-
+gram is the continuity equation
+(5.1)                          Ric ωt = tωt + (1 − t)η,
+where ω0 is a given Kähler metric of positive Ricci curvature η and t ∈ [0, 1] is a
+fixed parameter. Let I be the set of all t such that a solution ωt exists. As shown by
+Aubin I ∩[0, 1[ is open and non-empty and hence to prove the existence of a Kähler-
+Einstein metrics, i.e. that 1 ∈ I, it is enough to show that I is closed. More precisely,
+                                           36
+denoting by T the boundary of I and taking ti → T we can write ωti = ddc φti for
+suitably normalized metrics φti on −KX (e.g. satisfying supX (φti − φ0 ) = 0) and
+to show that I is closed it is enough to establish the following C 0 −estimate:
+(5.2)                              sup |φti − φ0 | ≤ C
+                                    X
+
+(then the higher order estimates follow using the Aubin-Yau C 2 −estimate, Evans-
+Krylov theory and elliptic boot strapping). Before continuing we recall that the
+following properties hold along the continuity path 5.1 for t ≥ t0 (for a fixed t0 ∈ I) :
+(5.3)                    (i) Ric ωt ≥ t0 ωt , (ii) M(φt ) ≤ C0 ,
+where the first property follows immediately from the fact that η ≥ 0 and the
+second one from the well-known fact that M(φt ) is decreasing in t.
+   In order to relate the desired C 0 −estimate 5.2 to algebraic properties of X Tian
+                                                                                (k)
+proposed the following conjecture stated in terms of the Bergman function ρω (x),
+at level k, associated to a Kähler metric ω on X :
+                               (k)      P k (φ) 2 −kφ
+                             ρω (x) = N    i=0 |si | e   ,
+                                                                       (φ)
+where φ is any metric on −KX with curvature form ω and {si } is any base
+in H 0 (X, −kKX ) which is orthonormal with respect to the L2 −norm k·kkφ on
+                                        2
+H 0 (X, −kKX ) determined by φ, i.e. kskkφ = X |s|2 e−kφ ω n .
+                                            ´
+
+        • (H1) (Tian’s partial C 0 −estimate). Given t0 ∈]0, 1], let K(X, t0 ) be the
+          space of all Kähler metrics ω in c1 (X) such that Ricω ≥ t0 ω. Then there
+          exists a k > 0 and δ > 0 such that kL is very ample and for any ω ∈
+          K(X, t0 ),
+                                              (k)
+                                     inf ρω (x) ≥ δ
+                                       X
+(more precisely, the conjecture says that k can be chosen arbitrarily large). If the
+                                                                                 (k)
+previous conjecture holds then, as follows immediately from the definition of ρω ,
+the desired C 0 −estimate holds 5.2 iff
+                                           (k)
+(5.4)                             sup φti − φ0 ≤ C
+                                   X
+             (k)                                                               (k)
+where now φti is the Bergman metric at level k determined by φtj , i.e. φtj =
+1     PNk (φtj ) 2                    (k)
+k log  i=0 |si   | . In other words: φti is the scaled pull-back of the Fubini-Study
+                          Nk
+metric φF S on O(1) → P under the Kodaira map Fj determined by φtj :
+                                        (k)
+                   Fj : X → PNk , φti = Fj∗ φF S /k, Fj (X) := Vj
+i.e. Fi (x) = [s0 (x) : s1 (x) : · · · sNk (x)], where now (si ) is a fixed base, which is
+orthonormal with respect to the L2 −norm determined by φtj (strictly speaking,
+due to the choice of base Vi is only determined modulo action of the the unitary
+group U (Nk + 1), but since this group is compact this fact will be immaterial in
+the following). After passing to a subsequence we may assume that the projective
+subvariety Vj := Fj (X) ⊂ PNk , converges, in the sense of cycles, to an algebraic
+cycle V∞ in PNk . It was indicated by Tian [71] that the validity of the previous
+conjecture would imply that the cycle V∞ is reduced, irreducible and even defines
+a normal variety. More precisely, we will make the following
+                                                 37
+      • (H2) V∞ is normal with log terminal singularities and there is a one pa-
+        rameter subgroup ρ : C∗ → GL(Nk + 1, C) such that
+                                    (k)
+                              sup φtj − ρ(τi )∗ φF S ≤ C
+                              X
+
+        where ρ(τi )V0 also converges (in the corresponding Hilbert scheme) to the
+        normal variety V∞
+Then, by standard properties of the Hilbert scheme ρ determines a (special) test
+configuration (X , L) with central fiber V∞ . In fact, as explained in [16] the existence
+of ρ in the case of Donaldson’s contintuity method follows from the reductivity of
+the automorphism group of (V∞ , D∞ ) established in [16], where D∞ is a divisor
+on V∞ induced by η = [D]. Now, assuming that X is K-stable (for simplicity we
+consider the case when X admits no non-trivial holomorphic vector fields, but the
+general argument is similar) we have that DF (X , L) ≥ 0 with equality iff (X , L) is
+equivariantly isomorphic to a product test-configuration (recall that the total space
+X here is automatically normal and even Q−Gorenstein, by Lemma 2.2). In the
+latter case, ρ(τ )∗ φF S −φ is trivially bounded and hence the desired C 0 −estimate 5.2
+then holds, showing that X indeed admits a Kähler-Einstein metric. The main issue
+is thus to exclude the case of DF (X , L) > 0 and this is where Cor 5.1 enters into
+the picture. Thus, assuming the validity of H1 and H2 above we deduce from Cor
+5.1 (with φ the restriction of the Fubini-Study metric) that if the second alternative
+DF (X , L) > 0 holds, then the Ding functional D tends to infinity along ρ(τi )∗ φF S
+                                                    (k)
+and hence it is unbounded from above along φtj . But this implies that D is also
+unbounded along the original sequence φtj (also using that if |ψ − ψ ′ | ≤ C then
+|D(ψ) − D(ψ ′ )| ≤ 2C, as follows immediately from the definition 3.1). But, since
+D ≤ M, this contradicts the property (ii) in formula 5.3 hence it must be that the
+first alternative, DF (X , L) = 0, holds and thus X admits a Kähler-Einstein metric,
+as desired.
+
+5.2. Towards the case of Q−Fano varieties. Let us finally discuss some of the
+new complications that arise when trying to generalize Tian’s program to the case of
+singular K-polystable Fano varieties X (by [51] such a Fano variety X automatically
+has log terminal singularities). Taking η to be a smooth semi-positive form in c1 (X)
+the continuity equations 5.1 are defined as before and, by the results in [4], the set
+I is still non-empty, i.e. T > 0 (using the positivity of the alpha invariant of X).
+The solutions ωt define Kähler forms on Xreg with volume c1 (X)n /n!. Next, we
+note that Tian’s conjecture admits a natural generalization to general Q−Fano
+varieties if one uses the notion of (singular) Ricci curvature appearing in [4] (and
+similarly for general log Fano varieties (X, D)). However, one new difficulty that
+arises is the openness of I. From the point of view of the implicit function theorem
+the problem is to find appropriate Banach spaces, encoding the singularities of X
+(the uniqueness of solutions to the formally linearized version of equation 5.1, for
+t ∈]0, 1[, follows from the results in [4]). On the other hand, another approach
+could be to use the following lemma, where the properness refers to the exhaustion
+function defined by the J−functional (see [4] for the singular case).
+
+Lemma 5.2. The set I is open iff the twisted Ding (Mabuchi) functional Dt (as-
+sociated to the twisting form (1 − t)η) is proper for any t ∈ I.
+                                           38
+Proof. If Dt is proper, then it follows from the results in [4] that a solution ωt
+exists. Conversely, if a solution ωt exists and I is open, i.e. solutions ωt+δ exist for
+δ sufficiently small, then it follows from the convexity of Dt+δ along weak geodesics
+that Dt+δ ≥ C. But since δ may be taken to be positive this implies that Dt is
+proper (and even coercive; compare [4]).                                              
+
+   Note that in the case n = 2 it is a basic fact that a projective variety X has log
+terminal singularities iff it has quotient singularities (defining an orbifold structure
+on X) and hence the two-dimensional Fano varieties are precisely the orbifold Del
+Pezzo surfaces. In the general Fano orbifold case, if one takes η to be an orbifold
+Kähler metric, the usual implicit function theorem applies to give that I above
+is indeed open. For the case of K-polystable Del Pezzo surfaces with canonical
+singularities (i.e. ADE singularities) the existence of Kähler-Einstein metrics was
+established very recently in [53], using a different method, thus generalizing the
+case of smooth Del Pezzo surfaces settled by Tian [70].
+
+
+                                         References
+ [1] Batyrev, V.V. Dual polyhedra and mirror symmetry for Calabi-Yau hypersurfaces in toric
+     varieties, J. Algebr. Geom. 3 (1994), 493–535.
+ [2] Berman, R.J.; Berndtsson, B: Real Monge-Ampère equations and Kähler-Ricci solitons on
+     toric log Fano varieties. arXiv:1207.6128. Annales de la Faculté des Sciences de Toulouse (to
+     appear)
+ [3] Berman, R.J; Boucksom, S; Guedj,V; Zeriahi: A variational approach to complex Monge-
+     Ampere equations. Publications math. de l’IHÉS (2012): 1-67 , November 14, 2012
+ [4] Berman, R.J: Eyssidieux, P: Boucksom, S; Guedj, V; Zeriahi, A: Kähler-Einstein metrics and
+     the Kähler-Ricci ﬂow on log Fano varieties arXiv:1111.7158
+ [5] Berman, R.J: Hisamoto, T: Nyström, DW: Calabi type functionals, test conﬁgurations and
+     geodesic rays (article in preparation).
+ [6] Berman, R.J; Guenancia, H: Kähler-Einstein metrics on stable varieties and log canonical
+     pairs. Geometric and Functional Analysis 2014 (to appear). arXiv: 1304.2087
+ [7] Berman, R.J; Witt Nystrom, D: Complex optimal transport and the pluripotential theory of
+     Kähler-Ricci solitons. arXiv:1401.8264
+ [8] Berndtsson, B: Curvature of vector bundles associated to holomorphic ﬁbrations. Annals of
+     Math. Vol. 169 (2009), 531-560
+ [9] Berndtsson, B: Strict and nonstrict positivity of direct image bundles. Math. Zeitschrift Vol.
+     269 (2011), 3-4, p. 1201-1218.
+[10] Berndtsson, B: A Brunn-Minkowski type inequality for Fano manifolds and the Bando-
+     Mabuchi uniqueness theorem. Inventiones Math. (June 2014) arXiv:1103.0923.
+[11] Berndtsson, B; Paun, M: Bergman kernels and the pseudoeﬀectivity of relative canonical
+     bundles. Duke Math. J. 145 (2008), no. 2, 341–378.
+[12] Berndtsson, B; Paun, M: A Bergman kernel proof of the Kawamata subadjunction theorem.
+     http://arxiv.org/abs/0804.3884
+[13] Campana, F; Guenancia, H; Păun, M: Metrics with cone singularities along normal crossing
+     divisors and holomorphic tensor ﬁelds. arXiv:1104.4879 (as communicated to me by Henri
+     Guenancia the precise results appears in a new version in preparation).
+[14] Chen, X: Space of K¨ahler metrics (IV)- On the lower bound of the K-energy.
+     arXiv:0809.4081v2.pdf
+[15] Chen, X; Tang, Y: Test conﬁguration and geodesic rays. Géométrie diﬀérentielle, physique
+     mathématique, mathématiques et société. I. Astérisque No. 321 (2008), 139–167
+[16] Chen, X; Donaldson, S; Sun, S: Kahler-Einstein metrics and stability. arXiv:1210.7494,
+     Kahler-Einstein metrics on Fano manifolds, I,II,III, arXiv:1211.4566, arXiv:1212.4714,
+     arXiv:1302.0282
+[17] Csiszár, I; Körner, J: Information Theory: Coding Theorems for Discrete Memoryless Sys-
+     tems. Cambridge University Press. (2011). p. 44
+                                                39
+[18] Darvas, T; He, W: Geodesic Rays and Kähler-Ricci Trajectories on Fano Manifolds.
+     arXiv:1411.0774
+[19] Demailly, J-P; Kollar, J: Semi-continuity of complex singularity exponents and Kähler- Ein-
+     stein metrics on Fano orbifolds. Ann. Sci. École Norm. Sup. (4) 34 (2001), no. 4, 525–556.
+[20] Ding, W.Y: Remarks on the existence problem of positive Kähler-Einstein metrics, Math.
+     Ann. , 282 (1988), 463–471.
+[21] Ding, W.Y; Tian, G: Kähler-Einstein metrics and the generalized Futaki invariant. Invent.
+     Math. 110 (1992), no. 2, 315–335.
+[22] S. K. Donaldson. Symmetric spaces, Kähler geometry and Hamiltonian dynamics. In Northern
+     California Symplectic Geometry Seminar , volume 196 of Amer. Math. Soc. Transl. Ser. 2 ,
+     pages 13–33. Amer. Math. Soc., Providence, RI, 1999
+[23] Donaldson, S.K. Scalar curvature and stability of toric varities. J. Diﬀ. Geom. 62 (2002),
+     289-349
+[24] Donaldson, S. K.: Lower bounds on the Calabi functional. J. Diﬀerential Geom. 70 (2005),
+     no. 3.
+[25] Donaldson, S.K: Some numerical results in complex diﬀerential geometry. Pure Appl. Math.
+     Q. 5 (2009), no. 2, Special Issue: In honor of Friedrich Hirzebruch. Part 1, 571–618.
+[26] Donaldson, S.K.: Kahler metrics with cone singularities along a divisor. arXiv:1102.1196
+[27] Donaldson, S.K.: Sun, S: Gromov-Hausdorﬀ limits of Kahler manifolds and algebraic geom-
+     etry. arXiv:1206.2609
+[28] Eyssidieux, P; Guedj, V: Zeriahi, A: Singular Kähler-Einstein metrics. J. Amer. Math. Soc.
+     22 (2009), 607-639.
+[29] ]GM Greuel, C Lossen, E Shustin: Introduction to singularities and deformations. - 2007 -
+     Springer
+[30] Guedj, V; Zeriahi, A: Intrinsic capacities on compact Kähler manifolds. J. Geom. Anal. 15
+     (2005), no. 4, 607–639
+[31] Guenancia, H; Păun. Conic singularities metrics with prescribed Ricci curvature: the case of
+     general cone angles along normal crossing divisors. arXiv:1307.6375
+[32] Elkik, R: Métriques sur les ﬁbrés d’intersection, Duke Math. J. 61 (1990),303–328
+[33] He, W: $\cF$-functional and geodesic stability. http://arxiv.org/abs/1208.1020
+[34] Jeﬀres, T.D.; Mazzeo, R; Rubinstein, Y.A: Kähler-Einstein metrics with edge singularities.
+     Preprint (2011) arXiv:1105.5216.
+[35] Hartshorne, R: Algebraic geometry. Graduate Texts in Math: 52. Springer-Verlag (2006).
+[36] Hisamoto, T: On the limit of spectral measures associated to a test conﬁguration. Preprint.
+[37] Kawamata, Y: Characterization of abelian varieties. Compositio Math. 43
+    (1981), no. 2, 253–276.
+[38] Kawakita, M: Inversion of adjunction on log canonicity. Invent. Math. 167 (2007), no. 1,
+     129–133.
+[39] Kollar, J: Singularities of pairs. Algebraic geometry—Santa Cruz 1995, 221–287.
+[40] Kreuzer, M; Skarke, H: PALP: A package for analyzing lattice polytopes with applications to
+     toric geometry. Computer Phys. Comm., 157, 87-106 (2004)
+[41] Li, C: Remarks on logarithmic K-stability. arXiv:1104.042
+[42] Li, C; Xu, C: Special test conﬁgurations and K-stability of Fano varieties. Annals. of Math.
+     Volume 180 (2014), 197-232. arXiv:1111.5398
+[43] Mabuchi, T: An energy-theoretic approach to the Hitchin-Kobayashi correspondence for man-
+     ifolds, I, Invent. Math. 159(2) (2005) 225–243, MR 2116275.
+[44] Mabuchi, T: K-stability of constant scalar curvature polarization. arXiv:0812.4093
+[45] Mabuchi, T: A stronger concept of K-stability. arXiv:0910.4617
+[46] Moriwaki, A: The continuity of Deligne’s pairing. Internat. Math. Res. Notices 1999, no. 19,
+     1057–1066.
+[47] Morrison, I: GIT constructions of moduli spaces of stable curves and maps. Riemann surfaces
+     and their moduli spaces, 315–369, Surv. Diﬀer. Geom., 14, Int. Press, Somerville, MA, 2009.
+[48] Muñóz García, E. Fibrés d’intersection. Compositio Math. 124 (2000), no. 3, 219–252
+[49] Kempf, G: Ness, L: The length of vectors in representation spaces, Lecture Notes i n Math .
+     73 2 (Springer , New York , 1978 ) 233-244 .
+[50] Nyström, DW: Test conﬁgurations and Okounkov bodies. Compos. Math. (to appear).
+     arXiv:1001.3286, 2010.
+
+                                               40
+[51] Odaka, Y: A generalization of the Ross–Thomas slope theory. Osaka Journal of Mathematics,
+     2013
+[52] Odaka, Y; Sun, S: Testing log K-stability by blowing up formalism. arXiv:1112.1353
+[53] Odaka, Y; Spotti,S; Sun, S: Compact Moduli Spaces of Del Pezzo Surfaces and Kähler-
+     Einstein metrics. http://arxiv.org/abs/1210.0858
+[54] Odaka, Y: On the moduli of Kahler-Einstein Fano manifolds. Proceeding of Kinosaki algebraic
+     geometry symposium 2013. arXiv:1211.4833
+[55] Perelman, G. The entropy formula for the Ricci ﬂow and its geometric applications,
+     Arxiv/0211159.
+[56] Paul, S; Tian, G: CM stability and the generalized Futaki invariant I. arXiv:math/0605278,
+     CM stability and the generalized Futaki invariant II. Astérisque No. 328 (2009)
+[57] Paul, S.T: Hyperdiscriminant polytopes, Chow polytopes, and Mabuchi energy asymptotics.
+     Ann. of Math. (2) 175 (2012), no. 1, 255–296
+[58] Păun, M: Takayama, S: Positivity of twisted relative pluricanonical bundles and their direct
+     images. arXiv:1409.5504
+[59] Phong, D. H.; Ross, J; Sturm, J: Deligne pairings and the Knudsen-Mumford expansion. J.
+     Diﬀerential Geom. 78 (2008), no. 3, 475–496.
+[60] Phong, D. H.; Sturm, J: Test conﬁgurations for K-stability and geodesic rays. J. Symp. Geom.
+     5 (2007) 221–247.
+[61] Phong, D.H; Song, J; Sturm, J; Weinkove, B: The Moser-Trudinger inequality on K¨ahler-
+     Einstein manifolds, American J. of Math., Vol. 130, Nr 4, 2008, 1067-1085.
+[62] Phong, D. H.; Sturm, J: Regularity of geodesic rays and Monge-Ampère equations. Proc.
+     Amer. Math. Soc. 138 (2010), no. 10, 3637–3650.
+[63] Phong, D. H.; Sturm, J: Lectures on stability and constant scalar curvature. Handbook of
+     geometric analysis, No. 3, 357–436, Adv. Lect. Math. (ALM), 14, Int. Press, Somerville, MA,
+     2010.
+[64] Ross, J; Thomas, R: A study of the Hilbert-Mumford criterion for the stability of projective
+     varieties, J. Algebraic Geom. 16 (2007), 201-255.
+[65] Székelyhidi , G: The partial $ C^ 0$-estimate along the continuity method. t arXiv:1310.8471,
+     2013
+[66] Stoppa, J: K-stability of constant scalar curvature K¨ahler manifolds, Adv. Math. 221 (2009),
+     no. 4, 1397-1408.
+[67] Stoppa, J: A note on the deﬁnition of K-stability. http://arxiv.org/abs/1111.5826
+[68] Stoppa, J; Székelyhidi, G: Relative K-stability of extremal metrics. J. Eur. Math. Soc. (JEMS)
+     13 (2011), no. 4, 899–909.
+[69] Tian, G: Kähler-Einstein metrics with positive scalar curvature. Invent. Math. 130 (1997),
+     no. 1, 1–37.
+[70] Tian, G: On Calabi’s conjecture for complex surfaces with positive ﬁrst Chern class. Invent.
+     Math. 101 (1990), no. 1, 101-172.
+[71] Tian, G: Existence of Einstein metrics on Fano manifolds. In Metric and Diﬀerential Geometry
+     Progress in Mathematics, 2012, Volume 297, Part 1, 119-159.
+[72] Tian, G; Zhu, X: Convergence of Kähler-Ricci ﬂow on Fano manifolds, II.
+     http://arxiv.org/abs/1102.4798
+[73] Tian, G; Zhang, S: Zhang, Z: Zhu,X: Supremum of Perelman’s entropy and Kähler-Ricci ﬂow
+     on a Fano manifold. http://arxiv.org/abs/1107.4018
+[74] Tosatti, V: Families of Calabi-Yau manifolds and canonical singularities. arXiv:1311.4845,
+     2013 - arxiv.org
+[75] Zhang, S: Heights and reductions of semi-stable varieties. Compositio Math. 104 (1996), no.
+     1, 77–105.
+[76] Wang, C-L: Curvature properties of the Calabi-Yau moduli. Doc. Math. 8 (2003), 577–590
+[77] Wang, X.; Height and GIT weight. Math. Res. Lett. 19 (2012), no. 04, 909–926
+
+  Department of Mathematical Sciences, Chalmers University of Technology and
+University of Gothenburg, Sweden
+  E-mail address: robertb@chalmers.se
+
+
+
+
+                                                41
+

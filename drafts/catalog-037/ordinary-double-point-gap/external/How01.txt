@@ -1,0 +1,395 @@
+                                                     MULTIPLIER IDEALS OF MONOMIAL IDEALS
+arXiv:math/0003232v1 [math.AG] 31 Mar 2000
+
+
+
+
+                                                                                J. A. HOWALD
+
+
+                                                     Abstract. In this note we discuss a simple algebraic calculation of the
+                                                     multiplier ideal associated to a monomial ideal in affine n-space. We
+                                                     indicate how this result allows one to compute not only the multiplier
+                                                     ideal but also the log canonical threshold of an ideal in terms of its
+                                                     Newton polygon.
+
+
+
+
+                                                                               Introduction
+                                                Multiplier ideals have become quite important in higher dimensional ge-
+                                             ometry, because of their strong vanishing properties, (cf [1], [3], [4], [5], [6],
+                                             [12]). They reflect the singularity of a divisor, ideal sheaf, or metric. It is
+                                             however fairly difficult to calculate multiplier ideals explicitly, even in the
+                                             simplest cases: the algebraic definition of the multiplier ideal associated to
+                                             an arbitrary ideal sheaf a requires that we construct a log resolution of a
+                                             and perform calculations on the resolved space. In this note, we compute
+                                             the multiplier ideal associated to an arbitrary monomial ideal a. Like a, it
+                                             can be described in combinatorial and linear-algebraic terms.
+                                                We begin with some definitions. Let X be a smooth quasiprojective com-
+                                             plex algebraic variety. Let a ⊂ OX be any ideal sheaf. By a log resolution
+                                             of a, we mean a proper birational map f : Y → X with the property that
+                                             Y is smooth and f −1 (a) = OY (−E), where E is an effective Cartier divisor,
+                                             and E + exc(f ) has normal crossing support.
+                                             Definition 1. Let a ⊂ OX be an ideal sheaf in X, and let f : Y → X be a
+                                             log resolution of a, with f −1 (a) = OY (−E). Let r > 0 be a rational number.
+                                             We define the multiplier ideal of a with coefficient r to be:
+
+                                                                     J (r · a) = f∗ OY (KY /X − ⌊rE⌋).
+                                                Here KY /X = KY − f ∗ KX is the relative canonical bundle, and ⌊−⌋ is
+                                             the round-down for Q−divisors. That J (r · a) is an ideal sheaf follows from
+                                             the observation that OY (KY /X − ⌊rE⌋) is a subsheaf of OY (KY /X ): since
+                                             f∗ (OY (KY /X )) = OX , J (r · a) ⊂ OX . We write J (a) for J (1 · a).
+                                               We will now specialize to the case X = An .
+
+                                                Date: February 2, 2000.
+                                                I would like to thank Robert Lazarsfeld for suggesting this problem, and for many
+                                             valuable discussions.
+                                                                                       1
+2                                      J. A. HOWALD
+
+Definition 2. Let a ⊂ C[x1 , · · · , xn ] be a monomial ideal. We will regard a
+as a subset of the lattice L = Nn of monomials. The Newton Polygon P of
+a is the convex hull of this subset of L, considered as a subset of L ⊗ R = Rn .
+It is an unbounded region. P ∩ L is the set of monomials in the integral
+closure of the ideal a [7].
+
+Notation 1. We write 1 for the vector (1, 1, . . . , 1), which is identified with
+the monomial x1 x2 . . . xn . The associated divisor div(1) is the union of the
+coordinate axes. We use Greek letters (λ ∈ L) for elements of L or L ⊗ R,
+and exponent notation xλ for the associated monomials. For any subset P
+of L ⊗ R, we define rP “pointwise:”
+                                  rP = {rλ : λ ∈ P }.
+We write Int(P ) for the topological interior of P , and ⌊P ⌋ for {x⌊λ⌋ : λ ∈ P }.
+   We regard the Newton polygon “officially” as a subset of the real vector
+space L⊗R = Rn ; the interior operation Int(P ) relies on the real topology of
+this vector space. However, we don’t always carefully distinguish P from the
+collection of its lattice points P ∩L, or from the collection of their associated
+monomials {xλ : λ ∈ P ∩ L}.
+   Here is our main result:
+Main Theorem. Let a ⊂ OAn be a monomial ideal. Let P be its Newton
+polygon. Then J (r·a) is a monomial ideal, and contains exactly the following
+monomials:
+                    J (r · a) = {xλ : λ + 1 ∈ Int(rP ) ∩ L}.
+
+Remark 1. The right hand side, {xλ : λ + 1 ∈ Int(rP ) ∩ L}, could instead
+be called ⌊rP ⌋. We state the theorem as we do in order to emphasize the
+monomial 1, which is independently important.
+
+Example 1. If a is generated by a single monomial, xλ , then the polygon
+P is the positive orthant translated upward to λ, and
+                                J (a) = ⌊P ⌋ = P = a.
+  This is not surprising, because in this case a is already a divisor with
+normal crossing support.
+Example 2. Let us calculate the multiplier ideal of (x8 , y 6 ). The Newton
+polygon is pictured in Figure 1. The distinguished integer vectors λ are
+those with the property that λ + 1 ∈ Int(P ). From Figure 1, we conclude
+                   J (x8 , y 6 ) = (x6 , x5 y, x4 y 2 , x2 y 3 , xy 4 , y 5 ).
+Notice that x3 y 2 is almost but not quite in J (x8 , y 6 ), because x4 y 3 lies on
+the boundary, not the interior, of the Newton polygon.
+                     MULTIPLIER IDEALS OF MONOMIAL IDEALS                          3
+
+
+
+
+                 7
+
+
+
+                 6
+
+
+
+                 5
+
+
+
+                 4
+
+
+
+                 3
+
+
+
+                 2
+
+
+
+                 1
+
+
+
+                 0      1     2    3    4    5    6    7     8   9
+
+
+
+
+                  Figure 1. The Multiplier ideal of (x8 , y 6 )
+
+Example 3. Let (ai )i∈n be positive integers, and let a = (xa11 , . . . , xann ).
+One might call this a “diagonal ideal.” The only interesting face of the
+Newton polygon P of a is defined by a single dual vector v = ( a11 , . . . , a1n ).
+Therefore J (a) contains the monomials {xλ : v·(λ+1) > 1}. See [3, example
+5.10], for an analytic perspective on this same result. In this expression, the
+term v ·1 ( = a11 + · · · + a1n ) may be familiar: It is the log-canonical threshold
+of a (see below).
+
+Example 4. Let g ∈ OAn be an arbitrary polynomial. One might hope
+that the multiplier ideal associated to the (non-monomial) ideal (g) would
+be identical to that associated to the monomial ideal ag generated by the
+monomials appearing in g. This is not true. Consider g = (x+y)n in C[x, y].
+By a linear change of coordinates in which z = x + y we obtain g = z n , and
+can calculate J ((g)) in terms of z. This gives J ((g)) = (g) 6= J (ag ).
+   Notice however that for any polynomial g, (g) ⊂ ag . It is not difficult to
+show that J (r · (g)) ⊂ J (r · ag ) for all r. This containment is almost always
+strict, but it does become an equality if both r < 1 and the coefficients of g
+are sufficiently general.
+   These conditions guarantee that the multiplicity of the Q−divisor r · (g =
+0) is less than one away from the zeroes of ag .
+
+Example 5. Let a be a monomial ideal in An , and let P be its Newton
+polygon. The log canonical threshold t of a is defined to be
+                            t = sup{r : J (r · a) 6= OX }.
+4                                      J. A. HOWALD
+
+See [9] or [4] for a detailed discussion of this concept. The Main Theorem
+shows that this must be equal to sup{r : 1 ∈  / rP } (provided that J (r · a) is
+nontrivial–the trivial case is an annoying exception). Thus the log canonical
+threshold is the reciprocal of the (unique) number m such that the boundary
+of P intersects the diagonal in the Rn at the point m1. In other words,
+in order to calculate the threshold, we need only find where P intersects
+the diagonal. Arnold calls this number m of the intersection point the
+“remoteness” of the polygon. In [2], he proves that m = 1t , in order to
+analyze asymptotic oscillatory integrals.
+
+Example 6. For the “diagonal ideals” of Example 3, the intersection of the
+diagonal with the Newton polygon is easily calculated using the dual vector
+v. The reader may check that its reciprocal is indeed v · 1. (If it happens
+that v · 1 > 1, then the log canonical threshold is 1, and the multiplier ideal
+is trivial.) See [9] for more details.
+
+Example 7. To illustrate these ideas, we calculate the log-canonical thresh-
+old of a slightly more complicated ideal. Let
+                              a = (xy 4 z 6 , x5 y, y 7 z, x8 z 8 ).
+After drawing the Newton polygon1 , one sees that the diagonal in R3 inter-
+sects the triangular face generated by the first three generators. Therefore,
+the fourth generator x8 z 8 can be ignored. The intersection of the diagonal
+with the triangle whose vertices have coordinates {(1, 4, 6), (5, 1, 0), (0, 7, 1)}
+is the point (m, m, m), where m = 19168 . The log canonical threshold of a is
+ 1      68
+m  , or 191 .
+   The structure of the polygon P can in general be quite complicated, but
+it must have a single face which intersects the diagonal. This face may
+not be simplicial, but it certainly decomposes into simplices, one of which
+intersects the diagonal in the same place and has no more than n vertices.
+This demonstrates that the log canonical threshold of a is equal to that of a
+smaller ideal generated by no more monomials than the dimension n of the
+space.
+   It has been conjectured 2 ([11],[9]) that for every dimension n the collec-
+tion Tn of all log canonical thresholds satisfies the Ascending Chain Condi-
+tion (“All subsets have maximal elements”). The restricted case of ACC for
+monomial ideals follows from the fact that the partial order of all monomial
+ideals has no infinite increasing sequences, nor even any infinite antichains
+[10]. This fact doesn’t require any characterization of the thresholds. If
+    1
+      Maple code illustrating this Newton polygon is available from the author by request.
+Unfortunately, static 2−dimensional representations are not very helpful.
+    2
+      Actually, Shokurov’s version of this conjecture is stronger than that presented here.
+It refers to log canonical thresholds of effective Weil divisors on possibly singular ambient
+spaces.
+                   MULTIPLIER IDEALS OF MONOMIAL IDEALS                              5
+
+ACC is true, then for any fixed dimension n, there is a threshold tn clos-
+est to, but less than, one. We attempted to use the characterization above
+to calculate tn in the monomial case, but were unsuccessful. It is known
+that t1 = 1/2, t2 = 5/6, t3 = 41/42, Also, if we restrict to ideals of the form
+a = (xb11 , . . . , xbnn ), then it is known that we can do no better than tn = ana−1
+                                                                                   n
+                                                                                      ,
+where a1 = 2 and an+1 = a2n + an . The sequence an is (2, 6, 42, 1806, . . . ).
+We used a computer to calculate the log canonical threshold for large num-
+bers of monomial ideals, and found no evidence that the above pattern is
+wrong in general.
+
+                           Proof of the Theorem
+   We will give a straightforward proof of the theorem, based on repeated
+blowups of the underlying space. The basic proof structure is then an in-
+duction, but this creates a problem: After a single such blowup f : Y → X
+the space of interest is no longer An , so an inductive step doesn’t apply.
+   This difficulty is not a serious one, because Y is still locally An . Also,
+all of the above definitions can be extended to Y and onward. For exam-
+ple, the “coordinate axes” on Y should be taken to be proper transforms
+of those from X, together with the exceptional divisor(s). The notion of a
+“monomial ideal” on X generalizes on Y to an intersection of codimension-1
+subschemes (monomials) supported on the “coordinate axes.” These exten-
+sions are consistent with those obtained by localizing on Y and identifying
+the coordinate patches with An in the obvious way. A briefer argument can
+be made if one relies on the theory of toric varieties. We will attempt to
+point out these connections where appropriate.
+Definition 3. By a monomial blowup, we mean a blowup of X along
+the intersection of some coordinate hyperplanes. By a sequence of mono-
+mial blowups, we mean a sequence of blowups, each of which is locally a
+monomial blowup.
+
+Definition 4. Above we defined 1 as a divisor on X = An , but we will need
+a more general notion. If Y is obtained from X by a sequence of monomial
+blowups, we let 1Y be the divisor which is the sum of the proper transforms
+of the coordinate axes in X, together which each exceptional divisor taken
+with coefficient 1. Thus 1 is the union of the “coordinate hyperplanes” of
+Y . We regard 1Y as an element of the lattice LY , which must be defined as
+the free abelian group on the coordinate hyperplanes in Y .
+   The toric picture better illustrates what’s going on here: the exceptional
+divisors and the proper transforms of the coordinate axes are precisely those
+effective divisors on Y which are invariant under the natural torus action.
+Hence LY is the lattice of torically invariant divisors on Y . In general, the
+sum of all of the effective toric divisors (each with coefficient one) on a toric
+variety is the anticanonical divisor. So 1X and 1Y are the torically natural
+6                                J. A. HOWALD
+
+anticanonical divisors, and LY and LX are the lattices of torically invariant
+divisors.
+Lemma 1. Let X be An or an intermediate blowup, and let f : Y → X be
+a monomial blowup of X. Then
+                            1Y − f ∗ (1X ) = KY /X .
+   This can be seen without toric geometry by direct calculation; it is easy
+to pull 1X up to Y and count its multiplicity along the exceptional divisor.
+Corollary 1. If f : Y → X arises by a sequence of monomial blowups, then
+                            1Y − f ∗ (1X ) = KY /X .
+   The corollary gives a convenient formula for KY /X when Y is a log-
+resolution (via a sequence of monomial blowups) of the monomial ideal a.
+It remains to see that such a space Y exists:
+Lemma 2. Let X = An , and let a be a monomial ideal on X. Then there
+is a sequence of monomial blowups f : Y → X which constitutes a log-
+resolution of a.
+Proof. Here we must use some toric geometry. The ideal a defines a subset
+of the lattice LX . The dual set of the ideal, {v ∈ L∗X : ∀λ ∈ P, hv, λi ≥ 1},
+defines a rational polytope P ∗ in the dual lattice L∗X . To find a “monomial
+log resolution” of a is to find a sequence of toric blowups which refine the
+polytope P ∗ in the appropriate sense. This can be done because P ∗ is
+rational. The blowups required are exactly those required torically to resolve
+the singularity of the space Bla(X). Figure 2 indicates how this process
+might be used to resolve the cusp. See [8, section 2.6], for more information
+on toric resolutions.
+   We now fix a monomial log-resolution f : Y → X, as in the Lemma. We
+need to examine the relationship between a and f −1 (a). By the definition
+of f , f −1 (a) is a line bundle. It corresponds to a divisor whose support is
+contained in the proper transforms of the coordinate axes from X and the
+exceptional divisors. We called the collection of such divisors LY . To f −1 (a)
+we may associate a single element γ of LY , its “generator.” We may even
+give it a Newton polygon PY , namely the positive orthant translated to γ.
+Lemma 3. Let f : Y → X resolve a by a sequence of monomial blowups.
+Let PX be the Newton polygon of a, and let PY be as above. Since f ∗ acts
+linearly on the lattices, we may extend it to all of LX ⊗ R. When we do this,
+   1. f ∗ takes the interior points of PX to interior points of PY .
+   2. f ∗ takes the boundary points of PX to boundary points of PY .
+   3. f ∗ takes the points not in PX to points not in PY .
+Proof. The lemma hinges on three basic ideas. First, f ∗ is certainly a map
+from LX to LY , but because it is linear, f ∗ extends to all of LX ⊗ R in a
+natural way. As a map of real vector spaces, f ∗ is continuous because it is
+                  MULTIPLIER IDEALS OF MONOMIAL IDEALS                         7
+
+
+
+
+                           3                            E3
+
+
+
+
+                           2             E2
+
+
+
+
+                           1                 E1
+
+
+
+
+                           0             1              2
+
+
+
+
+        Figure 2. The resolution of the cusp ideal (x3 , y 2 ) via dual
+        polytope refinement. The large rectangle is the dual polytope
+        P ∗ for this ideal. The cusp is fully resolved because the ray
+        representing E3 contains the lower left corner of the dual
+        polytope, splitting it apart into sections without corners.
+
+linear. Second, for each of the effective toric divisors, or “coordinate planes”
+Ei in Y
+                               ordEi (f ∗ (1X )) > 0.
+The equality is strict because the blowups permitted are monomial. Third,
+we have the standard equation f∗ (OY (−E)) = ā, where ā is the integral
+closure of a.
+    We will prove the lemma by proving part 3 first for integral points λ ∈
+LX ⊗ R, then for rational points, and finally for real points. We will prove
+part 1 by using the strict positivity of f ∗ (1X ). Finally, we’ll deduce part 2
+by continuity.
+    Let λ be an integer point of LX not in PX . Then xλ ∈    / ā = f∗ (OY (−E))
+so f ∗ (λ) ∈
+           / PY . If instead λ ∈/ PX has rational coordinates, then we can
+clear denominators. Let nλ be integral. nλ ∈    / nP (a) = P (an ), so f ∗ (nλ) ∈
+                                                                                /
+  ∗  n
+f (a ) = nPY . (Here we have used the just-proved integer case, as well
+as the fact that the resolution f : Y → X resolving a also resolves an .)
+Dividing by n gives f ∗ (λ) ∈
+                            / PY . If λ ∈/ PX has real coordinates, choose a
+rational µ ≥ λ also not in PX . f ∗ (λ) ≤ f ∗ (µ) ∈
+                                                  / PY , so f ∗ (λ) ∈
+                                                                    / PY .
+    A standard convexity argument proves that if λ ∈ PX then f ∗ (λ) ∈ PY .
+To prove part 1 of the lemma, let λ be in the interior of PX . Choose µ ∈ PX
+and ǫ ∈ R+ with λ = µ + ǫ1. Then f ∗ (λ) = f ∗ (µ) + ǫf ∗ (1). f ∗ (µ) ∈ PY ,
+8                                     J. A. HOWALD
+
+and ǫf ∗ (1) is strictly positive in every coordinate, so f ∗ (λ) is in the interior
+of PY .
+   Part 2 of the lemma follows from the continuity of the map f ∗ .
+
+   We can now give the proof of the main theorem. Because J (r · a) is
+invariant under the natural torus action, it must be a monomial ideal. We
+characterize the monomials xλ in J (r · a). By definition, xλ is in J (r · a) if
+and only if
+                          div(f ∗ (xλ )) + KY /X − ⌊rE⌋ ≥ 0
+(recall OY (−E) = f −1 (a)). This condition simply means that
+                          div(f ∗ (xλ )) + KY /X is in ⌊rPY ⌋
+(also recall ⌊rPY ⌋ = {x⌊λ⌋ : λ ∈ rP }). Using the calculation of KY /X from
+Lemma 1, this can be rewritten
+                       div(f ∗ (xλ )) − 1Y + f ∗ (1X ) ∈ ⌊rPY ⌋.
+This is of the form {divisor} − 1Y ∈ ⌊rPY ⌋, so we rewrite it as {divisor} ∈
+int(rPY ), obtaining
+                         div(f ∗ (xλ )) + f ∗ (1X ) ∈ int(rPY ).
+But this is just a condition on divisors from X. By Lemma 3, parts 1 and
+2, it is equivalent to (λ + 1X ) ∈ Int(rPX ). The theorem is proved.
+
+                                     References
+ [1] Urban Angehrn and Yum Tong Siu. Effective freeness and point separation for adjoint
+     bundles. Invent. Math., 122(2):291–308, 1995.
+ [2] V. I. Arnol’d, S. M. Guseı̆n-Zade, and A. N. Varchenko. Singularities of Differentiable
+     Maps. Vol. I. Birkhäuser Boston Inc., Boston, Mass., 1985.
+ [3] Jean-Pierre Demailly. L2 vanishing theorems for positive line bundles and adjunction
+     theory. In Transcendental methods in algebraic geometry (Cetraro, 1994), pages 1–97.
+     Springer, Berlin, 1996.
+ [4] Jean-Pierre Demailly and János Kollár. Semi-continuity of complex singularity ex-
+     ponents and kähler-einstein metrics on fano orbifolds. Mathematics E-Print Archive,
+     October 1999.
+ [5] Lawrence Ein. Multiplier ideals, vanishing theorems and applications. In Algebraic
+     geometry—Santa Cruz 1995, pages 203–219. Amer. Math. Soc., Providence, RI, 1997.
+ [6] Lawrence Ein and Robert Lazarsfeld. A geometric effective Nullstellensatz. Invent.
+     Math., 137(2):427–448, 1999.
+ [7] David Eisenbud. Commutative Algebra with a view toward Algebraic Geometry.
+     Springer-Verlag, New York, 1995.
+ [8] William Fulton. Introduction to Toric Varieties. Princeton University Press, Prince-
+     ton, NJ, 1993.
+ [9] János Kollár. Singularities of pairs. In Algebraic geometry—Santa Cruz 1995, pages
+     221–287. Amer. Math. Soc., Providence, RI, 1997.
+[10] Maclagan. Antichains of monomial ideals are finite. Mathematics E-Print Archive,
+     October 1999.
+[11] V. V. Shokurov. 3-fold log flips. Izv. Ross. Akad. Nauk Ser. Mat., 56:105–203, 1992.
+[12] Yum-Tong Siu. Invariance of plurigenera. Invent. Math., 134(3):661–673, 1998.
+

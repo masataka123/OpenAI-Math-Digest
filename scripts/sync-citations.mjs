@@ -4,19 +4,23 @@ import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 import {loadCitations,expandCitationMarkers,citationTex} from './lib/citations.mjs';
 import {validateGuide,expandGuides} from './lib/article-guides.mjs';
+import {catalogs} from '../src/data/site.mjs';
 
-export function findCitationRegistries(catalogId){
+export function findCitationRegistries(catalogId,{registeredOnly=false}={}){
+ const registered=new Set(catalogs.map(c=>`catalog-${c.id}`));
  const files=[];
  const visit=dir=>{for(const entry of fs.readdirSync(dir,{withFileTypes:true})){
   const file=path.join(dir,entry.name);
   if(entry.isDirectory())visit(file);else if(entry.name==='citations.json')files.push(file);
  }};
- for(const name of fs.readdirSync('drafts'))if(/^catalog-\d{3}$/.test(name)&&(!catalogId||name===`catalog-${catalogId}`))visit(path.join('drafts',name));
+ for(const name of fs.readdirSync('drafts'))if(/^catalog-\d{3}$/.test(name)&&(!catalogId||name===`catalog-${catalogId}`)&&(!registeredOnly||registered.has(name)))visit(path.join('drafts',name));
  return files.sort();
 }
 
 export function syncCitations({check=false,catalogId,textOnly=false,registryFile}={}){
- const files=registryFile?[registryFile]:findCitationRegistries(catalogId);
+ // Publication checks cover registered catalogues; explicit targets and text-only
+ // checks remain available for concurrent Stage 1 drafts.
+ const files=registryFile?[registryFile]:findCitationRegistries(catalogId,{registeredOnly:check&&!textOnly&&!catalogId});
  if(catalogId&&!files.length)throw Error(`No citation registry for catalogue ${catalogId}`);
  let count=0;
  for(const file of files){

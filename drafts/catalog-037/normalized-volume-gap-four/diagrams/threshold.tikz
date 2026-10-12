@@ -1,0 +1,20 @@
+\node[card] (a) at (0,0) {\heading{1}{短い重みの関数を得る}{Find short-weight functions}
+ $\lambda m<1$,\quad $\operatorname{wt}(\omega_C)=5/2$,\quad $D=5/3$\\[4pt]
+ $\displaystyle\bigoplus_{0<y<D}S_y\ne0$};
+\node[card,below=2.0cm of a] (b) {\heading{2}{小さい閾値からlc境界を作る}{A small threshold produces an lc boundary}
+ $\operatorname{lct}_o(C;\mathfrak m_o)\le3/2$\quad\Tx{と仮定}{assumed}\\[4pt]
+ $(C,G)\text{ lc}$,\quad $\operatorname{wt}(G)=td_0<5/2$};
+\flow{a}{b}{\Tx{Hilbert周波数ギャップ・符号試験の後、共通重みの一般元を平均}{After the Hilbert frequency gap and sign tests, average general equal-weight members}\\[3pt]\Cite{hilbert}\quad\Cite{short}\\[3pt]\Cite{threshold-construction}};
+\node[card,below=1.6cm of b] (c) {\heading{3}{正次元の最小lc中心へ}{Pass to a positive-dimensional minimal lc center}
+ $1\le\dim Z\le3$,\quad $Z\text{ normal, CM}$,\quad $T=S/I_Z$\\[4pt]
+ $T_y=0\quad(0<y<D)$,\qquad $\lambda m<1$};
+\flow{b}{c}{\Tx{境界重み$<5/2$で頂点を除外し、affine subadjunctionを適用}{Boundary weight $<5/2$ excludes the vertex; apply affine subadjunction}\\[3pt]\Cite{threshold-construction}\quad\Cite{subadjunction}};
+\node[card,below=2.0cm of c] (d) {\heading{4}{中心上の非消滅の仮定を満たす}{Verify nonvanishing hypotheses on the center}
+ $\dim Z=1:\ T=\mathbb C[z],\quad 0<\operatorname{wt}(z)<1$\\[4pt]
+ $\dim Z=2:\ \omega_T^{[q]}\hookrightarrow T$\quad\Tx{正重み生成元を$1$へ}{send a positive-weight generator to $1$}\\[4pt]
+ $\dim Z=3:\ \omega_T^{[q]}\hookrightarrow T,\quad\deg=b-5q/2<0$};
+\flow{c}{d}{\Tx{曲線の正規性／曲面のQ-factorial性／三次元中心のadjunction}{Curve normality / surface Q-factoriality / adjunction on the threefold center}\\[3pt]\Cite{threshold-centers}\quad\Cite{surface}};
+\node[result,below=1.7cm of d] (e) {\heading{5}{低重みの消滅と非消滅が矛盾}{Low-weight vanishing contradicts nonvanishing}
+ $\exists\ y\in(0,D):\ T_y\ne0$\\[4pt]
+ $\displaystyle\operatorname{lct}_o(C;\mathfrak m_o)>\frac32$};
+\flow{d}{e}{\Tx{二・三次元ではcanonical moduleの正値性から短区間非消滅}{In dimensions two and three, canonical-module positivity gives short-weight nonvanishing}\\[3pt]\Cite{positivity}\quad\Cite{short}};

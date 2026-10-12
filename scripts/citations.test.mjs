@@ -88,3 +88,11 @@ test('generated SVG links keep PDF page positions and the source sets declared o
   }
  }
 });
+
+// Unintegrated drafts have no public copies until their Stage 2 integration.
+test('publication registry discovery excludes unregistered drafts but explicit discovery retains them',()=>{
+ const all=findCitationRegistries();
+ const registered=new Set(catalogs.map(c=>`catalog-${c.id}`));
+ assert.deepEqual(findCitationRegistries(undefined,{registeredOnly:true}),all.filter(file=>registered.has(file.split('/')[1])));
+ for(const file of all)assert.ok(findCitationRegistries(file.split('/')[1].slice(8)).includes(file));
+});

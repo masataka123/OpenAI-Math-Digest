@@ -1,0 +1,1491 @@
+                                           THE VOLUME OF SINGULAR KÄHLER-EINSTEIN FANO VARIETIES
+
+                                                                                      YUCHEN LIU
+
+                                                  Abstract. We show that the anti-canonical volume of an n-dimensional Kähler-Einstein
+                                                  Q-Fano variety is bounded from above by certain invariants of the local singularities,
+                                                  namely lctn · mult for ideals and the normalized volume function for real valuations.
+arXiv:1605.01034v5 [math.AG] 23 May 2018
+
+
+
+
+                                                  This refines a recent result by Fujita. As an application, we get sharp volume upper
+                                                  bounds for Kähler-Einstein Fano varieties with quotient singularities. Based on very
+                                                  recent results by Li and the author, we show that a Fano manifold is K-semistable if and
+                                                  only if a de Fernex-Ein-Mustaţă type inequality holds on its affine cone.
+
+
+
+                                                                                  1. Introduction
+                                              An n-dimensional complex projective variety X is said to be a Q-Fano variety if X
+                                           has klt singularities and −KX is an ample Q-Cartier divisor. When n ≥ 2, the (anti-
+                                           canonical) volume ((−KX )n ) of a Q-Fano variety X can be arbitrarily large, such as
+                                           volumes of weighted projective spaces (see [Dol82]). In the smooth case, Kollár, Miyaoka,
+                                           Mori [KMM92] and Campana [Cam92] showed that there exists a uniform volume upper
+                                           bound Cn for n-dimensional Fano manifolds. If n ≤ 3, then Pn has the largest volume
+                                           among all n-dimensional Fano manifolds. This fails immediately when n ≥ 4 by examples
+                                           of Batyrev [Bat81]. However, if a Q-Fano variety X admits a Kähler-Einstein metric
+                                           (in the sense of [BBEGZ11]), then it is expected that Pn has the largest volume (see
+                                           [Tia90, OSS16] for n = 2, and [BB11, BB17] for smooth cases). Recently, Fujita [Fuj15]
+                                           showed that if X is a n-dimensional Q-Fano variety admitting a Kähler-Einstein metric,
+                                           then the anti-canonical volume ((−KX )n ) is less than or equal to (n + 1)n (= the volume
+                                           of Pn ).
+                                              In this paper, we refine the result [Fuj15] by looking at invariants of the local singular-
+                                           ities. Our first main result is the following:
+                                           Theorem 1. Let X be a Kähler-Einstein Q-Fano variety. Let p ∈ X be a closed point.
+                                           Let Z be a closed subscheme of X with Supp Z = {p}. Then we have
+                                                                                    n
+                                                                         n         1
+                                           (1.1)                  ((−KX ) ) ≤ 1 +       lct(X; IZ )n multZ X,
+                                                                                   n
+                                           where lct(X; IZ ) is the log canonical threshold of the ideal sheaf IZ , and multZ X is the
+                                           Hilbert-Samuel multiplicity of X along Z.
+                                             Note that the invariant lctn · mult has been studied by de Fernex, Ein and Mustaţă in
+                                           [Mus02, dFEM03, dFEM04, dFM15].
+                                             There are three major aspects of Theorem 1:
+                                               • If we take Z = p to be a smooth point on X, then lct(X; mp ) = n and multp X = 1.
+                                                 In particular, we recover Fujita’s result [Fuj15, Corollary 1.3].
+                                             Date: May 24, 2018.
+                                                                                             1
+2                                      YUCHEN LIU
+
+                                                   1+ord (K   )
+     • By definition, lct(X; IZ ) is the infimum of ordEE (IZY)/X among all prime divisors E
+       on a resolution Y of X. Although lct(X; IZ ) is not easy to compute in general, we
+       can always get a volume upper bound by considering one divisor E, e.g. Theorem
+       3 and 25.
+     • On the other hand, if we fix a singularity p on a Kähler-Einstein Q-Fano variety
+       X, we get a lower bound of lctn · mult among all thickenings of p. For example,
+       if X = Pn then the inequality (1.1) recovers the main result in [dFEM04] (see
+       Theorem 22). More generally, we get de Fernex-Ein-Mustaţă type inequalities
+       for all cone singularities with K-semistable base using a logarithmic version of
+       Theorem 1 (see Theorem 7).
+  For a real valuation v on C(X) centered at a closed point p, the normalized volume
+          c introduced by C. Li in [Li15], is defined as vol(v)
+function vol,                                            c      := AX (v)n · vol(v), where
+AX (v) is the log discrepancy of v and vol(v) is the volume of v. The following theorem
+gives an upper bound for the anti-canonical volume of X in terms of the normalized
+volume of a real valuation.
+Theorem 2. Let X be a Kähler-Einstein Q-Fano variety. Let p ∈ X be a closed point.
+Let v be a real valuation on C(X) centered at p. Then we have
+                                                 n
+                                     n          1    c
+(1.2)                         ((−KX ) ) ≤ 1 +        vol(v).
+                                                n
+
+   Minimizing the normalized volume function volc has been studied by Li, Xu, Blum and
+the author in [Li15, Li17, LL16, LX16, Blu18]. In [LL16], a logarithmic version of Theorem
+2 was developed to obtain the sharp lower bound of the normalized volume function for
+cone singularities over Kähler-Einstein Q-Fano varieties.
+   To compare Theorem 1 and 2, we know from [Mus02, Li15] that the infimum of
+                                                                                     c
+lct(X; IZ )n · multZ X among all thickenings Z of p is no bigger than the infimum of vol(v)
+among all real valuations centered at p. In fact, we show that these two infimums are
+the same (see Theorem 27). In particular, this means that Theorem 1 and 2 are actually
+equivalent.
+  As an application of Theorem 1 and 2, we get sharp volume upper bounds for Kähler-
+Einstein Q-Fano varieties with quotient singularities.
+Theorem 3. Let X be a Kähler-Einstein Q-Fano variety of dimension n. Let p ∈ X be
+a closed point. Suppose (X, p) is a quotient singularity with local analytic model Cn /G
+where G ⊂ GL(n, C) acts freely in codimension 1. Then
+                                              (n + 1)n
+                                  ((−KX )n ) ≤         ,
+                                                 |G|
+with equality if and only if |G ∩ Gm | = 1 and X ∼= Pn /G, where Gm ⊂ GL(n, C) is the
+subgroup consisting of non-zero scalar matrices.
+   It is well-known that for algebraic surfaces, klt singularities are the same as quotient
+singularities. In [Tia90], Tian showed that the anti-canonical volume of a Kähler-Einstein
+log Del Pezzo surface is bounded from above by 48/|G| where G ⊂ GL(2, C) is the orbifold
+                        VOLUME OF SINGULAR KE FANO VARIETIES                               3
+
+group at a closed point. In [OSS16], Odaka, Spotti and Sun improved the volume upper
+bounds to 12/|G|.
+   As a direct consequence of Theorem 3, we get the sharp volume upper bounds 9/|G|
+for Kähler-Einstein log Del Pezzo surfaces.
+Corollary 4. Let X be a Kähler-Einstein log Del Pezzo surface. Let p ∈ X be a closed
+point with local analytic model C2 /G, where G ⊂ GL(2, C) acts freely in codimension 1.
+Then
+                                                   9
+                                     ((−KX )2 ) ≤     ,
+                                                  |G|
+with equality if and only if |G ∩ Gm | = 1 and X ∼= P2 /G.
+Remark 5. The author was informed by Kento Fujita that he independently obtained
+cases of Corollary 4 when (X, p) is Du Val.
+  It was conjectured by Cheltsov and Kosta in [CK14, Conjecture 1.18] that a Gorenstein
+Del Pezzo surface admits Kähler-Einstein metrics if and only if the singularities are of
+certain types depending on the anti-canonical volume. This conjecture was proved by
+Odaka, Spotti and Sun in [OSS16, page 165] where Q-Gorenstein smoothable Kähler-
+Einstein log Del Pezzo surfaces are classified. As a quick application of Corollary 4, we
+give an alternative proof of the “only if” part of this conjecture. We remark that partial
+results are known before [OSS16], e.g. [DT92, Jef97, Won13] on the “only if” part and
+[MM93, GK07, Che08, Shi10, CK14] on the “if” part.
+Corollary 6. Let X be a Kähler-Einstein log Del Pezzo surface with at most Du Val
+singularities.
+   (1) If ((−KX )2 ) = 1, then X has at most singularities of type A1 , A2 , A3 , A4 , A5 ,
+       A6 , A7 or D4 .
+   (2) If ((−KX )2 ) = 2, then X has at most singularities of type A1 , A2 or A3 .
+   (3) If ((−KX )2 ) = 3, then X has at most singularities of type A1 or A2 .
+   (4) If ((−KX )2 ) = 4, then X has at most singularities of type A1 .
+   (5) If ((−KX )2 ) ≥ 5, then X is smooth.
+  The comparison between Theorem 1 and 2 also allows us to rephrase the results from
+[Li17, LL16] in terms of lctn · mult. The following theorem gives a necessary and sufficient
+condition for a Fano manifold to be K-semistable.
+Theorem 7. Let V be a Fano manifold of dimension n − 1. Assume     L∞ H = −rKV is an
+                                                                            0
+ample Cartier divisor for some r ∈ Q>0 . Let X := C(V, H) = Spec      k=0 H (V, mH) be
+the affine cone with cone vertex o. Then V is K-semistable if and only if for any closed
+subscheme Z of X supported at o, the following inequality holds:
+                                                   1
+(1.3)                      lct(X; IZ )n · multZ X ≥ ((−KV )n−1 ).
+                                                   r
+  In particular, from the “only if” part of Theorem 7 we get de Fernex-Ein-Mustaţă type
+inequalities (1.3) on cone singularities with K-semistable bases (see [dFEM04] or Theorem
+22 for the smooth case). Note that the “if” part is a straight-forward consequence after
+                                                    c from [Mus02, Li15].
+[Li17] using the relations between lctn · mult and vol
+4                                           YUCHEN LIU
+
+   The proofs of Theorem 1 and 2 rely on the recent result [Fuj15] where Fujita settled the
+optimal volume upper bounds for Ding-semistable Q-Fano varieties. Recall that a Q-Fano
+variety X is said to be Ding-semistable if the Ding invariant Ding(X , L) is nonnegative
+for any normal test configuration (X , L)/A1 of (X, −rKX ). The results in [Ber16, Section
+3] show that, if a Q-Fano variety X admits a Kähler-Einstein metric, then X is Ding-
+semistable (see also [Fuj15, Theorem 3.2]). This allows us to prove Theorem 1 and 2 under
+the weaker assumption that X is Ding-semistable (see Theorem 16 and 21). To prove the
+                                                                            c
+equality case of Theorem 3, we blow up a flag ideal associated to the vol-minimizing
+valuation to obtain a test configuration with zero CM weight. Then K-polystability
+is enough to characterize the Q-Fano variety with maximal volume (see Lemma 33 for
+details).
+   The paper is organized as follows. In Section 2, we recall the notions of Seshadri
+constants, Ding-semistability, filtrations and normalized volume of real valuations. As
+a generalization of [Fuj15, Theorem 2.3], we characterize the Seshadri constant of an
+arbitrary thickening of a close point in terms of the volume function in Lemma 10. In
+Section 3.1, we prove Theorem 1 and 2. The proof of Theorem 1 is a quick application of
+[Fuj15, Theorem 1.2] and Lemma 10. To prove Theorem 2, we apply [Fuj15, Theorem 4.9]
+to the filtration associated to any real valuation. In Section 3.2, we give some applications
+of Theorem 1 and 2. We recover the main result from [dFEM04]. We prove the inequality
+part of Theorem 3. We also get a volume upper bound for a Ding-semistable Q-Fano
+variety with an isolated singularity that is not terminal (see Theorem 25). Section 4
+is devoted to comparing the two invariants occurred in the volume upper bounds, i.e.
+                  c In Theorem 27, we show that these two invariants have the same
+lctn · mult and vol.
+infimums among ideals supported (resp. valuations centered) at a klt point. This implies
+that Theorem 1 and 2 are equivalent to each other. We prove Theorem 7 using Theorem
+27 and results from [Li17, LL16]. In Section 4.2, we study the existence of minimizers
+                     c In Section 5, we study the equality case of Theorem 1 and 2.
+of lctn · mult and vol.
+Lemma 33 characterizes the equality case of Theorem 2 when X is K-polystable with
+extra conditions on the real valuation. Applying this lemma, we prove the equality case
+of Theorem 3 and Corollary 6. We also prove that Pn is the only Ding-semistable Q-Fano
+variety of volume at least (n + 1)n (see Theorem 36). This theorem improves the equality
+case of [Fuj15, Theorem 1.1] where Fujita proved for Ding-semistable Fano manifolds.
+Notation. Throughout this paper, we work over the complex numbers C. Let X be an
+n-dimensional normal variety. Let ∆ be an effective Q-divisor on X such that (X, ∆) is
+a klt pair. For a closed subscheme Z of X, the log canonical threshold of its ideal sheaf
+IZ with respect to (X, ∆) is defined as
+                                        1 + ordE (KY − f ∗ (KX + ∆))
+                    lct(X, ∆; IZ ) := inf                            ,
+                                      E           ordE (IZ )
+where the infimum is taken over all prime divisors E on a log resolution f : Y → (X, ∆).
+We also denote by lct(X; IZ ) = lct(X, 0; IZ ) when ∆ = 0. If dim Z = 0, the Hilbert-Samuel
+multiplicity of X along Z is defined as
+                                                    ℓ(OX /IZk )
+                               multZ (X) := lim                 .
+                                                k→∞   k n /n!
+                        VOLUME OF SINGULAR KE FANO VARIETIES                                5
+
+We will also use the notation lct(a) (and mult(a)) as abbreviation of lct(X; a) (and
+multV (a) X) for a coherent ideal sheaf a (of dimension 0) once the variety X is specified.
+  Following [BBEGZ11, Ber16], on an n-dimensional Q-Fano variety X, a Kähler metric
+ω on the smooth locus Xreg is said to be a Kähler-Einstein
+                                                   R           metric on X if it has constant
+Ricci curvature, i.e. Ric(ω) = ω on Xreg , and Xreg ω = ((−KX )n ). By [BBEGZ11,
+                                                           n
+
+Definition 3.5 and Proposition 3.8], this is equivalent to saying that ω is a closed positive
+(1, 1)-current with full Monge-Ampère mass on X satisfying V −1 ω n = µω (see [BBEGZ11,
+Section 3] for details).
+  Given a normal variety X and a (not necessarily effective) Q-divisor ∆, we say that
+(X, ∆) is a sub pair if KX + ∆ is Q-Cartier. Let f : Y → (X, ∆) be a log resolution, then
+we have the following equality
+                                                     X
+                               KY = f ∗ (KX + ∆) +       ai Ei ,
+                                                         i
+
+where Ei are distinct prime divisors on Y . We say that (X, ∆) is sub log canonical if
+ai ≥ −1 for all i. If D is a Q-Cartier Q-divisor on X, then the log canonical threshold of
+D with respect to a sub pair (X, ∆) is defined as
+(1.4)        lct(X, ∆; D) := sup{c ∈ R : (X, ∆ + cD) is sub log canonical}.
+
+Acknowledgements. I would like to thank my advisor János Kollár for his constant
+support, encouragement and numerous inspiring conversations. I wish to thank Chi Li
+and Chenyang Xu for fruitful discussions and encouragement. I also wish to thank Charles
+Stibitz, Yury Ustinovskiy, Xiaowei Wang and Ziquan Zhuang for many useful discussions,
+Lue Pan for providing an argument for Lemma 24, and Harold Blum, Kento Fujita and
+Song Sun for helpful comments and suggestions through e-mails. The author is partially
+supported by NSF grant DMS-0968337 and DMS-1362960.
+
+                                    2. Preliminaries
+2.1. Seshadri constants.
+Definition 8 ([Laz04]). Let X be a projective variety of dimension n. For a Q-Cartier
+Q-divisor L on X, we define the volume of L on X to be
+                                                       h0 (X, OX (kL))
+                         volX (L) :=      lim sup                      .
+                                       k→∞, kL Cartier      k n /n!
+We know that the limsup computing volX (L) is actually a limit. If L ≡ L′ , then volX (L) =
+volX (L′ ). Moreover, we can extend it uniquely to a continuous function
+                                  volX : N 1 (X)R → R≥0 .
+Definition 9. Let X be a projective variety, L be an ample Q-Cartier divisor on X.
+Let Z be a nonempty proper closed subscheme of X with ideal sheaf IZ . Denote by
+σ : X̂ → X the blow up of X along Z. Let F be the Cartier divisor on X̂ given by
+OX̂ (−F ) = σ −1 (IZ ) · OX̂ . The Seshadri constant of L along Z, denoted by ǫZ (L), is
+defined as
+                        ǫZ (L) := sup{x ∈ R>0 | σ ∗ L − xF is ample}.
+6                                          YUCHEN LIU
+
+Lemma 10. Let X be an n-dimensional normal projective variety with n ≥ 2, L be an
+ample Q-divisor on X, p ∈ X be a closed point. Let Z be a closed subscheme of X with
+Supp Z = {p}. Let σ : X̂ → X be the blow up along Z, and F ⊂ X̂ be the Cartier divisor
+defined by the equation OX̂ (−F ) = σ −1 IZ · OX̂ .
+    (1) For any x ∈ R≥0 , we have
+                  volX̂ (σ ∗ L − xF ) ≥ ((σ ∗ L − xF )n ) = (Ln ) − multZ X · xn .
+    (2) Set ΛZ (L) := {x ∈ R≥0 | volX̂ (σ ∗ L − xF ) = ((σ ∗ L − xF )n )}. Then we have
+                    ǫZ (L) = max{x ∈ R≥0 | y ∈ ΛZ (L) for all y ∈ [0, x]}.
+Proof. The proof goes along the same line as [Fuj15, Theorem 2.3].
+   (1) The equality (σ ∗ L − xF )n ) = (Ln ) − multZ X · xn follows from the fact that
+multZ (X) = (−1)n−1 (F n ) (see [Ram73]).
+   For the inequality part, we can assume that x ∈ Q>0 since the function volX̂ (σ ∗ L − xF )
+is continuous. Take any sufficiently large k ∈ Z>0 with kx ∈ Z>0 and kL Cartier. Notice
+that we have the long exact sequence
+(2.1)     0 → H 0 (X̂, σ ∗ (kL) − kxF ) → H 0 (X̂, σ ∗ (kL)) → H 0 (kxF, σ ∗ (kL)|kxF ) → · · ·
+Thus
+               h0 (X̂, σ ∗ (kL) − kxF ) ≥ h0 (X̂, σ ∗ (kL)) − h0 (kxF, σ ∗ (kL)|kxF )
+                                        = h0 (X, kL) − h0 (kxF, OkxF )
+Consequently,
+                            ∗                          h0 (kxF, OkxF ) n
+                    volX̂ (σ L − xF ) ≥ volX (L) − lim                x .
+                                                   k→∞     (kx)n /n!
+Hence it suffices to show that
+                                      h0 (jF, OjF )
+                                  lim               = multZ X.
+                                  j→∞     j n /n!
+    We look at the exact sequence
+(2.2)                   0 → OX̂ (−jF )|F → O(j+1)F → OjF → 0
+                           L
+The isomorphism F ∼ = Proj m≥0 IZm /IZm+1 yields OX̂ (−jF )|F ∼
+                                                              = OF (j). Since H 1 (F, OF (j)) =
+0 for j ≫ 0, we have an exact sequence
+             0 → H 0 (F, OF (j)) → H 0 ((j + 1)F, O(j+1)F ) → H 0 (jF, OjF ) → 0
+Hence h0 ((j + 1)F, O(j+1)F ) − h0 (jF, OjF ) = h0 (F, OF (j)) = ℓ(IZj /IZj+1) for j ≫ 0. As a
+result,
+                              h0 (jF, OjF ) = ℓ(OX /IZj ) + const
+for j ≫ 0. Hence we prove (1).
+  (2) Assume volX̂ (σ ∗ L − xF ) = (Ln ) − multZ X · xn for some x ∈ Q>0 . We will show
+that
+(2.3)         hi (X̂, σ ∗ (kL) − kxF ) = o(k n ) for i ≥ 1, k ≫ 0 with kx ∈ Z>0 .
+                         VOLUME OF SINGULAR KE FANO VARIETIES                                  7
+
+For i ≥ 2, the long exact sequence (2.1) yields
+
+                hi (X̂, σ ∗ (kL) − kxF ) ≤ hi−1 (kxF, OkxF ) + hi (X̂, σ ∗ (kL)).
+
+Since σ ∗ (kL) is nef, we know that hi (X̂, σ ∗ (kL)) = o(k n ). Serre vanishing theorem implies
+that H i−1 (F, OF (j)) = 0 for i ≥ 2, j ≫ 0. Then the exact sequence (2.2) implies that
+
+                         H i−1 ((j + 1)F, O(j+1)F ) ∼
+                                                    = H i−1 (jF, OjF )
+
+for i ≥ 2, j ≫ 0. As a result, hi−1 (kxF, OkxF ) is constant for k ≫ 0. Therefore,
+hi (X̂, σ ∗ (kL) − kxF ) = o(k n ) for any i ≥ 2.
+   By the asymptotic Riemann-Roch theorem we know that
+
+                         χ(X̂, σ ∗ (kL) − kxF )
+                      lim                       = ((σ ∗ L − xF )n )
+                     k→∞          k n /n!
+                                                = (Ln ) − multZ X · xn
+                                                    = volX̂ (σ ∗ L − xF ).
+
+Hence we have
+                                    n
+                              1 X
+                          lim n     (−1)i hi (X̂, σ ∗ (kL) − kxF ) = 0.
+                         k→∞ k
+                                i=1
+
+Since hi (X̂, σ ∗ (kL) − kxF ) = o(k n ) for i ≥ 2, we conclude that h1 (X̂, σ ∗ (kL) − kxF ) =
+o(k n ) as well.
+   Now let us prove (2). Denote by a the right-hand side of the equation in (2). For any
+nef divisor, its volume is equal to its self intersection number. Hence it is obvious that
+ǫZ (L) ≤ a. Then it suffices to show that a ≤ ǫZ (L). Equivalently, we only need to show
+that for ǫ > 0 sufficiently small with a − ǫ ∈ Q>0 , σ ∗ L − (a − ǫ)F is ample. Fix δ ∈ Q>0
+such that δ < ǫZ (L), that is, σ ∗ L − δF is ample. By [dFKL07, Theorem A], we only need
+to show that
+                                                                  
+(2.4)                hi X̂, m (σ ∗ L − (a − ǫ)F ) − t(σ ∗ L − δF ) = o(mn )
+
+for any i > 0, any sufficiently small t ∈ Q>0 and suitably divisible m. Denote b :=
+(a − ǫ + tδ)/(1 − t). Notice that
+         1                                                a − ǫ + tδ
+            (σ ∗ L − (a − ǫ)F ) − t(σ ∗ L − δF ) = σ ∗ L −            F = σ ∗ L − bF.
+        1−t                                                  1−t
+It is clear that b < a for t ∈ Q>0 sufficiently small. Hence from the description of a we
+get:
+                            volX̂ (σ ∗ L − bF ) = (Ln ) − multZ X · bn .
+
+Then applying (2.3) yields that hi (X̂, σ ∗ (kL) − kbF ) = o(k n ) for i > 0, sufficiently small
+t ∈ Q>0 and suitably divisible k. In other words, (2.4) is true under the same condition
+for i, t and m = (1 − t)k. Hence we prove the lemma.                                          
+8                                       YUCHEN LIU
+
+2.2. K-semistability and Ding-semistability. In this section we recall the definition
+of K-semistability, and its recent equivalence Ding-semistability.
+Definition 11 ([Tia97, Don02], see also [LX14]). Let X be an n-dimensional Q-Fano
+variety.
+    (a) Let r ∈ Q>0 such that L := −rKX is Cartier. A test configuration (resp. a semi
+         test configuration) of (X, L) consists of the following data:
+            • a variety X admitting a Gm -action and a Gm -equivariant morphism π : X →
+              A1 , where the action of Gm on A1 is given by the standard multiplication;
+            • a Gm -equivariant π-ample (resp. π-semiample) line bundle L on X such that
+              (X , L)|π−1(A1 \{0}) is equivariantly isomorphic to (X, L) × (A1 \ {0}) with the
+              natural Gm -action.
+         Moreover, if X is normal in addition, then we say that (X , L)/A1 is a normal test
+         configuration (resp. a normal semi test configuration) of (X, L).
+   (b) Assume that (X , L) → A1 is a normal test configuration. Let π̄ : (X̄ , L̄) → P1
+         be the natural equivariant compactification of (X , L) → A1 . The CM weight
+         (equivalently, Donaldson-Futaki invariant) of (X , L) is defined by the intersection
+         formula:
+                                                                                 
+                                      1             n     n+1   n+1 n
+            CM(X , L) :=                               (L̄ ) + n (L̄ · KX̄ /P1 ) .
+                           (n + 1)((−KX )n ) r n+1               r
+    (c)   • The pair (X, −KX ) is called K-semistable if CM(X , L) ≥ 0 for any normal
+            test configuration (X , L)/A1 of (X, −rKX ).
+          • The pair (X, −KX ) is called K-polystable if CM(X , L) ≥ 0 for any normal
+            test configuration (X , L)/A1 of (X, −rKX ), and the equality holds if and only
+            if X ∼
+                 = X × A1 .
+   In [Din88], Ding introduced the so-called Ding functional on the space of Kähler metrics
+on Fano manifolds and showed that Kähler-Einstein metrics are critical points of the Ding
+functional. Recently, Berman [Ber16] established a formula expressing CM-weights in
+terms of the slope of Ding functional along a geodesic ray in the space of all bounded
+positively curved metrics on the anti-canonical Q-line bundle of a Q-Fano variety. Later
+on, this slope was called Ding invariant by Fujita [Fuj15] in order to define the concept
+of Ding-semistability. Next we will recall the recent work by Berman [Ber16] and Fujita
+[Fuj15].
+Definition 12 ([Ber16, Fuj15]). Let X be an n-dimensional Q-Fano variety.
+  (a) Let (X , L)/A1 be a normal semi test configuration of (X, −rKX ) and (X̄ , L̄)/P1
+      be its natural compactification. Let D(X ,L) be the Q-divisor on X satisfying the
+      following conditions:
+         • The support SuppD(X ,L) is contained in X0 .
+         • The divisor −rD(X ,L) is a Z-divisor corresponding to the divisorial sheaf
+           L̄(rKX̄ /P1 ).
+  (b) The Ding invariant Ding(X , L) of (X , L)/A1 is defined as
+                                     −(L̄n+1 )                                       
+           Ding(X , L) :=                            −  1 −  lct(X , D (X ,L) ; X0 )   .
+                             (n + 1)r n+1 ((−KX )n )
+      Here lct(X , D(X ,L); X0 ) is defined in the sense of (1.4).
+                        VOLUME OF SINGULAR KE FANO VARIETIES                              9
+
+   (c) X is called Ding-semistable if Ding(X , L) ≥ 0 for any normal test configuration
+       (X , L)/A1 of (X, −rKX ).
+   The following theorem illustrates relations among the existence of Kähler-Einstein met-
+rics, K-semistability and Ding-semistability of Q-Fano varieties.
+Theorem 13.      (1) If a Q-Fano variety X admits a Kähler-Einstein metric, then X
+      is Ding-semistable.
+  (2) A Q-Fano variety is K-semistable if and only if it is Ding-semistable.
+Proof. (1) is proved by Berman in [Ber16] (see also [Fuj15, Theorem 3.2]).
+   (2) The direction that Ding-semistability implies K-semistability is proved by Berman
+in [Ber16] using the inequality that Ding(X , L) ≥ CM(X , L) for any normal test con-
+figuration (X , L) (see also [Fuj15, Theorem 3.2.2]). The direction that K-semistability
+implies Ding-semistability is proved in [BBJ15] based on [LX14] (see also [Fuj16, Section
+3]).                                                                                    
+2.3. Filtrations. The use of filtrations to study stability notions was initiated by Witt
+Nyström in [WN12]. We recall the relevant definitions about filtrations after [BC11,
+WN12] (see also [BHJ17] and [Fuj15, Section 4.1]).
+                                                                 L
+Definition 14. A good filtration of a graded C-algebra S = ∞       m=0 Sm is a decreasing,
+left continuous, multiplicative and linearly bounded R-filtrations of S. In other words,
+for each m ≥ 0 ∈ Z, there is a family of subspaces {F x Sm }x∈R of Sm such that:
+                      ′
+      • F x Sm ⊆ TF x Sm , if x ≥ x′ ;
+                             ′
+      • F x Sm = x′ <x F x Sm ;
+                    ′            ′
+      • F x Sm · F x Sm′ ⊆ F x+x Sm+m′ , for any x, x′ ∈ R and m, m′ ∈ Z≥0 ;
+      • emin (F ) > −∞ and emax (F ) < +∞, where emin (F ) and emax (F ) are defined by
+        the following operations:
+
+                     emin (Sm , F ) := inf{t ∈ R : F t Sm 6= Sm };
+                     emax (Sm , F ) := sup{t ∈ R : F t Sm 6= 0};
+(2.5)                                                      emin(Sm , F )
+                     emin (F ) = emin (S• , F ) := lim inf               ;
+                                                    m→∞         m
+                                                            emax (Sm , F )
+                     emax (F ) = emax (S• , F ) := lim sup                 .
+                                                     i→∞          m
+                   L∞
+   Define S (t) :=         kt
+                     k=0 F Sk . When we want to emphasize the dependence of S
+                                                                                  (t)
+                                                                                      on
+                                     (t)       (t)
+the filtration F , we also denote S by F S . The following concept of volume will be
+important for us:
+                                                       dimC F mt Sm
+(2.6)                 vol S (t) = vol F S (t) := lim sup              .
+                                                   k→∞      mn /n!
+                                                            L                  L∞
+   Now assume L is an ample line bundle over X and S = ∞             0    m
+                                                               m=0 H (X, L ) =  m=0 Sm
+is the section ring of (X, L). Then following [Fuj15], we can define a sequence of ideal
+sheaves on X:
+                            F
+                                                               
+(2.7)                      I(m,x) = Image F x Sm ⊗ L−m → OX ,
+10                                             YUCHEN LIU
+              x
+and define F Sm := H 0 (V, Lm · I(m,x)
+                                 F
+                                       ) to be the saturation of F x Sm such that F x S m ⊆
+  x                              x
+F Sm . F is called saturated if F Sm = F x Sm for any x ∈ R and m ∈ Z≥0 . Notice that
+with the notation above we have:
+                                                              kt
+                                  (t)
+                                                      dimC F H 0 (X, kL)
+                        vol F S             := lim sup                    .
+                                                 k→∞         k n /n!
+2.4. Normalized volume of real valuations. Let (X, p) be a normal Q-Gorenstein
+singularity with dim X = n. A real valuation v on the function field C(X) is a map
+v : C(X) → R, satisfying:
+      • v(f g) = v(f ) + v(g);
+      • v(f + g) ≥ min{v(f ), v(g)};
+      • v(C∗ ) = 0.
+   Denote by Ov := {f ∈ C(X) : v(f ) ≥ 0} the valuation ring of v. Denote by (Op , mp )
+the local ring of X at p. We say that a real valuation v on C(X) is centered at p if the local
+ring Op is dominated by Ov . In other words, v is nonnegative on Op and strictly positive
+on mp . Denote by ValX,p the set of real valuations centered at p. Given a valuation
+v ∈ ValX,p , define the valuation ideals for any x ∈ R as follows:
+                               ax (v) := {f ∈ OX : v(f ) ≥ x}.
+The volume of the valuation v is defined as
+                                                       ℓ(OX /ax (v))
+                               vol(v) := lim                         .
+                                                x→+∞      xn /n!
+By [ELS03, Mus02, Cut13], the limit on the right hand side exists and is equal to the
+multiplicity of the graded family of ideals a• (v):
+                                           mult(am (v))
+                        vol(v) = lim                     =: mult(a• (v)).
+                                      m→∞       mn
+   Following [JM12, BdFFU15], we can define the log discrepancy for any valuation v ∈
+ValX . This is achieved in three steps in [JM12, BdFFU15]. Firstly, for a divisorial
+valuation ordE associated to a prime divisor E over X, define AX (E) := 1 + ordE (KY /X ),
+where π : Y → X is a resolution of X containing E. Next we define the log discrepancy of a
+quasi-monomial valuation (also called Abhyankar valuation). For a resolution π : Y → X,
+let y := (y1 , · · · , yr ) be a system of algebraic coordinate of a point η ∈ Y . By [JM12,
+Proposition 3.1], for every α = (α1 , · · · , αr ) ∈ Rn≥0 one can associate a unique valuation
+valα = valy,α ∈ ValX with the following property: whenever f ∈ OY,η is written in O       d Y,η
+        P               β                  d
+as f =    β∈Z≥0r   cβ y , with each cβ ∈ O  Y,η either zero or a unit, we have
+
+                              valα (f ) = min{hα, βi | cβ 6= 0}.
+Such valuations are called quasi-monomial valuations (or equivalently, Abhyankar valua-
+                                      P
+tions by [ELS03]). Let (Y, D = N        k=1 Dk ) be a log smooth model of X, i.e. π : Y → X
+is an isomorphism outside of the support of D. We denote by QMη (Y, D) the set of all
+quasi-monomial valuations v that can be described at the point η ∈ Y with respect to
+coordinates (y1 , · · · , yr ) such that each yi defines at η an irreducible component of D
+(hence η is the generic point of a connected component of the intersection of some of the
+                        VOLUME OF SINGULAR KE FANO VARIETIES                                 11
+                                S
+Di ’s). We put QM(Y, D) := η QM(Y, D). Suppose η is a generic point of a connected
+component of Di1 ∩ · · · ∩ Dir , then the log discrepancy of valα is defined as
+                             r
+                             X                           r
+                                                         X
+             AX (valα ) :=         αj · AX (ordDij ) =         αj · (1 + ordDij (KY /X )).
+                             j=1                         j=1
+
+Finally, in [JM12] Jonsson and Mustaţă showed that there exists a retraction map rY,D :
+ValX → QM(Y, D) for any log smooth model (Y, D) over X, such that it induces a
+homeomorphism ValX → lim(Y,D) QM(Y, D). For any real valuation v ∈ ValX , we define
+                          ←−
+                                    AX (v) = sup AX (r(Y,D) (v))
+                                              (Y,D)
+
+where (Y, D) ranges over all log smooth models over X. For details, see [JM12] and
+[BdFFU15, Theorem 3.1]. It is possible that AX (v) = +∞ for some v ∈ ValX , see e.g.
+[JM12, Remark 5.12].
+                                                     c
+  Following [Li15], the normalized volume function vol(v)  for any v ∈ ValX,p is defined as
+                                (
+                      c          AX (v)n · vol(v), if AX (v) < +∞;
+                      vol(v) :=
+                                 +∞,               if AX (v) = +∞.
+
+             c
+Notice that vol(v)                         c
+                   is rescaling invariant: vol(λv)   c
+                                                   = vol(v) for any λ > 0. By Izumi’s theo-
+rem (see [Izu85, Ree87, ELS03, JM12, BFJ14, Li15]), one can show that vol   c is uniformly
+bounded from below by a positive number on ValX,p .
+
+
+                              3. Proofs of main theorems
+3.1. Proofs. It was proved by Berman [Ber16] that the existence of a Kähler-Einstein
+metric on a Q-Fano variety implies Ding-semistability (see Theorem 13). In this section,
+we will prove Theorem 1 and 2 with the weaker assumption that X is Ding-semistable.
+  The following result by Fujita is crucial for proving Theorem 1.
+Theorem 15 ([Fuj15, Theorem 1.2]). Let X be a Q-Fano variety. Assume that X is
+Ding-semistable. Take any nonempty proper closed subscheme ∅ =      6 Z ( X corresponds to
+an ideal sheaf 0 6= IZ ( OX . Let σ : X̂ → X be the blow up along Z, let F ⊂ X̂ be the
+Cartier divisor defined by the equation OX̂ (−F ) = σ −1 IZ · OX̂ . Then we have β(Z) ≥ 0,
+where
+                                                Z +∞
+            β(Z) := lct(X; IZ ) · volX (−KX ) −      volX̂ (σ ∗ (−KX ) − xF )dx.
+                                                         0
+
+  We will prove the following theorem, a stronger result that implies Theorem 1.
+Theorem 16. Let X be a Ding-semistable Q-Fano variety. Let p ∈ X be a closed point.
+Let Z be a closed subscheme of X with Supp Z = {p}. Then we have
+                                         n
+                              n         1
+(3.1)                  ((−KX ) ) ≤ 1 +       lct(X; IZ )n multZ X.
+                                        n
+12                                            YUCHEN LIU
+
+Proof. Let σ : X̂ → X be the blow up along Z, and F ⊂ X̂ be the Cartier divisor defined
+by the equation OX̂ (−F ) = σ −1 IZ · OX̂ . By Theorem 15, we have
+                                            Z +∞
+                                       n
+                  lct(X; IZ ) · ((−KX ) ) ≥      volX̂ (σ ∗ (−KX ) − xF )dx.
+                                                   0
+On the other hand, by Lemma 10, we have
+  Z +∞                              Z √n
+                                         ((−KX )n )/multZ X
+                ∗
+                                                                                     
+        volX̂ (σ (−KX ) − xF )dx ≥                          ((−KX )n ) − multZ X · xn dx
+    0                                0
+                                       n                  p
+                                 =         ((−KX ))n · n ((−KX )n )/multZ X
+                                    n+1
+Hence we get the desired inequality
+                                            n
+                              n           1
+                      ((−KX ) ) ≤ 1 +           lct(X; IZ )n multZ X.
+                                          n
+                                                                                                       
+Remark 17. As we see in the proof above, if the equality of (3.1) holds, then
+                 volX̂ (σ∗ (−KX ) − xF ) = max{((−KX )n ) − multZ X · xn , 0}
+for any x ∈ R≥0 . Then by Lemma 10 (2) we have that ǫZ (−KX ) = (1 + n1 )lct(X; IZ ).
+
+     The following result by Fujita is the main tool to prove Theorem 2.
+Theorem 18 ([Fuj15, Theorem 4.9]). Let X be a Q-Fano variety of dimension
+                                                                       L+∞ n.0 Assume
+that X is Ding-semistable. Let F be a good graded filtration of S =      m=0 H (X, mL)
+                                                 1    ·(1/r)      ·d∞
+where L = −rKX is Cartier. Then the pair (X × A , I•         · (t) ) is sub log canonical
+in the sense of [Fuj15, Definition 2.4], where
+                  F            F
+            Im = I(m,me +)
+                            + I(m,me + −1)
+                                           t1 + · · · + I(m,me
+                                                         F
+                                                               − +1)
+                                                                     tm(e+ −e− )−1 + (tm(e+ −e− ) ),
+                                                        Z e+
+                      e+ − e−                1                            
+            d∞ = 1 −            + n+1                n
+                                                             vol F S (t) dt,
+                           r       r ((−KX ) ) e−
+
+and e+ , e− ∈ Z with e+ ≥ emax (S• , F ) and e− ≤ emin (S• , F ).
+  We will follow the notation of Theorem 18. Let v ∈ ValX,p be a real valuation centered
+at p. Define an R-filtration Fv of S as
+                                    Fvx Sm := H 0 (X, Lm · ax (v)).
+Lemma 19. The R-filtration Fv of S is decreasing, left-continuous, multiplicative and
+saturated. Moreover, if AX (v) < +∞ then Fv is also linearly bounded.
+Proof. The decreasing, left-continuous and multiplicative properties of Fv follows from
+the corresponding properties of {ax (v)}x∈R . To prove that Fv is saturated, notice that
+the homomorphism
+                                                    Fv
+                                 Fvx Sm ⊗C L−m ։ I(m,x)
+                       Fv                                                x     Fv
+induces the inclusion I(m,x) ⊂ ax (v) for any x ∈ R. Thus F Sm = H 0 (X, Lm · I(m,x) )⊂
+  x
+F Sm , which implies that Fv is saturated.
+                         VOLUME OF SINGULAR KE FANO VARIETIES                               13
+
+  If AX (v) < +∞, then by [Li15, Theorem 3.1] there exists a constant c = c(X, p) such
+that v ≤ cAX (v)ordp . So it is easy to see that
+                      emax (S• , Fv ) ≤ cAX (v) · emax (S• , Fordp ) < +∞.
+The second inequality follows from the work in [BKMS14]. Next, it is clear that ax (v) =
+OX for x ≤ 0. Hence Fvx Sm = Sm for x ≤ 0, which implies emin (S• , Fv ) ≥ 0. Hence Fv is
+linearly bounded.                                                                      
+  It is clear that Fvx Sm = Sm for x ≤ 0. Hence we may choose e− = 0. The graded
+sequence of ideal sheaves I• on X × A1 becomes:
+                      Fv          Fv                        Fv
+                Im = I(m,me +)
+                               + I(m,me + −1)
+                                              t1 + · · · + I(m,1) tme+ −1 + (tme+ ).
+We also have that
+                                                        Z +∞
+                             e+       1                                    
+                    d∞ = 1 −    + n+1                          vol Fv S (t) dt.
+                              r  r ((−KX )n )            0
+
+  The valuation vPextends to a Gm -invariant valuation v̄ on C(X × A1 ) = C(X)(t), such
+that for any f = j fj tj we have
+(3.2)                               v̄(f ) = min{v(fj ) + j}.
+                                              j
+
+Proposition 20. Let X be a Q-Fano variety of dimension n. Assume that X is Ding-
+semistable. Let p ∈ X be a closed point. Let v ∈ ValX,p be a real valuation centered at p.
+Then we have
+                                              Z +∞
+                                      1                        (t)
+                                                                   
+(3.3)                AX (v) ≥ n+1                   vol  F v S       dt.
+                               r ((−KX )n ) 0
+Proof. We may assume that AX (v) < +∞, since otherwise the inequality holds automat-
+ically. Hence Lemma 19 implies that Fv is good and saturated.
+                                            ·(1/r)
+   By Theorem 18, we know that (X ×A1 , I•         ·(t)·d∞ ) is sub log canonical. Since X ×A1
+has klt singularities, for any 0 < ǫ ≪ 1 there exists m = m(ǫ) such that
+                       OX×A1 ⊂ J (X × A1 , Im
+                                            ·(1−ǫ)/(rm)
+                                                        · (t)·(1−ǫ)d∞ ),
+where the right hand side is the multiplier ideal sheaf. By [BdFFU15, Theorem 1.2] we
+know that the following inequality holds for any real valuation u on X × A1 :
+                                   (1 − ǫ)
+(3.4)                   AX×A1 (u) >        u(Im ) + (1 − ǫ)d∞ u(t).
+                                     rm
+Let us choose a sequence of quasi-monomial real valuations {vn } on X such that vn → v
+and AX (vn ) → AX (v) when n → ∞. It is easy to see that {v̄n } is a sequence of quasi-
+monimial valuations on X × A1 satisfying v̄n (t) = 1 and
+                                  AX×A1 (v̄n ) = AX (vn ) + 1.
+Hence we have
+                       AX (v) + 1 = lim AX (v̄n )
+                                       n→∞
+                                       (1 − ǫ)
+                                   ≥           lim v̄n (Im ) + (1 − ǫ)d∞ .
+                                         rm n→∞
+14                                          YUCHEN LIU
+
+From the definition of Fvx Sm we get:
+                                                   
+                                              Fv
+                                           v I(m,x)   ≥ x.
+
+Therefore,
+                                               n                    o
+                                                      Fv
+                     lim v̄n (Im ) = lim min    vn I(m,j)   + me+ − j
+                     n→∞           n→∞ 0≤j≤re+
+                                          n                         o
+                                                      Fv
+                                  = min     lim vn I(m,j)   + me+ − j
+                                   0≤j≤re+ n→∞
+                                          n                   o
+                                                Fv
+                                  = min v I(m,j) + me+ − j
+                                     0≤j≤re+
+
+                                  ≥ me+
+Hence when ǫ → 0+ we get:
+                                                    e+
+(3.5)                               AX (v) + 1 ≥       + d∞ .
+                                                     r
+Therefore,
+                                                             Z +∞
+                             e+            1                                      
+               AX (v) ≥ −1 +    + d∞ = n+1                            vol Fv S (t) dt.
+                              r       r ((−KX )n )              0
+
+Hence we get the desired inequality.                                                     
+
+     The following theorem is a stronger result that implies Theorem 2.
+Theorem 21. Let X be a Ding-semistable Q-Fano variety. Let p ∈ X be a closed point.
+Let v ∈ ValX,p be a real valuation centered at p. Then we have
+                                                   n
+                                      n           1    c
+                              ((−KX ) ) ≤ 1 +          vol(v).
+                                                  n
+Proof. We may assume AX (v) < +∞, since otherwise the inequality holds automatically.
+Since Fvmx Sm = H 0 (X, Lm · amx (v)), we have the exact sequence
+                 0 → Fvmx Sm → H 0 (X, Lm ) → H 0 (X, Lm ⊗ (OX /amx (v))).
+Hence we have
+                           dim Fvmx Sm ≥ h0 (X, Lm ) − ℓ(OX /amx (v)).
+This implies
+(3.6)                           vol(Fv S (x) ) ≥ (Ln ) − vol(v)xn .
+So we have the estimate:
+               Z +∞                     Z √n
+                                             (Ln )/vol(v)
+                             (x)
+                                 
+                    vol Fv S       dx ≥                   ((Ln ) − vol(v)xn ) dx
+                0                        0
+                                           n            p
+                                      =       (Ln ) · n (Ln )/vol(v).
+                                        n+1
+                        VOLUME OF SINGULAR KE FANO VARIETIES                             15
+
+Applying (3.3) we get the inequality:
+                            Z +∞
+                        1                     (t)
+                                                  
+         AX (v) ≥                 vol   F v S       dt
+                     r(Ln ) 0
+                        1     n     n n
+                                        p                    n pn
+                 ≥                (L  )    (L  n )/vol(v) =       ((−KX )n )/vol(v).
+                     r(Ln ) n + 1                           n+1
+This is exactly equivalent to
+                                     n                           n
+                         n          1                n            1    c
+                ((−KX ) ) ≤ 1 +            AX (v) vol(v) = 1 +         vol(v).
+                                    n                             n
+                                                                                         
+3.2. Applications. The following result is an easy consequence of Theorem 1.
+Theorem 22 ([dFEM04]). Let X be a variety of dimension n. Let Z be a closed sub-
+scheme of X supported at a single smooth closed point. Then
+                                          n
+                               lct(X; IZ )
+                                              multZ X ≥ 1.
+                                   n
+Proof. It is clear that the multiplicity is preserved under completion. Next, [dFEM11,
+Proposition 2.11] implies that lct is also preserved under completion. Hence it suffices to
+prove the theorem for X = Pn . This follows directly by applying Theorem 1 to the case
+X = Pn .                                                                                 
+  Now we will illustrate some volume bounds for singular X.
+Theorem 23. Let X be a Ding-semistable Q-Fano variety. Let p ∈ X be a closed
+point. Suppose (X, p) is a quotient singularity with local analytic model C2 /G where
+G ⊂ GL(n, C) acts freely in codimension 1. Then
+                                             (n + 1)n
+                                ((−KX )n ) ≤          .
+                                                |G|
+Proof. Let (Y, o) := (Cn /G, 0) be the local analytic model of the quotient singularity
+(X, p). Let H := G ∩ Gm with d := |H|. Define the real valuation u0 on Y to be the
+pushforward of the valuation ord0 on Cn under the quotient map Cn → Y .
+   We first show that vol(u               cn be the blow up of Cn at the origin 0 with
+                         c 0 ) = nn . Let C
+                                  |G|
+exceptional divisor E. Denote by π : Cn → Y the quotient map. Then π lifts to C  cn as
+     cn → Ŷ , where Ŷ := C
+π̂ : C                     cn /G. We have the following commutative diagram:
+
+                                        cn
+                                        C     π̂
+                                                   Ŷ
+                                        g               h
+                                              π
+                                        Cn         Y
+Let F ⊂ Ŷ be the exceptional divisor of h. For a general point on F , its stabilizer under
+the G-action is exactly H. So π̂ ∗ F = dE, which implies that u0 = π∗ (ordE ) = d ordF . It
+is clear that                                        
+                                      ∗             1
+                            KCcn = π̂ KŶ + 1 −         F .
+                                                    d
+16                                           YUCHEN LIU
+
+Then combining these equalities with KCcn = g ∗KCn + (n − 1)E = g ∗(π ∗ KY ) + (n − 1)E,
+we get                                              n     
+                                   KŶ = h∗ KY +       − 1 F.
+                                                     d
+                      n
+Hence AX (ordF ) = d and AX (u0 ) = d · AX (ordF ) = n. Lemma 24 implies that vol(u0 ) =
+ 1                c 0 ) = nn .
+    . Therefore, vol(u
+|G|                          |G|
+   Since AY (u0 ) < +∞, a singular version of [JM12, Corollary 5.11] for klt singularities
+(such a statement is true thanks to the Izumi inequality for klt singularities [Li15, Proposi-
+tion 3.1]) implies that u0 has a unique extension, say û0 , as a valuation on Spec O dY,o that
+centered at the closed point. By assumption we have an isomorphism φ : O        [          d
+                                                                                  X,p → OY,o .
+             ∗
+Let v0 := (φ û0 )|OX,p , then v0 ∈ ValX,p . By a singular version of [JM12, Proposition 5.13],
+we know that AX (v0 ) = AY (u0 ). On the other hand, since the colength of any m-primary
+ideal does not change under completion, we have vol(v0 ) = vol(û0 ) = vol(u0 ). As a result,
+we have
+                                                            n
+                                               c 0) = n .
+                                    c 0 ) = vol(u
+                                    vol(v
+                                                          |G|
+Hence the theorem follows as a direct application of Theorem 2 to v = v0 .                   
+Lemma 24. Let G ⊂ GL(n, C) be a finite group acting on Cn = Spec C[x1 , · · · , xn ].
+Then we have
+                          dimC C[x1 , · · · , xn ]G
+                                                  <m    1
+                     lim                             =     .
+                    m→∞           mn /n!               |G|
+Proof. Denote W := C[x1 , · · · , xn ] = Cx1 ⊕ · · · ⊕ Cxn . Then we have that
+                                                      M
+                                C[x1 , · · · , xn ] ∼
+                                                    =   Symm W.
+                                                         m≥0
+
+Denote by ρm : G → GL(Sym W ) the induced representation of G on Symm W . Since
+                                    m
+
+G is finite, ρm (g) is diagonalizable for any m ≥ 0 and g ∈ G. Denote the n eigenvalues
+of ρ1 (g) by λg,1 , · · · , λg,n . Then the eigenvalues of ρm (g) are exactly all monomials in
+λg,i of degree m. Let cm := dimC (Symm W )G and dm := dimC C[x1 , · · · , xn ]G     ≤m . From
+representation theory we know that
+                                              1 X
+                                       cm =          tr(ρm (g)).
+                                             |G| g∈G
+
+Hence
+                             ∞
+                             X        1 X                   1
+                   c(t) :=        cm tm =                                    .
+                        m=0
+                                     |G| g∈G (1 − λg,1 t) · · · (1 − λg,n t)
+                                                                    P
+This is also known as Molien’s theorem [Mol1897]. Since dm = m        i=0 ci , we have
+                                 ∞
+                                 X                c(t)
+                      d(t) :=           dm tm =
+                                 m=0
+                                                  1−t
+                                  1 X                    1
+                             =                                                  .
+                                 |G| g∈G (1 − t)(1 − λg,1 t) · · · (1 − λg,n t)
+                        VOLUME OF SINGULAR KE FANO VARIETIES                             17
+
+Here all eigenvalues λg,i are roots of unity. Using partial fraction decomposition, for any
+g 6= id we have
+                                                             ∞
+                                                             X
+                                      1
+                                                           =    o(mn )tm .
+                     (1 − t)(1 − λg,1 t) · · · (1 − λg,n t) m=0
+Hence
+                                               X∞
+                                1        1
+                         d(t) =    ·         +     o(mn )tm
+                               |G| (1 − t)n+1 m=0
+                               X∞                    
+                                      1 n+m
+                             =                  + o(m ) tm .
+                                                      n
+
+                               m=0
+                                     |G|   n
+As a result,
+                                           1 n+m−1
+                                                         
+                              dm−1        |G|   n                 1
+                          lim       = lim                    =       .
+                         m→∞ mn /n!  m→∞      n
+                                             m /n!               |G|
+                                                                                         
+Theorem 25. Let X be a Ding-semistable Q-Fano variety. Let p ∈ X be an isolated
+singularity. If X is not terminal at p, then
+                                            n
+                               n           1
+                       ((−KX ) ) ≤ 1 +          multp X < e multp X.
+                                          n
+Proof. Denote by mp the maximal ideal at p. We first show that lct(X; mp ) ≤ 1. Since
+p is an isolated singularity, we may take a log resolution of (X, mp ), namely π : Y → X
+such that π is an isomorphism away from p and π −1 mp · OY is an invertible ideal sheaf on
+Y . Let Ei be the exceptional divisors of π. We define the numbers ai and bi by
+                               X                                   X
+               KY = π ∗ KX +      ai Ei and π −1 mp · OY = OY (−        bi Ei ).
+                              i                                          i
+
+It is clear that lct(X; mp ) = mini 1+a
+                                     bi
+                                        i
+                                          . Since π is an isomorphism away from p, we have
+bi ≥ 1 for any i. Since X is not terminal at p, there exists an index i0 such that ai0 ≤ 0.
+Hence
+                                                 1 + ai0
+                                 lct(X; mp ) ≤           ≤ 1.
+                                                   bi0
+So we finish the proof by applying Theorem 1 to Z = p.                                   
+
+               4. Comparing invariants for ideals and valuations
+   In this section, we will always assume that (X, p) is a normal Q-Gorenstein klt singu-
+larity of dimension n with p ∈ X a closed point.
+
+4.1. The infimums of invariants.
+Lemma 26. Let a be an ideal sheaf on X supported at p. Let v0 ∈ ValX be a divisorial
+valuation that computes lct(a). Then v0 is centered at p, and we have
+                                                      c 0 ).
+                                  lct(a)n · mult(a) ≥ vol(v
+18                                         YUCHEN LIU
+
+Proof. Since v0 computes lct(a), we have that lct(a) = AX (v0 )/v0 (a). Denote α := v0 (a).
+Then am ⊂ amα (v0 ) since v0 (am ) = mα. Therefore,
+                                                 ℓ(OX /am )
+                               mult(a) = lim
+                                            m→∞    mn /n!
+                                                 ℓ(OX /amα (v0 ))
+                                          ≥ lim
+                                            m→∞         mn /n!
+                                          = α vol(v0 ).
+Hence we prove the lemma.                                                                
+   Following [ELS03], for a graded sequence of ideals a• supported at p, the volume of a•
+is defined as
+                                                     ℓ(R/am )
+                                 vol(a• ) := lim sup          ,
+                                               m→∞    mn /n!
+while the multiplicity of a• is defined as
+                                              mult(am )
+                                   mult(a• ) := lim     .
+                                         m→∞     mn
+By [LM09, Cut13], we know that mult(a• ) = vol(a• ) when X is normal.
+Theorem 27. We have
+                                                               
+(4.1)                                                                  c
+                inf lct(a)n · mult(a) = inf lct(a• )n · vol(a• ) = inf vol(v),
+                 a                           a•                         v
+
+where the infimums are taken over all ideals a supported at p, all graded sequences of
+ideals a• supported at p and all real valuations v ∈ ValX,p , respectively. We also set
+lct(a• )n · vol(a• ) = +∞ if lct(a• ) = +∞.
+Proof. Let a• be a graded sequence of ideal sheaves supported at p. By [JM12, BdFFU15],
+we have
+                                lim m lct(am ) = lct(a• ).
+                                    m→∞
+Since mult(a• ) = vol(a• ), if lct(a• ) < +∞ then
+                         lim lct(am )n · mult(am ) = lct(a• )n · vol(a• ).
+                        m→∞
+
+Thus we have
+                                                                      
+(4.2)                  inf lct(a)n · mult(a) ≤ inf lct(a• )n · vol(a• ) .
+                        a                          a•
+
+     Next, Lemma 26 implies that
+                                                   
+(4.3)                                                     c
+                              inf lct(a)n · mult(a) ≥ inf vol(v).
+                               a                          v
+
+  Finally, for any real valuation v ∈ ValX,p with AX (v) < +∞, by [BdFFU15, Theorem
+1.2] we have
+                                         AX (v)
+                          lct(a• (v)) ≤           = AX (v) < +∞.
+                                        v(a• (v))
+By definition we have vol(a• (v)) = vol(v). Therefore,
+(4.4)                                                                c
+                     lct(a• (v))n · vol(a• (v)) ≤ AX (v)n · vol(v) = vol(v).
+                         VOLUME OF SINGULAR KE FANO VARIETIES                                19
+
+Hence we have
+                                                     
+(4.5)                                                       c
+                             inf lct(a• )n · vol(a• ) ≤ inf vol(v).
+                              a•                         v
+
+Combining (4.2)(4.3)(4.5) together, we finish the proof.                                     
+Remark 28.      (a) The first equality in (4.1) was observed by Mustaţă in [Mus02] where
+      he showed that lct(a• )n · mult(a• ) ≥ nn for any graded sequence of m-primary
+      ideals a• of a regular local ring of dimension n. The inequality (4.4) was essentially
+      realized by Li in [Li15, Remark 2.8] where he considered the smooth case.
+  (b) By Izumi’s theorem, the infimums in Theorem 27 are always positive (see Section
+      2.4).
+  We will use Theorem 27 to prove Theorem 7 based on [Li17, LL16].
+Theorem 29 (=Theorem 7). Let V be a Fano manifold of dimension n − 1. Assume
+H = −rKL∞ V is0 an ample Cartier divisor for some r ∈ Q>0 . Let X := C(V, H) =
+Spec     k=0 H (V, mH) be the affine cone with cone vertex o. Then V is K-semistable
+if and only if for any closed subscheme Z of X supported at o, the following inequality
+holds:
+                                                  1
+(4.6)                     lct(X; IZ )n · multZ X ≥ ((−KV )n−1 ).
+                                                  r
+Proof. It is clear that AX (ordV ) = r −1 and vol(ordV ) = r n−1 ((−KV )n−1 ). Hence the
+                                     c
+right hand side of (4.6) is equal to vol(ordV ). From Theorem 27 we know that (4.6) is
+equivalent to saying that the normalized volume vol c is minimized at ordV over (X, o).
+This is equivalent to V being K-semistable by [LL16, Corollary 1.5].                  
+
+4.2. Finding minimizers. Assume that the infimum of lctn (a) · mult(a) is attained by
+some ideal a = a0 . Then Lemma 26 and Theorem 27 together imply that the divisorial
+                                                      c In this subsection, we will study
+valuation v0 that computes lct(a0 ) is a minimizer of vol.
+                                                                  c that is divisorial, can
+the converse problem, i.e. assume there exists a minimizer v∗ of vol
+                  n
+the infimum of lct · mult for ideals be achieved? In Proposition 31, we give an affirmative
+answer to this problem assuming an extra condition on v∗ .
+Definition 30. Let R be a Noetherian local domain. For a real valuation v of K(R)
+dominating R, we define the associate graded algebra of v as
+                                       M
+                             grv R :=     am (v)/a>m (v),
+                                          m∈Φ
+
+where Φ is the valuation semigroup of v.
+
+Proposition 31. Assume that vol(·)  c       is minimized at a divisorial valuation v∗ . If the
+graded algebra grv∗ OX,p is a finitely generated C-algebra, then for any sufficiently divisible
+k ∈ Z>0 we have
+                                                              c ∗ ).
+                            lct(ak (v∗ ))n · mult(ak (v∗ )) = vol(v
+                                                
+In particular, the function lct(·)n · mult(·) attains its minimum at ak (v∗ ).
+20                                        YUCHEN LIU
+
+Proof. By Izumi’s theorem we know that the filtration a1 (v∗ ) ⊃ a2 (v∗ ) ⊃ · · · defines
+the same topology on OX,p as the mp -adic topology on OX,p . Then Lemma 32 implies
+⊕m≥0 am (v∗ ) is a finitely generated OX,p -algebra. Therefore, the degree k Veronese subal-
+gebra ⊕m≥0 akm (v∗ ) is generated in degree 1 for k ∈ Z>0 sufficiently divisible. This means
+akm = amk for any m ≥ 0. From inequality (4.4) we have
+
+                             c ∗ ) ≥ lct(a• (v∗ ))n · vol(a• (v∗ ))
+                             vol(v
+                                     = lct(ak• (v∗ ))n · vol(ak•(v∗ ))
+                                     = lct(ak (v∗ ))n · mult(ak (v∗ )).
+
+                                                                                  c ∗)
+On the other hand, Theorem 27 also implies that lct(ak (v∗ ))n · mult(ak (v∗ )) ≥ vol(v
+                             c
+because v∗ is a minimizer of vol(·). So we prove the proposition.                      
+
+Lemma 32. Let (R, m) be a Noetherian local ring. Let a• be a graded sequence of m-
+primary ideals. Assume that the linear topology on R defined by the filtration a1 ⊃ a2 ⊃ · · ·
+is the same as the m-adic topology on R. Assume that ⊕m≥0 am /am+1 is a finitely generated
+R/a1 -algebra. Then ⊕m≥0 am is a finitely generated R-algebra.
+
+Proof. We take a set of homogeneous generators of ⊕m≥0 am /am+1 , say x1 , · · · , xr . Let di
+be the degree of xi , i.e. xi ∈ adi /adi +1 . Take yi ∈ adi such that xi = yi + adi +1 . Denote by
+⊕m≥0 bm the graded R-subalgebra of ⊕m≥0 am generated by y1 , · · · , yr .
+  Since {xi } generates ⊕m≥0 am /am+1 , we have am = bm + am+1 . Hence for any l > 0 the
+induction yields
+                          am = (bm + bm+1 + · · · + bm+l−1 ) + am+l .
+Because R is Noetherian, the ideals (bm + bm+1 + · · · + bm+l−1 ) stabilize for l sufficiently
+large. Denote the stabilized ideal by cm , then we have am = cm + am+l for l sufficiently
+large. Since the filtration a1 ⊃ a2 ⊃ · · · defines the same topology as the m-adic topology,
+we may take l sufficiently large such that am+l ⊂ mam . As a result, we have am = cm +mam
+which implies that am = cm by Nakayama’s lemma.
+   Now it suffices to show that ⊕m≥0 cm is a finitely generated graded R-algebra. By
+definition, cm is generated by monomials in {yi } of weighted degree at least m. For
+any 0 ≤ j ≤ di , denote by yi,j the homogeneous element yi ∈ aj of degree j. Then
+any monomial in {yi } of weighted degree at least m is equal to a monomial in {yi,j } of
+weighted degree m. Hence ⊕m≥0 cm is generated by {yi,j } as a graded R-algebra, which
+finishes the proof.                                                                         
+
+Postscript Remark. Since the first version of this article was posted on the arXiv, there
+                                                                     c Here we mention
+has been a lot of progresses studying properties of the minimizer of vol.
+two of them which are useful in our presentation.
+     • Blum [Blu18] proved that there always exists a minimizer of volc for any klt singu-
+        larity x ∈ X;
+                                                      c in ValX,x , then S is necessarily a
+     • If a divisorial valuation v∗ = ordS minimizes vol
+        Kollár component (see [LX16] for a definition). In particular, grv∗ OX,x is finitely
+        generated. This was proved by Blum [Blu18] and Li-Xu [LX16] independently.
+                         VOLUME OF SINGULAR KE FANO VARIETIES                                21
+
+                                 5. Maximal volume cases
+5.1. K-polystable varieties of maximal volume. The following lemma is the main
+technical tool to prove the equality case of Theorem 3 and Corollary 6.
+Lemma 33. Let X be a K-polystable Q-Fano variety of dimension n. Let p ∈ X be
+a closed point. Assume that there exists a divisorial valuation v∗ ∈ ValX,p satisfying
+                   n
+                      c ∗ ). Then we have
+((−KX )n ) = 1 + n1 vol(v
+                                                            c on ValX,p ;
+   (1) v∗ is a minimizer of the normalized volume function vol
+   (2) X ∼= Proj (grv∗ OX,p )[x], where x is a homogeneous element of degree 1 (we may
+       view X as an orbifold projective cone over F := Proj grv∗ OX,p );
+Proof. Part (1) is a direct consequence of Theorem 2.
+  We need some preparation to prove part (2). Since v∗ is a divisorial minimizer of vol  c by
+(1), it is induced by a Kollár component by [Blu18, Proposition 4.9] and [LX16, Theorem
+1.2]. In particular, grv∗ OX,p is a finitely generated C-algebra. Let v̄∗ be the corresponding
+divisorial valuation on X × A1 (see (3.2)). Let t be the parameter of A1 . Let Spec R
+be an affine Zariski open subset of X. By Lemma 32, ⊕m≥0 am (v∗ ) is a finitely generated
+R-algebra. Then
+                  am (v̄∗ ) = am (v∗ ) + am−1 (v∗ )t + · · · + a1 (v∗ )tm−1 + (tm ).
+In order to keep track of the degree of the graded ring ⊕m≥0 am (v̄∗ ), denote by s the
+element t in a1 (v̄∗ ) = a1 (v∗ ) + (t). Hence deg s = 1, deg t = 0 and we have
+                am (v̄∗ ) = am (v∗ ) + am−1 (v∗ )s + · · · + a1 (v∗ )sm−1 + sm R[t],
+where deg ai (v∗ ) = i. As an R[t]-algebra, ⊕m≥0 am (v̄∗ ) is generated by ⊕m≥0 am (v∗ ) and s.
+Since ⊕m≥0 am (v∗ ) is a finitely generated R-algebra, we have that ⊕m≥0 am (v̄∗ ) is of finite
+type over OX×A1 .
+  Let X := ProjX×A1 ⊕m≥0 am (v̄∗ ), hence X is normal by Lemma 34. Denote by g : X →
+X × A1 the projection. Denote the composite map by π : X → A1 . The Q-line bundle L
+on X is defined as
+                                                      
+                              ∗                      1
+                       L := g (−KX×A1 /A1 ) + 1 +          AX (v∗ )OX (1),
+                                                     n
+where we treat OX (1) = k1 OX (k) as a Q-line bundle for sufficiently divisible k ∈ Z>0 . Let
+X̂ := g∗−1 (X × {0}) and σ = g|X̂ : X̂ → X. Let E be the exceptional divisor of g given
+by IE := OX (1). Hence
+                 E∼
+                  = Proj ⊕m≥0 am (v̄∗ )/am+1 (v̄∗ ) = Proj (grv∗ OX,p )[s],
+where s is a homogeneous element of degree 1. Since grv∗ OX,p is an integral domain, E is
+irreducible and reduced.
+   We will show the following statements:
+   (a) L is π-nef with L⊥ = X̂;
+   (b) L is π-semiample, hence (X , L) is a semi Q-test configuration of (X, −KX );
+   (c) CM(X , L) = 0.
+22                                        YUCHEN LIU
+
+  For (a), we see that Lt ∼
+                          = −KXt is ample whenever t 6= 0. From the definition we know
+that L is g-ample, hence L|E is ample. On X̂, we have that
+                                                
+                            ∼  ∗               1
+                       L|X̂ = σ (−KX ) + 1 +       AX (v∗ )OX̂ (1).
+                                               n
+For k ∈ Z>0 sufficiently divisible, let Z be the thickening of p in X such that IZ =
+                                              c hence lct(X; IZ )n · multZ X = vol(v
+ak (v∗ ). From (1) we know that v∗ minimizes vol,                               c ∗ ) by
+Proposition 31. Since
+                                n                 n
+                     n         1    c              1
+             ((−KX ) ) = 1 +        vol(v∗ ) = 1 +      lct(X; IZ )n · multZ X,
+                               n                   n
+by Lemma 10 and Remark 17 we have that L|X̂ is nef with zero top self intersection
+number. In addition, ǫZ (−KX ) = AX (v∗ )/m. As a result, L⊥ = X̂.
+  For (b), we first show that X is normal Q-Gorenstein with klt singularities. By Lemma
+34 we have that E = Ex(g) is a Q-Cartier prime divisor on X . Hence
+                              KX = g ∗KX×A1 + (AX (ordE ) − 1)E
+
+is Q-Cartier. To show that X has klt singularities, it suffices to show that (X , X̂) is plt.
+By Lemma 34, we have v̄∗ = ordE . Hence X0 = X̂ + E as Weil divisors since v̄∗ (t) = 1.
+In particular, KX + X̂ is Q-Cartier.
+   It is clear that
+                      IE /(IE · IX̂ ) = IE |X̂ = OX (1)|X̂ = OX̂ (1) ⊂ OX̂ .
+Since the kernel of IE → OX̂ is IE ∩ IX̂ , we have that IE · IX̂ = IE ∩ IX̂ . On the other
+hand, by computing graded ideals we know that IE + IX̂ = IF . Denote by η the generic
+point of F , then OX̂,η = OX ,η /IX̂,η is a DVR since X̂ is normal. Applying Lemma 35 to
+(R, p, q) = (OX ,η , IE,η , IX̂,η ) yields that E is Cartier at η. Since X0 = X̂ + E is Cartier
+and X̂ ∩ E = F , we have that X̂ = X0 − E is Cartier in codimension 2. Next we notice
+that X̂ → X produces a Kollár component, hence X̂ has klt singularities. Thus (X , X̂)
+is plt by inverse of adjunction [KM98, Theorem 5.50].
+   By Shokurov’s base-point-free theorem, to show L is π-semiample we only need to show
+that L − KX /A1 is π-ample. It follows from Lemma 34 that v̄∗ = ordE and E ∼Q OX (−1).
+Hence we have
+                      −KX /A1 = g ∗ (−KX×A1 /A1 ) − (AX×A1 (v̄∗ ) − 1)E
+                                 = g ∗ (−KX×A1 /A1 ) + AX (v∗ )OX (1).
+
+Since 0 < AX (v∗ ) < (1 + n1 )AX (v∗ ), we see that −KX /A1 is π-ample. Hence L − KX /A1 is
+π-ample.
+     For (c), we know that
+                                     1                                           
+              CM(X , L) =                  n
+                                              n(L̄n+1 ) + (n + 1)(L̄n · KX̄ /P1 ) .
+                             (n + 1)((−KX ) )
+                          VOLUME OF SINGULAR KE FANO VARIETIES                                 23
+
+By definition of L we know that
+                                                            
+                                ∗                         1
+                          L̄ = ḡ (−KX×P1 /P1 ) + 1 +          AX (v∗ )OX̄ (1),
+                                                          n
+                     KX̄ /P1 = ḡ ∗ KX×P1 /P1 − AX (v∗ )OX̄ (1).
+Since OX¯ (1) is supported in ḡ −1((p, 0)), we have (ḡ ∗ KX×P1 /P1 · OX̄ (1)) = 0 as a cycle.
+                                                    n+1
+Next, it is clear that ((ḡ ∗ KX×P1 /P1 )n+1 ) = (KX×P  1 /P1 ) = 0. Hence we have
+
+                                                n+1
+                                n+1            1
+                             (L̄ ) = 1 +              AX (v∗ )n+1 (OX¯ (1)n+1),
+                                               n
+                                                  n
+                        n                        1
+                     (L̄ · KX̄ /P1 ) = − 1 +          AX (v∗ )n+1 (OX¯ (1)n+1 ).
+                                                 n
+Thus CM(X , L) = 0.
+  Now we are ready to prove part (2). By (b) we know that L is semiample. Denote
+the ample model of (X , L)/A1 by (Y, M), with h : X → Y and L = h∗ M. Then
+(Y, M) is a normal Q-test configuration of (X, −KX ). Since h̄∗ KX̄ /P1 = KȲ/P1 , we have
+CM(Y, M) = CM(X , L) = 0. From (a) we know that L⊥ = X̂, so Ex(h) = X̂. Hence
+Y0 = h∗ X0 = h∗ (X̂ + E) = h∗ E. In particular, Y0 is a prime divisor on Y. It is clear
+that L|E = (1 + n1 )AX (v∗ )OE (1) is ample, hence h|E : E → Y0 is a finite birational
+morphism. Since X is K-polystable by assumption, hence CM(Y, M) = 0 yields that
+X∼ = Y0 . Then h|E : E → Y0 has to be an isomorphism because Y0 ∼ = X is normal. Hence
+X=E∼
+   ∼    = Proj (grv∗ OX,p )[s].                                                         
+Lemma 34. Let (X, p) be a normal singularity. Let v∗ be a divisorial valuation on
+X centered at p. Assume that grv∗ OX,p is a finitely generated C-algebra. Let F :=
+Proj grv∗ OX,p . Define X̂ := ProjX ⊕m≥0 am (v∗ ) with the projection σ : X̂ → X. Then
+X̂ is normal, F = Ex(σ) is a Q-Cartier prime divisor on X̂, and v∗ = ordF . (Note that
+σ is called a prime blow-up in [Ish04].)
+Proof. By Lemma 32, we know that ⊕m≥0 am (v∗ ) is a finitely generated OX -algebra. Since
+the valuation ideals am (v∗ ) are always integrally closed, X̂ is normal. By definition of F
+we know that the ideal sheaf IF is the same as the coherent sheaf OX̂ (1). Let k ∈ Z>0
+be sufficiently divisible so that amk (v∗ ) = ak (v∗ )m for any positive integer m. Thus X̂
+is naturally isomorphic to the blow up of X along the ideal sheaf ak (v∗ ). In particular,
+OX̂ (k) = σ −1 ak (v∗ ) · OX̂ is an invertible ideal sheaf. Next, OX̂ /OX̂ (k) is supported at the
+exceptional locus of σ. As ideal sheaves on X̂, we know that OX̂ (1)k ⊂ OX̂ (k) ⊂ OX̂ (1).
+Hence OX̂ (1) and OX̂ (k) have the same nilradical as ideal sheaves, and
+                       Fred = Supp(OX̂ /OX̂ (1)) = Supp(OX̂ /OX̂ (k))
+which is the reduced exceptional locus of σ. On the other hand, it is easy to see that
+grv∗ OX,p is an integral domain, so F is an integral scheme.
+   For k sufficiently divisible, we have that OX̂ (k) is invertible and σ∗ OX̂ (mk) = amk (v∗ )
+for any m ∈ Z≥0 . Thus OX̂ (k) = OX̂ (−lF ) for some positive integer l (so F is Q-Cartier).
+24                                     YUCHEN LIU
+
+Then for any m ∈ Z≥0 we have the following equivalences:
+               v∗ (f ) ≥ m ⇔ v∗ (f k ) ≥ mk ⇔ f k ∈ amk (v∗ ) ⇔ σ ∗ f k ∈ OX̂ (mk)
+                                                                ml
+                           ⇔ ordF (σ ∗ f k ) ≥ ml ⇔ ordF (f ) ≥    .
+                                                                k
+Assume v∗ (f ) = m. If ordF (f ) > ml/k, then we have ordF (f ) ≥ (ml + 1)/k. Hence
+ordF (f l ) ≥ (ml + 1)l/k which implies that v∗ (f l ) ≥ ml + 1, a contradiction! Hence we
+have ordF = (l/k)v∗ . Therefore, v∗ = ordF since both v∗ and ordF are divisorial.        
+Lemma 35. Let (R, m) be a Noetherian local ring. Let p, q be two prime ideals in R
+satisfying that p + q = m, p ∩ q = pq and R/q is a DVR. Then p is principal.
+Proof. Let x + q be a uniformizer of R/q. Since m = p + q, we may choose x so that x ∈ p.
+Hence we have (x) + q = m. As a result,
+                               p = (x) + p ∩ q = (x) + pq.
+So p = (x) by Nakayama lemma.                                                           
+5.2. Applications. The following theorem improves Fujita’s result on the equality case
+in [Fuj15, Theorem 5.1].
+Theorem 36. Let X be a Ding-semistable Q-Fano variety of dimension n. If ((−KX )n ) ≥
+(n + 1)n , then X ∼
+                  = Pn .
+Proof 1. Notice that ((−KX )n ) ≤ (n + 1)n by [Fuj15, Corollary 1.3]. Thus we have
+((−KX )n ) = (n + 1)n . Let p ∈ X be a smooth point. From [Fuj15, Proof of Theorem
+5.1] or Remark 17, we see that ǫp (−KX ) = n + 1. Then the theorem is a consequence
+of the forthcoming paper [LZ16] (joint with Ziquan Zhuang), where we show that if an
+n-dimensional Q-Fano variety X satisfies ǫp (−KX ) > n for some smooth point p ∈ X,
+then X ∼= Pn .                                                                     
+Proof 2. We follow the strategy and notation of the proof of Lemma 33. Let v∗ := ordp
+for a smooth point p ∈ X. As argued in the first proof, the assumptions of Lemma 33 are
+fulfilled except that X is only Ding-semistable rather than K-polystable. Nevertheless,
+we still have a semi Q-test configuration (X , L) of (X, −KX ) such that L⊥ = X̂ and
+CM(X , L) = 0. Let (Y, M) be the ample model of (X , L)/A1, with h : X → Y and
+L = h∗ M. We will show that Y0 ∼ = Pn .
+   Following the proof of Lemma 33, we know that h|E : E → Y0 is a finite birational
+morphism. Since v∗ = ordp and p ∈ X is a smooth point, we have that E ∼ = Pn . Therefore,
+E is the normalization of Y0 . Consider the short exact sequence
+                            0 → OX (−E) → OX → OE → 0.
+By taking h∗ , we get a long exact sequence
+(5.1)           0 → h∗ OX (−E) → OY → h∗ OE → R1 h∗ OX (−E) → · · ·
+Since X0 = X̂ + E, we have that h∗ OX (−E) = OY (−Y0 ) ⊗ h∗ OX (X̂). Notice that X̂ is
+h-exceptional, hence h∗ OX (X̂) = OY . As a result, h∗ OX (−E) ∼
+                                                               = OY (−Y0 ). On the other
+hand, we have
+                h∗ M = L = g ∗ (−KX×A1 /A1 ) − (n + 1)E = −KX /A1 − E.
+                         VOLUME OF SINGULAR KE FANO VARIETIES                                  25
+
+So −E = KX /A1 +h∗ M ∼Q,h KX . Since X has klt singularities, we have that R1 h∗ OX (−E) =
+0 by the generalized Kodaira vanishing theorem [Kol95, Theorem 10.19.4]. Thus the exact
+sequence (5.1) yields that h∗ OE = OY0 , which implies Y0 ∼
+                                                          =E∼ = Pn .
+          n
+  Since P is rigid under smooth deformation (cf. [Kol96, Exercise V.1.11.12.2]), we
+conclude that Yt ∼                                       = Xt ∼
+                  = Pn for general t ∈ A1 \ {0}, hence X ∼    = Yt ∼
+                                                                   = Pn .              
+  In the following theorem, we show the equality case of Theorem 3.
+Theorem 37. Let X be a Kähler-Einstein Q-Fano variety. Let p ∈ X be a closed
+point. Suppose (X, p) is a quotient singularity with local analytic model Cn /G, where
+G ⊂ GL(n, C) acts freely in codimension 1. Then ((−KX )n ) = (n + 1)n /|G| if and only
+if |G ∩ Gm | = 1 and X ∼
+                       = Pn /G.
+Proof. For the “if” part, we may assume that G ⊂ U(n). Hence G preserves the Fubini-
+Study metric ωF S on Pn . Since |G ∩ Gm | = 1, the G-action on Pn is free in codimen-
+sion 1. This implies that the quotient metric of ωF S on Pn /G is Kähler-Einstein and
+((−KPn /G )n ) = ((−KPn )n )/|G| = (n + 1)n /|G|.
+   For the “only if” part, let (Y, o) := (Cn /G, 0) be the local analytic model of (X, p). Let
+d := |G ∩Gm |. Following the proof of Theorem 23, we have a partial resolution h : Ŷ → Y
+of Y that is the quotient of the blow up g : C cn → Cn . Since Ŷ is the quotient of C cn , it has
+                                                                               ∼    n−1
+klt singularities. Denote by F the exceptional divisor of h, then we have F = P /G. Let
+u∗ := ordF be the divisorial on Y centered at o, then we have gru∗ OY,o ∼   = C[x1 , · · · , xn ]G
+is a finitely generated C-algebra. (Here we assume deg xi = 1/d so that the grading is
+preserved under the isomorphism.) Theorem 23 also implies vol(u   c ∗ ) = nn /|G|.
+   Since O[       ∼ d
+             X,p = OY,o , the divisorial valuation u∗ induces a divisorial valuation v∗ on
+X centered at p as in the proof of Theorem 23. Thus vol(v                c ∗ ), gr (OX,p ) ∼
+                                                             c ∗ ) = vol(u                      =
+                                                                                    v∗
+gru∗ (OY,o ) is a finitely generated C-algebra, X̂ := ProjX ⊕m≥0 am (v∗ ) has klt singularities,
+and                                                        n
+                                   n    (n + 1)n          1    c ∗ ).
+                            ((−KX ) ) =           = 1+         vol(v
+                                           |G|            n
+By [Ber16] we have that X is K-polystable. Hence applying Lemma 33 yields
+                      = Proj grv∗ OX,p [x] ∼
+                     X∼                    = Proj C[x1 , · · · , xn ]G [x],
+where deg xi = 1/d and deg x = 1. Denote y := x1/d , then C[x1 , · · · , xn ]G [x] is the
+Veronese subalgebra of C[x1 , · · · , xn ]G [y] where deg xi = deg y = 1/d. As a result,
+                            X∼
+                             = Proj C[x1 , · · · , xn ]G [y] = Pn /G.
+  Denote by H∞ the hyperplane at infinity in Pn . Let D be the prime divisor in X
+corresponding to H∞ /G in Pn /G. It is clear that (X, (1 − d1 )D) is an orbifold as a global
+quotient of Pn . Denote by π : Pn → X the quotient map, then we have
+                                      
+                      ∗              1
+                     π KX + 1 −          D = KPn , π ∗ D = dH∞ .
+                                     d
+Hence π ∗ (−KX ) = −KPn +(d−1)H∞ = OPn (n+d). This implies ((−KX )n ) = (n+d)n /|G|,
+so d = 1.                                                                         
+26                                          YUCHEN LIU
+
+Remark 38.      (1) The restriction on G in Theorem 37 can be dropped in its logarithmic
+      version as follows: suppose (X, D) is a conical Kähler-Einstein log Fano pair,
+      p 6∈ Supp(D), (X, p) is analytically isomorphic to (Cn /G, 0) and ((−KX − D)n ) =
+      (n + 1)n /|G|, then (X, D) ∼= (Pn /G, (1 − d1 )H∞ /G) where d = |G ∩ Gm |.
+  (2) The K-polystable condtion in Lemma 33 and Kähler-Einstein condition in Theo-
+      rem 3 cannot be dropped since any cubic surface in P3 with only one or two A2
+      singularities is K-semistable but not K-polystable (hence not Kähler-Einstein) ac-
+      cording to [OSS16, Section 4.2], but all global quotients of P2 are Kähler-Einstein
+      (hence K-polystable).
+Corollary 39 (=Corollary 6). Let X be a Kähler-Einstein log Del Pezzo surface with at
+most Du Val singularities.
+     (1) If ((−KX )2 ) = 1, then X has at most singularities of type A1 , A2 , A3 , A4 , A5 ,
+         A6 , A7 or D4 .
+     (2) If ((−KX )2 ) = 2, then X has at most singularities of type A1 , A2 or A3 .
+     (3) If ((−KX )2 ) = 3, then X has at most singularities of type A1 or A2 .
+     (4) If ((−KX )2 ) = 4, then X has at most singularities of type A1 .
+     (5) If ((−KX )2 ) ≥ 5, then X is smooth.
+Proof. Let C2 /G be the local analytic model of (X, p) for any closed point p ∈ X. By
+Corollary 4, we know that |G| ≤ 9/((−KX )2 ).
+   Recall that the order of orbifold group at an Ak singularity is k + 1, a Dk singularity
+is 4(k − 2), an E6 singularity is 24, an E7 singularity is 48, and an E8 singularity is
+120. Hence the inequality |G| ≤ 9/((−KX )2 ) implies (2)(3)(4)(5). For part (1), the same
+argument yields that X has at most singularities type of Ak with k ≤ 8, or of type D4 .
+Hence we only need to rule out A8 cases.
+   Assume to the contrary that (X, p) is of type A8 . Since ((−KX )2 ) = 1 = 9/|G|,
+Theorem 37 implies that X ∼  = P2 /G, where G = Z/9Z acts on P2 as follows:
+                             [x, y, z] 7→ [ζ i x, ζ −i y, z] for i ∈ Z/9Z,
+               2πi
+where ζ := e 9 is the ninth root of unity. The point p is the quotient of [0, 0, 1] under
+this action, which is of type 19 (1, −1) as a cyclic quotient singularity. However, the quo-
+tient singularities at [1, 0, 0] and [0, 1, 0] are both of type 91 (1, 2) which are not Du Val,
+contradiction!                                                                               
+
+                                           References
+[Bat81] V. V. Batyrev: Toric Fano threefolds. (Russian) Izv. Akad. Nauk SSSR Ser. Mat. 45 (1981), no.
+    4, 704-717, 927.
+[Ber16] Robert Berman: K-polystability of Q-Fano varieties admitting Kähler-Einstein metrics. Invent.
+    Math. 203 (2016), no. 3, 973-1025.
+[BB11] Robert Berman and Bo Berndtsson: The projective space has maximal volume among all toric
+    Kähler-Einstein manifolds. Preprint available at arXiv:1112.4445.
+[BB17] Robert Berman and Bo Berndtsson: The volume of Kähler-Einstein Fano varieties and convex
+    bodies. J. Reine Angew. Math. 723 (2017), 127-152.
+[BBJ15] Robert Berman, Sébastien Boucksom and Mattias Jonsson: A variational approach to the Yau-
+    Tian-Donaldson conjecture. Preprint available at arXiv:1509.04561.
+                            VOLUME OF SINGULAR KE FANO VARIETIES                                        27
+
+[BBEGZ11] Robert Berman, Sébastien Boucksom, Philippe Eyssidieux, Vincent Guedj and Ahmed Zeri-
+     ahi: Kähler-Einstein metrics and the Kähler-Ricci flow on log Fano varieties. To appear in J. Reine
+     Angew. Math., available at arXiv:1111.7158.
+[Blu18] Harold Blum: Existence of valuations with smallest normalized volume. Compos. Math. 154
+     (2018), no. 4, 820-849.
+[BC11] Sébastien Boucksom and Huayi Chen: Okounkov bodies of filtered linear series. Compos. Math.
+     147 (2011), no. 4, 1205-1229.
+[BdFFU15] Sébastien Boucksom, Tommaso de Fernex, Charles Favre and Stefano Urbinati: Valuation
+     spaces and multiplier ideals on singular varieties. Recent advances in algebraic geometry, 29-51,
+     London Math. Soc. Lecture Note Ser., 417, Cambridge Univ. Press, Cambridge, 2015.
+[BFJ14] Sébastien Boucksom, Charles Favre and Mattias Jonsson: A refinement of Izumi’s theorem.
+     Valuation theory in interaction, 55-81, EMS Ser. Congr. Rep., Eur. Math. Soc., Zrich, 2014.
+[BHJ17] Sébastien Boucksom, Tomoyuki Hisamoto and Mattias Jonsson: Uniform K-stability,
+     Duistermaat-Heckman measures and singularities of pairs. Ann. Inst. Fourier (Grenoble) 67 (2017),
+     no. 2, 743-841.
+[BKMS14] Sébastien Boucksom, Alex Küronya, Catriona Maclean and Tomasz Szemberg: Vanishing
+     sequences and Okounkov bodies. Math. Ann. 361 (2015), no. 3-4, 811-834.
+[Cam92] F. Campana: Connexité rationnelle des variétés de Fano. (French) Ann. Sci. École Norm. Sup.
+     (4) 25 (1992), no. 5, 539-545.
+[Che08] Ivan Cheltsov: Log canonical thresholds of del Pezzo surfaces. Geom. Funct. Anal. 18 (2008), no.
+     4, 1118-1144.
+[CK14] Ivan Cheltsov and Dimitra Kosta: Computing α-invariants of singular del Pezzo surfaces. J.
+     Geom. Anal. 24 (2014), no. 2, 798-842.
+[Cut13] Steven Dale Cutkosky: Multiplicities associated to graded families of ideals. Algebra Number
+     Theory 7 (2013), no. 9, 2059-2083.
+[dFEM03] Tommaso de Fernex, Lawrence Ein and Mircea Mustaţă: Bounds for log canonical thresholds
+     with applications to birational rigidity. Math. Res. Lett. 10 (2003), no. 2-3, 219-236.
+[dFEM04] Tommaso de Fernex, Lawrence Ein and Mircea Mustaţă: Multiplicities and log canonical
+     threshold. J. Algebraic Geom. 13 (2004), no. 3, 603-615.
+[dFEM11] Tommaso de Fernex, Lawrence Ein and Mircea Mustaţă: Log canonical thresholds on varieties
+     with bounded singularities. Classification of algebraic varieties, 221-257, EMS Ser. Congr. Rep., Eur.
+     Math. Soc., Zürich, 2011.
+[dFKL07] Tommaso de Fernex, Alex Küronya and Robert Lazarsfeld: Higher cohomology of divisors on
+     a projective variety. Math. Ann. 337 (2007), no. 2, 443-455.
+[dFM15] Tommaso de Fernex and Mircea Mustaţă: The volume of a set of arcs on a variety. Rev.
+     Roumaine Math. Pures Appl. 60 (2015), no. 3, 375-401.
+[Din88] Wei-Yue Ding: Remarks on the existence problem of positive Kähler-Einstein metrics, Math.
+     Ann. 282 (1988), 463-471.
+[DT92] Wei Yue Ding and Gang Tian: Kähler-Einstein metrics and the generalized Futaki invariant.
+     Invent. Math. 110 (1992), no. 2, 315-335.
+[Dol82] Igor Dolgachev: Weighted projective varieties. Group actions and vector fields (Vancouver, B.C.,
+     1981), 34-71, Lecture Notes in Math., 956, Springer, Berlin, 1982.
+[Don02] Simon Donaldson: Scalar curvature and stability of toric varieties. J. Differential Geom. 62
+     (2002), no. 2, 289-349.
+[ELS03] Lawrence Ein, Robert Lazarsfeld and Karen E. Smith: Uniform approximation of Abhyankar
+     valuation ideals in smooth function fields. Amer. J. Math. 125 (2003), no. 2, 409-440.
+[Fuj15] Kento Fujita: Optimal bounds for the volumes of Kähler-Einstein Fano manifolds. To appear in
+     Amer. J. Math., available at arXiv:1508.04578.
+[Fuj16] Kento Fujita: A valuative criterion for uniform K-stability of Q-Fano varieties. To appear in J.
+     Reine Angew. Math., available at arXiv:1602.00901
+[GK07] Alessandro Ghigi and János Kollár: Kähler-Einstein metrics on orbifolds and Einstein metrics
+     on spheres. Comment. Math. Helv. 82 (2007), no. 4, 877-902.
+[Ish04] Shihoko Ishii: Extremal functions and prime blow-ups. Comm. Algebra 32 (2004), no. 3, 819-827.
+28                                           YUCHEN LIU
+
+[Izu85] Shuzo Izumi: A measure of integrity for local analytic algebras. Publ. Res. Inst. Math. Sci. 21
+     (1985), no. 4, 719-735.
+[Jef97] Thalia D. Jeffres: Singular set of some Kähler orbifolds. Trans. Amer. Math. Soc. 349 (1997), no.
+     5, 1961-1971.
+[JM12] Mattias Jonsson and Mircea Mustaţă: Valuations and asymptotic invariants for sequences of
+     ideals. Ann. Inst. Fourier (Grenoble) 62 (2012), no. 6, 2145-2209 (2013).
+[Kol95] János Kollár: Shafarevich maps and automorphic forms. M. B. Porter Lectures. Princeton Uni-
+     versity Press, Princeton, NJ, 1995. x+201 pp.
+[Kol96] János Kollár: Rational curves on algebraic varieties. Ergebnisse der Mathematik und ihrer Gren-
+     zgebiete. 3. Folge. A Series of Modern Surveys in Mathematics [Results in Mathematics and Related
+     Areas. 3rd Series. A Series of Modern Surveys in Mathematics], 32. Springer-Verlag, Berlin, 1996.
+     viii+320 pp.
+[KMM92] János Kollár, Yoichi Miyaoka, Yoichi and Shigefumi Mori: Rational connectedness and bound-
+     edness of Fano manifolds. J. Differential Geom. 36 (1992), no. 3, 765-779.
+[KM98] János Kollár and Shigefumi Mori: Birational geometry of algebraic varieties. With the collabo-
+     ration of C. H. Clemens and A. Corti. Translated from the 1998 Japanese original. Cambridge Tracts
+     in Mathematics, 134. Cambridge University Press, Cambridge, 1998. viii+254 pp.
+[Laz04] Robert Lazarsfeld: Positivity in algebraic geometry. I. Classical setting: line bundles and linear
+     series. Ergebnisse der Mathematik und ihrer Grenzgebiete. 3. Folge. A Series of Modern Surveys in
+     Mathematics [Results in Mathematics and Related Areas. 3rd Series. A Series of Modern Surveys in
+     Mathematics], 48. Springer-Verlag, Berlin, 2004. xviii+387 pp.
+[LM09] Robert Lazarsfeld and Mircea Mustaţă: Convex bodies associated to linear series. Ann. Sci. c.
+     Norm. Supr. (4) 42 (2009), no. 5, 783-835.
+[Li15] Chi Li: Minimizing normalized volumes of valuations. To appear in Math. Z., available at
+     arXiv:1511.08164.
+[Li17] Chi Li: K-semistability is equivariant volume minimization. Duke Math. J. 166 (2017), no. 16,
+     3147C3218.
+[LL16] Chi Li and Yuchen Liu: Kähler-Einstein metrics and volume minimizations. To appear in Adv.
+     Math., available at arXiv:1602.05094.
+[LX14] Chi Li and Chenyang Xu: Special test configuration and K-stability of Fano varieties. Ann. of
+     Math. (2) 180 (2014), no. 1, 197-232.
+[LX16] Chi Li and Chenyang Xu: Stability of valuations and Kollár components. Preprint available at
+     arXiv:1604.05398.
+[LZ16] Yuchen Liu and Ziquan Zhuang: Characterization of projective spaces by Seshadri constants. To
+     appear in Math. Z., available at arXiv:1607.05743.
+[MM93] Toshiki Mabuchi and Shigeru Mukai: Stability and Einstein-Kähler metric of a quartic del Pezzo
+     surface. Einstein metrics and Yang-Mills connections (Sanda, 1990), 13360, Lecture Notes in Pure
+     and Appl. Math., 145, Dekker, New York, 1993.
+[Mol1897] Theodor Molien: Über die Invarianten der linearen Substitutionsgruppe. Sitzungsber. König.
+     Preuss. Akad. Wiss. (1897), 1152-1156.
+[Mus02] Mircea Mustaţă: On multiplicities of graded sequences of ideals. J. Algebra 256 (2002), no. 1,
+     229-249.
+[OSS16] Yuji Odaka, Cristiano Spotti and Song Sun: Compact moduli spaces of Del Pezzo surfaces and
+     Kähler-Einstein metrics. J. Differential Geom. 102 (2016), no. 1, 127-172.
+[Ram73] C. P. Ramanujam: On a geometric interpretation of multiplicity. Invent. Math. 22 (1973/74),
+     63-67.
+[Ree87] David Rees: Izumi’s theorem. Commutative algebra (Berkeley, CA, 1987), 407-416, Math. Sci.
+     Res. Inst. Publ., 15, Springer, New York, 1989.
+[Shi10] Yalong Shi: On the α-invariants of cubic surfaces with Eckardt points. Adv. Math. 225 (2010),
+     no. 3, 1285-1307.
+[Tia90] Gang Tian: On Calabi’s conjecture for complex surfaces with positive first Chern class. Invent.
+     Math. 101 (1990), no. 1, 101-172.
+                           VOLUME OF SINGULAR KE FANO VARIETIES                                       29
+
+[Tia97] Gang Tian: Kähler-Einstein metrics with positive scalar curvature. Invent. Math. 130 (1997), no.
+     1, 1-37.
+[WN12] David Witt Nyström: Test configurations and Okounkov bodies. Compos. Math. 148 (2012), no.
+     6, 1736-1756.
+[Won13] Joonyeong Won: Slope of a del Pezzo surface with du Val singularities. Bull. Lond. Math. Soc.
+     45 (2013), no. 2, 402-410.
+   E-mail address: yuchenl@math.princeton.edu
+
+  Department of Mathematics, Princeton University, Princeton, NJ, 08544-1000, USA.
+

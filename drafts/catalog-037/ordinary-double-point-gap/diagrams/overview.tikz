@@ -1,0 +1,43 @@
+\node[card] (start) {\heading{1}{帰納基底と高体積のgerm}{Induction bases and a high-volume germ}
+$n=2,3,4$ \Tx{の上界・等号を入力。}{supply the bound and equality.}\\
+$n=N+1\ge5,\quad d(x,X)\ge p_n=2(N/n)^n$.};
+\node[card,below=2.6cm of start] (cone) {\heading{2}{孤立Gorenstein円錐と整数grading}{Isolated Gorenstein cone and integral gradings}
+$d(o,C)=d(x,X),\quad\edim(X,x)\le\edim(C,o)$,\\
+$\zeta_i=(r_i/n)\xi+\epsilon_i,\quad\epsilon_i\to0,\quad -K_{B_i}=r_i L_i$.};
+\flow{start}{cone}{\Tx{最小値を保つ退化、低次元slice、index cover}{Preserve the minimum; use lower-dimensional slices and index covers}\\\Cite{stable}\quad\Cite{cone}};
+\node[half,anchor=north west] (small) at ($(cone.south west)+(0,-2.3)$) {\heading{3a}{小stabilizer}{Small stabilizers}
+$m_{\max}\le r/N$\\
+\Tx{有理曲線・有限evaluation・tensor}{Rational curve, finite evaluation, tensor}\\
+\Tx{自由なgrading、$r=N$または$N+1$}{Free grading, $r=N$ or $N+1$}};
+\node[half,anchor=north east] (large) at ($(cone.south east)+(0,-2.3)$) {\heading{3b}{大stabilizer}{Large stabilizers}
+$m=m_{\max}\ge r/N$\\
+$c_0\in\operatorname{int}K,\quad\Gamma=K\cap\Lambda$\\
+\Tx{adjoint liftingと内部格子点}{Adjoint lifting and interior lattice points}};
+\draw[edge] ($(small.north west)+(.2,2.3)$)--($(small.north west)+(.2,0)$);
+\draw[edge] ($(large.north west)+(.2,2.3)$)--($(large.north west)+(.2,0)$);
+\node[branchreason,anchor=west] at ($(small.north west)+(.6,1.05)$) {\Tx{絶対近似とorbifold quotient}{Absolute approximation; orbifold quotient}\\\Cite{approximation}};
+\node[branchreason,anchor=west] at ($(large.north west)+(.6,1.05)$) {\Tx{momentの厳密評価＋lifting}{Strict moment bound and lifting}\\\Cite{interior}\\\Cite{adjoint-lifting}};
+\node[half,below=2.2cm of small] (quad) {\heading{4a}{円錐を分類}{Classify the cone}
+$(B,L)=(Q^N,\mathcal O(1))$\\
+\Tx{特異性が滑らかな円錐を除外}{Singularity excludes the smooth cone}\\
+$C=\mathrm{ODP},\quad d(o,C)=p_n$};
+\node[half,below=2.2cm of large] (slice) {\heading{4b}{別のstabilizerでsliceを作る}{Slice at a second stabilizer}
+$G=D[v],\quad h\ge2,\quad\dim Y=n$\\
+\Tx{$Y$は特異klt。文字の割合$1/h$}{Singular klt $Y$; character share $1/h$}\\
+$d(o,C)\le(p_n+M_n)/2$};
+\branchflow{small}{quad}{\Tx{tensor weightと高指数分類}{Tensor weights and high index}\\\Cite{small-statement}};
+\branchflow{large}{slice}{\Tx{二filtration、特異性、colength}{Two filtrations, singularity, colength}\\\Cite{filter}\\\Cite{optimization}};
+\node[result,below=3.0cm of $(quad.south)!.5!(slice.south)$] (bound) {\heading{5}{上界を閉じ、等号を戻す}{Close the bound and return in equality}
+$M_n\le(p_n+M_n)/2\ \Longrightarrow\ M_n\le p_n$.\\
+\Tx{等号：strict countと整数丸めで$Nm_{\max}\le r$、従って$C=\mathrm{ODP}$。}{Equality: strict counting and integral rounding give $Nm_{\max}\le r$, hence $C=\mathrm{ODP}$.}};
+\coordinate (quad-target) at (quad.west |- bound.north);
+\draw[edge] ($(quad.south west)+(.2,0)$)--($(quad-target)+(.2,0)$);
+\coordinate (slice-target) at (slice.west |- bound.north);
+\draw[edge] ($(slice.south west)+(.2,0)$)--($(slice-target)+(.2,0)$);
+\node[branchreason,anchor=west] at ($(quad.south west)+(.6,-1.35)$) {\Tx{ODPの最小値を計算}{Compute the ODP minimum}\\\Cite{odp}};
+\node[branchreason,anchor=west] at ($(slice.south west)+(.6,-1.35)$) {\Tx{supremumと等号の帰還}{Supremum and equality return}\\\Cite{bootstrap}\\\Cite{equality-cone}};
+\node[result,below=2.5cm of bound] (finish) {\heading{6}{元のgermの等号分類}{Equality for the original germ}
+$\edim(X,x)\le n+1\ \Longrightarrow\ \text{\Tx{hypersurface}{hypersurface}}$\\
+\Tx{weighted testが二次部分の非退化性を強制。逆向きはODPの最小値。}{Weighted tests force a nondegenerate quadratic part; the ODP minimum gives the converse.}\\
+$\vd(x,X)=2(n-1)^n\ \Longleftrightarrow\ (X,x)^{\rm an}=\mathrm{ODP}$.};
+\flow{bound}{finish}{\Tx{embedding dimensionを戻し、重み付き評価を適用}{Return the embedding-dimension bound and apply weighted tests}\\\Cite{hypersurface}\quad\Cite{odp}};

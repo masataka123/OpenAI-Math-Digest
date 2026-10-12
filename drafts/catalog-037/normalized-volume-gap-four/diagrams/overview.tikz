@@ -1,0 +1,27 @@
+\node[card] (start) at (0,0) {\heading{1}{大体積の場合に絞る}{Restrict to the large-volume case}
+ $V=\widehat{\operatorname{vol}}(x,X)\ge162$, $\dim X=4$, $\Delta=0$\quad\Tx{特異なklt芽}{singular klt germ}};
+\node[card,below=1.7cm of start] (cone) {\heading{2}{孤立Gorenstein錐へ}{Pass to an isolated Gorenstein cone}
+ $\widehat{\operatorname{vol}}(o,C)=V$,\quad $\operatorname{edim}(x,X)\le\operatorname{edim}(o,C)$};
+\flow{start}{cone}{\Tx{安定退化・次数公式・非孤立点の小さい上界}{Stable degeneration, degree formula, and the smaller nonisolated bound}\\[3pt]\Cite{cone}\\[3pt]\Cite{stable}\quad\Cite{finite-degree}};
+\node[card,below=1.45cm of cone] (stab) {\heading{3}{横断jetでstabilizerを制限}{Bound stabilizers by transverse jets}
+ $m<2r/5$,\quad $y=\lambda j$,\quad $\lambda=5/(2r)$,\quad $\lambda m<1$};
+\flow{cone}{stab}{\Tx{文字別jet評価が最小化rayに反する付値を排除}{Character-sensitive jets exclude valuations contradicting the minimizing ray}\\[3pt]\Cite{jets}\quad\Cite{stabilizer}};
+\node[half,anchor=north] (disc) at ($(stab.south)+(-3.95,-2.0)$) {\heading{4a}{整数discrepancy}{Integral discrepancies}
+ $A_C(F)>5/2\ \Longrightarrow\ A_C(F)\ge3$\\[4pt]\Tx{すべての頂点中心の原始素因子}{Every primitive prime divisor centered at the vertex}};
+\node[half,anchor=north] (lct) at ($(stab.south)+(3.95,-2.0)$) {\heading{4b}{低重み関数とlc中心}{Short weights and lc centers}
+ $0<y<5/3$\quad\Tx{の非消滅}{nonvanishing}\\[4pt]$\operatorname{lct}_o(C;\mathfrak m_o)>3/2$};
+\draw[edge] ($(stab.south)+(-7,0)$)--($(disc.north)+(-3.05,0)$);
+\draw[edge] ($(stab.south)+(0.9,0)$)--($(lct.north)+(-3.05,0)$);
+\node[branchreason,anchor=west] at ($(stab.south)+(-6.45,-1)$) {\Tx{lc抽出とCartier性}{Lc extraction and Cartierness}\\[3pt]\Cite{stabilizer}};
+\node[branchreason,anchor=west] at ($(stab.south)+(1.45,-1)$) {\Tx{Hilbert双対性とsubadjunction}{Hilbert duality and subadjunction}\\[3pt]\Cite{short}\\[3pt]\Cite{threshold}};
+\node[card,anchor=north] (section) at ($(disc.south)+(3.95,-1.8)$) {\heading{5}{二つの評価を切断で合わせる}{Combine both estimates on a section}
+ $A_i-b_i>1\ \Longrightarrow\ H\text{ terminal Gorenstein}$\\[4pt]
+ $\operatorname{edim}(o,H)\le4\ \Longrightarrow\ \operatorname{edim}(x,X)\le5$};
+\draw[edge] ($(disc.south)+(-3.05,0)$)--($(section.north)+(-7,0)$);
+\draw[edge] ($(lct.south)+(-3.05,0)$)--($(section.north)+(0.9,0)$);
+\node[branchreason,anchor=west] at ($(disc.south)+(-2.5,-.9)$) {$b_i=1:\ A_i-b_i\ge2$\\[3pt]\Cite{section}};
+\node[branchreason,anchor=west] at ($(lct.south)+(-2.5,-.9)$) {$b_i\ge2:\ A_i-b_i>b_i/2\ge1$\\[3pt]\Tx{二つの評価でterminal性}{Both estimates give terminality}};
+\node[result,below=4.2cm of section] (end) {\heading{6}{元の芽へlci評価を適用}{Apply the lci bound to the original germ}
+ $\widehat{\operatorname{vol}}(x,X)\le162$\\[4pt]
+ $\widehat{\operatorname{vol}}(x,X)=162\quad\Longleftrightarrow\quad(X,x)\text{ analytic ODP}$};
+\flow{section}{end}{\Tx{指数1のcDV分類から$\operatorname{edim}(H)\le4$、元の芽の$\operatorname{edim}\le5$へ}{Index-one cDV classification gives $\operatorname{edim}(H)\le4$, then $\operatorname{edim}(X)\le5$}\\[3pt]\Cite{reid}\\[3pt]\Tx{埋込み次元5の特異四次元局所環は超曲面}{A singular fourfold local ring of embedding dimension five is a hypersurface}\\[3pt]\Cite{finish}\quad\Cite{lci}\\[3pt]\Tx{逆向きはODPの体積計算、解析的同型は完成不変性}{Reverse direction: ODP volume; analytic isomorphism: completion invariance}\\[3pt]\Cite{completion}};

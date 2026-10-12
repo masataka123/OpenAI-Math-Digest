@@ -1,0 +1,77 @@
+{
+  "catalogId": "037",
+  "productionVersion": "1.4",
+  "checkingScope": "Inter-paper proof input and selected intrapaper consequence; all-dimensional theorem includes fourfold theorem as a statement, not a reverse proof dependency. External inputs are recorded per article.",
+  "omittedSections": [
+    {
+      "section": "fixed classifications and selection UI",
+      "reason": "Two articles in one direct chain; no choice among independent routes is needed."
+    }
+  ],
+  "connections": [
+    {
+      "id": "fourfold-to-all-dimensions",
+      "from": {
+        "paperId": "normalized-volume-gap-four",
+        "result": "Theorem 1.1",
+        "pages": "1; proof 18",
+        "version": "September 24, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-normalized-volume-gap-in-dimension-four-September-24-2026/paper.pdf"
+      },
+      "to": {
+        "paperId": "ordinary-double-point-gap",
+        "result": "Theorem 2.4; §8.2",
+        "pages": "9, 52",
+        "version": "September 24, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-ordinary-double-point-gap-in-every-dimension-September-24-2026/paper.pdf"
+      },
+      "role": "Supply n=4 upper bound and analytic equality classification for induction to all n≥5.",
+      "hypotheses": "Same singular boundary-zero complex algebraic klt germs; K_X Q-Cartier; dimension 4. Neither isolatedness nor lci is assumed.",
+      "kind": "direct",
+      "checking": "Root and source_review, 2026-10-12: both theorem statements and all-dimensional use read in fixed sources. Not an independent verification of the full fourfold proof.",
+      "articleLinks": {
+        "ja": [
+          "../normalized-volume-gap-four/article.ja.md#theorem-1-1",
+          "../ordinary-double-point-gap/article.ja.md#proof-overview"
+        ],
+        "en": [
+          "../normalized-volume-gap-four/article.en.md#theorem-1-1",
+          "../ordinary-double-point-gap/article.en.md#proof-overview"
+        ]
+      },
+      "unresolved": []
+    },
+    {
+      "id": "local-gap-to-global-bound",
+      "from": {
+        "paperId": "ordinary-double-point-gap",
+        "result": "Theorem 1.1",
+        "pages": "3, 52",
+        "version": "September 24, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-ordinary-double-point-gap-in-every-dimension-September-24-2026/paper.pdf"
+      },
+      "to": {
+        "paperId": "ordinary-double-point-gap",
+        "result": "Corollary 1.2; §8.3",
+        "pages": "3, 53",
+        "version": "September 24, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-ordinary-double-point-gap-in-every-dimension-September-24-2026/paper.pdf"
+      },
+      "role": "At a singular closed point, combine the local gap with Liu local-to-global volume comparison. Smooth classification is a separate input.",
+      "hypotheses": "n≥2; K-semistable Q-Fano variety; choose a singular closed point for strict singular bound.",
+      "kind": "consequence",
+      "checking": "Root/source_review read §8.3; external statement checks delegated to article 01 and recorded in its sources.json.",
+      "articleLinks": {
+        "ja": [
+          "../ordinary-double-point-gap/article.ja.md#corollary-1-2"
+        ],
+        "en": [
+          "../ordinary-double-point-gap/article.en.md#corollary-1-2"
+        ]
+      },
+      "unresolved": [
+        "No sharpness or equality classification asserted for the smaller singular global bound."
+      ]
+    }
+  ]
+}

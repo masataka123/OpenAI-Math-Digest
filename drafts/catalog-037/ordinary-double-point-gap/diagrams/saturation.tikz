@@ -1,0 +1,30 @@
+\node[card] (start) {\heading{1}{文字を保持するTaylor半群}{Taylor semigroup retaining characters}
+$\Gamma\subset\Lambda=\{(j,\gamma):j\equiv\sum b_i\gamma_i\pmod m\}$,\\
+$K=\overline{\operatorname{cone}(\Gamma)},\quad c_0=(r,1,\ldots,1)\in\Lambda$.};
+\node[half,anchor=north west] (inside) at ($(start.south west)+(0,-2.8)$) {\heading{2a}{数値から内部性}{Numerical interiority}
+$H\ge2/s\ge2,\quad C_*<2$\\
+\Tx{近最小性と指数期待値評価}{Near-minimality and exponential bound}\\
+$c_0\in\operatorname{int}K$};
+\node[half,anchor=north east] (lift) at ($(start.south east)+(0,-2.8)$) {\heading{2b}{独立なadjoint lifting}{Independent adjoint lifting}
+$q\in\Lambda,\ q+c_0\in\operatorname{int}K$\\
+$\Longrightarrow q\in\Gamma$\\
+\Tx{smooth stack上でjetを持ち上げる}{Lift the prescribed jet on smooth stacks}};
+\draw[edge] ($(inside.north west)+(.2,2.8)$)--($(inside.north west)+(.2,0)$);
+\draw[edge] ($(lift.north west)+(.2,2.8)$)--($(lift.north west)+(.2,0)$);
+\node[branchreason,anchor=west] at ($(inside.north west)+(.6,1.3)$) {\Tx{momentとsupportの矛盾}{Moments contradict a support}\\\Cite{moments}\\\Cite{interior}};
+\node[branchreason,anchor=west] at ($(lift.north west)+(.6,1.3)$) {\Tx{multiplier ideal＋vanishing}{Multiplier ideals and vanishing}\\\Cite{howald}\\\Cite{adjoint-lifting}};
+\node[card,below=2.8cm of $(inside.south)!.5!(lift.south)$] (facets) {\heading{3}{primitive facet supportの高さを1に固定}{Force primitive facet supports to height one}
+$\eta\in\Lambda^*,\quad\eta(c_0)=1$.\\
+\Tx{微分可能点で、非有理・高さ2以上のsupport rayなら$q\notin K$, $q+c_0\in\operatorname{int}K$が生じる。}{At differentiability points, an irrational support ray or height at least two would give $q\notin K$ but $q+c_0\in\operatorname{int}K$.}\\
+\Tx{$c_0$の小球がsupportのnormを抑え、有限個にする。}{A ball around $c_0$ bounds support norms, giving finitely many supports.}};
+\coordinate (inside-target) at (inside.west |- facets.north);
+\draw[edge] ($(inside.south west)+(.2,0)$)--($(inside-target)+(.2,0)$);
+\coordinate (lift-target) at (lift.west |- facets.north);
+\draw[edge] ($(lift.south west)+(.2,0)$)--($(lift-target)+(.2,0)$);
+\node[branchreason,anchor=west] at ($(inside.south west)+(.6,-1.3)$) {\Tx{内部の小球がsupportを有界にする}{An interior ball bounds support norms}\\\Cite{saturation}};
+\node[branchreason,anchor=west] at ($(lift.south west)+(.6,-1.3)$) {\Tx{格子近似とliftingが矛盾を作る}{Lattice approximation and lifting give a contradiction}\\\Cite{saturation}};
+\node[result,below=2.7cm of facets] (sat) {\heading{4}{完全な飽和とcanonical shift}{Exact saturation and the canonical shift}
+$\Gamma=K\cap\Lambda,\qquad\operatorname{int}K\cap\Lambda=c_0+\Gamma$.\\
+\Tx{有限生成・飽和；内部格子点のidealがprincipal。}{Finite generation and saturation; the interior-lattice ideal is principal.}\\
+$\mathbb C[\Gamma]\ \text{\Tx{はGorenstein}{is Gorenstein}},\qquad \deg\omega_{\bar S}=(r,N)$.};
+\flow{facets}{sat}{\Tx{facetの整数値と平行移動；canonical moduleを適用}{Integral facet values and translation; apply the canonical-module formula}\\\Cite{saturation}\\\Cite{canonical-module}};

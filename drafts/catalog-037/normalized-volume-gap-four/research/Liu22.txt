@@ -1,0 +1,1070 @@
+                                                                  K-STABILITY OF CUBIC FOURFOLDS
+
+                                                                                        YUCHEN LIU
+arXiv:2007.14320v2 [math.AG] 10 Jan 2022
+
+
+
+
+                                                  Abstract. We prove that the K-moduli space of cubic fourfolds is identical to their GIT
+                                                  moduli space. More precisely, the K-(semi/poly)stability of cubic fourfolds coincide to the
+                                                  corresponding GIT stabilities, which was studied in detail by Laza. In particular, this
+                                                  implies that all smooth cubic fourfolds admit Kähler-Einstein metrics. Key ingredients
+                                                  are local volume estimates in dimension three due to Liu-Xu, and Ambro-Kawamata’s
+                                                  non-vanishing theorem for Fano fourfolds.
+
+
+
+
+                                                                                    1. Introduction
+                                              K-stability is an algebro-geometric stability condition introduced by Tian [Tia97] and later
+                                           reformulated algebraically by Donaldson [Don02] to detect the existence of Kähler-Einstein
+                                           (KE) metrics on Fano varieties. The Yau-Tian-Donaldson (YTD) Conjecture predicts that
+                                           the existence of a KE metric on a Fano variety X is equivalent to the K-polystability of
+                                           X. The relatively easier direction of the YTD Conjecture that KE metrics implies K-
+                                           polystability was confirmed in [Ber16]. When X is smooth, the YTD Conjecture was proved
+                                           in the celebrated works [CDS15] and [Tia15] using Cheeger-Colding-Tian theory. Later,
+                                           a different approach to the YTD Conjecture, namely the variational approach, has been
+                                           developed. Combining the analytic works [BBJ21, LTW19, Li19] and the algebraic work
+                                           [LXZ21], this approach gives a full proof of the YTD Conjecture for all (possibly singular)
+                                           Fano varieties. However, it is often a challenging problem to check K-(semi/poly)stability
+                                           of an explicit Fano variety.
+                                              In recent years, the algebraic study of K-stability has successfully led to a new theory,
+                                           known as the K-moduli theory, that produces an algebraic construction of compact moduli
+                                           spaces of Fano varieties. The Fano K-moduli theorem, proved in a combination of works
+                                           [Jia20, LWX21, CP21, BX19, ABHLX20, BLX19, Xu20, XZ20, XZ21, BHLLX21, LXZ21],
+                                           states that given dimension n and volume V , there exists an Artin stack MKss n,V of finite type
+                                           parametrizing K-semistable Fano varieties, called the K-moduli stack, and MKss    n,V admits a
+                                                                              Kps
+                                           projective good moduli space Mn,V      parametrizing K-polystable Fano varieties, called the
+                                           K-moduli space. In the Q-Gorenstein smoothable case, the Fano K-moduli theorem was
+                                           proved earlier in [LWX19, XZ20] (see also [Oda15, SSY16]) based on analytic results from
+                                           [CDS15, Tia15].
+                                              The K-moduli theory not only lays the foundation for these K-moduli spaces, but also
+                                           provides strong tools to verify K-stability for explicit Fano varieties (e.g. Fano hypersurfaces
+                                           or complete intersections). One notable strategy along this direction, namely the moduli
+                                           continuity method, goes as follows. Using α-invariants and group actions, it is usually easy
+                                           to find a K-stable Fano manifold X in the given family (e.g. Fermat hypersurfaces [Tia00,
+
+                                             Date: January 11, 2022.
+                                                                                              1
+2                                         YUCHEN LIU
+
+AGP06, Zhu21]). Then by openness of K-(semi)stability [BL18, BLX19, Xu20, LXZ21],
+there exists an open neighborhood of [X] in the parameter space which parametrizes K-
+stable Fano varieties Xt . By the Fano K-moduli theorem, there exists a component M K of
+                         Kps
+the K-moduli space Mn,V      that parametrizes those Xt and their K-polystable Q-Gorenstein
+limits, where n = dim(X) and V = (−KX )n . Hence the K-moduli space M K is birational to
+the GIT moduli space M GIT . Using the local-to-global volume comparison in [Liu18], if the
+global volume of X is relatively large, then we can often get a good control of the singularities
+appearing in the boundary of M K . This enables us to give an explicit description of the
+birational map M K 99K M GIT , and in some cases to even show that it is an isomorphism.
+This strategy first appeared implicitly in [Tia90] where Tian showed that all smooth del
+Pezzo surfaces with reductive automorphism groups are K-polystable. Later, it was used to
+construct explicit K-moduli compactifications of del Pezzo surfaces of degree 4 in [MM93]
+and of degree ≤ 3 in [OSS16] where the latter work was more focused on the stability study.
+In higher dimensions, it is shown that M K is isomorphic to M GIT for complete intersections
+of two quadric hypersurfaces in [SS17] (where smooth ones were shown to be K-stable earlier
+in [AGP06]) and cubic threefolds in [LX19]. Some cases for log Fano pairs have been worked
+out as well, see e.g. [Fuj21, GMGS21, ADL19, ADL20, ADL21]. Despite these results, much
+less is known in higher dimensions.
+   In this paper, we carry out this strategy for cubic fourfolds by showing that their K-moduli
+space is isomorphic to their GIT moduli space. In other words, the K-(semi/poly)stability
+of cubic fourfolds are the same as their GIT (semi/poly)stability.
+Theorem 1.1. Let X ⊂ P5 be a (possibly singular) cubic hypersurface. Then X is K-
+(semi/poly)stable if and only if X ⊂ P5 is GIT (semi/poly)stable. In particular, the K-moduli
+space M K parametrizing K-polystable Q-Fano varieties admitting Q-Gorenstein smoothings
+to smooth cubic fourfolds is isomorphic to the GIT moduli space M GIT of cubic fourfolds.
+   Note that the “only if” direction in Theorem 1.1 follows from the general fact in [Tia94,
+PT06] that a K-(semi/poly)stable Fano hypersurface is always GIT (semi/poly)stable. On
+the other hand, the “if” direction for general Fano hypersurfaces X ⊂ Pn+1 is expected
+to be true only when deg X = 3. In fact, if deg X ≥ 4 then there are non-reduced, hence
+K-unstable, GIT polystable hypersurfaces X, e.g. a multiple of a smooth hyperquadric. In
+addition, the “if” direction can also fail for non-hypersurface Fano varieties, e.g. quartic
+double solids [ADL21, Theorem 1.4].
+   The GIT of cubic fourfolds was studied in detail by Laza [Laz09] (see also [Yok08]). As
+a consequence, we have the following result which, together with [CDS15, Tia15], implies
+that any smooth cubic fourfold admits a KE metric. We also obtain a result on singularities
+of GIT semistable cubic fourfolds without involving direct GIT calculation, which answers
+affirmatively a question of Spotti and Sun [SS17, Question 5.8] in dimension 4.
+Corollary 1.2.
+  (1) All smooth cubic fourfolds are K-stable.
+  (2) All cubic fourfolds with simple singularities are K-stable.
+  (3) All GIT polystable cubic fourfolds are K-polystable. For a list of generic singularities
+      of GIT polystable cubic fourfolds with non-simple singularities, see [Laz09, Theorem
+      1.2 and Table 3].
+  (4) Any GIT semistable cubic fourfold has Gorenstein canonical singularities.
+                              K-STABILITY OF CUBIC FOURFOLDS                                   3
+
+In particular, each cubic fourfold in (1), (2) or (3) admits a (weak) KE metric.
+
+   We note that combined Corollary 1.2 with [Che01, CP02] and [Fuj19a, Corollary 1.4] on
+K-stability of smooth quintic fourfolds and the very recent result [AZ20, Theorem 1.1] on
+K-stability of smooth quartic fourfolds, we answer affirmatively the folklore conjecture that
+all smooth Fano hypersurfaces have KE metrics in dimension 4.
+   In the process of proving Theorem 1.1, we confirm the ODP Gap conjecture of local
+volumes [SS17, Conjecture 5.5] (see also Conjecture 2.10) for all local complete intersection
+singularities. The proof uses the lower semicontinuity of local volumes [BL21]. We note that
+this conjecture was confirmed in dimension at most 3 [LL19, LX19].
+
+Theorem 1.3 (=Theorem 2.12). Let (x ∈ X) be an n-dimensional non-smooth local com-
+plete intersection klt singularity. Then
+
+                                    c
+                                    vol(x, X) ≤ 2(n − 1)n ,
+
+and equality holds if and only if it is an ordinary double point.
+
+   Our proof of Theorem 1.1 starts from parallel arguments in [LX19] where the author
+and Xu showed the similar result to Theorem 1.1 for cubic threefolds. Suppose X is an
+n-dimensional K-semistable Q-Fano variety admitting a Q-Gorenstein smoothing to cubic
+hypersurfaces Xt . Let L be the Q-Cartier Weil divisor on X as the limit of hyperplane
+sections of Xt . By the moduli continuity method in [SS17, LX19], the analogous result to
+Theorem 1.1 for cubic n-folds would follow from showing X is a (possibly singular) cubic
+hypersurface. By [Fuj90] this reduces to showing L is Cartier. Using the local-to-global
+volume comparison from [Liu18], the divisor L being Cartier would follow from the ODP
+Gap Conjecture of local volumes in dimension n (see Conjecture 2.10), especially applied
+to the index 1 cover of a singular point x ∈ X where L is not Cartier. In [LX19], the
+author and Xu verified the ODP Gap conjecture in dimension 3, thus proving that K-
+(semi/poly)stability of cubic threefolds coincide with corresponding GIT stabilities. Such
+an approach depends heavily on the classification of terminal and canonical singularities in
+dimension 3, and is currently out of reach in dimension 4 or higher.
+   To overcome this difficulty, we study the explicit geometry of the linear systems |L| and
+|2L| on X under the assumption that L is not Cartier. Using the local-to-global volume
+estimates from [Liu18, LX19] and a Bertini type result for local volumes (see Theorem 2.16),
+we show that 2L is Cartier, and L is Cartier away from finitely many points. Then using
+Ambro-Kawamata’s non-vanishing theorem for fundamental divisors on Fano varieties with
+large Fano index [Amb99, Kaw00], we show that for general elements D ∈ |2L| and H ∈ |L|,
+the complete intersection (G = D∩H, L|G ) is a polarized K3 surface with Du Val singularities
+of degree 6. Then classical results on linear systems of K3 surfaces [May72] implies that |2L|
+is base point free, and (G, L|G ) is either a complete intersection, hyperelliptic, or unigonal.
+In the first case, we show that the index 1 cover of a non-Cartier point x ∈ X of L must be
+a local complete intersection which satisfies the ODP Gap Conjecture (see Theorem 1.3).
+Thus similar arguments to [LX19] show that X is K-unstable. In the last two cases, by
+analyzing the rational map φ|L| : X 99K P5 we show that α(X) < 51 which implies that X
+is K-unstable by [FO18, Theorem 3.5]. Given these contradictions, we conclude that L is
+Cartier on X, hence proving Theorem 1.1.
+4                                        YUCHEN LIU
+
+Acknowledgements. I would like to thank Chenyang Xu and Ziquan Zhuang for fruitful
+discussions and helpful comments on a draft, including Remark 4.8 and a simplification
+of the proof of Proposition 4.6. I would like to thank Kento Fujita, Chen Jiang, Zhiyuan
+Li, Linquan Ma, Yuji Odaka, Giulia Saccà, Cristiano Spotti, and Gang Tian for helpful
+discussions and comments. The author was partially supported by the NSF Grant No.
+2148266 (transferred from NSF Grant No. DMS-2001317).
+
+                           2. K-stability and local volumes
+  Throughout this paper, we work over the field C. We follow the standard convention from
+[KM98, Kol13]. A pair (X, ∆) is a normal variety X together with an effective Q-divisor ∆
+such that KX + ∆ is Q-Cartier. A pair (X, ∆) is called a log Fano pair if X is projective,
+(X, ∆) is klt, and −KX − ∆ is ample. We call X a Q-Fano variety if (X, 0) is a log Fano
+pair. We call X a lc Fano variety if X is normal projective with log canonical singularities,
+and −KX is Q-Cartier ample. A klt singularity x ∈ X is a closed point x on a normal
+variety X with klt singularities.
+
+2.1. Valuative criteria for K-stability.
+Definition 2.1. Let X be a normal variety. A prime divisor E over X is a prime divisor E
+on a normal variety Y together with a proper birational morphism µ : Y → X. The center
+of E on X is µ(E). Moreover, if KX is Q-Cartier, then we define the log discrepancy of E
+as
+                           AX (E) := 1 + coeff E (KY − µ∗ KX ).
+From the definition we know that AX (E) > 0 (resp. ≥ 0) if X has klt (resp. log canonical)
+singularities.
+Definition 2.2. Let X be an n-dimensional Q-Fano variety. Let E be a prime divisor over
+E. The pseudo-effective threshold of E is defined as
+                        TX (E) := sup{t ∈ R | µ∗ (−KX ) − tE is big}.
+The S-invariant of E, first introduced in [BJ20], is defined as
+                                        Z TX (E)
+                                   1
+                   SX (E) :=                     volY (µ∗ (−KX ) − tE)dt.
+                                (−KX )n 0
+The β-invariant of E, first introduced in [Fuj19b], is defined as
+                                 βX (E) := AX (E) − SX (E).
+   The original definition of K-(poly/semi)stability introduced by [Tia97, Don02] is by check-
+ing the sign of generalized Futaki invariants of test configurations. In this paper, we will use
+the valuative criterion for K-(semi)stability invented by Fujita [Fuj19b] and Li [Li17] with
+complementary result by Blum and Xu [BX19].
+   Let X be a Q-Fano variety (resp. a lc Fano variety) with −rKX Cartier for r ∈ Z>0 .
+Recall from [LX14, LWX21] that a test configuration (X , L)/A1 of (X, −rKX ) is special
+(resp. weakly special) if (X , X0 ) is plt (resp. log canonical) and L ∼Q −rKX /A1 , and we say
+that X0 is a special degeneration (resp. a weakly special degeneration) of X.
+Theorem-Definition 2.3. Let X be a Q-Fano variety. Then
+                                  K-STABILITY OF CUBIC FOURFOLDS                                        5
+
+   (1) [Fuj19b, Li17] X is K-semistable if and only if βX (E) ≥ 0 for any prime divisor E
+       over X;
+   (2) [BX19] X is K-stable if and only if βX (E) > 0 for any prime divisor E over X;
+   (3) [LWX21] X is K-polystable if and only if any K-semistable special degeneration of
+       X is isomorphic to itself.
+   (4) X is K-unstable if it is not K-semistable.
+Definition 2.4. Let X be a Q-Fano variety. The α-invariant of X is defined as
+                           α(X) = inf{lct(X; D) | 0 ≤ D ∼Q −KX }.
+By [BJ20], we know that α(X) = inf E A X (E)
+                                     TX (E) where the infimum is taken over all prime
+divisors E over X.
+Theorem 2.5 ([FO18, Theorem 3.5]). Let X be an n-dimensional K-semistable Q-Fano
+                              1
+variety. Then we have α(X) ≥ n+1 .
+2.2. Local volumes. In this section, we recall the concept of normalized volume of val-
+uations over a klt singularity first introduced by C. Li [Li18]. For simplicity, we restrict
+ourselves to divisorial valuations.
+Definition 2.6 ([Li18]). Let x ∈ X be an n-dimensional klt singularity. For a prime divisor
+E over X centered at x, we define (following [ELS03]) the volume of E over (x ∈ X) to be
+                                                       ℓ(OX,x /am (E))
+                               volX,x (E) := lim                       .
+                                                m→∞        mn /n!
+Here am (E) := {f ∈ OX,x | ordE (f ) ≥ m} and ℓ denotes the length of an Artinian module.
+The normalized volume of E over (x ∈ X) is defined as
+                                  c X,x (E) := AX (E)n · volX,x (E).
+                                  vol
+The local volume of x ∈ X is defined as
+                                c
+                                vol(x,           c X,x (E),
+                                       X) := inf vol
+                                                     E
+where the infimum runs over all prime divisors E over X centered at x.
+   There are alternative characterizations of local volumes. We provide two of them using
+ideals and Kollár components which are useful.
+Theorem 2.7 ([Liu18, Blu18]). Let x ∈ X be an n-dimensional klt singularity. Denote by
+(R, m) := (OX,x , mX,x ). Then we have
+          c
+          vol(x, X) =       inf         lct(X; a)n · e(a) =       min          lct(X; a• )n · e(a• ).
+                        a : m-primary                         a• : m-primary
+
+Here a (resp. a• ) represents an ideal (resp. a multiplicative graded sequence of ideals) of R,
+and e denotes the Hilbert-Samuel multiplicity.
+Definition 2.8. Let x ∈ X be a klt singularity. We say that a proper birational morphism
+µ : Y → X from a normal variety X provides a Kollár component S over (x ∈ X) if µ is an
+isomorphism over X \ {x}, the preimage µ−1 (x) = S is a Q-Cartier prime divisor on Y , the
+pair (Y, S) is plt, and −S is µ-ample.
+6                                            YUCHEN LIU
+
+                                                               c
+Theorem 2.9 ([LX20]). For any klt singularity x ∈ X, we have vol(x,             c X,x (S)
+                                                                     X) = inf S vol
+where the infimum runs over all Kollár components S over X centered at x.
+  The following conjecture was asked in [SS17]. It was confirmed in dimension 2 and 3 by
+[LL19, Proposition 4.10] and [LX19, Theorem 1.3] respectively.
+Conjecture 2.10 (ODP Gap Conjecture). Let (x ∈ X) be an n-dimensional non-smooth
+klt singularity. Then
+                                     c
+                                     vol(x, X) ≤ 2(n − 1)n ,
+and equality holds if and only if it is an ordinary double point.
+Theorem 2.11.      (1) [LL19, LX19] Conjecture 2.10 holds when n ≤ 3.
+  (2) [LX19, Theorem 1.6] Let x ∈ X be an n-dimensional klt singularity. Then we have
+       c
+      vol(x, X) ≤ nn , and equality holds if and only if it is smooth.
+    The following result verifies Conjecture 2.10 for local complete intersection singularities.
+Theorem 2.12. Conjecture 2.10 holds for all local complete intersection singularities.
+Proof. Let x ∈ X be an n-dimensional local complete intersection singularity. Since Con-
+jecture 2.10 holds in dimension ≤ 3 by Theorem 2.11(1), we may assume that n ≥ 4. Then
+there exists a locally closed immersion X ֒→ Z into a smooth variety Z of dimension n + r
+such that X = V (f1 , f2 , · · · , fr ) for some fi ∈ OZ,x . We may assume that r achieves its
+minimum, i.e. r := edim(x, X) − n where edim(x, X) := ℓ(mX,x /m2X,x ) denotes the embed-
+ding dimension. In particular, ordx (fi ) ≥ 2 for any 1 ≤ i ≤ r. Since x ∈ X is non-smooth,
+we have r ≥ 1.
+   If r ≥ 2, then we choose g1 , g2 ∈ m2Z,x and g3 , · · · , gn ∈ mZ,x , so that ḡ1 , ḡ2 ∈ m2Z,x/m3Z,x
+and ḡi ∈ mZ,x/m2Z,x are general for i ≥ 3. Let Xt := V (f1 + tg1 , f2 + tg2 , · · · , fr + tgr ). Then
+it is clear that (x ∈ Xt )t∈A1 is a Q-Gorenstein flat family of klt singularities. Moreover,
+for a general t ∈ A1 we know that x ∈ Xt is a local complete intersection of two quadrics
+with smooth projective tangent cone. Let St be the exceptional divisor of the ordinary
+blow up of x ∈ Xt for general t. Then simple calculation shows that AXt (St ) = n − 2 and
+volXt ,x (St ) = e(x, Xt ) = 4. Thus for general t we have
+                 c
+                 vol(x, Xt ) ≤ AXt (St )n · volXt ,x (St ) = 4(n − 2)n < 2(n − 1)n .
+                                                                        c
+Thus the lower semicontinuity of local volumes [BL21] implies that vol(x,             c
+                                                                              X) ≤ vol(x,   Xt ) <
+         n
+2(n − 1) .
+   If r = 1, then x ∈ X = V (f ) is a hypersurface singularity for some f ∈ OZ,x . By [LX19,
+                              c
+Lemma 3.1], we know that vol(x,     X) ≤ (n + 1 − ordx f )n · ordx f ≤ 2(n − 1)n . If the equality
+holds, then we must have ordx f = 2. Assume to the contrary that x ∈ X is not an ordinary
+double point. By choosing a suitable algebraic coordinates (z0 , · · · , zn ) at x ∈ Z, we may
+                                2 ) ∈ m3
+assume that f − (z02 + · · · + zm                                    2          2        3    2
+                                       Z,x where m < n. Let g = z0 + · · · + zn−1 + zn ∈ mZ,x ,
+and let Xt := V (f + tg). Then by [BL21] we know that vol(x,   c           c
+                                                                     X) ≤ vol(x,  Xt ) for general
+t. Since the degree 2 part of f + tg has rank n for general t, we know that x ∈ Xt is an
+n-dimensional A2 -singularity. Hence [Li18, Example 5.3] for n ≥ 4 implies that
+                                                     n
+                                               2n (n − 2)     n−1
+                     c
+                     vol(x,      c
+                            X) ≤ vol(x, Xt ) ≤                      < 2(n − 1)n .
+                                                 (n − 1)n−1
+                              K-STABILITY OF CUBIC FOURFOLDS                                    7
+
+Hence we get a contradiction. This finishes the proof.                                         
+
+   The following result from [XZ21, Theorem 1.3] on finite degree formula of local volumes
+is very useful. Note that when X is a Gromov-Hausdorff limit of Kähler-Einstein Fano
+manifolds, such a result was proven earlier in [LX18, Theorem 1.7].
+                                     e → (x ∈ X) be a finite quasi-étale Galois morphism
+Theorem 2.13 ([XZ21]). Let τ : (x̃ ∈ X)
+between klt singularities. Then
+                                c
+                                vol(x̃,               c
+                                        e = deg(τ ) · vol(x,
+                                        X)                   X).
+   The following theorem is one of the key ingredients in the moduli continuity method. It
+is a generalization of [Fuj18].
+Theorem 2.14 ([Liu18]). Let X be an n-dimensional K-semistable Q-Fano variety. Then
+for any closed point x ∈ X we have
+                                           
+                                   n      1 nc
+                             (−KX ) ≤ 1 +     vol(x, X).
+                                          n
+  The following lemma is well-known to experts.
+Lemma 2.15. Let (x ∈ X) and (x′ ∈ X ′ ) be two klt singularities that are analytically
+                     [
+isomorphic, that is, O    ∼ \               c           c ′ ′
+                      X,x = OX ′ ,x′ . Then vol(x, X) = vol(x , X ).
+
+Proof. Denote by (R, m) := (OX,x , mX,x ) and (R′ , m′ ) := (OX ′ ,x′ , mX ′ ,x′ ). Denote by ι :
+Rb→R  c′ the ring isomorphism. Then any m-primary ideal a of R corresponds to a unique
+m -primary ideal a′ of R′ via a′ = ι(b
+  ′                                  a) ∩ R′ . Under this correspondence, it is easy to see
+e(a) = e(a ). By [dFEM11, Proposition 2.11] we know that lct(X; a) = lct(X ′ ; a′ ). Hence
+           ′
+
+the statement follows from Theorem 2.7.                                                        
+
+2.3. Bertini type result for local volumes. In this section, we prove the following Bertini
+type result for local volumes.
+Theorem 2.16. Let x ∈ X be a non-isolated n-dimensional klt singularity. Then there
+exists a non-smooth (n − 1)-dimensional klt singularity y ∈ Y such that
+                                   c
+                                   vol(x, X)    c Y)
+                                                vol(y,
+                                        n
+                                             ≤            .
+                                      n        (n − 1)n−1
+Moreover, Y can be chosen as a general hyperplane section of X.
+  Before presenting the proof of Theorem 2.16, we need the following result on the local
+volume of fibrations.
+Proposition 2.17. Let π : X → B together with a section σ : B → X be a Q-Gorenstein
+flat family of klt singularities over a smooth curve B. Then for a general point b ∈ B we
+have
+                                  c
+                                  vol(σ(b), X)   c
+                                                 vol(σ(b), Xb )
+                                         n
+                                               =         n−1
+                                       n          (n − 1)
+8                                               YUCHEN LIU
+
+                                                                                              c
+Proof. By the adjunction of local volumes [LZ21, Theorem 1.7], we always have vol(σ(b),X
+                                                                                  nn
+                                                                                         )
+                                                                                           ≥
+c
+vol(σ(b),Xb)
+ (n−1)n−1
+             for any b ∈ B. Thus it suffices to show the reverse inequality for general b ∈ B.
+  Denote by η̄ the geometric generic point of B. Then by [Xu20] we know that there for a
+                             c
+general point b ∈ B we have vol(σ(b),        c
+                                      Xb ) = vol(σ(η̄), Xη̄ ). Let us fix an arbitrary ǫ > 0. By
+Theorem 2.9, there exists a Kollár component Sη̄ over σ(η̄) ∈ Xη̄ such that
+                                 c X ,σ(η̄) (Sη̄ ) ≤ vol(σ(η̄),
+                                 vol                 c          Xη̄ ) + ǫ.                            (2.1)
+                                     η̄
+
+Denote by µη̄ : Yη̄ → Xη̄ the plt blow up extracting Sη̄ . Hence there exists an étale morphism
+Be → B such that µη̄ extends over X ×B B  e which provides a flat family of Kollár components
+(see [LX19, Definition A.2]). Since the local volume is preserved under étale morphism by
+Lemma 2.15, we may replace B by B.      e Thus there is a birational morphism µ : Y → X
+which provides a flat family S of Kollár components over X centered at σ(B). Denote by
+bm := µ∗ OY (−mS). Since −S is a µ-ample Q-Cartier divisor, we know that bm is a flat
+family of ideals over B for m ≫ 1 (i.e. OX /bm is flat over B). After replacing B with a
+dense open set, we may assume that bm is a flat family of ideals over B for any m ∈ Z≥0 .
+For p ∈ R≥0 , we define bp := b⌈p⌉ = µ∗ OY (−⌈pS⌉). Let Sb and bp,b be the restriction of S
+and bp on Xb . By flatness of S and b• over B, we have bp,b = ap (Sb ) for any b ∈ B.
+                                         c
+   Next, we estimate the local volume vol(σ(b),  X ). Fix a general b ∈ B. Let t ∈ Ob,B be its
+uniformizer. For any s ∈ R>0 , consider the ideal sequence I•,s as
+                   Im,s := bms + b(m−1)s t + b(m−2)s t2 + · · · + bs tm−1 + (tm ).
+By the definition of bp we know that I•,s is a multiplicative ideal sequence of OX ,σ(b) co-
+                                                                      Pm
+supported at σ(b). Then we know that ℓ(OX ,σ(b) /Im,s ) =               i=1 ℓ(OXb ,σ(b) /bis,b ). Since
+                        1
+ℓ(OXb ,σ(b) /bp,b ) = (n−1)! volXb ,σ(b) (Sb )pn−1 + O(pn−2 ), we know that
+                                           1
+                    ℓ(OX ,σ(b) /Im,s ) =      volXb ,σ(b) (Sb )sn−1 mn + O(mn−1 ).
+                                           n!
+This implies that
+                                     e(I•,s ) = volXb ,σ(b) (Sb )sn−1 .                               (2.2)
+Let vs be the valuation of C(X ) as the quasi-monomial combination of Yb and S of weight
+s and 1, respectively. Then it is clear that AX (vs ) = s + AX (S) = s + AXb (Sb ) and
+vs (Im,s ) ≥ ms. Hence we have
+                                                AX (vs )
+                             lct(X ; I•,s ) ≤              ≤ 1 + s−1 AXb (Sb ).                       (2.3)
+                                                vs (I•,s )
+Combining Theorem 2.7, (2.2) and (2.3), we obtain
+        c
+        vol(σ(b), X ) ≤ lct(X ; I•,s )n · e(I•,s ) ≤ (1 + s−1 AXb (Sb ))n · volXb ,σ(b) (Sb )sn−1 .
+                                                 AXb (Sb )
+Since s is arbitrary, we may choose s =           n−1      which minimizes the right-hand-side of the
+above inequality. Hence we have
+
+          c                     nn     c X ,σ(b) (Sb ) ≤     nn      c
+          vol(σ(b), X) ≤               vol                          (vol(σ(η̄), Xη̄ ) + ǫ).
+                            (n − 1)n−1     b
+                                                         (n − 1)n−1
+                                 K-STABILITY OF CUBIC FOURFOLDS                                 9
+
+                                                  c X ,σ(b) (Sb ) = vol
+Here the second inequality follows from (2.1) and vol               c X ,σ(η̄) (Sη̄ ) by flatness
+                                                      b                 η̄
+                                                c
+of S and b• over B. By [Xu20] we know that vol(σ(η̄),              c
+                                                         Xη̄ ) = vol(σ(b), Xb ) for general b.
+                                                                      c           c
+Hence by letting ǫ → 0, we prove the reverse inequality that vol(σ(b),X
+                                                                 nn
+                                                                        )
+                                                                          ≤ vol(σ(b),X
+                                                                             (n−1)n−1
+                                                                                      b)
+                                                                                         for
+general b ∈ B. The proof is finished.                                                     
+Proof of Theorem 2.16. For simplicity, we assume that X is affine. Let C ⊂ Xsing be an
+integral curve through x. Let π : X → A1 be a general linear projection. Then π|C : C → A1
+is quasi-finite. Let y ∈ C be a general point. Let Y be the fiber of π containing y. Then
+after taking base change of π to the normalization of C, Lemma 2.15 and Proposition 2.17
+               c         c
+implies that vol(y,X)
+                n n   = vol(y,Y )                                  c           c
+                             n−1 . Since y ∈ C is general, we have vol(x, X) ≤ vol(y, X) by
+                         (n−1)
+[BL21]. This finishes the proof.                                                               
+Corollary 2.18. Let x ∈ X be a non-smooth klt singularity of dimension n ≥ 3. Assume
+                              c
+that dimx Xsing ≥ n − 3. Then vol(x, X)/nn ≤ 16/27. In particular, Conjecture 2.10 holds
+for x ∈ X.
+                                        c
+Proof. We focus on the first inequality vol(x, X)/nn ≤ 16/27, as the statement on Conjecture
+2.10 is a consequence of this inequality by a simple computation 16   n          n
+                                                                  27 n < 2(n − 1) whenever
+n ≥ 4, and the conjecture holds in dimension 3 by Theorem 2.11(1).
+   We do induction on n ≥ 3. When n = 3, the first inequality is precisely Theorem 2.11(1).
+Assume that the first inequality is true in dimension n − 1 with n ≥ 4. Let x ∈ X be a
+non-smooth klt singularity of dimension n with dimx Xsing ≥ n − 3. Let V be an irreducible
+component of Xsing such that x ∈ V and dim V ≥ n − 3. Let C ⊂ V be an integral curve
+through x. Then the proof of Theorem 2.16 implies that there exists a hyperplane section
+                                                      c           c
+Y ⊂ X and a closed point y ∈ Y ∩ C such that vol(x,X)
+                                                nn
+                                                         vol(y,Y )
+                                                      ≤ (n−1) n−1 . Furthermore, since
+
+Ysing ⊇ Xsing ∩ Y ⊇ V ∩ Y , we know that
+                      dimy Ysing ≥ dimy (V ∩ Y ) ≥ dimy V − 1 ≥ n − 4.
+                                      c
+                                  vol(y,Y )  16
+By induction hypothesis, we have (n−1) n−1 ≤ 27 . Hence we have
+
+
+                                  c
+                                  vol(x, X)    c Y)
+                                               vol(y,     16
+                                            ≤            ≤ .
+                                     nn       (n − 1)n−1  27
+Thus the proof is finished.                                                                    
+
+                         3. Local-to-global volume estimates
+  In order to prove our main result Theorem 1.1, we follow the strategy from [SS17, LX19],
+that is, to show that any K-semistable Q-Gorenstein limits of cubic hypersurfaces is again a
+cubic hypersurface. The following result on K-semistable degeneration of higher dimensional
+cubic hypersurfaces is an easy consequence of arguments therein.
+Theorem 3.1. Let n ≥ 4 be an integer. Let X → B be a K-semistable Q-Fano family over
+a smooth pointed curve 0 ∈ B such that over B ◦ := B \ {0} it is a smooth family of cubic
+n-folds. Then there exists a Q-Cartier integral Weil divisor class L on X := X0 such that
+the following properties hold.
+    (1) OX (mL) is Cohen-Macaulay for any m ∈ Z.
+10                                      YUCHEN LIU
+
+     (2) −KX ∼ (n − 1)L and (Ln ) = 3.
+     (3) hi (X, OX (mL)) = hi (Xb , OXb (m)) for any m ∈ Z, i ≥ 0, and b ∈ B ◦ . Moreover,
+         h0 (X, OX (L)) = n + 2, and hj (X, OX (mL)) = 0 for any m ∈ Z and 1 ≤ j ≤ n − 1.
+     (4) Any Q-Cartier Weil divisor D on X satisfies that 2D is Cartier. In particular, 2L
+         is Cartier.
+Proof. Denote by X ◦ := X \ X0 . By base change to a finite cover of B, we can find a
+hyperplane section L◦ ∼B OX ◦ (1) and taking Zariski closure yields a Weil divisor L on X .
+It is clear that −KX ◦ /B ◦ ∼B ◦ (n−1)L◦ . Since X0 ∼B 0 is integral, we know that −KX /B ∼B
+(n−1)L which implies that L is Q-Cartier. By assumption X has klt singularities, so [KM98,
+Corollary 5.25] implies that OX (mL) is Cohen-Macaulay for any m ∈ Z. Thus L := L|X0 is
+a Q-Cartier Weil divisor satisfying that OX0 (mL) ∼  = OX (mL) ⊗ OX0 is Cohen-Macaulay for
+any m ∈ Z, and −KX ∼ (n − 1)L. The fact that (Ln ) = 3 comes from (OXb (1)n ) = 3 and
+L is Q-Cartier. Hence we have shown (1) and (2).
+   For part (3), notice that OX (mL) is flat over B for any m ∈ Z whose fiber over b and
+0 are OXb (m) and OX (mL) respectively. If m ≥ 2 − n, then mL − KX ∼ (m + n − 1)L
+and mLb − KXb ∼ OXb (m + n − 1) are both ample. Hence Kawamata-Viehweg vanishing
+implies that H i (X, OX (mL)) = H i (Xb , OXb (m)) = 0 for any i ≥ 1 and m ≥ 2 − n. By
+flatness of OX (mL), we know that h0 (X, OX (mL)) = h0 (Xb , OXb (m)) for any m ≥ 2 − n.
+On the other hand, by Serre duality for CM sheaves [KM98, Theorem 5.71], we know
+that H i (X, OX (mL)) = H i (Xb , OXb (m)) = 0 for any i ≤ n − 1 and hn (X, OX (mL)) =
+hn (Xb , OXb (m)) whenever −mL and −mLb are ample, i.e. m ≤ −1. Thus part (3) is proven.
+   For part (4), we use the local volume estimates. Let x ∈ X be a point where D is not
+Cartier. Denote by ind(x, D) the Cartier index of D at x. Then by Theorems 2.13, 2.11(2),
+and 2.14, we know that
+                 3nn (n − 1)n      nn          n   c              nn
+                              =          (−KX )  ≤ vol(x, X) ≤           .
+                   (n + 1)n     (n + 1)n                       ind(x, D)
+                                  (n+1)n
+In particular, we get ind(x, D) ≤ 3(n−1)n < 3. This implies that ind(x, D) = 2.            
+
+  From now on, we restrict our focus to cubic fourfolds, i.e. n = 4. We will always denote by
+X a K-semistable Q-Fano variety admitting a Q-Gorenstein smoothing to cubic fourfolds.
+By [SS17, LX19], to prove Theorem 1.1 the main challenge is to show that L is Cartier on
+X. This would follow from Conjecture 2.10 in dimension 4 as indicated by Proposition 3.3.
+However, currently we are unable to confirm Conjecture 2.10 for n ≥ 4. In the below, we
+provide some partial results using the local volume estimates from Section 2. We will study
+the global geometry of (X, L) in Section 4.
+Proposition 3.2. With the above notation, we have that L is Cartier away from a finite
+subset Σ ⊂ X. Moreover, any x ∈ Σ is an isolated singularity of X.
+Proof. Let Σ be the closed subset of X where L is not Cartier. Clearly, we have Σ ⊂ Xsing .
+First of all, assume to the contrary that Σ contains a curve C. Let x ∈ C be a point. Let
+          e → (x ∈ X) be the index 1 cover with respect to L. Let C
+τ : (x̃ ∈ X)                                                         e := π −1 (C). Then by
+                                    c , X)/4
+finite degree formula we know that vol(x̃ ′ e  4                          e If X
+                                                 ≥ 2 · 3 /5 for any x̃′ ∈ C.
+                                                        5  4                    e is singular
+        e                                       c    ′  e    4   16
+along C, then by Corollary 2.18 we know that vol(x̃ , X)/4 ≤ 27 . This is a contradiction
+since 2 · 35 /54 > 16/27. Hence X e is smooth at the generic point of C.e This implies that
+                                K-STABILITY OF CUBIC FOURFOLDS                                     11
+
+(x′ ∈ X) is a quotient singularity of order 2 for a general point x′ ∈ C. Since C is contained
+in the ramification locus of τ , we know that (x′ ∈ X) has type 12 (1, 1, 1, 0) or 12 (1, 1, 0, 0).
+    Next, we will show that neither quotient type is possible. The argument is similar to
+[LX19, Proof of Lemma 3.16]. If (x′ ∈ X) has type 12 (1, 1, 1, 0), we pick a general hyperplane
+section H through x′ of X embedded in some projective space. Then clearly H0 = H ∩ X
+has a quotient singularity of type 12 (1, 1, 1), while Hb = H ∩ Xb is smooth for b ∈ B ◦ . This
+contradicts the rigidity theorem of Schlessinger [Sch71]. If (x′ ∈ X) has type 21 (1, 1, 0, 0),
+then we know that X has hypersurface singularities near x′ , and so does X . We pick two
+general hyperplane sections H1 and H2 through x′ of X . Then clearly (x′ ∈ H1 ∩ H2 ) is a
+normal isolated hypersurface singularity of dimension 3. Since OX (L) is Cohen-Macaulay,
+there is a well-defined Q-Cartier Weil divisor class L|H1 ∩H2 such that OH1 ∩H2 (L|H1 ∩H2 ) ∼       =
+OX (L) ⊗ OH1 ∩H2 . By local Grothendieck-Lefschetz theorem [Rob76], the local class group
+of (x′ ∈ H1 ∩ H2 ) is torsion free which implies that L|H1 ∩H2 is Cartier at x′ . Hence this
+implies that L is Cartier at x′ , which implies L is also Cartier at x′ . This is a contradiction.
+    Finally, we show that Σ consists only of isolated singularities. Assume to the contrary
+that x ∈ Σ is not isolated. Let C ′ ⊂ Xsing be a curve through x. Again, let (x̃ ∈ X)         e be
+the index one cover of (x ∈ X) with respect to L. Since L is Cartier at the generic point of
+C ′ , we know that Ce ′ := π −1 (C ′ ) is contained in X
+                                                       esing . Hence by Theorems 2.13, 2.14, and
+                                               c
+Corollary 2.18 we know that 2 · 35 /54 ≤ vol(x̃,     e 4 ≤ 16 , again a contradiction.
+                                                     X)/4                                           
+                                                               27
+
+Proposition 3.3. With the above notation, if L is not Cartier at x ∈ X, then the index 1
+           e violates Conjecture 2.10.
+cover x̃ ∈ X
+Proof. By Theorems 2.13 and 2.14, we have
+                         35 · 44   44                       c
+                                                            vol(x̃, e
+                                                                    X)
+                                 =    (−KX )4
+                                              ≤ c
+                                                vol(x, X) =            .
+                           54      54                       ind(x, L)
+Since 2L is Cartier at x ∈ X by Theorem 3.1, we know that ind(x, L) = 2. Hence
+                                                   5    4
+                                c
+                                vol(x̃, e ≥ 2 · 3 · 4 > 2 · 34 .
+                                        X)
+                                                54
+If x̃ ∈ X                                                  e → X is ramified only at x which
+        e is smooth, then Proposition 3.2 implies that τ : X
+implies that (x ∈ X) is an isolated quotient singularity of order 2 admitting a Q-Gorenstein
+smoothing. This contradicts [Sch71]. Hence x̃ ∈ X  e violates Conjecture 2.10.            
+
+                     4. Ambro-Kawamata non-vanishing approach
+  In this section, we use the following non-vanishing theorem of Ambro [Amb99, Main
+Theorem] and Kawamata [Kaw00, Theorem 5.1] to study the geometry of K-semistable
+Q-Gorenstein limits of cubic fourfolds.
+Theorem 4.1 ([Amb99, Kaw00]). Let (Y, ∆) be a projective klt pair. Let M be a nef Cartier
+divisor over Y such that M − KY − ∆ is nef and big. Assume that there exists a rational
+number r > dim(Y ) − 3 ≥ 0 such that −KY − ∆ ∼Q rM . Then H 0 (Y, M ) 6= 0, and for a
+general member D ∈ |M | the pair (Y, ∆ + D) is plt.
+  In the rest of this paper, we adapt the notation of Theorem 3.1 and assume n = 4. In
+particular, X is a K-semistable Q-Gorenstein limit of cubic fourfolds, and L is an ample
+12                                        YUCHEN LIU
+
+Q-Cartier Weil divisor on X such that −KX ∼ 3L. Denote by Σ the non-Cartier locus of L
+on X which is a finite set by Proposition 3.2.
+   Next, we apply Ambro-Kawamata’s non-vanishing theorem to our study on the geometry
+of linear systems |2L| and |L|. Our goal is to show that L is Cartier on X.
+Proposition 4.2. Let D1 , D2 be two general member of |2L| on X. Then both Di (i = 1, 2)
+and their complete intersection S := D1 ∩ D2 are Gorenstein canonical. Moreover, Bs |2L|
+is disjoint from Σ.
+Proof. We first show that both Di and S are klt of Gorenstein index at most 2. By Theorem
+3.1, we know that 2L is Cartier and ample. By applying Theorem 4.1 to 2L on X, we see
+that −KX ∼Q 23 (2L), so r = 23 > 1 = dim(X) − 3 ≥ 0. So we have that (X, Di ) is plt,
+hence Di is klt. Next, we apply Theorem 4.1 to 2L|Di on Di . By adjunction it is clear that
+−KDi ∼ L|Di , so r = 12 ≥ 0. Also, by Theorem 3.1(3) we have an exact sequence
+
+                       H 0 (X, 2L) → H 0 (Di , 2L|Di ) → H 1 (X, OX ) = 0.
+Hence the general divisor D2 ∈ |2L| restricts to a general divisor S ∈ |2L|D1 |. In particular,
+S is also klt. By adjunction, we know that KS ∼ L|S , so both Di and S have Gorenstein
+index at most 2.
+   Next we show that S is Gorenstein. Assume to the contrary that x ∈ S has Gorenstein
+index 2. Then clearly x ∈ Σ. Let τ : (x̃ ∈ X)e → (x ∈ X) be the index 1 cover of L. Since X    e
+                               e      −1
+is Gorenstein, the preimage S := τ (S) is also Gorenstein as it is a complete intersection
+    e Thus x̃ ∈ Se is a Du Val singularity. This implies that edim(x̃, X)
+in X.                                                                      e ≤ 5, i.e. x̃ ∈ Xe is
+a hypersurface singularity. But then the ODP conjecture holds for x̃ ∈ X     e by Theorem 1.3,
+and we get a contradiction to Proposition 3.3. This shows that S is Gorenstein.
+   Since both Di and S are Cohen-Macaulay, we know that OX (L) ⊗ OS ∼          = OS (L|S ) ∼
+                                                                                           = ωS .
+In particular, this implies that S ∩ Σ = ∅. It is clear that Bs |2L| ⊂ S, so Bs |2L| ∩ Σ = ∅. 
+Proposition 4.3. Let D ∈ |2L| and H ∈ |L| be general divisors on X. Let G := D ∩ H be
+their complete intersection. Then (G, L|G ) is a polarized K3 surface with Du Val singularities
+of degree 6. Moreover, |2L| is base point free, and the connected components of Bs |L| have
+dimension 0 or 2.
+Proof. By Proposition 4.2, we know that L|D ∼ −KD is Cartier. Since OX (−L) and OX (L)
+are both Cohen-Macaulay by Theorem 3.1(1), we know that OD (L|D ) ∼         = OX (L)/OX (−L).
+Hence we have an exact sequence H 0 (X, L) → H 0 (D, L|D ) → H 1 (X, −L) = 0 by Theorem
+3.1(3). Hence G is a general divisor in |L|D | which implies that (D, G) is plt by Theorem 4.1.
+Since G ∼ L|D is Cartier and D is Gorenstein canonical, we know that G has Gorenstein
+canonical singularities as well. By adjunction, KG ∼ 0. We claim that H 1 (G, OG ) = 0.
+Since L|D is Cartier, there is an exact sequence
+                         H 1 (D, OD ) → H 1 (G, OG ) → H 2 (D, −L|D ).
+Thus it suffices to show that both H 1 (D, OD ) and H 2 (D, −L|D ) vanish. Since D is Goren-
+stein canonical, we have OD (mL|D ) ∼= OX (mL) ⊗ OD . Hence we have the following exact
+sequences for i = 1, 2:
+                0 = H i (X, mL) → H i (D, mL|D ) → H i+1 (X, (m − 2)L) = 0.
+                               K-STABILITY OF CUBIC FOURFOLDS                                   13
+
+Here we use Theorem 3.1(3). Thus both H 1 (D, OD ) and H 2 (D, −L|D ) vanish, and the claim
+follows. Hence G is a K3 surface with Du Val singularities. The polarization L|G has degree
+6 since (L|2G ) = (L2 · D · H) = 2(L4 ) = 6.
+   Since Bs |2L| ⊂ Bs |L|, we know that Bs |2L| ⊂ G. Moreover, we can show that H 0 (X, 2L) →
+  0
+H (G, 2L|G ) is surjective by tracing exact sequences as below and using Theorem 3.1(3):
+                       H 0 (X, 2L) → H 0 (D, 2L|D ) → H 1 (X, OX ) = 0,
+                      H 0 (D, 2L|D ) → H 0 (G, 2L|G ) → H 1 (D, L|D ) = 0.
+Hence Bs |2L| = Bs |2L|G |. By classical result on linear system of K3 surfaces (see [Huy16,
+Remark 3.4]), we know that 2L|G is always base point free. Hence |2L| is also base point
+free.
+   By similar argument on tracing exact sequences, we know that H 0 (X, 2L) → H 0 (H, 2L|H )
+is surjective. Since G is a general divisor of the ample base point free linear system |2L|H |
+on H, we know that H is integral which implies that |L| has no fixed component. By tracing
+exact sequences as above, we know that H 0 (X, L) → H 0 (H, L|H ) → H 0 (G, L|G ) are both
+surjective. By Mayer’s theorem [May72] (see also [Huy16, Corollary 3.15]), we know that
+L|G is either base point free or has a fixed component isomorphic to P1 . Thus any connected
+component of Bs |L| = Bs |L|H | is either an isolated point or a surface.                  
+Proposition 4.4. Let H ∈ |L| be a general divisor. Then H is Gorenstein log canonical.
+Moreover, H admits a weakly special test configuration with central fiber isomorphic to the
+projective cone Cp (G, 2L|G ).
+Proof. By the proof of Proposition 4.3, we know that H is integral. Since the ideal sheaf
+of H in X is OX (−L), which is Cohen-Macaulay by Theorem 3.1(1), we know that H is
+Cohen-Macaulay as well. Since a general member G of the base point free linear system
+|2L|H | is normal, we know that H is R1 hence normal as well. By adjunction, we have that
+KH = (KX + H)|H ∼ −2L|H is Cartier. Hence H is Gorenstein normal.
+   Next we construct the weakly special test configuration. The idea is by degeneration to
+the normal cone of G. Let R = ⊕∞              0
+                                 m=0 Rm := H (H, 2mL|H ) be the section ring of (H, 2L|H ).
+Consider the N-filtration F on R (see e.g. [BX19, Section 2.3] for backgrounds) as
+            F p Rm := H 0 (H, 2mL|H − pG) ⊂ H 0 (H, 2mL|H ) = Rm          if p ∈ Z≥0 .
+For p ∈ Z<0 we define F p Rm = Rm . Since G ∼ 2L|H , it is clear that F • R is a multiplicative,
+linearly bounded, finitely generated N-filtration of R. Denote by
+                                             +∞ M
+                                             M  +∞
+                               H := ProjA1              t−p F p Rm ,
+                                             m=0 p=−∞
+
+where t is the parameter of A1 , and the grading of F p R   m is m. Then (H, OH (1)) → A
+                                                                                            1 is a
+
+test configuration of (H, 2L|H ). The central fiber H0 is given by
+                                        +∞ M
+                                        M  +∞
+                            H0 = Proj              F p Rm /F p+1 Rm .
+                                        m=0 p=−∞
+
+It is clear that F p Rm /F p+1 Rm = 0 for p < 0. Hence to show H0 ∼ = Cp (G, 2L|G ) it suffices to
+show that F p Rm /F p+1 Rm ∼   = H 0 (G, 2(m − p)L|G ) for p ≥ 0. By tracing the exact sequence
+      0 → H 0 (H, 2mL|H − (p + 1)G) → H 0 (H, 2mL|H − pG) → H 0 (G, 2(m − p)L|G )
+14                                       YUCHEN LIU
+
+        → H 1 (H, 2mL|H − (p + 1)G) ∼
+                                    = H 1 (H, 2(m − p − 1)L|H ),
+it suffices to show that H 1 (H, 2qL|H ) = 0 for any q ∈ Z. This follows from the following
+exact sequence and Theorem 3.1(3):
+                 0 = H 1 (X, 2qL) → H 1 (H, 2qL|H ) → H 2 (X, (2q − 1)L) = 0.
+Hence we have shown H0 ∼   = Cp (G, 2L|G ). Since G is a K3 surface with canonical singular-
+ities, we know that Cp (G, 2L|G ) is log canonical by [Kol13, Lemma 3.1]. By inversion of
+adjunction, we know that (H, H0 ) is log canonical near H0 , which implies that (H, H0 ) is
+log canonical as H \ H0 ∼ = H × (A1 \ {0}). Hence H is log canonical, and H is a weakly
+special test configuration of H. The proof is finished.                                   
+  Next, we divide the argument into cases based on the geometry of the polarized K3 surface
+(G, L|G ) where G is a general complete intersection of D ∈ |2L| and H ∈ |L|. By Mayer’s
+theorem [May72] (see also [Huy16, Remark 3.8 and Corollary 3.15]), there are three cases
+based on the behavior of the linear system |L|G |.
+    (1) (unigonal) |L|G | has a base curve C0 ∼     = P1 , |L|G − C0 | is base point free, and
+                           4
+        φ|L|G −C0 | : G → P is an elliptic fibration over a quartic rational normal curve.
+    (2) (hyperelliptic) |L|G | is base point free, and φ|L|G | : G → P4 is a double cover onto a
+        non-degenerate rational surface of degree 3 in P4 .
+    (3) (complete intersection) |L|G | is very ample, and φ|L|G | : G ֒→ P4 embeds G as a
+        (2, 3)-complete intersection in P4 .
+  The next result shows that (G, L|G ) cannot be unigonal.
+Proposition 4.5. The polarized K3 surface (G, L|G ) is not unigonal. In particular, Bs |L|
+is a finite set.
+Proof. Assume to the contrary that (G, L|G ) is unigonal of degree 6. Then we know that
+L|G ∼ 4C1 + C0 where C0 ∼    = P1 is a (−2)-curve, and C1 is a general fiber of the elliptic
+fibration G → P1 induced by |L|G − C0 |. In the proof of Proposition 4.3 we have shown that
+H 0 (X, L) → H 0 (H, L|H ) → H 0 (G, L|G ) are both surjective. Indeed, by the following exact
+sequence
+           0 = H 0 (H, −L|H ) → H 0 (H, L|H ) → H 0 (G, L|G ) → H 1 (H, OH ) = 0,
+we know that H 0 (H, L|H ) ∼
+                           = H 0 (G, L|G ).
+  Next, we resolve the birational map φ|L| : X 99K P5 as follows:
+
+                                              X′
+                                         π           ρ
+
+                                              φ|L|
+                                    X                    P5
+
+
+Here X ′ is the normalization of the graph of φ|L| . From the above discussion, we know
+that for a general divisor H ∈ |L|, the image ρ(π∗−1 H) is a general hyperplane section of
+W := ρ(X ′ ). From the above surjectivity between H 0 ’s, we know that the restrictions of
+φ|L| to H and G are φ|L|H | and φ|L|G | respectively. We claim that ρ(π∗−1 H) is a curve.
+                                K-STABILITY OF CUBIC FOURFOLDS                                     15
+
+   Assume to the contrary that dim(ρ(π∗−1 H)) ≥ 2. Denote by |L|H | = E + ΛH where E is
+the base component and ΛH is movable. Then it is clear that ρ(π∗−1 H) = φΛH (H). Since
+dim(φΛH (H)) ≥ 2, Bertini’s theorem implies that a general member F ∈ ΛH is an integral
+surface. Since G is ample on H, we know that F ∩ G is connected. Since Bs |L|G | = C0 and
+G is a general member of the base point free linear system |2L|H |, we know that E|G = C0 .
+Hence F |G is a general member of |L|G − C0 | which is the sum of four distinct elliptic fibers.
+In particular, F ∩ G is disconnected. This is a contradiction. Thus the claim is proved.
+   Since ρ(π∗−1 H) is a curve, it is the same as φ|L|G | (G) which is a rational normal curve
+of degree 4 in P4 . Since ρ(π∗−1 H) is a hyperplane section of W , we know that W ⊂ P5 is
+a non-degenerate surface of degree 4. By the classification of minimal degree varieties (see
+e.g. [EH87]), we know that W is isomorphic to either P(1, 1, 4) (cone over a quartic rational
+normal curve, φ|O(4)| : P(1, 1, 4) ֒→ P5 ), F2,1 (φ|3f +e| : F2 ֒→ P5 where f and e are a fiber and
+the negative section respectively), F0,2 (φ|O(1,2)| : P1 × P1 ֒→ P5 ), or the Veronese surface V4
+(φ|O(2)| : P2 ֒→ P5 ). In each case, there exists a family {Ct } of non-reduced divisors in the
+linear system |OW (1)| that covers W . Choose a general divisor Ct , then we know π∗ ρ∗ Ct is
+a non-reduced divisor in |L|. Since −KX ∼ 3L, we know that α(X) ≤ 16 which implies that
+X is K-unstable by Theorem 2.5. This is a contradiction. The conclusion on Bs |L| follows
+from the previous discussion since |L|G | is base point free in the non-unigonal cases.           
+
+  Next we treat the hyperelliptic case.
+Proposition 4.6. Assume (G, L|G ) is hyperelliptic. Then X is K-unstable.
+                                                                      π       ρ
+Proof. We resolve the rational map φ|L| = ρ ◦ π −1 by X ←     − X′ −→ W where X ′ is the
+                                                   ∗      1
+normalization of the graph of φ|L| . Denote by π |L| = 2 E + Λ where E is an effective Weil
+divisor on X ′ and Λ is base point free. Let L′ := π ∗ L − 21 E which is semiample on X ′ .
+Since ρ(π∗−1 H) is a hyperplane section of W , and ρ|G′ is a double cover for general G and
+G′ := π −1 (G), we know that dim(W ) ≥ 3. We first show that dim(W ) = 3.
+   Assume to the contrary that dim(W ) = 4, i.e. ρ is generically finite. Since Bs |L| is a
+finite set, we know that (π ∗ L · E) = 0 as a 2-cycle. Hence
+        deg(W ) · deg(ρ) = (L′4 ) ≤ (L′3 · π ∗ L) = ((π ∗ L − 12 E)3 · π ∗ L) = ((π ∗ L)4 ) = 3.
+Since W is non-degenerate, we have deg(W ) ≥ 2 which implies that deg(ρ) = 1, i.e. ρ is
+birational. Let H ′ := π∗−1 H be a general divisor in Λ. Then we know that ρ|H ′ is also
+birational. However, ρ|G′ has degree 2 for a general G′ in the base point free linear system
+(π ∗ |2L|)|H ′ . This is a contradiction. Thus we have dim(W ) = 3.
+   Next, we analyze the geometry of W . Notice that since (G, L|G ) ∼        = (G′ , (π ∗ L)|G′ ) has
+                             ′
+degree 6, the image ρ(G ) is an integral surface of degree 3. Since dim(W ) = 3, we know
+that ρ(H ′ ) is an integral surface for general H ′ ∈ Λ, hence ρ(H ′ ) = ρ(G′ ) has degree 3.
+This implies that deg(W ) = 3 as well. Now W is a non-degenerate threefold in P5 of degree
+3. By [EH87], there are three possibilities of W : P(1, 1, 3, 3) (a second iterated cone over a
+twisted cubic curve, φ|O(3)| : P(1, 1, 3, 3) ֒→ P5 ), the cone over F1,1 (the cone over the image
+of φ|2f +e| : F1 ֒→ P4 ), or P1 × P2 (φ|O(1,1)| : P1 × P2 ֒→ P5 ). In the first two cases, W is
+covered by non-reduced hyperplane sections, which implies that |L| contains a non-reduced
+element by similar arguments to the proof of Proposition 4.5. This shows α(X) ≤ 16 which
+implies that X is K-unstable by Theorem 2.5.
+16                                           YUCHEN LIU
+
+   The only case left is when (W, OW (1)) ∼  = (P1 × P2 , O(1, 1)). We will show that this
+case cannot occur. Our argument is inspired by [dFH11, Section 6].1 From the proof of
+Proposition 4.3, we see that φ|L| restricted to D is the finite morphism φ|L|D | : D → W
+as a double cover. Thus φ∗|L|D | : Pic(W ) ֒→ Pic(D) is an injection, which implies that
+rk Pic(D) ≥ rk Pic(W ) = 2. Since X admits a Q-Gorenstein smoothing f : X → B with
+X0 ∼= X where Xb is a smooth cubic fourfold for any b ∈ B ◦ , we know that f∗ OX (2L) is flat
+by Theorem 3.1(3). Hence after base change to a quasi-finite holomorphic map D → B from
+the unit disc D ⊂ C, we can find a Q-Gorenstein smoothing D → D of D ∼       = D0 such that
+Dt is a smooth (2, 3)-complete intersection in P5 for any t ∈ D◦ := D \ {0}. By Proposition
+4.2 we know that D0 is a Q-Fano variety with Gorenstein canonical singularity. Hence by
+Kawamata-Viehweg vanishing we have H i (D0 , OD0 ) = 0 for any i > 0. Similarly, since
+D → D is a Q-Gorenstein flat family of Q-Fano varieites, we have H i (D, OD ) = 0 for any
+i > 0. Hence from the exponential exact sequence, we obtain the following isomorphisms:
+                                    ∼
+                                    =              ∼
+                                                   =           ∼
+                                                               =
+                          Pic(D0 ) −              − H 2 (D, Z) ←
+                                   → H 2 (D0 , Z) ←            − Pic(D).
+Here the middle isomorphism follows from the topological fact that D0 ֒→ D admits a
+deformation retraction. In particular, we know that rk Pic(D) = rk Pic(D0 ) ≥ 2. By Lef-
+schetz hyperplane theorem, every fiber Dt of the smooth fibration D ◦ → D◦ satisfies that
+Pic(Dt ) = Z · [−KDt ]. Hence [KM92, Conditions 12.2.1] hold for D → D. By [KM92,
+12.2.2 – 12.2.5], we know that there is a Q-local system GN 1 (D/D) on D satisfying that
+GN 1 (D/D)(D) ∼ = Pic(D) ⊗Z Q and GN 1 (D/D)|t ∼= Pic(Dt ) ⊗Z Q for a very general t ∈ D◦ .
+                                         1
+Since D is contractible, we know that GN (D/D) is a trivial Q-local system, and
+                         2 ≤ rk Pic(D) = rk GN 1 (D/D) = rk Pic(Dt ) = 1.
+This is a contradiction. Thus the proof is finished.                                            
+     Finally we treat the case of G being a complete intersection.
+Proposition 4.7. Suppose L is not Cartier at x ∈ X. Assume (G, L|G ) is a (2, 3)-complete
+                                                 e of x ∈ X with respect to L is a local
+intersection in P4 . Then the index 1 cover x̃ ∈ X
+complete intersection singularity.
+Proof. It is clear that x ∈ Bs |L| ⊂ H. By Proposition 4.4, we know that there exists a
+weakly special test configuration H of H with central fiber H0 ∼     = Cp (G, 2L|G ). Denote by
+LH the Zariski closure of L|H × (A1 \ {0}) in H. Then it is clear that LH is a Gm -invariant
+Q-Cartier Weil divisor on H. Let L0 be the restriction of LH on H0 which is also a Q-Cartier
+Weil divisor. From the construction of H, we know that the Zariski closure G of G×(A1 \{0})
+in H is a trivial test configuration of G. Moreover, its central fiber G0 is precisely the section
+at infinity in the projective cone Cp (G, 2L|G ). Thus we have L0 |G0 ∼ = L|G under the natural
+                      ∼
+identification of G0 = G. Since L0 is Gm -invariant, we know that L0 is linearly equivalent to
+the cone over L|G . In particular, we know that ind(o, L0 ) = ind(o, LH ) = 2 where o ∈ H0 is
+the cone vertex. Besides, since L|G is Cartier, we know that o is the only non-Cartier point
+of LH in H0 .
+   From earlier discussions, we know that L|H is not Cartier at x. Thus LH is not Cartier
+at (x, t) for any t ∈ A1 \ {0}. This implies that the degeneration of (x, t) in H as t → 0
+is precisely o. Let τH : (õ ∈ H)  e → (o ∈ H) be the index 1 cover of LH . Then it is
+     1This argument is suggested by Chenyang Xu.
+                               K-STABILITY OF CUBIC FOURFOLDS                                     17
+
+
+clear that õ ∈ H e 0 is isomorphic to the affine cone singularity Ca (G, L|G ). Since G is a
+global complete intersection and L|G ∼    = OG (1), we know that õ ∈ H   e0 is a local complete
+                                                  e
+intersection singularity. We denote by τ : (x̃ ∈ X) → (x ∈ X) the index 1 cover of L. Denote
+by He := τ −1 (H). Then it is clear that He provides a Gm -equivariant degeneration of (x̃ ∈ H)e
+         e0 ) which is a local complete intersection singularity. By [BH93, Theorem 2.3.4], we
+to (õ ∈ H
+know that (x̃ ∈ H)e is a local complete intersection singularity. Since H  e is a Cartier divisor
+    e again using [BH93, Theorem 2.3.4] we conclude that x̃ ∈ X
+of X,                                                                 e is also a local complete
+intersection. The proof is finished.                                                            
+Remark 4.8. (Communicated with Ziquan Zhuang.) There is an alternative way to prove
+Propositions 4.6 and 4.7 using higher codimensional α-invariants. Since X is K-semistable
+and Bs |L| is finite, by [Zhu20, Theorem 1.1] we know that α(4) (X) ≥ 45 . Since −KX ∼ 3L,
+we know that lct(X; |L|) ≥ 12                                   2
+                                 5 . Hence (X, H1 + H2 + 5 H3 ) is log canonical for general
+members Hi ∈ |L| (1 ≤ i ≤ 3). Suppose x ∈ Σ is a non-Cartier point of L with the index
+1 cover τ : (x̃ ∈ X)  e → (x ∈ X). Thus (X,   e H e1 + H  e2 + 2 He
+                                                                5 3 ) is log canonical at x̃ where
+      e i := τ ∗ Hi is Cartier. Hence by adjunction we know that (H     e1 ∩ He2, 2 H
+                                                                                    e    e   e
+each H                                                                            5 1 ∩ H2 ∩ H3 ) is
+semi-log-canonical (slc). Hence x̃ ∈ H e1 ∩ He 2 is a Gorenstein slc surface singularity without
+an isolated lc center. By the classification of log canonical surface singularities (see e.g.
+[Kol13, Section 3.3]), we know that x̃ ∈ H   e1 ∩ H e 2 is either Du Val or nodal. In particular,
+     e1 ∩ H
+x̃ ∈ H      e 2 is a hypersurface singularity which implies that x̃ ∈ X    e is also a hypersurface
+singularity. Then similar arguments to the proof of Theorem 4.9 implies that X is K-
+unstable, a contradiction.
+  To summarize, we have shown the following result which implies Theorem 1.1.
+Theorem 4.9. Let (X, L) be the K-semistable limit of cubic fourfolds as in Theorem 3.1.
+Then L is a very ample Cartier divisor, and φ|L| : X ֒→ P5 embeds X as a (possibly singular)
+cubic fourfold.
+Proof. Assume to the contrary that L is not Cartier at x ∈ X. Then from the above
+discussions, we see that (G, L|G ) is a polarized K3 surface with Du Val singularities of
+degree 6. If (G, L|G ) is hyperelliptic or unigonal, then Propositions 4.5 and 4.6 imply that
+X is K-unstable, a contradiction. If (G, L|G ) is a (2, 3)-complete intersection in P4 , then
+Propositions 3.3 and 4.7 contradict each other since Conjecture 2.10 holds for local complete
+intersections by Theorem 1.3. Hence L must be Cartier on X. The rest of the statement
+directly follows from [Fuj90].                                                              
+Proof of Theorem 1.1. The proof is almost the same as [LX19, Proof of Theorem 1.1], with
+the following small modifications. By [Nad90, Theorem 6.1], [Tia00, p 85–87], [AGP06],
+[LZ20, Theorem 1.5], and [Zhu21, Corollary 1.4], there exists at least one smooth K-stable
+cubic fourfolds. We also replace [LX19, Lemma 3.17] by Theorem 4.9. Then the proof
+proceeds exactly the same as [LX19, Proof of Theorem 1.1].                              
+Proof of Corollary 1.2. For parts (1) and (2), by [Laz09, Theorem 1.1] we know that cubic
+fourfolds with simple singularities are GIT stable. Hence the statements follow from The-
+orem 1.1. Part (3) follows directly from Theorem 1.1. For part (4), Theorem 1.1 implies
+that any GIT semistable cubic fourfold is K-semistable, hence it has klt singularities. A
+18                                             YUCHEN LIU
+
+hypersurface with klt singularities must be Gorenstein canonical. The existence of (weak)
+KE metrics in (1)(2)(3) follows from the Yau-Tian-Donaldson Conjecture in the smooth
+case [CDS15, Tia15] and the general case [BBJ21, LTW19, Li19, LXZ21]. Thus the proof is
+finished.                                                                              
+
+                                              References
+[ABHLX20] Jarod Alper, Harold Blum, Daniel Halpern-Leistner, and Chenyang Xu. Reductivity of the
+          automorphism group of K-polystable Fano varieties. Invent. Math., 222(3):995–1032, 2020.
+[ADL19]   Kenneth Ascher, Kristin DeVleming, and Yuchen Liu. Wall crossing for K-moduli spaces of
+          plane curves. 2019. arXiv:1909.04576.
+[ADL20]   Kenneth Ascher, Kristin DeVleming, and Yuchen Liu. K-moduli of curves on a quadric surface
+          and K3 surfaces. J. Inst. Math. Jussieu, to appear, 2020. arXiv:2006.06816.
+[ADL21]   Kenneth Ascher, Kristin DeVleming, and Yuchen Liu. K-stability and birational models of
+          moduli of quartic K3 surfaces. 2021. arXiv:2108.06848.
+[AGP06]   Claudio Arezzo, Alessandro Ghigi, and Gian Pietro Pirola. Symmetries, quotients and Kähler-
+          Einstein metrics. J. Reine Angew. Math., 591:177–200, 2006.
+[Amb99]   Florin Ambro. Ladders on Fano varieties. J. Math. Sci. (New York), 94(1):1126–1135, 1999.
+          Algebraic geometry, 9.
+[AZ20]    Hamid Abban and Ziquan Zhuang. K-stability of Fano varieties via admissible flags. 2020.
+          arXiv:2003.13788.
+[BBJ21]   Robert Berman, Sebastian Boucksom, and Mattias Jonsson. A variational approach to the Yau-
+          Tian-Donaldson conjecture. J. Amer. Math. Soc., 34(3):605–652, 2021.
+[Ber16]   Robert J. Berman. K-polystability of Q-Fano varieties admitting Kähler-Einstein metrics. In-
+          vent. Math., 203(3):973–1025, 2016.
+[BH93]    Winfried Bruns and Jürgen Herzog. Cohen-Macaulay rings, volume 39 of Cambridge Studies in
+          Advanced Mathematics. Cambridge University Press, Cambridge, 1993.
+[BHLLX21] Harold Blum, Daniel Halpern-Leistner, Yuchen Liu, and Chenyang Xu. On properness of K-
+          moduli spaces and optimal degenerations of Fano varieties. Selecta Math. (N.S.), 27(4):Paper
+          No. 73, 2021.
+[BJ20]    Harold Blum and Mattias Jonsson. Thresholds, valuations, and K-stability. Adv. Math.,
+          365:107062, 2020.
+[BL18]    Harold Blum and Yuchen Liu. Openness of uniform K-stability in families of Q-Fano varieties.
+          Ann. Sci. Éc. Norm. Supér., to appear, 2018. arXiv:1808.09070.
+[BL21]    Harold Blum and Yuchen Liu. The normalized volume of a singularity is lower semicontinuous.
+          J. Eur. Math. Soc. (JEMS), 23(4):1225–1256, 2021.
+[Blu18]   Harold Blum. Existence of valuations with smallest normalized volume. Compos. Math.,
+          154(4):820–849, 2018.
+[BLX19]   Harold Blum, Yuchen Liu, and Chenyang Xu. Openness of K-semistability for Fano varieties.
+          Duke Math. J., to appear, 2019. arXiv:1907.02408.
+[BX19]    Harold Blum and Chenyang Xu. Uniqueness of K-polystable degenerations of Fano varieties.
+          Ann. of Math. (2), 190(2):609–656, 2019.
+[CDS15]   Xiuxiong Chen, Simon Donaldson, and Song Sun. Kähler-Einstein metrics on Fano manifolds.
+          I: Approximation of metrics with cone singularities, II: Limits with cone angle less than 2π, III:
+          Limits as cone angle approaches 2π and completion of the main proof. J. Amer. Math. Soc.,
+          28(1):183–197, 199–234, 235–278, 2015.
+[Che01]   I. A. Cheltsov. Log canonical thresholds on hypersurfaces. Mat. Sb., 192(8):155–172, 2001.
+[CP02]    I. A. Cheltsov and Jihun Park. Global log-canonical thresholds and generalized Eckardt points.
+          Mat. Sb., 193(5):149–160, 2002.
+[CP21]    Giulio Codogni and Zsolt Patakfalvi. Positivity of the CM line bundle for families of K-stable
+          klt Fano varieties. Invent. Math., 223(3):811–894, 2021.
+[dFEM11] Tommaso de Fernex, Lawrence Ein, and Mircea Mustaţă. Log canonical thresholds on varieties
+          with bounded singularities. In Classification of algebraic varieties, EMS Ser. Congr. Rep., pages
+          221–257. Eur. Math. Soc., Zürich, 2011.
+                                K-STABILITY OF CUBIC FOURFOLDS                                            19
+
+[dFH11]    Tommaso de Fernex and Christopher D. Hacon. Deformations of canonical pairs and Fano
+           varieties. J. Reine Angew. Math., 651:97–126, 2011.
+[Don02]    S. K. Donaldson. Scalar curvature and stability of toric varieties. J. Differential Geom.,
+           62(2):289–349, 2002.
+[EH87]     David Eisenbud and Joe Harris. On varieties of minimal degree (a centennial account). In Al-
+           gebraic geometry, Bowdoin, 1985 (Brunswick, Maine, 1985), volume 46 of Proc. Sympos. Pure
+           Math., pages 3–13. Amer. Math. Soc., Providence, RI, 1987.
+[ELS03]    Lawrence Ein, Robert Lazarsfeld, and Karen E. Smith. Uniform approximation of Abhyankar
+           valuation ideals in smooth function fields. Amer. J. Math., 125(2):409–440, 2003.
+[FO18]     Kento Fujita and Yuji Odaka. On the K-stability of Fano varieties and anticanonical divisors.
+           Tohoku Math. J. (2), 70(4):511–521, 2018.
+[Fuj90]    Takao Fujita. On singular del Pezzo varieties. In Algebraic geometry (L’Aquila, 1988), volume
+           1417 of Lecture Notes in Math., pages 117–128. Springer, Berlin, 1990.
+[Fuj18]    Kento Fujita. Optimal bounds for the volumes of Kähler-Einstein Fano manifolds. Amer. J.
+           Math., 140(2):391–414, 2018.
+[Fuj19a]   Kento Fujita. K-stability of Fano manifolds with not small alpha invariants. J. Inst. Math.
+           Jussieu, 18(3):519–530, 2019.
+[Fuj19b]   Kento Fujita. A valuative criterion for uniform K-stability of Q-Fano varieties. J. Reine Angew.
+           Math., 751:309–338, 2019.
+[Fuj21]    Kento Fujita. K-stability of log Fano hyperplane arrangements. J. Algebraic Geom., 30(4):603–
+           630, 2021.
+[GMGS21]   Patricio Gallardo, Jesus Martinez-Garcia, and Cristiano Spotti. Applications of the moduli
+           continuity method to log K-stable pairs. J. Lond. Math. Soc. (2), 103(2):729–759, 2021.
+[Huy16]    Daniel Huybrechts. Lectures on K3 surfaces, volume 158 of Cambridge Studies in Advanced
+           Mathematics. Cambridge University Press, Cambridge, 2016.
+[Jia20]    Chen Jiang. Boundedness of Q-Fano varieties with degrees and alpha-invariants bounded from
+           below. Ann. Sci. Éc. Norm. Supér. (4), 53(5):1235–1248, 2020.
+[Kaw00]    Yujiro Kawamata. On effective non-vanishing and base-point-freeness. Asian J. Math., 4(1):173–
+           181, 2000. Kodaira’s issue.
+[KM92]     János Kollár and Shigefumi Mori. Classification of three-dimensional flips. J. Amer. Math. Soc.,
+           5(3):533–703, 1992.
+[KM98]     János Kollár and Shigefumi Mori. Birational geometry of algebraic varieties, volume 134 of
+           Cambridge Tracts in Mathematics. Cambridge University Press, Cambridge, 1998. With the
+           collaboration of C. H. Clemens and A. Corti, Translated from the 1998 Japanese original.
+[Kol13]    János Kollár. Singularities of the minimal model program, volume 200 of Cambridge Tracts in
+           Mathematics. Cambridge University Press, Cambridge, 2013. With a collaboration of Sándor
+           Kovács.
+[Laz09]    Radu Laza. The moduli space of cubic fourfolds. J. Algebraic Geom., 18(3):511–545, 2009.
+[Li17]     Chi Li. K-semistability is equivariant volume minimization. Duke Math. J., 166(16):3147–3218,
+           2017.
+[Li18]     Chi Li. Minimizing normalized volumes of valuations. Math. Z., 289(1-2):491–513, 2018.
+[Li19]     Chi Li. G-uniform stability and Kähler-Einstein metrics on Fano varieties. Invent. Math., to
+           appear, 2019. arXiv:1907.09399.
+[Liu18]    Yuchen Liu. The volume of singular Kähler-Einstein Fano varieties. Compos. Math.,
+           154(6):1131–1158, 2018.
+[LL19]     Chi Li and Yuchen Liu. Kähler-Einstein metrics and volume minimization. Adv. Math., 341:440–
+           492, 2019.
+[LTW19]    Chi Li, Gang Tian, and Feng Wang. The uniform version of Yau-Tian-Donaldson conjecture for
+           singular Fano varieties. Peking Math. J., to appear, 2019. arXiv:1903.01215.
+[LWX19]    Chi Li, Xiaowei Wang, and Chenyang Xu. On the proper moduli spaces of smoothable Kähler–
+           Einstein Fano varieties. Duke Math. J., 168(8):1387–1459, 2019.
+[LWX21]    Chi Li, Xiaowei Wang, and Chenyang Xu. Algebraicity of the metric tangent cones and equi-
+           variant K-stability. J. Amer. Math. Soc., 34(4):1175–1214, 2021.
+20                                          YUCHEN LIU
+
+[LX14]    Chi Li and Chenyang Xu. Special test configuration and K-stability of Fano varieties. Ann. of
+          Math. (2), 180(1):197–232, 2014.
+[LX18]    Chi Li and Chenyang Xu. Stability of Valuations: Higher Rational Rank. Peking Math. J.,
+          1(1):1–79, 2018.
+[LX19]    Yuchen Liu and Chenyang Xu. K-stability of cubic threefolds. Duke Math. J., 168(11):2029–2073,
+          2019.
+[LX20]    Chi Li and Chenyang Xu. Stability of valuations and Kollár components. J. Eur. Math. Soc.
+          (JEMS), 22(8):2573–2627, 2020.
+[LXZ21]   Yuchen Liu, Chenyang Xu, and Ziquan Zhuang. Finite generation for valuations computing
+          stability thresholds and applications to K-stability. 2021. arXiv:2102.09405.
+[LZ20]    Yuchen Liu and Ziwen Zhu. Equivariant K-stability under finite group action. Internat. J. Math.,
+          to appear, 2020. arXiv:2001.10557.
+[LZ21]    Yuchen Liu and Ziquan Zhuang. Birational superrigidity and K-stability of singular Fano com-
+          plete intersections. Int. Math. Res. Not. IMRN, (1):384–403, 2021.
+[May72]   Alan L. Mayer. Families of K − 3 surfaces. Nagoya Math. J., 48:1–17, 1972.
+[MM93]    Toshiki Mabuchi and Shigeru Mukai. Stability and Einstein-Kähler metric of a quartic del Pezzo
+          surface. In Einstein metrics and Yang-Mills connections (Sanda, 1990), volume 145 of Lecture
+          Notes in Pure and Appl. Math., pages 133–160. Dekker, New York, 1993.
+[Nad90]   Alan Michael Nadel. Multiplier ideal sheaves and Kähler-Einstein metrics of positive scalar
+          curvature. Ann. of Math. (2), 132(3):549–596, 1990.
+[Oda15]   Yuji Odaka. Compact moduli spaces of Kähler-Einstein Fano varieties. Publ. Res. Inst. Math.
+          Sci., 51(3):549–565, 2015.
+[OSS16]   Yuji Odaka, Cristiano Spotti, and Song Sun. Compact moduli spaces of del Pezzo surfaces and
+          Kähler-Einstein metrics. J. Differential Geom., 102(1):127–172, 2016.
+[PT06]    Sean Timothy Paul and Gang Tian. CM stability and the generalized Futaki invariant I. 2006.
+          arXiv:math/0605278.
+[Rob76]   Lorenzo Robbiano. Some properties of complete intersections in “good” projective varieties.
+          Nagoya Math. J., 61:103–111, 1976.
+[Sch71]   Michael Schlessinger. Rigidity of quotient singularities. Invent. Math., 14:17–26, 1971.
+[SS17]    Cristiano Spotti and Song Sun. Explicit Gromov-Hausdorff compactifications of moduli spaces
+          of Kähler-Einstein Fano manifolds. Pure Appl. Math. Q., 13(3):477–515, 2017.
+[SSY16]   Cristiano Spotti, Song Sun, and Chengjian Yao. Existence and deformations of Kähler-Einstein
+          metrics on smoothable Q-Fano varieties. Duke Math. J., 165(16):3043–3083, 2016.
+[Tia90]   Gang Tian. On Calabi’s conjecture for complex surfaces with positive first Chern class. Invent.
+          Math., 101(1):101–172, 1990.
+[Tia94]   Gang Tian. The K-energy on hypersurfaces and stability. Comm. Anal. Geom., 2(2):239–265,
+          1994.
+[Tia97]   Gang Tian. Kähler-Einstein metrics with positive scalar curvature. Invent. Math., 130(1):1–37,
+          1997.
+[Tia00]   Gang Tian. Canonical metrics in Kähler geometry. Lectures in Mathematics ETH Zürich.
+          Birkhäuser Verlag, Basel, 2000. Notes taken by Meike Akveld.
+[Tia15]   Gang Tian. K-stability and Kähler-Einstein metrics. Comm. Pure Appl. Math., 68(7):1085–1156,
+          2015.
+[Xu20]    Chenyang Xu. A minimizing valuation is quasi-monomial. Ann. of Math. (2), 191(3):1003–1030,
+          2020.
+[XZ20]    Chenyang Xu and Ziquan Zhuang. On positivity of the CM line bundle on K-moduli spaces.
+          Ann. of Math. (2), 192(3):1005–1068, 2020.
+[XZ21]    Chenyang Xu and Ziquan Zhuang. Uniqueness of the minimizer of the normalized volume func-
+          tion. Camb. J. Math., 9(1):149–176, 2021.
+[Yok08]   Mutsumi Yokoyama. Stability of cubic hypersurfaces of dimension 4. In Higher dimensional
+          algebraic varieties and vector bundles, RIMS Kôkyûroku Bessatsu, B9, pages 189–204. Res.
+          Inst. Math. Sci. (RIMS), Kyoto, 2008.
+[Zhu20]   Ziwen Zhu. Higher codimensional alpha invariants and characterization of projective spaces.
+          Internat. J. Math., 31(2):2050012, 17, 2020.
+                             K-STABILITY OF CUBIC FOURFOLDS                                     21
+
+[Zhu21]   Ziquan Zhuang. Optimal destabilizing centers and equivariant K-stability. Invent. Math.,
+          226(1):195–223, 2021.
+
+  Department of Mathematics, Northwestern University, Evanston, IL 60208, USA.
+  Email address: yuchenl@northwestern.edu
+

@@ -1,0 +1,786 @@
+                                                  COHOMOLOGICAL CHARACTERIZATIONS OF PROJECTIVE SPACES AND
+                                                                     HYPERQUADRICS
+
+                                                                    CAROLINA ARAUJO, STÉPHANE DRUEL, SÁNDOR J. KOVÁCS
+
+
+
+
+                                                                                         1. I NTRODUCTION
+arXiv:0707.4310v2 [math.AG] 9 Oct 2007
+
+
+
+
+                                             Projective spaces and hyperquadrics are the simplest projective algebraic varieties, and they can be char-
+                                         acterized in many ways. The aim of this paper is to provide a new characterization of them in terms of
+                                         positivity properties of the tangent bundle (Theorem 1.1).
+                                             The first result in this direction was Mori’s proof of the Hartshorne conjecture in [Mor79] (see also Siu
+                                         and Yau [SY80]), that characterizes projective spaces as the only manifolds having ample tangent bundle.
+                                         Then, in [Wah83], Wahl characterized projective spaces as the only manifolds whose tangent bundles contain
+                                         ample invertible subsheaves. Interpolating Mori’s and Wahl’s results, Andreatta and Wiśniewski gave the
+                                         following characterization:
+                                         Theorem [AW01]. Let X be a smooth complex projective n-dimensional variety. Assume that the tangent
+                                         bundle TX contains an ample locally free subsheaf E of rank r. Then X ≃ Pn and either E ≃ OPn (1)⊕r
+                                         or r = n and E = TPn .
+                                             We note that earlier, in [CP98], Campana and Peternell obtained the same result for r ≥ n − 2.
+                                             Let E be an ample locally free subsheaf of TPn of rank p < n. By taking its determinant, we obtain a non-
+                                         zero section in H 0 (Pn , ∧p TPn ⊗ OPn (−p)). On the other hand, most sections in H 0 (Pn , ∧p TPn ⊗ OPn (−p))
+                                         do not come from ample locally free subsheaves of TPn .
+                                             This motivates the following characterization of projective spaces and hyperquadrics, which was con-
+                                         jectured by Beauville in [Bea00]. Here Qp denotes a smooth quadric hypersurface in Pp+1 , and OQp (1)
+                                         denotes the restriction of OPp+1 (1) to Qp . When p = 1, (Q1 , OQ1 (1)) is just (P1 , OP1 (2)).
+                                         Theorem 1.1. Let X be a smooth complex projective n-dimensional variety and L an ample line bundle
+                                         on X. If H 0 (X, ∧p TX ⊗ L −p ) 6= 0 for some positive integer p, then either (X, L ) ≃ (Pn , OPn (1)), or
+                                         p = n and (X, L ) ≃ (Qp , OQp (1)).
+                                             The statement of this theorem can be interpreted in the following way. Let X be a smooth complex
+                                         projective n-dimensional variety and L an ample line bundle on X. Consider the sheaf TL : = TX ⊗ L −1 .
+                                         Then Wahl’s theorem [Wah83] says that if H 0 (X, TL ) 6= 0 then X ≃ Pn . Theorem 1.1 generalizes this
+                                         statement to the case when one only assumes that H 0 (X, ∧p TL ) 6= 0 for some 0 < p ≤ n.
+                                             In order to prove Theorem 1.1, first notice that X is uniruled by [Miy87, Corollary 8.6]. Next observe that
+                                         if the Picard number of X is 1, then it is necessarily a Fano variety. If the Picard number is larger than 1, then
+                                         we fix a minimal covering family H of rational curves on X, and follow the strategy in [AW01] of looking
+                                         at the H-rationally connected quotient π : X ◦ → Y ◦ of X (see Section 2 for definitions). We show that any
+                                         non-zero section s ∈ H 0 (X, ∧p TX ⊗L −p ) restricts to a non-zero section s◦ ∈ H 0 (X ◦ , ∧p TX ◦ /Y ◦ ⊗L −p ),
+                                         except in the very special case when p = 2 and X ≃ Q2 . This is achieved in Section 5. Afterwards we need
+                                         to deal with two cases: the case when X is a Fano manifold with Picard number 1, and the case in which
+                                         the H-rationally connected quotient π : X ◦ → Y ◦ is either a projective space bundle or a quadric bundle,
+                                         and H 0 (X ◦ , ∧p TX ◦ /Y ◦ ⊗ L −p ) 6= 0.
+                                             When X is a Fano manifold with Picard number ρ(X) = 1, the result follows from the following.
+
+                                            Date: July 29, 2007.
+                                            2000 Mathematics Subject Classification. 14M20.
+                                            The first named author was partially supported by a CNPq Research Fellowship.
+                                            The second named author was partially supported by the 3AGC project of the A.N.R.
+                                            The third named author was supported in part by NSF Grant DMS-0554697 and the Craig McKibben and Sarah Merner Endowed
+                                         Professorship in Mathematics.
+                                                                                                    1
+2                            CAROLINA ARAUJO, STÉPHANE DRUEL, SÁNDOR J. KOVÁCS
+
+
+Theorem 1.2 (= Theorem 6.3). Let X be a smooth n-dimensional complex projective variety with ρ(X) =
+1, L an ample line bundle on X, and p a positive integer. If H 0 (X, TX⊗p ⊗ L −p ) 6= 0, then either
+(X, L ) ≃ (Pn , OPn (1)), or p = n ≥ 3 and (X, L ) ≃ (Qp , OQp (1)).
+    The paper is organized as follows. In Section 2 we gather old and new results about minimal covering
+families of rational curves and their rationally connected quotients. In Section 3 we show that the relative
+anticanonical bundle of a generically smooth surjective morphism from a normal projective Q-Gorenstein
+variety onto a smooth curve is never ample. This will be used to treat the case when the H-rationally
+connected quotient π : X ◦ → Y ◦ is a quadric bundle. In Section 4, we show that p-derivations can be
+lifted to the normalization. This technical result will be used in the following section, which is the technical
+core of the paper. In Section 5, we study the behavior of non-zero global sections of bundles of the form
+∧p TX ⊗ M with respect to fibrations X → Y . We also prove some general vanishing results, such as the
+following.
+Theorem 1.3 (= Corollary 5.5). Let X be a smooth complex projective variety and L an ample line bundle
+on X. If H 0 (X, ∧p TX ⊗ L −p−1−k ) 6= 0 for integers p ≥ 1 and k ≥ 0, then k = 0 and (X, L ) ≃
+(Pp , OPp (1)).
+    Finally, in Section 6 we prove Theorem 1.2 and put things together to prove Theorem 1.1.
+Notation and definitions. Throughout the present article we work over the field of complex numbers unless
+otherwise noted. By a vector bundle we mean a locally free sheaf and by a line bundle an invertible sheaf.
+If X is a variety and x ∈ X, then κ(x) denotes the residue field OX,x mX,x . Given a variety X, we denote
+by ρ(X) the Picard number of X. If E is a vector bundle over a variety X, we denote by E ∗ its dual vector
+bundle, and by P(E ) the Grothendieck projectivization ProjX (Sym(E )). For a morphism f : X → T , the
+fiber of f over t ∈ T is denoted by Xt .
+Acknowledgments . The work on this project benefitted from support from various institutions and from
+discussions with some of our colleagues. In particular, the second and third named authors’ visits to the
+Instituto Nacional de Matemática Pura e Aplicada and the first and second named authors’ visit to the
+Korea Institute of Advanced Studies were essentially helpful. The former visits were made possible by
+support from the ANR, the NSF and IMPA. The latter took place during a workshop organized by Jun-Muk
+Hwang with support from KIAS. We would like to thank these institutions for their support and Jun-Muk
+Hwang for his hospitality. We would also like to thank János Kollár for helpful discussions and suggestions
+that improved both the content and the presentation of this article.
+
+                       2. M INIMAL RATIONAL CURVES ON UNIRULED VARIETIES
+   In this section we gather some properties of minimal covering families of rational curves and their corre-
+sponding rationally connected quotients. For more details see [Kol96], [Deb01], or [AK03].
+   Let X be a smooth complex projective uniruled variety and H an irreducible component of RatCurvesn (X).
+Recall that only general points in H are in 1:1-correpondence with the associated curves in X.
+   We say that H is a covering family of rational curves on X if the corresponding universal family domi-
+nates X. A covering family H of rational curves on X is called unsplit if it is proper. It is called minimal if,
+for a general point x ∈ X, the subfamily of H parametrizing curves through x is proper. As X is uniruled,
+a minimal covering family of rational curves on X always exists. One can take, for instance, among all
+covering families of rational curves on X one whose members have minimal degree with respect to a fixed
+ample line bundle.
+   Fix a minimal covering family H of rational curves on X. Let C be a rational curve corresponding to a
+general point in H, with normalization morphism f : P1 → C ⊂ X. We denote by [C] or [f ] the point in
+H corresponding to C. We denote by f ∗ TX+ the subbundle of f ∗ TX defined by
+                                                                          
+                      f ∗ TX+ = im H 0 P1 , f ∗ TX (−1) ⊗ OP1 (1) → f ∗ TX ֒→ f ∗ TX .
+                                                                                              ⊕(n−d−1)
+By [Kol96, IV.2.9], if [f ] is a general member of H, then f ∗ TX ≃ OP1 (2) ⊕ OP1 (1)⊕d ⊕ OP1    , where
+          ∗
+d = deg(f TX ) − 2 ≥ 0.
+  Given a point x ∈ X, we denote by Hx the normalization of the subscheme of H parametrizing rational
+curves passing through x. By [Kol96, II.1.7, II.2.16], if x ∈ X is a general point, then Hx is a smooth
+                         CHARACTERIZATIONS OF PROJECTIVE SPACES AND HYPERQUADRICS                                  3
+
+
+projective variety of dimension d = deg(f ∗ TX ) − 2. We remark that a rational curve that is smooth at x is
+parametrized by at most one element of Hx .
+   Let H1 , . . . , Hk be minimal covering families of rational curves on X. For each i, let H i denote the clo-
+sure of Hi in Chow(X). We define the following equivalence relation on X, which we call (H1 , . . . , Hk )-
+equivalence. Two points x, y ∈ X are (H1 , . . . , Hk )-equivalent if they can be connected by a chain of
+1-cycles from H 1 ∪ · · · ∪ H k . By [Cam92] (see also [Kol96, IV.4.16]), there exists a proper surjective mor-
+phism π ◦ : X ◦ → Y ◦ from a dense open subset of X onto a normal variety whose fibers are (H1 , . . . , Hk )-
+equivalence classes. We call this map the (H1 , . . . , Hk )-rationally connected quotient of X. When Y ◦ is a
+point we say that X is (H1 , . . . , Hk )-rationally connected.
+Remark 2.1. By [Kol96, IV.4.16], there is a universal constant c, depending only on the dimension of X,
+with the following property. If H1 , . . . , Hk are minimal covering families of rational curves on X, and
+x, y ∈ X are general points on a general (H1 , . . . , Hk )-equivalence class, then x and y can be connected by
+a chain of at most c rational cycles from H 1 ∪ · · · ∪ H k .
+   The next two results are special features of the (H1 , . . . , Hk )-rationally connected quotient of X when
+the families H1 , . . . , Hk are unsplit. The first one says that π ◦ can be extended in codimension 1 to an
+equidimensional proper morphism with integral fibers, but possibly allowing singular fibers. The second
+one describes the general fiber of the H-rationally connected quotient of X when H is unsplit and Hx is
+irreducible for general x ∈ X.
+Lemma 2.2. Let X be a smooth complex projective variety and H1 , . . . , Hk unsplit covering families of
+rational curves on X. Then there is an open subset X ◦ of X, with codimX (X \ X ◦ ) ≥ 2, a smooth variety
+Y ◦ , and a proper surjective equidimensional morphism with irreducible and reduced fibers π ◦ : X ◦ → Y ◦
+which is the (H1 , . . . , Hk )-rationally connected quotient of X.
+Proof. The fact that the (H1 , . . . , Hk )-rationally connected quotient of X can be extended in codimension
+1 to an equidimensional proper morphism follows from the proof of [BCD07, Proposition 1]. This holds
+even in the more general context of quasi-unsplit covering families on Q-factorial varieties. In [BCD07,
+Proposition 1] this is established for a single quasi-unsplit family, but the same proof works for finitely
+many quasi-unsplit families. For convenience we review the construction of that extension.
+    Let π ◦ : X ◦ → Y ◦ be the (H1 , . . . , Hk )-rationally connected quotient of X. By shrinking Y ◦ if nec-
+essary, we may assume that π ◦ is smooth. Let Y → Chow(X) be the normalization of the closure of the
+image of Y ◦ in Chow(X), and let U ⊂ Y × X be the restriction of the universal family to Y . Denote by
+p : U → Y and q : U → X the induced natural morphisms. Notice that q : U → X is birational.
+    Let 0 ∈ Y and set U0 = p−1 (0). Then q(U0 ) is contained in an (H1 , . . . , Hk )-equivalence class. This
+follows from taking limits of chains of rational curves from the families H1 , . . . , Hk (see Remark 2.1),
+observing the assumption that the Hi ’s are unsplit, and the fact that the image of a general fiber of p in X is
+an (H1 , . . . , Hk )-equivalence class.
+    Let E be the exceptional locus of q. Since X is smooth, E has pure codimension 1 in U . Set S =
+q(E) ⊂ X. This is a set of codimension at least 2 in X. We shall show that S is closed with respect to
+(H1 , . . . , Hk )-equivalence. From that it will follow that the morphism p|U \E : U \ E → Y \ p(E) is proper
+and induces a proper equidimensional morphism X \ S → Y \ p(E) extending π ◦ . Let L be an effective
+ample divisor on Y . Then there exists an effective q-exceptional divisor F on U and an effective divisor
+D on X such that p∗ L + F = q ∗ D. First we claim that supp F = E. Indeed, let C ⊂ E be any curve
+contracted by q. Then C is not contracted by p since U ⊂ Y × X. Hence F · C = q ∗ D · C − p∗ L · C < 0,
+and so C ⊂ supp F . This proves the claim. Notice that the general fiber of p does not meet E. Therefore,
+for any curve C ⊂ U contained in a general fiber of p, we have q ∗ D · C = 0. This shows in particular
+that D · ℓ = 0 for any curve ℓ from any of the families H1 , . . . , Hk . If ℓ̃ ⊂ U is mapped onto ℓ by q, then
+F · ℓ̃ = q ∗ D · ℓ̃ − p∗ L · ℓ̃ ≤ 0. Hence either ℓ̃ is contained in E = supp F or it is disjoint from it. Therefore,
+if ℓ is a curve from any of the families H1 , . . . , Hk , then either ℓ ⊂ S or ℓ ∩ S = ∅. In other words, S is
+closed with respect to (H1 , . . . , Hk )-equivalence.
+    Replace X ◦ with X \ S and Y ◦ with Y \ p(E), obtaining a proper equidimensional morphism π ◦ : X ◦ →
+Y with codim(X \ X ◦ ) ≥ 2. Since Y is normal, we may also replace Y ◦ with its smooth locus and we
+   ◦
+
+still have the condition codim(X \ X ◦ ) ≥ 2.
+4                             CAROLINA ARAUJO, STÉPHANE DRUEL, SÁNDOR J. KOVÁCS
+
+
+    The locus B of Y ◦ over which π ◦ has multiple fibers has codimension at least 2 in Y ◦ . To see this,
+compactify Y ◦ to a smooth projective variety Ȳ and take a resolution π̄ : X̄ → Ȳ of the indeterminacies of
+X 99K Ȳ with X̄ smooth and projective. Let C̄ ⊂ Ȳ be a smooth projective curve obtained by intersecting
+dim Ȳ − 1 general very ample divisors on Ȳ . Let π̄C̄ : X̄C̄ → C̄ be the corresponding morphism. Then X̄C̄
+is smooth projective and the general fiber of π̄ is rationally connected. Hence π̄C̄ has a section by [GHS03],
+and thus it cannot contain multiple fibers. Now, replace Y ◦ with Y ◦ \ B to obtain an equidimensional proper
+morphism with no multiple fibers.
+    Let F be a general fiber of π ◦ . For each i, denote by Hij , 1 ≤ j ≤ ni , the unsplit covering families of
+rational curves on F whose general members correspond to rational curves on X from the family Hi . Let
+[Hij ] denote the class of a member of Hij in N1 (F ) and H := {[Hij ] | i = 1, . . . , k, j = 1, . . . , ni }. Then
+by [Kol96, IV.3.13.3], N1 (F ) is generated by H.
+    Finally we shall show that the locus B ′ of Y ◦ over which the fibers of π ◦ are not integral has codimension
+at least 2 in Y ◦ . Let C ⊂ Y ◦ be a smooth curve obtained by intersecting dim Y ◦ − 1 general very ample
+divisors on Y ◦ . Let πC : XC → C be the corresponding morphism. Then XC is smooth. We denote the
+image of the classes [Hij ]’s in N1 (XC ) and their collection H by the same symbols. By taking limits of
+chains of rational curves from the families H1 , . . . , Hk and applying [Kol96, IV.3.13.3] (see Remark 2.1),
+we see that any curve contained in any fiber of πC is numerically proportional in N1 (XC ) to a linear
+combination of the [Hij ]’s. Hence N1 (XC /C) is generated by H. Therefore, all fibers of πC are irreducible.
+Indeed, if F0′ is an irreducible component of a reducible fiber F0 , then F0′ is a Cartier divisor on XC , and
+F0′ · [Hij ] = 0 for every Hij . On the other hand, there is a curve ℓ ⊂ F0 such that F0′ · ℓ > 0, contradicting
+the fact that N1 (XC /C) is generated by H. Since there are no multiple fibers, the fibers are also reduced.
+Finally, we replace Y ◦ with Y ◦ \ B ′ and obtain a morphism with the required properties.                        
+Proposition 2.3. Let X be a smooth complex projective variety and H an unsplit covering family of rational
+curves on X. Assume that Hx is irreducible for general x ∈ X. Let π ◦ : X ◦ → Y ◦ be the H-rationally
+connected quotient of X. Then the general fiber of π ◦ is a Fano manifold with Picard number 1.
+Proof. Let Xt be a general fiber of π ◦ , and suppose ρ(Xt ) 6= 1. Denote by [H] the class of the members
+of H in N1 (X). By [Kol96, IV.3.13.3], every proper curve on Xt is numerically proportional to [H] in
+N1 (X). There exists an irreducible component Ht of HXt = {[C] ∈ H | C ⊂ Xt } which is an unsplit
+covering family of rational curves on Xt . Since Hx is irreducible for general x ∈ X, such a component Ht
+is unique. Since ρ(Xt ) 6= 1, Xt is not Ht -rationally connected by [Kol96, IV.3.13.3]. Let σt : Xt◦ → Zt◦
+be the (nontrivial) Ht -rationally connected quotient of Xt . Notice that for every z ∈ Zt◦ there is a curve
+Cz ⊂ Xt numerically proportional to [H] in N1 (X), meeting the fiber of σt over z, but not contained in
+it. Since Ht is unique, there is a dense open subset X ′ of X and a fibration σ : X ′ → Z ′ whose fibers are
+fibers of σt for some t ∈ Y ◦ . Moreover, there is a curve C ⊂ X numerically proportional to [H] in N1 (X),
+meeting X ′ , and not contracted by σ. But this is impossible. Indeed, let L′ be an effective divisor on Z ′
+meeting but not containing the image of C by σ. Let L be the closure of σ −1 (L′ ) in X. Then L · C > 0
+while L · ℓ = 0 for any curve ℓ parametrized by H lying on a fiber of σ.                                  
+Remark 2.4. The statement of Proposition 2.3 does not hold in general if we do not assume that Hx is
+irreducible for general x ∈ X. Indeed, one may take π ◦ : X ◦ → Y ◦ to be a suitable family of quadric
+surfaces in P3 and H to be the family of lines on the fibers of π ◦ .
+Definition 2.5. Let X be a smooth complex projective variety, and H a minimal covering family of rational
+curves on X. Let x ∈ X be a general point. Define the tangent map τx : Hx 99K P(Tx X ∗ ) by sending a
+curve that is smooth at x to its tangent direction at x. Define Cx to be the image of τx in P(Tx X ∗ ). This is
+called the variety of minimal rational tangents at x associated to the minimal family H.
+  The map τx : Hx → Cx is in fact the normalization morphism by [Keb02] and [HM04]. If τx is an
+immersion at every point of Hx , then all curves parametrized by Hx are smooth at x by [Kol96, V.3.6] and
+[Ara06, Proposition 2.7], and, as a consequence, there is a one-to-one corresponcence between points of Hx
+and the associated curves on X. The variety Cx comes with a natural projective embedding into P(Tx X ∗ ).
+This embedding encodes important geometric properties of X. The following result was proved in [Ara06]
+and gives a structure theorem for varieties whose variety of minimal rational tangents is linear.
+                        CHARACTERIZATIONS OF PROJECTIVE SPACES AND HYPERQUADRICS                              5
+
+
+Theorem 2.6 [Ara06]. Let X be a smooth complex projective variety, H a minimal covering family of
+rational curves on X, and Cx ⊂ P(Tx X ∗ ) the corresponding variety of minimal rational tangents at x ∈ X.
+Suppose that for a general x ∈ X, Cx is a d-dimensional linear subspace of P(Tx X ∗ ).
+   Then there exists an open subset X ◦ ⊂ X and a Pd+1 -bundle ϕ◦ : X ◦ → T ◦ over a smooth base with
+the property that every rational curve parametrized by H and meeting X ◦ is a line on a fiber of ϕ◦ . In
+particular, ϕ◦ : X ◦ → T ◦ is the H-rationally connected quotient of X. If H is unsplit, then we may take
+X ◦ such that codim(X \ X ◦ ) ≥ 2.
+Proposition 2.7. Let X be a smooth complex projective variety, H a minimal covering family of rational
+curves on X, and π ◦ : X ◦ → Y ◦ the H-rationally connected quotient of X. Suppose that the tangent bundle
+TX contains a subsheaf D such that f ∗ D is an ample vector bundle for a general member [f ] ∈ H. Then π ◦
+is a projective space bundle and the inclusion D|X ◦ ֒→ TX ◦ factors through an inclusion D|X ◦ ֒→ TX ◦ /Y ◦ .
+
+Proof. Let Cx ⊂ P(Tx X ∗ ) be the variety of minimal rational tangents associated to H at a general point
+x ∈ X. By [Ara06, Proposition 4.1], Cx is a union of linear subspaces of P(Tx X ∗ ) containing P(D ∗ ⊗κ(x)).
+In [Ara06, Proposition 4.1] D is assumed to be ample, but the proof only uses the fact that f ∗ D is a subsheaf
+of f ∗ TX+ for general [f ] ∈ H.
+   Lemma 2.8 below implies that Cx is irreducible, and thus a linear subspace of P(Tx X ∗ ).
+   Now we apply Theorem 2.6 to conclude that π ◦ is a projective space bundle. Moreover, for a general
+point x ∈ X ◦ , the stalk Dx is contained in (TX ◦ /Y ◦ )x . Since the cokernel of TX ◦ /Y ◦ ֒→ TX ◦ is torsion
+free, we conclude that there is an inclusion D|X ◦ ֒→ TX ◦ /Y ◦ factoring D|X ◦ ֒→ TX ◦ .                    
+
+   The following lemma is Proposition 2.2 of [Hwa07]. In [Hwa07, Proposition 2.2] X is assumed to have
+Picard number one, but this assumption is not used in the proof.
+Lemma 2.8. Let X be a smooth complex projective variety, H a minimal covering family of rational curves
+on X, and Cx ⊂ P(Tx X ∗ ) the corresponding variety of minimal rational tangents at x ∈ X. Suppose that
+for a general x ∈ X, Cx is a union of linear subspaces of P(Tx X ∗ ).
+   Then the intersection of any two irreducible components of Cx is empty.
+
+                     3. T HE RELATIVE ANTICANONICAL BUNDLE OF A FIBRATION
+   In this section we prove that the relative anticanonical bundle of a generically smooth surjective morphism
+from a normal projective Q-Gorenstein variety onto a smooth curve cannot be ample. In fact, we prove the
+following more general result. Note that a similar theorem was proved in [Miy93, Theorem 2].
+Theorem 3.1. Let X be a normal projective variety, f : X → C a surjective morphism onto a smooth
+curve, and ∆ ⊆ X a Weil divisor such that (X, ∆) is log canonical over the generic point of C. Then
+−(KX/C + ∆) is not ample.
+                g      σ
+Proof. Let X → C̃ → C be the Stein factorization of f . Then KC̃ = σ ∗ KC + Rσ where Rσ is the
+ramification divisor of σ and so −(KX/C̃ + ∆) = −(KX/C + ∆) + g ∗ Rσ . Notice that Rσ is effective and
+hence if −(KX/C + ∆) is ample, then so is −(KX/C̃ + ∆).
+   Thus, in order to prove the statement, we may assume that f has connected fibers. Let us now assume to
+the contrary that −(KX/C + ∆) is ample. Let π : X̃ → X be a log resolution of singularities of (X, ∆), A
+an ample divisor on C, and m ≫ 0 such that D = −m(KX/C + ∆) − f ∗ A is very ample. Then
+
+                               KX̃ + π∗−1 ∆ ∼Q π ∗ (KX + ∆) + E+ − E− ,
+where E+ and E− are effective π-exceptional divisors with no common components and such that the
+support of π∗−1 ∆ + E+ + E− is an snc divisor. By the log canonical assumption, E− can be decomposed as
+E− = E + F where ⌈E⌉ is reduced and E− agrees with E over the generic point of C. Set f˜ = f ◦ π and
+let D̃ ∈ |π ∗ D| be a general member. Setting ∆                                          ˜ is log canonical
+                                              ˜ = π −1 ∆ + 1 D̃ + E, we obtain that (X̃, ∆)
+                                                   ∗       m
+and that
+
+(3.1.1)                          KX̃ + ∆˜ + F ∼Q f˜∗ KC + E+ − 1 f˜∗ A.
+                                                                   m
+6                               CAROLINA ARAUJO, STÉPHANE DRUEL, SÁNDOR J. KOVÁCS
+
+
+   Furthermore, since E+ is π-exceptional, π∗ OX̃ (lE+ ) is an ideal sheaf in OX for any l ∈ Z (see for
+instance [Deb01, Lemma 7.11]). Then for any l ∈ N sufficiently divisible,
+                            ι
+    f˜∗ OX̃ (lm(KX̃/C + ∆))
+                        ˜ ֒→  f˜∗ OX̃ (lm(KX̃/C + ∆
+                                                  ˜ + F )) ≃
+
+                                      ≃ f˜∗ OX̃ (l(mE+ − f˜∗ A)) ≃ f˜∗ OX̃ (lmE+ ) ⊗ OC (−lA) ⊆ OC (−lA).
+Finally, observe that
+          • f˜∗ OX̃ (lm(KX̃/C + ∆
+                                ˜ + F )) is nonzero by (3.1.1) and because E+ is effective,
+          • f˜∗ O (lm(K
+                  X̃
+                                ˜ is semi-positive by [Cam04, Thm. 4.13], and
+                              + ∆))
+                            X̃/C
+           • ι is an isomorphism over a nonempty open subset of C.
+Therefore, f˜∗ OX̃ (lm(KX̃/C + ∆)) ˜ is a non-zero semi-positive sheaf contained in OC (−lA), but that con-
+tradicts the fact that A is ample.                                                                       
+
+                             4. L IFTING p- DERIVATIONS TO THE NORMALIZATION
+   In this section we show that p-derivations (see definition 4.4 below) can be lifted to the normalization.
+This is a generalization of Seidenberg’s theorem in [Sei66]. The proofs in this section follow closely the
+proof of Theorem 2.1.1 in [Käl06] and we also use the following result from [Käl06].
+Lemma 4.1 [Käl06, Lemma 2.1.2]. Let (A, m, k) be a local Noetherian domain and ∂ a derivation of A.
+Let ν be
+        a discrete
+                    valuation on the fraction field K(A) with center in A. Then there exists a c ∈ Z such
+         ∂(x)
+that ν x        ≥ c for any x ∈ K(A) \ {0}.
+
+Definition 4.2. Let R be a ring, A an R-algebra and M an A-module. Denote by ΩA/R the module of
+relative differentials of A over R. Given a positive integer p, we denote by ΩpA/R the p-th wedge power of
+ΩA/R . A p-derivation of A over R with values in M is an A-linear map ∂ : ΩpA/R → M . Such a map ∂
+induces a skew symmetric map K(A)⊕p → M ⊗A K(A), where K(A) denotes the fraction field of A. We
+use the same symbol ∂ to denote this induced map. When M = A and R is clear from the context, we call
+∂ simply a p-derivation of A.
+Lemma 4.3. Let (A, m, k) be a local Noetherian domain, p a positive integer, and ∂ a p-derivation of A.
+   ν be a discrete
+Let                    valuation on the fraction field K(A) with center in A. Then there exists c ∈ Z such that
+    ∂(x1 ,...,xp )
+ν     x1 ···xp       ≥ c for any x1 , . . . , xp ∈ K(A) \ {0}.
+
+Proof. We use induction on p. If p = 1, this is Lemma 4.1. Suppose now that p ≥ 2 and let (A, m, k) be a
+local Noetherian domain, ∂ a p-derivation of A, and ν a discrete valuation on the fraction field K(A) with
+center in A. Let m1 , . . . , mr be generators of the maximal ideal m.
+   Using the formula
+                                ∂(x1,1 x1,2 , . . . , xp,1 xp,2 ) X ∂(x1,i1 , . . . , xp,ip )
+                                                                 =                            ,
+                                   x1,1 x1,2 · · · xp,1 xp,2            x1,i1 · · · xp,ip
+we get                                                                                         
+                           ∂(x1,1 x1,2 , . . . , xp,1 xp,2 )             ∂(x1,i1 , . . . , xp,ip )
+                    ν                                           ≥ min ν
+                               x1,1 x1,2 · · · xp,1 xp,2                     x1,i1 · · · xp,ip
+for x1,1 , x1,2 , . . . , xp,1 , xp,2 ∈ A \ {0}. Further observe that
+                                      ∂(x−1
+                                         1 , x2 , . . . , xp )    ∂(x1 , . . . , xp )
+                                          −1                   =−                     .
+                                         x1 x2 · · · xp             x1 · · · xp
+Also, if a ∈ A, then a may be written as a sum of products mi1 · · · mik u with u ∈ A \ m. Therefore we
+only have to check that the required inequality holds for x1 , . . . , xp ∈ {m1 , . . . , mr } ∪ (A \ m).
+  If x1 , . . . , xp ∈ A \ m then
+                                                         
+                                      ∂(x1 , . . . , xp )
+                                  ν                         = ν(∂(x1 , . . . , xp )) ≥ 0.
+                                        x1 · · · xp
+                           CHARACTERIZATIONS OF PROJECTIVE SPACES AND HYPERQUADRICS                                            7
+
+
+  Suppose now that at least one of the xi ’s is in m. For simplicity we assume that x1 , . . . , xl ∈ A \ m and
+xl+1 , . . . , xp ∈ {m1 , . . . , mr }, 0 ≤ l < p. We may view ∂(·, · · · , ·, xl+1 , . . . , xp ) as an l-derivation of A.
+The result then follows by induction.                                                                                    
+Definition 4.4. Let S be a scheme, X a scheme over S, and L a line bundle on X. Denote by ΩX/S the
+sheaf of relative differentials of X over S, and by ΩpX/S its p-th wedge power for p ∈ N. A p-derivation of
+X over S with values in L is a morphism of sheaves ∂ : ΩpX/S → L . When S is the spectrum of a field
+and L is clear from the context, we drop S and L from the notation and call ∂ simply a p-derivation on X.
+                                                                                                     e →X
+Proposition 4.5. Let X be a Noetherian integral scheme over a field k of characteristic zero and η : X
+its normalization. Let L be a line bundle on X, p a positive integer, and ∂ a p-derivation with values in L .
+Then ∂ extends to a unique p-derivation ∂¯ on X
+                                              e with values in η ∗ L .
+
+Proof. The uniqueness of ∂¯ is clear since L is torsion free and η is birational. The existence of the lifting
+can be established locally. So we may assume that X is the spectrum of an integral k-algebra A, L is
+trivial, and ∂ is a p-derivation of A. Let A′ denote the integral closure of A in its fraction field K(A). There
+exists a unique extension of ∂ to a p-derivation of K(A), which we also denote by ∂. We must prove that
+∂(A′ , . . . , A′ ) ⊂ A′ .
+   First we reduce the problem to the case when A is a 1-dimensional local ring and A′ is a DVR. Since A′
+is integrally closed in K(A), A′ is the intersection of its localizations at primes of height one [Mat80, 2.
+Theorem 38]. Let p′ be a prime of height one of A′ , and set p = p′ ∩A. Notice that ∂(Ap, . . . , Ap) ⊂ Ap, and
+the result follows if we prove that ∂(A′p′ , . . . , A′p′ ) ⊂ A′p′ . Hence we may assume that A is a 1-dimensional
+local ring and A′ is a DVR. Denote by m and m′ the maximal ideals of A and A′ respectively.
+   Next we further reduce the problem to the case when A and A′ are complete local rings. Let R̄ be
+the completion of A′ with respect to the m′ -adic topology. Let Ā be the completion of A with respect to
+the m-adic topology. Since Ā is 1-dimensional, there is an inclusion of local rings Ā ⊂ R̄. Let ν be a
+discrete valuation of K(A′ ) whose valuation ring is A′ . By Lemma 4.3, ∂ is a continuous p-derivation of
+R with values in K(A′ ). Hence it has a unique extension to a continuous p-derivation ∂¯ of K(R̄). Notice
+that the condition ∂(A, . . . , A) ⊂ A implies that ∂(Ā, . . . , Ā) ⊂ Ā by the Artin-Rees Lemma. Since
+K(A) ∩ R̄ = A′ , the result then follows if we prove that ∂(R̄, . . . , R̄) ⊂ R̄. Therefore we may assume that
+A and A′ are complete 1-dimensional local rings.
+   Now we use induction on p. If p = 1, this is Seidenberg’s theorem [Sei66], so we may assume that p ≥ 2.
+Let kA be a coefficient field in A, and kA′ a coefficient field in A′ containing kA [Eis95, Theorem 7.8]. The
+extension kA′ |kA is finite. Let t ∈ m′ be a uniformizing parameter. It suffices to show that ∂(x1 , . . . , xp ) ∈
+A′ for x1 , . . . , xp ∈ kA′ ∪ {t}. Since ∂ is skew symmetric and p ≥ 2, we have ∂(t, P                 . . . , t) = 0. So we may
+assume that x1 ∈ kA′ . Since kA′ |kA is finite and separable, there exists P (X) =                           ai X i ∈ kA [X] such
+                           ′
+that P (x1 ) = 0 and P (x1 ) 6= 0. Thus
+                                                                                      X
+                    0 = ∂(P (x1 ), x2 , . . . , xp ) = P ′ (x1 )∂(x1 , . . . , xp ) +   ∂(ai , x2 , . . . , xp )xi1 .
+
+Finally, ∂(ai , , . . . , ) may be viewed as a p − 1 derivation of A and so ∂(x1 , . . . , xp ) ∈ A′ by the induction
+hypothesis.                                                                                                         
+
+                                              5. S ECTIONS OF ∧p TX ⊗ M
+   The following lemma will be used several times in this section.
+Lemma 5.1. Let Y be a smooth variety, π : X → Y a smooth morphism, M a line bundle on X, and p ≥ 2
+an integer. Suppose that for a general fiber, F , of π, H 0 (F, ∧i TF ⊗ M |F ) = 0 for 0 ≤ i ≤ p − 2. Then
+there exists an exact sequence:
+
+  0 → H 0 (X, ∧p TX/Y ⊗ M ) → H 0 (X, ∧p TX ⊗ M ) → H 0 (X, ∧p−1 TX/Y ⊗ π ∗ TY ⊗ M ).
+
+Proof. The short exact sequence
+                                            0 → TX/Y → TX → π ∗ TY → 0
+8                             CAROLINA ARAUJO, STÉPHANE DRUEL, SÁNDOR J. KOVÁCS
+
+
+yields a filtration ∧p TX ⊗ M = F0 ⊇ F1 ⊇ F2 ⊇ · · · ⊇ Fp ⊇ Fp+1 = 0 such that
+                                  Fi /Fi+1 ≃ ∧i TX/Y ⊗ π ∗ ∧p−i TY ⊗ M
+for each i. In particular, one has the short exact sequence,
+(5.1.1)               0 → ∧p TX/Y ⊗ M → Fp−1 → ∧p−1 TX/Y ⊗ π ∗ TY ⊗ M → 0.
+The assumption that H 0 (F, ∧i TF ⊗ M |F ) = 0 for 0 ≤ i ≤ p − 2 for a general fiber of π implies that
+H 0 (X, Fi /Fi+1 ) = 0 for 0 ≤ i ≤ p − 2, thus H 0 (X, ∧p TX ⊗ M ) = H 0 (X, F0 ) = · · · = H 0 (X, Fp−1 )
+and the result follows from (5.1.1).                                                                   
+   The condition that H 0 (F, ∧i TF ⊗M |F ) = 0 for 0 ≤ i ≤ p−2 and F a general fiber of π is easily verified
+when π is a projective space bundle and M |F is sufficiently negative. In this case we get the following.
+Lemma 5.2. Let Y be a smooth projective variety of dimension ≥ 1, E an ample vector bundle of rank
+r + 1 ≥ 2 and N a nef line bundle on Y . Consider the projective bundle π : X = P(E ) → Y with
+tautological line bundle OP(E ) (1). Let p, q ∈ N and assume that p ≥ 2. Then
+(5.2.1)                      H 0 (X, ∧p TX/Y ⊗ OP(E ) (−p − q) ⊗ π ∗ N −1 ) = 0.
+Proof. First observe, that if p > r then the statement is trivially true, so we will assume that p ≤ r. Let
+i ∈ N, i < p. After twisting by OP(E ) (−p − q) ⊗ π ∗ N −1 , the short exact sequence
+                          0 → ∧p−i−1 TX/Y → ∧p−i (π ∗ E ∗ (1)) → ∧p−i TX/Y → 0
+yields the exact sequence
+(5.2.2)    · · · → H i (X, ∧p−i (π ∗ E ∗ )(−i − q) ⊗ π ∗ N −1 ) → H i (X, ∧p−i TX/Y (−p − q) ⊗ π ∗ N −1 ) →
+                            → H i+1 (X, ∧p−i−1 TX/Y (−p − q) ⊗ π ∗ N −1 ) → . . .
+Since i < p ≤ r and Rj π∗ OP(E ) (l) = 0 for 0 < j < r and for any l ∈ Z, the Leray spectral sequence
+implies that
+          H i (X, ∧p−i (π ∗ E ∗ )(−i − q) ⊗ π ∗ N −1 ) = H i (Y, ∧p−i E ∗ ⊗ N −1 ⊗ π∗ OP(E ) (−i − q)).
+The sheaf π∗ OP(E ) (−i − q) is zero unless i = q = 0, in which case it is isomorphic to OY . Furthemore,
+H 0 (Y, ∧p E ∗ ⊗ N −1 ) = 0 since E is ample and N is nef, and hence
+                                 H i (X, ∧p−i (π ∗ E ∗ )(−i − q) ⊗ π ∗ N −1 ) = 0
+for 0 ≤ i ≤ p − 1. Therefore, by (5.2.2), one has a series of injections,
+    H 0 (X, ∧p TX/Y (−p − q) ⊗ π ∗ N −1 ) ֒→ H 1 (X, ∧p−1 TX/Y (−p − q) ⊗ π ∗ N −1 ) ֒→ . . .
+            · · · ֒→ H i (X, ∧p−i TX/Y (−p − q) ⊗ π ∗ N −1 ) ֒→ · · · ֒→ H p (X, OP(E ) (−p − q) ⊗ π ∗ N −1 ).
+    By the Kodaira vanishing theorem H p (X, OP(E ) (−p−q)⊗π ∗ N −1 ) = 0, and the statement follows.                
+Corollary 5.3. Let Y be a smooth projective variety of dimension ≥ 1 and E an ample vector bundle of
+rank r + 1 ≥ 2 on Y . Consider the projective bundle π : X = P(E ) → Y with tautological line bundle
+OP(E ) (1). Suppose that H 0 (X, ∧p TX ⊗ OP(E ) (−p − q) ⊗ π ∗ N −1 ) 6= 0 for some integers p ≥ 2, q ≥ 0,
+and some nef line bundle N on Y . Then Y ≃ P1 , E ≃ OP1 (1) ⊕ OP1 (1), p = 2, q = 0, and N ≃ OP1 .
+Proof. Let F ≃ Pr denote a general fiber of π and set M = OP(E ) (−p − q) ⊗ π ∗ N −1 . Then by Bott’s
+formula H 0 (F, ∧i TF ⊗ M |F ) = 0 for every 0 ≤ i ≤ p − 2. Then Lemma 5.1 and Lemma 5.2 imply that
+H 0 (X, ∧p−1 TX/Y ⊗ π ∗ (TY ⊗ N −1 )⊗ OP(E ) (−p − q)) 6= 0. By Bott’s formula again H 0 (F, ∧p−1 TF (−p −
+q)) 6= 0 implies that q = 0 and r = p − 1. Therefore we have
+    0 6= H 0 (X, ∧r TX/Y ⊗ π ∗ (TY ⊗ N −1 ) ⊗ OP(E ) (−r − 1)) =
+                                                                                     
+                H 0 (X, π ∗ TY ⊗ det E ∗ ⊗ N −1 ) ≃ H 0 (Y, π∗ π ∗ TY ⊗ det E ∗ ⊗ N −1 ) ≃
+                                                                                                          −1
+                                                                            H 0 (Y, TY ⊗ det
+                                                                                         | E{z⊗ N}              ).
+                                                                                               ample
+                        CHARACTERIZATIONS OF PROJECTIVE SPACES AND HYPERQUADRICS                                  9
+
+
+Now Wahl’s theorem [Wah83] yields that Y ≃ Pm for some m > 0. Then we immediately obtain that
+deg(det E ⊗ N ) ≤ 2. Since E is ample on a projective space,
+               2 ≤ r + 1 = rk E ≤ deg E ≤ deg(det E ⊗ N ) − deg N ≤ 2 − deg N ≤ 2.
+Therefore all of these inequalities must be equalities and we have that r + 1 = p = 2, q = 0 and N ≃ OY .
+Furthermore, this implies that then OPm (2) ≃ det E ֒→ TPm and hence m = 1.                           
+Proposition 5.4. Let X be a smooth projective variety, H ⊂ RatCurvesn (X) a minimal covering family of
+rational curves on X, L an ample line bundle on X, and M a nef line bundle on X such that c1 (M )·C > 0
+for every [C] ∈ H. Suppose that H 0 (X, ∧p TX ⊗ L −p ⊗ M −1 ) 6= 0 for some integer p ≥ 1. Then
+(X, L , M ) ≃ (Pp , OPp (1), OPp (1)).
+Proof. Let [f ] ∈ H be a general member and write f ∗ TX ≃ OP1 (2)⊕ OP1 (1)⊕d ⊕ OP⊕n−d−1
+                                                                                   1     . The condition
+            ∗         ∗                           0
+that both f L and f M are ample and that H (X, ∧ TX ⊗ L   p        −p  ⊗ M ) 6= 0 implies that f ∗ L ≃
+                                                                          −1
+
+OP1 (1) ≃ f M , and thus H is unsplit. A non-zero section s ∈ H (X, ∧p TX ⊗ L −p ⊗ M −1 ) and the
+              ∗                                                      0
+
+contraction
+                          Cθ : ∧p TX ⊗ L −p ⊗ M −1 → ∧p−1 TX ⊗ L −p ⊗ M −1
+induced by a differential form θ ∈ ΩX , gives rise to a non-zero map
+                                       ΩX → ∧p−1 TX ⊗ L −p ⊗ M −1
+                                          θ 7→ Cθ (s),
+the dual of which is the non-zero map
+(5.4.1)                                  ϕ : Ωp−1  p
+                                              X ⊗ L ⊗ M → TX .
+
+The sheaf f ∗ (Ωp−1        p
+                  X ⊗L ⊗M ) is ample. Thus, by Proposition 2.7 and Theorem 2.6, there is an open subset
+X ⊂ X, with codimX (X \ X ◦ ) ≥ 2, a smooth variety Y ◦ , and a Pd+1 -bundle π ◦ : X ◦ → Y ◦ such that
+  ◦
+
+any rational curve from H meeting X ◦ is a line on a fiber of π ◦ . Moreover, the restriction of s to X ◦ lies in
+H 0 (X ◦ , ∧p TX ◦ /Y ◦ ⊗ L |−p        −1
+                             X ◦ ⊗ M |X ◦ ), and its restriction to a general fiber F yields a non-zero section in
+                       −p
+H 0 (F, ∧p TF ⊗ L |F ⊗ M |−1     F ). On the other hand, by Bott’s formula, H (P
+                                                                                  0 d+1 , ∧p T
+                                                                                              Pd+1 (−p − 1)) = 0
+unless p = d + 1.
+   Suppose dim(Y ◦ ) > 0. Since codimX (X \ X ◦ ) ≥ 2, Y ◦ contains a complete curve through a general
+point. Let g : B → Y ◦ be the normalization of a complete curve passing through a general point of Y ◦ . Set
+XB := X ◦ ×Y ◦ B, and denote by LXB and MXB the pullbacks of L and M to XB respectively. Then
+XB → B is a Pp -bundle, and the section s induces a non-zero section in H 0 (XB , ∧p TXB /B ⊗LX−p      B
+                                                                                                         ⊗MX−1 B
+                                                                                                                 ).
+                                                          ◦
+But this is impossible by Corollary 5.3. Thus dim(Y ) = 0 and X ≃ P .         p                                 
+Corollary 5.5. Let X be a smooth projective variety and L an ample line bundle on X. If H 0 (X, ∧p TX ⊗
+L −p−1−k ) 6= 0 for integers p ≥ 1 and k ≥ 0, then k = 0 and (X, L ) ≃ (Pp , OPp (1)).
+Proof. Note that X is uniruled by [Miy87]. The result follows easily from Proposition 5.4.                      
+  Here is how we are going to apply these results under the assumptions of Theorem 1.1. Suppose that
+H 0 (X, ∧p TX ⊗ L −p ) 6= 0 for some ample line bundle L on X and integer p ≥ 2. Then X is uniruled
+by [Miy87] and we fix a minimal covering family H of rational curves on X. Let π : X ◦ → Y ◦ be
+the H-rational quotient of X. By shrinking Y ◦ if necessary, we may assume that Y ◦ and π are smooth.
+Corollary 5.5 provides the vanishing required to apply Lemma 5.1 to π : X ◦ → Y ◦ , yielding the following.
+Lemma 5.6. Let Y be a smooth variety, π : X → Y a smooth morphism with connected fibers, and L a
+line bundle on X. Let F be a general fiber of π. Suppose that F is projective and that the restriction L |F
+is ample. If H 0 (X, ∧p TX ⊗ L −p ) 6= 0 for some integer p ≥ 2, then either (F, L |F ) ≃ (Pp−1 , OPp−1 (1))
+and H 0 (X, ∧p−1 TX/Y ⊗ π ∗ TY ⊗ L −p ) 6= 0, or dim(F ) ≥ p and H 0 (X, ∧p TX/Y ⊗ L −p ) 6= 0.
+Proof. Corollary 5.5 implies that H 0 (F, ∧i TF ⊗ L |−p  F ) = 0 for 0 ≤ i ≤ p − 2. So we may apply
+Lemma 5.1 with M = L to conclude that either H (X, ∧p−1 TX/Y ⊗ π ∗ TY ⊗ L −p ) 6= 0, or dim F ≥ p
+                           −p                           0
+
+and H 0 (X, ∧p TX/Y ⊗ L −p ) 6= 0. In the first case we have H 0 (F, ∧p−1 TF ⊗ L |−p
+                                                                                   F ) 6= 0, and Corollary 5.5
+implies that (F, L |F ) ≃ (Pp−1 , OPp−1 (1)) and so the desired statement follows.                          
+10                           CAROLINA ARAUJO, STÉPHANE DRUEL, SÁNDOR J. KOVÁCS
+
+
+   Let X, H, and π : X ◦ → Y ◦ be as in the above discussion. If we are under the first case of Lemma 5.6,
+then Theorem 2.6 implies that the Pp−1 -bundle π : X ◦ → Y ◦ can be extended in codimension 1. Next we
+show that in this case we must have X ≃ Q2 .
+Lemma 5.7. Let X be a smooth projective variety and L an ample line bundle on X. Let X ◦ ⊂ X be an
+open subset whose complement has codimension at least 2 in X. Let π : X ◦ → Y ◦ be a smooth projective
+morphism with connected fibers onto a smooth quasi-projective variety. If H 0 (X ◦ , ∧p−1 TX ◦ /Y ◦ ⊗ π ∗ TY ◦ ⊗
+L |−p                                              ◦                   ◦
+   X ◦ ) 6= 0 for some integer p ≥ 2, then p = 2, X = X ≃ Q2 , and Y ≃ P .
+                                                                              1
+
+
+Proof. Suppose that for some p ≥ 2 there is a non-zero section
+
+                             s ∈ H 0 (X ◦ , ∧p−1 TX ◦ /Y ◦ ⊗ π ∗ TY ◦ ⊗ L |−p
+                                                                           X ◦ ) 6= 0.
+
+By Corollary 5.5, the fibers of π are isomorphic to Pp−1 , and the restriction of L to each fiber is isomorphic
+to OPp−1 (1). Since π has relative dimension p−1, there exists an inclusion ∧p−1 TX ◦ /Y ◦ ⊗π ∗ TY ◦ ⊆ ∧p TX ◦ ,
+and thus s, as in (5.4.1), yields a map ϕ : Ωp−1           p
+                                               X ◦ ⊗ L |X ◦ → TX of rank p at the generic point. Since
+                                                                      ◦
+
+codimX (X \ X ) ≥ 2, s extends to a section s̃ ∈ H (X, ∧ TX ⊗ L −p ). Denote by
+                 ◦                                    0       p
+
+
+                                             e : Ωp−1
+                                             ϕ         p
+                                                  X ⊗ L → TX
+
+the associated map, which has rank p at the generic point.
+    Let E = π∗ L . By [Fuj75, Corollary 5.4], X ◦ ≃ P(E ) over Y ◦ and then ∧p−1 TX ◦ /Y ◦ ⊗ L −p ≃
+π ∗ (det E ∗ ), and s is the pullback of a global section sY ◦ ∈ H 0 (Y ◦ , TY ◦ ⊗ det E ∗ ). This implies that the
+distribution D defined by s is integrable. Moreover, its leaves are the pullbacks of the leaves of the foliation
+F ◦ defined by the map det E ֒→ TY ◦ associated to sY ◦ .
+    Since codimX (X \ X ◦ ) ≥ 2, we can find complete curves sweeping out a dense open subset of Y ◦ . Let
+C be a general complete curve on Y ◦ . Compactify Y ◦ to a smooth variety Y , and let F be an invertible sub-
+sheaf of TY extending F ◦ . Then F |C = det E |C is ample. By [BM01, Theorem 0.1] (see also [KSCT07,
+Theorem 1]), the leaf of the foliation F through any point of C is rational. We conclude that the leaves of
+F ◦ are (possibly noncomplete) rational curves. Thus the closures of the leaves of the distribution D    e defined
+by ϕ e are algebraic.
+    Let F ⊂ X be the closure of a leaf of D      e that meets X ◦ and let η : Fe → F be its normalization.
+Then there exists a morphism Fe → B onto a smooth rational curve. The general fiber of this morphism is
+isomorphic to Pp−1 and the restriction of L to the general fiber is isomorphic to OPp−1 (1). The fibers are
+thus generically reduced and finally reduced since fibers satisfy Serre’s condition S1 . By [Fuj75, Corollary
+5.4], Fe → B is a Pp−1 -bundle and, in particular, Fe is smooth.
+    The section s̃ ∈ H 0 (X, ∧p TX ⊗ L −p ) defines a non-zero map ΩpX → L −p . Since F is the closure of a
+leaf of De and L |F is torsion free, the restriction of this map to F factors through a map Ωp → L |−p . By
+                                                                                                  F         F
+Lemma 4.5, this map extends to a map Ωpe → η ∗ L |−p    F  . Corollary 5.3  then implies  that p =  2 and e ≃ Q2 .
+                                                                                                          F
+                                             F
+Moreover η ∗ L |F ≃ OQ2 (1). In particular, π : X ◦ → Y ◦ is a P1 -bundle. Denote by H the unsplit covering
+family of rational on X whose general member corresponds to a fiber of π.
+    We claim that the general leaf of F ◦ is a complete rational curve. From this it follows that the general
+leaf of De is compact, and contained in X ◦ . Let Fe denote the normalization of the closure of a general leaf of
+ e
+D. Since Fe ≃ Q2 and η ∗ L |F ≃ OQ2 (1), X admits an unsplit covering family H ′ of rational curves whose
+general member corresponds to a ruling of Fe ≃ Q2 that is not contracted by π. Since codim(X \ X ◦ ) ≥ 2,
+the general member of H ′ corresponds to a complete rational curve contained in X ◦ . Its image in Y ◦ is a
+complete leaf of F ◦ . As we noted above, this implies that F = Fe ≃ Q2 . Notice that the section s̃ does not
+vanish anywhere on a general leaf F ≃ Q2 of F ◦ .
+    Let ϕ : X ′ → Z ′ be the (H, H ′ )-rationally connected quotient of X. Then the general fiber of ϕ is a
+leaf F ≃ Q2 of F ◦ . By Lemma 2.2, we may assume that codimX (X \ X ′ ) ≥ 2, Z ′ is smooth, and ϕ is a
+proper surjective equidimensional morphism with irreducible and reduced fibers. Therefore ϕ : X ′ → Z ′ is
+a quadric bundle by [Fuj75, Corollary 5.5]. Since the families H and H ′ are distinct, ϕ is in fact a smooth
+quadric bundle.
+                        CHARACTERIZATIONS OF PROJECTIVE SPACES AND HYPERQUADRICS                              11
+
+
+  We claim that in fact X = F and Z ′ is a point. Suppose otherwise, and let g : C → Z ′ be the
+normalization of a complete curve passing through a general point of Z ′ . Set XC = X ′ ×Z ′ C, denote by
+ϕC : XC → C the corresponding (smooth) quadric bundle, and write LXC for the pullback of L to XC .
+                                                        −1
+The section s̃ induces a non-zero section in H 0 (XC , ωX C /C
+                                                               ⊗ LX−2
+                                                                    C
+                                                                      ) that does not vanish anywhere on a
+                            −1
+general fiber of πC . Thus ωX C /C
+                                   is ample, contradicting Proposition 3.1.                                  
+
+                                        6. P ROOF OF T HEOREM 1.1
+  In order to prove the main theorem, we shall reduce it to the case when X has Picard number ρ(X) = 1.
+To treat that case, we will recall some facts about slopes of vector bundles that will be used later.
+Definition 6.1. Let X be an n-dimensional projective variety and H an ample line bundle on X. Let E be a
+                                                                                                    n−1
+torsion-free sheaf on X. We define the slope of E with respect to H to be µH (E ) = c1 (E )·c 1 (H )
+                                                                                           rk(E )       . We say
+that a torsion-free sheaf F on X is µH -semistable if for any subsheaf E of F we have µH (E ) ≤ µH (F ).
+Given a torsion-free sheaf F on X, there exists a filtration of F by (torsion-free) subsheaves
+                                       0 = E0 ( E1 ( . . . ( Ek = F ,
+with µH -semistable quotients Qi = Ei /Ei−1 , and such that µH (Q1 ) > µH (Q2 ) > . . . > µH (Qk ). This is
+called the Harder-Narasimhan filtration of F [HN75], [HL97, 1.3.4].
+Lemma 6.2. Let X be a smooth n-dimensional projective variety and H an ample line bundle on X. Let
+F be a vector bundle on X, p a positive integer, and N an invertible subsheaf of F ⊗p . Then F contains
+                                               µ (N )
+a (torsion-free) subsheaf E such that µH (E ) ≥ H p .
+
+Proof. Consider the Harder-Narasimhan filtration of F :
+                                       0 = E0 ( E1 ( . . . ( Er = F ,
+with Qi = Ei /Ei−1 µH -semistable for 1 ≤ i ≤ r, and µH (Q1 ) > µH (Q2 ) > . . . > µH (Qk ). We claim
+that E = E1 = Q1 satisfies the desired condition. In order to prove this, first let m ∈ N be such that H ⊗m
+is very ample and let C ⊂ X be a curve that is the intersection of the zero sets of n − 1 general sections of
+H ⊗m . Observe that for this curve C, and for any torsion-free sheaf E on X,
+(6.2.1)                                 µH (E C ) = mn−1 · µH (E ).
+Notice that by abuse of notation we denote the restriction of H to C by the same symbol. Let Gi = Ei C
+and Pi = Qi C . By the Mehta-Ramanathan Theorem ([MR82, 6.1], [HL97, 7.2.1]) the Harder-Narasimhan
+filtration of F C is exactly the restriction to C of the Harder-Narasimhan filtration of F (we may assume
+that m was already chosen large enough for this theorem to apply as well):
+                                      0 = G0 ( G1 ( . . . ( Gr = F C .
+As X is smooth, so is C and hence all torsion-free sheaves on C, in particular the Gi and the Pi , are locally
+free. Then for each 1 ≤ i ≤ r there exists a filtration
+                               Gi⊗p = Gi,0 ⊇ Gi,1 ⊇ . . . ⊇ Gi,p ⊇ Gi,p+1 = 0,
+                                ⊗j      ⊗(p−j)
+with quotients Gi,j /Gi,j+1 ≃ Gi−1 ⊗ Pi       . From these filtrations, we see that the inclusion N ֒→ F ⊗p
+                                 ⊗i1          ⊗ik                                                  P
+induces an inclusion N C ֒→ P1 ⊗ . . . ⊗ Pk , for suitable non-negative integers ij ’s such that ij = p.
+Since each Pi is µH -semistable (on C), so is the tensor product P1⊗i1 ⊗ . . . ⊗ Pk⊗ik [HL97, Theorem 3.1.4].
+Hence
+                                                             P
+                µH (N C )      µH (P1⊗i1 ⊗ . . . ⊗ Pk⊗ik )       ij µH (Pj )    pµH (Q1 C )
+   µH (N ) =          n−1
+                             ≤            n−1
+                                                           =         n−1
+                                                                             ≤                = pµH (Q1 ),
+                   m                    m                         m                 mn−1
+and so E = E1 = Q1 does indeed satisfy the required property.                                              
+  Now we can prove our main theorems.
+12                           CAROLINA ARAUJO, STÉPHANE DRUEL, SÁNDOR J. KOVÁCS
+
+
+Theorem 6.3. Let X be a smooth n-dimensional projective variety with ρ(X) = 1, L an ample line bundle
+on X, and p a positive integer. Suppose that H 0 (X, TX⊗p ⊗L −p ) 6= 0. Then either (X, L ) ≃ (Pn , OPn (1)),
+or p = n ≥ 3 and (X, L ) ≃ (Qp , OQp (1)).
+
+
+Proof. First notice that X is uniruled by [Miy87], and hence a Fano manifold with ρ(X) = 1. The result is
+clear if dim X = 1, so we assume that n ≥ 2. Fix a minimal covering family H of rational curves on X. By
+                                                                        µ (L p )
+Lemma 6.2, TX contains a torsion-free subsheaf E such that µL (E ) ≥ L p         = µL (L ). This implies
+         ∗
+that degrkfE E ≥ deg f ∗ L for a general member [f ] ∈ H. If r = rk(E ) = 1, then E is ample and we are done
+                                                                                             ⊕(n−d−1)
+by Wahl’s theorem. Otherwise, as f ∗ E is a subsheaf of f ∗ TX ≃ OP1 (2) ⊕ OP1 (1)⊕d ⊕ OP1           , we must
+have deg f ∗ L = 1 and either f ∗ E is ample, or f ∗ E ≃ OP1 (2) ⊕ OP1 (1)⊕r−2 ⊕ OP1 for a general [f ] ∈ H.
+If f ∗ E is ample, then X ≃ Pn by Proposition 2.7, using the fact that ρ(X) = 1. If f ∗ E is not ample, then
+OP1 (2) ⊂ f ∗ E for general [f ] ∈ H, and so Cx ⊂ P(E ∗ ⊗ κ(x)) for a general x ∈ X. Thus by [Ara06, 2.6]
+(f ∗ TX+ )o ⊂ (f ∗ E )o for a general o ∈ P1 and a general [f ] ∈ H. Since f ∗ TX+ is a subbundle of f ∗ TX , we
+                                                                            −1
+have an inclusion of sheaves f ∗ TX+ ֒→ f ∗ E , and thus det(f ∗ E ) = f ∗ ωX  . Since ρ(X) = 1, this implies
+            ∗∗      −1                   0     r                 n−r
+that det E = ωX , and thus 0 6= h (X, ∧ TX ⊗ ωX ) = h (X, OX ). The latter is zero unless n = r
+                                                               −1
+since X is a Fano manifold. If n = r, then we must have ωX        ≃ L ⊗n . Hence X ≃ Qn by [KO73].             
+
+
+Proof of Theorem 1.1. Let X be a smooth projective variety and L an ample line bundle on X such that
+H 0 (X, ∧p TX ⊗ L −p ) 6= 0. By Theorem 6.3, we may assume that ρ(X) ≥ 2. We may also assume that
+p ≥ 2 as the case p = 1 is just Wahl’s theorem. We shall proceed by induction on n.
+    Notice that X is uniruled by [Miy87]. Let H ⊂ RatCurvesn (X) be a minimal covering family of
+rational curves on X, and [f ] ∈ H a general member. By analyzing the degree of the vector bundle
+f ∗ (∧p TX ⊗ L −p ), we conclude that f ∗ L ≃ OP1 (1), and thus H is unsplit. Let π ◦ : X ◦ → Y ◦ be the
+H-rational quotient of X. By shrinking Y ◦ if necessary, we may assume that π ◦ is smooth. Since ρ(X) ≥ 2,
+we must have dim Y ◦ ≥ 1 by [Kol96, IV.3.13.3].
+    Let F be a general fiber of π ◦ and set k = dim F . By Lemma 5.6, either
+
+         • k = p − 1, (F, L |F ) ≃ (Pp−1 , OPp−1 (1)), and H 0 (X ◦ , ∧p−1 TX ◦ /Y ◦ ⊗ π ∗ TY ◦ ⊗ L −p ) 6= 0, or
+         • k ≥ p and H 0 (X ◦ , ∧p TX ◦ /Y ◦ ⊗ L −p ) 6= 0.
+
+   In the first case π : X ◦ → Y ◦ is a Pp−1 -bundle and we may assume that codimX (X \ X ◦ ) ≥ 2 by
+Theorem 2.6. Then we apply Lemma 5.7 and conclude that X ≃ Q2 .
+   In the second case, the induction hypothesis implies that either (F, L |F ) ≃ (Pk , OPk (1)), or k = p and
+(F, L |F ) ≃ (Qp , OQp (1)). If F ≃ Pk , again by Theorem 2.6, π : X ◦ → Y ◦ is a Pk -bundle, and we may
+assume that codimX (X \ X ◦ ) ≥ 2. As in the end of the proof of Proposition 5.4, we reach a contradiction
+by applying Corollary 5.3 to X ◦ ×Y ◦ B → B, where B → Y ◦ is the normalization of a complete curve
+passing through a general point of Y ◦ .
+   Suppose now that F ≃ Qp . Then, by Lemma 2.2 and [Fuj75, Corollary 5.5], π ◦ can be extended to a
+quadric bundle π : X ′ → Y ′ with irreducible and reduced fibers, where X ′ is an open subset of X with
+codimX (X \ X ′ ) ≥ 2, and Y ′ is smooth. Denote by X ′′ the open subset of X ′ where π is smooth. Notice
+that codimX ′ (X ′ \X ′′ ) ≥ 2. A non-zero global section of ∧p TX ⊗L −p restricts to a non-zero global section
+of ∧p TX ′′ /Y ′ ⊗ L |−p                                                                  0  ′   −1          −p
+                      X ′′ , which, in turn, extends to a non-zero global section s ∈ H (X , ωX ′ /Y ′ ⊗ L |X ′ )
+since X ′ is smooth. The section s does not vanish anywhere on a general fiber of π.
+   Let g : C → Y ′ be the normalization of a complete curve passing through a general point of Y ′ . Set
+XC = X ′ ×Y ′ C, denote by πC : XC → C the corresponding quadric bundle, and write LXC for the
+pullback of L to XC . The general fiber of πC is smooth. Now notice that XC is a local complete intersection
+variety, and nonsingular in codimension one, since the fibers of π are reduced. In particular, XC is a normal
+Gorenstein variety, and the morphism πC is generically smooth. The section s induces a non-zero section in
+H 0 (XC , ωX −1
+               C /C
+                    ⊗ LX−p  C
+                                                                                                 −1
+                              ) that does not vanish anywhere on the general fiber of πC . Thus ωX C /C
+                                                                                                        is ample,
+contradicting Proposition 3.1.                                                                                 
+                           CHARACTERIZATIONS OF PROJECTIVE SPACES AND HYPERQUADRICS                                         13
+
+
+                                                       R EFERENCES
+[AW01]   M. A NDREATTA AND J. A. W I ŚNIEWSKI: On manifolds whose tangent bundle contains an ample subbundle, Invent.
+         Math. 146 (2001), no. 1, 209–217.
+[Ara06]  C. A RAUJO: Rational curves of minimal degree and characterizations of projective spaces, Math. Ann. 335 (2006),
+         no. 4, 937–951.
+[AK03]   C. A RAUJO AND J. KOLL ÁR: Rational curves on varieties, Higher dimensional varieties and rational points (Budapest
+         2001), Bolyai Soc. Math. Stud., vol. 12, Springer, Berlin, 2003, pp. 13–68.
+[Bea00]  A. B EAUVILLE : Symplectic singularities, Invent. Math. 139 (2000), no. 3, 541–549.
+[BM01]   F. B OGOMOLOV AND M. M C Q UILLAN: Rational curves on foliated varieties, IHES preprint, 2001.
+[BCD07] L. B ONAVERO , C. C ASAGRANDE , AND S. D RUEL : On covering and quasi-unsplit families of rational curves, J. Eur.
+         Math. Soc. (JEMS) 9 (2007), no. 1, 45–76.
+[Cam92] F. C AMPANA: Connexité rationnelle des variétés de Fano, Ann. Sci. École Norm. Sup. (4) 25 (1992), no. 5, 539–545.
+[Cam04] F. C AMPANA: Orbifolds, special varieties and classification theory, Ann. Inst. Fourier (Grenoble) 54 (2004), no. 3,
+         499–630.
+[CP98]   F. C AMPANA AND T. P ETERNELL : Rational curves and ampleness properties of the tangent bundle of algebraic
+         varieties, Manuscripta Math. 97 (1998), no. 1, 59–74.
+[Deb01] O. D EBARRE : Higher-dimensional algebraic geometry, Universitext, Springer-Verlag, New York, 2001.
+[Eis95]  D. E ISENBUD: Commutative algebra, Graduate Texts in Mathematics, vol. 150, Springer-Verlag, New York, 1995,
+         With a view toward algebraic geometry.
+[Fuj75]  T. F UJITA: On the structure of polarized varieties with ∆-genera zero, J. Fac. Sci. Univ. Tokyo Sect. IA Math. 22
+         (1975), 103–115.
+[GHS03] T. G RABER , J. H ARRIS , AND J. S TARR: Families of rationally connected varieties, J. Amer. Math. Soc. 16 (2003),
+         no. 1, 57–67 (electronic).
+[HN75]   G. H ARDER AND M. S. NARASIMHAN: On the cohomology groups of moduli spaces of vector bundles on curves,
+         Math. Ann. 212 (1975), 215–248. MR0364254 (51 #509)
+[HL97]   D. H UYBRECHTS AND M. L EHN: The geometry of moduli spaces of sheaves, Aspects of Mathematics, E31, Friedr.
+         Vieweg & Sohn, Braunschweig, 1997.
+[Hwa07] J.-M. H WANG: Deformation of holomorphic maps onto Fano manifolds of second and fourth Betti numbers 1, Annales
+         de L’Institut Fourier 57 (2007), no. 3, 815–823.
+[HM04] J.-M. H WANG AND N. M OK: Birationality of the tangent map for minimal rational curves, Asian J. Math. 8 (2004),
+         no. 1, 51–64.
+[Käl06] R. K ÄLLSTR ÖM: Liftable derivations for generically separably algebraic morphisms of schemes, to appear in Trans.
+         Amer. Math. Soc., 2006. arXiv.org:math/0604559
+[Keb02] S. K EBEKUS: Families of singular rational curves, J. Algebraic Geom. 11 (2002), no. 2, 245–256.
+[KSCT07] S. K EBEKUS , L. S OL Á C ONDE , AND M. T OMA: Rationally connected foliations after Bogomolov and McQuillan, J.
+         Algebraic Geom. 16 (2007), no. 1, 65–81. MR2257320
+[KO73]   S. KOBAYASHI AND T. O CHIAI: Characterizations of complex projective spaces and hyperquadrics, J. Math. Kyoto
+         Univ. 13 (1973), 31–47.
+[Kol96]  J. KOLL ÁR: Rational curves on algebraic varieties, Ergebnisse der Mathematik und ihrer Grenzgebiete, vol. 32,
+         Springer-Verlag, Berlin, 1996.
+[Mat80] H. M ATSUMURA: Commutative algebra, second ed., Mathematics Lecture Note Series, vol. 56, Benjamin/Cummings
+         Publishing Co., Inc., Reading, Mass., 1980.
+[MR82]   V. B. M EHTA AND A. R AMANATHAN: Semistable sheaves on projective varieties and their restriction to curves, Math.
+         Ann. 258 (1981/82), no. 3, 213–224.
+[Miy87] Y. M IYAOKA: Deformations of a morphism along a foliation and applications, Algebraic geometry, Bowdoin, 1985
+         (Brunswick, Maine, 1985), Proc. Sympos. Pure Math., vol. 46, Amer. Math. Soc., Providence, RI, 1987, pp. 245–268.
+[Miy93] Y. M IYAOKA: Relative deformations of morphisms and applications to fibre spaces, Comment. Math. Univ. St. Paul.
+         42 (1993), no. 1, 1–7.
+[Mor79] S. M ORI: Projective manifolds with ample tangent bundles, Ann. of Math. (2) 110 (1979), no. 3, 593–606.
+[Sei66]  A. S EIDENBERG: Derivations and integral closure, Pacific J. Math. 16 (1966), 167–173.
+[SY80]   Y. T. S IU AND S. T. YAU: Compact Kähler manifolds of positive bisectional curvature, Invent. Math. 59 (1980), no. 2,
+         189–204. MR577360 (81h:58029)
+[Wah83] J. M. WAHL : A cohomological characterization of Pn , Invent. Math. 72 (1983), no. 2, 315–322.
+
+   C AROLINA A RAUJO : IMPA, Estrada Dona Castorina 110, Rio de Janeiro, 22460-320, Brazil
+   E-mail address: caraujo@impa.br
+   S T ÉPHANE D RUEL : Institut Fourier, UMR 5582 du CNRS, Université Joseph Fourier, BP 74, 38402 Saint Martin
+d’Hères, France
+   E-mail address: druel@ujf-grenoble.fr
+   S ÁNDOR J. KOV ÁCS : University of Washington, Department of Mathematics, Box 354350, Seattle, WA 98195, USA
+   E-mail address: kovacs@math.washington.edu
+

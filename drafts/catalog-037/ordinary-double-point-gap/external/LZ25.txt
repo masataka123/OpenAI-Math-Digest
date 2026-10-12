@@ -1,0 +1,657 @@
+                                                       MINIMAL LOG DISCREPANCY AND ORBIFOLD CURVES
+
+                                                                                     CHI LI, ZHENGYI ZHOU
+
+                                                                      Dedicated to Professor Gang Tian for his 65th birthday
+
+
+                                                   Abstract. We show that the minimal log discrepancy of any isolated Fano cone singularity is
+                                                   at most the dimension of the variety. This is based on its relation with dimensions of moduli
+                                                   spaces of orbifold rational curves. We also propose a conjectural characterization of weighted
+                                                   projective spaces as Fano orbifolds in terms of orbifold rational curves, which would imply the
+arXiv:2502.11847v1 [math.AG] 17 Feb 2025
+
+
+
+
+                                                   equality holds only for smooth points.
+
+
+
+
+                                                                            1. Introduction and main result
+                                              In birational algebraic geometry, in particular, in the study of Minimal Model Program (MMP),
+                                           the minimal log discrepancy (mld) is an important invariant for Kawamata log terminal (klt)
+                                           singularities (see [Amb06, KM98]). Indeed, Shokurov showed that two conjectural properties of
+                                           mld would imply the termination of flips along MMP. One of the conjectures says that the mld of
+                                           closed points is lower semicontinuous when the point moves on a fixed normal variety X of dimension
+                                           n. Since the mld of smooth point is equal to n, this in particular implies that mld(x, X) ≤ n (see
+                                           [Amb06, Conjecture 3.2]). In this short essay, we will prove that this sharp upper bound is indeed
+                                           true for any isolated Fano cone singularity.
+                                           Theorem 1.1. Let o ∈ X be an isolated Fano cone singularity of dimension n. Then mld(o, X) ≤
+                                           n.
+                                           Remark 1.2. By [McL16, Theorem 1.1], we find that more generally if the link of an isolated
+                                           singularity is contactomorphic to the link of an isolated Fano cone singularity, then the same
+                                           inequality is also true.
+                                              Note that when the Fano cone is an ordinary cone over a smooth Fano manifold, the upper
+                                           bound is equivalent to the well-known fact that the Fano index of a Fano manifold is at most
+                                           the dimension plus one. This fact can be proved by using either the Riemannn-Roch theorem
+                                           or Mori’s bend-and-break theory of rational curves. Since the Riemann-Roch approach does not
+                                           seem to work well in the orbifold setting, our proof uses Mori’s theory in the orbifold setting
+                                           and shows its connection with minimal log discrepancy invariants. This connection is motivated
+                                           by our previous work [LZ24] which in particular expresses the mld invariant in terms of certain
+                                           symplectic invariants that arises essentially in the study of moduli space of pseudo-holomorphic
+                                           curves. In this paper we will show that the mld invariant is bounded from above by dimensions of
+                                           certain moduli space of orbifold rational curves with domain a weighted projective line (see (6)).
+                                           We will give two proofs for this crucial inequality, one using purely algebraic geometry and the
+                                           other from a symplectic perspective. The argument for the above result also leads us to propose
+                                           a characterization of weight projective spaces by using orbifold rational curves in the same spirit
+                                           of Mori-Mukai (see Conjecture 2.9), which would imply that the equality case only happens for
+                                           smooth points. As evidence, we prove an orbifold version of Mori’s theorem:
+                                           Theorem 1.3. Let Y be a complex orbifold whose orbifold tangent bundle T Y is ample. Then Y
+                                           is a finite quotient of a weighted projective space.
+                                              See [Che17] for a related characterization of smooth projective spaces among normal varieties
+                                           with quotient singularities. The method of proof is the same as Mori, which uses a family of orbifold
+                                           rational curves of minimal degree that pass through a fixed (orbifold) point to sweep out the whole
+                                           orbifold. The ampleness is used to deduce that there are no obstructions to the deformation theory
+                                                                                                 1
+                           MINIMAL LOG DISCREPANCY AND ORBIFOLD CURVES                                           2
+
+
+of such curves. It is important for this purpose that we use orbifold rational curves with only one
+non-trivial orbifold point, which guarantees the splitting of any orbifold holomorphic vector bundle
+into a direct sum of orbifold line bundles (see (7)).
+
+Acknowledgments. C. Li is partially supported by NSF (Grant No. DMS-2305296). Z. Zhou
+is supported by National Key R&D Program of China under Grant No.2023YFA1010500, NSFC-
+12288201 and NSFC-12231010. C. Li thanks Qile Chen for helpful discussions on twisted stable
+maps and thanks Chris Woodward for telling him the reference [MT12].
+
+                                        2. Proof of Main results
+    We will use the notion in our previous paper [LZ24]. The starting point of our proof is a
+formula for the mld of an isolated Fano cone singularity (X, o) derived in [LZ24, Proposition 2.12].
+To state the formula, we assume that the X is the given as the orbifold cone C(Y, L) where the
+orbifold base Y = (Y, ∆) is obtained as the quotient (X \ o)/C∗ and L is the associated orbifold
+line bundle. The klt condition is equivalent to the condition that (Y, ∆) is a klt Fano orbifold and
+−KY = rL for some r ∈ Q>0 . Throughout this paper, we use (Y, L) to denote a Delige-Mumford
+stack (or equivalently an orbifold) equipped with an orbifold line bundle and use (Y, L) to denote
+the associated coarse moduli space as an algebraic variety equipped with a Q-line bundle.
+    let µ : X ′ → X be the extraction of orbifold base Y such that X ′ is isomorphic to the total
+space of the orbifold line bundle L−1 → Y. Now X ′ as an affine variety has only cyclic quotient
+singularities along zero section Y0 . Fix any p ∈ Y0 and choose a neighborhood U of p such that U
+is locally isomorphic to
+                                              1
+(1)                                      C × Cn−1 /
+                                                (1, b2 , . . . , bn )
+                                              m
+The natural projection π : X ′ → Y is induced by the map (x1 , x2 , . . . , xn ) 7→ (x2 , . . . , xn ).
+Proposition 2.1. With the above notation, we have the formula:
+                                         (                n
+                                                                   !)
+                                           1             X
+(2)                  mld(o, X) = min r,        rw1 (g) +     wi (g)
+                                  p,g6=1   m             i=2
+
+where p ranges over all quotient singularities on Y0 ⊂ X ′ and √g ranges over all non-identity
+elements in the stabilizer group Gp ∼
+                                    = Zm that satisfies g ∗ xi = e2π −1wi /m xi with 0 ≤ wi < m.
+   We give a short sketch of the proof.
+
+Proof. The exceptional divisor of µ : X ′ → X is equal to the zero section Y0 of the orbifold line
+bundle L−1 which is the underlying variety of the orbifold Y0 . Moreover we have the formula
+KX ′ = µ∗ KX + (r − 1)Y0 . So if we set mld(Y0 ; X ′ , (1 − r)Y0 ) = min{A(v; X ′ , (1 − r)Y0 ); center(v) ⊂
+Y0 } where v ranges over all divisorial valuations over X ′ , then there is an equality
+                               mld(o, X) = min {r, mld(Y0 ; X ′ , (1 − r)Y0 )} .
+   Now we can use the formula for mld of quotient singularities (with a boundary divisor) as in
+[LZ24]. Since cyclic quotient singularities are also locally toric, we can also use toric geometry
+to calculate the quantity as follows. Let p ∈ Y0 be a point such that a neighborhood of p is
+modeled on the quotient (1). Let Zn be the standard lattice in Rn and denote by Λ′ the larger
+                1
+lattice Zn + Z m  (1, b2 , . . . , bn ). Let Λ′ ∩ (0, 1]n = {v1 , . . . , vdp , 1} with 1 = (1, 1, . . . , 1). Then
+                                                  P
+mld(U ∩ Y0 ; X , (1 − r)Y0 ) = min1≤k≤dp { ni=2 xi (vk ) + rx1 (vk )} where xj (vk ) denotes the j-th
+               ′
+
+coordinate of the vector vk for 1 ≤ j ≤ n. On the other hand, each vk corresponds to gk ∈ Gp =
+                       1
+Λ′ /Zn and xj (vk ) = m    wj (gk ). So we get the desired formula.                                              
+                                             P
+   It is now convenient to introduce age(g) = ni=2 wim(g) , which is the age invariant in [CR02] for
+the twisted sector corresponding to g on the base orbifold Y. We use IY to denote the inertia
+orbifold of Y [ALR07, Definition 2.49], on which age is locally constant [ALR07, Lemma 4.6].
+Locally, connected components of IY are indexed by the conjugacy classes of the isotropy groups.
+                         MINIMAL LOG DISCREPANCY AND ORBIFOLD CURVES                                    3
+
+
+We use Y1 ⊂ IY to denote the non-twisted sector, which is diffeomorphic to Y and the inverse
+g 7→ g −1 makes sense on π0 (IY). Then we can re-write (2) in the following form:
+                                                                                               
+                                    rw1 (g)                               rw1 (g −1 )
+    mld(o, X) =      min         r,         + age(g) =     min         r,             + age(g −1 ) .
+                 g∈π0 (IY),g6=1       m                g∈π0 (IY),g6=1        m
+As w1 (g −1 ) = 0 if w1 (g) = 0 and w1 (g −1 ) = m − w1 (g) if w1 (g) 6= 0, we have
+(3)                                                                                                
+                                  r(m − w1 (g))                             r(m − w1 (g))
+mld(o, X) =        min         r,               + age(g −1 ) = min                        + age(g −1 ) .
+               g∈π0 (IY),g6=1          m                        g∈π0 (IY)        m
+
+The last equality follows from that r(m−w      m
+                                                 1 (1))
+                                                        + age(1−1 ) = r.
+   Our main new observation in this note is that the quantity on the right-hand side of the above
+formula can be related to the dimension of the moduli space of twisted (or orbifold rational curves.
+This is motivated on the one hand by the fact that the lSFT invariant calculates the dimension of
+certain moduli space in symplectic field theory (see §3 for an explanation) and on the other hand by
+similar formulae that appear in the study of orbifold Gromov-Witten invariants ([CR02, AGV08])
+   Let M be the smooth link of the Fano cone singularity (X, o). We consider the finite set S of
+isotropy groups (including the trivial group, which is the isotropy group for a generic point) of the
+S 1 action on M . The set S is equipped with a partial order, we say Gx > Gy if Gy ⊂ Gx ⊂ S 1
+is a subgroup. For G ∈ S, the quotient of the fixed point set M G /S 1 gives rise to a branch locus
+YG of the quotient Kähler orbifold Y giving M a stratification over the partial order set S. For
+non-minimal G ∈ S, we use G− to denote the unique maximal element that is smaller than G. We
+formally define G− = ∅ when G is the minimal element of S. By [LZ24, Proposition 3.3], the Reeb
+orbits with period at most the period of a principle orbit (the simple orbit over a generic point) are
+parameterized by M G plus a multiplicity k ∈ G\G− . In particular, the space of unparameterized
+Reeb orbits with period at most the period of a principle orbit can be identified IY.
+   We use g = (g1 , . . . , gk ) to denote a sequence of k elements in π0 (IY), which could be repetitive.
+                                        Pk
+By an orbifold curve C = (C, Q = i=1 (1 − ℓ−1        i )qi ), we mean a smooth Riemann surface C with an
+orbifold structure C/Zℓi with ℓi ∈ Z>0 at each qi ∈ Supp(Q). Note that we allow the trivial orbifold
+structure at qi which corresponds to ℓi = 1. We will use the notion of twisted maps in the sense of
+Abramovich-Vistoli as defined in [AV02].1 In particular, each marked point qi gives rise to a gerbe
+Qi banded by Zℓi and we have an evaluation map evqi (f ) ∈ IY. We denote by Morg ((C, Q), Y)
+the stack of twisted maps f : C → Y that satisfies evqi (f ) ∈ Ygi for each 1 ≤ i ≤ k (see [Ols06]).
+In the setting of differential geometry, this corresponds to the moduli space of representable good
+orbifold maps defined in [CR02], or equivalently representable orbifold maps using the groupoid
+languages in [LU04, §5]. For each f ∈ Morg ((C, Q), Y), we denote by Morg ((C, Q), Y; f |Q ) the
+subspace of twisted maps fˆ in Morg ((C, Q), Y) that satisfy evqi (fˆ) = evqi (f ) for each 1 ≤ i ≤ k.
+   The following estimate is the orbifold version of the standard estimate in the smooth case (see
+[Deb01, 2.11]). Note that on the right side of the estimate, we will use the intersection theory on
+Deligne-Mumford stacks as explained in [AGV08, §2].
+Lemma 2.2. With the above notation, we have the inequality
+                                                                          Xk
+(4)    dim[f ] Morg ((C, Q), Y; f |Q ) ≥ −KY · f∗ C + (1 − g(C)) dim Y − (   age(gi ) + dim Ygi ).
+                                                                                  i=1
+
+Proof. First, similar to the smooth case, by the deformation theory of the stacks (see [Ols06]), we
+get
+                       dim[f ] Morg ((C, Q), Y; f |Q ) ≥     χ(C, f ∗ T Y ⊗ ⊗i IQi )
+where IQi is the ideal sheaf of Qi . From the exact sequence,
+                                      0 → IQi → OC → OQi → 0
+
+  1We always identify an orbifold with the corresponding Deligne-Mumford stack.
+                           MINIMAL LOG DISCREPANCY AND ORBIFOLD CURVES                                                     4
+
+
+we get the identities:
+                                                       X
+      χ(C, f ∗ T Y ⊗ ⊗i IQi ) =      χ(C, f ∗ T Y) −       χ(Qi , f ∗ T Y)
+                                                       i
+                                                       X
+                                             ∗
+                                =    χ(C, f T Y) −         χ(Qi , f ∗ TYgi )
+                                                       i
+                                                                                                   !
+                                                                                    X                      X
+                                =      −KY · f∗ C + (1 − g(C)) dim Y −                     age(gi )    −       dim Ygi .
+                                                                                     i                     i
+
+For the second identity we used the tangent bundle lemma from [AGV08, Lemma 3.6.1]. The last
+identity used the Riemann-Roch theorem for twisted curves ([AGV08, Theorem 7.2.1]).       
+
+  When C = P1 and Q = 0 · {0} + (1 − ℓ−1 ){∞}, the orbifold curve (P1 , Q) is identified with the
+weighted projective line P1 (1, ℓ) with 0 = [1, 0] and ∞ = [0, 1]. When g = (1, g) we get from (4):
+dim[f ] Mor(1,g) (P1 (1, ℓ), Y; f |{0,∞} )   ≥ −KY · f∗ P(1, ℓ) + (dim Y − (age(g) + dim Yg )) − dim Y
+                                             = −KY · f∗ P(1, ℓ) + age(g −1 ) − dim Y.
+The last identity used the fact dim Y − (age(g) + dim Yg ) = age(g −1 ) and is a main evidence that
+the formula (3) is related to the dimension of moduli space of twisted rational curves.
+   Now note that f ∗ L−1 is an orbifold line bundle over P1 (1, ℓ) and, according to the definition
+of twisted curves, the morphism of the stabilizer groups Zℓ → Gf (∞) ∼    = Zm is injective with 1
+mapped to g. By Setting hgi ∼   = ℓZ  to be a subgroup  of Gf (∞) , the twisted  curve then satisfies
+ev(f ) ∈ Yg . Assume f (∞) is locally modeled on
+                                                       1
+                                         C × Cn−1 /      (1, b2 , . . . , bn ).
+                                                       m
+The generator of Zℓ is mapped to p ∈ Zm such that the order of p is ℓ. Note that f ∗ L−1 = OC (k) for
+                                                                                           w1 (g)ℓ
+k ∈ Z<0 where C = P(1, ℓ). We have pℓ    m = k mod ℓ. As w1 (g) = p ∈ [0, m), we have k ≤    m − ℓ.
+Since c1 (OC (1)) · C = 1ℓ , we get the following inequality:
+                                                                                  w (g)ℓ
+                                                             −k     ℓ − 1m                       m − w1 (g)
+             −KY · f∗ C = rL · f∗ C = rf ∗ L · C = r ·          ≥r·                         =r              .
+                                                              ℓ         ℓ                           m
+For simplicity of notation, we set dg−1 (f ) = −KY · f∗ C + age(g −1 ). Then the above discussion
+derives:
+                                                                                  r(m − w1 (g))
+(5)     dim[f ] Mor(1,g) (P1 (1, ℓ), Y; f |{0,∞} ) + dim Y ≥ dg−1 (f ) ≥                        + age(g −1 ).
+                                                                                       m
+Because the minimum (3) is taken over all strata, we get
+                              
+(6)           mld(o, X) ≤ min dg−1 (f ); f ∈ Mor(1,g) (P1 (1, ℓ); f |{0,∞} ), ℓ ∈ Z>0 .
+   So in order to prove the main theorem, we just need to prove the inequality dg−1 (f ) ≤ n =
+dim Y + 1 for some twisted map f : P1 (1, ℓ) → Y. If Y is a smooth Fano manifold without orbifold
+points, then this was achieved by Mori via a reduction to characteristic p > 0 and the bend-and-
+break method [Mor79]. In [CT09], this has been partly generalized to the orbifold setting but the
+authors were mainly interested in the singular Fano varieties with special singularities. We will
+explain that Mori’s method indeed gives us the sharp upper bound of mld in our problem.
+   In the bend-and-break method, there are two steps. First, we need to obtain a non-trivial
+twisted map f : P(1, ℓ) → Y. This is achieved by deforming a morphism from a smooth curve of
+genus g ≥ 1. Let C be a smooth Riemann surface of genus g ≥ 1 and f : C → Y be a non-trivial
+morphism. First by [AV02, Proof of Theorem 7.1.1], there exists a ramified cover C ′ → C such that
+f lifts to a (twisted) morphism f ′ : C ′ → Y where C ′ does not have non-trivial orbifold structure.
+Proposition 2.3. Let f : C → Y be a morphism from a smooth curve of genus g(C) ≥ 1. Fix any
+c ∈ C if dim[f ] Mor(C, Y; f |c ) ≥ 1, then there exists a nontrivial twisted map fˆ : P1 (1, ℓ) → Y.
+                         MINIMAL LOG DISCREPANCY AND ORBIFOLD CURVES                                  5
+
+
+Proof. First, we use the argument as in [KM98, Proof of Corollary 1.7] or [Deb01, Proof of Proposi-
+tion 3.1]. Let T be the normalization of a 1-dimensional substack of Mor(C, Y; f |c ) passing through
+[f ] and let T̄ be a smooth compactification of T . By the same reasoning as in [KM98, Proof of
+Corollary 1.7] or [Deb01, Proof of Proposition 3.1], there exists t0 ∈ T̄ such that ev is not defined
+at (c, t0 ). The indeterminacies of the induced rational map ev : C × T̄ 99K Y can be resolved
+                                                     ǫ         ev
+by blowing up points to get a morphism ev    e : S → C × T̄ 99K X. The fiber Ft0 of t0 under the
+projection S → T̄ is the union of the strict transform Ĉ of C × {t0 } and a connected exceptional
+rational 1-cycle E which is not entirely contracted by ev. e There is an irreducible P1 -component
+E1 of E such that E1 intersects Ft0 \ E1 at a single node p0 .
+    Now by the proof of valuative criterion of twisted stable maps as in [AV02, Proof of Proposition
+6.0.1] (see also [CR02]), we can add orbifold structures to the nodes of the Ft0 = Ĉ ∪ E so that
+the morphism ev  e : Ft0 → Y lifts to become a twisted map ev     e : Ft0 → Y. In more detail, at
+smooth points of Ft0 we do not need to add a new orbifold structure. This is proved based on a
+base-change construction and a purity lemma (see [AV02, Lemma 2.4.1]). On a node {xy = 0} of
+                   a chart {uv = 0}/Zℓ where the action of Zℓ is described by (u, v) 7→ (ζu, ζ −1 v)
+Ft0 , there exists √
+with ζ = exp(2π −1/ℓ). In this chart, the map Ft0 → Ft0 is given by x = uℓ and y = v ℓ . Let E1
+the orbifold curve (E1 , (1 − ℓ−1 )p0 ). Then the induced twisted map fˆ : E1 ∼= P1 (1, ℓ) → Y is the
+wanted map.
+                                                                                                    
+   In the second step, we can degenerate the twisted map P1 to another one if the dimension of
+the deformation space is large.
+Proposition 2.4. Let f : C = P1 (1, ℓ) → Y be an twisted map such that f (0) ∈ Y1 and f (∞) ∈ Yg .
+Assume that
+                                dim[f ] Mor(1,g) (P1 (1, ℓ), Y; f |{0,∞} ) ≥ 2,
+then there exists a non-trivial twisted map fˆ : Cˆ = P1 (1, ℓ̂) → Y such that f∗ [C] is numerically
+                   ˆ + P (fi )∗ [Ci ] where {fi : Ci → Y} is a nonempty collection of twisted maps.
+equivalent to fˆ∗ [C]    i
+
+  Note that in general fˆ(∞) is different from f (∞).
+Proof. The proof is similar to that of Proposition 2.4. Let T be the normalization of a 1-dimensional
+substack of Mor(C, Y; f |{0,∞} ) passing through [f ] but not contained in its C∗ -orbit and let T̄ be
+a smooth compactification of T . By arguing as in [Deb01, Proposition 3.2] in the orbifold setting,
+there exists t0 ∈ T̄ such that ev is not defined at (0, t0 ). We resolve the indeterminacy of the
+evaluation map ev : P1 × T 99K X to get a fibered surface π : S → T̄ and a map ev    ˜ : S → X such
+that Ft0 = π −1 (t0 ) is a cycle of rational curves. There is an irreducible component E1 of Ft0 that
+intersects Ft0 \ E1 at a single node. As before, we now use the same argument as [AV02, Proof of
+Proposition 6.0.1] to extend orbifold structures on P1 × T to S (up to base change). This induces
+a Zl̂ -orbifold structure at one point on E1 ∼  = P1 and we get a twisted map fˆ : P1 (1, ℓ̂) → Y as
+wanted.                                                                                             
+  We remark that the bend-and-break results in the orbifold setting similar to the above two
+propositions have also appeared in [CT09, Proposition 3.5 and 3.6]. Since the (image of) a twisted
+map can not break infinitely many times, the above two bend-and-break constructions produce a
+non-trivial bound (by also using (5)).
+Proposition 2.5. Assume that there exists a non-trivial smooth morphism C → Y that satisfies
+dim[f ] Mor(C, Y; f |c ) ≥ 1. Then there exists a twisted map f : P1 (1, ℓ) → Y satisfying f (0) ∈ Y1 ,
+f (∞) ∈ Yg and
+          −KY · f∗ P(1, ℓ) + age(g −1 ) − dim Y ≤ dim[f ] Mor(1,g) (P1 (1, ℓ), Y; f |{0,∞} ) ≤ 1.
+   To achieve the dimension condition in the above results, Mori introduced a groundbreaking
+method of reducing to the field of characteristic p > 0 and using the Frobenius morphism to
+increase the dimension of the deformation space. He then applied the bend-and-break to get a
+rational curve in positive characteristics with a uniform upper bound on their degrees. Finally,
+                           MINIMAL LOG DISCREPANCY AND ORBIFOLD CURVES                                           6
+
+
+Mori concluded the existence of a rational curve in characteristic zero by an algebraic argument
+(see [KM98, pg.15], [Deb01, pg.62-63]). The same line arguments can be applied in the setting
+of orbifolds (see [CT09]). Not that, in the characteristic p argument, we need to assume that the
+orders of the stabilizers are relatively prime to p. In other words, we need to work with tamed
+Deligne-Mumford stacks in the sense of [AV02]. This is not a restriction, since there are only
+finitely many strata and the prime p can be arbitrarily large. As a consequence, we get
+Proposition 2.6. Let Y be a Fano orbifold. There exists a twisted map f : P1 (1, ℓ) → Y satisfying
+f (0) ∈ Y1 , f (∞) ∈ Yg and
+                           dg−1 (f ) = −KY · f∗ P(1, ℓ) + age(g −1 ) ≤ dim Y + 1.
+   Combining this with the estimates (5)-(6), we complete the proof of Theorem 1.1.
+Example 2.7. Consider the weighted projective line P1 (2, 3) = (C2 \ 0)/C∗ where C∗ acts on C2
+by λ ◦ (z1 , z2√) = (λ2 z1 , λ3 z2 ). We have IY = Y ⊔ {([1, 0] = 0, −1)} ⊔ {([0, 1] = ∞, ǫ)} ⊔ {(∞, ǫ−1 )}
+with ǫ = e2π −1/3 . We consider the family of maps f : C∗ × P1 (1, 2) → Y given by
+                          f (t, [u1 , u2 ]) = ft ([u1 , u2 ]) = [t2 u21 + u2 , t3 u31 + u1 u2 ].
+Then ev0 (ft ) = [t2 , t3 ] = [1, 1] and ev∞ (ft ) = {([1, 0], −1)} and d−1 (f ) = −KY · f∗ C + age(−1) =
+5 · 12 + 12 = 3 > 2 = dim Y + 1. Note that f is undefined at (0, [1, 0]). Indeed, in a chart near
+0 = [1, 0], we set v = u2 /u21 to get f (t, v) = [t2 + v, t3 + v]. We can now resolve the indeterminacy
+by a weighted blowup of weight (1, 3) to map fˆ : Ĉ2 := Bl(1,3) C2 → Y . Denote the exceptional
+divisor by E1 ∼= P1 (1, 3), the strict transform of {t = 0} by E0 and the strict transform of {v = 0}
+by H. Near E1 ∩ E0 we have a chart C2 / 31 (1, −1) 7→ Ĉ2 given by (x, w) 7→ (xw, w3 ) such that
+E0 = {x = 0}, E1 = {w = 0} and
+                                  fˆ(x, w) = f (xw, w3 ) = [x2 + w, x3 + 1].
+Note that when x = 0, we get fˆ(0, w) = [w, 1] which can be seen as the restriction of identity
+self-map of P1 (2, 3). Near E1 ∩ H we have a chart given by (t, y) 7→ (t, t3 y) such that E1 = {t = 0}
+and
+                                    fˆ(t, y) = f (t, t3 y) = [1 + ty, 1 + y].
+Note that when t = 0, we get fˆ(0, y) = [1, 1 + y] which can be seen as the restriction of the map
+fˆ : E = P1 (1, 3) → P1 (2, 3) given by [y1 , y2 ] → [1, 1 + y2 /y13 ] = [y12 , y13 + y2 ].
+    So we indeed bend-and-break f to a twisted map f ′ : P1 (1, 3) ∪[0,1]1 =[0,1]2 P1 (2, 3) → P1 (2, 3) and
+by restriction get the above twisted map fˆ : E = P1 (1, 3) → P1 (2, 3) that satisfies ev∞ (fˆ) ∈ ([0, 1], ǫ)
+and dǫ−1 (fˆ) = 5 · 13 + 31 = 2 = dim Y + 1.
+Example 2.8. Consider P1 (2, 3, 5) = (C3 \ 0)/C∗ where C∗ acts on C3 by λ ◦ (z1 , z2 , z3 ) =
+(λ2 z1 , λ3 z2 , λ5 z3 ). There is a family {ft : P1 (1, 3) → Y}t∈C∗ of twisted map with fixed ft (0) and
+ft (∞) given by:
+                                   [u1 , u2 ] → [t2 u21 , t3 u31 + u2 , t5 u51 + u21 u2 ].
+We have dǫ−1 (ft ) = 10 · 13 + 31 + 13 = 4 > 3 = dim Y + 1. Note that ft ([1, 0]) is not defined at
+t = 0 and one can bend-and-break ft to f ′ : P1 (1, 5) ∪[0,1]1 =[0,1]2 P1 (3, 5) → P2 (2, 3, 5) and get a
+new twisted map fˆ : P1 (1, 5) → P2 (2, 3, 5) given by [y1 , y2 ] 7→ [y12 , y13 , y15 + y2 ] with de−2π√−1/5 (fˆ) =
+10 · 15 + 53 + 52 = 3 = dim Y + 1.
+  Based on our discussion and examples above, we propose a conjectural characterization for
+weighted projective spaces as Fano orbifolds:
+Conjecture 2.9. Let Y be a Fano orbifold of dimension n. Assume that for any ℓ ∈ Z>0 ,
+g ∈ π0 (IY) and any f ∈ Mor(1,g) (P1 (1, ℓ), Y) we have dg−1 (f ) = −KY ·f∗ P1 (1, ℓ)+age(g −1 ) ≥ n+1.
+Then Y is isomorphic to a finite quotient of a weighted projective space.
+   Note that this conjecture would imply that the equality in Theorem 1.1 holds only for smooth
+points. Indeed, the quotient orbifold Y = (X\o)/C∗ is a quotient of a weighted projective space if
+the equality in Theorem 1.1 holds. As a consequence (X, o) is an isolated quotient singularity, for
+                             MINIMAL LOG DISCREPANCY AND ORBIFOLD CURVES                                                 7
+
+
+which we know that the minimal discrepancy is equal to the dimension only when it is a smooth
+point.
+   In the smooth case, the above conjecture is essentially the conjecture of Mori-Mukai as proved
+by Cho-Miyaoka-Shepherd-Barron ([CMSB02], see also [Keb02, Che17]). We expect that a careful
+implementation of the argument from [CMSB02, Keb02] in the orbifold setting will prove such a
+statement. We leave this to a future study and carry out such arguments here for Fano orbifolds
+with ample orbifold tangent bundles.
+Proof of Theorem 1.3. We sketch a proof that is modeled on Mori’s proof in the case of smooth
+projective manifolds, which depends on the study of the tangent map of the rational curves at a
+fixed point. Let S be an irreducible component of Mor(1,g) (P1 (1, ℓ), Y; f |{∞} ) that satisfies
+                                       dg−1 (f ) = χ(f ∗ T Y) − dim Yg = n + 1,
+and Mor(1,g) (P1 (1, ℓ), Y; f |{∞} )/G is proper where G is the automorphism of P(1, ℓ) fixing ∞.
+Since P(1, ℓ) has only one orbifold point, by [MT12, Variation 2], we have a splitting
+(7)                                          f ∗ T Y = O(b1 ) ⊕ · · · ⊕ O(bn ).
+Let {ai ∈ [1, ℓ]} be the weights of Zℓ ֒→ Gf (∞) on f ∗ T Y|∞ satisfying a1 ≤ a2 ≤ · · · ≤ an . Then we
+have ai ≡ bi mod ℓ. By the ampleness of T Y, we have bi ≥ 1. By Bochner-Kodaira’s vanishing,
+we have
+(8)                             H 1 (P1 (1, ℓ), O(bi − k)) = 0, for k < 1 + ℓ + bi .
+By the Riemann-Roch for orbifold line bundles, we have
+                                                  bi   bi mod ℓ
+                               χ(O(bi )) = 1 + −                ≥1
+                                                  ℓ       ℓ
+and the equality holds if and only if bi ∈ [1, ℓ − 1].
+  Assume dim Yg = d. Then for j ≥ n − d + 1, aj (g) = ℓ and bj ≡ 0 mod ℓ. We have
+                                                            n−d
+                                                            X                                            n
+                                                                                                         X
+                                                                          bi − bi       mod ℓ                     bj
+                 n + 1 = χ(f ∗ T Y) − dim Yg =                     (1 +                         )+                   .
+                                                             j=1
+                                                                                    ℓ                             ℓ
+                                                                                                     j=n−d+1
+
+Since each term is an integer at least 1, there must exist i ∈ {1, . . . , n} such that:
+                                      bi = ai + ℓ,          and       bj = aj for j 6= i.
+In other words, we have a splitting
+(9)               f ∗ T Y = O(a1 ) ⊕ · · · ⊕ O(ai−1 ) ⊕ O(ai + ℓ) ⊕ O(ai+1 ) · · · ⊕ O(an ).
+The differential df corresponds to a section of
+(10)
+O(−(1+ℓ))⊗f ∗ T Y = O(a1 −ℓ−1)⊕· · ·⊕O(ai−1 −ℓ−1)⊕O(ai −1)⊕O(ai+1 −ℓ−1) · · ·⊕O(an −ℓ−1)
+which is equivalently a section of H 0 (P1 (1, ℓ), ai − 1) ∼
+                                                           = C since O(aj − ℓ − 1) with aj − ℓ − 1 < 0
+has no holomorphic sections. Locally f : C/ 1ℓ (1) → Cn /Gf (∞) factors through Cn /Zℓ and has a
+lifting to C → Cn whose leading order terms are given as:
+                   f (z) ∼ (t1 z a1 + t′1 z a1 +ℓ , . . . , ti z ai + t′i z ai +ℓ , . . . , tn z an + t′n z an +ℓ ).
+Then (t1 , . . . , tn ) 6= 0, for otherwise, df will have a zero of order ≥ ℓ in a component of the splitting
+(10), contradicting with the splitting. Then we can define a tangent map:
+                                                                        1
+                                      φ̃(f ) = (t1 , . . . , tn ) ∈ Cn / (a1 , . . . , an )
+                                                                        ℓ
+and the corresponding projective tangent map φ : S → Pw where w = (a1 , . . . , an ). Since the
+infinitesimal variation of f with a fixed φ̃(f ) = (t) correspond to variation of t′i , the fiber of φ̃ over
+[c] 6= 0 has an orbifold tangent space and an obstruction space given by H j (P1 (1, ℓ), O ⊕O(−ℓ)n−1 )
+which is equal to C for j = 0 and vanishes for j = 1.
+    The automorphism group G of P(1, ℓ) fixing ∞ is given by {[z, w] 7→ [az, bz ℓ +cw]|a, c 6= 0} where
+∞ = [0, 1]. The group G acts on S × P1 (1, ℓ) and we take the quotient M = S/G as an orbifold.
+The tangent space of S at f is given by H 0 (P1 (1, ℓ), On−1 ⊕ O(ℓ)) ∼                      = Cn+1 and tangent of the
+                          MINIMAL LOG DISCREPANCY AND ORBIFOLD CURVES                                         8
+
+
+G-action is H 0 (P(1, ℓ), O(ℓ)), hence the tangent space of M at [f ] is H 0 (P1 (1, ℓ), On−1 ) ∼      = Cn−1 .
+It is straightforward to check that the induced smooth orbifold morphism φ̄ : M → Pw is finite of
+maximal rank and inject the stabilizer of [f ] into the the stabilizer of φ̄([f ]), i.e. φ̄ is representable.
+In particular, φ̄ is an orbifold covering in the sense of [ALR07, Definition 2.16], therefore we
+conclude that M is a weighted projective space of weight w̄ = w/k where k is a divisor of
+gcd(w̄) := gcd(a1 , . . . , an ) such that gcd(w̄) = gcd(w)
+                                                         k      is equal to the order of the stabilizer at the
+generic point of M.
+    Note that locally near f (∞), Y ∼      = Cn /Gf (∞) is a quotient of Y ′ := Cn / 1ℓ (a1 , . . . , an ). Let
+µ′ : Ŷ ′ → Y ′ denote the weighted blowup of Y ′ at [0] with the weight w and µ : Ŷ → Y denote
+the weighted blow-up at f (∞) with weight w. Denote by E ′ and E the exceptional divisors of µ′
+and µ respectively. Then E ′ ∼     = Pw with O(E ′ )|E ′ = OPw (−ℓ). The exceptional divisor E is thus a
+finite quotient of weighted projective space Pw and the orbifold line bundle O(E)|E is the quotient
+of OPw (−ℓ).
+    Consider the evaluation map Φ : S × P1 (1, ℓ) → Y such that Φ|{s}×P(1,ℓ) is the morphism
+represented by s. We have an induced orbifold fibration Z = (S × P1 (1, ℓ))/G → M ∼              = Pw̄ which
+is an orbifold P(1, ℓ) fibration with a section σ : M → Z by σ([f ]) = [(f, ∞)]. The fiber of
+Φ|S×(P(1,ℓ)\{∞}) , at (f, q), has an orbifold tangent space H 0 (P(1, ℓ), O(−ℓ)n−1 ⊕ O) ⊕ C and the
+obstruction vanishes, where the C summand is from the tangent of q ∈ P(1, ℓ)\{0} and the first
+component of is the subspace of the tangent space of S ≃ H 0 (P(1, ℓ), On−1 ⊕ O(ℓ)) at f subject
+to the condition that it vanishes at the smooth point q ∈ P(1, ℓ). As the tangent space of the fiber
+is the tangent of the G action, the induced morphism Φ̄ : Z → Y is of maximal rank restricted to
+Z\σ(M). We claim the orbifold morphism Φ̄|Z\σ(M) is also representable. If g ∈ G fixes (f, 0),
+                                                                                                           √
+then on C/ 1ℓ (1) neighborhood around ∞ ∈ P(1, ℓ), g is written as z 7→ λz such that λ ∼ λe2π −1/ℓ
+if f ◦ g = f near 0 in C/ 1ℓ (1). Hence the stabilizer G[(f,0)] is a cyclic group. If G[(f,0)] does not
+inject into the stabilizer of f (0) in Y with a kernel Zs , then f is a branch cover over a twisted map
+f ′ : P(1, ℓ′ ) → Y of order s, where ℓ divides ℓ′ and ℓ′ /ℓ divides s. As a consequence, we have
+                                                     ′                                              
+      ′ ∗            a1 ℓ ′               ai−1 ℓ′          ai ℓ     ℓ′         ai+1 ℓ′                an ℓ ′
+   (f ) T Y = O               ⊕ ···⊕ O              ⊕O           +       ⊕O              ⊕ ···⊕ O              ,
+                      sℓ                    sℓ              sℓ      s            sℓ                    sℓ
+over P(1, ℓ′ ). All the weights above are no larger than 2ℓ′ /s ≤ ℓ′ . Since χ((f ′ )∗ T Y)−dim Yg′ ≥ n+1
+where f ′ (∞) ∈ Yg′ , we can argue as in (9) that at least one weight is larger than ℓ′ , contradiction.
+   The evaluation map Φ    e : S × P1 (1, ℓ) 99K Ŷ is well-defined near S × {∞} and the induced map
+ē
+Φ : Z 99K Ŷ near σ(M) is a covering map. Therefore the orbifold normal bundle of σ(M) is
+isomorphic to OPw̄ (−ℓ). As a consequence, we have Z = P(OPw̄ (−ℓ) ⊕ O). Then by blowing down
+σ(M) in Φ̄, we get an orbifold morphism P(w̄, ℓ) → Y that is smooth and representable, and hence
+an orbifold covering.
+
+                                         S × {∞}
+                                                            / S × P1 (1, ℓ)
+                                            ✁
+                                        ✁ ✁✁ •/G                      •/G
+                                      ✁✁                             
+                                  φ ✁✁
+                                   ✁✁  P w̄
+                                            ∼
+                                            =     σ(M)
+                                                                 /Z▼                    / P(w̄, ℓ)
+                                  ✁                                     ✤ ▼▼
+                                ✁✁    ♣♣♣                                ✤       ▼▼▼▼▼Φ̄
+                            ✁ ✁✁ ♣♣♣♣♣                                        ē
+                                                                           ✤ Φ        ▼▼▼
+                          ✁✁x♣♣♣ φ̄                                               µ
+                                                                                          ▼▼▼ 
+                        ∼
+                     Pw = E ′                / E                  / Ŷ                       /& Y
+                                                                                                             
+
+                 3. Relation with moduli space in symplectic field theory
+  In [LZ24, Proposition 3.4], we also derived the mld in terms of the lSFT invariant from symplectic
+geometry
+                                                         1
+(11)                                    mld(o, X) =        inf lSFT(γ) + 1
+                                                         2 γ
+                        MINIMAL LOG DISCREPANCY AND ORBIFOLD CURVES                                   9
+
+
+where γ ranges over all Reeb orbits of the link of x ∈ X with respect to any conic contact form.
+We refer to [LZ24, §2.3] for Conley-Zehnder indices and SFT degrees.
+   Let g = (g1 , . . . , gk ) be a sequence of elements in π0 (IY). We define M0,k (Y, A, g) to be the
+compactified moduli spaces of orbifold P1 curves with k marked points (only marked points can be
+orbifold points) to Y with homology class A, such that ith marked point is mapped to Ygi . The
+order of the ith marked point is the order of gi , hence the associated orbifold map (P1 , Q) → Y
+is representable as in [AGV08]. Then the complex virtual dimension of M0,k (Y, A, g) is given by
+[CR02, Theorem A]
+                                                                   k
+                                                                   X
+                                hc1 (T Y), Ai + dimC (Y) + k − 3 −   age(gi ).
+                                                               i=1
+This is equivalent to the right-hand-side of (4) with k − 3 from the freedom of marked points
+                                    Pk
+and automorphisms and without i=1 dimC Ygi as we do not require marked points going through
+fixed points in Ygi . As in §2, we will be mainly interested in the case with one marked point. We
+       •
+use M0,1 (Y, A, g) to denote the compactified moduli space of orbifold P1 (1, ℓ) in Y of homology
+class A with the order ℓ marked point mapped to a chosen point on Yg , where the order of g is
+ℓ. This is the compactification of the Deligne–Mumford stack Mor(P1 (1, ℓ), Y; f |∞ )/Aut(C). The
+virtual dimension is
+                            hc1 (T Y), Ai + dimC Y − 2 − age(g) − dimC Yg ,
+which is smaller than (5) by 2 from the automorphism of P(1, ℓ).
+   We have a correspondence between π0 (IY) with the connected components of the Morse-Bott
+family or Reeb orbits with period at most the principle orbit. We may rescale the contact form,
+such that the principle orbit (the simple Reeb orbit over a non-singular point of M/S 1 ) has period
+1. For g ∈ π0 (IY), we use γg to represent the corresponding Reeb orbit. We use γg,l to denote
+the Reeb orbit γg followed by l ∈ N principle orbits. They form all the Reeb orbits on M . Let W
+be a strong symplectic (orbifold) filling of M , we use MSFT (W, A, γg,l ) to denote the compactified
+moduli spaces of holomorphic planes in the completion W    c of homology class A and one positive
+puncture asymptotic to γg,l , see e.g.[EGH00, §1.5]. The real virtual dimension of MSFT (W, A, γg,l )
+is given by [EGH00, Proposition 1.7.1 ] (strictly speaking, we are considering the Morse-Bott case
+with the holomorphic curve asymptotic to a fixed orbit in the family, therefore we use µLCZ )
+(12)                                  µA
+                                       LCZ (γg,l ) + dimC W − 3,
+where µA LCZ (γg,l ) is the lower semi-continuous Conley-Zehnder index of γg,l using trivializations of
+detC u∗ T W such that u : D → W is a continuous (orbifold) map with boundary mapped to γg,l
+with homology class A. In our case, the unit disk bundle D(L−1 ) in L−1 is naturally a symplectic
+orbifold filling of M and we have the following.
+Proposition 3.1. Let γ be a Reeb orbit and u a disk in D(L−1 ) with boundary γg,l , whose intersec-
+tion number with the zero section is zero. Then we have lSFT(γg,l ) = vdimR MSFT (D(L−1 ), [u], γg,l ).
+Proof. By definition lSFT(γg,l ) = µQ LCZ (γg,l ) + dimC D(L
+                                                            −1
+                                                               ) − 3, where µQ
+                                                                             LCZ (γg,l ) is computed
+                                  N
+using a trivialization of detC ⊕ ξ for the contact structure ξ of M and some N ∈ Z>0 . By
+[LZ24, Lemma 3.1], as c1 (D(L−1 )) viewed in H 2 (D(L−1 ), M ; Q) is Lefschetz dual to a multiple
+of the fundamental class of the zero section, we have hc1 (D(L−1 )), [u]i = 0 and lSFT(γg,l ) =
+µuLCZ (γg,l ) + dimC D(L−1 ) − 3 = vdimR MSFT (D(L−1 ), [u], γg,l ).                              
+   We restate (6) as follows and reprove it using (11) as the definition of mld. The proof is disguised
+as degenerating the SFT curves in D(L−1 ) into fiber holomorphic disks and holomorphic curves
+contained in the zero section Y0 , hence we can relate their virtual dimensions. However, as we only
+care about the virtual dimension, we do not require such degeneration actually happens. One can
+verify the formulae in the proof directly using the virtual dimension formulae without appealing
+to the degeneration picture.
+Proposition 3.2. Let (X, o) be a n-dimensional Fano cone singularity over Fano orbifold Y with
+                                    •
+associated ample line bundle L. If M0,1 (Y, A, g) 6= ∅, we have
+                                                      •
+                               mld(o, X) ≤ vdimC M0,1 (Y, A, g) + 2.
+                           MINIMAL LOG DISCREPANCY AND ORBIFOLD CURVES                                  10
+
+
+Proof. We start with the seemingly simpler case where g = 1 represents the identity component Y
+                                                                             •
+of IY, i.e. the marked point on P1 is not an orbifold point. Assume u ∈ M0,1 (D(L−1 ), A, 1). Here
+we treat u as irreducible, the nodal case is the same. Then u L is an ample bundle over P1 . We
+                                                                 ∗
+
+write k = hc1 (L), Ai > 0, let v be the fiber disk in D(L−1 ) over a smooth point in Y and v k be the
+natural kth branched cover of v. Then we have vdimR MSFT (D(L−1 , [v k ], γ1k ) = 2k−2. This follows
+              k
+from that µvLCZ (γ1k ) = 2k − dimC Y as the linearized flow of γ1k using the induced trivialization
+from v k is rotation by k rounds in the fiber direction and identity on the complement. Then the
+claim follows from (12). Since v k #u has intersection number zero with Y0 , by Proposition 3.1, we
+have
+               k
+         lSFT(γid )   = vdimR MSFT (D(L−1 ), v k #u, γ1k )
+                                                                                 •
+(13)                  = vdimR MSFT (D(L−1 ), [v k ], γ1k ) + 4 + vdimR M0,1 (D(L−1 ), [u], 1).
+To see the last equality, the nodal curve v k ∪u is contained in MSFT (D(L−1 ), v k #u, γ1k ), those nodal
+curves form a strata of MSFT (D(L−1 ), v k #u, γ1k ) of virtual codimension 2. On the other hand,
+those nodal curves form the fiber product MSFT,1 (D(L−1 ), [v k ], γ1k ) ×D(L−1 ) M0,1 (D(L−1 ), [u], 1),
+where MSFT,1 (D(L−1 ), [v k ], γ1k ) is the SFT curves as in MSFT (D(L−1 ), [v k ], γ1k ) but with one
+marked point and the fiber product is taken over the evaluation maps on the marked points. Then
+we have vdimR MSFT,1 (D(L−1 ), [v k ], γ1k ) ×D(L−1 ) M0,1 (D(L−1 ), [u], 1) is
+               vdimR MSFT,1 (D(L−1 ), [v k ], γ1k ) + vdimR M0,1 (D(L−1 ), [u], 1) − dimR D(L−1 )
+                                                                      •
+          =    vdimR MSFT (D(L−1 ), [v k ], γ1k ) + 2 + vdimR M0,1 (D(L−1 ), [u], 1).
+Therefore (13) holds. Note that
+                       •                                          ∗
+              vdimR M0,1 (D(L−1 ), [u], 1) = 2 + vdimR M0,1 (Y, [u], 1) − 2hc1 (L), Ai − 2.
+                                                      •
+The first 2 is from that the point constraint in M0,1 (D(L−1 ), [u], 1) is of real codimension dimR D(L−1 ),
+                                   •
+while the point constraint in M0,1 (Y, [u], 1) is of real codimension dimR Y. The −2hc1 (L), Ai − 2
+comes from the index of Cauchy-Riemann operator in the normal direction of Y0 ⊂ D(L−1 ).
+Combining them together, we have
+                                                              •
+                                 lSFT(γ1k ) = vdimR M0,1 (Y, [u], 1) + 2
+In general, assume g is represented by G ∈ S and multiplicity k 6= 0 ∈ G\G− ⊂ Z/|G|. The orbifold
+marked point on P1 then has order |G|/ gcd(k, |G|). Then u∗ (L−1 ) has a meromorphic section
+without zero and an order −hc1 (L−1 ), Ai pole at the marked point. Then −k/|G| + hc1 (L−1 ), Ai
+is a negative integer −l. We consider the Reeb orbit γg,l−1 . Let v be the fiber orbifold disk over
+a generic point in M G /S 1 , with boundary γg,l−1 and an orbifold marked point asymptotic to
+Yg ⊂ ID(L−1 ), we use vdimR MSFT,1 (D(L−1 ), [v], γg,l−1 , g) to denote the moduli space of such v,
+then
+                           vdimR MSFT,1 (D(L−1 ), [v], γg,l−1 , g) = 2l − 2.
+                                                          1
+as this can be computed in the local model C × Cn−1 / |G|   (1, b2 , . . . , bn ). Since we have
+                 •                                        •
+       vdimR M0,1 (D(L−1 ), [u], g) =         vdimR M0,1 (Y, [u], g) + 2 + 2hc1 (L−1 ), [u]i − 2k/|G|
+                                                          •
+                                          =   vdimR M0,1 (Y, [u], g) + 2 − 2l.
+where 2 + 2hc1 (L−1 ), [u]i − 2k/|G| is the Fredholm index of the Cauchy-Riemann operator in the
+normal direction. Since v#u has zero intersection with Y0 , by Proposition 3.1, we have
+lSFT(γg,l−1 )    = vdimR MSFT (D(L−1 ), [v#u], γg,l−1 )
+                 = 2 + vdimR MSFT,1 (D(L−1 ), [v], γg,l−1 ) ×Yg M0,1 (D(L−1 ), [u], g)
+                 = 2 + vdimR MSFT,1 (D(L−1 ), [v], γg,l−1 ) + vdimM0,1 (D(L−1 ), [u], g) − dimR Yg
+                                                                             •
+                 = 2 + vdimR MSFT,1 (D(L−1 ), [v], γg,l−1 ) + vdimR M0,1 (D(L−1 ), [u], g).
+                                      •
+Then lSFT(γg,l−1 ) = 2 + vdimR M0,1 (Y, [u], g). Since 2mld(X, o) ≤ lSFT(γ) + 2, we have
+                                                              •
+                                mld(X, o) ≤ vdimC M0,1 (Y, [u], g) + 2.
+                           MINIMAL LOG DISCREPANCY AND ORBIFOLD CURVES                                          11
+
+
+                                                                                                                
+
+                                                 References
+[AGV08]  Dan Abramovich, Tom Graber, and Angelo Vistoli. Gromov–witten theory of deligne–mumford stacks.
+         Amer. J. Math., 130:1337–1398, 2008.
+[ALR07] Alejandro Adem, Johann Leida, and Yongbin Ruan. Orbifolds and stringy topology, volume 171 of Camb.
+         Tracts Math. Cambridge: Cambridge University Press, 2007.
+[Amb06] Florin Ambro. The minimal log discrepancy. arXiv preprint arXiv:0611859, 2006.
+[AV02]   Dan Abramovich and Angelo Vistoli. Compactifying the space of stable maps. J. Amer. Math. Soc.,
+         15(1):27–75, 2002.
+[Che17]  Jiun-Cheng Chen. Characterizing projective spaces for varieties with at most quotient singularities. Bull.
+         Inst. Math. Acad. Sin. (N.S.), 12(4):297–314, 2017.
+[CMSB02] Koji Cho, Yoichi Miyaoka, and N.I. Shepherd-Barron. Characterizations of projective space and applica-
+         tions to complex symplectic manifolds. In Heigher dimensional birational geometry (Kyoto, 1997), Adv.
+         Stud. Pure Math., 25, pages 1–88. Mathematical Society of Japan, 2002.
+[CR02]   Weimin Chen and Yongbin Ruan. Orbifold gromov-witten theory. In Orbifolds in Mathematics and
+         Physics, volume 310 of Contemp. Math., page 25–85. Amer. Math. Soc., Providence, RI, 2002.
+[CT09]   Jiun-Cheng Chen and Hsian-Hua Tseng. Cone theorem via Deligne-Mumford stacks. Math. Ann.,
+         345(3):525–545, 2009.
+[Deb01]  Olivier Debarre. Higher-dimensional algebraic geometry. Springer-Verlag, New York, 2001.
+[EGH00] Y. Eliashberg, A. Givental, and H. Hofer. Introduction to Symplectic Field Theory. In GAFA 2000. Vi-
+         sions in mathematics—Towards 2000. Proceedings of a meeting, Tel Aviv, Israel, August 25–September
+         3, 1999. Part II., pages 560–673. Basel: Birkhäuser, 2000.
+[Keb02]  Stephan Kebekus. Characterizing the projective space after cho, miyaoka and shepherd-barron. In Com-
+         plex Geometry (Göttingen, 2000), pages 147–155. Springer-Verlag, Berlin, 2002.
+[KM98]   Janos Kollar and Shigefumi Mori. Birational Geometry of Algebraic Varieties. Cambridge Univ. Press,
+         Cambridge, 1998.
+[LU04]   Ernesto Lupercio and Bernardo Uribe. Gerbes over orbifolds and twisted k-theory. Commun. Math.
+         Phys., 245:449–489, 2004.
+[LZ24]   Chi Li and Zhengyi Zhou. Kähler compactification of Cn and reeb dynamics. arXiv preprint
+         arXiv:2409.10275, 2024.
+[McL16] Mark McLean. Reeb orbits and the minimal discrepancy of an isolated singularity. Invent. Math.,
+         204(2):505–594, 2016.
+[Mor79]  Shigefumi Mori. Projective manifolds with ample tangent bundles. Ann. of Math., (110):593–606, 1979.
+[MT12]   Johan Martens and Michael Thaddeus. Variations on a theme of grothendieck. arXiv preprint
+         arXiv:1210.8161, 2012.
+[Ols06]  Martin Olsson. Hom-stacks and restriction scalars. Duke Math. J., 134(1):139–164, 2006.
+
+   Chi Li,
+   Department of Mathematics, Rutgers University, Piscataway, NJ, U.S., 08854-8019.
+   E-mail address: chi.li@rutgers.edu
+   Zhengyi Zhou,
+   Morningside Center of Mathematics, Chinese Academy of Sciences;
+   Academy of Mathematics and Systems Science, Chinese Academy of Sciences, China, 100190
+   E-mail address: zhyzhou@amss.ac.cn
+

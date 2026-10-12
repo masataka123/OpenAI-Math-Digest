@@ -1,0 +1,23 @@
+\node[card] (start) {\heading{1}{K-semistable $\mathbb Q$-Fano}{K-semistable $\mathbb Q$-Fano}
+$\dim V=n\ge2,\qquad V\not\simeq\mathbb P^n$.};
+\node[half,anchor=north west] (singular) at ($(start.south west)+(0,-3.0)$) {\heading{2a}{特異な場合}{The singular case}
+$(-K_V)^n\le\bigl((n+1)/n\bigr)^n\vd(x,V)$\\[3pt]
+$\le2\bigl((n^2-1)/n\bigr)^n<2n^n$.\\
+\Tx{小さい上界のsharpnessは未主張。}{No sharpness claimed for this smaller bound.}};
+\node[half,anchor=north east] (smooth) at ($(start.south east)+(0,-3.0)$) {\heading{2b}{滑らかな場合}{The smooth case}
+$(-K_V)^n\le2n^n$\\
+\Tx{等号なら$Q^n$または$\mathbb P^1\times\mathbb P^{n-1}$。}{Equality forces $Q^n$ or $\mathbb P^1\times\mathbb P^{n-1}$.}};
+\draw[edge] ($(singular.north west)+(.2,3.0)$)--($(singular.north west)+(.2,0)$);
+\draw[edge] ($(smooth.north west)+(.2,3.0)$)--($(smooth.north west)+(.2,0)$);
+\node[branchreason,anchor=west] at ($(singular.north west)+(.6,1.4)$) {\Tx{特異点で局所大域評価＋ODP上界}{Local-to-global at a singular point; ODP bound}\\\Cite{local-global}\\\Cite{main}};
+\node[branchreason,anchor=west] at ($(smooth.north west)+(.6,1.4)$) {\Tx{smooth Fanoの分類定理}{Apply the smooth Fano theorem}\\\Cite{smooth-global}};
+\node[result,below=3.0cm of $(singular.south)!.5!(smooth.south)$] (eq) {\heading{3}{等号例を確認}{Check the equality examples}
+$(-K_{Q^n})^n=(nH)^n=2n^n$,\\
+$(-K_{\mathbb P^1\times\mathbb P^{n-1}})^n=(2H_1+nH_2)^n=2n^n$.\\
+\Tx{KE metricがK-polystabilityを供給。$n=2$では二つの記述が一致。}{KE metrics supply K-polystability. The two descriptions coincide for $n=2$.}};
+\coordinate (singular-target) at (singular.west |- eq.north);
+\draw[edge] ($(singular.south west)+(.2,0)$)--($(singular-target)+(.2,0)$);
+\coordinate (smooth-target) at (smooth.west |- eq.north);
+\draw[edge] ($(smooth.south west)+(.2,0)$)--($(smooth-target)+(.2,0)$);
+\node[branchreason,anchor=west] at ($(singular.south west)+(.6,-1.4)$) {\Tx{厳密不等式が特異な等号を排除}{Strict inequality excludes singular equality}\\\Cite{global-proof}};
+\node[branchreason,anchor=west] at ($(smooth.south west)+(.6,-1.4)$) {\Tx{例のmetricと交点数を計算}{Metrics and intersection numbers of examples}\\\Cite{ke-stability}\\\Cite{global-proof}};

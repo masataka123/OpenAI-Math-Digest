@@ -1,0 +1,2461 @@
+                                                           ON THE VOLUME OF K-SEMISTABLE FANO MANIFOLDS
+
+                                                                                    CHI LI AND MINGHAO MIAO
+
+
+                                                  A BSTRACT. We prove that the anti-canonical volume of an n-dimensional K-semistable Fano mani-
+                                                  fold X that is not Pn is at most 2nn . Moreover, the volume is equal to 2nn if and only if X ∼
+                                                                                                                                               = P1 ×Pn−1
+                                                                                                   n+1
+                                                  or X is a smooth quadric hypersurface Q ⊂ P           . Our proof is based on a new connection between
+arXiv:2506.17420v3 [math.AG] 20 May 2026
+
+
+
+
+                                                  K-semistability and minimal rational curves.
+
+
+
+
+                                                                                              C ONTENTS
+
+                                           1.     Introduction                                                                                               2
+                                           Acknowledgments                                                                                                   4
+                                           2.     Preliminaries                                                                                              4
+                                           2.1.    K-stability                                                                                               4
+                                           2.2.    Seshadri Constant                                                                                         7
+                                           2.3.    Minimal rational curves                                                                                   9
+                                           3.     Submanifolds with trivial normal bundles                                                                  10
+                                           4.     Volume estimates and minimal rational curves                                                              15
+                                           4.1.    Two divisorial valuations: v1 and v2                                                                     15
+                                           4.2.    Singular minimal rational curves with trivial normal bundles                                             17
+                                           4.3.    Minimal rational curves with degree d ≥ 3                                                                20
+                                           4.4.    Completion of the proof of Theorem 1.1                                                                   27
+                                           4.5.    Examples and questions                                                                                   30
+                                           Appendix A.        Proof of the estimate (34)                                                                    33
+                                           Appendix B.        A proof of the formula (35)                                                                   38
+                                           References                                                                                                       40
+
+
+
+                                           Date: May 22, 2026.
+
+                                                                                                    1
+2                                      CHI LI AND MINGHAO MIAO
+
+                                          1. I NTRODUCTION
+
+   The study of K-(poly)stable Fano varieties is a very active research area. Thanks to the resolution
+of the Yau-Tian-Donaldson conjecture, we know that a Fano variety admits a Kähler-Einstein metric
+(resp. a unique Kähler-Einstein metric) if and only if it is K-polystable (resp. K-stable). A Fano
+variety is K-semistable if and only if it degenerates (via a special test configuration) to a K-polystable
+Fano variety. There are well-established valuative criterion for K-(semi)stability ([Fuj19, Li17]) and
+powerful methods to test it (see [AZ22]).
+   In this paper, we study the anticanonical volume (or degree) of K-semistable Fano varieties. For
+a Fano variety X, its (anticanonical) volume vol(X) is defined to be the self-intersection number
+(−KX )n . It is known that the volume of an n−dimensional Fano manifold can exceed the volume of
+the complex projective space Pn , even among toric Fano manifolds (see [Deb01, Section 5.11]). In a
+major advance in the study of K-stability, Fujita [Fuj18] proved that the volume of an n-dimensional
+K-semistable Fano manifold X satisfies vol(X) ≤ (n + 1)n = vol(Pn ) and the first equality holds if
+and only if X ∼ = Pn . It was later generalized to possibly singular Q-Fano varieties by Liu [Liu18].
+The toric Fano case was proved earlier in [BB17]. Moreover, from the boundedness of K-semistable
+Q-Fano varieties ([Jia20, Corollary 1.2]), we know that the set of volumes of n-dimensional K-
+semistable Q-Fano varieties is finite away from zero. In this paper, we solve the conjecture on
+characterizing the second-largest volume for K-semistable Fano manifolds,
+
+Theorem 1.1. Any K-semistable Fano manifold X that is not Pn satisfies (−KX )n ≤ 2nn and the
+equality holds only if X ∼
+                         = P1 ×Pn−1 or X is a smooth quadric hypersurface Q ⊂ Pn+1 . In particular,
+this holds for any Kähler manifold admitting Kähler-Einstein metric with positive Ricci curvature.
+
+   Like the result of Fujita ([Fuj18]), the last statement could be seen as a result in Kähler geometry.
+However, our proof uses essentially algebro-geometric methods. The above result seems to be first
+conjectured in [AIM20, Problem 2.6], and is stated as a folklore conjecture in [Zhu25, Conjecture
+6.8] which highlights the interesting (but also mysterious) feature that there are two Fano manifolds
+with the second largest volume. Our proof will indeed give a satisfactory explanation of this feature
+by connecting it to the theory of minimal rational curves on Fano manifolds.
+   There is a local analogue of this conjecture sometimes called the ODP conjecture (see Conjecture
+2.3) for the volume of klt singularity (see [SS17, LX19]). The ODP conjecture would imply that
+the volume of singular K-semistable Fano varieties is strictly less than 2nn (by Fujita-Liu’s local-to-
+global volume comparison, see Remark 3.7). Conversely, using Theorem 1.1, we immediately verify
+the ODP conjecture for the Fano cone over a K-semistable smooth Fano manifold (see Theorem
+4.17).
+   The toric version of Theorem 1.1 has its own interest and is called the “gap hypothesis” in [AB24,
+Conjecture 3.10]. It implies the sharp bound of a canonical height of canonical model of toric Fano
+varieties over Spec Z by [AB24, Lemma 3.8]. Moreover, in the toric case, the ODP conjecture
+is solved by Moraga-Süß’s result ([MS24]) using convex geometric methods. So combined with
+                          ON THE VOLUME OF K-SEMISTABLE FANO MANIFOLDS                                 3
+
+Theorem 1.1, we indeed have the sharp upper bound for all possibly singular K-semistable toric
+Fano varieties.
+
+Theorem 1.2 (See Theorem 3.6). Let X be an n-dimensional K-semistable toric Fano variety that is
+not Pn . Then (−KX )n ≤ 2nn and the equality holds only if X ∼
+                                                             = P1 × Pn−1 .
+
+   We remark that Theorem 1.2 was proved in [AB24] for smooth toric Fano manifolds of dimension
+n ⩽ 6 by using the classification of [Obr07] and also for certain singular toric Fano varieties by
+convex geometric arguments (see [AB24, Lemma 3.9]). Furthermore, using the well-known one-to-
+one correspondence between Gorenstein toric Fano varieties and reflexive lattice polytopes in Rn ,
+Theorem 1.2 immediately implies a convex geometric statement.
+
+Corollary 1.3 (See Corollary 3.9). Suppose P ⊆ Rn is an n-dimensional reflexive lattice polytope
+with its barycenter at 0 ∈ Rn . Assume P is not unimodularly equivalent to (n + 1) times a standard
+simplex (n + 1)∆n . Then the volume of P with respect to the Lebesgue measure in Rn satisfies
+volRn (P ) ⩽ 2nn /n! and the equality holds if and only if P is unimodularly equivalent to [0, 2] ×
+(n∆n−1 ).
+
+   We will prove Theorem 1.1 by exploring a new connection between K-stability and minimal ra-
+tional curves. We use the following invariant
+    lX = min{(−KX · C)| C ⊂ X is a minimal rational curve on X} ∈ {2, 3, · · · , dim X + 1}.
+For the case of lX = dim X + 1 and lX = dim X, we can use the classification result of [CMSB02,
+Miy04, CD15, DH17] to verify Theorem 1.1. At the other extreme, if lX = 2 and when the minimal
+rational curve is embedded, then the minimal rational curve has a trivial normal bundle. In this special
+case Theorem 1.1 is a consequence of the following generalization of a result of K. Fujita ([Fuj18]).
+
+Theorem 1.4. Let X be an n-dimensional K-semistable Fano manifold, and Z ⊂ X be a codimen-
+sion r smooth complex submanifold. Assume that the normal bundle of Z inside X is trivial and set
+d = (−KX )n−r · Z. Then we have the inequality
+                                                
+                                n          r    n
+(1)                      (−KX ) ⩽ (r + 1) ·         · d = (−KPr ×Z )n .
+                                                r
+Moreover, the equality holds if and only if X is biholomorphic to Pr × Z. In particular in the equality
+case Z is also a K-semistable Fano manifold.
+
+   To estimate the volume in much more involved cases when 3 ≤ d = lX ≤ n − 1, we are going to
+use the valuative criterion to test K-semistability via special valuations centered at minimal rational
+curves. While the proof of Theorem 1.4 uses ordinary blowup of submanifolds, the proof of Theorem
+1.1 needs weighted blowups (see Remark 4.11). In particular, we will define and analyze a particular
+weighted blowup of type (1⊕(d−2) , 2⊕(n−d+1) ) that is adapted to the splitting of normal bundle over
+P1 (see (13)). The analysis will also allow us to overcome the difficulty that the minimal rational
+curve may have singularities.
+4                                      CHI LI AND MINGHAO MIAO
+
+   We sketch the organization of this paper. In the next section, we recall basic knowledge about
+some key concepts used in later sections: K-stability, Seshadri constant, and minimal rational curves.
+In section 3, we prove Theorem 1.4 which implies Theorem 1.1 in the special case when the Fano
+manifold contains an embedded minimal rational curve with a trivial normal bundle. We also deduce
+Theorem 1.2 and Corollary 1.3. In section 4, we give the full proof of Theorem 1.1. We end the paper
+by giving some related examples and finding (K-semistable) Fano manifolds with minimal volumes.
+
+Acknowledgments. C. Li is partially supported by NSF (Grant No. DMS-2305296). M. Miao
+would like to thank his advisor Gang Tian for his constant support, encouragement, and guidance.
+M. Miao would like to thank Jiyuan Han, Xiaowei Jiang, Yang Liu, Yalong Shi, and Linsheng Wang
+for helpful discussions. We thank Robert Berman, Kento Fujita, Yuchen Liu, Chenyang Xu and
+Ziquan Zhuang for their interest and helpful comments, and Kento Fujita for pointing to us the Fact
+1. We are especially grateful to Ziquan Zhuang for kindly pointing out some error in our argument
+that appeared in the first version of this preprint (see Remark 4.4) and very helpful suggestions.
+This work is carried out during M. Miao’s visit to Rutgers University. He would like to thank the
+graduate school of Nanjing University for providing funding support and thank the Department of
+Mathematics at Rutgers University for its hospitality. We are grateful to an anonymous referee for
+careful reading and valuable suggestions that greatly improve our paper.
+
+
+                                         2. P RELIMINARIES
+
+   We will work over C. Unless otherwise specified, all varieties are assumed to be normal and
+projective. A Q-Fano variety X is a variety with at worst klt singularities such that the anti-canonical
+divisor −KX is an ample Q-Cartier divisor. A singularity x ∈ X consists of a variety X and a closed
+point x ∈ X. A singularity x ∈ X is called klt if X is klt near a neighborhood of x. A R-valuation
+over singularity x is a valuation v : K(X)∗ → R centered at x (namely, for all f ∈ OX,x , we have
+v(f ) ⩾ 0 and v(f ) > 0 if and only if f ∈ mx ) and v|C∗ = 0. The set of all such valuations is denoted
+by ValX,x .
+
+2.1. K-stability. K-stability, first introduced by Tian ([Tia97]) and later reformulated algebraically
+by Donaldson ([Don02]), is an algebro-geometric notion to characterize the existence of Kähler-
+Einstein metrics on Fano varieties. In this subsection, we recall some notions in K-stability theory
+that are relevant to our paper, and refer to [Xu25] for a detailed exposition of K-stability theory.
+   We say that a prime divisor E is over X if there exists a proper birational morphism µ : Y → X
+such that Y is normal and E is a prime divisor on Y . We define the log discrepancy of the divisor E
+over X as
+                           A(E) = AX (E) := 1 + coeff E (KY − µ∗ KX ).
+                                                                                   0
+The volume of an R-Cartier divisor D is defined as volX (D) := lim supm→+∞ h (X,O   X (⌊mD⌋))
+                                                                                  mn /n!
+                                                                                              . Note
+that the limsup is actually a limit and the volume function is continuous in the big cone Big(X)
+                         ON THE VOLUME OF K-SEMISTABLE FANO MANIFOLDS                                 5
+
+([Laz04, Section 2.2.C]). Define the S-invariant
+                                                         Z ∞
+                                            1
+                    S(E) := S(−KX ; E) :=                      vol(−KX − xE) dx,
+                                          (−KX )n         0
+
+where, for the simplicity of notation, we just write vol(−KX − xE) for vol(µ∗ (−KX ) − xE). We
+have the following valuative criterion for K-semistability,
+
+Theorem 2.1. [Fuj19, Li17] A Fano variety X is K-semistable if and only if A(E) − S(E) ⩾ 0 for
+every divisor E over X.
+
+   Another equivalent way to characterize K-semistability is via the δ-invariant (also known as the
+stability threshold), we recall δ(X) := inf E/X A(E)
+                                                S(E)
+                                                     where the infinum is taking over all divisors E
+over X ([FO18, BJ20]). Then X is K-semistable if and only if δ(X) ⩾ 1 by the valuative criterion.
+  One may define the log discrepancy AX (v) for any valuation v ∈ ValX,x , see [JM12, Section 5.1].
+For a klt singularity x ∈ X, we always have AX (v) > 0 for any nontrivial valuation v ∈ ValX,x .
+Denote Val∗X,x = {v ∈ ValX,x | AX (v) < +∞}. The volume of a valuation v ∈ ValX,x is defined as
+                                                 l(OX,x /am (v))
+                              volX,x (v) := lim sup              ,
+                                            m→+∞    mn /n!
+where am (v) denotes the valuation ideals: am (v) := {f ∈ OX,x | v(f ) ≥ m}. The first named
+author introduced the following invariant for singularity ([Li18]), which plays a key role in the study
+of local K-stability:
+
+Definition 2.2. Suppose x ∈ X is a klt singularity, for a valuation v ∈ ValX,x , we define the
+normalized volume
+                                  AX (v)n · vol(v) if AX (v) < +∞
+                                 (
+                      c X (v) :=
+                      vol
+                                   +∞               if AX (v) = +∞.
+
+The local volume of x ∈ X is defined as vol(x,
+                                        c      X) := inf v∈ValX,x vol
+                                                                  c X (v).
+
+   It was proved that for any n-dimensional klt singularity x ∈ X, we have vol(x,
+                                                                           c      X) ⩽ nn , with the
+equality holds if and only if x ∈ X is a smooth point ([LX19]). The following conjecture is known
+as the ODP conjecture ([SS17, LX19]).
+
+Conjecture 2.3. (ODP conjecture) The second largest local volume of an n-dimensional klt singu-
+larity is 2(n − 1)n . Moreover, the local volume is equal to 2(n − 1)n if and only if x ∈ X is an
+ordinary double point.
+
+   For later purposes, we formulate a calculus lemma and an estimate of volume. Let F denote the
+collection of continuous functions ϕ : [0, ∞) → [0, ∞) that is piecewise smooth, strictly increasing
+and surjective. In particular, such a function ϕ satisfies
+
+(2)                             lim ϕ(x) = 0,         lim ϕ(x) = +∞.
+                                x→0+               x→+∞
+6                                       CHI LI AND MINGHAO MIAO
+
+    For each x ∈ [0, ∞), we will use ϕ′ (x) to denote the right derivative at x:
+                                                      ϕ(x + ϵ) − ϕ(x)
+                                   ϕ′ (x) = limϵ→0+                   .
+                                                             ϵ
+For any ϕ ∈ F , its inverse function ϕ−1 : [0, ∞) → [0, ∞) is also an element of F . For any ϕ ∈ F ,
+consider the following function of V ∈ (0, ∞):
+                                               Z −1
+                                  ϕ         1 ϕ (V )
+                               F (V ) :=              (V − ϕ(x)) dx.
+                                           V 0
+Lemma 2.4. (1) For any ϕ ∈ F , the function F ϕ (V ) is piecewise smooth, strictly increasing and
+satisfies the limit conditions in (2). As a consequence, we can consider it as an element of F .
+   (2) If ψ ∈ F satisfies (ϕ−1 )′ (V ) ≥ (ψ −1 )′ (V ) for any V ∈ (0, ∞), then F ϕ (V ) ≥ F ψ (V ) for any
+V ∈ (0, ∞). If moreover there exists V1 > 0 and ϵ > 0 such that (ϕ−1 )′ (V ) > (ψ −1 )′ (V ) for V ∈
+(V1 , V1 + ϵ), then F ϕ (V ) > F ψ (V ) for V > V1 . As a consequence, we get (F ϕ )−1 (A) ≤ (F ψ )−1 (A)
+for any A ∈ (0, ∞) and with a strict inequality if A > F ψ (V1 ).
+
+Proof. First assume that ϕ(x) is smooth and strictly increasing on [0, ∞). Then its inverse function
+ϕ−1 (x) is also smooth, strictly increasing and satisfies the limit conditions in (2). Set G(V ) =
+R ϕ−1 (V )
+ 0
+           (V − ϕ(x))dx so that F (V ) = F ϕ (V ) = G(V )/V . Then G is a smooth function of V ∈
+                                                                    R ϕ−1 (V )
+[0, ∞) satisfying G(0) = 0. Its derivative is equal to G′ (V ) = 0             1 dx = ϕ−1 (V ). We can then
+calculate the derivative of F (V ) at any V ∈ (0, ∞):
+                                                   R ϕ−1 (V )
+                          ′          G′ · V − G               ϕ(x)dx    H(V )
+(3)                     F (V ) =            2
+                                                 = 0          2
+                                                                     =            >0
+                                          V                V               V2
+                            R ϕ−1 (V )
+with H(V ) = H ϕ (V ) = 0              ϕ(x)dx. So we know that F (V ) is a strictly increasing function of
+V ∈ [0, ∞). Using L’Hospital’s rule, we easily see that F satisfies the limit conditions in (2). So if
+we define F (0) = 0, then F ∈ F .
+   Note that H = H(V ) is a continuous function on [0, ∞) satisfying H(0) = 0 and H ′ (V ) =
+ϕ(ϕ−1 (V ))(ϕ−1 )′ (V ) = V (ϕ−1 )′ (V ). By using (3) and integrating the assumed inequality twice, we
+get F ϕ (V ) ≥ F ψ (V ). If moreover (ϕ−1 )′ (V ) > (ψ −1 )′ (V ) on an interval (V1 , V1 + ϵ), then we get
+the strict inequality H ϕ (V ) > H ψ (V ) for V > V1 by the following estimate:
+                                                   Z V
+                             ϕ             ϕ
+                           H (V ) = H (V1 ) +           t(ϕ−1 )′ (t)dt
+                                                    V1
+                                                   Z V
+                                   > H ψ (V1 ) +           t(ψ −1 )′ (t)dt = H ψ (V ).
+                                                      V1
+
+By using (3) and integrating once more, we get the strict inequality F ϕ (V ) > F ψ (V ) when V > V1 .
+  For the last statement, note that under the assumption of strict inequality, we know that if A >
+F (V1 ) then (F ψ )−1 (A) > V1 which implies: F ϕ ((F ψ )−1 (A)) > F ψ ((F ψ )−1 (A)) = A. So we
+    ψ
+
+conclude that (F ψ )−1 (A) > (F ϕ )−1 (A) when A > F ψ (V1 ).
+                          ON THE VOLUME OF K-SEMISTABLE FANO MANIFOLDS                                  7
+
+   If ϕ is only piecewise smooth, we can just carry out the above argument piecewise on each interval
+of smoothness. The same argument applies to prove the second statement too.                        □
+
+Corollary 2.5. Assume (X, L := −KX ) is a K-semistable Q-Fano variety. Let E be a prime divisor
+over X that satisfies the estimate: there exists ϕ ∈ F such that for any x ∈ [0, ∞),
+(4)                                   vol(L − xE) ⩾ V − ϕ(x).
+Then there exists a unique solution T ∈ (AX (E), ∞) to the equation
+(5)                                   (T − AX (E))ϕ(T ) = Φ(T )
+                Rx
+where Φ(x) = 0 ϕ(t)dt is the primitive function of ϕ(x) with Φ(0) = 0. Moreover, we have an
+estimate of the volume:
+(6)                           V = (−KX )n ⩽ ϕ(T ) = (F ϕ )−1 (A(E)).
+The equality V = ϕ(T ) holds if and only if the equality holds in (4) for x ∈ [0, T ]. In this case, T is
+the pseudo-effective threshold of the valuation ordE and in particular vol(L − T E) = 0.
+
+Proof. We have an estimate:
+                               Z +∞                                    Z ϕ−1 (V )
+                      1                                        1
+         0 ⩽ AX (E) −                 vol(L − xE)dx ⩽ AX (E) −                      (V − ϕ(x))dx
+                      V         0                              V         0
+            = AX (E) − F ϕ (V ).
+By the above lemma, F ϕ (V ) is a strictly increasing function that diverges to +∞ as V → +∞. So
+there exists a unique V ∗ that satisfies A(E) = F ϕ (V ∗ ) which is equivalent to the equality:
+                                                         Z ϕ−1 (V ∗ )
+                                 −1    ∗           ∗
+                              (ϕ (V ) − A(E))V =                      ϕ(x)dx.
+                                                         0
+              −1     ∗
+Setting T = ϕ (V ), we see that T satisfies (T − A(E))ϕ(T ) = Φ(T ).                                  □
+                                                                                      n
+Example 2.6 (Fujita [Fuj18]). Assume that ϕ(x) = xn and A(E) = n. Then F ϕ (V ) = n+1    V 1/n and
+          Rx         n+1
+Φ(x) = 0 ϕ(t)dt = xn+1 . The equation (5) has the solution T = n + 1, yielding ϕ(T ) = (n + 1)n =
+(F ϕ )−1 (n).
+                                                                                        V 1/(n−1)
+Example 2.7. Assume that ϕ(x) = 2nxn−1 and A(E) = n − 1. Then F ϕ (V ) = n−1
+                                                                                           
+              Rx                                                                    n   2n
+and Φ(x) = 0 ϕ(t)dt = 2xn . The equation (5) has the solution T = n, yielding ϕ(T ) = 2nn =
+(F ϕ )−1 (n − 1).
+
+2.2. Seshadri Constant. Let X be a normal projective variety and L an ample Q-Cartier divisor on
+X. Denote by X sm the set of smooth points of X. Let Z ⊂ X sm be a nonsingular closed subvariety
+of X of codimension r. The Seshadri constant of L at Z is defined as ϵ(L, Z) := sup{t ∈ R>0 |
+π ∗ L − tE is ample}, where π : BlZ X → X is the blowup of X along Z and E ∼        = P(NZ/X∨
+                                                                                                ) is
+the exceptional divisor. When X = P × Z and Z is identified with {p} × Z for a fixed p ∈ Pr ,
+                                        r
+
+(BlZ X, E) are the same as ((Blp Pr ) × Z, Ep × Z) where Ep ∼
+                                                            = Pr−1 is the exceptional divisor of the
+blow up Blp Pr → Pr . We see that ϵ(−KPr ×Z , Z) = r + 1.
+8                                     CHI LI AND MINGHAO MIAO
+
+   The next proposition generalizes a result of [LZ18] to higher dimensional subvariety Z with trivial
+normal bundle, which says there is a gap between r and r +1 for all the possible value of ϵ(−KX , Z).
+
+Proposition 2.8. Suppose X is a Q-Fano variety of dimension n, and let Z ⊂ X sm be a nonsingular
+subvariety of codimension r ⩾ 2 Assume that the normal bundle of Z is trivial, i.e., NZ/X ∼
+                                                                                          = OZ⊕r ,
+and ϵ(−KX , Z) > r. Then X ∼ = Pr × Z and Z is identified with {p} × Z for a point p ∈ Pr .
+
+Proof. We follow the argument as in [LZ18, Theorem 2]. Because the normal bundle is assumed
+to be trivial, by the adjunction formula −KZ = (−KX )|Z , and hence Z is a Fano manifold. For
+simplicity, we denote ϵ := ϵ(−KX , Z) > r. We choose a rational number ϵ′ such that r < ϵ′ < ϵ.
+Let π : X̂ := BlZ X → X be the blowup of X along Z and E is the exceptional divisor. We
+denote B := π ∗ (−KX ) − ϵ′ E. From the definition of ϵ(−KX , Z), we know B is a nef divisor.
+                                                                     ′
+We have KX̂ = π ∗ KX + (r − 1)E, so B − KX̂ = 2(π ∗ (−KX ) − ϵ +r−1     2
+                                                                            E) is nef and big since
+  ′                 ′
+(ϵ + r − 1)/2 < ϵ . Then by Kawamata’s basepoint-free theorem ([KM98, Theorem 3.3]), we know
+B is indeed semiample. Then there exists a fibration Φ : X̂ → Y ⊆ P(H 0 (X̂, kB)) induced by the
+complete linear series |kB| for some k ≫ 0 and Y is a closed subvariety. Next, let m be an integer
+such that mB is Cartier. Note that
+                                                              mϵ′ + r
+                                                                         
+                                                   ∗
+                      mB − E − KX̂ = (m + 1) π (−KX ) −                E
+                                                              m+1
+is an ample divisor since (mϵ′ + r)/(m + 1) < ϵ′ . Then, by Kodaira’s vanishing theorem, we get
+H 1 (X̂, mB − E) = 0. Therefore, the natural map H 0 (X̂, mB) → H 0 (E, mB|E ) is surjective for
+all m > 0 such that mB is Cartier. We conclude that Φ|E : E → Y is a closed embedding. Since
+X̂ has klt singularites, then it has rational singularities ([KM98, Theorem 5.22]), so in particular it
+is Cohen-Macaulay. Since B = −KX̂ + (r − 1 − ϵ′ )E ∼Φ,Q 0, we get −KX̂ ∼Φ,Q λE where
+λ = ϵ′ − r + 1 > 1. By [LZ18, Lemma 8], we have Φ : X̂ → Y is not birational. Thus, Φ must be a
+fiber type contraction.
+    Since we have already shown Φ|E : E → Y is a closed embedding, we conclude that Φ|E : E → Y
+is in fact an isomorphism, so Y ∼= E ∼        ∨
+                                       = P(NZ/X  )∼= Z × Pr−1 . A general fiber of Φ is a smooth
+rational curve. By a similar argument as in [LZ18, Lemma 6], we can show Φ : X̂ → Y is a
+smooth P1 -fibration. Note that s = Φ|−1E : Y → E gives a section of Φ, then there exists a rank
+2 vector bundle E over Y such that X̂ = PY (E). By [Har77, Proposition V.2.6], there exists an
+invertible sheaf L on Y and a surjective morphism E → L. We denote K = ker(E → L). Then
+OY (−1) ∼  = s∗ NE/X̂ ∼= L ⊗ K−1 . We know that the choice of E is unique up to twisting of an
+invertible sheaf. So we may assume K = OY , then L = OY (−1) ∼= p∗2 OPr−1 (−1) with the projection
+p2 : Y → Pr−1 and we have the following short exact sequence
+
+                                    0 → OY → E → OY (−1) → 0.
+
+By [Har77, Prop III.6.3], we have
+                                           M
+          Ext1 (L, OY ) = H 1 (Y, L∨ ) =           H i (Pr−1 , OPr−1 (1)) ⊗ H j (Z, OZ ) = 0,
+                                           i+j=1
+                          ON THE VOLUME OF K-SEMISTABLE FANO MANIFOLDS                                 9
+
+so the short exact sequence actually splits. Therefore, E ∼
+                                                          = OY ⊕ OY (−1) and X̂ ∼= P(OY ⊕
+OY (−1)) ∼= P(OPr−1 ⊕ OPr−1 (−1)) × Z ∼            r                      r
+                                            = Blp P × Z is isomorphic to P × Z blowup along
+{p} × Z. So X ∼     r
+                = P × Z.                                                                 □
+
+2.3. Minimal rational curves. Since the celebrated work of Mori that introduces the bend-and-
+break method for constructing rational curves on Fano manifolds ([Mor79]), the theory of rational
+curves has been developed extensively and has found numerous applications in algebraic geometry,
+especially in the classification of Fano manifolds with special properties. Here we recall some basic
+knowledge of rational curves and refer to [Kol96] for detailed expositions.
+   A free rational curve is represented by a morphism f : P1 → X that satisfies f ∗ T X = ⊕ni=1 OP1 (ai )
+with ai ≥ 0. A free rational curve is called minimal (or standard) if
+                                                                   ⊕(n−d+1)
+                           f ∗ T X = OP1 (2) ⊕ OP1 (1)⊕(d−2) ⊕ OP1            .
+Such a morphism f must be an immersion. We will also be interested in its normal bundle:
+                          Nf /X := f ∗ T X/T P1 = O(1)⊕(d−2) ⊕ O⊕(n−d+1) .
+Any Fano manifold always admits minimal rational curves, which can be obtained from the bend-
+and-break process starting with a free rational curve (see [Kol96, IV.Theorem 2.10]). Denote by
+RatCurvesn (X) the normalization of open subset of Ch(X) parametrizing integral rational curves.
+An irreducible component M of RatCurvesn (X) is referred to as a family of rational curves on
+X. The anticanonical degree deg(M) of the family M is defined to be −KX · C for any curve C
+belonging to the family. This family M is equipped with a P1 -bundle p : U → M and an evaluation
+morphism q : U → X. The family M is a dominating family if the evaluation morphism q : U → X
+is dominant (i.e. has a dense image). This is equivalent to the condition that a general rational
+curve in M is free. A dominating family M is locally unsplit if, for a general point x ∈ X, the
+subfamily Mx = p(q −1 (x)) parametrizing curves through x is proper (i.e. compact). Note that if
+M is a dominating family of rational curves on X that has a minimal anticanonical degree, then M
+is a dominating locally unsplit family. But not all dominating locally unsplit family has a minimal
+anticanonical degree.
+   Let M be a dominating locally unsplit family of rational curves. By Mori’s bend-and-break
+argument, we know that for a general point x ∈ X, a general curve in Mx is minimal. In particular,
+deg(M) ∈ {2, 3, · · · , n + 1}. Indeed, if a general free rational curve C = [f ] in Mx is not minimal,
+then there are at least two O(2) summands in the splitting of f ∗ T X. We can then fix two points on
+the curve C and bend-and-break the rational curve into a non-integral (reducible) curve which would
+contradict the locally unsplit property. Following [Miy04, CD15], we set
+(7)   lX := min{deg M; M is a dominating locally unsplit family of rational curves on X}.
+By the above discussion, we see that (see [CD15, Remark 4.2]):
+                 lX = min{−KX · C; C ⊂ X is a free rational curve on X}
+(8)                  = min{−KX · C; C ⊂ X is a minimal rational curve on X}.
+10                                      CHI LI AND MINGHAO MIAO
+
+Theorem 2.9. Using the above notation, we have the following important classificaiton results:
+
+     (1) ([CMSB02]) lX = n + 1 if and only if X ∼
+                                                = Pn .
+     (2) ([Miy04, CD15, DH17]) If n ≥ 3, then lX = n if and only if X ∼
+                                                                      = Qn or X is the blowup of
+         Pn along a smooth codimension two subvariety Y of degree dY ∈ {1, . . . , n} that is contained
+         in a hyperplane.
+
+Example 2.10 ([HM03]). On the other extreme, when the Picard number is one, the condition lX = 2
+is equivalent to the following condition:
+
+     (1) There exists a minimal rational curve with trivial normal bundle.
+     (2) For a general point x ∈ X, there are only finitely many rational curves through x which have
+                                           −1
+         minimal degree with respect to KX    .
+                                                                                                     −1
+     (3) for a general point x ∈ X, there exists a rational curve that has degree 2 with respect to KX  .
+
+There are many examples of such Fano manifolds. For example, except for the projective space
+P3 and 3-dimensional hyperquadric Q3 , all Fano 3-folds of Picard number 1 satisfy this condition.
+Hypersurfaces of Pn+1 of degree n or n + 1 are also examples of such Fano manifolds when n ⩾ 3.
+
+
+                       3. S UBMANIFOLDS WITH TRIVIAL NORMAL BUNDLES
+
+   In this section, we will prove Theorem 1.4 by generalizing the methods from [Fuj18, LZ18], and
+apply it in the toric case to prove Theorem 1.2. We start with a proposition that proves a more general
+version of the estimate (1) by incorporating the δ-invariant.
+
+Proposition 3.1. Let X be an n-dimensional Fano manifold, and Z ⊂ X be a codimension r non-
+singular subvariety with trivial normal bundle NZ/X = OZ⊕r . Set d = (−KX )n−r · Z. Then we have
+the estimate:                                    
+                                    −r         r n
+                          n
+                  (−KX ) ⩽ δ(X) · (r + 1)           · d = δ(X)−r · (−KPr ×Z )n .
+                                                 r
+
+Proof. Let π : X̂ := BlZ X → X be the blowup of X along Z with the exceptional divisor E. First,
+it is clear that the log discrepancy
+
+                     AX (E) = 1 + coeff E (KX̂ − π ∗ KX ) = 1 + (r − 1) = r.
+
+For the simplicity of notation, set L = −KX . We can assume x ∈ Q since the volume function
+volX̂ (π ∗ L − xE) is continuous. Then we take k ∈ N∗ sufficiently large such that kx ∈ Z>0 . Note
+that we have the exact sequence:
+
+                 0 → H 0 (X, kL ⊗ IZxk ) → H 0 (X, kL) → H 0 (X, kL ⊗ OxkZ ) → · · · ,
+
+which implies:
+                         h0 (X, kL ⊗ IZxk ) ⩾ h0 (X, kL) − h0 (X, kL ⊗ OxkZ ).
+                         ON THE VOLUME OF K-SEMISTABLE FANO MANIFOLDS                                11
+
+Note that the higher direct images Ri π∗ OX̂ = 0 for i > 0. By the Leray spectral sequences, we get
+H 0 (X̂, π ∗ (kL) − xkE) = H 0 (X, kL ⊗ IZxk ) and H 0 (X̂, π ∗ (kL)) = H 0 (X, kL). Thus,
+                                  h0 (X, kL ⊗ IZxk )                h0 (X, kL ⊗ OxkZ )
+        volX̂ (π ∗ L − xE) = lim sup                 ⩾ Ln
+                                                          − lim sup                    .
+                             k→+∞      k n /n!               k→+∞          k n /n!
+For j ∈ Z⩾0 , we use the exact sequence
+                           0 → IZj /IZj+1 → OX /IZj+1 → OX /IZj → 0.
+And H 1 (X, kL ⊗ (IZj /IZj+1 )) = ⊕H 1 (Z, −kKZ ) = 0 from Kodaira vanishing and the assumption
+that normal bundle NZ/X is trivial. It is easy to prove by induction that:
+          h0 (X, kL ⊗ OX /IZxk ) = h0 (X, kL ⊗ OX /IZxk−1 ) + h0 (X, kL ⊗ IZxk−1 /IZxk )
+                                       xk−1
+                                       X
+(9)                               =           h0 (X, kL ⊗ IZj /IZj+1 ).
+                                       j=0
+
+Using the assumption that NZ/X is trivial and Z is non-singular, by [Har77, Thm II. 8.24], we get:
+                                                                          r−1+j
+                                                                    ⊕(   )
+                     IZj /IZj+1 ∼                          ∨
+                                = Symj (IZ /IZ2 ) = Symj (NZ/X ) = OZ r−1 .
+Then the right-hand-side of (9) is given by
+xk−1                                 xk−1
+                                     X j + r − 1                               
+X
+      0                j    j+1                        0               r + xk − 1
+     h (Z, OX (kL) ⊗ IZ /IZ ) =                     · h (Z, −kKZ ) =                · h0 (Z, −kKZ ).
+ j=0                                  j=0
+                                            r − 1                           r
+
+Then,
+                h0 (X, kL ⊗ OxkZ )                     n!      (r + xk − 1)! h0 (Z, −kKZ )
+        lim sup                      =  lim  sup             ·              ·
+         k→+∞          k n /n!           k→+∞ r!(n − r)! (xk − 1)! · k
+                                                                           r k n−r /(n − r)!
+                                         
+                                           n
+(10)                                 =         (−KZ )n−r · xr .
+                                           r
+We set d = (−KZ )n−r = (−KX )n−r · Z. So we get volX̂ (π ∗ L − xE) ⩾ Ln − d nr xr . Since
+                                                                                        
+
+E∼ = Z × Pr−1 and O(−E)|E = p∗2 OPr−1 (1), one can easily see that the right-hand side equals to the
+top-intersection number
+                                  n  
+                ∗
+                                 X    n
+              (π L − xE) =  n
+                                          (π ∗ L)n−k · xk (−E)k
+                                 k=0
+                                      k
+                                                                             
+                                   ∗  n          r n       r      r−1    n      n r
+                               = (π L) + (−1)           dx · (−1)     =L −d         x.
+                                                    r                           r
+Moreover, we have:
+                                       Z TX (E)
+                                  1
+                  S(−KX ; E) =                  volX̂ (π ∗ (−KX ) − xE) dx
+                               (−KX )n 0
+                                       Z ϵ                    
+                                  1                   n       n r
+                             ⩾       n
+                                             (−KX ) − d           x dx
+                               (−KX ) 0                       r
+                                             n d · ϵr+1
+                                            
+                                     1                          r
+                             = ϵ−        n
+                                                            =      ϵ,
+                                  (−KX ) r r + 1              r+1
+12                                      CHI LI AND MINGHAO MIAO
+                             1/r
+where ϵ = (−KX )n /( nr · d)
+                       
+                                  . Then,
+                               AX (E)          r            r+1
+                      δ(X) ⩽               ⩽ r =                        1/r .
+                             S(−KX ; E)           ϵ  (−KX )n /( nr · d)
+                                                                   
+                                              r+1
+
+Therefore, (−KX )n ⩽ δ(X)−r (r + 1)r · nr · d = δ(X)−r · (−KPr ×Z )n .
+                                         
+                                                                                                     □
+
+Lemma 3.2. Under the same notation as the above proposition, we set
+(11)                   ΛZ (L) := {x ∈ R⩾0 | volX̂ (π ∗ L − xE) = (π ∗ L − xE)n }.
+Then we have ϵ(L, Z) = max{t ∈ R⩾0 | x ∈ ΛZ (L) for all x ∈ [0, t]}.
+
+Proof. The argument is similar to the proof of [Fuj18, Theorem 2.3(2)]. We denote
+(12)                  γ = γZ (L) := max{t ∈ R⩾0 | x ∈ ΛZ (L) for all x ∈ [0, t]}.
+When 0 ⩽ t ⩽ ϵ(L, Z), we have π ∗ L − tE is nef, then volX̂ (π ∗ L − tE) = (π ∗ L − tE)n . Therefore,
+ϵ(L, Z) ⩽ γ. In particular, γ > 0. Now, in order to show ϵ(L, Z) ⩾ γ, it suffices to show for any
+η > 0 sufficiently small such that γ − η ∈ Q>0 and π ∗ L − (γ − η)E is ample. Fix an δ ∈ Q>0 such
+that π ∗ L − δE is ample. Take any t ∈ Q>0 satisfying t ⩽ min{1, (γ − η)/δ, η/(γ − δ)}. Then,
+                                                                                
+                ∗                     ∗                      ∗      γ − η − tδ
+              (π L − (γ − η)E) − t(π L − δE) = (1 − t) π L −                    E .
+                                                                       1−t
+We set xt := (γ − η − tδ)/(1 − t). We take sufficiently large k ∈ N∗ such that kxt ∈ Z>0 . From
+Kodaira’s vanishing theorem, we have H i (X, kL) = 0 for i ⩾ 1. Then the exact sequence is given
+by
+     0 → H 0 (X, kL ⊗ IZkxt ) → H 0 (X, kL) → H 0 (X, kL ⊗ Okxt Z ) → H 1 (X, kL ⊗ IZkxt ) → 0.
+And H i (X, kL ⊗ IZkxt ) = H i−1 (X, kL ⊗ (OX /IZkxt )) for i ⩾ 2. On the one hand, since xt ∈ ΛZ (L)
+and by the equation (10),
+          h1 (X, kL ⊗ IZkxt )     n            ∗                      h0 (X, kL ⊗ Okxt Z )
+     lim sup                  = −L  + volX̂ (π   L − x t E) + lim sup                      = 0.
+     k→+∞       k n /n!                                        k→+∞          k n /n!
+Then, h1 (X, kL ⊗ IZkxt ) = o(k n ). On the other hand, for j ∈ Z⩾0 , by the exact sequence
+                              0 → IZj /IZj+1 → OX /IZj+1 → OX /IZj → 0.
+We have H i (X, kL ⊗ IZj /IZj+1 ) = 0 for i ⩾ 1 and j ⩾ 1 since NZ/X is trivial. So we get
+                            H i (X, kL ⊗ OX /IZj+1 ) ∼                   j
+                                                     = H i (X, kL ⊗ OX /IZ )
+for all i ⩾ 1 and j ⩾ 1. Then, for i ⩾ 2,
+          hi (X, kL ⊗ IZkxt ) = hi−1 (X, kL ⊗ (OX /IZkxt )) = hi−1 (X, kL ⊗ (OX /IZ )) = 0.
+And the higher direct images Ri π∗ OX̂ = 0 for i > 0, then by the Leray spectral sequence, we have
+H i (X̂, π ∗ (kL) − kxt E) ∼
+                           = H i (X, kL ⊗ IZxkt ) for i ⩾ 0. In particular, we get hi (X̂, kL − kxt E) =
+o(k n ) for i ⩾ 1. Then by [dFKL07, Theorem A], we conclude that π ∗ L − (γ − η)E is ample. This
+shows ϵ(L, Z) ⩾ γ.                                                                                     □
+                         ON THE VOLUME OF K-SEMISTABLE FANO MANIFOLDS                               13
+
+Proof of Theorem 1.4. Since X is assumed to be K-semistable, we know that δ(X) ≥ 1 by the
+valuative criterion (Theorem 2.1). Without loss of generality, we assume the codimension r of Z in
+X is positive. By the proof of Proposition 3.1, the equality (1) holds if and only if δ(X) = 1 and
+volX̂ (π ∗ (−KX ) − xE) = (π ∗ (−KX ) − xE)n for all x ∈ [0, r + 1], so γZ (−KX ) = r + 1 (see
+(12)). Then by Lemma 3.2, we have ϵ(−KX , Z) = γZ (−KX ) = r + 1. By Proposition 2.8, we get
+X∼ = Z × Pr .                                                                                   □
+
+Theorem 3.3. The second largest volume of n-dimensional K-semistable toric Fano manifold is 2nn
+and the equality holds only if X ∼
+                                 = P1 × Pn−1 .
+
+Proof. When X is a smooth toric Fano manifold, by the work of Chen-Fu-Hwang [CFH14, Corollary
+2.5] which is partly based on the work of Araujo [Ara06], we know that there exists a submanifold
+Z∼ = Pn−r for 0 ≤ r ≤ n − 1 that is contained in X with a trivial normal bundle. By Proposition 3.1
+and δ(X) ⩾ 1, we have (−KX )n ⩽ (−KPr ×Z )n = (−KPr ×Pn−r )n = nr ·(r+1)r ·(n−r+1)n−r =: cr .
+                                                                      
+
+By the following lemma 3.4, for 1 ≤ r ≤ n − 1, cr ≤ 2nn with equality holds if and only if r = 1 or
+r = n − 1 and in both cases X ∼ = P1 × Pn−1 .                                                    □
+
+Lemma 3.4. The sequence cr := nr (r + 1)r (n − r + 1)n−r with 0 ≤ r ≤ n satisfies cr = cn−r and
+                                   
+
+c0 = (n + 1)n > c1 = 2nn > c2 > · · · > c⌊n/2⌋ .
+
+Proof. It is clear that cr = cn−r . We calculate:
+                                          r+1         n−r
+                        cr+1          r+2           n−r
+                               =                 ·            = ar+1 /an−r
+                          cr          r+1          n−r+1
+where ak = ( k+1
+               k
+                  )k = (1 + k −1 )k is an strict increasing sequence for k ≥ 1 (that converges to e as
+k → +∞). So we get cr+1 /cr < 1 when r + 1 < n − r (or equivalently 2r + 1 < n). The statement
+then follows easily.                                                                                □
+
+Proposition 3.5. Let X be a singular n-dimensional K-semistable toric Q-Fano variety. When n = 2,
+then (−KX )2 ⩽ 92 . When n ⩾ 3, then (−KX )n ⩽ 16    27
+                                                        (n + 1)n . In particular, we have (−KX )n <
+(−KP1 ×Pn )n = 2nn holds for all positive integer n ⩾ 2.
+
+Proof. Suppose x ∈ X lies in the singular locus and (X, x) is a toric singularity. It was proved in
+[MS24, Theorem 2] that if (X, x) is an n-dimensional Q-Gorenstein toric singularity, then
+
+   (1) If n = 2, then vol(X,
+                      c      x) ⩽ 2;
+                                  16 n
+   (2) If n ≥ 3, then vol(X, x) ⩽ 27
+                      c              n .
+
+By Liu’s local-to-global volume comparison ([Liu18]), we have (−KX )n ⩽ ( n+1
+                                                                           n
+                                                                              )n · vol(X,
+                                                                                   c      x). Then
+                     2     3 2     9       2                   2
+when n = 2, (−KX ) ⩽ ( 2 ) · 2 = 2 < 2 · 2 = 8 = (−KP1 ×P1 ) . When n ⩾ 3,
+                            n + 1 n 16 n 16
+              (−KX )n ⩽ (        ) · n =    · (n + 1)n < 2nn = (−KP1 ×Pn−1 )n .
+                              n     27   27
+                                                                                                    □
+14                                       CHI LI AND MINGHAO MIAO
+
+Theorem 3.6. The second largest volume of n-dimensional K-semistable toric Q-Fano varieties is
+2nn and it is obtained only if X ∼
+                                 = P1 × Pn−1 .
+
+Proof. When X is a smooth toric Fano manifold, this follows from Theorem 3.3. When X is a strictly
+singular Q-Fano toric variety, this follows from Proposition 3.5. When the equality (−KX )n = 2nn
+holds, from Proposition 3.5, we know X must be nonsingular. Then by Theorem 3.3 again, we know
+X∼ = P1 × Pn−1 .                                                                                □
+
+Remark 3.7. We remark that the singular version of Theorem 1.1 (that is, consider all Q-Fano
+varieties, not just smooth Fano manifolds) follows from ODP conjecture (Conjecture 2.3). Let X be
+a K-semistable Q-Fano variety and x ∈ X be a singular point. Assume the ODP conjecture holds, by
+the same argument of Proposition 3.5, we have (−KX )n ⩽ ( n+1         n
+                                                                         )n · vol(X,
+                                                                              c      x) ⩽ ( n+1
+                                                                                             n
+                                                                                                )n ·2(n−1)n =
+( n+1
+   n
+      )n · ( n−1
+              n
+                 )n · 2nn < 2nn . Since the inequality is strict, it is expected that the equality of Theorem
+1.1 would hold only if X is a smooth Fano manifold.
+
+   As mentioned in the Introduction, Theorem 3.6 finds an application in Arakelov geometry on the
+sharp bound of height of arithmetic Fano varieties whose complexification is K-semistable. We refer
+our readers to [AB24, Ber25] for more detailed explanation and possible arithmetic applications.
+
+Theorem 3.8. Andreasson-Berman’s conjecture holds for the toric canonical model of a toric Fano
+varieties. Namely, for an n-dimensional K-semistable toric Fano variety and let X be the canonical
+model of X over Z, then for any volume-normalized continous metric ∥·∥ on −KX with positive
+curvature current, we have h∥·∥ (X , −KX ) ≤ h∥·∥FS (PnZ , −KPnZ ) where −KPnC is endowed with the
+volume normalized Fubini-Study metric.
+
+Proof. It follows directly from Theorem 3.6 and [AB24, Lemma 3.8].                                        □
+
+     We conclude this section with another application in convex geometry.
+
+Corollary 3.9. Suppose P ⊆ Rn is an n-dimensional reflexive lattice polytope with its barycenter at
+0 ∈ Rn . Assume that P is not unimodularly equivalent to (n+1) times a standard simplex (n+1)∆n ,
+then the volume of P with respect to the Lebesgue measure in Rn satisfies volRn (P ) ⩽ 2nn /n! and
+the equality holds if and only if P is unimodularly equivalent to [0, 2] × (n∆n−1 ).
+
+Proof. Here ∆n denote the standard n-dimensional simplex with vertices 0, e1 , · · · , en where ei are
+standard lattice basis of Zn for i = 1, · · · , n. And two convex bodies P and Q in Rn are called
+unimodularly equivalent if there exists an affine lattice automorphism of Zn mapping P onto Q. Let
+XP be the projective toric variety associated to a reflexive polytope P . Then XP is a Gorenstein
+Fano variety ([CLS11, Theorem 8.3.4]). By the result of [WZ04, SZ12, BB13], we know that the
+barycenter of P is zero if and only if XP is K-semistable. Since P is not unimodularly equivalent
+to (n + 1)∆n , we have XP ≇ Pn , then Theorem 3.6 immediately implies (−KXP )n ⩽ 2nn and the
+equality holds only if XP ∼= P1 × Pn−1 . Then the reflexive polytope P satisfies volRn (P ) ⩽ 2nn /n!
+and P ∼= [0, 2] × (n∆n−1 ) up to unimodularly equivalent.                                           □
+                           ON THE VOLUME OF K-SEMISTABLE FANO MANIFOLDS                                 15
+
+                    4. VOLUME ESTIMATES AND MINIMAL RATIONAL CURVES
+
+   The calculation in the previous section is based on the test of K-stability via standard blow-ups.
+In this section, we prove Theorem 1.1 by carrying out a test of K-stability via a particular weighted
+blow-ups along minimal rational curves (see Example (4.18) for the motivating example). We also
+need to overcome the difficulty of possible singularities on the rational curve.
+
+
+4.1. Two divisorial valuations: v1 and v2 . Let f : P1 → X be a minimal rational curve. In other
+words, it is an immersed rational curve that satisfies f ∗ T X = O(2) ⊕ O(1)⊕(d−2) ⊕ O⊕(n−d+1) with
+2 ≤ d ≤ n + 1 and d = f ∗ (−KX ) · P1 = (−KX ) · f (P1 ). The (relative) normal bundle has the
+splitting:
+
+(13)                       Nf /X = f ∗ T X/T P1 = O(1)⊕(d−2) ⊕ O⊕(n−d+1) .
+
+Correspondingly, we have the splitting of the conormal bundle:
+
+                                  Nf∨/X = O(−1)⊕(d−2) ⊕ O⊕(n−d+1) .
+
+Set Z = f (P1 ) which is an irreducible curve with possibly a finite number of singularities Z sing =
+{p1 , . . . , pk } and f : P1 → Z is the normalization of Z. Set f −1 (pi ) = {tji ; 1 ≤ j ≤ mi } to be the
+inverse image of the singularity pi under f so that f −1 (Z sing ) = ∪i f −1 (pi ).
+   For any point t ∈ P1 , we first construct a complex analytic coordinate chart near f (t) ∈ X in
+the following way, which is adapted to the splitting (13). Choose a disk Bt := Bt (ϵ) ⊂ P1 of
+radius ϵ > 0 (with respect to the round spherical metric) centered at t, such that f : Bt → X is an
+embedding. Since f : P1 → X is an immersion and f −1 (Z sing ) is a finite set, it is easy to see that we
+can choose ϵ sufficiently small such that Bt exists for all t ∈ P1 . Moreover, by choosing a uniform
+0 < ϵ ≪ 1, we can choose an open neighborhood U = Ut of f (t) and complex analytic coordinates
+z = zt := {z1 , . . . , zn } on U such that
+
+    (1) zi (f (t)) = 0 for i = 1, . . . , n; z(Ut ) = {|zi | < ϵ; i = 1, . . . , n};
+    (2) f (Bt ) ∩ Ut = {z1 = · · · = zn−1 = 0};
+    (3) For any 1 ≤ i ≤ d − 2, f ∗ dzi is a local generator of the i-th summand of O(−1)⊕(d−2) ,→
+        Nf∨/X over Bt ;
+    (4) For any d − 1 ≤ j ≤ n − 1, f ∗ dzj is a local generator of the j-th summand of O⊕(n−d+1) ,→
+        Nf∨/X over Bt .
+
+We now define a divisorial valuation v = ordE whose center over X is Z. Pick any rational function
+ψ on X. We assume that ψ is defined on a Zariski open set W such that W ∩ Z ̸= ∅. Pick any
+point t ∈ f −1 (W ∩ Z). The restriction ψ to U = Ut becomes holomorphic near 0 ∈ U . Expand the
+restriction f |U near 0 ∈ U :
+                                             X
+(14)                                 ψ(z) =     bIJ (zn )z′I z′′J
+                                                 I,J
+16                                                 CHI LI AND MINGHAO MIAO
+
+                                                                                                          i
+where z′ = {z1 , . . . , zd−2 } (resp. z′′ = {zd−1 , · · · , zn−1 }), and z′I = z1i1 · · · zd−2
+                                                                                             d−2
+                                                                                                 for I = (i1 , . . . , id−2 ) ∈
+  d−2                                           ′′J       j1        jn−d+1
+N     with |I| = i1 + · · · + id−2 (resp. z = zd−1 · · · zn−1 for J = (j1 , · · · , jn−d+1 ) ∈ Nn−d+1
+with |J| = j1 + · · · + jn−d+1 ). We then define: for ℓ = 1 or ℓ = 2
+                                                         X
+(15)                vℓ (ψ) = min{|I| + ℓ|J|; ψ =              bIJ z′I z′′J , bIJ = bIJ (zn ) ̸≡ 0}.
+                                                                 I,J
+
+
+We claim that this is independent of t ∈ f −1 (W ∩Z). Since Z \W is a finite set, W ∩Z is connected.
+So we just need to verify the claim locally. Assume that t′ is near t so that x′ = f (t′ ) is near x = f (t)
+and we can find a sequence of points {ti ; i = 1, . . . , N } and small discs Bti (ϵ1 ) ⊂ Bti (ϵ) = Bti with
+0 < ϵ1 ≪ ϵ such that t1 = t, tN = t′ and Bti (ϵ1 ) ∩ Bti+1 (ϵ1 ) ⊃ Bti (ϵ1 /3) ∪ Bti+1 (ϵ1 /3). In particular,
+this implies such that Uti ∩ Uti+1 ̸= ∅. For each 1 ≤ i ≤ N − 1, the transition function on Uti ∩ Uti+1
+from (Uti , z = zti ) and (Uti+1 , ẑ := zti+1 ) is of the form:
+
+(16)                      zk = ak (ẑn )ẑk + R2 , 1 ≤ k ≤ n − 1,                     zn = gn (ẑn ) + R1
+
+where ak (ẑn ) is a non-zero holomorphic transition function of OP1 (−1) for 1 ≤ k ≤ d − 2 and of
+OP1 for d − 1 ≤ k ≤ n − 1, gn (ẑn ) is an invertible holomorphic function and R2 (resp. R1 ) are
+holomorphic functions whose expansion consists only of terms of degree at least 2 (resp. at least 1)
+in ẑ1 , . . . , ẑn−1 . Assume ψ|Uti has the expansion (14) centered at ti ∈ Uti with all terms of weighted
+degree |I| + ℓ|J| at least y, i.e. the right-hand-side of (15) is equal to y. Then
+                     X
+ψ(z) =                      bIJ (gn (ẑn ) + R1 )(a′ (ẑn )ẑ′ + R2 )I (a′′ (ẑn )ẑ′′ + R2 )J
+             |I|+ℓ|J|≥y
+                X                                                                  X
+        =                 bIJ (gn (ẑn ))(a′ (ẑn )ẑ′ )I (a′′ (ẑn )ẑ′′ )J +                bIJ (gn (ẑn ))(a′ (ẑn )ẑ′ )I R2′J + Ry+1
+                                                                                                                                      w
+
+             |I|+ℓ|J|=y                                                          |I|+ℓ|J|=y
+             X
+        =          b̂KL (ẑn )ẑ′K ẑ′′L
+             K,L
+
+
+where (a′ ẑ′ )I = d−2
+                          Q      ik ik    ′′ ′′ J
+                                                  Qn−1      jk jk      ′
+                            k=1 ak zk , (a ẑ ) =    k=d−1 ak zk , R2 consists of terms of degree at least 2
+                            w
+in (ẑ1 , . . . , ẑd−2 ), Ry+1 consists of terms of weighted degree |I| + ℓ|J| at least y + 1 and the last
+expression is the expansion of f |Uti+1 near the center ti+1 ∈ Uti+1 . It is then easy to see that for ℓ = 1
+or ℓ = 2,
+                                                      X
+                                min{|K| + ℓ|L|; ψ =      b̂KL (ẑn )ẑ′K ẑ′′L , b̂KL ̸≡ 0}
+                                                               K,L
+
+is at least the quantity on the right-hand-side of (15). Since we can switch the role of ti and ti+1 , we
+know that the two quantities are actually equal. By passing from t1 = t to tN = t′ , we conclude that
+for ℓ = 1, 2, vℓ (f ) does not depend on t and t′ .
+
+Remark 4.1. Definition of quasi-monomial valuations by using analytic expansions under complex
+analytic coordinates has also recently appeared in [MP25, 2.3.1]. In particular, a similar discussion
+about the independence of local coordinate charts is contained in [MP25, Proposition 2.3.4].
+                         ON THE VOLUME OF K-SEMISTABLE FANO MANIFOLDS                               17
+
+  When restricted to each U = Ut , the valuation vℓ corresponds to the exceptional divisor E of the
+weighted blowup of Ut along f (Bt ) ∩ Ut with weights
+                                            
+                                            
+                                             (1, . . . , 1)               for ℓ = 1,
+                                             | {z }
+                   (1⊕(d−2) , ℓ⊕(n−d+1) ) =       n−1
+                                            
+                                             (1, . . . , 1, 2, · · · , 2) for ℓ = 2
+                                             | {z } | {z }
+                                                   d−2       n−d+1
+
+(See [QR12] for more a general set-up of weighted blowups). In fact, for ℓ = 1 the valuation v1
+corresponds to the symbolic blowup of X along Z.
+   Fix ℓ ∈ {1, 2} and set Iλ = Iλ (vℓ ) = {f ∈ OX ; vℓ (f ) ≥ λ}. Choose λ = xk for x ∈ Q>0 . Then
+similar to the proof of Proposition 3.1, we have the exact sequence:
+            0 → H 0 (X, Lk ⊗ Ixk ) → H 0 (X, Lk ) → H 0 (X, Lk ⊗ OX /Ixk ) → · · · ,
+which implies:
+                                                    h0 (X, Lk ⊗ OX /Ixk )
+                       vol(L − xE) ≥ Ln − lim sup                         .
+                                               k→+∞         k n /n!
+By using the exact sequence:
+                            0 → Iy /Iy+1 → OX /Iy+1 → OX /Iy → 0,
+we get inductively the estimates:
+                                                   xk−1
+                                                   X
+(17)                   h0 (X, Lk ⊗ OX /Ixk ) ≤            h0 (X, Lk ⊗ Iy /Iy+1 ).
+                                                   y=0
+
+
+4.2. Singular minimal rational curves with trivial normal bundles. Our goal in this subsection
+is to prove the following gap result when there is an immersed rational curve with a trivial bundle
+and a singular image set.
+Proposition 4.2. Let X be a K-semistable Fano manifold of dimension n ≥ 3. Assume that f : P1 →
+X is an immersed rational curve with a non-empty subset of singular points such that f ∗ T X =
+O(2) ⊕ On−1 . Then we have an estimate of the volume (−KX )n < 2nn . As a consequence, if there
+exists a minimal rational curve with a trivial normal bundle on X and (−KX )n = 2nn , then the
+minimal rational curve has no singular points and X must be isomorphic to P1 × Pn−1 .
+
+   The rest of this subsection is devoted to proving the above proposition. The last statement fol-
+lows from the strict volume inequality and Theorem 1.4. So we just need to prove the inequality
+(−KX )n < 2nn when f is not an embedding. We use the same notation as the previous subsection
+but now specialize to the case when ℓ = 1 and d = 2.
+    For any [s] ∈ H 0 (X, Lk ⊗ Iy /Iy+1 ), choose a local generator σt of Lk over Ut , the section [s]
+is represented uniquely over Ut by a holomorphic function with the following expression (note that,
+since d = 2, we get d − 2 = 0 so that (z1 , . . . , zn−1 , zn ) = (z′′ , zn )):
+                                       st            X
+                                              =           btJ (zn )z′′J
+                                       σt
+                                               |J|=y
+18                                            CHI LI AND MINGHAO MIAO
+
+which we call the initial term representation of s over Ut . Note that the superscript t in btJ means the
+dependence on t (and not the transpose). Set
+                                                   X
+                                   γt ([s]) = σt ·   btJ (zn )(dz′′ )⊗J
+                                                            |J|=y
+
+
+which defines a holomorphic section of f ∗ Lk ⊗ Symy (O⊕(n−1) ) over Bt . It is easy to check that
+γt ([s]) patches together to define a global section
+                                                                                                          n+y−2
+                γ([s]) ∈ H 0 (P1 , f ∗ Lk ⊗ Symy (O⊕n−1 )) = H 0 (P1 , f ∗ Lk ) ⊗ C(                        y ).
+
+In other words, we know that for each J = (j1 , . . . , jn−1 ) with |J| = j1 + · · · + jn−1 = y,
+btJ (zn )(dz′′ )⊗J patches together to become a section sJ in H 0 (P1 , f ∗ Lk ).
+    Now assume that t ̸= t′ ∈ P1 satisfy f (t) = f (t′ ) = x ∈ f (P1 ) = Z ⊂ X. Let C = f (Bt ) and
+C ′ = f (Bt′ ) be the two distinct locally smooth branches of Z that pass through x. Let (U = Ut , z =
+zt ) and (Û = Ut′ , ẑ = zt′ ) be coordinate charts centered at t and t′ respectively in Subsection 4.1.
+For each 1 ≤ k ≤ n, set mk = ordẑn =0 zk (0, . . . , 0, ẑn ) ≥ 0, then we can write:
+
+                       zk = gk1 (ẑn )ẑ1 + · · · + gk,n−1 (ẑn )ẑn−1 + ẑnmk hk (ẑn ) + R2 ,
+
+where gkj (ẑn ) and hk (ẑn ) are holomorphic functions of ẑn with hk (0) ̸= 0 if mk > 0 or hk (ẑn ) ≡ 0 if
+mk = 0, and R2 consists of terms of degree at least 2 in ẑ1 , . . . , ẑn−1 . Without the loss of generality,
+assume that m1 ≥ m2 ≥ · · · ≥ mn−1 ≥ 0. Then we must have m1 > 0. Otherwise, we have
+C ′ = {ẑ1 = · · · = ẑn−1 = 0} ⊆ C = {z1 = · · · = zn−1 = 0} which is not possible. Assume that
+1 ≤ q ≤ n − 1 satisfies mq > 0 and mq+1 = 0. If q < n − 1, then for any q + 1 ≤ k ≤ n − 1,
+we have dzk |Tx X = n−1                                                                  q+1≤k≤n−1
+                        P
+                           j=1 gkj (0)dẑj |Tx X which implies that the matrix (gkj (0))1≤j≤n−1        has rank
+equal to n − 1 − q. For the section sJ obtained from above, we get:
+                                                 q                         n−1     n−1
+                                                                                                          !jk
+                  j1 j2        jn−1
+                                                Y                          Y X
+          t                            t           m k jk     jk
+(18)     bJ (zn )z1 z2 · · · zn−1 = bJ (zn )( ẑn hk (ẑn ) + R1 ) ·                   gkj (ẑn )ẑj + R2
+                                                 k=1                                      k=q+1     j=1
+                                                                                         !jk                      
+                      q                                     n       n−1
+                      Y                                     Y       X
+     = znβ cJ (zn )       (ẑnmk jk hk (ẑn )jk + R1 )                   gkj (ẑn )ẑj         + Rjq−1 +···+jn−1 +1 
+                      k=1                                  k=q+1    j=1
+
+
+where we denote β = ordzn =0 (btJ (zn )) ≥ 0 and btJ (zn ) = znβ cJ (zn ) with cJ (zn ) ̸≡ 0. Note that if
+q = n − 1, then the last factor should be considered as 1. Also recall that for any θ ∈ N>0 , we always
+use Rθ to denote a holomorphic function of (ẑ1 , . . . , ẑn−1 , ẑn ) whose expansion consists of terms of
+degree at least θ in (ẑ1 , · · · , ẑn−1 ). For the purpose of the current argument, for θ ≥ 0 we now use
+Aθ to denote any non-zero holomorphic function of (ẑ1 , . . . , ẑn−1 , ẑn ) whose expansion is a nonzero
+polynomial of degree equal to θ in (ẑ1 , . . . , ẑn−1 ). Then the right-hand-side of (18) has the form:
+
+znβ (A0 + R1 )(A0 + R1 )(Ajq+1 +···+jn−1 + Rjq+1 +···+jn−1 +1 ) = znβ (Ajq+1 +···+jn−1 + Rjq+1 +···+jn−1 +1 )
+
+If q = n − 1, then the last factor should be considered as A0 .
+                            ON THE VOLUME OF K-SEMISTABLE FANO MANIFOLDS                                      19
+
+   Now observe that the right-hand-side of the above formula (18) should be of the form
+                               ′                  j
+                             btJ (ẑn )ẑ1j1 ẑ2j2 · · · ẑn−1
+                                                            n−1
+                                                                + R|J|+1 = A|J| + R|J|+1
+where |J| = j1 + · · · + jn−1 . This is due to the fact that by construction f ∗ dzj = f ∗ dẑj on Ut ∩ Ut′
+which is the restriction to Ut ∩ Ut′ of a global non-zero section of the j-th factor of O⊕(n−1) =
+Nf∨/X . Considering zn as a function of (ẑ1 , · · · , ẑn ) that satisfies ∂zn /∂zi (0, . . . , 0) ̸= 0 for some
+i ∈ {1, . . . , n}, this forces zn = A1 + R2 (i.e. ∂zn /∂zk (0, . . . , 0) ̸= 0 for some k ∈ {1, . . . , n − 1})
+and β = |J| − (jq+1 + · · · + jn−1 ) = j1 + · · · + jq ≥ j1 . So we conclude that sJ ∈ H 0 (P1 , f ∗ Lk ⊗
+O(−1)⊗j1 ⊗ O⊗j2 ⊗ · · · ⊗ O⊗jn−1 ), and get the estimate:
+(19)           h0 (C, Lk ⊗ Iy /Iy+1 ) ≤ h0 (P1 , O(2k) ⊗ Symy (O(−1) ⊕ O⊕(n−2) )).
+By (17) and (19), we get:
+           xk−1
+           X                                    xk−1
+                                                X
+                  h0 (C, Lk ⊗ Iy /Iy+1 ) ≤             h0 (P1 , O(2k) ⊗ Symy (O(−1) ⊕ O⊕(n−2) ))
+           y=0                                   y=0
+
+                                                X min{y,2k}
+                                                xk−1 X
+(20)                                       ≤                    (2k − i + 1)ay,i
+                                                 y=0     i=0
+
+where ay,i = n−3+y−i
+                    
+               n−3
+                     .
+    If x ⩽ 2, then by using the explicit expression of binomial coefficient, the right-hand-side of (20)
+is equal to b1 k n /n! + O(k n−1 ) where b1 is given by the following integral (see (24) for a derivation
+of a more complicated formula):
+                        Z x Z t                                       Z x
+                                          (t − z)n−3           n!
+            b1 = n!        dt (2 − z)                dz =                 (2 − z)(x − z)n−2 dz
+                         0      0          (n −  3)!       (n −   2)!  0
+                  = 2nxn−1 − xn < 2nxn−1 .
+When x > 2, the right-hand-side of (20) splits into the sum: 2k
+                                                               P Py            Pxk−1 P2k
+                                                                  y=0    i=0 +    y=2k+1   i=0 and the
+                                     ′ n            n−1
+right-hand-side of (20) is equal to b1 k /n! + O(k ) with
+                      Z 2 Z t                               Z x Z 2
+            ′                            (t − z)n−3                           (t − z)n−3
+           b1 = n!         dt (2 − z)               dz + n!    dt     (2 − z)            dz
+                       0      0           (n − 3)!           2     0           (n − 3)!
+                             Z 2
+                       n!
+               =                 (2 − z)(x − z)n−2 dz
+                    (n − 2)! 0
+                  = 2nxn−1 − xn + (x − 2)n < (2n − 1)xn−1 + 2n−1 .
+Set ψ(x) = 2nxn−1 and
+                                     (
+                                         2nxn−1               if 0 ≤ x ≤ 2
+(21)                        ϕ(x) =                 n−1    n−1
+                                         (2n − 1)x     +2     if x ≥ 2,
+so that ϕ(x) < ψ(x) with strict inequality when x > 2. Moreover it is easy to check that (ϕ−1 )′ (V ) ≥
+(ψ −1 )′ (V ) and the strict inequality holds when V > ϕ(2) = n2n = ψ(2). So we can apply Lemma
+2.4 to conclude that F ϕ (V ) ≥ F ψ (V ) and the strict inequality holds for V > n2n . By Example 2.7,
+F ψ (n2n ) = 2 n−1n
+                    , which is less than AX (E) = n − 1 if n ≥ 3. So we can apply Corollary 2.5 and
+20                                             CHI LI AND MINGHAO MIAO
+
+2.4.(2) to get (−KX )n ≤ (F ϕ )−1 (n − 1) < (F ψ )−1 (n − 1) = 2nn . This completes the proof of
+Proposition 4.2.
+
+4.3. Minimal rational curves with degree d ≥ 3. In this section, we are going to prove the fol-
+lowing result which resolves a large part of Theorem 1.1. Recall the invariant lX from (8), whose
+definition is the smallest degree of minimal rational curves on X.
+
+Proposition 4.3. Let X be a K-semistable Fano manifold with 3 ≤ lX ≤ n − 1. Then vol(X) < 2nn .
+
+     We use the notation from subsection 4.1 and specialize to the case when ℓ = 2 and 3 ≤ d ≤ n + 1.
+   For any [s] ∈ H 0 (X, Lk ⊗ Iy /Iy+1 ), choose a local generator σt of Lk over Ut , the section [s] is
+represented uniquely over Ut by a holomorphic function with the following expression:
+                                                                 ⌊y/2⌋
+                  st            X                                X            X
+                     =                    btIJ (zn )z′I z′′J =                           btIJ (zn )z′I z′′J
+                  σt                                             m=0 |I|+|J|=y−⌊y/2⌋+m
+                             |I|+2|J|=y
+                                                                      |I|=y−2⌊y/2⌋+2m
+                                                                         |J|=⌊y/2⌋−m
+
+which we call the initial term representation of s over Ut . We set
+                                             X
+                          γt ([s]) := σt ·            btIJ (zn )(dz′ )⊗I (dz′′ )⊗J
+                                                   |I|=y−2⌊y/2⌋
+                                                     |J|=⌊y/2⌋
+                                                 |I|+|J|=y−⌊y/2⌋
+
+which defines a local section of f ∗ Lk ⊗ Symy−2⌊y/2⌋ (O(−1)⊕(d−2) ) ⊗ Sym⌊y/2⌋ (O⊕(n−d+1) )) over
+Bt . We claim that this section is well-defined over the whole P1 , i.e. it is independent of t ∈ P1 . For
+any other t′ ∈ P1 , choose a sequence {ti ; i = 1, . . . , N } and Bti (ϵ′ ) as before. We use the transition
+function (16) to get
+ st          X
+      =              btIJ (gn (ẑn ) + R1 )(a′ (zn )ẑ′ + R2 )I (a′′ (zn )ẑ′′ + R2 )J
+ σt
+          |I|+2|J|=y
+             X                                                           X
+      =              btIJ (gn (ẑn ))(a′ (zn )ẑ′ )I (a′′ (zn )ẑ′′ )J +        btIJ (gn (ẑn ))(a′ (zn )ẑ)′I R2′J + Ry+1
+                                                                                                                       w
+
+            |I|+2|J|=y                                                   |I|+2|J|=y
+            st′ σt′     w
+       =:           + R̃y+1
+            σt′ σt
+where R2′ is quadratic in ẑ1 , . . . , ẑd−1 , Ry+1
+                                                 w
+                                                     consists of terms of weighted degree 2|I| + J ≥ y + 1
+      w
+and R̃y+1 consists of terms with 2|I| + J ≥ y and |I| + |J| > y − 2⌊y/2⌋. As a consequence, we get:
+                                             X
+                 γt′ ([s]) = σt ·                    btIJ (gn (ẑn ))(a′ (zn )dẑ′ )⊗I (a′′ (zn )ẑ′′ )⊗J
+                                          |I|=y−2⌊y/2⌋
+                                            |J|=⌊y/2⌋
+
+which coincides with γt ([s]) on Bt ∩ Bt′ .
+     So we get a linear map of vector spaces:
+
+γ : H 0 (X, Lk ⊗ Iy /Iy+1 ) → H 0 (P1 , f ∗ Lk ⊗ Symy−2⌊y/2⌋ (O(−1)⊕(d−2) ) ⊗ Sym⌊y/2⌋ (O⊕(n−d+1) )),
+                            ON THE VOLUME OF K-SEMISTABLE FANO MANIFOLDS                                  21
+
+whose kernel consists of elements [s] ∈ H 0 (X, Lk ⊗ Iy /Iy+1 ) that has the initial term representation
+given by (m ≥ 1 now):
+                                    ⌊y/2⌋
+                               st   X               X
+                                  =                               bIJ (zn )z′I z′′J ,
+                               σt   m=1       |I|+|J|=y−⌊y/2⌋+m
+                                               |I|=y−2⌊y/2⌋+2m
+                                                  |J|=⌊y/2⌋−m
+
+
+which by the same argument as above induces a section in H 0 (P1 , f ∗ Lk ⊗Symy−2⌊y/2⌋+2 (O(−1)⊕(d−2) )⊗
+Sym⌊y/2⌋−1 (O⊕(n−d+1) )). So we inductively get the estimate:
+
+(22)         h0 (X, Lk ⊗ Iy /Iy+1 )
+             ⌊y/2⌋
+              X
+         ≤           h0 (P1 , O(kd) ⊗ Symy−2⌊y/2⌋+2m (O(−1)⊕(d−2) ) ⊗ Sym⌊y/2⌋−m (O⊕(n−d+1) ))
+              m=0
+             ⌊y/2⌋
+              X
+(23)     ≤           h0 (P1 , O(kd) ⊗ Sym2m (O(−1)⊕(d−2) ) ⊗ Sym⌊y/2⌋−m (O⊕(n−d+1) )).
+              m=0
+
+For the last inequality, we used the facts that y − 2⌊y/2⌋ ≥ 0 and O(−1) is negative.
+
+Remark 4.4. In the first version of this preprint, we defined valuations vℓ for any ℓ ≥ 1 ∈ N and
+claimed that the above estimate is true for any ℓ ≥ 1 ∈ N. Ziquan Zhuang pointed out that for ℓ ≥ 3,
+this is not true. The reason is that while v1 and v2 are well-defined globally, the valuation vℓ for
+ℓ ≥ 3 depends on a collection of coordinate charts that only cover a dense open subset of f (P1 ) (the
+complement of finite many points), which causes the failure of the above estimate. For v1 and v2 the
+coordinates charts we constructed cover the whole f (P1 ) and there is no such an issue. By a similar
+argument in Subsection 4.1, a sufficient condition for vℓ to be defined globally is that the transition
+functions between coordinate charts covering the whole f (P1 ) are of the form:
+
+                        zk = ak (ẑn )ẑk + Rℓ , 1 ≤ k ≤ n − 1; zn = gn (ẑn ) + Rℓ−1
+
+where Rℓ (resp. Rℓ−1 ) consists of terms of degree at least ℓ (resp. at least ℓ − 1) in ẑ1 , . . . , ẑn−1 .
+When the minimal rational curve is embedded, this condition is satisfied exactly when the rational
+curve is (ℓ − 2)-comfortably embedded in the sense of Abate-Bracci-Tovena (see [ABT09, Remark
+3.3]). The latter condition is a refinement and a slight weakening of Grauert’s (ℓ − 1)-linearizability
+condition. From this point of view, the valuation v1 , v2 are always globally defined since any minimal
+rational curve is always 1-linearizable, and in particular (trivially) 0-comfortably embedded.
+
+    By the similar (and simpler) argument as above, we get the similar estimate for the valuation v1
+(i.e vℓ from section 4.1 with ℓ = 1):
+                                       y
+                                       X
+ 0      k
+h (X, L ⊗ Iy (v1 )/Iy+1 (v1 )) ≤             h0 (P1 , O(kd) ⊗ Symm (O(−1)⊕(d−2) ) ⊗ Symy−m (O⊕(n−d+1) )).
+                                       m=0
+22                                            CHI LI AND MINGHAO MIAO
+
+By (17) and (23), for each vℓ with ℓ ∈ {1, 2}, we get that h0 (X, Lk ⊗ OX /Ixk (vℓ )) is bounded from
+above by: 1
+
+                                             X ⌊y/ℓ⌋
+                                             xk−1 X
+                                Ik (x) :=              ay,m h0 (P1 , O(kd − ℓm)),
+                                             y=0 m=0
+
+
+where the coefficients
+                                                                
+                                      d − 3 + ℓm n − d + ⌊y/ℓ⌋ − m
+                              ay,m =                                .
+                                         d−3           n−d
+
+We will calculate the leading coefficient b1 = limk→+∞ (Ik (x) · n!)/k n . First, we assume that x ≤ d.
+Then we can expand:
+
+              X ⌊y/ℓ⌋
+              xk−1 X (ℓm)d−3 + O((ℓm)d−4 ) (⌊y/ℓ⌋ − m)n−d + O((⌊y/ℓ⌋ − m)n−d−1 )
+Ik (x) =                                                                         (kd − ℓm + 1)
+            y=0 m=0
+                            (d  − 3)!                     (n − d)!
+                                                                       
+                       n       xk−1   ⌊y/ℓ⌋
+                     k         X    1 X     1 m d−3 −1 y m n−d        m
+          =                                 (ℓ ) (ℓ     − ) (d − ℓ ) + O(k n−1 ).
+              (d − 3)!(n − d)! y=0 k m=0 k k           k   k          k
+
+
+As k → +∞, we see that Ik (x) = b1 k n /n! + O(k n−1 ) with b1 given by the integral:
+
+                                               Z x        Z t/ℓ
+                                 n!
+                                                     dt           (ℓs)d−3 (ℓ−1 t − s)n−d (d − ℓs)ds
+                          (d − 3)!(n − d)!      0          0
+                                                  Z x Z t
+                              n!         −(n−d+1)
+                     =                  ℓ            dt    z d−3 (d − z)(t − z)n−d dz
+                       (d − 3)!(n − d)!            0
+                                                     Z x0
+                                          n!
+                     = ℓ−(n−d+1)                        z d−3 (d − z)(x − z)n−d+1 dz
+                                 (d − 3)!(n − d + 1)! 0
+(24)                 = ℓ−(n−d+1) xn−1 (dn − (d − 2)x) =: ϕ(x).
+
+It is easy to see that ϕ(x) is an increasing function when x ∈ [0, (n−1)d
+                                                                    (d−2)
+                                                                          ] with ϕ(d) = ℓ−(n−d+1) dn (n −
+d + 2). In particular, ϕ(x) is strictly increasing when x ∈ [0, d] since d ≤ n + 1.
+     Next, consider the case when x ⩾ d. Then we need to split the sum in (17) into two parts:
+
+                     dk ⌊y/ℓ⌋
+                     X  X                                           X ⌊dk/ℓ⌋
+                                                                    xk−1 X
+                                     0   1
+                                ay,i h (P , O(kd − ℓi)) +                       ay,i h0 (P1 , O(kd − iℓ)).
+                     y=0 i=0                                       y=dk+1 i=0
+
+
+
+
+     1
+     Our main interest will be the case ℓ = 2. We include the parameter ℓ = 1 for comparison later.
+                                 ON THE VOLUME OF K-SEMISTABLE FANO MANIFOLDS                                            23
+
+Similar calculation as above shows that this sum equals b′1 k n /n! + O(k n−1 ) with b′1 equal to C · I
+                 n!
+where C = (d−3)!(n−d)! ℓ−(n−d+1) and I is equal to:
+                 Z d        Z t                                            Z x        Z d
+                                      d−3              n−d
+                       dt         z           (t − z)        (d − z)dz +         dt         z d−3 (t − z)n−d (d − z)dz
+                  0          0                                              d          0
+                                      Z d
+                                                         1
+            = C −1 ϕ(d) +                      z d−3         (x − z)n−d+1 − (d − z)n−d+1 (d − z)dz
+                                                                                        
+                                          0            n−d+1
+                                  Z d
+                   1
+            =                                 z d−3 (d − z)(x − z)n−d+1 dz.
+                 n−d+1                0
+
+We denote V = Ln = (−KX )n . So we get the estimate vol(L − xE) ≥ V − ϕ(x) for any x ≥ 0
+where
+                   (
+                     ℓ−(n−d+1) xn−1 (dn − (d − 2)x)             if 0 ≤ x ≤ d
+(25)        ϕ(x) =     ℓ−(n−d+1) n!
+                                    R d d−3            n−d+1
+                     (d−3)!(n−d+1)! 0
+                                       z (d − z)(x − z)      dz if x ≥ d.
+
+    Note that when 2 ≤ d ≤ n, the function ϕ = ϕ(x) belongs to the class F considered in Lemma
+2.4 (see Example 4.6 for the d = n + 1 case). In other words, it is a continuous, piecewise smooth,
+strictly increasing function of x ∈ [0, ∞) satisfying limx→0 ϕ(x) = 0 and limx→+∞ ϕ(x) = +∞. Set
+                              ( −(n−d+1) n
+                Z x              ℓ        x
+                                     n+1
+                                              (d(n + 1) − (d − 2)x)           0≤x≤d
+(26) Φ(x) =         ϕ(t)dt =       ℓ−(n−d+1) n!
+                                                 R d d−3            n−d+2
+                 0               (d−3)!(n−d+2)! 0
+                                                    z (d − z)(x − z)      dz x ≥ d.
+
+   By using the binomial expansion:
+                                                                     n−d+1
+                                                                      X          
+                n−d+1                                    n−d+1               n−d+1
+       (x − z)          = (x − d + d − z)                        =                  (d − z)j (x − d)n−d+1−j .
+                                                                     j=0
+                                                                               j
+
+it is straightforward to get the following combinatorial expressions when x ≥ d:
+                                                       n−d+1
+                                                        X         
+                                       −(n−d+1)                  n
+(27)              ϕ(x) = ℓ                                           · (n − d + 2 − j)dn−j (x − d)j ,
+                                                        j=0
+                                                                 j
+                                                       n−d+2
+                                                        X            
+                                       −(n−d+1)                  n + 1 n − d + 3 − j n+1−j
+(28)             Φ(x) = ℓ                                                           d      (x − d)j
+                                                        j=0
+                                                                   j       n+1
+
+Set T = sup{x : V − ϕ(x) = 0}. If T ≤ d, then we get V = ϕ(T ) ≤ ϕ(d) = ℓ−(n−d+1) dn (n −
+d + 2) ≤ dn (n − d + 2). Note that the number dn (n − d + 2) is nothing but the volume of the Fano
+hypersurface in Pn+1 of degree n − d + 2 which is always less than 2nn if 2 < d < n.
+
+Remark 4.5. Setting d = 2 in the formula (27)-(28), we also recover functions from Example 2.7
+(the ℓ1−n factor comes the fact that here we are using the ℓ⊕(n−1) blowup):
+
+                                       ϕ(x) = 2n · ℓ1−n xn−1 ,             Φ(x) = 2ℓ1−n xn .
+24                                      CHI LI AND MINGHAO MIAO
+
+   So we can assume T ≥ d. Now we set ℓ = 2 and A = AX (v2 ) = (d − 2) + 2(n − d + 1) = 2n − d.
+The equation Φ(T ) = (T − A)ϕ(T ) from (5) becomes:
+                Z d                                            Z d
+         1           d−3             n−d+2
+(29)                z (d − z)(T − z)       dz = (T − (2n − d))     z d−3 (d − z)(T − z)n−d+1 dz.
+     n−d+2 0                                                    0
+
+When 2 ≤ d ≤ n, by Corollary 2.5, there exists a unique solution T = T (d, n) to the above equation.
+
+Example 4.6. When d = n+1, the expression (25) becomes: ϕ(x) = (n+1)nxn−1 −(n−1)xn if x ≤
+n+1 and ϕ(x) = (n+1)n if x ≥ n+1. We then get the estimate: vol(−KX −xE) ≥ vol(X)−(n+1)n
+for any x ≥ n + 1, which implies the (un-interesting) volume estimate vol(X) ≤ (n + 1)n = vol(Pn ).
+
+Example 4.7. When d = n, the expressions (27)-(28) become:
+
+               ϕ(x) = ℓ−1 n · nn−1 · (x − n) + 2nn = ℓ−1 nn (x + 2 − n),
+                                                       
+(30)
+                         ℓ−1 nn
+                                                                          
+                                   2                     n
+              Φ(x) =              x − 2(n − 2)x +            (n − 1)(n − 2) .
+                            2                        (n + 1)
+When d = n and for the case of (1⊕(d−2) , ℓ⊕(n−d+1)
+                                                    )-weighted blowup, equation (T − A(vℓ ))ϕ(T ) =
+                        2                       n(n−2)(n+3)
+Φ(T ) is equivalent to T − 2(n − 2 + ℓ)T +         2(n+1)
+                                                            + (2ℓ − 4) = 0. One can solve
+                                                 q
+                                  (n − 1) + 3(n−1) for ℓ = 1;
+                                                       n+1
+                             T =           q
+                                  n+         6n
+                                               n+1
+                                                             for ℓ = 2.
+
+So we get the volume upper bound vol(X) ≤ ϕℓ (T ) which is given by:
+                                                     q
+                             nn (T − n + 2) = nn (1 + 3(n−1) )      for ℓ = 1
+                  ϕℓ (T ) =                            qn+1 
+                             1 nn (T − n + 2) = nn 1 +      3n
+                                                                     for ℓ = 2.
+                                 2                              2(n+1)
+
+Note that when n = 2, ϕ1 (T ) = ϕ2 (T ) = vol(Q) = 8. When n ≥ 3, ϕ1 (T ) > ϕ2 (T ) > 2nn =
+vol(Q). To get the sharp upper bound of vol(X) = (−KX )n for all d = n ≥ 3, we are going to use
+the classification results stated in Theorem 2.9.
+
+     By Corollary 2.5, Proposition 4.3 is equivalent to the following proposition.
+
+Proposition 4.8. Assume n = dim X ≥ 4. Let 3 ≤ d ≤ n − 1 and T be the solution to equation
+(29). We have ϕ(T ) < 2nn where ϕ was defined in (25). As a consequence, we know that if X is a
+K-semistable Fano manifold 3 ≤ lX = d ≤ n − 1, then vol(X) < 2nn .
+
+Remark 4.9. Example 4.7 shows that for d = n the estimate ϕ(T ) < 2nn is not true. Surprisingly,
+Proposition 4.8 implies that the (1⊕(d−2) , 2⊕(n−d+1) ) weighted blow-up is sufficient to establish the
+sharp estimate for all 3 ≤ d ≤ n − 1. Even though the statement appears elementary, due to the
+complicated expansion from (27)-(28) it seems not so easy to find a simple proof for all pairs of
+positive integers (d, n) satisfying 3 ≤ d ≤ n − 1. Motivated by some numerical calculations, we
+managed to get the desired estimate using some tools from calculus and probability theory. See
+Figure 1 for the numerical illustration for n = 7 and 2 ≤ d ≤ 7.
+                          ON THE VOLUME OF K-SEMISTABLE FANO MANIFOLDS                                  25
+
+   The rest of this subsection is devoted to explain the proof of Proposition 4.8. We first consider the
+case d = n − 1. Note that equation (T − AX (E))ϕ(T ) = Φ(T ) appeared in Corollary 2.5 is a degree
+n − d + 2 polynomial equation. When d = n − 1, the corresponding equation is a cubic equation in
+T for which we can explicitly compute the root T using Cardano’s formula.
+
+Proposition 4.10. Proposition 4.8 holds when d = n − 1 ≥ 3.
+
+Proof. When d = n − 1 and ℓ = 2, the expressions from (27)-(28) become:
+                1 n(n − 1)n−1
+                                                                                
+                                             2             n−1                 n
+      ϕ(x) = 2                   (x − n + 1) + 2n(n − 1) (x − n + 1) + 3(n − 1) ,
+               2          2
+                1 n(n − 1)n−1
+      Φ(x) = 2 (               (x − n + 1)3 + n(n − 1)n−1 (x − n + 1)2
+               2        6
+                                             4
+               +3(n − 1)n (x − n + 1) +         (n − 1)n+1 ).
+                                          n+1
+The equation (T − A(E))ϕ(T ) = Φ(T ) is equivalent to τ 3 − 12τ − 6(n−1)(5n+1)
+                                                                     n(n+1)
+                                                                               = 0 where τ =
+T − n + 1 > 2n − d − n + 1 = 2. By Cardano’s formula,
+                         s       r             s         r
+                          3  q      q 2        3    q      q2
+                     τ= − +             − 64 + − −            − 64,
+                             2      4               2       4
+                                                             n−1
+where q = − 6(n−1)(5n+1)
+                n(n+1)
+                         . Hence, vol(X) ≤ ϕ(T ) = n(n−1)
+                                                       8
+                                                                   ((τ + 2)2 + 2 − n6 ) =: F (n). We claim
+that for n ≥ 4, we have F (n) < 2nn = vol(Q).
+   The root τ satisfies τ 3 − 12τ = C(n), where C(n) = 6(n−1)(5n+1)
+                                                           n(n+1)
+                                                                    . Note that f (τ ) = τ 3 − 12τ
+is monotone increasing when τ ≥ 2. And C(n) is monotone        increasing with   respect to n. So
+      −1
+                                                            p3
+                                                                     √      p3
+                                                                                      √
+τ = f (C(n)) is monotone increasing. And limn→+∞ τ (n) = 15 + 161+ 15 − 161 =: τ∞ .
+So, in particular, we have τ ≤ τ∞ . We further consider
+                    n(n − 1)n−1
+                                                     
+        F (n)                               2       6
+                ≤                   (τ∞ + 2) + 2 −
+        2nn            8 · 2nn                      n
+                                                                        2       !
+                                                 √             √
+                                        q              q
+                            1             3             3
+                ≤                n−1       15 + 161 + 15 − 161 + 2 + 2 =: γ(n).
+                               1
+                    16 1 + n−1
+                                                                               1
+                                                                                  p3
+                                                                                          √
+Note that γ(n) is monotone decreasing with respect to n and limn→∞ γ(n) = 16e    ( 15 + 161 +
+p3
+         √
+   15 − 161 + 2)2 < 1. So γ(n) < 1 when n is sufficiently large. By numerical method, we can
+show that γ(n) < 1 when n ≥ 19. By direct computation, one can check that F (n) < 2nn when
+4 ≤ n ≤ 18 (one could also compute that when n = 3 and d = 2 so that we are in the case of trivial
+normal bundle, F (3) = 2 · 33 = 54).                                                             □
+
+Remark 4.11. If we use the valuation v1 in the case of d = n − 1, we can do a similar computation
+as in the proof of Proposition 4.10, then
+                                        s         r           s            r
+                                        3     q      q 2      3        q      q2
+              τ = T − n + 1 = −1 + −1 + +                − q + −1 + −            −q
+                                              2       4                2       4
+26                                      CHI LI AND MINGHAO MIAO
+                   2                              n−1
+where q = 12(n−1)
+            n(n+1)
+                   . In this case, ϕ(T ) = n(n−1)
+                                               2
+                                                   τ 2 + 2n(n − 1)n−1 τ + 3(n − 1)n > 2nn = vol(Q)
+when n ≥ 4. This shows that the use of (1⊕(d−2) , 2⊕(n−d+1) )-weighted blowup is crucial for the proof
+of Proposition 4.3 and hence for Theorem 1.1.
+
+
+Completion of proof of Proposition 4.8. Because of Proposition 4.10, we just need to prove Proposi-
+tion 4.8 when 3 ≤ d ≤ n − 2. For simplicity, set
+
+(31)                           Ψ(x) = (x − (2n − d))ϕ(x) − Φ(x).
+
+Note that Ψ′ (x) = (x − (2n − d))ϕ′ (x) since ϕ(x) = Φ′ (x). Since ϕ′ (x) > 0 for x > 0, we have the
+two useful facts:
+
+       • Ψ(x) is negative for x ∈ (0, T ) and positive for x ∈ (T, +∞), where T is the unique solution
+         to Ψ(T ) = 0 (see Corollary 2.5).
+       • x > 2n − d + 1, Ψ′ (x) > ϕ′ (x).
+
+Now we claim that x1 = 2n − d + 2 satisfies the following two inequalities
+
+(32)                       Ψ(x1 ) < 0     and     ϕ(x1 ) − 2nn − Ψ(x1 ) < 0.
+
+Assuming this, we can complete the proof of the proposition. To see this, we note that by the first
+fact above, Ψ(x1 ) < 0 implies that x1 < T . Then we can estimate:
+                                           Z T                        Z T
+                                                  ′
+                       ϕ(T ) = ϕ(x1 ) +          ϕ (x)dx < ϕ(x1 ) +         Ψ′ (x)dx
+                                            x1                         x1
+                                                                 n
+                              = ϕ(x1 ) + Ψ(T ) − Ψ(x1 ) < 2n .
+
+Note that we used the 2nd fact pointed out above since x1 > 2n − d + 1, and the vanishing Ψ(T ) = 0.
+Finally we need to verify the above claim that the two estimates in (32) are true. In other words, we
+need to show that for any 3 ≤ d ≤ n − 2, the following two inequalities are true:
+
+(33)                   Ψ(2n − d + 2) = 2ϕ(2n − d + 2) − Φ(2n − d + 2) < 0,
+
+
+(34)         ϕ(2n − d + 2) − Ψ(2n − d + 2) = Φ(2n − d + 2) − ϕ(2n − d + 2) < 2nn .
+
+The inequality (33) can be quickly verified below in Lemma 4.12. Regarding the inequality (34), for
+concrete n and d, it can be verified by straight forward calculation. For arbitrary n and d, the proof of
+(34) is complicated and is contained in the Appendix A. Roughly speaking, we will establish some
+effective estimates to reduce the proof of (34) to finitely many cases of (n, d) for which we can verify
+numerically.                                                                                           □
+
+Lemma 4.12. For 3 ≤ d ≤ n − 2, Φ(2n − d + 2) > 2ϕ(2n − d + 2).
+                                ON THE VOLUME OF K-SEMISTABLE FANO MANIFOLDS                             27
+
+                                                              (d−3)!
+Proof. Set x1 = 2n − d + 2 which is bigger than d and C = 2n−d−1 (n−d+2)!
+                                                                          > 0. We will use the
+integral formula in (25)-(26) to calculate:
+                                        Z d
+          Φ(x1 ) − 2ϕ(x1 ) = C                   z d−3 (d − z)(x1 − z)n−d+1 [x1 − z − 2(n − d + 2)] dz
+                                             0
+             Z d
+      = C          z d−3 (d − z) [2(n − d + 1) + d − z]n−d+1 (d − z − 2)dz
+              0
+             Z d                       n−d+1
+                                        X            
+                       d−3                       n−d+1 j
+      = C          z         (d − z)                    2 (n − d + 1)j (d − z)n−d+1−j ((d − z) − 2)dz
+              0                        j=0
+                                                   j
+          n−d+1
+           X n − d + 1
+      = C                dn−j · 2j (n − d + 1)j
+           j=0
+                  j
+           · (d · B(d − 2, n − d − j + 4) − 2B(d − 2, n − d + 3 − j))
+           n−d+1                                                           
+                                j n−j n − d + 2 − j     d(n − d + 3 − j)
+            X
+                   j
+      = C̃        2 (n − d + 1) d                   ·                    − 2 > 0,
+             j=0
+                                        j!(n − j)!         n+1−j
+
+
+where C̃ = (n − d + 1)! · C, d(n−d+3−j)
+                                n+1−j
+                                        − 2 = (d−2)(n−d+1−j)
+                                                  n+1−j
+                                                             ≥ 0 with equality only if j = n − d + 1
+              R 1 α−1           β−1
+and B(α, β) = 0 x (1 − x) dx denotes the Beta function for α, β ∈ R>0 .                           □
+
+
+4.4. Completion of the proof of Theorem 1.1.
+
+
+Proof of Theorem 1.1. We use the notation lX from (7)-(8). If lX = n + 1, then by Theorem 2.9, X
+must be Pn , and if lX = n then X is either Qn or the blowup of Pn along a smooth codimension two
+subvariety Y of degree dY ∈ {1, . . . , n} in a hyperplane. When dY ≥ 2, by Lemma 4.13 below we
+know (−KBlY Pn )n < 2nn . When dY = 1, by Lemma 4.14 below we know that BlPn−2 Pn is not a
+K-semistable Fano manifold, so it is excluded. Thus, we verified the Theorem 1.1 in the case lX ≥ n.
+When lX < n, there are minimal rational curves of degree d ∈ {2, . . . , n − 1}. For 3 ≤ d ≤ n − 1, by
+Proposition 4.8, vol(X) < 2nn . When d = 2, the minimal rational curve has a trivial normal bundle.
+If its image has singular points, then by Proposition 4.2 vol(X) < 2nn when n ≥ 3. For n = 2, the
+sharp volume bound of course follows from the classification of del Pezzo surfaces. Note that in this
+case, the quadric surface coincides with P1 × P1 . Finally, if the minimal rational curve with trivial
+normal bundle is an embedding, then by Theorem 1.4 we get vol(X) ≤ 2nn with equality if and only
+if X ∼ = P1 × Pn−1 .                                                                                □
+
+Lemma 4.13. Suppose X is the blowup of Pn along a subvariety Y of degree dY ∈ {1, · · · , n} that
+is contained in a hyperplane (See Theorem 2.9). Then
+                                                 (
+                                                     2nn                        if dY = 1
+                        (−KBlY Pn )n =               dY nn −(n+1−dY )n
+                                                            dY −1
+                                                                       =: VdY   if 2 ≤ dY ≤ n.
+28                                         CHI LI AND MINGHAO MIAO
+
+Proof. Denote d = dY . The normal bundle of Y is given by NY /Pn = OY (1) ⊕ OY (d). Let H =
+π ∗ OPn (1) be the pullback of a hyperplane section of Pn . Then,
+                                                            n  
+                 n                       n           n
+                                                         X     n
+     (−KBlY Pn ) = ((n + 1)H − E) = (n + 1) +                      (n + 1)n−k · (−1)k (H n−k · E k )
+                                                          k=2
+                                                               k
+                                     n  
+                                    X     n
+                    = (n + 1)n −             (n + 1)n−k · (sk−2 (NY /Pn ) · H n−k |A )
+                                    k=2
+                                          k
+                                     n                              k−2
+                                                                              !
+                                n
+                                    X     n          n−k        k−2
+                                                                     X
+                                                                            i
+                    = (n + 1) −              (n + 1)     · (−1)            d · d,
+                                    k=2
+                                          k                           i=0
+
+where s (N n ) denote the (k − 2)-th Segre class of normal bundle NY /Pn . If d = 1, then
+Pk−2 ik−2 Y /P                                 n
+                                                            n−1
+                                                                  n
+                                                                    
+  i=0 d = k − 1. By the combinatorial identity k (k − 1) = n k−1 − k ,
+
+                                        n                  
+                     n           n
+                                       X
+                                               k    n−1        n
+       (−KBlPn−2 Pn ) = (n + 1) −          (−1) n           −     (n + 1)n−k = 2nn .
+                                       k=2
+                                                     k − 1     k
+                 Pk−2     i
+If d ⩾ 2, then    i=0 d       = (dk−1 − 1)/(d − 1). Then,
+                                                  n         k   
+                                n             n
+                                                  X       n k d −d
+                 (−KBlY Pn )        = (n + 1) −     (−1)    ·        (n + 1)n−k
+                                                k=2
+                                                          k    d−1
+                                         1
+                                    =       (dnn − (n + 1 − d)n ) .
+                                        d−1
+Note that by L’Hospital’s rule limdY →1 VdY = 2nn and it is easy to check that VdY < 2nn for dY ≥
+2.                                                                                              □
+
+Lemma 4.14. Suppose π : X → Pn is the blowup of Pn along a subvariety Y ∼
+                                                                        = Pn−2 of degree
+dY = 1 contained in a hyperplane of Pn , then X is K-unstable.
+
+Proof. Let E = π −1 (Pn−2 ) be the exceptional divisor. And let H = π ∗ OPn (1) be the pullback of
+a hyperplane section of Pn . Note that the nef cone is Nef(X) = R⩾0 [H] + R⩾0 [H − E]. Then the
+divisor −KX − tE = (n + 1)H − (1 + t)E is nef if and only if 0 ⩽ t ⩽ n. When 0 ⩽ t ⩽ n, by the
+similar computation as in Lemma 4.13,
+                                                                 n  
+                                                n           n
+                                                               X     n
+volX (−KX − tE) = ((n + 1)H − (1 + t)E) = (n + 1) −                     (n + 1)n−k (−1 − t)k (k − 1)
+                                                                k=2
+                                                                     k
+                        = (n − t)n−1 (2n + (n − 1)t).
+
+We see the pseudo-effective threshold TX (E) equals to the nef threshold n. Then,
+                                       Z n
+                                 1                                       n−1
+              S(−KX ; E) =           n
+                                           volX (−KX − tE)dt = 1 +               .
+                              (−KX ) 0                                  2(n + 1)
+                                        n−1          n−1
+So AX (E) − S(−KX ; E) = 1 − (1 + 2(n+1)    ) = − 2(n+1)  < 0. By the valuative criterion (Theorem
+2.1), we conclude that X is K-unstable and destabilized by the exceptional divisor E.            □
+                            ON THE VOLUME OF K-SEMISTABLE FANO MANIFOLDS                                    29
+
+Remark 4.15. Note that X = BlPn−2 Pn is a toric Fano variety, so one can also prove lemma 4.14 via
+toric geometry. The minimal generators of the fan Σ ⊆ Rn is given by e1 = (1, 0 · · · , 0), · · · , en =
+(0, · · · , 0, 1), e0 = (−1, −1, · · · , −1), f = (1, 1, 0, · · · , 0). Here the ray generated by f corresponds
+to the exceptional divisor E = π −1 (Pn−2 ) by the cone-orbit correspondence. Then the moment
+polytope with respect to −KX is given by
+                                                       n
+                                                       X
+                                  n
+      PX = {(x1 , · · · , xn ) ∈ R | x1 + x2 ≥ −1,           xi ≤ 1, xj ≥ −1 for j = 1, · · · , n}.
+                                                       i=1
+                                                        n−1      n−1           1                  1
+By calculus, one can compute the barycenter Bc(P ) = ( 4(n+1) , 4(n+1) , − 2(n+1)  , · · · , − 2(n+1) ) ∈ Rn ,
+which does not coincide with the origin. Thus, X is K-unstable, so this gives another proof of
+                                                                     1
+Lemma 4.14. In fact, by the formula δ(X, −KX ) = minρ∈Σ(1) ⟨Bc(P ),u     ρ ⟩+1
+                                                                                in [BJ20, Section 7], we
+               2n+2
+know δ(X) = 3n+1 < 1 and it is minimized at ρ = f = (1, 1, 0 · · · , 0). So the exceptional divisor E
+in Lemma 4.14 is indeed the δ-minimizer of X.
+
+Remark 4.16. When X is the blowup of Pn along a smooth codimension two subvariety Y of degree
+dY ≥ 2 in a hyperplane H, K. Fujita showed in [Fuj16, Lemma 9.7] that X is K-unstable and
+destabilized by the strict transform of H on X. Although we do not need this result in our proof of
+Theorem 1.1, we thank the anonymous referee for bringing this fact to our attention.
+
+  As an immediate application of Theorem 1.1, we prove the ODP conjecture (Conjecture 2.3) for
+Fano cones over K-semistable Fano manifolds.
+
+Theorem 4.17. Suppose L = r−1 (−KX ) is an ample line bundle over an n-dimensional smooth
+K-semistable Fano manifold X for some r ∈ N∗ , then ODP conjecture (Conjecture 2.3) holds for the
+affine cone C(X, L) := Spec(⊕+∞    0
+                             k=0 H (X, kL)) with the cone vertex o.
+
+
+Proof. We denote π : Blo C → C be the blowup of C along the cone vertex o. By the result of
+[Li17, LL19], we know X is K-semistable if and only if the minimizer of normalized volume of
+(C, o) is attained by the canonical valuation v = ordE , which is the divisorial valuation associated to
+the exceptional divisor E = π −1 (o) ∼= X. From [Kol13, Section 3.1], we know
+                                KBlo C + (1 − r)E ∼Q 0 ∼Q π ∗ (KC ).
+Then AC (ordE ) = 1 + ordE (KBlo C − π ∗ KC ) = 1 + (r − 1) = r and vol(ordE ) = Ln . Then
+                      vol(C,
+                      c      o) = AC (ordE )n+1 · vol(v) = rn+1 · Ln = r(−KX )n .
+Let i(X) := max{r ∈ N∗ | −KX ∼Q rL for some ample line bundle L} be the Fano index of X.
+Then the above argument shows that vol(C,
+                                      c      o) ⩽ i(X) · (−KX )n . We know that for smooth Fano
+manifold, the Fano index always satisfies i(X) ⩽ n + 1 and i(X) = n + 1 if and only if X ∼
+                                                                                         = Pn and
+i(X) = n if and only if X ∼
+                          = Q ⊂ Pn+1 is a smooth quadric hypersurface ([KO73]).
+   If X ∼= Pn and r = i(Pn ) = n + 1, then (C(Pn , O(1)), o) ∼= (Cn , 0) is a smooth point, which
+is excluded in the ODP conjecture. If r < i(Pn ) = n + 1, then there exists some p ∈ Z>1 such
+that rp = i(Pn ) = n + 1. Then vol(C(P
+                                c       n
+                                          , L), o) = r(−KPn )n = (n + 1)n+1 /p < 2nn+1 . So we
+30                                       CHI LI AND MINGHAO MIAO
+
+can assume X ≇ Pn . Then by Theorem 1.1, we have (−KX )n ⩽ 2nn and the equality holds if
+X∼ = P1 × Pn−1 or X is a smooth quadric hypersurface Q. Combined with Kobayashi-Ochiai’s result
+i(X) ⩽ n, we get
+                                vol(C,
+                                c      o) ⩽ i(X) · (−KX )n ⩽ 2nn+1 .
+The equality holds if and only if i(X) = n and (−KX )n = 2nn , which implies (C, o) ∼
+                                                                                    = (C(Q, OQ (1)), o)
+                                         ∼   1
+is the ODP singularity (the case when X = P ×P   n−1
+                                                     is excluded since the Fano index i(P1 ×Pn−1 ) ≤
+2).                                                                                                □
+
+4.5. Examples and questions.
+
+Example 4.18. Our consideration of weighted blowup is motivated by a special example of a weighted
+blowup over the quadric hypersurface: X = Qn = {Z0 Z1 + Z2 Z3 + Z42 + · · · + Zn+1
+                                                                                2
+                                                                                    = 0} ⊂ Pn+1
+for n ≥ 3. Fix a minimal rational curve which is the line
+       C∼
+        = P1 = {Z1 = Z3 = Z4 = · · · = 0} = {[t : 0 : s : 0 : 0 : · · · : 0] : [t, s] ∈ P1 } ⊂ Pn+1 .
+On the affine chart U0 = {Z0 ̸= 0}, set ui = zi /z0 with i ̸= 0. Then the equations of X and C
+become:
+            X:      u1 + u2 u3 + u24 + · · · + u2n+1 = 0 =⇒ u1 = −u2 u3 − u24 − · · · − u2n+2 ,
+            C:      u3 = u4 = · · · = un+1 = 0.
+In particular, we choose coordinates u = {u2 , u3 , u4 , · · · , un+1 } as local coordinates on X. Similarly,
+on the affine chart U1 = {Z2 ̸= 0}, if we set vj = zj /z2 with j ̸= 2. The local coordinate is given by
+v = (v0 , v1 , v4 · · · , vn+1 ). The equations of X, C are given by:
+             X:      v0 v1 + v3 + v42 + · · · + vn+1
+                                                 2
+                                                     = 0 =⇒ v3 = −v0 v1 − v42 − · · · − vn+1
+                                                                                         2
+                                                                                             ,
+             C:      v1 = v4 = · · · = vn+1 = 0.
+                                              n+1 2
+                    Z2    −1       u1         X   uk        Zk   Zk Z0
+               v0 =    = u2 , v1 =    = −u3 −        , vk =    =       = uk · u−1
+                                                                               2
+                    Z2             u2         k=4
+                                                  u2        Z2   Z0 Z2
+
+     The conormal bundle of C \ {x} is generated by
+                         {dv1 = −du3 , dv4 = u−1                       −1
+                                              2 du4 , · · · , dvn+1 = u2 dun+1 }
+                                ∨
+which shows in particular that NC/X = O ⊕ O(−1)⊕n−2 .
+     Consider the C∗ action on Pn+1 with weights (0, 2, 0, 2, 1, . . . , 1) on the homogeneous coordinates.
+                                                              | {z }
+                                                                 n−3
+Note that the fixed point set of this C∗ always contains two lines: C and C1 = {[0 : t : 0 : s : 0 :
+· · · : 0]; [t, s] ∈ P1 }. When n ≥ 4, the fixed point set has another component Qn−4 = {Z0 = Z1 =
+Z2 = Z3 = 0} ∩ Qn ,→ Qn . Note that the C∗ action preserves the quadric hypersurface and gives
+rise to a divisorial valuation whose center on X is the line C. This divisorial valuation can also
+be obtained via a weighted blowup along the line C. Precisely, in the u-coordinates, we perform
+the weighted blow along C ∩ U0 = {u3 = u4 = · · · = un+1 = 0} with weights (0, 2, 1, . . . , 1).
+                          ON THE VOLUME OF K-SEMISTABLE FANO MANIFOLDS                                  31
+
+In the v coordinates, we also have the weights (0, 2, 1, . . . , 1). We see that the weighted blowup
+µ : X̂ → X is indeed globally defined and the exceptional divisor E is isomorphis to a weighted
+projective P(2, 1, . . . , 1)-bundle over P1 .
+                | {z }
+                  n−2
+
+   We can calculate the volume function vol(−KX − xE) = nn vol(H − ξE) where ξ = nx . Corre-
+sponding to the geometry of fixed point sets mentioned earlier, the situation turns out to be different
+for n = 3 and n ≥ 4. When n = 3, the nef threshold (Seshadri constant) of H with respect to E
+coincides with the pseudo-effective threshold and is equal to 2. We have the expression:
+                                                                       
+                                                              3    1 2
+        vol(−KX − xE) = 27 · vol(H − ξE) = 27 · 2 − ξ + ξ , 0 ≤ ξ ≤ 2.
+                                                              2    2
+When n ≥ 4, the nef threshold of H with respect to E is 1 while the pseudoeffective threshold of H
+with respect to E is 2. The volume function consists of two smooth pieces:
+
+(35)        vol(−KX − xE) = nn vol(H − ξE)
+                                 (
+                                   2 − n2 ξ n−1 + n−2 ξn,          ξ = nx ∈ [0, 1]
+                          = nn ·    n
+                                                   2
+
+                                    2
+                                      (2 − ξ)n−1 − n−2
+                                                     2
+                                                        (2 − ξ)n , ξ = nx ∈ [1, 2].
+
+In fact, this expression holds for any n ≥ 3, since when n = 3 the second piece and the first piece
+connect smoothly and become one whole smooth piece. To get the above formula, we can first
+calculate the volume function before the nef threshold by calculating the intersection:
+                                        n  
+                     ∗          n
+                                       X   n ∗ n−k k
+                   (µ H − ξE) =                µH       · ξ (−E)k
+                                       k=0
+                                           k
+                                   = H n + nξ n−1 π ∗ H · ξ n−1 (−E)n−1 + ξ n (−E)n
+                                         n             n−2
+                                   = 2 − ξ n−1 + ξ n
+                                         2                2
+where we used a weighted analogue of the usual intersection formula via Segre classes for projective
+bundles. It is not surprising that the expression of this piece coincides with the piece in the expression
+of (25) when x = nξ ≤ n.
+   The second piece is more difficult to get. One way to get it is to use the fact that the measure
+− n!1 dvol(H − tE) is the Duistermaat-Heckman measure of the previously mentioned Hamiltonian
+ 1
+S action (see [BHJ17]) and then use the symmetry of its density function around ξ = 1 in our
+case. We can also directly calculate the Duistermaat-Heckman measure of S 1 -action by using a well-
+established localization/Fourier formula ([BGV92, 7.4]) and for the interest of the reader we will
+provide such a derivation in Appendix B. It is straightforward to verify the estimate vol(−KX −
+xE) ≥ V − ϕ(x) (see (30)) for this example which is reduced to the inequality: for n ≤ x ≤ 2n,
+                     n2               n−2            1
+          F (x) :=      (2n − x)n−1 −     (2n − x)n + nn (x + 2 − n) − 2nn ≥ 0.
+                     2                 2             2
+This can be easily verified by the following facts: F (n) = F ′ (n) = 0 and F ′′ (x) = n2 (n − 1)(n −
+2)(2n − x)n−3 (x − n) > 0 for n < x < 2n.
+32                                     CHI LI AND MINGHAO MIAO
+
+Example 4.19. Let X ⊂ Pn+1 be a Fano hypersurface of degree 1 ≤ b ≤ n. Then the minimal
+rational curve is of splitting type O(1)n−b ⊕ Ob−1 so that d = n − b + 2 (see [Kol96, Exercise V.4.4]).
+The volume of X is given by Vd = dn (n − d + 2) = (n + 2 − b)n · b. One can easily verify that Vd is
+strictly smaller than vol(Pd−1 × Pn−d+1 ) except when b = 1 or b = 2.
+
+Question 4.20. Assume that a K-semistable Fano manifold X contains a minimal rational curve of
+degree 3 ≤ d ≤ n − 1 in X. Is it true that vol(X) = (−KX )n ≤ vol(Pd−1 × Pn−d+1 )?
+
+    In the first version, this was claimed as a result. However due to the issue discussed in Remark
+4.4, the question is left un-answered. On the other hand, our current results imply that the answer is
+affirmative if we instead assume d ∈ {2, n, n + 1}.
+   We end this paper by finding the minimal possible anti-canonical volume of n-dimensional (K-
+semistable) Fano manifolds. It is not a well-posed problem for general Q-Fano varieties. Even
+assuming K-semistablity, there exists a sequence of K-semistable Q-Fano varieties with volume
+(−KX )n tends to zero (see [Jia20, Example 1.4(2)]), so it is in general not possible to determine
+an optimal positive lower bound. When we restrict to n-dimensional smooth Fano manifold X, the
+volume (−KX )n is always a positive integer, so a priori (−KX )n ⩾ 1.
+
+Example 4.21. Suppose n ⩾ 2 is an integer. Assume a0 ⩽ a1 ⩽ · · · ⩽ an+1 are integers and we
+consider a general degree d hypersurface Xd of weighted projective space P(a0 , a1 · · · , an+1 ) that is
+well-formed and quasi-smooth. Note that Xd is a Fano variety if d < n+1
+                                                                        P
+                                                                          i=0 ai . By the adjunction
+formula
+                                               d · ( n+1  ai − d)n
+                                                    P
+                                            n
+                                    (−KX ) =         Qi=0
+                                                       n+1         .
+                                                       i=0 ai
+If a0 = · · · = an−1 = 1, an = 2, an+1 = n+1 and d = 2n+2. Namely, Xd is a general degree 2n+2
+hypersurface in P(1n , 2, n + 1). Then (−KX2n+2 )n = 1. By [IF00, Thm 8.1], we know that X2n+2 is
+smooth when n is even. By [ST24, Thm 1.3], we know δ(X2n+2 ) ⩾ (n + 1)/2 > 1, so X2n+2 is a
+smooth K-stable Fano manifold with minimal anti-canonical volume (−KX2n+2 )n = 1 for all even n.
+When n is odd, the general hypersurface X2n+2 ⊂ P(1n , 2, n + 1) is singular. (After communicating
+with K. Fujita, we find that this type of example already appears in [KSC04, Theorem 5.22].)
+
+Example 4.22. Let Y be the double cover of Pn ramified along a degree 2n smooth hypersurface D.
+Then by Hurwitz’s formula, KY = ϕ∗ (KPn + 21 D). So (−KY )n = deg(ϕ)·(−KPn − 12 D)n = 2. It was
+first shown in [AGP06, Theorem 3.2] that Y admits Kähler-Einstein metric, hence K-stable (See also
+[Der16] and [AZ22, Corollary 4.9(3)] for a purely algebraic proof of K-stability). Here we illustrate
+a different proof based on the result of [LZ22, Zhu21], we know K-stability of Y is equivalent to
+the K-stability of the log Fano pair (Pn , 12 D). Since we assume D is a smooth hypersurface, then
+the log Fano pair (Pn , ( n+1
+                           2n
+                              − ε)D) is klt, so it is uniformly K-stable by [ADL23, Theorem 2.10]
+                               2n
+for 0 < ε ≪ 1. Since D ∼Q n+1     (−KPn ), by the interpolation of K-stability ([ADL24, Prop 2.13]),
+                     n 1
+we conclude that (P , 2 D) is K-stable. Thus, Y is a smooth K-stable Fano manifold with volume
+(−KY )n = 2 for all dimensions n ⩾ 2. Note that Y contains a degree 2 free-immersed rational curve
+with n − 1 nodes (see [Kol96, IV.2.12.3]).
+                            ON THE VOLUME OF K-SEMISTABLE FANO MANIFOLDS                                 33
+
+    We indeed have the following:
+ Proposition 4.23. The minimum of anticanonical volumes of n-dimensional Fano manifolds is equal
+ to 1 if n is even and is equal to 2 if n is odd. The minimum volume is obtained by K-stable Fano
+ manifolds.
+
+    This follows from Example 4.21, Example 4.22 and following interesting fact pointed out to us
+ by K. Fujita:
+ Fact 1. ([KSC04, Solution to Exercise 5.23, Page 217]) Let X be a smooth projective variety of odd
+ dimension n. Then the self-intersection number (−KX )n is even.
+ Question 4.24. Classify all Fano manifolds that obtain the minimal volume.
+
+                             A PPENDIX A. P ROOF OF THE ESTIMATE (34)
+
+    The following graphs illustrate the result in Proposition 4.8.
+
+
+
+
+              ( A ) d=7                           ( B ) d=6                            ( C ) d=5
+
+
+
+
+              ( D ) d=4                           ( E ) d=3                            ( F ) d=2
+
+                                      F IGURE 1. n = 7, 7 ≥ d ≥ 2
+
+    The solid curve (resp. the dashed curve) is the graph of f (y) := ϕ(y)/(2nn ) − 1 (resp. g(y) :=
+ Ψ(y)/(2nn )) where y = x − d. The first graph illustrates Example 4.7. The second figure illustrates
+ Proposition 4.10. The 3rd to 5th figures illustrates that for d ∈ {5, 4, 3} at y1 = 2(n − d + 1) =
+ x1 − d ∈ {6, 8, 10}, g ′ (y1 ) > f ′ (y1 ) and g(y1 ) > f (y1 ) as claimed in the proof of Proposition 4.8.
+ The last figure illustrates Remark 4.5. The graphs are generated by the following codes.
+1 L=2;n=7;
+2 phi[y ,n ,d ]:=Lˆ(-n+d-1)∗Sum[Binomial[n,j]∗(n-d+2-j)∗dˆ(n-j)∗yˆj,{j,0,n-
+     d+1}];
+ 34                                        CHI LI AND MINGHAO MIAO
+
+3 Phi[y,n,d]:=Lˆ(-n+d-1)∗Sum[Binomial[n+1,j]∗(n-d+3-j)/(n+1)∗dˆ(n+1-j)∗yˆj,
+     {j,0,n-d+2}];
+4 A[n ,d ]:=d-2+L∗(n-d+1);
+5 Psi[y ,n ,d ]:=(y+d-A[n,d])∗phi[y,n,d]-Phi[y ,n ,d ];
+6 For[d=n,d>1,d--,Plot[{phi[y,n,d]/(2nˆn)-1,Psi[y,n,d]/(2nˆn)},{y,0,L∗(n+1-
+     d)+1}, PlotStyle → {Thick, Dashed}]//Print]
+
+
+
+
+ Proof of the estimate (34). For the simplicity of notation, we set r = n + 1 − d so that r + d = n + 1.
+ We will prove that (34) holds for x1 = 2r + d = 2n − d + 2.
+      (Case I: Both r and d are big) By using the expression (25)-(26), we can calculate:
+
+              S = S(r, d) = Φ(x1 ) − ϕ(x1 )
+                                     Z d
+                  2−(n−d+1) n!
+ (36)       =                            z d−3 (d − z)(x1 − z)n−d+1 (n − z)dz
+              (d − 3)!(n − d + 2)! 0
+                         r
+                  1     X                                                   n!
+ (37)       = r             (r + 1 − j) · [n(n − j + 1) − d(d − 2)]                  dn−j (2r)j
+              2 (r + 1) j=0                                           j!(n + 1 − j)!
+                                   r
+               (d + 2r)n+1 · n X
+                                                                     
+                                                                n+1
+ (38)       = r                       (r + 1 − j)(r − j + ∆)            (1 − p)n+1−j pj
+              2 (r + 1)(n + 1)d j=0                               j
+
+ where
+                                    d(r + 1)            2r                  d
+                           ∆=                ,   p=          ,   1−p=            .
+                                       n              d + 2r              d + 2r
+ For the identity (37) we use the binomial expansion of (x1 − z)r = (2r + (d − z))r and integrate
+ via the definition of Beta functions. To estimate the partial binomial sum, we use a method from
+ probability theory called Crámer’s tilt. Set
+
+                                            r     r        2r
+                                      q=       =     <p=
+                                           n+1   r+d     2r + d
+
+ such that the new expectation of the binomial distribution is r = (n + 1)q. We can calculate:
+                                                    j−(n+1)q                  q n+1
+                 (1 − p)n+1−j pj
+                                                                     
+                                           p(1 − q)              1 − p p(1 − q)
+                                      =
+                 (1 − q)n+1−j q j          q(1 − p)              1 − q q(1 − p)
+                                                                n+1
+                                                (1 − p)1−q pq
+                                                              
+                                      = η r−j
+                                                (1 − q)1−q q q
+
+ where
+
+                           q(1 − p)   rd   1            (1 − p)1−q pq      r+d
+                      η=            =     = ,                  1−q  q
+                                                                      = 2q        .
+                           p(1 − q)   2rd  2            (1 − q) q          2r + d
+                          ON THE VOLUME OF K-SEMISTABLE FANO MANIFOLDS                              35
+
+Substituting into the formula (38) and let j = r − k, we get
+                             r
+                  (n + 1)n n X
+                                                    
+                                                n+1
+(39)          S =               (k + 1)(k + ∆)        (1 − q)n+1−r+k q r−k 2−k
+                   (r + 1)d k=0                  r−k
+                               r
+                    (n + 1)n n X
+(40)              =               (k + 1)(k + ∆)2−k ak
+                     (r + 1)d k=0
+
+             n+1
+                 
+where ak =   r−k
+                 (1 − q)n+1−r+k q r−k . Note that for k ≥ 1,
+
+                        ak     r−k+1  d   d     d
+                            =        · ≤     ≤     < 1.
+                       ak−1   n−r+k+1 r  d+k   d+1
+                     d
+So if we set θ1 = 2(d+3) < 12 and β := n+1
+                                        dr
+                                                n
+                                           ≥ d(r+1) = ∆−1 , we get the estimate:
+
+                  +∞
+ S    (n + 1)n −1 X
+    ≤         ∆       (k + 1)(k + ∆)2−k · ak
+2nn     2nn       k=0
+                                       +∞
+                                                                                       !
+         (n + 1)n −1             a1 a2 X                           a2+j
+       =     n
+                 ∆ a0 ∆ + (1 + ∆) +        (j + 3)(j + 2 + ∆)2−j−2
+           2n                    a0 a0 j=0                          a2
+                                                        +∞                              j               !
+         (n + 1)n −1                          d2
+                                                                                  
+                                    d                   X
+                                                                               −j    d
+       ≤         ∆ a0 ∆ + (1 + ∆)      +                    (j + 3)(j + 2 + ∆)2
+           2nn                    d + 1 4(d + 1)(d + 2) j=0                         d+3
+         (n + 1)n −1
+       =         ∆ a0 (α1 ∆ + τ1 )
+           2nn
+                     d        2
+                              d        3−2θ1             d        d    2   θ2 −3θ +3
+                                                                              1
+where α1 = 1 + d+1      + 4(d+1)(d+2) (1−θ1 )2
+                                               and τ1 = d+1 + 2(d+1)(d+2) 1
+                                                                          (1−θ1 )3
+                                                                                   . By using Robbins’
+version of the Stirling approximation:
+
+                                     1            n!            1
+                                  e 12n+1 <        √       < e 12n ,
+                                              nn e−n 2πn
+
+one can verify that: with r = (n + 1)q,
+                                 
+                             n+1                              1
+                     a0   =         (1 − q)n+1−r q r ≤ p
+                               r                        2π(n + 1)q(1 − q)
+                            s           r
+                              (n + 1)      β
+                          =           =       .
+                              (2π)rd       2π
+
+Thus, when d ≤ r, we have β = d−1 + r−1 ≤ 2d−1 , then
+
+              S      e p                    e p
+                 ≤  √    β (α1 + τ 1 β) ≤  √   (2/d) (α1 + τ1 · (2/d)) ≤ 1
+             2nn   2 2π                   2 2π
+
+provided if d ≥ 9.
+36                                     CHI LI AND MINGHAO MIAO
+
+     When r ≤ d, similarly
+                                         +∞
+                                                                           !
+      S    (n + 1)n −1             a1 a2 X                           a 2+j
+         ≤         ∆ a0 ∆ + (1 + ∆) +        (j + 3)(j + 2 + ∆)2−j−2
+     2nn     2nn                   a0 a0 j=0                          a2
+                                         +∞                                    j !
+           (n + 1)n −1
+                                                                     
+                                      r−1X                              r  − 2
+         ≤         ∆ a0 ∆ + (1 + ∆) +        (j + 3)(j + 2 + ∆)2−j−2
+             2nn                       r j=0                               r
+               (n + 1)n −1
+           =           ∆ a0 (α2 ∆ + τ2 )
+                 2nn
+                                            3−2θ2                   θ2 −3θ +3
+where θ2 = θ2 (r) = r−2
+                     2r
+                         and α2 = 2 + r−1
+                                        4r (1−θ2 )2
+                                                    , τ2 = 1 + r−1   2   2
+                                                                  2r (1−θ2 )3
+                                                                              . Use ∆−1 ≤ r+1
+                                                                                           r
+                                                                                              β with
+     −1    −1      −1
+β = d + r ≤ 2r . We see the inequality
+                                                              
+                       S       e              r                  p
+                           ≤  √     α 2 +          τ 2 · (2/r)     2/r ≤ 1
+                      2nn    2 2π          r+1
+holds provided if r ≥ 11.
+  (Case II: r small and d large) Recall the relation n + 1 = r + d. To illustrate our way to estimate,
+consider the case r = n − d + 1 = 3 and d ≥ 3 so that n ≥ 5. Then we can calculate and estimate:
+           Ψ(x1 ) − ϕ(x1 )    (n − 2)n−2
+                           =              (115n3 − 126n2 − 66n + 40)
+                2nn          16nn (1 + n)
+                             e−2 115n3 − 126n2 − 66n + 40
+                           ≤
+                             16        (n − 2)2 (1 + n)
+                             115e−2         1 219n2 − 66n − 420
+                                                               
+                           =           1+
+                               16          115 (n − 2)2 (n + 1)
+                             115e−2
+                                                                           
+                                            1     m        −1        −2  −3
+                           =           1+             (219m + 810m + 324m )
+                               16          115 m + 3
+where for the first inequality we used (n − 2)n /nn ≤ e−2 and for the last equality we set m = n − 2.
+One can verify numerically that the last expression is less than 1 when m = n − 2 ≥ 69. So we can
+just verify numerically for 6 ≤ n ≤ 70 or equivalently 3 ≤ d ≤ 68.
+     For r ≥ 4, we use the formula (39) for S = S(r, d) to estimate (note that ∆ = d(r+1)
+                                                                                      n
+                                                                                          ≤ r + 1):
+                                r
+                   (n + 1)n n X
+                                                          
+            S                                        n+1
+              n
+                = n                (k + 1)(k + ∆)            (1 − q)n+1−r+k q r−k 2−k
+           2n     2n (r + 1)d k=0                    r−k
+                                          r
+           (n + 1)n 1
+                                     
+                                r − 1 X (k + 1)(k + r + 1)(n + 1)! d d+k r r−k −k
+      ≤                     1 +                                          (       ) (        ) 2
+             2nn r + 1            d      k=0
+                                             (r − k)!(n +  1 − (r − k))!   n + 1      n + 1
+                         r
+           e 1          X                         1                  r
+      ≤         (1 + ϵ)     (k + 1)(k + r + 1)          rr−k 2−k (1 + )−d
+           2r+1         k=0
+                                               (r − k)!              d
+
+where we set ϵ = r/d. Moreover, we have 1 + ϵ < eϵ and
+                                          ϵ2                  ϵ2     rϵ
+                  −d · log(1 + ϵ) = −d(ϵ − + · · · ) ≤ −dϵ + d = −r + .
+                                          2                   2      2
+                              ON THE VOLUME OF K-SEMISTABLE FANO MANIFOLDS                             37
+
+    Then
+                                              r
+                       S        e            X   (k + 1)(k + r + 1)rr−k −r+rϵ/2
+                          ≤          (1 + ϵ)                           e        .
+                      2nn   2(r + 1)         k=0
+                                                       2k (r − k)!
+    We define
+                                         r
+                                 e1−r X (k + 1)(k + r + 1)rr−k           S
+    (41)         R∞ = R∞ (r) =                 k
+                                                               = limd→+∞ n .
+                               2(r + 1) k=0   2 (r − k)!                2n
+                                                                           r(r+2)
+    We have S/2nn < R∞ er(r+2)/(2d) . So S < 2nn when d ≥ d(r) = 2(−logR        ∞)
+                                                                                   . By (Case I), we can
+    assume that 4 ≤ r ≤ 10. By the numerical analysis (we provide the following Wolfram Mathematica
+    code), we can determine the choice of d(r) for each 4 ≤ r ≤ 10. Moreover, by the beginning
+    discussion of (Case II), we can assume d(3) = 68. We list the results in Table 1.
+1 R = (Eˆ(1 - r)/(2∗(r + 1)))∗Sum[((k + 1)∗(k + r + 1)∗rˆ(r - k))/
+2          (2ˆk∗(r - k)!), {k, 0, r}]
+3 Table[N[(r∗(r + 2))/(2∗(-Log[R]))], {r, 4, 10}]
+
+
+
+                                                 TABLE 1. d(r)
+
+                                 r   3   4   5 6 7    8   9   10
+                                d(r) 68 101 89 91 97 106 117 128
+
+      (Case III: d small and r large) We use the integral formula (36) to estimate. We use
+                                                                                 d−z r
+             2−(n−d+1) (x1 − z)n−d+1 = 2−r (2r + d − z)r = rr (1 +                   ) ≤ rr e(d−z)/2
+                                                                                  2r
+    and n − z ≤ n to get:
+                                                         Z d
+                 S           2−(n−d+1) n!
+                    =                                          z d−3 (d − z)(x1 − z)n−d+1 (n − z)dz
+                2nn   2nn (d − 3)!(n − d + 2)!            0
+                                                                  Z d
+                        n(n − 1) · · · (n − d + 3) rr · n
+                      ≤                           ·                        z d−3 (d − z)e(d−z)/2 dz
+                               (d − 3)!             2nn               0
+
+                        n(n − 1) · · · (n − d + 3) (n − d + 1)r d d−3
+                                                                 Z
+                      =                   d−2              r
+                                                                      z (d − z)e(d−z)/2 dz
+                              (d − 3)!n                 2n         0
+                                                  Z d
+                             d − 1 −r        1
+                      ≤ (1 +        )                 z d−3 (d − z)e(d−z)/2 dz
+                               r        2(d − 3)! 0
+    where ϵ = d−1
+               r
+                  and
+                                          +∞
+                                          X             ϵ2 ϵ3
+                     −rlog(1 + ϵ) = −r           (ϵ −     + + · · · ) ≤ −rϵ + rϵ2 /2.
+                                           k=0
+                                                        2  3
+    Then
+                                                                 Z d
+                             S        2              1
+                               n
+                                 ≤ erϵ /2 e1−d/2                          z d−3 (d − z)e−z/2 dz
+                            2n                   2(d − 3)!        0
+ 38                                            CHI LI AND MINGHAO MIAO
+
+ We define
+                                                        Z d
+                                    1− d2       1                                             S
+                  R∞ (d) = e                                  z d−3 (d − z)e−z/2 dz = lim        .
+                                            2(d − 3)!    0                              r→+∞ 2nn
+
+                                      (d−1)2                                           (d−1)                    2
+ Therefore, we have S/2nn < e      R∞ (d). So for S < 2nn , it suffices r ≥ r(d) := 2(−logR
+                                        2r
+                                                                                           ∞ (d))
+                                                                                                  .
+ By Case I, we can assume 3 ≤ d ≤ 8 and the corresponding r(d) can be solved numerically (see the
+ following Wolfram Mathematica code):
+1 R = Eˆ(1 - d/2)∗(1/(2∗(d - 3)!))∗
+2      Integrate[(zˆ(d - 3)∗(d - z))/Eˆ(z/2), {z, 0, d}]
+3 Table[N[(d - 1)ˆ2/(2∗(-Log[R]))], {d, 3, 8}]
+
+
+
+                                                    TABLE 2. r(d)
+
+                                         d   3 4 5 6 7 8
+                                        r(d) 16 20 27 34 43 52
+
+   (Case IV: Both d and r = n + 1 − d are small). We can numerically check (see the following
+ Wolfram Mathematica code) that the estimate (34) holds for the following finitely many cases:
+
+       • 3 ≤ d ≤ 8 and 3 ≤ r ≤ r(d) − 1.
+       • 4 ≤ r ≤ 10 and 3 ≤ d ≤ d(r) − 1.
+
+ Both r(d) and d(r) are given by Table 1 and 2.
+1 x1 = 2 r + d
+2 n = r + d - 1
+3 S = (n!/(2ˆr∗(d - 3)!∗(n - d + 2)!))∗
+4   Integrate[zˆ(d - 3)∗(d - z)∗(x1 - z)ˆr∗(n - z), {z, 0, d}]
+5 Do[Print[S/(2∗nˆn) < 1], {d, 3, 8}, {r, 3, 52}]
+6 Do[Print[S/(2∗nˆn) < 1], {r, 3, 10}, {d, 3, 128}]
+
+
+
+                                                                                                                    □
+
+                             A PPENDIX B. A PROOF OF THE FORMULA (35)
+
+    We calculate the Duistermaat-Heckman measure via the localization method. Let ω = ωFS denote
+ the restriction of the Fubini-Study metric of Pn+1 on X = Qn = {Z0 Z1 + Z2 Z3 + Z42 + · · · + Zn+1
+                                                                                                2
+                                                                                                    =
+         n+1                    ∗                                    ∗
+ 0} ⊂ P       for n ≥ 3. The C action on X is given by: for any λ ∈ C ,
+             λ ◦ (Z0 , Z1 , Z2 , Z3 , Z4 , . . . , Zn+1 ) = (Z0 , λ2 Z1 , Z2 , λ2 Z3 , λZ4 , . . . , λZn+1 ).
+ The corresponding S 1 action is a Hamiltonian with moment map given by:
+                                            2|Z1 |2 + 2|Z3 |2 + |Z4 |2 + · · · + |Zn+1 |2
+                            µ([Z]) =                                                      .
+                                                  |Z0 |2 + |Z1 |2 + · · · + |Zn+1 |2
+                           ON THE VOLUME OF K-SEMISTABLE FANO MANIFOLDS                             39
+
+We introduce the equivariant volume functional:
+                                      Z            n   Z
+                                          iµ(z)ξ ω
+                              V (θ) =    e           =    eiθξ DH(ξ)
+                                       X         n!     R
+                     n
+where DH(ξ) = µ∗ ωn! is the Duistermaat-Heckman measure. As a consequence, the density function
+of DH(ξ) is the Fourier transform of V (θ).
+   The localization formula calculates the integral V (θ) via data on the fixed points sets (including
+the values of moment map and equivariant Euler curvature forms of normal bundles) which consists
+of three components in this case:
+
+                F0 = µ−1 (0) ∼
+                             = P1 : [∗, 0, ∗, 0, . . . , 0],
+                F1 = µ−1 (2) ∼
+                             = P1 : [0, ∗, 0, ∗, 0, . . . , 0],
+                F2 = µ−1 (1) ∼
+                             = Qn−4 : [0, 0, 0, 0, Z4 , . . . , Zn+1 ] with Z42 + · · · Zn+1
+                                                                                         2
+                                                                                             = 0.
+
+The contribution from F0 is given by:
+                                 eω            (−1)n+1 2π
+                   Z
+         V0 (θ) :=                n−2 (−i2θ)
+                                             =            ((iθ)1−n + (n − 2)(iθ)−n ).
+                    P 1 ((ω − iθ))                 2
+We have the following useful formula: for any a ∈ R,
+                               Z iaθξ
+                            1     e        (a − ξ)k−1
+                                        =             Sign(a − ξ).
+                           2π R (iθ)k       2(k − 1)!
+So we can calculate the Fourier transform of V0 (θ):
+                Z
+             1                                1
+                   V0 (θ)e−iθξ dθ =                 ((n − 2)ξ n−1 − (n − 1)ξ n−2 )Sign(−ξ)
+            2π R                         4(n − 1)!
+                                         f (ξ)
+                                   =:          Sign(−ξ).
+                                           2
+The contribution from F2 is given by:
+                                 e(ω+2iθ)
+                       Z
+                                                     2π 2iθ
+            V2 (θ) :=                  n−2
+                                                  =     e ((iθ)1−n + (2 − n)(iθ)−n ).
+                        P1 ((ω  + iθ))     (i2θ)      2
+Similar to above, the Fourier transform of V2 (θ) is equal to:
+       Z
+    1                               1
+           V2 (θ)e−iθξ dθ =               (−(n − 2)(2 − ξ)n−1 + (n − 1)(2 − ξ)n−2 )Sign(2 − ξ)
+   2π R                         4(n − 1)!
+                                g(ξ)
+                           =:        Sign(2 − ξ).
+                                 2
+The contribution from F1 is given by:
+                                               e(ω+iθ)                  eω eiθ
+                                  Z                             Z
+                     V1 (θ) :=                   2          2
+                                                              =         2      2 2
+                                   Qn−4 (ω + iθ) (ω − iθ)        Qn−4 (ω + θ )
+                                   ⌊ n−4
+                                      2
+                                         ⌋
+                                    X      (k + 1)       eiθ
+                              =                                .
+                                    k=0
+                                        (n − 4 − 2k)! (iθ)2k+4
+40                                                  CHI LI AND MINGHAO MIAO
+
+The Fourier transform of V1 (θ) is equal to:
+               Z                                ⌊ n−4
+                                                   2
+                                                      ⌋
+           1                  −iθξ
+                                                X              (k + 1)
+                    V1 (θ)e          dθ =                                      (1 − ξ)2k+3 Sign(1 − ξ).
+          2π    R                                  k=0
+                                                       2(n − 4 − 2k)!(2k + 3)!
+
+We claim that this is equal to − f (ξ)+g(ξ)
+                                      2
+                                            Sign(1 − ξ) so that the Fourier transform is V (θ) is equal to:
+                         f (ξ)            g(ξ)               f (ξ) + g(ξ)
+               ρ(ξ) =          Sign(−ξ) +      Sign(2 − ξ) −              Sign(1 − ξ)
+                          2                2                      2
+                          −f (ξ) 0 ≤ ξ ≤ 1
+                         
+                       =     g(ξ)    1≤ξ≤2
+                         
+                          0         otherwise.
+It is immediate to check that ρ(ξ) = − n!1 dξd
+                                               vol(H − ξE) by using the expression from (35), which
+verifies the formula (35) after integration. To verify the claim, we calculate:
+                                                                    n−1        
+   n−1           n−1                     n−1                  n−1
+                                                                    X     n−1
+ ξ     − (2 − ξ)      = (1 − (1 − ξ))        − (1 + (1 − ξ))      =               ((−1)k − 1)(1 − ξ)k
+                                                                    k=0
+                                                                            k
+                                     ⌊ n−2
+                                        2
+                                           ⌋       
+                                     X        n−1
+                        = −                          (1 − ξ)2j+1 ,
+                                      j=0
+                                              2j + 1
+and finally verify the claimed identity:
+−2(n − 1)!(f (ξ) + g(ξ)) = (n − 2)(ξ n−1 − (2 − ξ)n−1 ) − (n − 1)(ξ n−2 − (2 − ξ)n−2 ),
+                           ⌊ n−2
+                              2
+                                 ⌋                             ⌊ n−3
+                                                                    2
+                                                                       ⌋               
+                            X                n−1          2j+1
+                                                                  X               n−2
+                         =         (n − 2)         (1 − ξ)     −        (n − 1)          (1 − ξ)2j+1
+                             j=0
+                                            2j + 1                 j=0
+                                                                                  2j + 1
+                                         ⌊ n−2
+                                            2
+                                               ⌋
+                                            X         (n − 1)!2j
+                                     =                                 (1 − ξ)2j+1
+                                            j=0
+                                                (2j + 1)!(n − 2 − 2j)!
+                                                          ⌊ n−4
+                                                             2
+                                                                ⌋
+                                                          X            k+1
+                                     = 2(n − 1)!                                      (1 − ξ)2k+3 .
+                                                           k=0
+                                                               (n − 4 − 2k)!(2k + 3)!
+
+                                                            R EFERENCES
+[AB24]     Rolf Andreasson and Robert J. Berman. Sharp bounds on the height of K-semistable Fano varieties I, the
+           toric case. Compos. Math., 160(10):2366–2406, 2024.
+[ABT09]    Marco Abate, Filippo Bracci, and Francesca Tovena. Embeddings of submanifolds and normal bundles. Adv.
+           Math., 220(2):620–656, 2009.
+[ADL23]    Kenneth Ascher, Kristin DeVleming, and Yuchen Liu. K-stability and birational models of moduli of quartic
+           K3 surfaces. Invent. Math., 232(2):471–552, 2023.
+[ADL24]    Kenneth Ascher, Kristin DeVleming, and Yuchen Liu. Wall crossing for K-moduli spaces of plane curves.
+           Proc. Lond. Math. Soc. (3), 128(6):Paper No. e12615, 113, 2024.
+[AGP06]    Claudio Arezzo, Alessandro Ghigi, and Gian Pietro Pirola. Symmetries, quotients and Kähler-Einstein met-
+           rics. J. Reine Angew. Math., 591:177–200, 2006.
+[AIM20]    AIM. AIM problem list: K-stability and related topics, 2020. Available at http://aimpl.org/kstability.
+                              ON THE VOLUME OF K-SEMISTABLE FANO MANIFOLDS                                           41
+
+[Ara06]  Carolina Araujo. Rational curves of minimal degree and characterizations of projective spaces. Math. Ann.,
+         (335):937–951, 2006.
+[AZ22]   Hamid Abban and Ziquan Zhuang. K-stability of Fano varieties via admissible flags. Forum Math. Pi, 10:Pa-
+         per No. e15, 43, 2022.
+[BB13]   Robert J. Berman and Bo Berndtsson. Real Monge-Ampère equations and Kähler-Ricci solitons on toric log
+         Fano varieties. Ann. Fac. Sci. Toulouse Math. (6), 22(4):649–711, 2013.
+[BB17]   Robert J. Berman and Bo Berndtsson. The volume of Kähler-Einstein Fano varieties and convex bodies. J.
+         Reine Angew. Math., 723:127–152, 2017.
+[Ber25]  Robert J. Berman. On K-stability, height bounds and the Manin-Peyre conjecture. Pure Appl. Math. Q.,
+         21(3):931–970, 2025.
+[BGV92] Nicole Berline, Ezra Getzler, and Michèle Vergne. Heat kernels and Dirac operators, volume 298 of
+         Grundlehren Math. Wiss. Springer-Verlag, Berlin, 1992.
+[BHJ17]  Sébastien Boucksom, Tomoyuki Hisamoto, and Mattias Jonsson. Uniform K-stability, Duistermaat-
+         Heckman measures and singularities of pairs. Ann. Inst. Fourier (Grenoble), 67(2):743–841, 2017.
+[BJ20]   Harold Blum and Mattias Jonsson. Thresholds, valuations, and K-stability. Adv. Math., 365:107062, 57,
+         2020.
+[CD15]   Cinzia Casagrande and Stéphane Druel. Locally unsplit families of rational curves of large anticanonical
+         degree on Fano manifolds. Int. Math. Res. Not. IMRN, (21):10756–10800, 2015.
+[CFH14] Yifei Chen, Baohua Fu, and Jun-Muk Hwang. Minimal rational curves on complete toric manifolds and
+         applications. Proc. Edinb. Math. Soc. (2), 57(1):111–123, 2014.
+[CLS11] David A. Cox, John B. Little, and Henry K. Schenck. Toric varieties, volume 124 of Graduate Studies in
+         Mathematics. American Mathematical Society, Providence, RI, 2011.
+[CMSB02] Koji Cho, Yoichi Miyaoka, and N.I. Shepherd-Barron. Characterizations of projective space and applications
+         to complex symplectic manifolds. In Heigher dimensional birational geometry (Kyoto, 1997), Adv. Stud.
+         Pure Math., 25, pages 1–88. Mathematical Society of Japan, 2002.
+[Deb01]  Olivier Debarre. Higher-dimensional algebraic geometry. Universitext. Springer-Verlag, New York, 2001.
+[Der16]  Ruadhaı́ Dervan. On K-stability of finite covers. Bull. Lond. Math. Soc., 48(4):717–728, 2016.
+[dFKL07] Tommaso de Fernex, Alex Küronya, and Robert Lazarsfeld. Higher cohomology of divisors on a projective
+         variety. Math. Ann., 337(2):443–455, 2007.
+[DH17]   Thomas Dedieu and Andreas Höring. Numerical characterisation of quadrics. Algebraic Geometry,
+         4(1):120–135, 2017.
+[Don02]  S. K. Donaldson. Scalar curvature and stability of toric varieties. J. Differential Geom., 62(2):289–349, 2002.
+[FO18]   Kento Fujita and Yuji Odaka. On the K-stability of Fano varieties and anticanonical divisors. Tohoku Math.
+         J. (2), 70(4):511–521, 2018.
+[Fuj16]  Kento Fujita. On K-stability and the volume functions of Q-fano varieties. Proc. London Math. Soc. (3),
+         113(3):541–582, 2016.
+[Fuj18]  Kento Fujita. Optimal bounds for the volumes of Kähler-Einstein Fano manifolds. Amer. J. Math.,
+         140(2):391–414, 2018.
+[Fuj19]  Kento Fujita. A valuative criterion for uniform K-stability of Q-Fano varieties. J. Reine Angew. Math.,
+         751:309–338, 2019.
+[Har77]  Robin Hartshorne. Algebraic geometry. Springer-Verlag, New York-Heidelberg, 1977. Graduate Texts in
+         Mathematics, No. 52.
+[HM03]   Jun-Muk Hwang and Ngaiming Mok. Finite morphisms onto Fano manifolds of Picard number 1 which have
+         rational curves with trivial normal bundles. J. Algebraic Geom., 12(4):627–651, 2003.
+42                                        CHI LI AND MINGHAO MIAO
+
+[IF00]    A. R. Iano-Fletcher. Working with weighted complete intersections. In Explicit birational geometry of 3-
+          folds, volume 281 of London Math. Soc. Lecture Note Ser., pages 101–173. Cambridge Univ. Press, Cam-
+          bridge, 2000.
+[Jia20]   Chen Jiang. Boundedness of Q-Fano varieties with degrees and alpha-invariants bounded from below. Ann.
+          Sci. Éc. Norm. Supér. (4), 53(5):1235–1248, 2020.
+[JM12]    Mattias Jonsson and Mircea Mustata. Valuations and asymptotic invariants for sequences of ideals. Ann. Inst.
+          Fourier (Grenoble), 62(6):2145–2209, 2012.
+[KM98]    János Kollár and Shigefumi Mori. Birational geometry of algebraic varieties, volume 134 of Cambridge
+          Tracts in Mathematics. Cambridge University Press, Cambridge, 1998.
+[KO73]    Shoshichi Kobayashi and Takushiro Ochiai. Characterizations of complex projective spaces and hyper-
+          quadrics. J. Math. Kyoto Univ., 13:31–47, 1973.
+[Kol96]   János Kollár. Rational curves on algebraic varieties, volume 32 of Ergebnisse der Mathematik und ihrer
+          Grenzgebiete. 3. Folge. A Series of Modern Surveys in Mathematics. Springer-Verlag, Berlin, 1996.
+[Kol13]   János Kollár. Singularities of the minimal model program, volume 200 of Cambridge Tracts in Mathematics.
+          Cambridge University Press, Cambridge, 2013. With a collaboration of Sándor Kovács.
+[KSC04]   János Kollár, Karen E. Smith, and Alessio Corti. Rational and nearly rational varieties, volume 92 of Cam-
+          bridge Studies in Advanced Mathematics. Cambridge University Press, Cambridge, 2004.
+[Laz04]   Robert Lazarsfeld. Positivity in algebraic geometry. I, volume 48. Springer-Verlag, Berlin, 2004. Classical
+          setting: line bundles and linear series.
+[Li17]    Chi Li. K-semistability is equivariant volume minimization. Duke Math. J., 166(16):3147–3218, 2017.
+[Li18]    Chi Li. Minimizing normalized volumes of valuations. Math. Z., 289(1-2):491–513, 2018.
+[Liu18]   Yuchen Liu. The volume of singular Kähler-Einstein Fano varieties. Compos. Math., 154(6):1131–1158,
+          2018.
+[LL19]    Chi Li and Yuchen Liu. Kähler-Einstein metrics and volume minimization. Adv. Math., 341:440–492, 2019.
+[LX19]    Yuchen Liu and Chenyang Xu. K-stability of cubic threefolds. Duke Math. J., 168(11):2029–2073, 2019.
+[LZ18]    Yuchen Liu and Ziquan Zhuang. Characterization of projective spaces by Seshadri constants. Math. Z.,
+          289(1-2):25–38, 2018.
+[LZ22]    Yuchen Liu and Ziwen Zhu. Equivariant K-stability under finite group action. Internat. J. Math., 33(1):Paper
+          No. 2250007, 21, 2022.
+[Miy04]   Y. Miyaoka. Numerical characterisations of hyperquadrics. In Complex Analysis in Several Variables-
+          Memorial Conference of Kiyoshi Oka’s Centennial Birthday, volume 42 of Adv. Stud. Pure Math., pages
+          209–235. Math. Soc. Japan, Tokyo, 2004.
+[Mor79]   Shigefumi Mori. Projective manifolds with ample tangent bundles. Ann. of Math. (2), 110(3):593–606, 1979.
+[MP25]    Pietro Mesquita-Piccione. A non-Archimedean theory of complex spaces and the cscK problem. Adv. Math.,
+          481:Paper No. 110543, 2025.
+[MS24]    Joaquı́n Moraga and Hendrik Süß. Bounding toric singularities with normalized volume. Bull. Lond. Math.
+          Soc., 56(6):2212–2229, 2024.
+[Obr07]   Mikkel Obro. An algorithm for the classification of smooth Fano polytopes. arXiv:0704.0049, 2007. Data-
+          base at http://www.grdb.co.uk/forms/toricsmooth.
+[QR12]    M.H. Quek and D. Rydh. Weighted blow-ups. 2012. in preparation.
+[SS17]    Cristiano Spotti and Song Sun. Explicit Gromov-Hausdorff compactifications of moduli spaces of Kähler-
+          Einstein Fano manifolds. Pure Appl. Math. Q., 13(3):477–515, 2017.
+[ST24]    Taro Sano and Luca Tasin. Delta invariants of weighted hypersurfaces. arXiv preprint arXiv:2408.03057,
+          2024.
+[SZ12]    Yalong Shi and Xiaohua Zhu. Kähler-Ricci solitons on toric Fano orbifolds. Math. Z., 271(3-4):1241–1251,
+          2012.
+                           ON THE VOLUME OF K-SEMISTABLE FANO MANIFOLDS                                            43
+
+[Tia97]   Gang Tian. Kähler-Einstein metrics with positive scalar curvature. Invent. Math., 130(1):1–37, 1997.
+[WZ04]    Xu-Jia Wang and Xiaohua Zhu. Kähler-Ricci solitons on toric manifolds with positive first Chern class. Adv.
+          Math., 188(1):87–103, 2004.
+[Xu25]    Chenyang Xu. K-stability of Fano varieties, volume 50 of New Mathematical Monographs. Cambridge Uni-
+          versity Press, Cambridge, 2025.
+[Zhu21]   Ziquan Zhuang. Optimal destabilizing centers and equivariant K-stability. Invent. Math., 226(1):195–223,
+          2021.
+[Zhu25]   Ziquan Zhuang. Stability of klt singularities. In Handbook of geometry and topology of singularities VII,
+          pages 501–551. Springer, Cham, [2025] ©2025.
+
+
+   C HI L I : D EPARTMENT OF M ATHEMATICS , RUTGERS U NIVERSITY, P ISCATAWAY, NJ 08854-8019, US
+
+   Email address: chi.li@rutgers.edu
+
+
+   M INGHAO M IAO : S CHOOL OF M ATHEMATICS , NANJING U NIVERSITY, NANJING 210093, C HINA
+
+   Email address: minghao.miao@smail.nju.edu.cn
+

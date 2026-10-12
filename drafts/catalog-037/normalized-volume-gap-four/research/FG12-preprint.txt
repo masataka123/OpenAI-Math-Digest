@@ -1,0 +1,485 @@
+                                                ON CANONICAL BUNDLE FORMULAE AND
+                                                         SUBADJUNCTIONS
+arXiv:1009.3996v1 [math.AG] 21 Sep 2010
+
+
+
+
+                                                         OSAMU FUJINO AND YOSHINORI GONGYO
+
+
+
+
+                                                 Abstract. We consider a canonical bundle formula for generi-
+                                                 cally finite proper surjective morphisms and obtain subadjunction
+                                                 formulae for minimal log canonical centers of log canonical pairs.
+                                                 We also treat related topics and applications.
+
+
+                                                                           Contents
+                                            1. Introduction                                                            1
+                                            2. Main lemma                                                              3
+                                            3. Ambro’s canonical bundle formula                                        5
+                                            4. Subadjunction for minimal log canonical centers                         8
+                                            5. Log Fano varieties                                                      9
+                                            6. Non-vanishing theorem for log canonical pairs                          10
+                                            7. Subadjunction formula: local version                                   10
+                                            References                                                                11
+
+
+                                                                      1. Introduction
+                                             The following lemma is one of the main results of this paper, which is
+                                          missing in the literature. It is a canonical bundle formula for generically
+                                          finite proper surjective morphisms.
+                                          Lemma 1.1 (Main Lemma). Let X and Y be normal varieties and
+                                          let f : X → Y be a generically finite proper surjective morphism. Let
+                                          K be the rational number field Q or the real number field R. Suppose
+                                          that there exists an effective K-divisor ∆ on X such that (X, ∆) is
+                                          log canonical and that KX + ∆ ∼K,f 0. Then there exists an effective
+                                          K-divisor Γ on Y such that (Y, Γ) is log canonical and that
+                                                                   KX + ∆ ∼K f ∗ (KY + Γ).
+                                             Date: 2010/9/12, version 1.17.
+                                             2000 Mathematics Subject Classification. Primary 14N30; Secondary 14E30.
+                                             Key words and phrases. canonical bundle formula, adjunction formula, subad-
+                                          junction, log Fano varieties, non-vanishing theorem, log canonical centers.
+                                                                                 1
+2               OSAMU FUJINO AND YOSHINORI GONGYO
+
+Moreover, if (X, ∆) is kawamata log terminal, then we can choose Γ
+such that (Y, Γ) is kawamata log terminal.
+   As an application of Lemma 1.1, we prove a subadjunction formula
+for minimal lc centers. It is a generalization of Kawamata’s subadjunc-
+tion formula (cf. [K3, Theorem 1]). For a local version, see Theorem
+7.2 below.
+Theorem 1.2 (Subadjunction formula for minimal lc centers). Let K
+be the rational number field Q or the real number field R. Let X be
+a normal projective variety and let D be an effective K-divisor on X
+such that (X, D) is log canonical. Let W be a minimal log canonical
+center with respect to (X, D). Then there exists an effective K-divisor
+DW on W such that
+                      (KX + D)|W ∼K KW + DW
+and that the pair (W, DW ) is kawamata log terminal. In particular, W
+has only rational singularities.
+   We summarize the contents of this paper. Section 2 is devoted to the
+proof of Lemma 1.1. In Section 3, we discuss Ambro’s canonical bundle
+formula for projective kawamata log terminal pairs with a generaliza-
+tion for R-divisors (cf. Theorem 3.1). It is one of the key ingredients
+of the proof of Theorem 1.2. Although Theorem 3.1 is sufficient for
+applications in subsequent sections, we treat slight generalizations of
+Ambro’s canonical bundle formula for projective log canonical pairs. In
+Section 4, we prove a subadjunction formula for minimal log canonical
+centers (cf. Theorem 1.2), which is a generalization of Kawamata’s sub-
+adjunction formula (cf. [K3, Theorem 1]). In Section 5, we treat images
+of log Fano varieties by generically finite surjective morphisms as an
+application of Lemma 1.1. Theorem 5.1 is an answer to the question
+raised by Professor Karl Schwede (cf. [SS, Remark 6.5]). In Section 6,
+we give a quick proof of the non-vanishing theorem for log canonical
+pairs as an application of Theorem 1.2, which is the main theorem of
+the first author’s paper: [F4]. In Section 7, we prove a local version of
+our subadjunction formula for minimal log canonical centers (cf. The-
+orem 7.2). It is useful for local studies of singularities of pairs. This
+local version does not directly follow from the global version: Theorem
+1.2. It is because we do not know how to compactify log canonical
+pairs.
+   We close this introduction with the following notation. We also use
+the standard notation in [KM].
+Notation. Let K be the real number field R or the rational number
+field Q.
+        ON CANONICAL BUNDLE FORMULAE AND SUBADJUNCTIONS                  3
+
+   Let X be a normal variety and let B be an effective K-divisor
+such that KX + B is K-Cartier. Then we can define the discrepancy
+a(E, X, B) ∈ K for every prime divisor E over X. If a(E, X, B) ≥
+−1 (resp. > −1) for every E, then (X, B) is called log canonical
+(resp. kawamata log terminal). We sometimes abbreviate log canon-
+ical (resp. kawamata log terminal) to lc (resp. klt).
+   Assume that (X, B) is log canonical. If E is a prime divisor over X
+such that a(E, X, B) = −1, then cX (E) is called a log canonical center
+(lc center, for short) of (X, B), where cX (E) is the closure of the image
+of E on X. For the basic properties of log canonical centers, see [F4,
+Theorem 2.4] or [F5, Section 9].
+   We note that ∼K denotes K-linear equivalence of K-divisors. Let
+f : X → Y be a morphism between normal varieties and let D be a
+K-Cartier K-divisor on X. Then D is K-linearly f -trivial, denoted by
+D ∼K,f 0, if and only if there is a K-Cartier K-divisor B on Y such
+that D ∼K f ∗ B.
+   The base locus of the linear system Λ is denoted by BsΛ.
+Acknowledgments. The first author was partially supported by The
+Inamori Foundation and by the Grant-in-Aid for Young Scientists (A)
+♯20684001 from JSPS. He thanks Professor Karl Schwede for comments
+and questions. The second author was partially supported by the Re-
+search Fellowships of the Japan Society for the Promotion of Science
+for Young Scientists.
+  We will work over C, the complex number field, throughout this
+paper.
+                           2. Main lemma
+  In this section, we prove Lemma 1.1.
+Proof of Lemma 1.1. Let
+                                       g                 h
+                       f : X −−−→ Z −−−→ Y
+be the Stein factorization. By replacing (X, ∆) with (Z, g∗∆), we can
+assume that f : X → Y is finite. Let D be a K-Cartier K-divisor on
+Y such that KX + ∆ ∼K f ∗ D. We consider the following commutative
+diagram:
+                                   ν /
+                              X′       X
+                              f′                     f
+                                                
+                               Y′              / Y,
+                                           µ
+
+where
+4                   OSAMU FUJINO AND YOSHINORI GONGYO
+
+    (i) µ is a resolution of singularities of Y ,
+   (ii) there exists an open set U ⊆ Y such that µ is isomorphic over
+        U and f is étale over U. Moreover, µ−1 (Y − U) has a simple
+        normal crossing support and Y − U contains Suppf∗ ∆, and
+  (iii) X ′ is the normalization of the irreducible component of X ×Y Y ′
+        which dominates Y ′ . In particular, f ′ is finite.
+         P
+Let Ω = i δi Di be a K-divisor on X ′ such that
+                            KX ′ + Ω = ν ∗ (KX + ∆).
+We consider the ramification formula:
+
+                          KX ′ = f ′∗ KY ′ + R,
+                P
+where R = i (ri − 1)Di is an effective Z-divisor such that ri is the
+ramification index of Di for every i. Note that it suffices to show the
+above formula outside codimension two closed subsets of X ′ . Then it
+holds that
+                   (µ ◦ f ′ )∗ D ∼K f ′∗ KY ′ + R + Ω.
+By pushing forward the above formula by f ′ , we see
+                    degf ′ · µ∗ D ∼K degf ′ · KY ′ + f∗′ (R + Ω).
+We set
+                                 1
+                             Γ :=    µ∗ f∗′ (R + Ω)
+                              degf ′
+on Y . Then Γ is effective since
+               µ∗ f∗′ (R + Ω) = f∗ ν∗ (R + Ω) = f∗ (ν∗ R + ∆).
+                    S                                          P
+Let Y ′ \ µ−1 U = j Ej be the irreducible decomposition, where j Ej
+is a simple normal crossing divisor. We set
+                              Ij := {i|f ′(Di ) = Ej }.
+The coefficient of Ej in f∗′ (R + Ω) is
+                      P
+                        i∈Ij (ri + δi − 1)deg(f |Di )
+                                               ′
+                                                          .
+                                       degf ′
+Since δi ≤ 1, it holds that
+         X                               X
+            (ri + δi − 1)deg(f ′ |Di ) ≤   ri deg(f ′ |Di ) = degf ′ .
+         i∈Ij                               i∈Ij
+
+Thus (Y, Γ) is log canonical since KY ′ + f∗′ (R + Ω) = µ∗ (KY + Γ).
+Moreover, if (X, ∆) is kawamata log terminal, then δi < 1. Hence
+(Y, Γ) is kawamata log terminal.                                  
+       ON CANONICAL BUNDLE FORMULAE AND SUBADJUNCTIONS                 5
+
+            3. Ambro’s canonical bundle formula
+  Theorem 3.1 is Ambro’s canonical bundle formula for projective klt
+pairs (cf. [A2, Theorem 4.1]) with a generalization for R-divisors. We
+need it for the proof of our subadjunction formula: Theorem 1.2.
+Theorem 3.1 (Ambro’s canonical bundle formula for projective klt
+pairs). Let K be the rational number field Q or the real number field R.
+Let (X, B) be a projective kawamata log terminal pair and let f : X →
+Y be a projective surjective morphism onto a normal projective variety
+Y with connected fibers. Assume that
+                            KX + B ∼K,f 0.
+Then there exists an effective K-divisor BY on Y such that (Y, BY ) is
+klt and
+                     KX + B ∼K f ∗ (KY + BY ).
+Proof. If K = Q, then the statement is nothing
+                                             Pbut [A2, Theorem 4.1].
+From now on, we assume that K = R. L     Let i Bi be the irreducible
+decomposition of SuppB. We put V = RBi . Then it is well known
+                                            i
+that
+                L = {∆ ∈ V | (X, ∆) is log canonical}
+is a rational polytope in V . We can also check that
+                   N = {∆ ∈ L | KX + ∆ is f -nef}
+is a rational polytope and B ∈ N . We note that N is known as
+Shokurov’s polytope. Therefore, we can write
+                                 X
+                                 k
+                      KX + B =          ri (KX + ∆i )
+                                  i=1
+
+such that
+     (i) ∆i ∈ N is an effective Q-divisor on X for every i,
+    (ii) (X, ∆i ) is klt for every i, and
+                                            P
+   (iii) 0 < ri < 1, ri ∈ R for every i, and ki=1 ri = 1.
+Since KX + B is numerically f -trivial and KX + ∆i is f -nef for every
+i, KX + ∆i is numerically f -trivial for every i. Thus,
+             κ(Xη , (KX + ∆i )η ) = ν(Xη , (KX + ∆i )η ) = 0
+for every i, where η is the generic point of Y , by Nakayama (cf. [N,
+Chapter V 2.9. Corollary]). See also [A2, Theorem 4.2]. Therefore,
+KX + ∆i ∼Q,f 0 for every i by [F3, Theorem 1.1]. By the case when
+6                OSAMU FUJINO AND YOSHINORI GONGYO
+
+K = Q, we can find an effective Q-divisor Θi on Y such that (Y, Θi ) is
+klt and
+                      KX + ∆i ∼Q f ∗ (KY + Θi )
+                              P
+for every i. By putting BY = ki=1 ri Θi , we obtain
+                       KX + B ∼R f ∗ (KY + BY ),
+and (Y, BY ) is klt.                                                 
+    Corollary 3.2 is a direct consequence of Theorem 3.1.
+Corollary 3.2. Let K be the rational number field Q or the real number
+field R. Let (X, B) be a log canonical pair and let f : X → Y be
+a projective surjective morphism between normal projective varieties.
+Assume that
+                            KX + B ∼K,f 0
+and that every lc center of (X, B) is dominant onto Y . Then we can
+find an effective K-divisor BY on Y such that (Y, BY ) is kawamata log
+terminal and that
+                       KX + B ∼K f ∗ (KY + BY ).
+Proof. By taking a dlt blow-up (cf. [F5, Theorem 10.4]), we can assume
+that (X, B) is dlt. By replacing (X, B) with its minimal lc center and
+taking the Stein factorization, we can assume that (X, B) is klt and
+that f has connected fibers (cf. Lemma 1.1). Therefore, we can take a
+desired BY by Theorem 3.1.                                           
+   From now on, we treat Ambro’s canonical bundle formula for pro-
+jective log canonical pairs. We note that Theorem 3.1 is sufficient for
+applications in subsequent sections.
+3.3 (Observation). Let (X, B) be a log canonical pair and let f : X →
+Y be a projective surjective morphism between normal projective va-
+rieties with connected fibers. Assume that KX + B ∼Q,f 0 and that
+(X, B) is kawamata log terminal over the generic point of Y . We can
+write
+                   KX + B ∼Q f ∗ (KY + MY + ∆Y )
+where MY is the moduli Q-divisor and ∆Y is the discriminant Q-
+divisor. For details, see, for example, [A1]. It is conjectured that
+we can construct a commutative diagram
+                                       ν   /X
+                               X′
+                              f′                 f
+                                            
+                               Y′          / Y,
+                                       µ
+      ON CANONICAL BUNDLE FORMULAE AND SUBADJUNCTIONS                     7
+
+with the following properties.
+     (i) ν and µ are projective birational.
+    (ii) X ′ is normal and KX ′ + BX ′ = ν ∗ (KX + B).
+   (iii) KX ′ + BX ′ ∼Q f ′∗ (KY ′ + MY ′ + ∆Y ′ ) such that Y ′ is smooth,
+         the moduli Q-divisor MY ′ is semi-ample, and the discriminant
+         Q-divisor ∆Y ′ has a simple normal crossing support.
+In the above properties, the non-trivial part is the semi-ampleness of
+MY ′ . We know that we can construct desired commutative diagrams
+of f ′ : X ′ → Y ′ and f : X → Y when
+    (1) dim X − dim Y = 1 (cf. [K2, Theorem 5] and so on),
+    (2) dim Y = 1 (cf. [A1, Theorem 0.1] and [A2, Theorem 3.3]),
+    (3) general fibers of f are K3 surfaces, Abelian varieties, or smooth
+         surfaces with κ = 0 (cf. [F2, Theorem 1.2, Theorem 6.3]),
+and so on. We take a general member D ∈ |mMY ′ | of the free linear
+system |mMY ′ | where m is a sufficiently large and divisible integer. We
+put
+                                            1
+                    KY + BY = µ∗ (KY ′ + D + ∆Y ′ ).
+                                           m
+Then it is easy to see that
+                                             1
+                    µ∗ (KY + BY ) = KY ′ + D + ∆Y ′ ,
+                                            m
+(Y, BY ) is log canonical, and
+                       KX + B ∼Q f ∗ (KY + BY ).
+By the above observation, we have Ambro’s canonical bundle formula
+for projective log canonical pairs under some special assumptions.
+Theorem 3.4. Let (X, B) be a projective log canonical pair and let
+f : X → Y be a projective surjective morphism onto a normal projective
+variety Y such that KX + B ∼Q,f 0. Assume that dim Y ≤ 1 or
+dim X − dim Y ≤ 1. Then there exists an effective Q-divisor BY on Y
+such that (Y, BY ) is log canonical and
+                       KX + B ∼Q f ∗ (KY + BY ).
+Proof. By taking a dlt blow-up (cf. [F5, Theorem 10.4]), we can assume
+that (X, B) is dlt. If necessary, by replacing (X, B) with a suitable lc
+center of (X, B) and by taking the Stein factorization (cf. Lemma 1.1),
+we can assume that f : X → Y has connected fibers and that (X, B)
+is kawamata log terminal over the generic point of Y . We note that we
+can assume that dim Y = 1 or dim X − dim Y = 1. By the arguments
+in 3.3, we can find an effective Q-divisor BY on Y such that (Y, BY ) is
+log canonical and that KX + B ∼Q f ∗ (KY + BY ).                      
+8               OSAMU FUJINO AND YOSHINORI GONGYO
+
+    4. Subadjunction for minimal log canonical centers
+   The following theorem is a generalization of Kawamata’s subadjunc-
+tion formula (cf. [K3, Theorem 1]). Theorem 4.1 is new even for three-
+folds. It is an answer to Kawamata’s question (cf. [K1, Question 1.8]).
+Theorem 4.1 (Subadjunction formula for minimal lc centers). Let K
+be the rational number field Q or the real number field R. Let X be
+a normal projective variety and let D be an effective K-divisor on X
+such that (X, D) is log canonical. Let W be a minimal log canonical
+center with respect to (X, D). Then there exists an effective K-divisor
+DW on W such that
+                      (KX + D)|W ∼K KW + DW
+and that the pair (W, DW ) is kawamata log terminal. In particular, W
+has only rational singularities.
+Remark 4.2. In [K3, Theorem 1], Kawamata proved
+                  (KX + D + εH)|W ∼Q KW + DW ,
+where H is an ample Cartier divisor on X and ε is a positive rational
+number, under the extra assumption that D is a Q-divisor and there
+exists an effective Q-divisor D o such that D o < D and that (X, D o ) is
+kawamata log terminal. Therefore, Kawamata’s theorem claims noth-
+ing when D = 0.
+Proof of Theorem 4.1. By taking a dlt blow-up (cf. [F5, Theorem 10.4]),
+we can take a projective birational morphism f : Y → X from a normal
+projective variety Y with the following properties.
+    (i) KY + DY = f ∗ (KX + D).
+   (ii) (Y, DY ) is a Q-factorial dlt pair.
+We can take a minimal lc center Z of (Y, DY ) such that f (Z) = W .
+We note that KZ + DZ = (KY + DY )|Z is klt since Z is a minimal lc
+center of the dlt pair (Y, DY ). Let
+                                g         h
+                       f : Z −−−→ V −−−→ W
+be the Stein factorization of f : Z → W . By the construction, we can
+write
+                           KZ + DZ ∼K f ∗ A
+where A is a K-divisor on W such that A ∼K (KX + D)|W . We note
+that W is normal (cf. [F4, Theorem 2.4 (4)]). Since (Z, DZ ) is klt, we
+can take an effective K-divisor DV on V such that
+                           KV + DV ∼K h∗ A
+      ON CANONICAL BUNDLE FORMULAE AND SUBADJUNCTIONS                  9
+
+and that (V, DV ) is klt by Theorem 3.1. By Lemma 1.1, we can find
+an effective K-divisor DW on W such that
+                  KW + DW ∼K A ∼K (KX + D)|W
+and that (W, DW ) is klt.                                             
+
+                      5. Log Fano varieties
+  In this section, we give an easy application of Lemma 1.1. Theorem
+5.1 is an answer to the question raised by Karl Schwede (cf. [SS, Remark
+6.5]). For related topics, see [FG, Section 3].
+Theorem 5.1. Let (X, ∆) be a projective klt pair such that −(KX +∆)
+is ample. Let f : X → Y be a generically finite surjective morphism to
+a normal projective variety Y . Then we can find an effective Q-divisor
+∆Y on Y such that (Y, ∆Y ) is klt and −(KY + ∆Y ) is ample.
+Proof. Without loss of generality, we can assume that ∆ is a Q-divisor
+by perturbing the coefficients of ∆. Let H be a general very ample
+Cartier divisor on Y and let ε be a sufficiently small positive rational
+number. Then KX + ∆ + εf ∗H is anti-ample and (X, ∆ + εf ∗ H) is klt.
+We can take an effective Q-divisor Θ on X such that mΘ is a general
+member of the free linear system | − m(KX + ∆ + εf ∗H)| where m is
+a sufficiently large and divisible integer. Then
+                     KX + ∆ + εf ∗H + Θ ∼Q 0.
+Let δ be a positive rational number such that 0 < δ < ε. Then
+              KX + ∆ + (ε − δ)f ∗ H + Θ ∼Q f ∗ (−δH).
+By Lemma 1.1, we can find an effective Q-divisor ∆Y on Y such that
+                            KY + ∆Y ∼Q −δH
+and that (Y, ∆Y ) is klt. We note that
+                            −(KY + ∆Y ) ∼Q δH
+is ample.                                                             
+  By combining Theorem 5.1 with [FG, Theorem 3.1], we can easily
+obtain the following corollary.
+Corollary 5.2. Let (X, ∆) be a projective klt pair such that −(KX +∆)
+is ample. Let f : X → Y be a projective surjective morphism onto a
+normal projective variety Y . Then we can find an effective Q-divisor
+∆Y on Y such that (Y, ∆Y ) is klt and −(KY + ∆Y ) is ample.
+10               OSAMU FUJINO AND YOSHINORI GONGYO
+
+       6. Non-vanishing theorem for log canonical pairs
+   The following theorem is the main result of [F4]. It is almost equiva-
+lent to the base point free theorem for log canonical pairs. For details,
+see [F4].
+Theorem 6.1 (Non-vanishing theorem). Let X be a normal projective
+variety and let B be an effective Q-divisor on X such that (X, B) is
+log canonical. Let L be a nef Cartier divisor on X. Assume that
+aL − (KX + B) is ample for some a > 0. Then the base locus of the
+linear system |mL| contains no lc centers of (X, B) for every m ≫ 0,
+that is, there is a positive integer m0 such that Bs|mL|contains no lc
+centers of (X, B) for every m ≥ m0 .
+     Here, we give a quick proof of Theorem 6.1 by using Theorem 4.1.
+Proof. Let W be any minimal lc center of the pair (X, B). It is sufficient
+to prove that W is not contained in Bs|mL| for m ≫ 0. By Theorem
+4.1, we can find an effective Q-divisor BW on W such that (W, BW ) is
+klt and KW + DW ∼Q (KX + B)|W . Therefore, aL|W − (KW + BW ) ∼Q
+(aL − (KX + B))|W is ample. By the Kawamata–Shokurov base point
+free theorem, |mL|W | is free for m ≫ 0. By [F4, Theorem 2.2],
+                  H 0 (X, OX (mL)) → H 0 (W, OW (mL))
+is surjective for m ≥ a. Therefore, W is not contained in Bs|mL| for
+m ≫ 0.                                                            
+Remark 6.2. The above proof of Theorem 6.1 is shorter than the
+original proof in [F4]. However, the proof of Theorem 4.1 depends
+on very deep results such as existence of dlt blow-ups. The proof of
+Theorem 6.1 in [F4] only depends on various well-prepared vanishing
+theorems and standard techniques.
+
+            7. Subadjunction formula: local version
+   In this section, we give a local version of our subadjunction formula
+for minimal log canonical centers. Theorem 7.1 is a local version of Am-
+bro’s canonical bundle formula for kawamata log terminal pairs: The-
+orem 3.1. It is essentially [F1, Theorem 1.2].
+Theorem 7.1. Let K be the rational number field Q or the real number
+field R. Let (X, B) be a kawamata log terminal pair and let f : X → Y
+be a proper surjective morphism onto a normal affine variety Y with
+connected fibers. Assume that
+                            KX + B ∼K,f 0.
+       ON CANONICAL BUNDLE FORMULAE AND SUBADJUNCTIONS                        11
+
+Then there exists an effective K-divisor BY on Y such that (Y, BY ) is
+klt and
+                     KX + B ∼K f ∗ (KY + BY ).
+Sketch of the proof. First, we assume that K = Q. In this case, the
+proof of [F1, Theorem 1.2] works with some minor modifications. We
+note that M in the proof of [F1, Theorem 1.2] is µ-nef. We also note
+that we can assume H = 0 in [F1, Theorem 1.2] since Y is affine.
+Next, we assume that K = R. In this case, the reduction argument
+in the proof of Theorem 3.1 can be applied. So, we obtain the desired
+formula.                                                           
+  By Theorem 7.1, we can obtain a local version of Theorem 4.1. The
+proof of Theorem 4.1 works without any modifications.
+Theorem 7.2 (Subadjunction formula for minimal lc centers: local
+version). Let K be the rational number field Q or the real number field
+R. Let X be a normal affine variety and let D be an effective K-
+divisor on X such that (X, D) is log canonical. Let W be a minimal log
+canonical center with respect to (X, D). Then there exists an effective
+K-divisor DW on W such that
+                        (KX + D)|W ∼K KW + DW
+and that the pair (W, DW ) is kawamata log terminal. In particular, W
+has only rational singularities.
+  Theorem 7.2 does not directly follow from Theorem 4.1. It is because
+we do not know how to compactify log canonical pairs.
+
+                                References
+[A1] F. Ambro, Shokurov’s boundary property, J. Differential Geom. 67 (2004),
+     no. 2, 229–255.
+[A2] F. Ambro, The moduli b-divisor of an lc-trivial fibration, Compos. Math. 141
+     (2005), no. 2, 385–403.
+[F1] O. Fujino, Applications of Kawamata’s positivity theorem, Proc. Japan Acad.
+     Ser. A Math. Sci. 75 (1999), no. 6, 75–79.
+[F2] O. Fujino, A canonical bundle formula for certain algebraic fiber spaces and
+     its applications, Nagoya Math. J. 172 (2003), 129–171.
+[F3] O. Fujino, On Kawamata’s theorem, to appear in the proceeding of the “Clas-
+     sification of Algebraic Varieties”conference, Schiermonnikoog, Netherlands,
+     May 10–15, 2009.
+[F4] O. Fujino, Non-vanishing theorem for log canonical pairs, to appear in Jour-
+     nal of Algebraic Geometry.
+[F5] O. Fujino, Fundamental theorems for the log minimal model program, to
+     appear in Publ. Res. Inst. Math. Sci.
+[FG] O. Fujino, Y. Gongyo, On images of weak Fano manifolds, preprint 2010.
+12               OSAMU FUJINO AND YOSHINORI GONGYO
+
+[K1] Y. Kawamata, On Fujita’s freeness conjecture for 3-folds and 4-folds, Math.
+     Ann. 308 (1997), no. 3, 491–505.
+[K2] Y. Kawamata, Subadjunction of log canonical divisors for a subvariety of
+     codimension 2, Birational algebraic geometry (Baltimore, MD, 1996), 79–88,
+     Contemp. Math., 207, Amer. Math. Soc., Providence, RI, 1997.
+[K3] Y. Kawamata, Subadjunction of log canonical divisors, II. Amer. J. Math.
+     120 (1998), no. 5, 893–899.
+[KM] J. Kollár, S. Mori, Birational geometry of algebraic varieties, Cambridge
+     Tracts in Mathematics, Vol. 134, 1998.
+[N] N. Nakayama, Zariski-decomposition and abundance, MSJ Memoirs, 14.
+     Mathematical Society of Japan, Tokyo, 2004.
+[SS] K. Schwede, K. E. Smith, Globally F -regular and log Fano varieties, Adv.
+     Math. 224 (2010), no. 3, 863–894.
+
+  Department of Mathematics, Faculty of Science, Kyoto University,
+Kyoto 606-8502, Japan
+  E-mail address: fujino@math.kyoto-u.ac.jp
+
+  Graduate School of Mathematical Sciences, The University of Tokyo,
+3-8-1 Komaba, Meguro, Tokyo, 153-8914 Japan.
+  E-mail address: gongyo@ms.u-tokyo.ac.jp
+

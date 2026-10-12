@@ -1,0 +1,18 @@
+\node[card] (four) {\heading{02}{四次元での基底}{The four-dimensional base case}
+\textbf{The normalized-volume gap in dimension four}\\[3pt]
+$\widehat{\mathrm{vol}}(x,X)\le 162$; \Tx{等号は解析的ODPに限る}{equality precisely for an analytic ODP}.\\[3pt]
+\Cite{four-main}};
+\node[result,below=2.1cm of four] (all) {\heading{01}{全次元の局所ギャップ}{The local gap in every dimension}
+\textbf{The ordinary-double-point gap in every dimension}\\[3pt]
+$n\ge2,\quad \widehat{\mathrm{vol}}(x,X)\le 2(n-1)^n$; \Tx{等号は解析的ODP}{equality iff analytic ODP}.\\[3pt]
+\Cite{all-main}};
+\flow{four}{all}{\Tx{四次元の上界と等号分類を帰納法の基底へ入力}{Use the fourfold bound and equality as the induction base}\\[3pt]
+\Cite{four-use}\\[3pt]
+\Tx{$n=2,3$の既知結果と、$n\ge5$の新しい帰納段階を併用}{$n=2,3$ are known; a new induction step treats $n\ge5$}};
+\node[card,below=2.1cm of all] (global) {\heading{}{同じ全次元論文の大域的帰結}{Global consequence in the same all-dimensional paper}
+\Tx{特異なK半安定$\mathbb Q$-Fano多様体}{Singular K-semistable $\mathbb Q$-Fano varieties}:\\[3pt]
+$(-K_V)^n\le 2\left(\dfrac{n^2-1}{n}\right)^n<2n^n$.\\[3pt]
+\Cite{global}};
+\flow{all}{global}{\Tx{局所・大域体積比較を特異点に適用（帰結での利用）}{Apply the local-to-global volume comparison at a singular point}\\[3pt]
+\Cite{global-proof}\\[3pt]
+\Tx{比較定理と滑らかな場合の外部入力は第1記事に記載}{The comparison theorem and smooth-case inputs are listed in article 01}};

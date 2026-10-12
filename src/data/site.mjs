@@ -1,5 +1,6 @@
 import inventory033 from '../../coordination/catalog-033/inventory.json' with { type: 'json' };
 import inventory034 from '../../research/catalog-034-inventory.json' with { type: 'json' };
+import inventory037 from '../../coordination/catalog-037/inventory.json' with { type: 'json' };
 import inventory038 from '../../coordination/catalog-038/inventory.json' with { type: 'json' };
 import inventory042 from '../../coordination/catalog-042/inventory.json' with { type: 'json' };
 import inventory051 from '../../coordination/catalog-051/inventory.json' with { type: 'json' };
@@ -26,7 +27,7 @@ const fieldTranslations = [
     "id": "algebraic-complex-geometry",
     "ja": "代数幾何学・複素幾何学",
     "catalogIds": [
-      "033", "034", "038", "042", "051", "057", "063", "068"
+      "033", "034", "037", "038", "042", "051", "057", "063", "068"
     ]
   },
   {
@@ -135,7 +136,11 @@ export const papers = [...inventory033.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '033', sourceCommit: inventory033.sourceCommit,
  title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
  pages: entry.pdfPages, order: entry.order, featured: true,
-})), ...papers034, ...inventory038.manuscripts.map(entry => ({
+})), ...papers034, ...inventory037.manuscripts.map(entry => ({
+ id: entry.paperId, catalogId: '037', sourceCommit: inventory037.sourceCommit,
+ title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
+ pages: entry.pdfPages, order: entry.order, featured: true,
+})), ...inventory038.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '038', sourceCommit: inventory038.sourceCommit,
  title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
  pages: entry.pdfPages, order: entry.order, featured: true,
@@ -176,6 +181,13 @@ export const catalogs = [{
   contentsTitle: 'Log abundance for compact Kähler spaces under logarithmic Iitaka subadditivity',
   description: text('豊富性と良い極小モデルに関する論文群を、仮定と結論、証明の関係から整理する。', 'A guide to manuscripts on abundance and good minimal models, organized by hypotheses, conclusions, and arguments.'),
   paperIds: manuscriptIds034,
+}, {
+  id: '037', sourceCommit: inventory037.sourceCommit, mode: 'multi',
+  title: text(inventory037.titleJa, inventory037.overviewTitle),
+  contentsTitle: inventory037.contentsTitle,
+  description: text('四次元の超曲面帰着から全次元の体積ギャップ・等号分類へ至る2篇の証明と、大域的な帰結を読む。', 'Follow two proofs from the fourfold hypersurface reduction to the volume gap and equality classification in every dimension, with global consequences.'),
+  paperIds: inventory037.manuscripts.map(p => p.paperId),
+  overviewSectionIds: ['papers', 'connections', 'sources'],
 }, {
   id: '038', sourceCommit: inventory038.sourceCommit, mode: 'single',
   title: text(inventory038.titleJa, inventory038.overviewTitle),

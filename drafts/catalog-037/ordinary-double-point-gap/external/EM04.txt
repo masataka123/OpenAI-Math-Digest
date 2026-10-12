@@ -1,0 +1,516 @@
+                                                     INVERSION OF ADJUNCTION FOR LOCAL COMPLETE
+                                                                INTERSECTION VARIETIES
+
+                                                                        LAWRENCE EIN AND MIRCEA MUSTAŢǍ
+arXiv:math/0301164v2 [math.AG] 30 Jul 2003
+
+
+
+
+                                                    Abstract. We extend Inversion of Adjunction and Semicontinity of minimal log dis-
+                                                    crepancies from the case of a smooth ambient variety, as in [EMY], to the case of local
+                                                    complete intersection varieties.
+
+
+
+
+                                                                                    1. Introduction
+
+                                                   In this note we build on our previous work with Takehiko Yasuda in [EMY], to
+                                             prove a precise version of Inversion of Adjunction for varieties which are locally complete
+                                             intersections. [EMY] gives a description of certain invariants of singularities, known as
+                                             minimal log discrepancies, using the codimension of suitable spaces of arcs. This was
+                                             enough to give Inversion of Adjunction in the case when the ambient variety is smooth.
+                                             The main new ingredient in this paper is the study of the equations defining the jets which
+                                             can be lifted to the space of arcs.
+                                                    Recall the setting for Inversion of Adjunction. Consider a pair (X, Y ), where X is
+                                                                                                                            P
+                                             a Q-Gorenstein normal variety, and where Y stands for a formal combination ki=1 qi · Yi ,
+                                             where qi ∈ R+ and Yi ⊂ X are proper closed subschemes. Given such a pair and a closed
+                                             subset W ⊆ X, one can get an invariant mld(W ; X, Y ), called the minimal log discrepancy.
+                                             Loosely speaking, this invariant comes from evaluating KX +Y along divisors over X, with
+                                             centers in W . We refer to Section 3 for the precise definition. The following is our main
+                                             result.
+                                                                                                                               P
+                                             Theorem 1.1. Let X be a normal, local complete intersection variety, and Y = i qi · Yi ,
+                                             where qi ∈ R+ and Yi ⊂ X areSproper closed subschemes. If D ⊂ X is a normal effective
+                                             Cartier divisor such that D 6⊆ i Yi , then for every proper closed subset W ⊂ D, we have
+                                                                        mld(W ; X, D + Y ) = mld(W ; D, Y |D ).
+
+                                                    It is a conjecture due to Kollár and Shokurov that the equality in the above conjec-
+                                             ture is true if X is just normal and Q-Gorenstein. Note that the equality “≤” is easy and
+                                             is known in general. We refer to [K+] for a discussion of this conjecture, related topics,
+                                             and for the proof of some special cases via vanishing theorems. Our approach will be via
+                                             spaces of arcs, based on the results from [EMY], where the theorem was proved when X
+                                             is smooth.
+                                                   Ambro proposed in [Am] a conjecture on the semicontinuity of minimal log discrep-
+                                             ancies, extending a previous conjecture of Shokurov. This conjecture was proved on an
+                                                 2000 Mathematics Subject Classification. Primary 14B05; Secondary 14E30, 14E15, 14B10.
+                                               Key words and phrases. Jet schemes, minimal log discrepancies, inversion of adjunction.
+
+                                                                                              1
+2                                   L. EIN AND M. MUSTAŢǍ
+
+ambient smooth variety in [EMY]. We apply the above theorem to extend this to the local
+complete intersection case.
+                                                                               P
+Theorem 1.2. If X is a normal, local complete intersection variety, and if Y = i qi · Yi
+is as above, then the function x −→ mld(x; X, Y ), x ∈ X, is lower semicontinuous.
+
+      Using Theorem 1.1 and the description of minimal log discrepancies in terms of
+spaces of arcs, we deduce also the following theorem.
+Theorem 1.3. Let X be a normal, local complete intersection variety. X has log canon-
+ical (canonical, terminal) singularities if and only if Xm is equidimensional (respectively
+irreducible, normal) for every m.
+
+      The case of canonical singularities had been conjectured by Eisenbud and Frenkel
+and proved in [Mu2]; the characterization for log canonical singularities appeared there as
+a conjecture. The statement on terminal singularities answers a question of Mirel Caibǎr.
+All these characterizations have been proved in [EMY] in the case when X is a divisor on
+a smooth variety.
+
+       The main ingredient in the proof of Theorem 1.1 is the characterization of minimal
+log discrepancies in terms of jet schemes from [EMY] (see Theorem 3.1 below). In order to
+apply it, we need to estimate the dimension of the subset of a jet scheme, which consists
+of those jets which can be lifted to the space of arcs. This is taken care of in the next
+section, where we give a small set of equations for this set. In the last section, we use this
+to give the proofs of the results stated above.
+
+
+                             2. Equations for liftable jets
+
+      For definitions and basic properties of jet schemes, we refer to [Mu2]. If X is a
+scheme of finite type over C, then we denote its mth jet scheme by Xm , and its space of
+arcs by X∞ . When we consider Xm and X∞ , we restrict ourselves to the C-valued points.
+    X :X                                                                            X
+If ψm    ∞ −→ Xm is the canonical projection, then Xm,∞ stands for the image of ψm .
+
+       We work in the ambient space An , and we identify (An )m with (C[t]/(tm+1 ))n ≃
+A(m+1)n . The order of u = (ui )i ∈ (An )m along an ideal I ⊆ C[T1 , . . . , Tn ] is the minimum
+of the orders of P (u) ∈ C[t]/(tm+1 ), over all P ∈ I. Note that either this order is no larger
+than m, or it is equal to infinity.
+       As a motivation for what follows, we mention that for the proof of Theorem 1.1 we
+will need to compare the dimension of a suitable subset of Xm,∞ with the dimension of
+its intersection with Dm,∞ . To get the right estimate, it would be enough to cut Dm,∞
+in Xm,∞ by a small number of equations. It turns out to be easier to embed (locally) X
+in an affine space An , and to get a small number of equations for Dm,∞ in (An )m . As we
+will see, this will be enough for our purpose.
+        Returning to our setting, let D = V (F1 , . . . , Fr ) ⊂ An , where r ≤ n, and Fi ∈
+C[T1 , . . . , Tn ], for all i. We will denote by F the r × 1 matrix with entries Fi . Fix e ∈ Nr
+such that er ≥ . . . ≥ e1 , and fix also p ≥ er .
+        INVERSION OF ADJUNCTION FOR LOCAL COMPLETE INTERSECTION VARIETIES                          3
+
+        Up to a reordering of the variables, it is enough to consider the following situation.
+          (e)
+Let (An )p be the set of jets in (An )p satisfying the following conditions. The order along
+the ideal of r-minors of (∂Fk /∂Tl )k≤r,l≤n is equal to the order along det(∂Fk /∂Tl )k,l≤r , and
+it is equal to er ; for all i ≤ r −1, the order along the ideal of i-minors of (∂Fk /∂Tl )k≤i,l≤i+1
+                                                                                                (e)
+is equal to the order along det(∂Fk /∂Tl )k,l≤i , and it is equal to ei . It is clear that (An )p is
+                                                (e)              (e)             (e)      (e)
+a locally closed subset of (An )p . We put Dp := Dp ∩ (An )p , and let Dp,∞ = Dp ∩ Dp,∞ .
+                                                        (e)               (e)
+Our goal in this setion is to give equations for Dp,∞ inside (An )p . Of course, we have
+r(p + 1) equations which cut out Dp in (An )p , and we will show that in addition to these,
+we need only er extra equations.
+                                                                                       (e)
+      We fix first some notation. Let u ∈ (C[t]/(tp+1 ))n be a point in (An )p . We denote
+by ũ ∈ (C[[t]])n the unique lifting of u to polynomials of degree no more than p. If we
+denote by M the r × r matrix which is the classical adjoint of (∂Fk /∂Tl )k,l≤r , then we
+have the following
+                                                                 (e)             (e)
+Lemma 2.1. ([DL]) With the above notation, u ∈ (An )p                  is in Dp,∞ if and only if
+(1)                              ord(M (ũ)F (ũ)) ≥ p + er + 1.
+
+Proof. It is clear that if JacF is the Jacobian matrix of F , then
+                     M (ũ) · JacF (ũ) = (det(∂Fk /∂Tl )k,l≤r (ũ) · Ir , B(ũ)),
+for some r × (n − r) matrix B. An easy computation based on Cramer’s rule shows that
+all the entries of B(ũ) have order at least er .
+                        (e)
+     We have u ∈ Dp,∞ if and only if there is v ∈ (tC[[t]])n , such that F (ũ + tp v) = 0.
+Expanding using Taylor’s formula gives
+                         F (ũ + tp v) = F (ũ) + tp JacF (ũ)v + t2p (. . .),
+where all the entries in (. . .) have order at least 2. As det(M (ũ)) 6= 0, we have F (ũ+tp v) =
+0 if and only if M (ũ) · F (ũ + tp v) = 0.
+     Since 2p + 2 ≥ p + er + 2, and since v ≡ 0(mod t), and M (ũ)JacF (ũ) ≡ 0(mod ter ),
+we deduce that if there is v as above with F (ũ + tp v) = 0, then
+                                ord(M (ũ) · F (ũ)) ≥ p + er + 1.
+
+        To see that this is also sufficient, note that M (ũ) · F (ũ + tp v) = 0 can be rewritten
+as H1 (v) = . . . = Hr (v) = 0, for suitable polynomials H1 , . . . , Hr with coefficients in
+C[[t]]. As H(0) ≡ 0(mod t), and the order of an r-minor of the Jacobian of H is zero,
+the existence of v follows from (1) via the Implicit Function Theorem for formal power
+series.                                                                                          
+
+       From now on we will assume that u ∈ Dp , so that ord(F (ũ)) ≥ p + 1. Therefore the
+condition in (1) amounts to the vanishing of the coefficients of ti in the corresponding r
+equations, for p + 1 ≤ i ≤ p + 1 + er . Therefore we get rer equations. Note that while
+(1) is written in terms of ũ, since the lifting ũ of u was canonical, the resulting equations
+lie in the coordinate ring of (An )p . In the remainder of this section we will show that, in
+fact, we may replace the above rer equations by just er equations. This is the content of
+the following
+4                                        L. EIN AND M. MUSTAŢǍ
+
+                     (e)                         (e)
+Theorem 2.2. Dp,∞ is cut out in (An )p ∩ Dp by er equations.
+
+Proof. We prove the theorem by induction on r, the case r = 1 being an immediate
+consequence of Lemma 2.1. Let J denote the matrix (∂Fk /∂Tl )k,l≤r . We denote by δi,j
+the (r − 1)-minor of J, obtained by deleting the ith row and the jth column. Similarly,
+the (r − 2)-minor obtained by deleting the ith and the kth rows and the jth and the lth
+columns will be denoted by δik,jl . Here we assume i 6= k and j 6= l. We will use the
+following lemma, whose proof will be given at the end of this setion.
+Lemma 2.3. If A is an arbitrary r × r matrix, and if i < k and j < l, then
+                               δi,j · δk,l − δi,l · δk,j = det(A) · δik,jl ,
+where the δ’s denote the corresponding minors of A, as above.
+
+                                   (e)
+      Suppose that u ∈ (An )p ∩ Dp . Recall that M is the classical adjoint of J, so
+mij = (−1)i+j δj,i . The condition in (1) can be written as a set of r order conditions, the
+rth one being
+                                                                    
+                                           r−1
+                                           X
+(2)          ord (−1)r δr,r (ũ)Fr (ũ) +     (−1)j δj,r (ũ)Fj (ũ) ≥ p + er + 1.
+                                                 j=1
+
+
+         For every i ≤ r − 1, after multiplying the corresponding expression from (1) by
+δr,r (ũ) (whose order is er−1 ), we can rewrite the ith condition in (1) as
+                                                                                
+                                                       r−1
+                                                       X
+(3) ord (−1)r δr,r (ũ)δr,i (ũ)Fr (ũ) + δr,r (ũ) ·     (−1)j δj,i (ũ)Fj (ũ) ≥ p + er + er−1 + 1.
+                                                       j=1
+
+
+      Granting (2), which we multiply by δr,i (ũ) (whose order is at least er−1 ), we see
+that the condition in (3) is equivalent with
+                                                                             
+       r−1
+       X                                 r−1
+                                         X
+ ord  (−1)j δj,i (ũ)δr,r (ũ)Fj (ũ) +     (−1)j+1 δr,i (ũ)δj,r (ũ)Fj (ũ) ≥ p + er + er−1 + 1.
+       j=1                                 j=1
+
+
+      Using Lemma 2.3, this can be further rewritten as
+                                                
+                         r−1
+                         X
+(4)                ord  (−1)j δjr,ir (ũ)Fj (ũ) ≥ p + er−1 + 1.
+                               j=1
+
+Here we used the fact that ord(det(J)) = er . If we denote by J ′ the matrix formed by the
+first (r − 1) rows and columns of J, and by M ′ the classical adjoint of J ′ , and if we put
+F ′ = (F1 , . . . , Fr−1 ), then the above conditions (for i ≤ r − 1) can be rewritten as
+                               ord(M ′ (ũ) · F ′ (ũ)) ≥ p + er−1 + 1.
+By induction on r, this is equivalent with a set of er−1 equations G1 (u) = . . . = Ger−1 (u) =
+0.
+        INVERSION OF ADJUNCTION FOR LOCAL COMPLETE INTERSECTION VARIETIES                        5
+
+       Given this, we go back to the condition in (2). Since u ∈ Dp , we have ord F (ũ) ≥
+p + 1, so that ord(δr,r (ũ)Fr (ũ)) ≥ p + er−1 + 1. Moreover, by expanding each (r − 1)-minor
+along the last row, we write
+           r−1
+           X                            r−1
+                                        X                        r−1
+                                                                 X
+                                                      ∂Fr
+               (−1)j δj,r (ũ)Fj (ũ) =     (−1)i+r+1     (ũ) ·     (−1)j δjr,ir (ũ)Fj (ũ),
+                                                      ∂Ti
+           j=1                         i=1                        j=1
+
+which by (4) has order at least p + er−1 + 1. Therefore, in order to ensure (2) we need
+only (er − er−1 ) more equations Ger−1 +1 (u) = . . . = Ger (u) = 0. This concludes the proof
+of the theorem.                                                                            
+
+      We give now the proof of the lemma we have used.
+
+Proof of Lemma 2.3. All the determinants are considered as polynomial functions on the
+affine space of all matrices. Let P denote the difference of products of minors in the
+left hand side of the formula in the lemma. To see that P (A) is divisible by det(A)
+for every matrix A, it is enough to show that if A is such that one column is a linear
+combination of the otherPcolumns, then P (A) = 0. Let that column be indexed by m,
+so we can write Cm =          α6=m λα Cα (Cα denotes the αth column). If m 6= j, l, then
+δi,j (A) = (−1) m−j λj δi,m (A), δk,l (A) = (−1)m−l λl δk,m (A), δi,l (A) = (−1)m−l λl δi,m (A),
+and δk,j (A) = (−1)m−j λj δk,m (A). This clearly gives P (A) = 0.
+        Suppose now, for example, that m = j. We have δk,l (A) = (−1)m−l λl δk,j (A) and
+δi,l (A) = (−1)m−l λl δi,j (A), and this gives P (A) = 0. The case m = l is similar.
+      It follows from the above discussion that we can write P (A) = det(A) · Q(A). Since
+the degree of P with respect to any of aiβ , aβj , akβ and aβl is at most one, for all 1 ≤ β ≤ r,
+we see that Q depends only on the remaining variables.
+      Therefore, if B is the matrix obtained from a matrix A by deleting the ith and the
+kth rows and the jth and the lth columns, then Q depends only on B. In order to compute
+Q(B), we may assume that aij = akl = 1, and that all the other entries on those two rows
+and columns are zero. In this case, it is clear that δi,j (A) = (−1)k+l δik,jl (A), δk,l (A) =
+(−1)i+j δik,jl (A), while δi,l (A) = 0 = δk,j (A). Since det(A) = (−1)k+l+i+j δik,jl (A), we see
+that Q(A) = δik,jl (A), as required.                                                          
+Remark 2.4. Note that the above description of the equations does not assume that D
+is locally complete intersection, but only that the number of equations is not greater than
+the dimension of the affine space.
+
+
+                 3. Log discrepancies and Inversion of Adjunction
+
+      We start by recalling the definition of the version of minimal log discrepancies from
+[EMY]. Consider a pair (X, Y ), where X is a Q-Gorenstein normal variety, and where
+                                     P
+Y stands for a formal combination ki=1 qi · Yi , where qi ∈ R+ and Yi ⊂ X are proper
+closed subschemes. A divisor E over X is a prime divisor on some smooth variety X ′ ,
+such that we have a proper, birational morphism f : X ′ −→ X. In fact, we identify two
+such divisors if they give the same valuation of the function field of X. In particular, we
+6                                  L. EIN AND M. MUSTAŢǍ
+
+may assume that the inverse image of each Yi on X ′ is an effective Cartier divisor. The
+center of E on X is cX (E) := f (E).
+      The log discrepancy a(E; X, Y ) is defined
+                                               P such−1that a(E; X, Y )−1− 1 is the coefficient
+of E in KX ′ /X − f −1 (Y ). Here f −1 (Y ) =    i q i f (Y i ), where f  (Yi ) is the scheme
+theoretic inverse image of Yi . Recall the convention that KX ′ /X is a divisor supported on
+the exceptional locus of f .
+      If W ⊆ X is a closed subset, then the minimal log discrepancy of (X, Y ) on W is
+defined by
+                         mld(W ; X, Y ) := min a(E; X, Y ).
+                                                 cX (E)⊆W
+For more on these invariants, we refer to [EMY], Section 1, or to [Am].
+       We mention that the pair (X, Y ) is called log canonical if mld(X; X, Y ) ≥ 0. This
+is a requirement for having such interesting invariants: if dim X ≥ 2, and if (X, Y ) is not
+log canonical, then mld(X; X, Y ) = −∞. Note also that if mld(W ; X, Y ) ≥ 0, then the
+pair (X, Y ) is log canonical in some neighbourhood of W .
+       We need some preparations in order to state the characterization of minimal log
+discrepancies from [EMY]. We assume from now on that X is a normal, locally complete
+intersection variety, as this is the setting we have in Theorem 1.1. Let d = dim X, and let
+Z ⊂ X be the Jacobian subscheme of X, i.e., the subscheme defined by the dth Fitting
+ideal of Ω1X . Note that the support of Z is the singular locus Xsing of X.
+      If Y ⊂ X is a closed subscheme, then we have a function FY : X∞ −→ N ∪ {∞},
+such that FY (γ) is the order of vanishing of γ along the ideal of Y . Recall that we have
+                        X : X                        −1              X   −1
+canonical projections ψm      ∞ −→ Xm , so that FY (≥ m) = (ψm−1 ) (Ym−1 ), for all
+m ≥ 1.
+          It is a theorem of Denef and Loeser from [DL] that if m ≥ e, then the induced
+projections
+                                  X                   X
+                                 ψm+1 (FZ−1 (e)) −→ ψm  (FZ−1 (e))
+are locally trivial, with fiber Ad . Suppose
+                                           T now that we have proper closed subschemes
+Y1 , . . . , Yk ⊂ X, and suppose that A = i FY−1 i
+                                                   (≥ mi ), for some mi ∈ N. The codimension
+of A in X∞ is defined by
+                                                     X
+(5)             codim(A, X∞ ) := min{(m + 1)d − dim ψm (A ∩ FZ−1 (e))},
+                                    e,m
+
+where the minimum is over all e ∈ N and m ≥ max{e, m1 , . . . , mk } (the above result of
+Denef and Loeser implies that the expression in (5) is independent of which m we choose,
+as above). We use the convention dim(∅) = −∞.
+Theorem 3.1. ([EMY]) Let (X, Y ) be a pair, with X a normal, locally complete inter-
+                        P
+section variety, and Y = ki=1 qi · Yi , where qi ∈ R+ , and where Yi ⊂ X are proper closed
+subschemes. Fix a proper closed subscheme W ⊂ X and let τ ∈ R+ . If Z ⊂ X is the
+Jacobian subscheme, then mld(W ; X, Y ) ≥ τ if and only if
+                                           k
+                                                             !         k
+                                          \                           X
+                   −1        −1                −1
+        codim FW (≥ 1) ∩ FZ (≥ e) ∩          FYi (≥ mi ), X∞ ≥ e +       qi mi + τ,
+                                           i=1                           i=1
+
+for every e ∈ N, (mi )i   ∈ Nk .
+       INVERSION OF ADJUNCTION FOR LOCAL COMPLETE INTERSECTION VARIETIES                      7
+
+      We combine now the above theorem with our result from the previous section to
+give a proof of the case of the Inversion of Adjunction Conjecture which was stated in
+Section 1.
+
+Proof of Theorem 1.1. The inequality
+(6)                        mld(W ; X, D + Y ) ≤ mld(W ; D, Y |D )
+is well-known in general and follows by adjunction (see, for example, the proof of Propo-
+sition 7.3.2 in [K+], or the proof of Theorem 1.6 in [EMY]). We give the proof of the
+reverse inequality.
+       Working locally, we may assume that X is a subvariety of codimension r − 1 of an
+open subset U of an affine space An . Moreover, we may assume that X = H1 ∩ . . . Hr−1 ,
+and D = X ∩ Hr , where Hi is defined in U by Fi ∈ C[T1 , . . . , Tn ]. An inductive application
+of (6) gives
+                                      Xr
+                       mld(W ; U, Y +    Hi ) ≤ mld(W ; X, D + Y ).
+                                        i=1
+                                                                      Pr
+Therefore it is enough to prove mld(W ; D, Y |D ) ≤ mld(W ; U, Y +        i=1 Hi ).
+
+Pr   Consider τ ∈ R+ , and suppose that mld(W ; D, Y |D ) ≥ τ . We assume that mld(W ; U, Y +
+  i=1 i ) < τ , and we will derive a contradiction. We first apply Theorem 3.1 to the
+     H
+smooth variety U , to deduce that we can find m1 , . . . , mk ∈ N, and m′1 , . . . , m′r ∈ N such
+that
+                                                               
+                       \k                 r
+                                          \                         k
+                                                                    X              X r
+            −1
+  codim FW    (≥ 1) ∩    FY−1
+                             i
+                               (≥ m i ) ∩   F −1
+                                             Hj  (≥ m  ′
+                                                       j ), U ∞  <    m i q i +        m′j + τ.
+                        i=1               j=1                       i=1          j=1
+
+Let us choose m ≥ mi , m′j , for all i and j, and consider the projection to Um of the above
+subset of U∞ . We may
+                   P choose an    P irreducible component V of this projection, such that
+dim V > (m + 1)n − i qi mi − j m′j − τ .
+
+      As in Lemma 3.2 from [EMY], one can show that V ∩ ψm      D (D ) 6= ∅. Moreover,
+                                                                     ∞
+                   D                        D  −1
+given v ∈ V ∩ (ψm )(D∞ ), there is a ṽ ∈ (ψm ) (v) \ Z∞ . Here Z ⊂ D is the Jacobian
+subscheme of D, which is cut out on D by the r-minors of the matrix (∂Fi /∂Tj )i≤r,j≤n .
+If f = FZ (ṽ), then we may assume that f ≤ m. Indeed, otherwise, we may just replace
+                                                             D (ṽ).
+m by some m′ ≥ f , V by its inverse image in Xm′ , and v by ψm′
+
+
+       Choose now er to be the smallest order of vanishing along Z of an element in
+V ∩ Im(ψm    D ). We see that e ≤ f ≤ m. After renumbering the variables, we may assume
+                                r
+that some element in (ψm     D )−1 (V ) vanishes along det(∂F /∂X )
+                                                               i    j i,j≤r with order er . For
+these elements, we choose er−1 ≤ er to be the smallest order of vanishing along the ideal
+generated by the (r − 1)-minors of (∂Fi /∂Xj )i≤r−1,j≤r . Moreover, after renumbering the
+variables we may assume that this minimum is achieved by an element as above, along
+det(∂Fi /∂Xj )i,j≤r−1 . We proceed in this way to obtain a sequence e1 ≤ e2 ≤ . . . ≤ er . We
+fix also ṽ ′ ∈ (ψmD )−1 (V ∩ (An )(e) ), where we use the notation introduced in the previous
+                                   m
+section.
+    By Greenberg’s theorem (see [Gr]), there is a p ≥ m such that every element in
+Dm which can be lifted to Dp can be lifted to D∞ . If φ : Dp −→ Dm is the canonical
+8                                       L. EIN AND M. MUSTAŢǍ
+
+projection, then let V ′ be an irreducible component of φ−1 (V ∩Dm ) which contains ψpD (ṽ ′ ).
+                                                 P
+As φ−1 (V ∩ Dm ) is cut out in V × A(p−m)n by rj=1 (p − m′j + 1) equations, we see that
+                                                          k
+                                                          X
+                                    ′
+                          dim V > (p + 1)(n − r) −              qi mi − τ.
+                                                          i=1
+
+                                                                          (e)
+     It follows from our choice of e and p that V0′ := V ′ ∩ (An )p is open in V ′ . Moreover,
+Theorem 2.2 shows that V0′′ := V0′ ∩ Im(ψpD ) is cut out in V0′ by er equations. Since V0′′ is
+nonempty, by construction, we see that
+                                                             k
+                                                             X
+                       codim((ψpD )−1 (V0′′ ), D∞ ) < er +            qi mi + τ,
+                                                                i=1
+                          −1                    T
+while (ψpD )−1 (V0′′ ) ⊆ FW  (≥ 1)∩FZ−1 (≥ er )∩ i FY−1
+                                                      i
+                                                        (≥ mi ). This contradicts mld(W ; D, Y |D ) ≥
+τ , by Theorem 3.1, and completes the proof.
+                                                                                              
+
+                                     P X ⊂ V a normal, local complete intersection
+Corollary 3.2. Let V be a smooth variety,
+subvariety of codimension r, and Y = i qi · Yi , where qi ∈ R+ and where Yi ⊂ X are
+proper closed subschemes. If W ⊂ X is a proper closed subset, then mld(W ; X, Y ) =
+mld(W ; V, Y + r · X).
+
+Proof. Working locally, we may assume that X = H1 ∩. . .∩Hr , where the Hi ’s are effective
+divisors on V . Note that H1 ∩ . . . ∩ Hi is normal around X, for every i. It is enough to
+show that we have the inequalities
+                              r
+                              X
+             mld(W ; V, Y +         Hi ) ≤ mld(W ; V, Y + r · X) ≤ mld(W ; X, Y ),
+                              i=1
+
+as the extremal terms are equal by an inductive application of Theorem 1.1. The first
+inequality follows immediately from the definition of minimal log discrepancies.
+        For the second one, we proceed as follows. Let π : Ve −→ V be the blowing-up of
+V along X, with exceptional divisor E. If π ′ : E −→ X is the restriction of π, then π ′
+is a projective bundle with fiber Pr−1 , so that mld(W ; X, Y ) = mld(π −1 (W ); E, π −1 (Y )).
+Moreover, E is reduced and irreducible. It is also locally a complete intersetion, hence so
+is Ve . By computing KVe /V at the general point of E, we see that KVe /V = (r − 1)E.
+     From the formula describing the behaviour of minimal log discrepancies under a
+proper, birational morphism (see [EMY], Proposition 1.3 (iv)), we get
+
+             mld(W ; V, Y + r · X) = mld(π −1 (W ); Ve , π −1 (Y ) + rE − KVe /V )
+
+               = mld(π −1 (W ); Ve , π −1 (Y ) + E) ≤ mld(π −1 (W ); E, π −1 (Y )),
+where the inequality follows from (6). Therefore mld(W ; V, Y + r · X) ≤ mld(W ; X, Y ),
+so we are done.                                                                       
+        INVERSION OF ADJUNCTION FOR LOCAL COMPLETE INTERSECTION VARIETIES                      9
+
+       Together with the corresponding result from [EMY] for the smooth case, this imme-
+diately gives the semicontinuity of minimal log discrepancies for local complete intersetion
+varieties.
+
+Proof of Theorem 1.2. Recall that X is a normal, local complete intersection variety.
+Working locally, we may assume that X is a codimension r subvariety of a smooth variety
+V . It follows from the above corollary that for every x ∈ X, we have
+                            mld(x; X, Y ) = mld(x; V, Y + r · X),
+so it is enough to use the corresponding semicontinuity assertion on smooth varieties. This
+is Theorem 0.3 in [EMY].                                                                 
+
+       We give now the proof of the characterization of certain classes of singularities for
+local complete intersection varieties.
+
+Proof of Theorem 1.3. Recall the definition of log canonical, canonical, and terminal sin-
+gularities in terms of minimal log discrepancies. A normal, Q-Gorenstein variety X has
+log canonical (canonical, terminal) singularities if and only if we have mld(Xsing ; X, ∅) ≥ 0
+(respectively, ≥ 1, > 1). Note also that if X is Gorenstein, as in our case, then the above
+minimal log discrepancy is an integer.
+       We consider first the characterization of log canonical singularities. Let πm : Xm −→
+                                                                                   −1 (X
+X be the canonical projection. Xm is equidimensional if and only if dim πm              sing ) ≤
+(m + 1) dim X. Moreover, if this is the case, then Xm is locally a complete intersection
+and dim Xm = (m + 1) dim X (see [Mu2]). Working locally, we may assume that X is a
+codimension r subvariety of a smooth variety V . It follows from Theorem 3.1 that Xm
+is equidimensional for every m if and only if mld(Xsing ; V, r · X) ≥ 0. By Corollary 3.2,
+this is equivalent with mld(Xsing ; X, ∅) ≥ 0, i.e., with X having log canonical singularities.
+This completes this case.
+                                                           −1 (X
+      Similarly, Xm is irreducible if and only if dim πm        sing ) ≤ (m + 1) dim X − 1
+(see [Mu2]). The characterization of canonical singularities follows as above. From now
+on, we may assume that X has canonical singularities. In particular, Xm is locally a
+complete intersection for every m. Serre’s criterion implies that Xm is normal if and
+only if dim(Xm )sing ≤ (m + 1) dim X − 2. One can easily show that because Xm is
+equidimensional, we have (Xm )sing = πm−1 (X
+                                            sing ) (see the proof of Theorem 3.3 in [EMY]).
+Therefore Xm is normal for every m if and only if mld(Xsing ; V, r ·X) ≥ 2, and we conclude
+as above, applying Corollary 3.2.                                                        
+Remark 3.3. It is clear that if X is a variety such that X1 is irreducible, then dim Xsing ≤
+dim X − 2. If X is locally a complete intersection, then X has to be normal. It follows
+that in the above characterization for canonical or terminal singularities, we do not need
+to assume that X is normal.
+
+
+Acknowledgements. We are grateful to Florin Ambro, Vyacheslav V. Shokurov, and
+Takehiko Yasuda for useful discussions. The first author was partially supported by NSF
+grant DMS 0200278. The second author served as a Clay Mathematics Institute Long-
+Term Prize Fellow while this research has been done.
+10                                     L. EIN AND M. MUSTAŢǍ
+
+                                             References
+[Am] F. Ambro, On minimal log discrepancies, Math. Res. Letters 6 (1999), 573–580.
+[DL] J. Denef and F. Loeser, Germs of arcs on singular varieties and motivic integration, Invent. Math.
+     135 (1999), 201–232.
+[EMY] L. Ein, M. Mustaţǎ and T. Yasuda, Log discrepancies, jet schemes and Inversion of Adjunction,
+     Invent. Math., to appear.
+[Gr] M. Greenberg, Rational points in henselian discrete valuation rings, Publ. Math. I.H.E.S. 31 (1966),
+     59–64.
+[K+] J. Kollár (with 14 coauthors), Flips and abundance for algebraic threefolds, Astérisque 211, 1992.
+[Mu2] M. Mustaţǎ, Jet schemes of locally complete intersection canonical singularities, with an appendix
+     by D. Eisenbud and E. Frenkel, Invent. Math. 145 (2001), 397–424.
+
+
+      Department of Mathematics, Statistics and Computer Science, University of Illinois
+at Chicago, 851 Morgan St., M/C. 249, Chicago, IL 60607-7045, USA
+
+       E-mail address: ein@math.uic.edu
+
+      Department of Mathematics, Harvard University, One Oxford Street, Cambridge, MA
+02138, USA
+
+       E-mail address: mirceamustata@yahoo.com
+

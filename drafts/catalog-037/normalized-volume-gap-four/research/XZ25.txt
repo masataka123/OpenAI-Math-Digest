@@ -1,0 +1,2049 @@
+                                                         STABLE DEGENERATIONS OF SINGULARITIES
+
+                                                                       CHENYANG XU AND ZIQUAN ZHUANG
+
+
+
+
+                                                  Abstract. For any Kawamata log terminal (klt) singularity and any minimizer of its
+                                                  normalized volume function, we prove that the associated graded ring is always finitely
+arXiv:2205.10915v2 [math.AG] 17 Jan 2025
+
+
+
+
+                                                  generated, as conjectured by Chi Li. As a consequence, we complete the last step of
+                                                  establishing the Stable Degeneration Conjecture proposed by Chi Li and the first named
+                                                  author for an arbitrary klt singularity.
+
+
+                                                                                  1. Introduction
+                                              The algebraic K-stability of Fano varieties has been a very active research topic in
+                                           recent years. The local analogue is a stability theory for Kawamata log terminal (klt)
+                                           singularities. There were two roots from earlier analytic works: the first is the work
+                                           [MSY08], which shows that for a klt singularity x ∈ X with a torus T action, the existence
+                                           of the Sasaki-Einstein metric along a Reeb vector field ξ implies that ξ minimizes a
+                                           normalized volume function defined among all Reeb vector fields; the second one is the
+                                           study of the Ricci-flat metric tangent cone for a singularity on the Kähler-Einstein Fano
+                                           variety which is the Gromov-Hausdorff limit of Kähler-Einstein manifolds [DS17].
+                                              The general algebraic local stability theory was initiated in [Li18]. It centers around
+                                           the problem of minimizing the normalized volume function
+                                                                             c : ValX,x → R>0 ∪ {+∞},
+                                                                             vol
+                                           defined on the non-archimedean link ValX,x (i.e. the set of valuations centered at x) of a klt
+                                           singularity x ∈ (X, ∆). The complete conjectural picture, named the Stable Degeneration
+                                           Conjecture, was proposed in [Li18, LX18] (see [Xu18, Conjecture 4.4]), which says for any
+                                                                           c induces a T-equivariant degeneration to a K-semistable
+                                           klt singularity, a minimizer of vol
+                                           Fano cone singularity (for some torus T); and moreover, such a degeneration is unique.
+
+                                           1.1. Main theorem. After a period of intensive works, including [Li18,Li17,LL19,Blu18,
+                                           LX20, LX18, LWX21, Xu20, XZ21] etc., the only unknown part of the Stable Degeneration
+                                           Conjecture is the local higher rank finite generation, which we will address in the current
+                                           paper, i.e. we confirm [Li18, Conjecture 7.1(5)].
+                                           Theorem 1.1 (Local higher rank finite generation). Let x ∈ (X = Spec(R), ∆) be a klt
+                                           singularity.                          c
+                                                    L Let v be a minimizer of vol on ValX,x . Then the associated graded algebra
+                                           grv R := λ∈R≥0 aλ /a>λ is finitely generated, where
+                                                       aλ := {f ∈ R | v(f ) ≥ λ}         and       a>λ := {f ∈ R | v(f ) > λ}.
+                                             Here when the value monoid Φ of the image v : R \ {0} → R≥0 generates an abelian
+                                           group isomorphic to Z, i.e. the rational rank of v is one, the finite generation property
+                                                                                            1
+2                          CHENYANG XU AND ZIQUAN ZHUANG
+
+follows from [BCHM10] (see [Blu18,LX20]). However, the case when v is of higher rational
+rank needs substantially more work.
+   As we mentioned above, together with the aforementioned earlier works, this completes
+the local stability theory of klt singularities.
+Theorem 1.2 (Stable Degeneration Conjecture). Let x ∈ (X = Spec(R), ∆) be a klt
+singularity.
+   (1) Up to rescaling, volc has a unique minimizer v in ValX,x which is quasi-monomial
+       with a finitely generated associated graded ring grv R, and it induces a degeneration
+       of (X, ∆) to a K-semistable log Fano cone singularity (X0 = Spec(grv R), ∆0 ; ξv ),
+       where ξv is the Reeb vector field induced by the grading of grv R.
+   (2) Conversely, assume a quasi-monomial valuation v has a finite generated associated
+       graded ring grv R such that (X0 = Spec(grv R), ∆0 ) is klt where ∆0 is the degener-
+       ation of ∆ and (X0 , ∆0 ; ξv ) is K-semistable as a log Fano cone singularity. Then
+       v is a minimizer of vol c on ValX,x .
+   (3) (X0 , ∆0 ; ξv ) has a degeneration to a unique K-polystable log Fano cone singularity
+       (Y, ∆Y ; ξ), which admits a Ricci-flat Kähler cone metric when the ground field
+       k = C.
+   We refer to [LWX21, Section 2.2] for the definition of log Fano cone singularities and
+K-stability notions for them.
+   The above theorem combines many previous works together with Theorem 1.1. More
+precisely, the normalized volume function was first introduced in [Li18]. The existence of
+a minimizer v was proved in [Blu18], which was shown to be quasi-monomial in [Xu20].
+Then [XZ21] proved that a minimizer is unique up to rescaling. In [Li17, LX20], the rest
+of (1) and (2), i.e. the K-semistable characterization of the minimizer, was proved for
+the case when the rational rank of v is equal to one. Theorem 1.1 addresses the finite
+generation of the associated graded ring for v in a general case. Assuming this [LX18]
+proves the K-semistable characterization in all cases. The existence and uniqueness of a
+K-polystable degeneration in (3) is proved in [LWX21]. When k = C, such a degeneration
+admits a Ricci-flat Kähler cone metric by [Li21, Theorem 2.9], which in turn relies on the
+global finite generation theorem proved in [LXZ22].
+   As a consequence we also get the following result:
+Theorem 1.3. Let x ∈ (X, ∆) be a klt singularity. Then its local volume
+                          c X, ∆) := inf vol(v)
+                          vol(x,                   c
+                                               v∈ValX,x
+
+is an algebraic number.
+1.2. Finite generation via multiple degeneration. Higher rank finite generation
+plays a key role to complete the algebraic theory of K-stability. In the global setting,
+one needs to show that for any log Fano pair (X, ∆) that is not uniformly K-stable,
+any valuation v L
+                computing the δ-invariant has a finitely generated associated graded ring
+grv (R) for R = m∈r·N H 0 (−m(KX + ∆)) where r > 0 is a sufficiently divisible integer.
+This was solved in [LXZ22], and the proof can be split into two parts. In the first part,
+it is shown that such a valuation v is a monomial lc place on a log resolution (Y, E)
+of (X, ∆), for a Q-complement Γ whose birational transform on Y contains an ample
+                        STABLE DEGENERATIONS OF SINGULARITIES                                 3
+
+Q-subdivisor. Such a complement Γ is called special (with respect to the log resolution
+(Y, E)). It is a key observation in [LXZ22] that when the rational rank of v is greater
+than one, one should focus on lc places of this smaller class of Q-complements to achieve
+the finite generation. Then in the second part, it is shown that any v satisfying the above
+assumption indeed induces a finitely generated associated graded ring grv R. One major
+input in the proof of the second part is to show that for
+                                                          any small rational perturbation
+w of v, the induced degeneration Xw := Proj grw (R) yields a log Fano pair with an
+α-invariant bounded from below by a constant (which does not depend on w), therefore
+belongs to a bounded family of pairs by [Jia20].
+   For the local problem, one can mimic the argument in the first step as above to construct
+a special Q-complement for a valuation minimizing vol,   c and then perturbations of v
+yields degenerations to log Fano cones. However, a main issue is that the boundedness
+result for such log Fano cones, unlike the case for Fano varieties, is not known (see e.g.
+Conjecture 1.7). Therefore, we have to develop a new approach to circumvent the usage
+of boundedness result. In [Xu21], it was proposed to use multiple degenerations over a
+base An , to attack the finite generation. More precisely, if Γ is a Q-complement of a klt
+singularity x ∈ (X, ∆), then [Xu21] shows that one can use any r divisorial lc places of
+(X, ∆ + Γ) to obtain a Grm -equivariant flat degeneration of (X, ∆) over Ar , which indeed
+yields a locally stable family in the sense of [Kol23, Definition-Theorem 4.7].
+   The key recipe for this strategy to work is to show that the degeneration family has
+irreducible fibers over all points in Ar . This is in general a delicate condition. One of
+our main observations in this paper is that a refinement of the notion of the special Q-
+complement can be used to guarantee that the degenerations induced by its lc places have
+irreducible fibers. More precisely, besides the log smooth model considered in the original
+definition of special Q-complements in [LXZ22], we also consider models
+                                  π : (Y, E = Ex(π)) → X
+such that π is an isomorphism over X \ {x}, (Y, E + π∗−1 ∆) is qdlt (Definition 2.2), and
+−(KY +E +π∗−1 ∆) is ample. We call this a Kollár model, as it is a generalization
+                                                                                 P of Kollár
+component to the case of multiple exceptional components. If we write E = ri=1 Ei , then
+a key technical result says that the multiple degenerations over Ar given by Ei always have
+irreducible central fibers. This is sufficient to imply the finite generation of the associated
+graded ring for any valuation v ∈ QM(Y, E), as we will see in Section 4.3.
+   Then starting from any log smooth model (Y, E) admitting a special Q-complement Γ
+and a monomial lc place
+                              v ∈ QM(Y, E) ∩ LC(X, ∆ + Γ),
+we will show that v is contained in QM(Y ′ , E ′ ) for a Kollár model (Y ′ , E ′ ) → X. For
+this, we find a process to modify (Y, E) by first blowing up, and then running a minimal
+model program. See Section 3.3.
+  To summarize, we show the following technical statement (Theorem 4.1).
+Theorem 1.4. Let x ∈ (X = Spec(R), ∆) be a klt singularity and let v be a monomial lc
+place of a special Q-complement Γ with respect to some log smooth model (Y, E) of (X, ∆)
+(Definition 3.1). Then the associated graded ring grv (R) is finitely generated.
+4                          CHENYANG XU AND ZIQUAN ZHUANG
+
+  We remark that a special case of this statement, i.e. when x ∈ (X, ∆) is a log Fano
+cone singularity (with respect to some torus T) and v is T-invariant, is proved in [Hua22]
+by improving arguments in [LXZ22].
+  Theorem 1.4 implies the following global version of the higher rank finite generation
+statement, which was first proved in [LXZ22, Theorem 4.2].
+Corollary 1.5 ([LXZ22, Theorem 4.2]). Let (X, ∆) be a log Fano pair. Let v be a
+monomial lc place of a special Q-complement Γ with respect to some log smooth model
+π : (Y, E) →
+           L (X, ∆).  Then the associated graded algebra grv (R) is finitely generated,
+                   0
+where R = m∈N H (−mr(KX + ∆)) for some r such that r(KX + ∆) is Cartier.
+  Along the way of the proof, we also get the following more precise characterization for
+how the induced degenerations vary as we vary the valuations.
+Theorem 1.6. Let x ∈ (X = Spec(R), ∆) be a klt singularity and let (Y, E) be a toroidal
+model over (X, ∆) with a special Q-complement Γ. Then LCx (Γ; Y, E) is a rational poly-
+hedral subset of QM(Y, E), and for any two valuations v and w on the same open face of
+LCx (Γ; Y, E), there is an isomorphism grv R ∼
+                                             = grw R of the associated graded algebras.
+  For the definition of toroidal models (resp. LCx (Γ; Y, E)), see Section 2.2.2 (resp.
+Definition 3.1).
+  The remaining part of the proof is showing that any minimizer v is a monomial lc
+place for a log smooth model (Y, E) over (X, ∆) with a Q-complement. This is similar
+to [LXZ22, Corollary 3.4], but we replace the basis type divisors in the global settings by
+the construction in [XZ21]. See Section 3.1.
+  Finally, we want to restate the following conjecture that is well known to experts.
+Conjecture 1.7. Fix a positive integer n, a positive number δ and a finite set I ⊆
+[0, 1] ∩ Q. Then the set
+           n         x ∈ (X, ∆) is a K-semistable log Fano cone singularity, o
+             (X, ∆)                                 c X, ∆) ≥ δ
+                     dim X = n, Coeff(∆) ⊆ I, and vol(x,
+is bounded.
+   Theorem 1.2 and Conjecture 1.7 together imply that for any finite set I of rational
+numbers and any positive number δ, the class of all n-dimensional klt singularities x ∈
+              c X, ∆) ≥ δ and Coeff(∆) ⊆ I is bounded up to special degeneration
+(X, ∆) with vol(x,
+(i.e. specially bounded ). They also imply that the local volumes of n-dimensional klt
+singularities with Coeff(∆) ⊆ I satisfies the ascending chain condition (ACC) and the
+only accumulation point is zero. This is because Theorem 1.2 yields a degeneration of
+(x, X, ∆) to a K-semistable Fano cone singularity (X0 , ∆0 ; ξv ) and we know that
+              c X, ∆) = vol
+              vol(x,    c (X,∆) (v) = vol
+                                      c (X ,∆ ) (ξv ) = vol(X
+                                                        c 0 , ∆0 ; ξv ),
+                                          0  0
+
+where the second equality follows from [LX18, Lemma 2.58]. As we mentioned, a major
+difference between our current approach with the one in [LXZ22] is that we circumvent the
+above type of boundedness result, by considering multiple degenerations. Nevertheless,
+we believe Conjecture 1.7 still plays a key role for advancing our understanding of the
+local K-stability theory.
+                           STABLE DEGENERATIONS OF SINGULARITIES                                           5
+
+Acknowledgement: We would like to thank Chi Li, Yuchen Liu for helpful conversa-
+tions, and the referees for careful reading and helpful comments. CX is partially supported
+by NSF Grant DMS-2201349, DMS-2139613 and DMS-2153115. ZZ is partially supported
+by NSF Grants DMS-2240926, DMS-2234736, a Clay research fellowship, as well as a Sloan
+fellowship.
+                                          2. Preliminaries
+   Throughout this paper, we work over an algebraically closed field k of characteristic
+0. All algebraic varieties are assumed to be quasi-projective. We follow the standard
+terminology from [KM98, Kol13].
+   A singularity x ∈ (X, ∆) consists of a normal affine variety X, an effective Q-divisor ∆
+(could be 0) on X and a closed point x ∈ X. A divisor over a singularity x ∈ (X, ∆) is a
+prime divisor E ⊆ Y on some proper birational model µ : Y → X such that µ(E) = {x}.
+   For an effective Q-divisor ∆ on a normal variety, an effective Q-divisor ∆0 is called a
+Q-subdivisor of ∆ if ∆0 ≤ ∆.
+   Let (X, ∆) → U be a projective morphism from a klt pair (X, ∆) such that −KX − ∆
+is ample. A (global ) Q-complement is an effective Q-divisor Γ, such that (X, ∆ + Γ) is
+log canonical and KX + ∆ + Γ ∼Q 0. A (local ) Q-complement of a singularity x ∈ (X, ∆)
+is an effective Q-divisor Γ such that (X, ∆ + Γ) is lc and x is an lc center.1
+   Given a ring R, an (N-)graded sequence a• = {ak }k∈N of ideals is a set of ideals ak ⊆ R
+(k ∈ N) satisfying that ak · ak′ ⊆ ak+k′ .
+2.1. Qdlt pairs. The concept of qdlt pairs is introduced in [dFKX17, Definition 35].
+Definition 2.1. Let D ⊆ X be a reduced divisor on a normal variety. We say (X, D) is
+toroidal if for any x ∈ X there exists an SNC pair x′ ∈ (X ′ , D ′ ) and a finite abelian group
+G acting on it preserving every irreducible component of D ′ , such that the G-action is
+free in codimension one and Zariski locally we have
+                            (x ∈ (X, D)) ∼= (x′ ∈ (X ′ , D ′ )) /G.
+Definition 2.2 ([dFKX17, Definition 35]). A qdlt pair (X, ∆) is a log pair such that
+there exists an open set U ⊂ X such that ∆|U is reduced, (U, ∆|U ) is toroidal, and the log
+discrepancy AX,∆ (F ) > 0 for any prime divisor F over X whose center on X is contained
+in X \U. Note that when ⌊∆⌋ is irreducible, being qdlt is equivalent to being plt. Similarly
+we can define sub-qdlt pairs by allowing negative coefficients in ∆.
+  Qdlt pairs behave very similar to dlt pairs. We list a few properties of this kind.
+Lemma 2.3. Assume that (X, ∆) is a qdlt pair and X is quasi-projective. Let ∆0 and ∆1
+be effective Q-divisors (not necessarily Q-Cartier). Assume that ∆0 ≤ ∆ and Supp(∆1 )
+does not contain any stratum of ⌊∆⌋. Then there exist some 0 < ε ≪ 1 and some Q-
+divisor D ≥ ∆0 + ε∆1 such that (X, D) is qdlt and ⌊D⌋ = ⌊∆0 ⌋. Furthermore, if X
+is projective over S and −(KX + ∆) is ample over S, then D can be chosen so that
+−(KX + D) remains ample over S.
+  In particular, we can always make small perturbation of a qdlt pair to reduce the
+number of components with coefficient 1.
+  1Note that our definition of complements is slightly different from Shokurov’s original definition [Sho92].
+6                           CHENYANG XU AND ZIQUAN ZHUANG
+
+Proof. This is proved just as in [KM98, Proposition 2.43]. Let H be an ample divisor on
+X, and let U be the open set as in Definition 2.2. Since Supp(∆1 ) does not contain any
+stratum of ⌊∆⌋, after possibly shrinking U we may assume that ∆1 |U = 0. Choose some
+r > 0 such that r(∆ − ∆0 − ∆1 ) has integer coefficients and r(∆ − ∆0 − ∆1 )|U is Cartier.
+By the following Lemma 2.4, we may choose some m ≫ 0 such that the linear system
+|mH + r(∆ − ∆0 − ∆1 )| is basepoint free on U. Let G0 ∈ |mH + r(∆ − ∆0 − ∆1 )| be a
+general member and let G = 1r G0 . Then
+                                                             m
+                         KX + ∆0 + ∆1 + G ∼Q KX + ∆ + H
+                                                             r
+is Q-Cartier, and by Bertini’s theorem (X, ∆ + Supp(G)) is toroidal on U. Consider the
+convex combination
+                      (X, Dε := ∆0 + (1 − ε)(∆ − ∆0 ) + ε(∆1 + G))
+of (X, ∆) and (X, ∆0 + ∆1 + G). This pair has toroidal support on U and ⌊Dε ⌋ = ⌊∆0 ⌋
+when 0 < ε ≪ 1. If π : Y → (X, ∆ + ∆1 + G) is a log resolution and F ⊆ Y \ π −1 (U)
+is a prime divisor, then AX,Dε (F ) → AX,∆ (F ) > 0 as ε → 0. Thus (X, Dε ) is qdlt when
+0 < ε ≪ 1 and Dε gives the desired boundary. Moreover,
+                                                      mε
+                             KX + Dε ∼Q KX + ∆ +          H,
+                                                        r
+hence −(KX + Dε ) remains ample if −(KX + ∆) is ample.                                
+Lemma 2.4. Let X be a normal variety, and D a Weil divisor on X. Let H be an ample
+divisor. Then the base locus of |mH + D| for m ≫ 0 is the non-Cartier locus of D.
+Proof. This should be well-known to experts. First we show that every closed point
+x ∈ X in the non-Cartier locus of D is also in the base locus of |mH + D|. In fact,
+if there exists G ∈ |mH + D| such that x 6∈ Supp(G) then G is clearly Cartier at x,
+hence so is D ∼ G − mH, a contradiction. Next we take some m ≫ 0 such that the
+sheaf OX (D + mH) is globally generated. For every x ∈ X where D is Cartier, we have
+OX (D + mH) ⊗ k(x) ∼ = k(x), while global generation induces a surjection
+                      H 0 (X, OX (D + mH)) ։ OX (D + mH) ⊗ k(x).
+Thus we may find a section s ∈ H 0 (X, OX (D + mH)) that does not vanish at x; in other
+words, we get a divisor G ∈ |mH + D| that does not pass through x. As x is arbitrary,
+this implies that the base locus of |mH + D| is contained in the non-Cartier locus of D,
+and we are done.                                                                      
+    The next lemma describes the geometry of the lc centers of qdlt pairs.
+Lemma 2.5. Let (X, ∆) be a qdlt pair. Then the lc centers of (X, ∆) are normal, and
+they are exactly the irreducible components of various intersections D1 ∩ · · · ∩ Dr where
+D1 , . . . , Dr are irreducible components of ⌊∆⌋.
+Proof. By definition the lc centers intersect the toroidal locus U and then it is not hard
+to see that any lc center is given in this form. Let us show that any such intersection
+D1 ∩ · · · ∩ Dr is normal. Using induction on r it suffices to show that each component Di
+is normal, since by adjunction, (D1 , Diff D1 (∆ − D1 )) is qdlt. Without loss of generality
+we assume i = 1. By Lemma 2.3, there exists some ∆′ ≥ D1 such that (X, ∆′ ) is qdlt and
+                       STABLE DEGENERATIONS OF SINGULARITIES                              7
+
+⌊∆′ ⌋ = D1 (which is irreducible). By definition this implies that (X, ∆′ ) is plt, thus by
+[Kol13, Theorem 4.16] we see that D1 is normal and we are done.                           
+
+  We will sometimes use the following lemma to verify a given pair is qdlt.
+Lemma 2.6 ([dFKX17, Proposition 34]). Let (X, ∆) be an lc pair. Then it is qdlt if and
+only if for any minimal lc center W of (X, ∆), there exist r = codimX (W ) reduced divisors
+D1 , . . . , Dr ⊆ ⌊∆⌋ that are Q-Cartier at the generic point of W such that W ⊆ Di .
+2.2. Valuations and models.
+
+2.2.1. Valuations. Let X be a reduced, irreducible (separated) variety defined over k. A
+real valuation of its function field K(X) is a non-constant map
+                             v : K(X)× (:= K(X) \ {0}) → R
+satisfying:
+     • v(f g) = v(f ) + v(g);
+     • v(f + g) ≥ min{v(f ), v(g)};
+     • v(k× ) = 0.
+We set v(0) = +∞. The rational rank rat.rk.(v) of a valuation v is the dimension of the
+Q-vector space in R spanned by v(K(X)× ). A valuation v gives rise to a valuation ring
+                              Ov := {f ∈ K(X) | v(f ) ≥ 0}.
+We say a real valuation v is centered at a scheme-theoretic point x = cX (v) ∈ X if we
+have a local inclusion OX,x ֒→ Ov of local rings. Notice that the center of a valuation, if
+exists, is unique since X is separated. Denote by ValX the set of real valuations of K(X)
+that admits a center on X. For a closed point x ∈ X, we denote by ValX,x the set of real
+valuations of K(X) centered at x ∈ X. Note that a valuation v ∈ ValX is centered at a
+closed point x ∈ X if and only if v(f ) > 0 for all f ∈ mx .
+   For each valuation v ∈ ValX,x and any non-negative real number λ, we define the
+valuation ideal
+                              aλ (v) := {f ∈ OX,x | v(f ) ≥ λ}.
+Then it is clear that aλ (v) is an mx -primary ideal for each λ > 0 and x = cX (v).
+  Given a valuation v ∈ ValX and a nonzero ideal a ⊆ OX , we may evaluate a along v by
+setting
+                         v(a) := min{v(f ) | f ∈ a · OX,cX (v) }.
+It follows from the above definition that if a ⊆ b ⊆ OX are nonzero ideals, then v(a) ≥
+v(b). Additionally, v(a) > 0 if and only if cX (v) ∈ Supp(OX /a). We endow ValX with the
+weakest topology such that, for every nonzero ideal a on X, the map ValX → R defined by
+v 7→ v(a) is continuous. The subset ValX,x ⊆ ValX is endowed with the subspace topology.
+In some literature, the space ValX,x is called the non-archimedean link of x ∈ X. For more
+background on valuation spaces, see [JM12, Section 4].
+   Let D be a Cartier divisor on X and v ∈ ValX a valuation, we can also define v(D) to
+be v(f ) where f is a defining equation of D at cX (v). And similarly if D is Q-Cartier, we
+8                              CHENYANG XU AND ZIQUAN ZHUANG
+
+can define v(D) = m1 v(mD) for a sufficiently divisible positive integer m. For a graded
+sequence a• = {ak }k∈N of ideals, we define
+                                         v(ak )               v(ak )
+                             v(a•) = inf        = lim                .
+                                       k   k       k→∞,ak 6=0   k
+  Let µ : Y → X be a proper birational morphism with Y a normal variety. For a prime
+divisor E on Y (we call any such E a divisor over X), we define a valuation ordE ∈ ValX
+that sends each rational function in K(X)× = K(Y )× to its order of vanishing along E.
+Note that the center cX (ordE ) is the generic point of µ(E). We say that v ∈ ValX is a
+divisorial valuation if there exists E as above and λ ∈ R>0 such that v = λ · ordE .
+  When X = Spec(R) is affine and v ∈ ValX is a real valuation, we define the associated
+graded algebra as                          M
+                                  grv R :=      aλ (v)/a>λ(v)
+                                             λ∈R
+                  S
+where a>λ (v) =       µ>λ aµ (v) = {f ∈ R | v(f ) > λ}.
+
+Lemma 2.7. Let R be an integral domain and let a• L     be a graded sequence of ideals such
+that ai+1 ⊆ ai for all i ∈ N. Suppose that gr(R, a• ) := i∈N ai /ai+1 is an integral domain.
+Then there exists some discrete valuation v such that ai = ai (v) for all i ∈ N.
+Proof. For any 0 6= f ∈ R set v(f ) = sup{i | f ∈ ai }. We need to show that v is a
+valuation. Since ai+1 ⊆ ai for all i ∈ N ,we clearly have v(f + g) ≥ min{v(f ), v(g)}.
+Suppose that f ∈ ai \ ai+1 and g ∈ aj \ aj+1 , then their reductions f¯ ∈ ai /ai+1 and
+ḡ ∈ aj /aj+1 are non-zero in gr(R, a• ). Since gr(R, a• ) is an integral domain we get f¯ḡ 6= 0,
+which gives f g ∈ ai+j \ ai+j+1 and hence v(f g) = v(f ) + v(g).                                
+2.2.2. Models. A model (Y, E) over a pair (X, ∆) consists of a projective birational mor-
+phism π : Y → X and a reduced divisor E on Y . We call it a log smooth (resp. toroidal )
+model if (Y, Supp(E + Ex(π) + π∗−1 ∆)) is simple normal crossing (SNC) (resp. toroidal).
+Definition 2.8. A valuation v = vα is called quasi-monomial if there exists a log smooth
+model (Y, E = E1 + · · · + Er ) → X and r nonnegative numbers α = (α1 ,. . . , αr ) such that
+       T
+  (1) ri=1 Ei 6= ∅;                        T
+  (2) There exists a component C ⊆ ri=1 Ei , such that around the generic point η of
+       C, Ei is given by the local equation (zi = 0) and
+                                               P
+  (3) for any f ∈ OY,η , we may write f = β∈Zr cβ z β (where z β = z1β1 · · · zrβr ) in ÔY,η
+                                                     ≥0
+       so that each cβ is either zero or a unit, then
+                                             nX                o
+                               vα (f ) = min    αi βi | cβ 6= 0 .
+
+  For example, if we choose α ∈ Zr≥0 , the corresponding valuation is given by the toroidal
+divisor coming from the weighted blow up with weight α. The rational rank of the quasi-
+monomial valuation vα is equal to the dimension of the Q-linear vector space
+                                    spanQ {α1 , . . . , αr } ⊆ R.
+In particular, the rational rank is always bounded above by the codimension of η. On the
+other hand, by further blowing up we can always choose a log smooth model so that
+                                  codimY (η) = rat.rk.(v) = r,
+                          STABLE DEGENERATIONS OF SINGULARITIES                                      9
+
+in which case the weights α1 , . . . , αr are Q-linearly independent.
+   In the following, we also need a slight generalization of Definition 2.8, namely instead
+of assuming that (Y, E1 + · · · + Er ) is simple normal crossing at η, we assume
+                   (η ∈ Y, E1 + · · · + Er ) ∼
+                                             = (η ′ ∈ Y ′ , E ′ + · · · + E ′ )/G,
+                                                                1            r
+          ′
+where (η ∈     Y , E1′ + · · · + Er′ )
+                 ′
+                                         is a semi-local SNC pair and G is an abelian group,
+i.e. (η ∈ Y, E1 + · · · + Er ) is toroidal around η. Denote the pull back of Ei by ni Ei′ .
+Then for α = (α1 , . . . , αr ) ∈ Rr≥0 , we can define vα to be the restriction of vα′ at η ′ ∈
+(Y ′ , E1′ + · · · + Er′ ) as in Definition 2.8, where α′ = (n1 α1 , . . . , nr αr ) (the weights in α′
+are chosen so that vα (Ei ) = αi ). The definition is independent of the SNC abelian cover
+(Y ′ , E ′ ). We denote by QMη (Y, E) all such valuations with α ∈ Rr≥0 , and by QM◦η (Y, E)
+with α ∈ Rr>0 . In general, given a model (Y, E), we denote by QM(Y, E) ⊆ ValX the
+union of QMη (Y, F ) where η ∈ Y and F ⊆ E is a reduced divisor such that (Y, F ) is
+toroidal at η.
+Lemma 2.9. Let a• be a graded sequence of ideals. Then the function v → v(a• ) is
+concave on QMη (Y, E).
+Proof. By passing to the abelian cover, we may assume (Y, E) is log smooth at η. Assume
+v0 and v1 are in QMη (Y, E), corresponding to α0 and α1 in Rr≥0 and vt the valuation
+                                                            P
+corresponding to αt := (1 − t)α0 + tα1 . For any f write f = cβ z β . Let β0 satisfy
+                                cβ0 6= 0    and      vt (f ) = hαt , β0 i.
+Then
+               vt (f ) = (1 − t)hα0 , β0 i + thα1 , β0 i ≥ (1 − t)v0 (f ) + tv1 (f ).
+Let a be an ideal, and vt (a) = vt (f ) for some f ∈ a. Then
+                vt (a) = vt (f ) ≥ tv0 (f ) + (1 − t)v1 (f ) ≥ tv0 (a) + (1 − t)v1 (a).
+Since v(a• ) = limk→∞ k1 v(ak ) for any valuation v, the above inequality implies
+                                 vt (a• ) ≥ (1 − t)v0 (a• ) + tv1 (a• ).
+                                                                                                    
+Definition 2.10. Let (X, ∆) be a log canonical pair, we use LC(X, ∆) ⊆ ValX to denote
+the set of valuations which are lc places of (X, ∆). It is the cone over the dual complex
+DMR(X, ∆) defined in [dFKX17, Theorem 28].
+2.3. Normalized volume.
+Definition 2.11. Let X be an n-dimensional normal variety. Let x ∈ X be a closed
+point. Following [ELS03], we define the volume of a valuation v ∈ ValX,x as
+                                             ℓ(OX,x /ak (v))
+                               volX,x (v) = lim sup          ,
+                                        k→∞       k n /n!
+where ℓ denotes the length of an Artinian module.
+  By [ELS03, LM09, Cut13], the above limsup is actually a limit.
+Definition 2.12 (Log discrepancy). Let (X, ∆) be a log canonical pair. We define the
+log discrepancy function of valuations AX,∆ : ValX → [0, +∞] in successive generality.
+10                            CHENYANG XU AND ZIQUAN ZHUANG
+
+      (1) Let µ : Y → X be a proper birational morphism from a normal variety Y . Let E
+          be a prime divisor on Y . Then we define AX,∆ (ordE ) = AX,∆ (E), i.e.
+                             AX,∆ (ordE ) := 1 + ordE (KY − µ∗ (KX + ∆)).
+                           P
+      (2) Let (Y, E = ri=1 Ei ) → X be a log smooth model of (X, ∆). Let η be the generic
+          point of a connected component of E1 ∩ · · · ∩ Er . For any vα ∈ QMη (Y, E) where
+          α = (α1 , . . . , αr ) ∈ Rr≥0 \ {0}, we define AX,∆ (vα ) as
+                                                r
+                                                X
+                                AX,∆ (vα ) :=         αi AX,∆ (ordEi ).
+                                                i=1
+
+      (3) In [JM12], it was shown that there exists a retraction map
+                                   ρY,E : ValX → QM(Y, E)
+          for any log smooth model (Y, E) over X, such that it induces a homeomorphism
+          ValX → lim(Y,E) QM(Y, E). For any real valuation v ∈ ValX , we define
+                   ←−
+                             AX,∆ (v) := sup AX,∆ (ρY,E (v)),
+                                          (Y,E)
+
+          where (Y, E) ranges over all log smooth models over (X, ∆).
+     The following invariant is introduced in [Li18].
+Definition 2.13 ([Li18]). Let x ∈ (X, ∆) be an n-dimensional klt singularity. The
+                                         c (X,∆),x : ValX,x → R ∪ {+∞} is defined as
+normalized volume function of valuations vol
+                              (
+                                       n
+               c (X,∆),x (v) = AX,∆ (v) · volX,x (v), if AX,∆ (v) < +∞;
+               vol
+                               +∞,                     if AX,∆ (v) = +∞.
+   When the singularity x ∈ (X, ∆) is clear in the context, we will abbreviate the notation
+c (X,∆),x as vol
+vol          c (X,∆) or vol.
+                        c [Li18] first proposed to study the minimizer of volc (X,∆),x , and
+several deep conjectures were made there. Then the conjectural picture was supplemented
+in [LX18], where the relationship with K-stability was considered in full generality. It is
+shown in [Blu18] that a minimizer of vol c (X,∆),x always exists. A priori, the definition
+includes to consider general valuations. However, [Xu20] proves that any minimizer is
+quasi-monomial. Therefore, we can restrict our studies in this paper to quasi-monomial
+valuations. For more background of the study on normalized volumes, see [LLX20].
+2.4. Kollár components. Recall that a divisor E over a normal singularity x ∈ X is
+said to be primitive if there exists a projective birational morphism π : Y → X such that
+Y is normal, E is a prime divisor on Y and −E is a π-ample Q-Cartier divisor. We call
+π : Y → X the associated prime blowup (it is uniquely determined by E).
+Lemma 2.14. Let E be a divisor over x ∈ X = Spec(R). Then grE R := grordE R is
+finitely generated if and only if E is primitive.
+                                                                      L
+Proof. Let am = am (ordE ) (m ∈ N). By lifting generators
+                                                       L  of gr E R =   m∈N am /am+1 , we
+see that grE R is finitely generated if and only if R = m∈N am is finitely generated over
+R. We shall show that the latter is equivalent to the primitivity of E. If E is primitive
+and π : Y → X is the associated prime blowup, then am = π∗ OY (−mE). As −E is
+                        STABLE DEGENERATIONS OF SINGULARITIES                                 11
+
+π-ample, there exists some p ≫ 0 such that ai+jp = ai · ajp for all i, j ∈ N. It follows that
+R is finitely generated. Conversely, if R is finitely generated, then [Ish04, Corollary 3.3]
+implies that E is primitive.                                                               
+  Let π : Y → X be the prime blowup of a primitive divisor E over a normal singularity
+x ∈ X. Let am := π∗ OY (−mE). Then by the Rees construction we get a Gm -equivariant
+degeneration
+                                                              M
+(2.1)        p : X → A1 = Spec(k[t]) of X, where X := Spec        t−m am .
+                                                                     m∈Z
+
+By the construction, there is a natural isomorphism ι : X ×A1 (A1 \ {0}) ∼
+                                                                         = X × (A1 \ {0}).
+                          1                                    1
+So X has a section γ : A → X given by the closure of x × (A \ {0}).  L   Let X0 = p−1 (0)
+be the fiber over 0 ∈ A1 , and let x0 = γ(0). Note that X0 ∼
+                                                           = Spec( m∈N am /am+1 ). For
+any Q-divisor ∆ on X, we denote by ∆X the closure of ∆ × (A1 \ {0}) on X under the
+natural isomorphism ι.
+  When x ∈ (X, ∆) is a klt singularity, the following special class of primitive divisors
+plays a particularly important role (see e.g. [Xu14]).
+Definition 2.15. Let x ∈ (X, ∆) be a klt singularity and let E be a prime divisor over
+X. If there exists a proper birational morphism π : Y → X such that E = π −1 (x) is the
+unique exceptional divisor, (Y, E + π∗−1 ∆) is plt and −(KY + E + π∗−1 ∆) is π-ample, we
+call E a Kollár component over x ∈ (X, ∆).
+  The following simple criterion will be needed in order to verify that certain divisors
+over a given singularity are Kollár components.
+Lemma 2.16. Let x ∈ (X, ∆) be a klt singularity and let π : Y → X be a proper birational
+morphism. Let E ⊆ π −1 (x) be a prime exceptional divisor. Assume that there exists a
+Q-divisor D ≥ E + π∗−1 ∆ such that KY + D ∼Q,π 0 and (Y, D) is plt. Then E is a Kollár
+component over x ∈ (X, ∆).
+Proof. Let Γ = π∗ D − ∆ ≥ 0. Since KY + D ∼Q,π 0, we have KY + D ∼Q π ∗ (KX + ∆ + Γ).
+Thus as (Y, D) is plt we see that Γ is a Q-complement of x ∈ (X, ∆) and E is its unique lc
+place. By [BCHM10, Corollaries 1.4.3 and 1.3.1], this implies that E is primitive and we
+let ϕ : Z → X be the associated prime blowup. Then (Z, E+ϕ−1     ∗ (∆+Γ)) is lc since it is the
+crepant pullback of (X, ∆+Γ); it is also plt since it has only one lc place which is the divisor
+E. It follows that (Z, E + ϕ−1                                        −1
+                            ∗ ∆) is plt as well. As −(KX + E + ϕ∗ ∆) ∼Q,ϕ −AX,∆ (E) · E
+is ϕ-ample by construction, we conclude that E is a Kollár component.                        
+Lemma 2.17. If E is a Kollár component over a klt singularity x ∈ (X, ∆), and let
+                               p : (X , ∆X ) → A1 = Spec(k[t])
+be the Gm -equivariant family induced by the Rees construction as in (2.1). Then (X , ∆X +
+p−1 (0)) is plt.
+   Moreover, if E is an lc place of a Q-complement Γ, and denote by ΓX the closure of
+Γ × (A1 \ {0}) on X , then (X , ∆X + ΓX + p−1 (0)) is lc.
+Proof. The first part was shown in [LX20, Section 2.4].
+12                          CHENYANG XU AND ZIQUAN ZHUANG
+
+   From the assumption, we know that for any 0 ≤ t < 1, E is also a Kollár component
+over the klt pair (X, ∆ + tΓ). Thus from the first part, we know (X , ∆X + t · ΓX + p−1 (0))
+is plt for any 0 ≤ t < 1. So (X , ∆X + ΓX + p−1 (0)) is lc.                               
+  We also have the following result, which implies Theorem 1.1 in the case when v is
+divisorial.
+Theorem 2.18. Let x ∈ (X, ∆) be a klt singularity. Let v be a minimizer of the nor-
+                        c X,∆ . Assume that v is divisorial. Then v = λ · ordE for some
+malized volume function vol
+Kollár component E.
+Proof. See [LX20, Theorem C] or [Blu18, Proposition 4.9].                                  
+                                    c X,∆ could be a quasi-monomial valuation with ra-
+   Since in general, a minimizer of vol
+tional rank larger than one, we have to adapt the study for higher rank valuations. For
+this purpose, we will introduce the concept of Kollár models (see Definition 3.5).
+
+                      3. Lc places of special Q-complements
+   The concept of (Q-)complements was first introduced in [Sho92]. However, it is known
+that unlike the divisorial case, an arbitrary lc place v of a Q-complement with rational rank
+larger than one does not necessarily have a finitely generated associated graded algebra
+(see e.g. [AZ22, Theorem 4.16] and [LXZ22, Theorem 6.1]). We need to look at a smaller
+class of Q-complements, which we call special Q-complements. The goal of this section
+is then two-folds. First we relate minimizers of the normalized volume function to lc
+places of special Q-complement. More precisely, we will prove that for any klt singularity
+x ∈ (X, ∆), any minimizer of the normalized volume function vol    c is a monomial lc place
+of a special Q-complement Γ with respect to some log smooth model (Y, E) (see Lemma
+3.2). Next we will introduce the concept of Kollár models as a higher rank analog of
+Kollár components. As a crucial step towards the finite generation statement, we show
+that any monomial lc place of a special Q-complement with respect to some log smooth
+model can also be realized on a Kollár model (Theorem 3.14). In the next section, we will
+prove finite generation by analyzing degenerations of Kollár models.
+
+3.1. Special Q-complements. First we give the definition of special Q-complements,
+which is analogous to [LXZ22, Definition 3.3].
+Definition 3.1. Let (X, ∆) be klt and projective over a quasi-projective variety U such
+that −KX − ∆ is ample over U. A Q-complement Γ of (X, ∆) will be called special with
+respect to a log smooth (resp. toroidal model ) π : (Y, E) → (X, ∆) if π∗−1 Γ ≥ G for some
+effective Q-divisor G on Y ample over U whose support does not contain any stratum of
+(Y, E).
+   Any valuation
+                             v ∈ QM(Y, E) ∩ LC(X, ∆ + Γ)
+is called a monomial lc place of the special Q-complement Γ with respect to (Y, E). We
+denote by LC(Γ; Y, E) := QM(Y, E) ∩ LC(X, ∆ + Γ) the corresponding set of monomial
+lc places.
+                         STABLE DEGENERATIONS OF SINGULARITIES                                   13
+
+  When U = Spec(k) this reduces to [LXZ22, Definition 3.3]. In the local case we are
+mainly interested in here, i.e. when x ∈ (X, ∆) is a klt singularity and U = X, we further
+denote LCx (Γ; Y, E) to be the set of valuations in ValX,x ∩ LC(Γ; Y, E).
+  Now let us show that minimizers of the normalized volume function are monomial lc
+places of special Q-complements (Lemma 3.4). Once this is done, we will focus on showing
+that any monomial lc place of special Q-complements has a finitely generated graded ring.
+  We start with the following auxiliary result, which easily implies Lemma 3.4. It can be
+viewed as the local analog of [LXZ22, Lemma 3.1].
+Lemma 3.2. Let x ∈ (X, ∆) be a klt singularity of dimension n and let v0 ∈ ValX,x be a
+                                              c (X,∆) . Then for any effective Q-Cartier
+minimizer of the normalized volume function vol
+                                 A   (v )
+Q-divisor D such that v0 (D) < X,∆n 0 , there exists some Q-complement Γ of (X, ∆)
+such that Γ ≥ D and v0 is an lc place of (X, ∆ + Γ).
+  As a preliminary step, we prove:
+Lemma 3.3. Let x ∈ (X = Spec(R), ∆) be a klt singularity of dimension n and let
+v0 ∈ ValX,x be a minimizer of the normalized volume function vol     c (X,∆) . Let D be an
+                                                      AX,∆ (v0 )
+effective Q-Cartier Q-divisor on X such that v0 (D) <    n
+                                                                 . Then
+                            lctx (X, ∆ + D; a• (v0 )) = AX,∆+D (v0 ),
+where a• (v0 ) := {am (v0 )}m∈N is the graded sequence of valuation ideals. In particular, the
+log canonical threshold lctx (X, ∆ + D; a• (v0 )) is computed by v0 .
+Proof. If v0 (D) = 0, i.e. x 6∈ Supp(D), the result simply follows from [Blu18, Lemma 4.7],
+hence we may assume that v0 (D) > 0. Up to rescaling the valuation v0 , we may assume
+that AX,∆ (v0 ) = 1. Let c = AX,∆+D (v0 ) and let a• = a• (v0 ). Clearly v0 (a• ) = 1 (see
+[Blu18, Lemma 3.5]) and
+                                                     AX,∆+D (v0 )
+                           lctx (X, ∆ + D; a•) ≤                  = c.
+                                                       v0 (a• )
+Suppose that the inequality is strict, then there exists some valuation v ∈ ValX,x such that
+AX,∆+D (v) < c · v(a• ). Equivalently, AX,∆ (v) < v(D) + c · v(a• ). Choose some 0 < ε ≪ 1
+so that
+(3.1)                        (1 + ε)AX,∆ (v) < v(D) + c · v(a• ).
+We will derive a contradiction from here.
+  First let us recall some definitions and results from [XZ21, Section 3]. Let Nm =
+dimk (R/am ) and let
+                                      m−1
+                                      X
+(3.2)                          wm =         i · dimk (ai /ai+1 ).
+                                      i=0
+
+The valuation v0 (resp. v) induces a natural filtration on R, which restricts to a filtration
+Fv0 (resp. Fv ) on R/am with
+        Fvλ (R/am ) := (aλ (v) + am )/am       and       Fvλ0 (R/am ) := (aλ (v0 ) + am )/am .
+14                                  CHENYANG XU AND ZIQUAN ZHUANG
+
+A basis of R/am is said to be compatible with a filtration F of R/am if every filtered
+subspace of F is spanned by some of the basis elements. Any s1 , . . . , sNm ∈ R that
+restrict to form a basis of R/am that is compatible with Fv0 is called an m-basis (with
+respect to v0 ). If in addition it is also compatible with Fv and whenever s̄i ∈ Fvλ (R/am )
+we get si ∈ aλ (v), we call it an (m, v)-basis. Following [XZ21, Section 3.1], we define
+                      Nm
+                      X
+     Sem (v0 ; v) =      ⌊v(si )⌋, where s1 , . . . , sNm ∈ R is any (m, v)-basis with respect to v0 .
+                      i=1
+
+Note that (3.2) implies that Sem (v0 ; v0 ) = wm . We also set
+                                                    Sem (v0 ; v)
+                                 S(v0 ; v) = lim
+                                              m→∞      wm
+(the limit exists by [XZ21, Lemma 3.3]). By [XZ21, Theorem 3.10], the minimizing
+valuation v0 is K-semistable ([XZ21, Definition 3.4]). In particular we get
+(3.3)                                       S(v0 ; v) ≤ AX,∆ (v).
+A Q-divisor of the form
+                                                     Nm
+                                                   1 X
+                                            Γ=           div(si )
+                                                  wm i=1
+is called an m-basis type divisor with respect to v0 if s1 , . . . , sNm ∈ R is an m-basis with
+respect to v0 . Note that as the m-basis varies, v0 (Γ) is independent of the m-basis
+s1 , . . . , sNm , while v(Γ) achieves its maximum exactly when s1 , . . . , sNm is an (m, v)-basis.
+Thus we have
+                                 Sem (v0 ; v)                Sem (v0 ; v) + Nm
+                        v0 (Γ) ≥              = 1 and v(Γ) ≤                     .
+                                    wm                                wm
+As N m
+    wm
+                      1
+        grows like O( m ) (see [XZ21, Proof of Lemma 3.3]), we deduce from (3.3) that as
+m ≫ 0 we have
+                          v(Γ) ≤ (1 + ε)S(v0 ; v) ≤ (1 + ε)AX,∆ (v)
+for any m-basis type divisor Γ.
+   To derive a contradiction, we will construct an m-basis type divisor Γ with respect to
+v0 (for some m ≫ 0) such that Γ ≥ D. To see why this is enough, note that
+                v0 (Γ − D) = v0 (Γ) − v0 (D) ≥ 1 − v0 (D) = AX,∆ (v0 ) − v0 (D) = c,
+hence
+             v(D) + c · v(a• ) ≤ v(D) + v(Γ − D) = v(Γ) ≤ (1 + ε)AX,∆ (v),
+contradicting (3.1).
+   The construction of Γ proceeds as follows. Let r > 0 be a sufficiently divisible integer
+such that rD = div(f ) is Cartier. Consider the filtration F (indexed by N) on R/am
+induced by the decreasing sequence of ideals (f j )i∈N . In more explicit terms, we have an
+isomorphism
+                                                         ·f j
+(3.4)                                 R/am−j·v0 (f ) (v0 ) −→ F j (R/am )
+given by multiplication by f j . Choose a basis s̄1 , . . . , s̄Nm of R/am that is compatible
+with both Fv0 and F (such a compatible basis exists by [AZ22, Lemma 3.1]). We may lift
+                         STABLE DEGENERATIONS OF SINGULARITIES                                 15
+
+them to an m-basis s1 , . . . , sNm ∈ R such that f −j si ∈ R whenever s̄i ∈ F j (R/am ) (this is
+                                                                                   P m
+possible by [XZ21, Lemma 2.1]). This gives an m-basis type divisor Γ = w1m N        i=1 div(si ).
+Let us check that Γ ≥ D when m ≫ 0. Indeed, by construction we know that wm · Γ ≥
+µm · div(f ) where
+                                          +∞
+                                          X
+                                    µm =      dim F j (R/am ).
+                                            j=1
+
+Using the isomorphism (3.4), we get
+                                    ⌊v m    ⌋
+                                     X
+                                     0 (f )
+
+                             µm =               dim(R/am−j·v0 (f ) (v0 )).
+                                      j=1
+
+Keeping in mind that limλ→+∞ dim(R/a λ (v0 ))
+                                 λn /n!
+                                              = volX,x (v0 ), we obtain the asymptotic ex-
+pression
+                                     µm            volX,x (v0 )
+                          lim n+1               =               .
+                         m→∞ m      /(n + 1)!         v0 (f )
+Similarly, by (3.2)
+                                                 Xm
+                       wm = m · dim(R/am ) −          dim(R/aj ),
+                                                           j=1
+
+we see that
+                                     wm
+                             lim n+1
+                                               = n · volX,x (v0 ).
+                            m→∞ m    /(n + 1)!
+Putting the asymptotic together we deduce that
+                                        rµm        1
+                                    lim     =            ;
+                                    m→∞ wm    n · v0 (D)
+by assumption, the right hand side is > AX,∆1 (v0 ) = 1. Hence if m ≫ 0 we have wµmm > 1r
+which translates to Γ ≥ D as desired. By the previous discussions, this concludes the
+proof.                                                                                
+Proof of Lemma 3.2. This essentially follows from [LX18, Theorem 2.50 and Remark 2.52]
+(c.f. the proof of [LXZ22, Lemma 3.1]). We provide the argument for the reader’s conve-
+nience.
+   By ACC of log canonical thresholds [HMX14], there exists a constant ε ∈ (0, 1) de-
+pending only on dim X and the coefficients of ∆ + D satisfying the following: for any
+proper birational morphism π : X  e → X where X    e is Q-factorial and any reduced divisor
+G on X  e such that
+                                 e π∗−1 (∆ + D) + (1 − ε)G)
+                               (X,
+                 e π −1 (∆ + D) + G) is lc as well.
+is lc, we have (X,   ∗
+   By [Xu20], the minimizer v0 is quasi-monomial. Let r be the rational rank of v0 . Let
+π : Y → (X, ∆ + D) be a log resolution such that v0 lies in the interior of QMη (Y, E) for
+some SNC divisor E = E1 + · · · + Er on YTwith π(E) = {x}, where η = cY (v0 ) is the
+generic point of a connected component of ri=1 Ei . Let a• = a• (v0 ) and c = AX,∆+D (v0 )
+16                           CHENYANG XU AND ZIQUAN ZHUANG
+
+as in Lemma 3.3. Since on QMη (Y, E), AX,∆+D (w) is linear in w as π is a log resolution,
+and w 7→ w(ac•) is concave by Lemma 2.9, we conclude that the log discrepancy function
+                         w 7→ AX,∆+D+ac• (w) = AX,∆+D (w) − w(ac•)
+is convex on QMη (Y, E). In particular it is Lipschitz on QMη (Y, E), hence there exists
+some constant C > 0 such that
+                       |AX,∆+D+ac• (w) − AX,∆+D+ac• (v0 )| ≤ C|w − v0 |
+for all w ∈ QMη (Y, E). Here |w − v0 | denotes the Euclidean distance of w and v0 in
+QMη (Y, E) ∼
+           = Rr≥0 . By [LX18, Lemma 2.7], there exist divisorial valuations
+                                   v1 , . . . , vr ∈ QMη (Y, E)
+and positive integers q1 , . . . , qr such that
+     • v0 is in the convex cone generated by v1 , . . . , vr ,
+     • for all i = 1, . . . , r, the valuation qi vi is Z-valued and has the form ordFi for some
+       divisor Fi over X, and
+     • |vi − v0 | < Cqε i for all i = 1, . . . , r.
+As AX,∆+D+ac• (v0 ) = 0 by Lemma 3.3, the above conditions imply that
+(3.5)             AX,∆+D+ac• (Fi ) = qi AX,∆+D+ac• (vi ) ≤ qi · C|vi − v0 | < ε.
+On the other hand, (X, ∆ + D + ac• ) is lc by Lemma 3.3, thus we may choose some
+0 < ε0 ≪ 1 and some m ≫ 0 such that (X, ∆ + D + (c − ε0 )am ) is klt and
+                                  AX,∆+D+(c−ε0)am (Fi ) < ε.
+By [BCHM10, Corollary 1.4.3], there exists a projective birational morphism π1 : X1 → X
+that extracts exactly the divisors F1 , . . . , Fr , and we may assume X
+                                                                       P1r is Q-factorial. Note
+that X1 is of Fano type over X. Running a −(KX1 + ∆1 + D1 + i=1 Fi )-MMP over X
+(where ∆1 , D1 are the birational transforms                                                 e
+                                               Pr of ∆, D), we obtain a model g : X1 99K X
+over X such that −(KXe + g∗ (∆1 + D1 + i=1 Fi )) is nef. The equality (3.5) implies that
+                                                                 r
+                                                                 X
+                               e g∗ (∆1 + D1 + (1 − ε)
+                              (X,                                      Fi ))
+                                                                 i=1
+
+is lc, thus by our choice of ε we deduce that (X,  e g∗ (∆1 + D1 + Pr Fi )) is lc. But this
+                                                                      i=1
+implies   that the MMP   process X   99K Xe is birational on any lc center of (X1 , ∆1 + D1 +
+Pr                                 1
+   i=1 Fi ): otherwise we will have a divisor F over this center with
+
+                   AX,g          P
+                    e ∗ (∆1 +D1 + r           (F ) < AX1 ,∆1 +D1 +Pri=1 Fi (F ) = 0,
+                                   i=1 Fi )
+
+a contradiction. In particular, it does not contract any of the divisors Fi and we may
+replace   X    by Xe and assume that (X1 , ∆1 + D1 + Pr Fi ) is lc and −(KX1 + ∆1 + D1 +
+Pr          1                                              i=1                       P
+   i=1 Fi ) is nef. As X 1 is of Fano type over X, it follows  that −(KX1 + ∆1 + D1 + ri=1 Fi )
+is base point free. Hence by Bertini’s theorem we can choose some effective Q-divisor Γ1
+such that
+                                                       X r
+                               KX1 + ∆1 + D1 + Γ1 +         Fi ∼Q,π1 0
+                                                           i=1
+                          STABLE DEGENERATIONS OF SINGULARITIES                                  17
+                        P
+and (X1 , ∆1 +D1 +Γ1 + ri=1 Fi ) is still lc. Let Γ = π1∗ (D1 +Γ1 ), then Γ is a Q-complement
+of (X, ∆) that has all F1 , . . . , Fr as lc places. Since v0 is in their convex hull, it is also an
+lc place of (X, ∆ + Γ). By construction, Γ ≥ π1∗ D1 = D and we are done.                           
+  We now show that any minimizer of the normalized volume function is a monomial lc
+place of some special Q-complement.
+Lemma 3.4. Let x ∈ (X = Spec(R), ∆) be a klt singularity and let v0 be the minimizer of
+the normalized volume function. Then there exists a log smooth model π : (Y, E) → (X, ∆)
+such that v0 is a monomial lc place of some special Q-complement Γ with respect to (Y, E),
+i.e. v0 ∈ LC(Γ; Y, E).
+Proof. Let π : (Y, E) → (X, ∆) be a log smooth model such that v0 ∈ QM(Y, E) and
+−F is π-ample for some effective divisor F supported on the exceptional locus. Let
+r > 0 be a sufficiently large integer and let f ∈ π∗ OY (−rF ) be a general element. Let
+D0 = {f = 0}, then the birational transform π∗−1 D0 ∼Q,π −rF is π-ample and does not
+contain any stratum of (Y, E) by Bertini’s theorem. Since X is affine, the π-ample divisor
+                                                                                 A    (v0 )
+π∗−1 D0 is in fact ample. Let D = tD0 for some 0 < t ≪ 1 such that v0 (D) < X,∆    dim X
+                                                                                            .
+By Lemma 3.2, there exists some Q-complement Γ of (X, ∆) such that Γ ≥ D and v0 is
+an lc place of (X, ∆ + Γ). By construction, Γ is a special Q-complement with respect to
+(Y, E). This completes the proof.                                                        
+3.2. Kollár models. Our next goal is to reduce the study of special Q-complements
+(and their monomial lc places) to the study of Kollár models. In this subsection, we first
+introduce the concept of Kollár models and discuss some of their general properties.
+Definition 3.5. Let (X, ∆) be a klt pair that’s projective over a quasi-projective variety
+U such that −KX − ∆ is ample over U. A model π : (Y, E) → (X, ∆) is said to be of
+qdlt Fano type if there exists an effective Q-divisor D ≥ π∗−1 ∆ on Y such that ⌊D⌋ = E,
+(Y, D) is qdlt, and −(KY + D) is ample over U.
+  Note that these conditions imply that there exists a Q-complement Γ of (X, ∆) such
+that Y is a qdlt modification (in the sense of e.g. [Kol13, Theorem 1.34]) of (X, ∆ + Γ)
+and π∗−1 Γ contains an ample Q-subdivisor.
+  The following proposition demonstrates some of the flexibility in the construction of
+qdlt Fano type models.
+Proposition 3.6. Let (X, ∆) be a klt pair projective over U such that −KX − ∆ is ample
+over U. Let π : (Y, E) → (X, ∆) be a model of qdlt Fano type. Then:
+   (1) For any reduced divisor E0 ≤ E, the model (Y, E0 ) → (X, ∆) is of qdlt Fano type.
+   (2) For any birational contraction ϕ : Y 99K Y ′ over X that is an isomorphism at
+       the generic point of every stratum of E, the induced model π ′ : (Y ′ , E ′ = ϕ∗ E) →
+       (X, ∆) is of qdlt Fano type.
+Proof. Let D be the Q-divisor in Definition 3.5. We can choose some Q-divisor ∆0 such
+that ⌊∆0 ⌋ = E0 and ∆0 ≥ π∗−1 ∆. By Lemma 2.3 we get a Q-divisor D0 ≥ ∆0 ≥ π∗−1 ∆
+such that ⌊D0 ⌋ = ⌊∆0 ⌋ = E0 , (Y, D0 ) is qdlt and −(KY + D0 ) is ample over U. This
+implies (1).
+  Let G′ be an ample divisor on Y ′ that is in a general position and let G = ϕ−1 ′
+                                                                               ∗ G . Then
+by the assumption on ϕ and Bertini’s theorem we know that Supp(G) does not contain
+18                           CHENYANG XU AND ZIQUAN ZHUANG
+
+any stratum of E. By Lemma 2.3, there exists some 0 < ε ≪ 1 and some D1 ≥ π∗−1 ∆+εG
+such that ⌊D1 ⌋ = E, (Y, D1 ) is qdlt and
+                                    −(KY + D1 ) ∼Q 0 /U.
+In fact, Lemma 2.3 gives some D1 as above such that −(KY + D1 ) is ample; but then by
+Bertini’s theorem we can add a general ample divisor to D1 so that −(KY + D1 ) ∼Q 0 /U.
+   Let D1′ = ϕ∗ D1 . Since ϕ is an isomorphism at the generic points of all the strata of E,
+we see that (Y ′ , D1′ ) is also qdlt and −(KY ′ + D1′ ) ∼Q 0 /U. Since D1′ ≥ εG′ , the Q-divisor
+D ′ = D1′ − εG′ makes (Y ′ , E ′ ) a qdlt Fano type model over (X, ∆), as ⌊D ′ ⌋ = E ′ and
+                                    −(KY ′ + D ′ ) ∼Q,U εG′
+is ample by construction. This gives (2).                                                      
+Definition 3.7. Let x ∈ (X, ∆) be a klt singularity. A Kollár model of x ∈ (X, ∆) is
+a model π : (Y, E) → (X, ∆) such that π is an isomorphism away from {x}, E = Ex(π),
+(Y, π∗−1∆ + E) is qdlt and −(KY + π∗−1 ∆ + E) is ample.
+   Clearly a Kollár model is also of qdlt Fano type (with U = X). The terminology comes
+from the following basic observations.
+Lemma 3.8. Let x ∈ (X, ∆) be a klt singularity. Then the plt blowup π : Y → X of any
+Kollár component E is a Kollár model (Y, E) over (X, ∆). Conversely, if π : (Y, E) →
+(X, ∆) is a Kollár model, then every irreducible component of E is a Kollár component
+over x ∈ (X, ∆).
+Proof. The first part is clear from the definition. For the second part, suppose that
+π : (Y, E) → (X, ∆) is a Kollár model. Let E1 be an irreducible component of E. By
+Lemma 2.3, there exists some effective Q-divisor D1 ≥ π∗−1 ∆+ E1 on Y such that −(KY +
+D1 ) is ample, ⌊D1 ⌋ = E1 and (Y, D1 ) is qdlt. Since ⌊D1 ⌋ is irreducible, this indeed
+implies the pair (Y, D1 ) is plt. Let m > 0 be some sufficiently divisible integer and let
+G ∈ m1 | − m(KY + D1 )| be a general member. Then KY + D1 + G ∼Q 0 and (Y, D1 + G)
+remains plt by Bertini’s theorem. By Lemma 2.16, we conclude that E1 is a Kollár
+component.                                                                              
+  Over a klt singularity, the two types of models introduced above are closely related.
+In fact, the following proposition shows that Kollár models are nothing but the ample
+models of qdlt Fano type models.
+Proposition 3.9. Let x ∈ (X, ∆) be a klt singularity, and let π : (Y, E) → (X, ∆) be a
+model of qdlt Fano type such that π(E) = {x}. Let g : Y 99K Y ′ be the ample model of
+−(KY + π∗−1 ∆ + E) over X. Then g is an isomorphism at the generic point of every
+stratum of E, and the induced morphism π ′ : (Y ′ , E ′ = g∗ E) → (X, ∆) is a Kollár model.
+     We remark that here the ample model exists since Y is of Fano type over X.
+Proof. Let us first show that g : Y 99K Y ′ is an isomorphism at the generic point of
+every stratum of E. Let ϕ : Ye → Y be a small Q-factorial modification, which exists
+by [BCHM10, Corollary 1.4.3]. Note that ϕ is an isomorphism at the locus where Y
+is Q-factorial; in particular, this includes the generic points of all the strata of E. By
+Proposition 3.6, we deduce that the model (Ye , E e = ϕ∗ E) is of qdlt Fano type. Since a
+                          STABLE DEGENERATIONS OF SINGULARITIES                                  19
+
+small birational map such as ϕ does not change the ample model in question, we may
+replace (Y, E) by (Ye , E)
+                        e and assume that Y is Q-factorial.
+  Next we run the MMP h : Y 99K Y over X with respect to L := −(KY + π∗−1 ∆ + E).
+We need to show that the MMP is an isomorphism at the generic points of all strata of
+E. To see this, note that if D ≥ E + π∗−1∆ is the Q-divisor from Definition 3.5 that makes
+(Y, E) of qdlt Fano type, then
+(3.6)     L ∼Q,π −(KY + D) + (D − E − π∗−1 ∆) = (ample) + (D − E − π∗−1 ∆)
+and Supp(D − E − π∗−1 ∆) does not contain any stratum of E (otherwise (Y, D) would
+not be qdlt). Thus the MMP is an isomorphism at the generic points of all strata of
+E. By Proposition 3.6, the model (Y , E = h∗ E) is of qdlt Fano type. Since the MMP
+does not change the ample model of L, after replacing (Y, E) by (Y , E) (and modify the
+corresponding divisor D) we may further assume that L is nef.
+  The ample model g : Y → Y ′ of L contracts all subvarieties W ⊆ Y such that L|W is not
+big. By (3.6) again, we see that the contracted locus is contained in Supp(D −E −π∗−1 ∆),
+which does not contain any stratum of E. Therefore, we conclude that g is an isomorphism
+at the generic point of every stratum of E.
+  By Proposition 3.6, it then follows that π ′ : (Y ′ , E ′ ) → (X, ∆) is of qdlt Fano type. To
+show that π ′ is in fact a Kollár model, we first observe that E ′ ⊆ Ex(π ′ ) as π ′ (E ′ ) =
+π(E) = {x}. On the other hand,
+                                                        X r
+                      −(KX ′ + π∗′−1 ∆ + E ′ ) ∼Q,π′ −        AX,∆ (Ei′ ) · Ei′
+                                                         i=1
+
+is ample by construction, where E1′ , . . . , Er′ are the components of E ′ . Since AX,∆ (Ei′ ) > 0,
+                      ′                                     ′                 ′      ′   ′
+this implies that Ex(π ) is necessarily contained in E , thus E = Ex(π ). As π (E ) = {x},
+we further deduce that π ′ is an isomorphism away from {x}. This finishes the proof. 
+   The class of Kollár models (or more generally, qdlt Fano type models) enjoys many
+stronger properties that qdlt modifications of a general Q-complement do not always
+have. The following result gives one example, which illuminates our later discussion.
+                                       P
+Proposition 3.10. Let (Y, E = ri=1 Ei ) → (X, ∆) be a Kollár model over a klt singu-
+larity x ∈ (X, ∆). Then the dual complex D(E) is a simplex, i.e. the intersections of any
+subsets of {E1 , . . . , Er } is non-empty and irreducible.
+   This follows from the fact there is a unique minimal lc center for (Y, D + E) where D
+is the divisor in the definition of Kollár model. See [dFKX17, Proposition 25]. Later we
+need the following slightly stronger result.
+Lemma 3.11. Let (X, D) be an lc pair and let f : X → U be a projective morphism
+such that f∗ OX = OU and −(KX + D) is f -ample. Assume that there exists an effective
+Q-divisor ∆ on X such that (X, ∆) is klt. Then for any u ∈ U, the set of lc centers of
+(X, D) that intersects f −1 (u) has a unique minimal element with respect to inclusion. In
+particular, for any lc center W of (X, D), the map f |W : W → U has connected fibers.
+Proof. This is a special case of [Amb03, Theorem 6.6] and in fact the statement holds
+without assuming the existence of a klt boundary ∆. We provide a direct proof in our
+special case for the reader’s convenience. The statement is local on U, thus after shrinking
+20                          CHENYANG XU AND ZIQUAN ZHUANG
+
+around u ∈ U we may assume that L := −(KX + D) is ample. Since any intersection of lc
+centers is a union of lc centers [Kol13, 4.20], it suffices to show that the minimal lc center
+is unique. Suppose that there are two minimal lc centers Z1 6= Z2 that intersect f −1 (u).
+They are necessarily disjoint, otherwise their intersection contains smaller lc centers. Let
+IZ1 ∪Z2 be the ideal sheaf of Z1 ∪ Z2 ⊆ X. Let m > 0 be a sufficiently large and divisible
+integer such that OX (mL) ⊗ IZ1 ∪Z2 is globally generated, and let G ∈ |OX (mL) ⊗ IZ1 ∪Z2 |
+be a general member. Fix some 0 < ε ≪ 1. Then −(KX + D + εG) is ample, (X, D + εG)
+is lc away from Z1 ∪ Z2 (by Bertini’s theorem), but is not lc at the generic point of Z1
+and Z2 . Consider the convex combination
+                              (X, Γ := c∆ + (1 − c)(D + εG))
+of (X, D + εG) with the klt pair (X, ∆), where 0 < c ≪ 1. Then (X, Γ) is klt away
+from Z1 ∪ Z2 , its non-klt locus is exactly Z1 ∪ Z2 , and −(KX + Γ) is ample. Since Z1 is
+disjoint from Z2 , this contradicts the Kollár-Shokurov connectedness theorem [K+ 92, 17.4
+Theorem]. Finally, if W is an lc center of (X, D) and W → U has disconnected fibers,
+then after replacing U with an étale local neighbourhood we may assume that W itself is
+disconnected (see e.g. [Kol13, Claim 4.38.1]). But this contradicts the uniqueness of the
+minimal lc center.                                                                       
+   To prepare for the study of the degenerations of Kollár models in the next section, we
+also introduce a family version of Kollár models. Let us recall that a log canonical pair
+(X, ∆) with a flat morphism f : X → B to a smooth base is called a locally stable family
+(see [Kol23, Section 4.6]), if for any simple normal crossing divisor H1 + · · · + Hr ⊆ B
+(r = dim B), the pair (X, ∆ + f ∗ (H1 + · · · + Hr )) is log canonical.
+Definition 3.12. Let B ⊆ (X, ∆) → B be a Q-Gorenstein family of klt singularities
+over a smooth base B of dimension r (i.e. it is a locally stable family with a section
+such that b ∈ (Xb , ∆b ) is klt for all b ∈ B). A locally stable family of Kollár models of
+B ⊆ (X, ∆) → B is a model π : (Y, E) → (X, ∆) such that the following holds:
+   (1) π is an isomorphism away from B ⊆ X and E = Ex(π),
+   (2) −(KY + π∗−1 ∆ + E) is π-ample, and
+   (3) for any closed point b ∈ B, there exists some SNC divisor H1 + · · · + Hr with
+       b ∈ H1 ∩ · · · ∩ Hr such that (Y, π∗−1 ∆ + E + p∗ (H1 + · · · + Hr )) is qdlt where p
+       denotes the map Y → B.
+When E is irreducible, we call (Y, E) → (X, ∆) → B a locally stable family of Kollár
+components.
+Lemma 3.13. Using notation from Definition 3.12, we have
+  (1) Every irreducible component of E dominates B.
+  (2) For any irreducible component E1 of E, the map p|E1 : E1 → B is equidimensional
+      with irreducible and reduced fibers.
+  (3) πb : (Yb , Eb ) → (Xb , ∆b ) is a Kollár model for all b ∈ B.
+  (4) The component E1 can be extracted as a locally stable family of Kollár components,
+      and the natural map
+                              π∗ OY (−mE1 ) → π∗ OYb (−mE1 )
+       is surjective for all b ∈ B and m ∈ N.
+                           STABLE DEGENERATIONS OF SINGULARITIES                                     21
+
+Proof. Fix some b ∈ p(E1 ) and let D = π∗−1 ∆. Since all the statements are local on both
+X and B, we can shrink X and B around b if necessary. Let H = H1 + · · · + Hr . Since
+−(KY + D + E) is ample over X and E1 is an lc center of (Y, D + E), by Lemma 3.11
+we know that the map p : E1 → B ⊆ X has connected fibers. On the other hand, since
+(Y, D + E + p∗ H) is qdlt, we know that the fiber
+                            E1,b = p−1 (b) ∩ E1 = H1 ∩ · · · ∩ Hr ∩ E1
+is normal by Lemma 2.5, and
+                           dim E1,b = dim Y − (r + 1) = dim Xb − 1.
+It follows that E1,b is irreducible and reduced, and the map E1 → B is equidimensional.
+This gives the statement (2). It also implies that E1 dominates B as otherwise
+                         dim E1,b ≥ dim E1 − dim B + 1 ≥ dim Y − r,
+a contradiction. By adjunction, we also see that πb : (Yb, Eb ) → (Xb , ∆b ) is a Kollár model.
+Since E1 is arbitrary, we obtain the statements (1) and (3).
+   By Lemma 2.3, we get a Q-divisor D0 ≥ π∗−1 ∆ such that −(KY + D0 + E1 ) is Q-Cartier
+and π-ample, ⌊D0 ⌋ = 0 and (Y, D0 + E1 + p∗ H) is qdlt. Let D1 be the sum of D0 with a
+general member of m1 | − m(KY + D0 + E1 )| for some sufficiently divisible integer m > 0.
+Then D1 ≥ π∗−1 ∆, ⌊D1 ⌋ = 0,
+                                   KY + D1 + E1 ∼Q,π 0,
+                      ∗
+and (Y, D1 + E1 + p H) is qdlt. Then E1 is an lc place of the pair (X, ∆ + Γ) where
+Γ = π∗ D1 − ∆ ≥ 0. By [BCHM10, Corollary 1.4.3], there exists a birational contraction
+g : Y 99K Y ′ over X such that E ′ = g∗ E1 is the unique exceptional divisor of π ′ : Y ′ → X,
+and −E ′ is ample over X. We claim that
+                                        (Y ′ , E ′ ) → X → B
+extracts E1 as a locally stable family of Kollár components.
+  To see this, denote the map Y ′ → B by p′ and let D ′ = g∗ D1 . Since
+                                       KY + D1 + E1 ∼Q,π 0
+and (Y, D1 +E1 +p∗ H) is lc, the same holds for its birational transform (Y ′ , D ′ +E ′ +p′∗ H).
+Using D1 ≥ π∗−1 ∆ we then see that
+                                       (Y ′ , π∗′−1 ∆ + E ′ ) → B
+is locally stable. This implies E ′ is equidimensional over B with reduced fibers. In
+particular, it does not contain any component of Yb . As −E ′ is ample over X, the π ′ -
+exceptional locus is supported on E ′ , thus we also deduce that Yb′ 99K Xb is birational. By
+adjunction we know that (Yb′ , Db′ + Eb′ ) is lc, and it is crepant to (Yb , D1,b + E1,b ). Recall
+that (Y, D1 + E1 + p∗ H) is qdlt and ⌊D1 ⌋ = 0, thus by adjunction (Yb , D1,b + E1,b ) is qdlt
+and its only lc place is E1,b (recall that E1,b is irreducible). Since every component of Eb′
+has to be an lc place of (Yb′ , Db′ + Eb′ ), we see that Eb′ is also irreducible and it is the unique
+lc center of (Yb′ , Db′ + Eb′ ), which in turn gives the minimal lc center of (Y ′ , D ′ + E ′ + p′∗ H).
+Moreover, the birational map Yb 99K Yb′ identifies E1,b with Eb′ as divisors over Xb . By
+Lemma 2.6, we conclude that the pair (Y ′ , D ′ + E ′ + p′∗ H) is also qdlt. So (Y ′ , E ′ ) → B
+is a locally stable family of Kollár model as desired, which gives the first part of the
+statement (4).
+22                           CHENYANG XU AND ZIQUAN ZHUANG
+
+   Finally, by Kawamata-Viehweg Vanishing Theorem and the fact that −E ′ is π ′ -ample
+we have R1 π∗′ OY ′ (−mE ′ − p∗ Hi ) = 0. Repeatedly cutting down by the hyperplanes Hi ,
+we have
+                                 π∗′ OY ′ (−mE ′ ) → π∗′ OYb′ (−mE ′ )
+is surjective. Clearly π∗′ OY ′ (−mE ′ ) = π∗ OY (−mE1 ) as E1 and E ′ are the same divisors
+over X. Similarly π∗′ OYb′ (−mE ′ ) = π∗ OYb (−mE1 ) as the birational map Yb 99K Yb′ iden-
+tifies E1,b with Eb′ as divisors over Xb . Therefore, π∗ OY (−mE1 ) → π∗ OYb (−mE1 ) is also
+surjective. This proves the remaining part of (4). The proof is now complete.             
+3.3. Construction of Kollár models. In the rest of this section, we explain how to
+construct Kollár models, or more generally, models of qdlt Fano type using special Q-
+complements. The main goal is to prove the following statement.
+Theorem 3.14. Let (X, ∆) be a klt pair that is projective over a quasi-projective variety
+U such that −KX − ∆ is ample. Let π : (Y, E) → (X, ∆) be a toroidal model, and let Γ be
+a special Q-complement with respect to π. Then for any rational simplex σ ⊆ LC(Γ; Y, E),
+there exists a model π ′ : (Y ′ , E ′ ) → (X, ∆) of qdlt Fano type such that QM(Y ′ , E ′ ) = σ as
+a subset of ValX .
+   Here we say σ ⊆ LC(Γ; Y, E) is a rational simplex if there exist divisorial valuations
+v1 , . . . , vr ∈ LC(Γ; Y, E) that are contained in the same simplicial cone of QM(Y, E) such
+that they span an (r − 1)-simplex and σ is the cone over it.
+   We divide the proof of this theorem in two major steps: a tie-breaking step, where
+we modify the toroidal model (Y, E) and the special Q-complement Γ while fixing the
+rational simplex σ so that
+                               QM(Y, E) = LC(X, ∆ + Γ) = σ;
+and an MMP step, where we contract all the exceptional divisors that are not contained
+in E to obtain the qdlt Fano type model. We first treat the MMP step.
+Lemma 3.15. Theorem 3.14 holds when σ = QM(Y, E).
+Proof. Since in general σ ⊆ LC(Γ; Y, E) ⊆ QM(Y, E), the assumption in particular in-
+cludes that QM(Y, E) is a simplex and
+                                   QM(Y, E) = LC(Γ; Y, E).
+Let (Y, ∆Y ) be the crepant pullback of (X, ∆). Since Γ is a special Q-complement, there
+exists some effective ample Q-divisor G ≤ π∗−1 Γ that does not contain any stratum of E.
+Then the assumption QM(Y, E) = LC(Γ; Y, E) implies that (Y, ∆Y + π ∗ Γ) is sub-qdlt.
+   We first show that it suffices to find a birational contraction g : Y 99K Y ′ with Y ′ being
+projective over X, such that
+    (1) g is an isomorphism at the generic point of every stratum of (Y, E), and
+    (2) g contracts all the π-exceptional divisors that are not contained in E.
+These conditions are natural in order for (Y ′ , E ′ = g∗ E) to be a model of qdlt Fano type:
+in fact condition (1) is the same as the assumption in Proposition 3.6(2), while condition
+(2) guarantees that Y ′ is of Fano type since g in particular contracts all the π-exceptional
+divisors with non-positive coefficients in ∆Y + π ∗ Γ (these are the divisors that potentially
+prevent Y from being of Fano type). To see that the two conditions are sufficient for us,
+                        STABLE DEGENERATIONS OF SINGULARITIES                                 23
+
+let G′0 be an effective ample Q-divisor on Y ′ that is in a general position, and let G0 be
+its birational transform on Y . Then Supp(G0 ) does not contain any stratum of E (by (1)
+and Bertini), which are also the lc centers of (Y, ∆Y + π ∗ Γ). It follows that for 0 < ε ≪ 1
+(ε ∈ Q) we have G − εG0 is still ample, and (Y, ∆Y + π ∗ Γ − G + εG0) is still sub-qdlt with
+                         LC(Y, ∆Y + π ∗ Γ − G + εG0 ) = QM(Y, E).
+Choose a sufficiently divisible integer m and take a general G1 ∈ m1 |m(G − εG0 )|. Then
+by Bertini’s theorem (Y, ∆Y + π ∗ Γ − G + εG0 + G1 ) is also sub-qdlt with
+     LC(Y, ∆Y + π ∗ Γ − G + εG0 + G1 ) = LC(Y, ∆Y + π ∗ Γ − G + εG0 ) = QM(Y, E).
+Moreover, as
+                               π ∗ Γ − G + εG0 + G1 ∼Q π ∗ Γ
+and the left hand side is an effective Q-divisor we have
+(3.7)                           π ∗ Γ − G + εG0 + G1 = π ∗ Γ′
+for some Q-complement Γ′ of (X, ∆). Note that KY + ∆Y + π ∗ Γ′ ∼Q,π 0. By construction,
+the lc places of (X, ∆ + Γ′ ) are still given by QM(Y, E). Denote the induced map Y ′ → X
+by π ′ . By the property (2) of the birational contraction g : Y 99K Y ′ , the birational
+transform g∗ (∆Y + π ∗ Γ′ ) is effective; in other words, the crepant pullback of (X, ∆ + Γ′ )
+to Y ′ has an effective boundary. Combined with the property (1), we see that (Y ′ , g∗ (∆Y +
+π ∗ Γ′ )) is qdlt and its lc places are given by QM(Y ′ , E ′ ). By (3.7), π∗′ −1 Γ′ ≥ εG0 . Let
+                                                              −1
+                            D = g∗ (∆Y + π ∗ Γ) − εG0 ≥ π∗′ ∆.
+Then (Y ′ , D) is qdlt, ⌊D⌋ = E ′ and −(KY ′ + D) ∼Q εG0 is ample. It follows that the
+model (Y ′ , E ′ ) → (X, ∆) is qdlt of Fano type as desired.
+   Thus it remains to find a birational contraction that satisfies (1)–(2). Let F be the sum
+of π-exceptional divisors that are not contained in E. We aim to run an MMP Y 99K Y ′
+over X for some effective divisor whose support is F . Since F does not contain any stratum
+of E, the MMP process satisfies property (1). By the negativity lemma [KM98, Lemma
+3.39], the MMP will contract F hence it also satisfies property (2). Nevertheless, we need
+to verify that the MMP exists since Y may not be of Fano type over X. To this end,
+fix some 0 < c ≪ 1 so that AX,∆+(1−c)Γ (Ei ) < 1 for every irreducible component Ei of E
+(this is possible since Ei is an lc place of (X, ∆ + Γ)) and write
+                         π ∗ (KX + ∆ + (1 − c)Γ) = KY + ∆1 − ∆2
+where ∆1 and ∆2 are effective and have no common components. Then Supp(∆2 ) ⊆ F .
+As (X, ∆ + (1 − c)Γ) is klt, we also know that the coefficients of ∆1 are less than 1.
+  If (Y, ∆1 ) is klt, then so does (Y, ∆1 + εF ) when 0 < ε ≪ 1, and we may run the
+(KY + ∆1 + εF )-MMP Y 99K Y ′ over X by [BCHM10, Theorem 1.2]. Since
+                                KY + ∆1 + εF ∼Q,π ∆2 + εF
+and the right hand side is supported on F , this gives the desired birational contraction.
+    In general, since Y is Q-factorial, we can take a dlt modification by [OX12, Theorem
+1.1] of (Y, ∆1 ). This is a projective birational morphism
+                                                      P ′        ρ : Z → Y with exceptional
+                                                                                       P ′
+divisors Fi′ such that Z is Q-factorial, (Z, ρ−1
+                                              ∗  ∆1 +   F i ) is dlt, and KZ + ρ−1
+                                                                                ∗ ∆1 +   Fi
+                                                                                ′
+is ρ-nef. By the negativity lemma, the last condition implies that AY,∆1 (Fi ) ≤ 0 for all
+Fi′ . In particular, ρ is an isomorphism over the locus where (Y, ∆1 ) is already klt. We
+24                           CHENYANG XU AND ZIQUAN ZHUANG
+
+claim that ρ is an isomorphism at the generic point of every stratum of E, so that we can
+try to construct the birational contraction by running MMP on Z instead.
+   For this it suffices to show that if η ∈ Y is the generic point of any stratum of E,
+then (Y, ∆1 ) is klt at η. But since (Y, E + F ) is toroidal and Supp(∆2 ) ⊆ F , we have
+η 6∈ Supp(∆2 ). Thus as the crepant pullback (Y, ∆1 − ∆2 ) of the klt pair (X, ∆ + (1 − c)Γ)
+is sub-klt, we deduce that (Y, ∆1 ) is klt at η as desired, and therefore ρ : Z → Y is an
+isomorphism at η.
+   Thus we may replace Y by Z and run through the above argument. Let ϕ : Z → X be
+the induce map, and write
+                          ϕ∗ (KX + ∆ + (1 − c)Γ) = KZ + D1 − D2
+where D1 and D2 are effective and have no common components. Let Fe be the sum of
+                                                                     e             P ′
+all ϕ-exceptional divisors that are not contained in ρ−1                    −1
+                                                          ∗ E (i.e. F = ρ∗ F +       Fi ). As
+before, we have Supp(D2 ) ⊆ Fe. We claim that (Z, D1 ) is klt. Clearly ⌊D1 ⌋ = 0 since
+(X, ∆ + (1 − c)Γ) is klt; thus
+                                                        X
+                               D1 ≤ ρ−1∗ ∆ 1 +  (1 − ε)     Fi′
+                                                                P ′
+for some 0 < ε ≪P    1. Since ⌊∆1 ⌋ = 0 and (Z, ρ−1    ∗ ∆1 +      Fi ) is dlt, we know that
+(Z, ρ∗−1∆1 + (1 − ε) Fi′ ) is klt, hence so is (Z, D1 ), proving the above claim.
+   Now we can complete the proof. Since (Z, D1 + εFe) remains klt when 0 < ε ≪ 1, we
+may run the (KZ + D1 + εFe)-MMP Z 99K Y ′ over X. As
+                               KZ + D1 + εFe ∼Q,ϕ D2 + εFe
+and the right hand side is fully supported on Fe, the MMP exactly contracts Fe and thus
+the induced birational map Y 99K Y ′ is a birational contraction that satisfies the property
+(2). As Fe does not contain any stratum of ρ−1  ∗ E and ρ : Z → Y is an isomorphism at
+the generic point of every stratum of E, the map Y 99K Y ′ also satisfies the property (1).
+This finishes the proof.                                                                  
+  We next work towards reducing Theorem 3.14 to the special case treated above. For
+this we need an auxiliary result.
+Lemma 3.16. Let (Y, E) be a toroidal pair, and let ∆ be a Q-divisor supported on E
+such that ⌊∆⌋ ≤ 0. Let F1 , . . . , Fr be toroidal divisors over (Y, E) such that vi = ordFi are
+in a simplicial cone of QM(Y, E) and span an (r − 1)-simplex. Then there exists a proper
+                                                                                           r
+       Pr morphism ρ : Z → Y extracting the divisors F1 , . . . , Fr such that Ex(ρ) ⊆ ∪i=1 Fi
+birational
+and − i=1 AY,∆ (Fi ) · Fi is ample over Y .
+Proof. Let f : W → Y be a toroidal blowup that extracts the divisors F1 , . . . , Fr . Then
+W is of Fano type over Y . P  By running an MMP g : W 99K W ′ with scaling over Y we
+obtain a model such that − ri=1 AY,∆ (Fi ) · g∗ Fi is nef over Y and let h : W ′ → Z be the
+corresponding ample model over Y . It suffices to show that none of the divisors Fi are
+contracted in this process. By assumption, D := E − ∆ is effective and Supp(D) = E.
+Since AY,E (Fi ) = 0, we have AY,∆ (Fi ) = ordFi (D), thus
+                    X r                              r
+                                                     X
+                  −     AY,∆ (Fi ) · Fi ∼Q,f f ∗ D −   ordFi (D) · Fi = DW ,
+                    i=1                             i=1
+                        STABLE DEGENERATIONS OF SINGULARITIES                                 25
+
+for some effective divisor DW that does not contain any Fi in its support. It follows that
+the (DW -)MMP W 99K W ′ does not contract any of the divisors Fi and hence by replacing
+the initial model W with W ′ we may simply assume W = W ′ . On the other hand, we
+have
+                                    X r         Xr
+                         KW + ∆W +      Fi ∼Q,f     AY,∆ (Fi ) · Fi ,
+                                        i=1         i=1
+thus the ample model W → Z satisfies
+                                    r
+                                    X                          r
+                                                               X
+                                                ∗
+                      KW + ∆W +            Fi = h (KZ + ∆Z +         h∗ Fi ).
+                                     i=1                       i=1
+
+Here ∆Z , ∆W denote theP
+P                        strict transform of ∆ on Z, W . Note that locally both (W, ∆W +
+   r                       r
+   i=1 Fi ) and (Z, ∆Z +   i=1 h∗ Fi ) have toroidal singularities. In fact, étale locally on
+Y the toroidal pair (Y, E) is isomorphic to a toric pair, and if we take a base change of
+our MMP over the toric pair, the MMP with scaling and the ample model construction   Pr
+are naturally torus equivariant. Also recall that ⌊∆⌋ ≤ 0. Thus LC(W, ∆W        Pr +    i=1 Fi )
+is the r-dimensional simplicial cone spanned by all Fi while LC(Z, ∆Z + i=1 h∗ Fi ) is
+the simplicial cone spanned by h∗ Fi . But as the two pairs are crepant equivalent, their
+dual complexes have the same dimension. In particular, the divisors h∗ Fi also span an
+(r −1)-simplex. This implies that none of the Fi ’s are contracted on the ample model. 
+  The following lemma gives the tie-breaking step for the proof of Theorem 3.14.
+Lemma 3.17. Let π : (Y, E) → (X, ∆) be a toroidal model and let ΓY be a special Q-
+complement of (X, ∆) with respect to π. Let F1 , . . . , Fr be divisors over Y such that
+vi = ordFi ∈ LC(ΓY ; Y, E) are in a simplicial cone of QM(Y, E) and they span an (r −
+1)-simplex. Then there exists a birational toroidal morphism ρ : Z → (Y, E) and a Q-
+complement Γ of (X, ∆) such that
+    (1) ρ extracts the divisors F1 , . . . , Fr and Ex(ρ) ⊆ ∪ri=1 Fi ;
+    (2) Γ is special with respect to (Z, F ) where F = F1 + · · · + Fr ; and
+    (3) QM(Z, F ) = LC(X, ∆ + Γ).
+Proof. Let KY + ∆Y = π ∗ (KX + ∆) be the crepant pullback. Then (Y, ∆Y ) is sub-klt
+and in particular ⌊∆Y ⌋ ≤ 0. By applying Lemma 3.16 to the toroidal pair (Y, Supp(E +
+π∗−1 ∆+Ex(π))) and the sub-boundary ∆Y , we deduce that there exists aPtoroidal birational
+morphism ρ : Z → Y extracting the divisors F1 , . . . , Fr such that − ri=1 AY,∆Y (Fi ) · Fi
+is P
+   ample over Y . Note that AY,∆Y (Fi ) = AX,∆ (Fi ), so this Q-divisor is the same as
+− ri=1 AX,∆ (Fi ) · Fi . To prove the lemma, we need to find a special Q-complement Γ
+with respect to (Z, F ) such that QM(Z, F ) = LC(X, ∆ + Γ).
+   First we need to introduce some more notation. Let (Z, ∆Z ) be the crepant pullback
+of (X, ∆), i.e.,
+                                  ρ∗ π ∗ (KX + ∆) = KZ + ∆Z ,
+                Pr
+and let Fe =     i=1 AX,∆ (Fi ) · Fi . Since ΓY is a special Q-complement with respect to
+(Y, E), we have π∗−1 ΓY ≥ G for some effective ample Q-divisor G that does not contain
+any stratum of (Y, E). Let
+                                       D = π ∗ ΓY − G ≥ 0.
+26                            CHENYANG XU AND ZIQUAN ZHUANG
+
+Since G is ample on Y and −Fe is ample over Y , we can choose a rational number 0 < ε ≪ 1
+such that both 21 G + εD and 12 ρ∗ G − εFe are ample. This guarantees that ρ∗ (G + εD) − εFe
+is ample.
+   We break the pullback of ΓY to Z into three parts:
+                     ρ∗ π ∗ ΓY = (1 − ε)ρ∗ D + εFe + (ρ∗ (G + εD) − εFe).
+We claim that
+(3.8)                  LC(Z, ∆Z + (1 − ε)ρ∗ D + εFe) = QM(Z, F ).
+Once this is proved, the lemma follows almost immediately: since ρ∗ (G + εD) − εFe is
+ample, by Bertini’s theorem we can choose some effective Q-divisor
+                               G′ ∼Q ρ∗ (G + εD) − εFe
+such that
+                      LC(Z, ∆Z + (1 − ε)ρ∗ D + εFe + G′ ) = QM(Z, F )
+still holds. In particular, the ample Q-divisor G′ does not contain any stratum of (Z, F )
+in its support. Since
+                         (1 − ε)ρ∗ D + εFe + G′ ∼Q ρ∗ π ∗ ΓY ∼Q 0 /X,
+we have
+                               (1 − ε)ρ∗ D + εFe + G′ = ρ∗ π ∗ Γ
+for the effective Q-divisor
+                         Γ := π∗ ρ∗ ((1 − ε)ρ∗ D + εFe + G′ ) ∼Q ΓY
+on X. By construction Γ is a special Q-complement with respect to (Z, F ) and
+                 ρ∗ π ∗ (KX + ∆ + Γ) = KZ + ∆Z + (1 − ε)ρ∗ D + εFe + G′ .
+Thus
+            LC(X, ∆ + Γ) = LC(Z, ∆Z + (1 − ε)ρ∗ D + εFe + G′ ) = QM(Z, F )
+as desired.
+  It remains to prove (3.8). The pair in question is a convex linear combination of
+(Z, ∆Z + ρ∗ D) and (Z, ∆Z + Fe), thus it suffices to show that:
+    (1) both (Z, ∆Z + ρ∗ D) and (Z, ∆Z + Fe) are sub-lc,
+    (2) QM(Z, F ) ⊆ LC(Z, ∆Z + ρ∗ D), and
+    (3) LC(Z, ∆Z + Fe) = QM(Z, F ).
+First, (Z, ∆Z + ρ∗ D) is sub-lc since it is the crepant pullback of (Y, ∆Y + D), which is
+sub-lc as
+                            KY + ∆Y + D ≤ π ∗ (KX + ∆ + ΓY ).
+Moreover, all the Fi ’s are lc places of (Y, ∆Y + D) by assumption, thus
+                               QM(Z, F ) ⊆ LC(Z, ∆Z + ρ∗ D).
+On the other hand, a direct computation gives
+                                        r                                         r
+                                                                                             !
+                                        X                                         X
+     KZ + ∆Z + Fe = ρ∗ (KY + ∆Y ) +           AY,∆Y (Fi ) · Fi = KZ +   ρ−1
+                                                                         ∗ ∆Y ∨         Fi       ,
+                                        i=1                                       i=1
+                         STABLE DEGENERATIONS OF SINGULARITIES                                  27
+
+where the notation D1 ∨ D2 denotes the smallest Q-divisor D such that D ≥ Di for
+i = 1, 2. As ⌊∆Y ⌋ ≤ 0, we hence see that the toroidal pair (Z, ∆Z + Fe) is also lc and its
+lc places are exactly given by QM(Z, F ). Thus we have proved all the properties (1)–(3)
+above and this finishes the proof.                                                       
+Proof of Theorem 3.14. By Lemma 3.17, after possibly replacing the toroidal model (Y, E)
+and the corresponding special Q-complement Γ, we may assume that σ = QM(Y, E). The
+result then follows from Lemma 3.15.                                                   
+ One of the main applications of Theorem 3.14 is the construction of Kollár models for
+monomial lc places of special Q-complements.
+Corollary 3.18. Let x ∈ (X, ∆) be a klt singularity and let v ∈ ValX,x be a monomial
+lc place of some special Q-complement Γ with respect to some toroidal model (Y, E) →
+(X, ∆). Then there exists a Kollár model π ′ : (Y ′ , E ′ ) → (X, ∆) such that v ∈ QM(Y ′ , E ′ ).
+Proof. Let Σ ⊆ QM(Y, E) be the smallest simplicial face that contains v and choose some
+rational simplex
+                              σ ⊆ int(Σ) ∩ LC(Γ; Y, E)
+such that v ∈ σ. By Theorem 3.14, we get a model π : (Ye , E) e → (X, ∆) of qdlt Fano
+                    e  e
+type such that QM(Y , E) = σ. Since v is centered at x, the same holds for all valuations
+                            e = {x} and thus the ample model π : (Y ′ , E ′ ) → (X, ∆)
+in int(Σ). In particular π(E)
+                    e is a Kollár model by Proposition 3.9. By construction v ∈ σ =
+of −(KYe + π∗−1 ∆ + E)
+QM(Ye , E)
+        e = QM(Y ′ , E ′ ).                                                            
+                      4. Kollár models and finite generation
+  The goal of this section is to prove the following finite generation statement, which is
+a more precise version of Theorem 1.4.
+Theorem 4.1. Let x ∈ (X = Spec(R), ∆) be a klt singularity, and let v ∈ ValX,x be a
+quasi-monomial valuation. Then the following are equivalent.
+   (1) The associated graded ring grv R is finitely generated and the central fiber (Xv , ∆v )
+       of the induced degeneration is klt.
+   (2) The valuation v is a monomial lc place of a special Q-complement Γ with respect
+       to some toroidal model (Y, E) (see Definition 3.1).
+   (3) There exists a Kollár model (see Definition 3.5) π : (Y, E) → (X, ∆) such that
+       v ∈ QM(Y, E).
+  We explain some notation in the above theorem (c.f. [LXZ22, Theorem 4.2]). Assuming
+the finite generation of grv R, then similar to the Rees construction (2.1) for a primitive
+divisor, we define Xv := Spec(grv R), and let ∆v be the induced degeneration of ∆ to Xv .
+                                 P
+More precisely, suppose ∆ = li=1 ai ∆i where ∆i is a prime divisor on X and ai ∈ Q≥0 .
+Let I∆i ⊆ R be the ideal of ∆i . Let in(I∆i ) ⊆ grv R be the initial ideal of I∆i , i.e.
+              M
+   in(I∆i ) =     I∆i ,λ , where I∆i ,λ = {Im(f ) ∈ aλ (v)/a>λ(v) | f ∈ I∆i and v(f ) ≥ λ}.
+               λ
+             Pl
+Then ∆v := i=1 ai ∆v,i , where ∆v,i is the divisorial part of the closed subscheme V (in(I∆i ))
+in Xv , i.e. ∆v,i and V (in(I∆i )) coincide away from a codimension 2 subset of Xv . When
+28                           CHENYANG XU AND ZIQUAN ZHUANG
+
+v = ordE is a divisorial valuation induced by some primitive divisor E over x ∈ X, this
+coincides with the construction in (2.1).
+  Note that one of the implications in Theorem 4.1, namely (2) ⇒ (3), has already been
+established in Corollary 3.18.
+4.1. Special degenerations come from lc places of special complements. As in
+[LXZ22, Theorem 4.2], we first prove the easier part of the remaining implications, i.e.
+(1) ⇒ (2), in Theorem 4.1. We will need an auxiliary lemma which is a local analog of
+[BLX22, Theorem A.2].
+Lemma 4.2. Let E be a primitive divisor over a klt singularity x ∈ (X, ∆). Assume that
+the special fiber x0 ∈ (X0 , ∆0 ) of the Rees construction (2.1) is lc. Then E is an lc place
+of some N-complement of x ∈ (X, ∆), where the integer N only depends on the dimension
+of X and the coefficients of ∆.
+Proof. We follow the proof of [BLX22, Propositions A.3 and A.4]. To begin with, we
+show that the associated prime blow up π : Y → X of E specializes to some Y0 → X0 .
+Indeed, let aj = π∗ OY (−jE) ⊆ OX and let (X , ∆X ) → A1 be the Gm -equivariant family
+from (2.1). Then the flat extension of aj [t, t−1 ] ⊆ OX×(A1 \{0}) to X is given by e
+L                                                                                   aj :=
+        −i
+       t   (a i ∩ a j ). Since
+   i∈Z                         M            M
+                                 e   aj+1 ∼
+                                 aj /e    =     t−j (aj /aj+1)
+                                j∈N             j∈N
+is finitely generated, and if we denote by
+                                                                !
+                                               M
+                                  E = Proj           e
+                                                     aj /e
+                                                         aj+1       ,
+                                               j∈N
+                                        L
+then we have E ∼
+               = E × A1 . This implies    j∈N e
+                                              aj is finitely generated. Consider the
+morphism                                        !
+                                         M
+                         ρ : Y := ProjX       e
+                                              aj → X
+                                                     j∈N
+       1
+over A . Then
+                              Y ×A1 (A1 \ {0}) ∼  = Y × (A1 \ {0})
+and ρ restricts to π × id over A1 \ {0}. The exceptional divisor of ρ is given by E. Let
+∆Y = ρ−1 ∗ ∆X be the strict transform of ∆X , and denote by Y0 the central fiber of Y → A .
+                                                                                            1
+                                                                              1
+   Let ℓ > 0 be a sufficiently divisible integer such that ℓE is Cartier and R π∗ OY (−pℓE) =
+0 for all p ≥ 1. Through the long exact sequence
+                  0 → OY (−(pℓ + 1)E) → OY (−pℓE) → OE (−pℓE) → 0,
+we get apℓ /apℓ+1 ∼
+                  = H 0 (E, OE (−pℓE)). Let σ : Y → Y ′ be the quotient by µℓ , where the
+action is via µℓ ⊆ Gm . Let X ′ , E ′, Y0′ , X0′ be the induced quotients of X , E, Y0, X0 , where
+the corresponding quotient maps are still denoted by σ. Since the µℓ -action is free outside
+X0 and Y0 , we have
+                           KX + ∆X + X0 = σ ∗ (KX ′ + ∆′X + X0′ )
+for an effective Q-divisor ∆′X on X ′ and
+                        KY + E + Y0 + ∆Y = σ ∗ (KY ′ + E ′ + Y0′ + D ′ )
+                          STABLE DEGENERATIONS OF SINGULARITIES                                     29
+
+for an effective Q-divisor D ′ on Y ′ . By construction, we have
+                                           !                                 !
+                           M                          M
+               X0′ = Spec       apℓ /apℓ+1 = Spec         H 0 (E, OE (−pℓE))
+                              p∈N                          p∈N
+
+is the cone over E with polarization −ℓE|E . As Y0 → X0 is given by
+                                        M
+                               ProjX0 (   aj /aj+1 ) → X0 ,
+                                            j∈N
+               L
+Y0′ = ProjX0′ ( p∈N apℓ /apℓ+1), i.e., Y0′ → X0′ is the blowup of the cone vertex. Let E0′ , D0′
+be the restrictions of E ′ , D ′ to Y0′ . Note that E0′ ∼= E, hence we may view X0′ = X0 /µℓ as
+the cone over E0′ .
+   Denote by ∆′0 the restriction of ∆′X , so it satisfies σ|X  ∗
+                                                                 0
+                                                                   (KX0′ + ∆′0 ) = KX0 + ∆0 . Since
+the birational transform of ∆X on Y is ∆Y , we know the birational transform of ∆′X is D ′ .
+Restricting over 0, the birational transform of ∆′0 is D0′ , i.e. ∆′0 is the cone over D0′ |E0′ .
+By assumption and [KM98, Proposition 5.20], (X0 , ∆0 )/µℓ is lc, hence by [Kol13, Section
+3.1] we know that (Y0′ , E0′ + D0′ ) is also lc. By inversion of adjunction [Kol13, Theorem
+4.9], this implies that (Y ′ , Y0′ + E ′ + D ′ ) and its crepant cover (Y, Y0 + E + ∆Y ) are both
+log canonical (a priori we only know they are lc around Y0′ , but using the Gm -action we
+deduce that the lc condition propagates). In particular, by restricting to the general fiber
+we see that (Y, E + π∗−1 ∆) is lc. Since (X, ∆) is klt and −E is π-ample, we also have
+                            −(KY + E + π∗−1 ∆) ∼Q,π −AX,∆ (E) · E
+is π-ample. Hence by the boundedness of relative complements [Bir19, Theorem 1.8],
+there exists an N-complement Γ of (Y, E + π∗−1 ∆) over x ∈ X, where the integer N only
+depends on the dimension of X and the coefficients of ∆. Then π∗ Γ is an N-complement
+of x ∈ (X, ∆) having E as an lc place.                                              
+  We now prove the (1) ⇒ (2) direction in Theorem 4.1.
+Lemma 4.3. Let x ∈ (X = Spec(R), ∆) be a klt singularity, and let v ∈ ValX,x be a
+quasi-monomial valuation. Assume that grv R is finitely generated and (Xv , ∆v ) is klt.
+Then there exists a log smooth model (Y, E) of (X, ∆) such that v is a monomial lc place
+of a special Q-complement with respect to (Y, E).
+Proof. The argument is the same as the ones in [LXZ22, Lemma 4.3]. Let q be the rational
+rank of v. Let π : (Y, E) → (X, ∆) be a log smooth model such that −F is π-ample for
+some π-exceptional effective divisor F and that v ∈ QMη (Y, E) for some codimension q
+point η ∈ Y . Let m0 ∈ N be a sufficiently large and divisible integer, let f ∈ π∗ OY (−m0 F )
+be a general element, and let D = div(f ) ⊆ X. Then the strict transform G := π∗−1 D ∼
+π ∗ D − m0 F is ample and does not contain any stratum of (Y, E). Since grv R is finitely
+generated, we can choose some f0 := f, f1 , . . . , fℓ ∈ R whose restrictions form a (finite)
+set of generators f¯0 , . . . , f¯ℓ of grv R (in particular, f0 , . . . , fℓ generates R). By enlarging
+the set of generators, we may also assume that all in(I∆i ) ⊆ grv R are generated by the
+restrictions of some elements from f0 , . . . , fℓ .
+    Choose some rational number 0 < ε ≪ 1 such that (Xv , ∆v + εDv ) remains klt. By
+[LX18, Lemma 2.10], there exists a small neighbourhood U ⊆ QMη (Y, E) of v such that
+30                            CHENYANG XU AND ZIQUAN ZHUANG
+
+for all valuations w ∈ U, we have an isomorphism grw R ∼           = grv R sending the restrictions
+of f0 , . . . , fℓ in grv R to their respective restrictions in grw R. Then
+                                   (Xw , ∆w + εDw ) ∼= (Xv , ∆v + εDv )
+is also klt for any divisorial valuations w ∈ U. By Lemma 2.14, we know that w is induced
+by some primitive divisor over x ∈ X, and thus by Lemma 4.2 we further deduce that
+there exists an integer N that only depends on dim(X) and the coefficients of (X, ∆+εD),
+such that for any divisorial valuation w0 ∈ U, there is an N-complement Γ0 of (X, ∆+εD)
+such that w0 is an lc place of (X, ∆ + εD + Γ0 ). By enlarging N, we may assume that
+NΓ0 ∼ −N(KX + ∆ + εD) is Cartier.
+   Recall that v(g) (g ∈ R) is computed as the smallest weight of monomials in the power
+series expansion of g at the point η. As Γ varies among the N-complements, we have
+multη (π ∗ Γ) ≤ C for some absolute constant C > 0, as otherwise (X, ∆ + Γ) would not be
+lc. Possibly after shrinking U, there also exist some constants a, b > 0 depending only on
+v such that
+                               a · multη (u) ≤ w(u) ≤ b · multη (u)
+for all monomials u ∈ ÔY,η and all w ∈ U. In particular, all the monomials that are
+responsible for computing v(Γ) have bounded multiplicity (in terms of a, b, C and N).
+   Since there are only finitely many monomials with bounded multiplicity, we conclude
+that for any N-complement Γ, the value of w(Γ) is determined by only finitely many such
+monomials. In other words, there are finitely many βj ∈ Zq≥0 (j ∈ J), such that for any
+given N-complement Γ = N1 {g = 0} and any w ∈ U, we have
+                                            1
+                                   w(Γ) =     min{hαw , βj i},
+                                            N j∈J0
+where αw ∈ QMη (Y, E) ∼       q
+                         = R≥0 is the coordinate of w at η, and J0 ⊆ J is the subset
+consisting of those indices j for which the coefficients cβj in the local expansion g =
+P       β
+  β cβ z ∈ ÔY,η are nonzero. So for an N-complement Γ, we have v(Γ) 6= AX,∆+εD (v) if
+and only if
+                                AX,∆+εD (v) > minhαv , βj i
+                                                   j∈J0
+
+for the subset J0 corresponding to Γ (note that J0 is independent of v). For any such J0 ,
+there is a neighborhood UJ0 of v such that for any w ∈ UJ0 ,
+                                  AX,∆+εD (w) > minhαw , βj i .
+                                                  j∈J0
+
+As there are only finitely many subsets J0 of J, we conclude that for the pair (X, ∆ +
+εD), there exists a neighbourhood U ′ ⊆ U of v, such that if Γ is an N-complement of
+(X, ∆ + εD) for N given as above, the following holds:
+            v(Γ) 6= AX,∆+εD (v) implies       w(Γ) 6= AX,∆+εD (w) for any w ∈ U ′ .
+In particular, if we choose w0 ∈ U ′ , since w0 (Γ0 ) = AX,∆+εD (w0 ) for an N-complement Γ0
+we constructed above, we have v(Γ0 ) = AX,∆+εD (v) and therefore v is also an lc place of
+(X, ∆ + Γ′ ), where Γ′ = εD + Γ0 . Since π∗−1 Γ′ ≥ εG and G is π-ample, we see that Γ′ is
+a special Q-complement with respect to (Y, E). In other words, v is a monomial lc place
+of a special Q-complement as desired.                                                     
+                         STABLE DEGENERATIONS OF SINGULARITIES                             31
+
+4.2. Degeneration induced by a Kollár model. Next we recall the multiple divisor
+version of the Rees construction (see Section 2.4) that was first considered in [Xu21]. Let
+x ∈ (X = Spec(R), ∆) be a klt singularity as before, and let π : (Y, E) → (X, ∆) be a
+Kollár model. Let E1 , . . . , Er be the irreducible components of E. Then there exists a
+Q-complement Γ of x ∈ (X, ∆) such that E1 , . . . , Er are all lc places of (X, ∆ + Γ). By
+Lemma 2.3, there exists some effective Q-divisor ∆0 on Y such that (Y, ∆0 ) is klt and
+−(KY + ∆0 ) is ample over X. This condition is also satisfied by any small Q-factorial
+modification of Y , which exists by [BCHM10, Corollary 1.4.3]. By [BCHM10, Corollary
+1.3.1], this implies that the small Q-factorial modification of Y is a Mori dream space,
+hence the Zk -graded algebra
+                              M                                                −ik
+(4.1)              Rk =              π∗ OY (−i1 E1 − · · · − ik Ek ) t−i
+                                                                      1 · · · tk
+                                                                         1
+
+
+                         (i1 ,...,ik )∈Zk
+
+is finitely generated for any k ≤ r and induces a Gkm -equivariant family
+(4.2)                                fk : Xk := Spec(Rk ) → Ak ,
+where t1 , . . . , tk give the coordinates of Ak . It comes with a natural isomorphism
+                               Xk ×Ak (A1 \ {0})k ∼ = X × (A1 \ {0})k .
+Using this isomorphism, we let ∆Xk (resp. ΓXk ) be the closure of ∆ × (A1 \ {0})k (resp.
+Γ × (A1 \ {0})k ) in Xk . For simplicity, we will drop the subscript k at various places when
+there is no confusion, e.g. when we work over a fixed Ak . Also let Hi = (ti = 0) ⊆ Ak
+(i = 1, . . . , k) be the coordinate hyperplanes.
+   The following statement is proved in [Xu21, Theorem 3.5 and Proposition 3.6].
+Theorem 4.4. In the above notation, the family f : (X , ∆X + ΓX ) → Ak is locally stable.
+  To make our exposition more self-contained, we will sketch a proof of this theorem in
+the situation we consider above. In fact, one of our key observations for the proof of
+Theorem 4.1 is to upgrade the above construction to obtain a locally stable family of
+Kollár models (Y, E) → (X , ∆X ) → Ak . This includes the enhancement of Theorem 4.4
+that the locally stable family (X , ∆X ) → Ak has irreducible and klt fibers. As such, we
+will construct X and Y simultaneously. This is given by the following two propositions.
+Proposition 4.5. For any k ≤ r, the divisors E1 , . . . , Ek induce a locally stable family
+f : (X , ∆X + ΓX ) → Ak such that (X , ∆X + ΓX + f ∗ (H1 + · · · + Hk )) is lc and for any
+t ∈ Ak , (X , ∆X ) ×Ak {t} is klt.
+Proposition 4.6. Notation as in Proposition 4.5. Then
+                      π × id : (Y, E) × (A1 \ {0})k → X × (A1 \ {0})k
+extends to a locally stable family of Kollár models p : (Y, E) → (X , ∆X ). Moreover,
+                           (Y, p−1          ∗ ∗
+                                ∗ ∆X + E + p f (H1 + · · · + Hk ))
+
+is qdlt. In particular, the central fiber X0 := f −1 (0) is irreducible.
+  We use induction to prove the above two statements together. We denote by 4.5k and
+4.6k that the corresponding statement in the proposition holds for k. When k = 0, both
+statements are clearly true.
+32                           CHENYANG XU AND ZIQUAN ZHUANG
+
+Proof of 4.5k implies 4.6k . Let H = H1 + · · · + Hk , D = π∗−1 ∆, and let Ei (1 ≤ i ≤ r) be
+the divisor over X given by the (closure of) Ei × (A1 \ {0})k . Since we assume 4.5k , the
+pair (X , ∆X + ΓX + f ∗ H) is lc; by construction, it has E1 , . . . , Er as lc places. Note that
+the lc centers of (X , ∆X ) (if there is any) are contained in f ∗ H, as over (A1 \ {0})k the
+pair becomes (X, ∆) × (A1 \ {0})k . But as (X , ∆X + ΓX + f ∗ H) is lc, this implies (X , ∆X )
+is klt. Using [BCHM10, Corollary 1.4.3] we see that there exists a projective birational
+morphism p : Y → X that extracts all Ei (1 ≤ i ≤ r) as exceptional divisors. Since for
+0 < ε ≪ 1, the crepant pull back of KX + ∆X + (1 − ε)ΓX yields a klt pair on Y, we see
+that Y is of Fano type over X . Therefore, as −(KY + D + E) is ample, we may replace
+Y by the ample model of −(KY + D + E) over X (where E := E1 + · · · + Er and D is the
+birational transform of ∆X ; it is also the closure of D × (A1 \ {0})k ) so that
+                  (Y, D + E) ×Ak (A1 \ {0})k ∼
+                                             = (Y, D + E) × (A1 \ {0})k
+and −(KY + D + E) is p-ample. It is in fact ample since X is affine.
+   Let g = f ◦ q : Y → Ak . To show that (Y, D + E + g ∗ H) is qdlt, we proceed in several
+steps. First we show that (Y, D + E) is qdlt. This is certainly true over (A1 \ {0})k , as
+the pair simply becomes (Y, D + E) × (A1 \ {0})k . On the other hand, we have
+                     p∗ (KX + ∆X + ΓX + f ∗ H) ≥ KY + D + E + g ∗H
+by the above construction, thus (Y, D + E + g ∗H) is lc. For any divisor F over Y whose
+center is contained in g ∗ H, we then have
+                             AY,D+E (F ) > AY,D+E+g∗H (F ) ≥ 0.
+This implies that none of the lc centers of (Y, D + E) are contained in g ∗ H and hence the
+pair is qdlt.
+  Let
+                                   \r                   \r
+                             Z :=     Ei and Z :=          Ei .
+                                     i=1                   i=1
+
+By Proposition 3.10 we know that Z is non-empty and irreducible. We note that Z is
+also irreducible. In fact, as
+                           Z ×Ak (A1 \ {0})k ∼
+                                             = Z × (A1 \ {0})k ,
+we see that if Z is reducible, then one of its components S lies inside g ∗H. But S is
+necessarily an lc center of the qdlt pair (Y, D + E), and by the above discussion g ∗ H does
+not contain any lc center of (Y, D + E), a contradiction. Thus Z is irreducible as well.
+   We next show that Z0 = Z ∩ g −1 (0) is the minimal lc center of (Y, D + E + g ∗H) (in
+particular, Z0 is irreducible). Indeed, by Lemma 3.11 we know that the (unique) minimal
+lc center W of (Y, D + E + g ∗ H) intersecting g −1 (0) is contained in Z0 , as Ei (1 ≤ i ≤ r)
+and components of g ∗ Hj (j = 1, . . . , k) are all lc centers of this pair. By construction,
+Y carries a T = Gkm -action (induced by the T-action on X ), hence W is T-invariant.
+Suppose that Z0 6= W , then since | − m(KY + D + E) ⊗ IW | is globally generated for some
+sufficiently divisible integer m > 0, we may find some irreducible T-invariant divisor
+                                   G ∈ | − m(KY + D + E)|
+                        STABLE DEGENERATIONS OF SINGULARITIES                               33
+
+such that W ⊆ Supp(G) but Z0 6⊆ Supp(G). By T-invariance, we have G is the closure of
+G × (A1 \ {0})k for some divisor
+                                 G ∈ | − m(KY + D + E)|.
+By construction Z 6⊆ Supp(G) (as Z0 6⊆ Supp(G)) and therefore G does not contain any lc
+center of (Y, D + E). It follows that (Y, D + εG + E) is still qdlt and −(KY + D + εG + E)
+is ample when 0 < ε ≪ 1. Thinking of π∗ (D + εG) as playing the role of the original
+boundary divisor ∆, the same argument from the previous paragraphs implies that the
+specialization (Y, D +εG +E +g ∗H) is lc. But this is impossible as G contains the minimal
+lc center of (Y, D + E + g ∗ H). The obtained contradiction implies that Z0 is the minimal
+lc center of (Y, D + E + g ∗ H).
+   Next we aim to show that each Ei (1 ≤ i ≤ r) is Q-Cartier at the generic point of
+Z0 . Since L := −(KY + D + E) is Q-Cartier, this is true if we can find a divisor in
+some |mL − ℓEi | (1 ≤ i ≤ r) whose support does not contain Z0 . To this end, let
+L := −(KY + D + E), let ℓ be a positive integer such that ℓEi is Cartier at the generic
+point of Z (this is possible since Y has quotient singularity at the generic point of Z),
+let m > 0 be a sufficiently divisible integer and let B− (resp. B+ ) be a general member
+of |mL − ℓEi | (resp. |mL + ℓEi |). By Lemma 2.4, neither B− nor B+ contains Z in its
+support, thus none of the lc centers of (Y, D + E) are contained in Supp(B− + B+ ). It
+follows that the pair
+                                  (Y, D + ε(B− + B+ ) + E)
+remains qdlt when 0 < ε ≪ 1 (note that B− + B+ ∼ 2mL is Cartier). Let B− (resp. B+ )
+be the closure of B− × (A1 \ {0})k (resp. B+ × (A1 \ {0})k ). As before, this implies that
+the corresponding pair
+                               (Y, D + ε(B− + B+ ) + E + g ∗H)
+over Ak is lc. In particular, Supp(B− + B+ ) does not contain Z0 which is an lc center
+of (Y, D + E + g ∗ H). From the construction, the difference between B− and mL − ℓEi
+yields a divisor supported on g ∗ H. However, g ∗Hj (1 ≤ j ≤ k) is irreducible as f ∗ Hj is
+irreducible, and Ex(p) supports on E which does not contain any component supported
+over g ∗ H. Thus the difference is linearly equivalent to zero and B− gives the sought divisor
+in |mL − ℓEi |. By the discussion before, we deduce that Ei is Q-Cartier at the generic
+point of Z0 .
+   We can now finish the proof: it is already shown that Z0 is the unique minimal lc center
+of (Y, D + E + g ∗H), and by Lemma 3.11 every lc center of (Y, D + E + g ∗H) contains
+Z0 , which has codimension r + k in Y. Thus it remains to show that (Y, D + E + g ∗ H)
+is the quotient of an SNC pair at the generic point η of Z0 . We already know that every
+Ei (1 ≤ i ≤ r) is Q-Cartier at η, while each g ∗ Hj (1 ≤ j ≤ k) is clearly Cartier. Hence
+the statement follows from [K+ 92, 18.22 Theorem and 18.23 Complement], where we use
+g ∗Hj is irreducible for every j as argued above. As (Y, D + E + g ∗ H) is qdlt, this implies
+that
+                                 g −1(0) = g ∗ H1 ∩ · · · ∩ g ∗Hk
+is normal by Lemma 2.5. Since it is also connected, we conclude that g −1 (0) is irreducible.
+It follows that X0 is also irreducible and we finish the proof.                             
+Proof of 4.5k +4.6k implies 4.5k+1 . Proposition 4.6k gives us a locally stable family of
+                         Pr          p                              k
+Kollár models (Y, E =      i=1 Ei ) → (X = Spec(Rk ), ∆X ) → A . Applying Lemma
+34                            CHENYANG XU AND ZIQUAN ZHUANG
+
+3.13(4) to this family implies Ek+1 can be extracted over (X , ∆X ) as a locally stable
+family of Kollár components, such that for any point t ∈ Ak , Ek+1 ×Ak {t} is an lc place
+of (Xt , ∆t + Γt ), where the latter is the fiber of (X , ∆X + ΓX ) over t.
+   Then we can consider                 M
+                                 R′ :=      p∗ OY (−iEk+1 )t−i
+                                                            k+1 ,
+                                         i∈Z
+which is a k[t1 , . . . , tk+1]-algebra, and there is a morphism
+                                 f ′ : X ′ := Spec(R′ ) → Ak+1 .
+Let ∆X ′ and ΓX ′ be the closures of ∆X × {A1 \ 0} and ΓX × {A1 \ 0}. Since Ek+1 is a
+locally stable family of Kollár components over (X , ∆X ) and an lc place of (X , ∆X + ΓX ),
+(X ′, ∆X ′ ) is a locally stable family over Ak+1 (see [Xu21, Lemma 3.3]). Since Ek+1 is the
+closure of Ek+1 × (A1 \ {0})k , we get
+                                                                                
+                                             M
+                p∗ OY (−iEk+1 ) = Rk ∩             π∗ OY (−iEk+1 )t−i       −ik 
+                                                                    1 · · · tk
+                                                                       1
+                                                                                   ,
+                                          (i1 ,...,ik )∈Zk
+
+using 4.5k we deduce that R′ ∼     = Rk+1 which means X ′ coincides with Xk+1 .
+   Moreover, by Lemma 3.13(4), the above Rees construction commutes with base change.
+It follows from Lemma 2.17 that, for any t ∈ Ak with the Kollár component Ek+1 ×Ak {t}
+over (Xt , ∆Xt ) := (X , ∆X ) ×Ak {t} which is a lc place of a Q-complement Γt , the induced
+Rees construction ft′ : Xt′ → A1 satisfies (Xt′ , ∆Xt′ + ΓXt′ + ft′ −1 (0)) is log canonical (where
+∆Xt′ and ΓXt′ are respectively the closure of ∆Xt × (A1 \ {0}) and ΓXt × (A1 \ {0})) and
+(Xt′, ∆Xt′ + ft′ −1 (0)) is plt. By adjunction, the central fiber of ft′ is klt. By inversion of
+adjunction, it also implies that for Hj′ = (tj = 0) ⊂ Ak+1 (1 ≤ j ≤ k + 1),
+                                                     ∗
+                           (X ′ , ∆X ′ + ΓX ′ + f ′ (H1′ + · · · + Hk+1
+                                                                    ′
+                                                                        ))
+is lc (first in a neighbourhood of Xt , then extend to the entire X ′ by the Gk+1   m -action).
+                               ′             k+1               ′
+In particular, the fibers of (X , ∆X ′ ) → A     are klt and (X , ∆X ′ + ΓX ′ ) is also a locally
+stable family over Ak+1. This proves 4.5k+1.                                                   
+4.3. Irreducible central fiber implies finite generation. Finally, we will show that
+the irreducibility of the central fiber, as proven by Proposition 4.6 implies the finite
+generation. This was pointed out in [Xu21]. Here we give a detailed argument in a
+slightly more general context.
+   We fix the following setup. Let x ∈ X = Spec(R) be a singularity and let
+                               π : (Y, E = E1 + · · · + Em ) → X
+be a model. Assume that:
+       T
+     • m i=1 Ei is nonempty,                                    T
+     • (Y, Supp(E + Ex(π))) is toroidal at a generic point η of m i=1 Ei , and
+     • there exists an effective Q-Cartier Q-divisor F on Y such that −F is π-ample and
+       E + Ex(π) + F has toroidal support at η ∈ Y .
+Remark 4.7. The first two conditions allow us to define the simplex QMη (Y, E) ⊆ ValX
+and normally it contains the valuation we want to analyze. The last condition rules out
+some peculiar birational maps but in the situations we consider it is often automatic.
+                        STABLE DEGENERATIONS OF SINGULARITIES                                 35
+
+For example, if (Y, E) is a Kollár model of a klt singularity x ∈ (X, ∆), then the first
+condition follows from Proposition 3.10, the second condition holds by definition, and for
+the last condition we can take
+                           F = KY + π∗−1 ∆ + E − π ∗ (KX + ∆),
+which is supported on E. In general, for any quasi-monomial valuation v ∈ ValX , we
+can always choose a log smooth model π : (Y, E) → X such that Ex(π) supports a π-
+ample divisor (which serves as our −F ; by the negativity lemma F is effective) and
+v ∈ QM(Y, E).
+   Let vi ∈ ValX,x (i = 1, . . . , r) be divisorial valuations that all lie in QMη (Y, E). There
+exists a natural linear map Rr≥0 → QMη (Y, E) sending the i-th basis vector ei to vi . For
+0 6= s = (s1 , . . . , sr ) ∈ Rr≥0 we let vs ∈ QMη (Y, E) be the image of s. For any λ ∈ R, we
+also let Is,λ ⊆ R be the ideal given by
+(4.3)                Is,λ = Span{f ∈ R | s1 v1 (f ) + · · · + sr vr (f ) ≥ λ}.
+   The above expression is chosen so that Is,λ “looks like” the valuation ideal of vs . In
+fact, this is the case if Y = X (by the definition of quasi-monomial valuations). The
+following lemma is an algebraic reformulation (in our more general setup) of the result
+claimed in [Xu21, Lemma 3.8].
+Lemma 4.8. Let s ∈ Rr≥0 \ {0}. Assume that there exists some valuation w ∈ ValX,x
+such that Is,λ = aλ (w) for all λ. Then w = vs .
+  Geometrically, the condition that Is,• are valuation ideals is equivalent to saying that
+the central
+        L fiber of the induced degeneration is irreducible and reduced, i.e. the graded
+algebra λ (Is,λ /Is,>λ) is integral (see Lemma 2.7).
+  In the global setting, the analogous construction for Is,λ is often viewed as the “geodesic”
+connecting two valuations (see [Reb22], [BLXZ23, Section 3.1.2] or [BLQ24, Section 4]).
+Thus Lemma 4.8 can be interpreted as saying that whenever the geodesic lies in the
+valuations space, it is the obvious line in the corresponding simplex QM(Y, E).
+Proof. It is clear from the definition of quasi-monomial valuations that Is,λ ⊆ aλ (vs ) for
+all λ, hence vs ≥ w on R. It remains to show that w ≥ vs . Let 0 6= f0 ∈ R and let
+λ0 = vs (f0 ). Let                   
+                                b = f ∈ OY | vs (f ) ≥ λ0
+be the corresponding valuation ideal on Y ; in particular f0 ∈ b. Let αi = vs (Ei ). Then
+we have a surjection
+                                                 m
+                                                         !
+                                 M               X
+(4.4)                                     OY −      bi Ei → b
+                                      P
+                             bi ∈N,       αi bi ≥λ0    i=1
+
+by the definition of the quasi-monomial valuation vs . Let ℓ > 0 be a sufficiently divisible
+integer; in particular,
+                               π ∗ π∗ OY (−ℓF ) → OY (−ℓF )
+is surjective. We claim that for a general element f ∈ π∗ OY (−ℓF ), we have
+                          w(f ) = vs (f ) and         w(f0 f ) ≥ vs (f0 f ),
+36                                        CHENYANG XU AND ZIQUAN ZHUANG
+
+which together implies w(f0 ) ≥ vs (f0 ). Since f0 is arbitrary, we deduce that w ≥ vs as
+desired.
+  We now prove the claim. First observe that since f ∈ π∗ OY (−ℓF ) is general, we have
+                                                   π ∗ (div(f )) = ℓF + D
+for some divisor D that does not contain any stratum of E. Thus
+           s1 v1 (f ) + · · · + sr vr (f ) = s1 v1 (ℓF ) + · · · + sr vr (ℓF ) = vs (ℓF ) = vs (f ),
+where the second equality follows from the definition of the valuation vs and the fact that
+the local equation of ℓF is given by a monomial. In particular,
+                                                 f ∈ Is,vs (f ) = avs (f ) (w),
+i.e. w(f ) ≥ vs (f ) which together with vs ≥ w implies w(f ) = vs (f ).
+   Next we show that w(f0f ) ≥ vs (f0 f ). Since ℓ is sufficiently divisible and −F is π-ample,
+the map                                                !
+                      M                 Xm
+                              π∗ OY −       bi Ei − ℓF → π∗ (b ⊗ OY (−ℓF ))
+                          P
+                 bi ∈N,       αi bi ≥λ0                    i=1
+
+induced by (4.4) is surjective. As
+                                               f0 f ∈ π∗ (b ⊗ OY (−ℓF )),
+we may write
+                                                   f0 f = g1 + · · · + gp ,
+where each                                                                             !
+                                                                   m
+                                                                   X  (j)
+                                           gj ∈ π∗ OY            −   bi Ei − ℓF
+                                                                   i=1
+          (j)                  P (j)
+for some bi ∈ N that satisfies  αi bi ≥ λ0 .                             Similar to the argument above, for any
+j = 1, . . . , p we have
+                   r                        r                m
+                                                                                 !
+                   X                        X                X  (j)
+                          si vi (gj ) ≥            si vi       bi Ei + ℓF
+                   i=1                       i=1             i=1
+                                                   m
+                                                                         !       m
+                                                   X        (j)
+                                                                                 X         (j)
+                                          = vs             bi Ei + ℓF        =         αi bi + vs (ℓF )
+                                                    i=1                          i=1
+                                          ≥ λ0 + vs (ℓF ) = vs (f0 ) + vs (f ) = vs (f0 f ),
+where the first equality follows from the definition of the quasi-monomial valuation vs
+as above. It follows that each gj ∈ Is,vs (f0 f ) which gives f0 f ∈ Is,vs (f0 f ) . Therefore,
+w(f0f ) ≥ vs (f0 f ). This proves the claim and completes the proof of the lemma.            
+  In practice, it is often hard to show directly that Is,• are valuations ideals when the
+weights si are irrational. The following auxiliary lemma allows us to only consider rational
+weights.
+Lemma 4.9. Assume that aλ (vs ) = Is,λ for all λ ∈ R and all s ∈ Qr≥0 \ 0. Then the same
+holds when s ∈ Rr≥0 \ 0.
+                                   STABLE DEGENERATIONS OF SINGULARITIES                                  37
+                                  P
+Proof. We may write s = m            i=1 ci s
+                                              (i)
+                                                  for some s(i) ∈ Nr \ {0} (i = 1, . . . , m) and some
+c1 , . . . , cm ∈ R+ that are Q-linearly independent. Note that it suffices to prove
+                                                   P
+                    aλ (vs ) = Is,λ when λ = m       i=1 ai ci for some a1 , . . . , am ∈ N,
+
+since these are the only places where aλ (vs ) or Is,λ possibly jumps.
+   Fix any such s and λ. We claim that for any c′1 , . . . , c′m ∈ Q+ that are sufficiently close
+to c1 , . . . , cm respectively, we have
+                           aλ (vs ) = aλ′ (vs′ ) and Is,λ = Is′ ,λ′ ,
+             Pm                     P
+where s′ = i=1 c′i s(i) and λ′ = m             ′         ′   r
+                                      i=1 ai ci . Since s ∈ Q≥0 , we have aλ′ (vs′ ) = Is′ ,λ′ by
+assumption, hence the lemma follows immediately from this claim.
+  We now proceed to prove the above claim. Let us first check that
+                                                    aλ (vs ) = aλ′ (vs′ ).
+Suppose that this is not the case, i.e. there exists some 0 6= f ∈ R that is contained in
+one of aλ (vs ), aλ′ (vs′ ) but not the other. Since each c′i is sufficiently close to ci , we may
+assume that s ≤ 2s′ and λ′ ≤ 2λ. By the definition of the valuations vs , we then have
+vs ≤ 2vs′ . It follows that vs (f ) < 4λ, otherwise
+                                                         1
+                                               vs′ (f ) ≥ vs (f ) ≥ 2λ ≥ λ′
+                                                         2
+and thus
+                                                  f ∈ aλ (vs ) ∩ aλ′ (vs′ ),
+a contradiction. Let η ∈ Y be the center of vs . Recall that vs (f ) is the smallest weight
+of monomials in the local expansion of fP∈ OY,η . Consider the monomials with weights
+                                            m                                               ′
+at most 4λ. Each monomialPmhas weight       i=1 bi ci for some bi ∈ N. If we perturb ci to ci ,
+                                 ′
+then the weight becomes i=1 bi ci . As c1 , . . . , cm are Q-linearly independent, we have
+             m
+             X         m
+                       X
+                (1)       (2)                   (1)               (2)
+               bi ci =   bi ci if and only if (b1 , ..., b(1)               (2)
+                                                          m ) = (b1 , ..., bm ).
+                 i=1               i=1
+
+Combined with the fact that there are only finitely many monomials with weights at most
+4λ, we see that if the c′i ’s are sufficiently close to ci , then
+                m
+                X         m
+                          X                           m
+                                                      X         m
+                                                                X
+                   (1)       (2)                         (1) ′     (2)
+(4.5)      4λ >   bi ci ≥   bi ci if and only if 4λ >   bi ci ≥   bi c′i ;
+                       i=1               i=1                                   i=1                i=1
+
+           (1)           (1)             (2)       (2)                         Pm     (j)
+for any (b1 , ..., bm ) and (b1 , ..., bm ) in Nm such that i=1 bi ci < 4λ (j = 1, 2). In
+other words, the monomials that are responsible for computing vs (f ) are also responsible
+for computing vs′ (f ). In particular, we have
+                                   m
+                                   X                                             m
+                                                                                 X
+                       vs (f ) ≥         ai ci = λ if and only if vs′ (f ) ≥              ai c′i = λ′ ,
+                                   i=1                                              i=1
+
+hence it cannot happen that f belongs to one of aλ (vs ), aλ′ (vs′ ) but not the other. This
+is a contradiction. Thus aλ (vs ) = aλ′ (vs′ ) as desired.
+38                                 CHENYANG XU AND ZIQUAN ZHUANG
+
+    The other equality Is,λ = Is′ ,λ′ can be proved in a similar fashion. Suppose that Is,λ 6=
+Is′ ,λ′ , then there exists some f ∈ R such that one of the inequalities
+                                     r
+                                     X                          r
+                                                                X
+                                              si vi (f ) ≥ λ,         s′i vi (f ) ≥ λ′
+                                      i=1                       i=1
+                                                                                                       Pr
+holds but not the other. As in the above proof, we may assume that                                      i=1 si vi (f ) < 4λ.
+Note that
+                   X r              m
+                                    X           Xr              m
+                                                                X
+                                                    ′
+                       si vi (f ) =   bi ci and    si vi (f ) =   bi c′i
+                       i=1                        i=1                 i=1                 i=1
+
+for some bi ∈ N. As in (4.5), this implies that
+                        r
+                        X                                                   r
+                                                                            X
+                              si vi (f ) ≥ λ if and only if                       s′i vi (f ) ≥ λ′ ,
+                        i=1                                                 i=1
+
+a contradiction. Thus Is,λ = Is′ ,λ′ as desired. This proves the claim and also finishes the
+proof of the lemma.                                                                       
+  Combining the above results with the analysis in the previous subsection, we can now
+prove the direction (3) ⇒ (1) of Theorem 4.1.
+Corollary 4.10. Let x ∈ (X = Spec(R), ∆) be a klt singularity and π : (Y, E) → (X, ∆)
+a Kollár model. Assume that vi = ordEi (1 ≤ i ≤ r = m) are given by the components of
+E. Then aλ (vs ) = Is,λ for all λ ∈ R and all s ∈ Rr≥0 \ 0. In particular, the graded algebra
+grvs R is finitely generated, and grvs R ∼
+                                         = grvs′ R whenever s and s′ lies on the interior of
+the same face of Rr≥0 \ 0.
+Proof. By Propositions 4.5 and 4.6, we have a Grm -equivariant family
+                                                                             
+                      M
+        X = Spec            π∗ OY (−i1 E1 − · · · − ir Er ) t−i
+                                                              1
+                                                                 1
+                                                                   · · · t−i
+                                                                          r
+                                                                             r
+                                                                                → Art1 ,...,tr
+                        (i1 ,...,ir )∈Zr
+
+with integral central fiber. By Lemma 4.9, to show that aλ (vs ) = Is,λ , it suffices to verify
+it when s ∈ Qr≥0 \ 0. By rescaling, we may further assume that s ∈ Nr . The base change
+X ×Ar A1 via the map A1 → Ar : t 7→ (ts1 , . . . , tsr ) is a test configuration given by
+                                                                                
+                        X                                                                 M
+X ×Ar A1 = Spec              π∗ OY (−i1 E1 − · · · − ir Er ) t−i1 s1 −···−ir sr  = Spec   t−i Is,i .
+                       (i1 ,...,ir )∈Zr                                                                        i∈Z
+                             L
+Since the central fiber Spec( i∈N Is,i /Is,i+1 ) is integral and all Is,i are mx -primary when
+i > 0, by Lemma 2.7 there exists some valuation w ∈ ValX,x such that Is,λ = aλ (w) for
+all λ ∈ R. By Lemma 4.8, we have w = vs and hence aλ (vs ) = Is,λ as desired.
+   We next show that grvs R is finitely generated. Since Y is of Fano type over X, the
+graded algebra
+                               M
+                        R :=            π∗ OY (−i1 E1 − · · · − ir Er ).
+                                          (i1 ,...,ir )∈Nr
+                        STABLE DEGENERATIONS OF SINGULARITIES                               39
+
+is finitely generated by [BCHM10, Corollary 1.3.2]. On the other hand, since aλ (vs ) = Is,λ
+for any s ∈ Rr≥0 \ 0, the natural map R → grvs R sending
+                   f ∈ π∗ OY (−i1 E1 − · · · − ir Er ) 7→ f¯ ∈ griv1ss1 +···+ir sr R
+is surjective, by (4.3). Therefore, grvs R is also finitely generated.
+   Finally, assume that s, s′ ∈ Rr≥0 \ 0 belong to the interior of the same face. If we also
+have s, s′ ∈ Qr , then the central fibers of the two induced test configurations X ×Ar A1
+are isomorphic, since they are both given by the same fiber of X → Ar . Since the
+central fibers are also given by Spec(grvs R) and Spec(grvs′ R) respectively, this implies
+that grvs R ∼= grvs′ R. In general s, s′ may have irrational weights, but by [LX18, Lemma
+2.10] we have grvs R ∼ = grvu R for some u ∈ Qr≥0 that lies on the interior of the same face
+that contains s. Similarly for s′ . Thus the isomorphism grvs R ∼   = grvs′ R follows from the
+rational case treated above.                                                                
+  We are now ready to prove the main result (Theorem 4.1) of this section, as well as its
+implications mentioned in the introduction.
+Proof of Theorem 4.1. By Lemma 4.3 we have (1) ⇒ (2). By Corollary 3.18 we obtain
+(2) ⇒ (3). Finally Proposition 4.5 and Corollary 4.10 imply (3) ⇒ (1).         
+Proof of Corollary 1.5. Let L := −r(KX + ∆), let L∗ be the dual line bundle and let
+                                     (C, ∆C ) := C(X, ∆; L)
+                                                                         L
+be the cone over (X, ∆) with the vertex o. In particular, C = Spec m∈N H 0 (mL). Let
+(YL , EL ) be the total space of π ∗ (L∗ ). There is a morphism (YL , EL ) → (C, ∆C ) which
+factors through the total space of L∗ over (X, ∆). Then ΓC (the cone over Γ) gives a
+Q-complement of o ∈ (C, ∆C ), and the Gauss extension w ∈ ValC,o of v, defined as
+w(s) = v(s) + mr for all s ∈ H 0 (mL), is an lc place of (C, ∆C + ΓC ). Moreover, ΓC is
+special with respect to (YL , EL ), as Γ is special with respect to (Y, E).
+  Since after a grading shift, we have
+                  M                                M                      
+              grw        0
+                       H (−mr(KX + ∆)) = grv   ∼             0
+                                                           H (−mr(KX + ∆)) ,
+                  m∈N                                      m∈N
+
+hence the latter is finitely generated.                                                     
+                                                       c X,∆ is a monomial lc place
+Proof of Theorem 1.1. By Lemma 3.4 the minimizer v of vol
+of some special Q-complement Γ with respect to a log smooth model (Y, E) → (X, ∆).
+Then we can apply Theorem 4.1.                                                   
+Proof of Theorem 1.2. As we explained in the introduction, the only missing part was
+Theorem 1.1, which is established now.                                            
+Proof of Theorem 1.3. Let v ∈ ValX,x be a minimizer of vol  c X,∆ . Denote by X = Spec(R).
+By Theorem 1.1, grv (R) is finitely generated. If the rational rank of v is r, then Xv =
+Spec(grv (R)) admits a Grm -action, and (Xv , ∆v ) is a klt singularity. Moreover, the valua-
+tion v : R \ {0} → R yields a Reeb vector ξv and (Xv , ∆v ; ξv ) is a K-semistable log Fano
+cone singularities. By [LX18, Lemma 2.58], we have
+                                    c X,∆ (v) = vol
+                                    vol         c Xv ,∆v (ξv ),
+40                             CHENYANG XU AND ZIQUAN ZHUANG
+
+thus we need to show that the right hand side is an algebraic number.
+  This was proved in [DS14], inspired by arguments in [MSY08]. To see it, denote by
+N = Hom(Gm , Grm ) the coweight lattice, and NR = N ⊗Z R. Then by [DS14, Lemma 4.2],
+the function
+                                  volXv ,∆v : ξ 7→ vol(wtξ )
+(where wtξ is the valuation corresponding to ξ), defined on the Reeb cone t+ ⊆ NR , can be
+extended to a rational function with rational coefficients on NR . Moreover, if we restrict
+on the hyperplane AXv ,∆v (wtξ ) = 1, then the minimizer ξv of vol has algebraic numbers
+as coordinates in NR by [DS14, Lemma 4.6]. This implies volXv ,∆v (ξv ) is an algebraic
+number.                                                                                  
+Proof of Theorem 1.6. By the definition of quasi-monomial valuations, v 7→ AX,∆ (v) is
+linear on QM(Y, E) and v 7→ v(Γ) is piecewise linear with rational coefficients. The latter
+is also concave by Lemma 2.9. Since AX,∆ (v) ≥ v(Γ), we see that
+                       LC(Γ; Y, E) = {v ∈ QM(Y, E) | AX,∆ (v) = v(Γ)}
+is a rational polyhedral subset. We get LCx (Γ; Y, E) by removing from LC(Γ; Y, E) its
+intersection with a few faces of QM(Y, E), thus it is also polyhedral.
+   For the other statement, it suffices to consider the case when v, w ∈ int(σ) for some ra-
+tional simplex σ ⊆ LCx (Γ; Y, E), as the general case then follows by covering LCx (Γ; Y, E)
+with rational simplices. By Theorem 3.14, there exists a Kollár model π : (Y ′ , E ′ ) →
+(X, ∆) such that QM(Y ′ , E ′ ) = σ. By Corollary 4.10, we get grv R ∼= grw R. The proof is
+now complete.                                                                             
+
+                                            References
+   [Amb03] F. Ambro, Quasi-log varieties, Tr. Mat. Inst. Steklova 240 (2003), no. Biratsion. Geom.
+             Lineı̆n. Sist. Konechno Porozhdennye Algebry, 220–239.
+     [AZ22] Hamid Abban and Ziquan Zhuang, K-stability of Fano varieties via admissible flags, Forum
+             Math. Pi 10 (2022), Paper No. e15, 43.
+[BCHM10] Caucher Birkar, Paolo Cascini, Christopher D. Hacon, and James McKernan, Existence of
+             minimal models for varieties of log general type, J. Amer. Math. Soc. 23 (2010), no. 2, 405–
+             468.
+     [Bir19] Caucher Birkar, Anti-pluricanonical systems on Fano varieties, Ann. of Math. (2) 190 (2019),
+             no. 2, 345–463.
+   [BLQ24] Harold Blum, Yuchen Liu, and Lu Qi, Convexity of multiplicities of filtrations on local rings,
+             Compos. Math. 160 (2024), no. 4, 878–914.
+    [Blu18] Harold Blum, Existence of valuations with smallest normalized volume, Compos. Math. 154
+             (2018), no. 4, 820–849.
+   [BLX22] Harold Blum, Yuchen Liu, and Chenyang Xu, Openness of K-semistability for Fano varieties,
+             Duke Math. J. 171 (2022), no. 13, 2753–2797.
+ [BLXZ23] Harold Blum, Yuchen Liu, Chenyang Xu, and Ziquan Zhuang, The existence of the Kähler-
+             Ricci soliton degeneration, Forum Math. Pi 11 (2023), Paper No. e9, 28.
+    [Cut13] Steven Dale Cutkosky, Multiplicities associated to graded families of ideals, Algebra Number
+             Theory 7 (2013), no. 9, 2059–2083.
+ [dFKX17] Tommaso de Fernex, János Kollár, and Chenyang Xu, The dual complex of singularities,
+             Higher dimensional algebraic geometry—in honour of Professor Yujiro Kawamata’s sixtieth
+             birthday, 2017, pp. 103–129.
+     [DS14] Simon Donaldson and Song Sun, Gromov-Hausdorff limits of Kähler manifolds and algebraic
+             geometry, Acta Math. 213 (2014), no. 1, 63–106.
+                          STABLE DEGENERATIONS OF SINGULARITIES                                          41
+
+  [DS17]              , Gromov-Hausdorff limits of Kähler manifolds and algebraic geometry, II, J. Differ-
+             ential Geom. 107 (2017), no. 2, 327–371.
+  [ELS03] Lawrence Ein, Robert Lazarsfeld, and Karen E. Smith, Uniform approximation of Abhyankar
+             valuation ideals in smooth function fields, Amer. J. Math. 125 (2003), no. 2, 409–440.
+[HMX14] Christopher D. Hacon, James McKernan, and Chenyang Xu, ACC for log canonical thresholds,
+             Ann. of Math. (2) 180 (2014), no. 2, 523–571.
+   [Hua22] Kai Huang, K-stability of log Fano cone singularities, 2022. Thesis (Ph.D.)–Massachusetts
+             Institute of Technology.
+     [Ish04] Shihoko Ishii, Extremal functions and prime blow-ups, Comm. Algebra 32 (2004), no. 3, 819–
+             827.
+     [Jia20] Chen Jiang, Boundedness of Q-Fano varieties with degrees and alpha-invariants bounded from
+             below, Ann. Sci. Éc. Norm. Supér. (4) 53 (2020), no. 5, 1235–1250.
+    [JM12] Mattias Jonsson and Mircea Mustaţă, Valuations and asymptotic invariants for sequences of
+             ideals, Ann. Inst. Fourier (Grenoble) 62 (2012), no. 6, 2145–2209 (2013).
+   [KM98] János Kollár and Shigefumi Mori, Birational geometry of algebraic varieties, Cambridge
+             Tracts in Mathematics, vol. 134, Cambridge University Press, Cambridge, 1998. With the
+             collaboration of C. H. Clemens and A. Corti, Translated from the 1998 Japanese original.
+    [Kol13] János Kollár, Singularities of the minimal model program, Cambridge Tracts in Mathemat-
+             ics, vol. 200, Cambridge University Press, Cambridge, 2013. With a collaboration of Sándor
+             Kovács.
+    [Kol23]           , Families of varieties of general type, Cambridge Tracts in Mathematics, vol. 231,
+             Cambridge University Press, Cambridge, 2023. With the collaboration of Klaus Altmann and
+             Sándor J. Kovács.
+    [K+ 92] János Kollár et al., Flips and abundance for algebraic threefolds, Société Mathématique de
+             France, Paris, 1992. Papers from the Second Summer Seminar on Algebraic Geometry held
+             at the University of Utah, Salt Lake City, Utah, August 1991, Astérisque No. 211 (1992).
+      [Li17] Chi Li, K-semistability is equivariant volume minimization, Duke Math. J. 166 (2017), no. 16,
+             3147–3218.
+      [Li18]          , Minimizing normalized volumes of valuations, Math. Z. 289 (2018), no. 1-2, 491–513.
+      [Li21]          , Notes on weighted Kähler-Ricci solitons and application to Ricci-flat Kähler cone
+             metrics (2021). arXiv:2107.02088.
+     [LL19] Chi Li and Yuchen Liu, Kähler-Einstein metrics and volume minimization, Adv. Math. 341
+             (2019), 440–492.
+  [LLX20] Chi Li, Yuchen Liu, and Chenyang Xu, A guided tour to normalized volume, Geometric
+             analysis—in honor of Gang Tian’s 60th birthday, 2020, pp. 167–219.
+    [LM09] Robert Lazarsfeld and Mircea Mustaţă, Convex bodies associated to linear series, Ann. Sci.
+             Éc. Norm. Supér. (4) 42 (2009), no. 5, 783–835.
+[LWX21] Chi Li, Xiaowei Wang, and Chenyang Xu, Algebraicity of the metric tangent cones and equi-
+             variant K-stability, J. Amer. Math. Soc. 34 (2021), no. 4, 1175–1214.
+     [LX18] Chi Li and Chenyang Xu, Stability of valuations: higher rational rank, Peking Math. J. 1
+             (2018), no. 1, 1–79.
+     [LX20]           , Stability of valuations and Kollár components, J. Eur. Math. Soc. (JEMS) 22 (2020),
+             no. 8, 2573–2627.
+  [LXZ22] Yuchen Liu, Chenyang Xu, and Ziquan Zhuang, Finite generation for valuations computing
+             stability thresholds and applications to K-stability, Ann. of Math. (2) 196 (2022), no. 2, 507–
+             566.
+ [MSY08] Dario Martelli, James Sparks, and Shing-Tung Yau, Sasaki-Einstein manifolds and volume
+             minimisation, Comm. Math. Phys. 280 (2008), no. 3, 611–673.
+    [OX12] Yuji Odaka and Chenyang Xu, Log-canonical models of singular pairs and its applications,
+             Math. Res. Lett. 19 (2012), no. 2, 325–334.
+   [Reb22] Rémi Reboulet, Plurisubharmonic geodesics in spaces of non-Archimedean metrics of finite
+             energy, J. Reine Angew. Math. 793 (2022), 59–103.
+42                               CHENYANG XU AND ZIQUAN ZHUANG
+
+     [Sho92] V. V. Shokurov, Three-dimensional log perestroikas, Izv. Ross. Akad. Nauk Ser. Mat. 56
+             (1992), no. 1, 105–203.
+      [Xu14] Chenyang Xu, Finiteness of algebraic fundamental groups, Compos. Math. 150 (2014), no. 3,
+             409–414.
+      [Xu18]         , Interaction between singularity theory and the minimal model program, Proceedings of
+             the International Congress of Mathematicians—Rio de Janeiro 2018. Vol. II. Invited lectures,
+             2018, pp. 807–830.
+      [Xu20]         , A minimizing valuation is quasi-monomial, Ann. of Math. (2) 191 (2020), no. 3,
+             1003–1030.
+      [Xu21]         , Towards finite generation of higher rational rank valuations, Mat. Sb. 212 (2021),
+             no. 3, 157–174.
+      [XZ21] Chenyang Xu and Ziquan Zhuang, Uniqueness of the minimizer of the normalized volume
+             function, Camb. J. Math. 9 (2021), no. 1, 149–176.
+
+     Department of Mathematics, Princeton University, Princeton, NJ 08544, USA
+     Email address: chenyang@princeton.edu
+
+     Beijing International Center for Mathematical Research, Beijing 100871, China
+     Email address: cyxu@math.pku.edu.cn
+
+     Department of Mathematics, Johns Hopkins University, Baltimore, MD 21218, USA
+     Email address: zzhuang@jhu.edu
+
