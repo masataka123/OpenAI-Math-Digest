@@ -1,7 +1,14 @@
 {
   "stage2PDFsRetained": true,
-  "non037FilesPreserved": 3783,
-  "changedPreservedFiles": [],
+  "non037FilesPreserved": 3777,
+  "changedPreservedFiles": [
+    "coordination/catalog-338/RELEASE_CHECKLIST.md",
+    "coordination/catalog-338/README.md",
+    "coordination/catalog-338/SITE_HQ_HANDOFF.md",
+    "coordination/catalog-338/inventory.json",
+    "drafts/catalog-338/yau-uniformization/status.md",
+    "drafts/catalog-338/overview/status.md"
+  ],
   "scope": "037 drafts, coordination, public diagrams/PDFs; four test/citation scripts; 037-only hunks in site.mjs and pdf-editions.json",
   "uncommittedOtherWork": "AGENTS, PROJECT_PLAN, production (11 files) and catalog-034 pause records; any new 338 publication records remain owned by its author.",
   "ignoredLocalCaches": [
@@ -10,5 +17,7 @@
     "stage2/pdf-review/{ja,en}-<page>.png"
   ],
   "non037FilesChecked": 3783,
-  "explanation": "Concurrent 338 publication updated its own coordination records. Its source, diagrams, PDFs and shared component edits were preserved; 037 publication does not stage any 338 files."
+  "explanation": "Catalogue 338 publication and completion records were committed by the parallel task (6ff1d4b and bd9fbe6). No 338 paths or shared components are included in the 037 commits.",
+  "preservedOriginalDocumentEdits": 11,
+  "stage3Commit": "1b06837b5f2ac47de91ff3a59b580984f0840cf4"
 }

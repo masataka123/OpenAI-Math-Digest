@@ -56,3 +56,7 @@ python3 drafts/catalog-037/ordinary-double-point-gap/diagrams/render.py
 ## 第2段階の本部引継ぎ（2026-10-12）
 
 サイト組込み・公開図・日英PDF・公開前検査を本部が完了。本文と数学的確認範囲は維持。公開準備完了・未公開で停止。詳細は `coordination/catalog-037/STAGE2_HANDOFF.md`（リポジトリルートからのパス）。
+
+## 第3段階・公開反映確認（2026-10-12）
+
+公開commit `1b06837b5f2ac47de91ff3a59b580984f0840cf4`。日英ページ・図・PDFの配信版と表示操作を本部が確認。本文・数学的確認範囲は変更していない。公開記録：coordination/catalog-037/PUBLICATION.md。
