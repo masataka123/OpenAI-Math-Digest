@@ -1,0 +1,98 @@
+--- a/src/data/site.mjs
++++ b/src/data/site.mjs
+@@ -4,6 +4,7 @@
+ import inventory037 from '../../coordination/catalog-037/inventory.json' with { type: 'json' };
+ import inventory038 from '../../coordination/catalog-038/inventory.json' with { type: 'json' };
+ import inventory042 from '../../coordination/catalog-042/inventory.json' with { type: 'json' };
++import inventory046 from '../../coordination/catalog-046/inventory.json' with { type: 'json' };
+ import inventory051 from '../../coordination/catalog-051/inventory.json' with { type: 'json' };
+ import inventory052 from '../../coordination/catalog-052/inventory.json' with { type: 'json' };
+ import inventory057 from '../../coordination/catalog-057/inventory.json' with { type: 'json' };
+@@ -29,7 +30,7 @@
+     "id": "algebraic-complex-geometry",
+     "ja": "代数幾何学・複素幾何学",
+     "catalogIds": [
+-      "033", "034", "036", "037", "038", "042", "051", "052", "057", "063", "068"
++      "033", "034", "036", "037", "038", "042", "046", "051", "052", "057", "063", "068"
+     ]
+   },
+   {
+@@ -154,6 +155,10 @@
+  id: entry.paperId, catalogId: '042', sourceCommit: inventory042.sourceCommit,
+  title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
+  pages: entry.pdfPages, order: entry.order, featured: true,
++})), ...inventory046.manuscripts.map(entry => ({
++ id: entry.paperId, catalogId: '046', sourceCommit: inventory046.sourceCommit,
++ title: entry.title, path: entry.sourceUrl.split('/preprints/')[1], version: entry.version,
++ pages: entry.pdfPages, order: entry.order, featured: true,
+ })), ...inventory051.manuscripts.map(entry => ({
+  id: entry.paperId, catalogId: '051', sourceCommit: inventory051.sourceCommit,
+  title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
+@@ -219,6 +224,13 @@
+   description: text('K3曲面のOka性へ至る局所操作・周期の分類・凸近似と、その帰結を読む。', 'Follow local operations, period cases, and convex approximation to the Oka property of K3 surfaces and its consequences.'),
+   paperIds: inventory042.manuscripts.map(p => p.paperId),
+   overviewSectionIds: ['papers', 'connections', 'sources'],
++}, {
++  id: '046', sourceCommit: inventory046.sourceCommit, mode: 'multi',
++  title: text(inventory046.titleJa, inventory046.overviewTitle),
++  contentsTitle: inventory046.contentsTitle,
++  description: text('largeな基本群をもつ射影四次元多様体と有理曲線の連鎖をもつ射影曲面を構成し、普遍被覆の非正則凸性を示す二つの証明を読む。', 'Follow two constructions of projective varieties whose universal covers fail holomorphic convexity: a fourfold with large fundamental group and a surface with chains of rational curves.'),
++  paperIds: inventory046.manuscripts.map(p => p.paperId),
++  overviewSectionIds: ['papers', 'diagram-sources', 'connections', 'sources'],
+ }, {
+   id: '051', sourceCommit: inventory051.sourceCommit, mode: 'single',
+   title: text(inventory051.titleJa, inventory051.overviewTitle),
+--- a/src/data/pdf-editions.json
++++ b/src/data/pdf-editions.json
+@@ -286,5 +286,29 @@
+       "mathExpressions": 677,
+       "figures": 16
+     }
++  },
++  "046": {
++    "ja": {
++      "file": "catalog-046-ja.pdf",
++      "date": "2026-10-13",
++      "pages": 36,
++      "bytes": 1916952,
++      "sha256": "4a91c2a2eb56c7dbaff2409eacbef81c48aba568144bd223b32292bea39fb5b1",
++      "contentHash": "e2d93a979feea30984d9f57c6af8c52e81eb5cc22cf03aaf2bafca9f5f87fb31",
++      "chapters": 3,
++      "mathExpressions": 292,
++      "figures": 10
++    },
++    "en": {
++      "file": "catalog-046-en.pdf",
++      "date": "2026-10-13",
++      "pages": 37,
++      "bytes": 1315298,
++      "sha256": "86a3051618c7e5167621c9aa34c327432e0391678a873b9fed65a1fc5eba965a",
++      "contentHash": "2695f8037338307ed34b44a1a2c31fd663fd7bebb36e6ba9a0d6eb67552b06da",
++      "chapters": 3,
++      "mathExpressions": 282,
++      "figures": 10
++    }
+   }
+ }
+--- a/scripts/catalog-033.test.mjs
++++ b/scripts/catalog-033.test.mjs
+@@ -10,7 +10,7 @@
+ test('033 registers five papers in official order without moving the 034 source snapshot',()=>{
+  assert.equal(catalog.paperIds.length,5);
+  assert.equal(catalog.title.en,"Campana's orbifold Iitaka conjecture and logarithmic subadditivity");
+- assert.deepEqual(catalogsForField('algebraic-complex-geometry').map(c=>c.id),['033','034','036','037','038','042','051','052','057','063','068']);
++ assert.deepEqual(catalogsForField('algebraic-complex-geometry').map(c=>c.id),['033','034','036','037','038','042','046','051','052','057','063','068']);
+  for(const record of Object.values(records.papers)){
+   const paper=papers.find(p=>p.id===record.paperId);
+   assert.equal(paperSource(paper),record.sourceUrl);
+--- a/scripts/catalog-063.test.mjs
++++ b/scripts/catalog-063.test.mjs
+@@ -13,7 +13,7 @@
+  assert.deepEqual(catalog.paperIds,[record.paperId]);
+  assert.equal(catalog.title.en,inventory.overviewTitle);
+  assert.equal(paperSource(papers.find(p=>p.id===record.paperId)),record.sourceUrl);
+- assert.deepEqual(catalogsForField('algebraic-complex-geometry').map(c=>c.id),['033','034','036','037','038','042','051','052','057','063','068']);
++ assert.deepEqual(catalogsForField('algebraic-complex-geometry').map(c=>c.id),['033','034','036','037','038','042','046','051','052','057','063','068']);
+  assert.equal(catalogs.find(c=>c.id==='034').sourceCommit,'adc7f1241b42e322a6451854ab7e4b4c146bf78a');
+ });
+ 
