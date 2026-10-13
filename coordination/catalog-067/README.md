@@ -1,5 +1,7 @@
 # カタログ067 第1段階
 
+> 第3段階更新（2026-10-14）：日英サイト・図・PDFの公開確認まで完了。最新状態は [PUBLICATION.md](PUBLICATION.md)。以下は各段階終了時の履歴。
+
 制作セット1.4と補足を適用。作業先は共有リポジトリ、ブランチはmain（切替なし）。本部が単論文の執筆・自己点検を兼任し、独立レビューは実施しない。
 
 公式版：1581d4cbdd69a0faf34b2089614fe2a814316a6a。067 “The Campana–Peternell conjecture in dimension six”、Algebraic and complex geometry、overview PDF p.8、同分野の公式番号範囲032–069（欠番を補完しない）。収録1本、2026-09-25版27ページ。既存記事の重複なし。034 SchnellのCampana–Peternell不等式とは別の問題。

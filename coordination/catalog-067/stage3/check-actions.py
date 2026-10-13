@@ -8,4 +8,4 @@ data=get(base+'/actions/runs?head_sha='+sha+'&per_page=10');(out/'actions-runs.j
 for run in data['workflow_runs']:
  info={k:run.get(k) for k in ['id','head_sha','status','conclusion','html_url']}
  jobs=get(base+f"/actions/runs/{run['id']}/jobs");(out/'actions-jobs.json').write_text(json.dumps(jobs,indent=2)+'\n')
- info['jobs']=[{k:j.get(k) for k in ['name','status','conclusion']} for j in jobs['jobs']];print(json.dumps(info))
+ info['jobs']=[{**{k:j.get(k) for k in ['name','status','conclusion']},'activeSteps':[s['name'] for s in j.get('steps',[]) if s['status']=='in_progress'],'failedSteps':[s['name'] for s in j.get('steps',[]) if s.get('conclusion')=='failure']} for j in jobs['jobs']];print(json.dumps(info))
