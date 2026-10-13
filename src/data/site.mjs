@@ -9,6 +9,7 @@ import inventory051 from '../../coordination/catalog-051/inventory.json' with { 
 import inventory052 from '../../coordination/catalog-052/inventory.json' with { type: 'json' };
 import inventory057 from '../../coordination/catalog-057/inventory.json' with { type: 'json' };
 import inventory063 from '../../coordination/catalog-063/inventory.json' with { type: 'json' };
+import inventory067 from '../../coordination/catalog-067/inventory.json' with { type: 'json' };
 import inventory068 from '../../coordination/catalog-068/inventory.json' with { type: 'json' };
 import inventory338 from '../../coordination/catalog-338/inventory.json' with { type: 'json' };
 import subjectSource from './catalog-subjects.json' with { type: 'json' };
@@ -30,7 +31,7 @@ const fieldTranslations = [
     "id": "algebraic-complex-geometry",
     "ja": "代数幾何学・複素幾何学",
     "catalogIds": [
-      "033", "034", "036", "037", "038", "042", "046", "051", "052", "057", "063", "068"
+      "033", "034", "036", "037", "038", "042", "046", "051", "052", "057", "063", "067", "068"
     ]
   },
   {
@@ -175,6 +176,10 @@ export const papers = [...inventory033.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '063', sourceCommit: inventory063.sourceCommit,
  title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
  pages: entry.pdfPages, order: entry.order, featured: true,
+})), ...inventory067.manuscripts.map(entry => ({
+ id: entry.paperId, catalogId: '067', sourceCommit: inventory067.sourceCommit,
+ title: entry.title, path: entry.sourceUrl.split('/preprints/')[1], version: entry.version,
+ pages: entry.pdfPages, order: entry.order, featured: true,
 })), ...inventory068.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '068', sourceCommit: inventory068.sourceCommit,
  title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
@@ -258,6 +263,13 @@ export const catalogs = [{
   contentsTitle: inventory063.contentsTitle,
   description: text('一般化向井不等式と等号の場合の分類を、point descendant・量子乗法・最小有理曲線族の接続から読む。', 'Follow point descendants, quantum multiplication, and minimal rational curves through the generalized Mukai inequality and its equality case.'),
   paperIds: inventory063.manuscripts.map(p => p.paperId),
+  overviewSectionIds: ['papers', 'connections', 'sources'],
+}, {
+  id: '067', sourceCommit: inventory067.sourceCommit, mode: 'single',
+  title: text(inventory067.titleJa, inventory067.overviewTitle),
+  contentsTitle: inventory067.contentsTitle,
+  description: text('nef接束を持つFano六次元多様体の分類を、極小有理曲線族の特性数制約とVMRT認識から読む。', 'Follow characteristic-number constraints on minimal rational curves and VMRT recognition through the classification of Fano sixfolds with nef tangent bundle.'),
+  paperIds: inventory067.manuscripts.map(p => p.paperId),
   overviewSectionIds: ['papers', 'connections', 'sources'],
 }, {
   id: '068', sourceCommit: inventory068.sourceCommit, mode: 'multi',

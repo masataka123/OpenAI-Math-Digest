@@ -1,0 +1,679 @@
+{
+  "catalogId": "067",
+  "productionVersion": "1.4",
+  "checkingScope": "Fifteen external statement/application records. No direct citation of another OpenAI manuscript found in this manuscript; broader inter-catalogue relations uninvestigated.",
+  "omittedSections": {
+    "classification": "Single manuscript; no selection among papers needed",
+    "synthesisDiagram": "All branching is internal to one proof and is shown in article main diagram; duplicating it in the catalogue adds no navigation value",
+    "internalDependencyTable": "No second manuscript; external inputs retained here and in the article"
+  },
+  "connections": [
+    {
+      "id": "kan16-input",
+      "kind": "direct",
+      "to": {
+        "paperId": "campana-peternell-six",
+        "result": "§7, proof of Theorem 1.1",
+        "pages": [
+          {
+            "result": "§7, proof of Theorem 1.1",
+            "printed": "20",
+            "pdf": "20"
+          }
+        ],
+        "version": "September 25, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Campana-Peternell-conjecture-in-dimension-six-September-25-2026/main.pdf"
+      },
+      "role": "Classify the large-Picard branch; also classify lower-dimensional Albanese fibres",
+      "hypotheses": "ρ(X)≥2 implies ρ(X)>6−5; for 1≤dim F≤5, ρ(F)≥1>dim F−5",
+      "checking": {
+        "reviewer": "HQ self-check, also author",
+        "date": "2026-10-13",
+        "scope": "Input statement and use checked, not a recursive verification of the external proof",
+        "record": "campana-peternell-six/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../../papers/campana-peternell-six/#dependencies",
+        "en": "../../papers/campana-peternell-six/#dependencies"
+      },
+      "unresolved": [],
+      "from": {
+        "paperId": "Kan16",
+        "result": "Theorem 0.2",
+        "pages": [
+          {
+            "result": "Theorem 0.2",
+            "printed": "1",
+            "pdf": "1"
+          }
+        ],
+        "version": "arXiv:1505.02952v1, 12 May 2015; published 2016",
+        "sourceUrl": "https://arxiv.org/pdf/1505.02952v1"
+      }
+    },
+    {
+      "id": "kan17-input",
+      "kind": "direct",
+      "to": {
+        "paperId": "campana-peternell-six",
+        "result": "Proposition 3.1",
+        "pages": [
+          {
+            "result": "Proposition 3.1",
+            "printed": "8–10",
+            "pdf": "8–10"
+          }
+        ],
+        "version": "September 25, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Campana-Peternell-conjecture-in-dimension-six-September-25-2026/main.pdf"
+      },
+      "role": "Factor evaluation into smooth P1-fibrations; Remark 2.3 lists q-fibres; Proposition 4.1 handles the P2-evaluation branch",
+      "hypotheses": "X Fano, TX nef, ρ=1, pseudoindex 4; Remark 4.2 explicitly removes a fivefold restriction",
+      "checking": {
+        "reviewer": "HQ self-check, also author",
+        "date": "2026-10-13",
+        "scope": "Input statement and use checked, not a recursive verification of the external proof",
+        "record": "campana-peternell-six/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../../papers/campana-peternell-six/#dependencies",
+        "en": "../../papers/campana-peternell-six/#dependencies"
+      },
+      "unresolved": [],
+      "from": {
+        "paperId": "Kan17",
+        "result": "Theorem 3.3",
+        "pages": [
+          {
+            "result": "Theorem 3.3",
+            "printed": "9",
+            "pdf": "9"
+          }
+        ],
+        "version": "arXiv:1503.04579v1, 16 March 2015; published 2017",
+        "sourceUrl": "https://arxiv.org/pdf/1503.04579v1"
+      }
+    },
+    {
+      "id": "dh17-input",
+      "kind": "direct",
+      "to": {
+        "paperId": "campana-peternell-six",
+        "result": "Proposition 2.2",
+        "pages": [
+          {
+            "result": "Proposition 2.2",
+            "printed": "6",
+            "pdf": "6"
+          }
+        ],
+        "version": "September 25, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Campana-Peternell-conjecture-in-dimension-six-September-25-2026/main.pdf"
+      },
+      "role": "Classify pseudoindex ≥6 as P6 or Q6",
+      "hypotheses": "Every rational curve has anticanonical degree at least dim X=6",
+      "checking": {
+        "reviewer": "HQ self-check, also author",
+        "date": "2026-10-13",
+        "scope": "Input statement and use checked, not a recursive verification of the external proof",
+        "record": "campana-peternell-six/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../../papers/campana-peternell-six/#dependencies",
+        "en": "../../papers/campana-peternell-six/#dependencies"
+      },
+      "unresolved": [],
+      "from": {
+        "paperId": "DH17",
+        "result": "Theorem 1.3",
+        "pages": [
+          {
+            "result": "Theorem 1.3",
+            "printed": "1",
+            "pdf": "1"
+          }
+        ],
+        "version": "Author manuscript dated 9 December 2016; published 2017",
+        "sourceUrl": "https://www.math.univ-toulouse.fr/~tdedieu/hyperquadrics.pdf"
+      }
+    },
+    {
+      "id": "mok08s-input",
+      "kind": "direct",
+      "to": {
+        "paperId": "campana-peternell-six",
+        "result": "Proposition 2.2",
+        "pages": [
+          {
+            "result": "Proposition 2.2",
+            "printed": "6",
+            "pdf": "6"
+          }
+        ],
+        "version": "September 25, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Campana-Peternell-conjecture-in-dimension-six-September-25-2026/main.pdf"
+      },
+      "role": "Exclude pseudoindex 3 in dimension six",
+      "hypotheses": "Nef tangent bundle, ρ=1, irreducible minimal family and 1-dimensional VMRT",
+      "checking": {
+        "reviewer": "HQ self-check, also author",
+        "date": "2026-10-13",
+        "scope": "Input statement and use checked, not a recursive verification of the external proof",
+        "record": "campana-peternell-six/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../../papers/campana-peternell-six/#dependencies",
+        "en": "../../papers/campana-peternell-six/#dependencies"
+      },
+      "unresolved": [],
+      "from": {
+        "paperId": "Mok08s",
+        "result": "Theorem 15",
+        "pages": [
+          {
+            "result": "Theorem 15",
+            "printed": "199",
+            "pdf": "50"
+          }
+        ],
+        "version": "Astérisque 322 (2008), 151–205; published scan",
+        "sourceUrl": "https://www.numdam.org/article/AST_2008__322__151_0.pdf"
+      }
+    },
+    {
+      "id": "keb02-input",
+      "kind": "direct",
+      "to": {
+        "paperId": "campana-peternell-six",
+        "result": "Lemmas 4.1–4.2",
+        "pages": [
+          {
+            "result": "Lemmas 4.1–4.2",
+            "printed": "10–11",
+            "pdf": "10–11"
+          }
+        ],
+        "version": "September 25, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Campana-Peternell-conjecture-in-dimension-six-September-25-2026/main.pdf"
+      },
+      "role": "Finite tangent map; immersed markings in Theorem 3.3",
+      "hypotheses": "Irreducible covering family and proper family through a general point",
+      "checking": {
+        "reviewer": "HQ self-check, also author",
+        "date": "2026-10-13",
+        "scope": "Input statement and use checked, not a recursive verification of the external proof",
+        "record": "campana-peternell-six/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../../papers/campana-peternell-six/#dependencies",
+        "en": "../../papers/campana-peternell-six/#dependencies"
+      },
+      "unresolved": [],
+      "from": {
+        "paperId": "Keb02",
+        "result": "Theorems 3.3–3.4",
+        "pages": [
+          {
+            "result": "Theorems 3.3–3.4",
+            "printed": "7–8",
+            "pdf": "7–8"
+          }
+        ],
+        "version": "arXiv:math/0004023v2, 6 June 2000; published 2002",
+        "sourceUrl": "https://arxiv.org/pdf/math/0004023v2"
+      }
+    },
+    {
+      "id": "hm99-input",
+      "kind": "direct",
+      "to": {
+        "paperId": "campana-peternell-six",
+        "result": "Lemma 6.1",
+        "pages": [
+          {
+            "result": "Lemma 6.1",
+            "printed": "19",
+            "pdf": "19"
+          }
+        ],
+        "version": "September 25, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Campana-Peternell-conjecture-in-dimension-six-September-25-2026/main.pdf"
+      },
+      "role": "Contradict integrability of a proper spanned distribution",
+      "hypotheses": "b2(X)=1, irreducible VMRT, spanning tangent bivectors",
+      "checking": {
+        "reviewer": "HQ self-check, also author",
+        "date": "2026-10-13",
+        "scope": "Input statement and use checked, not a recursive verification of the external proof",
+        "record": "campana-peternell-six/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../../papers/campana-peternell-six/#dependencies",
+        "en": "../../papers/campana-peternell-six/#dependencies"
+      },
+      "unresolved": [],
+      "from": {
+        "paperId": "HM99",
+        "result": "Propositions 1.2.1–1.2.2",
+        "pages": [
+          {
+            "result": "Propositions 1.2.1–1.2.2",
+            "printed": "356–357",
+            "pdf": "7–8"
+          }
+        ],
+        "version": "Several Complex Variables, MSRI Publications 37 (1999), 351–389; published PDF with cover",
+        "sourceUrl": "https://library.slmath.org/books/Book37/files/hwang.pdf"
+      }
+    },
+    {
+      "id": "mok08r-input",
+      "kind": "direct",
+      "to": {
+        "paperId": "campana-peternell-six",
+        "result": "Proposition 6.2",
+        "pages": [
+          {
+            "result": "Proposition 6.2",
+            "printed": "19–20",
+            "pdf": "19–20"
+          }
+        ],
+        "version": "September 25, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Campana-Peternell-conjecture-in-dimension-six-September-25-2026/main.pdf"
+      },
+      "role": "Recognize the Grassmannian",
+      "hypotheses": "Fano, ρ=1, minimal component; projective VMRT equivalence to rank-two Hermitian symmetric Gr(2,5)",
+      "checking": {
+        "reviewer": "HQ self-check, also author",
+        "date": "2026-10-13",
+        "scope": "Input statement and use checked, not a recursive verification of the external proof",
+        "record": "campana-peternell-six/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../../papers/campana-peternell-six/#dependencies",
+        "en": "../../papers/campana-peternell-six/#dependencies"
+      },
+      "unresolved": [],
+      "from": {
+        "paperId": "Mok08r",
+        "result": "Main Theorem, §2.1",
+        "pages": [
+          {
+            "result": "Main Theorem, §2.1",
+            "printed": "10",
+            "pdf": "10"
+          }
+        ],
+        "version": "Author PDF IMR2005-09, 22 pages; published in AMS/IP 42 (2008), 41–61",
+        "sourceUrl": "https://hkumath.hku.hk/~nmok/IMR2005-09.pdf"
+      }
+    },
+    {
+      "id": "eghp06-input",
+      "kind": "direct",
+      "to": {
+        "paperId": "campana-peternell-six",
+        "result": "Proposition 6.2",
+        "pages": [
+          {
+            "result": "Proposition 6.2",
+            "printed": "19–20",
+            "pdf": "19–20"
+          }
+        ],
+        "version": "September 25, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Campana-Peternell-conjecture-in-dimension-six-September-25-2026/main.pdf"
+      },
+      "role": "Minimal-degree classification; scroll normality is proved in the manuscript",
+      "hypotheses": "Nondegenerate irreducible threefold in P5 of degree 3",
+      "checking": {
+        "reviewer": "HQ self-check, also author",
+        "date": "2026-10-13",
+        "scope": "Input statement and use checked, not a recursive verification of the external proof",
+        "record": "campana-peternell-six/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../../papers/campana-peternell-six/#dependencies",
+        "en": "../../papers/campana-peternell-six/#dependencies"
+      },
+      "unresolved": [],
+      "from": {
+        "paperId": "EGHP06",
+        "result": "Theorem 0.1",
+        "pages": [
+          {
+            "result": "Theorem 0.1",
+            "printed": "2",
+            "pdf": "2"
+          }
+        ],
+        "version": "arXiv:math/0404517v5, 15 November 2004; published 2006",
+        "sourceUrl": "https://eisenbud.github.io/papers/pdfs/2006-002.pdf"
+      }
+    },
+    {
+      "id": "del71-input",
+      "kind": "direct",
+      "to": {
+        "paperId": "campana-peternell-six",
+        "result": "Lemma 4.3; (4.4)",
+        "pages": [
+          {
+            "result": "Lemma 4.3; (4.4)",
+            "printed": "12",
+            "pdf": "12"
+          }
+        ],
+        "version": "September 25, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Campana-Peternell-conjecture-in-dimension-six-September-25-2026/main.pdf"
+      },
+      "role": "Fixed Hodge decomposition; Griffiths identification is separately marked unverified",
+      "hypotheses": "Smooth projective morphism e over simply connected X",
+      "checking": {
+        "reviewer": "HQ self-check, also author",
+        "date": "2026-10-13",
+        "scope": "Input statement and use checked, not a recursive verification of the external proof",
+        "record": "campana-peternell-six/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../../papers/campana-peternell-six/#dependencies",
+        "en": "../../papers/campana-peternell-six/#dependencies"
+      },
+      "unresolved": [
+        "Griffiths Hodge–de Rham identification not independently checked"
+      ],
+      "from": {
+        "paperId": "Del71",
+        "result": "Corollary 4.1.2",
+        "pages": [
+          {
+            "result": "Corollary 4.1.2",
+            "printed": "42",
+            "pdf": "39"
+          }
+        ],
+        "version": "Publications Mathématiques de l’IHÉS 40 (1971), 5–57; published scan",
+        "sourceUrl": "https://www.numdam.org/item/PMIHES_1971__40__5_0.pdf"
+      }
+    },
+    {
+      "id": "bs58-input",
+      "kind": "direct",
+      "to": {
+        "paperId": "campana-peternell-six",
+        "result": "Lemma 4.3; (4.4)",
+        "pages": [
+          {
+            "result": "Lemma 4.3; (4.4)",
+            "printed": "12",
+            "pdf": "12"
+          }
+        ],
+        "version": "September 25, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Campana-Peternell-conjecture-in-dimension-six-September-25-2026/main.pdf"
+      },
+      "role": "Relative GRR gives (4.4), also used for Lemma 2.3",
+      "hypotheses": "Proper morphism between smooth projective varieties; apply to OU and E dual",
+      "checking": {
+        "reviewer": "HQ self-check, also author",
+        "date": "2026-10-13",
+        "scope": "Input statement and use checked, not a recursive verification of the external proof",
+        "record": "campana-peternell-six/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../../papers/campana-peternell-six/#dependencies",
+        "en": "../../papers/campana-peternell-six/#dependencies"
+      },
+      "unresolved": [],
+      "from": {
+        "paperId": "BS58",
+        "result": "§7, Riemann–Roch theorem",
+        "pages": [
+          {
+            "result": "§7, Riemann–Roch theorem",
+            "printed": "113",
+            "pdf": "18"
+          }
+        ],
+        "version": "Bulletin de la Société Mathématique de France 86 (1958), 97–136; published scan",
+        "sourceUrl": "https://www.numdam.org/item/BSMF_1958__86__97_0.pdf"
+      }
+    },
+    {
+      "id": "dps94-input",
+      "kind": "consequence",
+      "to": {
+        "paperId": "campana-peternell-six",
+        "result": "§7.2",
+        "pages": [
+          {
+            "result": "§7.2",
+            "printed": "21–22",
+            "pdf": "21–22"
+          }
+        ],
+        "version": "September 25, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Campana-Peternell-conjecture-in-dimension-six-September-25-2026/main.pdf"
+      },
+      "role": "Smooth Albanese fibration with connected Fano nef-tangent fibres",
+      "hypotheses": "Compact Kähler, analytically nef tangent bundle, cover attaining maximal irregularity",
+      "checking": {
+        "reviewer": "HQ self-check, also author",
+        "date": "2026-10-13",
+        "scope": "Input statement and use checked, not a recursive verification of the external proof",
+        "record": "campana-peternell-six/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../../papers/campana-peternell-six/#dependencies",
+        "en": "../../papers/campana-peternell-six/#dependencies"
+      },
+      "unresolved": [],
+      "from": {
+        "paperId": "DPS94",
+        "result": "Theorem 3.14",
+        "pages": [
+          {
+            "result": "Theorem 3.14",
+            "printed": "31",
+            "pdf": "31"
+          }
+        ],
+        "version": "Author manuscript dps1.pdf, 47 pages; published J. Algebraic Geometry 3 (1994), 295–345",
+        "sourceUrl": "https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/dps1.pdf"
+      }
+    },
+    {
+      "id": "bb96-input",
+      "kind": "consequence",
+      "to": {
+        "paperId": "campana-peternell-six",
+        "result": "§7.2",
+        "pages": [
+          {
+            "result": "§7.2",
+            "printed": "21–22",
+            "pdf": "21–22"
+          }
+        ],
+        "version": "September 25, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Campana-Peternell-conjecture-in-dimension-six-September-25-2026/main.pdf"
+      },
+      "role": "H1(F,TF)=0 and local rigidity",
+      "hypotheses": "Rational homogeneous fibre F=G/P; F is a regular Fano variety",
+      "checking": {
+        "reviewer": "HQ self-check, also author",
+        "date": "2026-10-13",
+        "scope": "Input statement and use checked, not a recursive verification of the external proof",
+        "record": "campana-peternell-six/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../../papers/campana-peternell-six/#dependencies",
+        "en": "../../papers/campana-peternell-six/#dependencies"
+      },
+      "unresolved": [],
+      "from": {
+        "paperId": "BB96",
+        "result": "§3.7",
+        "pages": [
+          {
+            "result": "§3.7",
+            "printed": "17–18",
+            "pdf": "18–19"
+          }
+        ],
+        "version": "Compositio Mathematica 104 (1996), 1–26; published scan",
+        "sourceUrl": "https://www.numdam.org/item/CM_1996__104_1_1_0.pdf"
+      }
+    },
+    {
+      "id": "poc25-input",
+      "kind": "consequence",
+      "to": {
+        "paperId": "campana-peternell-six",
+        "result": "§7.2",
+        "pages": [
+          {
+            "result": "§7.2",
+            "printed": "21–22",
+            "pdf": "21–22"
+          }
+        ],
+        "version": "September 25, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Campana-Peternell-conjecture-in-dimension-six-September-25-2026/main.pdf"
+      },
+      "role": "Analytic local triviality; same statement also used in Proposition 3.1 for Q3-fibres",
+      "hypotheses": "Proper holomorphic submersion with all fibres biholomorphic",
+      "checking": {
+        "reviewer": "HQ self-check, also author",
+        "date": "2026-10-13",
+        "scope": "Input statement and use checked, not a recursive verification of the external proof",
+        "record": "campana-peternell-six/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../../papers/campana-peternell-six/#dependencies",
+        "en": "../../papers/campana-peternell-six/#dependencies"
+      },
+      "unresolved": [],
+      "from": {
+        "paperId": "Poc25",
+        "result": "Theorem 1.1 (Fischer–Grauert)",
+        "pages": [
+          {
+            "result": "Theorem 1.1 (Fischer–Grauert)",
+            "printed": "1",
+            "pdf": "1"
+          }
+        ],
+        "version": "Mathematische Zeitschrift 310, Article 33 (2025), published 25 April 2025",
+        "sourceUrl": "https://d-nb.info/1371867054/34"
+      }
+    },
+    {
+      "id": "chk13-input",
+      "kind": "consequence",
+      "to": {
+        "paperId": "campana-peternell-six",
+        "result": "§7.2",
+        "pages": [
+          {
+            "result": "§7.2",
+            "printed": "21–22",
+            "pdf": "21–22"
+          }
+        ],
+        "version": "September 25, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Campana-Peternell-conjecture-in-dimension-six-September-25-2026/main.pdf"
+      },
+      "role": "Split the ordinary universal cover",
+      "hypotheses": "Locally trivial proper fibration and Stein contractible universal cover Cq of the base",
+      "checking": {
+        "reviewer": "HQ self-check, also author",
+        "date": "2026-10-13",
+        "scope": "Input statement and use checked, not a recursive verification of the external proof",
+        "record": "campana-peternell-six/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../../papers/campana-peternell-six/#dependencies",
+        "en": "../../papers/campana-peternell-six/#dependencies"
+      },
+      "unresolved": [],
+      "from": {
+        "paperId": "CHK13",
+        "result": "Theorem 4.4",
+        "pages": [
+          {
+            "result": "Theorem 4.4",
+            "printed": "11",
+            "pdf": "11"
+          }
+        ],
+        "version": "Author manuscript universal-final.pdf, 14 pages; published J. reine angew. Math. 679 (2013), 207–221",
+        "sourceUrl": "https://claudon.pages.math.cnrs.fr/pdf/universal-final.pdf"
+      }
+    },
+    {
+      "id": "dem18-input",
+      "kind": "consequence",
+      "to": {
+        "paperId": "campana-peternell-six",
+        "result": "Corollary 7.1",
+        "pages": [
+          {
+            "result": "Corollary 7.1",
+            "printed": "21",
+            "pdf": "21"
+          }
+        ],
+        "version": "September 25, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Campana-Peternell-conjecture-in-dimension-six-September-25-2026/main.pdf"
+      },
+      "role": "Positive KE metric, checked via restatement of AP86 rather than its original proof",
+      "hypotheses": "Rational homogeneous Fano manifold",
+      "checking": {
+        "reviewer": "HQ self-check, also author",
+        "date": "2026-10-13",
+        "scope": "Input statement and use checked, not a recursive verification of the external proof",
+        "record": "campana-peternell-six/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../../papers/campana-peternell-six/#dependencies",
+        "en": "../../papers/campana-peternell-six/#dependencies"
+      },
+      "unresolved": [
+        "Original AP86 not independently checked"
+      ],
+      "from": {
+        "paperId": "Dem18",
+        "result": "§1 (Alekseevskii–Perelomov construction)",
+        "pages": [
+          {
+            "result": "§1 (Alekseevskii–Perelomov construction)",
+            "printed": "1",
+            "pdf": "1"
+          }
+        ],
+        "version": "Author manuscript special_issue_mok.pdf, 6 pages; published Asian J. Math. 22 (2018), 285–290",
+        "sourceUrl": "https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/special_issue_mok.pdf"
+      }
+    }
+  ],
+  "otherRelations": [
+    {
+      "kind": "alternative",
+      "source": "Watanabe, Fano manifolds of coindex three admitting nef tangent bundle (2021), Theorem 2.4",
+      "target": "Proposition 3.1",
+      "checking": "Mentioned in manuscript pp.2,7; external result not independently checked; not used to bypass manuscript proof"
+    },
+    {
+      "kind": "background",
+      "source": "Schnell article in catalogue 034",
+      "checking": "Different Campana–Peternell inequality; not identified as a proof dependency"
+    },
+    {
+      "kind": "uninvestigated",
+      "source": "Catalogues 036,052 and other OpenAI manuscripts",
+      "checking": "No additional relation claimed without source comparison"
+    }
+  ]
+}

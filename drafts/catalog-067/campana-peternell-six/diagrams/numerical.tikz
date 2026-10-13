@@ -1,0 +1,7 @@
+\node[card] (n0) {\Tx{二つの滑らかな射を使う}{Use the two smooth maps}\\[5pt]$\pi:U^9\to V^8,\quad e:U^9\to X^6,\quad E=T_e$\\$\ell,r,s,t\text{ descend to }V$};
+\node[card,below=2.2cm of n0] (n1) {\Tx{線形の交点制約を構成する}{Construct linear intersection constraints}\\[5pt]$Av=0,\quad A\in\operatorname{Mat}_{1785\times581}(\mathbb Q)$\\$e_*\mathrm{td}_i(E)=e_*[\mathrm{td}(E)\mathrm{ch}(E^*)]_i=0\ (i>3)$};
+\node[card,below=2.2cm of n1] (n2) {\Tx{射影公式で選択座標を積へ変える}{Use projection to obtain product coordinates}\\[5pt]$N(\xi_i\eta_j)_{C_1}=0,\quad |C_1|=129,\quad\xi_0=\eta_0=1$\\$\eta_1=u=c_1(T_F)L^2/L^3$};
+\node[result,below=2.2cm of n2] (n3) {\Tx{有理数上の二次関係を得る}{Obtain the quadratic relation over the rationals}\\[5pt]$\dim_{\mathbb Q}K_3\le6;\quad 6\text{ rational columns},\quad\det=-16/5$\\$32-20u+3u^2=0\quad\Longleftrightarrow\quad u=4,\ 8/3$};
+\flow{n0}{n1}{\Tx{降下する類の消滅、固定部分、相対GRRを使う}{Use descending classes, the fixed part and relative GRR}\\[4pt]\Cite{hodge}\quad \Cite{constraints}};
+\flow{n1}{n2}{\Tx{重み3・4の直像を一つの数で表す}{Scalar pushforwards in weights three and four}\\[4pt]\Cite{constraints}};
+\flow{n2}{n3}{\Tx{三次の積へ持ち上げ、有限体上界と有理基底を結合}{Lift to cubic products; combine a modular bound with a rational basis}\\[4pt]\Cite{certificate}};

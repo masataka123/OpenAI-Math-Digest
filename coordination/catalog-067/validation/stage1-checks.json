@@ -1,0 +1,45 @@
+{
+  "citationSequence": {
+    "equal": true,
+    "count": 55
+  },
+  "proofTargetSequence": {
+    "equal": true,
+    "count": 6
+  },
+  "statementSequence": {
+    "equal": true,
+    "count": 3
+  },
+  "displayMath": {
+    "equalAfterTextAndPunctuationNormalization": true,
+    "count": 10
+  },
+  "inlineMath": {
+    "assessment": "Manually compared; order, separate inline spans and repeated variables differ with translation, mathematical conditions agree."
+  },
+  "diagramManifest": {
+    "files": 34,
+    "hashesMatch": true
+  },
+  "officialHashes": true,
+  "citations": {
+    "command": "node scripts/sync-citations.mjs --check --catalog 067 --text-only",
+    "output": "Citations checked: 2 catalogue(s), 6 files.",
+    "scope": "Draft text and generated citation TeX only; public copies deferred to stage two."
+  },
+  "isolatedPreview": {
+    "pageViewportCases": 8,
+    "pageOverflow": 0,
+    "mathErrors": 0,
+    "browserErrors": 0
+  },
+  "deferred": [
+    "Site registration and real routes",
+    "Full check:citations public-copy gate",
+    "Repository tests/build/check:links",
+    "Bilingual booklet PDF and check:pdf",
+    "Public deployment"
+  ],
+  "checkedAt": "2026-10-13T14:50:22.525663+00:00"
+}

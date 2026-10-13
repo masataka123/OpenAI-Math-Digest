@@ -1,0 +1,5 @@
+\node[card] (n0) {\Tx{次元1から6を分類}{Classify dimensions one through six}\\[5pt]$X\text{ Fano},\quad T_X\text{ nef},\quad1\le\dim X\le6$\\$X\simeq G/P$};
+\node[card,below=2.2cm of n0] (n1) {\Tx{正Einstein計量を得る}{Obtain a positive Einstein metric}\\[5pt]$\rho(\sigma)=\lambda\sigma,\qquad\lambda>0$};
+\node[result,below=2.2cm of n1] (n2) {\Tx{定数倍で規格化する}{Normalize by constant rescaling}\\[5pt]$\omega=\lambda\sigma,\quad\rho(\omega)=\omega$\\$[\omega]=2\pi c_1(-K_X)$};
+\flow{n0}{n1}{\Tx{等質多様体の計量構成を適用する}{Apply the homogeneous metric construction}\\[4pt]\Cite{metric}};
+\flow{n1}{n2}{\Tx{Ricci形式の不変性とそのコホモロジー類を使う}{Use scaling invariance and the class of the Ricci form}\\[4pt]\Cite{ke}};

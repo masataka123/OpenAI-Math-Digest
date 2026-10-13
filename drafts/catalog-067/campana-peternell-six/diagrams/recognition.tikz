@@ -1,0 +1,7 @@
+\node[card] (n0) {\Tx{有限接写像と二次制約}{Finite tangent map and quadratic constraint}\\[5pt]$\tau_x:F^3\to\mathcal C_x\subset\mathbb P^5,\quad L=\tau_x^*\mathcal O(1)$\\$u=4\text{ or }8/3$};
+\node[card,below=2.2cm of n0] (n1) {\Tx{線形非退化性と切断種数}{Nondegeneracy and sectional genus}\\[5pt]$\langle\mathcal C_x\rangle=\mathbb P^5,\quad L^3\ge3$\\$0\le g(B)=1+(1-u/2)L^3$};
+\node[card,below=2.2cm of n1] (n2) {\Tx{次数3の滑らかなSegre像}{A smooth Segre image of degree three}\\[5pt]$u=8/3,\quad L^3=3,\quad\deg\tau_x=1$\\$\mathcal C_x\text{ normal}\ \Longrightarrow\ F\simeq\mathcal C_x\simeq\mathbb P^1\times\mathbb P^2$};
+\node[result,below=2.2cm of n2] (n3) {\Tx{Grassmann多様体を認識}{Recognize the Grassmannian}\\[5pt]$\mathcal C_x\simeq\mathbb P^1\times\mathbb P^2\subset\mathbb P^5$\\$X\simeq\operatorname{Gr}(2,5)$};
+\flow{n0}{n1}{\Tx{分布の可積分性と非可積分性を衝突させる}{Contradict integrability with nonintegrability}\\[4pt]\Cite{nondegenerate}\quad \Cite{hm}};
+\flow{n1}{n2}{\Tx{最小次数分類と正規性で接写像を同型にする}{Minimal degree and normality make the tangent map an isomorphism}\\[4pt]\Cite{eghp}\quad \Cite{recognition}};
+\flow{n2}{n3}{\Tx{Picard数1とモデルのVMRT同値を入力する}{Use Picard number one and projective equivalence of VMRTs}\\[4pt]\Cite{mok-rec}};

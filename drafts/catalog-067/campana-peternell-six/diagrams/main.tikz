@@ -1,0 +1,15 @@
+
+\node[result] (top) {\Tx{主定理の仮定}{Hypotheses of the main theorem}\\[4pt]$X^6\text{ smooth connected complex projective Fano},\quad T_X\text{ nef}$};
+\node[half,below left=2cm and -7cm of top] (known) {\Tx{既知のPicard数の枝}{Known Picard-number branch}\\[5pt]$\rho(X)\ge2>6-5$\\$X\simeq G/P$};
+\node[half,below right=2cm and -7cm of top] (rankone) {\Tx{Picard数1の枝}{Picard number one}\\[5pt]$\rho(X)=1,\quad\iota\ge2$\\$\iota=2,3\ \text{excluded}$};
+\draw[edge] (top.south west)++(2,0)--++(0,-2) node[midway,right,reason,text width=5cm] {\Tx{既知分類を適用}{Apply known classification}\\\Cite{kan-large}};
+\draw[edge] (top.south east)++(-2,0)--++(0,-2) node[midway,left,reason,text width=5cm] {\Tx{極小曲線族で帰着}{Reduce via minimal curves}\\\Cite{reduction}};
+\node[card,below=2.2cm of $(known.south)!.5!(rankone.south)$] (cases) {\Tx{Picard数1で残る場合}{Remaining Picard-number-one cases}\\[5pt]
+$\iota\ge6:\quad X\simeq\mathbb P^6\text{ or }Q^6$\\[4pt]
+$\iota=4:\quad \text{\Tx{評価写像の分解を排除}{exclude factorized evaluation}}\ \Longrightarrow\ X\simeq G/P$\\[4pt]
+$\iota=5:\quad(u-4)(3u-8)=0\ \Longrightarrow\ \mathcal C_x\simeq\mathbb P^1\times\mathbb P^2$};
+\draw[edge] (rankone.south)--(rankone.south|-cases.north);
+\node[reason,anchor=west,text width=12.6cm] at ($(cases.north west)+(1,1.1)$) {\Tx{大擬指数の既知分類と本稿の二つの枝}{Known large-pseudoindex classification and the two manuscript branches}\\[4pt]\Cite{dh}\quad\Cite{four}\\[3pt]\Cite{numerical}\quad\Cite{recognition}};
+\node[result,below=2cm of cases] (result) {\Tx{全分岐を合流させる}{Assemble all branches}\\[5pt]$\iota=5:\ X\simeq\operatorname{Gr}(2,5);\qquad \text{all cases}:\ X\simeq G/P$};
+\flow{cases}{result}{\Tx{VMRT認識を適用し、既知の枝と合わせる}{Apply VMRT recognition and combine with the known branches}\\[4pt]\Cite{mok-rec}\quad\Cite{assembly}};
+\draw[edge] (known.west)--++(-.65,0)|-(result.west);

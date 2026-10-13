@@ -1,0 +1,7 @@
+\node[card] (n0) {\Tx{最大不正則度を実現する被覆}{Choose a cover attaining maximal irregularity}\\[5pt]$X^\prime\to X,\quad q=\widetilde q(X),\quad d=\dim X-q\le6$};
+\node[card,below=2.2cm of n0] (n1) {\Tx{Albaneseファイバーを分類}{Classify the Albanese fibres}\\[5pt]$\alpha:X^\prime\to A,\quad\dim A=q$\\$d=6:\ \mathrm{Theorem}\ 1.1;\quad1\le d\le5:\ \rho(F)>d-5;\quad d=0:\ F=\mathrm{pt}$};
+\node[card,below=2.2cm of n1] (n2) {\Tx{局所自明性から普遍被覆の積へ}{From local triviality to a product universal cover}\\[5pt]$H^1(F,T_F)=0,\quad\widetilde A=\mathbb C^q\text{ Stein, contractible}$\\$\widetilde X\simeq F\times\mathbb C^q$};
+\node[result,below=2.2cm of n2] (n3) {\Tx{残る幾何学的結論}{Remaining geometric conclusions}\\[5pt]$F\times\mathbb A^q\text{ quasi-projective}$\\$F\times\mathbb C^q\longrightarrow\mathbb C^q\quad\text{Remmert reduction}$};
+\flow{n0}{n1}{\Tx{滑らかで連結なFanoファイバーを得る}{Obtain smooth connected Fano fibres}\\[4pt]\Cite{dps}\quad \Cite{kan-large}};
+\flow{n1}{n2}{\Tx{剛性とFischer--Grauert、Stein可縮底での分裂を使う}{Use rigidity, Fischer--Grauert and splitting over a Stein contractible base}\\[4pt]\Cite{fg}\quad \Cite{chk}};
+\flow{n2}{n3}{\Tx{射影性・コンパクト性と正則関数の降下を使う}{Use projectivity, compactness and descent of holomorphic functions}\\[4pt]\Cite{albanese-proof}};

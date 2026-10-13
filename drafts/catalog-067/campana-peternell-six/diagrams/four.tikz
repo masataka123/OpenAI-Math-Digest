@@ -1,0 +1,7 @@
+\node[card] (n0) {\Tx{評価写像の分解の枝を仮定}{Assume the factorization branch}\\[5pt]$U\xrightarrow{f}W\xrightarrow{g}X,\quad q:W\to Y,\quad \dim W=7$};
+\node[card,below=2.2cm of n0] (n1) {\Tx{相対次数を固定し、候補を絞る}{Fix relative degrees and narrow the fibres}\\[5pt]$a=b=-1,\qquad q\text{-fibres}:\ \mathbb P^2,\ Q^3,\ K(G_2)$};
+\node[card,below=2.2cm of n1] (n2) {\Tx{Betti数と交点数で二つの候補を排除}{Use Betti numbers and moments to eliminate two cases}\\[5pt]$\mathbb P^2:\ b_6=b_4-1;\qquad m_1=m_2=5m_4>0,\ m_3=3m_4$\\$\dim Y=4,\quad q\text{-fibre}=Q^3$};
+\node[result,below=2.2cm of n2] (n3) {\Tx{整数性との矛盾から有理等質性へ}{Integrality contradiction leaves rational homogeneity}\\[5pt]$q_*(-K_q)^4=0,\quad -K_q=3h-\lambda z,\quad\lambda\in\mathbb Z$\\$0=81m_3-108\lambda m_4\ \Longrightarrow\ \lambda=9/4$};
+\flow{n0}{n1}{\Tx{nef性と二つの曲線族から相対次数を得る}{Nefness and the two curve families fix the degrees}\\[4pt]\Cite{kan-factor}\quad \Cite{kan-fibres}};
+\flow{n1}{n2}{\Tx{Hard Lefschetzと対合を適用する}{Apply Hard Lefschetz and the cohomological involution}\\[4pt]\Cite{four}};
+\flow{n2}{n3}{\Tx{直交束の相対二次超曲面として計算する}{Compute with the relative quadric of an orthogonal bundle}\\[4pt]\Cite{four}};
