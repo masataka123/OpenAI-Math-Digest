@@ -1,0 +1,19 @@
+\node[card] (a) {\heading{1}{出発点はorbifoldへの写像}{Start with a map to an orbifold}
+$Y\xrightarrow{f}\mathcal S,\quad \operatorname{im}f_*\simeq\mathbf Z$\\
+\Tx{$Y\to A$ は点ブローアップ、$f(Y)$ は通常点領域}{Point blowups $Y\to A$; $f(Y)$ lies in the ordinary locus}};
+\node[card,below=2.65cm of a] (b) {\heading{2}{射影束の通常点領域で切断}{Cut in the ordinary locus of a projective bundle}
+$Y\hookrightarrow S\xrightarrow{h}\mathcal S,\quad\pi_1(S)\xrightarrow{\sim}\pi_1(\mathcal S)$\\
+\Tx{滑らかな射影5次元；$h\circ i=f$}{Smooth projective fivefold; $h\circ i=f$}};
+\flow{a}{b}{\Tx{一般切断のLefschetz同型をEhresmann変形で移す}{Transport the Lefschetz isomorphism\\by Ehresmann deformation}\\\Cite{orbifold-realization}\\\Cite{hl-input}};
+\node[card,below=2.3cm of b] (c) {\heading{3}{一つの例外曲線の法束を調整}{Adjust the normal bundle of one exceptional curve}
+$E\subset Y_1\subset T^3,\quad N_{E/T}\simeq\mathcal O(-1)\oplus\mathcal O(-1)$\\
+$G\subset\widehat T,\quad G\simeq\mathbf P^1\times\mathbf P^1$};
+\flow{b}{c}{\Tx{曲面を保つ小解消と反復blowupで標準局所模型へ}{Use a surface-preserving small resolution\\and repeated blowups}\\\Cite{blowdown}};
+\node[card,below=2.3cm of c] (d) {\heading{4}{反対のrulingを射影的に収縮}{Contract the other ruling projectively}
+$H|_G=\mathcal O(\alpha,\beta),\quad\beta>\alpha>0$\\
+$(H+\alpha G)|_G=\mathcal O(0,\beta-\alpha)$};
+\flow{c}{d}{\Tx{高い倍数の切断で収縮し、局所座標で滑らかさを確認}{Contract by high multiples;\\verify smoothness in local coordinates}\\\Cite{blowdown}};
+\node[result,below=2.3cm of d] (e) {\heading{5}{曲面そのものの埋込み}{Embed the original surface}
+$A\hookrightarrow S',\quad\operatorname{im}(\pi_1(A)\to\pi_1(S'))\simeq\mathbf Z$\\
+\Tx{ambient群と曲面準同型を各段階で保存}{Preserve the ambient group and surface homomorphism at every step}};
+\flow{d}{e}{\Tx{点blowupの逆順に繰り返す}{Repeat in reverse order of the point blowups}\\\Cite{embedding}};

@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "author-key",
+  "catalogId": "046",
+  "sources": {
+    "OVERVIEW": {
+      "recordFile": "../../../coordination/catalog-046/inventory.json",
+      "recordId": "overview"
+    },
+    "OpenAI26a": {
+      "recordFile": "sources.json",
+      "recordId": "large-fundamental-group-non-stein"
+    },
+    "OpenAI26b": {
+      "recordFile": "sources.json",
+      "recordId": "surface-shafarevich-counterexample"
+    }
+  },
+  "citations": {
+    "catalog": {
+      "source": "OVERVIEW",
+      "locations": [
+        {
+          "result": "Catalogue 046",
+          "printed": "6",
+          "pdf": "6"
+        }
+      ]
+    },
+    "fourfold": {
+      "source": "OpenAI26a",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "stein-obstruction": {
+      "source": "OpenAI26a",
+      "locations": [
+        {
+          "result": "Proposition 2.1, proof",
+          "printed": "6",
+          "pdf": "6"
+        }
+      ]
+    },
+    "remmert": {
+      "source": "OpenAI26a",
+      "locations": [
+        {
+          "result": "Section 1.1",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "surface": {
+      "source": "OpenAI26b",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "hull": {
+      "source": "OpenAI26b",
+      "locations": [
+        {
+          "result": "Lemma 1.2",
+          "printed": "4–5",
+          "pdf": "4–5"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ]
+}

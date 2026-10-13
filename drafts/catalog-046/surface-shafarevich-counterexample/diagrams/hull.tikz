@@ -1,0 +1,7 @@
+\node[card] (a) {\heading{1}{単連結普遍被覆に持ち上げる}{Lift to the simply connected universal cover}$\widetilde X\to X,\quad W\subset\pi^{-1}(Z_0)$\\$\pi_1(Z_0)/\ker(\pi_1(Z_0)\to\pi_1(X))\text{ is infinite}$};
+\node[card,below=2cm of a] (b) {\heading{2}{閉・非コンパクトな有理曲線鎖}{A closed noncompact string of rational curves}$W=\bigcup C_\alpha,\quad C_\alpha\cong\mathbb P^1$\\\Tx{局所有限；無限枚の閉離散ファイバー}{Locally finite; an infinite closed discrete fiber}};
+\flow a b {\Tx{被覆の核、$\pi_1(\mathbb P^1)=0$、節点の局所二枝性}{Covering kernel, $\pi_1(\mathbb P^1)=0$, and two branches at each node}\\\Cite{hull}};
+\node[card,below=2cm of b] (c) {\heading{3}{すべての正則関数が $W$ 上定数}{Every holomorphic function is constant on $W$}$g|_{C_\alpha}\text{ constant},\quad W\text{ connected}\ \Longrightarrow\ g|_W\text{ constant}$};
+\flow b c {\Tx{最大値原理と、交点を通じた定数の一致}{Maximum principle; constants agree at intersections}\\\Cite{hull}};
+\node[result,below=2cm of c] (d) {\heading{4}{一点正則包が非コンパクト}{A singleton hull is noncompact}$W\subseteq\widehat{\{w\}}_{\widetilde X}\quad(w\in W)$\\\Tx{閉非コンパクトな $W$ はコンパクトな包に入らない}{A compact hull cannot contain the closed noncompact $W$}};
+\flow c d {\Tx{正則包の定義へ直接代入する}{Apply the definition of the holomorphic hull directly}\\\Cite{hull}};

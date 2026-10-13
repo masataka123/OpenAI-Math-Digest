@@ -1,0 +1,19 @@
+\node[card] (a) {\heading{1}{配置と曲面を構成}{Construct the arrangement and surface}
+$A=\operatorname{Jac}(C)$\quad \Tx{単純；$Y\to A$ は点ブローアップ}{simple; $Y\to A$ is a point blowup sequence}\\
+$Y\xrightarrow{f}\mathcal S$\quad \Tx{像は通常点領域}{image in the ordinary locus}};
+\node[card,below=2.25cm of a] (b) {\heading{2}{巡回上界と無限性の下界}{Cyclic upper bound and infinite-order lower bound}
+$\operatorname{im}\pi_1(Y)\subset\langle rb\rangle$\quad\Tx{かつ}{and}\quad $e^n\ne1\ (n\ne0)$\\
+$\operatorname{im}(\pi_1(Y)\to\pi_1(\mathcal S))\simeq\mathbf Z$};
+\flow{a}{b}{\Tx{meridian関係と局所経路判定を合わせる}{Combine meridian relations with the local path criterion}\\\Cite{cyclic}};
+\node[card,below=2.15cm of b] (c) {\heading{3}{通常の射影ambientへ移す}{Pass to an ordinary projective ambient variety}
+$A\hookrightarrow S'$\quad\Tx{滑らか・連結・射影}{smooth, connected, projective}\\
+$\operatorname{im}(\pi_1(A)\to\pi_1(S'))\simeq\mathbf Z$};
+\flow{b}{c}{\Tx{曲面の群準同型を保って実現・blowdown}{Realize and blow down\\while preserving the surface homomorphism}\\\Cite{embedding}};
+\node[card,below=2.2cm of c] (d) {\heading{4}{固定曲面を含む4次元完全交叉}{A fourfold complete intersection containing the fixed surface}
+$A\subset X\subset S'\times B,\quad\dim B=6$\\
+\Tx{$X$ はlarge；$\operatorname{im}\pi_1(A)\simeq\mathbf Z$}{Largeness of $X$; $\operatorname{im}\pi_1(A)\simeq\mathbf Z$}};
+\flow{c}{d}{\Tx{fiberの次元を制御し、Lefschetzで群像を保存}{Control fiber dimensions\\and preserve the group image by Lefschetz}\\\Cite{reduction}};
+\node[result,below=2.3cm of d] (e) {\heading{5}{普遍被覆の解析的障害}{Analytic obstruction on the universal cover}
+$A_K=\mathbf C^2/K\subset\widetilde X,\quad K\simeq\mathbf Z^3,\quad H_3(A_K)\ne0$\\
+\Tx{非Stein ＋ 正次元コンパクト解析部分多様体なし $\Rightarrow$ 非正則凸}{Non-Stein + no positive-dimensional compact analytic subvariety\\$\Rightarrow$ not holomorphically convex}};
+\flow{d}{e}{\Tx{階数3の被覆・large条件・Remmert還元を使う}{Use the rank-three cover, largeness and Remmert reduction}\\\Cite{stein-obstruction}\quad\Cite{remmert-self}};

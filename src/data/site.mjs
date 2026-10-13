@@ -4,6 +4,7 @@ import inventory036 from '../../coordination/catalog-036/inventory.json' with { 
 import inventory037 from '../../coordination/catalog-037/inventory.json' with { type: 'json' };
 import inventory038 from '../../coordination/catalog-038/inventory.json' with { type: 'json' };
 import inventory042 from '../../coordination/catalog-042/inventory.json' with { type: 'json' };
+import inventory046 from '../../coordination/catalog-046/inventory.json' with { type: 'json' };
 import inventory051 from '../../coordination/catalog-051/inventory.json' with { type: 'json' };
 import inventory052 from '../../coordination/catalog-052/inventory.json' with { type: 'json' };
 import inventory057 from '../../coordination/catalog-057/inventory.json' with { type: 'json' };
@@ -29,7 +30,7 @@ const fieldTranslations = [
     "id": "algebraic-complex-geometry",
     "ja": "代数幾何学・複素幾何学",
     "catalogIds": [
-      "033", "034", "036", "037", "038", "042", "051", "052", "057", "063", "068"
+      "033", "034", "036", "037", "038", "042", "046", "051", "052", "057", "063", "068"
     ]
   },
   {
@@ -154,6 +155,10 @@ export const papers = [...inventory033.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '042', sourceCommit: inventory042.sourceCommit,
  title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
  pages: entry.pdfPages, order: entry.order, featured: true,
+})), ...inventory046.manuscripts.map(entry => ({
+ id: entry.paperId, catalogId: '046', sourceCommit: inventory046.sourceCommit,
+ title: entry.title, path: entry.sourceUrl.split('/preprints/')[1], version: entry.version,
+ pages: entry.pdfPages, order: entry.order, featured: true,
 })), ...inventory051.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '051', sourceCommit: inventory051.sourceCommit,
  title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
@@ -219,6 +224,13 @@ export const catalogs = [{
   description: text('K3曲面のOka性へ至る局所操作・周期の分類・凸近似と、その帰結を読む。', 'Follow local operations, period cases, and convex approximation to the Oka property of K3 surfaces and its consequences.'),
   paperIds: inventory042.manuscripts.map(p => p.paperId),
   overviewSectionIds: ['papers', 'connections', 'sources'],
+}, {
+  id: '046', sourceCommit: inventory046.sourceCommit, mode: 'multi',
+  title: text(inventory046.titleJa, inventory046.overviewTitle),
+  contentsTitle: inventory046.contentsTitle,
+  description: text('largeな基本群をもつ射影四次元多様体と有理曲線の連鎖をもつ射影曲面を構成し、普遍被覆の非正則凸性を示す二つの証明を読む。', 'Follow two constructions of projective varieties whose universal covers fail holomorphic convexity: a fourfold with large fundamental group and a surface with chains of rational curves.'),
+  paperIds: inventory046.manuscripts.map(p => p.paperId),
+  overviewSectionIds: ['papers', 'diagram-sources', 'connections', 'sources'],
 }, {
   id: '051', sourceCommit: inventory051.sourceCommit, mode: 'single',
   title: text(inventory051.titleJa, inventory051.overviewTitle),

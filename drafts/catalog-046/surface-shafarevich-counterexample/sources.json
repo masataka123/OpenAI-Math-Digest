@@ -1,0 +1,463 @@
+{
+  "catalogId": "046",
+  "paperId": "surface-shafarevich-counterexample",
+  "title": "A surface counterexample to Shafarevich holomorphic convexity",
+  "displayName": "A surface counterexample to Shafarevich holomorphic convexity",
+  "authors": "OpenAI",
+  "version": "September 23, 2026",
+  "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-surface-counterexample-to-Shafarevich-holomorphic-convexity-September-23-2026/paper.pdf",
+  "pdfPages": 26,
+  "sha256": "d99ed633f092375c6b34a026df5d81c56ef9da8b99ca8e9f990146078b71a66a",
+  "checkedOn": "2026-10-13",
+  "checkedLocations": [
+    {
+      "printedPage": "2",
+      "pdfPage": 2
+    },
+    {
+      "printedPage": "4",
+      "pdfPage": 4
+    },
+    {
+      "printedPage": "5",
+      "pdfPage": 5
+    },
+    {
+      "printedPage": "6",
+      "pdfPage": 6
+    },
+    {
+      "printedPage": "7",
+      "pdfPage": 7
+    },
+    {
+      "printedPage": "8",
+      "pdfPage": 8
+    },
+    {
+      "printedPage": "9",
+      "pdfPage": 9
+    },
+    {
+      "printedPage": "10",
+      "pdfPage": 10
+    },
+    {
+      "printedPage": "11",
+      "pdfPage": 11
+    },
+    {
+      "printedPage": "12",
+      "pdfPage": 12
+    },
+    {
+      "printedPage": "13",
+      "pdfPage": 13
+    },
+    {
+      "printedPage": "14",
+      "pdfPage": 14
+    },
+    {
+      "printedPage": "15",
+      "pdfPage": 15
+    },
+    {
+      "printedPage": "16",
+      "pdfPage": 16
+    },
+    {
+      "printedPage": "17",
+      "pdfPage": 17
+    },
+    {
+      "printedPage": "18",
+      "pdfPage": 18
+    },
+    {
+      "printedPage": "19",
+      "pdfPage": 19
+    },
+    {
+      "printedPage": "20",
+      "pdfPage": 20
+    },
+    {
+      "printedPage": "21",
+      "pdfPage": 21
+    },
+    {
+      "printedPage": "22",
+      "pdfPage": 22
+    },
+    {
+      "printedPage": "23",
+      "pdfPage": 23
+    },
+    {
+      "printedPage": "24",
+      "pdfPage": 24
+    }
+  ],
+  "statements": [
+    {
+      "result": "Theorem 1.1",
+      "pages": "2",
+      "checking": "Assumptions and all conclusions transcribed and compared to original"
+    },
+    {
+      "result": "Lemma 1.2",
+      "pages": "4–5",
+      "checking": "Assumptions and all conclusions transcribed and compared to original"
+    },
+    {
+      "result": "Proposition 5.3",
+      "pages": "20",
+      "checking": "Assumptions and all conclusions transcribed and compared to original"
+    },
+    {
+      "result": "Lemma 6.1",
+      "pages": "21–22",
+      "checking": "Assumptions and all conclusions transcribed and compared to original"
+    },
+    {
+      "result": "Lemma 6.2",
+      "pages": "23",
+      "checking": "Assumptions and all conclusions transcribed and compared to original"
+    },
+    {
+      "result": "Lemma 6.3",
+      "pages": "23–24",
+      "checking": "Assumptions and all conclusions transcribed and compared to original"
+    }
+  ],
+  "proofPassages": [
+    {
+      "location": "Lemma 2.2, pp. 6–7",
+      "scope": "Read weighted criterion and bounded-degree/infinite-relator convention; not independently reconstructed"
+    },
+    {
+      "location": "§§3–4, pp. 7–17",
+      "scope": "Read family, based monodromy, pair pinching, involution cost and degree transfer; not a full independent verification of all calculations"
+    },
+    {
+      "location": "§5, pp. 17–20",
+      "scope": "Read order of depth, finite cover, compactification and boundary-power choices"
+    },
+    {
+      "location": "§6, pp. 21–24",
+      "scope": "Read entire finite-local-detection, rationality, retraction/properness and theorem conclusion"
+    },
+    {
+      "location": "Lemma 1.2, pp. 4–5",
+      "scope": "Read all covering, closedness, local finiteness, maximum-principle and hull steps"
+    }
+  ],
+  "externalSources": [
+    {
+      "id": "groth",
+      "displayName": "Revêtements étales et groupe fondamental (SGA 1)",
+      "authors": "Alexander Grothendieck et al.",
+      "version": "2003 revised edition; arXiv:math/0206203v2. Main printed pagination of this edition is used, not the old marginal pagination.",
+      "sourceUrl": "https://arxiv.org/pdf/math/0206203v2",
+      "pdfPages": 343,
+      "checkedLocations": [
+        {
+          "printedPage": "242",
+          "pdfPage": 258
+        },
+        {
+          "printedPage": "245",
+          "pdfPage": 261
+        },
+        {
+          "printedPage": "251",
+          "pdfPage": 267
+        },
+        {
+          "printedPage": "254",
+          "pdfPage": 270
+        }
+      ],
+      "checkedResults": [
+        "Exposé XII, Théorème 5.1",
+        "Propositions 2.1(vi), 3.2(vi), 5.3"
+      ],
+      "localFile": "external/sga1.pdf",
+      "sha256": "8e64218d356456c534eebf996940f0f957e43b54f1a080241debe12cbaf60d3c"
+    },
+    {
+      "id": "eh",
+      "displayName": "Strong resolution of singularities in characteristic zero",
+      "authors": "Santiago Encinas; Herwig Hauser",
+      "version": "Commentarii Mathematici Helvetici 77 (2002), 821–845; publisher PDF",
+      "sourceUrl": "https://ems.press/content/serial-article-files/42948?nt=1",
+      "pdfPages": 25,
+      "checkedLocations": [
+        {
+          "printedPage": "822",
+          "pdfPage": 2
+        },
+        {
+          "printedPage": "823",
+          "pdfPage": 3
+        }
+      ],
+      "checkedResults": [
+        "The result: existence of strong resolution preserving the smooth locus"
+      ],
+      "localFile": "external/encinas-hauser.pdf",
+      "sha256": "1eedc28c2f5fc2c1cd98c79090260ee2b24844f45d05c1fdd60f8f6c304301cd"
+    },
+    {
+      "id": "loj",
+      "displayName": "Triangulation of semi-analytic sets",
+      "authors": "Stanisław Łojasiewicz",
+      "version": "Annali della Scuola Normale Superiore di Pisa, Ser. 3, 18 (1964), 449–474; Numdam PDF with cover page",
+      "sourceUrl": "https://numdam.org/item/ASNSP_1964_3_18_4_449_0.pdf",
+      "pdfPages": 27,
+      "checkedLocations": [
+        {
+          "printedPage": "464",
+          "pdfPage": 17
+        }
+      ],
+      "checkedResults": [
+        "§3, Theorem 2"
+      ],
+      "localFile": "external/lojasiewicz.pdf",
+      "sha256": "5efc756a499a43f542f782a0fa565d30e9adf083786f8e778a8133bd55a8f203"
+    },
+    {
+      "id": "stacks-03GR",
+      "displayName": "The Stacks Project — Relative normalization: Lemma 29.54.15",
+      "authors": "The Stacks Project Authors",
+      "version": "HTML tag 03GR, accessed 2026-10-13; unpaginated",
+      "sourceUrl": "https://stacks.math.columbia.edu/tag/03GR",
+      "checkedLocations": [],
+      "checkedResults": [
+        "03GR"
+      ],
+      "checking": "Statement and application in Lemma 6.1 checked; complete external proof not recursively verified"
+    },
+    {
+      "id": "stacks-0B3I",
+      "displayName": "The Stacks Project — Finite morphisms are projective: Lemma 29.45.16",
+      "authors": "The Stacks Project Authors",
+      "version": "HTML tag 0B3I, accessed 2026-10-13; unpaginated",
+      "sourceUrl": "https://stacks.math.columbia.edu/tag/0B3I",
+      "checkedLocations": [],
+      "checkedResults": [
+        "0B3I"
+      ],
+      "checking": "Statement and application in Lemma 6.1 checked; complete external proof not recursively verified"
+    },
+    {
+      "id": "stacks-0BIC",
+      "displayName": "The Stacks Project — Embedded resolution: Lemma 54.15.6",
+      "authors": "The Stacks Project Authors",
+      "version": "HTML tag 0BIC, accessed 2026-10-13; unpaginated",
+      "sourceUrl": "https://stacks.math.columbia.edu/tag/0BIC",
+      "checkedLocations": [],
+      "checkedResults": [
+        "0BIC"
+      ],
+      "checking": "Statement and application in Lemma 6.1 checked; complete external proof not recursively verified"
+    }
+  ],
+  "dependencies": [
+    {
+      "source": "groth",
+      "kind": "direct",
+      "usedAt": "Lemmas 6.1–6.2, pp. 22–23",
+      "checking": "External statement and use compared; external proof not recursively verified",
+      "from": {
+        "sourceId": "groth",
+        "result": "Exposé XII, Théorème 5.1; Propositions 2.1(vi), 3.2(vi), 5.3",
+        "printedPages": "251, 242, 245, 254",
+        "pdfPages": "267, 258, 261, 270",
+        "version": "2003 revised edition; arXiv:math/0206203v2. Main printed pagination of this edition is used, not the old marginal pagination.",
+        "sourceUrl": "https://arxiv.org/pdf/math/0206203v2"
+      },
+      "to": {
+        "paperId": "surface-shafarevich-counterexample",
+        "result": "§5.2; Lemmas 6.1–6.2",
+        "printedPages": "18, 21–23",
+        "pdfPages": "18, 21–23",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-surface-counterexample-to-Shafarevich-holomorphic-convexity-September-23-2026/paper.pdf"
+      },
+      "role": "有限位相被覆を有限étale代数被覆にし、局所有限正規延長を代数化した正規化と同定する。",
+      "hypotheses": "基底は有限型複素スキーム。有限正規延長の同定では稠密開上で一致し両側が有限かつ正規。propernessを被覆比較の仮定に加えない。",
+      "articleLinks": {
+        "ja": "/ja/papers/surface-shafarevich-counterexample/#proof-3-step-1",
+        "en": "/en/papers/surface-shafarevich-counterexample/#proof-3-step-1"
+      },
+      "unresolved": [
+        "外部結果自体の全証明は独立検証していない"
+      ]
+    },
+    {
+      "source": "eh",
+      "kind": "direct",
+      "usedAt": "Lemmas 6.1–6.2, pp. 22–23",
+      "checking": "External statement and use compared; external proof not recursively verified",
+      "from": {
+        "sourceId": "eh",
+        "result": "The result",
+        "printedPages": "822–823",
+        "pdfPages": "2–3",
+        "version": "Commentarii Mathematici Helvetici 77 (2002), 821–845; publisher PDF",
+        "sourceUrl": "https://ems.press/content/serial-article-files/42948?nt=1"
+      },
+      "to": {
+        "paperId": "surface-shafarevich-counterexample",
+        "result": "Lemma 6.1",
+        "printedPages": "22",
+        "pdfPages": "22",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-surface-counterexample-to-Shafarevich-holomorphic-convexity-September-23-2026/paper.pdf"
+      },
+      "role": "正規化を射影的に解消し、既に滑らかな良い開部分を保つ。",
+      "hypotheses": "標数0の代数多様体。特別ファイバー近傍で既にsmooth/SNCである部分を保持する必要がある。",
+      "articleLinks": {
+        "ja": "/ja/papers/surface-shafarevich-counterexample/#proof-3-step-1",
+        "en": "/en/papers/surface-shafarevich-counterexample/#proof-3-step-1"
+      },
+      "unresolved": [
+        "外部結果自体の全証明は独立検証していない"
+      ]
+    },
+    {
+      "source": "loj",
+      "kind": "direct",
+      "usedAt": "Lemma 6.3, p. 24",
+      "checking": "External statement and use compared; external proof not recursively verified",
+      "from": {
+        "sourceId": "loj",
+        "result": "Section 3, Theorem 2",
+        "printedPages": "464",
+        "pdfPages": "17",
+        "version": "Annali della Scuola Normale Superiore di Pisa, Ser. 3, 18 (1964), 449–474; Numdam PDF with cover page",
+        "sourceUrl": "https://numdam.org/item/ASNSP_1964_3_18_4_449_0.pdf"
+      },
+      "to": {
+        "paperId": "surface-shafarevich-counterexample",
+        "result": "Lemma 6.3",
+        "printedPages": "24",
+        "pdfPages": "24",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-surface-counterexample-to-Shafarevich-holomorphic-convexity-September-23-2026/paper.pdf"
+      },
+      "role": "特別ファイバーと両立する三角形分割から変形収縮近傍を作り、propernessと合わせ無限像を移す。",
+      "hypotheses": "滑らかな複素射影曲面は実解析多様体、解析的ファイバーは半解析的集合。コンパクト性により有限分割を用いる。",
+      "articleLinks": {
+        "ja": "/ja/papers/surface-shafarevich-counterexample/#proof-4-step-2",
+        "en": "/en/papers/surface-shafarevich-counterexample/#proof-4-step-2"
+      },
+      "unresolved": [
+        "外部結果自体の全証明は独立検証していない"
+      ]
+    },
+    {
+      "source": "stacks-03GR",
+      "kind": "direct",
+      "usedAt": "Lemmas 6.1–6.2, pp. 22–23",
+      "checking": "External statement and use compared; external proof not recursively verified",
+      "from": {
+        "sourceId": "stacks-03GR",
+        "result": "Tag 03GR (Lemma 29.54.15)",
+        "printedPages": null,
+        "pdfPages": null,
+        "version": "HTML tag 03GR, accessed 2026-10-13; unpaginated",
+        "sourceUrl": "https://stacks.math.columbia.edu/tag/03GR"
+      },
+      "to": {
+        "paperId": "surface-shafarevich-counterexample",
+        "result": "Lemma 6.1",
+        "printedPages": "22",
+        "pdfPages": "22",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-surface-counterexample-to-Shafarevich-holomorphic-convexity-September-23-2026/paper.pdf"
+      },
+      "role": "有限被覆の相対正規化が有限であることを保証する。",
+      "hypotheses": "有限型複素スキームはNagata。有限関数体拡大の正規化を用いる。",
+      "articleLinks": {
+        "ja": "/ja/papers/surface-shafarevich-counterexample/#proof-3-step-1",
+        "en": "/en/papers/surface-shafarevich-counterexample/#proof-3-step-1"
+      },
+      "unresolved": [
+        "外部結果自体の全証明は独立検証していない"
+      ]
+    },
+    {
+      "source": "stacks-0B3I",
+      "kind": "direct",
+      "usedAt": "Lemmas 6.1–6.2, pp. 22–23",
+      "checking": "External statement and use compared; external proof not recursively verified",
+      "from": {
+        "sourceId": "stacks-0B3I",
+        "result": "Tag 0B3I (Lemma 29.45.16)",
+        "printedPages": null,
+        "pdfPages": null,
+        "version": "HTML tag 0B3I, accessed 2026-10-13; unpaginated",
+        "sourceUrl": "https://stacks.math.columbia.edu/tag/0B3I"
+      },
+      "to": {
+        "paperId": "surface-shafarevich-counterexample",
+        "result": "Lemma 6.1",
+        "printedPages": "22",
+        "pdfPages": "22",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-surface-counterexample-to-Shafarevich-holomorphic-convexity-September-23-2026/paper.pdf"
+      },
+      "role": "有限射を射影射とし、射影的なY上の正規化の射影性を得る。",
+      "hypotheses": "正規化のYへの射が有限で、Yは射影的。",
+      "articleLinks": {
+        "ja": "/ja/papers/surface-shafarevich-counterexample/#proof-3-step-1",
+        "en": "/en/papers/surface-shafarevich-counterexample/#proof-3-step-1"
+      },
+      "unresolved": [
+        "外部結果自体の全証明は独立検証していない"
+      ]
+    },
+    {
+      "source": "stacks-0BIC",
+      "kind": "direct",
+      "usedAt": "Lemmas 6.1–6.2, pp. 22–23",
+      "checking": "External statement and use compared; external proof not recursively verified",
+      "from": {
+        "sourceId": "stacks-0BIC",
+        "result": "Tag 0BIC (Lemma 54.15.6)",
+        "printedPages": null,
+        "pdfPages": null,
+        "version": "HTML tag 0BIC, accessed 2026-10-13; unpaginated",
+        "sourceUrl": "https://stacks.math.columbia.edu/tag/0BIC"
+      },
+      "to": {
+        "paperId": "surface-shafarevich-counterexample",
+        "result": "Lemma 6.1",
+        "printedPages": "22",
+        "pdfPages": "22",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-surface-counterexample-to-Shafarevich-holomorphic-convexity-September-23-2026/paper.pdf"
+      },
+      "role": "正則曲面上の被約境界を点blowupによりSNC化する。",
+      "hypotheses": "解消後の正則曲面と境界。既にSNCの開部分は保持する。",
+      "articleLinks": {
+        "ja": "/ja/papers/surface-shafarevich-counterexample/#proof-3-step-1",
+        "en": "/en/papers/surface-shafarevich-counterexample/#proof-3-step-1"
+      },
+      "unresolved": [
+        "外部結果自体の全証明は独立検証していない"
+      ]
+    }
+  ],
+  "unresolved": [
+    "Independent reconstruction of every Frattini and monodromy calculation",
+    "Full independent proof audit of the weighted completed-algebra argument",
+    "§1.1 historical comparisons",
+    "§1.2 additional consequences are outside article scope; catalog HQ has separately checked abelianity Corollary 1.4 and semialgebraic Corollary 8.1"
+  ]
+}

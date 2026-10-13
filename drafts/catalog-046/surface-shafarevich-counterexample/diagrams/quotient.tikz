@@ -1,0 +1,7 @@
+\node[card] (a) {\heading{1}{基点付きモノドロミーと重み}{Based monodromy and weights}$K\twoheadrightarrow\Pi,\quad p\varphi_m=\beta_mp,\quad \deg(\varphi_m-1)\geq1$};
+\node[card,below=2cm of a] (b) {\heading{2}{48生成元と24の符号反転関係}{48 generators and 24 involution relations}$P(t)=(1+t)G(t),\quad G(t)=3t(1+t)(1+t^2)^2$\\\Tx{関係コスト $\leq tG(t)$}{Relation cost $\leq tG(t)$}};
+\flow a b {\Tx{差分基底の次数を保ち、Frattini 商で関係を節約}{Preserve degrees in a difference basis; economize via Frattini}\\\Cite{weights}};
+\node[card,below=2cm of b] (c) {\heading{3}{先に深さ、後に境界冪}{Depth first, boundary powers after compactification}$97t\frac{(4t)^J}{1-4t}<\frac1{100},\qquad bt^{2^e}<\frac1{100}$};
+\flow b c {\Tx{有限被覆とコンパクト化後に $b$ を数えて $e$ を選ぶ}{Count $b$ and choose $e$ after the finite cover and compactification}\\\Cite{compactify}\quad\Cite{quotient}};
+\node[result,below=2cm of c] (d) {\heading{4}{境界関係の後も無限}{Infinitude survives all boundary relations}$t=\frac{49}{200},\quad1-G(t)+\frac1{50}<-\frac1{125}<0$\\$|Q|=\infty,\quad\overline{\rho(\pi_1(F_s))}=Q$};
+\flow c d {\Tx{重み付き判定：関係級数の収束も満たす}{Weighted criterion, including convergence of the relator series}\\\Cite{criterion}};

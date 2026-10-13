@@ -1,0 +1,7 @@
+\node[card] (a) {\heading{1}{交点を含む局所境界群}{Local boundary groups, including crossings}$A_V=\rho\bigl(\pi_1(V\setminus D)\bigr),\quad \pi_1(V\setminus D)\cong\mathbb Z^r,\ r\leq2$\\\Tx{$A_V$ は有限、共役型も有限個}{Each $A_V$ is finite; finitely many conjugacy types}};
+\node[card,below=2cm of a] (b) {\heading{2}{全局所像を有限商で検出}{Detect every entire local image}$N\triangleleft Q\text{ open},\quad N\cap gA_Vg^{-1}=1,\quad P_f=Q/N$};
+\flow a b {\Tx{profinite 分離で全非単位元を同時に避ける}{Profinite separation avoids every nonidentity local element}\\\Cite{descent}};
+\node[card,below=2.3cm of b] (c) {\heading{3}{有限被覆を正規化・解消}{Normalize and resolve the finite cover}$U'\to U,\qquad X\to\overline Y\to Y$\\\Tx{$X$ は滑らか・連結・射影、既に良い開部分を保存}{Smooth connected projective $X$; preserve the good open locus}};
+\flow b c {\Tx{有限 étale 代数化、有限正規化、強い解消}{Algebraize, normalize finitely, then resolve}\\\Cite{riemann}\\\Cite{resolution}};
+\node[result,below=2cm of c] (d) {\heading{4}{例外曲線の meridian も消して下降}{Kill exceptional meridians and descend}$\rho\pi_*(\mu_E)\in N\cap gA_Vg^{-1}=1$\\$\rho_X:\pi_1(X)\to Q,\qquad\rho_Xi_*=\rho\pi_*$};
+\flow c d {\Tx{横断円板を下へ写し、局所像と核の両方に入れる}{Project a transverse disk; its image lies in both subgroups}\\\Cite{descent}};

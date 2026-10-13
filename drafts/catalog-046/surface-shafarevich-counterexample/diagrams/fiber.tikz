@@ -1,0 +1,7 @@
+\node[card] (a) {\heading{1}{指定ファイバーを保存}{Preserve the distinguished fiber}$D_*:\ \mathbb P^1+24\text{ tails},\qquad \rho(\mu_{D_*})=1$};
+\node[card,below=2.2cm of a] (b) {\heading{2}{全成分は有理、交点は節点}{Rational components and ordinary nodes}$(u,w)\mapsto(u,w^e),\quad \text{tail}\setminus\{2\text{ points}\}\text{ covers }\mathbb C^*$\\$Z=h^{-1}(c_*)_{\mathrm{red}}$};
+\flow a b {\Tx{垂直方向は非分岐；二点分岐被覆の完備化は $\mathbb P^1$}{Unramified vertically; compactify a two-point-branched cover}\\\Cite{rational}};
+\node[card,below=2cm of b] (c) {\heading{3}{近い穿孔ファイバーの無限像}{Infinite image of a nearby punctured fiber}$\rho(\pi_1(F_s))\cap N\text{ is dense in infinite }N$\\$V\searrow Z,\quad F'_s\subset V$};
+\flow b c {\Tx{三角形分割で収縮近傍；properness で全ファイバーを含める}{A triangulated retracting neighborhood; properness contains the whole fiber}\\\Cite{triangulation}};
+\node[result,below=2cm of c] (d) {\heading{4}{連結成分 $Z_0$ へ無限像が移る}{Transfer the infinite image to a component $Z_0$}$\pi_1(F'_s)\longrightarrow\pi_1(Z_0)\longrightarrow\pi_1(X)$\\$\left|\operatorname{im}\bigl(\pi_1(Z_0)\to\pi_1(X)\bigr)\right|=\infty$};
+\flow c d {\Tx{包含のホモトピー因数分解；基点の共役を除く}{Factor the inclusion up to homotopy and basepoint conjugation}\\\Cite{transfer}};

@@ -1,0 +1,25 @@
+\node[half,minimum height=2.5cm] (a) {\heading{}{四次元：largeな基本群}{Fourfold: large fundamental group}
+$A\subset X_4$,\quad $\operatorname{im}\pi_1(A)\simeq\mathbb Z$\\
+\Tx{$\widetilde X_4$に正次元コンパクト解析部分多様体なし}{No positive-dimensional compact analytic subvariety in $\widetilde X_4$}};
+\node[half,right=.8cm of a,minimum height=2.5cm] (b) {\heading{}{曲面：有理成分の曲線}{Surface: a rational nodal curve}
+$Z_0\subset X_2$,\quad $|\operatorname{im}\pi_1(Z_0)|=\infty$\\
+\Tx{各成分は $\mathbb P^1$}{Every component is $\mathbb P^1$}};
+\node[half,below=2.2cm of a,minimum height=2.4cm] (c) {\heading{}{閉じた持上げ曲面の位相}{Topology of a closed lifted surface}
+$\widehat A\simeq_{\rm diff}\mathbb R\times(S^1)^3$\\
+$H_3(\widehat A,\mathbb Z)\ne0$\\
+\Tx{$\widehat A$、したがって $\widetilde X_4$ は非Stein}{$\widehat A$, hence $\widetilde X_4$, is not Stein}};
+\node[half,below=2.2cm of b,minimum height=2.4cm] (d) {\heading{}{閉・非コンパクトな持上げ}{A closed noncompact lift}
+$W\subset\widetilde X_2$\\
+\Tx{有理曲線の局所有限な連結和}{A locally finite connected union of rational curves}\\
+$g|_W=\mathrm{constant}\quad(g\in\mathcal O(\widetilde X_2))$};
+\draw[edge] ($(a.south)+(-3,0)$)--($(c.north)+(-3,0)$);
+\node[branchreason,anchor=west] at ($(a.south)!.5!(c.north)+(-2.6,0)$) {\Tx{核 $\mathbb Z^3$ の被覆とStein曲面の次元制約}{The $\mathbb Z^3$ kernel cover and the Stein surface dimension bound}\\\Cite{stein-obstruction}};
+\draw[edge] ($(b.south)+(-3,0)$)--($(d.north)+(-3,0)$);
+\node[branchreason,anchor=west] at ($(b.south)!.5!(d.north)+(-2.6,0)$) {\Tx{無限枚被覆と最大値原理}{Infinite-sheeted covering and the maximum principle}\\\Cite{hull}};
+\node[result,below=3cm of $(c.south)!.5!(d.south)$,anchor=north] (e) {\heading{}{通常の普遍被覆は正則凸でない}{The ordinary universal cover is not holomorphically convex}
+\Tx{左：正則凸ならRemmert reductionが同型となりStein}{Left: holomorphic convexity would give a Stein space by Remmert reduction}\\
+\Tx{右：$W\subset\widehat{\{w\}}$ により一点の正則包が非コンパクト}{Right: $W\subset\widehat{\{w\}}$ makes the singleton hull noncompact}};
+\draw[edge] ($(c.south)+(-3,0)$)--($(e.north)+(-6.7,0)$);
+\node[branchreason,anchor=west] at ($(c.south)+( -2.6,-1.5)$) {\Tx{正次元の例外ファイバーがない}{No positive-dimensional exceptional fiber}\\\Cite{remmert}};
+\draw[edge] ($(d.south)+(-3,0)$)--($(e.north)+(.9,0)$);
+\node[branchreason,anchor=west] at ($(d.south)+(-2.6,-1.5)$) {\Tx{閉・非コンパクトな $W$ が正則包に入る}{The hull contains closed noncompact $W$}\\\Cite{hull}};

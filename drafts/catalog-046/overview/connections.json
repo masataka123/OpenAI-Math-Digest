@@ -1,0 +1,101 @@
+{
+  "catalogId": "046",
+  "productionVersion": "1.4",
+  "checkingScope": "2本の主結果・証明経路・参考文献を照合。相互の引用・主定理の直接使用は確認されない。全カタログ横断の網羅的調査は未実施。",
+  "omittedSections": {
+    "classificationCards": "両論文の役割は公式順共通表と1点の障害比較図で区別できるため省略。",
+    "dependencyGraph": "相互直接依存は確認されず、代わりに2障害→非正則凸性の比較図を採用。",
+    "selectionUI": "2本を共通表から選べるため省略。",
+    "detailedConnectionTable": "帰結比較2件は接続記録と曲面記事に集約し、主定理構成図へ混ぜない。"
+  },
+  "figureDecision": {
+    "purpose": "四次元側で必要なlarge＋Remmertの追加段階と、曲面側の直接的hull障害を比較する。",
+    "consideredCombinedGraph": true,
+    "adopted": "obstructions.ja/en: 並行する別構成が同じ否定結論へ至る図1点。論文間の直接依存矢印なし。",
+    "tableRole": "正式順・版・主張・方法と記事への入口",
+    "diagramRole": "非Steinから非正則凸への条件付き帰着とhullによる直接障害の差"
+  },
+  "comparisons": [
+    {
+      "papers": [
+        "large-fundamental-group-non-stein",
+        "surface-shafarevich-counterexample"
+      ],
+      "kind": "alternative",
+      "meaning": "同じsmooth-projective Shafarevich予想に対する別構成。large/no compact analyticという四次元側追加条件は曲面側にない。",
+      "sourceLocations": [
+        "fourfold Theorem1.1 p1 / §1.1 p2",
+        "surface Theorem1.1 p2 / Lemma1.2 pp4–5"
+      ],
+      "notClaimed": "同じ対象の別証明、一般化関係、片方から他方の直接依存は主張しない。"
+    }
+  ],
+  "connections": [
+    {
+      "id": "special-consequence",
+      "from": {
+        "paperId": "special-kahler-abelianity",
+        "catalogId": "057",
+        "result": "Corollary 1.4",
+        "printedPage": "3",
+        "pdfPage": 3,
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-abelianity-conjecture-for-special-compact-Kahler-manifolds-September-23-2026/paper.pdf",
+        "sha256": "dfbf9ad2335b9d20dedd8a2ae527ebb45b74155a976acc6d284dd851144e22b8"
+      },
+      "to": {
+        "paperId": "surface-shafarevich-counterexample",
+        "result": "Section 1.2 (consequences only)",
+        "printedPage": "3",
+        "pdfPage": 3,
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-surface-counterexample-to-Shafarevich-holomorphic-convexity-September-23-2026/paper.pdf"
+      },
+      "kind": "consequence",
+      "role": "specialであれば正則凸なので、この曲面はspecialではない。",
+      "hypotheses": "Xはsmooth connected projectiveなのでcompact Kähler。specialを仮定して反例の非正則凸性と矛盾。",
+      "checking": {
+        "by": "catalogue HQ",
+        "on": "2026-10-13",
+        "scope": "供給側結果記述・surface使用段落・適用条件を照合。供給側全証明の再検証なし。"
+      },
+      "articleLinks": {},
+      "unresolved": [
+        "供給論文の全証明の独立検証は対象外"
+      ]
+    },
+    {
+      "id": "semialgebraic-consequence",
+      "from": {
+        "paperId": "semialgebraic-universal-covers",
+        "catalogId": "058",
+        "result": "Corollary 8.1",
+        "printedPage": "60",
+        "pdfPage": 60,
+        "version": "September 24, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Semialgebraic-universal-covers-of-normal-projective-varieties-September-24-2026/paper.pdf",
+        "sha256": "dd294523779a9237a2ae4d5399e874bdfbfddbfe8c54a379240aeb2d2c75bf1b"
+      },
+      "to": {
+        "paperId": "surface-shafarevich-counterexample",
+        "result": "Section 1.2 (consequences only)",
+        "printedPage": "3",
+        "pdfPage": 3,
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-surface-counterexample-to-Shafarevich-holomorphic-convexity-September-23-2026/paper.pdf"
+      },
+      "kind": "consequence",
+      "role": "semialgebraic projective-open presentationがあれば正則凸なので、この普遍被覆はそのような表示を持たない。",
+      "hypotheses": "Xはconnected normal projective（smooth）。仮定する表示はcomplex-topology openかつsemialgebraic。",
+      "checking": {
+        "by": "catalogue HQ",
+        "on": "2026-10-13",
+        "scope": "供給側結果記述・surface使用段落・適用条件を照合。供給側全証明の再検証なし。"
+      },
+      "articleLinks": {},
+      "unresolved": [
+        "供給論文の全証明の独立検証は対象外"
+      ]
+    }
+  ]
+}

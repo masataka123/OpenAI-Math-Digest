@@ -1,0 +1,14 @@
+\node[card] (a) {\heading{A}{標識球面の族と無限商}{Marked spheres and an infinite quotient}$\Pi=\pi_1(\mathbb P^1\setminus A_s)\longrightarrow Q,\quad |A_s|=48,\quad |Q|=\infty$};
+\node[card,below=2.1cm of a] (b) {\heading{B}{局所群を検出して射影曲面へ}{Detect local groups and build a projective surface}$U'\longrightarrow U=Y\setminus D,\qquad X\longrightarrow\overline Y\longrightarrow Y,\quad \rho_X:\pi_1(X)\to Q$};
+\flow a b {\Tx{全境界像を有限化し、交点の群も検出する}{Make boundary images finite and detect crossing groups}\\\Cite{quotient}\quad\Cite{descent}};
+\node[half,below left=2.2cm and .2cm of b.south] (c) {\heading{C}{有理節点ファイバー}{Rational nodal fiber}$Z=h^{-1}(c_*)_{\mathrm{red}}$\\\Tx{全成分が滑らかな $\mathbb P^1$}{All components are smooth $\mathbb P^1$}};
+\node[half,below right=2.2cm and .2cm of b.south] (d) {\heading{D}{基本群像を特殊化}{Transfer the group image}$\left|\operatorname{im}\bigl(\pi_1(Z_0)\to\pi_1(X)\bigr)\right|=\infty$};
+\draw[edge] (b.south)--++(0,-.5)-|($(c.north)+(-3.2,0)$);
+\draw[edge] (b.south)--++(0,-.5)-|($(d.north)+(-3.2,0)$);
+\node[branchreason,anchor=south west,text width=5.5cm] at ($(c.north)+(-2.6,.25)$) {\Tx{垂直 meridian は自明、尾は二点分岐}{Trivial vertical meridians; two branch points per tail}\\\Cite{rational}};
+\node[branchreason,anchor=south west,text width=5.5cm] at ($(d.north)+(-2.6,.25)$) {\Tx{近傍収縮と properness で無限像を移す}{Retraction and properness transfer infinitude}\\\Cite{transfer}};
+\node[result,below=2.2cm of $(c.south)!.5!(d.south)$] (e) {\heading{E}{ここで単連結普遍被覆を取る}{Now take the simply connected universal cover}$W\subset\widetilde X,\qquad W\subseteq\widehat{\{w\}}_{\widetilde X}$\\\Tx{$W$ は閉・非コンパクトな局所有限の有理曲線鎖}{A closed noncompact locally finite string of rational curves}};
+\draw[wire] (c.south)--++(0,-.45)-|($(e.north)+(0,.6)$);
+\draw[wire] (d.south)--++(0,-.45)-|($(e.north)+(0,.6)$);
+\draw[edge] ($(e.north)+(0,.6)$)--(e.north);
+\node[reason,anchor=west,text width=5cm] at ($(e.north)+(1,1)$) {\Tx{最大値原理で一点正則包へ}{Maximum principle gives the hull}\\\Cite{hull}};

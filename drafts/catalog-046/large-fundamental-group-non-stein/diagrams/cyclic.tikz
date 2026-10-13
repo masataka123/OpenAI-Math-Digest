@@ -1,0 +1,19 @@
+\node[card] (a) {\heading{1}{六分岐点と二つのpencil}{Six branch points and two pencils}
+$g(C)=2,\quad A=\operatorname{Jac}(C)$\quad \Tx{は単純}{is simple}\\
+\Tx{各labelの二重符号被覆 $\longrightarrow V$、特別fiber $C\times C$}{Double sign covers for each label $\longrightarrow V$, fiber $C\times C$}};
+\node[card,below=2.8cm of a] (b) {\heading{2}{通常点領域の曲面写像}{A surface map in the ordinary locus}
+$Y\to A,\quad f:Y\to\mathcal S$\\
+\Tx{交換対称性の粗商を特別fiberで解消}{Resolve the coarse symmetry quotient at the distinguished fiber}};
+\flow{a}{b}{\Tx{分岐の偶奇・位数4作用・有理写像の解消}{Use branching parity, the order-four action\\and resolution of the rational map}\\\Cite{construction}};
+\node[card,below=2.2cm of b] (c) {\heading{3}{巡回上界}{Cyclic upper bound}
+$kh_i=1\ (i=1,\ldots,4)\ \Longrightarrow\ h_1=\cdots=h_4=r$\\
+$h_5=h_6=b,\quad\operatorname{im}\pi_1(Y)\subset\langle rb\rangle$};
+\flow{b}{c}{\Tx{符号0の例外meridianを殺し、共通basepointで比較}{Kill parity-zero exceptional meridians;\\compare with common basing}\\\Cite{upper}};
+\node[card,below=2.7cm of c] (d) {\heading{4}{局所被覆の終点を読む}{Read endpoints in local covers}
+\Tx{核のbuffer付き整合性 ＋ 一様双曲性}{Buffered kernel compatibility + uniform hyperbolicity}\\
+\Tx{中心：$\ell_z+\ell_w$；外側：$\ker\ell_z\cap\ker\ell_w$}{Central: $\ell_z+\ell_w$; outer: $\ker\ell_z\cap\ker\ell_w$}};
+\flow{c}{d}{\Tx{有限巡回の可能性を残す上界へ、独立の下界を追加}{Add a separate lower bound:\\cyclicity alone allows finite image}\\\Cite{models}\quad\Cite{local-criterion}};
+\node[result,below=2.8cm of d] (e) {\heading{5}{非零の全冪を検出}{Detect every nonzero power}
+$\operatorname{diam}(\operatorname{pr}_{\mathbb B}e^n)<u,\quad n\ell(e)\ne0\ (n\ne0)$\\
+$e^n\ne1\ \Longrightarrow\ \operatorname{im}f_*\simeq\mathbf Z$};
+\flow{d}{e}{\Tx{各冪が一辺；orbifoldの零ホモトピーを局所関係へ移す}{Each power is one edge;\\transfer orbifold nullhomotopies to local relations}\\\Cite{comparison}\\\Cite{nonzero-powers}};
