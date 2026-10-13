@@ -1,0 +1,18 @@
+\node[card] (a) {\heading{1}{正則分裂と有理曲線}{A splitting and a rational curve}
+$T_X=E_1\oplus E_2,\quad g:C=\mathbb P^1\to X$\par
+\Tx{射影 $P_i$ を固定。可積分性はまだ仮定しない。}{Fix the projectors $P_i$; integrability is not assumed.}};
+\node[card,below=2.0cm of a] (b) {\heading{2}{接方向を分ける写像}{Separate the tangent directions}
+$F:C\times C\to X,\quad F|_\Delta=g,\quad dF(T^{(i)})\subset F^*E_i$};
+\flow a b {\Tx{形式解を有理化し、例外曲線を縮約する。}{Rationalize the formal solution and contract exceptional curves.}\\[3pt]\Cite{box}};
+\node[card,below=2.0cm of b] (c) {\heading{3}{曲線上で入力と出力を分ける}{Separate input and target on a curve}
+$L_i=\{s_j=b\}:\quad F^*E_i|_{L_i}\simeq g^*E_i,\quad
+F^*E_j|_{L_i}\simeq\mathcal O_C\otimes E_{j,g(b)}$};
+\flow b c {\Tx{射影bracket接続を $\mathbb P^1$ ファイバーへ引き戻し輸送する。}{Pull back the projected-bracket connection and transport on $\mathbb P^1$ fibers.}\\[3pt]\Cite{transport}};
+\node[card,below=2.2cm of c] (d) {\heading{4}{二点評価でbracketを試す}{Test the bracket by two-point evaluation}
+$u(a)=v(a)=0,\qquad\operatorname{span}\{u(b)\}=E_{i,g(b)}$\par
+$\sigma_{u,v}=\Theta_j^{-1}(F^*B_i)(\Theta_i u\wedge\Theta_i v)$\par
+\Tx{自明束の定数切断：$\sigma_{u,v}(a)=0\Rightarrow\sigma_{u,v}(b)=0$。}{A constant section of a trivial bundle: $\sigma_{u,v}(a)=0\Rightarrow\sigma_{u,v}(b)=0$.}};
+\flow c d {\Tx{有理連結性をここで使い、二点評価がsubmersionとなる族を選ぶ。}{Use rational connectedness here to choose a submersive two-point family.}\\[3pt]\Cite{evaluation}};
+\node[result,below=2.0cm of d] (e) {\heading{5}{両方の指定部分束が可積分}{Both specified summands are integrable}
+$B_i(g(b))=0\ (i=1,2)\quad\Longrightarrow\quad B_1=B_2=0\text{ on }X$};
+\flow d e {\Tx{対角線で輸送は恒等。開集合上の消滅を恒等原理で延ばす。}{Transport is the identity on the diagonal; extend vanishing by the identity principle.}\\[3pt]\Cite{bracket}};

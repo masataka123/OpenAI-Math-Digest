@@ -1,0 +1,20 @@
+\node[card] (a) {\heading{1}{局所積とbox}{Local products and boxes}
+$T_X=E_1\oplus E_2$,\quad $E_1,E_2$ \Tx{は可積分}{integrable}\\
+$df(T\mathbb C^a)\subset E_1$,\quad $df(T\mathbb C^b)\subset E_2$};
+\node[card,below=2.05cm of a] (b) {\heading{2}{不定点を除き、混合境界を越える}{Remove indeterminacy and cross a mixed boundary}
+$H\longrightarrow X\quad\rightsquigarrow\quad Q\longrightarrow X$ \Tx{（正則box）}{(holomorphic box)}\\
+$\delta_j/\lambda_j\to0$,\quad $\lambda_j/\sqrt{\delta_j}\to0$};
+\flow{a}{b}{\Tx{有理型延長の曲線ファイバーを接方向で排除}{Tangencies exclude curve fibres of the meromorphic graph}\\
+\Cite{iva-input}\quad\Cite{hartogs}};
+\node[card,below=2.05cm of b] (c) {\heading{3}{指定軸を全polydisk上で保持}{Keep prescribed axes on their full polydisks}
+$\alpha:S\to X,\ \beta:T\to X\quad\rightsquigarrow\quad F:S\times T\to X$\\
+\Tx{反対側の辺も同じ定義域上の正則代表をもつ}{Opposite edges retain holomorphic representatives on the same domains}};
+\flow{b}{c}{\Tx{閉Kähler形式の面積評価で殻を作り、軸と合わせて延長}{A closed Kähler form bounds area; shells and axes continue the box}\\
+\Cite{boundary}\\\Cite{axes}};
+\node[card,below=1.85cm of c] (d) {\heading{4}{軸指定と対角線指定の経路格子}{Path grids with prescribed axes or diagonal}
+$R(s,0)=\alpha(s),\ R(0,t)=\beta(t)$\quad\Tx{または}{or}\quad $R(s,s)=\gamma(s)$};
+\flow{c}{d}{\Tx{各タイルで全軸を再利用し、任意の連続経路を処理}{Reuse entire axes at each tile to handle arbitrary continuous paths}\\\Cite{rectangles}};
+\node[result,below=1.85cm of d] (e) {\heading{5}{普通普遍被覆の適合的な積}{Compatible product of the ordinary universal cover}
+$\widetilde X\simeq \widetilde L_1\times\widetilde L_2=Y_1\times Y_2$\\
+$d\Phi(\pi^*E_i)=\operatorname{pr}_i^*T_{Y_i}$,\quad $\dim Y_i=r_i$};
+\flow{d}{e}{\Tx{順逆の芽を全経路接続し、monodromyと被覆持ち上げ}{Continue inverse germs along all paths; use monodromy and covering lifts}\\\Cite{leaves}\quad\Cite{global}};

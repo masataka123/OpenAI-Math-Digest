@@ -1,0 +1,29 @@
+\node[half] (a) {\heading{}{Kählerの経路}{The Kähler route}
+$X$ \Tx{コンパクト・連結Kähler}{compact connected Kähler}\\
+$T_X=E_1\oplus E_2$,\quad $\operatorname{rk}E_i>0$\\
+\Tx{両因子の可積分性を仮定}{Both summands assumed integrable}};
+\node[half,right=.7cm of a] (b) {\heading{}{有理連結の経路}{The rationally connected route}
+$X$ \Tx{滑らか・連結・射影・有理連結}{smooth, connected, projective, RC}\\
+$T_X=E_1\oplus E_2$,\quad $\operatorname{rk}E_i>0$\\
+\Tx{可積分性をまだ仮定しない}{Integrability not yet assumed}};
+\node[half,below=2.4cm of a] (c) {\heading{}{全経路に沿う接続}{Continuation along all paths}
+\Tx{正則boxから経路長方形へ}{Holomorphic boxes to path rectangles}\\
+$H_o:L_1\times L_2\rightleftarrows X:K_o$\\
+\Tx{互いに逆な局所芽}{Mutually inverse local germs}};
+\node[half,below=2.4cm of b] (d) {\heading{}{可積分性を得る}{Obtain integrability}
+$\Lambda^2E_i\longrightarrow T_X/E_i=E_j$\\
+\Tx{Frobenius障害が消滅}{The Frobenius obstruction vanishes}};
+\draw[edge] ($(a.south)+(-3,0)$)--($(c.north)+(-3,0)$);
+\node[branchreason,anchor=west] at ($(a.south)!0.5!(c.north)+(-2.6,0)$) {\Tx{全polydiskを保つ延長と格子}{Extension and grids retaining full polydisks}\\\Cite{continuation}};
+\draw[edge] ($(b.south)+(-3,0)$)--($(d.north)+(-3,0)$);
+\node[branchreason,anchor=west] at ($(b.south)!0.5!(d.north)+(-2.6,0)$) {\Tx{tangent box・束の移送・二点評価}{Tangent boxes, transport and two-point evaluation}\\\Cite{integrability}};
+\node[half,result,below=2.3cm of c,text width=7.5cm] (e) {\heading{}{普通普遍被覆の積}{Ordinary universal-cover product}
+$\widetilde X\simeq Y_1\times Y_2$\\
+$d\Phi(\pi^*E_i)=\operatorname{pr}_i^*T_{Y_i}$};
+\node[half,result,below=2.3cm of d,text width=7.5cm] (f) {\heading{}{$X$自身の積}{A product of $X$ itself}
+$X\simeq X_1\times X_2$\\
+$E_i=\operatorname{pr}_i^*T_{X_i}$};
+\draw[edge] ($(c.south)+(-3,0)$)--($(e.north)+(-3,0)$);
+\node[branchreason,anchor=west] at ($(c.south)!0.5!(e.north)+(-2.6,0)$) {\Tx{monodromy・基点を合わせた持ち上げ}{Monodromy and based covering lifts}\\\Cite{universal}};
+\draw[edge] ($(d.south)+(-3,0)$)--($(f.north)+(-3,0)$);
+\node[branchreason,anchor=west] at ($(d.south)!0.5!(f.north)+(-2.6,0)$) {\Tx{有理連結性と可積分な因子から積へ}{RC and an integrable factor give a product}\\\Cite{horing-product}\\\Cite{product}};

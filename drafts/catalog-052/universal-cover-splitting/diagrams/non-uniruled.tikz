@@ -1,0 +1,9 @@
+\node[card] (a) {\heading{1}{非単線織の射影多様体}{A non-uniruled projective manifold}
+$X$ \Tx{は滑らか・連結・射影、}{smooth, connected, projective;}\quad $T_X=E_1\oplus E_2$\\
+\Tx{正階数の正則部分束への指定分裂}{Specified holomorphic positive-rank subbundles}};
+\node[card,below=1.8cm of a] (b) {\heading{2}{二つの可積分な分布}{Two integrable distributions}
+$[E_i,E_i]\subset E_i\quad(i=1,2)$};
+\flow{a}{b}{\Tx{非単線織性からLie括弧の閉性を得る}{Non-uniruledness supplies closure under the Lie bracket}\\\Cite{hor-input}};
+\node[result,below=1.8cm of b] (c) {\heading{3}{適合的な普遍被覆の積}{Compatible universal-cover product}
+$\widetilde X\simeq Y_1\times Y_2$,\quad $d\Phi(\pi^*E_i)=\operatorname{pr}_i^*T_{Y_i}$};
+\flow{b}{c}{\Tx{射影性からKähler性を得て、全経路接続を適用}{Projectivity supplies Kählerness; apply all-path continuation}\\\Cite{main}\quad\Cite{non-uniruled}};

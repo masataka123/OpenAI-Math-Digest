@@ -1,0 +1,15 @@
+\node[card] (a) {\heading{1}{一般RCファイバーを選ぶ}{Choose a general RC quotient fiber}
+$X\ \text{uniruled compact K\"ahler},\quad T_X=V_1\oplus V_2$\par
+$Z\ \text{\Tx{滑らか・連結・Kähler・有理連結}{smooth, connected, K\"ahler, RC}}$};
+\node[card,below=2.5cm of a] (b) {\heading{2}{射影的なファイバーで接束を分ける}{Split the tangent bundle of a projective fiber}
+$Z\ \text{\Tx{射影的}{projective}},\qquad T_Z=W_1\oplus W_2,\quad W_i=T_Z\cap V_i|_Z$};
+\flow a b {\Tx{RC商の存在、Campanaの射影性、接束を保存する射影を使う。}{Use the RC quotient, recalled Campana projectivity, and projectors preserving $T_Z$.}\\[3pt]\Cite{horing-quotient}\\[3pt]\Cite{horing-projective}\\[3pt]\Cite{horing-preserve}};
+\node[card,below=2.0cm of b] (c) {\heading{3}{一般ファイバー上の可積分性}{Integrability on the general fiber}
+$W_1,W_2\ \text{\Tx{ともに可積分}{both integrable}}$\par
+\Tx{両rankが正なら主定理。一方が零なら $0,T_Z$。}{Use the main theorem for positive ranks; otherwise the summands are $0,T_Z$.}};
+\flow b c {\Tx{主定理の次元・正rankの仮定を満たす場合だけ適用する。}{Apply the main theorem precisely when its dimension and positive-rank hypotheses hold.}\\[3pt]\Cite{main}};
+\node[result,below=2.4cm of c] (d) {\heading{4}{二つのfibrationとrank 2の三分岐}{Two fibrations and the rank-two trichotomy}
+$\varphi_i:X\dashrightarrow Y_i,\quad T_{F_i}=W_i|_{F_i};\quad W_i=0\Rightarrow\varphi_i=\mathrm{id}$\par
+$\operatorname{rk}V_1=2:\quad\operatorname{rk}W_1=2,1,0$\par
+\Tx{analytic fiber bundle / 有理曲線の一般ファイバー / $T_Z\subset V_2|_Z$。}{Analytic fiber bundle / rational-curve general fiber / $T_Z\subset V_2|_Z$.}};
+\flow c d {\Tx{構造定理の可積分性の前提を満たす。零rankには恒等写像。}{Meet the integrability premise of the structure theorems; use identity for zero rank.}\\[3pt]\Cite{horing-structure}\\[3pt]\Cite{horing-identity}};

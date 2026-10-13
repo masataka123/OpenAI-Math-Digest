@@ -1,0 +1,320 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "author-key",
+  "catalogId": "052",
+  "sources": {
+    "P": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "pagination": "same"
+    },
+    "Hor07": {
+      "recordFile": "sources.json",
+      "recordId": "horing07",
+      "pagination": "same",
+      "guideRole": {
+        "ja": "有理連結多様体で可積分な指定分裂から適合する積を得る",
+        "en": "Compatible product from an integrable specified splitting on a rationally connected manifold"
+      }
+    },
+    "Hor08": {
+      "recordFile": "sources.json",
+      "recordId": "horing08",
+      "guideRole": {
+        "ja": "RC商の一般ファイバー、その射影性と接束分裂、almost-holomorphic fibrationとrank 2の三分岐",
+        "en": "General RC quotient fibers, their projectivity and tangent splitting, almost-holomorphic fibrations and the rank-two trichotomy"
+      }
+    }
+  },
+  "citations": {
+    "main": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "product": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Corollary 1.2",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "quotient": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Corollary 5.1",
+          "printed": "12–13",
+          "pdf": "12–13"
+        }
+      ]
+    },
+    "box": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 2.1",
+          "printed": "3",
+          "pdf": "3"
+        }
+      ]
+    },
+    "formal": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 2.2; equation (2.2)",
+          "printed": "4–5",
+          "pdf": "4–5"
+        }
+      ]
+    },
+    "rational": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 2.3; equations (2.3)–(2.4)",
+          "printed": "6–7",
+          "pdf": "6–7"
+        }
+      ]
+    },
+    "extension": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 2.5; Proposition 2.1 (proof)",
+          "printed": "8–9",
+          "pdf": "8–9"
+        }
+      ]
+    },
+    "transport": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 3.1; equation (3.2)",
+          "printed": "10",
+          "pdf": "10"
+        }
+      ]
+    },
+    "evaluation": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 4.1",
+          "printed": "11",
+          "pdf": "11"
+        }
+      ]
+    },
+    "bracket": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.1 (proof)",
+          "printed": "11",
+          "pdf": "11"
+        }
+      ]
+    },
+    "surface": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma A.1",
+          "printed": "13–14",
+          "pdf": "13–14"
+        }
+      ]
+    },
+    "family": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Appendix B; Lemma 4.1 (proof)",
+          "printed": "14–15",
+          "pdf": "14–15"
+        }
+      ]
+    },
+    "g3": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Remark 2.4",
+          "printed": "8",
+          "pdf": "8"
+        }
+      ]
+    },
+    "horing-product": {
+      "source": "Hor07",
+      "locations": [
+        {
+          "result": "Theorem 1.4",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "horing-structure": {
+      "source": "Hor08",
+      "locations": [
+        {
+          "result": "Theorems 1.3–1.4",
+          "printed": "1068",
+          "pdf": "3"
+        }
+      ]
+    },
+    "horing-quotient": {
+      "source": "Hor08",
+      "locations": [
+        {
+          "result": "Definition 2.9; Theorem 2.10",
+          "printed": "1070",
+          "pdf": "5"
+        }
+      ]
+    },
+    "horing-projective": {
+      "source": "Hor08",
+      "locations": [
+        {
+          "result": "remark after Definition 2.8",
+          "printed": "1070",
+          "pdf": "5"
+        }
+      ]
+    },
+    "horing-preserve": {
+      "source": "Hor08",
+      "locations": [
+        {
+          "result": "Proposition 3.16",
+          "printed": "1073",
+          "pdf": "8"
+        }
+      ]
+    },
+    "horing-identity": {
+      "source": "Hor08",
+      "locations": [
+        {
+          "result": "Theorem 1.3 (proof)",
+          "printed": "1074",
+          "pdf": "9"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ],
+  "articleGuides": {
+    ".": {
+      "selfSource": "P",
+      "externalSources": [
+        "Hor07",
+        "Hor08"
+      ],
+      "proofTargets": [
+        "main",
+        "box",
+        "product",
+        "quotient"
+      ],
+      "mainResults": [
+        "main",
+        "product",
+        "quotient"
+      ],
+      "statements": {
+        "main": "theorem-1-1",
+        "box": "proposition-2-1",
+        "product": "corollary-1-2",
+        "quotient": "corollary-5-1"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "main",
+          "conclusion": "Both specified summands are integrable",
+          "anchor": "proof-overview-step-3"
+        },
+        {
+          "result": "product",
+          "conclusion": "Compatible isomorphism X≅X1×X2 with both factors smooth projective",
+          "anchor": "proof-2-step-1"
+        },
+        {
+          "result": "quotient",
+          "conclusion": "Both almost-holomorphic fibrations and tangent identities; identity when Wi=0",
+          "anchor": "proof-3-step-2"
+        },
+        {
+          "result": "quotient",
+          "conclusion": "Rank-two trichotomy: rank W1=2,1,0",
+          "anchor": "proof-3-step-3"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "box",
+          "purpose": {
+            "ja": "全体の接する写像を作る命題と、その3段階の構成。",
+            "en": "The tangent-box statement and its three-stage construction."
+          }
+        },
+        {
+          "citation": "rational",
+          "purpose": {
+            "ja": "形式切断の個数から有理式を復元する核心。",
+            "en": "The section count that reconstructs rational coordinate functions."
+          }
+        },
+        {
+          "citation": "transport",
+          "purpose": {
+            "ja": "可積分性を仮定しない相対接続と対角線からの正規化。",
+            "en": "Relative connections without an integrability hypothesis and diagonal normalization."
+          }
+        },
+        {
+          "citation": "bracket",
+          "purpose": {
+            "ja": "定数切断と二点評価を組み合わせて両bracketを消す。",
+            "en": "Constant sections and two-point evaluation kill both bracket tensors."
+          }
+        },
+        {
+          "citation": "product",
+          "purpose": {
+            "ja": "積分解へ進む外部入力と因子の射影性。",
+            "en": "The external product input and projectivity of the factors."
+          }
+        },
+        {
+          "citation": "quotient",
+          "purpose": {
+            "ja": "RC商の一般ファイバー上で主定理を再適用する。",
+            "en": "Reapply the main theorem to general RC quotient fibers."
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+\node[card] (a) {\heading{1}{形式的Cauchy問題}{A formal Cauchy problem}
+$u=s,\ v=t-s:\quad \widehat F(u,0)=g(u),\quad
+\partial_v\widehat F=P_2(\widehat F)\partial_u\widehat F$};
+\node[card,below=2.0cm of a] (b) {\heading{2}{一意な形式解を貼り合わせる}{Glue the unique formal solution}
+$\widehat F=\sum_{k\ge0}f_k(u)v^k,\qquad f_1=P_2(g)g'$\par
+\Tx{係数の再帰。一意性で座標変換に適合。収束は未使用。}{Recursion determines coefficients; uniqueness handles changes of charts.}};
+\flow a b {\Tx{射影の冪等性により形式方程式と二つの接条件が同値。}{Idempotence makes the formal equation equivalent to both tangencies.}\\[3pt]\Cite{formal}};
+\node[card,below=2.1cm of b] (c) {\heading{3}{切断数から有理関数を復元する}{Reconstruct rational coordinate ratios}
+$h^0(\Delta,M_m)\le m^2+O(m+1)<2(m+1)^2$\par
+$AS_0+BS_\nu=0\quad\Rightarrow\quad S_\nu/S_0=-A/B$};
+\flow b c {\Tx{$I/I^2=\mathcal O_{\mathbb P^1}(-2)$ のfiltrationで上界を得る。}{The filtration with $I/I^2=\mathcal O_{\mathbb P^1}(-2)$ bounds formal sections.}\\[3pt]\Cite{rational}};
+\node[card,below=2.0cm of c] (d) {\heading{4}{対角線の一部で正則化し、点blowupで解消}{Cancel locally, then resolve by point blowups}
+$R:S\dashrightarrow X,\qquad \mu:S'\to S,\qquad F':S'\to X$\par
+$(P_1dF')\wedge d(s\circ\mu)=0,\quad(P_2dF')\wedge d(t\circ\mu)=0$};
+\flow c d {\Tx{分子・分母の共通冪を消去。base idealのcolengthが減少する。}{Cancel common normal powers; decreasing base-ideal colength resolves the map.}\\[3pt]\Cite{rational}\\[3pt]\Cite{surface}};
+\node[result,below=2.2cm of d] (e) {\heading{5}{例外曲線を潰し正則写像を降下させる}{Contract exceptional curves and descend}
+$P_1dF'|_{T_H}=P_2dF'|_{T_H}=0\quad\Rightarrow\quad dF'|_{T_H}=0$\par
+$F:S\to X,\qquad F|_\Delta=g,\qquad dF(T^{(i)})\subset F^*E_i$};
+\flow d e {\Tx{例外因子の消滅次数を消去し、連結ファイバー上で定数とする。}{Cancel exceptional vanishing orders; the map is constant on connected fibers.}\\[3pt]\Cite{extension}};

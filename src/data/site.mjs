@@ -4,6 +4,7 @@ import inventory037 from '../../coordination/catalog-037/inventory.json' with { 
 import inventory038 from '../../coordination/catalog-038/inventory.json' with { type: 'json' };
 import inventory042 from '../../coordination/catalog-042/inventory.json' with { type: 'json' };
 import inventory051 from '../../coordination/catalog-051/inventory.json' with { type: 'json' };
+import inventory052 from '../../coordination/catalog-052/inventory.json' with { type: 'json' };
 import inventory057 from '../../coordination/catalog-057/inventory.json' with { type: 'json' };
 import inventory063 from '../../coordination/catalog-063/inventory.json' with { type: 'json' };
 import inventory068 from '../../coordination/catalog-068/inventory.json' with { type: 'json' };
@@ -27,7 +28,7 @@ const fieldTranslations = [
     "id": "algebraic-complex-geometry",
     "ja": "代数幾何学・複素幾何学",
     "catalogIds": [
-      "033", "034", "037", "038", "042", "051", "057", "063", "068"
+      "033", "034", "037", "038", "042", "051", "052", "057", "063", "068"
     ]
   },
   {
@@ -152,6 +153,10 @@ export const papers = [...inventory033.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '051', sourceCommit: inventory051.sourceCommit,
  title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
  pages: entry.pdfPages, order: entry.order, featured: true,
+})), ...inventory052.manuscripts.map(entry => ({
+ id: entry.paperId, catalogId: '052', sourceCommit: inventory052.sourceCommit,
+ title: entry.title, path: entry.sourceUrl.split('/preprints/')[1], version: entry.version,
+ pages: entry.pdfPages, order: entry.order, featured: true,
 })), ...inventory057.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '057', sourceCommit: inventory057.sourceCommit,
  title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
@@ -209,6 +214,13 @@ export const catalogs = [{
   description: text('円板変分から標準束の豊富性へ至る証明と、大域生成・有限被覆の二つの系を読む。', 'Follow disc variations to canonical ampleness and its consequences for global generation and finite covers.'),
   paperIds: inventory051.manuscripts.map(p => p.paperId),
   overviewSectionIds: ['papers', 'connections', 'sources'],
+}, {
+  id: '052', sourceCommit: inventory052.sourceCommit, mode: 'multi',
+  title: text(inventory052.titleJa, inventory052.overviewTitle),
+  contentsTitle: inventory052.contentsTitle,
+  description: text('指定された接束分裂の可積分性と、普遍被覆または多様体自身の積分解へ至る2篇の証明を読む。', 'Follow two proofs separating integrability of a prescribed tangent splitting from product decompositions of the universal cover or the manifold itself.'),
+  paperIds: inventory052.manuscripts.map(p => p.paperId),
+  overviewSectionIds: ['papers', 'diagram-sources', 'connections', 'sources'],
 }, {
   id: '057', sourceCommit: inventory057.sourceCommit, mode: 'multi',
   title: text(inventory057.titleJa, inventory057.overviewTitle),

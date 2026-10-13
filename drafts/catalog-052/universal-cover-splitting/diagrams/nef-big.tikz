@@ -1,0 +1,18 @@
+\node[card] (a) {\heading{1}{標準モデル上の正則部分へ}{The regular canonical locus}
+$K_X$ \Tx{はnefかつbig}{nef and big},\quad $f:X\to Z$,\quad $K_X=f^*K_Z$\\
+$X^\circ=f^{-1}(Z_{\mathrm{reg}})$};
+\node[card,below=1.9cm of a] (b) {\heading{2}{近似計量の誤差を制御}{Control the error of approximate metrics}
+$\operatorname{Ric}(\omega_\varepsilon)=-\omega_\varepsilon+\varepsilon\omega_A$,\quad
+$g_\varepsilon\to g\text{ on }X^\circ$};
+\flow{a}{b}{\Tx{crepant解消上で近似計量と局所的な滑らかな収束を使う}{Use approximation and local smooth convergence on a crepant resolution}\\\Cite{song-input}\quad\Cite{metric}};
+\node[card,below=1.9cm of b] (c) {\heading{3}{第二基本形式の消滅}{Vanishing second fundamental forms}
+$0\le\displaystyle\int_X\sum_j|B_{j,\varepsilon}|^2dV_\varepsilon\le
+\frac{\varepsilon}{(n-1)!}\int_X\omega_A\wedge\omega_\varepsilon^{n-1}=O(\varepsilon)$\\
+$\nabla_g(E_i|_{X^\circ})\subset E_i|_{X^\circ}$};
+\flow{b}{c}{\Tx{二つの第一Chern類を加えて曲率の次数を相殺}{Add the first Chern degrees to cancel the curvature terms}\\\Cite{parallel}};
+\node[card,below=1.8cm of c] (d) {\heading{4}{稠密開集合から全体の可積分性へ}{From a dense open set to global integrability}
+$\Lambda^2E_i\longrightarrow T_X/E_i,\quad u\wedge v\longmapsto[u,v]\bmod E_i=0$};
+\flow{c}{d}{\Tx{torsion-free性と正則なFrobenius障害の一致の定理}{Use torsion-freeness and the identity theorem for the holomorphic obstruction}\\\Cite{parallel}};
+\node[result,below=1.8cm of d] (e) {\heading{5}{普通普遍被覆の積へ}{Pass to the ordinary universal-cover product}
+$\widetilde X\simeq Y_1\times Y_2$,\quad $d\Phi(\pi^*E_i)=\operatorname{pr}_i^*T_{Y_i}$};
+\flow{d}{e}{\Tx{コンパクトKähler性と可積分性を主定理へ入力}{Feed compact Kählerness and integrability into the main theorem}\\\Cite{main}\quad\Cite{nef-proof}};

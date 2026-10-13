@@ -1,0 +1,876 @@
+The structure of uniruled manifolds with split
+tangent bundle
+
+  メタデータ     言語: English
+            出版者: Osaka University and Osaka City University,
+            Departments of Mathematics
+            公開日: 2024-09-09
+            キーワード:
+            作成者: Horing, Andreas
+            メールアドレス:
+            所属: Universite Paris 6 Institut de Mathematiques de
+            Jussieu Equipe de Topologie et Geometrie Algebrique
+    URL     https://ocu-omu.repo.nii.ac.jp/records/2010198
+Höring, A.
+Osaka J. Math.
+45 (2008), 1067–1084
+
+
+
+             THE STRUCTURE OF UNIRULED MANIFOLDS
+                   WITH SPLIT TANGENT BUNDLE
+
+                                         A NDREAS HÖRING
+
+                                   (Received October 30, 2007)
+
+                                            Abstract
+        In this paper we show that a uniruled manifold with a split tangent bundle
+    admits almost holomorphic fibrations that are related to the splitting. We analyse
+    these fibrations in detail in several special cases. This yields new results about the
+    integrability of the direct factors and the universal covering of the manifold.
+
+                                               Contents
+    1.   Introduction .........................................................................    1067
+    2.   Notation and basic results .......................................................        1070
+    3.   The rationally connected quotient map .......................................             1073
+    4.   The projective case ...............................................................       1076
+    5.   An application to the universal covering .....................................            1079
+    References .................................................................................   1083
+
+    1.   Introduction
+
+     A compact Kähler manifold X has a split tangent bundle if TX = V1  V2 , where V1
+and V2 are subbundles of TX . Initiated by Beauville’s conjecture 1.6 on the universal
+covering of these manifolds [2], these manifolds have been studied by several authors
+during the last years ([12], [9], [4], [17]). One of the main themes of these papers
+is that uniruled manifolds with split tangent bundle play a distinguished role. For ex-
+ample if X is projective and not uniruled, then both V1 and V2 are integrable [17,
+Theorem 1.3], while for uniruled manifolds it is easy to construct examples where this
+is not the case.
+     The goal of this paper is to develop a structure theory for uniruled Kähler man-
+ifolds of arbitrary dimension. The main tool in this study will be the rationally con-
+nected quotient map (cf. Theorem 2.10 for the definition and properties). We will ob-
+serve in Proposition 3.16 that if Z is a general fibre of the rationally connected quotient
+map of X , then
+
+                                  TZ = (TZ \ V1 j Z )  (TZ \ V2 j Z ).
+
+
+   2000 Mathematics Subject Classification. Primary 14F10; Secondary 14D06, 14E30, 14J40,
+32Q30, 57R30.
+1068                                         A. H ÖRING
+
+In particular Z is a rationally connected manifold with a (maybe trivial) splitting of the
+tangent bundle. This “ungeneric position property” (cf. [16] for the terminology) puts
+us in a much better situation since we have the following description for rationally
+connected manifolds with split tangent bundle.
+
+    Theorem 1.1 ([17, Theorem 1.4]). Let X be a rationally connected projective
+manifold such that TX = V1  V2 . If V1 or V2 is integrable, then there exists an iso-
+morphism X ' X 1  X 2 such that V j = pX j TX j for j = 1, 2. In particular both V1 and
+V2 are integrable.
+
+    So far there are no examples of rationally connected manifolds with split tangent
+bundle where the direct factors are not integrable. In fact I am fairly optimistic that
+such examples do not exist.
+
+    Conjecture 1.2. Let X be a projective manifold with split tangent bundle TX =
+V1  V2 . If X is rationally connected, V1 or V2 is integrable.
+
+     Using Theorem 1.1 we can show the existence of a meromorphic fibration on X
+that is related to the decomposition of the tangent bundle. More precisely we have the
+
+     Theorem 1.3. Let X be a uniruled compact Kähler manifold such that TX = V1 
+V2 . Let Z be a general fibre of the rationally connected quotient map, and suppose
+that TZ \ V1 j Z or TZ \ V2 j Z is integrable. Then for i = 1, 2 there exists an almost
+holomorphic fibration (cf. Definition 2.9) i : X        99K
+                                                    Yi such that the general fibre Fi is
+rationally connected and
+
+                                  TFi = (TZ \ Vi j Z )j Fi  Vi j Fi .
+
+   If we specify to the case where one of the direct factors has rank 2 we obtain a
+more precise statement1 .
+
+      Theorem 1.4. Let X be a uniruled compact Kähler manifold such that TX = V1 
+V2 and rk V1 = 2. Let Z be a general fibre of the rationally connected quotient map,
+and suppose that TZ \ V1 j Z or TZ \ V2 j Z is integrable. Then there are three possibili-
+ties:
+1) TZ \ V1 j Z = V1 j Z . Then the manifold X admits the structure of an analytic fibre
+bundle X ! Y such that the general fibre is rationally connected and TX =Y = V1 .
+2) TZ \ V1 j Z is a line bundle. Then there exists an equidimensional map  : X ! Y
+such that the general  -fibre F is a rational curve and TF  V1 j F .
+3) TZ  V2 j Z .
+
+  1 The situation where one of the direct factors has rank 1 is fully understood, cf. [4].
+                    U NIRULED M ANIFOLDS WITH S PLIT TANGENT B UNDLE                     1069
+
+      This result is an analogue to the classification of compact Kähler surfaces: such
+a surface S is rationally connected or admits a fibration S ! C with general fibre a
+rational curve or is not covered by rational curves.
+      In the projective case, we then give two applications of this structure theory: the
+first application is to try to “contract the obstruction to being integrable”, that is to
+construct a fibration X ! Y such that Y and the general fibre F have a split tangent
+bundle with integrable direct factors. We attain this goal for a splitting in vector bun-
+dles of small rank by showing a special case of Conjecture 1.2 (cf. Lemma 4.21) and
+combining it with the structure Theorem 1.4.
+                                                                                   L
+     Theorem 1.5. Let X be a uniruled projective manifold such that TX = kj =1 V j ,
+where for all j 2 f1, ::: , k g we have rk V j  2. Let Z be a general fibre of the rationally
+connected quotient map. If TZ \ V j j Z 6 = 0, the direct factor V j is integrable.
+     Furthermore the rationally connected quotient map can be realised as a flat fibra-
+tion  : X ! Y on a projective manifold Y such that
+
+                                            k
+                                            M
+                                     TY =          T  (V j ).
+                                            j =1
+
+
+In particular T  (V j ) is an integrable subbundle of TY for every j 2 f1, ::: , k g (cf. No-
+tation 2.13 for the precise definition of T  (V j )).
+
+     As a second application we go back to the origin of our study of manifolds with
+split tangent bundle which is the
+
+    Conjecture 1.6 (A. Beauville). Let X be a compact Kähler manifold such that
+TX = V1  V2 , where V1 and V2 are vector bundles. Let  : X̃ ! X be the univer-
+sal covering of X . Then X̃ ' X 1  X 2 , where pX j TX j '  V j . If moreover V j is
+integrable, then there exists an automorphism of X̃ such that we have an identity of
+subbundles of the tangent bundle  V j = pX j TX j .
+
+    This will be done in Section 5 where we obtain the
+
+    Theorem 1.7. Let X be a uniruled projective manifold such that TX = V1  V2
+and rk V1 = 2. Let Z be a general fibre of the rationally connected quotient map, then
+one of the following holds.
+1) TZ \ V1 j Z 6 = 0. If V1 and V2 are integrable, Conjecture 1.6 holds.
+2) TZ \ V1 j Z = 0. Then det V1 is pseudoeffective and V2 is integrable.
+
+    This result generalises and considerably simplifies the proof of [17, Theorem 1.5].
+1070                                         A. H ÖRING
+
+       2.   Notation and basic results
+
+     We work over the complex field C. For standard definitions in complex alge-
+braic geometry we refer to [15] or [19], for positivity notions of vector bundles we
+follow the definitions from [25]. Manifolds and varieties are always supposed to be
+irreducible.
+     A fibration is a proper surjective morphism : X ! Y with connected fibres from a
+complex manifold onto a normal complex variety Y . The  -smooth locus is the largest
+Zariski open subset Y   Y such that for every y 2 Y  , the fibre  1 (y) is a smooth
+variety of dimension dim X dim Y . The  -singular locus is its complement. A fibre
+is always a fibre in the scheme-theoretic sense, a set-theoretic fibre is the reduction of
+the fibre.
+     Let us recall some basic definitions from the theory of rational curves.
+
+    D EFINITION 2.8. Let X be a compact Kähler variety. A rational curve is a non-
+constant morphism f : P1 ! X .
+    The manifold is uniruled if through a general point of X there exists a rational
+curve. It is rationally connected if for two general points there exists a rational curve
+through these two points.
+
+   R EMARK . By a theorem of Campana [6], a rationally connected compact Kähler
+manifold is projective, in particular Theorem 1.1 applies in the Kähler situation.
+
+     D EFINITION 2.9. A meromorphic map  : X               99K
+                                                         Y from a compact Kähler man-
+ifold to a normal Kähler variety is almost holomorphic if there exist non-empty open
+subsets X   X and Y   Y such that  j X  : X  ! Y  is a fibration. In particular for
+y 2 Y a general point, the fibre  1 (y) exists in the usual sense and is compact.
+
+    The importance of almost holomorphic maps is due to the fact that every compact
+Kähler manifold admits such a fibration that separates the rationally connected part and
+the non-uniruled part: the rationally connected quotient map [21] or MRC-fibration
+[23] or rational quotient map [10]:
+
+
+                                                                                              99K
+    Theorem 2.10 ([22, Theorem 5.4], [8, Theorem 1.1], [13]).2 Let X be a com-
+pact Kähler manifold. Then there exists an almost holomorphic fibration  : X              Y
+onto a normal compact Kähler variety Y such that the general fibre is rationally con-
+nected and the variety Y is not uniruled. This map is unique up to meromorphic equiv-
+alence of fibrations (cf. [7, 1.1.2] for the definition), and is called rationally connected
+quotient map.
+
+
+   2 The statement in [22] is in the algebraic setting, but the same proof goes through in the compact
+
+Kähler category: the main technical tool [8, Theorem 1.1] holds in this larger generality.
+                     U NIRULED M ANIFOLDS WITH S PLIT TANGENT B UNDLE                                          1071
+
+
+
+     99K
+     The rationally connected quotient map has the following universal property: let
+  : X     Z be an almost holomorphic fibration such that the general fibre is rationally
+connected. Then  factors through , i.e. there exists an almost holomorphic fibration
+     99K
+ : Z Y such that  =  Æ .
+     2.1. Foliation theory. We recall some basic statements about holomorphic foli-
+ations, for more details we refer to [5, 16]. Let X be a compact Kähler manifold. A
+subbundle V  TX is integrable if it is closed under the Lie bracket. We recall that
+the Lie bracket
+
+                                       [ . , . ] : V  V ! TX
+
+is a bilinear antisymmetric mapping that is not O X -linear but induces an O X -linear map
+V2
+    V ! TX =V that is zero if and only if V is integrable. In particular
+                                                                      !!
+                                                     2
+                                                     ^
+                             H   0
+                                     X , Hom             V , TX = V        =0
+
+
+implies that V is integrable. In general we will show this vanishing property using a
+dominating family of subvarieties (Z s )s 2 S of X (i.e. through a general point of X passes
+at least one member of the family) such that a general member of the family satisfies
+                                       !        !                              !          !        !
+                      2
+                      ^                                               2
+                                                                      ^
+     H 0 Z s , Hom        V , TX = V                = H 0 Zs ,             V        (TX =V )            = 0.
+                                           Zs                                                  Zs
+
+Since an antiample vector bundle does not have any global sections, we will use this
+frequently in the following form.
+
+     Lemma 2.11. Let X be a compact Kähler manifold, and let V  TX be a sub-
+bundle. Let (Z s )s 2 S be a dominating family of X such that for a general member Z s
+                                  V
+of the family, the vector bundle 2 V j Z s is ample and (TX =V )j Z s is trivial. Then V is
+integrable.
+
+     By the Frobenius theorem an integrable subbundle V of TX induces a foliation on
+X , i.e. for every x 2 X there exists an analytic neighbourhood U and a submersion
+U ! W such that TU =W = V jU . These submersions are called the distinguished maps
+of the foliation and the fibres are the so-called plaques. The foliation induces an equiv-
+alence relation on X , two points being equivalent if and only if they can be connected
+by chains of smooth (open) curves Ci such that TCi  V jCi . An equivalence class is
+called a leaf of the foliation. A subset of X is V -saturated if it is a union of leaves.
+     The next proposition, which is a corollary of the global stability theorem for foli-
+ations on Kähler manifold (cf. [27] for a short proof) gives a first idea why rationally
+connected manifolds are so useful in this context.
+1072                                     A. H ÖRING
+
+    Proposition 2.12. Let X be a compact Kähler manifold such that TX = V1  V2 .
+Suppose that V1  TX is integrable and that one leaf is compact and rationally con-
+nected. Then X has the structure of an analytic fibre bundle X ! Y over a compact
+Kähler manifold Y such that TX =Y = V1 and the fibres are rationally connected.
+
+     Proof. By [17, Corollary 2.11] there exists a submersion X ! Y onto a compact
+Kähler manifold Y such that TX =Y = V1 and the fibres are rationally connected. The
+arguments of [17, Lemma 3.19] (which do not use the projectiveness hypothesis made
+there) then establish that the submersion is locally trivial.
+
+     2.2. Pushing forward subsheaves of the tangent bundle. For the applications
+in the projective case it will be crucial to track the behaviour of the splitting under
+certain morphisms. Let us first give a precise definition of the push forward of a sub-
+sheaf of the tangent bundle, this definition just formalizes the idea of looking at the
+natural tangent map.
+
+     N OTATION 2.13. Let  : X ! Y be a fibration between quasiprojective mani-
+folds. The canonical map   Y !  X induces a a generically surjective sheaf homo-
+morphism T  : TX !   TY . In particular for S  TX a quasicoherent subsheaf, we
+have an inclusion T  (S)    TY . Since  is proper, by Grauert’s theorem the push-
+forward  (T  (S))  TY is a quasicoherent subsheaf.
+     For the convenience of the reader, we will denote by
+
+                                        T  (S)  TY
+
+the saturation of  (T  (S)) in TY [26, III, 1.6]. With this notation T  (S) is a reflexive
+subsheaf of TY .
+
+     Let X be a projective manifold such that TX = V1  V2 . Suppose that X is the
+blow-up : X ! X 0 of a projective manifold X 0 along a smooth submanifold Z . Since
+in the complement of the exceptional locus we have an isomorphism   X 0 '  X , we
+can consider the reflexive sheaves T (Vi ) as subsheaves of TX 0 and it is clear that they
+induce a splitting in the complement of Z . Since Z has codimension at least 2, the
+splitting extends to X 0 , that is
+
+                                 TX 0 = T (V1 )  T (V2 ).
+
+Furthermore we have an easy lemma relating the universal coverings of X and X 0 .
+
+    Lemma 2.14. Let X be a projective manifold such that TX = V1  V2 . Suppose
+that X is the blow-up  : X ! X 0 of a projective manifold X 0 along a smooth sub-
+manifold. Then we have a splitting TX 0 = T (V1 )  T (V2 ). If T (V1 ) and T (V2 )
+are integrable and Conjecture 1.6 holds for X 0 , then the conjecture holds for X .
+                    U NIRULED M ANIFOLDS WITH S PLIT TANGENT B UNDLE                       1073
+
+    Proof. The proof is exactly the same as in [17, Proposition 4.24] and we refrain
+from repeating the lengthy argument.
+
+    Lemma 2.15. Let X be a projective manifold such that TX = V1  V2 . Let  : X !
+Y be a fibration onto a projective manifold Y that makes X into a P1 - or conic bundle.
+Then for j = 1, 2, the reflexive sheaf T  (V j )  TY is a subbundle of TY and
+
+                                   TY = T  (V1 )  T  (V2 ).
+
+     Proof. If  is a P1 -bundle the morphism is smooth, so [17, Lemma 4.22] applies.
+If  is a conic bundle it is well-known that the set D  Y such that for y 2 D, the fibre
+ 1 (y) is not reduced, has codimension at least 2 [28, Proposition 1.8.5]. Therefore
+[17, Lemma 4.22] applies again.
+
+    3.    The rationally connected quotient map
+
+     In this section we show Proposition 3.16 which is the crucial observation of this
+paper. The moral idea behind the statement is that the rationally connected quotient
+map reflects the existence of an ‘positive’ subsheaf S of the tangent bundle TX . Propo-
+sition 3.16 can then be seen as a translation of the basic fact that a direct sum of
+sheaves is ‘positive’ (e.g. ample) if and only if both direct factors are ‘positive’ (e.g. am-
+ple). Once we have established this technical statement, we can use Theorem 1.1 to
+show Theorem 1.3 and with some extra effort Theorem 1.4.
+
+    Proposition 3.16. Let X be a compact Kähler manifold such that TX = V1  V2 .
+Let X    99K
+          Y be an almost holomorphic fibration such that the general fibre is rationally
+connected. Then the general fibre Z satisfies
+
+                              TZ = (TZ \ V1 j Z )  (TZ \ V2 j Z ).
+
+    Proof. The general fibre has a trivial normal bundle N Z = X and is rationally con-
+nected, so
+                                                                      
+                   Hom(TZ , N Z = X ) ' H 0 Z ,  Z     O
+                                                         Z
+                                                           dim X dim Z
+                                                                       = 0.
+
+Fix now an arbitrary x 2 Z , and let t be an element of the vector space TZ , x . The
+decomposition TX , x = V1, x  V2, x induces a decomposition t = v1 + v2 with v j 2 V j , x .
+Furthermore for j = 1, 2 we have a decomposition v j = t j + n j with t j 2 TZ , x and
+n j 2 N Z = X , x . Since Hom(TZ , N Z = X ) = 0, the composition of the maps t 7! v j 7! n j is
+zero. Therefore n j = 0 for j = 1, 2, so we have t = t1 + t2 . Moreover by construction
+t j 2 (TZ , x \ V j , x ), this shows the claim.
+
+     R EMARK . The reader will have noticed that the proof does not really use the ratio-
+nal connectedness of Z , but merely the cohomological condition h 0 (Z , Hom(TZ , N Z = X )) =
+1074                                      A. H ÖRING
+
+h 0 (Z ,  Z ) = 0. In fact the proposition is part of a more “ungeneric position” theory
+describing fibre spaces with split tangent bundle that is developed in [16]. A similar
+cohomological condition was used in [2, 4.4.] to show a more special result.
+
+     Proof of Theorem 1.3. Let Z be a general fibre of the rationally connected quo-
+tient map of X . By Proposition 3.16 we have
+
+                             TZ = (TZ \ V1 j Z )  (TZ \ V2 j Z ).
+
+By hypothesis one of the intersections TZ \ V1 j Z or TZ \ V2 j Z is integrable. Therefore
+by Theorem 1.1 the general fibre Z is isomorphic to a product Z 1  Z 2 such that TZ \
+V j j Z = pZ j TZ j for j = 1, 2.
+       If TZ \ V1 = 0 the identity map X ! X satisfies the statement, so we suppose
+without loss of generality that TZ \ V1 is not zero. Since this holds for a general fibre,
+the submanifolds Z 1  z for z 2 Z 2 form a dominant family of submanifolds of X .
+Let Y1  C(X ) be the open subset parametrizing the family in the cycle space C(X )
+[14, Chapter VIII], let 01  Y1  X be the graph of the family, and let q1 : 01 ! Y1
+and p1 : 01 ! X be the natural projections. By construction p1 is dominant and an
+isomorphism on its image p1 (01 ). Since q1 is a fibration, we have a fibration 1 :=
+q1 Æ p1 1 : p1 (01 ) ! Y1 . Let Y1 be the normalisation of the closure of Y1 in C(X ), then
+we obtain the stated almost holomorphic fibration 1 : X              99K
+                                                                   Y1 . The general fibre F1
+of this map is just a member of the family Z 1  z, so clearly TF1  V1 j F1 and F1 is
+rationally connected. The statement for TZ \ V2 follows analogously.
+
+    R EMARK . It is clear from examples that in general the constructed fibration is
+not a holomorphic map, so we might think about resolving the indeterminacies by
+blowing-up X 0 ! X . It is not obvious and would be interesting to see if this can
+be done in a way such that X 0 has a split tangent bundle.
+
+    Proposition 3.17. Let X be a uniruled compact Kähler manifold with split tan-
+gent bundle TX = V1  V2 . Let Z be a general fibre of the rationally connected quotient
+map, and suppose that TZ \ V1 j Z or TZ \ V2 j Z is integrable. If TZ \ V1 j Z = V1 j Z , the
+manifold X has the structure of an analytic fibre bundle X ! Y such that TX =Y = V1 .
+
+    Proof. By Theorem 1.3 the condition TZ \ V1 j Z = V1 j Z implies that there exists
+an almost holomorphic map 1 : X       99K
+                                    Y1 such that the general fibre F1 is rationally
+connected and satisfies
+
+                               TFi = (TZ \ V1 j Z )j Fi = V1 j F1 .
+
+It follows that V1 is integrable and has a rationally connected leaf. We conclude with
+Proposition 2.12.
+                    U NIRULED M ANIFOLDS WITH S PLIT TANGENT B UNDLE                     1075
+
+     In view of Proposition 3.17 it is clear that Theorem 1.4 follows as soon as we have
+understood the geometry when TZ \ V1 j Z is a line bundle. Since we will consider this
+situation also in the next section, we state this case as a
+
+     Proposition 3.18. Let X be a uniruled compact Kähler manifold with split tan-
+gent bundle TX = V1  V2 where rk V1 = 2. Suppose that the general fibre Z of the
+rationally connected quotient map satisfies rk(TZ \ V1 j Z ) = 1. Then there exists an
+equidimensional map  : X ! Y on a compact Kähler variety such that the general
+fibre F is a rational curve that satisfies TF  V1 j F .
+
+    Proof. The line bundle TZ \ V1 j Z is integrable, so by Theorem 1.3 there exists
+an almost holomorphic map 1 : X       99K
+                                       Y1 such that the general fibre F1 is rationally
+connected and satisfies
+
+                               TF1 = (TZ \ V1 j Z )j F1  V1 j F1 .
+
+Since rk(TZ \ V1 j Z ) = 1, the general fibre is a smooth rational curve such that
+
+                                TX j F1 ' OP1 (2)  OPdim
+                                                       1
+                                                          X 1
+                                                              .
+
+Since h 0 (F1 , N F1 = X ) = dim X 1 and h 1 (F1 , N F1 = X ) = 0, the corresponding open sub-
+variety of the cycle space C(X ) is smooth of dimension dim X 1. We denote by Y
+its closure in C(X ) and endow it with the reduced structure. Denote by 0  Y  X the
+reduction of the graph over Y . Denote furthermore by p X : 0 ! X and pY : 0 ! Y
+the restrictions of the projections to the graph.
+     S TEP 1. We show that p X is finite. We argue by contradiction, then by the an-
+alytic version of Zariski’s main theorem there are fibres of positive dimension. Let
+x 2 X be a point such that p X 1 (x) has a component of positive dimension. Let 1 
+pY ( p X 1 (x)) be an irreducible component of dimension k > 0. Then 01 := pY 1 (1)
+has dimension k + 1. Consider now the foliation induced by pX V1 on 0  Y  X .
+Since a general pY -fibre is contained in a pX V1 -leaf and this is a closed condition,
+every fibre pY 1 (y) is contained in a pX V1 -leaf. So for y 2 1, the set p X ( pY 1 (y))
+is contained in V1x , the V1 -leaf through x. It follows that S := p X ( pY 1 (1)) is con-
+tained set-theoretically in V1x . Since p X is injective on the fibres of pY , and pY 1 (1)
+has dimension k + 1  2, the subvariety S has dimension at least 2. Since rk V1 = 2,
+it has dimension 2 and S = V1x (at least set-theoretically). So V1x is a compact leaf
+and is covered by a family of rational cycles that intersect in the point x. Hence V1x
+is rationally connected, so by Proposition 2.12 there exists a submersion : X ! Z
+such that TX = Z = V1 and the fibres are rationally connected. By the universal property
+of the rationally connected quotient the general -fibre is contracted by the rationally
+connected quotient map. This implies rk(TZ \ V1 j Z ) = rk V1 , a contradiction.
+     S TEP 2. Construction of  . Since p X is birational by construction and finite,
+it is bijective by the analytic version of Zariski’s main theorem. Since X is smooth
+1076                                     A. H ÖRING
+
+and 0 reduced this shows that p X is an isomorphism. Since pY is equidimensional,
+ := pY Æ p X 1 : X ! Y is equidimensional.
+    Proof of Theorem 1.4. By Proposition 3.16, the general fibre Z of the rationally
+connected quotient map satisfies
+
+                             TZ = (V1 j Z \ TZ )  (V2 j Z \ TZ ).
+
+Since rk V1 = 2, there are three cases.
+    If V1 j Z \ TZ = V1 j Z , we conclude with Proposition 3.17.
+    If 0 ( V1 j Z \ TZ ( TZ , the intersection has rank 1. Proposition 3.18 shows that
+we are in the second case of the statement.
+    If V1 j Z \ TZ = 0, clearly TZ = TZ \ V2 j Z  V2 j Z .
+
+       4.   The projective case
+
+     The main setback of Theorem 1.4 is that in the second case it is not clear if the
+base of the constructed fibration is smooth, yet the smoothness is crucial to show that
+the splitting of the tangent bundle pushes down to the base. In order to improve our
+analysis of this fibration we have to use the theory of Mori contractions, this forces us
+leave the Kähler world. In Lemma 4.21 we will then show the integrability of at least
+one direct factor for a splitting in vector bundles of rank 2. For uniruled varieties, the
+statement does not generalise to a splitting in vector bundles of higher rank. Never-
+theless the lemma provides some first evidence for Conjecture 1.2 which it establishes
+for manifolds of dimension four.
+     A Mori contraction of a projective manifold X is a morphism with connected fibres
+ : X ! Y to a normal variety Y such that the anticanonical bundle K X is  -ample.
+We say that the contraction is elementary if the relative Picard number  (X =Y ) is equal
+to one. The contraction is said to be of fibre type if dim Y < dim X ; otherwise it is
+birational.
+
+    Lemma 4.19. Let X be a projective manifold, and let  : X ! Y be an equi-
+dimensional fibration of relative dimension 1 on a normal variety Y such that the gen-
+eral fibre F is a rational curve. Then there exists a factorisation  = ˜ Æ , where
+ : X ! X̃ is a birational morphism onto a projective manifold X̃ and ˜ : X̃ ! Y
+makes X̃ into a P1 - or conic bundle. Furthermore  is a composition of blow-ups of
+projective manifolds along submanifolds of codimension 2, and Y is smooth.
+
+     Proof. We argue by induction on the relative Picard number  (X =Y ). If  (X =Y ) =
+1, the anticanonical divisor K X is  -ample and the contraction is elementary, so by
+Ando’s theorem  induces a P1 -bundle or a conic bundle structure. In both cases Y is
+smooth.
+                   U NIRULED M ANIFOLDS WITH S PLIT TANGENT B UNDLE                   1077
+
+     Suppose now that  (X =Y ) > 1. Since the general fibre is a rational curve, the
+canonical divisor is not  -nef. It follows from the relative contraction theorem [20,
+Theorem 4-1-1] that there exists an elementary contraction  : X ! X̃ that is a
+Y -morphism, i.e. there exists a morphism ˜ : X̃ ! Y such that  = ˜ Æ . Since 
+is equidimensional of relative dimension 1, it follows that all the -fibres have dimen-
+sion at most 1. Thus  is of fibre type of relative dimension 1 or of birational type.
+     We claim that  is not of fibre type. We argue by contradiction and suppose that
+dim X = dim X̃ +1. Then dim X̃ = dimY , so ˜ is a birational morphism. Since  ( X̃ =Y ) =
+ (X =Y ) 1 > 0, the map ˜ is not an isomorphism, so by Zariski’s main theorem
+there exists a fibre ˜ 1 (y) of positive dimension. Since  is of fibre type, we see that
+ 1 (y) =  1 (˜ 1 (y)) has dimension at least 2, a contradiction.
+     Hence  is a birational contraction such that all the fibres have dimension at most 1.
+Recall now the Ionescu-Wiśniewski inequality [18, Theorem 0.4], [29, Theorem 1.1]
+
+                                dim E + dim G  dim X ,
+
+where E is the exceptional locus of the birational contraction  and G is any -fibre.
+It follows that the contraction is divisorial, i.e. dim E = dim X 1 and all the fibres
+have dimension at most 1. By Ando’s theorem [1, Theorem 2.1] we know that X̃ is
+smooth and  is the blow-up of X̃ along a smooth submanifold of codimension 2.
+Now  ( X̃ =Y ) =  (X =Y ) 1 and ˜ is equidimensional of relative dimension 1 over Y ,
+so the statement follows by the induction hypothesis.
+
+     R EMARK . In order to generalise the proof to the compact Kähler case it would
+be necessary to establish a relative contraction theorem for projective morphisms be-
+tween compact Kähler varieties. Unfortunately the Mori theory for compact Kähler
+manifolds is not yet at this stage, in particular there seem to be no statements for the
+relative situation.
+
+    Corollary 4.20. Let X be a uniruled projective manifold such that TX = V1  V2
+and rk V1 = 2. Let Z be a general fibre of the rationally connected quotient map, and
+suppose that TZ \ V1 j Z or TZ \ V2 j Z is integrable. Suppose that TZ \ V1 j Z 6 = 0. Then
+X admits a flat fibration  : X ! Y onto a smooth projective manifold Y such that
+
+                                 TY = T  (V1 )  T  (V2 ).
+
+     Proof. If TZ \ V1 j Z = V1 j Z we conclude with the first case of Theorem 1.4.
+     If 0 ( TZ \ V1 j Z ( TZ we are in the second case of Theorem 1.4, so there exists an
+equidimensional fibration X ! Y such that the general fibre is a rational curve. Since
+X is projective, there exists by Lemma 4.19 a factorisation  = ˜ Æ , where : X ! X̃
+is birational morphism onto a projective manifold X̃ and ˜ : X̃ ! Y makes X̃ into a
+1078                                          A. H ÖRING
+
+P1 - or conic bundle. Since  is a composition of smooth blow-ups a repeated appli-
+cation of Lemma 2.14 shows that
+
+                                     TX̃ = T (V1 )  T (V2 ).
+
+We can now apply Lemma 2.15 to ˜ to see that for i = 1, 2
+
+                                       T ˜ (T (Vi )) = T  (Vi )
+
+is a subbundle of TY such that TY = T  (V1 )  T  (V2 ).
+                                                                                                    L
+    Lemma 4.21. Let X be a uniruled projective manifold such that TX = kj =1 V j ,
+where for all j = 1, ::: , k we have rkV j  2. Then one of the direct factors is integrable.
+    In particular if dim X  4, one of the direct factors is integrable.
+
+     Proof. The statement is trivial if one direct factor has rank 1, so we suppose that
+all the direct factors have rank 2. Let f : P1 ! X be a general minimal rational curve
+on X [10, Chapter 4], then
+
+                       k
+                       M
+                              f  V j = f  TX ' OP1 (2)  OP1 (1)a  OP1b .
+                       j =1
+
+
+We may suppose up to renumbering that f  V1 ' OP1 (2)  OP1 (c) where c = 0 or 1. It
+follows that for i  2, we have f  Vi ' OP1 (1)  OP1 or f  Vi ' OP1 (1)2 or f  Vi '
+OP12 , in particular
+
+                                   H 1 (P1 , f  Vi ) = 0,      8i  2.
+By [9, Lemma 0.4], we have c1 (Vi ) 2 H 1 (X , Vi ), so c1 ( f  Vi ) 2 H 1 (P1 , f  Vi ) is zero
+for i  2. So f  det Vi ' OP1 , since f  Vi is nef this implies f  Vi ' OP12 for i  2.
+                   V                                                       L
+This shows that 2 V1 j f (P1 ) is ample and (TX =V1 )j f (P1 ) =                      j
+                                                                               j 2 V j f (P1 ) is trivial.   By
+Lemma 2.11 this implies the integrability of V1 .
+
+     Proof of Theorem 1.5. Let Z be a general fibre of the rationally connected quo-
+tient map, then an application of Proposition 3.16 to all the possible decompositions
+                    L
+W1 := Vi and W2 := kj =1, j 6 = i V j implies
+
+                                              k
+                                              M
+                                       TZ =           (TZ \ V j j Z ).
+                                               j =1
+
+
+Moreover we have rk(TZ \ V j j Z )  2 for all j 2 f1, ::: , k g, so one of the direct factors
+is integrable by Lemma 4.21. We can now apply Theorem 1.1 inductively to see that
+all the direct factors TZ \ V j j Z are integrable and Z splits in a product.
+                      U NIRULED M ANIFOLDS WITH S PLIT TANGENT B UNDLE                             1079
+
+     S TEP 1. Integrability of the direct factors. Suppose that TZ \ Vi j Z is not zero,
+then there are two possibilities. Either TZ \ Vi j Z = Vi j Z , so the integrability of Vi is
+immediate from the integrability of TZ \ Vi j Z ; or TZ \ Vi j Z ( Vi j Z , then Vi has rank 2
+and the splitting of Z in a product yields a dominant family of rational curves such
+that a general member C satisfies TC  Vi jC and the normal bundle NC = X is trivial.
+Since
+                                                k
+                                                M
+                            TX jC = Vi jC                    V j jC = TC  NC = X
+                                              j =1, j 6 = i
+
+                                       V                                                   L
+and rk Vi = 2, this implies that    2
+                                      Vi C is ample and (TX =Vi )jC ' kj =1, j 6 = i V j jC is
+trivial. By Lemma 2.11 this implies the integrability of Vi .
+     S TEP 2. Structure of the rationally connected quotient map. We proceed by in-
+duction on the dimension of X , the case dim X = 1 is trivial. Up to renumbering we
+can suppose that the intersection TZ \ V1 j Z is not empty.
+     If V1 has rank 1, we have TZ \ V1 j Z = V1 j Z , so V1 is integrable and the general leaf
+is rationally connected. Thus by Proposition 2.12 there exists a submersion : X ! Y 0
+                                    L
+such that TX =Y 0 = V1 . Hence TY0 = kj =2 T (V j ). If Y 0 is not uniruled we are done,
+otherwise apply the induction hypothesis to Y 0 .
+     If V2 has rank 2, we apply Corollary 4.20 to obtain a flat fibration : X ! Y 0
+onto a projective manifold Y 0 such that the general fibre is rationally connected and
+                                                   0     1
+                                                    Mk      k
+                                                            M
+                        TY 0 = T (V1 )  T              A
+                                                       Vj =   T                   (V j ).
+                                                        j =2               j =1
+
+
+If Y 0 is not uniruled we are done, otherwise apply the induction hypothesis to Y 0 .
+     S TEP 3. Integrability of the images. Let  : X ! Y be the map constructed in
+Step 2. Then
+                                                   k
+                                                   M
+                                          TY =                T  (V j )
+                                                   j =1
+
+and Y is not uniruled. Apply Lemma 5.22 below to all the possible decompositions
+                         L
+W1 := T  (Vi ) and W2 := kj =1, j 6 = i T  (V j ) to see that for all i 2 f1, ::: , k g, the subbundle
+T  (Vi ) is integrable.
+
+     5.   An application to the universal covering
+
+    This section is essentially devoted to the proof of Theorem 1.7. The basic strat-
+egy is to prove Conjecture 1.6 by a reduction to the case of non-uniruled varieties and
+induction on the rank of the direct factors. Before we come to the proof we have to
+show a refinement of [17, Theorem 1.3].
+1080                                        A. H ÖRING
+
+     Lemma 5.22. Let X be a projective manifold with split tangent bundle TX = V1 
+V2 . Suppose that a general fibre Z of the rationally connected quotient map satisfies
+TZ  V2 j Z . Then V2 is integrable and det V1 is pseudo-effective.
+
+      Proof. S TEP 1. Suppose that det V1 is pseudoeffective. Since V1 is a direct fac-
+                                            Vrk V1
+tor of  X , the vector bundle det V1               X has a trivial direct factor. If  2
+                 V          
+H 0 X , det V1     rk V1
+                          X is the associated nowhere-vanishing det V1 -valued form, and
+ a germ of any vector field, a local computation shows that i  = 0 if and only if 
+is in V2 . An integrability criterion by Demailly [11, Theorem] shows that V2 is inte-
+grable.
+      S TEP 2. det V1 is pseudoeffective. We argue by contradiction, then by [3] there
+exists a birational morphism  : X 0 ! X and a general intersection curve C := D1 \
+   \ Ddim X 1 of very ample divisors D1 , : : : , Ddim X 1 where Di 2 jm i H j for some
+ample divisor H such that   det V1  C < 0. Let
+
+                               0 = E 0  E 1      Er =   V1
+
+be the Harder-Narasimham filtration with respect to the polarisation H , i.e. the graded
+pieces E i +1 = E i are semistable with respect to H . Since m 1 , : : : , m dim X 1 can be arbi-
+trarily high, we can suppose that the filtration commutes with restriction to C. Further-
+more since C is general and E 1 a reflexive sheaf, the curve C is contained in the locus
+where E 1 is locally free. Since
+
+
+                          (E1 jC )  (  V1 jC ) =  rkdet VV1  C > 0
+                                                         
+                                                                 1
+
+
+and E 1 jC is semistable, it is ample by [24, p.62]. By [21, Corollary 1.5] this implies
+that E 1 is vertical with respect to the rationally connected quotient map of X 0 , that is
+a general fibre Z 0 of the rationally connected quotient satisfies E 1 j Z 0 \ TZ 0 = E 1 j Z 0 . In
+particular the intersection TZ 0 \   V1 j Z 0 is not zero. Since X 0 and X are birational, this
+implies that TZ \ V1 j Z is not zero, a contradiction.
+
+      Proof of Theorem 1.7. If TZ \ V1 j Z = 0, Proposition 3.16 shows that TZ  V2 j Z .
+Therefore we can conclude with Lemma 5.22.
+      If TZ \ V1 j Z = V1 j Z there exists a submersion X ! Y such that TX =Y = V1 . Further-
+more V2 is an integrable connection on the submersion, so we conclude with the
+Ehresmann theorem [17, Theorem 3.17].
+      If TZ \ V1 j Z ( V1 j Z is a line bundle there exists an equidimensional map : X ! Y
+of relative dimension one such that the general  -fibre F is a rational curve and TF 
+V1 j F . Since X is projective there exists by Lemma 4.19 a factorisation  = ˜ Æ ,
+where  : X ! X̃ is birational morphism onto a projective manifold X̃ and ˜ : X̃ ! Y
+makes X̃ into a P1 - or conic bundle. Furthermore  is a composition of blow-ups of
+                    U NIRULED M ANIFOLDS WITH S PLIT TANGENT B UNDLE                     1081
+
+projective manifolds along submanifolds of codimension 2, so Lemma 2.14 implies
+
+                                  TX̃ = T (V1 )  T (V2 ).
+
+By the same lemma it is sufficient to show the conjecture for X̃ , so we can replace
+without loss of generality X by X̃ and suppose that the fibration  makes X into a
+P1 - or conic bundle over the projective manifold Y . Set W j := T  (V j ), then
+
+                                       TY = W1  W2
+
+by Lemma 2.15 and W1 has rank 1. Furthermore by ([17, Proposition 4.23.], see also
+[16, Corollary 4.3.9]) all the fibres of  are reduced.
+     The manifold Y can’t have the structure of a P1 -bundle Y ! M such that TY = M =
+W1 : this would yield a morphism X ! M such that TX = M = V1 and the general fibre is
+rationally connected. This contradicts TZ \ V1 j Z ( V1 j Z . Therefore by [4, Theorem 1]
+the subbundle W2 is integrable, and the universal covering : Ỹ ! Y satisfies Ỹ ' Y1 
+Y2 such that  W1 = pY1 TY1 and  W2 = pY2 TY2 . Furthermore we have a commutative
+diagram
+
+
+
+
+where   ˜ : X̃ := X Y Ỹ ! X is étale. By construction the set-theoretical fibres of q
+are 
+    ˜  V1 -leaves. Since  has no multiple fibres, the fibration ˜ has no multiple fibres.
+Hence q = pY2 Æ ˜ does not have any multiple fibres, so the scheme-theoretical fibres
+are 
+    ˜  V1 -leaves. This shows that q is a submersion with integrable connection     ˜  V2 .
+Since
+
+                               T ˜ (
+                                     ˜  V2 ) =  W2 = pY2 TY2 ,
+
+there exists for every 
+                       ˜  V2 -leaf V2 a y1 2 Y1 such that ˜ (V2 ) = y1  Y2 . By Lemma 5.23
+below the restriction of q to a    ˜  V2 leaf is an étale covering, so we conclude with the
+Ehresmann theorem [17, Theorem 3.17].
+
+    R EMARK . Note that Theorem 1.7 generalises immediately to the compact Kähler
+case if we show that the map in the second case of Theorem 1.4 is flat.
+
+   Lemma 5.23. Let  : X ! Y1  Y2 be a proper surjective map from a complex
+manifold X onto a product of (not necessarily compact) complex manifolds such that
+1082                                            A. H ÖRING
+
+the morphism q := pY2 Æ  : X ! Y2 is a submersion that admits an integrable con-
+nection V  TX . Suppose that for every V -leaf V, there exists a y1 2 Y1 such that
+ (V) = y1  Y2 . Then the restriction of q to every V -leaf is an étale covering.
+      The proof consists merely of rephrasing the classical proof of the Ehresmann theo-
+rem as in [5, V., §2, Proposition 1]. For the convenience of the reader we nevertheless
+include this technical exercise.
+      Proof. In this proof all fibres and intersections are set-theoretical.
+      Let V be a V -leaf, and let y1 2 Y1 such that  (V) = y1  Y2 . Since pY2 j y1 Y2 : y1 
+Y2 ! Y2 is an isomorphism, it is sufficient to show that  jV : V ! y1  Y2 is an étale
+map. Furthermore it is sufficient to show that for y1  y2 2 y1  Y2 , there exists a
+disc D  y1  Y2 such that for y 2 D, the fibre  1 (y) cuts each leaf of the restricted
+foliation V j 1 (D) exactly in one point. Granting this for the moment, we show how
+this implies the result. The connected components of V \  1 (D) are leaves of V j 1 (D)
+Let V0 be such a connected component. Since for y 2 D, the intersection V0 \  1 (y)
+is exactly one point, the restricted morphism  jV0 : V0 ! D is one-to-one and onto, so
+it is a biholomorphism. This shows that  jV\ 1 (D) : V \  1 (D) ! D is a trivialisation
+of  jV .
+      Let us now show the claim. Set k := rk V and n := dim X , and set Z :=  1 (y1  Y2 ).
+Since every V -leaf is sent on some b  Y2 , the complex space Z is V -saturated. In
+particular if V  Z is leaf, the restriction of a distinguished map f i : Wi ! Dn k to Z
+which we denote by f i jWi \ Z : Wi \ Z ! Dn k , is a distinguished map for the foliation
+V j Z and a plaque of f i is contained in V if and only if it is a plaque of f i jWi \ Z .
+      S TEP 1. The local situation. Let x 2  1 (y1  y2 ) be a point. Since q is a
+submersion with integrable connection V there exists coordinate neighbourhood x 2
+Wx0  X with local coordinates z 1 , : : : , z k , z k+1 , : : : , z n and a coordinate neighbourhood
+y2 2 Ux  Y2 with coordinate w1 , : : : , wk such that q(Wx0 ) = Ux and q jWx0 : Wx ! Ux
+is given in these coordinates by
+
+                                  (z 1 , : : : , z n ) ! (z 1 , : : : , z k ).
+
+Furthermore there exists a distinguished map f x : Wx0 ! Dn k given in these coordi-
+nates by
+
+                                (z 1 , : : : , z n ) ! (z k+1 , : : : , z n ).
+
+Since x 2  1 (y1  y2 ) and  is equidimensional over a smooth base, so open,  (Wx0 )
+is a neighbourhood of y1  y2 in Y1  Y2 . Since pY2 j y1 Ux : y1  Ux ! Ux is an iso-
+morphism we can suppose that up to restricting Ux and Wx0 a bit that
+
+                               (Wx0 ) \ (y1  Y2 ) = y1  Ux .
+Set Wx := Wx0 \ Z , then  j Z (Wx ) = y1  Ux . It then follows from this local descrip-
+tion that  jW : Wx ! y1  Ux has the property that for y 2 y1  Ux the fibre  1 (y)
+               x
+                     U NIRULED M ANIFOLDS WITH S PLIT TANGENT B UNDLE                            1083
+
+intersects each plaque of the distinguished map f x jWx : Wx ! Dk in exactly one point.
+     S TEP 2. Using the properness. Since the fibre  1 (y1  y2 ) is compact, we can
+take a finite cover of the fibre by Wi := Wxi where i = 1, ::: , l and Wxi is as in Step 1.
+For each i 2 f1, : : : , l g, the image  (Wi ) is a neighbourhood of y1  y2 2 y1  Y2 .
+          T
+Let D  li =1  (Wi ) be a disc that contains y1  y2 . If V0 is a leaf of V j 1 (D) , it is
+contained in some plaque P of Wi for some i 2 f1, : : : , l g. Since the plaques intersect
+each fibre at most in one point,  jV0 : V0 ! D is injective. The equality P \  1 (D) =
+V0 then implies that
+
+                           (V0 ) =  (P \  1 (D)) =  (P) \ D = D,
+so  jV0 : V0 ! D is surjective. So V0 intersects each fibre exactly in one point.
+
+     ACKNOWLEDGEMENTS . I want to thank L. Bonavero and T. Peternell for encour-
+aging me to work on this problem. I also want to thank the DFG-Schwerpunkt ‘Globale
+Methoden in der Komplexen Geometrie’ and the ‘Deutsch-französische Hochschule-
+Université franco-allemande’ for partial financial support.
+     I would like to thank the referee for proposing a simplified proof of the crucial Propo-
+sition 3.16.
+
+
+
+
+                                             References
+
+ [1]   T. Ando: On extremal rays of the higher-dimensional varieties, Invent. Math. 81 (1985),
+       347–357.
+ [2]   A. Beauville: Complex manifolds with split tangent bundle; in Complex Analysis and Algebraic
+       Geometry de Gruyter, Berlin, 2000, 61–70,.
+ [3]   S. Boucksom, J.-P. Demailly, M. Paun and T. Peternell: The pseudo-effective cone of a compact
+       Kähler manifold and varieties of negative Kodaira dimension, arXiv:math/0405285, 2004.
+ [4]   M. Brunella, J.V. Pereira and F. Touzet: Kähler manifolds with split tangent bundle, Bull. Soc.
+       Math. France 134 (2006), 241–252.
+ [5]   C. Camacho and A. Lins Neto: Geometric Theory of Foliations, Translated from the Portuguese
+       by Sue E. Goodman, Birkhäuser Boston, Boston, MA, 1985.
+ [6]   F. Campana: Coréduction algébrique d’un espace analytique faiblement kählérien compact,
+       Invent. Math. 63 (1981), 187–223.
+ [7]   F. Campana: Orbifolds, special varieties and classification theory, Ann. Inst. Fourier (Greno-
+       ble) 54 (2004), 499–630.
+ [8]   F. Campana: Orbifolds, special varieties and classification theory: an appendix, Ann. Inst.
+       Fourier (Grenoble) 54 (2004), 631–665.
+ [9]   F. Campana and T. Peternell: Projective manifolds with splitting tangent bundle, I, Math. Z.
+       241 (2002), 613–637.
+[10]   O. Debarre: Higher-Dimensional Algebraic Geometry, Universitext, Springer, New York, 2001.
+[11]   J.-P. Demailly: On the Frobenius integrability of certain holomorphic p-forms; in Complex
+       Geometry (Göttingen, 2000), Springer, Berlin, 2002, 93–98.
+[12]   S. Druel: Variétés algébriques dont le fibré tangent est totalement décomposé, J. Reine Angew.
+       Math. 522 (2000), 161–171.
+1084                                          A. H ÖRING
+
+[13]   T. Graber, J. Harris and J. Starr: Families of rationally connected varieties, J. Amer. Math.
+       Soc. 16 (2003), 57–67 (electronic).
+[14]   H. Grauert, Th. Peternell and R. Remmert, editors: Several Complex Variables, VII, Sheaf-
+       theoretical methods in complex analysis, Encyclopaedia Math. Sci. 74, Springer, Berlin, 1994.
+[15]   R. Hartshorne: Algebraic Geometry, Graduate Texts in Mathematics 52, Springer, New York,
+       1977.
+[16]   A. Höring: Two applications of positivity to the classification theory of complex projective vari-
+       eties, Thesis Bayreuth and Grenoble, available at http://tel.archives-ouvertes.fr/
+       tel-00121528/fr/ (2006).
+[17]   A. Höring: Uniruled varieties with split tangent bundle, Math. Z. 256 (2007), 465–479.
+[18]   P. Ionescu: Generalized adjunction and applications, Math. Proc. Cambridge Philos. Soc. 99
+       (1986), 457–472.
+[19]   L. Kaup and B. Kaup: Holomorphic Functions of Several Variables, de Gruyter Studies in
+       Mathematics 3, Walter de Gruyter & Co., Berlin, 1983.
+[20]   Y. Kawamata, K. Matsuda and K. Matsuki: Introduction to the minimal model problem; in
+       Algebraic Geometry, Sendai, 1985, Adv. Stud. Pure Math. 10, North-Holland, Amsterdam,
+       1987, 283–360.
+[21]   S. Kebekus, L. Solá Conde and M. Toma: Rationally connected foliations after Bogomolov and
+       McQuillan, J. Algebraic Geom. 16 (2007), 65–81.
+[22]   J. Kollár: Rational Curves on Algebraic Varieties, Ergebnisse der Mathematik und ihrer Grenz-
+       gebiete. 3. Folge. A Series of Modern Surveys in Mathematics 32, Springer, Berlin, 1996.
+[23]   J. Kollár, Y. Miyaoka and S. Mori: Rational connectedness and boundedness of Fano mani-
+       folds, J. Differential Geom. 36 (1992), 765–779.
+[24]   R. Lazarsfeld: Positivity in Algebraic Geometry, I, Ergebnisse der Mathematik und ihrer Grenz-
+       gebiete. 3. Folge. A Series of Modern Surveys in Mathematics 48, Springer, Berlin, 2004.
+[25]   R. Lazarsfeld: Positivity in Algebraic Geometry, II, Ergebnisse der Mathematik und ihrer
+       Grenzgebiete. 3. Folge. A Series of Modern Surveys in Mathematics 49, Springer, Berlin, 2004.
+[26]   Y. Miyaoka and T. Peternell: Geometry of Higher-Dimensional Algebraic Varieties, DMV Sem-
+       inar 26, Birkhäuser, Basel, 1997.
+[27]   J.V. Pereira: Global stability for holomorphic foliations on Kaehler manifolds, Qual. Theory
+       Dyn. Syst. 2 (2001), 381–384.
+[28]   V.G. Sarkisov: On conic bundle structures, Izv. Akad. Nauk SSSR Ser. Mat. 46 (1982),
+       371–408, 432.
+[29]   J.A. Wiśniewski: On contractions of extremal rays of Fano manifolds, J. Reine Angew. Math.
+       417 (1991), 141–157.
+
+
+
+                                                         Université Paris 6
+                                                         Institut de Mathématiques de Jussieu
+                                                         Equipe de Topologie et Géométrie Algébrique
+                                                         175, rue du Chevaleret, 75013 Paris
+                                                         France
+                                                         e-mail: hoering@math.jussieu.fr
+

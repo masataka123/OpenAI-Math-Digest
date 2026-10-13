@@ -1,0 +1,118 @@
+{
+  "catalogId": "052",
+  "productionVersion": "1.4",
+  "checkingScope": "2本の主結果・主要証明と引用箇所を照合。この範囲では収録2本間の直接証明依存を確認しなかった。外部直接入力の詳細は記事sources/dependenciesを参照。未調査の付録・背景全体に不在を主張しない。",
+  "omittedSections": [
+    {
+      "section": "分類カード・論文選択UI",
+      "reason": "2本の役割は公式表と1枚の対照図で区別できる。独自分類は不要。"
+    },
+    {
+      "section": "依存関係の全件表",
+      "reason": "カタログではHöringによる異なる二つの役割とcompanion背景引用のみ説明し、他の入力・版・照合範囲は記事へ委ねる。"
+    }
+  ],
+  "diagramDecision": {
+    "adopted": true,
+    "files": [
+      "routes.ja.svg",
+      "routes.en.svg"
+    ],
+    "message": "可積分性を仮定して普通普遍被覆を積化する経路と、RCから可積分性を証明してX自体を積化する経路の対照",
+    "aggregationConsidered": "一本の直接依存鎖としての合流は原典にない。二経路を並置して可積分性の位置と積分解の対象の相違を示す。",
+    "divisionOfRoles": "図は仮定と結論の対照。共通表は公式順・主張・議論の役割。外部入力の細部は各記事。",
+    "reason": "二つの異なる積分解を混同しない視覚的効果がある。図の2列は分類数の標準化ではなく2本の論理比較。"
+  },
+  "connections": [
+    {
+      "id": "companion-background",
+      "from": {
+        "paperId": "split-tangent-integrability",
+        "result": "Theorem 1.1",
+        "pages": "1",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Integrability-of-split-tangent-bundles-on-rationally-connected-manifolds-September-23-2026/main.pdf"
+      },
+      "to": {
+        "paperId": "universal-cover-splitting",
+        "result": "Introduction",
+        "pages": "3",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Universal-cover-splitting-for-compact-Kahler-manifolds-September-23-2026/paper.pdf"
+      },
+      "role": "有理連結の場合の自動可積分性を背景として紹介する。主証明への直接入力ではない。",
+      "hypotheses": "滑らかな連結有理連結射影複素多様体の指定正階数二分裂",
+      "kind": "background",
+      "checking": {
+        "by": "本部 + source_review",
+        "date": "2026-10-13",
+        "scope": "引用箇所と両原典の主要証明を照合。未調査の全関係の不在認定ではない。"
+      },
+      "articleLinks": {
+        "ja": "/ja/papers/universal-cover-splitting/#dependencies",
+        "en": "/en/papers/universal-cover-splitting/#dependencies"
+      },
+      "unresolved": []
+    },
+    {
+      "id": "horing-to-rc-product",
+      "from": {
+        "paperId": "horing",
+        "result": "Theorem 1.4",
+        "pages": "2",
+        "version": "arXiv:math/0505327v3 (2017-11-09); PDF internal date November 2, 2018",
+        "sourceUrl": "https://arxiv.org/pdf/math/0505327v3"
+      },
+      "to": {
+        "paperId": "split-tangent-integrability",
+        "result": "Corollary 1.2",
+        "pages": "2",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Integrability-of-split-tangent-bundles-on-rationally-connected-manifolds-September-23-2026/main.pdf"
+      },
+      "role": "一方の因子の可積分性からX自身の適合的な積を得る。",
+      "hypotheses": "RC smooth connected projective X; specified split tangent; one summand integrable, supplied by Theorem 1.1",
+      "kind": "consequence",
+      "checking": {
+        "by": "本部 + source_review",
+        "date": "2026-10-13",
+        "scope": "外部定理の記述と適用箇所を照合。外部証明の全検証なし。"
+      },
+      "articleLinks": {
+        "ja": "/ja/papers/split-tangent-integrability/#dependencies",
+        "en": "/en/papers/split-tangent-integrability/#dependencies"
+      },
+      "unresolved": []
+    },
+    {
+      "id": "horing-to-nonuniruled",
+      "from": {
+        "paperId": "horing",
+        "result": "Theorem 1.3",
+        "pages": "1",
+        "version": "arXiv:math/0505327v3 (2017-11-09); PDF internal date November 2, 2018",
+        "sourceUrl": "https://arxiv.org/pdf/math/0505327v3"
+      },
+      "to": {
+        "paperId": "universal-cover-splitting",
+        "result": "Corollary 1.2",
+        "pages": "3",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Universal-cover-splitting-for-compact-Kahler-manifolds-September-23-2026/paper.pdf"
+      },
+      "role": "非単線織射影の場合に可積分性を供給してTheorem 1.1へ渡す。",
+      "hypotheses": "smooth connected non-uniruled projective X and specified splitting",
+      "kind": "consequence",
+      "checking": {
+        "by": "本部 + source_review",
+        "date": "2026-10-13",
+        "scope": "外部定理の記述と適用箇所を照合。"
+      },
+      "articleLinks": {
+        "ja": "/ja/papers/universal-cover-splitting/#dependencies",
+        "en": "/en/papers/universal-cover-splitting/#dependencies"
+      },
+      "unresolved": []
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+\node[card] (a) {\heading{1}{有理連結性と指定分裂}{Rational connectedness and the specified splitting}
+$X\ \text{\Tx{滑らか・連結・射影的}{smooth, connected, projective}},\quad
+T_X=E_1\oplus E_2$\par
+\Tx{Theorem 1.1により両方の $E_i$ が可積分。}{Theorem 1.1 makes both $E_i$ integrable.}};
+\node[card,below=2.1cm of a] (b) {\heading{2}{指定部分束に適合する大域的な積}{A global product compatible with the subbundles}
+$X\simeq X_1\times X_2,\qquad E_i=\operatorname{pr}_i^*T_{X_i}$};
+\flow a b {\Tx{少なくとも一方の可積分性をHöringの積定理へ渡す。}{Supply at least one integrable summand to H\"oring's product theorem.}\\[3pt]\Cite{horing-product}};
+\node[result,below=2.0cm of b] (c) {\heading{3}{因子も滑らかで射影的}{The factors are smooth and projective}
+$X_1\simeq X_1\times\{x_2\}\subset X,\quad
+X_2\simeq\{x_1\}\times X_2\subset X$};
+\flow b c {\Tx{閉じた切片に $X$ の射影埋込みを制限する。}{Restrict a projective embedding of $X$ to the closed slices.}\\[3pt]\Cite{product}};
