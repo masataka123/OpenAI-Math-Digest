@@ -1,5 +1,7 @@
 # カタログ052 第1段階の引継ぎ
 
+> 現在は第3段階まで完了し、公開確認済み。公開URL・commit・検査結果は [PUBLICATION.md](PUBLICATION.md)。
+
 > 2026-10-13 第2段階を実施。現在の状態・成果物・検査・公開再開手順は [STAGE2_HANDOFF.md](STAGE2_HANDOFF.md) を参照。以下は第1段階の記録。
 
 ## 現在の状態と作業場所

@@ -1,5 +1,7 @@
 # カタログ052 第1段階制作記録
 
+> 現在は第3段階まで完了し、公開確認済み。公開URL・commit・検査結果は [PUBLICATION.md](PUBLICATION.md)。
+
 > 2026-10-13 第2段階を実施。現在の状態・成果物・検査・公開再開手順は [STAGE2_HANDOFF.md](STAGE2_HANDOFF.md) を参照。以下は第1段階の記録。
 - 制作セット1.4と2026-10-12までの補足を適用。2026-10-13 JST。
 - 作業場所：/Users/iwai/Desktop/GitHub/OpenAI-Math-Digest、既存ブランチ main。ブランチ切替・commit・pushなし。

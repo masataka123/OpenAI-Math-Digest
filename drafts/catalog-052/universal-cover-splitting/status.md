@@ -23,3 +23,7 @@
 - 日英サイトへ登録し、TeX/SVGをpublicへ配置。案内＋公式順2記事を日英PDF（28/32ページ、各3章・8図）へ収録。
 - 数学的本文・引用・図原本は保持。案内だけPDF生成予定の文を削除し、共通PDFリンクを表示。
 - 検査・未確認範囲・次段階：coordination/catalog-052/STAGE2_HANDOFF.md。commit・push・公開は未実施。
+
+## 第3段階の公開確認
+
+2026-10-13T21:05:16.060645+09:00、本部。commit abbbc326a8e097c750414874237fd82979e125f3をmainへ公開し、Actions・公開ページ・図・PDFの反映を確認。数学的な未確認事項は保持。coordination/catalog-052/PUBLICATION.md参照。

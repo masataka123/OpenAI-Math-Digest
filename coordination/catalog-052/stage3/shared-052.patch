@@ -1,0 +1,98 @@
+--- a/src/data/site.mjs
++++ b/src/data/site.mjs
+@@ -4,6 +4,7 @@
+ import inventory038 from '../../coordination/catalog-038/inventory.json' with { type: 'json' };
+ import inventory042 from '../../coordination/catalog-042/inventory.json' with { type: 'json' };
+ import inventory051 from '../../coordination/catalog-051/inventory.json' with { type: 'json' };
++import inventory052 from '../../coordination/catalog-052/inventory.json' with { type: 'json' };
+ import inventory057 from '../../coordination/catalog-057/inventory.json' with { type: 'json' };
+ import inventory063 from '../../coordination/catalog-063/inventory.json' with { type: 'json' };
+ import inventory068 from '../../coordination/catalog-068/inventory.json' with { type: 'json' };
+@@ -27,7 +28,7 @@
+     "id": "algebraic-complex-geometry",
+     "ja": "代数幾何学・複素幾何学",
+     "catalogIds": [
+-      "033", "034", "037", "038", "042", "051", "057", "063", "068"
++      "033", "034", "037", "038", "042", "051", "052", "057", "063", "068"
+     ]
+   },
+   {
+@@ -152,6 +153,10 @@
+  id: entry.paperId, catalogId: '051', sourceCommit: inventory051.sourceCommit,
+  title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
+  pages: entry.pdfPages, order: entry.order, featured: true,
++})), ...inventory052.manuscripts.map(entry => ({
++ id: entry.paperId, catalogId: '052', sourceCommit: inventory052.sourceCommit,
++ title: entry.title, path: entry.sourceUrl.split('/preprints/')[1], version: entry.version,
++ pages: entry.pdfPages, order: entry.order, featured: true,
+ })), ...inventory057.manuscripts.map(entry => ({
+  id: entry.paperId, catalogId: '057', sourceCommit: inventory057.sourceCommit,
+  title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
+@@ -209,6 +214,13 @@
+   description: text('円板変分から標準束の豊富性へ至る証明と、大域生成・有限被覆の二つの系を読む。', 'Follow disc variations to canonical ampleness and its consequences for global generation and finite covers.'),
+   paperIds: inventory051.manuscripts.map(p => p.paperId),
+   overviewSectionIds: ['papers', 'connections', 'sources'],
++}, {
++  id: '052', sourceCommit: inventory052.sourceCommit, mode: 'multi',
++  title: text(inventory052.titleJa, inventory052.overviewTitle),
++  contentsTitle: inventory052.contentsTitle,
++  description: text('指定された接束分裂の可積分性と、普遍被覆または多様体自身の積分解へ至る2篇の証明を読む。', 'Follow two proofs separating integrability of a prescribed tangent splitting from product decompositions of the universal cover or the manifold itself.'),
++  paperIds: inventory052.manuscripts.map(p => p.paperId),
++  overviewSectionIds: ['papers', 'diagram-sources', 'connections', 'sources'],
+ }, {
+   id: '057', sourceCommit: inventory057.sourceCommit, mode: 'multi',
+   title: text(inventory057.titleJa, inventory057.overviewTitle),
+--- a/src/data/pdf-editions.json
++++ b/src/data/pdf-editions.json
+@@ -238,5 +238,29 @@
+       "mathExpressions": 401,
+       "figures": 8
+     }
++  },
++  "052": {
++    "ja": {
++      "file": "catalog-052-ja.pdf",
++      "date": "2026-10-13",
++      "pages": 28,
++      "bytes": 1654961,
++      "sha256": "b60422d72dcf52dc38c4ebad4d5b1ebd422b1019a5bef8f6f76cb850996be139",
++      "contentHash": "1286f84775d84f2be2c8f3f64b2a1ecbf287c23ee21a983b30a1a31842d04be6",
++      "chapters": 3,
++      "mathExpressions": 247,
++      "figures": 8
++    },
++    "en": {
++      "file": "catalog-052-en.pdf",
++      "date": "2026-10-13",
++      "pages": 32,
++      "bytes": 1170927,
++      "sha256": "627da28ece074863dc4dcc356baaf9ce6e3317872895728375a5d74d4d580803",
++      "contentHash": "f0b6527507dc08169fa5806d43a9a4503b6ae5c4506e43e127f50aed79c3085b",
++      "chapters": 3,
++      "mathExpressions": 247,
++      "figures": 8
++    }
+   }
+ }
+--- a/scripts/catalog-033.test.mjs
++++ b/scripts/catalog-033.test.mjs
+@@ -10,7 +10,7 @@
+ test('033 registers five papers in official order without moving the 034 source snapshot',()=>{
+  assert.equal(catalog.paperIds.length,5);
+  assert.equal(catalog.title.en,"Campana's orbifold Iitaka conjecture and logarithmic subadditivity");
+- assert.deepEqual(catalogsForField('algebraic-complex-geometry').map(c=>c.id),['033','034','037','038','042','051','057','063','068']);
++ assert.deepEqual(catalogsForField('algebraic-complex-geometry').map(c=>c.id),['033','034','037','038','042','051','052','057','063','068']);
+  for(const record of Object.values(records.papers)){
+   const paper=papers.find(p=>p.id===record.paperId);
+   assert.equal(paperSource(paper),record.sourceUrl);
+--- a/scripts/catalog-063.test.mjs
++++ b/scripts/catalog-063.test.mjs
+@@ -13,7 +13,7 @@
+  assert.deepEqual(catalog.paperIds,[record.paperId]);
+  assert.equal(catalog.title.en,inventory.overviewTitle);
+  assert.equal(paperSource(papers.find(p=>p.id===record.paperId)),record.sourceUrl);
+- assert.deepEqual(catalogsForField('algebraic-complex-geometry').map(c=>c.id),['033','034','037','038','042','051','057','063','068']);
++ assert.deepEqual(catalogsForField('algebraic-complex-geometry').map(c=>c.id),['033','034','037','038','042','051','052','057','063','068']);
+  assert.equal(catalogs.find(c=>c.id==='034').sourceCommit,'adc7f1241b42e322a6451854ab7e4b4c146bf78a');
+ });
+ 
