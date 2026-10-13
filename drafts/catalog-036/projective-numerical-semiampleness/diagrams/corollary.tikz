@@ -1,0 +1,8 @@
+\node[card] (a) {\heading{}{数値的に零な通常随伴}{A numerically trivial ordinary adjoint}
+$(X,B)\ \text{projective klt},\quad K_X+B\equiv0,\quad M\ \text{nef }\mathbb Q\text{-Cartier}.$};
+\node[card,below=1.4cm of a] (b) {\heading{}{主定理の仮定を満たす}{The main theorem applies}
+$K_X+B\in\Eff(X),\qquad D=K_X+B+M\equiv M\ \text{nef}.$};
+\flow a b {\Tx{零の数値類はpseudo-effective、数値同値はnef性を保つ}{The zero class is pseudo-effective and numerical equivalence preserves nefness}\\\Cite{main-corollary}};
+\node[result,below=1.4cm of b] (c) {\heading{}{Mの半豊富な数値的代表}{A semiample numerical representative of M}
+$D\equiv L,\quad L\ \text{semiample on }X\quad\Longrightarrow\quad M\equiv L.$};
+\flow b c {\Tx{同じ多様体上の半豊富代表を取り、数値同値を合成}{Take a semiample representative on the same variety and compose numerical equivalences}\\\Cite{main-result}};

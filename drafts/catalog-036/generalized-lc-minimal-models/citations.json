@@ -1,0 +1,455 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "author-key",
+  "catalogId": "036",
+  "sources": {
+    "P": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "pagination": "same"
+    },
+    "TX24": {
+      "recordFile": "sources.json",
+      "recordId": "TX24",
+      "guideRole": {
+        "ja": "NQCの相対的弱Zariski分解から極小モデルへ移送し、元のXから停止するMMPを選ぶ。相対ample境界付きgood modelはPicard数の確認に使用",
+        "en": "Transfer from relative NQC weak Zariski decompositions and choose a terminating MMP from X; good models with ample boundary check relative Picard rank"
+      }
+    },
+    "DEL00": {
+      "recordFile": "sources.json",
+      "recordId": "DEL00",
+      "guideRole": {
+        "ja": "asymptotic multiplier idealのtwistの大域生成とsubadditivity",
+        "en": "Global generation of twists of asymptotic multiplier ideals and subadditivity"
+      }
+    },
+    "Fuj09a": {
+      "recordFile": "sources.json",
+      "recordId": "Fuj09a",
+      "guideRole": {
+        "ja": "klt対のnef Cartier因子について次元だけによる大域生成倍数を固定する",
+        "en": "Fix a dimension-dependent globally generated multiple of a nef Cartier divisor on a klt pair"
+      }
+    },
+    "BDPP13": {
+      "recordFile": "sources.json",
+      "recordId": "BDPP13",
+      "guideRole": {
+        "ja": "滑らかな射影被覆の非uniruled性からcanonical擬有効性を得る",
+        "en": "Obtain canonical pseudo-effectivity from non-uniruledness of a smooth projective cover"
+      }
+    },
+    "BCHM10": {
+      "recordFile": "sources.json",
+      "recordId": "BCHM10",
+      "guideRole": {
+        "ja": "klt境界polytopeのample model有限性。外部証明は対象外",
+        "en": "Finiteness of ample models for a klt boundary polytope; external proof excluded"
+      }
+    },
+    "OpenAI26LA": {
+      "recordFile": "sources.json",
+      "recordId": "OpenAI26LA",
+      "guideRole": {
+        "ja": "通常の対に限る主定理後の半豊富性。逆向きの利用はCorollary 12.1(i)の有限生成証明に限定して区別",
+        "en": "Post-theorem semiampleness for ordinary pairs only; the reverse use occurs in the finite-generation proof of Corollary 12.1(i)"
+      }
+    },
+    "KM98": {
+      "recordFile": "sources.json",
+      "recordId": "KM98",
+      "guideRole": {
+        "ja": "遅いflipの高次直像消滅に用いるrelative Kawamata–Viehweg vanishing。本稿内の適用は読んだが、書籍の該当記述は未照合",
+        "en": "Relative Kawamata–Viehweg vanishing for late flips; the application was read, but the original book passage remains unchecked"
+      }
+    }
+  },
+  "citations": {
+    "main-result": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "ordinary-result": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Corollary 1.2",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "phase": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 3.1",
+          "printed": "8",
+          "pdf": "8"
+        }
+      ]
+    },
+    "local-chain": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 5.1; Lemma 6.1; Section 8",
+          "printed": "22, 29–30, 39–44",
+          "pdf": "22, 29–30, 39–44"
+        }
+      ]
+    },
+    "all-characters": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Section 8.3, (8.16)–(8.20)",
+          "printed": "44–45",
+          "pdf": "44–45"
+        }
+      ]
+    },
+    "smooth": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 3.2",
+          "printed": "8–13",
+          "pdf": "8–13"
+        }
+      ]
+    },
+    "ideals": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Section 3.1, (3.4)–(3.8)",
+          "printed": "9–10",
+          "pdf": "9–10"
+        }
+      ]
+    },
+    "index": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Section 3.1, (3.9)–(3.11)",
+          "printed": "11–12",
+          "pdf": "11–12"
+        }
+      ]
+    },
+    "vanishing": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Section 3.1, (3.12)–(3.14)",
+          "printed": "12–13",
+          "pdf": "12–13"
+        }
+      ]
+    },
+    "relative": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 3.3",
+          "printed": "13–14",
+          "pdf": "13–14"
+        }
+      ]
+    },
+    "transfer": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Section 3.3",
+          "printed": "14",
+          "pdf": "14"
+        }
+      ]
+    },
+    "exact-output": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Section 3.3, (3.17)–(3.18)",
+          "printed": "15–16",
+          "pdf": "15–16"
+        }
+      ]
+    },
+    "descent": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 3.4",
+          "printed": "16–17",
+          "pdf": "16–17"
+        }
+      ]
+    },
+    "deferred": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorems 9.1, 10.1; Section 13.4",
+          "printed": "45, 50, 77",
+          "pdf": "45, 50, 77"
+        }
+      ]
+    },
+    "bchm": {
+      "source": "BCHM10",
+      "locations": [
+        {
+          "result": "Corollary 1.1.5",
+          "printed": "7",
+          "pdf": "7"
+        }
+      ]
+    },
+    "del": {
+      "source": "DEL00",
+      "locations": [
+        {
+          "result": "Corollary 1.5; Theorem 1.8; Variants 2.4–2.5",
+          "printed": "7–8, 12",
+          "pdf": "7–8, 12"
+        }
+      ]
+    },
+    "fujino": {
+      "source": "Fuj09a",
+      "locations": [
+        {
+          "result": "Theorem 1.1; Remark 1.2",
+          "printed": "475",
+          "pdf": "1"
+        }
+      ]
+    },
+    "bdpp": {
+      "source": "BDPP13",
+      "locations": [
+        {
+          "result": "Theorem 0.2; Corollary 0.3",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "tx-wzd": {
+      "source": "TX24",
+      "locations": [
+        {
+          "result": "Theorems 5.2, 5.4",
+          "printed": "24",
+          "pdf": "24"
+        }
+      ]
+    },
+    "tx-models": {
+      "source": "TX24",
+      "locations": [
+        {
+          "result": "Theorem 2.7",
+          "printed": "9",
+          "pdf": "9"
+        }
+      ]
+    },
+    "tx-program": {
+      "source": "TX24",
+      "locations": [
+        {
+          "result": "Theorem 4.2",
+          "printed": "22",
+          "pdf": "22"
+        }
+      ]
+    },
+    "tx-good": {
+      "source": "TX24",
+      "locations": [
+        {
+          "result": "Theorem 5.26",
+          "printed": "32",
+          "pdf": "32"
+        }
+      ]
+    },
+    "la-main": {
+      "source": "OpenAI26LA",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "la-ring": {
+      "source": "OpenAI26LA",
+      "locations": [
+        {
+          "result": "Corollary 12.1(i), proof and (67)",
+          "printed": "76",
+          "pdf": "76"
+        }
+      ]
+    },
+    "tx-transfer-all": {
+      "source": "TX24",
+      "locations": [
+        {
+          "result": "Theorem 2.7",
+          "printed": "9",
+          "pdf": "9"
+        },
+        {
+          "result": "Theorem 4.2",
+          "printed": "22",
+          "pdf": "22"
+        },
+        {
+          "result": "Theorems 5.2, 5.4",
+          "printed": "24",
+          "pdf": "24"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ],
+  "articleGuides": {
+    ".": {
+      "selfSource": "P",
+      "externalSources": [
+        "TX24",
+        "DEL00",
+        "Fuj09a",
+        "BDPP13",
+        "BCHM10",
+        "OpenAI26LA",
+        "KM98"
+      ],
+      "proofTargets": [
+        "main-result",
+        "smooth",
+        "ordinary-result"
+      ],
+      "mainResults": [
+        "main-result",
+        "ordinary-result"
+      ],
+      "statements": {
+        "main-result": "theorem-1-1",
+        "ordinary-result": "corollary-1-2",
+        "smooth": "proposition-3-2"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "main-result",
+          "conclusion": "Fixed nef b-data and no extraction; generalized lc",
+          "anchor": "proof-overview-step-3"
+        },
+        {
+          "result": "main-result",
+          "conclusion": "All discrepancies nondecrease, strictly for original contracted primes",
+          "anchor": "proof-overview-step-3"
+        },
+        {
+          "result": "main-result",
+          "conclusion": "Pseudo-effective adjoint has nef endpoint",
+          "anchor": "proof-overview-step-2"
+        },
+        {
+          "result": "main-result",
+          "conclusion": "Non-pseudo-effective endpoint: connected fibre contraction, dimension drop, relative Picard number one and relative anti-ampleness",
+          "anchor": "proof-overview-step-3"
+        },
+        {
+          "result": "main-result",
+          "conclusion": "All conclusions over arbitrary algebraically closed characteristic-zero fields",
+          "anchor": "proof-overview-step-4"
+        },
+        {
+          "result": "ordinary-result",
+          "conclusion": "Zero nef b-data: all discrepancy, no-extraction and both endpoint conclusions",
+          "anchor": "proof-2-step-1"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "main-result",
+          "purpose": {
+            "ja": "仮定、全discrepancyと二つの終点。",
+            "en": "Hypotheses, all discrepancy conditions, and both endpoints."
+          }
+        },
+        {
+          "citation": "phase",
+          "purpose": {
+            "ja": "局所指標の全semi-invariantに対する合同式。",
+            "en": "The local congruence for every semi-invariant."
+          }
+        },
+        {
+          "citation": "smooth",
+          "purpose": {
+            "ja": "ideal安定化、可算性、指数有界性と停止の矛盾。",
+            "en": "Ideal stabilization, countability, index bound and termination contradiction."
+          }
+        },
+        {
+          "citation": "relative",
+          "purpose": {
+            "ja": "二重被覆・平均・normによる相対数値分解。",
+            "en": "Relative numerical decomposition by double covers, averaging and norms."
+          }
+        },
+        {
+          "citation": "exact-output",
+          "purpose": {
+            "ja": "固定nef dataの差分、strictnessと非factorialな相対Picard数。",
+            "en": "Fixed-nef-data differences, strictness and nonfactorial relative Picard rank."
+          }
+        },
+        {
+          "citation": "descent",
+          "purpose": {
+            "ja": "有限MMPとrelative Projの基礎体降下。",
+            "en": "Ground-field descent of the finite MMP and relative Proj."
+          }
+        },
+        {
+          "citation": "all-characters",
+          "purpose": {
+            "ja": "tupleの合同式を全有理固有関数へ拡張する箇所。",
+            "en": "Extension from tuple congruences to all rational eigenfunctions."
+          }
+        },
+        {
+          "citation": "deferred",
+          "purpose": {
+            "ja": "未検証の深い一様評価を追うための入口。",
+            "en": "Entry to the deeper uniform estimates left unverified in this account."
+          }
+        }
+      ]
+    }
+  }
+}

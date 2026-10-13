@@ -1,5 +1,6 @@
 import inventory033 from '../../coordination/catalog-033/inventory.json' with { type: 'json' };
 import inventory034 from '../../research/catalog-034-inventory.json' with { type: 'json' };
+import inventory036 from '../../coordination/catalog-036/inventory.json' with { type: 'json' };
 import inventory037 from '../../coordination/catalog-037/inventory.json' with { type: 'json' };
 import inventory038 from '../../coordination/catalog-038/inventory.json' with { type: 'json' };
 import inventory042 from '../../coordination/catalog-042/inventory.json' with { type: 'json' };
@@ -28,7 +29,7 @@ const fieldTranslations = [
     "id": "algebraic-complex-geometry",
     "ja": "代数幾何学・複素幾何学",
     "catalogIds": [
-      "033", "034", "037", "038", "042", "051", "052", "057", "063", "068"
+      "033", "034", "036", "037", "038", "042", "051", "052", "057", "063", "068"
     ]
   },
   {
@@ -137,7 +138,11 @@ export const papers = [...inventory033.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '033', sourceCommit: inventory033.sourceCommit,
  title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
  pages: entry.pdfPages, order: entry.order, featured: true,
-})), ...papers034, ...inventory037.manuscripts.map(entry => ({
+})), ...papers034, ...inventory036.manuscripts.map(entry => ({
+ id: entry.paperId, catalogId: '036', sourceCommit: inventory036.sourceCommit,
+ title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
+ pages: entry.pdfPages, order: entry.order, featured: true,
+})), ...inventory037.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '037', sourceCommit: inventory037.sourceCommit,
  title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
  pages: entry.pdfPages, order: entry.order, featured: true,
@@ -186,6 +191,13 @@ export const catalogs = [{
   contentsTitle: 'Log abundance for compact Kähler spaces under logarithmic Iitaka subadditivity',
   description: text('豊富性と良い極小モデルに関する論文群を、仮定と結論、証明の関係から整理する。', 'A guide to manuscripts on abundance and good minimal models, organized by hypotheses, conclusions, and arguments.'),
   paperIds: manuscriptIds034,
+}, {
+  id: '036', sourceCommit: inventory036.sourceCommit, mode: 'multi',
+  title: text(inventory036.titleJa, inventory036.overviewTitle),
+  contentsTitle: inventory036.contentsTitle,
+  description: text('固定nefデータのモデル存在、射影・Kählerの数値的半豊富性、数値次元1の極小モデルを4篇の証明から読む。', 'Follow four proofs of models with fixed nef data, projective and Kähler numerical semiampleness, and minimal models in numerical dimension one.'),
+  paperIds: inventory036.manuscripts.map(p => p.paperId),
+  overviewSectionIds: ['papers', 'connections', 'sources'],
 }, {
   id: '037', sourceCommit: inventory037.sourceCommit, mode: 'multi',
   title: text(inventory037.titleJa, inventory037.overviewTitle),

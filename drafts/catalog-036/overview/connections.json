@@ -1,0 +1,407 @@
+{
+  "catalogId": "036",
+  "productionVersion": "1.4 + 2026-10-11/12 supplements",
+  "checkingScope": "記録した主要な結果単位の接続について原記述と適用を照合。全外部証明の再帰的点検ではない。未掲載関係は未調査。",
+  "omittedSections": [
+    {
+      "section": "固定数の分類カード",
+      "reason": "4篇の順序と役割は共通表で示せる。3分類を移植せず、主要連続帰着を1図、別経路を短い文章で示す。"
+    },
+    {
+      "section": "接続選択UI・本文の詳細依存表",
+      "reason": "主要経路は図と説明で読め、細部は各記事の依存表へ渡す。全接続記録は本JSONへ保持。"
+    }
+  ],
+  "diagramDecision": {
+    "adopted": [
+      "routes.ja.svg",
+      "routes.en.svg"
+    ],
+    "reason": "generalized MMPへordinary abundanceとbig性が合流し、projective positive partがKählerの射影底へ入力される帰着が、一覧だけでは読みにくいため。ND1は別経路として説明し、直接依存に混ぜない。",
+    "arrows": [
+      "glm-to-projective",
+      "projective-to-kahler"
+    ],
+    "additionalInputOnArrow": "ordinary-la-to-projective"
+  },
+  "connections": [
+    {
+      "id": "glm-to-projective",
+      "from": {
+        "paperId": "generalized-lc-minimal-models",
+        "result": "Theorem 1.1; Section 3.3",
+        "printedPages": "2, 14–16",
+        "pdfPages": "2, 14–16",
+        "version": "September 24, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Minimal-models-and-Mori-fibre-spaces-for-generalized-log-canonical-Q-pairs-September-24-2026/paper.pdf"
+      },
+      "to": {
+        "paperId": "projective-numerical-semiampleness",
+        "result": "Theorem 2.3; Proposition 7.1; Section 8.2",
+        "printedPages": "4, 28–30, 31–32",
+        "pdfPages": "4, 28–30, 31–32",
+        "version": "October 3, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Numerical-Semiampleness-of-Nef-Adjoint-Divisors-October-3-2026/paper.pdf"
+      },
+      "role": "固定rational nef b-dataのgeneralized klt MMPを供給し、ordinary adjointとnef summandを扱う帰納法を支える。",
+      "hypotheses": "Q-factorial generalized kltを利用。元のX上でM nefを仮定しても後続モデルのtraceをnefとは仮定しない。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "by": "catalog-036 headquarters plus article authors",
+        "date": "2026-10-13",
+        "evidence": "coordination/catalog-036/CONTENT_REVIEW.md; each article sources.json",
+        "scope": "Input statement and target application checked; external proof not recursively verified."
+      },
+      "articleLinks": {
+        "from": {
+          "ja": "../generalized-lc-minimal-models/article.ja.md#results",
+          "en": "../generalized-lc-minimal-models/article.en.md#results"
+        },
+        "to": {
+          "ja": "../projective-numerical-semiampleness/article.ja.md#proof-3",
+          "en": "../projective-numerical-semiampleness/article.en.md#proof-3"
+        }
+      },
+      "unresolved": [
+        "Input theorem itself is not independently proved here."
+      ]
+    },
+    {
+      "id": "projective-to-kahler",
+      "from": {
+        "paperId": "projective-numerical-semiampleness",
+        "result": "Proposition 8.1; Theorem 2.3",
+        "printedPages": "30, 4",
+        "pdfPages": "30, 4",
+        "version": "October 3, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Numerical-Semiampleness-of-Nef-Adjoint-Divisors-October-3-2026/paper.pdf"
+      },
+      "to": {
+        "paperId": "kahler-numerical-semiampleness",
+        "result": "Proposition 2.5; Theorem 1.2 proof in Section 7.3",
+        "printedPages": "7–8, 48–49",
+        "pdfPages": "7–8, 48–49",
+        "version": "October 6, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Numerical-semiampleness-of-nef-adjoint-classes-on-compact-Kahler-manifolds-October-6-2026/numerical-generalized-abundance.pdf"
+      },
+      "role": "射影底で数値的に半豊富なpositive partを作り、Kähler解消へ引き戻す。",
+      "hypotheses": "底は正規射影的、ordinary klt boundary、ordinary adjoint pseudo-effective、底上の追加有理line nef。Kähler generalized MMPへの無条件移行ではない。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "by": "catalog-036 headquarters plus article authors",
+        "date": "2026-10-13",
+        "evidence": "coordination/catalog-036/CONTENT_REVIEW.md; each article sources.json",
+        "scope": "Input statement and target application checked; external proof not recursively verified."
+      },
+      "articleLinks": {
+        "from": {
+          "ja": "../projective-numerical-semiampleness/article.ja.md#results",
+          "en": "../projective-numerical-semiampleness/article.en.md#results"
+        },
+        "to": {
+          "ja": "../kahler-numerical-semiampleness/article.ja.md#proof-1-step-3",
+          "en": "../kahler-numerical-semiampleness/article.en.md#proof-1-step-3"
+        }
+      },
+      "unresolved": [
+        "Input theorem itself is not independently proved here."
+      ]
+    },
+    {
+      "id": "ordinary-la-to-projective",
+      "from": {
+        "sourceId": "OpenAI26LA",
+        "displayName": "Log abundance in characteristic zero",
+        "result": "Theorem 1.1",
+        "printedPages": "2",
+        "pdfPages": "2",
+        "version": "September 24, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf"
+      },
+      "to": {
+        "paperId": "projective-numerical-semiampleness",
+        "result": "Theorem 2.2; Propositions 7.1 and 8.1",
+        "printedPages": "4, 28–35",
+        "pdfPages": "4, 28–35",
+        "version": "October 3, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Numerical-Semiampleness-of-Nef-Adjoint-Divisors-October-3-2026/paper.pdf"
+      },
+      "role": "nefになったordinary adjointのsemiampleness、Calabi–Yau帰着、canonical bundle formulaの入力。",
+      "hypotheses": "ordinary klt/lc rational boundary。Mをboundaryに読み替えない。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "by": "catalog-036 headquarters plus article authors",
+        "date": "2026-10-13",
+        "evidence": "coordination/catalog-036/CONTENT_REVIEW.md; each article sources.json",
+        "scope": "Input statement and target application checked; external proof not recursively verified."
+      },
+      "articleLinks": {
+        "from": {
+          "source": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf"
+        },
+        "to": {
+          "ja": "../projective-numerical-semiampleness/article.ja.md#proof-3",
+          "en": "../projective-numerical-semiampleness/article.en.md#proof-3"
+        }
+      },
+      "unresolved": [
+        "Input theorem itself is not independently proved here."
+      ]
+    },
+    {
+      "id": "ordinary-kla-to-kahler",
+      "from": {
+        "sourceId": "OpenAI26K",
+        "displayName": "Log abundance for compact Kähler spaces under logarithmic Iitaka subadditivity",
+        "result": "Theorem 2.13; Proposition 3.8",
+        "printedPages": "13, 23–24",
+        "pdfPages": "13, 23–24",
+        "version": "October 6, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-6-2026/main.pdf"
+      },
+      "to": {
+        "paperId": "kahler-numerical-semiampleness",
+        "result": "Theorem 2.3; Proposition 2.4; Proposition 7.2",
+        "printedPages": "6–7, 47–48",
+        "pdfPages": "6–7, 47–48",
+        "version": "October 6, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Numerical-semiampleness-of-nef-adjoint-classes-on-compact-Kahler-manifolds-October-6-2026/numerical-generalized-abundance.pdf"
+      },
+      "role": "通常随伴の実際のQ-line分解と既知の負部分を収縮する有限プログラム。",
+      "hypotheses": "smooth SNC starting model、必要なlogarithmic Iitaka仮定、ordinary klt case。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "by": "catalog-036 headquarters plus article authors",
+        "date": "2026-10-13",
+        "evidence": "coordination/catalog-036/CONTENT_REVIEW.md; each article sources.json",
+        "scope": "Input statement and target application checked; external proof not recursively verified."
+      },
+      "articleLinks": {
+        "from": {
+          "source": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-6-2026/main.pdf"
+        },
+        "to": {
+          "ja": "../kahler-numerical-semiampleness/article.ja.md#proof-1-step-2",
+          "en": "../kahler-numerical-semiampleness/article.en.md#proof-1-step-2"
+        }
+      },
+      "unresolved": [
+        "既存034記事は10月4日版。036は10月6日版を直接参照。034改訂は別作業。",
+        "外部結果の証明全体は未検証。"
+      ]
+    },
+    {
+      "id": "orbifold-to-kahler",
+      "from": {
+        "sourceId": "OpenAI26O",
+        "displayName": "Orbifold and logarithmic Iitaka subadditivity",
+        "result": "Lemmas 4.1, 4.3; Proposition 4.5; Corollary 6.2",
+        "printedPages": "21–26, 40–41",
+        "pdfPages": "21–26, 40–41",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf"
+      },
+      "to": {
+        "paperId": "kahler-numerical-semiampleness",
+        "result": "Theorem 2.3; Proposition 4.1",
+        "printedPages": "6–7, 11–17",
+        "pdfPages": "6–7, 11–17",
+        "version": "October 6, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Numerical-semiampleness-of-nef-adjoint-classes-on-compact-Kahler-manifolds-October-6-2026/numerical-generalized-abundance.pdf"
+      },
+      "role": "対数Iitakaの仮定を充足し、実偏極を許すHodge lineとperiod商へのQ-line降下を与える。",
+      "hypotheses": "logarithmic部分はsmooth projective・reduced SNC・support inclusion。period部分は最高Hodge lineとambient integral latticeを保持。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "by": "catalog-036 headquarters plus article authors",
+        "date": "2026-10-13",
+        "evidence": "coordination/catalog-036/CONTENT_REVIEW.md; each article sources.json",
+        "scope": "Input statement and target application checked; external proof not recursively verified."
+      },
+      "articleLinks": {
+        "from": {
+          "source": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026/paper.pdf"
+        },
+        "to": {
+          "ja": "../kahler-numerical-semiampleness/article.ja.md#proof-4",
+          "en": "../kahler-numerical-semiampleness/article.en.md#proof-4"
+        }
+      },
+      "unresolved": [
+        "root-cover延長・全モデル互換性の全細部は未検証。"
+      ]
+    },
+    {
+      "id": "ordinary-la-to-nd1",
+      "from": {
+        "sourceId": "OpenAI26LA",
+        "displayName": "Log abundance in characteristic zero",
+        "result": "Theorem 1.1",
+        "printedPages": "2",
+        "pdfPages": "2",
+        "version": "September 24, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf"
+      },
+      "to": {
+        "paperId": "minimal-models-numerical-dimension-one",
+        "result": "Corollary 1.2",
+        "printedPages": "2",
+        "pdfPages": "2",
+        "version": "September 24, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Minimal-models-in-numerical-dimension-one-September-24-2026/paper.pdf"
+      },
+      "role": "構成済みの同じterminal nef終点でK_Y自体をsemiampleにする。",
+      "hypotheses": "ordinary pair (Y,0)、effective zero rational boundary、K_Y nef Q-Cartier。",
+      "kind": "consequence",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "by": "catalog-036 headquarters plus article authors",
+        "date": "2026-10-13",
+        "evidence": "coordination/catalog-036/CONTENT_REVIEW.md; each article sources.json",
+        "scope": "Input statement and target application checked; external proof not recursively verified."
+      },
+      "articleLinks": {
+        "from": {
+          "source": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf"
+        },
+        "to": {
+          "ja": "../minimal-models-numerical-dimension-one/article.ja.md#proof-2-step-1",
+          "en": "../minimal-models-numerical-dimension-one/article.en.md#proof-2-step-1"
+        }
+      },
+      "unresolved": [
+        "Input theorem itself is not independently proved here."
+      ]
+    },
+    {
+      "id": "ordinary-la-to-glc-consequence",
+      "from": {
+        "sourceId": "OpenAI26LA",
+        "displayName": "Log abundance in characteristic zero",
+        "result": "Theorem 1.1",
+        "printedPages": "2",
+        "pdfPages": "2",
+        "version": "September 24, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf"
+      },
+      "to": {
+        "paperId": "generalized-lc-minimal-models",
+        "result": "Remark following Corollary 1.2",
+        "printedPages": "2",
+        "pdfPages": "2",
+        "version": "September 24, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Minimal-models-and-Mori-fibre-spaces-for-generalized-log-canonical-Q-pairs-September-24-2026/paper.pdf"
+      },
+      "role": "M=0のordinaryなnef終点だけにsemiamplenessを追加する。generalized主定理の証明入力ではない。",
+      "hypotheses": "ordinary lc pair、nef adjoint。nonzero nef b-dataへ外挿しない。",
+      "kind": "consequence",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "by": "catalog-036 headquarters plus article authors",
+        "date": "2026-10-13",
+        "evidence": "coordination/catalog-036/CONTENT_REVIEW.md; each article sources.json",
+        "scope": "Input statement and target application checked; external proof not recursively verified."
+      },
+      "articleLinks": {
+        "from": {
+          "source": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf"
+        },
+        "to": {
+          "ja": "../generalized-lc-minimal-models/article.ja.md#proof-2-step-2",
+          "en": "../generalized-lc-minimal-models/article.en.md#proof-2-step-2"
+        }
+      },
+      "unresolved": [
+        "Input theorem itself is not independently proved here."
+      ]
+    },
+    {
+      "id": "glc-to-la-finite-generation",
+      "from": {
+        "paperId": "generalized-lc-minimal-models",
+        "result": "Corollary 1.2",
+        "printedPages": "2",
+        "pdfPages": "2",
+        "version": "September 24, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Minimal-models-and-Mori-fibre-spaces-for-generalized-log-canonical-Q-pairs-September-24-2026/paper.pdf"
+      },
+      "to": {
+        "sourceId": "OpenAI26LA",
+        "displayName": "Log abundance in characteristic zero",
+        "result": "Corollary 12.1(i), proof and (67)",
+        "printedPages": "76",
+        "pdfPages": "76",
+        "version": "September 24, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf"
+      },
+      "role": "非抽出モデルの有効例外差で全rounded degreeの切断を同一視し、lc log canonical ringの有限生成へ使う。",
+      "hypotheses": "ordinary lc rational pair。LA主定理Theorem1.1の入力ではなく後続系の証明。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "by": "catalog-036 headquarters plus article authors",
+        "date": "2026-10-13",
+        "evidence": "coordination/catalog-036/CONTENT_REVIEW.md; each article sources.json",
+        "scope": "Input statement and target application checked; external proof not recursively verified."
+      },
+      "articleLinks": {
+        "from": {
+          "ja": "../generalized-lc-minimal-models/article.ja.md#results",
+          "en": "../generalized-lc-minimal-models/article.en.md#results"
+        },
+        "to": {
+          "source": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf"
+        }
+      },
+      "unresolved": [
+        "Input theorem itself is not independently proved here."
+      ]
+    },
+    {
+      "id": "nd1-separate-route",
+      "from": {
+        "paperId": "minimal-models-numerical-dimension-one",
+        "result": "Theorem 1.1",
+        "printedPages": "2",
+        "pdfPages": "2",
+        "version": "September 24, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Minimal-models-in-numerical-dimension-one-September-24-2026/paper.pdf"
+      },
+      "to": {
+        "paperId": "generalized-lc-minimal-models",
+        "result": "Corollary 1.2 (smooth ordinary pseudo-effective case)",
+        "printedPages": "2",
+        "pdfPages": "2",
+        "version": "September 24, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Minimal-models-and-Mori-fibre-spaces-for-generalized-log-canonical-Q-pairs-September-24-2026/paper.pdf"
+      },
+      "kind": "alternative",
+      "role": "数値次元1の場合の極小モデルを、余次元2安定化と二つの曲面で構成する別経路。直接依存の矢印にはしない。",
+      "hypotheses": "ND1はsmooth connected projective over C、dim≥3、κσ(K)=1。GLC側はより広いordinary lc存在結論だが、proof mechanismは別。",
+      "checking": {
+        "status": "comparison-of-statements-and-proof-inputs",
+        "by": "HQ and Kähler reviewer",
+        "date": "2026-10-13",
+        "evidence": "REVIEW_ND1_BY_KAHLER.md"
+      },
+      "articleLinks": {
+        "from": {
+          "ja": "../minimal-models-numerical-dimension-one/article.ja.md#proof-1",
+          "en": "../minimal-models-numerical-dimension-one/article.en.md#proof-1"
+        },
+        "to": {
+          "ja": "../generalized-lc-minimal-models/article.ja.md#proof-2",
+          "en": "../generalized-lc-minimal-models/article.en.md#proof-2"
+        }
+      },
+      "unresolved": [
+        "異なる仮定を持つ全結果の同値性を主張しない。未記録の引用関係は未調査。"
+      ]
+    }
+  ]
+}

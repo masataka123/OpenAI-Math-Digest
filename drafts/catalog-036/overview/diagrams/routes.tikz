@@ -1,0 +1,14 @@
+\node[card] (g) {\textbf{Minimal models and Mori fibre spaces for generalized log canonical Q-pairs}\\[5pt]
+\heading{03}{Generalized lc：固定nef b-dataのモデル}{Generalized lc: models with fixed nef b-data}
+$K_X+B+M_X$\Tx{がpseudo-effectiveならnef終点}{ pseudo-effective $\Longrightarrow$ nef endpoint}.\\
+\Tx{元のモデル上の$M_X$がnefとは限らない。}{The trace $M_X$ on the original model need not be nef.}};
+\node[card,below=3.6cm of g] (p) {\textbf{Numerical Semiampleness of Nef Adjoint Divisors}\\[5pt]
+\heading{02}{射影klt対のpositive part}{Positive parts for projective klt pairs}
+$P_\sigma\bigl(w^*(K_X+B+M)\bigr)\equiv L,\qquad L\text{ semiample}$.\\
+\Tx{$K_X+B$はpseudo-effective、$M$は$X$上でnef。}{$K_X+B$ is pseudo-effective; $M$ is nef on $X$.}};
+\flow g p {\Tx{有限MMPにordinary abundanceと新しいbig性を合流}{Combine a finite MMP with ordinary abundance and new bigness}\\\Cite{glm}\\\Cite{p-input}\quad\Cite{la}};
+\node[result,below=3.0cm of p] (k) {\textbf{Numerical semiampleness of nef adjoint classes on compact K\"ahler manifolds}\\[5pt]
+\heading{01}{Kähler：実Chern類のsemiample代表}{K\"ahler: a semiample real-Chern-class representative}
+$c_1(K_X+B+M)=c_1(L)\ \text{in }H^{1,1}_{\mathrm{BC}}(X,\mathbb R)$.\\
+\Tx{smooth・SNC klt、$K_X+B$ pseudo-effective、$M$と$D=K_X+B+M$はnef。}{Smooth SNC klt; $K_X+B$ pseudo-effective; $M$ and $D=K_X+B+M$ nef.}};
+\flow p k {\Tx{代数還元の射影底へ降下し、positive partを適用}{Descend to a projective base and apply the positive-part theorem}\\\Cite{p-positive}\\\Cite{k-input}};

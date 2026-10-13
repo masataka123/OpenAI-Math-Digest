@@ -1,0 +1,19 @@
+\node[card] (a) {\heading{1}{正摂動を余次元2で固定}{Fix perturbations in codimension two}
+$X\dashrightarrow Y$,\quad $M_j=K_Y+t_jB_Y$,\quad $t_j\to0$.\\
+\Tx{$|d_jM_j|$は$Y\setminus Z_j$で生成、$\operatorname{codim}Z_j\geq3$。}{$|d_jM_j|$ is generated on $Y\setminus Z_j$, $\operatorname{codim}Z_j\geq3$.}};
+\node[card,below=2.4cm of a] (b) {\heading{2}{第一の曲面：固定捻りの二次増大}{First surface: growth with one fixed twist}
+$L=K_Y$,\quad $h^0(\widehat Y,m\pi^*L+P)\geq\frac{m^2}{2}L^2H^{n-2}+O(m)$.\\
+\Tx{$j=j(m)$を選んでも$S,P$は固定する。}{$S$ and $P$ stay fixed while $j=j(m)$ varies.}};
+\flow a b {\Tx{Nadel消滅とKoszul複体で制限を全射にする}{Nadel vanishing and Koszul give surjective restriction}\\\Cite{growth}\quad\Cite{laz}};
+\node[card,below=2.3cm of b] (c) {\heading{3}{元の$X$へ切断を移す}{Transfer sections to the original $X$}
+$u^*K_X\geq r^*\pi^*L,\quad \kappa_\sigma(X,K_X)=1$\\
+$\Longrightarrow\quad L^2\cdot H^{n-2}=0$.};
+\flow b c {\Tx{一つのample $A_X$で正の二次limsupを排除}{One ample $A_X$ excludes positive quadratic limsup}\\\Cite{completion}};
+\node[card,below=2.3cm of c] (d) {\heading{4}{第二の曲面：負の曲線は矛盾}{Second surface: a negative curve is impossible}
+$L\cdot C_0<0\ \Longrightarrow\ \operatorname{coeff}_eF_j\geq ck_j$\\
+$\Longrightarrow\quad M_j^2\cdot[T]\geq\epsilon>0,\quad M_j^2\cdot[T]\to0$.};
+\flow c d {\Tx{固定した点・例外曲線でjetとHodge indexを使う}{Jets and Hodge index on a fixed point and exceptional curve}\\\Cite{nefness}};
+\node[result,below=2.3cm of d] (e) {\heading{}{極小モデルと標準因子の比較}{Minimal model and canonical comparison}
+$K_Y\text{ nef},\qquad p^*K_X=q^*K_Y+E,\quad E\geq0,\quad q_*E=0$.\\
+\Tx{有限$K$-negative列、因子非抽出、縮約因子上で$E>0$。}{Finite $K$-negative sequence; no extraction; $E>0$ on contracted divisors.}};
+\flow d e {\Tx{nef性に、有限prefixのdiscrepancy比較を合わせる}{Combine nefness with discrepancies of the finite prefix}\\\Cite{comparison}};

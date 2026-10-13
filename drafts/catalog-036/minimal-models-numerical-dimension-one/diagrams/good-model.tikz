@@ -1,0 +1,7 @@
+\node[card] (a) {\heading{}{Theorem 1.1の同じ終点}{The same endpoint of Theorem 1.1}
+$Y$ \Tx{は射影$\mathbb Q$-factorial terminal}{is projective, $\mathbb Q$-factorial and terminal}.\\
+$(Y,0)\text{ lc},\qquad K_Y\text{ nef and }\mathbb Q\text{-Cartier}$.};
+\node[result,below=2.5cm of a] (b) {\heading{}{Corollary 1.2：good minimal model}{Corollary 1.2: good minimal model}
+$\exists m>0:\quad mK_Y\text{ is Cartier and globally generated}$.\\
+\Tx{数値同値な代替ではなく、$K_Y$自体の半豊富性。}{Semiampleness of $K_Y$ itself, not just a numerical replacement.}};
+\flow a b {\Tx{有効有理境界0のordinary lc対へlog abundanceを適用}{Apply log abundance to the ordinary lc pair with boundary zero}\\\Cite{la}\quad\Cite{cor}};

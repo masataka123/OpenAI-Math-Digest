@@ -1,0 +1,15 @@
+\node[card] (a) {\heading{1}{実際の随伴引戻しとmoduli line}{An actual adjoint pullback and its moduli line}
+$K_Y+D\sim_{\mathbb Q}f^*H,\quad L_S=b^*H-K_S-\Delta_S$\\
+\Tx{有効klt全空間の根被覆：最高Hodge固有直線束のparabolic延長。}{Root cover of the effective klt total space: parabolic extension of the highest Hodge eigenline.}};
+\node[card,below=2.2cm of a] (b) {\heading{2}{実偏極のperiod入力}{Period input with a real polarization}
+$L_{S'}\sim_{\mathbb Q}p^*P,\quad P\text{ nef on projective }Q$\\
+$\nu(L_{S'})=\operatorname{rank}(d\Phi_{\rm line}),\quad\dim Q\leq\operatorname{rank}(d\Phi)$};
+\flow a b {\Tx{整格子を保つperiod商と、境界を含む有理直線束の降下}{Use the integral period quotient and rational-line descent including the boundary}\\\Cite{external-period}\\\Cite{root}};
+\node[card,below=2.0cm of b] (c) {\heading{3}{line periodとfull periodの階数を一致させる}{Match the line and full period ranks}
+$r=\nu(P)\leq\dim Q\leq\operatorname{rank}(d\Phi)=r$\\
+\Tx{$\dim Q>0$なら$P$はbig；点の場合$L_{S'}\sim_{\mathbb Q}0$。}{If $\dim Q>0$, then $P$ is big; over a point, $L_{S'}\sim_{\mathbb Q}0$.}};
+\flow b c {\Tx{有効境界の極評価により、lineの核のベクトル場は正則に持ち上がる}{Effectivity bounds poles, so vector fields in the line kernel lift holomorphically}\\\Cite{rank}};
+\node[result,below=2.0cm of c] (d) {\heading{4}{moduli lineを小係数の有効境界に置換}{Replace the moduli line by an effective boundary of small coefficients}
+$E_S\sim_{\mathbb Q}L_S,\quad (S,\Delta_S+E_S)\text{ sub-klt}$\\
+$D_Z=b_*(\Delta_S+E_S)\geq0,\quad H\sim_{\mathbb Q}K_Z+D_Z,\quad (Z,D_Z)\text{ klt}$};
+\flow c d {\Tx{Kodaira分解とBertini；元の有効境界が閾値$\leq1$を保証}{Kodaira decomposition and Bertini; original effectivity bounds thresholds by $1$}\\\Cite{boundary}};

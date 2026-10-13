@@ -1,0 +1,260 @@
+{
+  "schemaVersion": 1,
+  "catalogId": "036",
+  "citationStyle": "author-key",
+  "sources": {
+    "P": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "pagination": "same"
+    },
+    "BCHM10": {
+      "recordFile": "sources.json",
+      "recordId": "BCHM10",
+      "guideRole": {
+        "ja": "big境界付きklt対の有限scaling MMP",
+        "en": "Finite scaling MMP for klt pairs with big boundary"
+      }
+    },
+    "Laz10": {
+      "recordFile": "sources.json",
+      "recordId": "Laz10",
+      "guideRole": {
+        "ja": "固定捻り付き制限全射のためのNadel消滅",
+        "en": "Nadel vanishing for restriction with a fixed twist"
+      }
+    },
+    "OpenAI26LA": {
+      "recordFile": "sources.json",
+      "recordId": "OpenAI26LA",
+      "guideRole": {
+        "ja": "系にのみ追加するordinary lc log abundance",
+        "en": "Ordinary lc log abundance added only for the corollary"
+      }
+    },
+    "KM98": {
+      "recordFile": "sources.json",
+      "recordId": "KM98",
+      "guideRole": {
+        "ja": "MMP、base point free、negativity。引用書原本の番号・頁照合は保留",
+        "en": "MMP, base point free and negativity; original book result/page checks remain open"
+      }
+    },
+    "Har77": {
+      "recordFile": "sources.json",
+      "recordId": "Har77",
+      "guideRole": {
+        "ja": "曲面Riemann–RochとHodge index。本稿の使用を読解、原書照合は保留",
+        "en": "Surface Riemann–Roch and Hodge index; manuscript uses read, book checks remain open"
+      }
+    },
+    "Ful98": {
+      "recordFile": "sources.json",
+      "recordId": "Ful98",
+      "guideRole": {
+        "ja": "cycle交叉とBorel–Moore局所化。本稿の使用を読解、原書照合は保留",
+        "en": "Cycle intersections and Borel–Moore localization; manuscript uses read, book checks remain open"
+      }
+    }
+  },
+  "citations": {
+    "main": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.1; equation (1.1)",
+          "printed": "1–2",
+          "pdf": "1–2"
+        }
+      ]
+    },
+    "cor": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Corollary 1.2",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "perturbations": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 2.1; Lemmas 2.2–2.3",
+          "printed": "4–8",
+          "pdf": "4–8"
+        }
+      ]
+    },
+    "growth": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 3.1",
+          "printed": "8–10",
+          "pdf": "8–10"
+        }
+      ]
+    },
+    "nefness": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemmas 3.2–3.3; Proposition 3.4",
+          "printed": "10–13",
+          "pdf": "10–13"
+        }
+      ]
+    },
+    "completion": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Section 4; equation (4.1)",
+          "printed": "13–14",
+          "pdf": "13–14"
+        }
+      ]
+    },
+    "comparison": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 2.1(iii); Lemma 2.2",
+          "printed": "4–5, 8",
+          "pdf": "4–5, 8"
+        }
+      ]
+    },
+    "bchm": {
+      "source": "BCHM10",
+      "locations": [
+        {
+          "result": "Corollary 1.4.2",
+          "printed": "10",
+          "pdf": "10"
+        }
+      ]
+    },
+    "laz": {
+      "source": "Laz10",
+      "locations": [
+        {
+          "result": "Theorem 2.4",
+          "printed": "11",
+          "pdf": "11"
+        }
+      ]
+    },
+    "la": {
+      "source": "OpenAI26LA",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ],
+  "articleGuides": {
+    ".": {
+      "selfSource": "P",
+      "externalSources": [
+        "BCHM10",
+        "Laz10",
+        "OpenAI26LA",
+        "KM98",
+        "Har77",
+        "Ful98"
+      ],
+      "proofTargets": [
+        "main",
+        "cor"
+      ],
+      "mainResults": [
+        "main",
+        "cor"
+      ],
+      "statements": {
+        "main": "theorem-1-1",
+        "cor": "corollary-1-2"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "main",
+          "conclusion": "Nefness of KY",
+          "anchor": "proof-1-step-3"
+        },
+        {
+          "result": "main",
+          "conclusion": "Finite K-negative sequence; projective Q-factorial terminal endpoint; no extraction",
+          "anchor": "proof-1-step-4"
+        },
+        {
+          "result": "main",
+          "conclusion": "Effective q-exceptional canonical comparison and strict support",
+          "anchor": "proof-1-step-4"
+        },
+        {
+          "result": "cor",
+          "conclusion": "Semiampleness of KY on the same endpoint; good minimal model",
+          "anchor": "proof-2-step-1"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "main",
+          "purpose": {
+            "ja": "切断増大の規約と主定理の全結論",
+            "en": "The section-growth convention and all conclusions"
+          }
+        },
+        {
+          "citation": "perturbations",
+          "purpose": {
+            "ja": "正摂動から余次元2で固定したモデルへ",
+            "en": "From positive perturbations to a model fixed in codimension two"
+          }
+        },
+        {
+          "citation": "growth",
+          "purpose": {
+            "ja": "固定捻りとj(m)の選び方",
+            "en": "The fixed twist and the choice of j(m)"
+          }
+        },
+        {
+          "citation": "nefness",
+          "purpose": {
+            "ja": "固定曲面上での負の曲線の排除",
+            "en": "Excluding negative curves on a fixed surface"
+          }
+        },
+        {
+          "citation": "completion",
+          "purpose": {
+            "ja": "Xへの切断移送と数値次元の使用",
+            "en": "Section transfer to X and use of numerical dimension"
+          }
+        },
+        {
+          "citation": "cor",
+          "purpose": {
+            "ja": "log abundanceを追加する位置",
+            "en": "Where log abundance is added"
+          }
+        }
+      ]
+    }
+  }
+}

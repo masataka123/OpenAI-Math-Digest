@@ -1,0 +1,591 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "author-key",
+  "catalogId": "036",
+  "sources": {
+    "P": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "pagination": "same"
+    },
+    "OpenAI26LA": {
+      "recordFile": "sources.json",
+      "recordId": "la",
+      "pagination": "same",
+      "guideRole": {
+        "ja": "通常lc対のlog abundance、moving kernel、有限データFrobenius比較",
+        "en": "Ordinary lc abundance, moving kernels and finite-data Frobenius comparison"
+      }
+    },
+    "OpenAI26c": {
+      "recordFile": "sources.json",
+      "recordId": "gm",
+      "pagination": "same",
+      "guideRole": {
+        "ja": "固定したnef b-divisorを保つ停止するMMPの選択",
+        "en": "A terminating choice of MMP retaining fixed nef b-divisor data"
+      }
+    },
+    "LP18": {
+      "recordFile": "sources.json",
+      "recordId": "lp",
+      "pagination": "same",
+      "guideRole": {
+        "ja": "正部分の比較、nef因子の底への数値的下降、元の多様体への下降",
+        "en": "Positive-part comparisons and numerical descent to the base and original variety"
+      }
+    },
+    "BZ15": {
+      "recordFile": "sources.json",
+      "recordId": "bz",
+      "pagination": "same",
+      "guideRole": {
+        "ja": "Cartier指数1・被約境界の一様双有理性から曲線次数を抑える",
+        "en": "Uniform birationality for index-one nef data and reduced boundary bounds curve degrees"
+      }
+    },
+    "Amb03": {
+      "recordFile": "sources.json",
+      "recordId": "ambro",
+      "pagination": "same",
+      "guideRole": {
+        "ja": "通常klt随伴のQ線形引戻しを、底の有効klt境界へ置き換える",
+        "en": "Replace a Q-linear pullback ordinary klt adjoint by an effective klt boundary on the base"
+      }
+    },
+    "HX11": {
+      "recordFile": "sources.json",
+      "recordId": "hx",
+      "pagination": "same",
+      "guideRole": {
+        "ja": "相対有限生成と非常に一般のファイバーのgood modelから相対good modelを得る",
+        "en": "Obtain a relative good model from relative finite generation and good models on very general fibres"
+      }
+    },
+    "Fuj09b": {
+      "recordFile": "sources.json",
+      "recordId": "fujino",
+      "pagination": "same",
+      "guideRole": {
+        "ja": "有理klt対の相対log canonical ringの有限生成",
+        "en": "Finite generation of relative log canonical rings for rational klt pairs"
+      }
+    },
+    "CP15": {
+      "recordFile": "sources.json",
+      "recordId": "cp",
+      "pagination": "different",
+      "guideRole": {
+        "ja": "滑らかな解消のpseudo-effective Kから余接束のgeneric semipositivity",
+        "en": "Generic semipositivity of the cotangent bundle on a smooth resolution with pseudo-effective K"
+      }
+    },
+    "BDPP13": {
+      "recordFile": "sources.json",
+      "recordId": "bdpp",
+      "pagination": "same",
+      "guideRole": {
+        "ja": "非pseudo-effective因子を一つのstrongly movable curveで分離する",
+        "en": "Separate a non-pseudo-effective divisor by a strongly movable curve"
+      }
+    },
+    "BCHM10": {
+      "recordFile": "sources.json",
+      "recordId": "bchm",
+      "pagination": "same",
+      "guideRole": {
+        "ja": "canonicalな指数1被覆のcrepant Q-factorial terminalization",
+        "en": "Crepant Q-factorial terminalization of the canonical index-one cover"
+      }
+    }
+  },
+  "citations": {
+    "main-result": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "main-corollary": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Corollary 1.2",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "induction": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§3.1",
+          "printed": "4–5",
+          "pdf": "4–5"
+        }
+      ]
+    },
+    "programs": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 3.2",
+          "printed": "6–7",
+          "pdf": "6–7"
+        }
+      ]
+    },
+    "positive-iitaka": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Propositions 3.3–3.4",
+          "printed": "8",
+          "pdf": "8"
+        }
+      ]
+    },
+    "curve": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 4.1",
+          "printed": "9–10",
+          "pdf": "9–10"
+        }
+      ]
+    },
+    "moving": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemmas 4.3–4.7",
+          "printed": "10–12",
+          "pdf": "10–12"
+        }
+      ]
+    },
+    "terminal": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 5.1",
+          "printed": "13",
+          "pdf": "13"
+        }
+      ]
+    },
+    "scalar": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 5.2",
+          "printed": "14",
+          "pdf": "14"
+        }
+      ]
+    },
+    "bundle": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 5.3",
+          "printed": "15",
+          "pdf": "15"
+        }
+      ]
+    },
+    "exclusions": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§§5.4–5.6",
+          "printed": "16–20",
+          "pdf": "16–20"
+        }
+      ]
+    },
+    "frobenius": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 6.1",
+          "printed": "20–21",
+          "pdf": "20–21"
+        }
+      ]
+    },
+    "application": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§6.7",
+          "printed": "27–28",
+          "pdf": "27–28"
+        }
+      ]
+    },
+    "full": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 7.1",
+          "printed": "28",
+          "pdf": "28"
+        }
+      ]
+    },
+    "boundary": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§7",
+          "printed": "29–30",
+          "pdf": "29–30"
+        }
+      ]
+    },
+    "positive": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 8.1",
+          "printed": "30",
+          "pdf": "30"
+        }
+      ]
+    },
+    "positive-rules": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 8.2",
+          "printed": "31",
+          "pdf": "31"
+        }
+      ]
+    },
+    "nef-mmp": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 8.3",
+          "printed": "31–32",
+          "pdf": "31–32"
+        }
+      ]
+    },
+    "nef-reduction": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§§8.3–8.4",
+          "printed": "32–33",
+          "pdf": "32–33"
+        }
+      ]
+    },
+    "relative": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§8.5",
+          "printed": "33–34",
+          "pdf": "33–34"
+        }
+      ]
+    },
+    "descent": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 8.4",
+          "printed": "35",
+          "pdf": "35"
+        }
+      ]
+    },
+    "field": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 8.5; §8.7",
+          "printed": "35–36",
+          "pdf": "35–36"
+        }
+      ]
+    },
+    "la": {
+      "source": "OpenAI26LA",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "la-moving": {
+      "source": "OpenAI26LA",
+      "locations": [
+        {
+          "result": "Lemmas 7.1–7.5",
+          "printed": "45–52",
+          "pdf": "45–52"
+        }
+      ]
+    },
+    "la-frobenius": {
+      "source": "OpenAI26LA",
+      "locations": [
+        {
+          "result": "Theorem 9.1",
+          "printed": "62",
+          "pdf": "62"
+        }
+      ]
+    },
+    "gm": {
+      "source": "OpenAI26c",
+      "locations": [
+        {
+          "result": "Theorem 1.1; §3.3",
+          "printed": "2, 14–15",
+          "pdf": "2, 14–15"
+        }
+      ]
+    },
+    "lp-positive": {
+      "source": "LP18",
+      "locations": [
+        {
+          "result": "Lemmas 2.4–2.5",
+          "printed": "7–8",
+          "pdf": "7–8"
+        }
+      ]
+    },
+    "lp-descent": {
+      "source": "LP18",
+      "locations": [
+        {
+          "result": "Lemma 2.14",
+          "printed": "12",
+          "pdf": "12"
+        }
+      ]
+    },
+    "lp-base": {
+      "source": "LP18",
+      "locations": [
+        {
+          "result": "Lemma 3.1",
+          "printed": "13",
+          "pdf": "13"
+        }
+      ]
+    },
+    "bz": {
+      "source": "BZ15",
+      "locations": [
+        {
+          "result": "Theorem 1.3",
+          "printed": "3",
+          "pdf": "3"
+        }
+      ]
+    },
+    "ambro": {
+      "source": "Amb03",
+      "locations": [
+        {
+          "result": "Theorem 0.2",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "hx": {
+      "source": "HX11",
+      "locations": [
+        {
+          "result": "Theorem 2.12",
+          "printed": "12",
+          "pdf": "12"
+        }
+      ]
+    },
+    "hx-termination": {
+      "source": "HX11",
+      "locations": [
+        {
+          "result": "Corollary 2.9",
+          "printed": "9",
+          "pdf": "9"
+        }
+      ]
+    },
+    "fujino": {
+      "source": "Fuj09b",
+      "locations": [
+        {
+          "result": "Theorem 1.4",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "cp": {
+      "source": "CP15",
+      "locations": [
+        {
+          "result": "Theorem 2.1",
+          "printed": "844",
+          "pdf": "11"
+        }
+      ]
+    },
+    "bdpp": {
+      "source": "BDPP13",
+      "locations": [
+        {
+          "result": "Theorem 2.2",
+          "printed": "6",
+          "pdf": "6"
+        }
+      ]
+    },
+    "bchm": {
+      "source": "BCHM10",
+      "locations": [
+        {
+          "result": "Corollary 1.4.3",
+          "printed": "10",
+          "pdf": "10"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ],
+  "articleGuides": {
+    ".": {
+      "selfSource": "P",
+      "externalSources": [
+        "OpenAI26LA",
+        "OpenAI26c",
+        "LP18",
+        "BZ15",
+        "Amb03",
+        "HX11",
+        "Fuj09b",
+        "CP15",
+        "BDPP13",
+        "BCHM10"
+      ],
+      "proofTargets": [
+        "main-result",
+        "terminal",
+        "full",
+        "positive",
+        "main-corollary"
+      ],
+      "mainResults": [
+        "main-result",
+        "main-corollary"
+      ],
+      "statements": {
+        "main-result": "theorem-1-1",
+        "main-corollary": "corollary-1-2",
+        "terminal": "theorem-5-1",
+        "full": "proposition-7-1",
+        "positive": "proposition-8-1"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "main-result",
+          "conclusion": "Semiample Q-Cartier numerical representative on the original variety",
+          "anchor": "proof-1-step-2"
+        },
+        {
+          "result": "main-result",
+          "conclusion": "Every algebraically closed field of characteristic zero",
+          "anchor": "proof-1-step-3"
+        },
+        {
+          "result": "main-corollary",
+          "conclusion": "Every nef Q-Cartier divisor on a klt Calabi–Yau pair is numerically semiample",
+          "anchor": "proof-5-step-1"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "programs",
+          "purpose": {
+            "ja": "普通の半豊富随伴を保ちながら一般化随伴をnefにする二段階MMP。",
+            "en": "The two-stage MMP keeps an ordinary semiample adjoint while making a generalized adjoint nef."
+          }
+        },
+        {
+          "citation": "terminal",
+          "purpose": {
+            "ja": "最大nef次元からbig性を得る核心の開始点。",
+            "en": "Entry to the full-nef-dimension bigness argument."
+          }
+        },
+        {
+          "citation": "frobenius",
+          "purpose": {
+            "ja": "固定した複素データの条件と、何を正標数へ移すか。",
+            "en": "The fixed complex data and what is transferred to positive characteristic."
+          }
+        },
+        {
+          "citation": "boundary",
+          "purpose": {
+            "ja": "指数1被覆と境界摂動を経てPnを閉じる。",
+            "en": "Close Pn using an index-one cover and boundary perturbation."
+          }
+        },
+        {
+          "citation": "positive",
+          "purpose": {
+            "ja": "正部分の帰納法の主張と二つの場合。",
+            "en": "The positive-part induction and its two cases."
+          }
+        },
+        {
+          "citation": "relative",
+          "purpose": {
+            "ja": "相対good model、標準束公式、低次元の正部分。",
+            "en": "Relative good models, canonical bundle formula and lower-dimensional positive parts."
+          }
+        },
+        {
+          "citation": "descent",
+          "purpose": {
+            "ja": "数値的代表を元のXへ戻すPic0の操作。",
+            "en": "The Pic0 argument descending a numerical representative to X."
+          }
+        },
+        {
+          "citation": "field",
+          "purpose": {
+            "ja": "代数閉体の変更に必要な有限型パラメータ論法。",
+            "en": "The finite-type parameter argument for changing algebraically closed fields."
+          }
+        }
+      ]
+    }
+  }
+}

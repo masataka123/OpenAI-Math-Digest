@@ -1,0 +1,17 @@
+\node[card] (a) {\heading{}{非bigと仮定して規格化}{Normalize a hypothetical non-big divisor}
+$K_X\sim0,\quad L\ \text{nef Cartier},\quad n(X,L)=n,\quad L^n=0.$\\
+$P=r(L+tA),\quad r\to\infty,\quad P^n\to\epsilon^n,\quad P\cdot C\ge r.$};
+\node[card,below=1.8cm of a] (b) {\heading{}{二つのjet評価を作る}{Construct two jet estimates}
+$\operatorname{ord}_x(s)\le4k(P^n)^{1/n}\quad (s\in H^0(X,kP),\ s\ne0).$\\
+$R=P_1+P_2+q\xi\ \text{on}\ Z=\mathbb P(\mathcal O(L)_1\oplus\mathcal O(L)_2),\quad
+\varepsilon(R;z)>2n+2.$};
+\flow a b {\Tx{一様双有理性とmoving kernels：次数有界の曲線で基底成分を排除}{Uniform birationality and moving kernels exclude components by bounded-degree curves}\\\Cite{bz}; \Cite{curve}\\\Cite{scalar}; \Cite{bundle}};
+\node[card,below=1.8cm of b] (c) {\heading{}{複素数上で有限データを固定}{Fix finite data over the complex numbers}
+$D=w^*P,\quad S=w^*L,\quad H=w^*P+\eta A_W.$\\
+\Tx{余接束のflag、有限個の大きいjets、一つの可動曲線$\gamma$。}{A cotangent flag, finitely many high jets, one movable class $\gamma$.}\\
+$\pi_x^*(D+K_W/2+\lambda S)\cdot\gamma<40\epsilon J\cdot\gamma\quad(0\le\lambda\le q).$};
+\flow b c {\Tx{scalar評価を可動曲線の上界に、Seshadri評価をjet切断に変換}{Convert scalar bounds to a movable witness and Seshadri bounds to jet sections}\\\Cite{application}; \Cite{bdpp}};
+\node[result,below=1.7cm of c] (d) {\heading{}{比較定理の矛盾からbig性}{Bigness from the comparison contradiction}
+\Tx{同じFrobenius行列式の消滅次数に両立しない上下界。}{Incompatible upper and lower vanishing orders of one Frobenius determinant.}\\
+$L\ \text{is big}.$};
+\flow c d {\Tx{固定データを正標数へ移し、rankと消滅次数を比較}{Reduce fixed data and compare rank with vanishing order}\\\Cite{frobenius}; \Cite{la-frobenius}};

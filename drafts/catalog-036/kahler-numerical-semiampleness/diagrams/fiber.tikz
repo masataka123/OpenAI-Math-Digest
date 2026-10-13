@@ -1,0 +1,15 @@
+\node[card] (a) {\heading{1}{ファイバーより先に全体上のデータを選ぶ}{Choose global data before choosing a fiber}
+$h:T\to W,\quad (f_i:X_i\to Z_i)_{i\in I},\quad M_i^*\equiv M$\\
+\Tx{相対因子cycleから可算個の写像とflat捻りを固定する。}{Relative divisor cycles give countably many maps and fixed flat twists.}};
+\node[card,below=2.0cm of a] (b) {\heading{2}{非常に一般のファイバーで同時に制約}{Impose simultaneous constraints on a very general fiber}
+$F=T_w,\quad\kappa(F,(J+M_i^*)|_F)\leq0\quad(\text{all }i)$\\
+\Tx{切断の比を全体へ持ち上げると、代数還元により定数になる。}{Ratios of lifted sections are constant on fibers by algebraic reduction.}};
+\flow a b {\Tx{coherent base changeとample捻り；可算性で同時選択}{Coherent base change and ample twisting; countability allows a simultaneous choice}\\\Cite{countable}};
+\node[card,below=2.0cm of b] (c) {\heading{3}{非零nef類なら正次元の半豊富底}{A nonzero nef class gives a positive-dimensional semiample base}
+$M|_F\not\equiv0\ \Longrightarrow\ \widehat F\xrightarrow{g}Q,\quad\dim Q>0$\\
+\Tx{検出された$i$のflat差を$Q$へ降ろすと、bigな底の線はbigのまま。}{Descend the detected flat difference to $Q$; a flat twist preserves the big base line.}};
+\flow b c {\Tx{低次元分解と負部分の単調性を適用}{Apply lower-dimensional decomposition and monotonicity of the negative part}\\\Cite{fiber}\quad\Cite{flat-fiber}};
+\node[result,below=2.0cm of c] (d) {\heading{4}{飯高次元の矛盾から数値降下へ}{The Iitaka-dimension contradiction yields numerical descent}
+$\kappa(F,J_F+M_i^*|_F)>0\text{ is impossible};\quad c_1(M|_F)=0$\\
+$p^*M\equiv(h')^*N,\quad N\text{ a nef rational line on }W'$};
+\flow c d {\Tx{有効固定部分で切断を持ち上げる；正のcurrentを底へ降ろす}{Lift sections using the effective fixed part; descend a positive current to the base}\\\Cite{fiber-descent}\quad\Cite{descent}};

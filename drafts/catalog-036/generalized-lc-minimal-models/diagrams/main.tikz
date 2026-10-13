@@ -1,0 +1,18 @@
+\node[card] (local) {\heading{1}{局所指標から滑らかな停止へ}{Local phases to smooth termination}
+$A_{\theta_i}(w'_i)\le C,\quad w'_i(h)\equiv\ell\,\mathrm{angle}(\chi_h(\gamma_i))\pmod{\mathbb Z}$\\
+\Tx{整数値の制限と全semi-invariantへの合同式}{Integral-valued restrictions; congruences for every semi-invariant}};
+\node[card,below=2.15cm of local] (relative) {\heading{2}{相対的な弱Zariski分解}{Relative weak Zariski decomposition}
+$p^*K_X\equiv_Z P+N,\quad P\text{ nef/NQC},\quad N\ge0$\\
+\Tx{smooth入力を二重被覆・平均・有限normで相対化}{Relative smooth input via double covers, averaging, and finite norms}};
+\flow{local}{relative}{\Tx{可算性でcanonical indexを固定し、負の曲線と大域生成を衝突}{Countability fixes the canonical index; generation contradicts a negative curve}\\\Cite{smooth}\quad\Cite{relative}};
+\node[card,below=2.15cm of relative] (program) {\heading{3}{元の$X$から停止するgeneralized MMP}{A terminating generalized MMP from the original $X$}
+$(X,B+M)\dashrightarrow(Y,B_Y+M_Y)$\\
+\Tx{同じnef b-divisorを保持。$\mathbb Q$-factorial性は不要}{Preserve the same nef b-divisor; no factoriality assumption}};
+\flow{relative}{program}{\Tx{擬有効側は帰納法で存在を移送。非擬有効側は直接scalingへ}{Transfer existence inductively in the pseudo-effective case; otherwise use scaling directly}\\\Cite{tx-wzd}\quad\Cite{tx-program}};
+\node[result,below=2.25cm of program] (output) {\heading{4}{符号に応じた二つの終点}{Two endpoints determined by the sign}
+$D\in\overline{\operatorname{Eff}}(X)\ \Longrightarrow\ D_Y\text{ nef}$\\[5pt]
+$D\notin\overline{\operatorname{Eff}}(X)\ \Longrightarrow\ h:Y\to T,\quad\dim T<\dim Y,$\\
+$\rho(Y/T)=1,\qquad -D_Y\text{ ample}/T$\\
+\Tx{連結ファイバー、抽出なし、全log discrepancy非減少}{Connected fibres, no extraction, all log discrepancies nondecreasing}\\
+\Tx{元の$X$上の縮約素因子では狭義。任意の代数閉標数0体へ降下}{Strict on original contracted primes; descend to any algebraically closed characteristic-zero field}};
+\flow{program}{output}{\Tx{有効exceptional差でstrictnessと符号を確認。相対ample境界でPicard数を確認}{Effective exceptional differences control strictness and sign; ample boundary checks Picard rank}\\\Cite{exact-output}\quad\Cite{tx-good}\\\Cite{descent}};

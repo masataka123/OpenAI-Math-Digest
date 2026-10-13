@@ -1,0 +1,11 @@
+\node[card] (zero) {\heading{1}{通常のlc対を零nef dataで見る}{View an ordinary lc pair with zero nef data}
+$(X,B),\qquad \mathbf M=0,\qquad D=K_X+B$\\
+\Tx{generalized discrepancyの式が通常の式に一致}{The generalized discrepancy equation becomes the ordinary one}};
+\node[result,below=1.7cm of zero] (model) {\heading{2}{Corollary 1.2の全結論}{All conclusions of Corollary 1.2}
+$\phi:X\dashrightarrow Y,\quad A_{X,B}(E)\le A_{Y,B_Y}(E)$\\
+\Tx{抽出なし、元の縮約素因子でstrict。擬有効ならnef、他方はMori fibre}{No extraction; strict on original contracted primes; nef if pseudo-effective, Mori fibre otherwise}};
+\flow{zero}{model}{\Tx{nef dataそのものを零とし、全結論を特殊化}{Set the nef data themselves to zero and specialize every conclusion}\\\Cite{main-result}\quad\Cite{ordinary-result}};
+\node[card,below=1.85cm of model] (good) {\heading{3}{通常の擬有効の場合だけの追加帰結}{Further consequence only in the ordinary pseudo-effective case}
+$K_Y+B_Y\text{ nef}\ \Longrightarrow\ K_Y+B_Y\text{ semiample}$\\
+\Tx{同じ終点に別原稿を適用。非零generalized nef dataには拡張しない}{Apply the separate manuscript on the same endpoint; no extension to nonzero generalized nef data}};
+\flow{model}{good}{\Tx{通常のlc・有効有理境界・nef adjointを確認}{Check ordinary lc, effective rational boundary, and nef adjoint}\\\Cite{la-main}};

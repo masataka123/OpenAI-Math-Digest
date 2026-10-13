@@ -1,0 +1,15 @@
+\node[card] (a) {\heading{1}{分解と消滅を同時に帰納}{Induct on decomposition and vanishing together}
+$J=K_T+B\text{ pseudo-effective},\quad M\text{ nef},\quad n=\dim T$\\
+\Tx{射影の場合：射影正部分定理。$a(T)=0$：$M\equiv0$と通常分解。}{Projective case: projective positive parts. $a(T)=0$: $M\equiv0$ and ordinary decomposition.}};
+\node[card,below=2.2cm of a] (b) {\heading{2}{中間の場合はnef項を降ろす}{Descend the nef term in the intermediate case}
+$0<a(T)<n,\quad h:T\to W,\quad M\equiv h^*N_W,\quad N_W\text{ nef}$\\
+\Tx{可算個の全体上のflat捻りを先に固定し、ファイバー上の類を消す。}{Fix countably many global flat twists first; kill the class on the fibers.}};
+\flow a b {\Tx{帰納的分解と代数還元が与える矛盾から数値降下へ}{Inductive decomposition and algebraic reduction give numerical descent}\\\Cite{fiber}\quad\Cite{fiber-descent}};
+\node[card,below=2.3cm of b] (c) {\heading{3}{通常随伴を射影底に置く}{Put an ordinary adjoint on a projective base}
+$Y\xrightarrow{f}Z\xrightarrow{j}W,\quad J_Y\sim_{\mathbb Q}f^*H,\quad H\sim_{\mathbb Q}K_Z+\Delta_Z$\\
+\Tx{$H$はpseudo-effective、$(Z,\Delta_Z)$は有効klt。}{Here $H$ is pseudo-effective and $(Z,\Delta_Z)$ is effective klt.}};
+\flow b c {\Tx{$b>2n$でプログラムを$W$上に保ち、periodから境界を作る}{Keep the program over $W$ using $b>2n$; form a boundary via periods}\\\Cite{program}\quad\Cite{base}};
+\node[result,below=2.5cm of c] (d) {\heading{4}{射影分解を引き戻し、負部分全体を同定}{Pull back the projective decomposition and identify the negative part}
+$\mu^*(J+M)\equiv P+R,\quad P\text{ semiample},\quad R=N(\mu^*(J+M))$\\
+\Tx{$a(T)=0$での$c_1(M)=0$と合わせて帰納が閉じる。}{Together with $c_1(M)=0$ when $a(T)=0$, this closes the induction.}};
+\flow c d {\Tx{射影的正部分、混合Hodge--Riemann、例外誤差の除去}{Projective positive parts, mixed Hodge--Riemann, removal of exceptional errors}\\\Cite{external-positive}\\\Cite{lift-negative}\quad\Cite{induction}};

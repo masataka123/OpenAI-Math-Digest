@@ -1,0 +1,57 @@
+{
+  "checkedOn": "2026-10-13T20:23:00+09:00",
+  "reviewer": "generalized article author (self-check; not independent review)",
+  "branch": "main",
+  "scope": "Stage 1 draft only",
+  "source": "fixed catalog commit 1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "mainClaims": [
+    {
+      "claim": "Theorem 1.1",
+      "page": 2,
+      "coverage": [
+        "fixed nef b-data",
+        "normal integral projective output",
+        "no extraction",
+        "all discrepancies nondecreasing",
+        "strict increase on original contracted primes",
+        "pseudo-effective gives nef",
+        "non-pseudo-effective gives connected Mori contraction, dimension drop, relative Picard rank 1, relative anti-ampleness",
+        "algebraically closed characteristic-zero field"
+      ],
+      "status": "Compared to source statement and §§3.1–3.4 deduction"
+    },
+    {
+      "claim": "Corollary 1.2",
+      "page": 2,
+      "coverage": [
+        "all ordinary-pair conclusions by M=0"
+      ],
+      "status": "Compared to source"
+    }
+  ],
+  "externalStatementChecks": [
+    "TX24 pp.9,22,24,32",
+    "DEL00 author PDF pp.7–8,12",
+    "Fuj09a print475/PDF1",
+    "BDPP13 v1 p.2",
+    "BCHM10 v2 p.7",
+    "OpenAI26LA pp.2,76"
+  ],
+  "validation": {
+    "citationText": "pass, single registry only",
+    "figureBuild": "pass, xelatex -no-pdf then dvisvgm; no overfull/missing-character errors",
+    "hashManifest": "19 source/output files match",
+    "renderedAnchors": "all statements, conclusion coverage and body fragments present",
+    "visual": "All six diagram PNGs inspected: boxes/arrows/citations separate; bilingual labels and Fuj09a visible. Japanese/English mobile top inspected.",
+    "browser": "1280 and 375 px; no horizontal page overflow; 0 MathJax errors; 3 figures per language"
+  },
+  "notClaimed": [
+    "independent verification of the entire manuscript",
+    "verification of complete §§4–13 local proof and all external local inputs",
+    "original KM98 vanishing passage comparison",
+    "033/034 final shared-site screen uniformity (HQ comparison pending)",
+    "site integration",
+    "booklet PDFs",
+    "publication"
+  ]
+}

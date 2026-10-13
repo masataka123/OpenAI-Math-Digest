@@ -1,0 +1,15 @@
+\node[card] (a) {\heading{1}{通常Calabi--Yau型から単純モデルへ}{From ordinary Calabi--Yau type to a simple model}
+$a(T)=0,\quad K_{T_0}+B_0\sim_{\mathbb Q}0$\\
+\Tx{トーラス・積を低次元帰納で扱い、単純なシンプレクティックモデルを残す。}{Treat tori and products by lower-dimensional induction; retain a simple symplectic model.}};
+\node[card,below=2.0cm of a] (b) {\heading{2}{有限対応を排除し、傾きを評価}{Exclude moving correspondences and bound slopes}
+$\mathcal L=K_X+N_0,\quad c_1(H)\leq k c_1(\mathcal L)\ (H\to\Omega_X^{\otimes k})$\\
+\Tx{点blowupにも同じ傾きの評価を課す。}{The corresponding slope bound also holds after a point blowup.}};
+\flow a b {\Tx{nef b-partを0として積分解し、単純モデルへ帰着}{Apply the product decomposition with zero nef b-part; reduce to a simple model}\\\Cite{external-bby}\quad\Cite{reduction}};
+\node[card,below=2.0cm of b] (c) {\heading{3}{有理型切断から符号付き因子表示へ}{From a meromorphic section to a signed divisor}
+$\mathcal L^{\otimes m}\text{ has a meromorphic section},\quad N_0\sim_{\mathbb Q}E-G$\\
+$E,G\geq0,\quad K'+uE,\ K'+uG\text{ ordinary klt adjoints}$};
+\flow b c {\Tx{二つの対角線：行列式の消滅と点極の上界が衝突}{Two diagonals: determinant vanishing contradicts the point-pole bound}\\\Cite{nonvanishing}\quad\Cite{cancellation}};
+\node[result,below=2.0cm of c] (d) {\heading{4}{両符号のpseudo-effectivityから消滅}{Both signs are pseudo-effective, hence the class vanishes}
+$N(\alpha_E)\leq N(\alpha_G),\quad u\{N_0\}=\{N(\alpha_E)-N(\alpha_G)\}$\\
+$\{N_0\}\text{ nef},\ -\{N_0\}\text{ pseudo-effective}\quad\Longrightarrow\quad c_1(M)=0$};
+\flow c d {\Tx{代数次元0で通常分解の正部分は有理自明；負部分を比較}{Ordinary positive parts are rationally trivial in algebraic dimension zero; compare negatives}\\\Cite{ordinary}\quad\Cite{zero-simple}};

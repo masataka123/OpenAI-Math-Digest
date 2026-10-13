@@ -1,0 +1,14 @@
+\node[card] (a) {\heading{1}{強化定理をnef随伴へ適用}{Apply the stronger theorem to the nef adjoint}
+$D=K_X+B+M\text{ nef},\quad\mu^*D\equiv P+R,\quad P\text{ semiample}$\\
+$R=N(\mu^*D)$};
+\node[card,below=1.8cm of a] (b) {\heading{2}{負部分は0、差はflat}{The negative part is zero and the difference is flat}
+$R=0,\quad P-\mu^*D\in\operatorname{Pic}^0(U)\otimes\mathbb Q$};
+\flow a b {\Tx{nef類の負部分は0；Chern類0の有理直線束を同定}{A nef class has zero negative part; identify rational lines with zero Chern class}\\\Cite{strong}\quad\Cite{negative}};
+\node[card,below=1.8cm of b] (c) {\heading{3}{元の空間上でflat部分を変更}{Change the flat part on the original space}
+$P-\mu^*D\sim_{\mathbb Q}\mu^*F,\quad F\in\operatorname{Pic}^0(X)\otimes\mathbb Q$\\
+$L=D+F,\quad\mu^*L\sim_{\mathbb Q}P$};
+\flow b c {\Tx{smooth modificationでPicard torusは不変}{The Picard torus is invariant under a smooth modification}\\\Cite{flat}};
+\node[result,below=1.8cm of c] (d) {\heading{4}{半豊富な代表を降ろす}{Descend the semiample representative}
+$L\text{ semiample on }X,\qquad c_1(L)=c_1(D)$\\
+\Tx{$F$のtorsion性や元の$D$の半豊富性は結論に含めない。}{Neither torsion of $F$ nor semiampleness of the original $D$ is asserted.}};
+\flow c d {\Tx{$\mu_*\mathcal O_U=\mathcal O_X$と射影公式で生成性を降ろす}{Use $\mu_*\mathcal O_U=\mathcal O_X$ and the projection formula to descend generation}\\\Cite{finish}};

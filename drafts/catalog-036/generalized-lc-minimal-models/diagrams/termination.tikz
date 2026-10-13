@@ -1,0 +1,17 @@
+\node[card] (ideals) {\heading{1}{無限のsmooth scaling MMPを仮定}{Assume an infinite smooth scaling MMP}
+$\lambda_i\to0,\quad\mathcal J_s(t)=\mathcal J(X,s\|K_X+tH\|)\longrightarrow\mathcal J_s$\\
+\Tx{共通twistの大域生成がidealを安定化}{A common globally generated twist stabilizes the ideals}};
+\node[card,below=1.85cm of ideals] (estimate) {\heading{2}{全valuationで一様な誤差}{Uniform error for all valuations}
+$u(\mathcal J_s)/s\le E_i(u)\le\sigma_u\le\bigl(u(\mathcal J_s)+A_X(u)\bigr)/s$\\
+$\Delta_i(u)\le A_X(u)/s$\\
+\Tx{整数値・有界discrepancyで有限極限は固定可算集合}{Integral values and bounded discrepancy give a fixed countable set of finite limits}};
+\flow{ideals}{estimate}{\Tx{subadditivityとbase orderで両側評価}{Subadditivity and base orders give two-sided bounds}\\\Cite{del}\quad\Cite{ideals}};
+\node[card,below=2.05cm of estimate] (index) {\heading{3}{一つのCartier指数}{One common Cartier index}
+$RK_{X_i}\text{ Cartier for every }i$\\
+\Tx{index-one coverの任意の指標角$\alpha$は可算集合に入れない}{Arbitrary character angles $\alpha$ on index-one covers cannot all lie in a countable set}};
+\flow{estimate}{index}{\Tx{全semi-invariantの合同式をcanonical formの比に適用}{Apply the all-semi-invariant congruence to a ratio of canonical forms}\\\Cite{phase}\quad\Cite{index}};
+\node[result,below=2.2cm of index] (stop) {\heading{4}{大域生成と負の曲線の矛盾}{Generation contradicts a negative curve}
+$R^kf_{i*}\mathcal O_{X_i}(mK_{X_i})=0\quad(k>0,\ i\gg_m0)$\\
+$RK_{X_i}+a f_i^*J\text{ globally generated},\quad RK_{X_i}\cdot C<0$\\
+\Tx{停止しnef終点へ。$p^*K_X=P+N$、$P$ nef、$N\ge0$}{Terminate at a nef endpoint: $p^*K_X=P+N$, $P$ nef, $N\ge0$}};
+\flow{index}{stop}{\Tx{遅いflipの消滅。次元依存の生成倍数を先に固定してregularity}{Late-flip vanishing; fix the dimension-dependent generation multiple before regularity}\\\Cite{vanishing}\\\Cite{fujino}};

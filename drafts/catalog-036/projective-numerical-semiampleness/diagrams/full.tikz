@@ -1,0 +1,17 @@
+\node[card] (a) {\heading{}{普通随伴の飯高次元で帰着}{Reduce by the ordinary Iitaka dimension}
+$T=K_X+B,\quad (T+aM)\cdot C>0.$\\
+$\kappa(T)>0:\ \text{\Tx{低次元ファイバーで帰納}{induct on smaller fibres}};\quad
+\kappa(T)=0:\ K_Y+B_Y\sim_{\mathbb Q}0.$};
+\node[card,below=1.9cm of a] (b) {\heading{}{境界零のCalabi--Yau対}{A zero-boundary Calabi--Yau pair}
+$K_X\equiv0\ \Longrightarrow\ K_X\sim_{\mathbb Q}0\ \Longrightarrow\ K_{\widetilde X}\sim0.$\\
+\Tx{指数1被覆とcrepant terminalizationでTheorem 5.1を使う。}{Use an index-one cover and crepant terminalization, then Theorem 5.1.}\\
+$M\ \text{big}.$};
+\flow a b {\Tx{二つのMMPで普通の半豊富随伴を保存し、残る場合を処理}{The two MMPs preserve the ordinary semiample adjoint; treat the remaining case}\\\Cite{positive-iitaka}; \Cite{terminal}\\\Cite{bchm}};
+\node[card,below=1.7cm of b] (c) {\heading{}{境界を摂動して通常klt随伴を作る}{Perturb the boundary to an ordinary klt adjoint}
+$T_*=K_X+(1+\alpha)B\sim_{\mathbb Q}\alpha B,\quad T_*+M\ \text{big}.$\\
+$G\sim_{\mathbb Q}\alpha B+M,\quad \Delta_u=(1-u\alpha)B+uG,\quad K_X+\Delta_u\sim_{\mathbb Q}uM.$};
+\flow b c {\Tx{正の飯高次元、または終点で境界が消える場合に分けて有効$G$を得る}{Positive Iitaka dimension or disappearance of the boundary supplies effective $G$}\\\Cite{boundary}};
+\node[result,below=1.7cm of c] (d) {\heading{}{半豊富性からfull-nef次元の帰納を閉じる}{Close the full-nef-dimension induction}
+$M\ \text{semiample},\quad n(X,M)=n\ \Longrightarrow\ M\ \text{big}.$\\
+$T+cM\ \text{big for every}\ c\in\mathbb Q_{>0}.$};
+\flow c d {\Tx{nefな通常klt随伴にabundanceを適用し、正の線形結合で戻す}{Apply abundance to the nef ordinary klt adjoint, then use positive combinations}\\\Cite{la}; \Cite{full}};

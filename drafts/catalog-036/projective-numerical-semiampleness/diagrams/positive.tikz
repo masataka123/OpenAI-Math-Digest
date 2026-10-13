@@ -1,0 +1,15 @@
+\node[card] (a) {\heading{}{nef因子に自明なMMP}{An MMP trivial on the nef divisor}
+$L=m_0M\ \text{Cartier},\quad m>2n,\quad T+mL\ \text{nef at the endpoint}.$\\
+\Tx{$L$の整数次数と半直線の長さが、各stepを$L$-自明にする。}{Integral $L$-degrees and ray lengths force every step to be $L$-trivial.}};
+\node[card,below=1.7cm of a] (b) {\heading{}{nef dimensionによる二つの場合}{Two cases according to nef dimension}
+$n(X,T+mL)=n:\ (P_n)\Rightarrow T+M\ \text{big}\Rightarrow\text{\Tx{通常のgood model}{ordinary good model}}.$\\[5pt]
+$n(X,T+mL)<n:\ T|_F\equiv M|_F\equiv0,\quad K_F+B_F\sim_{\mathbb Q}0.$};
+\flow a b {\Tx{終点でnef reductionを取り、通常のabundanceをファイバーへ適用}{Take nef reduction at the endpoint and apply ordinary abundance on its fibres}\\\Cite{nef-mmp}; \Cite{nef-reduction}};
+\node[card,below=2.1cm of b] (c) {\heading{}{低次元の通常随伴とnef因子}{An ordinary adjoint and nef divisor on a smaller base}
+$p^*M\equiv f^*M_1,\qquad K_{X_2}+B_2\sim_{\mathbb Q}g^*(K_{Z_2}+B_{Z_2}).$\\
+$(Z_{\dim Z_2}),\qquad \dim Z_2<n,\quad (Z_2,B_{Z_2})\ \text{klt}.$};
+\flow b c {\Tx{低次元の場合：nef下降、相対good model、標準束公式を合成}{In the lower-dimensional case: nef descent, a relative good model, and the bundle formula}\\\Cite{lp-base}; \Cite{fujino}\\\Cite{hx}; \Cite{ambro}};
+\node[result,below=1.7cm of c] (d) {\heading{}{有理かつ数値的に半豊富な正部分}{A rational, numerically semiample positive part}
+$P_\sigma(w^*(T+M))\equiv A_W,\qquad A_W\ \text{semiample over a point}.$\\
+\Tx{full-nefの場合も低次元の場合も共通解消で元のモデルへ戻る。}{Both cases return to the original model on a common resolution.}};
+\flow c d {\Tx{nefな正部分の引戻し、有効例外差の除去、数値類の不変性}{Pull back nef positive parts, remove effective exceptional terms, and use numerical invariance}\\\Cite{positive-rules}; \Cite{lp-positive}};

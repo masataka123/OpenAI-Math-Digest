@@ -1,0 +1,15 @@
+\node[card] (a) {\heading{}{通常klt対と二つの帰納命題}{An ordinary klt pair and two induction statements}
+$T=K_X+B\in\Eff(X),\quad M\ \text{nef},\quad D=T+M\ \text{nef}.$\\
+$(P_n):$ \Tx{非常に一般の曲線上の正値性からbig性}{positivity on very general curves gives bigness}.\\
+$(Z_n):$ \Tx{滑らかなモデル上で正部分を数値的に半豊富にする}{a numerically semiample positive part on a smooth model}.};
+\node[card,below=2.2cm of a] (b) {\heading{}{帰納の二つの出力}{The two inductive outputs}
+$(P_n)\quad\Longrightarrow\quad (Z_n):\quad P_\sigma(w^*D)\equiv A_W,\quad A_W\ \text{semiample}.$\\
+\Tx{最大nef次元の核心はTheorem 5.1、境界を戻すのはProposition 7.1。}{Theorem 5.1 supplies the terminal case; Proposition 7.1 restores the boundary.}};
+\flow a b {\Tx{停止するMMPと普通のlog abundanceを入力し、nef reductionで次元を下げる}{Use a terminating MMP and ordinary log abundance; lower dimension by nef reduction}\\\Cite{gm}\\\Cite{la}; \Cite{positive}};
+\node[result,below=1.8cm of b] (c) {\heading{}{元の多様体への数値的下降}{Numerical descent to the original variety}
+$P_\sigma(w^*D)=w^*D\equiv A_W\quad\Longrightarrow\quad D\equiv L_X.$\\
+\Tx{$L_X$は同じ$X$上の半豊富な$\mathbb Q$-Cartier因子。}{$L_X$ is semiample and $\mathbb Q$-Cartier on the same $X$.}};
+\flow b c {\Tx{$D$のnef性とkltのrational singularitiesからPicard捻りを下降}{Nefness of $D$ and rational singularities descend the Picard twist}\\\Cite{descent}; \Cite{lp-descent}};
+\node[result,below=1.5cm of c] (d) {\heading{}{任意の標数0の代数閉体}{Every algebraically closed field of characteristic zero}
+$\mathbb C\ \rightsquigarrow\ k_0\ \rightsquigarrow\ k,\qquad D_k\equiv L_k\ \text{semiample}.$};
+\flow c d {\Tx{固定した倍数の大域生成性をPicard族のconstructible locusで下降}{Descend global generation of a fixed multiple via its constructible Picard locus}\\\Cite{field}};
