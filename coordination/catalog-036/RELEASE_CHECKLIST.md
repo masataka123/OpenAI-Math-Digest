@@ -4,14 +4,14 @@ production/RELEASE_CHECKLIST.md（制作セット1.4）の段階・担当・証�
 
 - 対象：036 Numerical semiampleness and generalized minimal models。
 - カタログ本部：本チャット。本部執筆1本＋3記事担当。構成multi、4篇。
-- 現在の依頼：第2段階まで。**公開準備完了**。公開確認済みではない。
+- 現在の依頼：第3段階。**公開確認済み**。PUBLICATION.md参照。
 - 第2段階（組込みと日英PDF）：本チャットのサイト本部が完了。第3段階：公開指示を受けたサイト本部。
 
 ## 段階と停止
 
 - [x] 第1段階：日英記事・図・引用・案内・別担当の内容点検・未確認事項・再開手順を保存して停止。証拠：HANDOFF.md、CONTENT_REVIEW.md、UNRESOLVED.md。
 - [x] 第2段階：日英サイト・必須PDF・公開前検査を完了して停止。担当：本チャット。証拠：STAGE2_HANDOFF.md、stage2/。
-- [ ] 第3段階：依頼範囲外。commit/push/deploy/公開反映確認は実施していない。
+- [x] 第3段階：commit/push、Actions build/deploy成功、公開80リソース一致・28画面・8操作経路を確認。stage3/参照。
 
 ## 内容と成果物
 
@@ -59,7 +59,7 @@ production/RELEASE_CHECKLIST.md（制作セット1.4）の段階・担当・証�
 
 ## 公開（第3段階）
 
-現在は依頼範囲外。commit・push・GitHub Actions・公開URLでの日英記事/図/PDF反映確認はいずれも未実施。
+ユーザーの第3段階指示で実施済み。PUBLICATION.mdとstage3/に公開commit・Actions・URLと照合結果を保存。
 
 ## 残作業
 
@@ -69,4 +69,4 @@ production/RELEASE_CHECKLIST.md（制作セット1.4）の段階・担当・証�
 | 034 Kähler入力版差 | 次のサイト本部 | 旧記事10/4、036原典10/6 | 原典固定引用を維持。034の自動変更なし |
 | サイト組込み・検査 | 本チャット | 完了 | STAGE2_HANDOFF.md、stage2/ |
 | 日英PDF | 本チャット | 完了、56/62頁 | stage2/pdf-check.log、pdf-review/ |
-| 公開・反映 | 公開指示を受けたサイト本部 | 未依頼 | 第3段階で実施 |
+| 公開・反映 | 本チャットのサイト本部 | 公開確認済み | PUBLICATION.md、stage3/ |

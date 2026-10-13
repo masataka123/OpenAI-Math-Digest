@@ -1,5 +1,7 @@
 # カタログ036 — 第2段階の引継ぎ
 
+> 第3段階更新（2026-10-13）：日英サイト・図・PDFの公開確認まで完了。最新状態は [PUBLICATION.md](PUBLICATION.md)。以下は各段階終了時の履歴。
+
 **公開準備完了。第2段階で停止。commit・push・公開は未実施。** 2026-10-13、本チャットがサイト本部を兼任。作業場所 `/Users/iwai/Desktop/GitHub/OpenAI-Math-Digest`、ブランチ `main`、HEAD `8c7b6d95600ef6b977039452d344eb2a55db3123`。開始・終了時刻は [stage2/completion.json](stage2/completion.json)。
 
 ## 完了範囲と成果物

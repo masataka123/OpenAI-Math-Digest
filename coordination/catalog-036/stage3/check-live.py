@@ -4,6 +4,7 @@ import subprocess,hashlib,json,datetime
 root=Path('/private/tmp/catalog036-publication');out=Path('coordination/catalog-036/stage3')
 base='https://masataka123.github.io/OpenAI-Math-Digest/'
 paths=[f'{lang}/catalog/036/index.html' for lang in ['ja','en']]+[f'{lang}/papers/{paper}/index.html' for lang in ['ja','en'] for paper in [m['paperId'] for m in json.loads(Path('coordination/catalog-036/inventory.json').read_text())['manuscripts']]]
+paths += [f'{lang}/{route}index.html' for lang in ['ja','en'] for route in ['', 'fields/algebraic-complex-geometry/']]
 paths += [str(p.relative_to(root/'public')) for p in (root/'public/diagrams/catalog-036').rglob('*') if p.is_file()]
 paths += ['pdf/catalog-036-ja.pdf','pdf/catalog-036-en.pdf']
 def check(p):
