@@ -1,6 +1,8 @@
 # Catalogue 187 — Astra新稿の制作本部
 
-**第2段階（サイト組込み・日英PDF・公開前検査）まで完了。commit・push・公開は行わず停止。**
+**第3段階（commit・push・公開・反映確認）まで完了。**
+
+公開commit：`f837bf8`。Actionsのbuild・deploy成功、公開24 URL／18資産ハッシュ／日英8画面を確認。[公開確認記録](astra-stage3-20261015/PUBLICATION_REPORT.md)。
 
 現行記事は `gpt-6-astra / high` が公式原典から新規執筆した日英稿。旧Solの原稿・図・解釈・点検は採用していない。モデルと初稿36分22秒の記録は [MODEL_PROVENANCE.json](astra-20261015/MODEL_PROVENANCE.json)。単独自己点検を独立レビューとは呼ばない。
 
@@ -15,10 +17,10 @@
 - 第2段階：[完了記録](astra-stage2-20261015/README.md)、[詳細点検](astra-stage2-20261015/REVIEW.md)、screens/、pdf-review/、logs/。39テスト・全体引用・全PDFハッシュ・155ページ183,482内部リンクが合格。日英PC／375pxの20ケースと全43PDFページを点検。
 - 187の案内リンク8件と有限盤のPDF斜線を修正。数学本文は第1段階から変更なし。指定見本はSchnell・033 Orbifold・034。051を標準見本にしていない。
 
-## 未確認と次段階
+## 数学的な未確認と保全
 
 全証明書の手検算、専用局所応手suite、全中間集合突合、方策の対局実行、探索、Lean監査・コンパイル、25／35手経路・Proposition7、他カタログ関係は未実施。日英本文とPDFでも確認範囲を明示。
 
-作業先 `/Users/iwai/Desktop/GitHub/OpenAI-Math-Digest`、ブランチmain。並行作業の004のcommit、246の更新を保全し、本部はGit書込み操作を行っていない。変更一覧はastra-stage2-20261015/CHANGED_FILES.txt、保全結果はscope.json。共通ファイルは187項目だけを変更し、共通表示・PDF生成処理は変更していない。
+作業先 `/Users/iwai/Desktop/GitHub/OpenAI-Math-Digest`、ブランチmain。並行作業の004のcommit、246の更新を保全し、第2段階ではGit書込み操作を行わず、第3段階で187のみcommit・pushした。変更一覧はastra-stage2-20261015/CHANGED_FILES.txt、保全結果はscope.json。共通ファイルは187項目だけを変更し、共通表示・PDF生成処理は変更していない。
 
-次はユーザーの公開指示後に第3段階へ進む。[SITE_HQ_HANDOFF.md](SITE_HQ_HANDOFF.md) と [第3段階手順](astra-stage2-20261015/HANDOFF_STAGE3.md) を使う。旧Sol稿・旧公開物は履歴として保存し、現行稿と混同しない。旧stage2/等は今回の検査根拠ではない。
+公開工程の残作業はない。[SITE_HQ_HANDOFF.md](SITE_HQ_HANDOFF.md) と [公開確認記録](astra-stage3-20261015/PUBLICATION_REPORT.md) を参照。第2段階のHANDOFF_STAGE3.mdは当時の履歴として保存。旧Sol稿・旧公開物は履歴として保存し、現行稿と混同しない。旧stage2/等は今回の検査根拠ではない。

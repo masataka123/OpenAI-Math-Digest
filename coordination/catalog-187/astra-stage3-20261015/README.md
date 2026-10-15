@@ -17,3 +17,7 @@ Astra新稿の制作記録・検査画像を同梱する。旧Sol履歴とダウ
 最初のstage操作の直前、別担当が246をstageしていたため、既存index検出により一切の変更前に停止。その後、246のcommit b5af7b4がremote/mainへ反映されたことを確認した。新しいHEADから187だけを加えたtmp/catalog-187-release-finalを作り、同じ検査を再実行した。今回の差分として246を同梱せず、既に公開された履歴として保持する。最終選択はselection.json、旧選択はbefore-base-update/。最終ビルドは155ページ。
 
 commit前の空白検査では、ビルド生ログとPDF抽出テキストに限り末尾空白を検出した。これらは検査証跡として原形を保持した。両種を除く原稿・ソース・記録のgit diff --checkは合格。
+
+## 完了
+
+第3段階の公開・反映確認は完了した。最終結果はPUBLICATION_REPORT.md、publication.json、actions-jobs.json、live-http.json、browser.json。数学本文・図・PDFの追加変更なし。
