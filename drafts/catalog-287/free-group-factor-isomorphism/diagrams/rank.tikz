@@ -1,0 +1,21 @@
+\node[card] (a) {\heading{1}{有限台実係数を選ぶ}{Choose finite real coefficients}
+$D_{x_1}=h,\ D_{x_j}=0\ (j\ge2),\quad \|h\|_{\ell^2},\ \|D_w-\delta_e\|_{\ell^2}<\eta$\\
+\Tx{自由prefixのCatalan極限 $\longrightarrow$ 低スペクトルの切断逆作用素}{Free-prefix Catalan limit $\longrightarrow$ cutoff inverse at low spectrum}};
+\node[card,below=2.1cm of a] (b) {\heading{2}{モーメントを保つ自己同型}{Automorphisms preserving moments}
+$\beta_t(S)=S,\quad \beta_t\in\operatorname{Aut}(M)$\\
+$\|\beta_1(A_j)-A_j\|\le3\pi\|h_j\|_{\ell^2},\quad
+\|\beta_1(A_w)-CA_w\|\le3\pi\|D_w-\delta_e\|_{\ell^2}$};
+\flow{a}{b}{\Tx{形式trace恒等式と実解析性、関係式の降下とnormal延長}{Formal trace identity and analyticity; descend relations and extend normally}\\\Cite{trace}\\\Cite{extension}};
+\node[card,below=1.7cm of b] (c) {\heading{3}{旧補完生成元を吸収する}{Absorb the old completion}
+$\gamma(A_j)=A_j,\quad\gamma(C)=CA_w,\quad\alpha=\gamma^{-1}\beta_1$\\
+$\max_j\|\alpha(A_j)-A_j\|<\varepsilon,\qquad\|\alpha(A_w)-C\|<\varepsilon$};
+\flow{b}{c}{\Tx{小cocycleと自由群の基底変換を組み合わせる}{Combine the small cocycle with a free-basis change}\\\Cite{small-cocycle}\\\Cite{perturb}};
+\node[card,below=1.9cm of c] (d) {\heading{4}{語を得てから将来予算を決める}{Choose the future budget after the word}
+$F_{j,k}\ \longrightarrow\ \varepsilon_k\ \longrightarrow\ w_k\ \longrightarrow\ G_{j,k}(X)=F_{j,k}(X,X_{w_k})$\\
+$L_k\ \longrightarrow\ r_k\le\min\{r_{k-1}/2,\,2^{-k}/(1+L_k)\}$};
+\flow{c}{d}{\Tx{現在の $F_{j,k}$ は旧 $C^{(k-1)}$ を使う。語長は将来予算へ反映}{Current $F_{j,k}$ uses the old $C^{(k-1)}$; word length affects the future budget}\\\Cite{limit}};
+\node[result,below=1.9cm of d] (e) {\heading{5}{Haar分布と生成性を別々に確保}{Secure Haar distribution and generation separately}
+$A_j^{(k)}\xrightarrow{\|\cdot\|}A_j^{(\infty)},\qquad
+\|G_{j,k}(A^{(\infty)})-y_j\|_2\le3\cdot2^{-k}$\\
+$W^*(A^{(\infty)})=M,\qquad L(\mathbb F_n)\cong L(\mathbb F_{n+1})$};
+\flow{d}{e}{\Tx{尾和制御、条件付き期待値、Haar組の空間的同定}{Tail control, conditional expectation, and spatial identification of a Haar tuple}\\\Cite{limit}\\\Cite{haar}};

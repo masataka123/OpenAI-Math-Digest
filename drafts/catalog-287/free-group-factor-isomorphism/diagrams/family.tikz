@@ -1,0 +1,10 @@
+\node[card] (a) {\heading{1}{非同型の選択肢を排除する}{Rule out the nonisomorphic alternative}
+$N_2\cong N_3$\\\Tx{$1<r\le\infty$の二分法：全て同型、または相異なる全てが非同型}{Dichotomy for $1<r\le\infty$: all isomorphic, or pairwise nonisomorphic}};
+\node[card,below=1.7cm of a] (b) {\heading{2}{可算無限階数を含む同型}{Isomorphism including countably infinite rank}
+$N_r\cong N_s\qquad(1<r,s\le\infty)$};
+\flow{a}{b}{\Tx{異なる有限階数の同型が二分法の第二選択肢を否定}{An isomorphism of distinct finite ranks excludes the second alternative}\\\Cite{rank-two}\\\Cite{dichotomy}};
+\node[result,below=2cm of b] (c) {\heading{3}{全ての正の増幅を吸収する}{Absorb every positive amplification}
+$N_r^t\cong N_{1+(r-1)t^{-2}}\cong N_r\quad(1<r<\infty)$\\
+$N_\infty^t\cong N_2^t\cong N_2\cong N_\infty$\\
+$\mathcal F(N_r)=\mathbb R_{>0}\qquad(1<r\le\infty)$};
+\flow{b}{c}{\Tx{有限パラメータには増幅公式、無限パラメータには $N_\infty\cong N_2$}{Use amplification for finite parameters and $N_\infty\cong N_2$ for infinity}\\\Cite{dykema}\\\Cite{all-ranks}};

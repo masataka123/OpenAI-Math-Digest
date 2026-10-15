@@ -1,0 +1,19 @@
+\node[card] (a) {\heading{1}{移送先を一つの因子に固定}{Fix one target factor}
+$\theta_n:L(\mathbb F_n)\xrightarrow{\ \cong\ }M=L(\mathbb F_2)\qquad(n\ge2)$\\
+\Tx{normalなトレース保存同型は同時分布と $W^*$ 生成性を保つ}{Normal tracial isomorphisms preserve joint distributions and $W^*$-generation}};
+\node[card,below=1.7cm of a] (b) {\heading{2}{Microstates：半円 $n$ 組}{Microstates: semicircular $n$-tuple}
+$X^{(n)}=\theta_n(S^{(n)}),\qquad\delta(X^{(n)})=\delta_0(X^{(n)})=n$\\
+$W^*(X^{(n)})=M$};
+\flow{a}{b}{\Tx{半円実現と自由半円族の次元を移送する}{Transport the semicircular realization and its dimensions}\\\Cite{semicircular}\\\Cite{delta}\quad\Cite{delta-zero}};
+\node[card,below=2.1cm of b] (c) {\heading{3}{Nonmicrostates：群環の自己共役 $2n$ 組}{Nonmicrostates: self-adjoint group-algebra $2n$-tuple}
+$G^{(n)}=(\operatorname{Re}u_1,\operatorname{Im}u_1,\ldots,\operatorname{Re}u_n,\operatorname{Im}u_n)$\\
+$Y^{(n)}=\theta_n(G^{(n)}),\quad \delta^*(Y^{(n)})=\delta^\star(Y^{(n)})=(n-1)-0+1=n$\\
+$W^*(Y^{(n)})=M$};
+\node[reason,anchor=west] at ($(b.south)!.5!(c.north)+(-6.35,0)$) {\Tx{別の組を用いる：移送前に群環を代数的に生成することを確認}{Use a different tuple: check algebraic generation of the group algebra before transport}\\\Cite{group-entropy}\\\Cite{betti}};
+\draw[edge] (a.east)--++(1.0,0)|-(c.east);
+
+\node[result,below=1.7cm of c] (d) {\heading{4}{生成組依存性と非有界性}{Dependence on generators and unboundedness}
+\Tx{$n=2,3$で値が異なり、$n\to\infty$で非有界}{Different values at $n=2,3$; unbounded as $n\to\infty$}\\
+\Tx{固定するのは $M$。二つの組も代数的生成環も同一とはしない}{Only $M$ is fixed; neither tuple families nor their algebraic algebras are identified}};
+\flow{c}{d}{\Tx{同時トレース分布に依存する四つの次元を比較する}{Compare the four dimensions, each depending on the joint tracial distribution}\\\Cite{entropy-proof}};
+\draw[edge] (b.west)--++(-.65,0)|-(d.west);

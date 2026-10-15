@@ -1,0 +1,516 @@
+{
+  "catalogId": "287",
+  "paperId": "free-group-factor-isomorphism",
+  "title": "An isomorphism of the free group factors",
+  "displayName": "An isomorphism of the free group factors",
+  "authors": "OpenAI",
+  "version": "September 23, 2026",
+  "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/An-isomorphism-of-the-free-group-factors-September-23-2026/An-isomorphism-of-the-free-group-factors-September-23-2026.pdf",
+  "pdfPages": 23,
+  "sha256": "e2000710ef969c50802cf398c64928bdfe92ea4925ce8bd9fb7a5b6bc4a232e1",
+  "checkedOn": "2026-10-15",
+  "worker": "astra_hq",
+  "model": "gpt-6-astra",
+  "checkingType": "author self-check; not independent review",
+  "externalSources": [
+    {
+      "id": "Dyk94",
+      "authors": "Ken Dykema",
+      "displayName": "Interpolated free group factors",
+      "version": "Pacific Journal of Mathematics 163 (1994), 123–135; publisher PDF with cover",
+      "sourceUrl": "https://msp.org/pjm/1994/163-1/pjm-v163-n1-p06-p.pdf",
+      "pdfPages": 17,
+      "sha256": "abf97e5a1bafa036b328bb1a3f97f63cd466435006daa9a6cbcf32dd7004c748",
+      "localFile": "external/dykema.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "128",
+          "pdfPage": 7
+        }
+      ],
+      "checking": "Statement and use checked; proof not recursively verified."
+    },
+    {
+      "id": "GP25",
+      "authors": "Isaac Goldbring and Jennifer Pi",
+      "displayName": "On the first-order free group factor alternative",
+      "version": "arXiv:2305.08168v2, 2 January 2025",
+      "sourceUrl": "https://arxiv.org/pdf/2305.08168v2",
+      "pdfPages": 23,
+      "sha256": "eccc65527d227da059994ab5b71e8c7413bd58137da6dbc1f33bea8b9bf128f7",
+      "localFile": "external/goldbring-pi.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "2",
+          "pdfPage": 2
+        }
+      ],
+      "checking": "Statement and use checked; proof not recursively verified."
+    },
+    {
+      "id": "V90",
+      "authors": "Dan Voiculescu",
+      "displayName": "Circular and semicircular systems and free product factors",
+      "version": "Progress in Mathematics 92 (1990), 45–60; author-hosted two-page scan",
+      "sourceUrl": "https://math.berkeley.edu/~dvv/CircularSemi.pdf",
+      "pdfPages": 9,
+      "sha256": "ba1ff52b38a0a7e362f9d2a1f7fa29dbf48cae6c9fe4a18a1785feaf4055527c",
+      "localFile": "external/voiculescu-circular.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "49",
+          "pdfPage": 3
+        }
+      ],
+      "checking": "Statement and use checked; proof not recursively verified."
+    },
+    {
+      "id": "V01",
+      "authors": "Dan Voiculescu",
+      "displayName": "Free entropy",
+      "version": "arXiv:math/0103168v1, 26 March 2001",
+      "sourceUrl": "https://arxiv.org/pdf/math/0103168v1",
+      "pdfPages": 31,
+      "sha256": "90fea157ec958bdc3aa52500e0a4bac402e05acf686d702d1135972fe87d4e5a",
+      "localFile": "external/voiculescu-entropy.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "10",
+          "pdfPage": 10
+        },
+        {
+          "printedPage": "11",
+          "pdfPage": 11
+        }
+      ],
+      "checking": "Statement and use checked; proof not recursively verified."
+    },
+    {
+      "id": "BEHY23",
+      "authors": "Michael Brannan, Floris Elzinga, Samuel J. Harris, and Makoto Yamashita",
+      "displayName": "Crossed product equivalence of quantum automorphism groups of finite dimensional C∗-algebras",
+      "version": "arXiv:2202.04714v2, 21 February 2023; §5 corresponding to the cited published article",
+      "sourceUrl": "https://arxiv.org/pdf/2202.04714v2",
+      "pdfPages": 27,
+      "sha256": "5e3d942ad72faff6bfdd6ded13683056dcf2f4e4063022d7aea6b08046338e71",
+      "localFile": "external/brannan.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "15",
+          "pdfPage": 15
+        }
+      ],
+      "checking": "Statement and use checked; proof not recursively verified."
+    },
+    {
+      "id": "MS05",
+      "authors": "Igor Mineyev and Dimitri Shlyakhtenko",
+      "displayName": "Non-microstates free entropy dimension for groups",
+      "version": "Geometric and Functional Analysis 15 (2005), 476–490; published PDF",
+      "sourceUrl": "https://mineyev.web.illinois.edu/art/non-microstates.pdf",
+      "pdfPages": 15,
+      "sha256": "c84a5e313e5355123255dc264b933f25eb33c35004e015c9a92c72c60435b3a9",
+      "localFile": "external/mineyev-shlyakhtenko.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "489",
+          "pdfPage": 14
+        }
+      ],
+      "checking": "Statement and use checked; proof not recursively verified."
+    },
+    {
+      "id": "CS03",
+      "authors": "Alain Connes and Dimitri Shlyakhtenko",
+      "displayName": "L2-homology for von Neumann algebras",
+      "version": "arXiv:math/0309343v1, 20 September 2003",
+      "sourceUrl": "https://arxiv.org/pdf/math/0309343v1",
+      "pdfPages": 39,
+      "sha256": "9548e54e83706e3db9561ea588c80fb10c07ef1a6d2084beb9a03ebdb6605adc",
+      "localFile": "external/connes-shlyakhtenko.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "4",
+          "pdfPage": 4
+        }
+      ],
+      "checking": "Statement and use checked; proof not recursively verified."
+    }
+  ],
+  "statements": [
+    {
+      "citation": "main-rank",
+      "anchor": "theorem-1-1",
+      "pages": "1",
+      "checking": "Hypotheses, quantifiers, and all conclusions compared with original; see conclusionCoverage."
+    },
+    {
+      "citation": "rank-two",
+      "anchor": "theorem-1-2",
+      "pages": "2",
+      "checking": "Hypotheses, quantifiers, and all conclusions compared with original; see conclusionCoverage."
+    },
+    {
+      "citation": "all-ranks",
+      "anchor": "corollary-6-1",
+      "pages": "21",
+      "checking": "Hypotheses, quantifiers, and all conclusions compared with original; see conclusionCoverage."
+    },
+    {
+      "citation": "entropy",
+      "anchor": "corollary-7-1",
+      "pages": "21–22",
+      "checking": "Hypotheses, quantifiers, and all conclusions compared with original; see conclusionCoverage."
+    }
+  ],
+  "proofPassages": [
+    {
+      "pages": "4–19",
+      "scope": "Read the Haar-tuple identification; free-sum argument; formal trace identity and analytic moments; relation descent, surjectivity and normal extension; free-prefix Catalan count and cutoff inverse; one-step perturbation; adaptive-budget generating limit."
+    },
+    {
+      "pages": "20–22",
+      "scope": "Read amplification normalization, rank-two proof, full dichotomy application, and both entropy tuple constructions."
+    }
+  ],
+  "unresolved": [
+    "No recursive verification of external theorem proofs or their dependencies.",
+    "Rădulescu Corollary 4.7 was not read directly; its full-range dichotomy was checked in Goldbring–Pi Theorem 1.1, explicitly cited by the manuscript.",
+    "The Brannan–Elzinga–Harris–Yamashita input was checked in preprint v2 §5, not the journal pagination.",
+    "No expert referee review or formal verification. All mathematical checks here are self-checks against source passages."
+  ],
+  "inheritedEvidence": "None: mathematical text, diagrams and checks newly produced from official manuscript and external originals; only shared display infrastructure reused.",
+  "dependencies": [
+    {
+      "id": "dykema",
+      "from": {
+        "paperId": "Dyk94",
+        "result": "Theorem 2.4",
+        "printedPage": "128",
+        "pdfPage": "7",
+        "version": "Pacific Journal of Mathematics 163 (1994), 123–135; publisher PDF with cover",
+        "sourceUrl": "https://msp.org/pjm/1994/163-1/pjm-v163-n1-p06-p.pdf"
+      },
+      "to": {
+        "paperId": "free-group-factor-isomorphism",
+        "result": "Theorem 1.2; Section 6, p.20",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/An-isomorphism-of-the-free-group-factors-September-23-2026/An-isomorphism-of-the-free-group-factors-September-23-2026.pdf"
+      },
+      "role": "Normalize amplification and identify ranks 3,5 at t=sqrt(2) with ranks 2,3.",
+      "hypotheses": "Finite real s>1; t>0; normalized corner trace.",
+      "kind": "direct",
+      "checking": {
+        "worker": "astra_hq",
+        "model": "gpt-6-astra",
+        "date": "2026-10-15",
+        "type": "self-check",
+        "scope": "External statement and manuscript application read; not complete external proof verification.",
+        "record": "../free-group-factor-isomorphism/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../free-group-factor-isomorphism/article.ja.md#dependencies",
+        "en": "../free-group-factor-isomorphism/article.en.md#dependencies"
+      },
+      "unresolved": []
+    },
+    {
+      "id": "dichotomy",
+      "from": {
+        "paperId": "GP25",
+        "result": "Theorem 1.1",
+        "printedPage": "2",
+        "pdfPage": "2",
+        "version": "arXiv:2305.08168v2, 2 January 2025",
+        "sourceUrl": "https://arxiv.org/pdf/2305.08168v2"
+      },
+      "to": {
+        "paperId": "free-group-factor-isomorphism",
+        "result": "Corollary 6.1, p.21",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/An-isomorphism-of-the-free-group-factors-September-23-2026/An-isomorphism-of-the-free-group-factors-September-23-2026.pdf"
+      },
+      "role": "Use the full-range isomorphism dichotomy including infinity.",
+      "hypotheses": "Theorem 1.2 rules out pairwise nonisomorphism.",
+      "kind": "consequence",
+      "checking": {
+        "worker": "astra_hq",
+        "model": "gpt-6-astra",
+        "date": "2026-10-15",
+        "type": "self-check",
+        "scope": "External statement and manuscript application read; not complete external proof verification.",
+        "record": "../free-group-factor-isomorphism/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../free-group-factor-isomorphism/article.ja.md#dependencies",
+        "en": "../free-group-factor-isomorphism/article.en.md#dependencies"
+      },
+      "unresolved": [
+        "Original Radulescu Corollary 4.7 not read directly."
+      ]
+    },
+    {
+      "id": "semicircular",
+      "from": {
+        "paperId": "V90",
+        "result": "Remarks 1.10–1.11",
+        "printedPage": "49",
+        "pdfPage": "3",
+        "version": "Progress in Mathematics 92 (1990), 45–60; author-hosted two-page scan",
+        "sourceUrl": "https://math.berkeley.edu/~dvv/CircularSemi.pdf"
+      },
+      "to": {
+        "paperId": "free-group-factor-isomorphism",
+        "result": "Corollary 7.1, pp.21–22",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/An-isomorphism-of-the-free-group-factors-September-23-2026/An-isomorphism-of-the-free-group-factors-September-23-2026.pdf"
+      },
+      "role": "Realize L(F_n) by a free semicircular n-tuple.",
+      "hypotheses": "Finite n>=2; faithful trace; harmless scalar normalization to variance one.",
+      "kind": "consequence",
+      "checking": {
+        "worker": "astra_hq",
+        "model": "gpt-6-astra",
+        "date": "2026-10-15",
+        "type": "self-check",
+        "scope": "External statement and manuscript application read; not complete external proof verification.",
+        "record": "../free-group-factor-isomorphism/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../free-group-factor-isomorphism/article.ja.md#dependencies",
+        "en": "../free-group-factor-isomorphism/article.en.md#dependencies"
+      },
+      "unresolved": []
+    },
+    {
+      "id": "delta",
+      "from": {
+        "paperId": "V01",
+        "result": "Section 2.4(c),(d)",
+        "printedPage": "11",
+        "pdfPage": "11",
+        "version": "arXiv:math/0103168v1, 26 March 2001",
+        "sourceUrl": "https://arxiv.org/pdf/math/0103168v1"
+      },
+      "to": {
+        "paperId": "free-group-factor-isomorphism",
+        "result": "Corollary 7.1, pp.21–22",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/An-isomorphism-of-the-free-group-factors-September-23-2026/An-isomorphism-of-the-free-group-factors-September-23-2026.pdf"
+      },
+      "role": "Compute delta=n.",
+      "hypotheses": "Free family with atomless semicircular marginals.",
+      "kind": "consequence",
+      "checking": {
+        "worker": "astra_hq",
+        "model": "gpt-6-astra",
+        "date": "2026-10-15",
+        "type": "self-check",
+        "scope": "External statement and manuscript application read; not complete external proof verification.",
+        "record": "../free-group-factor-isomorphism/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../free-group-factor-isomorphism/article.ja.md#dependencies",
+        "en": "../free-group-factor-isomorphism/article.en.md#dependencies"
+      },
+      "unresolved": []
+    },
+    {
+      "id": "delta-zero",
+      "from": {
+        "paperId": "BEHY23",
+        "result": "Section 5, opening paragraph",
+        "printedPage": "15",
+        "pdfPage": "15",
+        "version": "arXiv:2202.04714v2, 21 February 2023; §5 corresponding to the cited published article",
+        "sourceUrl": "https://arxiv.org/pdf/2202.04714v2"
+      },
+      "to": {
+        "paperId": "free-group-factor-isomorphism",
+        "result": "Corollary 7.1, pp.21–22",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/An-isomorphism-of-the-free-group-factors-September-23-2026/An-isomorphism-of-the-free-group-factors-September-23-2026.pdf"
+      },
+      "role": "Compute modified microstates dimension delta_0=n.",
+      "hypotheses": "Free semicircular n-tuple.",
+      "kind": "consequence",
+      "checking": {
+        "worker": "astra_hq",
+        "model": "gpt-6-astra",
+        "date": "2026-10-15",
+        "type": "self-check",
+        "scope": "External statement and manuscript application read; not complete external proof verification.",
+        "record": "../free-group-factor-isomorphism/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../free-group-factor-isomorphism/article.ja.md#dependencies",
+        "en": "../free-group-factor-isomorphism/article.en.md#dependencies"
+      },
+      "unresolved": [
+        "Journal page correspondence not checked; author preprint v2 used."
+      ]
+    },
+    {
+      "id": "group-entropy",
+      "from": {
+        "paperId": "MS05",
+        "result": "Theorem 4.1",
+        "printedPage": "489",
+        "pdfPage": "14",
+        "version": "Geometric and Functional Analysis 15 (2005), 476–490; published PDF",
+        "sourceUrl": "https://mineyev.web.illinois.edu/art/non-microstates.pdf"
+      },
+      "to": {
+        "paperId": "free-group-factor-isomorphism",
+        "result": "Corollary 7.1, p.22",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/An-isomorphism-of-the-free-group-factors-September-23-2026/An-isomorphism-of-the-free-group-factors-September-23-2026.pdf"
+      },
+      "role": "Compute delta* and delta-star by group L2-Betti numbers.",
+      "hypotheses": "Self-adjoint tuple algebraically generates C F_n before transport.",
+      "kind": "consequence",
+      "checking": {
+        "worker": "astra_hq",
+        "model": "gpt-6-astra",
+        "date": "2026-10-15",
+        "type": "self-check",
+        "scope": "External statement and manuscript application read; not complete external proof verification.",
+        "record": "../free-group-factor-isomorphism/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../free-group-factor-isomorphism/article.ja.md#dependencies",
+        "en": "../free-group-factor-isomorphism/article.en.md#dependencies"
+      },
+      "unresolved": []
+    },
+    {
+      "id": "betti",
+      "from": {
+        "paperId": "CS03",
+        "result": "Section 2.1.1",
+        "printedPage": "4",
+        "pdfPage": "4",
+        "version": "arXiv:math/0309343v1, 20 September 2003",
+        "sourceUrl": "https://arxiv.org/pdf/math/0309343v1"
+      },
+      "to": {
+        "paperId": "free-group-factor-isomorphism",
+        "result": "Corollary 7.1, p.22",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/An-isomorphism-of-the-free-group-factors-September-23-2026/An-isomorphism-of-the-free-group-factors-September-23-2026.pdf"
+      },
+      "role": "Insert beta_0=0 and beta_1=n-1.",
+      "hypotheses": "Free group F_n, n>=2.",
+      "kind": "consequence",
+      "checking": {
+        "worker": "astra_hq",
+        "model": "gpt-6-astra",
+        "date": "2026-10-15",
+        "type": "self-check",
+        "scope": "External statement and manuscript application read; not complete external proof verification.",
+        "record": "../free-group-factor-isomorphism/sources.json"
+      },
+      "articleLinks": {
+        "ja": "../free-group-factor-isomorphism/article.ja.md#dependencies",
+        "en": "../free-group-factor-isomorphism/article.en.md#dependencies"
+      },
+      "unresolved": []
+    }
+  ],
+  "checkedLocations": [
+    {
+      "printedPage": "1",
+      "pdfPage": 1
+    },
+    {
+      "printedPage": "2",
+      "pdfPage": 2
+    },
+    {
+      "printedPage": "3",
+      "pdfPage": 3
+    },
+    {
+      "printedPage": "4",
+      "pdfPage": 4
+    },
+    {
+      "printedPage": "5",
+      "pdfPage": 5
+    },
+    {
+      "printedPage": "6",
+      "pdfPage": 6
+    },
+    {
+      "printedPage": "7",
+      "pdfPage": 7
+    },
+    {
+      "printedPage": "8",
+      "pdfPage": 8
+    },
+    {
+      "printedPage": "9",
+      "pdfPage": 9
+    },
+    {
+      "printedPage": "10",
+      "pdfPage": 10
+    },
+    {
+      "printedPage": "11",
+      "pdfPage": 11
+    },
+    {
+      "printedPage": "12",
+      "pdfPage": 12
+    },
+    {
+      "printedPage": "13",
+      "pdfPage": 13
+    },
+    {
+      "printedPage": "14",
+      "pdfPage": 14
+    },
+    {
+      "printedPage": "15",
+      "pdfPage": 15
+    },
+    {
+      "printedPage": "16",
+      "pdfPage": 16
+    },
+    {
+      "printedPage": "17",
+      "pdfPage": 17
+    },
+    {
+      "printedPage": "18",
+      "pdfPage": 18
+    },
+    {
+      "printedPage": "19",
+      "pdfPage": 19
+    },
+    {
+      "printedPage": "20",
+      "pdfPage": 20
+    },
+    {
+      "printedPage": "21",
+      "pdfPage": 21
+    },
+    {
+      "printedPage": "22",
+      "pdfPage": 22
+    },
+    {
+      "printedPage": "23",
+      "pdfPage": 23
+    }
+  ],
+  "pageMappingEvidence": "Main manuscript has printed page numbers 1–23 matching PDF positions; external offsets recorded only at read locations. Dykema Theorem 2.4 and Voiculescu Remarks 1.10–1.11 additionally inspected as rendered scans."
+}

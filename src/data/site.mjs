@@ -16,6 +16,7 @@ import inventory068 from '../../coordination/catalog-068/inventory.json' with { 
 import inventory159 from '../../coordination/catalog-159/inventory.json' with { type: 'json' };
 import inventory187 from '../../coordination/catalog-187/inventory.json' with { type: 'json' };
 import inventory246 from '../../coordination/catalog-246/inventory.json' with { type: 'json' };
+import inventory287 from '../../coordination/catalog-287/inventory.json' with { type: 'json' };
 import inventory338 from '../../coordination/catalog-338/inventory.json' with { type: 'json' };
 import subjectSource from './catalog-subjects.json' with { type: 'json' };
 export const text = (ja, en) => ({ ja, en });
@@ -92,7 +93,7 @@ const fieldTranslations = [
   {
     "id": "operator-algebras",
     "ja": "作用素環",
-    "catalogIds": []
+    "catalogIds": ["287"]
   },
   {
     "id": "topology",
@@ -208,6 +209,10 @@ export const papers = [...inventory004.manuscripts.map(entry => ({
 })), ...inventory246.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '246', sourceCommit: inventory246.sourceCommit,
  title: entry.title, path: entry.sourceUrl.split('/preprints/')[1], version: entry.version,
+ pages: entry.pdfPages, order: entry.order, featured: true,
+})), ...inventory287.manuscripts.map(entry => ({
+ id: entry.paperId, catalogId: '287', sourceCommit: inventory287.sourceCommit,
+ title: entry.title, path: entry.path, version: entry.version,
  pages: entry.pdfPages, order: entry.order, featured: true,
 })), ...inventory338.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '338', sourceCommit: inventory338.sourceCommit,
@@ -339,6 +344,13 @@ export const catalogs = [{
   description: text('球面境界を持つ双曲群について、モジュラスの二つの増大率を排除し、一様化から群全体の有限核を持つ等長作用へ進む論証を読む。', 'For a hyperbolic group with sphere boundary, follow the exclusion of two modulus-growth regimes and the passage from uniformization to an isometric action of the whole group with finite kernel.'),
   paperIds: inventory246.manuscripts.map(p => p.paperId),
   overviewSectionIds: ['articles', 'argument', 'sources'],
+}, {
+  id: '287', sourceCommit: inventory287.sourceCommit, mode: 'single',
+  title: text(inventory287.titleJa, inventory287.overviewTitle),
+  contentsTitle: inventory287.contentsTitle,
+  description: text('自由Haarユニタリの構成と生成性から階数低下を得て、増幅公式と二者択一定理による帰結へ進む論証を読む。', 'Follow the construction and generation of free Haar unitaries to rank reduction, then the consequences of amplification formulas and the dichotomy theorem.'),
+  paperIds: inventory287.manuscripts.map(p => p.paperId),
+  overviewSectionIds: ['inventory', 'connections', 'sources'],
 }, {
   id: '338', sourceCommit: inventory338.sourceCommit, mode: 'single',
   title: text(inventory338.titleJa, inventory338.overviewTitle),

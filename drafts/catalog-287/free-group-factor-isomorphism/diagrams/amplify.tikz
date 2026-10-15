@@ -1,0 +1,10 @@
+\node[card] (a) {\heading{1}{構成が適用できる階数を使う}{Use ranks covered by the construction}
+$N_3\cong N_4\cong N_5,\qquad \Theta:N_3\longrightarrow N_5$};
+\node[card,below=1.8cm of a] (b) {\heading{2}{同じトレースのcornerへ増幅}{Amplify to corners of the same trace}
+$\Theta^{\sqrt2}:N_3^{\sqrt2}\longrightarrow N_5^{\sqrt2}$\\
+$\tau(p)=\sqrt2,\qquad \tau_{Q^{\sqrt2}}=\frac1{\sqrt2}(\tau_Q\otimes\mathrm{Tr})$};
+\flow{a}{b}{\Tx{$n=3,4$の同型を合成し、$\Theta\otimes\mathrm{id}$をcornerに制限}{Compose the isomorphisms for $n=3,4$ and restrict $\Theta\otimes\mathrm{id}$ to corners}\\\Cite{main-rank}\\\Cite{amplification}};
+\node[result,below=2cm of b] (c) {\heading{3}{階数2と3へ同定する}{Identify the corners with ranks two and three}
+$N_3^{\sqrt2}\cong N_{1+2/2}=N_2,\quad N_5^{\sqrt2}\cong N_{1+4/2}=N_3$\\
+$\Phi:N_2\xrightarrow{\ \cong\ }N_3$\quad\Tx{単位的・normal・トレース保存}{unital, normal, trace-preserving}};
+\flow{b}{c}{\Tx{正規化公式 $N_s^t\cong N_{1+(s-1)t^{-2}}$ を適用}{Apply the normalized formula $N_s^t\cong N_{1+(s-1)t^{-2}}$}\\\Cite{dykema}};

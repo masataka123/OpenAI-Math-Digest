@@ -1,0 +1,438 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "author-key",
+  "catalogId": "287",
+  "sources": {
+    "P": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "displayName": "An isomorphism of the free group factors",
+      "pagination": "same"
+    },
+    "Dyk94": {
+      "recordFile": "sources.json",
+      "recordId": "Dyk94",
+      "guideRole": {
+        "ja": "正規化された増幅公式。Theorem 1.2で使用。",
+        "en": "Normalized amplification formula, used in Theorem 1.2."
+      }
+    },
+    "GP25": {
+      "recordFile": "sources.json",
+      "recordId": "GP25",
+      "guideRole": {
+        "ja": "無限パラメータを含む古典的同型二分法の明示的再掲。Corollary 6.1で使用。",
+        "en": "Explicit restatement of the classical isomorphism dichotomy including the infinite parameter, used in Corollary 6.1."
+      }
+    },
+    "V90": {
+      "recordFile": "sources.json",
+      "recordId": "V90",
+      "guideRole": {
+        "ja": "半円族による自由群因子の実現。Corollary 7.1で使用。",
+        "en": "Semicircular realization of free group factors, used in Corollary 7.1."
+      }
+    },
+    "V01": {
+      "recordFile": "sources.json",
+      "recordId": "V01",
+      "guideRole": {
+        "ja": "自由な半円族のmicrostates次元δ=n。",
+        "en": "Microstates dimension δ=n for a free semicircular family."
+      }
+    },
+    "BEHY23": {
+      "recordFile": "sources.json",
+      "recordId": "BEHY23",
+      "guideRole": {
+        "ja": "§5冒頭の自由半円族についてのδ₀=nの記述。誌面版に代え著者プレプリントv2を照合。",
+        "en": "The opening of §5 states δ₀=n for free semicircular tuples; checked in author preprint v2 rather than the journal layout."
+      }
+    },
+    "MS05": {
+      "recordFile": "sources.json",
+      "recordId": "MS05",
+      "guideRole": {
+        "ja": "群環を代数的に生成する自己共役組のδ*、δ⋆をL²-Betti数で計算。",
+        "en": "Computes δ* and δ⋆ from L²-Betti numbers for self-adjoint algebraic generators of a group algebra."
+      }
+    },
+    "CS03": {
+      "recordFile": "sources.json",
+      "recordId": "CS03",
+      "guideRole": {
+        "ja": "自由群のL²-Betti数β₀=0、β₁=n−1。",
+        "en": "Free-group L²-Betti numbers β₀=0 and β₁=n−1."
+      }
+    }
+  },
+  "citations": {
+    "main-rank": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "rank-two": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.2",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "all-ranks": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Corollary 6.1",
+          "printed": "21",
+          "pdf": "21"
+        }
+      ]
+    },
+    "entropy": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Corollary 7.1",
+          "printed": "21–22",
+          "pdf": "21–22"
+        }
+      ]
+    },
+    "haar": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 2.2",
+          "printed": "4",
+          "pdf": "4"
+        }
+      ]
+    },
+    "free-sum": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemmas 2.3–2.5",
+          "printed": "4–6",
+          "pdf": "4–6"
+        }
+      ]
+    },
+    "flow": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 3.1",
+          "printed": "7",
+          "pdf": "7"
+        }
+      ]
+    },
+    "trace": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemmas 3.2–3.4",
+          "printed": "7–10",
+          "pdf": "7–10"
+        }
+      ]
+    },
+    "extension": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Section 3.3",
+          "printed": "10–11",
+          "pdf": "10–11"
+        }
+      ]
+    },
+    "small-cocycle": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 4.1; Sections 4.1–4.3",
+          "printed": "11–16",
+          "pdf": "11–16"
+        }
+      ]
+    },
+    "prefix": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 4.2",
+          "printed": "12",
+          "pdf": "12"
+        }
+      ]
+    },
+    "spectral": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 4.3",
+          "printed": "13–14",
+          "pdf": "13–14"
+        }
+      ]
+    },
+    "cutoff": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Section 4.3",
+          "printed": "15–16",
+          "pdf": "15–16"
+        }
+      ]
+    },
+    "perturb": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 5.1",
+          "printed": "16–17",
+          "pdf": "16–17"
+        }
+      ]
+    },
+    "limit": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Section 5.2; equations (5.3)–(5.9)",
+          "printed": "17–19",
+          "pdf": "17–19"
+        }
+      ]
+    },
+    "amplification": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Section 6; equation (6.1)",
+          "printed": "20",
+          "pdf": "20"
+        }
+      ]
+    },
+    "entropy-proof": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Section 7",
+          "printed": "21–22",
+          "pdf": "21–22"
+        }
+      ]
+    },
+    "dykema": {
+      "source": "Dyk94",
+      "locations": [
+        {
+          "result": "Theorem 2.4",
+          "printed": "128",
+          "pdf": "7"
+        }
+      ]
+    },
+    "dichotomy": {
+      "source": "GP25",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "semicircular": {
+      "source": "V90",
+      "locations": [
+        {
+          "result": "Remarks 1.10–1.11",
+          "printed": "49",
+          "pdf": "3"
+        }
+      ]
+    },
+    "delta": {
+      "source": "V01",
+      "locations": [
+        {
+          "result": "Section 2.4(c),(d)",
+          "printed": "11",
+          "pdf": "11"
+        }
+      ]
+    },
+    "delta-zero": {
+      "source": "BEHY23",
+      "locations": [
+        {
+          "result": "Section 5, opening paragraph",
+          "printed": "15",
+          "pdf": "15"
+        }
+      ]
+    },
+    "group-entropy": {
+      "source": "MS05",
+      "locations": [
+        {
+          "result": "Theorem 4.1",
+          "printed": "489",
+          "pdf": "14"
+        }
+      ]
+    },
+    "betti": {
+      "source": "CS03",
+      "locations": [
+        {
+          "result": "Section 2.1.1",
+          "printed": "4",
+          "pdf": "4"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ],
+  "articleGuides": {
+    ".": {
+      "selfSource": "P",
+      "externalSources": [
+        "Dyk94",
+        "GP25",
+        "V90",
+        "V01",
+        "BEHY23",
+        "MS05",
+        "CS03"
+      ],
+      "proofTargets": [
+        "main-rank",
+        "rank-two",
+        "all-ranks",
+        "entropy"
+      ],
+      "mainResults": [
+        "main-rank",
+        "rank-two",
+        "all-ranks",
+        "entropy"
+      ],
+      "statements": {
+        "main-rank": "theorem-1-1",
+        "rank-two": "theorem-1-2",
+        "all-ranks": "corollary-6-1",
+        "entropy": "corollary-7-1"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "main-rank",
+          "conclusion": "For every integer n≥3: unital normal trace-preserving bijective *-map",
+          "anchor": "proof-1-step-4"
+        },
+        {
+          "result": "rank-two",
+          "conclusion": "L(F₂) ≅ L(F₃), with all asserted map properties",
+          "anchor": "proof-2-step-1"
+        },
+        {
+          "result": "all-ranks",
+          "conclusion": "All 1<r,s≤∞ are isomorphic",
+          "anchor": "proof-3-step-1"
+        },
+        {
+          "result": "all-ranks",
+          "conclusion": "Fundamental group R>0 for every 1<r≤∞",
+          "anchor": "proof-3-step-2"
+        },
+        {
+          "result": "entropy",
+          "conclusion": "Self-adjoint n-tuples X(n) generate M and have δ=δ₀=n",
+          "anchor": "proof-4-step-1"
+        },
+        {
+          "result": "entropy",
+          "conclusion": "Self-adjoint 2n-tuples Y(n) generate M and have δ*=δ⋆=n",
+          "anchor": "proof-4-step-2"
+        },
+        {
+          "result": "entropy",
+          "conclusion": "Each dimension varies and is unbounded over finite self-adjoint W*-generators of M",
+          "anchor": "proof-4-step-3"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "trace",
+          "purpose": {
+            "ja": "形式的微分から実際のモーメント不変性へ。",
+            "en": "From a formal derivation to actual moment invariance."
+          }
+        },
+        {
+          "citation": "extension",
+          "purpose": {
+            "ja": "関係式の降下・全射性・normal延長を区別する。",
+            "en": "Distinguish relation descent, surjectivity, and normal extension."
+          }
+        },
+        {
+          "citation": "small-cocycle",
+          "purpose": {
+            "ja": "自由なprefix、スペクトル極限、打切り逆作用素を読む。",
+            "en": "Read the free prefixes, spectral limit, and cutoff inverse."
+          }
+        },
+        {
+          "citation": "limit",
+          "purpose": {
+            "ja": "語を得た後に将来誤差を固定する順序と生成性。",
+            "en": "Order of choices after finding a word, and generation in the limit."
+          }
+        },
+        {
+          "citation": "amplification",
+          "purpose": {
+            "ja": "正規化と√2増幅によるrank 2への帰着。",
+            "en": "Normalization and the √2 amplification to rank two."
+          }
+        },
+        {
+          "citation": "all-ranks",
+          "purpose": {
+            "ja": "無限パラメータと基本群への二分法の適用。",
+            "en": "Dichotomy for the infinite parameter and fundamental groups."
+          }
+        },
+        {
+          "citation": "entropy-proof",
+          "purpose": {
+            "ja": "異なる二種類の生成組と分布の移送。",
+            "en": "Two different tuple families and transport of distributions."
+          }
+        }
+      ]
+    }
+  }
+}
