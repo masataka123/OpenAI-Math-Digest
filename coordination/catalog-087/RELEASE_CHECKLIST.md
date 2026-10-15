@@ -143,3 +143,14 @@ npm run check:links
 - [ ] commit・push・Actions・公開反映確認：第3段階、現在の依頼範囲外。
 
 証拠：[第2段階報告](stage2/REPORT.md)、[再開手順](stage2/PUBLICATION_HANDOFF.md)。状態は公開準備完了、公開未実施。
+
+
+## 第3段階の完了（2026-10-15T22:49:52.018673+09:00）
+
+- [x] 現在のユーザーの公開指示を確認。087のみの差分をcommit・push。
+- [x] Actions build / deploy成功。
+- [x] 日英記事・32図・32TeX・日英PDFを公開URLで照合。
+- [x] 公開16表示条件と図拡大・引用・言語切替・PDF導線を確認。
+- [x] 数学的な未確認範囲を維持し、他担当変更を保持。
+
+現在の状態：公開確認済み。[公開記録](PUBLICATION.md)。
