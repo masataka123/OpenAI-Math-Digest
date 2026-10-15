@@ -1,3 +1,5 @@
+> 第3段階完了（2026-10-15）。日英サイト・図・PDFの公開反映を確認済み。最新記録：[stage3/PUBLICATION.md](stage3/PUBLICATION.md)。以下の以前の段階の記録は履歴として保持。
+
 # カタログ159 制作記録
 
 - 作業先：`/Users/iwai/Desktop/GitHub/OpenAI-Math-Digest`、開始時ブランチ：`main`。ブランチ切替なし。

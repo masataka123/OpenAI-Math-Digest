@@ -1,3 +1,5 @@
+> 第3段階完了（2026-10-15）。日英サイト・図・PDFの公開反映を確認済み。最新記録：[stage3/PUBLICATION.md](stage3/PUBLICATION.md)。以下の以前の段階の記録は履歴として保持。
+
 > 2026-10-15 第2段階を実施済み。以下は第1段階時点の引継ぎ履歴。最新状態は [stage2/QA_REPORT.md](stage2/QA_REPORT.md)、次の手順は [stage2/HANDOFF_STAGE3.md](stage2/HANDOFF_STAGE3.md)。
 
 # カタログ159 第2段階への引継ぎ
