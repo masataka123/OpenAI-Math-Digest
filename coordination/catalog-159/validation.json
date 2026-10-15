@@ -1,0 +1,93 @@
+{
+  "checkedAt": "2026-10-15T12:45:52.788Z",
+  "scope": "Stage 1 explicit catalogue target; no site registration/PDF/public-copy check",
+  "checks": [
+    {
+      "name": "pinned official source hashes",
+      "passed": true
+    },
+    {
+      "name": "quasipolynomial-arithmetic-progressions/ja: source-generated guides, statement anchors, conclusion coverage, TeX/SVG",
+      "passed": true,
+      "headings": [
+        "results",
+        "diagram-sources",
+        "proof-overview",
+        "proof-1",
+        "proof-2",
+        "dependencies",
+        "sources"
+      ],
+      "proofTargets": [
+        "main",
+        "increment",
+        "reciprocal"
+      ],
+      "coverage": [
+        {
+          "result": "main",
+          "conclusion": "r_k(N) cardinality bound",
+          "anchor": "proof-overview-step-3"
+        },
+        {
+          "result": "main",
+          "conclusion": "Equivalent density threshold including endpoints",
+          "anchor": "proof-overview-step-3"
+        },
+        {
+          "result": "reciprocal",
+          "conclusion": "Divergent reciprocal sum forces every finite length, including 1 and 2",
+          "anchor": "proof-2-step-2"
+        }
+      ]
+    },
+    {
+      "name": "quasipolynomial-arithmetic-progressions/en: source-generated guides, statement anchors, conclusion coverage, TeX/SVG",
+      "passed": true,
+      "headings": [
+        "results",
+        "diagram-sources",
+        "proof-overview",
+        "proof-1",
+        "proof-2",
+        "dependencies",
+        "sources"
+      ],
+      "proofTargets": [
+        "main",
+        "increment",
+        "reciprocal"
+      ],
+      "coverage": [
+        {
+          "result": "main",
+          "conclusion": "r_k(N) cardinality bound",
+          "anchor": "proof-overview-step-3"
+        },
+        {
+          "result": "main",
+          "conclusion": "Equivalent density threshold including endpoints",
+          "anchor": "proof-overview-step-3"
+        },
+        {
+          "result": "reciprocal",
+          "conclusion": "Divergent reciprocal sum forces every finite length, including 1 and 2",
+          "anchor": "proof-2-step-2"
+        }
+      ]
+    },
+    {
+      "name": "diagram originals and generated artifact hashes",
+      "passed": true,
+      "files": 19
+    },
+    {
+      "name": "overview/ja: official order and common four-column table",
+      "passed": true
+    },
+    {
+      "name": "overview/en: official order and common four-column table",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+\node[card] (cert) {\heading{1}{旧制約を持つ二箱の証明書}{Two-box certificate with old constraints}
+$\mathbb E fB^->a\mathbb EB^+,\qquad Q_i=\log(2/w_i)$\\
+\Tx{整数決定座標 $b_i$ と多項式 $C_i(u,b_{<i})$ を保持}{Retain integer slots $b_i$ and polynomials $C_i(u,b_{<i})$}};
+\node[card,below=2.15cm of cert] (path) {\heading{2}{準備して末端箱へ進む}{Prepare and descend to terminal boxes}
+$\mathbb EY\ge(1-\delta)a,\qquad\Pr(Y\ge(1-2\delta)a)\ge\delta a$\\
+\Tx{rank cut と単射な整数アフィン経路}{Rank cuts and injective integer-affine paths}};
+\flow{cert}{path}{\Tx{旧整数引数を正確に変換。停止経路は質量ゼロにする}{Transform old integer arguments exactly; stopped paths have zero mass}\\\Cite{prepare}\quad\Cite{forward}};
+\node[card,below=2.15cm of path] (absolute) {\heading{3}{絶対増分で新規座標を得る}{Obtain fresh slots by the absolute increment}
+$\mathbb E(f-\lambda)B>0,\qquad d_{\rm fresh}\le(2+p)^{C_k}$\\
+\Tx{新規座標数は末端の次元に依存しない}{Fresh rank is independent of terminal dimension}};
+\flow{path}{absolute}{\Tx{正の計数と相対持上げを旧rank $0$ に適用する}{Positive counting and relative lifting at old rank $0$}\\\Cite{absolute}\quad\Cite{relative}};
+\node[card,below=2.15cm of absolute] (return) {\heading{4}{正負のpayoffを一緒に戻す}{Return both payoffs together}
+$j>s:\ g^U(u),\qquad j\le s:\ \pi^0g=P_Y\ \text{exact}$\\
+\Tx{旧決定式と整数引数を正確に復元する}{Restore old determining equations and integer arguments exactly}};
+\flow{absolute}{return}{\Tx{受動・能動の復帰後、合同条件と実数条件を解く}{Passive/active return, then solve modular and real constraints}\\\Cite{return}\quad\Cite{extract}};
+\node[result,below=2.15cm of return] (new) {\heading{5}{三角型損失を持つ次の証明書}{Next certificate with triangular losses}
+$a'=(1+\eta_k)a,\qquad Q_i'-Q_i\le P_i(p,d_*,Q_{>i})$\\
+\Tx{根切片の対数費用は全幅を含む多項式}{Root logarithmic slice cost is polynomial in all width logs}};
+\flow{return}{new}{\Tx{被覆平均で同時残差箱へ戻し、割引後にも固定増分を残す}{Compress to simultaneous boxes and retain a fixed net gain}\\\Cite{compress}\quad\Cite{budgets}};

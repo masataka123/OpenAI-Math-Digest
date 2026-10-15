@@ -1,0 +1,15 @@
+\node[card] (start) {\heading{1}{制約なしの区間から開始}{Start on an unconstrained interval}
+$f=1_A,\quad a_0=\alpha/2,\quad p=C(2+\log(1/\alpha))$\\
+$T=\lceil\log(2/\alpha)/\log(1+\eta_k)\rceil+1=O_k(p)$};
+\node[card,below=2.2cm of start] (budget) {\heading{2}{高い重みから予測を閉じる}{Close forecasts from higher weights}
+$d_i(t)\le d_*(p),\quad Q_i(t)\le V_i=\operatorname{poly}_k(p)$\\
+$V_i=Q_i(0)+TP_i(p,d_*,V_{>i}),\qquad D=D_k$};
+\flow{start}{budget}{\Tx{次元を先に固定し、幅の増加を上位幅のみで抑える}{Fix dimensions first; width increments use only higher widths}\\\Cite{budgets}};
+\node[card,below=2.2cm of budget] (stop) {\heading{3}{側長を保って有限回で停止}{Sustain the side lengths and stop finitely}
+$\sum\text{log slice costs}+\text{log side cutoff}\le\operatorname{poly}_k(p)$\\
+$a_T\ge(\alpha/2)(1+\eta_k)^T\ge1,\qquad fB^-\le B^+$};
+\flow{budget}{stop}{\Tx{増分または不可能性。初期の $\log N$ で全費用を支払う}{Increment or impossibility; initial $\log N$ pays all costs}\\\Cite{increment}\quad\Cite{closure}};
+\node[result,below=2.2cm of stop] (result) {\heading{4}{閾値を反転する}{Invert the threshold}
+$r_k(N)/N\le C_k e^{-c_k(\log N)^{\varepsilon_k}}$\\
+$\log N\ge A_k(2+\log(1/\alpha))^{A_k}\ \Longrightarrow\ k\text{-AP}$};
+\flow{stop}{result}{\Tx{証明書の矛盾から上界へ。余裕 $\alpha N/2$ で端点も扱う}{Certificate contradiction gives the bound; slack $\alpha N/2$ handles endpoints}\\\Cite{inversion}};

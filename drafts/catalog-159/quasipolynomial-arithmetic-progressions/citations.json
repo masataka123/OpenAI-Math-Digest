@@ -1,0 +1,328 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "author-key",
+  "catalogId": "159",
+  "sources": {
+    "P": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "pagination": "same"
+    },
+    "LSS24": {
+      "recordFile": "sources.json",
+      "recordId": "LSS",
+      "guideRole": {
+        "ja": "区間のGowers逆定理と逆向きの相関判定。本稿の箱・積巡回群への拡張とは区別する",
+        "en": "Interval Gowers inverse theorem and converse correlation bound; distinct from this manuscript’s box and product-cyclic extensions"
+      }
+    },
+    "SS14": {
+      "recordFile": "sources.json",
+      "recordId": "SS",
+      "guideRole": {
+        "ja": "入力Bohr半径を乗法的に保持するalmost-periodicity。Lemma C.2から次数1のshift comparisonへ使う",
+        "en": "Almost-periodicity retaining the input Bohr radius multiplicatively, used through Lemma C.2 in degree-one shift comparison"
+      }
+    }
+  },
+  "citations": {
+    "main": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "4",
+          "pdf": "4"
+        }
+      ]
+    },
+    "reciprocal": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Corollary 1.2",
+          "printed": "4",
+          "pdf": "4"
+        }
+      ]
+    },
+    "increment": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 2.1; §2.2",
+          "printed": "9–10",
+          "pdf": "9–10"
+        }
+      ]
+    },
+    "closure": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 10.4",
+          "printed": "81",
+          "pdf": "81"
+        }
+      ]
+    },
+    "budgets": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Propositions 10.2–10.3; §§10.2–10.3",
+          "printed": "77–80",
+          "pdf": "77–80"
+        }
+      ]
+    },
+    "inversion": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proof of Theorem 1.1",
+          "printed": "81–82",
+          "pdf": "81–82"
+        }
+      ]
+    },
+    "prepare": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 4.1; Lemma 4.3",
+          "printed": "25–26",
+          "pdf": "25–26"
+        }
+      ]
+    },
+    "forward": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 6.2",
+          "printed": "42–44",
+          "pdf": "42–44"
+        }
+      ]
+    },
+    "absolute": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 2.2",
+          "printed": "11–12",
+          "pdf": "11–12"
+        }
+      ]
+    },
+    "fixed-box": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition D.3",
+          "printed": "118–119",
+          "pdf": "118–119"
+        }
+      ]
+    },
+    "relative": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proof of Theorem I.15",
+          "printed": "194–195",
+          "pdf": "194–195"
+        }
+      ]
+    },
+    "inverse-local": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem A.7; Lemma A.9",
+          "printed": "90–93",
+          "pdf": "90–93"
+        }
+      ]
+    },
+    "almost-local": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma C.2",
+          "printed": "101",
+          "pdf": "101"
+        }
+      ]
+    },
+    "return": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 7.8; Corollary 7.9; Theorem 8.2",
+          "printed": "57–62",
+          "pdf": "57–62"
+        }
+      ]
+    },
+    "extract": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 9.1; §9",
+          "printed": "69–70",
+          "pdf": "69–70"
+        }
+      ]
+    },
+    "compress": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 10.1",
+          "printed": "76–77",
+          "pdf": "76–77"
+        }
+      ]
+    },
+    "dyadic": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 11.1; Corollary 11.2",
+          "printed": "82",
+          "pdf": "82"
+        }
+      ]
+    },
+    "lss-inverse": {
+      "source": "LSS24",
+      "locations": [
+        {
+          "result": "Theorem 1.2",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "lss-converse": {
+      "source": "LSS24",
+      "locations": [
+        {
+          "result": "Lemma B.5",
+          "printed": "83",
+          "pdf": "83"
+        }
+      ]
+    },
+    "ss-almost": {
+      "source": "SS14",
+      "locations": [
+        {
+          "result": "Theorem 5.4",
+          "printed": "14",
+          "pdf": "14"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ],
+  "articleGuides": {
+    ".": {
+      "selfSource": "P",
+      "externalSources": [
+        "LSS24",
+        "SS14"
+      ],
+      "proofTargets": [
+        "main",
+        "increment",
+        "reciprocal"
+      ],
+      "mainResults": [
+        "main",
+        "reciprocal"
+      ],
+      "statements": {
+        "main": "theorem-1-1",
+        "increment": "theorem-2-1",
+        "reciprocal": "corollary-1-2"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "main",
+          "conclusion": "r_k(N) cardinality bound",
+          "anchor": "proof-overview-step-3"
+        },
+        {
+          "result": "main",
+          "conclusion": "Equivalent density threshold including endpoints",
+          "anchor": "proof-overview-step-3"
+        },
+        {
+          "result": "reciprocal",
+          "conclusion": "Divergent reciprocal sum forces every finite length, including 1 and 2",
+          "anchor": "proof-2-step-2"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "main",
+          "purpose": {
+            "ja": "量化と密度上界・閾値の二つの表示",
+            "en": "Quantifiers and the density-bound/threshold formulations"
+          }
+        },
+        {
+          "citation": "increment",
+          "purpose": {
+            "ja": "二箱の証明書と三角型損失の主張",
+            "en": "Two-box certificates and triangular loss bounds"
+          }
+        },
+        {
+          "citation": "absolute",
+          "purpose": {
+            "ja": "次元に依存しない新規座標数を供給する接続",
+            "en": "The connection supplying a dimension-independent fresh-slot count"
+          }
+        },
+        {
+          "citation": "budgets",
+          "purpose": {
+            "ja": "構造を先に固定する順序と下降する幅予測",
+            "en": "Structural choices first and descending width forecasts"
+          }
+        },
+        {
+          "citation": "closure",
+          "purpose": {
+            "ja": "反復回数、側長の維持、閾値1での矛盾",
+            "en": "Iteration horizon, side-length budget, and contradiction at target one"
+          }
+        },
+        {
+          "citation": "fixed-box",
+          "purpose": {
+            "ja": "中国剰余定理とwraparoundを除く重み",
+            "en": "Chinese remaindering and the weight excluding wraparound"
+          }
+        },
+        {
+          "citation": "reciprocal",
+          "purpose": {
+            "ja": "二進区間の総和と全有限長への量化",
+            "en": "Dyadic summation and quantification over every finite length"
+          }
+        }
+      ]
+    }
+  }
+}

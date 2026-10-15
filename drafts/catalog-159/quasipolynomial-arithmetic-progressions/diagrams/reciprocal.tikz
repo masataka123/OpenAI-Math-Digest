@@ -1,0 +1,15 @@
+\node[card] (a) {\heading{1}{一つの長さを固定して反証する}{Fix one length and argue by contradiction}
+$k\ge3,\quad A\subseteq\mathbb N,\quad \sum_{a\in A}a^{-1}=\infty$\\
+\Tx{$A$ が非定数 $k$ 項等差数列を持たないと仮定}{$A$ is assumed to contain no nonconstant $k$-term AP}};
+\node[card,below=2.0cm of a] (dyadic) {\heading{2}{二進区間に有限評価を適用}{Apply the finite bound on dyadic intervals}
+$\displaystyle\sum_{a\in A\cap[2^m,2^{m+1})}\frac1a\le2^{-m}r_k(2^m)$\\
+$\displaystyle\le C_ke^{-c_k(m\log2)^{\varepsilon_k}}\quad(m\ge1)$};
+\flow{a}{dyadic}{\Tx{平行移動で長さ $2^m$ の区間へ。各逆数は $2^{-m}$ 以下}{Translate to an interval of length $2^m$; each reciprocal is at most $2^{-m}$}\\\Cite{main}\quad\Cite{dyadic}};
+\node[card,below=2.0cm of dyadic] (sum) {\heading{3}{総和可能性が発散に矛盾}{Summability contradicts divergence}
+$m^{\varepsilon}/\log m\longrightarrow\infty\quad\Longrightarrow\quad e^{-dm^\varepsilon}\le m^{-2}\ \text{\Tx{十分大きい $m$}{eventually}}$\\
+$\displaystyle\sum_{a\in A}a^{-1}<\infty$};
+\flow{dyadic}{sum}{\Tx{$m=0$ は高々1、残りの上界は総和可能}{$m=0$ contributes at most one; the remaining upper bounds are summable}\\\Cite{reciprocal}};
+\node[result,below=2.0cm of sum] (all) {\heading{4}{全有限長へ量化する}{Quantify over every finite length}
+$\forall\ell\ge1\ \exists a,d\in\mathbb N:\quad a+jd\in A\ (0\le j<\ell)$\\
+\Tx{$k\ge3$ は任意、長さ1・2は無限性から得る}{$k\ge3$ was arbitrary; infinitude supplies lengths 1 and 2}};
+\flow{sum}{all}{\Tx{定数は固定した $k$ ごとでよく、一様閾値は不要}{Constants may depend on each fixed $k$; no uniform threshold is needed}\\\Cite{reciprocal}};

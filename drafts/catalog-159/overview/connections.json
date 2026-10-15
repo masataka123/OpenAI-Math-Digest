@@ -1,0 +1,125 @@
+{
+  "catalogId": "159",
+  "productionVersion": "1.4",
+  "checkingScope": "Two principal external analytic inputs checked against source statements and application points. Catalogue160 companion identified for background comparison only; its theorem not independently checked. Other-catalogue proof dependencies uninvestigated.",
+  "omittedSections": [
+    {
+      "section": "classification",
+      "reason": "One manuscript; no useful distinct reading categories."
+    },
+    {
+      "section": "catalogue-overview-diagram",
+      "reason": "Considered the convergence of inverse theory, almost-periodicity, positive counting, and triangular iteration. These are internal proof routes already shown together in the article diagrams; duplicating them in the catalogue would not aid article selection. The catalogue retains the official one-row table and a short prose route."
+    },
+    {
+      "section": "internal-dependency-table",
+      "reason": "Single manuscript; no inter-manuscript edge inside this catalogue."
+    }
+  ],
+  "connections": [
+    {
+      "id": "lss-input",
+      "from": {
+        "paperId": "LSS",
+        "title": "Quasipolynomial bounds on the inverse theorem for the Gowers U^{s+1}[N]-norm",
+        "result": "Theorem 1.2; Lemma B.5",
+        "pages": "1; 83",
+        "version": "arXiv:2402.17994v3, 10 August 2024",
+        "sourceUrl": "https://arxiv.org/abs/2402.17994v3"
+      },
+      "to": {
+        "paperId": "quasipolynomial-arithmetic-progressions",
+        "result": "Theorem A.7; Lemma A.9",
+        "pages": "91–93",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Quasipolynomial-Bounds-for-Arithmetic-Progressions-September-23-2026/paper.pdf"
+      },
+      "role": "Interval inverse and converse inputs; the manuscript supplies box and cyclic adaptations.",
+      "hypotheses": "Unit-bounded interval function with Gowers norm at least delta; conversely a correlation with controlled polynomial nilsequence.",
+      "kind": "direct",
+      "checking": {
+        "reviewer": "astra_review",
+        "model": "gpt-6-astra",
+        "date": "2026-10-15",
+        "status": "Statement and application checked; external proof not independently verified",
+        "record": "../../../coordination/catalog-159/reviews/source-check.json"
+      },
+      "articleLinks": {
+        "ja": "../../../ja/papers/quasipolynomial-arithmetic-progressions/#dependencies",
+        "en": "../../../en/papers/quasipolynomial-arithmetic-progressions/#dependencies"
+      },
+      "unresolved": [
+        "Full external proof and recursive dependencies not checked."
+      ]
+    },
+    {
+      "id": "ss-input",
+      "from": {
+        "paperId": "SS",
+        "title": "Roth’s theorem for four variables and additive structures in sums of sparse sets",
+        "result": "Theorem 5.4",
+        "pages": "14",
+        "version": "arXiv:1408.2568v1, 11 August 2014",
+        "sourceUrl": "https://arxiv.org/abs/1408.2568v1"
+      },
+      "to": {
+        "paperId": "quasipolynomial-arithmetic-progressions",
+        "result": "Lemma C.2",
+        "pages": "101",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Quasipolynomial-Bounds-for-Arithmetic-Progressions-September-23-2026/paper.pdf"
+      },
+      "role": "Radius-sensitive almost-periodicity for the degree-one shift comparison.",
+      "hypotheses": "Regular Bohr ambient set, positive relative density, sumset bound, and size ratio beta<=1; application splits into three cases for |K|.",
+      "kind": "direct",
+      "checking": {
+        "reviewer": "astra_review",
+        "model": "gpt-6-astra",
+        "date": "2026-10-15",
+        "status": "Statement and application checked; external proof not independently verified",
+        "record": "../../../coordination/catalog-159/reviews/source-check.json"
+      },
+      "articleLinks": {
+        "ja": "../../../ja/papers/quasipolynomial-arithmetic-progressions/#dependencies",
+        "en": "../../../en/papers/quasipolynomial-arithmetic-progressions/#dependencies"
+      },
+      "unresolved": [
+        "Full external proof and recursive dependencies not checked."
+      ]
+    },
+    {
+      "id": "catalog160-coloring-comparison",
+      "from": {
+        "paperId": "catalog-160-manuscript",
+        "title": "Quantitative Superexponential Bounds for van der Waerden Numbers",
+        "result": "Theorem 7.2 (as cited by catalogue 159 manuscript)",
+        "pages": "not independently checked",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Quantitative-Superexponential-Bounds-for-van-der-Waerden-Numbers-September-23-2026/paper.pdf"
+      },
+      "to": {
+        "paperId": "quasipolynomial-arithmetic-progressions",
+        "result": "§1.4 / reference [37]",
+        "pages": "8; 198",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Quasipolynomial-Bounds-for-Arithmetic-Progressions-September-23-2026/paper.pdf"
+      },
+      "role": "Background comparison: upper colouring threshold from Theorem1.1 is compared with the companion lower bound stated in §1.4. Not an input to the density upper bound.",
+      "hypotheses": "Catalogue159 §1.4 reports the companion lower bound for integers r>=256, k>=3. Companion theorem not independently checked.",
+      "kind": "background",
+      "checking": {
+        "reviewer": "astra_review",
+        "model": "gpt-6-astra",
+        "date": "2026-10-15",
+        "status": "Identity matched between §1.4, reference [37], and official CONTENTS catalogue160 title/path. Companion PDF theorem not read."
+      },
+      "articleLinks": {
+        "ja": "../../../ja/papers/quasipolynomial-arithmetic-progressions/#dependencies",
+        "en": "../../../en/papers/quasipolynomial-arithmetic-progressions/#dependencies"
+      },
+      "unresolved": [
+        "Companion Theorem7.2 statement, page and proof not independently checked."
+      ]
+    }
+  ]
+}

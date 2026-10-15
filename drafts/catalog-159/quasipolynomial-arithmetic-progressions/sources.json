@@ -1,0 +1,305 @@
+{
+  "order": 1,
+  "paperId": "quasipolynomial-arithmetic-progressions",
+  "title": "Quasipolynomial Bounds for Arithmetic Progressions",
+  "displayName": "Quasipolynomial Bounds for Arithmetic Progressions",
+  "authors": [
+    "OpenAI"
+  ],
+  "citationKey": "OpenAI26",
+  "version": "September 23, 2026",
+  "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "pdfPages": 198,
+  "sha256": "481eaf7730dc4d581e5270cc4d514c6ee2ec386d5af643cf914e20b4d00c59be",
+  "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Quasipolynomial-Bounds-for-Arithmetic-Progressions-September-23-2026/paper.pdf",
+  "downloadUrl": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Quasipolynomial-Bounds-for-Arithmetic-Progressions-September-23-2026/paper.pdf",
+  "existingArticle": null,
+  "duplicateCheck": "Searched existing drafts, src, research, coordination by exact title and title words; matches only in official CONTENTS snapshots. No pre-existing article found.",
+  "draftDirectory": "drafts/catalog-159/quasipolynomial-arithmetic-progressions",
+  "worker": "astra_author (gpt-6-astra), catalogue headquarters author role",
+  "articleStatus": "in-progress",
+  "catalogId": "159",
+  "checkedOn": "2026-10-15",
+  "specifiedModel": "gpt-6-astra",
+  "author": "astra_author",
+  "basis": "Fresh reading of official source. No prior Sol draft/interpretation reused.",
+  "checkedLocations": [
+    {
+      "printedPage": "4",
+      "pdfPage": 4
+    },
+    {
+      "printedPage": "9",
+      "pdfPage": 9
+    },
+    {
+      "printedPage": "10",
+      "pdfPage": 10
+    },
+    {
+      "printedPage": "11",
+      "pdfPage": 11
+    },
+    {
+      "printedPage": "12",
+      "pdfPage": 12
+    },
+    {
+      "printedPage": "14",
+      "pdfPage": 14
+    },
+    {
+      "printedPage": "25",
+      "pdfPage": 25
+    },
+    {
+      "printedPage": "26",
+      "pdfPage": 26
+    },
+    {
+      "printedPage": "40",
+      "pdfPage": 40
+    },
+    {
+      "printedPage": "41",
+      "pdfPage": 41
+    },
+    {
+      "printedPage": "42",
+      "pdfPage": 42
+    },
+    {
+      "printedPage": "43",
+      "pdfPage": 43
+    },
+    {
+      "printedPage": "44",
+      "pdfPage": 44
+    },
+    {
+      "printedPage": "57",
+      "pdfPage": 57
+    },
+    {
+      "printedPage": "58",
+      "pdfPage": 58
+    },
+    {
+      "printedPage": "59",
+      "pdfPage": 59
+    },
+    {
+      "printedPage": "60",
+      "pdfPage": 60
+    },
+    {
+      "printedPage": "61",
+      "pdfPage": 61
+    },
+    {
+      "printedPage": "69",
+      "pdfPage": 69
+    },
+    {
+      "printedPage": "70",
+      "pdfPage": 70
+    },
+    {
+      "printedPage": "76",
+      "pdfPage": 76
+    },
+    {
+      "printedPage": "77",
+      "pdfPage": 77
+    },
+    {
+      "printedPage": "78",
+      "pdfPage": 78
+    },
+    {
+      "printedPage": "79",
+      "pdfPage": 79
+    },
+    {
+      "printedPage": "80",
+      "pdfPage": 80
+    },
+    {
+      "printedPage": "81",
+      "pdfPage": 81
+    },
+    {
+      "printedPage": "82",
+      "pdfPage": 82
+    },
+    {
+      "printedPage": "90",
+      "pdfPage": 90
+    },
+    {
+      "printedPage": "91",
+      "pdfPage": 91
+    },
+    {
+      "printedPage": "92",
+      "pdfPage": 92
+    },
+    {
+      "printedPage": "93",
+      "pdfPage": 93
+    },
+    {
+      "printedPage": "101",
+      "pdfPage": 101
+    },
+    {
+      "printedPage": "114",
+      "pdfPage": 114
+    },
+    {
+      "printedPage": "115",
+      "pdfPage": 115
+    },
+    {
+      "printedPage": "116",
+      "pdfPage": 116
+    },
+    {
+      "printedPage": "117",
+      "pdfPage": 117
+    },
+    {
+      "printedPage": "118",
+      "pdfPage": 118
+    },
+    {
+      "printedPage": "119",
+      "pdfPage": 119
+    },
+    {
+      "printedPage": "194",
+      "pdfPage": 194
+    },
+    {
+      "printedPage": "195",
+      "pdfPage": 195
+    },
+    {
+      "printedPage": "62",
+      "pdfPage": 62
+    }
+  ],
+  "statements": [
+    {
+      "result": "Theorem 1.1",
+      "pages": [
+        4,
+        5,
+        81
+      ],
+      "check": "Fixed integer k>=3; positive constants depending on k; all N>=2; r_k largest no nonconstant d>0 k-AP subset of [N]. Equivalent threshold log N>=A_k(2+log(1/alpha))^{A_k}, 0<alpha<=1, density at least alpha. Quasipolynomial sufficient N as function of 1/alpha, no uniform k claim."
+    },
+    {
+      "result": "Corollary 1.2",
+      "pages": [
+        4,
+        82
+      ],
+      "check": "A subset of positive integers and divergent reciprocal sum imply every finite length. Fix k first, translate dyadic intervals of length 2^m, bound contribution by 2^{-m}r_k(2^m), use exp(-c m^epsilon) summability; m=0 finite and k=1,2 from infinitude."
+    },
+    {
+      "result": "Theorem 2.1",
+      "pages": [
+        9,
+        10,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81
+      ],
+      "check": "Strict two-box certificate; p>=2,a>=exp(-p); sufficiently long positive-dimensional integer box. New threshold (1+eta)a or impossibility. Strictly higher-weight dependence in increments of dimensions and width logarithms, fixed depth D, root loss includes all incoming Q_i. Starting no slots gives polynomial envelopes; T=O_k(p), a0=alpha/2; density threshold>=1 impossible."
+    }
+  ],
+  "proofPassages": [
+    {
+      "pages": "4, 8–14, 24–26, 40–44, 57–62, 69–70, 76–82, 90–93, 101, 114–119, 194–195",
+      "scope": "Statements and selected proof passages; full numerical iteration and reciprocal-sum deduction read."
+    }
+  ],
+  "unresolved": [
+    "Full technical proofs in sections3–9 and AppendicesB–I, including growing-dimension cube comparison, passive/active return, exact restoration and global closure of every parameter dependency.",
+    "Independent proof of either external input and their recursive dependencies.",
+    "All consequences in section11 beyond reciprocal-sum deduction; not proposed as article main results."
+  ],
+  "externalSources": [
+    {
+      "id": "LSS",
+      "authors": "James Leng, Ashwin Sah, Mehtaab Sawhney",
+      "displayName": "Quasipolynomial bounds on the inverse theorem for the Gowers $U^{s+1}[N]$-norm",
+      "version": "v3, 10 August 2024",
+      "sourceUrl": "https://arxiv.org/pdf/2402.17994v3",
+      "sha256": "12439e0bda174047274fa49d0c578fad528b25a7205c172c70ca683d1fba6005",
+      "checkedLocations": [
+        {
+          "printedPage": "1",
+          "pdfPage": 1
+        },
+        {
+          "printedPage": "83",
+          "pdfPage": 83
+        }
+      ],
+      "checking": {
+        "reviewer": "astra_review",
+        "specifiedModel": "gpt-6-astra",
+        "scope": "Direct interval inverse/converse input. Theorem5.4/Corollary5.5 cited as antecedents of paper AppendixB, not treated as wholesale imported proof.",
+        "record": "../../../coordination/catalog-159/reviews/source-check.json"
+      }
+    },
+    {
+      "id": "SS",
+      "authors": "Tomasz Schoen, Olof Sisask",
+      "displayName": "Roth’s theorem for four variables and additive structures in sums of sparse sets",
+      "version": "v1, 11 August 2014",
+      "sourceUrl": "https://arxiv.org/pdf/1408.2568v1",
+      "sha256": "fb98edd6b51ffafd9ed0693df38e0626421bb7a64ba12f41fe5989be27bfd47f",
+      "checkedLocations": [
+        {
+          "printedPage": "14",
+          "pdfPage": 14
+        }
+      ],
+      "checking": {
+        "reviewer": "astra_review",
+        "specifiedModel": "gpt-6-astra",
+        "scope": "Direct almost-periodicity input to C.2 p101; source theorem statement and application checked; source proof not independently checked.",
+        "record": "../../../coordination/catalog-159/reviews/source-check.json"
+      }
+    }
+  ],
+  "dependencies": [
+    {
+      "from": "LSS, Theorem 1.2",
+      "to": "Theorem A.7 pp.91–92",
+      "role": "Interval inverse input; box and product-cyclic extensions are internal.",
+      "kind": "direct",
+      "checking": "Statement and application checked by astra_review; proof not independently verified."
+    },
+    {
+      "from": "LSS, Lemma B.5",
+      "to": "Lemma A.9 p.93",
+      "role": "Interval converse inverse input; box argument supplied internally.",
+      "kind": "direct",
+      "checking": "Statement and use checked by astra_review."
+    },
+    {
+      "from": "SS, Theorem 5.4",
+      "to": "Lemma C.2 p.101",
+      "role": "Almost-periodicity retaining incoming radius multiplicatively, feeds degree-one shift comparison.",
+      "kind": "direct",
+      "checking": "Statement, hypotheses and convolution normalization checked by astra_review; source proof not independently verified."
+    }
+  ]
+}
