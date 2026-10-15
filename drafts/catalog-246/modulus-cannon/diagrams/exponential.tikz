@@ -1,0 +1,7 @@
+\node[card] (a) {\heading{01}{Hölder変動を拡大して保つ}{Magnify while preserving H\"older variation}$\lambda>1,\quad H_N\to u\quad\Longrightarrow\quad W:Z\setminus\{b\}\to\mathbb R\ \text{nonconstant}$};
+\node[card,below=1.9cm of a] (b) {\heading{02}{近似列の小エネルギーを確保}{Retain small energy on approximants}$h_j,\sigma_j\ \text{fixed first},\qquad f_j=\dfrac{H_{N_j}\circ h_j^{-1}-u(x_j)}{\sigma_j},\quad E_{N_j}(f_j)\to0$};
+\flow{a}{b}{\Tx{重み付き振動の記録更新と対角選択}{Weighted oscillation records and diagonal selection}\\[3pt]\Cite{magnify}};
+\node[card,below=1.9cm of b] (c) {\heading{03}{異なる穿孔を持つ変換を比較}{Compare transforms with different punctures}$p_s\ne p_t\quad\Longrightarrow\quad W_t(x)=W_t(p_s)\quad(x\in\mathcal N(W_s)\setminus\{p_t\})$};
+\flow{b}{c}{\Tx{レベル連続体上の変動を二つのエネルギーで抑える}{Bound level-continuum variation by the two energies}\\[3pt]\Cite{comparison}};
+\node[result,below=3.1cm of c] (d) {\heading{04}{分離した値域と同じ値が衝突}{Separated ranges conflict with an equal value}$W_j(D_1)\cap W_j(D_2)=\varnothing,\qquad W_j(x_1)=W_j(p_i)=W_j(x_2)$\\$x_\nu\in\mathcal N(W_i)\cap D_\nu\quad\Longrightarrow\quad\bot$};
+\flow{c}{d}{\Tx{安定化群の集積方向を避け再拡大、穿孔を相異ならせる}{Remagnify away from stabilizer directions; choose distinct punctures}\\[3pt]\Cite{bh-cyclic}\\[3pt]\Cite{stabilizer}\quad\Cite{exponential}};

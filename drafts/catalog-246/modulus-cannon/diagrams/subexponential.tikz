@@ -1,0 +1,9 @@
+\node[card] (a) {\heading{01}{一様な深度で値区間を細分する}{Subdivide value intervals at a uniform depth}$\limsup M(n)^{1/n}\le1,\quad J_y\subset J,\quad t_y=|J_y|/|J|$\\$\sum_y\min(a^{-\gamma D}t_y,a^{\tau D}t_y^2)\ge1$};
+\node[card,below=1.9cm of a] (b) {\heading{02}{確率を流し、良い節点を残す}{Flow probability and retain good nodes}$P_i\le a^{-\gamma Dn}\Delta_i/\Delta_0,\qquad\sum_i\Delta_i^2\le E_0$\\\Tx{無限個の世代で、良い節点の質量が少なくとも1/2}{Good mass is at least $1/2$ at infinitely many generations}};
+\flow{a}{b}{\Tx{値区間の長さを相殺してDを固定、二乗評価とJensen}{Cancel interval length before fixing $D$; square bound and Jensen}\\[3pt]\Cite{capacity}\quad\Cite{probabilities}};
+\node[card,below=1.9cm of b] (c) {\heading{03}{同じ深さで多数の遠い穿孔対を選ぶ}{Select many far puncture pairs at one depth}$k=k_0+Dn,\ R=a^{-k},\ \ell=D\lfloor\gamma n/Q\rfloor$\\$NP_*\gtrsim k^{-1},\qquad\#\{\{i,j\}:d_{ij}>a^{-\ell}\}\gtrsim N^2$};
+\flow{b}{c}{\Tx{逆語のprefixと祖先への条件付き確率で近い対を抑える}{Control near pairs by inverse prefixes and conditional probabilities}\\[3pt]\Cite{punctures}};
+\node[card,below=1.9cm of c] (d) {\heading{04}{一方の端点に振動費用を割り当てる}{Assign an oscillation cost to one endpoint}$D_{ij}=\overline B(h_i^{-1}p_j,C_\mu s_{ij}),\quad s_{ij}\asymp R^2/d_{ij}^2$\\$\mu(D_{ij})\gtrsim\kappa^2\Delta_i^2,\qquad h_iD_{ij}\subset\overline B(p_j,C_3R)$};
+\flow{c}{d}{\Tx{一対を固定してレベル比較、固定倍の拡大球も制御}{Fix a pair for level comparison; control the enlarged ball}\\[3pt]\Cite{pair}};
+\node[result,below=1.9cm of d] (e) {\heading{05}{費用と重複度が両立しない}{Cost and overlap cannot coexist}$c k^{-2}a^{2\gamma Dn}\le\sum\mu(D_{ij})\le C a^{Q\ell}\mu(Z)$\\$Q\ell\le\gamma Dn\quad\Longrightarrow\quad a^{\gamma Dn}\le Ck^2\quad\bot$};
+\flow{d}{e}{\Tx{測度の不変性は使わず、課金した拡大球を直接数える}{Count enlarged charged balls directly; no measure invariance}\\[3pt]\Cite{charges}};

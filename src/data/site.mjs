@@ -13,6 +13,7 @@ import inventory057 from '../../coordination/catalog-057/inventory.json' with { 
 import inventory063 from '../../coordination/catalog-063/inventory.json' with { type: 'json' };
 import inventory067 from '../../coordination/catalog-067/inventory.json' with { type: 'json' };
 import inventory068 from '../../coordination/catalog-068/inventory.json' with { type: 'json' };
+import inventory246 from '../../coordination/catalog-246/inventory.json' with { type: 'json' };
 import inventory338 from '../../coordination/catalog-338/inventory.json' with { type: 'json' };
 import subjectSource from './catalog-subjects.json' with { type: 'json' };
 export const text = (ja, en) => ({ ja, en });
@@ -79,7 +80,7 @@ const fieldTranslations = [
   {
     "id": "group-theory",
     "ja": "群論",
-    "catalogIds": []
+    "catalogIds": ["246"]
   },
   {
     "id": "mathematical-physics",
@@ -194,6 +195,10 @@ export const papers = [...inventory004.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '068', sourceCommit: inventory068.sourceCommit,
  title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
  pages: entry.pdfPages, order: entry.order, featured: true,
+})), ...inventory246.manuscripts.map(entry => ({
+ id: entry.paperId, catalogId: '246', sourceCommit: inventory246.sourceCommit,
+ title: entry.title, path: entry.sourceUrl.split('/preprints/')[1], version: entry.version,
+ pages: entry.pdfPages, order: entry.order, featured: true,
 })), ...inventory338.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '338', sourceCommit: inventory338.sourceCommit,
  title: entry.title, path: entry.sourceUrl.split('/preprints/')[1], version: entry.version,
@@ -303,6 +308,13 @@ export const catalogs = [{
   description: text('反標準束の非消滅を、不変指数・計量降下・不変切断の構成へ結ぶ7篇の証明から読む。', 'Follow seven proofs connecting anticanonical nonvanishing with invariant indices, metric descent, and invariant sections.'),
   paperIds: inventory068.manuscripts.map(p => p.paperId),
   overviewSectionIds: ['papers', 'diagram-sources', 'index-routes', 'exact-routes', 'connections', 'sources'],
+}, {
+  id: '246', sourceCommit: inventory246.sourceCommit, mode: 'single',
+  title: text(inventory246.titleJa, inventory246.overviewTitle),
+  contentsTitle: inventory246.contentsTitle,
+  description: text('球面境界を持つ双曲群について、モジュラスの二つの増大率を排除し、一様化から群全体の有限核を持つ等長作用へ進む論証を読む。', 'For a hyperbolic group with sphere boundary, follow the exclusion of two modulus-growth regimes and the passage from uniformization to an isometric action of the whole group with finite kernel.'),
+  paperIds: inventory246.manuscripts.map(p => p.paperId),
+  overviewSectionIds: ['articles', 'argument', 'sources'],
 }, {
   id: '338', sourceCommit: inventory338.sourceCommit, mode: 'single',
   title: text(inventory338.titleJa, inventory338.overviewTitle),

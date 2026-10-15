@@ -1,0 +1,16 @@
+\node[card] (start) {\heading{01}{視覚計量と組合せ的モジュラス}{Visual metric and combinatorial modulus}$Z=\partial G\cong S^2,\quad r_n=a^{-n},\quad M(n)=\operatorname{Mod}_2(\mathcal F_0,T_n)$};
+\node[card,below=1.9cm of start] (limit) {\heading{02}{非有界性から関数と測度を作る}{Extract a function and measure from unboundedness}$M(N)\to\infty\quad\Longrightarrow\quad H_N\to u,\quad\mu_N\rightharpoonup\mu,\quad E_N\to0$};
+\flow{start}{limit}{\Tx{記録更新・横断の双対性・環帯の振動評価}{Records, crossing duality, and annular oscillation bounds}\\[3pt]\Cite{scalar}};
+\node[half,anchor=north] (exp) at ($(limit.south)+(-3.9,-2.1)$) {\heading{03a}{指数的増大を排除}{Exclude exponential growth}$\limsup M(n)^{1/n}>1$\\\Tx{Hölder拡大とレベル比較}{Hölder magnification and level comparison}};
+\node[half,anchor=north] (sub) at ($(limit.south)+(3.9,-2.1)$) {\heading{03b}{劣指数的増大を排除}{Exclude subexponential growth}$\limsup M(n)^{1/n}\le1$\\\Tx{確率の木と測度費用}{Probability tree and measure cost}};
+\draw[edge] ($(limit.south)+(-7.0,0)$)--($(exp.north)+(-3.1,0)$);
+\draw[edge] ($(limit.south)+(.8,0)$)--($(sub.north)+(-3.1,0)$);
+\node[branchreason,anchor=south west,text width=5.7cm] at ($(exp.north)+(-2.55,.25)$) {\Tx{拡大極限の値域が衝突}{Magnified ranges conflict}\\\Cite{exponential}};
+\node[branchreason,anchor=south west,text width=5.7cm] at ($(sub.north)+(-2.55,.25)$) {\Tx{費用の下界が重複度の上界を超える}{Cost exceeds the overlap bound}\\\Cite{subexponential}};
+\node[result,below=5.6cm of limit] (bounded) {\heading{04}{二つの場合が尽き、有界性が残る}{Both cases exhausted: bounded modulus}$\sup_n M(n)<\infty$};
+\draw[edge] (exp.south)--($(bounded.north)+(-3.9,0)$);
+\draw[edge] (sub.south)--($(bounded.north)+(3.9,0)$);
+\node[card,below=2.3cm of bounded] (sphere) {\heading{05}{計量球面を一様化}{Uniformize the metric sphere}$\psi:(Z,d)\longrightarrow S^2$\quad\Tx{準Möbius同相}{quasi-M\"obius homeomorphism}};
+\flow{bounded}{sphere}{\Tx{近似自己相似性・経路連結性を確保して適用}{Apply after checking self-similarity and path connectedness}\\[3pt]\Cite{bk}};
+\node[result,below=1.9cm of sphere] (action) {\heading{06}{群全体を双曲空間で実現}{Realize the whole group on hyperbolic space}$\rho:G\to\operatorname{Isom}(\mathbb H^3)$\\\Tx{固有・余コンパクト、有限核}{Proper and cocompact, with finite kernel}};
+\flow{sphere}{action}{\Tx{不変共形構造と三つ組空間を使う}{Use an invariant conformal structure and the triple space}\\[3pt]\Cite{bridge}};

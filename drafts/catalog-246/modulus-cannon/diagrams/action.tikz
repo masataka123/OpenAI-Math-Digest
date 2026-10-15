@@ -1,0 +1,7 @@
+\node[card] (a) {\heading{01}{境界作用を球面へ共役する}{Conjugate the boundary action onto the sphere}$\psi:(Z,d)\to S^2,\qquad\mathcal G=\psi G\psi^{-1}$};
+\node[card,below=2.9cm of a] (b) {\heading{02}{一様準共形群から不変構造を作る}{Build an invariant structure from uniform quasiconformality}$\sup_{f\in\mathcal G}K(f)<\infty,\qquad q(x)=\operatorname{circumcenter}\{f^*q_{\mathrm{round}}(x)\}$};
+\flow{a}{b}{\Tx{無限小歪みの特徴付け、双曲平面での周心}{Infinitesimal distortion criterion; hyperbolic circumcenters}\\[3pt]\Cite{aim-metric}\\[3pt]\Cite{tukia}};
+\node[card,below=2.2cm of b] (c) {\heading{03}{可測構造を積分して等長延長する}{Integrate the measurable structure and extend isometrically}$F^*q_{\mathrm{round}}=q,\qquad F\mathcal GF^{-1}\subset\operatorname{M\ddot ob}^{\pm}(S^2)$\\$\rho:G\to\operatorname{Isom}(\mathbb H^3)$\\$F\psi$ \Tx{が境界作用を共役}{conjugates the boundary actions}};
+\flow{b}{c}{\Tx{可測Riemann写像定理と向き反転も含む合成則}{Measurable Riemann mapping and composition, including reversals}\\[3pt]\Cite{ab-integrate}};
+\node[result,below=1.9cm of c] (d) {\heading{04}{三つ組の作用から空間の作用へ}{Transfer the action from triples to hyperbolic space}$T(S^2)\simeq I/H\longrightarrow I/K_o\simeq\mathbb H^3,\quad |H|=2$\\\Tx{同変な固有全射：固有・余コンパクト、有限核}{Equivariant proper surjection: proper, cocompact, finite kernel}};
+\flow{c}{d}{\Tx{境界拡大で三つ組の固有性・余コンパクト性を確保}{Boundary expansion supplies properness and cocompactness on triples}\\[3pt]\Cite{bridge}};

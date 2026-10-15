@@ -1,0 +1,7 @@
+\node[card] (a) {\heading{01}{記録更新と長方形を固定}{Fix records and a crossing rectangle}$M(N-\ell)\le\lambda^{-\ell}M(N),\qquad\operatorname{Mod}_2(\text{horizontal crossings})\gtrsim M(N)$};
+\node[card,below=1.9cm of a] (b) {\heading{02}{横断を双対化し、帯の値を正則化}{Dualize crossings and regularize band values}$\sum\rho_N^2\lesssim M(N)^{-1},\quad H_N|_{\text{top}}=0,\quad H_N|_{\text{bottom}}=1$\\\Tx{レベル連続体が値をまたぐ経路を遮る}{Level continua block straddling paths}};
+\flow{a}{b}{\Tx{最小ノルムの入射ベクトル、min--max包絡}{Least-norm incidence vector; min--max envelopes}\\[3pt]\Cite{rectangle}};
+\node[card,below=1.9cm of b] (c) {\heading{03}{環帯ごとに振動を測る}{Measure oscillation on annuli}$|H_N(x)-H_N(y)|^2\lesssim\lambda^{-\ell}\mu_N(A_\ell),\quad \mu_N=M(N)\sum\rho_N(q)^2\delta_q$};
+\flow{b}{c}{\Tx{レベル横断を拡大して小スケールのモジュラスを使う}{Expand level crossings and use modulus at the smaller scale}\\[3pt]\Cite{annulus}};
+\node[result,below=1.9cm of c] (d) {\heading{04}{三つの入力を保持して極限へ}{Keep three inputs at the limit}$H_N\to u,\ \mu_N\rightharpoonup\mu;\quad(\operatorname{osc}_{\overline B(x,s)}u)^2\lesssim\mu(\overline B(x,C_\mu s))$\\$C_t\cap U\subset\{u=t\},\quad\operatorname{diam}C_t\ge d_1;\quad E_N^{(J)}(H_N\circ g^{-1};K)\to0$};
+\flow{c}{d}{\Tx{環帯の和・閉集合の弱収束評価、変換を先に固定}{Sum disjoint annuli; closed-set weak limits; fix transformations first}\\[3pt]\Cite{scalar}};
