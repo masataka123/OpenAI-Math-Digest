@@ -1,0 +1,17 @@
+\node[card] (a) {\heading{1}{射影と小さい非正規化trace}{Projection with small unnormalized trace}
+$p\in M_N(C_r^*(\Lambda)),\quad a=\tau_{\Lambda,N}(p)\in(0,\tfrac12)$\\[4pt]
+$K=\Lambda*F_N,\quad U=(\lambda_K(t_1),\ldots,\lambda_K(t_N))$};
+\node[card,below=1.9cm of a] (b) {\heading{2}{正規形でgood入力とbad入力を分ける}{Separate good and bad inputs by normal form}
+$\xi=p\xi:\quad \|U\xi_g\|\ge\sqrt{1-a}\|\xi\|,\quad
+\|U\xi_b\|\le\sqrt a\|\xi\|$\\[4pt]
+$\|U\xi\|\ge c_a\|\xi\|,\qquad c_a=\sqrt{1-a}-\sqrt a>0$};
+\flow a b {\Tx{部分群包含はtraceを保存。bad入力は対角traceで制御}{Subgroup inclusion preserves trace; diagonal traces control bad inputs}\\[4pt]\Cite{subgroup}; \Cite{row}};
+\node[card,below=1.9cm of b] (c) {\heading{3}{C*環の隅で逆元を取る}{Invert inside the C*-corner}
+$A=pU^*Up,\qquad c_a^2p\le A\le Np$\\[4pt]
+$A^{-1/2}\in pM_N(C_r^*(K))p,\quad V=UpA^{-1/2},\quad V^*V=p$};
+\flow b c {\Tx{正の下界により隅のfunctional calculusを適用}{The positive lower bound permits functional calculus in the corner}\\[4pt]\Cite{corner}};
+\node[result,below=1.9cm of c] (d) {\heading{4}{スカラー射影・trace・群の条件}{Scalar projection, trace, and group conditions}
+$e=VV^*=(Up)A^{-1}(Up)^*\in C_r^*(K),\quad\tau_K(e)=a$\\[4pt]
+$0<a<\tfrac12\ \Longrightarrow\ e\ne0,1$\\[4pt]
+\Tx{$\Lambda$ が有限生成・torsion-freeなら $K$ もそうである}{If $\Lambda$ is finitely generated and torsion-free, so is $K$}};
+\flow c d {\Tx{trace性と自由積の巡回既約正規形}{Traciality and cyclically reduced free-product normal forms}\\[4pt]\Cite{compression}};

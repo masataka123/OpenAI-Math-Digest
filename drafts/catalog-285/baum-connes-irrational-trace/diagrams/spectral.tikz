@@ -1,0 +1,20 @@
+\node[card] (local) {\heading{1}{invalidコピーで辺が不足する}{Missing edges on invalid copies}
+$X_\omega|_P-w_P\in C_P\setminus\{0\}$,\quad $|\operatorname{supp}(X_\omega|_P-w_P)|>\eta|P|$\\
+$d|B|-2e_{\omega,P}(B)\geq c|B|$\quad $(B\subset P)$};
+\node[card,below=2cm of local] (cycles) {\heading{2}{cycle座標を遠いコピーから消去する}{Eliminate cycle coordinates from farthest copies}
+$Z_1(X;\mathbb F_2)=\bigoplus_P Z_1(P;\mathbb F_2)$\\
+$\operatorname{pr}_P(L_j)\subset Z_1(D_P;\mathbb F_2)$,\quad $D_P=B_P\cup(A\cap P)$};
+\flow{local}{cycles}{\Tx{相殺で生じる追加の辺は同時交差球 $B_P$ 内に入る}{Extra edges created by cancellation lie inside the overlap ball $B_P$}\\\Cite{cycles}; \Cite{deficit}};
+\node[card,below=2cm of cycles] (deficit) {\heading{3}{互いに素な外側頂点へ階数を配分する}{Charge rank to disjoint exterior vertex sets}
+$b_1(D_P)\leq(d/2-1-c/4)|(Y\cap P)\setminus B_P|$\\
+$d|Y|-2|E(A)|\geq(c/2)|Y|$\quad $(Y\subset U_\omega\text{ finite})$};
+\flow{cycles}{deficit}{\Tx{girthで付着の余分なcycleを抑え、消去順で重複を避ける}{Girth bounds extra attachment cycles; elimination avoids double counting}\\\Cite{deficit}};
+\node[card,below=2cm of deficit] (gap) {\heading{4}{有効成分と残りの双方に一様gapを得る}{Obtain a uniform gap on copies and the remainder}
+$\pi_\omega(T)|_{\ell^2(U_\omega)}\geq c^2/(8d)$,\quad $\varepsilon=\min\{\rho,c^2/(8d)\}>0$\\
+$\ker\pi_\omega(T)=\bigoplus_{P\,\mathrm{valid}}\mathbb C1_P$,\quad
+$\operatorname{spec}(\pi_\omega(T))\subset\{0\}\cup[\varepsilon,2d]$};
+\flow{deficit}{gap}{\Tx{level set積分とCauchy--Schwarz：$q(x)=d-\deg_\omega(x)$ を含める}{Level sets and Cauchy--Schwarz, retaining $q(x)=d-\deg_\omega(x)$}\\\Cite{spectral-gap}};
+\node[result,below=2cm of gap] (projection) {\heading{5}{被約群C*環内で核射影を作る}{Construct the kernel projection in the reduced algebra}
+$\bigoplus_\omega\pi_\omega\text{ faithful}$,\quad $b_0=\chi(T)\in C_r^*(G_{\rm sur})$\\
+$\chi(0)=1$,\quad $\chi|_{[\varepsilon,2d]}=0$,\quad $b_0^2=b_0=b_0^*$};
+\flow{gap}{projection}{\Tx{共通gapを忠実な直和へ移し、連続汎関数計算を使う}{Transfer the common gap to the faithful sum and use continuous calculus}\\\Cite{operator}; \Cite{projection}};

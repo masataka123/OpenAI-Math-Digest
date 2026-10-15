@@ -1,0 +1,367 @@
+{
+  "paperId": "kadison-kaplansky-projection",
+  "title": "A torsion-free counterexample to the Kadison–Kaplansky projection conjecture",
+  "displayName": "A torsion-free counterexample to the Kadison–Kaplansky projection conjecture",
+  "version": "September 23, 2026",
+  "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Torsion-Free-Counterexample-to-the-Kadison-Kaplansky-Projection-Conjecture-September-23-2026/paper.pdf",
+  "downloadUrl": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Torsion-Free-Counterexample-to-the-Kadison-Kaplansky-Projection-Conjecture-September-23-2026/paper.pdf",
+  "pdfPages": 76,
+  "sha256": "df6227b61598580506210a8236216e043d1acd4ba062a9901b3063559ff62a5a",
+  "catalogId": "285",
+  "authors": "OpenAI",
+  "checkedOn": "2026-10-15",
+  "owner": "projection",
+  "model": "gpt-6-astra",
+  "checkingScope": "原典の主要帰着と証明本文を読解した自己点検。全証明の独立検証・専門家査読ではない。",
+  "externalSources": [
+    {
+      "id": "mt",
+      "citationKey": "MT10",
+      "title": "A constructive proof of the general Lovász Local Lemma",
+      "displayName": "A constructive proof of the general Lovász Local Lemma",
+      "authors": "Robin A. Moser and Gábor Tardos",
+      "version": "arXiv:0903.0544v3, 20 May 2009; published 2010",
+      "sourceUrl": "https://arxiv.org/pdf/0903.0544v3",
+      "downloadUrl": "https://arxiv.org/pdf/0903.0544v3",
+      "pdfPages": 12,
+      "sha256": "394a21143451acad99ae93e934dc12a5d7df4da68659b8060786fdd8a9665a0c",
+      "cache": "coordination/catalog-285/sources/kadison-kaplansky-projection/mt.pdf",
+      "checkedLocations": [
+        {
+          "pdfPage": 1,
+          "printedPage": "1"
+        }
+      ],
+      "checking": "定理記述と本稿での適用箇所を照合。外部結果の証明自体は未検証。"
+    },
+    {
+      "id": "bgw",
+      "citationKey": "BGW16",
+      "title": "Exactness and the Kadison–Kaplansky Conjecture",
+      "displayName": "Exactness and the Kadison–Kaplansky Conjecture",
+      "authors": "Paul Baum, Erik Guentner and Rufus Willett",
+      "version": "Author-hosted 40-page manuscript, retrieved 2026-10-15; published 2016",
+      "sourceUrl": "https://math.hawaii.edu/~erik/papers/kadison.pdf",
+      "downloadUrl": "https://math.hawaii.edu/~erik/papers/kadison.pdf",
+      "pdfPages": 40,
+      "sha256": "1e52b6caccaf8de7521ef37f1f6299f08847f05f573cbf1ad3d58adbdebe0029",
+      "cache": "coordination/catalog-285/sources/kadison-kaplansky-projection/bgw.pdf",
+      "checkedLocations": [
+        {
+          "pdfPage": 36,
+          "printedPage": "36"
+        }
+      ],
+      "checking": "定理記述と本稿での適用箇所を照合。外部結果の証明自体は未検証。"
+    },
+    {
+      "id": "baum-connes-injectivity",
+      "authors": "OpenAI",
+      "title": "A torsion-free counterexample to reduced Baum–Connes injectivity",
+      "displayName": "A torsion-free counterexample to reduced Baum–Connes injectivity",
+      "version": "September 23, 2026",
+      "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Torsion-Free-Counterexample-to-Reduced-Baum-Connes-Injectivity-September-23-2026/paper.pdf",
+      "pdfPages": 85,
+      "sha256": "df8d9301aa6d0306d7ac652e989c37a3c46b4c2285944694b746449157fc6714",
+      "checkedLocations": [
+        {
+          "pdfPage": 1,
+          "printedPage": "1"
+        }
+      ],
+      "checking": "主結果と導入を比較。直接依存は本稿本文・参考文献の範囲で確認できない。"
+    },
+    {
+      "id": "baum-connes-irrational-trace",
+      "authors": "OpenAI",
+      "title": "An irrational-trace counterexample to reduced Baum–Connes",
+      "displayName": "An irrational-trace counterexample to reduced Baum–Connes",
+      "version": "September 23, 2026",
+      "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/An-Irrational-Trace-Counterexample-to-Reduced-Baum-Connes-September-23-2026/paper.pdf",
+      "pdfPages": 23,
+      "sha256": "4a9f78651b522ce79e99191bec9fe71a2c1ff505c9d3f991e8f401b0283e740e",
+      "checkedLocations": [
+        {
+          "pdfPage": 2,
+          "printedPage": "2"
+        }
+      ],
+      "checking": "主結果と導入を比較。直接依存は本稿本文・参考文献の範囲で確認できない。"
+    }
+  ],
+  "proofPassages": [
+    {
+      "section": "§2, Proposition 2.2",
+      "pages": "4–6",
+      "read": "free-product normal form、good/badの2評価、corner内の逆元、trace同値、有限生成・torsion-free保存"
+    },
+    {
+      "section": "Proposition 5.4; Proposition 6.3",
+      "pages": "18–20, 24–25",
+      "read": "局所補題の適用、展開性・長語回復・pruningの出力。全bit-level計数は未追試"
+    },
+    {
+      "section": "§7.1; §§7.5–7.6",
+      "pages": "26–27, 34–38",
+      "read": "幾何的仮定、残余forest、incidence count、stabilizerとcone acyclicityからtorsion-free"
+    },
+    {
+      "section": "§§8.2–8.7",
+      "pages": "40–49",
+      "read": "nilpotent deck群の座標、twisted projection、finite magnetic factor、両端小トレース"
+    },
+    {
+      "section": "§§9.1–9.3; §§9.7–9.9",
+      "pages": "50–54, 59–63",
+      "read": "モデルband、有限テストからregular norm、同時選択。中間template設計の全誤差は未追試"
+    },
+    {
+      "section": "§10; §11",
+      "pages": "63–73",
+      "read": "gapのtransfer、weighted trace、非同変domainと同変all-copy比較の区別、scalarへの最終接続"
+    }
+  ],
+  "unresolved": [
+    "§§4–6の全ラベル表・bit-level確率計数と§§9.4–9.6の全template/rounding誤差は独立に再計算していない。",
+    "§7.2–7.4の全van Kampen diagram変形・共通rootによる一球overlap評価は独立検証していない。Theorem 7.1を構成内の入力として扱う。",
+    "Lemma 8.5のSchwartz核の全解析的同定、全parameter不等式の一括検算は未実施。",
+    "原典が引用する群環のidempotent不存在に関する別稿[32]は今回未照合。この記事の主結論・依存辺に用いない。",
+    "外部結果の全証明の再帰検証は未実施。"
+  ],
+  "dependencies": [
+    {
+      "id": "local-lemma-expansion",
+      "source": "MT10",
+      "result": "Theorem 1.1",
+      "pages": "1",
+      "target": "§5.4 / Proposition 5.4",
+      "targetPages": "18–20",
+      "kind": "direct",
+      "role": "有限ブロック内で全bad-cut事象を同時回避。依存近傍とx_Zの不等式を原典で比較。"
+    },
+    {
+      "id": "trace-assembly",
+      "source": "BGW16",
+      "result": "Proposition 10.3",
+      "pages": "36",
+      "target": "§11 final paragraph",
+      "targetPages": "73",
+      "kind": "consequence",
+      "role": "countable torsion-free Γprojについてtrivial-coefficient reduced assembly像のtrace整数性。構成済み[p0]の非整数traceから非全射。"
+    }
+  ],
+  "catalogRelations": [
+    {
+      "targetPaperId": "baum-connes-injectivity",
+      "kind": "comparison-no-direct-use-found",
+      "scope": "本稿導入・構成の帰着・参考文献と相手の主定理を比較。未読部分の全関係は断定しない。",
+      "difference": "kernel class of infinite order versus nonintegral-trace projection"
+    },
+    {
+      "targetPaperId": "baum-connes-irrational-trace",
+      "kind": "comparison-no-direct-use-found",
+      "scope": "本稿導入・構成の帰着・参考文献と相手の主定理を比較。未読部分の全関係は断定しない。",
+      "difference": "torsion-free small-trace matrix followed by scalar compression versus an irrational-trace scalar projection without a torsion-free assertion"
+    }
+  ],
+  "statements": [
+    {
+      "result": "Theorem 1.1",
+      "pages": "2",
+      "hypotheses": "Existential construction of a finitely generated torsion-free discrete group Gproj.",
+      "conclusion": "A scalar e=e*=e² in C*r(Gproj), 0<tau(e)<1/2; hence e differs from 0 and 1.",
+      "checking": "原典p.2画像と日英主張、§11の最終接続を照合"
+    },
+    {
+      "result": "Theorem 3.1",
+      "pages": "6",
+      "hypotheses": "Existential construction of Γproj, finite N≥1, self-adjoint T in MN(C[Γproj]).",
+      "conclusion": "Γproj finitely generated torsion-free; nonempty separated regular spectral band, actual p0 in MN(C*r(Γproj)), unnormalized trace in (0,1/2).",
+      "checking": "主張p.6とTheorem10.11 p.72、概説§3を対応"
+    },
+    {
+      "result": "Proposition 2.2",
+      "pages": "4–6",
+      "hypotheses": "Λ discrete, p actual matrix projection, unnormalized trace a in (0,1/2).",
+      "conclusion": "Corner invertibility and scalar projection of equal trace over Λ*FN; preserves finite generation and torsion-freeness when assumed.",
+      "checking": "証明本文pp.4–6、good/bad評価と隅の逆元を読解"
+    }
+  ],
+  "checkedLocations": [
+    {
+      "pdfPage": 2,
+      "printedPage": "2"
+    },
+    {
+      "pdfPage": 4,
+      "printedPage": "4"
+    },
+    {
+      "pdfPage": 5,
+      "printedPage": "5"
+    },
+    {
+      "pdfPage": 6,
+      "printedPage": "6"
+    },
+    {
+      "pdfPage": 18,
+      "printedPage": "18"
+    },
+    {
+      "pdfPage": 19,
+      "printedPage": "19"
+    },
+    {
+      "pdfPage": 20,
+      "printedPage": "20"
+    },
+    {
+      "pdfPage": 24,
+      "printedPage": "24"
+    },
+    {
+      "pdfPage": 25,
+      "printedPage": "25"
+    },
+    {
+      "pdfPage": 26,
+      "printedPage": "26"
+    },
+    {
+      "pdfPage": 27,
+      "printedPage": "27"
+    },
+    {
+      "pdfPage": 36,
+      "printedPage": "36"
+    },
+    {
+      "pdfPage": 37,
+      "printedPage": "37"
+    },
+    {
+      "pdfPage": 38,
+      "printedPage": "38"
+    },
+    {
+      "pdfPage": 40,
+      "printedPage": "40"
+    },
+    {
+      "pdfPage": 41,
+      "printedPage": "41"
+    },
+    {
+      "pdfPage": 42,
+      "printedPage": "42"
+    },
+    {
+      "pdfPage": 45,
+      "printedPage": "45"
+    },
+    {
+      "pdfPage": 46,
+      "printedPage": "46"
+    },
+    {
+      "pdfPage": 47,
+      "printedPage": "47"
+    },
+    {
+      "pdfPage": 48,
+      "printedPage": "48"
+    },
+    {
+      "pdfPage": 49,
+      "printedPage": "49"
+    },
+    {
+      "pdfPage": 50,
+      "printedPage": "50"
+    },
+    {
+      "pdfPage": 51,
+      "printedPage": "51"
+    },
+    {
+      "pdfPage": 52,
+      "printedPage": "52"
+    },
+    {
+      "pdfPage": 53,
+      "printedPage": "53"
+    },
+    {
+      "pdfPage": 54,
+      "printedPage": "54"
+    },
+    {
+      "pdfPage": 59,
+      "printedPage": "59"
+    },
+    {
+      "pdfPage": 60,
+      "printedPage": "60"
+    },
+    {
+      "pdfPage": 61,
+      "printedPage": "61"
+    },
+    {
+      "pdfPage": 62,
+      "printedPage": "62"
+    },
+    {
+      "pdfPage": 63,
+      "printedPage": "63"
+    },
+    {
+      "pdfPage": 64,
+      "printedPage": "64"
+    },
+    {
+      "pdfPage": 65,
+      "printedPage": "65"
+    },
+    {
+      "pdfPage": 66,
+      "printedPage": "66"
+    },
+    {
+      "pdfPage": 67,
+      "printedPage": "67"
+    },
+    {
+      "pdfPage": 68,
+      "printedPage": "68"
+    },
+    {
+      "pdfPage": 69,
+      "printedPage": "69"
+    },
+    {
+      "pdfPage": 70,
+      "printedPage": "70"
+    },
+    {
+      "pdfPage": 71,
+      "printedPage": "71"
+    },
+    {
+      "pdfPage": 72,
+      "printedPage": "72"
+    },
+    {
+      "pdfPage": 73,
+      "printedPage": "73"
+    }
+  ],
+  "visualChecks": [
+    "本稿PDF p.2の主定理・誌面番号を画像確認",
+    "MT arXiv v3 PDF p.1のTheorem1.1と誌面1を画像確認",
+    "BGW著者版 PDF p.36のProposition10.3と誌面36を画像確認",
+    "6個のSVGをsharpでPNG化し配置・文字・数式・矢印・出典の重なりなしを目視"
+  ]
+}

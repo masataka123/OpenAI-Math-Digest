@@ -1,0 +1,76 @@
+{
+  "catalogId": "285",
+  "requestedModel": "gpt-6-astra",
+  "authorAssignments": [
+    {
+      "paperId": "baum-connes-injectivity",
+      "agent": "/root/injectivity",
+      "explicitModel": "gpt-6-astra",
+      "history": "none",
+      "role": "author; later cross-review assigned separately"
+    },
+    {
+      "paperId": "kadison-kaplansky-projection",
+      "agent": "/root/projection",
+      "explicitModel": "gpt-6-astra",
+      "history": "none",
+      "role": "author; later cross-review assigned separately"
+    },
+    {
+      "paperId": "baum-connes-irrational-trace",
+      "agent": "/root/irrational",
+      "explicitModel": "gpt-6-astra",
+      "history": "none",
+      "role": "author; catalogue synthesis after initial draft"
+    }
+  ],
+  "reusePolicy": "Mathematical content and interpretations are newly produced from fixed official sources. Existing source files, common rendering infrastructure and designated display examples are permitted; prior Sol content and reviews are not production evidence.",
+  "reviewAssignments": [
+    {
+      "paperId": "baum-connes-injectivity",
+      "author": "/root/injectivity",
+      "reviewer": "/root/projection",
+      "explicitModel": "gpt-6-astra",
+      "scope": "Primary claims, conclusion coverage and key source connections; not a full independent proof verification",
+      "status": "completed; review findings resolved; see review records"
+    },
+    {
+      "paperId": "kadison-kaplansky-projection",
+      "author": "/root/projection",
+      "reviewer": "/root/irrational",
+      "explicitModel": "gpt-6-astra",
+      "scope": "Primary claims, conclusion coverage and key source connections; not a full independent proof verification",
+      "status": "completed; review findings resolved; see review records"
+    },
+    {
+      "paperId": "baum-connes-irrational-trace",
+      "author": "/root/irrational",
+      "reviewer": "/root/injectivity",
+      "explicitModel": "gpt-6-astra",
+      "scope": "Primary claims, conclusion coverage and key source connections; not a full independent proof verification",
+      "status": "completed; review findings resolved; see review records"
+    }
+  ],
+  "overviewAssignment": {
+    "author": "/root/irrational",
+    "reviewer": "/root/injectivity",
+    "explicitModel": "gpt-6-astra",
+    "status": "completed; R1/R2 resolved and separately reviewed"
+  },
+  "headquartersRole": "Coordination, artifact acceptance, bilingual structural checks and display verification; mathematical authorship/source review delegated to explicitly selected gpt-6-astra.",
+  "stage": "Stage 1 complete; stage 2/3 not performed",
+  "stage2": {
+    "siteIntegration": "headquarters",
+    "pdfReviewJa": {
+      "agent": "/root/projection",
+      "model": "gpt-6-astra",
+      "scope": "all pages and figures; layout and text correspondence"
+    },
+    "pdfReviewEn": {
+      "agent": "/root/injectivity",
+      "model": "gpt-6-astra",
+      "scope": "all pages and figures; layout and text correspondence"
+    },
+    "contentChange": "Only pagination wrappers and PDF integration comment; mathematical text unchanged"
+  }
+}

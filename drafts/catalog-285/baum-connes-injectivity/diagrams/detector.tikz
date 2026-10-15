@@ -1,0 +1,21 @@
+\node[card] (a) {\heading{1}{被覆の埋込みとsheetのcycle座標}{Embed the cover and decompose sheet cycles}
+$\widetilde X\hookrightarrow\operatorname{Cay}(\Gamma,S)$,\quad $H\hookrightarrow\Gamma$,\quad $Q\in\Gamma/H$.\\[3pt]
+$\bigoplus_Q Z_1(Q;R)\ \cong\ Z_1(\operatorname{Cay}(\Gamma,S);R)$.};
+\node[card,below=1.7cm of a] (b) {\heading{2}{cone鎖の完全性}{Exact cone chains}
+$0\to C_2(Z)\to C_1(Z)\to C_0(Z)\to\mathbb Z\to0$.\\[3pt]
+$C_1,C_2$\Tx{は自由 $\mathbb Z\Gamma$ 加群}{ are free $\mathbb Z\Gamma$-modules},\quad
+$C_0\cong\mathbb Z\Gamma\oplus\mathbb Z\Gamma\otimes_{\mathbb ZH}\mathbb Z$.};
+\flow a b {\Tx{有限台cycleの直和分解をconeの境界へ移す}{Turn finite-support cycle coordinates into cone boundaries}\\[3pt]\Cite{embedding}\quad\Cite{cone}};
+\node[card,below=1.8cm of b] (c) {\heading{3}{ねじれを排除し、次数2を延長}{Exclude torsion and extend degree two}
+$C_p\le\Gamma\ \Longrightarrow\ \operatorname{Tor}^{\mathbb F_p[C_p]}_n(\mathbb F_p,\mathbb F_p)
+=0\ (n>2)$\quad\Tx{は矛盾}{is impossible}.\\[5pt]
+$K=\ker(C_0\to\mathbb Z)$,\quad $\operatorname{Ext}^2_{\mathbb Z\Gamma}(K,\mathbb Z)=0$\\[3pt]
+$\Longrightarrow\quad H^2(B\Gamma;\mathbb Z)\twoheadrightarrow H^2(BH;\mathbb Z)$.};
+\flow b c {\Tx{周期分解との矛盾／長さ1の自由分解と制限写像の同定}{Periodic-resolution contradiction / length-one resolution and restriction}\\[3pt]\Cite{torsion}\quad\Cite{extension}};
+\node[result,below=1.8cm of c] (d) {\heading{4}{整数トーラス検出}{An integral torus detector}
+$\omega(g,g')=\alpha\gamma'+\binom{\alpha}{2}\beta'$,\quad
+$\omega(z,x)-\omega(x,z)=-1$.\\[5pt]
+$\Gamma$\Tx{はねじれなし}{ is torsion-free},\quad
+$i_\Gamma:\mathbb Z^2\hookrightarrow\Gamma$,\quad
+$\langle(Bi_\Gamma)^*c_\Gamma,[T^2]\rangle=-1$.};
+\flow c d {\Tx{Heisenberg cocycleを延長し、bar cycleの評価を保つ}{Extend the Heisenberg cocycle and preserve its bar-cycle evaluation}\\[3pt]\Cite{cocycle}\quad\Cite{detector}};

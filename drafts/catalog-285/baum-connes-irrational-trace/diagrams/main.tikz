@@ -1,0 +1,29 @@
+\node[result] (geometry) {\heading{1}{同時交差を制御する}{Control simultaneous overlaps}
+$P=g\Theta_i\subset\operatorname{Cay}(\Gamma,S)$,\quad $n_i=|\Theta_i|$, $k_i=\lfloor n_i/2\rfloor$\\
+\Tx{ $c_P\ne R$：中心の根からの距離が以下の全コピーとの交差 $\subset B_P$}{For $c_P\ne R$, overlaps with all copies no farther from the root lie in one tree ball $B_P$}};
+\node[card,below=2.4cm of geometry] (module) {\heading{2}{符号関係で有限生成群を作る}{Form the finitely generated group from code relations}
+$W_0=\sum_P C_P^\perp$,\quad $V=\mathbb F_p^{(\Gamma)}/W_0$,\quad $G_{\rm sur}=V\rtimes\Gamma$\\
+$W_0\cap\mathbb F_p^P=C_P^\perp$,\quad $\Omega=\widehat V$};
+\flow{geometry}{module}{\Tx{双対距離が球外の相殺を排除：局所関係は増えない}{Dual distance excludes cancellation outside the ball: no extra local relations}\\\Cite{relations}};
+\node[half,below=2.1cm of module,xshift=-3.85cm] (prob) {\heading{3a}{正しいパターンの確率}{Exact pattern probability}
+$\operatorname{res}_P(\Omega)=C_P$\\
+$m_\Omega(P\text{ valid})=p^{-k_i}$};
+\node[half,below=2.1cm of module,xshift=3.85cm] (gap) {\heading{3b}{全体のスペクトルギャップ}{Global spectral gap}
+$\operatorname{spec}(T)\subset\{0\}\cup[\varepsilon,2d]$\\
+$b_0=1_{\{0\}}(T)\in C_r^*(G_{\rm sur})$};
+\draw[edge] ($(module.south)+(-7.05,0)$)--($(prob.north)+(-3.2,0)$);
+\draw[edge] ($(module.south)+(.65,0)$)--($(gap.north)+(-3.2,0)$);
+\node[branchreason,anchor=west] at ($(module.south)+(-6.5,-1.0)$) {\Tx{Haar測度を有限符号へ押し出す}{Push Haar measure onto the finite code}\\\Cite{marginals}};
+\node[branchreason,anchor=west] at ($(module.south)+(1.2,-1.0)$) {\Tx{全体の不足評価と連続汎関数計算}{Global deficit and continuous calculus}\\\Cite{spectral-gap}; \Cite{projection}};
+\node[result,below=2.2cm of prob,xshift=3.85cm] (trace) {\heading{4}{確率と核の対角成分を積分する}{Integrate probabilities against kernel diagonals}
+$\displaystyle\tau(b_0)=\sum_i n_i\cdot\frac1{n_i}\cdot p^{-k_i}=\sum_i p^{-k_i}\notin\mathbb Q$\\
+\Tx{$k_{i+1}-k_i\to\infty$：基数 $p$ の桁は最終的周期的でない}{Diverging gaps $k_{i+1}-k_i$: the base-$p$ digits are not eventually periodic}};
+\draw[edge] ($(prob.south)+(-3.2,0)$)--($(trace.north)+(-7.05,0)$);
+\draw[edge] ($(gap.south)+(-3.2,0)$)--($(trace.north)+(.65,0)$);
+\node[branchreason,anchor=west] at ($(prob.south)+(-2.65,-1.05)$) {\Tx{単位元を含む $n_i$ 個の事象は排反}{The $n_i$ events at the identity are disjoint}\\\Cite{trace}};
+\node[branchreason,anchor=west] at ($(gap.south)+(-2.65,-1.05)$) {\Tx{定数関数への射影の対角は $1/n_i$}{Projection onto constants has diagonal $1/n_i$}\\\Cite{projection}};
+\node[result,below=2.1cm of trace] (end) {\heading{5}{係数なしassemblyの像から除外する}{Exclude the class from coefficient-free assembly}
+$\tau_*\bigl(\operatorname{im}\mu_0^{G_{\rm sur}}\bigr)\subset\Lambda_{G_{\rm sur}}\subset\mathbb Q$\\
+$[b_0]\notin\operatorname{im}\mu_0^{G_{\rm sur}}$,\quad
+$[b_0]\otimes1\notin\operatorname{im}(\mu_0^{G_{\rm sur}}\otimes\mathbb Q)$};
+\flow{trace}{end}{\Tx{局所化したトレース定理を $1\otimes x$ に適用する}{Apply the localized trace theorem to $1\otimes x$}\\\Cite{lueck}; \Cite{assembly}};

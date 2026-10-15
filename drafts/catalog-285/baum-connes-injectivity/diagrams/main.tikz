@@ -1,0 +1,17 @@
+\node[card] (a) {\heading{1}{同じ構成列の二つの出力}{Two outputs of one construction sequence}
+$H\hookrightarrow\Gamma_\nu$,\quad $\Gamma_\nu$ \Tx{はねじれなし}{is torsion-free}.\\[3pt]
+$\langle c_{\Gamma_\nu}|_{T^2},[T^2]\rangle=-1$,\qquad $\beta\mapsto0\in K_0(C_r^*\Gamma_\nu)$\quad$(\nu\gg0)$.};
+\node[card,below=2.05cm of a] (b) {\heading{2}{有限生成部分群へ証拠を回収}{Recover a witness in a finitely generated subgroup}
+$H\le G_{\mathrm{inj}}\le\Gamma_\nu$,\quad $i:\mathbb Z^2\hookrightarrow G_{\mathrm{inj}}$.\\[3pt]
+$c=-c_{\Gamma_\nu}|_{BG_{\mathrm{inj}}}$,\quad $\langle(Bi)^*c,[T^2]\rangle=1$,\quad $i_*(\beta)=0$.};
+\flow a b {\Tx{整数検出とBott消滅を選び、有限多項式の台を残す}{Choose detector and Bott vanishing; retain finite polynomial supports}\\[3pt]\Cite{detector}\quad\Cite{bott}\\[3pt]\Cite{finite-witness}};
+\node[card,below=1.8cm of b] (c) {\heading{3}{整数指数で非消滅を検出}{Detect nonvanishing by an integer index}
+$h=(Bi)_*[D_{T^2}]$,\quad $c_1(L)=c$.\\[3pt]
+$\langle[L]-[1],h\rangle=\langle(Bi)^*c,[T^2]\rangle=1$\quad$\Longrightarrow\quad h\otimes1\ne0$.};
+\flow b c {\Tx{捩れDirac指数とペアリングの自然性}{Twisted Dirac index and naturality of the pairing}\\[3pt]\Cite{index}\quad\Cite{main-proof}};
+\node[result,below=2.0cm of c] (d) {\heading{4}{同じ類の被約assembly像は零}{The same class has zero reduced assembly}
+$\mu_r^{G_{\mathrm{inj}}}(h)=i_*\mu_r^{\mathbb Z^2}([D_{T^2}])=\pm i_*(\beta)=0$.\\[4pt]
+$\mu_r^{G_{\mathrm{inj}}}\otimes\mathbb Q:\ K_0(BG_{\mathrm{inj}})\otimes\mathbb Q
+\longrightarrow K_0(C_r^*G_{\mathrm{inj}})\otimes\mathbb Q$\\[3pt]
+\Tx{は単射でない。係数代数は自明作用付き $\mathbb C$。}{is not injective. The coefficient algebra is $\mathbb C$ with trivial action.}};
+\flow c d {\Tx{トーラスのBott像と、Mi\v{s}\v{c}enko束の係数拡大}{Torus Bott image and extension of Mi\v{s}\v{c}enko-bundle coefficients}\\[3pt]\Cite{torus-assembly}\\[3pt]\Cite{mishchenko}};

@@ -1,0 +1,392 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "author-key",
+  "catalogId": "285",
+  "sources": {
+    "OpenAI26a": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "pagination": "same"
+    },
+    "EH20": {
+      "recordFile": "sources.json",
+      "recordId": "EH20",
+      "guideRole": {
+        "ja": "トーラスDirac類のassembly像。Theorem 1.3の全トーラスの場合を使用",
+        "en": "Assembly of the torus Dirac class; the full-torus case of Theorem 1.3"
+      }
+    },
+    "KP20": {
+      "recordFile": "sources.json",
+      "recordId": "KP20",
+      "guideRole": {
+        "ja": "Miščenko指数と被約assemblyの比較。コンパクトなトーラスサイクルへ適用",
+        "en": "Comparison of the Miščenko index with reduced assembly, applied to the compact torus cycle"
+      }
+    },
+    "BvE16": {
+      "recordFile": "sources.json",
+      "recordId": "BvE16",
+      "guideRole": {
+        "ja": "閉じた偶数次元Spinᶜ多様体の捩れDirac指数。トーラス上の線束の次数を検出",
+        "en": "Twisted Dirac index on a closed even-dimensional spin-c manifold, detecting the degree of a line bundle on the torus"
+      }
+    },
+    "HS07": {
+      "recordFile": "sources.json",
+      "recordId": "HS07",
+      "guideRole": {
+        "ja": "比較・帰結のみ。次数2の検出により最大assembly像は有理的に非零",
+        "en": "Comparison and consequence only: degree-two detection makes the maximal assembly image rationally nonzero"
+      }
+    },
+    "OpenAI26b": {
+      "recordFile": "sources.json",
+      "recordId": "OpenAI26b",
+      "guideRole": {
+        "ja": "方法上の先行原稿。cone-chainと有限位数排除は本稿で再証明する。主定理の直接入力ではない",
+        "en": "Methodological predecessor; cone chains and torsion exclusion are reproved here, rather than imported as a main-theorem input"
+      }
+    }
+  },
+  "citations": {
+    "main-result": {
+      "source": "OpenAI26a",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "main-proof": {
+      "source": "OpenAI26a",
+      "locations": [
+        {
+          "result": "§9.2",
+          "printed": "82–83",
+          "pdf": "82–83"
+        }
+      ]
+    },
+    "choices": {
+      "source": "OpenAI26a",
+      "locations": [
+        {
+          "result": "§9.1",
+          "printed": "81–82",
+          "pdf": "81–82"
+        }
+      ]
+    },
+    "comparison": {
+      "source": "OpenAI26a",
+      "locations": [
+        {
+          "result": "§§1.1–1.2",
+          "printed": "1–3",
+          "pdf": "1–3"
+        }
+      ]
+    },
+    "sampling": {
+      "source": "OpenAI26a",
+      "locations": [
+        {
+          "result": "Proposition 5.2; §5.8",
+          "printed": "41–42, 49–50",
+          "pdf": "41–42, 49–50"
+        }
+      ]
+    },
+    "embedding": {
+      "source": "OpenAI26a",
+      "locations": [
+        {
+          "result": "Proposition 6.4",
+          "printed": "57",
+          "pdf": "57"
+        }
+      ]
+    },
+    "geometry": {
+      "source": "OpenAI26a",
+      "locations": [
+        {
+          "result": "Lemmas 6.3, 7.3; Proposition 7.4",
+          "printed": "55–57, 62–64",
+          "pdf": "55–57, 62–64"
+        }
+      ]
+    },
+    "cone": {
+      "source": "OpenAI26a",
+      "locations": [
+        {
+          "result": "Lemma 7.6; (7.12)",
+          "printed": "65",
+          "pdf": "65"
+        }
+      ]
+    },
+    "torsion": {
+      "source": "OpenAI26a",
+      "locations": [
+        {
+          "result": "Lemma 7.8",
+          "printed": "66",
+          "pdf": "66"
+        }
+      ]
+    },
+    "cocycle": {
+      "source": "OpenAI26a",
+      "locations": [
+        {
+          "result": "Lemma 7.9",
+          "printed": "67–68",
+          "pdf": "67–68"
+        }
+      ]
+    },
+    "extension": {
+      "source": "OpenAI26a",
+      "locations": [
+        {
+          "result": "Lemma 7.10",
+          "printed": "68–69",
+          "pdf": "68–69"
+        }
+      ]
+    },
+    "detector": {
+      "source": "OpenAI26a",
+      "locations": [
+        {
+          "result": "Proposition 7.11",
+          "printed": "69",
+          "pdf": "69"
+        }
+      ]
+    },
+    "realization": {
+      "source": "OpenAI26a",
+      "locations": [
+        {
+          "result": "Lemmas 8.1–8.4",
+          "printed": "72–76",
+          "pdf": "72–76"
+        }
+      ]
+    },
+    "source-algebra": {
+      "source": "OpenAI26a",
+      "locations": [
+        {
+          "result": "Lemma 8.5; (8.17)–(8.18)",
+          "printed": "76–77",
+          "pdf": "76–77"
+        }
+      ]
+    },
+    "parity": {
+      "source": "OpenAI26a",
+      "locations": [
+        {
+          "result": "(8.19)–(8.20)",
+          "printed": "77–78",
+          "pdf": "77–78"
+        }
+      ]
+    },
+    "transport": {
+      "source": "OpenAI26a",
+      "locations": [
+        {
+          "result": "Lemma 8.6; (8.23)–(8.25)",
+          "printed": "79–80",
+          "pdf": "79–80"
+        }
+      ]
+    },
+    "bott": {
+      "source": "OpenAI26a",
+      "locations": [
+        {
+          "result": "Proposition 8.8",
+          "printed": "80",
+          "pdf": "80"
+        }
+      ]
+    },
+    "finite-witness": {
+      "source": "OpenAI26a",
+      "locations": [
+        {
+          "result": "Lemmas 8.7, 8.9",
+          "printed": "80–81",
+          "pdf": "80–81"
+        }
+      ]
+    },
+    "torus-assembly": {
+      "source": "EH20",
+      "locations": [
+        {
+          "result": "Theorem 1.3",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "mishchenko": {
+      "source": "KP20",
+      "locations": [
+        {
+          "result": "Corollary 1.4; (1.6)",
+          "printed": "5–7",
+          "pdf": "5–7"
+        }
+      ]
+    },
+    "index": {
+      "source": "BvE16",
+      "locations": [
+        {
+          "result": "Theorem 1",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "maximal": {
+      "source": "HS07",
+      "locations": [
+        {
+          "result": "Theorem 1.2",
+          "printed": "1–2",
+          "pdf": "1–2"
+        }
+      ]
+    },
+    "method": {
+      "source": "OpenAI26b",
+      "locations": [
+        {
+          "result": "§7.6",
+          "printed": "36–38",
+          "pdf": "36–38"
+        }
+      ]
+    },
+    "method-use": {
+      "source": "OpenAI26a",
+      "locations": [
+        {
+          "result": "§2; §7.4",
+          "printed": "7, 64",
+          "pdf": "7, 64"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ],
+  "articleGuides": {
+    ".": {
+      "selfSource": "OpenAI26a",
+      "externalSources": [
+        "EH20",
+        "KP20",
+        "BvE16",
+        "HS07",
+        "OpenAI26b"
+      ],
+      "proofTargets": [
+        "main-result",
+        "detector",
+        "bott"
+      ],
+      "mainResults": [
+        "main-result"
+      ],
+      "statements": {
+        "main-result": "theorem-1-1",
+        "detector": "proposition-7-11",
+        "bott": "proposition-8-8"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "main-result",
+          "conclusion": "Finitely generated torsion-free group, injective torus and integral detector of evaluation 1",
+          "anchor": "proof-overview-step-1"
+        },
+        {
+          "result": "main-result",
+          "conclusion": "Integral vanishing of the rank-zero Bott image",
+          "anchor": "proof-overview-step-1"
+        },
+        {
+          "result": "main-result",
+          "conclusion": "Infinite-order K-homology class and nonzero rational class",
+          "anchor": "proof-overview-step-2"
+        },
+        {
+          "result": "main-result",
+          "conclusion": "Zero reduced assembly image and failure of rational injectivity",
+          "anchor": "proof-overview-step-3"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "main-result",
+          "purpose": {
+            "ja": "群・係数・二つの結論を確認する。",
+            "en": "Check the group, coefficients and the two conclusions."
+          }
+        },
+        {
+          "citation": "sampling",
+          "purpose": {
+            "ja": "幾何条件と全正則ノルム近似を同時に課す箇所。",
+            "en": "The simultaneous geometric and full-regular-norm requirements."
+          }
+        },
+        {
+          "citation": "detector",
+          "purpose": {
+            "ja": "ねじれ排除と整数検出を合流させる。",
+            "en": "Combine torsion exclusion and the integral detector."
+          }
+        },
+        {
+          "citation": "source-algebra",
+          "purpose": {
+            "ja": "有界作用素族から正確な商代数内ホモトピーへ進む。",
+            "en": "Pass from bounded operator families to exact quotient homotopies."
+          }
+        },
+        {
+          "citation": "finite-witness",
+          "purpose": {
+            "ja": "一つの群、その有限生成部分群へ等式を降ろす。",
+            "en": "Recover equality in one group and then a finitely generated subgroup."
+          }
+        },
+        {
+          "citation": "main-proof",
+          "purpose": {
+            "ja": "指数の非消滅とassemblyの消滅を照合する。",
+            "en": "Compare the nonzero index pairing with zero assembly."
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "stage": 2,
+  "status": "validated, awaiting publication instruction",
+  "completedAt": "2026-10-15T13:14:03.087952+00:00",
+  "branch": "main",
+  "pdf": {
+    "ja": {
+      "file": "catalog-285-ja.pdf",
+      "date": "2026-10-15",
+      "pages": 37,
+      "bytes": 2255571,
+      "sha256": "7ac34ce2c3aa4b760cb8001d061706308e954896b61b09ffa1a79aaa9685d2ad",
+      "contentHash": "4145ad95a7d4fb4036d06a6cbaa4f28150f8e552c1d29260c11745e55feb5309",
+      "chapters": 4,
+      "mathExpressions": 371,
+      "figures": 8
+    },
+    "en": {
+      "file": "catalog-285-en.pdf",
+      "date": "2026-10-15",
+      "pages": 43,
+      "bytes": 1693123,
+      "sha256": "1a462002b439c3fb4593bdc11c70ee2c3b18a252f48a8ff398d7b95ffe0ca539",
+      "contentHash": "09a1dbbf5b81cda200ead347e3f9507a65cefb047b3dbb318413dd900754372e",
+      "chapters": 4,
+      "mathExpressions": 370,
+      "figures": 8
+    }
+  },
+  "tests": {
+    "passed": 39,
+    "failed": 0
+  },
+  "buildPages": 183,
+  "citationRegistries": 66,
+  "citationGeneratedFiles": 236,
+  "pdfEditionsChecked": 44,
+  "links": {
+    "checked": 222885,
+    "htmlPages": 183,
+    "method": "Repository scripts/check-links.mjs completed successfully; cached auxiliary run returned identical counts",
+    "log": "logs/links-final.txt"
+  },
+  "browser": {
+    "draftConditions": 16,
+    "referenceConditions": 12,
+    "navigationLanguages": 2,
+    "figureInteractions": 32,
+    "failed": 0
+  },
+  "pdfVisualReview": {
+    "ja": "37 pages reviewed, final changed pages rechecked",
+    "en": "43 pages reviewed in final version",
+    "model": "gpt-6-astra",
+    "openIssues": 0
+  },
+  "mathematicalScope": "Stage 1 limits retained; no new full-proof verification",
+  "commitPushPublication": false
+}

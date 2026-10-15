@@ -1,0 +1,20 @@
+\node[card] (a) {\heading{1}{両端で小さくなるfiber projection}{A fiber projection small at both endpoints}
+$p(t)=p_t\otimes p_{t-\delta}[V_t],\quad 0<t<\delta$\\[4pt]
+$0<s_p(t)\le CNt^{n_f}(\delta-t)^{n_f},\qquad N=q^{n_f}$};
+\node[card,below=1.9cm of a] (b) {\heading{2}{定数ベクトルで上側bandを作る}{Use constant vectors to make an upper band}
+$O(t)E_*(t)=E_*(t),\qquad O(t)|_{1-E_*(t)}\le1-\chi$\\[4pt]
+$\operatorname{tr}_{\mathrm{id}}E_*(t)=s_p(t),\qquad |J(t)|\le2$};
+\flow a b {\Tx{展開性と隣接二層の窓を組み合わせる}{Combine expansion with windows on two adjacent layers}\\[4pt]\Cite{tower}; \Cite{model}};
+\node[card,below=2.0cm of b] (c) {\heading{3}{girthと完全な正則ノルム近似を同時実現}{Simultaneous girth and full regular-norm approximation}
+$\|T_P-\Pi O\Pi\|\le\eta,\quad |\mathcal S|=o(dD)$\\[4pt]
+$S=\sum_i2^{C_\bullet H_i}\sum_{v\text{ in layer }i}e_v=o(1)$};
+\flow b c {\Tx{有限テスト・同時sampling、重み付きtraceを局在化}{Finite tests and simultaneous sampling; localize the weighted trace}\\[4pt]\Cite{realization}; \Cite{cover}};
+\node[card,below=2.1cm of c] (d) {\heading{4}{領域の切取りと残余forestでgapを保存}{Trim domains and control the remaining forest}
+$\|1_{B(Q)}E_Q\|\le\sqrt S,\quad \|T-T_D\|=o(1)$\\[4pt]
+$0\ne p_0=1_{[1-\chi/4,\infty)}(T)\in M_N(C_r^*(\Gamma_{\mathrm{proj}}))$};
+\flow c d {\Tx{一球overlapと小摂動。分離bandへ連続functional calculus}{One-ball overlaps and small perturbations; continuous functional calculus}\\[4pt]\Cite{geometry}; \Cite{gap}};
+\node[result,below=2.0cm of d] (e) {\heading{5}{全コピーへの同変写像でtraceを比較}{Compare traces through an equivariant map to all copies}
+$\mathcal A\xi=(E_Q(\xi|_Q))_Q,\quad K=\ker\mathcal A$\\[4pt]
+$p_0\mathcal H\hookrightarrow K^\perp,\qquad
+0<\tau_{\Gamma,N}(p_0)\le S_0\le S<\tfrac12$};
+\flow d e {\Tx{非同変な領域割当てとは別に、全incidenceを数える}{Count all incidences separately from the nonequivariant domain assignment}\\[4pt]\Cite{trace}};

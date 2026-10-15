@@ -1,0 +1,37 @@
+{
+  "catalogId": "285",
+  "worker": "gpt-6-astra",
+  "checkingScope": "Main statements and cited proof passages inspected. Injectivity p7 explicitly adapts projection Sections4,6; injectivity p64 follows projection Section7.6 and reproves its exact-chain interfaces. No direct application of another manuscript main theorem is asserted. Detailed injectivity proof is covered by its assigned author and separate reviewer.",
+  "connections": [
+    {
+      "fromPaper": "kadison-kaplansky-projection",
+      "toPaper": "baum-connes-injectivity",
+      "kind": "method-adaptation",
+      "sourceResults": "Sections 4,6; Section 7.6 (pp.36–38)",
+      "targetLocations": "Section 2 p.7; Section 7.4 p.64",
+      "role": "Padded-stream/recovery adapted with new interface bounds; cone-chain/prime-order obstruction followed and exact-chain interfaces reproved for current sheets.",
+      "notClaimed": "Projection main theorem is not an existence input; integral detector extension and Bott realization are separate.",
+      "checked": "Explicit statements on target pp.7,64 and source Section7.6 checked; not an independent verification of every adapted proof."
+    }
+  ],
+  "comparisons": [
+    {
+      "papers": [
+        "baum-connes-injectivity",
+        "kadison-kaplansky-projection",
+        "baum-connes-irrational-trace"
+      ],
+      "kind": "method comparison, not a proof-dependency edge",
+      "description": "Shared methods are not all independent: the explicit projection→injectivity methodological reference is recorded above. No main-theorem application is inferred."
+    },
+    {
+      "papers": [
+        "kadison-kaplansky-projection",
+        "baum-connes-irrational-trace"
+      ],
+      "kind": "distinct trace obstructions",
+      "description": "Projection §11 p73 uses integral trace on assembly for torsion-free Γproj; irrational trace uses rational trace for arbitrary countable Gsur and also obstructs rationalized surjectivity."
+    }
+  ],
+  "diagramDecision": "Reconsidered after recording projection→injectivity method adaptation. A combined diagram could show this method arrow alongside the injectivity/surjectivity distinction and the two trace outcomes, but these encode different relations (method reuse versus obstruction comparison) and would need extensive qualifiers. The single directional method relation is clearer in one paragraph with source/target citations; the four-column table carries the outcomes. Omit classification cards and catalogue diagram; preserve the exact directed record and individual proof diagrams."
+}

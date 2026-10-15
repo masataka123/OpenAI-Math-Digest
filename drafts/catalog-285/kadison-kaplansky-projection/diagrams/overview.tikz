@@ -1,0 +1,18 @@
+\node[card] (a) {\heading{1}{有限アルファベットと電圧被覆}{Finite alphabet and voltage cover}
+$Y\longleftarrow P,\qquad \Gamma_{\mathrm{proj}}=\langle\mathcal S\mid\text{closed-walk labels in }P\rangle$\\[4pt]
+\Tx{長語回復・girth・nilpotent torsion-free電圧群 $F$}{Long-word recovery, girth, and a nilpotent torsion-free deck group $F$}};
+\node[card,below=2.1cm of a] (b) {\heading{2}{幾何と解析を合わせて行列構成}{Combine geometry and analysis for the matrix construction}
+$T=T^*\in M_N(\mathbb C[\Gamma_{\mathrm{proj}}]),\quad
+p_0\in M_N(C_r^*(\Gamma_{\mathrm{proj}}))$\\[4pt]
+$0<a=\sum_{j=1}^{N}\tau_\Gamma((p_0)_{jj})<\tfrac12$\\[4pt]
+\Tx{$\Gamma_{\mathrm{proj}}$ は有限生成・torsion-free}{$\Gamma_{\mathrm{proj}}$ is finitely generated and torsion-free}};
+\flow a b {\Tx{コピーの幾何・分離band・同変なtrace上界}{Copy geometry, a separated band, and an equivariant trace bound}\\[4pt]\Cite{geometry}; \Cite{matrix-end}};
+\node[card,below=1.9cm of b] (c) {\heading{3}{自由積と行の下界}{Free product and a row bounded below}
+$G_{\mathrm{proj}}=\Gamma_{\mathrm{proj}}*F_N,\quad U=(\lambda(t_1),\ldots,\lambda(t_N))$\\[4pt]
+$p_0U^*Up_0\ge(\sqrt{1-a}-\sqrt a)^2p_0$};
+\flow b c {\Tx{非正規化trace $a<1/2$ を正規形評価へ}{Use the unnormalized trace $a<1/2$ in the normal-form estimate}\\[4pt]\Cite{compression}};
+\node[result,below=1.9cm of c] (d) {\heading{4}{スカラー射影と全結論}{Scalar projection and all conclusions}
+$e=(Up_0)(p_0U^*Up_0)^{-1}(Up_0)^*\in C_r^*(G_{\mathrm{proj}})$\\[4pt]
+$e=e^*=e^2,\quad 0<\tau_{G_{\mathrm{proj}}}(e)=a<\tfrac12,\quad e\ne0,1$\\[4pt]
+\Tx{有限生成・torsion-free性も自由積で保存}{The free product also preserves finite generation and torsion-freeness}};
+\flow c d {\Tx{隅の逆元・部分等長作用素・traceの保存}{Corner inverse, partial isometry, and preservation of trace}\\[4pt]\Cite{finish}};

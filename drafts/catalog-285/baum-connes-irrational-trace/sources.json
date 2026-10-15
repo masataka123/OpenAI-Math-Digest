@@ -1,0 +1,188 @@
+{
+  "paperId": "baum-connes-irrational-trace",
+  "title": "An irrational-trace counterexample to reduced Baum–Connes",
+  "displayName": "An irrational-trace counterexample to reduced Baum–Connes",
+  "version": "September 23, 2026",
+  "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/An-Irrational-Trace-Counterexample-to-Reduced-Baum-Connes-September-23-2026/paper.pdf",
+  "downloadUrl": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/An-Irrational-Trace-Counterexample-to-Reduced-Baum-Connes-September-23-2026/paper.pdf",
+  "sha256": "4a9f78651b522ce79e99191bec9fe71a2c1ff505c9d3f991e8f401b0283e740e",
+  "pdfPages": 23,
+  "catalogId": "285",
+  "authors": [
+    "OpenAI"
+  ],
+  "checkedOn": "2026-10-15",
+  "worker": "gpt-6-astra",
+  "productionVersion": "1.4",
+  "externalSources": [
+    {
+      "id": "lueck",
+      "title": "The relation between the Baum-Connes Conjecture and the Trace Conjecture",
+      "displayName": "The relation between the Baum-Connes Conjecture and the Trace Conjecture",
+      "authors": "Wolfgang Lück",
+      "version": "2002 author-hosted typeset PDF, numbered 1–30 (not final journal pagination 123–152)",
+      "sourceUrl": "https://www.math.uni-bonn.de/people/lueck/data/trc.pdf",
+      "sha256": "15a50c9f2bdceba757f66ddd5e1f4527a71d2c1578c3b1e9c86f119cde27d9d3",
+      "checkedLocations": [
+        {
+          "printedPage": "2",
+          "pdfPage": 2
+        },
+        {
+          "printedPage": "23",
+          "pdfPage": 23
+        },
+        {
+          "printedPage": "25",
+          "pdfPage": 25
+        }
+      ]
+    },
+    {
+      "id": "osajda",
+      "title": "Small cancellation labellings of some infinite graphs and applications",
+      "displayName": "Small cancellation labellings of some infinite graphs and applications",
+      "authors": "Damian Osajda",
+      "version": "Acta Mathematica 225 (2020), 159–191",
+      "sourceUrl": "https://intlpress.com/api/bgcloud-front/resource/pdf/volume/1805558233924313090-1805558233924313090-a435a3d1f4b693c71097e3d66a7d45cd.pdf",
+      "sha256": "df7a49a884acd623d8236debe9b4a1c1eef2b157e2e9a08e7c3253ff55c95877",
+      "checkedLocations": [
+        {
+          "printedPage": "163",
+          "pdfPage": 5
+        },
+        {
+          "printedPage": "164",
+          "pdfPage": 6
+        },
+        {
+          "printedPage": "173",
+          "pdfPage": 15
+        },
+        {
+          "printedPage": "176",
+          "pdfPage": 18
+        }
+      ]
+    },
+    {
+      "id": "bh",
+      "title": "Metric Spaces of Non-Positive Curvature",
+      "displayName": "Metric Spaces of Non-Positive Curvature",
+      "authors": "Martin R. Bridson, André Haefliger",
+      "version": "Springer, 1999; scanned book, print/PDF offset +23",
+      "sourceUrl": "https://webhomes.maths.ed.ac.uk/~v1ranick/papers/bridsonhaefligerx.pdf",
+      "sha256": "894ac23c8033d213df3f21927a6da479ff855ef6c092a326457df60cf0a492cf",
+      "checkedLocations": [
+        {
+          "printedPage": "414",
+          "pdfPage": 437
+        },
+        {
+          "printedPage": "419",
+          "pdfPage": 442
+        }
+      ]
+    },
+    {
+      "id": "lps",
+      "title": "Ramanujan graphs",
+      "displayName": "Ramanujan graphs",
+      "authors": "Alexander Lubotzky, Ralph Phillips, Peter Sarnak",
+      "version": "Combinatorica 8 (1988), 261–277; published scan with visible folios",
+      "sourceUrl": "https://courses.grainger.illinois.edu/cs598sgt/sp2015/LPS.pdf",
+      "sha256": "073b84bd275370a55aff11c71a16aea203f8637e39776c5ac3f8f33aabdbd384",
+      "checkedLocations": [
+        {
+          "printedPage": "267",
+          "pdfPage": 7
+        },
+        {
+          "printedPage": "269",
+          "pdfPage": 9
+        }
+      ],
+      "downloadUrl": "https://courses.grainger.illinois.edu/cs598sgt/sp2015/LPS.pdf"
+    }
+  ],
+  "statements": [
+    {
+      "result": "Theorem 1.1",
+      "pages": "2",
+      "checking": "Finitely generated discrete Gsur, actual projection b0 in Cr*(Gsur), irrational canonical trace, class outside integral coefficient-free proper-action reduced assembly. No torsion-free assumption."
+    },
+    {
+      "result": "Theorem 1.2",
+      "pages": "2",
+      "checking": "Image of tau_* composed with degree-zero assembly is rational for every countable discrete group; checked against Lück Theorem 0.3 and domain in Sections 4–5."
+    },
+    {
+      "result": "Proposition 5.5",
+      "pages": "21",
+      "checking": "Projection in ordinary reduced group C*-algebra, all evaluation representations, kernel on valid copies and diagonal 1/ni."
+    },
+    {
+      "result": "Proposition 6.1",
+      "pages": "21–22",
+      "checking": "Trace sum p^(-ki), exact ni copies at identity, mutually exclusive events, irrationality and rationalized non-surjectivity."
+    }
+  ],
+  "proofPassages": [
+    {
+      "pages": "5–9",
+      "passage": "Lemmas 2.2–2.4: compressed diagrams, avoidance, universal hyperbolicity and simultaneous overlap; read argument, not independently reconstructing all singular diagram surgeries."
+    },
+    {
+      "pages": "9–15",
+      "passage": "Proposition 3.1, Lemmas 3.2 and 4.1–4.4: graph choices, finite cycle direct sum, primal/dual code bounds, exact relations and Haar marginals."
+    },
+    {
+      "pages": "15–22",
+      "passage": "Equations (17)–(36), Lemmas 5.2–5.4, Propositions 5.5 and 6.1: faithful regular representations, global deficit via disjoint exterior charges, gap and functional calculus, trace and assembly obstruction."
+    }
+  ],
+  "dependencies": [
+    {
+      "fromSource": "lueck",
+      "result": "Theorem 0.3; Sections 4–5",
+      "to": "Theorem 1.2, p.2; Theorem 1.1 proof, p.22",
+      "kind": "direct",
+      "role": "Localized assembly trace image ΛG, applied to 1⊗x; no surjectivity hypothesis.",
+      "checking": "Statement and domain/index formulation checked; proof not independently verified."
+    },
+    {
+      "fromSource": "osajda",
+      "result": "Theorem 2.7; Lemma 3.1; Theorem 3.2",
+      "to": "Proposition 3.1, pp.9–10",
+      "kind": "direct",
+      "role": "Finite alphabet, unique long path labels, isometric relators under bounded degree, unbounded girth and bounded diameter/girth.",
+      "checking": "Statements and parameter hypotheses checked; original proof not independently verified."
+    },
+    {
+      "fromSource": "bh",
+      "result": "III.H.2.1 and III.H.2.9",
+      "to": "Proposition 2.3, p.8",
+      "kind": "direct",
+      "role": "Uniform coarse linear filling bounds imply universal thin-triangle constant before λ is selected.",
+      "checking": "Definitions and theorem checked; singular diagram to disk filling construction read in manuscript, not independently reconstructed."
+    },
+    {
+      "fromSource": "lps",
+      "result": "Theorems 3.4 and 4.1",
+      "to": "Proposition 3.1, pp.9–10",
+      "kind": "direct",
+      "role": "Fixed-degree expanders with logarithmic girth.",
+      "checking": "Theorems 3.4 and 4.1 and visible printed folios 267 and 269 visually checked in the Illinois-hosted published scan (PDF 7 and 9). Proofs not independently verified."
+    }
+  ],
+  "catalogConnections": {
+    "checkingScope": "The introduction, construction, final proof and complete bibliography of this manuscript were inspected for direct use of the other two catalog-285 manuscripts. No such use was found; this is not a claim of independence of all constructions.",
+    "connections": []
+  },
+  "unresolved": [
+    "No independent verification of all plane-diagram surgeries in Lemma 2.2 and the coarse disk-filling reconstruction in Proposition 2.3.",
+    "External input proofs and their recursive dependencies were not checked.",
+    "Davis–Lück comparison papers [13,16] not checked; the comparison used here is directly with Lück’s proper equivariant KK domain and analytic assembly."
+  ]
+}

@@ -17,6 +17,7 @@ import inventory087 from '../../coordination/catalog-087/inventory.json' with { 
 import inventory159 from '../../coordination/catalog-159/inventory.json' with { type: 'json' };
 import inventory187 from '../../coordination/catalog-187/inventory.json' with { type: 'json' };
 import inventory246 from '../../coordination/catalog-246/inventory.json' with { type: 'json' };
+import inventory285 from '../../coordination/catalog-285/inventory.json' with { type: 'json' };
 import inventory287 from '../../coordination/catalog-287/inventory.json' with { type: 'json' };
 import inventory338 from '../../coordination/catalog-338/inventory.json' with { type: 'json' };
 import subjectSource from './catalog-subjects.json' with { type: 'json' };
@@ -94,7 +95,7 @@ const fieldTranslations = [
   {
     "id": "operator-algebras",
     "ja": "作用素環",
-    "catalogIds": ["287"]
+    "catalogIds": ["285", "287"]
   },
   {
     "id": "topology",
@@ -214,6 +215,10 @@ export const papers = [...inventory004.manuscripts.map(entry => ({
 })), ...inventory246.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '246', sourceCommit: inventory246.sourceCommit,
  title: entry.title, path: entry.sourceUrl.split('/preprints/')[1], version: entry.version,
+ pages: entry.pdfPages, order: entry.order, featured: true,
+})), ...inventory285.manuscripts.map(entry => ({
+ id: entry.paperId, catalogId: '285', sourceCommit: inventory285.sourceCommit,
+ title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
  pages: entry.pdfPages, order: entry.order, featured: true,
 })), ...inventory287.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '287', sourceCommit: inventory287.sourceCommit,
@@ -356,6 +361,13 @@ export const catalogs = [{
   description: text('球面境界を持つ双曲群について、モジュラスの二つの増大率を排除し、一様化から群全体の有限核を持つ等長作用へ進む論証を読む。', 'For a hyperbolic group with sphere boundary, follow the exclusion of two modulus-growth regimes and the passage from uniformization to an isometric action of the whole group with finite kernel.'),
   paperIds: inventory246.manuscripts.map(p => p.paperId),
   overviewSectionIds: ['articles', 'argument', 'sources'],
+}, {
+  id: '285', sourceCommit: inventory285.sourceCommit, mode: 'multi',
+  title: text(inventory285.titleJa, inventory285.overviewTitle),
+  contentsTitle: inventory285.contentsTitle,
+  description: text('係数なし被約assemblyの核と像、torsion-free群の被約群C*環内の射影を扱う3篇の証明概説。', 'Three proof overviews on the kernel and image of coefficient-free reduced assembly and projections in reduced group C*-algebras of torsion-free groups.'),
+  paperIds: inventory285.manuscripts.map(p => p.paperId),
+  overviewSectionIds: ['papers', 'assembly', 'connections', 'sources'],
 }, {
   id: '287', sourceCommit: inventory287.sourceCommit, mode: 'single',
   title: text(inventory287.titleJa, inventory287.overviewTitle),
