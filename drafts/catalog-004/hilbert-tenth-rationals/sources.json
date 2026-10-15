@@ -1,0 +1,335 @@
+{
+  "catalogId": "004",
+  "paperId": "hilbert-tenth-rationals",
+  "title": "Hilbert’s tenth problem over the rational numbers",
+  "displayName": "Hilbert’s tenth problem over the rational numbers",
+  "authors": [
+    "OpenAI"
+  ],
+  "version": "October 6, 2026",
+  "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Hilberts-tenth-problem-over-the-rational-numbers-October-6-2026/main.pdf",
+  "downloadUrl": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Hilberts-tenth-problem-over-the-rational-numbers-October-6-2026/main.pdf",
+  "pdfPages": 62,
+  "sha256": "f79236c22b981fe66aaf3ba494a466bf26db212117db47d95a31bf0315af2b30",
+  "checkedOn": "2026-10-15",
+  "citationKey": "OpenAI26H",
+  "checkedLocations": [
+    {
+      "printedPage": "1",
+      "pdfPage": 1
+    },
+    {
+      "printedPage": "3",
+      "pdfPage": 3
+    },
+    {
+      "printedPage": "6",
+      "pdfPage": 6
+    },
+    {
+      "printedPage": "7",
+      "pdfPage": 7
+    },
+    {
+      "printedPage": "8",
+      "pdfPage": 8
+    },
+    {
+      "printedPage": "9",
+      "pdfPage": 9
+    },
+    {
+      "printedPage": "10",
+      "pdfPage": 10
+    },
+    {
+      "printedPage": "11",
+      "pdfPage": 11
+    },
+    {
+      "printedPage": "12",
+      "pdfPage": 12
+    },
+    {
+      "printedPage": "13",
+      "pdfPage": 13
+    },
+    {
+      "printedPage": "14",
+      "pdfPage": 14
+    },
+    {
+      "printedPage": "15",
+      "pdfPage": 15
+    },
+    {
+      "printedPage": "16",
+      "pdfPage": 16
+    },
+    {
+      "printedPage": "17",
+      "pdfPage": 17
+    },
+    {
+      "printedPage": "18",
+      "pdfPage": 18
+    },
+    {
+      "printedPage": "19",
+      "pdfPage": 19
+    },
+    {
+      "printedPage": "20",
+      "pdfPage": 20
+    },
+    {
+      "printedPage": "21",
+      "pdfPage": 21
+    },
+    {
+      "printedPage": "22",
+      "pdfPage": 22
+    },
+    {
+      "printedPage": "23",
+      "pdfPage": 23
+    },
+    {
+      "printedPage": "24",
+      "pdfPage": 24
+    },
+    {
+      "printedPage": "25",
+      "pdfPage": 25
+    },
+    {
+      "printedPage": "26",
+      "pdfPage": 26
+    },
+    {
+      "printedPage": "39",
+      "pdfPage": 39
+    },
+    {
+      "printedPage": "42",
+      "pdfPage": 42
+    },
+    {
+      "printedPage": "43",
+      "pdfPage": 43
+    },
+    {
+      "printedPage": "44",
+      "pdfPage": 44
+    },
+    {
+      "printedPage": "45",
+      "pdfPage": 45
+    },
+    {
+      "printedPage": "46",
+      "pdfPage": 46
+    },
+    {
+      "printedPage": "47",
+      "pdfPage": 47
+    },
+    {
+      "printedPage": "48",
+      "pdfPage": 48
+    },
+    {
+      "printedPage": "56",
+      "pdfPage": 56
+    },
+    {
+      "printedPage": "57",
+      "pdfPage": 57
+    }
+  ],
+  "provenance": {
+    "method": "Fresh reading of official PDFs supplied by headquarters; no previous Sol manuscripts, diagrams, interpretations or reviews used. Additional PDFs fetched anew during this task.",
+    "mainFile": "coordination/catalog-004/astra-2026-10-15/sources/hilbert.pdf",
+    "model": "spawn時指定 gpt-6-astra"
+  },
+  "statements": [
+    {
+      "result": "Theorem 1.1",
+      "pages": "3",
+      "checked": "integer coefficients; rational solutions; unbounded input variable count; unconditional assertion in manuscript"
+    },
+    {
+      "result": "Proposition 2.12",
+      "pages": "16–17",
+      "checked": "nonconstant integral f; all finite tests from section 2.4 solvable implies ordinary integer zero"
+    },
+    {
+      "result": "Corollary 7.1",
+      "pages": "56–57",
+      "checked": "degree 0-prime for H10(Q), degree<=4, and presented finite nonempty lists of squares of quadratics; no variable/count/height bound"
+    }
+  ],
+  "proofPassages": [
+    {
+      "pages": "6–17",
+      "scope": "Read finite tests, integer model, compactness, additive injection, coarsened valuation/branch transfer, all-contact congruences and uniform height contradiction."
+    },
+    {
+      "pages": "18–20, 23–26",
+      "scope": "Read formula and odd-pole argument; weak approximation; full-Selmer-corank bound before pointwise 2-converse, pairing step, simultaneous twist preparation and completion. Matrix local calculations pp21–22 not fully audited."
+    },
+    {
+      "pages": "26–27, 39, 42–44",
+      "scope": "Read height architecture, exact Fontaine–Mazur hypotheses/application, modular factor and final dimension-dependent height estimate. Other cover/descent/conductor steps not fully audited."
+    },
+    {
+      "pages": "44–48",
+      "scope": "Read rank-one descent and formal logarithm estimate, Lemma6.1 statement, CRT witness proof Corollary6.2 and use in Corollary2.6."
+    },
+    {
+      "pages": "51–52",
+      "scope": "Read finite-complexity prime-pattern input and lower-bound architecture; external Green–Tao/Ziegler sources not checked."
+    },
+    {
+      "pages": "56–57",
+      "scope": "Read all oracle/degree/normal-form argument including scope limitations."
+    }
+  ],
+  "unresolved": [
+    "Full Selmer matrix computation and every simultaneous matrix construction check.",
+    "All external inputs and constants in section4 cover, descent, conductor, height and isogeny arguments. Fontaine–Mazur statement/application checked separately.",
+    "Full section6 prime-pattern proof and uniform sieve; cited Green–Tao and inverse theorem sources not checked.",
+    "Fresh source verification of Silverman canonical-height, descent and formal-group textbook inputs remains incomplete.",
+    "External theorem proofs are not recursively verified; no expert review or formal verification."
+  ],
+  "externalSources": [
+    {
+      "id": "pointwise",
+      "title": "A pointwise 2-converse for elliptic curves with rational two-torsion",
+      "displayName": "A pointwise 2-converse for elliptic curves with rational two-torsion",
+      "authors": "OpenAI",
+      "version": "October 7, 2026; fixed commit 1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-pointwise-2-converse-for-elliptic-curves-with-rational-two-torsion-October-7-2026/paper.pdf",
+      "pdfPages": 91,
+      "sha256": "df42f33f68fbef7766e5679b298e68e910157f78f2266889fb757824b9e44939",
+      "localFile": "coordination/catalog-004/astra-2026-10-15/sources/pointwise.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "1",
+          "pdfPage": 1
+        },
+        {
+          "printedPage": "2",
+          "pdfPage": 2
+        }
+      ]
+    },
+    {
+      "id": "fontaine",
+      "title": "Fontaine–Mazur modularity at the prime 2",
+      "displayName": "Fontaine–Mazur modularity at the prime 2",
+      "authors": "OpenAI",
+      "version": "October 6, 2026; fixed commit 1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Fontaine-Mazur-modularity-at-the-prime-2-October-6-2026/paper.pdf",
+      "pdfPages": 72,
+      "sha256": "3c8797c7d468cdcccbfedf719c9a758a083954ba3c3005975736eb911d26a636",
+      "localFile": "drafts/catalog-004/hilbert-tenth-rationals/research/fontaine-mazur.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "1",
+          "pdfPage": 1
+        }
+      ]
+    },
+    {
+      "id": "davis",
+      "title": "Hilbert’s tenth problem is unsolvable",
+      "displayName": "Hilbert’s tenth problem is unsolvable",
+      "authors": "Martin Davis",
+      "version": "The American Mathematical Monthly 80(3) (1973), 233–269; source scan includes a leading JSTOR cover page",
+      "sourceUrl": "https://math.umd.edu/~mcl/Pubs/713/Diophantine.pdf",
+      "pdfPages": 38,
+      "sha256": "f4079091f2f6c3d6f1bd863df0f38f28c90b370bc946e5068c162ae401c62d1b",
+      "localFile": "drafts/catalog-004/hilbert-tenth-rationals/research/davis.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "262",
+          "pdfPage": 31
+        },
+        {
+          "printedPage": "263",
+          "pdfPage": 32
+        },
+        {
+          "printedPage": "264",
+          "pdfPage": 33
+        }
+      ]
+    },
+    {
+      "id": "pairing",
+      "title": "The Cassels–Tate pairing on polarized abelian varieties",
+      "displayName": "The Cassels–Tate pairing on polarized abelian varieties",
+      "authors": "Bjorn Poonen; Michael Stoll",
+      "version": "Author version: November 6, 1998; minor correction August 23, 2014; published Annals of Mathematics 150 (1999), 1109–1149",
+      "sourceUrl": "https://math.mit.edu/~poonen/papers/sha.pdf",
+      "pdfPages": 32,
+      "sha256": "3b9a619423358bc877fd2123b73a759157a728ec11e0f7b0aa48bd0333d7149a",
+      "localFile": "drafts/catalog-004/hilbert-tenth-rationals/research/poonen-stoll.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "1",
+          "pdfPage": 1
+        },
+        {
+          "printedPage": "2",
+          "pdfPage": 2
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "from": "pointwise",
+      "result": "Theorem 1.1",
+      "page": 2,
+      "to": "Lemma 3.4",
+      "toPages": "23–24",
+      "kind": "direct",
+      "role": "Full Sha finite after s2=r+t<=r+dim Sha[2]=1 and nonzero rational 2-torsion established.",
+      "checking": "Input statement and application hypotheses compared; proof of input not checked."
+    },
+    {
+      "from": "pairing",
+      "result": "§1",
+      "page": 2,
+      "to": "Lemma 3.4",
+      "toPages": "24",
+      "kind": "direct",
+      "role": "Finite Sha and rational divisor (O) give perfect alternating pairing; hence even 2-torsion dimension.",
+      "checking": "Author version statement and polarization condition compared."
+    },
+    {
+      "from": "fontaine",
+      "result": "Theorem 1.1",
+      "page": 1,
+      "to": "§4.7",
+      "toPages": "39",
+      "kind": "direct",
+      "role": "Modularity for r2; irreducibility, oddness, de Rham distinct weights and finite ramification verified in target; no residual hypothesis.",
+      "checking": "Statement and target application read; full descent and representation construction not independently audited."
+    },
+    {
+      "from": "davis",
+      "result": "Theorem 8.1",
+      "page": 264,
+      "pdfPage": 33,
+      "to": "Theorem 1.1; Corollary 7.1",
+      "toPages": "17, 56–57",
+      "kind": "direct",
+      "role": "DPRM representation theorem gives integer H10 undecidability and degree 0-prime after positive witness conversion.",
+      "checking": "Statement and reduction use compared."
+    }
+  ]
+}

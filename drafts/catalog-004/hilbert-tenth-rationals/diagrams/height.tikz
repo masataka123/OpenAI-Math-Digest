@@ -1,0 +1,23 @@
+\node[card] (error) {\heading{1}{根の誤差と精度を固定}{Fix the root error and precision}
+$\delta=f(\eta(a))\ne0,\quad |\delta|\le C_fB^D,\quad K\ge cD$.\\
+\Tx{各 $A\in R$ を3傾きで表示：}{Represent each $A\in R$ by three slopes:}
+$\widetilde A=\sum_{i=1}^3\widetilde u_i/\widetilde v$.};
+\node[card,below=1.9cm of error] (branch) {\heading{2}{奇数接触から試験枝を選ぶ}{Odd contact selects a tested branch}
+$q\mid M_K(s_i)\ \Longrightarrow\ v_q(\widetilde r)\text{ odd}$.\\
+\Tx{負の環付値で生成される凸部分群 $J$ の外に $v_q(\widetilde r)>0$。}{The value $v_q(\widetilde r)>0$ lies outside the convex subgroup $J$ of negative ring values.}\\
+$r^l(R_F)_{\mathfrak p}\ \Longrightarrow\ v^*\ge l$.};
+\flow{error}{branch}{\Tx{$\Phi$ の極の偶奇制限で付値を粗くし、その中心を使う。}{Use pole parity of $\Phi$, coarsen the valuation, and take its center.}\\\Cite{branch}};
+\node[card,below=1.9cm of branch] (congruence) {\heading{3}{共役比較から主比較へ}{Conjugate comparison, then primary comparison}
+$\eta(ha)\equiv4\eta(a),\quad\eta(h)\equiv4\pmod{q^K}$.\\
+\Tx{指数比は整：切断形式対数を適用できる。}{The index ratio is integral: apply the truncated formal logarithm.}\\
+$v_q(\widetilde a-\eta(a))\ge K\quad(\text{all }a\in R)$.};
+\flow{branch}{congruence}{\Tx{同じ $h,j_0$ が全 $a$ に働く。乗法性は仮定しない。}{One pair $h,j_0$ works for all $a$; multiplicativity is not assumed.}\\\Cite{local}};
+\node[card,below=1.9cm of congruence] (height) {\heading{4}{同じ $\delta$ で全環要素を抑える}{Bound the entire ring using one $\delta$}
+$M_K(s_i)^K\mid\delta\ \Longrightarrow\ h(s_i)\le H_K|\delta|^{c/K}\ll_f B$.\\
+$h(\widetilde A)\le\sum_{i=1}^3h(s_i)+\log3\ll_f B\quad(A\in R)$.};
+\flow{congruence}{height}{\Tx{根の座標に合同を適用し、5点高さ評価へ渡す。}{Apply the congruences to the root coordinates, then use the height bound.}\\\Cite{five-point}\quad\Cite{height-contradiction}};
+\node[result,below=1.9cm of height] (finite) {\heading{5}{二次増大で通常整数へ戻る}{Quadratic growth forces ordinary integers}
+$h(x(\eta(a_j)P))\ll_f B,\qquad h(x(nP))=2\widehat h(P)n^2+O(1)$.\\
+$B^2\ll_f B+1\ \Longrightarrow\ \eta(a_j)=n_j\in\Z\ \Longrightarrow\ a_j=n_j$.\\
+\Tx{$\eta$ の加法性・単射性から $f(n)=0$。}{Additivity and injectivity of $\eta$ give $f(n)=0$.}};
+\flow{height}{finite}{\Tx{楕円座標の分子・分母も環値。$B=1$ は直ちに有界。}{Coordinate numerators and denominators are ring values; $B=1$ is immediate.}\\\Cite{height-contradiction}};

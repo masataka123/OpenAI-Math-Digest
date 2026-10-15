@@ -1,0 +1,17 @@
+\node[card] (tests) {\heading{1}{再帰的なテスト列を作る}{Build a recursive test sequence}
+$f\in\Z[X_1,\ldots,X_n]$, \Tx{非定数}{nonconstant}.\\
+\Tx{$T+f(a)=0$ をSkolem化し、閉項の有限制約と $\Phi$ を課す。}{$T+f(a)=0$: Skolemize; impose finite ground constraints and $\Phi$.}\\
+\Tx{各テストは有限個の有理数可解性質問に変換できる。}{Each test becomes finitely many rational-solvability queries.}};
+\node[card,below=1.7cm of tests] (model) {\heading{2}{全テスト成功から一つのモデルへ}{All tests successful: one model}
+$R\hookrightarrow{}^*\Q,\quad f(a)=0,\quad \Phi(\widetilde A)\ (A\in R)$.\\
+\Tx{初等図式は存在証明でのみ使用し、アルゴリズムには入れない。}{The elementary diagram is used for existence, not queried by the algorithm.}};
+\flow{tests}{model}{\Tx{コンパクト性：有限部分の有理数証人を同時に実現する。}{Compactness realizes all finite rational witnesses simultaneously.}\\\Cite{compactness}};
+\node[card,below=1.85cm of model] (integer) {\heading{3}{算術的な帰還}{Arithmetic return}
+$\text{all tests succeed}\ \Longrightarrow\ \exists \mathbf n\in\Z^n:\ f(\mathbf n)=0$.\\
+\Tx{奇数極の排除＋局所指数合同＋5点高さ評価。}{Odd-pole exclusion + local index congruences + five-point height bound.}\\
+\Tx{加法的指数を通常有限区間へ押し戻す（次の図）。}{Force additive indices into an ordinary finite interval (next diagram).}};
+\flow{model}{integer}{\Tx{一様高さ上界と非捩れ点の二次高さ増大を比較する。}{Compare a uniform height bound with quadratic growth at a nontorsion point.}\\\Cite{height-contradiction}};
+\node[result,below=1.85cm of integer] (answer) {\heading{4}{二つの探索で整数問題を決定}{Two searches decide the integer problem}
+\Tx{零点あり：整数組を列挙。零点なし：失敗テストを発見。}{A zero: enumerate integer tuples. No zero: find a failed test.}\\
+$H10(\Z)\le_T H10(\Q)\quad\Longrightarrow\quad$\Tx{有理数判定手続きは存在しない。}{no rational decision procedure.}};
+\flow{integer}{answer}{\Tx{整数モデルで順方向も成立。DPRMの判定不能性へ矛盾。}{The integer model gives the forward implication; contradict DPRM.}\\\Cite{termination}\quad\Cite{dprm}};

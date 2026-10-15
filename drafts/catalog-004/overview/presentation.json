@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-10-15",
+  "rows": [
+    {
+      "paperId": "hilbert-tenth-rationals",
+      "displayName": "Hilbert’s tenth problem over the rational numbers",
+      "result": "Theorem 1.1 · p. 3; Corollary 7.1 · pp. 56–57",
+      "claim": {
+        "ja": "変数数を入力に含む整数係数多項式の有理零点の有無は決定不能。問題のTuring次数は0′で、次数4以下および二次式の平方和への制限でも同じ。",
+        "en": "Rational solvability of integer-coefficient polynomials is undecidable when the number of variables is part of the input. Its Turing degree is 0′, also for degree at most four and sums of squares of quadratic polynomials."
+      },
+      "role": {
+        "ja": "再帰的な有限有理テストから整数零点を回収する。楕円曲線の添字比較・極の偶奇・五点接触の高さ評価を合流させ、整数零点探索と失敗テスト探索を並走させる。",
+        "en": "Recovers an integer zero from recursive finite rational tests. Elliptic index comparisons, pole parity and a five-point contact-height bound combine with parallel searches for an integer zero and a failed test."
+      }
+    },
+    {
+      "paperId": "pointwise-2-converse-rational-two-torsion",
+      "displayName": "A pointwise 2-converse for elliptic curves with rational two-torsion",
+      "result": "Theorem 1.1 · p. 2",
+      "claim": {
+        "ja": "E/ℚに非零の有理2-torsionがあり、full 2∞-Selmer群のℤ₂-corankが0または1なら、解析的rankとMordell–Weil rankはそのcorankに等しく、Sha(E/ℚ)は有限。2での還元型は任意。",
+        "en": "For E/ℚ with nonzero rational two-torsion and full 2∞-Selmer corank zero or one, analytic and Mordell–Weil ranks equal that corank and Sha(E/ℚ) is finite, with arbitrary reduction at 2."
+      },
+      "role": {
+        "ja": "有限twist族の非零addressから固定曲線の中心値・導関数を整数的補間で回収する。先行原稿のLemma 3.4では、そのうちSha有限性を所定の平方類の有理点を得るために使う。",
+        "en": "Integral interpolation recovers the central value or derivative at a fixed curve from nonzero addresses in finite twist families. The preceding manuscript uses the Sha-finiteness conclusion in Lemma 3.4 to obtain a rational point in a prescribed square class."
+      }
+    }
+  ]
+}

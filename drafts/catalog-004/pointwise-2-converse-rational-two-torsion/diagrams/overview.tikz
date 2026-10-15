@@ -1,0 +1,19 @@
+\node[result] (start) {\heading{1}{偶数系：単位検査と一様評価}{The even system: unit tests and a uniform estimate}
+$E(\mathbb Q)[2]\ne0$\\\Tx{偶数側の評価を、二つの経路へ使う}{Use the even estimate in both routes}};
+\node[half,below left=2.5cm and -7.4cm of start] (zero) {\heading{2a}{偶数系から基点へ}{Return to the even base}
+$s_2(E)=0\ \Longrightarrow\ a(E)=0$};
+\node[half,below right=2.5cm and -7.4cm of start] (norm) {\heading{2b}{奇数係数を先に正規化}{Normalize the odd detector}
+$2j(P_h)\ge2w(h)+s(h)-C$\\\Tx{$a(E^{(h)})=1$ の $h$ に対して}{For $h$ with $a(E^{(h)})=1$}};
+\draw[edge] ($(zero.north)+(-3.35,2.5)$)--($(zero.north)+(-3.35,0)$);
+\draw[edge] ($(norm.north)+(-3.35,2.5)$)--($(norm.north)+(-3.35,0)$);
+\node[branchreason,text width=5.4cm,anchor=south west] at ($(zero.north west)+(1.15,.45)$) {\Tx{偶数検査と円分補間}{Even tests and cyclotomic transfer}\\\Cite{even-assembly}};
+\node[branchreason,text width=5.4cm,anchor=south west] at ($(norm.north west)+(1.15,.45)$) {\Tx{偶数評価と有界個数のcompanion}{Even estimate and bounded-factor companion}\\\Cite{odd-lower}};
+\node[half,below=2.5cm of norm] (one) {\heading{3}{固定 $K$ で二つの同時検査}{Simultaneous tests over fixed $K$}
+$s_2(E)=1\ \Longrightarrow\ a(E)=1$};
+\draw[edge] ($(norm.south)+(-3.35,0)$)--($(one.north)+(-3.35,0)$);
+\node[branchreason,anchor=west] at ($(norm.south)!.5!(one.north)+(-2.8,0)$) {\Tx{先に $k$ を固定、次に立方体を構成}{Fix $k$ first, then construct the cubes}\\\Cite{rank-one}};
+\node[result,below=2.5cm of one,xshift=-3.9cm] (end) {\heading{4}{解析的rankから全有限性へ}{From analytic rank to full finiteness}
+$a(E)=r(E)=s_2(E),\qquad \#\Sha(E/\mathbb Q)<\infty$};
+\draw[edge] ($(zero.south)+(-3.35,0)$)--($(end.north)+(-6.9,0)$);
+\draw[edge] ($(one.south)+(3.35,0)$)--($(end.north)+(7.25,0)$);
+\node[reason,anchor=south west] at ($(end.north west)+(1.3,.5)$) {\Tx{Gross--Zagier--Kolyvaginの順方向}{The forward Gross--Zagier--Kolyvagin implication}\\\Cite{forward}};

@@ -1,0 +1,13 @@
+\node[card] (a) {\heading{1}{最終companionを一度固定}{Fix the final companion once}
+$L(E^{(k)},1)\ne0,\quad K=\mathbb Q(\sqrt k),\quad s_2(E/K)=1$};
+\node[card,below=2.6cm of a] (b) {\heading{2}{非零頂点で二つの検査を同時に1へ}{Make both tests one at every nonzero vertex}
+$a(E^{(h_x)})=1,\quad a(E^{(h_xk)})=0\qquad(x\ne0)$\\
+\Tx{新しい素数はすべて $K$ で分裂、$h_0=1$}{All new primes split in $K$; $h_0=1$}};
+\flow a b {\Tx{別々の非零多項式から共通の単位割当を作る}{Turn separate nonzero polynomials into simultaneous units}\\\Cite{address}};
+\node[card,below=2.6cm of b] (c) {\heading{3}{固定 $K$ で指数の上界を得る}{Bound the index over the fixed field}
+$2J_{h_x}(k)-4w(h_x)-s(h_x)-s(h_xk)\le C$\\
+\Tx{$C$ は立方体次元・新素数集合によらない}{The bound is independent of cube dimension and new support}};
+\flow b c {\Tx{奇数・偶数の単位上界を高さ比較に入力}{Use both unit bounds in the height comparison}\\\Cite{height}\\\Cite{rank-one}};
+\node[result,below=2.6cm of c] (d) {\heading{4}{欠けた基点の導関数を回収}{Recover the derivative at the missing base}
+$\operatorname{ord}_{s=1}\bigl(L(E,s)L(E^{(k)},s)\bigr)=1\quad\Longrightarrow\quad a(E)=1$};
+\flow c d {\Tx{full Selmer corank 1と有界分母消去因子で移送}{Transfer using full Selmer corank one and a bounded clearing factor}\\\Cite{ring-transfer}\\\Cite{ring-proof}};

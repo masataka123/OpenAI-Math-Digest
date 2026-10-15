@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "author-key",
+  "catalogId": "004",
+  "sources": {
+    "OpenAI26H": {
+      "recordFile": "sources.json",
+      "recordId": "hilbert"
+    },
+    "OpenAI26P": {
+      "recordFile": "sources.json",
+      "recordId": "pointwise"
+    },
+    "OVERVIEW": {
+      "recordFile": "../../../coordination/catalog-004/astra-2026-10-15/inventory.json",
+      "recordId": "overview"
+    }
+  },
+  "citations": {
+    "pointwise-main": {
+      "source": "OpenAI26P",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "hilbert-main": {
+      "source": "OpenAI26H",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "3",
+          "pdf": "3"
+        }
+      ]
+    },
+    "hilbert-transfer": {
+      "source": "OpenAI26H",
+      "locations": [
+        {
+          "result": "Lemma 3.4",
+          "printed": "23–24",
+          "pdf": "23–24"
+        }
+      ]
+    },
+    "hilbert-poles": {
+      "source": "OpenAI26H",
+      "locations": [
+        {
+          "result": "Proposition 2.8",
+          "printed": "12",
+          "pdf": "12"
+        }
+      ]
+    },
+    "hilbert-local": {
+      "source": "OpenAI26H",
+      "locations": [
+        {
+          "result": "Lemma 2.10; Proposition 2.11",
+          "printed": "14–15",
+          "pdf": "14–15"
+        }
+      ]
+    },
+    "hilbert-height": {
+      "source": "OpenAI26H",
+      "locations": [
+        {
+          "result": "Theorem 2.4",
+          "printed": "9",
+          "pdf": "9"
+        }
+      ]
+    },
+    "hilbert-tests": {
+      "source": "OpenAI26H",
+      "locations": [
+        {
+          "result": "§2.4; Proposition 2.12",
+          "printed": "12–17",
+          "pdf": "12–17"
+        }
+      ]
+    },
+    "hilbert-degree": {
+      "source": "OpenAI26H",
+      "locations": [
+        {
+          "result": "Corollary 7.1",
+          "printed": "56–57",
+          "pdf": "56–57"
+        }
+      ]
+    },
+    "hilbert-completion": {
+      "source": "OpenAI26H",
+      "locations": [
+        {
+          "result": "§3.4",
+          "printed": "24–26",
+          "pdf": "24–26"
+        }
+      ]
+    },
+    "official": {
+      "source": "OVERVIEW",
+      "locations": [
+        {
+          "result": "Catalogue 004",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ]
+}

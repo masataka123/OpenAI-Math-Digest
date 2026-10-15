@@ -1,0 +1,13 @@
+\node[card] (a) {\heading{1}{既知の単純零点に有界個数のcompanion}{A bounded-factor companion for a known simple zero}
+$a(E^{(h)})=1,\quad \omega(k'(h))\le A,\quad L(E^{(hk')},1)\ne0$\\
+$v(L^*(hk'))\le2w(hk')+s(hk')+C$};
+\node[card,below=2.6cm of a] (b) {\heading{2}{ring-class和の指数を下から評価}{Lower-bound the ring-class index}
+$2J_h(k')\ge4w(h)+s(h)+s(hk')-C$};
+\flow a b {\Tx{$k'$ は $2Nh$ で平方、素因数数は一様}{The companion is square at $2Nh$ with bounded prime count}\\\Cite{ring-lower}};
+\node[card,below=2.6cm of b] (c) {\heading{3}{固定genus partnerの検出器へ比較}{Compare with the fixed-genus-partner detector}
+$2J_h(k')-2j(P_h)=v(L^*(hk'))+O(1)$};
+\flow b c {\Tx{二つの高さ公式で導関数とregulatorを消去}{Cancel the derivative and regulator in two height formulas}\\\Cite{height}\\\Cite{cst-height}};
+\node[result,below=2.6cm of c] (d) {\heading{4}{下界を証明してから奇数最小深さを固定}{Prove the lower bound before fixing odd minimum depth}
+$2j(P_h)\ge2w(h)+s(h)-C',\qquad w(k')\le A$\\
+\Tx{単位検査：$a(E^{(h)})=1$, $j(P_h)\le w(h)+C$}{Unit test: $a(E^{(h)})=1$, $j(P_h)\le w(h)+C$}};
+\flow c d {\Tx{偶数評価を代入し、$s(hk')$ を消す}{Insert the even estimate and cancel $s(hk')$}\\\Cite{odd-lower}\\\Cite{odd-coefficients}};

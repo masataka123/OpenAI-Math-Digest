@@ -1,0 +1,57 @@
+{
+  "catalogId": "004",
+  "productionVersion": "1.4",
+  "checkingScope": "上記2原典間の明示的な直接入力を結果・使用箇所・条件で照合。その他のカタログ外入力の網羅ではない。",
+  "omittedSections": [
+    {
+      "section": "分類カード・選択UI",
+      "reason": "2篇が一つの証明経路を構成する。公式順表と1枚の総括図で選択・合流を示せるため分類と選択UIを重ねない。"
+    }
+  ],
+  "connections": [
+    {
+      "id": "pointwise-to-hilbert-prescribed-point",
+      "to": {
+        "paperId": "hilbert-tenth-rationals",
+        "result": "Lemma 3.4",
+        "pages": "23–24",
+        "version": "October 6, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Hilberts-tenth-problem-over-the-rational-numbers-October-6-2026/main.pdf"
+      },
+      "role": {
+        "ja": "Sha(E_l/ℚ)の有限性を供給する。Cassels–Tate pairingの交代性とr+dim Sha[2]=1からSha[2]=0とrank=1を得て、γ=(β,1)を有理点で実現する。",
+        "en": "Supplies finiteness of Sha(E_l/ℚ). Alternation of the Cassels–Tate pairing and r+dim Sha[2]=1 give Sha[2]=0 and rank one, so γ=(β,1) comes from a rational point."
+      },
+      "hypotheses": {
+        "ja": "E_l:y²=x(x−l)(x+3l)はfull rational two-torsionを持つ。Lemma 3.3のSel₂計算からr+dim Sha[2]=1。full 2∞-Selmer corank=r+t≤r+dim Sha[2]≤1を有限性の使用前に得る。",
+        "en": "E_l:y²=x(x−l)(x+3l) has full rational two-torsion. Lemma 3.3 gives r+dim Sha[2]=1; the full 2∞-Selmer corank r+t is at most this quantity before invoking finiteness."
+      },
+      "kind": "direct",
+      "checking": {
+        "by": "gpt-6-astra catalogue editor",
+        "date": "2026-10-15",
+        "scope": "供給Theorem1.1と利用Lemma3.4の本文・full Selmer条件・使用する結論を直接照合。入力定理の全証明の独立検証ではない。"
+      },
+      "articleLinks": {
+        "ja": {
+          "from": "../../../ja/papers/pointwise-2-converse-rational-two-torsion/#theorem-1-1",
+          "to": "../../../ja/papers/hilbert-tenth-rationals/#dependencies"
+        },
+        "en": {
+          "from": "../../../en/papers/pointwise-2-converse-rational-two-torsion/#theorem-1-1",
+          "to": "../../../en/papers/hilbert-tenth-rationals/#dependencies"
+        }
+      },
+      "unresolved": [
+        "入力側の全補間・有限twist構成の独立検証は未実施。"
+      ],
+      "from": {
+        "paperId": "pointwise-2-converse-rational-two-torsion",
+        "result": "Theorem 1.1",
+        "pages": "2",
+        "version": "October 7, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-pointwise-2-converse-for-elliptic-curves-with-rational-two-torsion-October-7-2026/paper.pdf"
+      }
+    }
+  ]
+}

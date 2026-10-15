@@ -1,3 +1,4 @@
+import inventory004 from '../../coordination/catalog-004/inventory.json' with { type: 'json' };
 import inventory033 from '../../coordination/catalog-033/inventory.json' with { type: 'json' };
 import inventory034 from '../../research/catalog-034-inventory.json' with { type: 'json' };
 import inventory036 from '../../coordination/catalog-036/inventory.json' with { type: 'json' };
@@ -26,7 +27,7 @@ const fieldTranslations = [
   {
     "id": "number-theory",
     "ja": "数論",
-    "catalogIds": []
+    "catalogIds": ["004"]
   },
   {
     "id": "algebraic-complex-geometry",
@@ -137,7 +138,11 @@ const papers034 = inventory034.manuscripts.map((entry, index) => {
     pages: entry.pdfPages, order: entry.order, featured: ['schnell-fiber-spaces', 'log-abundance-characteristic-zero', 'arithmetic-stein-degree', 'relative-denominators', 'uniform-log-iitaka', 'kahler-log-abundance', 'minimal-metrics-injectivity', 'fourfold-nonvanishing', 'uniform-slc-indices', 'conditional-kahler-fourfolds', 'uniform-pluricanonical-iitaka', 'lifting-adjoint-sections', 'effective-log-iitaka-fourfolds', 'abundance-after-nonvanishing'].includes(manuscriptIds034[index]),
   };
 });
-export const papers = [...inventory033.manuscripts.map(entry => ({
+export const papers = [...inventory004.manuscripts.map(entry => ({
+ id: entry.paperId, catalogId: '004', sourceCommit: inventory004.sourceCommit,
+ title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
+ pages: entry.pdfPages, order: entry.order, featured: true,
+})), ...inventory033.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '033', sourceCommit: inventory033.sourceCommit,
  title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
  pages: entry.pdfPages, order: entry.order, featured: true,
@@ -195,6 +200,14 @@ export const papers = [...inventory033.manuscripts.map(entry => ({
  pages: entry.pdfPages, order: entry.order, featured: true,
 }))];
 export const catalogs = [{
+ id: '004', sourceCommit: inventory004.sourceCommit, mode: 'multi',
+ title: text(inventory004.titleJa, inventory004.overviewTitle),
+ titlePhrases: {ja: ['ℚ上のHilbertの', '第10問題']},
+ contentsTitle: inventory004.contentsTitle,
+ description: text("カタログ004は、有理零点の決定不能性を扱う原稿と、その局所条件の構成に使う楕円曲線の点別2-converseを収録する。", "Catalogue 004 contains a manuscript on undecidability of rational solvability and a pointwise 2-converse for elliptic curves used to construct its local conditions."),
+ paperIds: inventory004.manuscripts.map(p => p.paperId),
+ overviewSectionIds: ['papers', 'diagram-sources', 'route', 'connections', 'sources'],
+}, {
  id: '033', sourceCommit: inventory033.sourceCommit,
  title: text('Campanaのorbifold飯高予想と対数的劣加法性', inventory033.overviewTitle),
  contentsTitle: inventory033.contentsTitle,

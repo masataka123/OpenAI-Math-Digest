@@ -1,0 +1,193 @@
+{
+  "catalogId": "004",
+  "paperId": "overview",
+  "checkedOn": "2026-10-15",
+  "checkedBy": "gpt-6-astra catalogue editor",
+  "externalSources": [
+    {
+      "id": "hilbert",
+      "displayName": "Hilbert’s tenth problem over the rational numbers",
+      "authors": "OpenAI",
+      "version": "October 6, 2026",
+      "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Hilberts-tenth-problem-over-the-rational-numbers-October-6-2026/main.pdf",
+      "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "sha256": "f79236c22b981fe66aaf3ba494a466bf26db212117db47d95a31bf0315af2b30",
+      "pdfPages": 62,
+      "checkedLocations": [
+        {
+          "printedPage": "3",
+          "pdfPage": 3
+        },
+        {
+          "printedPage": "6",
+          "pdfPage": 6
+        },
+        {
+          "printedPage": "9",
+          "pdfPage": 9
+        },
+        {
+          "printedPage": "12",
+          "pdfPage": 12
+        },
+        {
+          "printedPage": "13",
+          "pdfPage": 13
+        },
+        {
+          "printedPage": "14",
+          "pdfPage": 14
+        },
+        {
+          "printedPage": "15",
+          "pdfPage": 15
+        },
+        {
+          "printedPage": "16",
+          "pdfPage": 16
+        },
+        {
+          "printedPage": "17",
+          "pdfPage": 17
+        },
+        {
+          "printedPage": "18",
+          "pdfPage": 18
+        },
+        {
+          "printedPage": "23",
+          "pdfPage": 23
+        },
+        {
+          "printedPage": "24",
+          "pdfPage": 24
+        },
+        {
+          "printedPage": "26",
+          "pdfPage": 26
+        },
+        {
+          "printedPage": "56",
+          "pdfPage": 56
+        },
+        {
+          "printedPage": "57",
+          "pdfPage": 57
+        },
+        {
+          "printedPage": "25",
+          "pdfPage": 25
+        }
+      ]
+    },
+    {
+      "id": "pointwise",
+      "displayName": "A pointwise 2-converse for elliptic curves with rational two-torsion",
+      "authors": "OpenAI",
+      "version": "October 7, 2026",
+      "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-pointwise-2-converse-for-elliptic-curves-with-rational-two-torsion-October-7-2026/paper.pdf",
+      "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "sha256": "df42f33f68fbef7766e5679b298e68e910157f78f2266889fb757824b9e44939",
+      "pdfPages": 91,
+      "checkedLocations": [
+        {
+          "printedPage": "2",
+          "pdfPage": 2
+        },
+        {
+          "printedPage": "3",
+          "pdfPage": 3
+        },
+        {
+          "printedPage": "4",
+          "pdfPage": 4
+        },
+        {
+          "printedPage": "6",
+          "pdfPage": 6
+        },
+        {
+          "printedPage": "7",
+          "pdfPage": 7
+        },
+        {
+          "printedPage": "8",
+          "pdfPage": 8
+        },
+        {
+          "printedPage": "9",
+          "pdfPage": 9
+        },
+        {
+          "printedPage": "16",
+          "pdfPage": 16
+        },
+        {
+          "printedPage": "17",
+          "pdfPage": 17
+        },
+        {
+          "printedPage": "74",
+          "pdfPage": 74
+        },
+        {
+          "printedPage": "78",
+          "pdfPage": 78
+        },
+        {
+          "printedPage": "79",
+          "pdfPage": 79
+        },
+        {
+          "printedPage": "80",
+          "pdfPage": 80
+        },
+        {
+          "printedPage": "81",
+          "pdfPage": 81
+        },
+        {
+          "printedPage": "82",
+          "pdfPage": 82
+        },
+        {
+          "printedPage": "84",
+          "pdfPage": 84
+        },
+        {
+          "printedPage": "85",
+          "pdfPage": 85
+        },
+        {
+          "printedPage": "86",
+          "pdfPage": 86
+        },
+        {
+          "printedPage": "87",
+          "pdfPage": 87
+        },
+        {
+          "printedPage": "88",
+          "pdfPage": 88
+        }
+      ]
+    }
+  ],
+  "proofPassages": [
+    {
+      "source": "hilbert",
+      "passages": "§§2.4–2.7 pp.12–17; Proposition 2.8 p.12; Lemma 3.4 pp.23–24; §3.4 completion p.26; §7 pp.56–57",
+      "scope": "有限テストの方向・有効性・pole-parityの役割・full Selmer corank条件・全帰結の接続を原典から照合。"
+    },
+    {
+      "source": "pointwise",
+      "passages": "Theorem 1.1 p.2; introduction pp.2–4; selected interpolation and statement passages pp.6–9,16–17; assembly passages pp.74,78–82,84–88",
+      "scope": "主結果の仮定・3結論、二つのrankの場合と固定twist補間の役割。詳細な補間証明の独立検証ではない。"
+    }
+  ],
+  "unresolved": [
+    "Pointwise §§3–8の全整数的補間・一様評価の独立検証は未実施。",
+    "Hilbert §§4–6の全高さ・篩評価、引用先の全証明は未検証。",
+    "案内ではカタログ内の直接辺1件を照合。カタログ外の全依存を網羅しない。"
+  ]
+}

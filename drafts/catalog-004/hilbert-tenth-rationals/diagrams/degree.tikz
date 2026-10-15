@@ -1,0 +1,17 @@
+\node[card] (oracle) {\heading{1}{有理数問題のTuring次数}{Turing degree of rational solvability}
+$\mathbf0'\le_T H10(\Z)\le_T H10(\Q)\le_T\mathbf0'$.\\
+\Tx{最後の上界：有理数組を列挙し、正確に多項式を評価。}{Upper bound: enumerate rational tuples and evaluate exactly.}};
+\node[card,below=1.9cm of oracle] (gates) {\heading{2}{演算回路を二次式リストへ}{Arithmetic circuit to quadratic list}
+$Y_v-X_j,\quad Y_v-c,\quad Y_v-Y_u-Y_w,\quad Y_v-Y_uY_w,\quad Y_{\rm out}$.\\
+\Tx{これらを $q_1,\ldots,q_s$ とする。$s\ge1$, $\deg q_i\le2$。}{Call these $q_1,\ldots,q_s$: $s\ge1$, $\deg q_i\le2$.}\\
+\Tx{各入力の回路値への拡張は一意。}{Each input has a unique extension through the circuit.}};
+\flow{oracle}{gates}{\Tx{次数の下界はDPRM＋有限テスト。回路の構成は実効的。}{The lower bound uses DPRM and finite tests; the circuit is effective.}\\\Cite{dprm}\quad\Cite{corollary-proof}};
+\node[card,below=1.85cm of gates] (sum) {\heading{3}{平方和で連立条件を一つにする}{One sum of squares encodes the system}
+$\exists x\in\Q^n:f(x)=0\ \Longleftrightarrow\ \exists z\in\Q^N:\sum_iq_i(z)^2=0$.\\
+$H10(\Q)\le_m S_2\le_m H_{\le4}$.};
+\flow{gates}{sum}{\Tx{有理数の平方は非負。平方和の総次数は高々4。}{Rational squares are nonnegative; the sum has total degree at most four.}\\\Cite{normal-form}};
+\node[result,below=1.85cm of sum] (scope) {\heading{4}{両制限問題も次数 $\mathbf0'$}{Both restrictions have degree $\mathbf0'$}
+\Tx{変数数・項数・係数高さは固定しない。}{Variables, summands, and coefficient heights remain unbounded.}\\
+\Tx{整数問題からの帰着はTuring帰着のまま。}{The reduction from integer solvability remains a Turing reduction.}\\
+\Tx{$\Z$ の存在定義や $H10(\Q)$ のmany-one完全性は得ない。}{No existential definition of $\Z$ or many-one completeness of $H10(\Q)$ follows.}};
+\flow{sum}{scope}{\Tx{両制限問題も有理数組の列挙で計算枚挙可能。}{Both restricted problems are computably enumerable by rational-tuple enumeration.}\\\Cite{corollary}};

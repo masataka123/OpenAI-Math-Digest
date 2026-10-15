@@ -1,0 +1,185 @@
+{
+  "catalogId": "004",
+  "paperId": "pointwise-2-converse-rational-two-torsion",
+  "title": "A pointwise 2-converse for elliptic curves with rational two-torsion",
+  "displayName": "A pointwise 2-converse for elliptic curves with rational two-torsion",
+  "authors": "OpenAI",
+  "version": "October 7, 2026",
+  "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-pointwise-2-converse-for-elliptic-curves-with-rational-two-torsion-October-7-2026/paper.pdf",
+  "sha256": "df42f33f68fbef7766e5679b298e68e910157f78f2266889fb757824b9e44939",
+  "pdfPages": 91,
+  "checkedOn": "2026-10-15",
+  "model": {
+    "assigned": "gpt-6-astra",
+    "evidence": "spawn時指定gpt-6-astra",
+    "role": "日英記事執筆・自己点検",
+    "doesNotGuaranteeCorrectness": true
+  },
+  "externalSources": [
+    {
+      "id": "kato04",
+      "authors": "Kazuya Kato",
+      "displayName": "p-adic Hodge theory and values of zeta functions of modular forms",
+      "version": "Astérisque 295 (2004), pp. 117–290; NUMDAM scan with cover",
+      "sourceUrl": "https://www.numdam.org/article/AST_2004__295__117_0.pdf",
+      "pdfPages": 175,
+      "sha256": "3c6e14b11fa60262db8aff782ce3cf4d83e9100c0be83621a7e4ce502cec605d",
+      "localFile": "external/kato04.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "185",
+          "pdfPage": 70
+        },
+        {
+          "printedPage": "186",
+          "pdfPage": 71
+        },
+        {
+          "printedPage": "189",
+          "pdfPage": 74
+        },
+        {
+          "printedPage": "221",
+          "pdfPage": 106
+        },
+        {
+          "printedPage": "222",
+          "pdfPage": 107
+        }
+      ]
+    },
+    {
+      "id": "bt25",
+      "authors": "Ashay A. Burungale; Ye Tian",
+      "displayName": "A rank zero p-converse to a theorem of Gross–Zagier, Kolyvagin and Rubin",
+      "version": "arXiv:2506.03465v1, 4 June 2025 (numbering cited by the manuscript)",
+      "sourceUrl": "https://arxiv.org/pdf/2506.03465v1",
+      "pdfPages": 7,
+      "sha256": "290b953a3be232141b1810a588f4859e6a869b04c468db3625829c1797fcf81e",
+      "localFile": "external/bt26.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "5",
+          "pdfPage": 5
+        }
+      ]
+    },
+    {
+      "id": "cst14",
+      "authors": "Li Cai; Jie Shu; Ye Tian",
+      "displayName": "Explicit Gross–Zagier and Waldspurger formulae",
+      "version": "Algebra & Number Theory 8(10) (2014), pp. 2523–2572; publisher PDF with cover",
+      "sourceUrl": "https://msp.org/ant/2014/8-10/ant-v8-n10-p05-s.pdf",
+      "pdfPages": 53,
+      "sha256": "20902b59fe63e1660319fb30b95aa9484ddc406625a217996dd579de397cbfb3",
+      "localFile": "external/cst14.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "2524",
+          "pdfPage": 3
+        },
+        {
+          "printedPage": "2525",
+          "pdfPage": 4
+        }
+      ]
+    },
+    {
+      "id": "sk20",
+      "authors": "Christopher Skinner",
+      "displayName": "A converse to a theorem of Gross, Zagier, and Kolyvagin",
+      "version": "Annals of Mathematics 191(2) (2020), pp. 329–354; published version",
+      "sourceUrl": "https://annals.math.princeton.edu/wp-content/uploads/annals-v191-n2-p01-s.pdf",
+      "pdfPages": 26,
+      "sha256": "cfdfab6e62ac507be40d1f0bc8d9cb8371d95b42c5ae259fde054c70fb20c214",
+      "localFile": "external/sk20.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "330",
+          "pdfPage": 2
+        }
+      ]
+    }
+  ],
+  "statements": [
+    {
+      "result": "Theorem 1.1",
+      "pages": "2",
+      "checked": "full local Kummer Selmer corank 0/1; rational nonzero two-torsion; analytic rank and Mordell–Weil rank equality; entire Sha finite; no reduction condition at 2"
+    },
+    {
+      "result": "Theorem 3.2",
+      "pages": "7",
+      "checked": "all local/sign data fixed; arbitrarily large cubes; B independent of family; base corank zero; nonvanishing and D upper bound"
+    },
+    {
+      "result": "Proposition 9.10",
+      "pages": "80–81",
+      "checked": "prepared positive odd filter, fixed h*, all analytically rank-one h; lower bound includes s(h)"
+    },
+    {
+      "result": "Proposition 9.14",
+      "pages": "85–87",
+      "checked": "full Selmer corank one, rational two-torsion; a(E)=1"
+    }
+  ],
+  "proofPassages": [
+    {
+      "pages": "4–16",
+      "scope": "Kummer coranks, parity use, notation, scalar family, fixed-form trace, rational divisibility, integral intersection, determinant central comparison, binary transfer"
+    },
+    {
+      "pages": "16–17, 44–47",
+      "scope": "ring-class setup and outputs; bounded clearing factor; simultaneous arithmetic interface; Laurent-coefficient transfer"
+    },
+    {
+      "pages": "48, 53–54, 59–61, 64–65, 68–74",
+      "scope": "witness and bounded-factor statements; coefficient comparison and normalization; symbol interface; address lemma and forest assembly (not all full technical proofs)"
+    },
+    {
+      "pages": "74–88",
+      "scope": "complete main assembly, even estimate, varying companion, height comparison, odd normalization, full-torsion split witness, fixed-K final transfer"
+    }
+  ],
+  "dependencies": [
+    {
+      "source": "kato04",
+      "result": "§§8.9–8.12; Theorem 9.7; Theorem 12.5(3)",
+      "usedAt": "§§3.3–3.5, pp. 10–14",
+      "kind": "direct",
+      "checked": "external statements and manuscript use compared; p=2 not replaced with integral 12.5(4)"
+    },
+    {
+      "source": "bt25",
+      "result": "Theorem 2.6; Remark 2.7",
+      "usedAt": "§3.4, p. 12",
+      "kind": "direct",
+      "checked": "CM newforms, every prime, equality over Lambda tensor Q; integral strengthening not used"
+    },
+    {
+      "source": "cst14",
+      "result": "Theorem 1.1",
+      "usedAt": "Lemma 9.9, p. 80; proof Theorem 4.2, p. 47",
+      "kind": "direct",
+      "checked": "split Heegner hypotheses, primitive character, conductor and c sqrt(abs(D)) normalization, cusp normalization; full local comparisons not independently reconstructed"
+    },
+    {
+      "source": "sk20",
+      "result": "§1, forward Gross–Zagier–Kolyvagin statement",
+      "usedAt": "Lemma 2.1, p. 5; end proof Theorem 1.1, p. 88",
+      "kind": "direct",
+      "checked": "analytic rank 0/1 gives rank equality and full Sha finiteness; not Skinners converse hypotheses"
+    }
+  ],
+  "unresolved": [
+    "No independent reconstruction of all integral cochain limits, maps and determinant switches in §§4–5.",
+    "Uniform moment/sieve bounds of §6, all theta weights/local identities of §7, and all network coefficient calculations of §8 not independently verified.",
+    "Ferrero–Washington, Monsky parity, Nekovar duality, Waldspurger and related theta inputs: manuscript citation/use read; external passages not independently rechecked.",
+    "No source outside the permitted fresh primary sources and designated format/technical examples was used."
+  ],
+  "catalogConnections": {
+    "directInputsIdentified": [],
+    "scope": "principal routes and bibliography checked; no direct input from another catalogue 004 paper found; broader Goldfeld companion explicitly not a proof input; other possible relations uninvestigated"
+  }
+}

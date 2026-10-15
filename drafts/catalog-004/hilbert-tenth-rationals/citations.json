@@ -1,0 +1,351 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "author-key",
+  "catalogId": "004",
+  "sources": {
+    "OpenAI26H": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "pagination": "same"
+    },
+    "OpenAI26P": {
+      "recordFile": "sources.json",
+      "recordId": "pointwise",
+      "guideRole": {
+        "ja": "有理2捩れと全2一次Selmer corankが0または1のときのSha有限性。Lemma 3.4への直接入力",
+        "en": "Finiteness of Sha from rational two-torsion and full 2-primary Selmer corank zero or one; direct input to Lemma 3.4"
+      },
+      "pagination": "same"
+    },
+    "OpenAI26F": {
+      "recordFile": "sources.json",
+      "recordId": "fontaine",
+      "guideRole": {
+        "ja": "§4.7の奇・regularな2次元2進表現のモジュラー性。残余像の条件なし",
+        "en": "Modularity of the odd regular two-dimensional 2-adic representation in §4.7, without residual-image restrictions"
+      },
+      "pagination": "same"
+    },
+    "Dav73": {
+      "recordFile": "sources.json",
+      "recordId": "davis",
+      "guideRole": {
+        "ja": "整数問題の判定不能性と次数に使うDPRM表示定理",
+        "en": "DPRM representation theorem used for undecidability and the degree of the integer problem"
+      }
+    },
+    "PS99": {
+      "recordFile": "sources.json",
+      "recordId": "pairing",
+      "guideRole": {
+        "ja": "有限Sha上の完全交代ペアリングと有理因子による偏極の条件",
+        "en": "Perfect alternating pairing on finite Sha and the rational-divisor condition on the polarization"
+      },
+      "pagination": "same"
+    }
+  },
+  "citations": {
+    "main": {
+      "source": "OpenAI26H",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "3",
+          "pdf": "3"
+        }
+      ]
+    },
+    "corollary": {
+      "source": "OpenAI26H",
+      "locations": [
+        {
+          "result": "Corollary 7.1",
+          "printed": "56",
+          "pdf": "56"
+        }
+      ]
+    },
+    "theory": {
+      "source": "OpenAI26H",
+      "locations": [
+        {
+          "result": "Proposition 2.1; §2.3; Lemma 2.7",
+          "printed": "7, 11–12",
+          "pdf": "7, 11–12"
+        }
+      ]
+    },
+    "tests": {
+      "source": "OpenAI26H",
+      "locations": [
+        {
+          "result": "§2.4",
+          "printed": "12–13",
+          "pdf": "12–13"
+        }
+      ]
+    },
+    "compactness": {
+      "source": "OpenAI26H",
+      "locations": [
+        {
+          "result": "Lemma 2.9",
+          "printed": "13–14",
+          "pdf": "13–14"
+        }
+      ]
+    },
+    "termination": {
+      "source": "OpenAI26H",
+      "locations": [
+        {
+          "result": "Proof of Theorem 1.1",
+          "printed": "17",
+          "pdf": "17"
+        }
+      ]
+    },
+    "height-contradiction": {
+      "source": "OpenAI26H",
+      "locations": [
+        {
+          "result": "Proposition 2.12; (2.21)–(2.28)",
+          "printed": "16–17",
+          "pdf": "16–17"
+        }
+      ]
+    },
+    "five-point": {
+      "source": "OpenAI26H",
+      "locations": [
+        {
+          "result": "Theorem 2.4; Corollary 2.5",
+          "printed": "9–10",
+          "pdf": "9–10"
+        }
+      ]
+    },
+    "branch": {
+      "source": "OpenAI26H",
+      "locations": [
+        {
+          "result": "Lemma 2.10; Proposition 2.11",
+          "printed": "14–15",
+          "pdf": "14–15"
+        }
+      ]
+    },
+    "local": {
+      "source": "OpenAI26H",
+      "locations": [
+        {
+          "result": "Proposition 2.2; Lemma 2.3",
+          "printed": "8–9",
+          "pdf": "8–9"
+        }
+      ]
+    },
+    "pole-input": {
+      "source": "OpenAI26H",
+      "locations": [
+        {
+          "result": "Proposition 2.8; Lemmas 3.1, 3.4, 3.6",
+          "printed": "12, 18–19, 23–26",
+          "pdf": "12, 18–19, 23–26"
+        }
+      ]
+    },
+    "height-input": {
+      "source": "OpenAI26H",
+      "locations": [
+        {
+          "result": "§4.7; Lemma 4.8; completion of Theorem 2.4",
+          "printed": "39, 42–44",
+          "pdf": "39, 42–44"
+        }
+      ]
+    },
+    "prime-input": {
+      "source": "OpenAI26H",
+      "locations": [
+        {
+          "result": "Lemma 6.1; Corollary 6.2",
+          "printed": "47–48",
+          "pdf": "47–48"
+        }
+      ]
+    },
+    "corollary-proof": {
+      "source": "OpenAI26H",
+      "locations": [
+        {
+          "result": "Proof of Corollary 7.1",
+          "printed": "56–57",
+          "pdf": "56–57"
+        }
+      ]
+    },
+    "normal-form": {
+      "source": "OpenAI26H",
+      "locations": [
+        {
+          "result": "§7, arithmetic-circuit conversion",
+          "printed": "57",
+          "pdf": "57"
+        }
+      ]
+    },
+    "pointwise": {
+      "source": "OpenAI26P",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "fontaine": {
+      "source": "OpenAI26F",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "pairing": {
+      "source": "PS99",
+      "locations": [
+        {
+          "result": "§1",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "dprm": {
+      "source": "Dav73",
+      "locations": [
+        {
+          "result": "Theorem 8.1",
+          "printed": "264",
+          "pdf": "33"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ],
+  "articleGuides": {
+    ".": {
+      "selfSource": "OpenAI26H",
+      "externalSources": [
+        "OpenAI26P",
+        "OpenAI26F",
+        "Dav73",
+        "PS99"
+      ],
+      "proofTargets": [
+        "main",
+        "height-contradiction",
+        "corollary"
+      ],
+      "mainResults": [
+        "main",
+        "corollary"
+      ],
+      "statements": {
+        "main": "theorem-1-1",
+        "height-contradiction": "proposition-2-12",
+        "corollary": "corollary-7-1"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "main",
+          "conclusion": "No rational-solvability algorithm",
+          "anchor": "proof-1-step-2"
+        },
+        {
+          "result": "corollary",
+          "conclusion": "H10(Q) has degree 0-prime",
+          "anchor": "proof-3-step-1"
+        },
+        {
+          "result": "corollary",
+          "conclusion": "Degree<=4 restriction has degree 0-prime",
+          "anchor": "proof-3-step-2"
+        },
+        {
+          "result": "corollary",
+          "conclusion": "Presented sum-of-squares list restriction has degree 0-prime",
+          "anchor": "proof-3-step-2"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "tests",
+          "purpose": {
+            "ja": "有限テストの実効性と証人変数の範囲。",
+            "en": "Effectivity of finite tests and the scope of witness variables."
+          }
+        },
+        {
+          "citation": "local",
+          "purpose": {
+            "ja": "共役比較が指数比の整性を先に与える箇所。",
+            "en": "Why the conjugate comparison first makes the index ratio integral."
+          }
+        },
+        {
+          "citation": "branch",
+          "purpose": {
+            "ja": "奇数付値と粗い付値の中心で試験枝を選ぶ。",
+            "en": "Select a tested branch using odd valuation and the center of a coarsening."
+          }
+        },
+        {
+          "citation": "height-contradiction",
+          "purpose": {
+            "ja": "同じ誤差δを全環要素へ使い、二次高さ増大と比較する。",
+            "en": "Use one error δ for all ring values and compare with quadratic height growth."
+          }
+        },
+        {
+          "citation": "pole-input",
+          "purpose": {
+            "ja": "存在条件の整数完全性と奇数極排除を分ける。",
+            "en": "Separate integer completeness from odd-pole exclusion."
+          }
+        },
+        {
+          "citation": "height-input",
+          "purpose": {
+            "ja": "モジュラー性・レベル・isogeny・底高さの接続。",
+            "en": "The modularity, level, isogeny and base-height connections."
+          }
+        },
+        {
+          "citation": "prime-input",
+          "purpose": {
+            "ja": "全整数に同時に働く局所証人のCRT構成。",
+            "en": "The CRT construction of local witnesses working for all integers."
+          }
+        },
+        {
+          "citation": "corollary-proof",
+          "purpose": {
+            "ja": "Turing帰着とmany-one帰着の出発点の違い。",
+            "en": "The different starting points of the Turing and many-one reductions."
+          }
+        }
+      ]
+    }
+  }
+}

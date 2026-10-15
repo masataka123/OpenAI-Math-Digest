@@ -1,0 +1,13 @@
+\node[card] (a) {\heading{1}{固定格子のKato類と有理divisibility}{Fixed-lattice Kato classes and rational divisibility}
+$u_x\in\Lambda[1/2],\qquad 2^{C_{\rm int}}u\in\mathcal O[G]$\\
+\Tx{CM成分は有理主予想を入力する}{For CM constituents, use the rational main conjecture}};
+\node[card,below=2.6cm of a] (b) {\heading{2}{群基底で整性を回収}{Recover integrality in the group basis}
+$\mathcal O\cap\Lambda[1/2]=\Lambda\quad\Longrightarrow\quad 2^{C_{\rm int}}u\in\Lambda[G]$};
+\flow a b {\Tx{指標別の有理性と一様整性を合わせる}{Combine characterwise rationality with uniform integrality}\\\Cite{binary}};
+\node[card,below=2.6cm of b] (c) {\heading{3}{基点と同じ有限桁を持つ非零頂点}{A nonzero vertex matches finitely many base digits}
+$b>2^M-1\quad\Longrightarrow\quad v(u_x(0)-u_0(0))\ge M-C_{\rm int}$\\
+$x\ne0,\qquad v(u_x(0))\le B+C_{\rm loc}$};
+\flow b c {\Tx{整係数の定数項へ二進合同を適用}{Apply binary congruences to the integral constant coefficient}\\\Cite{cyclo-proof}};
+\node[result,below=2.6cm of c] (d) {\heading{4}{基点の非消滅と付値上界}{Base nonvanishing and valuation bound}
+$L(E^{(h_0)},1)\ne0,\qquad D(h_0)\le B+C_E$};
+\flow c d {\Tx{$M-C_{\rm int}>B+C_{\rm loc}$ を固定して矛盾を得る}{Fix $M-C_{\rm int}>B+C_{\rm loc}$ and obtain a contradiction}\\\Cite{cyclo-transfer}};
