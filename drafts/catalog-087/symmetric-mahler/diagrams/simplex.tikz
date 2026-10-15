@@ -1,0 +1,18 @@
+\node[card] (a) {\heading{1}{lensの境界を一様座標化する}{Parametrize the lens boundary by a uniform coordinate}
+$F(e^{i\Theta})\overset{\rm law}=\epsilon\lambda(T)+iT,\quad T\sim\operatorname{Unif}[-1,1]$\\
+\Tx{$\epsilon$ は独立な一様符号、$g=F^{-1}$。}{$\epsilon$ is an independent fair sign; $g=F^{-1}$.}};
+\node[card,below=2.2cm of a] (b) {\heading{2}{高冪写像に孤立零点の質量を適用する}{Apply isolated-zero mass to the high-power map}
+$f_k=(g(b_jz)^k)_j,\qquad\sum_I M_{I,k}\ge(\pi k)^d/d!$\\
+\Tx{spanning性が零点と先頭項の非退化を保証する。}{Spanning controls the zero and the nonvanishing leading term.}};
+\flow a b {\Tx{lens内部のコンパクト部分準位集合を確認し、Stokes質量を使う。}{Verify compact sublevels inside the lens and use the Stokes mass bound.}\\[3pt]\Cite{lens}\quad\Cite{mass}};
+\node[card,below=2.2cm of b] (c) {\heading{3}{半径変換で境界確率へ集中させる}{Rescale radii to obtain boundary probabilities}
+$u_i=\rho_i^{1/k}e^{i\theta_i},\qquad \limsup_{k\to\infty}M_{I,k}/k^d\le\frac{\pi^d}{d!}P_I$\\
+$S=\sum_I P_I\ge1$};
+\flow b c {\Tx{$k^d$を相殺し、固定された有限測度上で上側Fatouを用いる。}{Cancel $k^d$ and apply upper Fatou on a fixed finite measure space.}\\[3pt]\Cite{boundary}};
+\node[card,below=2.2cm of c] (d) {\heading{4}{境界の零集合を除き、単体体積を加算する}{Remove boundary ties and sum simplex volumes}
+$t_I=B_IX,\qquad d!|\Sigma_X|=\sum_{I,\epsilon}|\det B_I|\,\mathbf1_{\rm feasible}\quad\Tx{a.e.}{a.e.}$\\
+$S=\dfrac{d!}{4^d}\int_A|\Sigma_X|\,dX,\qquad\Sigma_X\subset C=A^\circ$};
+\flow c d {\Tx{余分な境界一致は零測度。一意な最大点により単体内部は交わらない。}{Extra boundary equalities are null; unique maximizers make simplex interiors disjoint.}\\[3pt]\Cite{null}\quad\Cite{simplex}};
+\node[result,below=1.8cm of d] (e) {\heading{5}{下界と等号論証用の欠損を得る}{Obtain the bound and the deficit for equality}
+$P(A)\ge4^d/d!,\qquad 0\le\int_A(|C|-|\Sigma_X|)\,dX\le P(A)-4^d/d!$};
+\flow d e {\Tx{包含と $S\ge1$ を積分恒等式へ代入する。}{Insert containment and $S\ge1$ into the exact identity.}\\[3pt]\Cite{simplex}};

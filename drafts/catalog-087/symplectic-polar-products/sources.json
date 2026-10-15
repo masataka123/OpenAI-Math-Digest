@@ -1,0 +1,331 @@
+{
+  "order": 3,
+  "paperId": "symplectic-polar-products",
+  "title": "Symplectic Balls in Symmetric Polar Products",
+  "displayName": "Symplectic Balls in Symmetric Polar Products",
+  "version": "September 22, 2026",
+  "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "pdfPages": 19,
+  "sha256": "643930d71faeb8ba5aa5cda35465d20697f2955dce9a91ff729fb3ebd90c76ee",
+  "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Symplectic-Balls-in-Symmetric-Polar-Products-September-22-2026/paper.pdf",
+  "downloadUrl": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Symplectic-Balls-in-Symmetric-Polar-Products-September-22-2026/paper.pdf",
+  "draftDirectory": "drafts/catalog-087/symplectic-polar-products",
+  "existingArticle": null,
+  "worker": "gpt-6-astra",
+  "articleStatus": "assigned",
+  "catalogId": "087",
+  "authors": [
+    "OpenAI"
+  ],
+  "checkedOn": "2026-10-15",
+  "productionVersion": "1.4",
+  "checkedLocations": [
+    {
+      "printedPage": "1",
+      "pdfPage": 1
+    },
+    {
+      "printedPage": "2",
+      "pdfPage": 2
+    },
+    {
+      "printedPage": "3",
+      "pdfPage": 3
+    },
+    {
+      "printedPage": "4",
+      "pdfPage": 4
+    },
+    {
+      "printedPage": "5",
+      "pdfPage": 5
+    },
+    {
+      "printedPage": "6",
+      "pdfPage": 6
+    },
+    {
+      "printedPage": "7",
+      "pdfPage": 7
+    },
+    {
+      "printedPage": "8",
+      "pdfPage": 8
+    },
+    {
+      "printedPage": "9",
+      "pdfPage": 9
+    },
+    {
+      "printedPage": "10",
+      "pdfPage": 10
+    },
+    {
+      "printedPage": "11",
+      "pdfPage": 11
+    },
+    {
+      "printedPage": "12",
+      "pdfPage": 12
+    },
+    {
+      "printedPage": "13",
+      "pdfPage": 13
+    },
+    {
+      "printedPage": "14",
+      "pdfPage": 14
+    },
+    {
+      "printedPage": "15",
+      "pdfPage": 15
+    },
+    {
+      "printedPage": "16",
+      "pdfPage": 16
+    },
+    {
+      "printedPage": "17",
+      "pdfPage": 17
+    },
+    {
+      "printedPage": "18",
+      "pdfPage": 18
+    },
+    {
+      "printedPage": "19",
+      "pdfPage": 19
+    }
+  ],
+  "statements": [
+    {
+      "result": "Theorem 1.1",
+      "pages": "1",
+      "hypotheses": "n≥2; K compact convex, nonempty interior, K=−K",
+      "conclusions": [
+        "cG(int K × int K°)=4",
+        "smooth embedding of B^{2n}(c) for every 0<c<4"
+      ],
+      "checking": "statement and proof §§2–5 read"
+    },
+    {
+      "result": "Theorem 2.1",
+      "pages": "4",
+      "hypotheses": "n,m,k≥1; holomorphic f on open Ω containing 0; sole common zero 0; order at least k; all closed sublevels τ≤s<1 compact in Ω",
+      "conclusions": [
+        "balls of every capacity below πk in (V,dd^c(|z|²+τ))"
+      ],
+      "checking": "statement and proof pp.4–7 read"
+    },
+    {
+      "result": "Proposition 3.2",
+      "pages": "9",
+      "hypotheses": "F of Lemma3.1; k≥2; Jk signed horizontal primitive",
+      "conclusions": [
+        "smoothness",
+        "oddness in v",
+        "nonnegative stated derivative",
+        "uniform error epsilon_k→0 on all D"
+      ],
+      "checking": "statement and proof pp.9–12 read"
+    },
+    {
+      "result": "Corollary 5.3; Remark 5.4",
+      "pages": "16–17",
+      "hypotheses": "n≥1; origin-symmetric convex body",
+      "conclusions": [
+        "volume product ≥4^n/n!",
+        "cube sharpness example, no classification"
+      ],
+      "checking": "proof and example read"
+    },
+    {
+      "result": "Corollary 5.5",
+      "pages": "17",
+      "hypotheses": "n≥3; finite positive capacities; strict volume and pairwise inequalities",
+      "conclusions": [
+        "disjoint neighborhood embeddings of closed balls into U_K"
+      ],
+      "checking": "statement, proof and external Theorem1.1 statement/conventions read"
+    }
+  ],
+  "proofPassages": [
+    {
+      "pages": "3–7",
+      "content": "dc normalization; logarithmic slope; regularized maximum; compact support; complete Moser flow; radial pullback and inverse"
+    },
+    {
+      "pages": "7–12",
+      "content": "biholomorphic lens; horizontal radius parametrization; moving-endpoint error estimate and order of limits"
+    },
+    {
+      "pages": "12–14",
+      "content": "holomorphic tuple for finite strips, compact sublevels, global injectivity, polar support bound, cancelling scale factors"
+    },
+    {
+      "pages": "15–17",
+      "content": "finite polar approximation, arbitrary K, supporting cylinder, nonsqueezing use, volume and packing deductions"
+    }
+  ],
+  "externalSources": [
+    {
+      "id": "aako",
+      "displayName": "From symplectic measurements to the Mahler conjecture",
+      "title": "From symplectic measurements to the Mahler conjecture",
+      "authors": "Shiri Artstein-Avidan, Roman Karasev, Yaron Ostrover",
+      "version": "arXiv:1303.4197v2",
+      "sourceUrl": "https://arxiv.org/pdf/1303.4197v2",
+      "pdfPages": 17,
+      "sha256": "62780dbc433249bf91425fb1ed8fb10c717f1d4e71fb461e084e2629c0a9430c",
+      "checkedLocations": [
+        {
+          "printedPage": "14",
+          "pdfPage": 14
+        },
+        {
+          "printedPage": "15",
+          "pdfPage": 15
+        }
+      ]
+    },
+    {
+      "id": "gromov",
+      "displayName": "Pseudo holomorphic curves in symplectic manifolds",
+      "title": "Pseudo holomorphic curves in symplectic manifolds",
+      "authors": "Mikhael Gromov",
+      "version": "Inventiones Mathematicae 82 (1985), 307–347; published PDF",
+      "sourceUrl": "https://www.ihes.fr/~gromov/wp-content/uploads/2018/08/945.pdf",
+      "pdfPages": 41,
+      "sha256": "db8e3b07dc75fe2e029fd63bba359dd0b5c5c5b764fa6b7aea119d561a5125a6",
+      "checkedLocations": [
+        {
+          "printedPage": "310",
+          "pdfPage": 4
+        }
+      ]
+    },
+    {
+      "id": "gross",
+      "displayName": "A conformal Skorokhod embedding",
+      "title": "A conformal Skorokhod embedding",
+      "authors": "Renan Gross",
+      "version": "arXiv:1905.00852v1",
+      "sourceUrl": "https://arxiv.org/pdf/1905.00852v1",
+      "pdfPages": 11,
+      "sha256": "04647e41ba1ff4fee0fdfd1666132939b6a1870f652c2d45adf4b7a853c0a2f3",
+      "checkedLocations": [
+        {
+          "printedPage": "9",
+          "pdfPage": 9
+        }
+      ]
+    },
+    {
+      "id": "moser",
+      "displayName": "On the Volume Elements on a Manifold",
+      "title": "On the Volume Elements on a Manifold",
+      "authors": "Jürgen Moser",
+      "version": "Transactions of the American Mathematical Society 120 (1965), 286–294; published PDF",
+      "sourceUrl": "https://people.math.harvard.edu/~dafr/M392C-2018-MorseTheory/Readings/Moser.pdf",
+      "pdfPages": 9,
+      "sha256": "e28ec02d6b5f349d14699f9d8d83c20c8e75aed43af2041601df4795f25543bf",
+      "checkedLocations": [
+        {
+          "printedPage": "291",
+          "pdfPage": 6
+        },
+        {
+          "printedPage": "292",
+          "pdfPage": 7
+        },
+        {
+          "printedPage": "293",
+          "pdfPage": 8
+        }
+      ]
+    },
+    {
+      "id": "packings",
+      "displayName": "Symplectic Ball Packings in Higher Dimensions",
+      "title": "Symplectic Ball Packings in Higher Dimensions",
+      "authors": "OpenAI",
+      "version": "September 23, 2026; commit 1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Symplectic-Ball-Packings-in-Higher-Dimensions-September-23-2026/paper.pdf",
+      "pdfPages": 43,
+      "sha256": "54a390c7a58b2f003896a3ea5319b0e8376dbf69059b7c00645d0d55babdbdb2",
+      "checkedLocations": [
+        {
+          "printedPage": "2",
+          "pdfPage": 2
+        },
+        {
+          "printedPage": "4",
+          "pdfPage": 4
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "from": "aako",
+      "to": "Theorem1.1 p16",
+      "kind": "direct",
+      "role": "supporting-square cylinder",
+      "checking": "source statement/formula and local application checked; full external proof not verified"
+    },
+    {
+      "from": "gromov",
+      "to": "Theorem1.1 p16",
+      "kind": "direct",
+      "role": "nonsqueezing upper bound",
+      "checking": "source statement/formula and local application checked; full external proof not verified"
+    },
+    {
+      "from": "gross",
+      "to": "Lemma3.1 pp7–8",
+      "kind": "background",
+      "role": "rotated conformal coordinate; needed properties proved locally",
+      "checking": "source statement/formula and local application checked; full external proof not verified"
+    },
+    {
+      "from": "moser",
+      "to": "Theorem2.1 Step3 p6",
+      "kind": "direct",
+      "role": "deformation method; local compact-support version proved in manuscript",
+      "checking": "source statement/formula and local application checked; full external proof not verified"
+    },
+    {
+      "from": "packings",
+      "to": "Corollary5.5 p17",
+      "kind": "consequence",
+      "role": "sufficiency of ball packing with neighborhood convention",
+      "checking": "source statement/formula and local application checked; full external proof not verified"
+    }
+  ],
+  "catalogRelations": [
+    {
+      "paperId": "symmetric-mahler",
+      "kind": "background",
+      "location": "p.2; §3 p.7",
+      "role": "common lens construction; explicitly not an input from volume theorem or equality classification"
+    },
+    {
+      "paperId": "symmetric-mahler",
+      "kind": "alternative",
+      "location": "Corollary5.3 pp16–17",
+      "role": "same symmetric volume lower bound by symplectic route, without equality classification"
+    },
+    {
+      "paperId": "general-mahler",
+      "kind": "uninvestigated",
+      "role": "no direct input recorded in proof passages read; no assertion of exhaustive relationship check"
+    }
+  ],
+  "unresolved": [
+    "Full proofs of nonsqueezing and external ball-packing theorem not independently verified.",
+    "Equality classification is not a conclusion of this manuscript.",
+    "No claim of an embedding at capacity 4.",
+    "Independent gpt-6-astra content review received; scoped manuscript preview checks completed by headquarters. Stage2 site integration and booklet PDF checks remain pending."
+  ],
+  "priorWorkReuse": "No existing Sol drafts, interpretations, or reviews used. Official sources and shared rendering/citation tooling only."
+}

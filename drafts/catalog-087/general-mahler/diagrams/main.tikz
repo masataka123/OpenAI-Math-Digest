@@ -1,0 +1,18 @@
+\node[card] (a) {\heading{1}{凸体を正双対錐へ持ち上げる}{Lift the body to positively dual cones}
+$m=n+1,\quad D=C^*,\quad \langle U,V\rangle=m$\\
+$\chi_C(V)\chi_D(U)=\dfrac{(n!)^2}{m^m}|K|\,|(K-z_0)^\circ|$};
+\node[card,below=2.05cm of a] (b) {\heading{2}{射影平均・共分散を同時に選ぶ}{Balance projection means and covariance together}
+$\E X_z=a(z)U,\quad A=\int(\Phi I-P_z),\quad L=\sum_iG_iM_i$\\
+$\E A=0,\quad \lambda T^2+\mathbf C\circ T+\mathbf K=0$};
+\flow{a}{b}{\Tx{Moreau分解と固定点で非可換な射影場を正規化}{Moreau decomposition and a fixed point normalize the field}\\\Cite{projection}; \Cite{normalization}};
+\node[card,below=1.85cm of b] (c) {\heading{3}{層積分写像のJacobianを積へ比較}{Compare layer-map Jacobians with the product}
+$\dfrac1m\log(\chi_C(V)\chi_D(U))\ge-\mathcal E$};
+\flow{b}{c}{\Tx{平滑化・変数変換・Jensen不等式でentropy評価}{Smoothing, change of variables and Jensen give entropy}\\\Cite{entropy}};
+\node[card,below=2.05cm of c] (d) {\heading{4}{線形Gaussian場と正の欠損へ分離}{Separate a linear Gaussian field and positive defects}
+$\mathcal E\le \Delta_p-J_\Sigma(u)+.80\|[L,T]\|_2^2$\\
+$\hfill{}+1.8\tau T^2-\int(W-W_0)\,d\beta,\quad\beta\ge0$};
+\flow{c}{d}{\Tx{Hermite次数とthreshold比較で非線形誤差を評価}{Hermite degrees and threshold comparison control the error}\\\Cite{decomposition}; \Cite{errors}};
+\node[result,below=2.15cm of d] (e) {\heading{5}{区間分散で誤差を吸収し、体積へ戻す}{Absorb errors by interval variance and return to volume}
+$\mathcal E\le-.14\tau T^2-\int(W-W_0)\,d\beta\le0$\\
+$\chi_C(V)\chi_D(U)\ge1\quad\Longrightarrow\quad P(K)\ge\dfrac{m^m}{(n!)^2}$};
+\flow{d}{e}{\Tx{正規化による相殺と厳密なスカラー区間評価}{Normalization cancellation and strict scalar interval bounds}\\\Cite{scalar}; \Cite{linear}\\\Tx{切片積の換算}{Convert the section product}: \Cite{cone}};

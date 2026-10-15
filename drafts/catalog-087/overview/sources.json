@@ -1,0 +1,151 @@
+{
+  "catalogId": "087",
+  "paperId": "overview",
+  "title": "The Mahler conjectures and symplectic width",
+  "authors": "OpenAI",
+  "version": "Fixed Research Catalog commit 1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/overview.pdf",
+  "checkedOn": "2026-10-15",
+  "externalSources": [
+    {
+      "id": "symmetric-mahler",
+      "displayName": "The symmetric Mahler conjecture and its equality cases",
+      "authors": "OpenAI",
+      "version": "September 22, 2026",
+      "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-symmetric-Mahler-conjecture-and-its-equality-cases-September-22-2026/paper.pdf",
+      "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "sha256": "0560a02b890de6637a1e007f2d438e8dec93575b4e12a66a6313511348ddd6a6",
+      "pdfPages": 26,
+      "checkedLocations": [
+        {
+          "printedPage": "2",
+          "pdfPage": 2
+        },
+        {
+          "printedPage": "3",
+          "pdfPage": 3
+        },
+        {
+          "printedPage": "4",
+          "pdfPage": 4
+        },
+        {
+          "printedPage": "5",
+          "pdfPage": 5
+        }
+      ]
+    },
+    {
+      "id": "general-mahler",
+      "displayName": "The Mahler Conjecture for General Convex Bodies",
+      "authors": "OpenAI",
+      "version": "September 22, 2026",
+      "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Mahler-Conjecture-for-General-Convex-Bodies-September-22-2026/paper.pdf",
+      "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "sha256": "f2d35982e2e7dfe55474092a7db4c558419fb892b412bf122b20d43b51229eff",
+      "pdfPages": 72,
+      "checkedLocations": [
+        {
+          "printedPage": "1",
+          "pdfPage": 1
+        },
+        {
+          "printedPage": "2",
+          "pdfPage": 2
+        },
+        {
+          "printedPage": "3",
+          "pdfPage": 3
+        },
+        {
+          "printedPage": "4",
+          "pdfPage": 4
+        },
+        {
+          "printedPage": "40",
+          "pdfPage": 40
+        },
+        {
+          "printedPage": "41",
+          "pdfPage": 41
+        }
+      ]
+    },
+    {
+      "id": "symplectic-polar-products",
+      "displayName": "Symplectic Balls in Symmetric Polar Products",
+      "authors": "OpenAI",
+      "version": "September 22, 2026",
+      "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Symplectic-Balls-in-Symmetric-Polar-Products-September-22-2026/paper.pdf",
+      "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "sha256": "643930d71faeb8ba5aa5cda35465d20697f2955dce9a91ff729fb3ebd90c76ee",
+      "pdfPages": 19,
+      "checkedLocations": [
+        {
+          "printedPage": "1",
+          "pdfPage": 1
+        },
+        {
+          "printedPage": "2",
+          "pdfPage": 2
+        },
+        {
+          "printedPage": "16",
+          "pdfPage": 16
+        },
+        {
+          "printedPage": "17",
+          "pdfPage": 17
+        }
+      ]
+    },
+    {
+      "id": "packings",
+      "displayName": "Symplectic Ball Packings in Higher Dimensions",
+      "title": "Symplectic Ball Packings in Higher Dimensions",
+      "authors": "OpenAI",
+      "version": "September 23, 2026; commit 1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Symplectic-Ball-Packings-in-Higher-Dimensions-September-23-2026/paper.pdf",
+      "pdfPages": 43,
+      "sha256": "54a390c7a58b2f003896a3ea5319b0e8376dbf69059b7c00645d0d55babdbdb2",
+      "checkedLocations": [
+        {
+          "printedPage": "2",
+          "pdfPage": 2
+        },
+        {
+          "printedPage": "4",
+          "pdfPage": 4
+        }
+      ]
+    }
+  ],
+  "proofPassages": [
+    {
+      "paperId": "symmetric-mahler",
+      "pages": "2–5",
+      "scope": "main statements; proof overview; functional and entropy deductions; full proof interfaces checked by article writer/peer reviewer"
+    },
+    {
+      "paperId": "general-mahler",
+      "pages": "1–4, 40–41",
+      "scope": "main statements and method; geometric-to-functional and entropy consequences; full proof scope in article record"
+    },
+    {
+      "paperId": "symplectic-polar-products",
+      "pages": "1–17",
+      "scope": "writer read full principal proof; catalogue distinguishes lower embedding, upper obstruction and volume/packing deductions"
+    }
+  ],
+  "unresolved": [
+    "No complete independent proof verification.",
+    "General paper certificate/interpolation/tail bounds not fully recomputed.",
+    "Article cross-checks and visual comparison recorded separately by headquarters."
+  ],
+  "production": {
+    "writer": "gpt-6-astra",
+    "task": "Catalogue guide after completed symplectic initial draft",
+    "priorSolReuse": false
+  }
+}

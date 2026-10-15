@@ -1,0 +1,12 @@
+\node[card] (a) {\heading{1}{すべての次元の対称幾何不等式を入力する}{Use the symmetric geometric inequality in every dimension}
+$P(K)\ge4^N/N!$\quad\Tx{すべての $N\ge1$}{for every $N\ge1$},\quad $f=e^{-\varphi}$\ \Tx{は偶}{is even}};
+\node[card,below=2.2cm of a] (b) {\heading{2}{補助体の次元を増やして関数の積へ移す}{Increase the auxiliary dimension to obtain a functional product}
+$N=n+m,\ m\to\infty,\qquad\mathcal P(f)=\left(\int f\right)\inf_z\int f^z\ge4^n$};
+\flow a b {\Tx{偶なlog-concave関数への含意は全次元の仮定を必要とする。}{The implication for even log-concave functions requires the all-dimensional hypothesis.}\\[3pt]\Cite{fm}\\[3pt]\Cite{fm-limit}};
+\node[result,below=2.0cm of b] (c) {\heading{3}{原点の極関数をLegendre変換と同定する}{Identify the polar function at zero with the Legendre transform}
+$f^0=e^{-\varphi^*},\qquad\left(\int e^{-\varphi}\right)\left(\int e^{-\varphi^*}\right)\ge\mathcal P(f)\ge4^n$\\
+\Tx{第2積分が無限の場合も含む。}{The second integral is allowed to be infinite.}};
+\flow b c {\Tx{$z=0$の積は平行移動最小値以上。$\varphi=\|x\|_1$で鋭さを確認する。}{The product at $z=0$ dominates the translation infimum; $\varphi=\|x\|_1$ proves sharpness.}\\[3pt]\Cite{functional}};
+\node[card,below=1.9cm of c] (d) {\heading{}{等号分類の範囲}{Scope of equality classification}
+\Tx{凸体のHanner分類から、一般の等号ポテンシャルの分類は導かない。}{The Hanner classification of bodies does not classify all equality potentials.}};
+\flow c d {\Tx{補助体の極限は関数の等号を分類する議論ではない。}{The auxiliary-body limit is not an equality-classification argument for functions.}\\[3pt]\Cite{fm-equality}};

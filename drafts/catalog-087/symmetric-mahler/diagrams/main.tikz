@@ -1,0 +1,17 @@
+\node[card] (a) {\heading{1}{原点を固定し、対称凸体を帯で近似}{Fix the origin and approximate by strip bodies}
+$K=-K\subset\mathbb R^n,\ n\ge1,\qquad Q=K^\circ$};
+\node[card,below=2.1cm of a] (b) {\heading{2}{正則質量を単体積分へ変換する}{Convert holomorphic mass to a simplex integral}
+$1\le S=\dfrac{d!}{4^d}\int_A|\Sigma_X|\,dX\le\dfrac{d!}{4^d}P(A)$\quad $\Longrightarrow\ P(K)\ge4^n/n!$};
+\flow a b {\Tx{一様境界座標が恒等式を与え、極体の近似で極限を取る。}{The uniform boundary coordinate gives the identity; polar approximation passes to the limit.}\\[3pt]\Cite{simplex}\quad\Cite{approx}};
+\node[card,below=2.1cm of b] (c) {\heading{3}{等号を仮定し、1次元持ち上げる}{Assume equality and lift by one dimension}
+$P(K)=4^n/n!,\quad B=K\oplus_1[-1,1],\quad B^\circ=Q\times[-1,1]$\\
+\Tx{欠損消失から各 $X,\xi$ に共通witnessを得る。}{Vanishing deficit supplies a common witness for each $X,\xi$.}};
+\flow b c {\Tx{直和の体積式が等号を保ち、積近傍とコンパクト性を使える。}{The sum-volume formula preserves equality; product neighborhoods and compactness apply.}\\[3pt]\Cite{deficit}\quad\Cite{witness}};
+\node[card,below=2.1cm of c] (d) {\heading{4}{端点費用からmedian、3球交差性、分類へ}{From endpoint costs to medians, three balls and classification}
+$(\mathbb R^n,p_Q):\ \text{\Tx{全3点にmedian}{every triple has a median}}\quad\Longrightarrow\quad Q=TH$\\
+$K=Q^\circ=T^{-T}H^\circ:\ \text{\Tx{線形Hanner体}{a linear Hanner body}}$};
+\flow c d {\Tx{端点漸近と凸分離がmedianを与え、実有限次元分類を適用する。}{Endpoint scaling and separation give medians; apply real finite-dimensional classification.}\\[3pt]\Cite{median}\quad\Cite{balls}\\[3pt]\Cite{hl}};
+\node[result,below=2.1cm of d] (e) {\heading{5}{逆向きは区間からの再帰構成}{The converse follows by recursion from intervals}
+$P(A\oplus_s A')=\binom{k+l}{k}^{-1}P(A)P(A'),\qquad s\in\{1,\infty\}$\\
+$P(K)=4^n/n!\quad\Longleftrightarrow\quad K\ \text{\Tx{は線形Hanner体}{is a linear Hanner body}}$};
+\flow d e {\Tx{区間の積4、極性閉性、線形不変性で全Hanner体の達成を示す。}{Product 4 for intervals, polar closure and linear invariance give attainment by all Hanner bodies.}\\[3pt]\Cite{sums}};

@@ -1,0 +1,16 @@
+\node[card] (a) {\heading{1}{消滅次数を対数傾きへ}{Turn vanishing order into logarithmic slope}
+$0<a<k,\quad a/k<b<1,\quad a<\mu<bk$\\
+$H=\chi(\log\tau)\le bk\log|z|^2+C,\quad H=\tau$\ \Tx{境界側}{near the outer region}};
+\node[card,below=1.8cm of a] (b) {\heading{2}{特異点のみを置換}{Replace only the singularity}
+$P_\delta=\mu\log(|z|^2+\delta)-M,\quad\widetilde H=\operatorname{rmax}(H,P_\delta)$\\
+$\widetilde H=P_\delta\text{ on }B_{r_1},\quad\operatorname{supp}(\widetilde H-\tau)\Subset V$};
+\flow a b {\Tx{$\mu<bk$で内側を支配；固定した$r_1$の後で$\delta$を選ぶ}{Use $\mu<bk$ for inner domination; choose $\delta$ after fixing $r_1$}\\\Cite{smoothing}};
+\node[card,below=2.6cm of b] (c) {\heading{3}{コンパクト台の流で形式を輸送}{Transport forms by a compactly supported flow}
+$\omega_s=dd^c(|z|^2+(1-s)\tau+s\widetilde H)$\\
+$\iota_{Y_s}\omega_s=-d^c(\widetilde H-\tau),\quad\phi_1^*\omega_1=\omega$};
+\flow b c {\Tx{固定コンパクト台が非コンパクト領域でも流の存在を保証}{Fixed compact support ensures existence of the flow on the noncompact domain}\\\Cite{moser}\\\Cite{transport}};
+\node[result,below=1.8cm of c] (d) {\heading{4}{放射状モデルの球を戻す}{Pull back the ball in the radial model}
+$R(z)=\sqrt{1+\mu/(|z|^2+\delta)}\,z,\quad R^*\omega_0=\omega_1$\\
+$\pi\bigl(r_1^2+\mu r_1^2/(r_1^2+\delta)\bigr)>\pi a$\\
+$\phi_1^{-1}\circ\iota\circ R^{-1}:B^{2n}(\pi a)\hookrightarrow(V,\omega)$};
+\flow c d {\Tx{放射状座標の単調性と形式の直接計算}{Use radial monotonicity and the explicit pullback identity}\\\Cite{transport}};

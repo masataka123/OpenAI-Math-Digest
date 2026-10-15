@@ -1,0 +1,15 @@
+\node[card] (a) {\heading{1}{水平sliceを半径で測る}{Parametrize a horizontal slice by radius}
+$F(w)=i\psi(iw),\quad g=F^{-1},\quad F(ir)=iT(r)$\\
+$r_0=T^{-1}(|t|),\quad R=|g(v+it)|,\quad A=\Re(wF'(w))>0$};
+\node[card,below=1.8cm of a] (b) {\heading{2}{主要項$\pi/4$を取り出す}{Extract the leading coefficient $\pi/4$}
+$\displaystyle J_k(v,t)/k=k\int_{r_0}^R\frac{r^{2k-1}}A\,dr$\\[3pt]
+$\displaystyle 1/A=\pi/2+(1/A-\pi/2)$};
+\flow a b {\Tx{$|g'|^2dv=(r/A)dr$で変数変換；回転のみで尺度を保持}{Change variables using $|g'|^2dv=(r/A)dr$; rotation preserves the scale}\\\Cite{gross}\quad\Cite{radial}};
+\node[card,below=1.8cm of b] (c) {\heading{3}{動く端点を一様に制御}{Control the moving endpoint uniformly}
+$r_a=\max(r_0,r_*),\quad L_*=\inf_{r\ge r_*}T'(r)\to\infty$\\
+$\displaystyle k\int_{r_a}^1r^{2k-1}\sqrt{\frac{1-r}{r-r_a}}\,dr\le1+\pi/e$};
+\flow b c {\Tx{先端の損失を$T(r)-|t|\ge L_*(r-r_a)$で抑える}{Bound the tip loss using $T(r)-|t|\ge L_*(r-r_a)$}\\\Cite{uniform}};
+\node[result,below=1.8cm of c] (d) {\heading{4}{全ての高さで誤差を消す}{Make the error vanish at every height}
+$\displaystyle \frac{|J_k|}k-\frac\pi4|g|^{2k}\le C_*kr_*^{2k-2}+\frac{C_0(1+\pi/e)}{\sqrt{L_*}}$\\[4pt]
+$\displaystyle |J_k|/k\le(\pi/4)|g|^{2k}+\epsilon_k,\quad\epsilon_k\to0$};
+\flow c d {\Tx{先に$r_*\uparrow1$、次に固定$r_*$で$k\to\infty$}{First choose $r_*$ close to 1; then let $k\to\infty$ at fixed $r_*$}\\\Cite{uniform}};

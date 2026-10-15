@@ -1,0 +1,11 @@
+\node[card] (a) {\heading{1}{有限個の厳密な余裕を確保}{Retain strict slack in finitely many inequalities}
+$n\ge3,\quad\sum_i R_i^n<4^n,\quad R_i+R_j<4$\\
+$\exists c<4:\quad\sum_iR_i^n<c^n,\quad R_i+R_j<c$};
+\node[card,below=1.8cm of a] (b) {\heading{2}{閉球を開球内へ充填}{Pack closed balls into an open ball}
+$\bigsqcup_i\overline B^{2n}(R_i)\hookrightarrow B^{2n}(c)$\\
+\Tx{閉球の開近傍上で定義された埋込み}{Embeddings defined on open neighborhoods of the closed balls}};
+\flow a b {\Tx{高次元球充填の十分性と近傍規約を使用}{Use higher-dimensional packing sufficiency and its neighborhood convention}\\\Cite{packings-input}};
+\node[result,below=1.8cm of b] (c) {\heading{3}{近傍を縮めて極体との積へ合成}{Shrink neighborhoods and compose into the polar product}
+$B^{2n}(c)\hookrightarrow U_K$\\
+\Tx{各近傍の像は互いに交わらず、$U_K$内にある}{The neighborhood images are disjoint and contained in $U_K$}};
+\flow b c {\Tx{閉球の像のコンパクト性で近傍を選択；主定理と合成}{Use compact images to shrink neighborhoods; compose with Theorem 1.1}\\\Cite{packing}\quad\Cite{main}};

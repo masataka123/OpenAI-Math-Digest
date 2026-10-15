@@ -1,0 +1,15 @@
+\node[card] (a) {\heading{1}{内部と閉体の体積を同定}{Identify interior and closed-body volumes}
+$tC\subset\operatorname{int}C\ (0<t<1),\quad t\uparrow1$\\
+$\operatorname{vol}_{2n}(U_K)=\operatorname{vol}_n(K)\operatorname{vol}_n(K^\circ)$};
+\node[card,below=1.8cm of a] (b) {\heading{2}{各容量の球で体積を下から評価}{Bound the volume below with each ball}
+$n\ge2,\quad0<c<4:\quad B^{2n}(c)\hookrightarrow U_K$\\
+$c^n/n!\le\operatorname{vol}_{2n}(U_K)$};
+\flow a b {\Tx{主定理の埋込みは$\omega_0^n/n!$を保存}{The embedding in the main theorem preserves $\omega_0^n/n!$}\\\Cite{main}\quad\Cite{volume}};
+\node[result,below=1.8cm of b] (c) {\heading{3}{容量の数値極限と一次元}{Take the numerical capacity limit; include dimension one}
+$\operatorname{vol}_n(K)\operatorname{vol}_n(K^\circ)\ge4^n/n!$\\
+$n=1:\quad[-a,a]\text{ and }[-a^{-1},a^{-1}]\ \Longrightarrow\ 4$};
+\flow b c {\Tx{$c\uparrow4$；容量4の埋込みは不要。一次元は直接計算}{Let $c\uparrow4$; no capacity-4 embedding is needed. Compute $n=1$ directly}\\\Cite{volume}};
+\node[card,below=1.8cm of c] (d) {\heading{4}{鋭さの例を確認}{Check the sharp example}
+$\operatorname{vol}([-1,1]^n)=2^n,\quad\operatorname{vol}(\{\sum|p_j|\le1\})=2^n/n!$\\
+\Tx{等号例であって、全等号例の分類ではない}{An equality example, not a classification of every equality case}};
+\flow c d {\Tx{極体を$2^n$個の単体へ分ける}{Decompose the polar into $2^n$ simplices}\\\Cite{volume}};

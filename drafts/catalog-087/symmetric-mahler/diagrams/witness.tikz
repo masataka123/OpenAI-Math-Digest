@@ -1,0 +1,15 @@
+\node[card] (a) {\heading{1}{等号を保って持ち上げ、内接多面体で近似する}{Lift while preserving equality and use inner polytopes}
+$B=K\oplus_1[-1,1],\ C=Q\times[-1,1],\quad P(B)=4^d/d!$\\
+$C_j=Q_j\times[-1,1],\ B_j=C_j^\circ,\quad D_j=\int_{B_j}(|C_j|-|\Sigma_{j,X}|)dX\to0$};
+\node[card,below=2.0cm of a] (b) {\heading{2}{所定の点と方向を積近傍で捕まえる}{Capture each prescribed point and direction}
+$X\in\operatorname{int}B,\ e\in\partial C,\qquad D_{j_k}<|U_k||V_k|$\\
+$X_k\to X,\ e_k\to e,\quad e_k\in\Sigma_{j_k,X_k}$};
+\flow a b {\Tx{全 $Z\in U_k$ で $V_k$ を避けるなら欠損積分が大きすぎる。}{Missing $V_k$ for every $Z\in U_k$ would force too large an integrated deficit.}\\[3pt]\Cite{deficit}\quad\Cite{compact}};
+\node[card,below=2.1cm of b] (c) {\heading{3}{同じwitnessを有界に保ち、退化極限を許す}{Bound a common witness and allow degenerate limits}
+$Y_k\in\lambda(0)B_{j_k},\quad c_{ik}\to c_i,\ Y_k\to Y,\ \theta_{ik}\to\theta_i$\\
+$|h\cdot Y|\le\lambda(h\cdot X)\ (h\in C),\quad c_i\cdot Y=\lambda(c_i\cdot X)$};
+\flow b c {\Tx{凹性で頂点の制約を凸包へ延長する。基底の極限で独立性を要求しない。}{Concavity extends vertex constraints to their hull; limiting rows need not stay independent.}\\[3pt]\Cite{compact}};
+\node[result,below=2.1cm of c] (d) {\heading{4}{境界gaugeで重みを固定し、全表示と比較する}{Fix the total weight by the boundary gauge and compare all representations}
+$e=\xi/T,\quad \sum_i\theta_i=1,\quad\alpha_i=T\theta_i$\\
+$\displaystyle\sum_i\alpha_i\lambda(c_i\cdot X)=\xi\cdot Y\le\sum_j\beta_j\lambda(h_j\cdot X)$};
+\flow c d {\Tx{$1=p_C(e)\le\sum\theta_i\le1$。共通 $Y$ が任意の競合表示に使える。}{Use $1=p_C(e)\le\sum\theta_i\le1$; the same $Y$ works against every competitor.}\\[3pt]\Cite{witness}};

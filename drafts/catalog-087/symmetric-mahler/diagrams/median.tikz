@@ -1,0 +1,16 @@
+\node[card] (a) {\heading{1}{3点の距離を2符号の重みに変換する}{Convert three distances into two sign weights}
+$\|\cdot\|=p_Q,\ p_1=\|x\|,\ p_2=\|y\|,\ p=\|x-y\|$\\
+$s=p_1+p_2,\ a=p_1-p_2,\quad A_\pm=(p\pm a)/2,\ c=(s-p)/2$};
+\node[card,below=2.0cm of a] (b) {\heading{2}{頂点へ近づけて最適表示の費用を正規化する}{Approach the apex and normalize the optimal cost}
+$X_\delta=(\delta u,1-\delta),\ u\in\operatorname{int}K,\quad\xi=(x-y,a)$\\
+$\lambda(1-\delta t)/\lambda(1-\delta)\to t$\\\Tx{正のコンパクト区間上一様}{uniformly on compact positive intervals}};
+\flow a b {\Tx{Proposition 7.1の全重みは $p$。端点漸近は表示の変動に一様に対応する。}{Proposition 7.1 gives total weight $p$; endpoint scaling handles varying representations uniformly.}\\[3pt]\Cite{witness}\quad\Cite{endpoint}};
+\node[card,below=2.2cm of b] (c) {\heading{3}{2項の競合表示と比較して支持関数を評価する}{Compare with a two-term representation to bound a support function}
+$D_0=\{r_+-r_-:r_++r_-=x-y,\ \|r_\pm\|\le A_\pm\}$\\
+$\langle x+y,u\rangle\le h_{D_0}(u)+s-p$};
+\flow b c {\Tx{競合表示 $p_1(x/p_1,1)+p_2(-y/p_2,-1)$ の費用を上界に使う。}{Use the cost of the competitor $p_1(x/p_1,1)+p_2(-y/p_2,-1)$ as an upper bound.}\\[3pt]\Cite{endpoint-cost}};
+\node[result,below=2.2cm of c] (d) {\heading{4}{凸分離と三角不等式でmedianを得る}{Use separation and triangle inequalities to obtain a median}
+$x+y\in D_0+(s-p)Q,\qquad m=x-r_+=y+r_-$\\
+$\|m\|\le c,\quad\|x-m\|\le A_+,\quad\|y-m\|\le A_-$\\
+\Tx{3組すべてで距離が加法的。$c=0$、$A_\pm=0$も含む。}{Distances are additive for all three pairs, including $c=0$ or $A_\pm=0$.}};
+\flow c d {\Tx{支持関数を全方向へ斉次化する。各距離上界の和は元の距離に等しい。}{Homogenize the support bound to every direction; the upper bounds sum to the original distances.}\\[3pt]\Cite{median}};

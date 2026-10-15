@@ -1,0 +1,22 @@
+\node[card] (a) {\heading{1}{有限stripを正則関数で記述}{Encode finite strips holomorphically}
+$n\ge2,\quad\operatorname{span}_{\mathbb R}\{b_j\}=\mathbb R^n$\\
+$K=\{x:|b_j\cdot x|\le1\},\quad f_j=g(b_j\cdot z)^k,\quad\tau=\sum_j|f_j|^2$\\
+$V=\{\tau<1\},\quad \omega=dd^c(|z|^2+\tau)$};
+\node[card,below=2.0cm of a] (b) {\heading{2}{球の供給と運動量の制御}{Supply a ball and control momentum}
+$B^{2n}(d)\hookrightarrow(V,\omega)\ (d<\pi k)$\\
+$\Phi_k(z)=(x,-u-\sum_jJ_k(b_j\cdot u,b_j\cdot x)b_j)$\\
+$\Phi_k^*\omega_0=\omega,\quad h_K(p)/k\le C_K/k+(\pi/4)\tau+m\epsilon_k$};
+\flow a b {\Tx{単独零点・コンパクトsublevelと、一様slice評価を合流}{Combine the isolated zero and compact sublevels with the uniform slice bound}\\\Cite{holomorphic}\quad\Cite{slice}};
+\node[card,below=2.0cm of b] (c) {\heading{3}{二つの拡大率を相殺}{Cancel the two conformal factors}
+$S=(1+\eta)\pi k/4,\quad (1+\eta)c<4\ \Longrightarrow\ Sc<\pi k$\\
+$D_{\sqrt S}(z)=\sqrt S z,\quad L_S(q,p)=(q,p/S)$\\
+$L_S\circ\Phi_k\circ E\circ D_{\sqrt S}:B^{2n}(c)\hookrightarrow U_K$};
+\flow b c {\Tx{水平単調性で大域単射、支持関数で像を極体の拡大に収める}{Horizontal monotonicity gives injectivity; the support function bounds the image}\\\Cite{realization}\\\Cite{scale}};
+\node[result,below=1.9cm of c] (d) {\heading{4}{任意の凸体で下界を得る}{Obtain the lower bound for every body}
+$K\subset K'\subset\lambda K,\quad (K')^\circ\subset K^\circ,\quad \lambda c<4$\\
+$B^{2n}(c)\hookrightarrow U_K\quad(0<c<4),\qquad c_G(U_K)\ge4$};
+\flow c d {\Tx{極体の有限近似後、源の$\sqrt\lambda$倍と位置の$1/\lambda$倍}{After finite polar approximation, dilate the source by $\sqrt\lambda$ and position by $1/\lambda$}\\\Cite{approximation}};
+\node[result,below=2.2cm of d] (e) {\heading{5}{独立な円柱障害と合わせる}{Combine with the independent cylinder obstruction}
+$U_K\hookrightarrow(-1,1)^2\times\mathbb R^{2n-2}\simeq B^2(4)\times\mathbb R^{2n-2}$\\
+$c_G(U_K)\le4\quad\Longrightarrow\quad c_G(U_K)=4$};
+\flow d e {\Tx{支持する共役座標と面積保存写像；nonsqueezingを適用}{Supporting conjugate coordinates and an area-preserving map; apply nonsqueezing}\\\Cite{aako}\\\Cite{gromov}};

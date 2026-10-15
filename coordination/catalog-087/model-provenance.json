@@ -1,0 +1,64 @@
+{
+  "requestedModel": "gpt-6-astra",
+  "assignments": [
+    {
+      "task": "/root/symmetric",
+      "model": "gpt-6-astra",
+      "forkTurns": "none",
+      "role": "article writer and self-check"
+    },
+    {
+      "task": "/root/general",
+      "model": "gpt-6-astra",
+      "forkTurns": "none",
+      "role": "article writer and self-check"
+    },
+    {
+      "task": "/root/symplectic",
+      "model": "gpt-6-astra",
+      "forkTurns": "none",
+      "role": "article writer and self-check"
+    },
+    {
+      "task": "/root/symplectic",
+      "model": "gpt-6-astra",
+      "role": "catalog overview writer after article draft"
+    }
+  ],
+  "existingSolContentReused": false,
+  "allowedReuse": [
+    "official originals",
+    "shared rendering/citation tooling",
+    "specified format exemplars"
+  ],
+  "reviewAssignments": [
+    {
+      "reviewer": "/root/symmetric",
+      "model": "gpt-6-astra",
+      "paperId": "general-mahler",
+      "status": "completed; findings resolved",
+      "record": "reviews/general-mahler.md"
+    },
+    {
+      "reviewer": "/root/general",
+      "model": "gpt-6-astra",
+      "paperId": "symplectic-polar-products",
+      "status": "completed; findings resolved",
+      "record": "reviews/symplectic-polar-products.md"
+    },
+    {
+      "reviewer": "/root/symplectic",
+      "model": "gpt-6-astra",
+      "paperId": "symmetric-mahler",
+      "status": "completed; findings resolved",
+      "record": "reviews/symmetric-mahler.md"
+    },
+    {
+      "reviewer": "/root/general",
+      "model": "gpt-6-astra",
+      "paperId": "overview",
+      "status": "completed; findings resolved",
+      "record": "reviews/overview.md"
+    }
+  ]
+}

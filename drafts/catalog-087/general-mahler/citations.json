@@ -1,0 +1,496 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "author-key",
+  "catalogId": "087",
+  "sources": {
+    "P": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "displayName": "The Mahler Conjecture for General Convex Bodies",
+      "pagination": "same"
+    },
+    "Kla18": {
+      "recordFile": "sources.json",
+      "recordId": "Kla18",
+      "guideRole": {
+        "ja": "錐のLaplace積への対応。本稿Lemma 2.1で符号・階乗を再計算",
+        "en": "Cone/Laplace correspondence, recalculated with signs and factorials in Lemma 2.1"
+      }
+    },
+    "Sol19": {
+      "recordFile": "sources.json",
+      "recordId": "Sol19",
+      "guideRole": {
+        "ja": "Moreau分解。本稿Lemma 3.1では正双対の符号で再証明",
+        "en": "Moreau decomposition, reproved with positive duality in Lemma 3.1"
+      }
+    },
+    "Cha13": {
+      "recordFile": "sources.json",
+      "recordId": "Cha13",
+      "guideRole": {
+        "ja": "平方根の作用素単調性により共分散更新をspectral box内に保つ",
+        "en": "Operator monotonicity of square roots keeps the covariance update in its spectral box"
+      }
+    },
+    "HP02": {
+      "recordFile": "sources.json",
+      "recordId": "HP02",
+      "guideRole": {
+        "ja": "Gaussian covarianceの半群表示。本稿Lemma 5.1でHermite展開による再証明",
+        "en": "Semigroup covariance representation, reproved by Hermite expansion in Lemma 5.1"
+      }
+    },
+    "Nof17": {
+      "recordFile": "sources.json",
+      "recordId": "Nof17",
+      "guideRole": {
+        "ja": "対称行列関数の差商微分公式を固有値間の区間平均に変換",
+        "en": "Divided-difference differentiation of symmetric matrix functions gives interval averages between eigenvalues"
+      }
+    },
+    "FM08": {
+      "recordFile": "sources.json",
+      "recordId": "FM08",
+      "guideRole": {
+        "ja": "全次元の幾何不等式から一般log-concave関数の積下界を導く",
+        "en": "All-dimensional geometric Mahler implies the functional lower bound for general log-concave functions"
+      }
+    },
+    "FGZ21": {
+      "recordFile": "sources.json",
+      "recordId": "FGZ21",
+      "guideRole": {
+        "ja": "Gozlanのfunctional inverse Santalóとentropy–transportの同値を使用",
+        "en": "Gozlan’s equivalence of functional inverse Santaló and entropy–transport inequalities"
+      }
+    },
+    "CEK15": {
+      "recordFile": "sources.json",
+      "recordId": "CEK15",
+      "guideRole": {
+        "ja": "編集補足：moment measureの有限一次モーメントとentropyの有限性を説明（原稿§8.2の明示引用ではない）",
+        "en": "Editorial supplement for finite moment-measure first moments and entropy; not an explicit citation in manuscript §8.2"
+      }
+    }
+  },
+  "citations": {
+    "main": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "functional": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Corollary 1.2",
+          "printed": "4",
+          "pdf": "4"
+        }
+      ]
+    },
+    "transport": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Corollary 8.1",
+          "printed": "41",
+          "pdf": "41"
+        }
+      ]
+    },
+    "center": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Section 2.1",
+          "printed": "5–6",
+          "pdf": "5–6"
+        }
+      ]
+    },
+    "cone": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 2.1",
+          "printed": "6–7",
+          "pdf": "6–7"
+        }
+      ]
+    },
+    "scalar": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 2.3",
+          "printed": "8",
+          "pdf": "8"
+        }
+      ]
+    },
+    "projection": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 3.1",
+          "printed": "9–10",
+          "pdf": "9–10"
+        }
+      ]
+    },
+    "normalization": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 3.4",
+          "printed": "12–14",
+          "pdf": "12–14"
+        }
+      ]
+    },
+    "field": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Equation (7)",
+          "printed": "11",
+          "pdf": "11"
+        }
+      ]
+    },
+    "entropy": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 4.3; Equation (11)",
+          "printed": "19–20",
+          "pdf": "19–20"
+        }
+      ]
+    },
+    "covariance": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 5.1",
+          "printed": "20–21",
+          "pdf": "20–21"
+        }
+      ]
+    },
+    "threshold": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Section 5.3; Lemma 5.4",
+          "printed": "23–24",
+          "pdf": "23–24"
+        }
+      ]
+    },
+    "decomposition": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 5.7",
+          "printed": "26–27",
+          "pdf": "26–27"
+        }
+      ]
+    },
+    "errors": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Section 6.5; Equation (23)",
+          "printed": "34",
+          "pdf": "34"
+        }
+      ]
+    },
+    "spectral": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 7.1",
+          "printed": "35–36",
+          "pdf": "35–36"
+        }
+      ]
+    },
+    "linear": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 7.2",
+          "printed": "36–39",
+          "pdf": "36–39"
+        }
+      ]
+    },
+    "rigidity": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Section 7.3",
+          "printed": "39–40",
+          "pdf": "39–40"
+        }
+      ]
+    },
+    "func-proof": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Section 8.1",
+          "printed": "40–41",
+          "pdf": "40–41"
+        }
+      ]
+    },
+    "et-proof": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Section 8.2",
+          "printed": "41",
+          "pdf": "41"
+        }
+      ]
+    },
+    "appendices": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Appendix A.2; Proposition B.1",
+          "printed": "43–45, 54–55",
+          "pdf": "43–45, 54–55"
+        }
+      ]
+    },
+    "klartag": {
+      "source": "Kla18",
+      "locations": [
+        {
+          "result": "Lemma 2.1; Corollary 4.1",
+          "printed": "6–7, 15",
+          "pdf": "6–7, 15"
+        }
+      ]
+    },
+    "moreau": {
+      "source": "Sol19",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "sqrt": {
+      "source": "Cha13",
+      "locations": [
+        {
+          "result": "Theorem 2.3",
+          "printed": "4",
+          "pdf": "4"
+        }
+      ]
+    },
+    "hp": {
+      "source": "HP02",
+      "locations": [
+        {
+          "result": "Proposition 2.1, Equation (2.4)",
+          "printed": "3",
+          "pdf": "3"
+        }
+      ]
+    },
+    "dk": {
+      "source": "Nof17",
+      "locations": [
+        {
+          "result": "Theorem 2.11",
+          "printed": "6",
+          "pdf": "7"
+        }
+      ]
+    },
+    "fm": {
+      "source": "FM08",
+      "locations": [
+        {
+          "result": "Proposition 2(a)",
+          "printed": "1434–1435",
+          "pdf": "6–7"
+        }
+      ]
+    },
+    "fm-equality": {
+      "source": "FM08",
+      "locations": [
+        {
+          "result": "Remark 2",
+          "printed": "1437",
+          "pdf": "9"
+        }
+      ]
+    },
+    "fgz": {
+      "source": "FGZ21",
+      "locations": [
+        {
+          "result": "Definition 1.1; Theorem 1.3",
+          "printed": "2–3",
+          "pdf": "2–3"
+        }
+      ]
+    },
+    "cek-finite": {
+      "source": "CEK15",
+      "locations": [
+        {
+          "result": "Lemma 4",
+          "printed": "3840",
+          "pdf": "7"
+        },
+        {
+          "result": "Proposition 7 proof, (14)–(15)",
+          "printed": "3844",
+          "pdf": "11"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ],
+  "articleGuides": {
+    ".": {
+      "selfSource": "P",
+      "externalSources": [
+        "Kla18",
+        "Sol19",
+        "Cha13",
+        "HP02",
+        "Nof17",
+        "FM08",
+        "FGZ21",
+        "CEK15"
+      ],
+      "proofTargets": [
+        "main",
+        "functional",
+        "transport"
+      ],
+      "mainResults": [
+        "main",
+        "functional",
+        "transport"
+      ],
+      "statements": {
+        "main": "theorem-1-1",
+        "functional": "corollary-1-2",
+        "transport": "corollary-8-1"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "main",
+          "conclusion": "all-dimensional lower bound, every interior center then Santalo infimum",
+          "anchor": "general-bound"
+        },
+        {
+          "result": "main",
+          "conclusion": "equality forces simplex, converse volume computation, n=1",
+          "anchor": "general-equality"
+        },
+        {
+          "result": "functional",
+          "conclusion": "uncentered functional product lower bound including infinite dual integral",
+          "anchor": "proof-2-step-1"
+        },
+        {
+          "result": "functional",
+          "conclusion": "sharp attainment without classification",
+          "anchor": "proof-2-step-2"
+        },
+        {
+          "result": "transport",
+          "conclusion": "finite first moments/entropies and −3n transport bound under essential continuity",
+          "anchor": "proof-3-step-1"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "cone",
+          "purpose": {
+            "ja": "中心・符号・階乗を固定する。",
+            "en": "Fix the center, dual sign and factorials."
+          }
+        },
+        {
+          "citation": "normalization",
+          "purpose": {
+            "ja": "座標と共分散を同時に選ぶ固定点。",
+            "en": "The simultaneous coordinate/covariance fixed point."
+          }
+        },
+        {
+          "citation": "entropy",
+          "purpose": {
+            "ja": "積の対数を誤差汎関数へ帰着する。",
+            "en": "Reduce the logarithmic product to the error functional."
+          }
+        },
+        {
+          "citation": "linear",
+          "purpose": {
+            "ja": "区間評価と正規化の相殺。",
+            "en": "Interval estimates and normalization cancellation."
+          }
+        },
+        {
+          "citation": "rigidity",
+          "purpose": {
+            "ja": "等号から固定基底での可換性と単体を得る。",
+            "en": "Extract fixed-basis commutation and a simplex from equality."
+          }
+        },
+        {
+          "citation": "appendices",
+          "purpose": {
+            "ja": "定数を支える有理証明書・補間・尾部評価。独立検証は未完了。",
+            "en": "Rational certificates, interpolation and tails underlying the constants; independent checking incomplete."
+          }
+        },
+        {
+          "citation": "func-proof",
+          "purpose": {
+            "ja": "全次元極限と等号例。",
+            "en": "The all-dimensional limit and extremizing example."
+          }
+        },
+        {
+          "citation": "et-proof",
+          "purpose": {
+            "ja": "essential continuityと輸送の符号規約。",
+            "en": "Essential continuity and transport/entropy sign conventions."
+          }
+        }
+      ]
+    }
+  }
+}

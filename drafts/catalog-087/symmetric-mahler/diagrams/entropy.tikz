@@ -1,0 +1,14 @@
+\node[card] (a) {\heading{1}{対称・全次元・本質的連続性を確認する}{Check symmetry, full dimensionality and essential continuity}
+$\eta_i=e^{-V_i}dx,\quad \eta_i(\mathbb R^n)=1,\quad\nu_i=(\nabla V_i)_\#\eta_i$\\
+$e^{-V_i}=0\quad\mathcal H^{n-1}\text{-a.e. on }\partial\operatorname{supp}\eta_i$};
+\node[card,below=2.3cm of a] (b) {\heading{2}{一次モーメントとentropyの有限性を得る}{Obtain finite first moments and finite entropy}
+$\int|y|\,d\nu_i=\int|\nabla V_i|e^{-V_i}dx=\int|\nabla e^{-V_i}|dx<\infty$\\
+$V_i\in L^1(\eta_i),\qquad H(\eta_i)=-\int V_i\,d\eta_i\in\mathbb R$};
+\flow a b {\Tx{勾配の可積分性と、Proposition 7の証明中のポテンシャル評価を使う。}{Use gradient integrability and the potential estimate in the proof of Proposition 7.}\\[3pt]\Cite{cek-gradient}\\[3pt]\Cite{cek-entropy}};
+\node[card,below=2.2cm of b] (c) {\heading{3}{偶関数版の定数4に同値性を適用する}{Apply the equivalence at the even functional constant 4}
+$\mathrm{IS}_{n,s}(4)\quad\Longleftrightarrow\quad\mathrm{ET}_{n,s}(4)$};
+\flow b c {\Tx{Corollary 1.2が左辺を供給する。密度の条件とentropyの符号を揃える。}{Corollary 1.2 supplies the left side; match the density assumptions and entropy sign.}\\[3pt]\Cite{functional}\quad\Cite{fgz}};
+\node[result,below=1.9cm of c] (d) {\heading{4}{対称entropy--transport不等式を得る}{Obtain the symmetric entropy--transport inequality}
+$H(\eta_1)+H(\eta_2)\le-n\log(4e^2)+\mathcal T(\nu_1,\nu_2)$\\
+\Tx{$\mathcal T=+\infty$も許す。}{$\mathcal T=+\infty$ is permitted.}};
+\flow c d {\Tx{同値性の $c$ に4を代入する。}{Insert $c=4$ in the equivalence.}\\[3pt]\Cite{fgz-def}\quad\Cite{entropy}};

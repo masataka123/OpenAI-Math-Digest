@@ -1,0 +1,24 @@
+\node[half] (a) {\heading{}{幅からの経路}{Route through width}
+\textbf{Symplectic Balls in Symmetric Polar Products}\\[4pt]
+$n\ge2,\quad c_G(U_K)=4$\\
+$B^{2n}(c)\hookrightarrow U_K\quad(c<4)$\\[4pt]
+\Cite{width-main}};
+\node[half,right=0.8cm of a] (b) {\heading{}{体積と等号への経路}{Route to volume and equality}
+\textbf{The symmetric Mahler conjecture and its equality cases}\\[4pt]
+\Tx{正則質量と実単体積分；等号でmedian}{Holomorphic mass and simplex integrals; medians at equality}\\[4pt]
+\Cite{symmetric-main}};
+\node[result,below=2.2cm of $(a.south)!.5!(b.south)$] (c) {\heading{}{共通する対称体の下界}{Shared lower bound for symmetric bodies}
+$K=-K,\quad n\ge1:\qquad |K|\,|K^\circ|\ge4^n/n!$\\
+\Tx{Hanner等号分類は対称版の追加結論。幅論文は分類しない。}{The symmetric paper also classifies Hanner equality; the width paper does not.}};
+\coordinate (leftflow) at ($(a.south)+(-3.25,0)$);
+\draw[edge] (leftflow)--(leftflow |- c.north);
+\coordinate (rightflow) at ($(b.south)+(-3.25,0)$);
+\draw[edge] (rightflow)--(rightflow |- c.north);
+\node[branchreason,anchor=west] at ($(a.south)+(-2.9,-0.95)$) {\Tx{体積保存；$n=1$は直接計算}{Volume preservation; $n=1$ directly}\\\Cite{width-volume}};
+\node[branchreason,anchor=west] at ($(b.south)+(-2.9,-0.95)$) {\Tx{主定理の下界部分}{The lower-bound part of the theorem}\\\Cite{symmetric-main}};
+\node[card,below=1.5cm of c] (d) {\heading{}{一般体：中心・定数・等号が異なる}{General bodies: different center, constant and equality}
+\textbf{The Mahler Conjecture for General Convex Bodies}\\[4pt]
+$P(K)=|K|\,|(K-s(K))^\circ|\ge(n+1)^{n+1}/(n!)^2$\\
+\Tx{等号は単体。$n\ge2$で、制限しても鋭い対称定数は出ない。}{Equality precisely for simplices; for $n\ge2$, restriction does not give the sharp symmetric constant.}\\[4pt]
+\Cite{general-main}};
+\node[reason,anchor=center] at ($(c.south)!.5!(d.north)$) {\Tx{以下は仮定と結論の比較であり、上からの証明依存ではない}{The following compares hypotheses and conclusions; it is not a proof dependency from above}};

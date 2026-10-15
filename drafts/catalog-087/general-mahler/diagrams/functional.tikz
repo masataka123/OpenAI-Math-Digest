@@ -1,0 +1,10 @@
+\node[card] (a) {\heading{1}{すべての次元の幾何下界を用意}{Use the geometric bound in every dimension}
+$P(K)\ge\dfrac{(d+1)^{d+1}}{(d!)^2}\quad(d\ge1)$};
+\node[card,below=2.1cm of a] (b) {\heading{2}{高次元補助体から関数積へ極限}{Pass from auxiliary bodies to functional products}
+$P(f)=(\int f)\inf_z\int f^z\ge e^n$\\
+$\displaystyle\lim_{k\to\infty}\frac{k^nP(\Delta_{n+k})}{P(\Delta_k)}=e^n$};
+\flow{a}{b}{\Tx{一般log-concave関数への全次元の含意}{All-dimensional implication for general log-concave functions}\\\Cite{fm}};
+\node[result,below=1.95cm of b] (c) {\heading{3}{原点のLegendre積と達成例}{Origin-centered Legendre product and attainment}
+$f^0=e^{-\varphi^*}\quad\Longrightarrow\quad(\int e^{-\varphi})(\int e^{-\varphi^*})\ge e^n$\\
+$\varphi=\sum_i x_i+\iota_{[-1,\infty)^n},\quad\int e^{-\varphi}=e^n,\quad\int e^{-\varphi^*}=1$};
+\flow{b}{c}{\Tx{任意中心の積は最小値以上。等号例は別に積分する}{Every centered product exceeds its infimum; integrate the example}\\\Cite{func-proof}\\\Tx{極限から全等号分類は移らない}{Equality classification does not pass through the limit}: \Cite{fm-equality}};

@@ -1,0 +1,15 @@
+\node[card] (a) {\heading{1}{錐の積の等号からすべての欠損を消す}{Equality eliminates the retained defects}
+$\chi_C(V)\chi_D(U)=1\ \Longrightarrow\ \mathcal E=0$\\
+$T=0,\quad \beta=0,\quad \nu\{(x,y):x\ne y\}=0$};
+\node[card,below=1.9cm of a] (b) {\heading{2}{Gaussian係数を固定基底で同時対角化}{Diagonalize the coefficients in one fixed basis}
+$\nu[(x-y)^2]=\dfrac1m\sum_{i,j}\|[M_i,M_j]\|_{\rm HS}^2=0$};
+\flow{a}{b}{\Tx{厳密な区間評価とGaussian直交性を等号に適用}{Use strict interval bounds and Gaussian orthogonality}\\\Cite{linear}; \Cite{rigidity}};
+\node[card,below=1.9cm of b] (c) {\heading{3}{射影を座標ごとに分離する}{Separate the projection coordinatewise}
+$\beta=0\ \Longrightarrow\ P_z=\Theta_z(L)\ \text{a.e.}$\\
+$\Pi_C(x)=(f_1(x_1),\ldots,f_m(x_m))$};
+\flow{b}{c}{\Tx{正の縮小行列・Fubini・交差弱微分の消滅}{Positive contractions, Fubini and vanishing cross derivatives}\\\Cite{rigidity}};
+\node[result,below=2.0cm of c] (d) {\heading{4}{半直線の積から単体の切片を得る}{Half-line factors give a simplex section}
+$C\cong\mathbb R_+^m\quad\Longrightarrow\quad K\ \text{\Tx{は単体}{is a simplex}}$\\
+\Tx{逆向き：標準単体と重心で}{Converse: standard simplex at its barycenter}\\
+$|K|=1/n!,\quad |(K-z_0)^\circ|=m^m/n!$};
+\flow{c}{d}{\Tx{solid・pointed性で零・直線因子を排除し、体積を直接計算}{Solidity and pointedness exclude zero/line factors; compute volumes}\\\Cite{rigidity}};

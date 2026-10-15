@@ -13,6 +13,7 @@ import inventory057 from '../../coordination/catalog-057/inventory.json' with { 
 import inventory063 from '../../coordination/catalog-063/inventory.json' with { type: 'json' };
 import inventory067 from '../../coordination/catalog-067/inventory.json' with { type: 'json' };
 import inventory068 from '../../coordination/catalog-068/inventory.json' with { type: 'json' };
+import inventory087 from '../../coordination/catalog-087/inventory.json' with { type: 'json' };
 import inventory159 from '../../coordination/catalog-159/inventory.json' with { type: 'json' };
 import inventory187 from '../../coordination/catalog-187/inventory.json' with { type: 'json' };
 import inventory246 from '../../coordination/catalog-246/inventory.json' with { type: 'json' };
@@ -48,7 +49,7 @@ const fieldTranslations = [
   {
     "id": "convex-metric-geometry",
     "ja": "凸幾何学・距離幾何学",
-    "catalogIds": []
+    "catalogIds": ["087"]
   },
   {
     "id": "theoretical-computer-science",
@@ -198,6 +199,10 @@ export const papers = [...inventory004.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '068', sourceCommit: inventory068.sourceCommit,
  title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
  pages: entry.pdfPages, order: entry.order, featured: true,
+})), ...inventory087.manuscripts.map(entry => ({
+ id: entry.paperId, catalogId: '087', sourceCommit: inventory087.sourceCommit,
+ title: entry.title, path: entry.sourceUrl.split('/preprints/')[1], version: '2026-09-22',
+ pages: entry.pdfPages, order: entry.order, featured: true,
 })), ...inventory159.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '159', sourceCommit: inventory159.sourceCommit,
  title: entry.title, path: entry.sourceUrl.split('/preprints/')[1], version: entry.version,
@@ -323,6 +328,13 @@ export const catalogs = [{
   description: text('反標準束の非消滅を、不変指数・計量降下・不変切断の構成へ結ぶ7篇の証明から読む。', 'Follow seven proofs connecting anticanonical nonvanishing with invariant indices, metric descent, and invariant sections.'),
   paperIds: inventory068.manuscripts.map(p => p.paperId),
   overviewSectionIds: ['papers', 'diagram-sources', 'index-routes', 'exact-routes', 'connections', 'sources'],
+}, {
+  id: '087', sourceCommit: inventory087.sourceCommit, mode: 'multi',
+  title: text(inventory087.titleJa, inventory087.overviewTitle),
+  contentsTitle: inventory087.contentsTitle,
+  description: text('対称版・一般版の体積積と等号分類、極体積のGromov幅を、3篇の証明と評価の接続から読む。', 'Follow three proofs concerning symmetric and general volume products, equality cases, and the Gromov width of polar products.'),
+  paperIds: inventory087.manuscripts.map(p => p.paperId),
+  overviewSectionIds: ['papers', 'connections', 'consequences', 'sources'],
 }, {
   id: '159', sourceCommit: inventory159.sourceCommit, mode: 'single',
   title: text(inventory159.titleJa, inventory159.overviewTitle),

@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "catalogId": "087",
+  "citationStyle": "author-key",
+  "sources": {
+    "OpenAI26a": {
+      "recordFile": "sources.json",
+      "recordId": "symmetric-mahler",
+      "pagination": "same"
+    },
+    "OpenAI26b": {
+      "recordFile": "sources.json",
+      "recordId": "general-mahler",
+      "pagination": "same"
+    },
+    "OpenAI26c": {
+      "recordFile": "sources.json",
+      "recordId": "symplectic-polar-products",
+      "pagination": "same"
+    },
+    "OpenAI26p": {
+      "recordFile": "sources.json",
+      "recordId": "packings",
+      "pagination": "same"
+    },
+    "OVERVIEW": {
+      "recordFile": "../../../coordination/catalog-087/inventory.json",
+      "recordId": "overview"
+    }
+  },
+  "citations": {
+    "symmetric-main": {
+      "source": "OpenAI26a",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "general-main": {
+      "source": "OpenAI26b",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "width-main": {
+      "source": "OpenAI26c",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "width-volume": {
+      "source": "OpenAI26c",
+      "locations": [
+        {
+          "result": "Corollary 5.3",
+          "printed": "16–17",
+          "pdf": "16–17"
+        }
+      ]
+    },
+    "symplectic-background": {
+      "source": "OpenAI26c",
+      "locations": [
+        {
+          "result": "Background and prior constructions",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "general-comparison": {
+      "source": "OpenAI26b",
+      "locations": [
+        {
+          "result": "Introduction, comparison with symmetric case",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "symmetric-comparison": {
+      "source": "OpenAI26a",
+      "locations": [
+        {
+          "result": "§1.1, comparison with general case",
+          "printed": "3",
+          "pdf": "3"
+        }
+      ]
+    },
+    "symmetric-functional": {
+      "source": "OpenAI26a",
+      "locations": [
+        {
+          "result": "Corollaries 1.2–1.3 and proofs",
+          "printed": "4–5",
+          "pdf": "4–5"
+        }
+      ]
+    },
+    "general-functional": {
+      "source": "OpenAI26b",
+      "locations": [
+        {
+          "result": "§8; Corollaries 1.2 and 8.1",
+          "printed": "40–41",
+          "pdf": "40–41"
+        }
+      ]
+    },
+    "packing-source": {
+      "source": "OpenAI26p",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "packing-use": {
+      "source": "OpenAI26c",
+      "locations": [
+        {
+          "result": "Corollary 5.5",
+          "printed": "17",
+          "pdf": "17"
+        }
+      ]
+    },
+    "catalog-source": {
+      "source": "OVERVIEW",
+      "locations": [
+        {
+          "result": "Catalogue 087, Convex and metric geometry",
+          "printed": "10",
+          "pdf": "10"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ]
+}

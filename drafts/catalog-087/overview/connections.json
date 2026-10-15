@@ -1,0 +1,137 @@
+{
+  "catalogId": "087",
+  "productionVersion": "1.4",
+  "checkingScope": "Scoped original-source comparisons; no direct chain among the three manuscripts. Internal geometric→functional→entropy routes stay in article guides. Catalogue343 is external consequence input.",
+  "omittedSections": [
+    {
+      "section": "classification cards",
+      "reason": "Official-order table and one result comparison diagram supply the needed choice without arbitrary fixed groups."
+    },
+    {
+      "section": "complete dependency graph",
+      "reason": "No exhaustive relationship investigation claimed; unrecorded relationships remain uninvestigated."
+    }
+  ],
+  "connections": [
+    {
+      "id": "shared-lens-background",
+      "from": {
+        "paperId": "symmetric-mahler",
+        "result": "§3",
+        "pages": "7–9",
+        "version": "September 22, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-symmetric-Mahler-conjecture-and-its-equality-cases-September-22-2026/paper.pdf"
+      },
+      "to": {
+        "paperId": "symplectic-polar-products",
+        "result": "Background; §3",
+        "pages": "2, 7",
+        "version": "September 22, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Symplectic-Balls-in-Symmetric-Polar-Products-September-22-2026/paper.pdf"
+      },
+      "role": "Shared conformal lens construction; width manuscript proves its own needed estimates and explicitly does not use companion volume/equality theorems.",
+      "hypotheses": "Origin-symmetric setting; no theorem-dependency edge.",
+      "kind": "background",
+      "checking": {
+        "worker": "gpt-6-astra",
+        "checkedOn": "2026-10-15",
+        "scope": "original statements and explicit application/comparison read; no full external proof validation"
+      },
+      "articleLinks": {
+        "ja": "../symplectic-polar-products/article.ja.md#dependencies",
+        "en": "../symplectic-polar-products/article.en.md#dependencies"
+      },
+      "unresolved": []
+    },
+    {
+      "id": "symmetric-volume-alternative",
+      "from": {
+        "paperId": "symplectic-polar-products",
+        "result": "Corollary 5.3",
+        "pages": "16–17",
+        "version": "September 22, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Symplectic-Balls-in-Symmetric-Polar-Products-September-22-2026/paper.pdf"
+      },
+      "to": {
+        "paperId": "symmetric-mahler",
+        "result": "Theorem 1.1, lower-bound part only",
+        "pages": "2",
+        "version": "September 22, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-symmetric-Mahler-conjecture-and-its-equality-cases-September-22-2026/paper.pdf"
+      },
+      "role": "Alternative symplectic route yields the same symmetric volume lower bound; does not supply Hanner equality classification.",
+      "hypotheses": "n≥1 for corollary; n≥2 via width, n=1 directly; K origin-symmetric.",
+      "kind": "alternative",
+      "checking": {
+        "worker": "gpt-6-astra",
+        "checkedOn": "2026-10-15",
+        "scope": "original statements and explicit application/comparison read; no full external proof validation"
+      },
+      "articleLinks": {
+        "ja": "../symplectic-polar-products/article.ja.md#proof-4",
+        "en": "../symplectic-polar-products/article.en.md#proof-4"
+      },
+      "unresolved": []
+    },
+    {
+      "id": "general-symmetric-comparison",
+      "from": {
+        "paperId": "general-mahler",
+        "result": "Theorem 1.1; Introduction",
+        "pages": "1",
+        "version": "September 22, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Mahler-Conjecture-for-General-Convex-Bodies-September-22-2026/paper.pdf"
+      },
+      "to": {
+        "paperId": "symmetric-mahler",
+        "result": "Theorem 1.1; §1.1",
+        "pages": "2–3",
+        "version": "September 22, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-symmetric-Mahler-conjecture-and-its-equality-cases-September-22-2026/paper.pdf"
+      },
+      "role": "General Santaló-centered constant is smaller for n≥2; restricting it does not prove the sharp symmetric constant or Hanner equality.",
+      "hypotheses": "General bodies versus origin-symmetric bodies; simplex versus linear-Hanner equality classifications.",
+      "kind": "background",
+      "checking": {
+        "worker": "gpt-6-astra",
+        "checkedOn": "2026-10-15",
+        "scope": "original statements and explicit application/comparison read; no full external proof validation"
+      },
+      "articleLinks": {
+        "ja": "../general-mahler/article.ja.md#results",
+        "en": "../general-mahler/article.en.md#results"
+      },
+      "unresolved": []
+    },
+    {
+      "id": "343-to-packing-corollary",
+      "from": {
+        "paperId": "packings",
+        "result": "Theorem 1.1",
+        "pages": "2",
+        "version": "September 23, 2026; commit 1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Symplectic-Ball-Packings-in-Higher-Dimensions-September-23-2026/paper.pdf"
+      },
+      "to": {
+        "paperId": "symplectic-polar-products",
+        "result": "Corollary 5.5",
+        "pages": "17",
+        "version": "September 22, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Symplectic-Balls-in-Symmetric-Polar-Products-September-22-2026/paper.pdf"
+      },
+      "role": "Strict inequalities allow c<4, external packing into B(c), then width embedding into U_K. Theorem 1.1 of catalogue343 is a consequence input only.",
+      "hypotheses": "n≥3; finitely many positive capacities; sum R_i^n<4^n and pair sums<4; closed-ball neighborhood convention.",
+      "kind": "consequence",
+      "checking": {
+        "worker": "gpt-6-astra",
+        "checkedOn": "2026-10-15",
+        "scope": "original statements and explicit application/comparison read; no full external proof validation"
+      },
+      "articleLinks": {
+        "ja": "../symplectic-polar-products/article.ja.md#proof-5",
+        "en": "../symplectic-polar-products/article.en.md#proof-5"
+      },
+      "unresolved": []
+    }
+  ]
+}

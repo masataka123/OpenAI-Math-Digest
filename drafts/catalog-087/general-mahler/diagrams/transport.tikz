@@ -1,0 +1,13 @@
+\node[card] (a) {\heading{1}{関数版を $IS_n(e)$ と読む}{Read functional Mahler as $IS_n(e)$}
+$(\int e^{-\varphi})(\int e^{-\varphi^*})\ge e^n$};
+\node[card,below=2.05cm of a] (b) {\heading{2}{密度の追加条件の下で同値を適用}{Apply equivalence with the additional density condition}
+$\eta_i=e^{-V_i}dx,\quad \nu_i=(\nabla V_i)_\#\eta_i$\\
+\Tx{全次元の確率測度・essential continuity}{Full-dimensional probabilities; essential continuity}\\[4pt]
+$\int|y|\,d\nu_i<\infty,\quad V_i\in L^1(\eta_i)$\\
+\Tx{編集補足：密度の勾配とポテンシャルの可積分性}{Editorial supplement: integrability of density gradients and potentials}\\
+\Cite{cek-finite}};
+\flow{a}{b}{\Tx{Gozlanの $IS_n(c)\Longleftrightarrow ET_n(c)$}{Gozlan's $IS_n(c)\Longleftrightarrow ET_n(c)$}\\\Cite{fgz}};
+\node[result,below=1.95cm of b] (c) {\heading{3}{entropyの符号と定数を換算}{Convert the entropy sign and constant}
+$H(\eta)=\int\log(d\eta/dx)\,d\eta,\quad -n\log(ee^2)=-3n$\\
+$H(\eta_1)+H(\eta_2)\le-3n+\mathcal T(\nu_1,\nu_2)$};
+\flow{b}{c}{\Tx{有限一次モーメントとentropyの設定を保持し $c=e$ を代入}{Keep the first-moment/entropy setting and substitute $c=e$}\\\Cite{et-proof}};
