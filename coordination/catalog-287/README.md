@@ -1,3 +1,7 @@
+# 現在の状態：第3段階・公開確認済み
+
+2026-10-15に287を公開し、Actionsと日英ページ・図・PDFの反映を確認。詳細は[stage3/PUBLICATION.md](stage3/PUBLICATION.md)。以下は第1・第2段階の履歴を保持したもの。
+
 # カタログ287 — 第1段階制作記録
 
 - 作業先：`/Users/iwai/Desktop/GitHub/OpenAI-Math-Digest`、作業ブランチ：`main`（切替なし）。
