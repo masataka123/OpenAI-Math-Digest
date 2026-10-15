@@ -1,0 +1,15 @@
+\node[card] (a) {\heading{1}{nefでないと仮定する}{Assume failure of nefness}
+$D_0=A-wE,\quad D_0^2=0,\quad D_0\cdot C<0$\\
+$C\ne E_i,\quad A\cdot C>0,\quad A=\pi^*L\ \text{\Tx{はnef}{is nef}}$};
+\node[card,below=1.8cm of a] (b) {\heading{2}{有理摂動で正の自己交点を得る}{Perturb rationally to positive square}
+$D=A-sE-\delta C,\qquad s>w,\quad s,\delta\in\mathbb Q_{>0}$\\
+$D^2>0,\qquad A\cdot D>0$};
+\flow{a}{b}{\Tx{$-2\delta D_0\cdot C>0$ を使い、次に $s>w$ へ動かす}{Use $-2\delta D_0\cdot C>0$, then move the coefficient to $s>w$}\\\Cite{nef}};
+\node[card,below=2.4cm of b] (c) {\heading{3}{有効な倍数を作る}{Produce an effective multiple}
+$h^2(kD)=0,\qquad h^0(kD)\ge\chi(kD)=\tfrac12 k^2D^2+O(k)>0$\\
+$F\sim kD,\qquad F\ge0$};
+\flow{b}{c}{\Tx{nefな $A$ で $K_Y-kD$ を排除し、Riemann--Rochを適用}{Use nef $A$ to exclude $K_Y-kD$, then apply Riemann--Roch}\\\Cite{rr-internal}\\\Cite{ext-duality}\\\Cite{ext-chow}};
+\node[result,below=1.9cm of c] (d) {\heading{4}{等重複度の禁止と矛盾する}{Contradict the homogeneous vanishing tests}
+$F+k\delta C\sim kA-mE,\quad m=ks>kw$\\
+$H^0\!\left(S,kL\otimes\bigcap_i I_{p_i}^m\right)\ne0\quad\Longrightarrow\quad\bot\quad\Longrightarrow\quad\boxed{D_0\ \text{\Tx{はnef}{is nef}}}$};
+\flow{c}{d}{\Tx{曲線を足し戻し、例外次数を点のイデアル冪へ戻す}{Add the curve back; push exceptional order down to point-ideal powers}\\\Cite{ext-resolve}\\\Cite{nef}};

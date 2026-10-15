@@ -1,0 +1,16 @@
+\node[card] (a) {\heading{1}{次数付き支持の密度}{Density of graded supports}
+$F_N\subset NP_*,\quad \#F_N=\operatorname{vol}(P_*)N^n+o(N^n)$\\
+$F_N+F_M\subset F_{N+M},\qquad P_*=\Delta(w,\ldots,w,rw)$};
+\node[card,below=1.9cm of a] (b) {\heading{2}{固定内部領域の全格子点}{All lattice points in a compact interior region}
+$K\Subset\operatorname{int}(P_*)\quad\Longrightarrow\quad NK\cap\mathbf Z^n\subset F_N$\\
+\Tx{$cN^n$ 個の分解を $o(N^n)$ 個の欠落では排除できない}{$o(N^n)$ missing points cannot exclude $cN^n$ decompositions}};
+\flow a b {\Tx{ほぼ半分の次数への分解と加法性}{Decompose into nearly equal degrees and use additivity}\\\Cite{filling}};
+\node[card,below=1.95cm of b] (c) {\heading{3}{細長い単体で多点補間}{Multipoint interpolation in an elongated simplex}
+$E_m=\{(\beta,b):|\beta|+b/r<m+1\},\quad m=\lfloor N\theta\rfloor$\\
+$q_i=(1,\ldots,1,c_i),\quad c_i\ne c_j,\quad c_i\ne0$};
+\flow b c {\Tx{縮小・整数平行移動で $E_m$ を入れ、剰余定理でjetを補間}{Contract and translate to include $E_m$; apply CRT to interpolate jets}\\\Cite{crt}\quad\Cite{jets}};
+\node[result,below=2.1cm of c] (d) {\heading{4}{同じ幾何学的一般点へ移す}{Pass to the same geometric generic tuple}
+$\exists\,(x_1,\ldots,x_r)\text{ with jets}\ \Longrightarrow\ U_{N,m}\subset U_r\text{ nonempty open}$\\
+$\operatorname{Spec}K_r\longrightarrow U_{N,m},\quad K_r=\overline{k(U_r)}$\\
+\Tx{可算体上で開集合の共通部分の閉点を選ばない}{No closed point in a countable intersection is chosen}};
+\flow c d {\Tx{後向きjet移送、評価階数の開条件、基底変換}{Backward jet transfer, openness of evaluation rank, and base change}\\\Cite{formal}\quad\Cite{jets}};

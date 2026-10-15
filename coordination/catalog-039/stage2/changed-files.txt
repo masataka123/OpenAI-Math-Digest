@@ -1,0 +1,455 @@
+coordination/catalog-039/FORMAT_REVIEW.md
+coordination/catalog-039/README.md
+coordination/catalog-039/RELEASE_CHECKLIST.md
+coordination/catalog-039/SITE_HQ_HANDOFF.md
+coordination/catalog-039/STAGE2_REPORT.md
+coordination/catalog-039/STAGE3_HANDOFF.md
+coordination/catalog-039/check-links-cached.mjs
+coordination/catalog-039/finalize-stage2.py
+coordination/catalog-039/stage2-browser.mjs
+coordination/catalog-039/stage2-pdf-qa.py
+coordination/catalog-039/stage2/baseline.json
+coordination/catalog-039/stage2/browser.json
+coordination/catalog-039/stage2/changed-files.txt
+coordination/catalog-039/stage2/completion.json
+coordination/catalog-039/stage2/git-status-end.txt
+coordination/catalog-039/stage2/git-status-start.txt
+coordination/catalog-039/stage2/logs/browser.txt
+coordination/catalog-039/stage2/logs/build-final.txt
+coordination/catalog-039/stage2/logs/build-first.txt
+coordination/catalog-039/stage2/logs/build-linkfix.txt
+coordination/catalog-039/stage2/logs/citations.txt
+coordination/catalog-039/stage2/logs/links-before-fix.txt
+coordination/catalog-039/stage2/logs/links-final.txt
+coordination/catalog-039/stage2/logs/links-first.txt
+coordination/catalog-039/stage2/logs/links-preflight.txt
+coordination/catalog-039/stage2/logs/pdf-build-final.txt
+coordination/catalog-039/stage2/logs/pdf-build.txt
+coordination/catalog-039/stage2/logs/pdf-check.txt
+coordination/catalog-039/stage2/logs/pdf-qa.txt
+coordination/catalog-039/stage2/logs/tests-final.txt
+coordination/catalog-039/stage2/logs/tests.txt
+coordination/catalog-039/stage2/pdf-editions-before.json
+coordination/catalog-039/stage2/pdf-review/before-link-fix-hashes.json
+coordination/catalog-039/stage2/pdf-review/en-01 2.png
+coordination/catalog-039/stage2/pdf-review/en-01.png
+coordination/catalog-039/stage2/pdf-review/en-02 2.png
+coordination/catalog-039/stage2/pdf-review/en-02.png
+coordination/catalog-039/stage2/pdf-review/en-03 2.png
+coordination/catalog-039/stage2/pdf-review/en-03.png
+coordination/catalog-039/stage2/pdf-review/en-04 2.png
+coordination/catalog-039/stage2/pdf-review/en-04.png
+coordination/catalog-039/stage2/pdf-review/en-05 2.png
+coordination/catalog-039/stage2/pdf-review/en-05.png
+coordination/catalog-039/stage2/pdf-review/en-06 2.png
+coordination/catalog-039/stage2/pdf-review/en-06.png
+coordination/catalog-039/stage2/pdf-review/en-07 2.png
+coordination/catalog-039/stage2/pdf-review/en-07.png
+coordination/catalog-039/stage2/pdf-review/en-08 2.png
+coordination/catalog-039/stage2/pdf-review/en-08.png
+coordination/catalog-039/stage2/pdf-review/en-09 2.png
+coordination/catalog-039/stage2/pdf-review/en-09.png
+coordination/catalog-039/stage2/pdf-review/en-10 2.png
+coordination/catalog-039/stage2/pdf-review/en-10.png
+coordination/catalog-039/stage2/pdf-review/en-11 2.png
+coordination/catalog-039/stage2/pdf-review/en-11.png
+coordination/catalog-039/stage2/pdf-review/en-12 2.png
+coordination/catalog-039/stage2/pdf-review/en-12.png
+coordination/catalog-039/stage2/pdf-review/en-13 2.png
+coordination/catalog-039/stage2/pdf-review/en-13.png
+coordination/catalog-039/stage2/pdf-review/en-14 2.png
+coordination/catalog-039/stage2/pdf-review/en-14.png
+coordination/catalog-039/stage2/pdf-review/en-15 2.png
+coordination/catalog-039/stage2/pdf-review/en-15.png
+coordination/catalog-039/stage2/pdf-review/en-16 2.png
+coordination/catalog-039/stage2/pdf-review/en-16.png
+coordination/catalog-039/stage2/pdf-review/en-17 2.png
+coordination/catalog-039/stage2/pdf-review/en-17.png
+coordination/catalog-039/stage2/pdf-review/en-18 2.png
+coordination/catalog-039/stage2/pdf-review/en-18.png
+coordination/catalog-039/stage2/pdf-review/en-19 2.png
+coordination/catalog-039/stage2/pdf-review/en-19.png
+coordination/catalog-039/stage2/pdf-review/en-20 2.png
+coordination/catalog-039/stage2/pdf-review/en-20.png
+coordination/catalog-039/stage2/pdf-review/en-21 2.png
+coordination/catalog-039/stage2/pdf-review/en-21.png
+coordination/catalog-039/stage2/pdf-review/en-22 2.png
+coordination/catalog-039/stage2/pdf-review/en-22.png
+coordination/catalog-039/stage2/pdf-review/en-23 2.png
+coordination/catalog-039/stage2/pdf-review/en-23.png
+coordination/catalog-039/stage2/pdf-review/en-24 2.png
+coordination/catalog-039/stage2/pdf-review/en-24.png
+coordination/catalog-039/stage2/pdf-review/en-25 2.png
+coordination/catalog-039/stage2/pdf-review/en-25.png
+coordination/catalog-039/stage2/pdf-review/en-26 2.png
+coordination/catalog-039/stage2/pdf-review/en-26.png
+coordination/catalog-039/stage2/pdf-review/en-27 2.png
+coordination/catalog-039/stage2/pdf-review/en-27.png
+coordination/catalog-039/stage2/pdf-review/en-28 2.png
+coordination/catalog-039/stage2/pdf-review/en-28.png
+coordination/catalog-039/stage2/pdf-review/en-29 2.png
+coordination/catalog-039/stage2/pdf-review/en-29.png
+coordination/catalog-039/stage2/pdf-review/en-30 2.png
+coordination/catalog-039/stage2/pdf-review/en-30.png
+coordination/catalog-039/stage2/pdf-review/en-31 2.png
+coordination/catalog-039/stage2/pdf-review/en-31.png
+coordination/catalog-039/stage2/pdf-review/en-32 2.png
+coordination/catalog-039/stage2/pdf-review/en-32.png
+coordination/catalog-039/stage2/pdf-review/en-33 2.png
+coordination/catalog-039/stage2/pdf-review/en-33.png
+coordination/catalog-039/stage2/pdf-review/en-34 2.png
+coordination/catalog-039/stage2/pdf-review/en-34.png
+coordination/catalog-039/stage2/pdf-review/en-35 2.png
+coordination/catalog-039/stage2/pdf-review/en-35.png
+coordination/catalog-039/stage2/pdf-review/en-36 2.png
+coordination/catalog-039/stage2/pdf-review/en-36.png
+coordination/catalog-039/stage2/pdf-review/en-37 2.png
+coordination/catalog-039/stage2/pdf-review/en-37.png
+coordination/catalog-039/stage2/pdf-review/en-38 2.png
+coordination/catalog-039/stage2/pdf-review/en-38.png
+coordination/catalog-039/stage2/pdf-review/en-39 2.png
+coordination/catalog-039/stage2/pdf-review/en-39.png
+coordination/catalog-039/stage2/pdf-review/en-40 2.png
+coordination/catalog-039/stage2/pdf-review/en-40.png
+coordination/catalog-039/stage2/pdf-review/en-41 2.png
+coordination/catalog-039/stage2/pdf-review/en-41.png
+coordination/catalog-039/stage2/pdf-review/en-42 2.png
+coordination/catalog-039/stage2/pdf-review/en-42.png
+coordination/catalog-039/stage2/pdf-review/en-43 2.png
+coordination/catalog-039/stage2/pdf-review/en-43.png
+coordination/catalog-039/stage2/pdf-review/en-44 2.png
+coordination/catalog-039/stage2/pdf-review/en-44.png
+coordination/catalog-039/stage2/pdf-review/en-45 2.png
+coordination/catalog-039/stage2/pdf-review/en-45.png
+coordination/catalog-039/stage2/pdf-review/en-46 2.png
+coordination/catalog-039/stage2/pdf-review/en-46.png
+coordination/catalog-039/stage2/pdf-review/en-47 2.png
+coordination/catalog-039/stage2/pdf-review/en-47.png
+coordination/catalog-039/stage2/pdf-review/en-48 2.png
+coordination/catalog-039/stage2/pdf-review/en-48.png
+coordination/catalog-039/stage2/pdf-review/en-49 2.png
+coordination/catalog-039/stage2/pdf-review/en-49.png
+coordination/catalog-039/stage2/pdf-review/en-50 2.png
+coordination/catalog-039/stage2/pdf-review/en-50.png
+coordination/catalog-039/stage2/pdf-review/en-51 2.png
+coordination/catalog-039/stage2/pdf-review/en-51.png
+coordination/catalog-039/stage2/pdf-review/en-52 2.png
+coordination/catalog-039/stage2/pdf-review/en-52.png
+coordination/catalog-039/stage2/pdf-review/en-53 2.png
+coordination/catalog-039/stage2/pdf-review/en-53.png
+coordination/catalog-039/stage2/pdf-review/en-54 2.png
+coordination/catalog-039/stage2/pdf-review/en-54.png
+coordination/catalog-039/stage2/pdf-review/en-55 2.png
+coordination/catalog-039/stage2/pdf-review/en-55.png
+coordination/catalog-039/stage2/pdf-review/en-56 2.png
+coordination/catalog-039/stage2/pdf-review/en-56.png
+coordination/catalog-039/stage2/pdf-review/en-57 2.png
+coordination/catalog-039/stage2/pdf-review/en-57.png
+coordination/catalog-039/stage2/pdf-review/en-contact-1.png
+coordination/catalog-039/stage2/pdf-review/en-contact-10.png
+coordination/catalog-039/stage2/pdf-review/en-contact-2.png
+coordination/catalog-039/stage2/pdf-review/en-contact-3.png
+coordination/catalog-039/stage2/pdf-review/en-contact-4.png
+coordination/catalog-039/stage2/pdf-review/en-contact-5.png
+coordination/catalog-039/stage2/pdf-review/en-contact-6.png
+coordination/catalog-039/stage2/pdf-review/en-contact-7.png
+coordination/catalog-039/stage2/pdf-review/en-contact-8.png
+coordination/catalog-039/stage2/pdf-review/en-contact-9.png
+coordination/catalog-039/stage2/pdf-review/ja-01 2.png
+coordination/catalog-039/stage2/pdf-review/ja-01.png
+coordination/catalog-039/stage2/pdf-review/ja-02 2.png
+coordination/catalog-039/stage2/pdf-review/ja-02.png
+coordination/catalog-039/stage2/pdf-review/ja-03 2.png
+coordination/catalog-039/stage2/pdf-review/ja-03.png
+coordination/catalog-039/stage2/pdf-review/ja-04 2.png
+coordination/catalog-039/stage2/pdf-review/ja-04.png
+coordination/catalog-039/stage2/pdf-review/ja-05 2.png
+coordination/catalog-039/stage2/pdf-review/ja-05.png
+coordination/catalog-039/stage2/pdf-review/ja-06 2.png
+coordination/catalog-039/stage2/pdf-review/ja-06.png
+coordination/catalog-039/stage2/pdf-review/ja-07 2.png
+coordination/catalog-039/stage2/pdf-review/ja-07.png
+coordination/catalog-039/stage2/pdf-review/ja-08 2.png
+coordination/catalog-039/stage2/pdf-review/ja-08.png
+coordination/catalog-039/stage2/pdf-review/ja-09 2.png
+coordination/catalog-039/stage2/pdf-review/ja-09.png
+coordination/catalog-039/stage2/pdf-review/ja-10 2.png
+coordination/catalog-039/stage2/pdf-review/ja-10.png
+coordination/catalog-039/stage2/pdf-review/ja-11 2.png
+coordination/catalog-039/stage2/pdf-review/ja-11.png
+coordination/catalog-039/stage2/pdf-review/ja-12 2.png
+coordination/catalog-039/stage2/pdf-review/ja-12.png
+coordination/catalog-039/stage2/pdf-review/ja-13 2.png
+coordination/catalog-039/stage2/pdf-review/ja-13.png
+coordination/catalog-039/stage2/pdf-review/ja-14 2.png
+coordination/catalog-039/stage2/pdf-review/ja-14.png
+coordination/catalog-039/stage2/pdf-review/ja-15 2.png
+coordination/catalog-039/stage2/pdf-review/ja-15.png
+coordination/catalog-039/stage2/pdf-review/ja-16 2.png
+coordination/catalog-039/stage2/pdf-review/ja-16.png
+coordination/catalog-039/stage2/pdf-review/ja-17 2.png
+coordination/catalog-039/stage2/pdf-review/ja-17.png
+coordination/catalog-039/stage2/pdf-review/ja-18 2.png
+coordination/catalog-039/stage2/pdf-review/ja-18.png
+coordination/catalog-039/stage2/pdf-review/ja-19 2.png
+coordination/catalog-039/stage2/pdf-review/ja-19.png
+coordination/catalog-039/stage2/pdf-review/ja-20 2.png
+coordination/catalog-039/stage2/pdf-review/ja-20.png
+coordination/catalog-039/stage2/pdf-review/ja-21 2.png
+coordination/catalog-039/stage2/pdf-review/ja-21.png
+coordination/catalog-039/stage2/pdf-review/ja-22 2.png
+coordination/catalog-039/stage2/pdf-review/ja-22.png
+coordination/catalog-039/stage2/pdf-review/ja-23 2.png
+coordination/catalog-039/stage2/pdf-review/ja-23.png
+coordination/catalog-039/stage2/pdf-review/ja-24 2.png
+coordination/catalog-039/stage2/pdf-review/ja-24.png
+coordination/catalog-039/stage2/pdf-review/ja-25 2.png
+coordination/catalog-039/stage2/pdf-review/ja-25.png
+coordination/catalog-039/stage2/pdf-review/ja-26 2.png
+coordination/catalog-039/stage2/pdf-review/ja-26.png
+coordination/catalog-039/stage2/pdf-review/ja-27 2.png
+coordination/catalog-039/stage2/pdf-review/ja-27.png
+coordination/catalog-039/stage2/pdf-review/ja-28 2.png
+coordination/catalog-039/stage2/pdf-review/ja-28.png
+coordination/catalog-039/stage2/pdf-review/ja-29 2.png
+coordination/catalog-039/stage2/pdf-review/ja-29.png
+coordination/catalog-039/stage2/pdf-review/ja-30 2.png
+coordination/catalog-039/stage2/pdf-review/ja-30.png
+coordination/catalog-039/stage2/pdf-review/ja-31 2.png
+coordination/catalog-039/stage2/pdf-review/ja-31.png
+coordination/catalog-039/stage2/pdf-review/ja-32 2.png
+coordination/catalog-039/stage2/pdf-review/ja-32.png
+coordination/catalog-039/stage2/pdf-review/ja-33 2.png
+coordination/catalog-039/stage2/pdf-review/ja-33.png
+coordination/catalog-039/stage2/pdf-review/ja-34 2.png
+coordination/catalog-039/stage2/pdf-review/ja-34.png
+coordination/catalog-039/stage2/pdf-review/ja-35 2.png
+coordination/catalog-039/stage2/pdf-review/ja-35.png
+coordination/catalog-039/stage2/pdf-review/ja-36 2.png
+coordination/catalog-039/stage2/pdf-review/ja-36.png
+coordination/catalog-039/stage2/pdf-review/ja-37 2.png
+coordination/catalog-039/stage2/pdf-review/ja-37.png
+coordination/catalog-039/stage2/pdf-review/ja-38 2.png
+coordination/catalog-039/stage2/pdf-review/ja-38.png
+coordination/catalog-039/stage2/pdf-review/ja-39 2.png
+coordination/catalog-039/stage2/pdf-review/ja-39.png
+coordination/catalog-039/stage2/pdf-review/ja-40 2.png
+coordination/catalog-039/stage2/pdf-review/ja-40.png
+coordination/catalog-039/stage2/pdf-review/ja-41 2.png
+coordination/catalog-039/stage2/pdf-review/ja-41.png
+coordination/catalog-039/stage2/pdf-review/ja-42 2.png
+coordination/catalog-039/stage2/pdf-review/ja-42.png
+coordination/catalog-039/stage2/pdf-review/ja-43 2.png
+coordination/catalog-039/stage2/pdf-review/ja-43.png
+coordination/catalog-039/stage2/pdf-review/ja-44 2.png
+coordination/catalog-039/stage2/pdf-review/ja-44.png
+coordination/catalog-039/stage2/pdf-review/ja-45 2.png
+coordination/catalog-039/stage2/pdf-review/ja-45.png
+coordination/catalog-039/stage2/pdf-review/ja-46 2.png
+coordination/catalog-039/stage2/pdf-review/ja-46.png
+coordination/catalog-039/stage2/pdf-review/ja-47 2.png
+coordination/catalog-039/stage2/pdf-review/ja-47.png
+coordination/catalog-039/stage2/pdf-review/ja-48 2.png
+coordination/catalog-039/stage2/pdf-review/ja-48.png
+coordination/catalog-039/stage2/pdf-review/ja-49 2.png
+coordination/catalog-039/stage2/pdf-review/ja-49.png
+coordination/catalog-039/stage2/pdf-review/ja-50 2.png
+coordination/catalog-039/stage2/pdf-review/ja-50.png
+coordination/catalog-039/stage2/pdf-review/ja-51 2.png
+coordination/catalog-039/stage2/pdf-review/ja-51.png
+coordination/catalog-039/stage2/pdf-review/ja-52 2.png
+coordination/catalog-039/stage2/pdf-review/ja-52.png
+coordination/catalog-039/stage2/pdf-review/ja-contact-1.png
+coordination/catalog-039/stage2/pdf-review/ja-contact-2.png
+coordination/catalog-039/stage2/pdf-review/ja-contact-3.png
+coordination/catalog-039/stage2/pdf-review/ja-contact-4.png
+coordination/catalog-039/stage2/pdf-review/ja-contact-5.png
+coordination/catalog-039/stage2/pdf-review/ja-contact-6.png
+coordination/catalog-039/stage2/pdf-review/ja-contact-7.png
+coordination/catalog-039/stage2/pdf-review/ja-contact-8.png
+coordination/catalog-039/stage2/pdf-review/ja-contact-9.png
+coordination/catalog-039/stage2/pdf-review/structure.json
+coordination/catalog-039/stage2/preservation.json
+coordination/catalog-039/stage2/screenshots/en-catalog-039--1280.png
+coordination/catalog-039/stage2/screenshots/en-catalog-039--375.png
+coordination/catalog-039/stage2/screenshots/en-catalog-connections-1280.png
+coordination/catalog-039/stage2/screenshots/en-catalog-connections-375.png
+coordination/catalog-039/stage2/screenshots/en-catalog-figure.png
+coordination/catalog-039/stage2/screenshots/en-catalog-inventory-1280.png
+coordination/catalog-039/stage2/screenshots/en-catalog-inventory-375.png
+coordination/catalog-039/stage2/screenshots/en-fields-algebraic-complex-geometry--1280.png
+coordination/catalog-039/stage2/screenshots/en-fields-algebraic-complex-geometry--375.png
+coordination/catalog-039/stage2/screenshots/en-home-1280.png
+coordination/catalog-039/stage2/screenshots/en-home-375.png
+coordination/catalog-039/stage2/screenshots/en-maximal-seshadri-higher-dimensions-figure-1.png
+coordination/catalog-039/stage2/screenshots/en-maximal-seshadri-higher-dimensions-figure-2.png
+coordination/catalog-039/stage2/screenshots/en-maximal-seshadri-higher-dimensions-figure-3.png
+coordination/catalog-039/stage2/screenshots/en-maximal-seshadri-higher-dimensions-proof-1280.png
+coordination/catalog-039/stage2/screenshots/en-maximal-seshadri-higher-dimensions-proof-375.png
+coordination/catalog-039/stage2/screenshots/en-maximal-seshadri-higher-dimensions-references-1280.png
+coordination/catalog-039/stage2/screenshots/en-maximal-seshadri-higher-dimensions-references-375.png
+coordination/catalog-039/stage2/screenshots/en-maximal-seshadri-higher-dimensions-results-1280.png
+coordination/catalog-039/stage2/screenshots/en-maximal-seshadri-higher-dimensions-results-375.png
+coordination/catalog-039/stage2/screenshots/en-maximal-seshadri-positive-characteristic-figure-1.png
+coordination/catalog-039/stage2/screenshots/en-maximal-seshadri-positive-characteristic-figure-2.png
+coordination/catalog-039/stage2/screenshots/en-maximal-seshadri-positive-characteristic-figure-3.png
+coordination/catalog-039/stage2/screenshots/en-maximal-seshadri-positive-characteristic-proof-1280.png
+coordination/catalog-039/stage2/screenshots/en-maximal-seshadri-positive-characteristic-proof-375.png
+coordination/catalog-039/stage2/screenshots/en-maximal-seshadri-positive-characteristic-references-1280.png
+coordination/catalog-039/stage2/screenshots/en-maximal-seshadri-positive-characteristic-references-375.png
+coordination/catalog-039/stage2/screenshots/en-maximal-seshadri-positive-characteristic-results-1280.png
+coordination/catalog-039/stage2/screenshots/en-maximal-seshadri-positive-characteristic-results-375.png
+coordination/catalog-039/stage2/screenshots/en-maximal-seshadri-surfaces-figure-1.png
+coordination/catalog-039/stage2/screenshots/en-maximal-seshadri-surfaces-figure-2.png
+coordination/catalog-039/stage2/screenshots/en-maximal-seshadri-surfaces-figure-3.png
+coordination/catalog-039/stage2/screenshots/en-maximal-seshadri-surfaces-proof-1280.png
+coordination/catalog-039/stage2/screenshots/en-maximal-seshadri-surfaces-proof-375.png
+coordination/catalog-039/stage2/screenshots/en-maximal-seshadri-surfaces-references-1280.png
+coordination/catalog-039/stage2/screenshots/en-maximal-seshadri-surfaces-references-375.png
+coordination/catalog-039/stage2/screenshots/en-maximal-seshadri-surfaces-results-1280.png
+coordination/catalog-039/stage2/screenshots/en-maximal-seshadri-surfaces-results-375.png
+coordination/catalog-039/stage2/screenshots/en-model-034-1280.png
+coordination/catalog-039/stage2/screenshots/en-model-034-375.png
+coordination/catalog-039/stage2/screenshots/en-model-orbifold-1280.png
+coordination/catalog-039/stage2/screenshots/en-model-orbifold-375.png
+coordination/catalog-039/stage2/screenshots/en-model-schnell-1280.png
+coordination/catalog-039/stage2/screenshots/en-model-schnell-375.png
+coordination/catalog-039/stage2/screenshots/en-nagata-plane-curves-figure-1.png
+coordination/catalog-039/stage2/screenshots/en-nagata-plane-curves-figure-2.png
+coordination/catalog-039/stage2/screenshots/en-nagata-plane-curves-figure-3.png
+coordination/catalog-039/stage2/screenshots/en-nagata-plane-curves-proof-1280.png
+coordination/catalog-039/stage2/screenshots/en-nagata-plane-curves-proof-375.png
+coordination/catalog-039/stage2/screenshots/en-nagata-plane-curves-references-1280.png
+coordination/catalog-039/stage2/screenshots/en-nagata-plane-curves-references-375.png
+coordination/catalog-039/stage2/screenshots/en-nagata-plane-curves-results-1280.png
+coordination/catalog-039/stage2/screenshots/en-nagata-plane-curves-results-375.png
+coordination/catalog-039/stage2/screenshots/en-papers-maximal-seshadri-higher-dimensions--1280.png
+coordination/catalog-039/stage2/screenshots/en-papers-maximal-seshadri-higher-dimensions--375.png
+coordination/catalog-039/stage2/screenshots/en-papers-maximal-seshadri-positive-characteristic--1280.png
+coordination/catalog-039/stage2/screenshots/en-papers-maximal-seshadri-positive-characteristic--375.png
+coordination/catalog-039/stage2/screenshots/en-papers-maximal-seshadri-surfaces--1280.png
+coordination/catalog-039/stage2/screenshots/en-papers-maximal-seshadri-surfaces--375.png
+coordination/catalog-039/stage2/screenshots/en-papers-nagata-plane-curves--1280.png
+coordination/catalog-039/stage2/screenshots/en-papers-nagata-plane-curves--375.png
+coordination/catalog-039/stage2/screenshots/ja-catalog-039--1280.png
+coordination/catalog-039/stage2/screenshots/ja-catalog-039--375.png
+coordination/catalog-039/stage2/screenshots/ja-catalog-connections-1280.png
+coordination/catalog-039/stage2/screenshots/ja-catalog-connections-375.png
+coordination/catalog-039/stage2/screenshots/ja-catalog-figure.png
+coordination/catalog-039/stage2/screenshots/ja-catalog-inventory-1280.png
+coordination/catalog-039/stage2/screenshots/ja-catalog-inventory-375.png
+coordination/catalog-039/stage2/screenshots/ja-fields-algebraic-complex-geometry--1280.png
+coordination/catalog-039/stage2/screenshots/ja-fields-algebraic-complex-geometry--375.png
+coordination/catalog-039/stage2/screenshots/ja-home-1280.png
+coordination/catalog-039/stage2/screenshots/ja-home-375.png
+coordination/catalog-039/stage2/screenshots/ja-maximal-seshadri-higher-dimensions-figure-1.png
+coordination/catalog-039/stage2/screenshots/ja-maximal-seshadri-higher-dimensions-figure-2.png
+coordination/catalog-039/stage2/screenshots/ja-maximal-seshadri-higher-dimensions-figure-3.png
+coordination/catalog-039/stage2/screenshots/ja-maximal-seshadri-higher-dimensions-proof-1280.png
+coordination/catalog-039/stage2/screenshots/ja-maximal-seshadri-higher-dimensions-proof-375.png
+coordination/catalog-039/stage2/screenshots/ja-maximal-seshadri-higher-dimensions-references-1280.png
+coordination/catalog-039/stage2/screenshots/ja-maximal-seshadri-higher-dimensions-references-375.png
+coordination/catalog-039/stage2/screenshots/ja-maximal-seshadri-higher-dimensions-results-1280.png
+coordination/catalog-039/stage2/screenshots/ja-maximal-seshadri-higher-dimensions-results-375.png
+coordination/catalog-039/stage2/screenshots/ja-maximal-seshadri-positive-characteristic-figure-1.png
+coordination/catalog-039/stage2/screenshots/ja-maximal-seshadri-positive-characteristic-figure-2.png
+coordination/catalog-039/stage2/screenshots/ja-maximal-seshadri-positive-characteristic-figure-3.png
+coordination/catalog-039/stage2/screenshots/ja-maximal-seshadri-positive-characteristic-proof-1280.png
+coordination/catalog-039/stage2/screenshots/ja-maximal-seshadri-positive-characteristic-proof-375.png
+coordination/catalog-039/stage2/screenshots/ja-maximal-seshadri-positive-characteristic-references-1280.png
+coordination/catalog-039/stage2/screenshots/ja-maximal-seshadri-positive-characteristic-references-375.png
+coordination/catalog-039/stage2/screenshots/ja-maximal-seshadri-positive-characteristic-results-1280.png
+coordination/catalog-039/stage2/screenshots/ja-maximal-seshadri-positive-characteristic-results-375.png
+coordination/catalog-039/stage2/screenshots/ja-maximal-seshadri-surfaces-figure-1.png
+coordination/catalog-039/stage2/screenshots/ja-maximal-seshadri-surfaces-figure-2.png
+coordination/catalog-039/stage2/screenshots/ja-maximal-seshadri-surfaces-figure-3.png
+coordination/catalog-039/stage2/screenshots/ja-maximal-seshadri-surfaces-proof-1280.png
+coordination/catalog-039/stage2/screenshots/ja-maximal-seshadri-surfaces-proof-375.png
+coordination/catalog-039/stage2/screenshots/ja-maximal-seshadri-surfaces-references-1280.png
+coordination/catalog-039/stage2/screenshots/ja-maximal-seshadri-surfaces-references-375.png
+coordination/catalog-039/stage2/screenshots/ja-maximal-seshadri-surfaces-results-1280.png
+coordination/catalog-039/stage2/screenshots/ja-maximal-seshadri-surfaces-results-375.png
+coordination/catalog-039/stage2/screenshots/ja-model-034-1280.png
+coordination/catalog-039/stage2/screenshots/ja-model-034-375.png
+coordination/catalog-039/stage2/screenshots/ja-model-orbifold-1280.png
+coordination/catalog-039/stage2/screenshots/ja-model-orbifold-375.png
+coordination/catalog-039/stage2/screenshots/ja-model-schnell-1280.png
+coordination/catalog-039/stage2/screenshots/ja-model-schnell-375.png
+coordination/catalog-039/stage2/screenshots/ja-nagata-plane-curves-figure-1.png
+coordination/catalog-039/stage2/screenshots/ja-nagata-plane-curves-figure-2.png
+coordination/catalog-039/stage2/screenshots/ja-nagata-plane-curves-figure-3.png
+coordination/catalog-039/stage2/screenshots/ja-nagata-plane-curves-proof-1280.png
+coordination/catalog-039/stage2/screenshots/ja-nagata-plane-curves-proof-375.png
+coordination/catalog-039/stage2/screenshots/ja-nagata-plane-curves-references-1280.png
+coordination/catalog-039/stage2/screenshots/ja-nagata-plane-curves-references-375.png
+coordination/catalog-039/stage2/screenshots/ja-nagata-plane-curves-results-1280.png
+coordination/catalog-039/stage2/screenshots/ja-nagata-plane-curves-results-375.png
+coordination/catalog-039/stage2/screenshots/ja-papers-maximal-seshadri-higher-dimensions--1280.png
+coordination/catalog-039/stage2/screenshots/ja-papers-maximal-seshadri-higher-dimensions--375.png
+coordination/catalog-039/stage2/screenshots/ja-papers-maximal-seshadri-positive-characteristic--1280.png
+coordination/catalog-039/stage2/screenshots/ja-papers-maximal-seshadri-positive-characteristic--375.png
+coordination/catalog-039/stage2/screenshots/ja-papers-maximal-seshadri-surfaces--1280.png
+coordination/catalog-039/stage2/screenshots/ja-papers-maximal-seshadri-surfaces--375.png
+coordination/catalog-039/stage2/screenshots/ja-papers-nagata-plane-curves--1280.png
+coordination/catalog-039/stage2/screenshots/ja-papers-nagata-plane-curves--375.png
+drafts/catalog-039/overview/article.en.md
+drafts/catalog-039/overview/article.ja.md
+drafts/catalog-039/overview/status.md
+public/diagrams/catalog-039/maximal-seshadri-higher-dimensions/bounds.en.svg
+public/diagrams/catalog-039/maximal-seshadri-higher-dimensions/bounds.en.tex
+public/diagrams/catalog-039/maximal-seshadri-higher-dimensions/bounds.ja.svg
+public/diagrams/catalog-039/maximal-seshadri-higher-dimensions/bounds.ja.tex
+public/diagrams/catalog-039/maximal-seshadri-higher-dimensions/overview.en.svg
+public/diagrams/catalog-039/maximal-seshadri-higher-dimensions/overview.en.tex
+public/diagrams/catalog-039/maximal-seshadri-higher-dimensions/overview.ja.svg
+public/diagrams/catalog-039/maximal-seshadri-higher-dimensions/overview.ja.tex
+public/diagrams/catalog-039/maximal-seshadri-higher-dimensions/reshape.en.svg
+public/diagrams/catalog-039/maximal-seshadri-higher-dimensions/reshape.en.tex
+public/diagrams/catalog-039/maximal-seshadri-higher-dimensions/reshape.ja.svg
+public/diagrams/catalog-039/maximal-seshadri-higher-dimensions/reshape.ja.tex
+public/diagrams/catalog-039/maximal-seshadri-positive-characteristic/jets.en.svg
+public/diagrams/catalog-039/maximal-seshadri-positive-characteristic/jets.en.tex
+public/diagrams/catalog-039/maximal-seshadri-positive-characteristic/jets.ja.svg
+public/diagrams/catalog-039/maximal-seshadri-positive-characteristic/jets.ja.tex
+public/diagrams/catalog-039/maximal-seshadri-positive-characteristic/main.en.svg
+public/diagrams/catalog-039/maximal-seshadri-positive-characteristic/main.en.tex
+public/diagrams/catalog-039/maximal-seshadri-positive-characteristic/main.ja.svg
+public/diagrams/catalog-039/maximal-seshadri-positive-characteristic/main.ja.tex
+public/diagrams/catalog-039/maximal-seshadri-positive-characteristic/reshape.en.svg
+public/diagrams/catalog-039/maximal-seshadri-positive-characteristic/reshape.en.tex
+public/diagrams/catalog-039/maximal-seshadri-positive-characteristic/reshape.ja.svg
+public/diagrams/catalog-039/maximal-seshadri-positive-characteristic/reshape.ja.tex
+public/diagrams/catalog-039/maximal-seshadri-surfaces/field.en.svg
+public/diagrams/catalog-039/maximal-seshadri-surfaces/field.en.tex
+public/diagrams/catalog-039/maximal-seshadri-surfaces/field.ja.svg
+public/diagrams/catalog-039/maximal-seshadri-surfaces/field.ja.tex
+public/diagrams/catalog-039/maximal-seshadri-surfaces/main.en.svg
+public/diagrams/catalog-039/maximal-seshadri-surfaces/main.en.tex
+public/diagrams/catalog-039/maximal-seshadri-surfaces/main.ja.svg
+public/diagrams/catalog-039/maximal-seshadri-surfaces/main.ja.tex
+public/diagrams/catalog-039/maximal-seshadri-surfaces/nef.en.svg
+public/diagrams/catalog-039/maximal-seshadri-surfaces/nef.en.tex
+public/diagrams/catalog-039/maximal-seshadri-surfaces/nef.ja.svg
+public/diagrams/catalog-039/maximal-seshadri-surfaces/nef.ja.tex
+public/diagrams/catalog-039/nagata-plane-curves/fields.en.svg
+public/diagrams/catalog-039/nagata-plane-curves/fields.en.tex
+public/diagrams/catalog-039/nagata-plane-curves/fields.ja.svg
+public/diagrams/catalog-039/nagata-plane-curves/fields.ja.tex
+public/diagrams/catalog-039/nagata-plane-curves/main.en.svg
+public/diagrams/catalog-039/nagata-plane-curves/main.en.tex
+public/diagrams/catalog-039/nagata-plane-curves/main.ja.svg
+public/diagrams/catalog-039/nagata-plane-curves/main.ja.tex
+public/diagrams/catalog-039/nagata-plane-curves/positivity.en.svg
+public/diagrams/catalog-039/nagata-plane-curves/positivity.en.tex
+public/diagrams/catalog-039/nagata-plane-curves/positivity.ja.svg
+public/diagrams/catalog-039/nagata-plane-curves/positivity.ja.tex
+public/diagrams/catalog-039/overview/relations.en.svg
+public/diagrams/catalog-039/overview/relations.en.tex
+public/diagrams/catalog-039/overview/relations.ja.svg
+public/diagrams/catalog-039/overview/relations.ja.tex
+public/pdf/catalog-039-en.pdf
+public/pdf/catalog-039-ja.pdf
+scripts/catalog-033.test.mjs
+scripts/catalog-063.test.mjs
+src/data/pdf-editions.json
+src/data/site.mjs

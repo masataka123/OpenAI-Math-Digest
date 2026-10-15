@@ -1,0 +1,14 @@
+\node[card] (a) {\heading{1}{有限生成体へ下降する}{Descend to a finitely generated field}
+$F\subset K,\quad F/\mathbb Q\ \text{\Tx{は有限生成}{finitely generated}},\quad F\hookrightarrow\mathbb C$\\
+$(S_0,L_0)/F\quad\longmapsto\quad(S_{0,\mathbb C},L_{0,\mathbb C}),\quad r_0$};
+\node[card,below=2.1cm of a] (b) {\heading{2}{全jet失敗集合の真性を保存する}{Preserve properness of every jet failure locus}
+$B_{a,m}\subset U_{r,0},\quad m>a\sqrt{H/r}$\\
+$B_{a,m,\mathbb C}\ne U_{r,\mathbb C}\quad\Longrightarrow\quad B_{a,m,K}\ne U_{r,K}$};
+\flow{a}{b}{\Tx{複素数上のnef境界が核を排除；大域切断と小行列式を基底変換}{The complex nef boundary excludes kernels; base-change sections and maximal minors}\\\Cite{main-result}\\\Cite{ext-coherent}\\\Cite{corollary}};
+\node[card,below=1.7cm of b] (c) {\heading{3}{共通補集合に点を取る}{Find a point in the common complement}
+$F(U_{r,0})\hookrightarrow K,\qquad Z_r=\bigcup_{a,m:m>a\sqrt{H/r}}B_{a,m,K}$\\
+$U_{r,K}\setminus Z_r\ne\varnothing$};
+\flow{b}{c}{\Tx{非可算性で $2r$ 個の独立元を選び、代数閉性で体埋込みを延長}{Uncountability supplies $2r$ independent elements; algebraic closedness extends the embedding}\\\Cite{corollary}};
+\node[result,below=1.7cm of c] (d) {\heading{4}{代数的なnef化と上界を適用する}{Apply algebraic nefness and the upper bound}
+$\pi^*L-\sqrt{H/r}\sum_iE_i\ \text{\Tx{はnef}{is nef}},\qquad\boxed{\varepsilon=\sqrt{L^2/r}}$};
+\flow{c}{d}{\Tx{全jet検査から下界へ；曲面Riemann--Rochで上界も得る}{All jet tests give the lower bound; surface Riemann--Roch gives the upper bound}\\\Cite{nef}\\\Cite{upper}};

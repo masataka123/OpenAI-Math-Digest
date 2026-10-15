@@ -1,0 +1,16 @@
+\node[card] (a) {\heading{1}{旗から次数付き指数へ}{From a flag to graded exponents}
+$S_N\subset N\Delta(1/D,\ldots,1/D,D^{n-1}V)$\\
+$\#S_N=h^0(X,NL)=VN^n/n!+o(N^n)$};
+\node[card,below=2.15cm of a] (b) {\heading{2}{切片の積と個数を保存}{Preserve intercept product and cardinality}
+$F_N\subset N\Delta(w,\ldots,w,rw),\quad w=(V/r)^{1/n}$\\
+\Tx{次数付き性と後向きjet移送を保つ}{Keep gradedness and backward jet transfer}};
+\flow a b {\Tx{旗の次数評価と二切片変形を $n-1$ 回適用}{Use the flag bound and reshape two intercepts $n-1$ times}\\\Cite{flag}\quad\Cite{reshape}};
+\node[card,below=2.0cm of b] (c) {\heading{3}{内部充填からjet分離へ}{Interior filling gives jet separation}
+$0<\theta<w,\quad m=\lfloor N\theta\rfloor$\\
+$H^0(X_{K_r},NL_{K_r})\twoheadrightarrow\bigoplus_i J^m_{p_i}(NL_{K_r})$};
+\flow b c {\Tx{密度と加法性、剰余定理、非空開条件}{Density and additivity, CRT, and a nonempty open locus}\\\Cite{filling}\quad\Cite{jets}};
+\node[result,below=2.25cm of c] (d) {\heading{4}{上下界を合わせる}{Match the lower and upper bounds}
+$\displaystyle \varepsilon_r\geq\lim_{\theta\uparrow w}\lim_{N\to\infty}\frac{\lfloor N\theta\rfloor}{N}=w$\\
+$\displaystyle D_s\text{ nef}\ \Longrightarrow\ 0\leq D_s^n=V-rs^n\ \Longrightarrow\ \varepsilon_r\leq w$\\
+$\varepsilon_r=w,\qquad D_w\text{ nef},\qquad D_w^n=0$};
+\flow c d {\Tx{局所長さから曲線下界、別にブローアップで上界}{Local lengths give the lower bound; the blow-up gives the upper bound}\\\Cite{curve}\quad\Cite{volume}};

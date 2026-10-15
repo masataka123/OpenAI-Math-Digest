@@ -1,0 +1,32 @@
+\node[card] (a) {\heading{1}{反例を全配置の均等系へ}{Make a counterexample universal and uniform}
+$\mathcal U_r(d,m),\quad d/m\le\sqrt r,\quad (d,m)\mapsto(Nd,Nm)$};
+\node[card,below=1.45cm of a] (b) {\heading{2}{任意の法変位へ特殊化}{Specialize to arbitrary normal displacements}
+$0\ne F(w)=\sum_j f_jw^j,\quad f_j\in H^0(B,L^{d-kj}),\quad \operatorname{mult}_{(a_i,c_i)}F\ge m$};
+\flow a b {\Tx{閉 incidence 条件と巡回積、法座標の拡大}{Closed incidence conditions, cyclic products, rescaled normal coordinate}\\\Cite{universal};\quad\Cite{normal}};
+\node[half,below=1.7cm of b.south west,anchor=north west] (sq) {\heading{}{平方 $r=k^2$}{Square $r=k^2$}
+$A=L^k(-P)$ \Tx{を非捩れに選ぶ}{chosen nontorsion}\\
+$j<m:$ \Tx{零点数と次数で排除}{excluded by zeros and degree}\\
+$j=m:\ c\notin\operatorname{im}(\mathrm{ev})$};
+\node[half,right=.6cm of sq] (ns) {\heading{}{非平方 $r$}{Nonsquare $r$}
+$3<d/m<\sqrt r,\quad q=r-9$\\
+$w=\sigma_Pv,\quad\widetilde F=\sigma_P^{-m}F(\sigma_Pv)$\\
+$\deg(T\otimes A^{m-j})=h>0\quad(0\le j\le m)$};
+\draw[edge] ($(b.south west)+(.25,0)$)--($(sq.north west)+(.25,0)$);
+\draw[edge] ($(b.south west)+(8.15,0)$)--($(ns.north west)+(.25,0)$);
+\node[branchreason,anchor=south west] at ($(sq.north west)+(.65,.18)$) {\Tx{二つの最高係数で矛盾}{Contradict the two highest coefficients}\\\Cite{square}};
+\node[branchreason,anchor=south west] at ($(ns.north west)+(.65,.18)$) {\Tx{九点の強制零点を除く}{Remove the nine forced coefficient zeros}\\\Cite{cubic}};
+\node[card,below=1.7cm of sq.south west,anchor=north west] (c) {\heading{3}{非平方：各曲線上で非零核を得る}{Nonsquare: a kernel on each fixed curve}
+$\ker J_\tau\ne0,\quad I=\{(\ell,b):b<m,\ \ell<q(m-b)\}$};
+\draw[edge] (ns.south)--($(ns.south)+(0,-.45)$)-|($(c.north)+(5.8,0)$);
+\node[reason,anchor=south west] at ($(c.north west)+(.65,.25)$) {\Tx{$\tau$ を固定して点を衝突、零点数を保存}{Fix $\tau$, collide the points, preserve zero counts}\\\Cite{collision}};
+\node[card,below=1.5cm of c] (d) {\heading{4}{正規化基底の極限を計算}{Compute the normalized basis limit}
+$H_{E_{j,K,\tau}}\longrightarrow e^{Kx+jy},\qquad B_\tau\longrightarrow B_0=(K^\ell j^b)$};
+\flow c d {\Tx{theta 級数の全固定階微分が収束}{Theta series converge with every fixed derivative}\\\Cite{matrix}};
+\node[card,below=1.5cm of d] (e) {\heading{5}{行の個数を制御して補間}{Interpolate using bounds on row sizes}
+$N_K\le m,\quad\#\{K:N_K\ge t\}\le q(m-t+1)$\\
+$S\subset mD_\lambda+(0,U_0),\quad q(1-\lambda)m\ge1$};
+\flow d e {\Tx{縮小多角形と共通倍で格子端点誤差を吸収}{A contracted polygon and common powers absorb endpoint errors}\\\Cite{rows}};
+\node[result,below=1.45cm of e] (f) {\heading{6}{全配置の存在を排除する}{Exclude universal existence}
+$\operatorname{rank}B_0=\#S\ \Longrightarrow\ \ker J_\tau=0\ (\tau\ll1)$\\
+\Tx{非零核と矛盾し、平方・非平方とも}{Contradiction; both branches give}\quad $d_0\sqrt r>\sum_i m_i$};
+\flow e f {\Tx{行補間の全射性と非零小行列式の持続}{Surjective row interpolation and persistence of a nonzero minor}\\\Cite{full-rank}};

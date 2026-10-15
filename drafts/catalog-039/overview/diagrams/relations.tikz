@@ -1,0 +1,22 @@
+\node[card] (plane) {\heading{01}{平面曲線：全 $r\geq10$ の厳密不等式}{Plane curves: strict inequality for every $r\geq10$}
+\textit{Nagata's conjecture for plane curves}\\
+$d\sqrt r>\sum_i m_i\quad\Longrightarrow\quad\varepsilon(\mathcal O(1);p_1,\ldots,p_r)=1/\sqrt r$\\
+\Tx{法束への特殊化、平方数の係数比較、非平方数のtheta行列}{Normal specialization, square-case coefficients, nonsquare theta matrices}};
+\node[reason,below=0.35cm of plane] (note) {\Tx{この経路を、下の一般偏極多様体の証明へ接続しない}{This route is not used as a premise for the polarized-variety proofs below}\\\Cite{plane}};
+\node[card,below=1.65cm of plane] (surface) {\heading{02}{曲面：jet単射性による消滅}{Surfaces: vanishing via injective jet tests}
+\textit{Maximal Seshadri constants on arbitrary polarized surfaces}\\
+\Tx{節点の指数境界・圧縮・有限トーラス群}{Node exponent bounds, compression, and finite torus groups}\\
+$\varepsilon=\sqrt{L^2/r}$\quad\Tx{（十分大きい全 $r$）}{(every sufficiently large $r$)}};
+\node[card,below=2.25cm of surface] (higher) {\heading{03}{高次元：全jetへの全射性へ作り直す}{Higher dimensions: reconstruct for surjectivity onto full jets}
+\textit{Maximal Multipoint Seshadri Constants in Higher Dimensions}\\
+\Tx{二切片変形・次数付き支持の内部充填・補間}{Two-intercept reshaping, interior filling of graded supports, interpolation}\\
+$\varepsilon=(L^n/r)^{1/n},\quad n\geq3,\quad k=\mathbf C$};
+\draw[edge,dashed] ($(surface.south)+(-6.9,0)$)--($(higher.north)+(-6.9,0)$);
+\node[reason,anchor=west] at ($(surface.south)+(-6.35,-1.12)$) {\Tx{節点・圧縮・原始格子方向を、ラベル付き多項式空間へ拡張}{Extend nodes, compression and primitive directions to labelled polynomial spaces}\\\Cite{higher-method}};
+\node[result,below=2.35cm of higher] (positive) {\heading{04}{正標数：形式的移送と幾何学的一般点}{Positive characteristic: formal transfer and a geometric generic tuple}
+\textit{Maximal multipoint Seshadri constants in positive characteristic}\\
+$y^2+xy-x^3=\xi\eta,\qquad K_r=\overline{k(U_r)}$\\
+$\varepsilon_r=(L^n/r)^{1/n},\quad n\geq2,\quad\operatorname{char}k>0$};
+\draw[edge,dashed] ($(higher.south)+(-6.9,0)$)--($(positive.north)+(-6.9,0)$);
+\node[reason,anchor=west] at ($(higher.south)+(-6.35,-1.17)$) {\Tx{曲面・高次元の構成を再証明：解析極限を形式代入へ}{Reprove the surface and higher-dimensional constructions using formal substitutions}\\\Cite{positive-method}};
+\node[reason,below=0.35cm of positive] {\Tx{破線＝方法の継承・再構成。先行する最大性の主定理の直接入力ではない}{Dashed arrows: methodological inheritance and reconstruction, not use of earlier maximality theorems.}};

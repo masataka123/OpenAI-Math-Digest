@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "author-key",
+  "catalogId": "039",
+  "sources": {
+    "OVERVIEW": {
+      "recordFile": "../../../coordination/catalog-039/inventory.json",
+      "recordId": "overview",
+      "pagination": "same"
+    },
+    "OpenAI26a": {
+      "recordFile": "sources.json",
+      "recordId": "nagata-plane-curves",
+      "pagination": "same"
+    },
+    "OpenAI26b": {
+      "recordFile": "sources.json",
+      "recordId": "maximal-seshadri-surfaces",
+      "pagination": "same"
+    },
+    "OpenAI26c": {
+      "recordFile": "sources.json",
+      "recordId": "maximal-seshadri-higher-dimensions",
+      "pagination": "same"
+    },
+    "OpenAI26d": {
+      "recordFile": "sources.json",
+      "recordId": "maximal-seshadri-positive-characteristic",
+      "pagination": "same"
+    }
+  },
+  "citations": {
+    "official": {
+      "source": "OVERVIEW",
+      "locations": [
+        {
+          "result": "039",
+          "printed": "6",
+          "pdf": "6"
+        }
+      ]
+    },
+    "plane": {
+      "source": "OpenAI26a",
+      "locations": [
+        {
+          "result": "Theorem 1.1; Corollary 6.2",
+          "printed": "1, 22",
+          "pdf": "1, 22"
+        }
+      ]
+    },
+    "surface": {
+      "source": "OpenAI26b",
+      "locations": [
+        {
+          "result": "Theorem 1.1; Corollary 5.5",
+          "printed": "2, 18",
+          "pdf": "2, 18"
+        }
+      ]
+    },
+    "higher": {
+      "source": "OpenAI26c",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "1–2",
+          "pdf": "1–2"
+        }
+      ]
+    },
+    "positive": {
+      "source": "OpenAI26d",
+      "locations": [
+        {
+          "result": "Theorem 1.1; Remark 6.3",
+          "printed": "1–2, 16",
+          "pdf": "1–2, 16"
+        }
+      ]
+    },
+    "surface-method": {
+      "source": "OpenAI26b",
+      "locations": [
+        {
+          "result": "Propositions 3.2, 3.4; Lemma 4.3",
+          "printed": "8–10, 14",
+          "pdf": "8–10, 14"
+        }
+      ]
+    },
+    "higher-method": {
+      "source": "OpenAI26c",
+      "locations": [
+        {
+          "result": "§1.1; Proposition 4.1",
+          "printed": "2, 9–14",
+          "pdf": "2, 9–14"
+        }
+      ]
+    },
+    "positive-method": {
+      "source": "OpenAI26d",
+      "locations": [
+        {
+          "result": "§1.1; §4; §5",
+          "printed": "2, 8–14",
+          "pdf": "2, 8–14"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ]
+}

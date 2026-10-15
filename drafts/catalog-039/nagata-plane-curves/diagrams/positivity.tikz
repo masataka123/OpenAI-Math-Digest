@@ -1,0 +1,20 @@
+\node[card] (a) {\heading{1}{曲線ごとの狭義不等式}{Strict inequality for each curve}
+$d\sqrt r>\sum_i\operatorname{mult}_{p_i}C,\qquad N_r=\sqrt rH-\sum_iE_i$};
+\node[card,below=1.45cm of a] (b) {\heading{2}{strict nef と平方零を別々に得る}{Establish strict nefness and square zero separately}
+$N_r\cdot E_i=1,\quad N_r\cdot\widetilde C>0,\qquad N_r^2=r-r=0$};
+\flow a b {\Tx{例外曲線と平面曲線の狭義変換を尽くす}{Exhaust exceptional curves and strict transforms of plane curves}\\\Cite{positivity}};
+\node[half,below=1.75cm of b.south west,anchor=north west] (lo) {\heading{}{下界：nef な境界類}{Lower bound: a nef boundary class}
+$H-r^{-1/2}\sum_iE_i=N_r/\sqrt r$\\
+$\varepsilon\ge r^{-1/2}$};
+\node[half,right=.6cm of lo] (up) {\heading{}{上界：曲線を漸近的に作る}{Upper bound: asymptotic curves}
+$e_n=\lceil\sqrt r(n+1)\rceil$\\
+$\binom{e_n+2}{2}>r\binom{n+1}{2}$\\
+$\varepsilon\le e_n/(rn)\longrightarrow r^{-1/2}$};
+\draw[edge] ($(b.south west)+(.25,0)$)--($(lo.north west)+(.25,0)$);
+\draw[edge] ($(b.south west)+(8.15,0)$)--($(up.north west)+(.25,0)$);
+\node[branchreason,anchor=south west] at ($(lo.north west)+(.65,.2)$) {\Tx{正のスカラーで正規化}{Normalize by a positive scalar}\\\Cite{positivity}};
+\node[branchreason,anchor=south west] at ($(up.north west)+(.65,.2)$) {\Tx{条件数の比較と nef 交点}{Count conditions and intersect a nef class}\\\Cite{positivity}};
+\node[result,below=1.4cm of lo.south west,anchor=north west] (c) {\heading{3}{上下界が一致する}{The bounds coincide}
+$\displaystyle\varepsilon(\mathcal O(1);p_1,\ldots,p_r)=\frac1{\sqrt r}$};
+\draw[edge] (lo.south)--($(c.north)+(-3.8,0)$);
+\draw[edge] (up.south)--($(c.north)+(3.8,0)$);

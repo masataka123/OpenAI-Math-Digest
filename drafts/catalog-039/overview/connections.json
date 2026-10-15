@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "catalogId": "039",
+  "checkedOn": "2026-10-15",
+  "classification": "No fixed classification cards; one methodological overview diagram",
+  "meaning": "Source-use comparison, not proof certification. No maximality-theorem dependency between the four articles was established in the reviewed arguments.",
+  "edges": [
+    {
+      "from": "nagata-plane-curves",
+      "to": "maximal-seshadri-surfaces",
+      "kind": "background",
+      "location": "surface §1, pp.1–2",
+      "role": "Plane problem is contextual motivation; surface maximality is proved through its own interpolation argument",
+      "diagramArrow": false
+    },
+    {
+      "from": "maximal-seshadri-surfaces",
+      "to": "maximal-seshadri-higher-dimensions",
+      "kind": "methodological-generalization",
+      "location": "higher §1.1 p.2; Proposition 4.1 pp.9–14",
+      "sourceResults": "surface Propositions 3.2, 3.4 pp.8–10; Lemma 4.3 p.14",
+      "role": "Node, compression and primitive directions reconstructed for labelled graded exponent spaces and full-jet surjectivity",
+      "diagramArrow": "dashed"
+    },
+    {
+      "from": "maximal-seshadri-surfaces",
+      "to": "maximal-seshadri-positive-characteristic",
+      "kind": "methodological-background",
+      "location": "positive §1.1 p.2; §§4–5 pp.8–14",
+      "role": "Surface constructions reworked in arbitrary characteristic; no finite-group character decomposition assumed",
+      "diagramArrow": false
+    },
+    {
+      "from": "maximal-seshadri-higher-dimensions",
+      "to": "maximal-seshadri-positive-characteristic",
+      "kind": "methodological-generalization",
+      "location": "positive §1.1 p.2; §§4–5 pp.8–14",
+      "role": "Replace analytic limits with formal transfer, retain graded filling and CRT, use geometric generic tuple",
+      "diagramArrow": "dashed"
+    }
+  ],
+  "crossCatalogStatus": "Not exhaustively investigated; no absence-of-dependence claim",
+  "unresolved": [
+    "Chow49 original theorem statement and exact location in plane Lemma3.3 input"
+  ]
+}

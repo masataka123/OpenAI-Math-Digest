@@ -1,0 +1,15 @@
+\node[card] (a) {\heading{1}{有限次数の非空開条件}{Nonempty open conditions in each degree}
+$O_{j,k}=\{\mathbf p:H^0(X,kL)\twoheadrightarrow\bigoplus_iJ_{p_i}^{\lfloor k\theta_j\rfloor}(kL)\}$\\
+$0<\theta_j\uparrow w,\quad k\geq k_j$};
+\node[card,below=1.85cm of a] (b) {\heading{2}{非常に一般な共通配置を取る}{Choose a common very-general tuple}
+$Z_r=\bigcup_{j\geq1}\bigcup_{k\geq k_j}(U_r(X)\setminus O_{j,k})$\\
+$U_r(X)\setminus Z_r\ne\varnothing$};
+\flow{a}{b}{\Tx{principal partsの局所自由性で開性、複素Baire性で非空性}{Local freeness of principal parts gives openness; the complex Baire property gives nonemptiness}\\[3pt]\Cite{locus}};
+\node[card,below=1.95cm of b] (c) {\heading{3}{曲線との交点で下界を得る}{Bound intersections with every integral curve}
+$kL\cdot C\geq\lfloor k\theta_j\rfloor\sum_i\operatorname{mult}_{p_i}C$\\
+$\varepsilon\geq\theta_j\quad(j\geq1),\qquad\theta_j\uparrow w$};
+\flow{b}{c}{\Tx{非零の制限切断を選び、Hilbert--Samuel重複度で局所交点を評価}{Choose a section nonzero on the curve; bound local intersections by Hilbert--Samuel multiplicity}\\[3pt]\Cite{lower}};
+\node[result,below=2.05cm of c] (d) {\heading{4}{独立な上界と合わせてnef類を得る}{Use the independent upper bound and obtain nefness}
+$0\leq t<\varepsilon:\quad D_t\ \text{nef},\quad0\leq D_t^n=V-rt^n$\\
+$\varepsilon\leq w\quad\Longrightarrow\quad\varepsilon=w,\quad D_w\ \text{nef},\quad D_w^n=0$};
+\flow{c}{d}{\Tx{狭義変換との交点式と例外曲線を調べる。零の自己交点だけではnef性を導かない}{Check strict transforms and exceptional curves; zero top intersection alone does not imply nefness}\\[3pt]\Cite{upper}};

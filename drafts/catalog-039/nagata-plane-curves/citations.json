@@ -1,0 +1,313 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "author-key",
+  "catalogId": "039",
+  "sources": {
+    "P": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "displayName": "Nagata’s conjecture for plane curves",
+      "pagination": "same"
+    },
+    "StacksN": {
+      "recordFile": "sources.json",
+      "recordId": "stacks-normal",
+      "guideRole": {
+        "ja": "法束を O_B(k) と同定する",
+        "en": "Identify the normal bundle with O_B(k)"
+      }
+    },
+    "StacksC": {
+      "recordFile": "sources.json",
+      "recordId": "stacks-cohomology",
+      "guideRole": {
+        "ja": "平方の場合に切断空間の次元を計算する",
+        "en": "Compute the section-space dimension in the square case"
+      }
+    },
+    "StacksT": {
+      "recordFile": "sources.json",
+      "recordId": "stacks-torsion",
+      "guideRole": {
+        "ja": "非捩れの次数0の線束を選ぶ",
+        "en": "Choose a nontorsion degree-zero line bundle"
+      }
+    },
+    "Chow49": {
+      "recordFile": "sources.json",
+      "recordId": "chow",
+      "guideRole": {
+        "ja": "Lemma 3.3の解析的像の代数性に使用。原著の定理記述は未照合",
+        "en": "Algebraicity of the analytic image in Lemma 3.3; original theorem statement not checked"
+      }
+    }
+  },
+  "citations": {
+    "main-result": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "fields": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Corollary 6.1",
+          "printed": "22",
+          "pdf": "22"
+        }
+      ]
+    },
+    "positivity": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Corollary 6.2",
+          "printed": "22",
+          "pdf": "22"
+        }
+      ]
+    },
+    "universal": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 2.1",
+          "printed": "3–4",
+          "pdf": "3–4"
+        }
+      ]
+    },
+    "normal": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 2.2",
+          "printed": "4–6",
+          "pdf": "4–6"
+        }
+      ]
+    },
+    "square": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 2.3",
+          "printed": "6–7",
+          "pdf": "6–7"
+        }
+      ]
+    },
+    "cubic": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 2.4; Proposition 3.1",
+          "printed": "8–9",
+          "pdf": "8–9"
+        }
+      ]
+    },
+    "theta": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemmas 3.2–3.3; §3.3",
+          "printed": "10–12",
+          "pdf": "10–12"
+        }
+      ]
+    },
+    "collision": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 4.1",
+          "printed": "13–14",
+          "pdf": "13–14"
+        }
+      ]
+    },
+    "matrix": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 4.2; Proposition 4.3",
+          "printed": "14–17",
+          "pdf": "14–17"
+        }
+      ]
+    },
+    "rows": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemmas 5.1–5.4",
+          "printed": "18–21",
+          "pdf": "18–21"
+        }
+      ]
+    },
+    "full-rank": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 5.5; Theorem 1.1 proof",
+          "printed": "21",
+          "pdf": "21"
+        }
+      ]
+    },
+    "reading-scope": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§§2–6",
+          "printed": "3–22",
+          "pdf": "3–22"
+        }
+      ]
+    },
+    "normal-input": {
+      "source": "StacksN",
+      "locations": [
+        {
+          "result": "Tag 0B3P, Lemma 15.2",
+          "printed": "26",
+          "pdf": "26"
+        }
+      ]
+    },
+    "cohomology-input": {
+      "source": "StacksC",
+      "locations": [
+        {
+          "result": "Tag 01XT, Lemma 8.1",
+          "printed": "16",
+          "pdf": "16"
+        }
+      ]
+    },
+    "torsion-input": {
+      "source": "StacksT",
+      "locations": [
+        {
+          "result": "Tag 0C1Z, Lemma 17.1",
+          "printed": "36",
+          "pdf": "36"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ],
+  "articleGuides": {
+    ".": {
+      "selfSource": "P",
+      "externalSources": [
+        "StacksN",
+        "StacksC",
+        "StacksT",
+        "Chow49"
+      ],
+      "proofTargets": [
+        "main-result",
+        "fields",
+        "positivity"
+      ],
+      "mainResults": [
+        "main-result",
+        "fields",
+        "positivity"
+      ],
+      "statements": {
+        "main-result": "theorem-1-1",
+        "fields": "corollary-6-1",
+        "positivity": "corollary-6-2"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "main-result",
+          "conclusion": "Strict simultaneous inequality for all forms and nonnegative multiplicity vectors; square and nonsquare cases",
+          "anchor": "proof-1-step-4"
+        },
+        {
+          "result": "fields",
+          "conclusion": "Uncountable algebraically closed characteristic-zero fields and nonempty simultaneous exceptional complement",
+          "anchor": "proof-2-step-1"
+        },
+        {
+          "result": "positivity",
+          "conclusion": "Strict nefness and square zero",
+          "anchor": "proof-3-step-1"
+        },
+        {
+          "result": "positivity",
+          "conclusion": "Equal-weight multipoint Seshadri lower and upper bounds",
+          "anchor": "proof-3-step-2"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "universal",
+          "purpose": {
+            "ja": "全次数・全重複度に共通の例外集合と均等化。",
+            "en": "A common exceptional set for all degrees and multiplicities, and symmetrization."
+          }
+        },
+        {
+          "citation": "normal",
+          "purpose": {
+            "ja": "法方向の極限で非零性と重複度を保つ箇所。",
+            "en": "Nonvanishing and multiplicity in the normal limit."
+          }
+        },
+        {
+          "citation": "square",
+          "purpose": {
+            "ja": "平方の場合の境界等号を排除する二段階。",
+            "en": "Two steps excluding equality in the square case."
+          }
+        },
+        {
+          "citation": "collision",
+          "purpose": {
+            "ja": "楕円曲線を固定してから点を衝突させる。",
+            "en": "Collide points only after fixing the elliptic curve."
+          }
+        },
+        {
+          "citation": "matrix",
+          "purpose": {
+            "ja": "基底の正規化と数値行列の極限。",
+            "en": "Basis normalization and the numerical matrix limit."
+          }
+        },
+        {
+          "citation": "rows",
+          "purpose": {
+            "ja": "総次元ではなく行の分布を制御する。",
+            "en": "Control the row distribution, not merely total dimension."
+          }
+        },
+        {
+          "citation": "positivity",
+          "purpose": {
+            "ja": "strict nef・平方0・定数の上下界を区別する。",
+            "en": "Separate strict nefness, square zero, and the two bounds for the constant."
+          }
+        }
+      ]
+    }
+  }
+}

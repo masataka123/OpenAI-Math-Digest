@@ -1,0 +1,10 @@
+\node[card] (a) {\heading{1}{違反する系の存在条件}{Incidence conditions for a violation}
+$d\sqrt r\le\sum_i m_i,\qquad A_{d,\mathbf m}\subset U_r$\\
+\Tx{$\mathbf Q$ 係数の Taylor 条件行列の小行列式}{Minors of the Taylor-condition matrix over $\mathbf Q$}};
+\node[card,below=1.45cm of a] (b) {\heading{2}{体拡大で真の閉集合を保つ}{Preserve properness under field extension}
+$A_{d,\mathbf m,\mathbf C}\ne U_{r,\mathbf C}\ \Longrightarrow\ A_{d,\mathbf m,k}\ne U_{r,k}$};
+\flow a b {\Tx{複素数上の定理と非零有理小行列式}{The complex theorem and a nonzero rational minor}\\\Cite{main-result};\quad\Cite{fields}};
+\node[result,below=1.45cm of b] (c) {\heading{3}{一つの非空な補集合で全不等式}{All inequalities on one nonempty complement}
+$U_{r,k}\setminus\bigcup_{d,\mathbf m\text{ violating}}A_{d,\mathbf m,k}\ne\varnothing$\\
+\Tx{全 $d\ge1$・全 $m_i\ge0$ に狭義不等式}{Strict inequality for every $d\ge1$ and every $m_i\ge0$}};
+\flow b c {\Tx{非可算性から $2r$ 個の代数的独立座標を選ぶ}{Use uncountability to choose $2r$ algebraically independent coordinates}\\\Cite{fields}};

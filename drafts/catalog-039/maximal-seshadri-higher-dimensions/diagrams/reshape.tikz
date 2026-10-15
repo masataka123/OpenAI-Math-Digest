@@ -1,0 +1,16 @@
+\node[card] (a) {\heading{1}{残りの座標をラベルにする}{Retain the other coordinates as labels}
+$\kappa=k-\sum_{i\geq3}\gamma_i/a_i,\quad f\in M\bigl(\kappa\Delta(A,B)\bigr)$\\
+$g=y^2-x^2(1+x)=\xi\eta,\quad f=g^jf_0,\quad H=AB$};
+\node[card,below=2.0cm of a] (b) {\heading{2}{二枝の消失次数で初項を囲む}{Bound least terms by the two branch orders}
+$\nu_t(f)\in\kappa Q,\quad Q=\operatorname{conv}\{0,(a,0),(c,c),(0,b)\}$\\
+$a+b=W=dH,\quad c=1/d,\quad\operatorname{area}(Q)=H/2$};
+\flow{a}{b}{\Tx{正規化上の次数と二枝の零点次数を比較し、$g^j$を戻す}{Compare normalization degree with branch orders, then restore the factor $g^j$}\\[3pt]\Cite{node}};
+\node[card,below=2.0cm of b] (c) {\heading{3}{原始方向の幅を正確に指定する}{Tune the width in a primitive direction}
+$P=\operatorname{conv}\{(-b,0),(a,0),(0,c)\},\quad R=H/w$\\
+$u=(i,j)\ \Tx{\text{は原始}}{\text{is primitive}},\quad \operatorname{range}_P\det(u,\cdot)=R$};
+\flow{b}{c}{\Tx{shear と対角圧縮の後、$j$を2冪、$i$を奇数に選び $i/d+ja=R$ とする}{Shear and compress; choose a power of two $j$ and odd $i$ with $i/d+ja=R$}\\[3pt]\Cite{direction}};
+\node[result,below=2.1cm of c] (d) {\heading{4}{面積から幅を求め、二回圧縮する}{Recover the width from area and compress twice}
+$h_{\max}=H/R=w,\quad S'_k\subset k\Delta(w,H/w,a_3,\ldots,a_n)$\\
+$\#S'_k=\#S_k,\quad S'_k+S'_l\subset S'_{k+l}$\\
+\Tx{変形後の全jet全射性 $\Longrightarrow$ 変形前の全jet全射性}{Full-jet surjectivity after reshaping $\Longrightarrow$ surjectivity before it}};
+\flow{c}{d}{\Tx{横・縦圧縮は消失次数で定義する。固定次数の非零小行列式でjetを戻す}{Define both compressions by vanishing orders; transfer jets using a nonzero finite-degree minor}\\[3pt]\Cite{transfer}; \Cite{reshape-proof}};

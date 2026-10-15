@@ -3,6 +3,7 @@ import inventory034 from '../../research/catalog-034-inventory.json' with { type
 import inventory036 from '../../coordination/catalog-036/inventory.json' with { type: 'json' };
 import inventory037 from '../../coordination/catalog-037/inventory.json' with { type: 'json' };
 import inventory038 from '../../coordination/catalog-038/inventory.json' with { type: 'json' };
+import inventory039 from '../../coordination/catalog-039/inventory.json' with { type: 'json' };
 import inventory042 from '../../coordination/catalog-042/inventory.json' with { type: 'json' };
 import inventory046 from '../../coordination/catalog-046/inventory.json' with { type: 'json' };
 import inventory051 from '../../coordination/catalog-051/inventory.json' with { type: 'json' };
@@ -31,7 +32,7 @@ const fieldTranslations = [
     "id": "algebraic-complex-geometry",
     "ja": "代数幾何学・複素幾何学",
     "catalogIds": [
-      "033", "034", "036", "037", "038", "042", "046", "051", "052", "057", "063", "067", "068"
+      "033", "034", "036", "037", "038", "039", "042", "046", "051", "052", "057", "063", "067", "068"
     ]
   },
   {
@@ -152,6 +153,10 @@ export const papers = [...inventory033.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '038', sourceCommit: inventory038.sourceCommit,
  title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
  pages: entry.pdfPages, order: entry.order, featured: true,
+})), ...inventory039.manuscripts.map(entry => ({
+ id: entry.paperId, catalogId: '039', sourceCommit: inventory039.sourceCommit,
+ title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
+ pages: entry.pdfPages, order: entry.order, featured: true,
 })), ...inventory042.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '042', sourceCommit: inventory042.sourceCommit,
  title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
@@ -221,6 +226,13 @@ export const catalogs = [{
   contentsTitle: inventory038.contentsTitle,
   description: text('指数型最小化と局所的な持上げから、藤田の自由性予想の主張と証明の接続を読む。', 'Follow exponential minimization and local lifting through the claimed proof of Fujita’s freeness conjecture.'),
   paperIds: inventory038.manuscripts.map(p => p.paperId),
+  overviewSectionIds: ['papers', 'connections', 'sources'],
+}, {
+  id: '039', sourceCommit: inventory039.sourceCommit, mode: 'multi',
+  title: text(inventory039.titleJa, inventory039.overviewTitle),
+  contentsTitle: inventory039.contentsTitle,
+  description: text('平面の厳密Nagata不等式と、曲面・高次元・正標数での多点Seshadri定数の最大性を、4篇の証明から読む。', 'Follow four proofs of the strict plane Nagata inequality and maximal multipoint Seshadri constants on surfaces, in higher dimensions, and in positive characteristic.'),
+  paperIds: inventory039.manuscripts.map(p => p.paperId),
   overviewSectionIds: ['papers', 'connections', 'sources'],
 }, {
   id: '042', sourceCommit: inventory042.sourceCommit, mode: 'single',

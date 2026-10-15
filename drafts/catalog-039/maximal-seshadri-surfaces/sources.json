@@ -1,0 +1,473 @@
+{
+  "catalogId": "039",
+  "paperId": "maximal-seshadri-surfaces",
+  "title": "Maximal Seshadri constants on arbitrary polarized surfaces",
+  "displayName": "Maximal Seshadri constants on arbitrary polarized surfaces",
+  "authors": "OpenAI",
+  "citationKey": "OpenAI26b",
+  "version": "September 23, 2026",
+  "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Maximal-Seshadri-Constants-on-Arbitrary-Polarized-Surfaces-September-23-2026/main.pdf",
+  "downloadUrl": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Maximal-Seshadri-Constants-on-Arbitrary-Polarized-Surfaces-September-23-2026/main.pdf",
+  "sha256": "85976b9c9ccf5e561ae597a409f149949e2380c0e8db7e1afaa0c73ffcaf923e",
+  "pdfPages": 19,
+  "checkedOn": "2026-10-15",
+  "checkedLocations": [
+    {
+      "printedPage": "1",
+      "pdfPage": 1
+    },
+    {
+      "printedPage": "2",
+      "pdfPage": 2
+    },
+    {
+      "printedPage": "3",
+      "pdfPage": 3
+    },
+    {
+      "printedPage": "4",
+      "pdfPage": 4
+    },
+    {
+      "printedPage": "5",
+      "pdfPage": 5
+    },
+    {
+      "printedPage": "6",
+      "pdfPage": 6
+    },
+    {
+      "printedPage": "7",
+      "pdfPage": 7
+    },
+    {
+      "printedPage": "8",
+      "pdfPage": 8
+    },
+    {
+      "printedPage": "9",
+      "pdfPage": 9
+    },
+    {
+      "printedPage": "10",
+      "pdfPage": 10
+    },
+    {
+      "printedPage": "11",
+      "pdfPage": 11
+    },
+    {
+      "printedPage": "12",
+      "pdfPage": 12
+    },
+    {
+      "printedPage": "13",
+      "pdfPage": 13
+    },
+    {
+      "printedPage": "14",
+      "pdfPage": 14
+    },
+    {
+      "printedPage": "15",
+      "pdfPage": 15
+    },
+    {
+      "printedPage": "16",
+      "pdfPage": 16
+    },
+    {
+      "printedPage": "17",
+      "pdfPage": 17
+    },
+    {
+      "printedPage": "18",
+      "pdfPage": 18
+    },
+    {
+      "printedPage": "19",
+      "pdfPage": 19
+    }
+  ],
+  "statements": [
+    {
+      "result": "Theorem 1.1",
+      "pages": "2",
+      "hypotheses": "S smooth integral projective over C, L ample; r >= r0(S,L); outside a countable union of proper closed subsets in ordered distinct configurations Ur.",
+      "conclusions": [
+        "Nonempty complement",
+        "Boundary divisor pi*L-sqrt(L^2/r) sum Ei is nef",
+        "Unweighted multipoint epsilon equals sqrt(L^2/r)"
+      ],
+      "checking": "Statement, all conclusions and proof p.17 read."
+    },
+    {
+      "result": "Proposition 5.3",
+      "pages": "16–17",
+      "hypotheses": "For every k,m>0 with m>k sqrt(H/r), no nonzero section of kL vanishes to order at least m at all fixed distinct points.",
+      "conclusions": [
+        "The boundary divisor is nef, hence tests all integral curves including unequal multiplicities."
+      ],
+      "checking": "Full statement and contradiction argument read."
+    },
+    {
+      "result": "Corollary 5.5",
+      "pages": "18",
+      "hypotheses": "K uncountable algebraically closed of characteristic zero; smooth integral projective surface and ample line bundle.",
+      "conclusions": [
+        "For all sufficiently large r, equality outside a countable union of proper closed subsets, with nonempty complement."
+      ],
+      "checking": "Full statement and descent/base-change proof read."
+    }
+  ],
+  "proofPassages": [
+    {
+      "pages": "4–6",
+      "results": "Lemma 2.1, Proposition 2.2",
+      "scope": "Finite minors, distinct initial monomial basis, weighted analytic rescaling and convergence."
+    },
+    {
+      "pages": "6–11",
+      "results": "Lemma 3.1, Propositions 3.2 and 3.4, Corollary 3.5",
+      "scope": "Nodal divisor, removal of components, intersection bound, slice compression, transfer to the surface."
+    },
+    {
+      "pages": "11–15",
+      "results": "Lemma 4.1, Proposition 4.2, Lemma 4.3, Corollary 4.4",
+      "scope": "Triangle multiplicity estimate, character projection, index-r lattice, primitive direction for all large r, quantifier order."
+    },
+    {
+      "pages": "15–18",
+      "results": "Lemmas 5.1–5.2, Proposition 5.3, Lemma 5.4, Theorem 1.1 proof, Corollary 5.5",
+      "scope": "Open locus, very general complement, RR effective divisor, upper bound, field extension."
+    }
+  ],
+  "externalSources": [
+    {
+      "id": "varieties",
+      "citationKey": "SPVar",
+      "displayName": "The Stacks Project — Varieties",
+      "authors": "The Stacks Project Authors",
+      "version": "version ed88ff78, compiled July 14, 2026; retrieved October 15, 2026",
+      "sourceUrl": "https://stacks.math.columbia.edu/download/varieties.pdf",
+      "pdfPages": 113,
+      "sha256": "ed339c312c86721e3f830876da14cabe89a96e83e454a78b7cd355555f4bca45",
+      "localFile": "sources/varieties.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "108",
+          "pdfPage": 108
+        }
+      ],
+      "checkedStatement": "Lemma 47.3 (Tag 0FD6)",
+      "checking": "Statement and cited application checked; the external proof is not recursively verified."
+    },
+    {
+      "id": "more-morphisms",
+      "citationKey": "SPMor",
+      "displayName": "The Stacks Project — More on Morphisms",
+      "authors": "The Stacks Project Authors",
+      "version": "version ed88ff78, compiled July 14, 2026; retrieved October 15, 2026",
+      "sourceUrl": "https://stacks.math.columbia.edu/download/more-morphisms.pdf",
+      "pdfPages": 246,
+      "sha256": "59df05f5d52f453b17677398c72a51fe156367f460f6dcfdf764d9631b7c787c",
+      "localFile": "sources/more-morphisms.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "94",
+          "pdfPage": 94
+        }
+      ],
+      "checkedStatement": "Lemma 32.3 (Tag 0G4F)",
+      "checking": "Statement and cited application checked; the external proof is not recursively verified."
+    },
+    {
+      "id": "divisors",
+      "citationKey": "StacksN",
+      "displayName": "The Stacks Project — Divisors",
+      "authors": "The Stacks Project Authors",
+      "version": "version ed88ff78, compiled July 14, 2026; retrieved October 15, 2026",
+      "sourceUrl": "https://stacks.math.columbia.edu/download/divisors.pdf",
+      "pdfPages": 94,
+      "sha256": "0527740ac9877baff00aaad784e66aae83ff541dad40d4939028059f9f28a493",
+      "localFile": "sources/divisors.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "47",
+          "pdfPage": 47
+        },
+        {
+          "printedPage": "81",
+          "pdfPage": 81
+        },
+        {
+          "printedPage": "82",
+          "pdfPage": 82
+        }
+      ],
+      "checkedStatement": "Sections 22, 33 (Tags 0638, 01OF)",
+      "checking": "Statement and cited application checked; the external proof is not recursively verified."
+    },
+    {
+      "id": "modules",
+      "citationKey": "SPMod",
+      "displayName": "The Stacks Project — Sheaves of Modules",
+      "authors": "The Stacks Project Authors",
+      "version": "version ed88ff78, compiled July 14, 2026; retrieved October 15, 2026",
+      "sourceUrl": "https://stacks.math.columbia.edu/download/modules.pdf",
+      "pdfPages": 54,
+      "sha256": "7effc55750a81b6969a94ca3432fb71c366b3d91acdd4016ea4149dd28b475e6",
+      "localFile": "sources/modules.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "45",
+          "pdfPage": 45
+        },
+        {
+          "printedPage": "46",
+          "pdfPage": 46
+        }
+      ],
+      "checkedStatement": "Section 29 (Tag 0G3P)",
+      "checking": "Statement and cited application checked; the external proof is not recursively verified."
+    },
+    {
+      "id": "chow",
+      "citationKey": "SPChow",
+      "displayName": "The Stacks Project — Chow Homology and Chern Classes",
+      "authors": "The Stacks Project Authors",
+      "version": "version ed88ff78, compiled July 14, 2026; retrieved October 15, 2026",
+      "sourceUrl": "https://stacks.math.columbia.edu/download/chow.pdf",
+      "pdfPages": 190,
+      "sha256": "28aaf3c7a76d359c3be56f1c86167ab42fcb40bc35b1ae6ef3b47cb41f9a41f5",
+      "localFile": "sources/chow.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "154",
+          "pdfPage": 154
+        }
+      ],
+      "checkedStatement": "Section 66 (Tag 02UO)",
+      "checking": "Statement and cited application checked; the external proof is not recursively verified."
+    },
+    {
+      "id": "duality",
+      "citationKey": "SPDual",
+      "displayName": "The Stacks Project — Duality for Schemes",
+      "authors": "The Stacks Project Authors",
+      "version": "version ed88ff78, compiled July 14, 2026; retrieved October 15, 2026",
+      "sourceUrl": "https://stacks.math.columbia.edu/download/duality.pdf",
+      "pdfPages": 97,
+      "sha256": "ab59074f91c60e44908903b839e709857dda0daf36c030e898b5bf55cdcda304",
+      "localFile": "sources/duality.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "69",
+          "pdfPage": 69
+        }
+      ],
+      "checkedStatement": "Lemma 27.1(6)–(7) (Tag 0FVV)",
+      "checking": "Statement and cited application checked; the external proof is not recursively verified."
+    },
+    {
+      "id": "resolve",
+      "citationKey": "SPRes",
+      "displayName": "The Stacks Project — Resolution of Surfaces",
+      "authors": "The Stacks Project Authors",
+      "version": "version ed88ff78, compiled July 14, 2026; retrieved October 15, 2026",
+      "sourceUrl": "https://stacks.math.columbia.edu/download/resolve.pdf",
+      "pdfPages": 54,
+      "sha256": "6c6efffce73e982fa6c090792042a1842e7f53816a18c24ea172749571fa3db7",
+      "localFile": "sources/resolve.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "7",
+          "pdfPage": 7
+        }
+      ],
+      "checkedStatement": "Lemma 3.4(4), Section 3 (Tag 0AGP)",
+      "checking": "Statement and cited application checked; the external proof is not recursively verified."
+    },
+    {
+      "id": "limits",
+      "citationKey": "SPLim",
+      "displayName": "The Stacks Project — Limits of Schemes",
+      "authors": "The Stacks Project Authors",
+      "version": "version ed88ff78, compiled July 14, 2026; retrieved October 15, 2026",
+      "sourceUrl": "https://stacks.math.columbia.edu/download/limits.pdf",
+      "pdfPages": 61,
+      "sha256": "a575d9eddea143ae00b39df8e0d98a66c6c9b2adcdace9d004c0ed5bc47f9d1e",
+      "localFile": "sources/limits.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "25",
+          "pdfPage": 25
+        }
+      ],
+      "checkedStatement": "Lemma 10.1 (Tag 01ZM)",
+      "checking": "Statement and cited application checked; the external proof is not recursively verified."
+    },
+    {
+      "id": "spaces-descent",
+      "citationKey": "SPDes",
+      "displayName": "The Stacks Project — Descent and Algebraic Spaces",
+      "authors": "The Stacks Project Authors",
+      "version": "version ed88ff78, compiled July 14, 2026; retrieved October 15, 2026",
+      "sourceUrl": "https://stacks.math.columbia.edu/download/spaces-descent.pdf",
+      "pdfPages": 38,
+      "sha256": "5c8408a876c17c258f78ac2cc8241662a4b089a8d33f787eefbdf27c0d782335",
+      "localFile": "sources/spaces-descent.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "21",
+          "pdfPage": 21
+        },
+        {
+          "printedPage": "22",
+          "pdfPage": 22
+        }
+      ],
+      "checkedStatement": "Lemma 13.1 (Tag 0D3C)",
+      "checking": "Statement and cited application checked; the external proof is not recursively verified."
+    },
+    {
+      "id": "coherent",
+      "citationKey": "StacksC",
+      "displayName": "The Stacks Project — Cohomology of Schemes",
+      "authors": "The Stacks Project Authors",
+      "version": "version ed88ff78, compiled July 14, 2026; retrieved October 15, 2026",
+      "sourceUrl": "https://stacks.math.columbia.edu/download/coherent.pdf",
+      "pdfPages": 80,
+      "sha256": "b4980a08a8cce98fed6a420364b18c119364a9436577031b28a16863bcbdbfb8",
+      "localFile": "sources/coherent.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "10",
+          "pdfPage": 10
+        }
+      ],
+      "checkedStatement": "Lemma 5.2 (Tag 02KH)",
+      "checking": "Statement and cited application checked; the external proof is not recursively verified."
+    }
+  ],
+  "dependencies": [
+    {
+      "fromSource": "varieties",
+      "fromResult": "Lemma 47.3 (Tag 0FD6)",
+      "toResult": "Lemma 3.1",
+      "toPages": "7",
+      "kind": "direct",
+      "role": "Very ample A^2 on the smooth integral blow-up; smooth general member.",
+      "checking": "External statement and internal application checked; proof of external result excluded."
+    },
+    {
+      "fromSource": "more-morphisms",
+      "fromResult": "Lemma 32.3 (Tag 0G4F)",
+      "toResult": "Lemma 3.1",
+      "toPages": "7",
+      "kind": "direct",
+      "role": "Very ample system is base-point-free, geometrically integral surface, two general hyperplanes have codimension-two intersection.",
+      "checking": "External statement and internal application checked; proof of external result excluded."
+    },
+    {
+      "fromSource": "divisors",
+      "fromResult": "Sections 22, 33 (Tags 0638, 01OF)",
+      "toResult": "Lemma 3.1; Lemma 5.1",
+      "toPages": "7, 15",
+      "kind": "direct",
+      "role": "Blow-up Rees algebra; regular diagonal and principal-parts filtration.",
+      "checking": "External statement and internal application checked; proof of external result excluded."
+    },
+    {
+      "fromSource": "modules",
+      "fromResult": "Section 29 (Tag 0G3P)",
+      "toResult": "Lemma 5.1",
+      "toPages": "15",
+      "kind": "direct",
+      "role": "Finite jet evaluation is an algebraic vector bundle map.",
+      "checking": "External statement and internal application checked; proof of external result excluded."
+    },
+    {
+      "fromSource": "chow",
+      "fromResult": "Section 66 (Tag 02UO)",
+      "toResult": "Lemma 5.2; Lemma 5.4",
+      "toPages": "16–17",
+      "kind": "direct",
+      "role": "Smooth projective surface; positive-square rational divisor has quadratically positive Euler characteristic.",
+      "checking": "External statement and internal application checked; proof of external result excluded."
+    },
+    {
+      "fromSource": "duality",
+      "fromResult": "Lemma 27.1(6)–(7) (Tag 0FVV)",
+      "toResult": "Lemma 5.2",
+      "toPages": "16",
+      "kind": "direct",
+      "role": "Smooth projective Y; h2(kD)=h0(KY-kD), latter vanishes by nef intersection.",
+      "checking": "External statement and internal application checked; proof of external result excluded."
+    },
+    {
+      "fromSource": "resolve",
+      "fromResult": "Lemma 3.4(4), Section 3 (Tag 0AGP)",
+      "toResult": "Proposition 5.3",
+      "toPages": "17",
+      "kind": "direct",
+      "role": "Blow-ups of distinct smooth points; O(-mE) pushes to the m-th ideal powers.",
+      "checking": "External statement and internal application checked; proof of external result excluded."
+    },
+    {
+      "fromSource": "limits",
+      "fromResult": "Lemma 10.1 (Tag 01ZM)",
+      "toResult": "Corollary 5.5",
+      "toPages": "18",
+      "kind": "direct",
+      "role": "Finite projective equations and line-bundle gluing descend to F finitely generated over Q.",
+      "checking": "External statement and internal application checked; proof of external result excluded."
+    },
+    {
+      "fromSource": "spaces-descent",
+      "fromResult": "Lemma 13.1 (Tag 0D3C)",
+      "toResult": "Corollary 5.5",
+      "toPages": "18",
+      "kind": "direct",
+      "role": "Ampleness preserved and reflected by field extension.",
+      "checking": "External statement and internal application checked; proof of external result excluded."
+    },
+    {
+      "fromSource": "coherent",
+      "fromResult": "Lemma 5.2 (Tag 02KH)",
+      "toResult": "Corollary 5.5",
+      "toPages": "18",
+      "kind": "direct",
+      "role": "Field extensions flat, projective morphism quasi-compact and quasi-separated; H0 base change.",
+      "checking": "External statement and internal application checked; proof of external result excluded."
+    },
+    {
+      "fromPaperId": "nagata-plane-curves",
+      "fromResult": "Theorem 1.1",
+      "toResult": "Introduction comparison",
+      "toPages": "2",
+      "kind": "background",
+      "role": "The sharp plane threshold and strict inequality are identified as a separate refinement; not used by the proof on p.17.",
+      "checking": "Comparison in surface paper p.2 and actual proof p.17 checked; no dependency arrow to surface theorem."
+    }
+  ],
+  "unresolved": [
+    "External input proofs and their recursive dependencies were not verified.",
+    "No explicit optimal value of r0 is given or computed.",
+    "Connections to all other catalogues beyond the explicit comparisons in pp.2–3 are uninvestigated.",
+    "Generalized weighted Seshadri constants, positive characteristic, and fixed small point counts are outside the results summarized here."
+  ],
+  "externalVisualEvidence": [
+    "qa/source-p2.png",
+    "qa/source-p16.png",
+    "qa/source-p18.png"
+  ],
+  "review": {
+    "reviewer": "higher (article subagent, not the author of this article)",
+    "date": "2026-10-15",
+    "scope": "Main results and principal internal reductions compared against source; bilingual principal results and Sections 3–4; external Stacks statements not independently rechecked by reviewer",
+    "result": "No required mathematical discrepancy found",
+    "record": "../maximal-seshadri-higher-dimensions/review-surfaces.md"
+  }
+}

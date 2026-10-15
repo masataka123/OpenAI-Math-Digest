@@ -1,0 +1,303 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "author-key",
+  "catalogId": "039",
+  "sources": {
+    "P": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "pagination": "same"
+    },
+    "OpenAI26b": {
+      "recordFile": "sources.json",
+      "recordId": "surface-method",
+      "pagination": "same",
+      "guideRole": {
+        "ja": "節点の指数評価・対角圧縮・原始格子方向の方法上の先行稿。本稿で再証明するため、曲面の最大性定理を直接入力にしない",
+        "en": "Methodological antecedent for node bounds, diagonal compression and primitive directions; the adaptation is proved here, without using surface maximality"
+      }
+    }
+  },
+  "citations": {
+    "main": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "1–2",
+          "pdf": "1–2"
+        }
+      ]
+    },
+    "definition": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§1, equations (1.1)–(1.2)",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "transfer": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemmas 2.2–2.7",
+          "printed": "5–7",
+          "pdf": "5–7"
+        }
+      ]
+    },
+    "flag": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 3.1",
+          "printed": "8–9",
+          "pdf": "8–9"
+        }
+      ]
+    },
+    "reshape": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 4.1",
+          "printed": "9–10",
+          "pdf": "9–10"
+        }
+      ]
+    },
+    "node": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§4, equations (4.3)–(4.13)",
+          "printed": "10–11",
+          "pdf": "10–11"
+        }
+      ]
+    },
+    "direction": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§4, equations (4.14)–(4.19)",
+          "printed": "12–14",
+          "pdf": "12–14"
+        }
+      ]
+    },
+    "saturation": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 5.1",
+          "printed": "14–15",
+          "pdf": "14–15"
+        }
+      ]
+    },
+    "interpolation": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 5.2; Proposition 5.3",
+          "printed": "15–16",
+          "pdf": "15–16"
+        }
+      ]
+    },
+    "iteration": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§6.1, equations (6.1)–(6.3)",
+          "printed": "16–17",
+          "pdf": "16–17"
+        }
+      ]
+    },
+    "locus": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§6.2, equation (6.4)",
+          "printed": "17",
+          "pdf": "17"
+        }
+      ]
+    },
+    "lower": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 6.1; equation (6.6)",
+          "printed": "18",
+          "pdf": "18"
+        }
+      ]
+    },
+    "upper": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§6.4, equations (6.7)–(6.8)",
+          "printed": "19",
+          "pdf": "19"
+        }
+      ]
+    },
+    "relation": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§1.1; §4",
+          "printed": "2, 9",
+          "pdf": "2, 9"
+        }
+      ]
+    },
+    "surface-node": {
+      "source": "OpenAI26b",
+      "locations": [
+        {
+          "result": "Proposition 3.2",
+          "printed": "8",
+          "pdf": "8"
+        }
+      ]
+    },
+    "surface-compression": {
+      "source": "OpenAI26b",
+      "locations": [
+        {
+          "result": "Proposition 3.4",
+          "printed": "9–10",
+          "pdf": "9–10"
+        }
+      ]
+    },
+    "surface-direction": {
+      "source": "OpenAI26b",
+      "locations": [
+        {
+          "result": "Lemma 4.3",
+          "printed": "14",
+          "pdf": "14"
+        }
+      ]
+    },
+    "reshape-proof": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proof of Proposition 4.1",
+          "printed": "10–14",
+          "pdf": "10–14"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ],
+  "articleGuides": {
+    ".": {
+      "selfSource": "P",
+      "externalSources": [
+        "OpenAI26b"
+      ],
+      "proofTargets": [
+        "main",
+        "reshape",
+        "main"
+      ],
+      "mainResults": [
+        "main"
+      ],
+      "statements": {
+        "main": "theorem-1-1",
+        "reshape": "proposition-4-1"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "main",
+          "conclusion": "All sufficiently large integer point counts, with r0 depending only on X,L",
+          "anchor": "proof-1-step-2"
+        },
+        {
+          "result": "main",
+          "conclusion": "Nonempty common very-general locus",
+          "anchor": "proof-3-step-1"
+        },
+        {
+          "result": "main",
+          "conclusion": "Ordinary multipoint constant equals the volume bound",
+          "anchor": "proof-3-step-2"
+        },
+        {
+          "result": "main",
+          "conclusion": "Equivalent nef blow-up real class and top self-intersection zero",
+          "anchor": "proof-3-step-3"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "main",
+          "purpose": {
+            "ja": "量化、基礎体、通常多点定数とnef因子の結論。",
+            "en": "Quantifiers, ground field, ordinary multipoint constant and nef-class conclusion."
+          }
+        },
+        {
+          "citation": "reshape-proof",
+          "purpose": {
+            "ja": "実数切片を許す節点・圧縮・原始方向の核心。",
+            "en": "The node, compression and primitive-direction mechanism with real intercepts."
+          }
+        },
+        {
+          "citation": "saturation",
+          "purpose": {
+            "ja": "密度だけでなく次数間加法性が内部点を埋める理由。",
+            "en": "Why additivity across degrees upgrades density to interior saturation."
+          }
+        },
+        {
+          "citation": "interpolation",
+          "purpose": {
+            "ja": "細長い単体での全jet補間と内側への平行移動。",
+            "en": "Full-jet interpolation in the elongated simplex and translation into the interior."
+          }
+        },
+        {
+          "citation": "locus",
+          "purpose": {
+            "ja": "有限次数の存在から共通の非常に一般な配置へ。",
+            "en": "From existence in each degree to a common very-general tuple."
+          }
+        },
+        {
+          "citation": "lower",
+          "purpose": {
+            "ja": "特異な曲線上でも通常の重複度を用いる下界。",
+            "en": "The lower bound using ordinary multiplicities, including singular curves."
+          }
+        },
+        {
+          "citation": "upper",
+          "purpose": {
+            "ja": "blow-upによる上界とnefnessの同値。",
+            "en": "The blow-up upper bound and the nefness equivalence."
+          }
+        }
+      ]
+    }
+  }
+}

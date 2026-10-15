@@ -1,0 +1,260 @@
+{
+  "catalogId": "039",
+  "paperId": "nagata-plane-curves",
+  "title": "Nagata’s conjecture for plane curves",
+  "authors": "OpenAI",
+  "version": "September 23, 2026",
+  "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Nagatas-Conjecture-for-Plane-Curves-September-23-2026/main.pdf",
+  "downloadUrl": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Nagatas-Conjecture-for-Plane-Curves-September-23-2026/main.pdf",
+  "pdfPages": 24,
+  "sha256": "42a8897d121e2fc0bff7fe5582ea60b4b2304d706658293fb380166f46c56879",
+  "checkedOn": "2026-10-15",
+  "checkingScope": "Theorem 1.1 and the proof passages in Sections 2–6 read, including every principal reduction. This is editorial source comparison, not independent validation of the entire proof.",
+  "checkedLocations": [
+    {
+      "printedPage": "1",
+      "pdfPage": 1
+    },
+    {
+      "printedPage": "2",
+      "pdfPage": 2
+    },
+    {
+      "printedPage": "3",
+      "pdfPage": 3
+    },
+    {
+      "printedPage": "4",
+      "pdfPage": 4
+    },
+    {
+      "printedPage": "5",
+      "pdfPage": 5
+    },
+    {
+      "printedPage": "6",
+      "pdfPage": 6
+    },
+    {
+      "printedPage": "7",
+      "pdfPage": 7
+    },
+    {
+      "printedPage": "8",
+      "pdfPage": 8
+    },
+    {
+      "printedPage": "9",
+      "pdfPage": 9
+    },
+    {
+      "printedPage": "10",
+      "pdfPage": 10
+    },
+    {
+      "printedPage": "11",
+      "pdfPage": 11
+    },
+    {
+      "printedPage": "12",
+      "pdfPage": 12
+    },
+    {
+      "printedPage": "13",
+      "pdfPage": 13
+    },
+    {
+      "printedPage": "14",
+      "pdfPage": 14
+    },
+    {
+      "printedPage": "15",
+      "pdfPage": 15
+    },
+    {
+      "printedPage": "16",
+      "pdfPage": 16
+    },
+    {
+      "printedPage": "17",
+      "pdfPage": 17
+    },
+    {
+      "printedPage": "18",
+      "pdfPage": 18
+    },
+    {
+      "printedPage": "19",
+      "pdfPage": 19
+    },
+    {
+      "printedPage": "20",
+      "pdfPage": 20
+    },
+    {
+      "printedPage": "21",
+      "pdfPage": 21
+    },
+    {
+      "printedPage": "22",
+      "pdfPage": 22
+    },
+    {
+      "printedPage": "23",
+      "pdfPage": 23
+    },
+    {
+      "printedPage": "24",
+      "pdfPage": 24
+    }
+  ],
+  "statements": [
+    {
+      "result": "Theorem 1.1",
+      "pages": "1",
+      "hypotheses": "For each integer r>=10, distinct ordered points in P2_C outside one countable union E_r of proper closed subsets with nonempty complement; all nonzero effective forms of degree d>=1 and all mi>=0 integral bounded by actual multiplicities.",
+      "conclusion": "d sqrt(r)>sum mi, simultaneously for all degrees and vectors, including reducible and nonreduced curves.",
+      "checking": "Statement and assembly pp.3–21 read."
+    },
+    {
+      "result": "Corollary 6.1",
+      "pages": "22",
+      "hypotheses": "Uncountable algebraically closed k of characteristic zero; r>=10.",
+      "conclusion": "Same simultaneous strict inequality outside a countable union of proper closed subsets of ordered distinct tuples, nonempty complement.",
+      "checking": "Rational minors and algebraic independence argument read."
+    },
+    {
+      "result": "Corollary 6.2",
+      "pages": "22",
+      "hypotheses": "Blowup at a tuple covered by Theorem 1.1 or Corollary 6.1.",
+      "conclusion": "N_r=sqrt(r)H-sum Ei is strictly nef, N_r^2=0, and equal-weight multipoint epsilon(O(1);p_i)=1/sqrt(r).",
+      "checking": "All three conclusions and separate upper/lower bounds read."
+    }
+  ],
+  "proofPassages": [
+    {
+      "pages": "3–6",
+      "results": "Lemma 2.1, Proposition 2.2",
+      "read": "Closed incidence loci, cyclic products, arbitrary normal displacement, nonzero initial coefficient and preservation of multiplicities."
+    },
+    {
+      "pages": "6–8",
+      "results": "Proposition 2.3, Lemma 2.4",
+      "read": "Non-torsion bundles and evaluation cokernel, endpoint d=km, cubic exclusion d<=3m."
+    },
+    {
+      "pages": "8–12",
+      "results": "Proposition 3.1, Lemmas 3.2–3.3, Section 3.3",
+      "read": "Removal of nine zeros, theta multiplier choices, analytic cubic embedding, coefficient spaces and fixed charts."
+    },
+    {
+      "pages": "13–17",
+      "results": "Lemmas 4.1–4.2, Proposition 4.3",
+      "read": "Fixed-curve collision, unit-normalized coefficient subsequence, Rouche, normal convergence, exponent set including zero-degree block, minor persistence."
+    },
+    {
+      "pages": "17–21",
+      "results": "Lemmas 5.1–5.4, Proposition 5.5",
+      "read": "Row interpolation, contracted polygon, endpoint errors, common powers before limits, final contradiction."
+    },
+    {
+      "pages": "21–22",
+      "results": "Corollaries 6.1–6.2",
+      "read": "Base change of Q-minors, strict nefness, zero square, dimension-count upper bound."
+    }
+  ],
+  "externalSources": [
+    {
+      "id": "stacks-normal",
+      "displayName": "The Stacks project — Divisors",
+      "authors": "The Stacks Project Authors",
+      "version": "Online chapter PDF and tag statement consulted 2026-10-15",
+      "sourceUrl": "https://stacks.math.columbia.edu/download/divisors.pdf",
+      "statementUrl": "https://stacks.math.columbia.edu/tag/0B3P",
+      "pdfPages": 94,
+      "checkedLocations": [
+        {
+          "printedPage": "26",
+          "pdfPage": 26
+        }
+      ],
+      "checking": "Statement and application compared; proof not recursively checked."
+    },
+    {
+      "id": "stacks-cohomology",
+      "displayName": "The Stacks project — Cohomology of Schemes",
+      "authors": "The Stacks Project Authors",
+      "version": "Online chapter PDF and tag statement consulted 2026-10-15",
+      "sourceUrl": "https://stacks.math.columbia.edu/download/coherent.pdf",
+      "statementUrl": "https://stacks.math.columbia.edu/tag/01XT",
+      "pdfPages": 80,
+      "checkedLocations": [
+        {
+          "printedPage": "16",
+          "pdfPage": 16
+        }
+      ],
+      "checking": "Statement and application compared; proof not recursively checked."
+    },
+    {
+      "id": "stacks-torsion",
+      "displayName": "The Stacks project — Algebraic Curves",
+      "authors": "The Stacks Project Authors",
+      "version": "Online chapter PDF and tag statement consulted 2026-10-15",
+      "sourceUrl": "https://stacks.math.columbia.edu/download/curves.pdf",
+      "statementUrl": "https://stacks.math.columbia.edu/tag/0C1Z",
+      "pdfPages": 71,
+      "checkedLocations": [
+        {
+          "printedPage": "36",
+          "pdfPage": 36
+        }
+      ],
+      "checking": "Statement and application compared; proof not recursively checked."
+    },
+    {
+      "id": "chow",
+      "displayName": "On Compact Complex Analytic Varieties",
+      "authors": "W.-L. Chow",
+      "version": "American Journal of Mathematics 71 (1949), 893–914; original theorem location unverified",
+      "sourceUrl": "https://www.jstor.org/stable/2372375",
+      "checkedLocations": [],
+      "checking": "Bibliography and application in manuscript Lemma 3.3 checked; original statement not retrieved."
+    }
+  ],
+  "dependencies": [
+    {
+      "from": "stacks-normal",
+      "to": "Proposition 2.2, p.4",
+      "kind": "direct",
+      "role": "Normal bundle of smooth degree-k plane curve is O_B(k).",
+      "checking": "Original statement and use checked"
+    },
+    {
+      "from": "stacks-cohomology",
+      "to": "Proposition 2.3, p.7",
+      "kind": "direct",
+      "role": "H1(P2,O)=0 computes h0(B,O_B(k))<r for k>=4.",
+      "checking": "Original statement and use checked"
+    },
+    {
+      "from": "stacks-torsion",
+      "to": "Proposition 2.3, p.6; Lemma 2.4, p.8",
+      "kind": "direct",
+      "role": "Fixed-order torsion is finite, hence all torsion is countable and a nontorsion degree-zero bundle can be chosen.",
+      "checking": "Original statement and use checked"
+    },
+    {
+      "from": "chow",
+      "to": "Lemma 3.3, p.11",
+      "kind": "direct",
+      "role": "Closed analytic embedded compact elliptic curve in P2 is algebraic.",
+      "checking": "Use and hypotheses checked; original statement unverified"
+    }
+  ],
+  "unresolved": [
+    "Chow 1949 original theorem location and original statement were not accessible during the initial draft; its use and required hypotheses in Lemma 3.3 p.11 were checked. Retain this limitation before Stage 2.",
+    "External theorem proofs, every background reference and independent verification of all analytic estimates are outside this editorial check."
+  ]
+}

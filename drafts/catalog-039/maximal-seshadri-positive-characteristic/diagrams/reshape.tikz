@@ -1,0 +1,15 @@
+\node[card] (a) {\heading{1}{標数2でも節点の二枝を保持}{Keep two nodal branches even in characteristic two}
+$g=y^2+xy-x^3=\xi\eta,\qquad x=v(v+1),\quad y=v^2(v+1)$\\
+\Tx{$v=0,-1$ の消滅次数の和を次数で抑える}{Bound the sum of orders at $v=0,-1$ by the degree}};
+\node[card,below=2.0cm of a] (b) {\heading{2}{最小指数を面積一定の四角形へ}{Put least exponents in a fixed-area quadrilateral}
+$\nu_t(f)\in\kappa Q,\qquad \operatorname{area}(Q)=H/2$\\
+\Tx{有限個の初項を整数重みで実現し、jet行列の階数を戻す}{Realize finite initial terms by integral weights and transfer jet rank back}};
+\flow a b {\Tx{二枝の評価と形式的代入を用いる}{Use the two branch valuations and formal substitutions}\\\Cite{node}\quad\Cite{formal}};
+\node[card,below=2.0cm of b] (c) {\heading{3}{原始方向で高さを指定}{Prescribe height in a primitive direction}
+$u=(i,j)\in\mathbf Z^2,\quad \gcd(i,j)=1,\quad q_2-q_0=H/w$\\
+\Tx{せん断・圧縮後の三角形に整数基底変換}{An integral basis change after shear and compression}};
+\flow b c {\Tx{$dw<1/16$ から、$t$ と原始方向を全次数で固定}{Use $dw<1/16$ to fix $t$ and the primitive direction in every degree}\\\Cite{height}};
+\node[result,below=2.05cm of c] (d) {\heading{4}{横・縦の圧縮で切片を変える}{Horizontal and vertical compression reshape intercepts}
+$S'_N\subset N\Delta(w,H/w,a_3,\ldots,a_n),\qquad \#S'_N=\#S_N$\\
+\Tx{区間上界を得る。中間整数の充填はまだ主張しない}{Obtain interval bounds, without yet claiming filling of intermediate integers}};
+\flow c d {\Tx{面積から最大切片 $w$、各圧縮で個数とjet移送を保存}{Area gives the maximal slice $w$; compressions preserve counts and jet transfer}\\\Cite{compression}\quad\Cite{reshape}};
