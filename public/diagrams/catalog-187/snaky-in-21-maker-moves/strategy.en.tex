@@ -1,0 +1,69 @@
+% Generated from current Astra diagram sources.
+\documentclass[border=12pt]{standalone}
+\def\pgfsysdriver{pgfsys-dvisvgm.def}
+\usepackage[dvisvgm]{xcolor}
+\usepackage{xeCJK}
+\setCJKmainfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf]
+\setCJKsansfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf]
+\usepackage{amsmath,amssymb,tikz,lmodern}
+\usetikzlibrary{arrows.meta,positioning,calc,patterns}
+\renewcommand{\familydefault}{\sfdefault}
+\definecolor{ink}{HTML}{25322F}
+\definecolor{green}{HTML}{246657}
+\definecolor{tint}{HTML}{EEF4F0}
+\definecolor{soft}{HTML}{C6D2CC}
+\definecolor{muted}{HTML}{52615B}
+\newif\ifJapanese
+\newcommand{\Tx}[2]{\ifJapanese #1\else #2\fi}
+\newcommand{\Head}[2]{{\color{green}\bfseries\Tx{#1}{#2}}\\[5pt]}
+\newcommand{\refurl}[2]{\special{dvisvgm:raw <a xlink:href="#1" target="_blank" rel="noopener noreferrer">}{\setlength{\fboxsep}{0pt}\colorbox{white}{\color{green}\underline{\strut #2}}}\special{dvisvgm:raw </a>}}
+\tikzset{box/.style={draw=soft,fill=white,rounded corners=2pt,text=ink,align=left,text width=14.2cm,inner sep=12pt,font=\fontsize{10.5}{14}\selectfont},result/.style={box,draw=green,fill=tint},reason/.style={text=muted,align=left,text width=12.5cm,font=\fontsize{9}{12}\selectfont,inner sep=0pt},edge/.style={-{Stealth[length=2.3mm]},line width=1pt,draw=green}}
+\newcommand{\Flow}[3]{\draw[edge] ($(#1.south)+(-6.7,0)$)--($(#2.north)+(-6.7,0)$);\node[reason,anchor=west] at ($(#1.south)!.5!(#2.north)+(-6.2,0)$){#3};}
+% Shared MIT-licensed repository typography; all catalogue-187 diagram content newly authored by Astra.
+
+% Generated from citations.json; do not edit.
+\newcommand{\Cite}[1]{\csname cite-#1\endcsname}
+\expandafter\def\csname cite-rules\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{§1; (1) · pp. 1–2}}}
+\expandafter\def\csname cite-theorem\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{Theorem 1 · p. 1}}}
+\expandafter\def\csname cite-finite\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{Corollary 6 · p. 8}}}
+\expandafter\def\csname cite-condition\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{Definition 2; §2 · p. 3}}}
+\expandafter\def\csname cite-bases\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{Lemma 4 · p. 4}}}
+\expandafter\def\csname cite-certificate\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{Proposition 5; (7) · pp. 5–6}}}
+\expandafter\def\csname cite-policy\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{§4 · pp. 7–8}}}
+\expandafter\def\csname cite-combine\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{Lemma 3; (2)–(3) · pp. 3–4}}}
+\expandafter\def\csname cite-elementary\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{§3.2; (6); Figure 2 · pp. 5–6}}}
+\expandafter\def\csname cite-encoding\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{§3.1 · pp. 4–5}}}
+\expandafter\def\csname cite-intersection\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{§3.3; Table 1 · pp. 6–7}}}
+\expandafter\def\csname cite-verification\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{§6.1 · pp. 11–12}}}
+\expandafter\def\csname cite-program\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{Appendix G.2 · pp. 82–84}}}
+\expandafter\def\csname cite-supplement\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{Appendix G.1 · pp. 81–82}}}
+
+\Japanesefalse
+\begin{document}
+\begin{tikzpicture}
+\node[box] (s) {
+\Head{目標形と条件の基底}{Target shape and base conditions}
+\begin{tikzpicture}[x=.47cm,y=.47cm,baseline=-.1cm]
+\foreach \x/\y in {0/0,1/0,2/0,3/0,3/1,4/1}{\draw[fill=tint] (\x,\y) rectangle +(1,1);\fill (\x+.5,\y+.5) circle (2pt);}
+\node[anchor=west,font=\small] at (5.6,1) {$S;\quad t+R(S),\ R\in G,\ |G|=8$};
+\end{tikzpicture}\\[5pt]
+$(S\setminus\{s_j\},S,1)\quad (j=0,\ldots,5)$\quad\Tx{最後の1マスを取る六基底}{Six bases: claim the missing cell.}\\
+\Tx{黒丸は目標の構成マス。対局の初期配置ではない。}{Dots mark target cells, not an initial game position.}
+};
+\node[box,below=1.8cm of s] (c) {\Head{条件を合成し、応手後に子を選ぶ}{Compose conditions; select a child after the reply}
+$A\subseteq M,\ B\cap T=\varnothing\quad\Longrightarrow\quad \bigcup_i A_i\cup\bigcap_iT_i\subseteq M'$\\[4pt]
+\Tx{合法な応手 $b$ は共通部分に入れない。どれかの $T_i$ が残る。}{A legal reply $b$ cannot enter the intersection; some $T_i$ survives.}\\
+$h=1+\max_i h_i$\quad\Tx{置換も含む、実際のMaker着手数}{Actual Maker claims, including replacements.}};
+\Flow{s}{c}{\Tx{六基底を有効にし、合成で有効性を保存}{Validate the bases and preserve validity under composition}\\\Cite{bases}\quad\Cite{combine}}
+\node[result,below=1.8cm of c] (f) {\Head{空盤面に使える最終条件}{Final condition applicable to the empty board}
+$(A_{727},T_{727},h_{727})=(\varnothing,T_{727},21),\quad |T_{727}|=251$\\
+\Tx{事前所有は不要。最初のピボットは $(8,8)$。}{No prior ownership is required; the first pivot is $(8,8)$.}};
+\Flow{c}{f}{\Tx{有限証明書の集合と高さを再構成し、最後の要求を消す}{Reconstruct sets and heights; eliminate the final requirement}\\\Cite{certificate}}
+\node[result,below=1.8cm of f] (p) {\Head{一つの方策が、すべての合法応手に勝つ}{One policy wins against every legal continuation}
+$\exists\sigma\ \forall\beta:\quad\text{Maker claims}\leq21$\\
+\Tx{子の順序・置換先を固定。各移行で高さが減り、基底で終了。}{Fix child and replacement orders; each transition lowers height to a base.}\\
+\Tx{到達しない履歴にも合法に延長し、早期勝利後のコピーを保持。}{Extend legally off-policy and retain a copy after early victory.}};
+\Flow{f}{p}{\Tx{掲載順の生存子と固定順の空きマスで選択を一意化}{Use the first surviving child and first free cell in fixed orders}\\\Cite{policy}}
+
+\end{tikzpicture}
+\end{document}

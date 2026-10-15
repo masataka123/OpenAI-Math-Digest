@@ -1,0 +1,76 @@
+% Generated from current Astra diagram sources.
+\documentclass[border=12pt]{standalone}
+\def\pgfsysdriver{pgfsys-dvisvgm.def}
+\usepackage[dvisvgm]{xcolor}
+\usepackage{xeCJK}
+\setCJKmainfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf]
+\setCJKsansfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf]
+\usepackage{amsmath,amssymb,tikz,lmodern}
+\usetikzlibrary{arrows.meta,positioning,calc,patterns}
+\renewcommand{\familydefault}{\sfdefault}
+\definecolor{ink}{HTML}{25322F}
+\definecolor{green}{HTML}{246657}
+\definecolor{tint}{HTML}{EEF4F0}
+\definecolor{soft}{HTML}{C6D2CC}
+\definecolor{muted}{HTML}{52615B}
+\newif\ifJapanese
+\newcommand{\Tx}[2]{\ifJapanese #1\else #2\fi}
+\newcommand{\Head}[2]{{\color{green}\bfseries\Tx{#1}{#2}}\\[5pt]}
+\newcommand{\refurl}[2]{\special{dvisvgm:raw <a xlink:href="#1" target="_blank" rel="noopener noreferrer">}{\setlength{\fboxsep}{0pt}\colorbox{white}{\color{green}\underline{\strut #2}}}\special{dvisvgm:raw </a>}}
+\tikzset{box/.style={draw=soft,fill=white,rounded corners=2pt,text=ink,align=left,text width=14.2cm,inner sep=12pt,font=\fontsize{10.5}{14}\selectfont},result/.style={box,draw=green,fill=tint},reason/.style={text=muted,align=left,text width=12.5cm,font=\fontsize{9}{12}\selectfont,inner sep=0pt},edge/.style={-{Stealth[length=2.3mm]},line width=1pt,draw=green}}
+\newcommand{\Flow}[3]{\draw[edge] ($(#1.south)+(-6.7,0)$)--($(#2.north)+(-6.7,0)$);\node[reason,anchor=west] at ($(#1.south)!.5!(#2.north)+(-6.2,0)$){#3};}
+% Shared MIT-licensed repository typography; all catalogue-187 diagram content newly authored by Astra.
+
+% Generated from citations.json; do not edit.
+\newcommand{\Cite}[1]{\csname cite-#1\endcsname}
+\expandafter\def\csname cite-rules\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{§1; (1) · pp. 1–2}}}
+\expandafter\def\csname cite-theorem\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{Theorem 1 · p. 1}}}
+\expandafter\def\csname cite-finite\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{Corollary 6 · p. 8}}}
+\expandafter\def\csname cite-condition\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{Definition 2; §2 · p. 3}}}
+\expandafter\def\csname cite-bases\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{Lemma 4 · p. 4}}}
+\expandafter\def\csname cite-certificate\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{Proposition 5; (7) · pp. 5–6}}}
+\expandafter\def\csname cite-policy\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{§4 · pp. 7–8}}}
+\expandafter\def\csname cite-combine\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{Lemma 3; (2)–(3) · pp. 3–4}}}
+\expandafter\def\csname cite-elementary\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{§3.2; (6); Figure 2 · pp. 5–6}}}
+\expandafter\def\csname cite-encoding\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{§3.1 · pp. 4–5}}}
+\expandafter\def\csname cite-intersection\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{§3.3; Table 1 · pp. 6–7}}}
+\expandafter\def\csname cite-verification\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{§6.1 · pp. 11–12}}}
+\expandafter\def\csname cite-program\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{Appendix G.2 · pp. 82–84}}}
+\expandafter\def\csname cite-supplement\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{Appendix G.1 · pp. 81–82}}}
+
+\Japanesetrue
+\begin{document}
+\begin{tikzpicture}
+\node[box] (a) {\Head{親の1回で、全候補の仮定を用意する}{One parent claim prepares every candidate}
+$T=\{p\}\cup\bigcup_iT_i,\quad A=(\bigcup_iA_i\cup\bigcap_iT_i)\setminus\{p\}$\\[4pt]
+\Tx{$p$を取得、既所有なら空きマスへ置換。}{Claim $p$, or replace it with a free cell if already owned.}\\
+$M'\supseteq\bigcup_iA_i\cup\bigcap_iT_i$};
+\node[result,below=1.8cm of a] (b) {\Head{未勝利の場合、任意の合法応手から生存子へ}{If not yet won, every legal reply leaves a child}
+$b\notin M'\ \Longrightarrow\ b\notin\bigcap_iT_i\ \Longrightarrow\ \exists i:\ b\notin T_i$\\[4pt]
+$A_i\subseteq M',\qquad (B\cup\{b\})\cap T_i=\varnothing$\\
+\Tx{領域外の応手は全子を外す。古いBreaker石は $T_i\subseteq T$ で排除。}{A reply outside $T$ misses every child; $T_i\subseteq T$ excludes old Breaker stones.}\\
+$1+h_i\leq1+\max_i h_i=h$};
+\Flow{a}{b}{\Tx{共通部分の所有と応手の合法性を使う}{Use ownership of the intersection and legality of the reply}\\\Cite{combine}}
+\node[box,below=1.8cm of b] (c) {\Head{条件付きの例：card 6、高さ2}{Conditional example: card 6, height 2}
+\begin{tikzpicture}[x=.48cm,y=.48cm,baseline=0cm]
+\foreach \y in {0,...,5}{\foreach \x in {0,1}{\draw[soft] (\x,\y) rectangle +(1,1);}}
+\foreach \y in {0,...,4}{\fill (0.5,\y+.5) circle (3pt);}
+\node[draw=green,rectangle,inner sep=2pt] at (1.5,4.5) {$p$};
+\node[draw=green,circle,inner sep=1pt] at (1.5,3.5) {$c_-$};
+\node[draw=green,circle,inner sep=1pt] at (1.5,5.5) {$c_+$};
+\node[anchor=east,font=\scriptsize] at (0,.5) {$0$};\node[anchor=east,font=\scriptsize] at (0,5.5) {$y=5$};
+\node[anchor=north,font=\scriptsize] at (.5,0) {$0$};\node[anchor=north,font=\scriptsize] at (1.5,0) {$x=1$};
+\node[anchor=west,align=left,text width=9.9cm,inner sep=0pt,font=\small] at (3,3) {
+$A_6=\{(0,y):0\leq y\leq4\},\quad p=(1,4)$\\[5pt]
+$c_-=(1,3),\quad c_+=(1,5)$\\[5pt]
+\Tx{黒丸：必要なMaker所有。四角：ピボット候補。}{Dots: required Maker ownership. Square: pivot candidate.}\\
+\Tx{丸枠：完成候補。無印：所有未指定。}{Circles: completion candidates. Unmarked: unspecified.}\\
+\Tx{$T_6$内にBreaker石（$\times$）はない。候補は既所有でもよい。}{$T_6$ has no Breaker stone ($\times$); candidates may already be owned.}\\[4pt]
+\Tx{$p$確保後、未勝利なら両候補は空き。}{After securing $p$, both candidates are free unless already won.}\\
+\Tx{一方を塞がれても他方で完成：$h_6=1+1=2$。}{Blocking one leaves the other: $h_6=1+1=2$.}
+};
+\end{tikzpicture}};
+\Flow{b}{c}{\Tx{六基底の二配置を合成する具体例（全対局木ではない）}{A composition of two placed bases, not the full game tree}\\\Cite{elementary}}
+
+\end{tikzpicture}
+\end{document}

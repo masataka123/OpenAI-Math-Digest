@@ -1,0 +1,36 @@
+The last condition  in Proposition 5 requires no pre-existing Maker holdings. Its
+Breaker-free hypothesis is also automatic on the empty board. This is the passage from
+conditional victories to an ordinary victory without a handicap. Stones required by intermediate
+conditions are not granted at the start of the game.
+Lemma 4 · p. 4Proposition 5; (7) · pp. 5–6
+2. Fix child and replacement choices to obtain one policy
+Merely selecting an available continuation after the fact would leave the policy description
+implicit. Section 4 fixes the choices before play: order cells by increasing ,
+lexicographically within each level, and order children as printed in the certificate.
+For an active condition in placement , claim its prescribed cell  if free. If it already belongs
+to Maker, claim the first free cell in the fixed order. The invariant  excludes
+Breaker ownership of the pivot. Unless the claim wins, take the first child whose envelope avoids
+the next reply. That envelope also avoids all earlier Breaker holdings, by inheritance from its
+parent. A reference with placement  changes the active placement to ; an inline
+combination retains .
+At a base, claim the last missing cell and stop. A transition from a combination to a child costs
+one actual Maker claim and, if victory has not occurred, one actual Breaker reply; height drops
+by at least one. Starting at height 21 therefore gives at most 21 claims. An already-owned pivot is
+not treated as permission to skip a turn: counting its replacement preserves the correspondence
+between actual claims and alternating play.
+§4 · pp. 7–8
+3. Legality on all histories and the endpoint after claim 21
+Along histories consistent with the policy, the active expression and placement can be
+reconstructed from the history. On a history containing an earlier Maker choice inconsistent with
+the policy, prescribe the first free cell instead. Finite ownership guarantees a free cell on the
+infinite board. The resulting policy is legal even on histories it never reaches, while the height
+induction applies to every history obtained by following it from the empty board. The quantifier
+order is : future Breaker replies do not determine the choice of .
+If the first win occurs on Maker claim , there have been  Breaker claims. No reply
+after victory is needed. If play is formally extended by fresh claims, permanent ownership
+preserves the completed copy. Thus a legal extension through the first 20 replies still contains a
+copy immediately after Maker claim 21. This proves the theorem's equivalent endpoint
+formulation.
+§4 · pp. 7–8
+OpenAI Math Digest · 187
+187 / 01 9

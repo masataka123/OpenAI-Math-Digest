@@ -1,0 +1,14 @@
+Figure 4. The final 251-cell envelope in the 17×17 square and the move count ensuring a free
+replacement. Hatching denotes cells outside the envelope, not stones.
+Open figure ↗TeX source ↓
+1. Nesting keeps prescribed claims within the board
+The composition formula puts every placed child envelope inside its parent and every pivot
+inside its own envelope. A base target is its base envelope. Consequently all prescribed cells
+along a descent from the final condition, including the last completion cell, lie in .
+Order  and replace an already-owned pivot with its first free cell. Before Maker claim 
+, the players together own at most  cells. They cannot have filled all 251
+cells, so a legal replacement always exists. It loses none of Maker's required holdings, and the
+surviving-child argument covers the ensuing Breaker reply unchanged. The same height
+induction can therefore be executed on the 251-cell board.
+OpenAI Math Digest · 187
+187 / 01 20

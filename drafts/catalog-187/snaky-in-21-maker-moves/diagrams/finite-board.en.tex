@@ -1,0 +1,668 @@
+% Generated from current Astra diagram sources.
+\documentclass[border=12pt]{standalone}
+\def\pgfsysdriver{pgfsys-dvisvgm.def}
+\usepackage[dvisvgm]{xcolor}
+\usepackage{xeCJK}
+\setCJKmainfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf]
+\setCJKsansfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf]
+\usepackage{amsmath,amssymb,tikz,lmodern}
+\usetikzlibrary{arrows.meta,positioning,calc,patterns}
+\renewcommand{\familydefault}{\sfdefault}
+\definecolor{ink}{HTML}{25322F}
+\definecolor{green}{HTML}{246657}
+\definecolor{tint}{HTML}{EEF4F0}
+\definecolor{soft}{HTML}{C6D2CC}
+\definecolor{muted}{HTML}{52615B}
+\newif\ifJapanese
+\newcommand{\Tx}[2]{\ifJapanese #1\else #2\fi}
+\newcommand{\Head}[2]{{\color{green}\bfseries\Tx{#1}{#2}}\\[5pt]}
+\newcommand{\refurl}[2]{\special{dvisvgm:raw <a xlink:href="#1" target="_blank" rel="noopener noreferrer">}{\setlength{\fboxsep}{0pt}\colorbox{white}{\color{green}\underline{\strut #2}}}\special{dvisvgm:raw </a>}}
+\tikzset{box/.style={draw=soft,fill=white,rounded corners=2pt,text=ink,align=left,text width=14.2cm,inner sep=12pt,font=\fontsize{10.5}{14}\selectfont},result/.style={box,draw=green,fill=tint},reason/.style={text=muted,align=left,text width=12.5cm,font=\fontsize{9}{12}\selectfont,inner sep=0pt},edge/.style={-{Stealth[length=2.3mm]},line width=1pt,draw=green}}
+\newcommand{\Flow}[3]{\draw[edge] ($(#1.south)+(-6.7,0)$)--($(#2.north)+(-6.7,0)$);\node[reason,anchor=west] at ($(#1.south)!.5!(#2.north)+(-6.2,0)$){#3};}
+% Shared MIT-licensed repository typography; all catalogue-187 diagram content newly authored by Astra.
+
+% Generated from citations.json; do not edit.
+\newcommand{\Cite}[1]{\csname cite-#1\endcsname}
+\expandafter\def\csname cite-rules\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{§1; (1) · pp. 1–2}}}
+\expandafter\def\csname cite-theorem\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{Theorem 1 · p. 1}}}
+\expandafter\def\csname cite-finite\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{Corollary 6 · p. 8}}}
+\expandafter\def\csname cite-condition\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{Definition 2; §2 · p. 3}}}
+\expandafter\def\csname cite-bases\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{Lemma 4 · p. 4}}}
+\expandafter\def\csname cite-certificate\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{Proposition 5; (7) · pp. 5–6}}}
+\expandafter\def\csname cite-policy\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{§4 · pp. 7–8}}}
+\expandafter\def\csname cite-combine\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{Lemma 3; (2)–(3) · pp. 3–4}}}
+\expandafter\def\csname cite-elementary\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{§3.2; (6); Figure 2 · pp. 5–6}}}
+\expandafter\def\csname cite-encoding\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{§3.1 · pp. 4–5}}}
+\expandafter\def\csname cite-intersection\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{§3.3; Table 1 · pp. 6–7}}}
+\expandafter\def\csname cite-verification\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{§6.1 · pp. 11–12}}}
+\expandafter\def\csname cite-program\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{Appendix G.2 · pp. 82–84}}}
+\expandafter\def\csname cite-supplement\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf}{Appendix G.1 · pp. 81–82}}}
+
+\Japanesefalse
+\begin{document}
+\begin{tikzpicture}
+% Grid freshly derived from astra-20261015/validation/reconstruction/INDEPENDENT-RESULT.json.
+\node[box] (a) {\Head{空の有限盤：最終領域と17×17正方形}{Empty finite boards: the final envelope and the 17×17 square}
+\begin{tikzpicture}[x=.32cm,y=.32cm,baseline=0cm]
+\draw[fill=white,draw=soft] (0,0) rectangle +(1,1);
+% Explicit hatching outside T727: (0,0); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (0.710,0.050) -- (0.950,0.290);
+\draw[soft,sharp corners,line width=.3pt] (0.490,0.050) -- (0.950,0.510);
+\draw[soft,sharp corners,line width=.3pt] (0.270,0.050) -- (0.950,0.730);
+\draw[soft,sharp corners,line width=.3pt] (0.050,0.050) -- (0.950,0.950);
+\draw[soft,sharp corners,line width=.3pt] (0.050,0.270) -- (0.730,0.950);
+\draw[soft,sharp corners,line width=.3pt] (0.050,0.490) -- (0.510,0.950);
+\draw[soft,sharp corners,line width=.3pt] (0.050,0.710) -- (0.290,0.950);
+\draw[fill=white,draw=soft] (0,1) rectangle +(1,1);
+% Explicit hatching outside T727: (0,1); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (0.710,1.050) -- (0.950,1.290);
+\draw[soft,sharp corners,line width=.3pt] (0.490,1.050) -- (0.950,1.510);
+\draw[soft,sharp corners,line width=.3pt] (0.270,1.050) -- (0.950,1.730);
+\draw[soft,sharp corners,line width=.3pt] (0.050,1.050) -- (0.950,1.950);
+\draw[soft,sharp corners,line width=.3pt] (0.050,1.270) -- (0.730,1.950);
+\draw[soft,sharp corners,line width=.3pt] (0.050,1.490) -- (0.510,1.950);
+\draw[soft,sharp corners,line width=.3pt] (0.050,1.710) -- (0.290,1.950);
+\draw[fill=white,draw=soft] (0,2) rectangle +(1,1);
+% Explicit hatching outside T727: (0,2); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (0.710,2.050) -- (0.950,2.290);
+\draw[soft,sharp corners,line width=.3pt] (0.490,2.050) -- (0.950,2.510);
+\draw[soft,sharp corners,line width=.3pt] (0.270,2.050) -- (0.950,2.730);
+\draw[soft,sharp corners,line width=.3pt] (0.050,2.050) -- (0.950,2.950);
+\draw[soft,sharp corners,line width=.3pt] (0.050,2.270) -- (0.730,2.950);
+\draw[soft,sharp corners,line width=.3pt] (0.050,2.490) -- (0.510,2.950);
+\draw[soft,sharp corners,line width=.3pt] (0.050,2.710) -- (0.290,2.950);
+\draw[fill=white,draw=soft] (0,3) rectangle +(1,1);
+% Explicit hatching outside T727: (0,3); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (0.710,3.050) -- (0.950,3.290);
+\draw[soft,sharp corners,line width=.3pt] (0.490,3.050) -- (0.950,3.510);
+\draw[soft,sharp corners,line width=.3pt] (0.270,3.050) -- (0.950,3.730);
+\draw[soft,sharp corners,line width=.3pt] (0.050,3.050) -- (0.950,3.950);
+\draw[soft,sharp corners,line width=.3pt] (0.050,3.270) -- (0.730,3.950);
+\draw[soft,sharp corners,line width=.3pt] (0.050,3.490) -- (0.510,3.950);
+\draw[soft,sharp corners,line width=.3pt] (0.050,3.710) -- (0.290,3.950);
+\draw[fill=white,draw=soft] (0,4) rectangle +(1,1);
+\draw[fill=white,draw=soft] (0,5) rectangle +(1,1);
+\draw[fill=white,draw=soft] (0,6) rectangle +(1,1);
+\draw[fill=white,draw=soft] (0,7) rectangle +(1,1);
+\draw[fill=white,draw=soft] (0,8) rectangle +(1,1);
+\draw[fill=white,draw=soft] (0,9) rectangle +(1,1);
+\draw[fill=white,draw=soft] (0,10) rectangle +(1,1);
+\draw[fill=white,draw=soft] (0,11) rectangle +(1,1);
+\draw[fill=white,draw=soft] (0,12) rectangle +(1,1);
+\draw[fill=white,draw=soft] (0,13) rectangle +(1,1);
+% Explicit hatching outside T727: (0,13); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (0.710,13.050) -- (0.950,13.290);
+\draw[soft,sharp corners,line width=.3pt] (0.490,13.050) -- (0.950,13.510);
+\draw[soft,sharp corners,line width=.3pt] (0.270,13.050) -- (0.950,13.730);
+\draw[soft,sharp corners,line width=.3pt] (0.050,13.050) -- (0.950,13.950);
+\draw[soft,sharp corners,line width=.3pt] (0.050,13.270) -- (0.730,13.950);
+\draw[soft,sharp corners,line width=.3pt] (0.050,13.490) -- (0.510,13.950);
+\draw[soft,sharp corners,line width=.3pt] (0.050,13.710) -- (0.290,13.950);
+\draw[fill=white,draw=soft] (0,14) rectangle +(1,1);
+% Explicit hatching outside T727: (0,14); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (0.710,14.050) -- (0.950,14.290);
+\draw[soft,sharp corners,line width=.3pt] (0.490,14.050) -- (0.950,14.510);
+\draw[soft,sharp corners,line width=.3pt] (0.270,14.050) -- (0.950,14.730);
+\draw[soft,sharp corners,line width=.3pt] (0.050,14.050) -- (0.950,14.950);
+\draw[soft,sharp corners,line width=.3pt] (0.050,14.270) -- (0.730,14.950);
+\draw[soft,sharp corners,line width=.3pt] (0.050,14.490) -- (0.510,14.950);
+\draw[soft,sharp corners,line width=.3pt] (0.050,14.710) -- (0.290,14.950);
+\draw[fill=white,draw=soft] (0,15) rectangle +(1,1);
+% Explicit hatching outside T727: (0,15); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (0.710,15.050) -- (0.950,15.290);
+\draw[soft,sharp corners,line width=.3pt] (0.490,15.050) -- (0.950,15.510);
+\draw[soft,sharp corners,line width=.3pt] (0.270,15.050) -- (0.950,15.730);
+\draw[soft,sharp corners,line width=.3pt] (0.050,15.050) -- (0.950,15.950);
+\draw[soft,sharp corners,line width=.3pt] (0.050,15.270) -- (0.730,15.950);
+\draw[soft,sharp corners,line width=.3pt] (0.050,15.490) -- (0.510,15.950);
+\draw[soft,sharp corners,line width=.3pt] (0.050,15.710) -- (0.290,15.950);
+\draw[fill=white,draw=soft] (0,16) rectangle +(1,1);
+% Explicit hatching outside T727: (0,16); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (0.710,16.050) -- (0.950,16.290);
+\draw[soft,sharp corners,line width=.3pt] (0.490,16.050) -- (0.950,16.510);
+\draw[soft,sharp corners,line width=.3pt] (0.270,16.050) -- (0.950,16.730);
+\draw[soft,sharp corners,line width=.3pt] (0.050,16.050) -- (0.950,16.950);
+\draw[soft,sharp corners,line width=.3pt] (0.050,16.270) -- (0.730,16.950);
+\draw[soft,sharp corners,line width=.3pt] (0.050,16.490) -- (0.510,16.950);
+\draw[soft,sharp corners,line width=.3pt] (0.050,16.710) -- (0.290,16.950);
+\draw[fill=white,draw=soft] (1,0) rectangle +(1,1);
+% Explicit hatching outside T727: (1,0); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (1.710,0.050) -- (1.950,0.290);
+\draw[soft,sharp corners,line width=.3pt] (1.490,0.050) -- (1.950,0.510);
+\draw[soft,sharp corners,line width=.3pt] (1.270,0.050) -- (1.950,0.730);
+\draw[soft,sharp corners,line width=.3pt] (1.050,0.050) -- (1.950,0.950);
+\draw[soft,sharp corners,line width=.3pt] (1.050,0.270) -- (1.730,0.950);
+\draw[soft,sharp corners,line width=.3pt] (1.050,0.490) -- (1.510,0.950);
+\draw[soft,sharp corners,line width=.3pt] (1.050,0.710) -- (1.290,0.950);
+\draw[fill=white,draw=soft] (1,1) rectangle +(1,1);
+% Explicit hatching outside T727: (1,1); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (1.710,1.050) -- (1.950,1.290);
+\draw[soft,sharp corners,line width=.3pt] (1.490,1.050) -- (1.950,1.510);
+\draw[soft,sharp corners,line width=.3pt] (1.270,1.050) -- (1.950,1.730);
+\draw[soft,sharp corners,line width=.3pt] (1.050,1.050) -- (1.950,1.950);
+\draw[soft,sharp corners,line width=.3pt] (1.050,1.270) -- (1.730,1.950);
+\draw[soft,sharp corners,line width=.3pt] (1.050,1.490) -- (1.510,1.950);
+\draw[soft,sharp corners,line width=.3pt] (1.050,1.710) -- (1.290,1.950);
+\draw[fill=white,draw=soft] (1,2) rectangle +(1,1);
+\draw[fill=white,draw=soft] (1,3) rectangle +(1,1);
+\draw[fill=white,draw=soft] (1,4) rectangle +(1,1);
+\draw[fill=white,draw=soft] (1,5) rectangle +(1,1);
+\draw[fill=white,draw=soft] (1,6) rectangle +(1,1);
+\draw[fill=white,draw=soft] (1,7) rectangle +(1,1);
+\draw[fill=white,draw=soft] (1,8) rectangle +(1,1);
+\draw[fill=white,draw=soft] (1,9) rectangle +(1,1);
+\draw[fill=white,draw=soft] (1,10) rectangle +(1,1);
+\draw[fill=white,draw=soft] (1,11) rectangle +(1,1);
+\draw[fill=white,draw=soft] (1,12) rectangle +(1,1);
+\draw[fill=white,draw=soft] (1,13) rectangle +(1,1);
+\draw[fill=white,draw=soft] (1,14) rectangle +(1,1);
+% Explicit hatching outside T727: (1,14); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (1.710,14.050) -- (1.950,14.290);
+\draw[soft,sharp corners,line width=.3pt] (1.490,14.050) -- (1.950,14.510);
+\draw[soft,sharp corners,line width=.3pt] (1.270,14.050) -- (1.950,14.730);
+\draw[soft,sharp corners,line width=.3pt] (1.050,14.050) -- (1.950,14.950);
+\draw[soft,sharp corners,line width=.3pt] (1.050,14.270) -- (1.730,14.950);
+\draw[soft,sharp corners,line width=.3pt] (1.050,14.490) -- (1.510,14.950);
+\draw[soft,sharp corners,line width=.3pt] (1.050,14.710) -- (1.290,14.950);
+\draw[fill=white,draw=soft] (1,15) rectangle +(1,1);
+% Explicit hatching outside T727: (1,15); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (1.710,15.050) -- (1.950,15.290);
+\draw[soft,sharp corners,line width=.3pt] (1.490,15.050) -- (1.950,15.510);
+\draw[soft,sharp corners,line width=.3pt] (1.270,15.050) -- (1.950,15.730);
+\draw[soft,sharp corners,line width=.3pt] (1.050,15.050) -- (1.950,15.950);
+\draw[soft,sharp corners,line width=.3pt] (1.050,15.270) -- (1.730,15.950);
+\draw[soft,sharp corners,line width=.3pt] (1.050,15.490) -- (1.510,15.950);
+\draw[soft,sharp corners,line width=.3pt] (1.050,15.710) -- (1.290,15.950);
+\draw[fill=white,draw=soft] (1,16) rectangle +(1,1);
+% Explicit hatching outside T727: (1,16); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (1.710,16.050) -- (1.950,16.290);
+\draw[soft,sharp corners,line width=.3pt] (1.490,16.050) -- (1.950,16.510);
+\draw[soft,sharp corners,line width=.3pt] (1.270,16.050) -- (1.950,16.730);
+\draw[soft,sharp corners,line width=.3pt] (1.050,16.050) -- (1.950,16.950);
+\draw[soft,sharp corners,line width=.3pt] (1.050,16.270) -- (1.730,16.950);
+\draw[soft,sharp corners,line width=.3pt] (1.050,16.490) -- (1.510,16.950);
+\draw[soft,sharp corners,line width=.3pt] (1.050,16.710) -- (1.290,16.950);
+\draw[fill=white,draw=soft] (2,0) rectangle +(1,1);
+% Explicit hatching outside T727: (2,0); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (2.710,0.050) -- (2.950,0.290);
+\draw[soft,sharp corners,line width=.3pt] (2.490,0.050) -- (2.950,0.510);
+\draw[soft,sharp corners,line width=.3pt] (2.270,0.050) -- (2.950,0.730);
+\draw[soft,sharp corners,line width=.3pt] (2.050,0.050) -- (2.950,0.950);
+\draw[soft,sharp corners,line width=.3pt] (2.050,0.270) -- (2.730,0.950);
+\draw[soft,sharp corners,line width=.3pt] (2.050,0.490) -- (2.510,0.950);
+\draw[soft,sharp corners,line width=.3pt] (2.050,0.710) -- (2.290,0.950);
+\draw[fill=white,draw=soft] (2,1) rectangle +(1,1);
+\draw[fill=white,draw=soft] (2,2) rectangle +(1,1);
+\draw[fill=white,draw=soft] (2,3) rectangle +(1,1);
+\draw[fill=white,draw=soft] (2,4) rectangle +(1,1);
+\draw[fill=white,draw=soft] (2,5) rectangle +(1,1);
+\draw[fill=white,draw=soft] (2,6) rectangle +(1,1);
+\draw[fill=white,draw=soft] (2,7) rectangle +(1,1);
+\draw[fill=white,draw=soft] (2,8) rectangle +(1,1);
+\draw[fill=white,draw=soft] (2,9) rectangle +(1,1);
+\draw[fill=white,draw=soft] (2,10) rectangle +(1,1);
+\draw[fill=white,draw=soft] (2,11) rectangle +(1,1);
+\draw[fill=white,draw=soft] (2,12) rectangle +(1,1);
+\draw[fill=white,draw=soft] (2,13) rectangle +(1,1);
+\draw[fill=white,draw=soft] (2,14) rectangle +(1,1);
+\draw[fill=white,draw=soft] (2,15) rectangle +(1,1);
+\draw[fill=white,draw=soft] (2,16) rectangle +(1,1);
+% Explicit hatching outside T727: (2,16); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (2.710,16.050) -- (2.950,16.290);
+\draw[soft,sharp corners,line width=.3pt] (2.490,16.050) -- (2.950,16.510);
+\draw[soft,sharp corners,line width=.3pt] (2.270,16.050) -- (2.950,16.730);
+\draw[soft,sharp corners,line width=.3pt] (2.050,16.050) -- (2.950,16.950);
+\draw[soft,sharp corners,line width=.3pt] (2.050,16.270) -- (2.730,16.950);
+\draw[soft,sharp corners,line width=.3pt] (2.050,16.490) -- (2.510,16.950);
+\draw[soft,sharp corners,line width=.3pt] (2.050,16.710) -- (2.290,16.950);
+\draw[fill=white,draw=soft] (3,0) rectangle +(1,1);
+% Explicit hatching outside T727: (3,0); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (3.710,0.050) -- (3.950,0.290);
+\draw[soft,sharp corners,line width=.3pt] (3.490,0.050) -- (3.950,0.510);
+\draw[soft,sharp corners,line width=.3pt] (3.270,0.050) -- (3.950,0.730);
+\draw[soft,sharp corners,line width=.3pt] (3.050,0.050) -- (3.950,0.950);
+\draw[soft,sharp corners,line width=.3pt] (3.050,0.270) -- (3.730,0.950);
+\draw[soft,sharp corners,line width=.3pt] (3.050,0.490) -- (3.510,0.950);
+\draw[soft,sharp corners,line width=.3pt] (3.050,0.710) -- (3.290,0.950);
+\draw[fill=white,draw=soft] (3,1) rectangle +(1,1);
+\draw[fill=white,draw=soft] (3,2) rectangle +(1,1);
+\draw[fill=white,draw=soft] (3,3) rectangle +(1,1);
+\draw[fill=white,draw=soft] (3,4) rectangle +(1,1);
+\draw[fill=white,draw=soft] (3,5) rectangle +(1,1);
+\draw[fill=white,draw=soft] (3,6) rectangle +(1,1);
+\draw[fill=white,draw=soft] (3,7) rectangle +(1,1);
+\draw[fill=white,draw=soft] (3,8) rectangle +(1,1);
+\draw[fill=white,draw=soft] (3,9) rectangle +(1,1);
+\draw[fill=white,draw=soft] (3,10) rectangle +(1,1);
+\draw[fill=white,draw=soft] (3,11) rectangle +(1,1);
+\draw[fill=white,draw=soft] (3,12) rectangle +(1,1);
+\draw[fill=white,draw=soft] (3,13) rectangle +(1,1);
+\draw[fill=white,draw=soft] (3,14) rectangle +(1,1);
+\draw[fill=white,draw=soft] (3,15) rectangle +(1,1);
+\draw[fill=white,draw=soft] (3,16) rectangle +(1,1);
+% Explicit hatching outside T727: (3,16); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (3.710,16.050) -- (3.950,16.290);
+\draw[soft,sharp corners,line width=.3pt] (3.490,16.050) -- (3.950,16.510);
+\draw[soft,sharp corners,line width=.3pt] (3.270,16.050) -- (3.950,16.730);
+\draw[soft,sharp corners,line width=.3pt] (3.050,16.050) -- (3.950,16.950);
+\draw[soft,sharp corners,line width=.3pt] (3.050,16.270) -- (3.730,16.950);
+\draw[soft,sharp corners,line width=.3pt] (3.050,16.490) -- (3.510,16.950);
+\draw[soft,sharp corners,line width=.3pt] (3.050,16.710) -- (3.290,16.950);
+\draw[fill=white,draw=soft] (4,0) rectangle +(1,1);
+\draw[fill=white,draw=soft] (4,1) rectangle +(1,1);
+\draw[fill=white,draw=soft] (4,2) rectangle +(1,1);
+\draw[fill=white,draw=soft] (4,3) rectangle +(1,1);
+\draw[fill=white,draw=soft] (4,4) rectangle +(1,1);
+\draw[fill=white,draw=soft] (4,5) rectangle +(1,1);
+\draw[fill=white,draw=soft] (4,6) rectangle +(1,1);
+\draw[fill=white,draw=soft] (4,7) rectangle +(1,1);
+\draw[fill=white,draw=soft] (4,8) rectangle +(1,1);
+\draw[fill=white,draw=soft] (4,9) rectangle +(1,1);
+\draw[fill=white,draw=soft] (4,10) rectangle +(1,1);
+\draw[fill=white,draw=soft] (4,11) rectangle +(1,1);
+\draw[fill=white,draw=soft] (4,12) rectangle +(1,1);
+\draw[fill=white,draw=soft] (4,13) rectangle +(1,1);
+\draw[fill=white,draw=soft] (4,14) rectangle +(1,1);
+\draw[fill=white,draw=soft] (4,15) rectangle +(1,1);
+\draw[fill=white,draw=soft] (4,16) rectangle +(1,1);
+% Explicit hatching outside T727: (4,16); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (4.710,16.050) -- (4.950,16.290);
+\draw[soft,sharp corners,line width=.3pt] (4.490,16.050) -- (4.950,16.510);
+\draw[soft,sharp corners,line width=.3pt] (4.270,16.050) -- (4.950,16.730);
+\draw[soft,sharp corners,line width=.3pt] (4.050,16.050) -- (4.950,16.950);
+\draw[soft,sharp corners,line width=.3pt] (4.050,16.270) -- (4.730,16.950);
+\draw[soft,sharp corners,line width=.3pt] (4.050,16.490) -- (4.510,16.950);
+\draw[soft,sharp corners,line width=.3pt] (4.050,16.710) -- (4.290,16.950);
+\draw[fill=white,draw=soft] (5,0) rectangle +(1,1);
+\draw[fill=white,draw=soft] (5,1) rectangle +(1,1);
+\draw[fill=white,draw=soft] (5,2) rectangle +(1,1);
+\draw[fill=white,draw=soft] (5,3) rectangle +(1,1);
+\draw[fill=white,draw=soft] (5,4) rectangle +(1,1);
+\draw[fill=white,draw=soft] (5,5) rectangle +(1,1);
+\draw[fill=white,draw=soft] (5,6) rectangle +(1,1);
+\draw[fill=white,draw=soft] (5,7) rectangle +(1,1);
+\draw[fill=white,draw=soft] (5,8) rectangle +(1,1);
+\draw[fill=white,draw=soft] (5,9) rectangle +(1,1);
+\draw[fill=white,draw=soft] (5,10) rectangle +(1,1);
+\draw[fill=white,draw=soft] (5,11) rectangle +(1,1);
+\draw[fill=white,draw=soft] (5,12) rectangle +(1,1);
+\draw[fill=white,draw=soft] (5,13) rectangle +(1,1);
+\draw[fill=white,draw=soft] (5,14) rectangle +(1,1);
+\draw[fill=white,draw=soft] (5,15) rectangle +(1,1);
+\draw[fill=white,draw=soft] (5,16) rectangle +(1,1);
+\draw[fill=white,draw=soft] (6,0) rectangle +(1,1);
+\draw[fill=white,draw=soft] (6,1) rectangle +(1,1);
+\draw[fill=white,draw=soft] (6,2) rectangle +(1,1);
+\draw[fill=white,draw=soft] (6,3) rectangle +(1,1);
+\draw[fill=white,draw=soft] (6,4) rectangle +(1,1);
+\draw[fill=white,draw=soft] (6,5) rectangle +(1,1);
+\draw[fill=white,draw=soft] (6,6) rectangle +(1,1);
+\draw[fill=white,draw=soft] (6,7) rectangle +(1,1);
+\draw[fill=white,draw=soft] (6,8) rectangle +(1,1);
+\draw[fill=white,draw=soft] (6,9) rectangle +(1,1);
+\draw[fill=white,draw=soft] (6,10) rectangle +(1,1);
+\draw[fill=white,draw=soft] (6,11) rectangle +(1,1);
+\draw[fill=white,draw=soft] (6,12) rectangle +(1,1);
+\draw[fill=white,draw=soft] (6,13) rectangle +(1,1);
+\draw[fill=white,draw=soft] (6,14) rectangle +(1,1);
+\draw[fill=white,draw=soft] (6,15) rectangle +(1,1);
+\draw[fill=white,draw=soft] (6,16) rectangle +(1,1);
+\draw[fill=white,draw=soft] (7,0) rectangle +(1,1);
+\draw[fill=white,draw=soft] (7,1) rectangle +(1,1);
+\draw[fill=white,draw=soft] (7,2) rectangle +(1,1);
+\draw[fill=white,draw=soft] (7,3) rectangle +(1,1);
+\draw[fill=white,draw=soft] (7,4) rectangle +(1,1);
+\draw[fill=white,draw=soft] (7,5) rectangle +(1,1);
+\draw[fill=white,draw=soft] (7,6) rectangle +(1,1);
+\draw[fill=white,draw=soft] (7,7) rectangle +(1,1);
+\draw[fill=white,draw=soft] (7,8) rectangle +(1,1);
+\draw[fill=white,draw=soft] (7,9) rectangle +(1,1);
+\draw[fill=white,draw=soft] (7,10) rectangle +(1,1);
+\draw[fill=white,draw=soft] (7,11) rectangle +(1,1);
+\draw[fill=white,draw=soft] (7,12) rectangle +(1,1);
+\draw[fill=white,draw=soft] (7,13) rectangle +(1,1);
+\draw[fill=white,draw=soft] (7,14) rectangle +(1,1);
+\draw[fill=white,draw=soft] (7,15) rectangle +(1,1);
+\draw[fill=white,draw=soft] (7,16) rectangle +(1,1);
+\draw[fill=white,draw=soft] (8,0) rectangle +(1,1);
+\draw[fill=white,draw=soft] (8,1) rectangle +(1,1);
+\draw[fill=white,draw=soft] (8,2) rectangle +(1,1);
+\draw[fill=white,draw=soft] (8,3) rectangle +(1,1);
+\draw[fill=white,draw=soft] (8,4) rectangle +(1,1);
+\draw[fill=white,draw=soft] (8,5) rectangle +(1,1);
+\draw[fill=white,draw=soft] (8,6) rectangle +(1,1);
+\draw[fill=white,draw=soft] (8,7) rectangle +(1,1);
+\draw[fill=white,draw=soft] (8,8) rectangle +(1,1);
+\draw[fill=white,draw=soft] (8,9) rectangle +(1,1);
+\draw[fill=white,draw=soft] (8,10) rectangle +(1,1);
+\draw[fill=white,draw=soft] (8,11) rectangle +(1,1);
+\draw[fill=white,draw=soft] (8,12) rectangle +(1,1);
+\draw[fill=white,draw=soft] (8,13) rectangle +(1,1);
+\draw[fill=white,draw=soft] (8,14) rectangle +(1,1);
+\draw[fill=white,draw=soft] (8,15) rectangle +(1,1);
+\draw[fill=white,draw=soft] (8,16) rectangle +(1,1);
+\draw[fill=white,draw=soft] (9,0) rectangle +(1,1);
+\draw[fill=white,draw=soft] (9,1) rectangle +(1,1);
+\draw[fill=white,draw=soft] (9,2) rectangle +(1,1);
+\draw[fill=white,draw=soft] (9,3) rectangle +(1,1);
+\draw[fill=white,draw=soft] (9,4) rectangle +(1,1);
+\draw[fill=white,draw=soft] (9,5) rectangle +(1,1);
+\draw[fill=white,draw=soft] (9,6) rectangle +(1,1);
+\draw[fill=white,draw=soft] (9,7) rectangle +(1,1);
+\draw[fill=white,draw=soft] (9,8) rectangle +(1,1);
+\draw[fill=white,draw=soft] (9,9) rectangle +(1,1);
+\draw[fill=white,draw=soft] (9,10) rectangle +(1,1);
+\draw[fill=white,draw=soft] (9,11) rectangle +(1,1);
+\draw[fill=white,draw=soft] (9,12) rectangle +(1,1);
+\draw[fill=white,draw=soft] (9,13) rectangle +(1,1);
+\draw[fill=white,draw=soft] (9,14) rectangle +(1,1);
+\draw[fill=white,draw=soft] (9,15) rectangle +(1,1);
+\draw[fill=white,draw=soft] (9,16) rectangle +(1,1);
+\draw[fill=white,draw=soft] (10,0) rectangle +(1,1);
+\draw[fill=white,draw=soft] (10,1) rectangle +(1,1);
+\draw[fill=white,draw=soft] (10,2) rectangle +(1,1);
+\draw[fill=white,draw=soft] (10,3) rectangle +(1,1);
+\draw[fill=white,draw=soft] (10,4) rectangle +(1,1);
+\draw[fill=white,draw=soft] (10,5) rectangle +(1,1);
+\draw[fill=white,draw=soft] (10,6) rectangle +(1,1);
+\draw[fill=white,draw=soft] (10,7) rectangle +(1,1);
+\draw[fill=white,draw=soft] (10,8) rectangle +(1,1);
+\draw[fill=white,draw=soft] (10,9) rectangle +(1,1);
+\draw[fill=white,draw=soft] (10,10) rectangle +(1,1);
+\draw[fill=white,draw=soft] (10,11) rectangle +(1,1);
+\draw[fill=white,draw=soft] (10,12) rectangle +(1,1);
+\draw[fill=white,draw=soft] (10,13) rectangle +(1,1);
+\draw[fill=white,draw=soft] (10,14) rectangle +(1,1);
+\draw[fill=white,draw=soft] (10,15) rectangle +(1,1);
+\draw[fill=white,draw=soft] (10,16) rectangle +(1,1);
+\draw[fill=white,draw=soft] (11,0) rectangle +(1,1);
+\draw[fill=white,draw=soft] (11,1) rectangle +(1,1);
+\draw[fill=white,draw=soft] (11,2) rectangle +(1,1);
+\draw[fill=white,draw=soft] (11,3) rectangle +(1,1);
+\draw[fill=white,draw=soft] (11,4) rectangle +(1,1);
+\draw[fill=white,draw=soft] (11,5) rectangle +(1,1);
+\draw[fill=white,draw=soft] (11,6) rectangle +(1,1);
+\draw[fill=white,draw=soft] (11,7) rectangle +(1,1);
+\draw[fill=white,draw=soft] (11,8) rectangle +(1,1);
+\draw[fill=white,draw=soft] (11,9) rectangle +(1,1);
+\draw[fill=white,draw=soft] (11,10) rectangle +(1,1);
+\draw[fill=white,draw=soft] (11,11) rectangle +(1,1);
+\draw[fill=white,draw=soft] (11,12) rectangle +(1,1);
+\draw[fill=white,draw=soft] (11,13) rectangle +(1,1);
+\draw[fill=white,draw=soft] (11,14) rectangle +(1,1);
+\draw[fill=white,draw=soft] (11,15) rectangle +(1,1);
+\draw[fill=white,draw=soft] (11,16) rectangle +(1,1);
+\draw[fill=white,draw=soft] (12,0) rectangle +(1,1);
+% Explicit hatching outside T727: (12,0); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (12.710,0.050) -- (12.950,0.290);
+\draw[soft,sharp corners,line width=.3pt] (12.490,0.050) -- (12.950,0.510);
+\draw[soft,sharp corners,line width=.3pt] (12.270,0.050) -- (12.950,0.730);
+\draw[soft,sharp corners,line width=.3pt] (12.050,0.050) -- (12.950,0.950);
+\draw[soft,sharp corners,line width=.3pt] (12.050,0.270) -- (12.730,0.950);
+\draw[soft,sharp corners,line width=.3pt] (12.050,0.490) -- (12.510,0.950);
+\draw[soft,sharp corners,line width=.3pt] (12.050,0.710) -- (12.290,0.950);
+\draw[fill=white,draw=soft] (12,1) rectangle +(1,1);
+\draw[fill=white,draw=soft] (12,2) rectangle +(1,1);
+\draw[fill=white,draw=soft] (12,3) rectangle +(1,1);
+\draw[fill=white,draw=soft] (12,4) rectangle +(1,1);
+\draw[fill=white,draw=soft] (12,5) rectangle +(1,1);
+\draw[fill=white,draw=soft] (12,6) rectangle +(1,1);
+\draw[fill=white,draw=soft] (12,7) rectangle +(1,1);
+\draw[fill=white,draw=soft] (12,8) rectangle +(1,1);
+\draw[fill=white,draw=soft] (12,9) rectangle +(1,1);
+\draw[fill=white,draw=soft] (12,10) rectangle +(1,1);
+\draw[fill=white,draw=soft] (12,11) rectangle +(1,1);
+\draw[fill=white,draw=soft] (12,12) rectangle +(1,1);
+\draw[fill=white,draw=soft] (12,13) rectangle +(1,1);
+\draw[fill=white,draw=soft] (12,14) rectangle +(1,1);
+\draw[fill=white,draw=soft] (12,15) rectangle +(1,1);
+\draw[fill=white,draw=soft] (12,16) rectangle +(1,1);
+\draw[fill=white,draw=soft] (13,0) rectangle +(1,1);
+% Explicit hatching outside T727: (13,0); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (13.710,0.050) -- (13.950,0.290);
+\draw[soft,sharp corners,line width=.3pt] (13.490,0.050) -- (13.950,0.510);
+\draw[soft,sharp corners,line width=.3pt] (13.270,0.050) -- (13.950,0.730);
+\draw[soft,sharp corners,line width=.3pt] (13.050,0.050) -- (13.950,0.950);
+\draw[soft,sharp corners,line width=.3pt] (13.050,0.270) -- (13.730,0.950);
+\draw[soft,sharp corners,line width=.3pt] (13.050,0.490) -- (13.510,0.950);
+\draw[soft,sharp corners,line width=.3pt] (13.050,0.710) -- (13.290,0.950);
+\draw[fill=white,draw=soft] (13,1) rectangle +(1,1);
+\draw[fill=white,draw=soft] (13,2) rectangle +(1,1);
+\draw[fill=white,draw=soft] (13,3) rectangle +(1,1);
+\draw[fill=white,draw=soft] (13,4) rectangle +(1,1);
+\draw[fill=white,draw=soft] (13,5) rectangle +(1,1);
+\draw[fill=white,draw=soft] (13,6) rectangle +(1,1);
+\draw[fill=white,draw=soft] (13,7) rectangle +(1,1);
+\draw[fill=white,draw=soft] (13,8) rectangle +(1,1);
+\draw[fill=white,draw=soft] (13,9) rectangle +(1,1);
+\draw[fill=white,draw=soft] (13,10) rectangle +(1,1);
+\draw[fill=white,draw=soft] (13,11) rectangle +(1,1);
+\draw[fill=white,draw=soft] (13,12) rectangle +(1,1);
+\draw[fill=white,draw=soft] (13,13) rectangle +(1,1);
+\draw[fill=white,draw=soft] (13,14) rectangle +(1,1);
+\draw[fill=white,draw=soft] (13,15) rectangle +(1,1);
+\draw[fill=white,draw=soft] (13,16) rectangle +(1,1);
+% Explicit hatching outside T727: (13,16); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (13.710,16.050) -- (13.950,16.290);
+\draw[soft,sharp corners,line width=.3pt] (13.490,16.050) -- (13.950,16.510);
+\draw[soft,sharp corners,line width=.3pt] (13.270,16.050) -- (13.950,16.730);
+\draw[soft,sharp corners,line width=.3pt] (13.050,16.050) -- (13.950,16.950);
+\draw[soft,sharp corners,line width=.3pt] (13.050,16.270) -- (13.730,16.950);
+\draw[soft,sharp corners,line width=.3pt] (13.050,16.490) -- (13.510,16.950);
+\draw[soft,sharp corners,line width=.3pt] (13.050,16.710) -- (13.290,16.950);
+\draw[fill=white,draw=soft] (14,0) rectangle +(1,1);
+% Explicit hatching outside T727: (14,0); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (14.710,0.050) -- (14.950,0.290);
+\draw[soft,sharp corners,line width=.3pt] (14.490,0.050) -- (14.950,0.510);
+\draw[soft,sharp corners,line width=.3pt] (14.270,0.050) -- (14.950,0.730);
+\draw[soft,sharp corners,line width=.3pt] (14.050,0.050) -- (14.950,0.950);
+\draw[soft,sharp corners,line width=.3pt] (14.050,0.270) -- (14.730,0.950);
+\draw[soft,sharp corners,line width=.3pt] (14.050,0.490) -- (14.510,0.950);
+\draw[soft,sharp corners,line width=.3pt] (14.050,0.710) -- (14.290,0.950);
+\draw[fill=white,draw=soft] (14,1) rectangle +(1,1);
+\draw[fill=white,draw=soft] (14,2) rectangle +(1,1);
+\draw[fill=white,draw=soft] (14,3) rectangle +(1,1);
+\draw[fill=white,draw=soft] (14,4) rectangle +(1,1);
+\draw[fill=white,draw=soft] (14,5) rectangle +(1,1);
+\draw[fill=white,draw=soft] (14,6) rectangle +(1,1);
+\draw[fill=white,draw=soft] (14,7) rectangle +(1,1);
+\draw[fill=white,draw=soft] (14,8) rectangle +(1,1);
+\draw[fill=white,draw=soft] (14,9) rectangle +(1,1);
+\draw[fill=white,draw=soft] (14,10) rectangle +(1,1);
+\draw[fill=white,draw=soft] (14,11) rectangle +(1,1);
+\draw[fill=white,draw=soft] (14,12) rectangle +(1,1);
+\draw[fill=white,draw=soft] (14,13) rectangle +(1,1);
+\draw[fill=white,draw=soft] (14,14) rectangle +(1,1);
+\draw[fill=white,draw=soft] (14,15) rectangle +(1,1);
+% Explicit hatching outside T727: (14,15); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (14.710,15.050) -- (14.950,15.290);
+\draw[soft,sharp corners,line width=.3pt] (14.490,15.050) -- (14.950,15.510);
+\draw[soft,sharp corners,line width=.3pt] (14.270,15.050) -- (14.950,15.730);
+\draw[soft,sharp corners,line width=.3pt] (14.050,15.050) -- (14.950,15.950);
+\draw[soft,sharp corners,line width=.3pt] (14.050,15.270) -- (14.730,15.950);
+\draw[soft,sharp corners,line width=.3pt] (14.050,15.490) -- (14.510,15.950);
+\draw[soft,sharp corners,line width=.3pt] (14.050,15.710) -- (14.290,15.950);
+\draw[fill=white,draw=soft] (14,16) rectangle +(1,1);
+% Explicit hatching outside T727: (14,16); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (14.710,16.050) -- (14.950,16.290);
+\draw[soft,sharp corners,line width=.3pt] (14.490,16.050) -- (14.950,16.510);
+\draw[soft,sharp corners,line width=.3pt] (14.270,16.050) -- (14.950,16.730);
+\draw[soft,sharp corners,line width=.3pt] (14.050,16.050) -- (14.950,16.950);
+\draw[soft,sharp corners,line width=.3pt] (14.050,16.270) -- (14.730,16.950);
+\draw[soft,sharp corners,line width=.3pt] (14.050,16.490) -- (14.510,16.950);
+\draw[soft,sharp corners,line width=.3pt] (14.050,16.710) -- (14.290,16.950);
+\draw[fill=white,draw=soft] (15,0) rectangle +(1,1);
+% Explicit hatching outside T727: (15,0); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (15.710,0.050) -- (15.950,0.290);
+\draw[soft,sharp corners,line width=.3pt] (15.490,0.050) -- (15.950,0.510);
+\draw[soft,sharp corners,line width=.3pt] (15.270,0.050) -- (15.950,0.730);
+\draw[soft,sharp corners,line width=.3pt] (15.050,0.050) -- (15.950,0.950);
+\draw[soft,sharp corners,line width=.3pt] (15.050,0.270) -- (15.730,0.950);
+\draw[soft,sharp corners,line width=.3pt] (15.050,0.490) -- (15.510,0.950);
+\draw[soft,sharp corners,line width=.3pt] (15.050,0.710) -- (15.290,0.950);
+\draw[fill=white,draw=soft] (15,1) rectangle +(1,1);
+% Explicit hatching outside T727: (15,1); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (15.710,1.050) -- (15.950,1.290);
+\draw[soft,sharp corners,line width=.3pt] (15.490,1.050) -- (15.950,1.510);
+\draw[soft,sharp corners,line width=.3pt] (15.270,1.050) -- (15.950,1.730);
+\draw[soft,sharp corners,line width=.3pt] (15.050,1.050) -- (15.950,1.950);
+\draw[soft,sharp corners,line width=.3pt] (15.050,1.270) -- (15.730,1.950);
+\draw[soft,sharp corners,line width=.3pt] (15.050,1.490) -- (15.510,1.950);
+\draw[soft,sharp corners,line width=.3pt] (15.050,1.710) -- (15.290,1.950);
+\draw[fill=white,draw=soft] (15,2) rectangle +(1,1);
+% Explicit hatching outside T727: (15,2); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (15.710,2.050) -- (15.950,2.290);
+\draw[soft,sharp corners,line width=.3pt] (15.490,2.050) -- (15.950,2.510);
+\draw[soft,sharp corners,line width=.3pt] (15.270,2.050) -- (15.950,2.730);
+\draw[soft,sharp corners,line width=.3pt] (15.050,2.050) -- (15.950,2.950);
+\draw[soft,sharp corners,line width=.3pt] (15.050,2.270) -- (15.730,2.950);
+\draw[soft,sharp corners,line width=.3pt] (15.050,2.490) -- (15.510,2.950);
+\draw[soft,sharp corners,line width=.3pt] (15.050,2.710) -- (15.290,2.950);
+\draw[fill=white,draw=soft] (15,3) rectangle +(1,1);
+\draw[fill=white,draw=soft] (15,4) rectangle +(1,1);
+\draw[fill=white,draw=soft] (15,5) rectangle +(1,1);
+\draw[fill=white,draw=soft] (15,6) rectangle +(1,1);
+\draw[fill=white,draw=soft] (15,7) rectangle +(1,1);
+\draw[fill=white,draw=soft] (15,8) rectangle +(1,1);
+\draw[fill=white,draw=soft] (15,9) rectangle +(1,1);
+\draw[fill=white,draw=soft] (15,10) rectangle +(1,1);
+\draw[fill=white,draw=soft] (15,11) rectangle +(1,1);
+\draw[fill=white,draw=soft] (15,12) rectangle +(1,1);
+\draw[fill=white,draw=soft] (15,13) rectangle +(1,1);
+\draw[fill=white,draw=soft] (15,14) rectangle +(1,1);
+\draw[fill=white,draw=soft] (15,15) rectangle +(1,1);
+% Explicit hatching outside T727: (15,15); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (15.710,15.050) -- (15.950,15.290);
+\draw[soft,sharp corners,line width=.3pt] (15.490,15.050) -- (15.950,15.510);
+\draw[soft,sharp corners,line width=.3pt] (15.270,15.050) -- (15.950,15.730);
+\draw[soft,sharp corners,line width=.3pt] (15.050,15.050) -- (15.950,15.950);
+\draw[soft,sharp corners,line width=.3pt] (15.050,15.270) -- (15.730,15.950);
+\draw[soft,sharp corners,line width=.3pt] (15.050,15.490) -- (15.510,15.950);
+\draw[soft,sharp corners,line width=.3pt] (15.050,15.710) -- (15.290,15.950);
+\draw[fill=white,draw=soft] (15,16) rectangle +(1,1);
+% Explicit hatching outside T727: (15,16); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (15.710,16.050) -- (15.950,16.290);
+\draw[soft,sharp corners,line width=.3pt] (15.490,16.050) -- (15.950,16.510);
+\draw[soft,sharp corners,line width=.3pt] (15.270,16.050) -- (15.950,16.730);
+\draw[soft,sharp corners,line width=.3pt] (15.050,16.050) -- (15.950,16.950);
+\draw[soft,sharp corners,line width=.3pt] (15.050,16.270) -- (15.730,16.950);
+\draw[soft,sharp corners,line width=.3pt] (15.050,16.490) -- (15.510,16.950);
+\draw[soft,sharp corners,line width=.3pt] (15.050,16.710) -- (15.290,16.950);
+\draw[fill=white,draw=soft] (16,0) rectangle +(1,1);
+% Explicit hatching outside T727: (16,0); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (16.710,0.050) -- (16.950,0.290);
+\draw[soft,sharp corners,line width=.3pt] (16.490,0.050) -- (16.950,0.510);
+\draw[soft,sharp corners,line width=.3pt] (16.270,0.050) -- (16.950,0.730);
+\draw[soft,sharp corners,line width=.3pt] (16.050,0.050) -- (16.950,0.950);
+\draw[soft,sharp corners,line width=.3pt] (16.050,0.270) -- (16.730,0.950);
+\draw[soft,sharp corners,line width=.3pt] (16.050,0.490) -- (16.510,0.950);
+\draw[soft,sharp corners,line width=.3pt] (16.050,0.710) -- (16.290,0.950);
+\draw[fill=white,draw=soft] (16,1) rectangle +(1,1);
+% Explicit hatching outside T727: (16,1); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (16.710,1.050) -- (16.950,1.290);
+\draw[soft,sharp corners,line width=.3pt] (16.490,1.050) -- (16.950,1.510);
+\draw[soft,sharp corners,line width=.3pt] (16.270,1.050) -- (16.950,1.730);
+\draw[soft,sharp corners,line width=.3pt] (16.050,1.050) -- (16.950,1.950);
+\draw[soft,sharp corners,line width=.3pt] (16.050,1.270) -- (16.730,1.950);
+\draw[soft,sharp corners,line width=.3pt] (16.050,1.490) -- (16.510,1.950);
+\draw[soft,sharp corners,line width=.3pt] (16.050,1.710) -- (16.290,1.950);
+\draw[fill=white,draw=soft] (16,2) rectangle +(1,1);
+% Explicit hatching outside T727: (16,2); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (16.710,2.050) -- (16.950,2.290);
+\draw[soft,sharp corners,line width=.3pt] (16.490,2.050) -- (16.950,2.510);
+\draw[soft,sharp corners,line width=.3pt] (16.270,2.050) -- (16.950,2.730);
+\draw[soft,sharp corners,line width=.3pt] (16.050,2.050) -- (16.950,2.950);
+\draw[soft,sharp corners,line width=.3pt] (16.050,2.270) -- (16.730,2.950);
+\draw[soft,sharp corners,line width=.3pt] (16.050,2.490) -- (16.510,2.950);
+\draw[soft,sharp corners,line width=.3pt] (16.050,2.710) -- (16.290,2.950);
+\draw[fill=white,draw=soft] (16,3) rectangle +(1,1);
+% Explicit hatching outside T727: (16,3); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (16.710,3.050) -- (16.950,3.290);
+\draw[soft,sharp corners,line width=.3pt] (16.490,3.050) -- (16.950,3.510);
+\draw[soft,sharp corners,line width=.3pt] (16.270,3.050) -- (16.950,3.730);
+\draw[soft,sharp corners,line width=.3pt] (16.050,3.050) -- (16.950,3.950);
+\draw[soft,sharp corners,line width=.3pt] (16.050,3.270) -- (16.730,3.950);
+\draw[soft,sharp corners,line width=.3pt] (16.050,3.490) -- (16.510,3.950);
+\draw[soft,sharp corners,line width=.3pt] (16.050,3.710) -- (16.290,3.950);
+\draw[fill=white,draw=soft] (16,4) rectangle +(1,1);
+\draw[fill=white,draw=soft] (16,5) rectangle +(1,1);
+\draw[fill=white,draw=soft] (16,6) rectangle +(1,1);
+\draw[fill=white,draw=soft] (16,7) rectangle +(1,1);
+\draw[fill=white,draw=soft] (16,8) rectangle +(1,1);
+\draw[fill=white,draw=soft] (16,9) rectangle +(1,1);
+\draw[fill=white,draw=soft] (16,10) rectangle +(1,1);
+\draw[fill=white,draw=soft] (16,11) rectangle +(1,1);
+\draw[fill=white,draw=soft] (16,12) rectangle +(1,1);
+% Explicit hatching outside T727: (16,12); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (16.710,12.050) -- (16.950,12.290);
+\draw[soft,sharp corners,line width=.3pt] (16.490,12.050) -- (16.950,12.510);
+\draw[soft,sharp corners,line width=.3pt] (16.270,12.050) -- (16.950,12.730);
+\draw[soft,sharp corners,line width=.3pt] (16.050,12.050) -- (16.950,12.950);
+\draw[soft,sharp corners,line width=.3pt] (16.050,12.270) -- (16.730,12.950);
+\draw[soft,sharp corners,line width=.3pt] (16.050,12.490) -- (16.510,12.950);
+\draw[soft,sharp corners,line width=.3pt] (16.050,12.710) -- (16.290,12.950);
+\draw[fill=white,draw=soft] (16,13) rectangle +(1,1);
+% Explicit hatching outside T727: (16,13); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (16.710,13.050) -- (16.950,13.290);
+\draw[soft,sharp corners,line width=.3pt] (16.490,13.050) -- (16.950,13.510);
+\draw[soft,sharp corners,line width=.3pt] (16.270,13.050) -- (16.950,13.730);
+\draw[soft,sharp corners,line width=.3pt] (16.050,13.050) -- (16.950,13.950);
+\draw[soft,sharp corners,line width=.3pt] (16.050,13.270) -- (16.730,13.950);
+\draw[soft,sharp corners,line width=.3pt] (16.050,13.490) -- (16.510,13.950);
+\draw[soft,sharp corners,line width=.3pt] (16.050,13.710) -- (16.290,13.950);
+\draw[fill=white,draw=soft] (16,14) rectangle +(1,1);
+% Explicit hatching outside T727: (16,14); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (16.710,14.050) -- (16.950,14.290);
+\draw[soft,sharp corners,line width=.3pt] (16.490,14.050) -- (16.950,14.510);
+\draw[soft,sharp corners,line width=.3pt] (16.270,14.050) -- (16.950,14.730);
+\draw[soft,sharp corners,line width=.3pt] (16.050,14.050) -- (16.950,14.950);
+\draw[soft,sharp corners,line width=.3pt] (16.050,14.270) -- (16.730,14.950);
+\draw[soft,sharp corners,line width=.3pt] (16.050,14.490) -- (16.510,14.950);
+\draw[soft,sharp corners,line width=.3pt] (16.050,14.710) -- (16.290,14.950);
+\draw[fill=white,draw=soft] (16,15) rectangle +(1,1);
+% Explicit hatching outside T727: (16,15); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (16.710,15.050) -- (16.950,15.290);
+\draw[soft,sharp corners,line width=.3pt] (16.490,15.050) -- (16.950,15.510);
+\draw[soft,sharp corners,line width=.3pt] (16.270,15.050) -- (16.950,15.730);
+\draw[soft,sharp corners,line width=.3pt] (16.050,15.050) -- (16.950,15.950);
+\draw[soft,sharp corners,line width=.3pt] (16.050,15.270) -- (16.730,15.950);
+\draw[soft,sharp corners,line width=.3pt] (16.050,15.490) -- (16.510,15.950);
+\draw[soft,sharp corners,line width=.3pt] (16.050,15.710) -- (16.290,15.950);
+\draw[fill=white,draw=soft] (16,16) rectangle +(1,1);
+% Explicit hatching outside T727: (16,16); no SVG pattern dependency.
+\draw[soft,sharp corners,line width=.3pt] (16.710,16.050) -- (16.950,16.290);
+\draw[soft,sharp corners,line width=.3pt] (16.490,16.050) -- (16.950,16.510);
+\draw[soft,sharp corners,line width=.3pt] (16.270,16.050) -- (16.950,16.730);
+\draw[soft,sharp corners,line width=.3pt] (16.050,16.050) -- (16.950,16.950);
+\draw[soft,sharp corners,line width=.3pt] (16.050,16.270) -- (16.730,16.950);
+\draw[soft,sharp corners,line width=.3pt] (16.050,16.490) -- (16.510,16.950);
+\draw[soft,sharp corners,line width=.3pt] (16.050,16.710) -- (16.290,16.950);
+
+\node[draw=green,rectangle,inner sep=.5pt,font=\scriptsize] at (8.5,8.5) {$p$};
+\draw[green] (0,0) rectangle (17,17);
+\foreach \n in {0,8,16}{\node[font=\scriptsize,anchor=north] at (\n+.5,0) {$\n$};\node[font=\scriptsize,anchor=east] at (0,\n+.5) {$\n$};}
+\node[anchor=west,align=left,text width=6.7cm,inner sep=0pt,font=\small] at (19,9) {
+$T_{727}:\ 251$ \Tx{マス}{cells}\\[6pt]
+\Tx{白：$T_{727}$内の空きマス。}{White: free cells of $T_{727}$.}\\
+\Tx{斜線：正方形内の $T_{727}$外。}{Hatching: square cells outside $T_{727}$.}\\
+\Tx{斜線はBreaker石ではない。}{Hatching does not denote Breaker stones.}\\[6pt]
+$p=(8,8)$\quad\Tx{最初の候補、まだ未所有。}{First candidate, not yet owned.}\\
+\Tx{初期状態では全マスが空き。}{All board cells are initially free.}\\[6pt]
+\Tx{縦軸 $y$、横軸 $x$。左下隅がマス座標。}{Vertical $y$, horizontal $x$; coordinates name lower-left corners.}
+};
+\end{tikzpicture}};
+\node[box,below=1.8cm of a] (b) {\Head{指定マスも置換先も盤内にある}{Both prescribed and replacement cells stay on the board}
+$F_i(T_i)\subseteq F(T),\quad p\in T$\\[4pt]
+\Tx{子領域・ピボット・最後の完成形は最終領域内に残る。}{Child envelopes, pivots and terminal copies remain in the final envelope.}\\
+\Tx{第 $m\leq21$ 回のMaker着手前：}{Before Maker claim $m\leq21$:}\\
+$\#\text{occupied cells}\leq2(m-1)\leq40<251.$\\
+\Tx{既所有ピボットの代わりに、盤内の最初の空きマスを取れる。}{An owned pivot can be replaced by the first free cell inside the board.}};
+\Flow{a}{b}{\Tx{領域の入れ子と有限盤の空きマス評価を使う}{Use envelope nesting and the finite-board vacancy bound}\\\Cite{combine}\quad\Cite{finite}}
+\node[result,below=1.8cm of b] (c) {\Head{両盤で21回以内。余分な応手も処理できる}{At most 21 moves on either board, including extra replies}
+\Tx{17×17内で $b\notin T_{727}$ なら、全子領域を外す。}{If $b\notin T_{727}$ lies in the square, it misses every child envelope.}\\
+\Tx{領域内の応手には合成補題。同じ高さ帰納法が働く。}{Replies inside are handled by composition; the same height induction applies.}\\
+\Tx{251マスや17×17が最小という主張ではない。}{No minimal-board assertion is made.}};
+\Flow{b}{c}{\Tx{盤内置換で実着手数を保ち、領域外応手を包含する}{Keep actual-move accounting and include replies outside the envelope}\\\Cite{finite}}
+
+\end{tikzpicture}
+\end{document}

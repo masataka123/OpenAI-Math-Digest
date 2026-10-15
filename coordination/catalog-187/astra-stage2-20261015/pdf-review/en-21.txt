@@ -1,0 +1,34 @@
+Corollary 6 · p. 8
+2. Replies in the square's additional cells also leave a continuation
+On the 17×17 board, Maker may still confine all claims to . A Breaker claim in the square
+but outside  misses every child envelope. Replies inside the envelope are covered by Lemma
+3, so allowing the additional cells does not increase the bound. On both boards the count is at
+most 21 actual Maker claims, without assuming a reply after victory. This argument does not
+establish minimality of 251 cells or of the 17×17 square.
+Corollary 6 · p. 8
+6. Dependencies and the roles of computational materials
+This proof route closes within the manuscript's six bases, composition lemma, finite certificate
+calculation and conversion to a history-dependent policy. No application of an external theorem
+was identified in this route; an empty dependency table would add nothing. Cross-catalogue
+citations, applications, generalizations and alternative proofs remain uninvestigated.
+The certificate records compositions of conditions, not one winning transcript. Reconstructors
+evaluate finite sets and heights from those data. Neither a strategy-search program nor an
+undistributed game tree is an input to that reconstruction. Section 6 and Appendix G.1 also
+report checks of 37,042 local reply classes, full-card agreement and malformed-input rejection.
+This edition ran only the two programs described above, not those additional suites.
+§6.1 · pp. 11–12Appendix G.1 · pp. 81–82
+The official repository's Lean guide identifies the infinite-board 21-claim policy as its
+formalization scope and says it does not include the finite-board restriction. This is a different
+object from the finite reconstruction supplement for the 35-claim certificate discussed in §6.2 and
+Appendix C. We did not inspect Lean source and dependencies or perform kernel compilation.
+Python PASS is not treated as a Lean verification of the main theorem.
+Pinned materials: 21-claim certificate, short verifier, second implementation, Lean scope guide.
+7. Return to the sources
+§1; (1) · pp. 1–2 — The empty board, first player, eight target symmetries and actual-move
+convention.
+Lemma 3; (2)–(3) · pp. 3–4 — Required ownership, protected envelopes and both turn
+conventions.
+• 
+• 
+OpenAI Math Digest · 187
+187 / 01 21

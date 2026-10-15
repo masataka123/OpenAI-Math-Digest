@@ -1,0 +1,22 @@
+We explain the 21-claim construction in §§2–4. Its direct mathematical inputs are Lemma 3, Lemma 4 and
+Proposition 5 in this same manuscript; it does not assume a winning theorem from an earlier paper. The historical
+and methodological references in §1, the independent four-in-a-row result in §5, and the 25- and 35-claim
+constructions in Appendices A–B are separate from this proof route.
+2. Theorem 1 — Proof overview of the main theorem
+Proof target：Theorem 1 · p. 1
+The hypotheses and full conclusions are stated in Theorem 1. First specify the information
+preserved by the proof. For finite sets  and an integer , the triple  is
+valid if, for every pair of finite disjoint ownership sets , at a Maker turn with  and 
+, Maker has already completed a target or can complete one within  further actual
+claims. The set  is the requirement,  the Breaker-free envelope, and  the height.
+This condition does not specify the whole position. Cells of  may already belong to Maker,
+and arbitrary finite holdings of either player are allowed outside . Neither the difference
+between  and  nor the previous move order is restricted. This flexibility lets the same
+condition be used in many different histories.
+Definition 2; §2 · p. 3
+Proof route. Combine the six one-cell completions by a rule that selects a continuation after the
+reply. Calculate that the last certificate condition has  and , then execute the
+recursive choices in fixed orders. The board panel depicts the target, not a play sequence from
+the empty board.
+OpenAI Math Digest · 187
+187 / 01 7

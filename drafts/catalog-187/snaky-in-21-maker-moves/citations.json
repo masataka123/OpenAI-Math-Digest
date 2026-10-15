@@ -1,0 +1,250 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "author-key",
+  "catalogId": "187",
+  "sources": {
+    "P": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "displayName": "Snaky in 21 Maker moves",
+      "pagination": "same"
+    }
+  },
+  "citations": {
+    "rules": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§1; (1)",
+          "printed": "1–2",
+          "pdf": "1–2"
+        }
+      ]
+    },
+    "theorem": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "finite": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Corollary 6",
+          "printed": "8",
+          "pdf": "8"
+        }
+      ]
+    },
+    "condition": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Definition 2; §2",
+          "printed": "3",
+          "pdf": "3"
+        }
+      ]
+    },
+    "bases": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 4",
+          "printed": "4",
+          "pdf": "4"
+        }
+      ]
+    },
+    "certificate": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 5; (7)",
+          "printed": "5–6",
+          "pdf": "5–6"
+        }
+      ]
+    },
+    "policy": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§4",
+          "printed": "7–8",
+          "pdf": "7–8"
+        }
+      ]
+    },
+    "combine": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 3; (2)–(3)",
+          "printed": "3–4",
+          "pdf": "3–4"
+        }
+      ]
+    },
+    "elementary": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§3.2; (6); Figure 2",
+          "printed": "5–6",
+          "pdf": "5–6"
+        }
+      ]
+    },
+    "encoding": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§3.1",
+          "printed": "4–5",
+          "pdf": "4–5"
+        }
+      ]
+    },
+    "intersection": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§3.3; Table 1",
+          "printed": "6–7",
+          "pdf": "6–7"
+        }
+      ]
+    },
+    "verification": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§6.1",
+          "printed": "11–12",
+          "pdf": "11–12"
+        }
+      ]
+    },
+    "program": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Appendix G.2",
+          "printed": "82–84",
+          "pdf": "82–84"
+        }
+      ]
+    },
+    "supplement": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Appendix G.1",
+          "printed": "81–82",
+          "pdf": "81–82"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ],
+  "articleGuides": {
+    ".": {
+      "selfSource": "P",
+      "externalSources": [],
+      "proofTargets": [
+        "theorem",
+        "combine",
+        "certificate",
+        "finite"
+      ],
+      "mainResults": [
+        "theorem",
+        "finite"
+      ],
+      "statements": {
+        "theorem": "theorem-1",
+        "finite": "corollary-6",
+        "combine": "lemma-3",
+        "certificate": "proposition-5"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "theorem",
+          "conclusion": "One fixed policy covers all legal Breaker continuations in at most 21 actual Maker moves",
+          "anchor": "proof-overview-step-2"
+        },
+        {
+          "result": "theorem",
+          "conclusion": "Global legality and equivalent endpoint after the 21st Maker claim",
+          "anchor": "proof-overview-step-3"
+        },
+        {
+          "result": "finite",
+          "conclusion": "The 251-cell board",
+          "anchor": "proof-3-step-1"
+        },
+        {
+          "result": "finite",
+          "conclusion": "The 17 by 17 square",
+          "anchor": "proof-3-step-2"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "rules",
+          "purpose": {
+            "ja": "空盤面・先手・目標の8対称配置と実着手数の定式化。",
+            "en": "The empty board, first player, eight target symmetries and actual-move convention."
+          }
+        },
+        {
+          "citation": "combine",
+          "purpose": {
+            "ja": "必要所有と排除領域の意味、Maker手番とBreaker手番の二つの結論。",
+            "en": "Required ownership, protected envelopes and both turn conventions."
+          }
+        },
+        {
+          "citation": "elementary",
+          "purpose": {
+            "ja": "card 6／7で合成を追い、条件付き局面と対局履歴を区別する。",
+            "en": "Follow cards 6 and 7, distinguishing conditional positions from game histories."
+          }
+        },
+        {
+          "citation": "intersection",
+          "purpose": {
+            "ja": "最終32配置の累積交差と空要求を確かめる。",
+            "en": "Check the cumulative intersection of 32 placements and the empty requirement."
+          }
+        },
+        {
+          "citation": "policy",
+          "purpose": {
+            "ja": "選択順の固定、配置の合成、全履歴への拡張と有限盤の置換。",
+            "en": "Fixed choices, composed placements, extension to all histories and finite-board replacement."
+          }
+        },
+        {
+          "citation": "program",
+          "purpose": {
+            "ja": "短い再構成器の集合演算とassertの範囲を読む。",
+            "en": "Read the set operations and assertions of the short reconstructor."
+          }
+        }
+      ]
+    }
+  }
+}

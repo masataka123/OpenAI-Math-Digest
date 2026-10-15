@@ -1,0 +1,530 @@
+ M AGENTS.md
+ M PROJECT_PLAN.md
+ M production/ARTICLE_TEMPLATE.md
+ M production/CATALOG_TEMPLATE.md
+ M production/CITATIONS.md
+ M production/FORMAT_CONTRACT.md
+ M production/README.md
+ M production/RECORDS.md
+ M production/RELEASE_CHECKLIST.md
+ M production/START_CATALOG.md
+ M production/WORKER_TEMPLATE.md
+ M src/data/pdf-editions.json
+ M src/data/site.mjs
+?? coordination/catalog-004/CONTENT_REVIEW.md
+?? coordination/catalog-004/FORMAT_REVIEW.md
+?? coordination/catalog-004/README.md
+?? coordination/catalog-004/RELEASE_CHECKLIST.md
+?? coordination/catalog-004/SITE_HQ_HANDOFF.md
+?? coordination/catalog-004/astra-2026-10-15/CONTENT_REVIEW.md
+?? coordination/catalog-004/astra-2026-10-15/FINAL_REPORT.md
+?? coordination/catalog-004/astra-2026-10-15/FORMAT_REQUIREMENTS.md
+?? coordination/catalog-004/astra-2026-10-15/RELEASE_CHECKLIST.md
+?? coordination/catalog-004/astra-2026-10-15/SITE_HQ_HANDOFF.md
+?? coordination/catalog-004/astra-2026-10-15/TECHNICAL_QA.md
+?? coordination/catalog-004/astra-2026-10-15/baseline.json
+?? coordination/catalog-004/astra-2026-10-15/build-preview.mjs
+?? coordination/catalog-004/astra-2026-10-15/capture-preview.mjs
+?? coordination/catalog-004/astra-2026-10-15/changed-files.txt
+?? coordination/catalog-004/astra-2026-10-15/citations-check.log
+?? coordination/catalog-004/astra-2026-10-15/comparisons/
+?? coordination/catalog-004/astra-2026-10-15/content-review-snapshot.json
+?? coordination/catalog-004/astra-2026-10-15/figures/
+?? coordination/catalog-004/astra-2026-10-15/format-004-test.log
+?? coordination/catalog-004/astra-2026-10-15/format-004.test.mjs
+?? coordination/catalog-004/astra-2026-10-15/format-test.log
+?? coordination/catalog-004/astra-2026-10-15/git-status-start.txt
+?? coordination/catalog-004/astra-2026-10-15/make-comparisons.py
+?? coordination/catalog-004/astra-2026-10-15/model-provenance.json
+?? coordination/catalog-004/astra-2026-10-15/preservation.json
+?? coordination/catalog-004/astra-2026-10-15/preserve-check.py
+?? coordination/catalog-004/astra-2026-10-15/preview-build.log
+?? coordination/catalog-004/astra-2026-10-15/preview-checks.json
+?? coordination/catalog-004/astra-2026-10-15/preview/
+?? coordination/catalog-004/astra-2026-10-15/reference-manifest.json
+?? coordination/catalog-004/astra-2026-10-15/references/
+?? coordination/catalog-004/astra-2026-10-15/screen-checks.json
+?? coordination/catalog-004/astra-2026-10-15/screens/
+?? coordination/catalog-004/astra-2026-10-15/source-pages/
+?? coordination/catalog-004/astra-2026-10-15/sources/
+?? coordination/catalog-004/astra-2026-10-15/stage2/
+?? coordination/catalog-004/astra-2026-10-15/stage3/
+?? coordination/catalog-004/astra-2026-10-15/technical-inputs.json
+?? coordination/catalog-004/astra-2026-10-15/validate.mjs
+?? coordination/catalog-004/astra-2026-10-15/validation.json
+?? coordination/catalog-004/build-preview.mjs
+?? coordination/catalog-004/changed-files.txt
+?? coordination/catalog-004/check-preview.mjs
+?? coordination/catalog-004/check-references.mjs
+?? coordination/catalog-004/check-table-scroll.mjs
+?? coordination/catalog-004/comparisons/
+?? coordination/catalog-004/create-hilbert-records.py
+?? coordination/catalog-004/create-overview.py
+?? coordination/catalog-004/figure-review/
+?? coordination/catalog-004/make-comparisons.py
+?? coordination/catalog-004/make-reference-preview.mjs
+?? coordination/catalog-004/preview-checks.json
+?? coordination/catalog-004/preview/
+?? coordination/catalog-004/recheck-2026-10-15/
+?? coordination/catalog-004/reference-preview/
+?? coordination/catalog-004/reference-screen-checks.json
+?? coordination/catalog-004/reference-screenshots/
+?? coordination/catalog-004/reviews/
+?? coordination/catalog-004/screen-checks.json
+?? coordination/catalog-004/screenshots/
+?? coordination/catalog-004/sources/
+?? coordination/catalog-004/stage2/
+?? coordination/catalog-004/superseded-sol-20261015/
+?? coordination/catalog-004/table-scroll-checks.json
+?? coordination/catalog-004/validate-stage1.py
+?? coordination/catalog-004/validation/
+?? coordination/catalog-034/LA_REVISION_PAUSED_2026-10-11.md
+?? coordination/catalog-034/la-revision-paused-2026-10-11.tar.gz
+?? coordination/catalog-036/generalized-lc-minimal-models-review-extract-2.txt
+?? coordination/catalog-036/generalized-lc-minimal-models-review-extract.txt
+?? coordination/catalog-036/kahler-numerical-semiampleness-review-extract.txt
+?? coordination/catalog-036/projective-numerical-semiampleness-review-extract-2.txt
+?? coordination/catalog-036/projective-numerical-semiampleness-review-extract.txt
+?? coordination/catalog-036/sources/
+?? coordination/catalog-036/stage2/pdf-review/
+?? coordination/catalog-036/stage2/screenshots/
+?? coordination/catalog-036/stage3/screens/
+?? coordination/catalog-036/validation/preview/
+?? coordination/catalog-036/validation/screens/
+?? coordination/catalog-036/validation/source-pages/
+?? coordination/catalog-039/preview/
+?? coordination/catalog-039/reference-preview/
+?? coordination/catalog-039/screenshots/
+?? coordination/catalog-039/sources/CONTENTS.md
+?? coordination/catalog-039/sources/maximal-seshadri-higher-dimensions.pdf
+?? coordination/catalog-039/sources/maximal-seshadri-higher-dimensions.txt
+?? coordination/catalog-039/sources/maximal-seshadri-positive-characteristic.pdf
+?? coordination/catalog-039/sources/maximal-seshadri-positive-characteristic.txt
+?? coordination/catalog-039/sources/maximal-seshadri-surfaces.pdf
+?? coordination/catalog-039/sources/maximal-seshadri-surfaces.txt
+?? coordination/catalog-039/sources/nagata-plane-curves.pdf
+?? coordination/catalog-039/sources/nagata-plane-curves.txt
+?? coordination/catalog-039/sources/overview.pdf
+?? coordination/catalog-039/sources/overview.tex
+?? coordination/catalog-039/sources/overview.txt
+?? coordination/catalog-039/stage2/pdf-review/before-link-fix-hashes.json
+?? "coordination/catalog-039/stage2/pdf-review/en-01 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-01.png
+?? "coordination/catalog-039/stage2/pdf-review/en-02 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-02.png
+?? "coordination/catalog-039/stage2/pdf-review/en-03 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-03.png
+?? "coordination/catalog-039/stage2/pdf-review/en-04 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-04.png
+?? "coordination/catalog-039/stage2/pdf-review/en-05 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-05.png
+?? "coordination/catalog-039/stage2/pdf-review/en-06 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-06.png
+?? "coordination/catalog-039/stage2/pdf-review/en-07 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-07.png
+?? "coordination/catalog-039/stage2/pdf-review/en-08 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-08.png
+?? "coordination/catalog-039/stage2/pdf-review/en-09 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-09.png
+?? "coordination/catalog-039/stage2/pdf-review/en-10 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-10.png
+?? "coordination/catalog-039/stage2/pdf-review/en-11 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-11.png
+?? "coordination/catalog-039/stage2/pdf-review/en-12 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-12.png
+?? "coordination/catalog-039/stage2/pdf-review/en-13 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-13.png
+?? "coordination/catalog-039/stage2/pdf-review/en-14 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-14.png
+?? "coordination/catalog-039/stage2/pdf-review/en-15 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-15.png
+?? "coordination/catalog-039/stage2/pdf-review/en-16 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-16.png
+?? "coordination/catalog-039/stage2/pdf-review/en-17 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-17.png
+?? "coordination/catalog-039/stage2/pdf-review/en-18 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-18.png
+?? "coordination/catalog-039/stage2/pdf-review/en-19 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-19.png
+?? "coordination/catalog-039/stage2/pdf-review/en-20 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-20.png
+?? "coordination/catalog-039/stage2/pdf-review/en-21 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-21.png
+?? "coordination/catalog-039/stage2/pdf-review/en-22 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-22.png
+?? "coordination/catalog-039/stage2/pdf-review/en-23 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-23.png
+?? "coordination/catalog-039/stage2/pdf-review/en-24 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-24.png
+?? "coordination/catalog-039/stage2/pdf-review/en-25 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-25.png
+?? "coordination/catalog-039/stage2/pdf-review/en-26 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-26.png
+?? "coordination/catalog-039/stage2/pdf-review/en-27 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-27.png
+?? "coordination/catalog-039/stage2/pdf-review/en-28 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-28.png
+?? "coordination/catalog-039/stage2/pdf-review/en-29 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-29.png
+?? "coordination/catalog-039/stage2/pdf-review/en-30 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-30.png
+?? "coordination/catalog-039/stage2/pdf-review/en-31 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-31.png
+?? "coordination/catalog-039/stage2/pdf-review/en-32 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-32.png
+?? "coordination/catalog-039/stage2/pdf-review/en-33 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-33.png
+?? "coordination/catalog-039/stage2/pdf-review/en-34 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-34.png
+?? "coordination/catalog-039/stage2/pdf-review/en-35 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-35.png
+?? "coordination/catalog-039/stage2/pdf-review/en-36 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-36.png
+?? "coordination/catalog-039/stage2/pdf-review/en-37 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-37.png
+?? "coordination/catalog-039/stage2/pdf-review/en-38 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-38.png
+?? "coordination/catalog-039/stage2/pdf-review/en-39 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-39.png
+?? "coordination/catalog-039/stage2/pdf-review/en-40 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-40.png
+?? "coordination/catalog-039/stage2/pdf-review/en-41 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-41.png
+?? "coordination/catalog-039/stage2/pdf-review/en-42 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-42.png
+?? "coordination/catalog-039/stage2/pdf-review/en-43 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-43.png
+?? "coordination/catalog-039/stage2/pdf-review/en-44 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-44.png
+?? "coordination/catalog-039/stage2/pdf-review/en-45 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-45.png
+?? "coordination/catalog-039/stage2/pdf-review/en-46 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-46.png
+?? "coordination/catalog-039/stage2/pdf-review/en-47 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-47.png
+?? "coordination/catalog-039/stage2/pdf-review/en-48 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-48.png
+?? "coordination/catalog-039/stage2/pdf-review/en-49 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-49.png
+?? "coordination/catalog-039/stage2/pdf-review/en-50 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-50.png
+?? "coordination/catalog-039/stage2/pdf-review/en-51 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-51.png
+?? "coordination/catalog-039/stage2/pdf-review/en-52 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-52.png
+?? "coordination/catalog-039/stage2/pdf-review/en-53 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-53.png
+?? "coordination/catalog-039/stage2/pdf-review/en-54 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-54.png
+?? "coordination/catalog-039/stage2/pdf-review/en-55 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-55.png
+?? "coordination/catalog-039/stage2/pdf-review/en-56 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-56.png
+?? "coordination/catalog-039/stage2/pdf-review/en-57 2.png"
+?? coordination/catalog-039/stage2/pdf-review/en-57.png
+?? coordination/catalog-039/stage2/pdf-review/en-contact-1.png
+?? coordination/catalog-039/stage2/pdf-review/en-contact-10.png
+?? coordination/catalog-039/stage2/pdf-review/en-contact-2.png
+?? coordination/catalog-039/stage2/pdf-review/en-contact-3.png
+?? coordination/catalog-039/stage2/pdf-review/en-contact-4.png
+?? coordination/catalog-039/stage2/pdf-review/en-contact-5.png
+?? coordination/catalog-039/stage2/pdf-review/en-contact-6.png
+?? coordination/catalog-039/stage2/pdf-review/en-contact-7.png
+?? coordination/catalog-039/stage2/pdf-review/en-contact-8.png
+?? coordination/catalog-039/stage2/pdf-review/en-contact-9.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-01 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-01.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-02 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-02.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-03 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-03.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-04 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-04.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-05 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-05.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-06 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-06.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-07 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-07.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-08 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-08.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-09 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-09.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-10 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-10.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-11 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-11.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-12 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-12.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-13 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-13.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-14 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-14.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-15 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-15.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-16 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-16.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-17 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-17.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-18 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-18.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-19 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-19.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-20 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-20.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-21 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-21.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-22 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-22.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-23 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-23.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-24 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-24.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-25 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-25.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-26 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-26.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-27 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-27.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-28 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-28.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-29 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-29.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-30 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-30.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-31 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-31.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-32 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-32.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-33 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-33.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-34 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-34.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-35 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-35.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-36 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-36.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-37 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-37.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-38 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-38.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-39 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-39.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-40 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-40.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-41 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-41.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-42 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-42.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-43 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-43.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-44 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-44.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-45 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-45.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-46 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-46.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-47 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-47.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-48 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-48.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-49 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-49.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-50 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-50.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-51 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-51.png
+?? "coordination/catalog-039/stage2/pdf-review/ja-52 2.png"
+?? coordination/catalog-039/stage2/pdf-review/ja-52.png
+?? coordination/catalog-039/stage2/pdf-review/ja-contact-1.png
+?? coordination/catalog-039/stage2/pdf-review/ja-contact-2.png
+?? coordination/catalog-039/stage2/pdf-review/ja-contact-3.png
+?? coordination/catalog-039/stage2/pdf-review/ja-contact-4.png
+?? coordination/catalog-039/stage2/pdf-review/ja-contact-5.png
+?? coordination/catalog-039/stage2/pdf-review/ja-contact-6.png
+?? coordination/catalog-039/stage2/pdf-review/ja-contact-7.png
+?? coordination/catalog-039/stage2/pdf-review/ja-contact-8.png
+?? coordination/catalog-039/stage2/pdf-review/ja-contact-9.png
+?? coordination/catalog-039/stage2/screenshots/
+?? coordination/catalog-039/stage3/screens/
+?? coordination/catalog-039/validation/source-pages/
+?? coordination/catalog-046/preview/
+?? coordination/catalog-046/reference-preview/
+?? coordination/catalog-046/screenshots/
+?? coordination/catalog-046/sources/
+?? coordination/catalog-046/stage2/pdf-review/
+?? coordination/catalog-046/stage2/screenshots/
+?? coordination/catalog-046/stage2/shared-diff-end.patch
+?? coordination/catalog-046/stage3/screens/
+?? coordination/catalog-046/verification/
+?? coordination/catalog-052/preview/
+?? coordination/catalog-052/reference-preview/
+?? coordination/catalog-052/screenshots/
+?? coordination/catalog-052/source/
+?? coordination/catalog-052/stage2/pdf-review/
+?? coordination/catalog-052/stage2/screenshots/
+?? coordination/catalog-052/stage3/screens/
+?? coordination/catalog-052/verification/
+?? coordination/catalog-067/source/
+?? coordination/catalog-067/stage2/pdf-review/
+?? coordination/catalog-067/stage2/screenshots/
+?? coordination/catalog-067/stage3/screens/
+?? coordination/catalog-067/validation/preview/
+?? coordination/catalog-067/validation/screens/
+?? coordination/catalog-067/validation/source-pages/
+?? coordination/catalog-187/
+?? coordination/catalog-246/
+?? drafts/catalog-004/hilbert-tenth-rationals/research/
+?? drafts/catalog-004/hilbert-tenth-rationals/status.md
+?? drafts/catalog-004/overview/status.md
+?? drafts/catalog-004/pointwise-2-converse-rational-two-torsion/check-diagrams.mjs
+?? drafts/catalog-004/pointwise-2-converse-rational-two-torsion/checks/
+?? drafts/catalog-004/pointwise-2-converse-rational-two-torsion/external/
+?? drafts/catalog-004/pointwise-2-converse-rational-two-torsion/make-records.py
+?? drafts/catalog-004/pointwise-2-converse-rational-two-torsion/status.md
+?? drafts/catalog-036/generalized-lc-minimal-models/external/
+?? drafts/catalog-036/generalized-lc-minimal-models/review/en-1280-diagram-sources.png
+?? drafts/catalog-036/generalized-lc-minimal-models/review/en-1280-proof-1.png
+?? drafts/catalog-036/generalized-lc-minimal-models/review/en-1280-proof-2.png
+?? drafts/catalog-036/generalized-lc-minimal-models/review/en-1280-proof-overview.png
+?? drafts/catalog-036/generalized-lc-minimal-models/review/en-1280-top.png
+?? drafts/catalog-036/generalized-lc-minimal-models/review/en-375-diagram-sources.png
+?? drafts/catalog-036/generalized-lc-minimal-models/review/en-375-proof-1.png
+?? drafts/catalog-036/generalized-lc-minimal-models/review/en-375-proof-2.png
+?? drafts/catalog-036/generalized-lc-minimal-models/review/en-375-proof-overview.png
+?? drafts/catalog-036/generalized-lc-minimal-models/review/en-375-top.png
+?? drafts/catalog-036/generalized-lc-minimal-models/review/en-figure-1.png
+?? drafts/catalog-036/generalized-lc-minimal-models/review/en-figure-2.png
+?? drafts/catalog-036/generalized-lc-minimal-models/review/en-figure-3.png
+?? drafts/catalog-036/generalized-lc-minimal-models/review/ja-1280-diagram-sources.png
+?? drafts/catalog-036/generalized-lc-minimal-models/review/ja-1280-proof-1.png
+?? drafts/catalog-036/generalized-lc-minimal-models/review/ja-1280-proof-2.png
+?? drafts/catalog-036/generalized-lc-minimal-models/review/ja-1280-proof-overview.png
+?? drafts/catalog-036/generalized-lc-minimal-models/review/ja-1280-top.png
+?? drafts/catalog-036/generalized-lc-minimal-models/review/ja-375-diagram-sources.png
+?? drafts/catalog-036/generalized-lc-minimal-models/review/ja-375-proof-1.png
+?? drafts/catalog-036/generalized-lc-minimal-models/review/ja-375-proof-2.png
+?? drafts/catalog-036/generalized-lc-minimal-models/review/ja-375-proof-overview.png
+?? drafts/catalog-036/generalized-lc-minimal-models/review/ja-375-top.png
+?? drafts/catalog-036/generalized-lc-minimal-models/review/ja-figure-1.png
+?? drafts/catalog-036/generalized-lc-minimal-models/review/ja-figure-2.png
+?? drafts/catalog-036/generalized-lc-minimal-models/review/ja-figure-3.png
+?? drafts/catalog-036/generalized-lc-minimal-models/review/preview.en.html
+?? drafts/catalog-036/generalized-lc-minimal-models/review/preview.ja.html
+?? drafts/catalog-036/kahler-numerical-semiampleness/diagrams/base.en.png
+?? drafts/catalog-036/kahler-numerical-semiampleness/diagrams/base.ja.png
+?? drafts/catalog-036/kahler-numerical-semiampleness/diagrams/descent.en.png
+?? drafts/catalog-036/kahler-numerical-semiampleness/diagrams/descent.ja.png
+?? drafts/catalog-036/kahler-numerical-semiampleness/diagrams/fiber.en.png
+?? drafts/catalog-036/kahler-numerical-semiampleness/diagrams/fiber.ja.png
+?? drafts/catalog-036/kahler-numerical-semiampleness/diagrams/induction.en.png
+?? drafts/catalog-036/kahler-numerical-semiampleness/diagrams/induction.ja.png
+?? drafts/catalog-036/kahler-numerical-semiampleness/diagrams/zero.en.png
+?? drafts/catalog-036/kahler-numerical-semiampleness/diagrams/zero.ja.png
+?? drafts/catalog-036/kahler-numerical-semiampleness/external/
+?? drafts/catalog-036/minimal-models-numerical-dimension-one/references/
+?? drafts/catalog-036/projective-numerical-semiampleness/external/
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/corollary.en.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/corollary.ja.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/diagram-contact.en.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/diagram-contact.ja.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/en-1280-diagram-sources.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/en-1280-proof-1.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/en-1280-proof-2.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/en-1280-proof-3.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/en-1280-proof-4.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/en-1280-proof-5.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/en-1280-top.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/en-375-diagram-sources.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/en-375-proof-1.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/en-375-proof-2.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/en-375-proof-3.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/en-375-proof-4.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/en-375-proof-5.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/en-375-top.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/full.en.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/full.ja.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/ja-1280-diagram-sources.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/ja-1280-proof-1.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/ja-1280-proof-2.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/ja-1280-proof-3.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/ja-1280-proof-4.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/ja-1280-proof-5.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/ja-1280-top.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/ja-375-diagram-sources.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/ja-375-proof-1.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/ja-375-proof-2.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/ja-375-proof-3.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/ja-375-proof-4.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/ja-375-proof-5.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/ja-375-top.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/main.en.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/main.ja.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/positive.en.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/positive.ja.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/preview.en.html
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/preview.ja.html
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/sample-orbifold-logarithmic-iitaka.en-1280.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/sample-orbifold-logarithmic-iitaka.en-375.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/sample-orbifold-logarithmic-iitaka.en.html
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/sample-orbifold-logarithmic-iitaka.ja-1280.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/sample-orbifold-logarithmic-iitaka.ja-375.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/sample-orbifold-logarithmic-iitaka.ja.html
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/sample-schnell-fiber-spaces.en-1280.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/sample-schnell-fiber-spaces.en-375.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/sample-schnell-fiber-spaces.en.html
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/sample-schnell-fiber-spaces.ja-1280.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/sample-schnell-fiber-spaces.ja-375.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/sample-schnell-fiber-spaces.ja.html
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/terminal.en.png
+?? drafts/catalog-036/projective-numerical-semiampleness/qa/terminal.ja.png
+?? drafts/catalog-039/maximal-seshadri-higher-dimensions/checks/article-en-1280.png
+?? drafts/catalog-039/maximal-seshadri-higher-dimensions/checks/article-en-375.png
+?? drafts/catalog-039/maximal-seshadri-higher-dimensions/checks/article-ja-1280.png
+?? drafts/catalog-039/maximal-seshadri-higher-dimensions/checks/article-ja-375.png
+?? drafts/catalog-039/maximal-seshadri-higher-dimensions/checks/diagram-en-1.png
+?? drafts/catalog-039/maximal-seshadri-higher-dimensions/checks/diagram-en-2.png
+?? drafts/catalog-039/maximal-seshadri-higher-dimensions/checks/diagram-en-3.png
+?? drafts/catalog-039/maximal-seshadri-higher-dimensions/checks/diagram-ja-1.png
+?? drafts/catalog-039/maximal-seshadri-higher-dimensions/checks/diagram-ja-2.png
+?? drafts/catalog-039/maximal-seshadri-higher-dimensions/checks/diagram-ja-3.png
+?? drafts/catalog-039/maximal-seshadri-higher-dimensions/checks/references-en-1280.png
+?? drafts/catalog-039/maximal-seshadri-higher-dimensions/checks/references-en-375.png
+?? drafts/catalog-039/maximal-seshadri-higher-dimensions/checks/references-ja-1280.png
+?? drafts/catalog-039/maximal-seshadri-higher-dimensions/checks/references-ja-375.png
+?? drafts/catalog-039/maximal-seshadri-higher-dimensions/checks/source-p1.png
+?? drafts/catalog-039/maximal-seshadri-higher-dimensions/checks/source-p19.png
+?? drafts/catalog-039/maximal-seshadri-higher-dimensions/checks/statement-en-1280.png
+?? drafts/catalog-039/maximal-seshadri-higher-dimensions/checks/statement-en-375.png
+?? drafts/catalog-039/maximal-seshadri-higher-dimensions/checks/statement-ja-1280.png
+?? drafts/catalog-039/maximal-seshadri-higher-dimensions/checks/statement-ja-375.png
+?? drafts/catalog-039/maximal-seshadri-higher-dimensions/preview.en.html
+?? drafts/catalog-039/maximal-seshadri-higher-dimensions/preview.ja.html
+?? drafts/catalog-039/maximal-seshadri-surfaces/qa/field.en.png
+?? drafts/catalog-039/maximal-seshadri-surfaces/qa/field.ja.png
+?? drafts/catalog-039/maximal-seshadri-surfaces/qa/main.en.png
+?? drafts/catalog-039/maximal-seshadri-surfaces/qa/main.ja.png
+?? drafts/catalog-039/maximal-seshadri-surfaces/qa/nef.en.png
+?? drafts/catalog-039/maximal-seshadri-surfaces/qa/nef.ja.png
+?? drafts/catalog-039/maximal-seshadri-surfaces/qa/source-p16.png
+?? drafts/catalog-039/maximal-seshadri-surfaces/qa/source-p18.png
+?? drafts/catalog-039/maximal-seshadri-surfaces/qa/source-p2.png
+?? drafts/catalog-039/maximal-seshadri-surfaces/sources/
+?? drafts/catalog-039/nagata-plane-curves/diagrams/fields.en.png
+?? drafts/catalog-039/nagata-plane-curves/diagrams/fields.ja.png
+?? drafts/catalog-039/nagata-plane-curves/diagrams/main.en.png
+?? drafts/catalog-039/nagata-plane-curves/diagrams/main.ja.png
+?? drafts/catalog-039/nagata-plane-curves/diagrams/positivity.en.png
+?? drafts/catalog-039/nagata-plane-curves/diagrams/positivity.ja.png
+?? drafts/catalog-039/nagata-plane-curves/source-page-22.png
+?? drafts/catalog-046/large-fundamental-group-non-stein/qa/
+?? drafts/catalog-046/surface-shafarevich-counterexample/external/
+?? drafts/catalog-046/surface-shafarevich-counterexample/qa/
+?? drafts/catalog-187/
+?? drafts/catalog-246/
+?? public/diagrams/catalog-187/
+?? public/diagrams/catalog-246/
+?? public/pdf/catalog-187-en.pdf
+?? public/pdf/catalog-187-ja.pdf
+?? public/pdf/catalog-246-en.pdf
+?? public/pdf/catalog-246-ja.pdf

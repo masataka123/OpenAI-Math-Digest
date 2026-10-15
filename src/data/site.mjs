@@ -13,6 +13,7 @@ import inventory057 from '../../coordination/catalog-057/inventory.json' with { 
 import inventory063 from '../../coordination/catalog-063/inventory.json' with { type: 'json' };
 import inventory067 from '../../coordination/catalog-067/inventory.json' with { type: 'json' };
 import inventory068 from '../../coordination/catalog-068/inventory.json' with { type: 'json' };
+import inventory187 from '../../coordination/catalog-187/inventory.json' with { type: 'json' };
 import inventory246 from '../../coordination/catalog-246/inventory.json' with { type: 'json' };
 import inventory338 from '../../coordination/catalog-338/inventory.json' with { type: 'json' };
 import subjectSource from './catalog-subjects.json' with { type: 'json' };
@@ -60,7 +61,7 @@ const fieldTranslations = [
   {
     "id": "combinatorics",
     "ja": "組合せ論",
-    "catalogIds": []
+    "catalogIds": ["187"]
   },
   {
     "id": "algebra",
@@ -195,6 +196,10 @@ export const papers = [...inventory004.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '068', sourceCommit: inventory068.sourceCommit,
  title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
  pages: entry.pdfPages, order: entry.order, featured: true,
+})), ...inventory187.manuscripts.map(entry => ({
+ id: entry.paperId, catalogId: '187', sourceCommit: inventory187.sourceCommit,
+ title: entry.title, path: entry.sourceUrl.split('/preprints/')[1], version: entry.version,
+ pages: entry.pdfPages, order: entry.order, featured: true,
 })), ...inventory246.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '246', sourceCommit: inventory246.sourceCommit,
  title: entry.title, path: entry.sourceUrl.split('/preprints/')[1], version: entry.version,
@@ -308,6 +313,13 @@ export const catalogs = [{
   description: text('反標準束の非消滅を、不変指数・計量降下・不変切断の構成へ結ぶ7篇の証明から読む。', 'Follow seven proofs connecting anticanonical nonvanishing with invariant indices, metric descent, and invariant sections.'),
   paperIds: inventory068.manuscripts.map(p => p.paperId),
   overviewSectionIds: ['papers', 'diagram-sources', 'index-routes', 'exact-routes', 'connections', 'sources'],
+}, {
+  id: '187', sourceCommit: inventory187.sourceCommit, mode: 'single',
+  title: text(inventory187.titleJa, inventory187.overviewTitle),
+  contentsTitle: inventory187.contentsTitle,
+  description: text('条件付き勝利局面の合成と有限証明書から、Snakyを高々21回のMaker着手で達成する方策と有限盤への移行を読む。', 'Follow conditional-win composition and a finite certificate to one policy forcing Snaky within 21 Maker claims and its transfer to finite boards.'),
+  paperIds: inventory187.manuscripts.map(p => p.paperId),
+  overviewSectionIds: ['papers', 'connections', 'sources'],
 }, {
   id: '246', sourceCommit: inventory246.sourceCommit, mode: 'single',
   title: text(inventory246.titleJa, inventory246.overviewTitle),

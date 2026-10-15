@@ -1,0 +1,21 @@
+\documentclass[border=12pt]{standalone}
+\def\pgfsysdriver{pgfsys-dvisvgm.def}
+\usepackage[dvisvgm]{xcolor}
+\usepackage{xeCJK}
+\setCJKmainfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf]
+\setCJKsansfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf]
+\usepackage{amsmath,amssymb,tikz,lmodern}
+\usetikzlibrary{arrows.meta,positioning,calc,patterns}
+\renewcommand{\familydefault}{\sfdefault}
+\definecolor{ink}{HTML}{25322F}
+\definecolor{green}{HTML}{246657}
+\definecolor{tint}{HTML}{EEF4F0}
+\definecolor{soft}{HTML}{C6D2CC}
+\definecolor{muted}{HTML}{52615B}
+\newif\ifJapanese
+\newcommand{\Tx}[2]{\ifJapanese #1\else #2\fi}
+\newcommand{\Head}[2]{{\color{green}\bfseries\Tx{#1}{#2}}\\[5pt]}
+\newcommand{\refurl}[2]{\special{dvisvgm:raw <a xlink:href="#1" target="_blank" rel="noopener noreferrer">}{\setlength{\fboxsep}{0pt}\colorbox{white}{\color{green}\underline{\strut #2}}}\special{dvisvgm:raw </a>}}
+\tikzset{box/.style={draw=soft,fill=white,rounded corners=2pt,text=ink,align=left,text width=14.2cm,inner sep=12pt,font=\fontsize{10.5}{14}\selectfont},result/.style={box,draw=green,fill=tint},reason/.style={text=muted,align=left,text width=12.5cm,font=\fontsize{9}{12}\selectfont,inner sep=0pt},edge/.style={-{Stealth[length=2.3mm]},line width=1pt,draw=green}}
+\newcommand{\Flow}[3]{\draw[edge] ($(#1.south)+(-6.7,0)$)--($(#2.north)+(-6.7,0)$);\node[reason,anchor=west] at ($(#1.south)!.5!(#2.north)+(-6.2,0)$){#3};}
+% Shared MIT-licensed repository typography; all catalogue-187 diagram content newly authored by Astra.

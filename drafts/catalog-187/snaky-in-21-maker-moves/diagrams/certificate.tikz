@@ -1,0 +1,24 @@
+\node[box] (a) {\Head{六基底と722行を、循環なく評価する}{Evaluate six bases and 722 lines without cycles}
+\Tx{既出cardの配置参照 $j:sUV$ と、有限な括弧内合成。}{Placed references $j:sUV$ to earlier cards and finite nested compositions.}\\
+\Tx{座標は行の座標系。括弧は内側から、番号は小さい側から。}{Coordinates use the line's frame; evaluate inside out and in increasing index.}\\
+$(A_i,T_i,h_i)\longmapsto(A,T,1+\max_i h_i)$};
+\node[box,below=1.8cm of a] (b) {\Head{最終行の32配置へ合流する}{Merge the 32 placements in the final line}
+\begin{tabular}{c|rrrrrr}
+\Tx{子card}{Child card}&648&708&712&713&725&726\\
+\Tx{配置数}{Placements}&4&4&8&4&8&4\\
+$h_i$&15&20&15&15&20&20\\
+\Tx{余分な累積交差}{Extra cumulative intersection}&35&31&21&12&4&0
+\end{tabular}\\[6pt]
+\Tx{すべての配置後の $A_i=\{p\}$、$p=(8,8)$。}{Every placed requirement is $A_i=\{p\}$, with $p=(8,8)$.}};
+\Flow{a}{b}{\Tx{集合演算を再構成し、各条件の有効性を帰納的に伝える}{Reconstruct set operations; propagate validity inductively}\\\Cite{encoding}\quad\Cite{certificate}}
+\node[result,below=1.8cm of b] (c) {\Head{要求が空になり、最悪の高さが21になる}{The requirement vanishes and the worst height is 21}
+$\bigcup_i A_i=\bigcap_iT_i=\{p\}\quad\Longrightarrow\quad A_{727}=\varnothing$\\[5pt]
+$h_{727}=1+\max(15,20,15,15,20,20)=21$\\
+$T_{727}=\{p\}\cup\bigcup_i T_i,\qquad |T_{727}|=251$\\
+\Tx{同じ初手を一度だけ数え、応手後に一つの子を実行する。}{Count the common first move once; execute one child after the reply.}};
+\Flow{b}{c}{\Tx{Table 1の累積交差を使い、ピボットを要求から除く}{Use Table 1's cumulative intersection and remove the pivot}\\\Cite{intersection}\quad\Cite{combine}}
+\node[box,below=1.8cm of c] (d) {\Head{有限計算とゲームの意味を接続する}{Connect finite computation to game semantics}
+\Tx{再構成器：集合・高さ・後方参照を検査。}{Reconstructors check sets, heights and backward references.}\\
+\Tx{Lemma 3：その条件が任意の合法応手に耐えることを保証。}{Lemma 3 makes the conditions valid against arbitrary legal replies.}\\
+\Tx{今回：著者の二実装を再実行。独自の独立証明ではない。}{This run: two author-provided implementations, not an independent proof.}};
+\Flow{c}{d}{\Tx{assertの対象と数学的帰納法の役割を区別する}{Separate the assertions from the mathematical induction}\\\Cite{verification}\quad\Cite{program}}

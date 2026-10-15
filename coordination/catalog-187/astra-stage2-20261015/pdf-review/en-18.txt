@@ -1,0 +1,32 @@
+Child card
+726
+Requirement before placement
+Envelope size before placement
+169
+Height
+20
+Placements
+4
+Cells other than  in the cumulative intersection
+0
+The last column is the intersection accumulated over all placements through that row, not a
+separate intersection for each group. Finally , so the parent requirement is 
+. Its height is . Count the first claim
+once, then execute only the child actually selected; do not add the move counts of 32
+placements.
+§3.3; Table 1 · pp. 6–7
+The intersection condition guarantees a child after every legal reply to the opening . For
+example, the manuscript takes Maker , Breaker , then child 708:100 with pivot .
+After Breaker , child 684:011, still under the outer transposition, has pivot . This
+illustrates an available nonlocal continuation, not a reply sequence forced upon Breaker.
+Coverage comes from the intersection condition, not from the number of examples.
+3. What the finite reconstruction in this edition checked
+The editors freshly retrieved the pinned author-supplied certificate and ran its short 
+verify_certificate.py and separately implemented independent_evaluator.py. Both returned PASS,
+checking 728 conditions, the empty final requirement, 251 cells, height 21 and the final
+intersection table. The short verifier also checks containment in the 17×17 square, maximum
+card height 21, and cards 6 and 7. The second implementation uses a different parser and
+explicit matrices and counted 1,620 combination nodes, including 898 inline nodes, and 4,089
+references.
+OpenAI Math Digest · 187
+187 / 01 18

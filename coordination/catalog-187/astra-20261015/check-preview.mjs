@@ -1,0 +1,16 @@
+import fs from 'node:fs';import path from 'node:path';import {fileURLToPath,pathToFileURL} from 'node:url';
+import {chromium} from '/Users/iwai/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs';
+const here=path.dirname(fileURLToPath(import.meta.url)),screen=path.join(here,'screens');fs.mkdirSync(screen,{recursive:true});
+const browser=await chromium.launch({channel:'chrome',headless:true}),report=[];
+for(const lang of ['ja','en'])for(const name of ['article','overview','schnell','orbifold','catalog034'])for(const width of [1280,375]){
+ const page=await browser.newPage({viewport:{width,height:900},deviceScaleFactor:1});const errors=[];page.on('pageerror',e=>errors.push(String(e)));
+ await page.goto(pathToFileURL(path.join(here,'preview',`${name}.${lang}.html`)).href);await page.evaluate(()=>document.fonts.ready);await page.addStyleTag({content:"html{scroll-behavior:auto!important}"});
+ const facts=await page.evaluate(()=>({viewport:innerWidth,documentWidth:document.documentElement.scrollWidth,mathErrors:document.querySelectorAll('[data-mjx-error]').length,figures:document.querySelectorAll('.proof-figure').length,rows:document.querySelectorAll('.catalog-inventory tbody tr').length,localMissing:[...document.querySelectorAll('a[href^="#"]')].map(a=>a.getAttribute('href').slice(1)).filter(id=>id&&!document.getElementById(decodeURIComponent(id))),duplicates:[...document.querySelectorAll('[id]')].map(e=>e.id).filter((id,i,a)=>a.indexOf(id)!==i),emptyImages:[...document.images].filter(i=>!i.complete||i.naturalWidth===0).map(i=>i.src),tables:[...document.querySelectorAll('.digest-table-wrap')].map(e=>({width:e.clientWidth,scroll:e.scrollWidth}))}));
+ await page.screenshot({path:path.join(screen,`${name}.${lang}.${width}.top.png`)});
+ const selectors=name==='article'?['#results','#diagram-sources','#proof-overview','#proof-1','#proof-2','#proof-3','#sources']:name==='overview'?['#papers','#connections']:name==='schnell'?['.theorem-statement','.proof-figure']:name==='orbifold'?['.figure-key']:['.catalog-inventory'];
+ for(let i=0;i<selectors.length;i++){const el=page.locator(selectors[i]).first();if(await el.count()){await el.scrollIntoViewIfNeeded();await page.addStyleTag({content:'.site-chrome{visibility:hidden!important}'});await el.screenshot({path:path.join(screen,`${name}.${lang}.${width}.section-${i}.png`)});}}
+ if(name==='article'&&width===1280){await page.setViewportSize({width,height:2000});const figs=page.locator('.proof-diagram');for(let i=0;i<await figs.count();i++)await figs.nth(i).screenshot({path:path.join(screen,`figure.${lang}.${i+1}.png`)});}
+ await page.setViewportSize({width,height:900});await page.addStyleTag({content:'.site-chrome{visibility:visible!important}'});await page.evaluate(()=>scrollTo(0,document.body.scrollHeight));facts.languageAtBottom=await page.locator('.language-switch').first().boundingBox();
+ report.push({name,lang,width,...facts,errors});await page.close();
+}
+await browser.close();fs.writeFileSync(path.join(here,'validation/browser.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report.map(r=>({name:r.name,lang:r.lang,width:r.width,overflow:r.documentWidth-r.width,mathErrors:r.mathErrors,missing:r.localMissing.length,duplicates:r.duplicates.length,rows:r.rows,errors:r.errors})),null,2));

@@ -1,0 +1,21 @@
+--- start/site.mjs
++++ final/site.mjs
+@@ -316,16 +316,15 @@
+ }, {
+   id: '187', sourceCommit: inventory187.sourceCommit, mode: 'single',
+   title: text(inventory187.titleJa, inventory187.overviewTitle),
+-  titlePhrases: {ja: ['Makerの21着手以内で', 'Snakyを達成する']},
+   contentsTitle: inventory187.contentsTitle,
+   description: text('条件付き勝利局面の合成と有限証明書から、Snakyを高々21回のMaker着手で達成する方策と有限盤への移行を読む。', 'Follow conditional-win composition and a finite certificate to one policy forcing Snaky within 21 Maker claims and its transfer to finite boards.'),
+   paperIds: inventory187.manuscripts.map(p => p.paperId),
+-  overviewSectionIds: ['papers', 'sources'],
++  overviewSectionIds: ['papers', 'connections', 'sources'],
+ }, {
+   id: '246', sourceCommit: inventory246.sourceCommit, mode: 'single',
+   title: text(inventory246.titleJa, inventory246.overviewTitle),
+   contentsTitle: inventory246.contentsTitle,
+-  description: text('視覚境界の組合せ2-modulusの有界化から、準Möbius一様化と双曲3空間上の固有・余コンパクトな等長作用へ至る証明を読む。', 'Follow the boundedness of combinatorial 2-modulus on the visual boundary through quasi-Möbius uniformization to a proper cocompact isometric action on hyperbolic three-space.'),
++  description: text('球面境界を持つ双曲群について、モジュラスの二つの増大率を排除し、一様化から群全体の有限核を持つ等長作用へ進む論証を読む。', 'For a hyperbolic group with sphere boundary, follow the exclusion of two modulus-growth regimes and the passage from uniformization to an isometric action of the whole group with finite kernel.'),
+   paperIds: inventory246.manuscripts.map(p => p.paperId),
+   overviewSectionIds: ['articles', 'argument', 'sources'],
+ }, {

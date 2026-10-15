@@ -1,0 +1,5 @@
+import {chromium} from '/Users/iwai/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs';
+import fs from 'node:fs';import path from 'node:path';import {fileURLToPath,pathToFileURL} from 'node:url';
+const h=path.dirname(fileURLToPath(import.meta.url)),b=await chromium.launch({channel:'chrome',headless:true}),report=[];
+for(const lang of ['ja','en']){const p=await b.newPage({viewport:{width:1280,height:2000}});await p.goto(pathToFileURL(h+`/preview/article.${lang}.html`).href);await p.addStyleTag({content:'html{scroll-behavior:auto!important}.site-chrome{display:none!important}'});await p.evaluate(()=>document.fonts.ready);
+for(let i=0;i<4;i++){const e=p.locator('.proof-diagram').nth(i);await e.scrollIntoViewIfNeeded();report.push({lang,figure:i+1,...await e.evaluate(e=>({width:e.clientWidth,height:e.clientHeight,scrollHeight:e.scrollHeight,svgBox:e.querySelector('svg').getBoundingClientRect().toJSON()}))});await e.screenshot({path:h+`/screens/figure.${lang}.${i+1}.png`});}await p.close();}await b.close();fs.writeFileSync(h+'/validation/inline-figures.json',JSON.stringify(report,null,2));

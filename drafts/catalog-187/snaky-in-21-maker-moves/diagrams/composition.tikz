@@ -1,0 +1,30 @@
+\node[box] (a) {\Head{親の1回で、全候補の仮定を用意する}{One parent claim prepares every candidate}
+$T=\{p\}\cup\bigcup_iT_i,\quad A=(\bigcup_iA_i\cup\bigcap_iT_i)\setminus\{p\}$\\[4pt]
+\Tx{$p$を取得、既所有なら空きマスへ置換。}{Claim $p$, or replace it with a free cell if already owned.}\\
+$M'\supseteq\bigcup_iA_i\cup\bigcap_iT_i$};
+\node[result,below=1.8cm of a] (b) {\Head{未勝利の場合、任意の合法応手から生存子へ}{If not yet won, every legal reply leaves a child}
+$b\notin M'\ \Longrightarrow\ b\notin\bigcap_iT_i\ \Longrightarrow\ \exists i:\ b\notin T_i$\\[4pt]
+$A_i\subseteq M',\qquad (B\cup\{b\})\cap T_i=\varnothing$\\
+\Tx{領域外の応手は全子を外す。古いBreaker石は $T_i\subseteq T$ で排除。}{A reply outside $T$ misses every child; $T_i\subseteq T$ excludes old Breaker stones.}\\
+$1+h_i\leq1+\max_i h_i=h$};
+\Flow{a}{b}{\Tx{共通部分の所有と応手の合法性を使う}{Use ownership of the intersection and legality of the reply}\\\Cite{combine}}
+\node[box,below=1.8cm of b] (c) {\Head{条件付きの例：card 6、高さ2}{Conditional example: card 6, height 2}
+\begin{tikzpicture}[x=.48cm,y=.48cm,baseline=0cm]
+\foreach \y in {0,...,5}{\foreach \x in {0,1}{\draw[soft] (\x,\y) rectangle +(1,1);}}
+\foreach \y in {0,...,4}{\fill (0.5,\y+.5) circle (3pt);}
+\node[draw=green,rectangle,inner sep=2pt] at (1.5,4.5) {$p$};
+\node[draw=green,circle,inner sep=1pt] at (1.5,3.5) {$c_-$};
+\node[draw=green,circle,inner sep=1pt] at (1.5,5.5) {$c_+$};
+\node[anchor=east,font=\scriptsize] at (0,.5) {$0$};\node[anchor=east,font=\scriptsize] at (0,5.5) {$y=5$};
+\node[anchor=north,font=\scriptsize] at (.5,0) {$0$};\node[anchor=north,font=\scriptsize] at (1.5,0) {$x=1$};
+\node[anchor=west,align=left,text width=9.9cm,inner sep=0pt,font=\small] at (3,3) {
+$A_6=\{(0,y):0\leq y\leq4\},\quad p=(1,4)$\\[5pt]
+$c_-=(1,3),\quad c_+=(1,5)$\\[5pt]
+\Tx{黒丸：必要なMaker所有。四角：ピボット候補。}{Dots: required Maker ownership. Square: pivot candidate.}\\
+\Tx{丸枠：完成候補。無印：所有未指定。}{Circles: completion candidates. Unmarked: unspecified.}\\
+\Tx{$T_6$内にBreaker石（$\times$）はない。候補は既所有でもよい。}{$T_6$ has no Breaker stone ($\times$); candidates may already be owned.}\\[4pt]
+\Tx{$p$確保後、未勝利なら両候補は空き。}{After securing $p$, both candidates are free unless already won.}\\
+\Tx{一方を塞がれても他方で完成：$h_6=1+1=2$。}{Blocking one leaves the other: $h_6=1+1=2$.}
+};
+\end{tikzpicture}};
+\Flow{b}{c}{\Tx{六基底の二配置を合成する具体例（全対局木ではない）}{A composition of two placed bases, not the full game tree}\\\Cite{elementary}}

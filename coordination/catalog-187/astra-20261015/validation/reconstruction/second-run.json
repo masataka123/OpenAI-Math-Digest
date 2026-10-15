@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "coordination/catalog-187/astra-20261015/sources/independent_evaluator.py",
+    "coordination/catalog-187/astra-20261015/sources/certificate.txt",
+    "coordination/catalog-187/astra-20261015/validation/reconstruction"
+  ],
+  "exitCode": 0,
+  "seconds": 0.19153425004333258,
+  "stdout": "{\n  \"status\": \"PASS\",\n  \"cards\": 728,\n  \"listed_combinations\": 722,\n  \"all_combinations_including_nested\": 1620,\n  \"nested_combinations\": 898,\n  \"references\": 4089,\n  \"symmetry_counts\": {\n    \"1\": 595,\n    \"0\": 1033,\n    \"4\": 584,\n    \"3\": 449,\n    \"6\": 348,\n    \"7\": 321,\n    \"2\": 470,\n    \"5\": 289\n  },\n  \"matrix_checks\": {\n    \"distinct_signed_permutation_matrices\": 8,\n    \"composition_pairs_checked\": 64\n  },\n  \"card_height_histogram\": {\n    \"1\": 6,\n    \"2\": 42,\n    \"3\": 66,\n    \"4\": 94,\n    \"5\": 100,\n    \"6\": 86,\n    \"7\": 65,\n    \"8\": 51,\n    \"9\": 56,\n    \"10\": 44,\n    \"11\": 32,\n    \"12\": 20,\n    \"13\": 26,\n    \"14\": 12,\n    \"15\": 12,\n    \"16\": 5,\n    \"17\": 3,\n    \"18\": 3,\n    \"19\": 1,\n    \"20\": 3,\n    \"21\": 1\n  }\n}\n",
+  "stderr": ""
+}
