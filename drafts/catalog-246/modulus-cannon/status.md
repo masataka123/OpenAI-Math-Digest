@@ -19,3 +19,7 @@
 ## 後続の編集
 
 第2段階（2026-10-15 19:53 JST開始）は初稿と区別する。記事本文・数式・図原本・引用レジストリへの追加編集は行わず、公開用図の配置、日英冊子生成、共通表示と紙面の検査を実施。結果は本部astra-stage2/REPORT.mdを参照。
+
+## 第3段階の完了
+
+2026-10-15T20:36:06.572225+09:00、commit `b5af7b4404f6e1989e5b799f62e0f38c8c620958` をmainへpush。GitHub Actions build/deploy成功、公開日英ページ・図・PDFを照合。本文と図の数学的内容は変更していない。詳細はcoordination/catalog-246/astra-stage3/PUBLICATION.md。

@@ -13,3 +13,7 @@
 2026-10-15 19:54–19:55 JST、Astra本部。全体テストで判明した案内の引用管理漏れを修正。overview/citations.jsonを新設し、公式カタログp.27の参照を共通記録から日英へ生成した。PDF配置の内部コメントを実装済みの共通導線に合わせた。数学的内容・説明順は変更していない。公開前検査は本部astra-stage2/REPORT.md参照。
 
 20:08–20:09 JST、日英案内の4本ずつの内部リンクを、GitHub Pagesのbaseを共通処理で付与する相対Markdownリンクへ修正。日英PDFを再生成し、内部宛先と画面を再検査した。最終紙面画像は修正前と全46ページ一致。
+
+## 第3段階の完了
+
+2026-10-15T20:36:06.572225+09:00、commit `b5af7b4404f6e1989e5b799f62e0f38c8c620958` をmainへpush。GitHub Actions build/deploy成功、公開日英ページ・図・PDFを照合。本文と図の数学的内容は変更していない。詳細はcoordination/catalog-246/astra-stage3/PUBLICATION.md。

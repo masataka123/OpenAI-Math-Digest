@@ -1,3 +1,5 @@
+> 現在の状態：第3段階まで完了。以下は第2段階時点の経過・再開手順も含む。最新の公開結果は [astra-stage3/PUBLICATION.md](astra-stage3/PUBLICATION.md) を参照。
+
 # 246 第3段階への引継ぎ — Astra版
 
 第2段階はユーザーの再開指示に基づき実施。採用原稿はAstra第1段階の新稿であり、旧Sol作業を制作根拠として使っていない。担当モデルは引き続き `gpt-6-astra` high。第2段階結果は `astra-stage2/REPORT.md`、初期引継ぎは `astra-stage2/stage1-SITE_HQ_HANDOFF.md` に保存。
