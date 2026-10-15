@@ -18,3 +18,7 @@
 - https://masataka123.github.io/OpenAI-Math-Digest/pdf/catalog-039-en.pdf
 
 再生成が必要な場合：通常の`node scripts/build-catalog-pdf.mjs --catalog 039`で2冊のみ生成し再build。環境固有のPDF_PYTHON、DYLD_FALLBACK_LIBRARY_PATH、XDG_CACHE_HOMEはSTAGE2_REPORT.mdを参照。一時Python環境が失われたらscripts/pdf/README.mdの依存関係を再構成する。
+
+## 第3段階完了（2026-10-15）
+
+公開・反映確認を完了。上記の停止／公開待ちは当時の履歴。[公開記録](PUBLICATION.md)、[最終結果](stage3/completion.json)を参照。Chow49原著照合の保留を保持。

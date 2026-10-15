@@ -26,3 +26,7 @@
 ## 第2段階完了
 
 2026-10-15：サイト登録、日英冊子、日本語52ページ／英語57ページ（各5章13図）、公開前検査を完了して停止。mainのままcommit・pushなし。[検査報告](STAGE2_REPORT.md)、[最終結果](stage2/completion.json)、[第3段階の再開手順](STAGE3_HANDOFF.md)。
+
+## 第3段階完了（2026-10-15）
+
+公開・反映確認を完了。上記の停止／公開待ちは当時の履歴。[公開記録](PUBLICATION.md)、[最終結果](stage3/completion.json)を参照。Chow49原著照合の保留を保持。

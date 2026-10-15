@@ -16,6 +16,7 @@ for(const lang of ['ja','en'])for(const width of [1280,375])for(const route of [
  }
  if(route.startsWith('papers/')){const id=route.split('/')[1];assert.equal(m.figures,counts[ids.indexOf(id)]);assert.ok(m.mathCount>0);}
  await page.screenshot({path:`${out}/${lang}-${(route||'home').replaceAll('/','-')}-${width}.jpg`,quality:85});pages.push({lang,route,...m});
+ if(width===1280 && (route==='catalog/039/'||route.startsWith('papers/'))){await page.addStyleTag({content:'.site-chrome{visibility:hidden!important}'});await page.locator('.proof-figure').first().screenshot({path:`${out}/${lang}-${route.replaceAll('/','-')}-figure.png`});}
 }
 for(const lang of ['ja','en'])for(const id of ids){
  await page.setViewportSize({width:375,height:900});await page.goto(base+lang+'/fields/algebraic-complex-geometry/');await ready();await page.locator('h3 a[href$="/catalog/039/"]').click();await ready();await page.locator(`#paper-${id} a.manuscript-title`).click();await ready();

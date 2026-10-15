@@ -50,3 +50,7 @@ Chrome headlessの起動はこの環境ではsandbox外許可が必要。プレ�
 ## 追記：第2段階完了
 
 2026-10-15、上記の第2段階を実施。現在の状態と証拠はSTAGE2_REPORT.md、次の再開手順はSTAGE3_HANDOFF.md。公開準備完了、commit・push・公開未実施。
+
+## 第3段階完了（2026-10-15）
+
+公開・反映確認を完了。上記の停止／公開待ちは当時の履歴。[公開記録](PUBLICATION.md)、[最終結果](stage3/completion.json)を参照。Chow49原著照合の保留を保持。
