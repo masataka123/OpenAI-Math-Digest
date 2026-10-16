@@ -1,8 +1,8 @@
 # カタログ074 段階別チェックリスト
 
-制作セット1.4＋現行補足。対象はmulti（公式順2論文）。本部：/root（ユーザー選択Astra/high）、執筆・独立内容点検：明示起動gpt-6-astra/high。2026-10-16に第1段階を受領。第1段階の内容編集を維持し、現在は**第2段階完了・公開準備完了、未公開**。第2段階の証拠はstage2/REVIEW.md。
+制作セット1.4＋現行補足。対象はmulti（公式順2論文）。本部：/root（ユーザー選択Astra/high）、執筆・独立内容点検：明示起動gpt-6-astra/high。2026-10-16に第1段階を受領。第1段階の内容編集を維持し、現在は**第3段階完了・公開反映確認済み**。第2段階の証拠はstage2/REVIEW.md。
 
-## 第1段階（今回の依頼範囲）
+## 第1段階（当初の依頼範囲・履歴）
 
 | 要件 | 判定 | 担当・証拠 |
 |---|---|---|
@@ -34,14 +34,16 @@
 
 検査ログ・PDF画像・Web操作証拠はstage2/。内部リンク検査のキャッシュ版使用と標準版中断はstage2/link-check-status.jsonに明記。第3段階の手順はSITE_HQ_HANDOFF.md。制作標準コマンドは../../production/RELEASE_CHECKLIST.mdを参照。解説冊子PDFは日本語30頁・英語32頁、各3章・7図として実際に生成した。
 
-## 第3段階（依頼範囲外）
+## 第3段階（追加依頼により2026-10-16完了・本部/root）
 
-- [ ] 現在のユーザー公開指示を確認した上で、対象差分のcommit・push。
-- [ ] GitHub Actionsのbuild/deploy成功と公開日英HTML・図・PDFの反映確認。
-- [ ] URL・commit・検査結果・数学的未確認を報告。
+- [x] 現在のユーザー公開指示を確認した上で、対象差分のcommit・push。
+- [x] GitHub Actionsのbuild/deploy成功と公開日英HTML・図・PDFの反映確認。
+- [x] URL・commit・検査結果・数学的未確認を報告。
 
 ## 残る未確認
 
 4Dが引用する「3D Lemma 2.3」は固定3D版Lemma 3.3と条件・結論が対応するが、番号変更の版履歴は未調査。各原典の全技術証明・外部結果の全証明は検証していない。4D §11の追加帰結は本記事の対象外。本文末尾・sources.json・SOURCE_REVIEW.mdに個別範囲を保持する。未調査の他論文接続を「依存なし」と認定しない。
 
 第2段階の最終補完：日英PDFの図内引用40か所ずつを074専用後処理でリンク化。全62頁の再描画は画素一致。最終check:pdf成功。再生成時の後処理はSITE_HQ_HANDOFF.mdに記載。
+
+第3段階の証拠：stage3/REVIEW.md、completion.json、actions-run.json、actions-jobs.json、live-assets.json、screen-checks.json。公開commit `49470c7236da9e0b9e2393229f3a3dca7c4dbfad`。

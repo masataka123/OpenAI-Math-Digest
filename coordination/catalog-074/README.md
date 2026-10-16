@@ -1,8 +1,10 @@
-# カタログ074 第1段階
+# カタログ074 制作・公開記録
+
+**現在：第3段階まで完了・公開反映確認済み。** 詳細は[stage3/REVIEW.md](stage3/REVIEW.md)。
 
 - 制作セット：1.4と現行補足。作業開始：2026-10-16 19:06 JST。
 - 作業場所：`/Users/iwai/Desktop/GitHub/OpenAI-Math-Digest`、ブランチ：`main`。開始HEADは`git-head-start.txt`、既存差分は`git-status-start.txt`。
-- 現在の依頼：記事制作・内容点検・カタログ案内まで。サイト組込み・冊子PDF生成・commit・push・公開は行わない。
+- 第1段階の依頼は記事制作・内容点検・案内まで。その後、第2段階、第3段階が順次明示依頼された。以下の段階別記録は当時の状態を保持する。
 - 公式名称：074 **Kakeya in three and four dimensions**。公式分野 **Real and complex analysis**、公式表示順3番目、原資料のsection IDは10、番号範囲071–086。overview PDF p.9、分野全体pp.9–10。
 - 原典固定commit：`1581d4cbdd69a0faf34b2089614fe2a814316a6a`。2本、公式順・版・URL・頁・SHA-256は`inventory.json`。
 - 既存同名記事はsrc/dataおよびdraftsの検索で見つからなかった。原典は新規取得し、他カタログの原稿・数学的解釈・点検結果は制作根拠にしない。
@@ -18,7 +20,7 @@
 
 起動設定の機械可読記録は`model-provenance.json`。執筆の開始・終了・締切は各記事の`status.md`。初稿は各60分以内。追加編集は別記する。
 
-変更可能範囲は`coordination/catalog-074/`と`drafts/catalog-074/`のみ。共通表示・サイト登録・他カタログ・PDF管理ファイルには書き込まない。共有ブランチの切替や他担当変更の取消は行わない。
+第1段階の変更可能範囲は`coordination/catalog-074/`と`drafts/catalog-074/`のみ。共通表示・サイト登録・他カタログ・PDF管理ファイルには書き込まない。共有ブランチの切替や他担当変更の取消は行わない。
 
 ## 構成と採否
 
@@ -51,3 +53,9 @@
 検査結果は[stage2/REVIEW.md](stage2/REVIEW.md)、成果物とhashはstage2/completion.json・checksums.json、変更ファイルはstage2/changed-files.txt。次回公開の手順は[SITE_HQ_HANDOFF.md](SITE_HQ_HANDOFF.md)。commit・push・公開は未実施。
 
 最終PDFには図内引用リンク各40か所を補完済み。共通再生成の後処理が必要なので、SITE_HQ_HANDOFF.mdの再生成順を参照。
+
+## 第3段階の完了
+
+2026-10-16T20:33:19.906324+09:00。ユーザーの明示依頼によりmainへcommit・pushし、Actions build/deploy成功と公開反映を確認した。公開commit `49470c7236da9e0b9e2393229f3a3dca7c4dbfad`。38件の配信内容が検査済み候補と完全一致し、日英PC/375pxの12条件・図28操作・PDF導線も適合。第1・第2段階の「未公開」は当時の記録であり、現在は公開済み。数学的保留は維持する。
+
+公開先：[日本語](https://masataka123.github.io/OpenAI-Math-Digest/ja/catalog/074/)／[English](https://masataka123.github.io/OpenAI-Math-Digest/en/catalog/074/)。検査記録：[stage3/REVIEW.md](stage3/REVIEW.md)。

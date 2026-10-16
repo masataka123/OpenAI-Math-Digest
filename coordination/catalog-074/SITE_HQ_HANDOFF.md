@@ -1,8 +1,8 @@
-# カタログ074 第3段階への引継ぎ
+# カタログ074 公開後の保守引継ぎ
 
 ## 現在の状態
 
-**第2段階完了・公開準備完了、未公開。** 2026-10-16。作業先/Users/iwai/Desktop/GitHub/OpenAI-Math-Digest、ブランチmain。ユーザー指示は第2段階まで。commit・push・Actions・公開反映確認は未実施。
+**第3段階完了・公開反映確認済み。** 2026-10-16T20:33:19.906324+09:00。作業先/Users/iwai/Desktop/GitHub/OpenAI-Math-Digest、ブランチmain。ユーザーの追加依頼に基づき公開commit `49470c7236da9e0b9e2393229f3a3dca7c4dbfad` をpush。Actions成功、日英ページ・図・PDFを照合済み。詳細はstage3/REVIEW.md。
 
 第1段階の引継ぎはstage2/stage1-SITE_HQ_HANDOFF.mdに保持。公式名称074 Kakeya in three and four dimensions、分野Real and complex analysis、公式順2論文。固定原典commitは1581d4cbdd69a0faf34b2089614fe2a814316a6a。台帳はinventory.json。
 
@@ -21,9 +21,9 @@
 
 全テスト39件、引用同期（ツール表示69 catalogue(s)・248ファイル）、ビルド191ページ、全登録PDF46版、内部参照233,430件が適合。内部参照は標準と同一判定・readFileキャッシュのみ追加の専用検査で完了し、標準版の重複実行は中断した（stage2/link-check-status.json）。
 
-074日英PC/375pxの12条件＋指定見本の12条件、図28操作、日英切替のアンカー保持、PDFリンク、分野入口を確認。PDF全62ページと全14図を画像確認。詳しくはstage2/REVIEW.md。公開URLでの検査はまだ行っていない。
+074日英PC/375pxの12条件＋指定見本の12条件、図28操作、日英切替のアンカー保持、PDFリンク、分野入口を確認。PDF全62ページと全14図を画像確認。詳しくはstage2/REVIEW.md。第3段階で公開URLでの検査も完了した（stage3/REVIEW.md）。
 
-## 次回・第3段階の手順
+## 第3段階で実施した手順（完了・履歴）
 
 1. ユーザーの公開指示を確認してから再開する。README.md、RELEASE_CHECKLIST.md、stage2/REVIEW.md、reviews/CONTENT_REVIEW.mdと最新Git状態を読む。共有ブランチを切り替えず、他担当の既存差分を保持する。
 2. stage2/changed-files.txtとsite-registration.diff、pdf-edition-074.jsonで074の公開差分を限定する。site.mjsとpdf-editions.jsonに他担当差分があれば、必要な074の項目だけを含める。git add -A等で他カタログの変更を一括採用しない。依存する074原稿・inventory・presentation・引用記録・公開図・PDFを漏らさない。
@@ -49,3 +49,7 @@ node scripts/build-catalog-pdf.mjs --check --catalog 074
 ## 数学的保留
 
 4Dが引用する[24,Lemma2.3]は今回固定3DのLemma3.3に条件・結論が対応するが、番号変更の版履歴は未調査。全技術証明や外部入力の全証明を認定したものではない。各sources.json、本文末尾、reviews/SOURCE_REVIEW.mdの範囲を維持する。第2段階では数学本文・図原本の追加改稿をしていない。
+
+## 今後の再開
+
+公開作業の残件はない。改訂時は最新Git状態とstage3/completion.jsonを確認し、074の範囲に限定して作業する。数学本文を変更する場合は内容点検を更新し、日英PDFを再生成して上記リンク補完・整合性検査を行う。作業ツリーには他担当の変更が残るため、一括stageやブランチ切替を行わない。
