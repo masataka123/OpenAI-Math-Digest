@@ -1,0 +1,29 @@
+---
+const {lang='ja'}=Astro.props;
+const en=lang==='en', base=import.meta.env.BASE_URL;
+---
+<section id="riefe" class="character-intro" aria-labelledby="riefe-heading">
+ <div>
+  <p class="eyebrow">MEET OUR GUIDE</p>
+  <h2 id="riefe-heading">{en?'Who is the character at the top right?':'右上のキャラクターは？'}</h2>
+  <p>{en?<>Born from ChatGPT, this character is <strong>Riefe Elm Verdier</strong>—Riefe for short. Riefe is your companion as you read the papers on this site.</>:<>ChatGPTから生まれたキャラクターで、名前は<strong>リーフェ・エルム・ヴェルディエ</strong>。愛称は「リーフェ」です。このサイトでは、論文を一緒に読み進める案内役を務めています。</>}</p>
+  <p class="muted">{en?'The character’s backstory was also created by ChatGPT.':'なお、設定もChatGPTが考えました。'}</p>
+  <div class="character-links">
+   <a class="button primary" href={`${base}${lang}/character/`}>{en?'Explore Riefe’s world':'設定はこちら'} <span aria-hidden="true">→</span></a>
+  </div>
+ </div>
+ <picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset={`${base}images/riefe/god-level-still.webp`}/>
+  <img src={`${base}images/riefe/god-level.png`} width="320" height="320" loading="lazy" decoding="async" alt={en?'Riefe raising both paws beneath the Japanese words “God level”':'「神レベル」の文字の下で両手を上げるリーフェのスタンプ'}/>
+ </picture>
+</section>
+<style>
+ .character-intro{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:48px;align-items:center;margin-top:48px;padding-top:36px;border-top:1px solid var(--line)}
+ .character-intro h2{font-size:clamp(1.5rem,2.4vw,2rem);margin:12px 0 20px}
+ .character-intro p{max-width:760px;line-height:1.9}
+ .character-intro picture{display:block;width:100%;max-width:280px;justify-self:center}
+ .character-intro img{display:block;width:100%;height:auto}
+ .character-links{display:flex;flex-wrap:wrap;align-items:center;gap:18px 28px;margin-top:20px}
+ .character-links .button{margin:0}
+ @media(max-width:700px){.character-intro{grid-template-columns:1fr;gap:24px}.character-intro picture{max-width:240px}}
+</style>

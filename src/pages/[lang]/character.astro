@@ -1,0 +1,97 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CharacterFigure from '../../components/CharacterFigure.astro';
+import {languages} from '../../data/site.mjs';
+import {riefe} from '../../data/riefe.mjs';
+export function getStaticPaths(){return languages.map(lang=>({params:{lang}}));}
+const lang=Astro.params.lang as 'ja'|'en', en=lang==='en', base=import.meta.env.BASE_URL;
+const c=riefe[lang];
+---
+<Layout lang={lang} title={`${c.name} — ${c.subtitle}`} otherPath={`${en?'ja':'en'}/character/`} description={c.intro}>
+ <article class="character-page">
+  <a class="back" href={`${base}${lang}/#riefe`}>← {en?'Back to the homepage':'トップページへ'}</a>
+  <header class="character-header">
+   <p class="eyebrow">{c.subtitle}</p>
+   <h1>{en?<><span>Riefe Elm</span> <span>Verdier</span></>:<><span>リーフェ・エルム・</span><span>ヴェルディエ</span></>}</h1>
+   <p class="lede">{c.intro}</p>
+   <p class="character-credit">{c.credit}</p>
+  </header>
+  <CharacterFigure name="turnaround" lang={lang} eager caption={en?'Riefe’s character design, seen from the front, side, and back.':'リーフェの姿と装い。正面・側面・背面の三面図。'}/>
+  <nav class="character-contents" aria-label={en?'Character profile contents':'設定資料集の目次'}>{c.sections.map(s=><a href={`#${s.id}`}>{s.title}</a>)}</nav>
+  {c.sections.map(s=><section id={s.id} class="character-section" aria-labelledby={`heading-${s.id}`}>
+   <div class="character-copy"><h2 id={`heading-${s.id}`}>{s.title}</h2>{s.paragraphs.map(p=><p>{p}</p>)}
+    {'foods' in s&&s.foods&&<dl class="favorite-foods">{s.foods.map(f=><div><dt>{f.name}</dt><dd>{f.text}</dd></div>)}</dl>}
+   </div>
+   {'image' in s&&s.image&&<CharacterFigure name={s.image} caption={s.caption} lang={lang}/>}
+   {s.id==='tea'&&<CharacterFigure name="cafe-terrace" lang={lang} caption={en?'Tea and scones on a café terrace in Folio.':'フォリオのカフェテラスで、スコーンと紅茶を楽しむリーフェ。'}/>}
+  </section>)}
+  <aside class="character-closing">
+   <div class="character-closing-copy">
+   <p class="eyebrow">{en?'RIEFE’S FAVORITE WORDS':'リーフェの口癖'}</p>
+   <blockquote>{en?'“':'「'}{c.quote}{en?'”':'」'}</blockquote>
+   </div>
+   <img class="character-portrait" src={`${base}images/riefe/portrait.webp`} width="632" height="720" loading="lazy" decoding="async" alt={en?'Riefe smiling':'笑顔のリーフェ'}/>
+   <div class="character-actions">
+    <a class="button primary" href="https://store.line.me/stickershop/product/37323156/ja" target="_blank" rel="noopener noreferrer">{en?'View LINE stickers':'LINEスタンプを見る'} ↗</a>
+    <a href={`${base}${lang}/#riefe`}>{en?'Back to the homepage':'トップページへ戻る'} →</a>
+   </div>
+  </aside>
+ </article>
+ <dialog class="character-lightbox" aria-labelledby="character-lightbox-title">
+  <div class="lightbox-toolbar"><h2 id="character-lightbox-title">{en?'Riefe’s world':'リーフェの設定資料集'}</h2><button type="button" data-character-close autofocus>{en?'Close':'閉じる'} ×</button></div>
+  <p class="lightbox-hint">{en?'Use + to enlarge; scroll to explore the image.':'＋で拡大し、スクロールして細部をご覧いただけます。'}</p>
+  <div class="lightbox-controls"><button type="button" data-character-fit>{en?'Fit image':'全体を表示'}</button><button type="button" data-character-zoom aria-label={en?'Enlarge image':'画像を拡大'}>＋</button></div>
+  <div class="lightbox-scroll" tabindex="0" role="region" aria-label={en?'Enlarged image':'拡大画像'}></div>
+ </dialog>
+</Layout>
+<script>
+ const viewer=document.querySelector<HTMLDialogElement>('.character-lightbox')!;
+ const scroller=viewer.querySelector<HTMLElement>('.lightbox-scroll')!;
+ let trigger:HTMLAnchorElement|null=null, savedOverflow='', zoom=1;
+ const fit=()=>{zoom=1;const img=scroller.querySelector('img');if(img){img.style.width='100%';img.style.height='100%';img.style.objectFit='contain';}scroller.scrollTo(0,0);};
+ document.querySelectorAll<HTMLAnchorElement>('[data-character-image]').forEach(link=>{
+  link.setAttribute('aria-haspopup','dialog');
+  link.addEventListener('click',event=>{
+   if(event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
+   event.preventDefault();trigger=link;
+   const img=new Image();img.src=link.href;img.alt=link.querySelector('img')?.alt??'';
+   scroller.replaceChildren(img);savedOverflow=document.documentElement.style.overflow;document.documentElement.style.overflow='hidden';
+   viewer.showModal();fit();
+  });
+ });
+ viewer.querySelector('[data-character-close]')!.addEventListener('click',()=>viewer.close());
+ viewer.querySelector('[data-character-fit]')!.addEventListener('click',fit);
+ viewer.querySelector('[data-character-zoom]')!.addEventListener('click',()=>{const img=scroller.querySelector('img');if(img){zoom=Math.min(zoom*1.6,6);img.style.width=`${scroller.clientWidth*zoom}px`;img.style.height='auto';}});
+ viewer.addEventListener('click',event=>{if(event.target===viewer)viewer.close();});
+ viewer.addEventListener('close',()=>{document.documentElement.style.overflow=savedOverflow;scroller.replaceChildren();trigger?.focus({preventScroll:true});});
+</script>
+<style>
+ .character-header{padding:36px 0 8px;max-width:960px}
+ .character-header h1{font-size:clamp(2rem,4.4vw,3.8rem);line-height:1.4;margin:16px 0 22px}
+ .character-header h1 span{display:inline-block}
+ .character-credit{color:var(--muted);font-size:var(--font-meta)}
+ .character-contents{display:flex;flex-wrap:wrap;gap:12px 28px;padding:24px 0;margin:30px 0 12px;border-bottom:1px solid var(--line);font:var(--font-meta)/1.8 -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif}
+ .character-section{padding-top:44px;scroll-margin-top:130px}
+ .character-copy{max-width:780px;margin:0 auto}
+ .character-copy h2{font-size:clamp(1.5rem,2.4vw,2rem);color:var(--link);margin:0 0 24px}
+ .character-copy p{font-size:var(--font-body);line-height:2;margin:16px 0}
+ .favorite-foods{margin:28px 0 0}
+ .favorite-foods>div{border-top:1px solid var(--line);padding:24px 0}
+ .favorite-foods dt{font-size:1.15rem;color:var(--link);font-weight:600}
+ .favorite-foods dd{margin:12px 0 0;line-height:2}
+ .character-closing{display:grid;grid-template-columns:minmax(0,1fr) 210px;grid-template-areas:"copy portrait" "actions portrait";gap:20px 40px;align-items:center;padding:36px;margin-top:48px;background:#edf0e8;border:1px solid var(--line);border-radius:8px}
+ .character-closing-copy{grid-area:copy;align-self:end}
+ .character-closing-copy .eyebrow{margin:0 0 16px}
+ .character-closing-copy blockquote{margin:0}
+ .character-portrait{grid-area:portrait;display:block;width:210px;max-width:100%;height:auto;border-radius:8px;justify-self:center}
+ blockquote{font-size:clamp(1.4rem,2.6vw,2rem);line-height:1.8;margin:16px 0 24px;color:var(--link)}
+ .character-actions{grid-area:actions;align-self:start;display:flex;flex-wrap:wrap;align-items:center;gap:20px 30px}.character-actions .button{margin:0}
+ .character-lightbox{width:calc(100% - 24px);max-width:1600px;height:calc(100dvh - 24px);max-height:calc(100dvh - 24px);padding:16px;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--ink)}
+ .character-lightbox[open]{display:flex;flex-direction:column;gap:10px}.character-lightbox::backdrop{background:rgb(20 32 28 / .8)}
+ .lightbox-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px}.lightbox-toolbar h2{font-size:1rem;margin:0}
+ .character-lightbox button{min-height:44px;min-width:44px;background:#edf0e8;border:1px solid var(--line);color:var(--ink);padding:8px 12px}
+ .lightbox-controls{display:flex;gap:12px}.lightbox-hint{margin:0;font-size:var(--font-meta);color:var(--muted)}
+ .lightbox-scroll{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain}
+ .lightbox-scroll :global(img){display:block;max-width:none}
+ @media(max-width:700px){.character-header{padding-top:28px}.character-header h1{font-size:clamp(1.55rem,6.5vw,2.5rem)}.character-closing{grid-template-columns:minmax(0,1fr);grid-template-areas:"copy" "portrait" "actions";gap:24px;padding:24px 18px}.character-portrait{width:50%;max-width:210px}.character-section{padding-top:36px}.character-contents{gap:12px 20px}}
+</style>

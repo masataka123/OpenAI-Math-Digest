@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import ReadingGuide from '../../components/ReadingGuide.astro';
+import CharacterIntro from '../../components/CharacterIntro.astro';
 import {fields, catalogs, languages, officialOverview, overviewTitle} from '../../data/site.mjs';
 export function getStaticPaths(){return languages.map(lang=>({params:{lang}}));}
 const lang=Astro.params.lang, en=lang==='en', base=import.meta.env.BASE_URL;
@@ -20,4 +21,5 @@ const active=fields.filter(field=>field.catalogIds.length);
   <p><a href="https://citedbyagi.com/" target="_blank" rel="noopener noreferrer">Cited by AGI</a>{en?' reports that Osamu Fujino is the most-cited author by bibliography-entry count across the 722 manuscripts in the OpenAI math collection.':' の集計によると、OpenAI math の722本の論文で、参考文献の引用件数が最も多い著者は Osamu Fujino です。'}</p>
   <p class="small muted">{en?'120 citations across 37 manuscripts, based on the repository as of 6 October 2026. Counts refer to bibliography entries, not repeated mentions within a paper.':'2026年10月6日のリポジトリに基づく集計：37本の論文で120件。文中の言及回数ではなく、参考文献項目を数えています。'}</p>
  </aside>
+ <CharacterIntro lang={lang}/>
 </Layout>

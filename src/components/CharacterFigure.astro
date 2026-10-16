@@ -1,0 +1,17 @@
+---
+const {name,caption,lang='ja',eager=false}=Astro.props;
+const base=import.meta.env.BASE_URL, en=lang==='en';
+const width=name==='portrait'?632:name==='turnaround'?1672:1536, height=name==='portrait'?720:name==='turnaround'?941:1024;
+---
+<figure class="character-figure">
+ <a class="character-image-link" href={`${base}images/riefe/${name}.webp`} data-character-image aria-label={`${en?'Enlarge image':'画像を拡大'}: ${caption}`}>
+  <img src={`${base}images/riefe/${name}.webp`} srcset={width>800?`${base}images/riefe/${name}-800.webp 800w, ${base}images/riefe/${name}.webp ${width}w`:undefined} sizes="(max-width:700px) calc(100vw - 36px), (max-width:1264px) calc(100vw - 64px), 1200px" width={width} height={height} loading={eager?'eager':'lazy'} decoding="async" alt={caption}/>
+ </a>
+ <figcaption>{caption}<span>{en?'Select the image to enlarge.':'画像をタップすると拡大できます。'}</span></figcaption>
+</figure>
+<style>
+ .character-figure{margin:30px 0 0}
+ .character-image-link{display:block;cursor:zoom-in;border-radius:8px;overflow:hidden}
+ img{display:block;width:100%;height:auto}
+ figcaption{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;margin:12px 0 0;color:var(--muted);font:var(--font-meta)/1.8 -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif}
+</style>
