@@ -1,0 +1,447 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "author-key",
+  "catalogId": "074",
+  "sources": {
+    "P": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "pagination": "same"
+    },
+    "GWZ26": {
+      "recordFile": "sources.json",
+      "recordId": "GWZ26",
+      "guideRole": {
+        "ja": "凸集中と密度閾値を持つ集合評価を重み付きline chartへ移す",
+        "en": "Set estimate with convex clustering and a density threshold, extended to weighted line charts"
+      }
+    },
+    "RW25": {
+      "recordFile": "sources.json",
+      "recordId": "RW25",
+      "guideRole": {
+        "ja": "平面Furstenberg評価からplateの充填と条件付き射影評価を得る",
+        "en": "Planar Furstenberg input for plate filling and conditional projection bounds"
+      }
+    },
+    "Gut10": {
+      "recordFile": "sources.json",
+      "recordId": "Gut10",
+      "guideRole": {
+        "ja": "明示的な横断性損失を持つ多重線形評価から局所的な平面性を得る",
+        "en": "Multilinear estimate with explicit transversality loss, used for local planiness"
+      }
+    },
+    "GLX25": {
+      "recordFile": "sources.json",
+      "recordId": "GLX25",
+      "guideRole": {
+        "ja": "主定理の帰結としてNikodymおよび固定位相の曲線Kakeya評価を移送",
+        "en": "Transfers to Nikodym and fixed-phase curved Kakeya estimates after the main theorem"
+      }
+    },
+    "OpenAI26b": {
+      "recordFile": "sources.json",
+      "recordId": "OpenAI26b",
+      "guideRole": {
+        "ja": "本稿の重み付きplank評価の利用先。引用番号に固定版との不整合がある",
+        "en": "Downstream user of the weighted plank estimate; its citation number mismatches the fixed version"
+      }
+    }
+  },
+  "citations": {
+    "main": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "nikodym": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Corollary 11.1",
+          "printed": "94–95",
+          "pdf": "94–95"
+        }
+      ]
+    },
+    "curved": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Corollary 11.2",
+          "printed": "95–96",
+          "pdf": "95–96"
+        }
+      ]
+    },
+    "critical": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 10.1",
+          "printed": "86–90",
+          "pdf": "86–90"
+        }
+      ]
+    },
+    "model": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Definition 2.3; (2.1)–(2.8)",
+          "printed": "6–8",
+          "pdf": "6–8"
+        }
+      ]
+    },
+    "cleaning": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 2.6; Lemma 2.10",
+          "printed": "9–16",
+          "pdf": "9–16"
+        }
+      ]
+    },
+    "geometric": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 3.1; Lemmas 3.2–3.3",
+          "printed": "18–21",
+          "pdf": "18–21"
+        }
+      ]
+    },
+    "weighted-chart": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 3.3",
+          "printed": "20–21",
+          "pdf": "20–21"
+        }
+      ]
+    },
+    "planar": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 3.4; Corollary 3.5",
+          "printed": "21–22",
+          "pdf": "21–22"
+        }
+      ]
+    },
+    "multilinear": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 3.7; Corollary 3.8",
+          "printed": "23",
+          "pdf": "23"
+        }
+      ]
+    },
+    "local": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 4.1; Lemma 4.3",
+          "printed": "24–28",
+          "pdf": "24–28"
+        }
+      ]
+    },
+    "canonical": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Propositions 5.4, 5.6",
+          "printed": "44–48",
+          "pdf": "44–48"
+        }
+      ]
+    },
+    "entropy": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 7.4; Lemmas 7.5–7.6",
+          "printed": "65–68",
+          "pdf": "65–68"
+        }
+      ]
+    },
+    "projection": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 8.1",
+          "printed": "68–69",
+          "pdf": "68–69"
+        }
+      ]
+    },
+    "information": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemmas 8.4–8.7; (8.27)",
+          "printed": "73–78",
+          "pdf": "73–78"
+        }
+      ]
+    },
+    "pinning": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Sections 9.1–9.2",
+          "printed": "79–85",
+          "pdf": "79–85"
+        }
+      ]
+    },
+    "discrete": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 10.2; (10.19)–(10.23)",
+          "printed": "91–92",
+          "pdf": "91–92"
+        }
+      ]
+    },
+    "functions": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 10.2; (10.24)–(10.25)",
+          "printed": "93",
+          "pdf": "93"
+        }
+      ]
+    },
+    "finish": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proof of Theorem 1.1",
+          "printed": "94",
+          "pdf": "94"
+        }
+      ]
+    },
+    "gwz": {
+      "source": "GWZ26",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "rw": {
+      "source": "RW25",
+      "locations": [
+        {
+          "result": "Theorem 4.1",
+          "printed": "9",
+          "pdf": "9"
+        }
+      ]
+    },
+    "guth": {
+      "source": "Gut10",
+      "locations": [
+        {
+          "result": "Theorem 1.3",
+          "printed": "264",
+          "pdf": "2"
+        }
+      ]
+    },
+    "glx-n": {
+      "source": "GLX25",
+      "locations": [
+        {
+          "result": "Proposition 2.3; (6)–(9)",
+          "printed": "13–14",
+          "pdf": "13–14"
+        }
+      ]
+    },
+    "glx-c": {
+      "source": "GLX25",
+      "locations": [
+        {
+          "result": "Proposition 4.1; Definition 4.5",
+          "printed": "19",
+          "pdf": "19"
+        }
+      ]
+    },
+    "glx-phase": {
+      "source": "GLX25",
+      "locations": [
+        {
+          "result": "Definitions 1.7, 1.10–1.11; Theorem 1.12",
+          "printed": "3–5",
+          "pdf": "3–5"
+        }
+      ]
+    },
+    "four-use": {
+      "source": "OpenAI26b",
+      "locations": [
+        {
+          "result": "Lemma 2.15",
+          "printed": "17–18",
+          "pdf": "17–18"
+        }
+      ]
+    },
+    "angular": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 6.2",
+          "printed": "51–54",
+          "pdf": "51–54"
+        }
+      ]
+    }
+  },
+  "articleGuides": {
+    ".": {
+      "selfSource": "P",
+      "externalSources": [
+        "GWZ26",
+        "RW25",
+        "Gut10",
+        "GLX25",
+        "OpenAI26b"
+      ],
+      "proofTargets": [
+        "main",
+        "critical",
+        "nikodym",
+        "curved"
+      ],
+      "mainResults": [
+        "main",
+        "nikodym",
+        "curved"
+      ],
+      "statements": {
+        "main": "theorem-1-1",
+        "critical": "proposition-10-1",
+        "nikodym": "corollary-11-1",
+        "curved": "corollary-11-2"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "main",
+          "conclusion": "All epsilon, delta and arbitrary complex L3 functions, uniform tube centers/directions",
+          "anchor": "proof-1-step-3"
+        },
+        {
+          "result": "nikodym",
+          "conclusion": "Euclidean full p,q interpolation range, including endpoints",
+          "anchor": "proof-3-step-1"
+        },
+        {
+          "result": "nikodym",
+          "conclusion": "Fixed local constant-curvature manifold estimate and L3 endpoint",
+          "anchor": "proof-3-step-2"
+        },
+        {
+          "result": "curved",
+          "conclusion": "Fixed-phase curved operator, full p,q range and L3 endpoint",
+          "anchor": "proof-4-step-1"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "model",
+          "purpose": {
+            "ja": "重み・全時間plank・密度損失と臨界指数の定義",
+            "en": "Definitions of weights, full-time planks, density cost and critical exponent"
+          }
+        },
+        {
+          "citation": "geometric",
+          "purpose": {
+            "ja": "三つの幾何入力のうち集合評価の重み付けと尺度変換",
+            "en": "Weighted extension and rescaling of the set input"
+          }
+        },
+        {
+          "citation": "canonical",
+          "purpose": {
+            "ja": "正準時間プロファイルとstationary packetの取得",
+            "en": "Canonical temporal profile and stationary packets"
+          }
+        },
+        {
+          "citation": "information",
+          "purpose": {
+            "ja": "同一indexの二事象と独立積法則の比較",
+            "en": "Same-index two-event law compared with its independent marginals"
+          }
+        },
+        {
+          "citation": "critical",
+          "purpose": {
+            "ja": "五つの場合分けと強いtraceによる矛盾の閉じ方",
+            "en": "The five-case contradiction and the role of strong traces"
+          }
+        },
+        {
+          "citation": "discrete",
+          "purpose": {
+            "ja": "方向分離から密度に一様な離散評価へ",
+            "en": "Direction separation and the uniform discrete density bound"
+          }
+        },
+        {
+          "citation": "functions",
+          "purpose": {
+            "ja": "cell平均と有限個のlevel setから任意の関数へ",
+            "en": "Cell averages and finitely many level sets for general functions"
+          }
+        },
+        {
+          "citation": "nikodym",
+          "purpose": {
+            "ja": "Euclidean／局所定曲率Nikodymへの移送",
+            "en": "Transfer to Euclidean and local constant-curvature Nikodym operators"
+          }
+        },
+        {
+          "citation": "curved",
+          "purpose": {
+            "ja": "固定位相に対する局所曲線Kakeyaへの移送",
+            "en": "Local curved Kakeya transfer for a fixed phase"
+          }
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ]
+}

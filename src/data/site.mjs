@@ -13,6 +13,7 @@ import inventory057 from '../../coordination/catalog-057/inventory.json' with { 
 import inventory063 from '../../coordination/catalog-063/inventory.json' with { type: 'json' };
 import inventory067 from '../../coordination/catalog-067/inventory.json' with { type: 'json' };
 import inventory068 from '../../coordination/catalog-068/inventory.json' with { type: 'json' };
+import inventory074 from '../../coordination/catalog-074/inventory.json' with { type: 'json' };
 import inventory087 from '../../coordination/catalog-087/inventory.json' with { type: 'json' };
 import inventory159 from '../../coordination/catalog-159/inventory.json' with { type: 'json' };
 import inventory187 from '../../coordination/catalog-187/inventory.json' with { type: 'json' };
@@ -45,7 +46,7 @@ const fieldTranslations = [
   {
     "id": "real-complex-analysis",
     "ja": "実解析・複素解析",
-    "catalogIds": []
+    "catalogIds": ["074"]
   },
   {
     "id": "convex-metric-geometry",
@@ -200,6 +201,10 @@ export const papers = [...inventory004.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '068', sourceCommit: inventory068.sourceCommit,
  title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
  pages: entry.pdfPages, order: entry.order, featured: true,
+})), ...inventory074.manuscripts.map(entry => ({
+ id: entry.paperId, catalogId: '074', sourceCommit: inventory074.sourceCommit,
+ title: entry.title, path: entry.sourceUrl.split('/preprints/')[1], version: entry.version,
+ pages: entry.pdfPages, order: entry.order, featured: true,
 })), ...inventory087.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '087', sourceCommit: inventory087.sourceCommit,
  title: entry.title, path: entry.sourceUrl.split('/preprints/')[1], version: '2026-09-22',
@@ -333,6 +338,13 @@ export const catalogs = [{
   description: text('反標準束の非消滅を、不変指数・計量降下・不変切断の構成へ結ぶ7篇の証明から読む。', 'Follow seven proofs connecting anticanonical nonvanishing with invariant indices, metric descent, and invariant sections.'),
   paperIds: inventory068.manuscripts.map(p => p.paperId),
   overviewSectionIds: ['papers', 'diagram-sources', 'index-routes', 'exact-routes', 'connections', 'sources'],
+}, {
+  id: '074', sourceCommit: inventory074.sourceCommit, mode: 'multi',
+  title: text(inventory074.titleJa, inventory074.overviewTitle),
+  contentsTitle: inventory074.contentsTitle,
+  description: text('三次元の最大関数評価と四次元のHausdorff次元を、共有するplank入力と異なる証明経路から読む。', 'Follow the shared plank input and distinct proof routes to the three-dimensional maximal estimate and four-dimensional Hausdorff dimension.'),
+  paperIds: inventory074.manuscripts.map(p => p.paperId),
+  overviewSectionIds: ['papers', 'diagram-sources', 'connections', 'sources'],
 }, {
   id: '087', sourceCommit: inventory087.sourceCommit, mode: 'multi',
   title: text(inventory087.titleJa, inventory087.overviewTitle),

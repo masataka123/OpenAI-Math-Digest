@@ -1,0 +1,12 @@
+\node[card] (a) {\heading{}{固定された非退化Bourgain位相}{A fixed nondegenerate Bourgain phase}
+$\phi(x,t;y)=x\cdot y+\psi(t;y),\quad\psi(0;y)=0$\\
+$\det\nabla_y^2\partial_t\psi\ne0,\quad\nabla_y^2\partial_t^2\psi=c\,\nabla_y^2\partial_t\psi$};
+\node[card,below=2cm of a] (b) {\heading{}{局所直線化とparameter比較}{Local straightening and parameter comparison}
+$\phi\circ\kappa=x\cdot y+t h(y)+q(y)+f(t),\quad\det\nabla_y^2 h\ne0$\\
+\Tx{曲線は$x=\omega-t\nabla h(y)$へ移る}{The curves become $x=\omega-t\nabla h(y)$}};
+\flow a b {\Tx{座標・位相を$\delta$に依存させず固定する}{Keep the phase and chart fixed independently of $\delta$}\\[4pt]\Cite{glx-phase}};
+\node[result,below=2.2cm of b] (c) {\heading{}{Corollary 11.2：曲線最大作用素}{Corollary 11.2: the curved maximal operator}
+$\|K^\phi_\delta f\|_{L^q(Y)}\leq C_{p,\varepsilon,\phi,\Omega,Y}\delta^{1-3/p-\varepsilon}\|f\|_{L^p(\Omega)}$\\[4pt]
+$1\leq p\leq3,\quad q=2p',\quad0<\delta<\delta_{\mathrm{curv}}$\\
+\Tx{$p=q=3$では任意小損失$\delta^{-\varepsilon}$}{At $p=q=3$, the loss is arbitrarily small: $\delta^{-\varepsilon}$}};
+\flow b c {\Tx{Theorem 1.1と補間の$K(3)$を曲線版へ移送}{Transfer $K(3)$ from Theorem 1.1 and interpolation to the curved version}\\[4pt]\Cite{glx-c}\\[3pt]\Cite{curved}};

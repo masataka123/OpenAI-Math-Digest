@@ -1,0 +1,12 @@
+\node[card] (a) {\heading{}{二つの端点を同じ正規化にそろえる}{Put both endpoints in the same normalization}
+$\|\widetilde K_\delta f\|_3\lesssim_\eta\delta^{-\eta}\|f\|_3$,\qquad
+$\|\widetilde K_\delta f\|_\infty\leq\delta^{-2}\|f\|_1$};
+\node[card,below=1.8cm of a] (b) {\heading{}{全補間範囲：$K(3)$}{The full interpolation range: $K(3)$}
+$1\leq p\leq3,\quad q=2p',\qquad
+\|\widetilde K_\delta f\|_q\lesssim\delta^{1-3/p-\varepsilon}\|f\|_p$};
+\flow a b {\Tx{三つの円柱で比較し、$1/p=1-2\theta/3$で補間}{Compare with three cylinders; interpolate with $1/p=1-2\theta/3$}\\[4pt]\Cite{nikodym}};
+\node[result,below=2cm of b] (c) {\heading{}{Corollary 11.1：二つのNikodym評価}{Corollary 11.1: two Nikodym estimates}
+$\|N^{\mathrm{Euc}}_\delta f\|_q\leq C_{p,\varepsilon}\delta^{1-3/p-\varepsilon}\|f\|_p$\\[4pt]
+$\|N^g_{\delta,U}f\|_{L^q(U)}\leq C_{p,\varepsilon,U,V,g}\delta^{1-3/p-\varepsilon}\|f\|_{L^p(V)}$\\[4pt]
+\Tx{$U\Subset V$は固定局所chart；$p=q=3$で$\delta^{-\varepsilon}$}{$U\Subset V$ is a fixed local chart; $p=q=3$ gives $\delta^{-\varepsilon}$}};
+\flow b c {\Tx{Kakeya--Nikodym移送と定曲率測地線の局所直線化}{Kakeya--Nikodym transfer and local geodesic straightening}\\[4pt]\Cite{glx-n}};

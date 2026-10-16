@@ -1,0 +1,65 @@
+{
+  "catalogId": "074",
+  "productionVersion": "1.4",
+  "checkingScope": "Selected result-level direct input compared in the two pinned manuscripts. Full proofs and unlisted other-catalogue connections not independently verified.",
+  "omittedSections": [
+    {
+      "section": "classification cards and selection UI",
+      "reason": "Two official rows already distinguish analytic and dimensional targets; extra classifications duplicate the entry points."
+    }
+  ],
+  "diagramDecision": {
+    "adopted": true,
+    "purpose": "Display the shared lemma branching into distinct analytic and dimensional conclusions; prevent reading the 3D maximal main theorem as the 4D input.",
+    "detailLocation": "Article dependency sections and this connection record",
+    "notSufficientAlone": "The diagram and text state that additional geometric inputs and iterations are required."
+  },
+  "connections": [
+    {
+      "id": "three-plank-to-four-horizon",
+      "from": {
+        "paperId": "kakeya-maximal-three",
+        "result": "Lemma 3.3",
+        "pages": "20–21",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Kakeya-maximal-conjecture-in-three-dimensions-September-23-2026/paper.pdf"
+      },
+      "to": {
+        "paperId": "kakeya-hausdorff-four",
+        "result": "Lemma 2.15; Proposition 2.16; Theorem 2.17",
+        "pages": "17–25",
+        "version": "September 24, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Every-four-dimensional-Kakeya-set-has-full-Hausdorff-dimension-September-24-2026/paper.pdf"
+      },
+      "role": {
+        "ja": "全時間plankの重み集中と長いmark条件からvisited-cell multiplicityを制御し、初期horizon上界とHausdorff反例のpositive-horizon帰着を支える。",
+        "en": "Control visited-cell multiplicity from weighted full-time plank caps and long marks, supporting the initial horizon bound and positive-horizon reduction of a Hausdorff counterexample."
+      },
+      "hypotheses": "Bounded affine-line chart in R²; arbitrary positive weights and repeated traces; D≥1; whole-trace plank cap Σω≤Aab for 1≤a≤b≤D; #J_i≥D^(1−ηε); fixed enlargements. Fixed ε estimates precede a slow ε↓0 diagonal in 4D.",
+      "kind": "direct",
+      "checking": {
+        "status": "statements-and-selected-applications-compared-with-citation-number-discrepancy",
+        "checkedOn": "2026-10-16",
+        "by": [
+          "review_content (gpt-6-astra/high)",
+          "headquarters"
+        ],
+        "evidence": "coordination/catalog-074/reviews/SOURCE_REVIEW.md"
+      },
+      "articleLinks": {
+        "ja": {
+          "from": "../kakeya-maximal-three/article.ja.md#dependencies",
+          "to": "../kakeya-hausdorff-four/article.ja.md#dependencies"
+        },
+        "en": {
+          "from": "../kakeya-maximal-three/article.en.md#dependencies",
+          "to": "../kakeya-hausdorff-four/article.en.md#dependencies"
+        }
+      },
+      "unresolved": [
+        "4D cites [24, Lemma 2.3]; matching current 3D statement is Lemma 3.3. Revision history causing the discrepancy not checked.",
+        "Not an independent verification of the complete proof of the plank estimate or downstream arguments."
+      ]
+    }
+  ]
+}

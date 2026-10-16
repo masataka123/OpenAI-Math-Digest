@@ -1,0 +1,34 @@
+\node[result] (input) at (0,0) {
+\heading{}{全時間plankへの集中を制御する}{Control concentration in full-time planks}
+$M_i(t)=b_i+tu_i,\quad \sum_{M_i\subset P}\omega_i\le Aab,\quad \#J_i\ge D^{1-\eta}$\\[4pt]
+$\displaystyle\sum_i\omega_i\#J_i\le C_\varepsilon A D^\varepsilon\#E$
+\quad \Cite{three-plank}
+};
+\node[half] (three) at (-4.15,-5.4) {
+\heading{}{三次元の配置へ使う}{Three-dimensional input}
+\Tx{flat scaleのplate捕捉と\newline 正のdeficitの配置}{Plate capture at a flat scale;\newline a positive-deficit configuration}\\[5pt]
+\Tx{別の幾何入力と定常配置の排除を加える}{Additional geometric inputs and exclusion of stationary configurations}
+};
+\node[half] (four) at (4.15,-5.4) {
+\heading{}{四次元の反例を移す}{Four-dimensional reduction}
+$\dim_H K<4\ \Longrightarrow\ H(\mathcal E)>0$\\[5pt]
+\Tx{可変尺度被覆・有限選択・重みを保持}{Retain variable-scale covers, finite selections, and weights}
+};
+\draw[edge] ($(input.south)+(-7.5,0)$)--($(three.north)+(-3.35,0)$);
+\draw[edge] ($(input.south)+(.8,0)$)--($(four.north)+(-3.35,0)$);
+\node[branchreason,anchor=west] at (-7.05,-2.7) {\Tx{全時間の集中評価を使う}{Use the full-time concentration estimate}\\[4pt]\Cite{three-use}};
+\node[branchreason,anchor=west] at (1.25,-2.7) {\Tx{入力の内容対応を照合}{Matched input statement}\\[4pt]\Cite{four-plank}\\[4pt]\Tx{利用先はLemma 2.3と引用：番号不整合}{Receiving citation says Lemma 2.3: number mismatch}};
+\node[half,draw=green,fill=tint] (r3) at (-4.15,-11.5) {
+\heading{}{三次元：最大関数評価}{3D: maximal estimate}
+$\|K_\delta f\|_{L^3(S^2)}\le C_\varepsilon\delta^{-\varepsilon}\|f\|_{L^3(\mathbb R^3)}$\\[5pt]
+\Tx{すべての $\varepsilon>0$、$0<\delta<1$}{Every $\varepsilon>0$ and $0<\delta<1$}\\[4pt]\Cite{three-main}
+};
+\node[half,draw=green,fill=tint] (r4) at (4.15,-11.5) {
+\heading{}{四次元：Hausdorff次元}{4D: Hausdorff dimension}
+$\dim_H K=4$\\[5pt]
+\Tx{全方向に単位線分を含む任意集合}{An arbitrary set containing a unit segment in every direction}\\[4pt]\Cite{four-main}
+};
+\draw[edge] ($(three.south)+(-3.35,0)$)--($(r3.north)+(-3.35,0)$);
+\draw[edge] ($(four.south)+(-3.35,0)$)--($(r4.north)+(-3.35,0)$);
+\node[branchreason,anchor=west] at (-7.05,-8.3) {\Tx{臨界指数を消し、一般の $L^3$ 関数へ}{Remove the critical loss; pass to general $L^3$ functions}\\[4pt]\Cite{three-end}};
+\node[branchreason,anchor=west] at (1.25,-8.3) {\Tx{正のhorizonを三つの配置の改善で排除}{Exclude positive horizon through three improvement regimes}\\[4pt]\Cite{four-reduction}\\[4pt]\Cite{four-end}};

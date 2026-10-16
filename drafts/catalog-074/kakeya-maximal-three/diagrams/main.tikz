@@ -1,0 +1,18 @@
+\node[result] (a) {\heading{}{臨界指数の消滅を入力}{Input: critical vanishing}
+$\forall\varepsilon>0:\quad p>2,\quad h(p,0)=0,\quad (p-2)/3<\varepsilon/2$};
+\node[card,below=2.2cm of a] (b) {\heading{}{方向分離した離散shading}{Direction-separated discrete shadings}
+$\Delta_0=\sup_B n_B/(ab)\lesssim1$,\quad $\theta=\max\{N^{-1},\lambda\}$\\
+$|A|\gtrsim_{p,\xi}N^{-\xi}nN\theta^{p+1}$};
+\flow a b {\Tx{両端の傾きの比較とregularizationで一様定数を得る}{Endpoint slope comparison and regularization give a uniform constant}\\[4pt]\Cite{critical}\\[3pt]\Cite{discrete}};
+\node[card,below=1.85cm of b] (c) {\heading{}{密度全域を積分する}{Integrate over the full density range}
+$\|K_N1_E\|_3^3\lesssim N^{p-2+\xi}(1+\log N)|E|$\\
+\Tx{$\lambda<N^{-1}$は有限な球面測度で別に評価}{$\lambda<N^{-1}$ is handled separately using finite sphere measure}};
+\flow b c {\Tx{分離方向のcapsと、中心ごとの有界重複を使う}{Use caps around separated directions and bounded overlap of spatial groups}\\[4pt]\Cite{discrete}};
+\node[card,below=1.85cm of c] (d) {\heading{}{Cell平均と有限level分解}{Cell averages and finitely many levels}
+\Tx{$\|f\|_3=1$に正規化（最終評価は斉次性を戻す）}{Normalize $\|f\|_3=1$ (restore homogeneity in the final estimate)}\\
+$0\leq F_N\leq N,\quad \|F_N\|_3\leq1,\quad K_\delta f\leq64K_NF_N$\\
+$\|K_\delta f\|_3\lesssim_{p,\kappa}\delta^{-(p-2)/3-\kappa}\|f\|_3$};
+\flow c d {\Tx{$O(\log N)$個のlevelsをHölderで合計し、対数を吸収}{Sum $O(\log N)$ levels by H\"older and absorb logarithms}\\[4pt]\Cite{functions}};
+\node[result,below=1.75cm of d] (e) {\heading{}{Theorem 1.1：任意の $L^3$ 関数}{Theorem 1.1: arbitrary $L^3$ functions}
+$\|K_\delta f\|_{L^3(S^2)}\leq C_\varepsilon\delta^{-\varepsilon}\|f\|_{L^3(\mathbb R^3)}$};
+\flow d e {\Tx{$p$を$\varepsilon$から一度選び、$\kappa=\varepsilon/2$とする}{Choose $p$ once from $\varepsilon$ and set $\kappa=\varepsilon/2$}\\[4pt]\Cite{finish}};

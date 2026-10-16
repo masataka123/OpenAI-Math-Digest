@@ -1,0 +1,8 @@
+import {chromium} from '/Users/iwai/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs';import fs from 'node:fs';import path from 'node:path';
+const root=path.resolve('coordination/catalog-074'),out=root+'/screenshots';fs.mkdirSync(out,{recursive:true});const b=await chromium.launch({channel:'chrome',headless:true});const report=[];
+const files=fs.readdirSync(root+'/preview').filter(x=>x.endsWith('.html'));
+for(const file of files)for(const width of [1280,375]){const page=await b.newPage({viewport:{width,height:1000}});await page.goto('file://'+root+'/preview/'+file);const measured=await page.evaluate(()=>({viewport:innerWidth,scrollWidth:document.documentElement.scrollWidth,mathErrors:document.querySelectorAll('[data-mml-node="merror"]').length,figures:document.querySelectorAll('.proof-figure').length,sourceLines:document.querySelectorAll('.source-line').length,languageVisible:(()=>{const r=document.querySelector('.language-switch')?.getBoundingClientRect();return r&&r.right<=innerWidth&&r.left>=0})()}));
+ await page.screenshot({path:`${out}/${file}.${width}.top.png`});
+ for(const target of ['#papers','#results','#diagram-sources','#proof-1','#connections','#proof-2','#proof-3','#proof-4','#proposition-2-12','#corollary-7-1']){if(await page.locator(target).count()){await page.locator(target).evaluate(e=>e.scrollIntoView({block:'start',behavior:'instant'}));await page.screenshot({path:`${out}/${file}.${width}.${target.slice(1)}.png`});}}
+ report.push({file,width,...measured});await page.close();}
+fs.writeFileSync(root+'/screen-checks.json',JSON.stringify(report,null,2)+'\n');await b.close();console.log(JSON.stringify(report));

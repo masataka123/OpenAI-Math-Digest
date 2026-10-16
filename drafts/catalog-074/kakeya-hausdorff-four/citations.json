@@ -1,0 +1,453 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "author-key",
+  "catalogId": "074",
+  "sources": {
+    "P": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "displayName": "Every four-dimensional Kakeya set has full Hausdorff dimension",
+      "pagination": "same"
+    },
+    "OpenAI26a": {
+      "recordFile": "sources.json",
+      "recordId": "three",
+      "pagination": "same",
+      "guideRole": {
+        "ja": "重み付きfull-time plank評価。4次元稿の引用番号2.3と現固定版3.3の不整合は本文参照。",
+        "en": "Weighted full-time plank bound; the text records the discrepancy between the cited number 2.3 and the pinned version’s 3.3."
+      }
+    },
+    "CV13": {
+      "recordFile": "sources.json",
+      "recordId": "cv",
+      "pagination": "same",
+      "guideRole": {
+        "ja": "独立な方向をdeterminantで重み付けしたmultilinear Kakeya評価。",
+        "en": "Determinant-weighted multilinear Kakeya for independent directions."
+      }
+    },
+    "WZ25": {
+      "recordFile": "sources.json",
+      "recordId": "wz",
+      "pagination": "same",
+      "guideRole": {
+        "ja": "scalar-normal first jetに使うrestricted-triple dot-product alternative。",
+        "en": "Restricted-triple dot-product alternative for the scalar-normal first jet."
+      }
+    },
+    "OSS24": {
+      "recordFile": "sources.json",
+      "recordId": "oss",
+      "pagination": "same",
+      "guideRole": {
+        "ja": "平面剛性に使う、乗法的畳み込みのFourier減衰と平坦な係数の生成。",
+        "en": "Multiplicative-convolution Fourier decay and flat generated coefficients for planar rigidity."
+      }
+    }
+  },
+  "citations": {
+    "main-result": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "3",
+          "pdf": "3"
+        }
+      ]
+    },
+    "reduction-target": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 2.17",
+          "printed": "20",
+          "pdf": "20"
+        }
+      ]
+    },
+    "chart-horizon": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Definitions 2.1, 2.6, 2.8",
+          "printed": "8–12",
+          "pdf": "8–12"
+        },
+        {
+          "result": "Definition 2.14",
+          "printed": "17",
+          "pdf": "17"
+        }
+      ]
+    },
+    "critical-path": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 3.5",
+          "printed": "36",
+          "pdf": "36"
+        },
+        {
+          "result": "Proposition 4.3; Lemmas 4.1–4.5",
+          "printed": "47–51",
+          "pdf": "47–51"
+        }
+      ]
+    },
+    "isotropic": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 6.1",
+          "printed": "86",
+          "pdf": "86"
+        },
+        {
+          "result": "Proposition 6.8; Corollary 6.9",
+          "printed": "104–108",
+          "pdf": "104–108"
+        }
+      ]
+    },
+    "finite-narrowness": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Propositions 8.4–8.5",
+          "printed": "124–130",
+          "pdf": "124–130"
+        },
+        {
+          "result": "Propositions 9.2, 9.5–9.6",
+          "printed": "138–154",
+          "pdf": "138–154"
+        }
+      ]
+    },
+    "conversion-completion": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 4.5",
+          "printed": "51",
+          "pdf": "51"
+        },
+        {
+          "result": "Proposition 4.11; Lemma 4.12",
+          "printed": "61–62",
+          "pdf": "61–62"
+        },
+        {
+          "result": "Proposition 10.1; §10.8",
+          "printed": "154–168",
+          "pdf": "154–168"
+        }
+      ]
+    },
+    "finite-selection": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 2.17, finite selection",
+          "printed": "20–21",
+          "pdf": "20–21"
+        }
+      ]
+    },
+    "profile-selection": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 2.17, (2.24)–(2.32)",
+          "printed": "21–23",
+          "pdf": "21–23"
+        }
+      ]
+    },
+    "positive-horizon": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 2.17, (2.33)–(2.39)",
+          "printed": "23–25",
+          "pdf": "23–25"
+        }
+      ]
+    },
+    "plank-input": {
+      "source": "OpenAI26a",
+      "locations": [
+        {
+          "result": "Lemma 3.3",
+          "printed": "20–21",
+          "pdf": "20–21"
+        }
+      ]
+    },
+    "cv-input": {
+      "source": "CV13",
+      "locations": [
+        {
+          "result": "Theorem 1",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "wz-input": {
+      "source": "WZ25",
+      "locations": [
+        {
+          "result": "Definition 4.2",
+          "printed": "17",
+          "pdf": "17"
+        },
+        {
+          "result": "Theorem 5.2, §8 restatement",
+          "printed": "49",
+          "pdf": "49"
+        }
+      ]
+    },
+    "oss-input": {
+      "source": "OSS24",
+      "locations": [
+        {
+          "result": "Theorem 1.5",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "plank-use": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 2.15",
+          "printed": "17–18",
+          "pdf": "17–18"
+        }
+      ]
+    },
+    "critical-diagram": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 4.3",
+          "printed": "48–50",
+          "pdf": "48–50"
+        }
+      ]
+    },
+    "iso-diagram": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 6.1; Corollary 6.9",
+          "printed": "86–108",
+          "pdf": "86–108"
+        }
+      ]
+    },
+    "finite-diagram": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Propositions 8.4–8.5, 9.2, 9.5–9.6",
+          "printed": "124–154",
+          "pdf": "124–154"
+        }
+      ]
+    },
+    "infinite-diagram": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 10.1",
+          "printed": "154–168",
+          "pdf": "154–168"
+        }
+      ]
+    },
+    "conversion-diagram": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 4.11; Lemma 4.12",
+          "printed": "61–62",
+          "pdf": "61–62"
+        }
+      ]
+    },
+    "completion": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§10.8",
+          "printed": "168",
+          "pdf": "168"
+        }
+      ]
+    },
+    "bootstrap": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 9.5",
+          "printed": "143–149",
+          "pdf": "143–149"
+        }
+      ]
+    },
+    "scope": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 2.17",
+          "printed": "20–25",
+          "pdf": "20–25"
+        },
+        {
+          "result": "§10.8",
+          "printed": "168",
+          "pdf": "168"
+        }
+      ]
+    },
+    "iso-branch": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§6",
+          "printed": "86–108",
+          "pdf": "86–108"
+        }
+      ]
+    },
+    "finite-branch": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§§8–9",
+          "printed": "117–154",
+          "pdf": "117–154"
+        }
+      ]
+    },
+    "infinite-branch": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§10",
+          "printed": "154–168",
+          "pdf": "154–168"
+        }
+      ]
+    },
+    "reduction-diagram": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 2.17",
+          "printed": "20–25",
+          "pdf": "20–25"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ],
+  "articleGuides": {
+    ".": {
+      "selfSource": "P",
+      "externalSources": [
+        "OpenAI26a",
+        "CV13",
+        "WZ25",
+        "OSS24"
+      ],
+      "proofTargets": [
+        "main-result",
+        "reduction-target"
+      ],
+      "mainResults": [
+        "main-result"
+      ],
+      "statements": {
+        "main-result": "theorem-1-1",
+        "reduction-target": "theorem-2-17"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "main-result",
+          "conclusion": "dim_H K=4 for every Kakeya set K, without measurability assumptions",
+          "anchor": "proof-overview-step-4"
+        },
+        {
+          "result": "main-result",
+          "conclusion": "arbitrary-set scope via outer measure and finite witnesses",
+          "anchor": "proof-1-step-1"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "main-result",
+          "purpose": {
+            "ja": "任意集合に対する量化と、Hausdorff次元の定義。",
+            "en": "Quantification over arbitrary sets and the Hausdorff dimension convention."
+          }
+        },
+        {
+          "citation": "scope",
+          "purpose": {
+            "ja": "可変尺度被覆からの帰着と、三分岐を閉じる最終証明。",
+            "en": "Variable-scale-cover reduction and the final closure of all three branches."
+          }
+        },
+        {
+          "citation": "critical-path",
+          "purpose": {
+            "ja": "密度・時間・細さを最適化する順序と合成。",
+            "en": "Order of density, time, and narrowness optimization and composition."
+          }
+        },
+        {
+          "citation": "conversion-diagram",
+          "purpose": {
+            "ja": "局所候補を十分な元尺度の被覆と有限ラベルへ戻す条件。",
+            "en": "Conditions for returning local candidates to original coverage and finite lists."
+          }
+        },
+        {
+          "citation": "isotropic",
+          "purpose": {
+            "ja": "等方改善、二次への復元、scalarモデルの先行排除。",
+            "en": "Isotropic improvement, restoration of quadratic degree, and prior exclusion of the scalar model."
+          }
+        },
+        {
+          "citation": "bootstrap",
+          "purpose": {
+            "ja": "u_j→2kの反復と実際のendpointラベルの構成。",
+            "en": "The iteration u_j→2k and construction of actual endpoint labels."
+          }
+        },
+        {
+          "citation": "infinite-diagram",
+          "purpose": {
+            "ja": "二重局所化、密度比の相殺、元尺度への回収。",
+            "en": "Nested localization, cancellation in density ratios, and recovery at the original scale."
+          }
+        }
+      ]
+    }
+  }
+}

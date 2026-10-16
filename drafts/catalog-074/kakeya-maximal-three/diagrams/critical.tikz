@@ -1,0 +1,19 @@
+\node[card] (a) {\heading{}{正の臨界指数を仮定}{Assume a positive critical exponent}
+$m\leq_{\exp}N^{h+\Pi_F(1)}\Delta_h$,\quad $h>0$\\
+\Tx{同じtraceでもindex・重み・shadingを保持}{Preserve indices, weights and shadings, including repeated traces}};
+\node[card,below=2.7cm of a] (b) {\heading{}{局所質量上界と時間の充填}{Local mass bounds and temporal filling}
+\Tx{凸集中付きの集合評価・平面Furstenberg・横断的三族}{Convex-clustered set input, planar Furstenberg and transverse triples}\\
+\Tx{各短いblockで共通平面；正のslackが尺度損失を吸収}{A common plane on each short block; positive slack absorbs scale costs}};
+\flow a b {\Tx{重みへの拡張と局所化；密度閾値を保持する}{Weighted extensions and localization; retain the density threshold}\\[4pt]\Cite{gwz}\quad\Cite{rw}\\[3pt]\Cite{guth}\\[3pt]\Cite{local}};
+\node[card,below=2.3cm of b] (c) {\heading{}{最小delayから定常packetへ}{Minimum delay produces stationary packets}
+$F(s)=\beta(s-\tau)_+,\quad \ell=1-\tau,\quad 0<\beta<1$\\
+$(X,Y,U,V)$\quad\Tx{の尺度速度}{have scale speeds}\quad$(0,\tau,\ell,1)$};
+\flow b c {\Tx{外側cutと異方的な内側cutを比較し、元の重みを保つ}{Compare outer and anisotropic inner cuts, preserving inherited weights}\\[4pt]\Cite{canonical}\\[3pt]\Tx{角度非集中で$\beta<1$}{Angular nonconcentration gives $\beta<1$}: \Cite{angular}};
+\node[card,below=2.1cm of c] (d) {\heading{}{二つのframeの射影制約}{Projection constraints from two frames}
+$Y'=Y+\Delta t\,V$,\quad $X'=X+\Delta t\,U+\Delta\vartheta\,Y+\Delta t\Delta\vartheta\,V$\\
+\Tx{実joint law：hit確率1；周辺の積：$D^{-c}$}{Actual joint law: hit probability 1; product marginals: $D^{-c}$}};
+\flow c d {\Tx{平面射影・product pinningとshort-gap情報評価を比較}{Compare planar projection and product pinning with short-gap information}\\[4pt]\Cite{information}\\[3pt]\Cite{projection}};
+\node[result,below=2.2cm of d] (e) {\heading{}{正のgapが臨界性と矛盾}{A positive gap contradicts criticality}
+\Tx{Packetのentropy需要と射影制約は両立しない}{Packet entropy demand is incompatible with projection constraints}\\
+$\exists\,p\downarrow2:\ h(p,0)=0$};
+\flow d e {\Tx{五つの場合分け；$v_1$の強いtraceで正値集合に局所化}{Five cases; strong traces of $v_1$ localize to its positive set}\\[4pt]\Cite{entropy}\\[3pt]\Cite{critical}};

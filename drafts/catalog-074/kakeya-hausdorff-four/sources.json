@@ -1,0 +1,422 @@
+{
+  "catalogId": "074",
+  "paperId": "kakeya-hausdorff-four",
+  "title": "Every four-dimensional Kakeya set has full Hausdorff dimension",
+  "coverTitle": "Every Four-Dimensional Kakeya Set Has Full Hausdorff Dimension",
+  "authors": "OpenAI",
+  "version": "September 24, 2026",
+  "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Every-four-dimensional-Kakeya-set-has-full-Hausdorff-dimension-September-24-2026/paper.pdf",
+  "downloadUrl": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Every-four-dimensional-Kakeya-set-has-full-Hausdorff-dimension-September-24-2026/paper.pdf",
+  "pdfPages": 175,
+  "sha256": "30d0c186aa9c697d02ab9bf736968028f1ce8a2f164f1d7291398d530035ccde",
+  "checkedOn": "2026-10-16",
+  "owner": "write_four",
+  "model": "gpt-6-astra",
+  "reasoningEffort": "high",
+  "checkingScope": "公式原典から新規制作。主定理の任意集合の範囲、Theorem2.17の有限選択・密度・正horizon、critical paths、三分岐の出力と最終回収、bootstrapの閉じ方を読解。技術命題の全証明は未検証。",
+  "checkedLocations": [
+    {
+      "printedPage": "1",
+      "pdfPage": 1
+    },
+    {
+      "printedPage": "3",
+      "pdfPage": 3
+    },
+    {
+      "printedPage": "8",
+      "pdfPage": 8
+    },
+    {
+      "printedPage": "11",
+      "pdfPage": 11
+    },
+    {
+      "printedPage": "12",
+      "pdfPage": 12
+    },
+    {
+      "printedPage": "17",
+      "pdfPage": 17
+    },
+    {
+      "printedPage": "18",
+      "pdfPage": 18
+    },
+    {
+      "printedPage": "20",
+      "pdfPage": 20
+    },
+    {
+      "printedPage": "21",
+      "pdfPage": 21
+    },
+    {
+      "printedPage": "22",
+      "pdfPage": 22
+    },
+    {
+      "printedPage": "23",
+      "pdfPage": 23
+    },
+    {
+      "printedPage": "24",
+      "pdfPage": 24
+    },
+    {
+      "printedPage": "25",
+      "pdfPage": 25
+    },
+    {
+      "printedPage": "36",
+      "pdfPage": 36
+    },
+    {
+      "printedPage": "47",
+      "pdfPage": 47
+    },
+    {
+      "printedPage": "48",
+      "pdfPage": 48
+    },
+    {
+      "printedPage": "50",
+      "pdfPage": 50
+    },
+    {
+      "printedPage": "51",
+      "pdfPage": 51
+    },
+    {
+      "printedPage": "61",
+      "pdfPage": 61
+    },
+    {
+      "printedPage": "62",
+      "pdfPage": 62
+    },
+    {
+      "printedPage": "76",
+      "pdfPage": 76
+    },
+    {
+      "printedPage": "86",
+      "pdfPage": 86
+    },
+    {
+      "printedPage": "90",
+      "pdfPage": 90
+    },
+    {
+      "printedPage": "104",
+      "pdfPage": 104
+    },
+    {
+      "printedPage": "107",
+      "pdfPage": 107
+    },
+    {
+      "printedPage": "108",
+      "pdfPage": 108
+    },
+    {
+      "printedPage": "112",
+      "pdfPage": 112
+    },
+    {
+      "printedPage": "113",
+      "pdfPage": 113
+    },
+    {
+      "printedPage": "115",
+      "pdfPage": 115
+    },
+    {
+      "printedPage": "118",
+      "pdfPage": 118
+    },
+    {
+      "printedPage": "124",
+      "pdfPage": 124
+    },
+    {
+      "printedPage": "129",
+      "pdfPage": 129
+    },
+    {
+      "printedPage": "130",
+      "pdfPage": 130
+    },
+    {
+      "printedPage": "138",
+      "pdfPage": 138
+    },
+    {
+      "printedPage": "143",
+      "pdfPage": 143
+    },
+    {
+      "printedPage": "148",
+      "pdfPage": 148
+    },
+    {
+      "printedPage": "149",
+      "pdfPage": 149
+    },
+    {
+      "printedPage": "154",
+      "pdfPage": 154
+    },
+    {
+      "printedPage": "159",
+      "pdfPage": 159
+    },
+    {
+      "printedPage": "164",
+      "pdfPage": 164
+    },
+    {
+      "printedPage": "168",
+      "pdfPage": 168
+    }
+  ],
+  "statements": [
+    {
+      "result": "Theorem 1.1",
+      "pages": "3",
+      "hypotheses": "K⊂R4; for every e∈S3 there exists ae with {ae+te:0≤t≤1}⊂K. No measurability, compactness, or stickiness assumption.",
+      "conclusion": "dim_H K=4.",
+      "checking": "仮定・量化・結論を原典p.3と照合。"
+    },
+    {
+      "result": "Theorem 2.17",
+      "pages": "20–25",
+      "hypotheses": "There exists a Kakeya set K⊂R4 with dim_H K<4.",
+      "conclusion": "There exist 0<d<1 and S,η>0 and a tempered homogeneous exact problem of version2 in C(d) with H(E)>0.",
+      "checking": "pp.20–25全証明の帰着を読解。BPR基礎定理自体の証明は未検証。"
+    },
+    {
+      "result": "Proposition 4.3",
+      "pages": "48–50",
+      "hypotheses": "Fixed version and j,S,η; existence of a bad problem; optimize d*, k, ℓ in that order.",
+      "conclusion": "Linear relative density and time profiles, finite-grid nested true systems, finite-ℓ linear narrowness or unbounded increments.",
+      "checking": "記述とcompositionによる接続を読解。"
+    },
+    {
+      "result": "Proposition 4.11",
+      "pages": "61–70",
+      "hypotheses": "Guarded tangent diagonal; each substantial residual on every eligible subsequence supplies a Definition4.10 candidate with bounded depth and fixed positive limiting gain.",
+      "conclusion": "Excluded original output, success≥p_path/log N0, original lists/slacks bounded by fixed powers of K_path log N0, polynomial original complexity.",
+      "checking": "記述・greedy/finite-list回収の構成を確認。全中間推定の独立検証ではない。"
+    }
+  ],
+  "proofPassages": [
+    {
+      "section": "§§2.1–2.5",
+      "pages": "7–20",
+      "read": "exact problem、tempered data、cap class、true floor、normalization、horizon、weighted plankの入力記述、初期上界の質量比較。"
+    },
+    {
+      "section": "Theorem 2.17 proof",
+      "pages": "20–25",
+      "read": "可変尺度球被覆、外測度、有限方向選択、平滑化、gの3評価、端点選択、priorの相殺、傾き体積とh≥σ/6。"
+    },
+    {
+      "section": "Lemma 3.5; §4.1",
+      "pages": "36–37, 47–51",
+      "read": "時間延長の記述・構成冒頭、最適化順序、正のk、critical pathの証明、排除される改善。scalar-sheet比較自体の全証明未読。"
+    },
+    {
+      "section": "§4.5",
+      "pages": "60–62",
+      "read": "候補の質量条件、元尺度への変換命題、元の法則から有限一覧を回収するLemma4.12。"
+    },
+    {
+      "section": "Theorem 5.5; Theorem 6.1; §6.3; §6.9",
+      "pages": "76–77, 86, 89–90, 104–108",
+      "read": "dot-product入力、等方改善の出力、determinant multilinear入力、conic障害の二次testへの復元と同じblockへの外挿、scalar系の先行排除。"
+    },
+    {
+      "section": "§§7.1–7.4; §8.1; §§8.3–8.4",
+      "pages": "109–118, 121–125, 129–130",
+      "read": "graph辺保持とscalar係数、projection記述、wide-interval条件、horizontal modelへの接続。細部の全推定未検証。"
+    },
+    {
+      "section": "§§9.1–9.3",
+      "pages": "137–154",
+      "read": "臨界率命題、G(u) bootstrapの条件・反復式・有限反復からendpointへの対角化、wide intervalsへの回帰。"
+    },
+    {
+      "section": "§§10.1–10.8",
+      "pages": "154–168",
+      "read": "Prop10.1の出力、二重局所化、相対密度シフト相殺、元尺度のdepth gain・label回収、主定理の最終結論。全補題の独立検証ではない。"
+    }
+  ],
+  "dependencies": [
+    {
+      "id": "three-plank-to-four",
+      "kind": "direct",
+      "from": {
+        "paperId": "kakeya-maximal-three",
+        "result": "Lemma 3.3",
+        "pages": "20–21",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Kakeya-maximal-conjecture-in-three-dimensions-September-23-2026/paper.pdf"
+      },
+      "to": {
+        "result": "Lemma 2.15; Proposition 2.16; Theorem 2.17",
+        "pages": "17–25"
+      },
+      "role": "Weighted full-time plank bound gives initial horizon and g(0,0)≤0.",
+      "hypotheses": "Bounded affine-line chart, positive weights, repeated indices allowed, full trace plank cap, at least D^(1−η) time marks.",
+      "checking": "write_fourとreview_contentが固定版両原典の記述・条件を照合。入力自体の全証明未検証。",
+      "unresolved": [
+        "4Dは[24,Lemma2.3]と記載するが、現固定3Dの対応はLemma3.3。参照番号不整合を注記。"
+      ]
+    },
+    {
+      "id": "cv-to-velocity",
+      "kind": "direct",
+      "from": {
+        "externalId": "cv",
+        "result": "Theorem 1",
+        "pages": "2"
+      },
+      "to": {
+        "result": "Equation (6.10); Proposition 6.2",
+        "pages": "90–91"
+      },
+      "role": "Wedge-weighted endpoint estimate; ambient=wedge dimension, scale radius to r yielding r^n, full lines and nonnegative weights.",
+      "checking": "原典p.2と4D p.90を両担当で照合。全証明未検証。"
+    },
+    {
+      "id": "wz-to-first-jet",
+      "kind": "direct",
+      "from": {
+        "externalId": "wz",
+        "result": "Definition 4.2; Theorem 5.2 restated in §8",
+        "pages": "17, 49"
+      },
+      "to": {
+        "result": "Theorem 5.5; Proposition 5.4",
+        "pages": "76–81"
+      },
+      "role": "Upper AD covering condition and restricted-triple dot-product alternative; scalar exponent d<1 excludes expansion.",
+      "checking": "外部定理の記述と4D再掲一致。下流適用の全計算未検証。"
+    },
+    {
+      "id": "oss-to-planar",
+      "kind": "direct",
+      "from": {
+        "externalId": "oss",
+        "result": "Theorem 1.5",
+        "pages": "2"
+      },
+      "to": {
+        "result": "Lemma 7.4; Proposition 7.6",
+        "pages": "112–115"
+      },
+      "role": "Multiplicative-convolution decay generates coefficients with small interval probabilities; preserves original incidence edges.",
+      "hypotheses": "Normalize ratio law to [-1,1], choose s<min(S,1), n s>1; smoothed energy uniformly on h≤r≤h^e0.",
+      "checking": "外部原典記述・4D適用条件をreview_contentが照合。write_fourが原典記述を再確認。"
+    }
+  ],
+  "unresolved": [
+    "scalar-sheet comparison全証明、conditional higher jets、potentialとquadratic restoration、全例外集合予算の独立検証は未実施。",
+    "Basu–Pollack–Royのパラメータ一様基礎定理、graph BSG/sumset calculus、その他基礎入力の証明は追わない。",
+    "§11の追加帰結とそのtransfer定理は本記事対象外・未調査。",
+    "日英サイト組込み・見本とのPC/375px実画面比較・冊子PDFは第2段階へ引継ぎ。"
+  ],
+  "externalSources": [
+    {
+      "id": "three",
+      "displayName": "The Kakeya maximal conjecture in three dimensions",
+      "title": "The Kakeya maximal conjecture in three dimensions",
+      "authors": "OpenAI",
+      "version": "September 23, 2026; fixed commit 1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Kakeya-maximal-conjecture-in-three-dimensions-September-23-2026/paper.pdf",
+      "pdfPages": 97,
+      "sha256": "49cc52aa3de89f0e91d181b00ee8050fb29635ee0da9f29145d52318e7168204",
+      "checkedLocations": [
+        {
+          "printedPage": "20",
+          "pdfPage": 20
+        },
+        {
+          "printedPage": "21",
+          "pdfPage": 21
+        }
+      ],
+      "checked": "Lemma3.3記述と4D Lemma2.15の条件一致。4Dの参照番号2.3は不一致。"
+    },
+    {
+      "id": "cv",
+      "displayName": "The endpoint multilinear Kakeya theorem via the Borsuk–Ulam theorem",
+      "title": "The endpoint multilinear Kakeya theorem via the Borsuk–Ulam theorem",
+      "authors": "Anthony Carbery; Stefán Ingi Valdimarsson",
+      "version": "arXiv:1205.6371v1, 29 May 2012",
+      "sourceUrl": "https://arxiv.org/pdf/1205.6371v1",
+      "pdfPages": 20,
+      "sha256": "0f750cd18f1f9a7aeb7e9f2d2256d1c5af3342462f1ff6630e88f662efd796e6",
+      "checkedLocations": [
+        {
+          "printedPage": "2",
+          "pdfPage": 2
+        }
+      ],
+      "checked": "Theorem1、非負重み、full-line tube、d=n特化とr^n scalingを4D Eq6.10と照合。"
+    },
+    {
+      "id": "wz",
+      "displayName": "Sticky Kakeya sets and the sticky Kakeya conjecture",
+      "title": "Sticky Kakeya sets and the sticky Kakeya conjecture",
+      "authors": "Hong Wang; Joshua Zahl",
+      "version": "arXiv:2210.09581v2, 7 October 2025",
+      "sourceUrl": "https://arxiv.org/pdf/2210.09581v2",
+      "pdfPages": 69,
+      "sha256": "15bc7805850d59b23f93c9536d28fb828ed2beb04f55a466451493cf63f0e3ab",
+      "checkedLocations": [
+        {
+          "printedPage": "17",
+          "pdfPage": 17
+        },
+        {
+          "printedPage": "49",
+          "pdfPage": 49
+        }
+      ],
+      "checked": "Definition4.2の上側cover条件、Theorem5.2 §8再掲のrestricted triple alternativeを照合。"
+    },
+    {
+      "id": "oss",
+      "displayName": "On the Fourier decay of multiplicative convolutions",
+      "title": "On the Fourier decay of multiplicative convolutions",
+      "authors": "Tuomas Orponen; Nicolas de Saxcé; Pablo Shmerkin",
+      "version": "arXiv:2309.03068v2, 27 February 2024",
+      "sourceUrl": "https://arxiv.org/pdf/2309.03068v2",
+      "pdfPages": 26,
+      "sha256": "52342022c2d36a84222fedff2d1f94856ab7fd1e1e58973bd03676194037cab7",
+      "checkedLocations": [
+        {
+          "printedPage": "2",
+          "pdfPage": 2
+        }
+      ],
+      "checked": "Theorem1.5、energy仮定と[-1,1]正規化・ns>1を4D Lemma7.4と照合。"
+    }
+  ],
+  "independentReview": {
+    "reviewer": "review_content",
+    "model": "gpt-6-astra",
+    "reasoningEffort": "high",
+    "record": "coordination/catalog-074/reviews/SOURCE_REVIEW.md",
+    "checkedOn": "2026-10-16",
+    "scope": "主結果・Theorem2.17・critical paths・bootstrap・三分岐の接続・3D plankとCV/WZ/OSSの記述/適用条件。全証明の独立検証ではない。",
+    "resolvedFindings": [
+      "CVの利用箇所を§6.3/Equation6.10 p.90へ訂正。",
+      "Theorem2.17を独立証明対象とし主張欄を追加。",
+      "overview図の各分岐矢印へ使用内容を追加。"
+    ]
+  }
+}

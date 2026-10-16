@@ -1,0 +1,20 @@
+\node[card] (cover) {\heading{1}{可変尺度のHausdorff被覆}{Variable-scale Hausdorff cover}
+$\dim_{\mathrm H}K<4-\sigma,\quad\sum_i r_i^{4-\sigma}\le1$\\[3pt]
+\Tx{共通の時間区間と有界intercept箱；傾き集合の外測度は正}{Common time interval and bounded intercept box; positive outer slope measure}};
+\node[card,below=1.5cm of cover] (finite) {\heading{2}{同じ尺度で有限個の線分を選ぶ}{Choose finitely many witnesses at one scale}
+$\delta=2^{-k},\quad ck^{-2}\delta^{-3}\le M\le C\delta^{-3}$\\[3pt]
+\Tx{各線分の被覆時間 $\gtrsim k^{-2}$；全方向に対する可測選択は不要}{Covered time $\gtrsim k^{-2}$ per segment; no measurable choice over all directions}};
+\flow{cover}{finite}{\Tx{外測度の可算劣加法性、最大分離集合、有限選択}{Countable outer subadditivity, maximal separated set, finite selection}\\[3pt]\Cite{finite-selection}};
+\node[card,below=1.8cm of finite] (density) {\heading{3}{密度profileと角度cap}{Density profile and angular cap}
+$g=r-f,\quad g(1,0)\ge\sigma,\quad g(0,0)\le0,\quad g(r,u)\le r+2-2u$\\[3pt]
+\Tx{平滑化後の傾き密度を制御；plank評価が $g(0,0)\le0$ を与える}{Control smoothed slope density; the plank estimate gives $g(0,0)\le0$}};
+\flow{finite}{density}{\Tx{全時間plankの重みcapと長いmark集合を用いる}{Use full-time plank weight caps and long marked sets}\\[3pt]\Cite{plank-input}\\[3pt]\Tx{本稿の再掲：}{Restated here as: }\Cite{plank-use}};
+\node[card,below=1.5cm of density] (endpoint) {\heading{4}{端点と角度尺度を選択}{Select the endpoint and angular scale}
+$(r_0,u_0)\in\operatorname*{arg\,max}(g-Rr+Su),\quad g(r_0,u_0)\ge\sigma/2$\\[3pt]
+$L=r_0,\quad d=1-R<1,\quad E\in\mathcal C(d)$};
+\flow{density}{endpoint}{\Tx{最大化の一方向比較をcrop後の密度条件へ移す}{Transport one-sided maximizing inequalities through the crop}\\[3pt]\Cite{profile-selection}};
+\node[result,below=1.65cm of endpoint] (positive) {\heading{5}{質量下界と傾き体積上界を比較}{Compare the mass floor and slope volume}
+$N_0^{\sigma/2}\le m(r_0,u_0)\le N_0^{o(1)}q^{-3}$\\[4pt]
+$q=N_0^{-h+o(1)}\quad\Longrightarrow\quad H(E)\ge\sigma/6>0$\\[3pt]
+\Tx{追加選択・部分列に対しても成立する終端chartの下界}{A lower bound for terminal charts surviving further selections and subsequences}};
+\flow{endpoint}{positive}{\Tx{元priorへ戻してcrop分母を相殺；monic cubicのJacobianを使う}{Cancel crop-prior denominators; use the monic-cubic Jacobian}\\[3pt]\Cite{positive-horizon}};
