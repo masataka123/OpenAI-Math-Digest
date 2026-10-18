@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+\node[card] (a) {\heading{1}{頂点型を処方する}{Prescribe vertex types}$q=128$, projective plane + 7 Fano labels\\$|S_x\cap S_{x'}|\equiv1$ except $(x_A,x_A)$; $|S_x\cap S_y|\equiv1$};
+\node[card,below=2.1cm of a] (b) {\heading{2}{有限matchingを選ぶ}{Select a finite matching}$\operatorname{girth}\Gamma\ge L$,\quad \Tx{縮約された球面配置なし}{no reduced spherical arrangement}};
+\flow{a}{b}{\Tx{parityを保って確率的に配置を排除}{Preserve parity and probabilistically exclude arrangements}\\\Cite{types}\\\Cite{exclude}};
+\node[card,below=2.1cm of b] (c) {\heading{3}{coneで幾何学的条件を回収}{Recover topology from cones}$X=F\cup\bigcup K_\Lambda$, $\widetilde X\simeq *$;\\ \Tx{根保護、捩れなし、有限表示}{root protection, torsion-free, finitely presented}};
+\flow{b}{c}{\Tx{cone surgeryと有限2次元性}{Cone surgeries and finite dimension two}\\\Cite{cone}};
+\node[result,below=2.1cm of c] (d) {\heading{4}{scalarな片側逆元と非零annihilator}{Scalar one-sided inverse and nonzero annihilator}$a,b,c\in\mathbb F_2[G]$:\\ $ab=1,\ ac=0,\ c\ne0\ \Longrightarrow\ ba\ne1$};
+\flow{c}{d}{\Tx{同期歩行のparityと根の恒等元係数}{Simultaneous-step parity and the root coefficient}\\\Cite{parity}\\\Cite{completion}};
+\end{tikzpicture}

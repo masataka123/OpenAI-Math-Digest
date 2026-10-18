@@ -1,0 +1,7 @@
+\node[card] (a) {\heading{1}{有限群を付加しcentral文字を固定}{Attach finite groups and fix a central character}$L_i=(C_M)^{H_i}\rtimes H_i$, $z=\delta_i$, $|z|=M$.\\$f=M^{-1}\sum_k\zeta^{-k}z^k\ne0$, $S=fK[G_1]$ \Tx{（単位$f$）}{(identity $f$)}.};
+\node[card,below=1.5cm of a] (b) {\heading{2}{modular stabilizer blockを分解}{Decompose the modular stabilizer blocks}$T_\theta\cap A_0=1$, $T_\theta\hookrightarrow(\mathbb F_p)^3$.\\$fK[L_i]\simeq\prod_\theta M_{s_\theta}(K[T_\theta])$.};
+\node[card,below=1.5cm of b] (c) {\heading{3}{冪零idealを用いた有限基底変換}{A finite basis change over a nilpotent ideal}$\mathfrak a^{3(p-1)+1}=0$, $Q^{-1}EQ=\operatorname{diag}(I_{d_0},0)$.\\$d=d_0|T_\theta|$, $w=s_\theta|T_\theta|$, $wd_0=s_\theta d$ \Tx{（整数等式）}{(integer identities)}.};
+\node[result,below=1.5cm of c] (d) {\heading{4}{同数の座標を対応させる}{Pair equally numerous coordinates}$J_i\in\operatorname{Mat}_{w\times d}(S)$, $Y_i\in\operatorname{Mat}_{d\times w}(S)$.\\$Y_iJ_i=fI_d$, $J_iY_i=P_iI_w$, $P_i=fe_i$.};
+\flow a b {\Tx{指数和1でprime-to-$p$安定化群を排除する}{The exponent sum one excludes prime-to-$p$ stabilizers}\\\Cite{sector-blocks}};
+\flow b c {\Tx{augmentation後の基底を有限幾何級数で持ち上げる}{Lift the augmented basis using a finite geometric series}\\\Cite{sector-ranks}};
+\flow c d {\Tx{各blockの座標対応を逆写像で同じ群環へ戻す}{Pull blockwise coordinate pairings back into the same group algebra}\\\Cite{sector-ranks}};

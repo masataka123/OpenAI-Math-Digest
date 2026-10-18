@@ -1,0 +1,7 @@
+\begin{tikzpicture}
+\node[card] (a) {\heading{1}{右隣接の作用を使う}{Use the right-neighbor action}$(T_cx)(g)=\sum_uc_ux(gu)$,\quad$T_cT_d=T_{cd}$\\\Tx{$x$のsupportは無限でもよい}{Configurations $x$ may have infinite support}};
+\node[card,below=2.1cm of a] (b) {\heading{2}{左逆写像と像を同定}{Identify the left inverse and the image}$ab=1\ \Longrightarrow\ T_aT_b=\mathrm{id}$\\$\operatorname{im}T_b=\{y:T_{ba}y=y\}$};
+\flow{a}{b}{\Tx{有限supportの係数和を合成する}{Compose finite coefficient sums}\\\Cite{action}\\\Cite{image}};
+\node[result,below=2.2cm of b] (c) {\heading{3}{非零欠損係数から像にないconfigurationを得る}{Use a nonzero defect coefficient to find a missing configuration}$(ba-1)_h\ne0\ \Longrightarrow\ (T_{ba}\delta_h-\delta_h)(1_G)\ne0$\\$\delta_h\notin\operatorname{im}T_b$;\quad\Tx{$G$はsurjunctiveでない}{$G$ is not surjunctive}};
+\flow{b}{c}{\Tx{scalarな逆積欠損と有限alphabet $K$}{Scalar reverse defect and finite alphabet $K$}\\\Cite{ca}};
+\end{tikzpicture}

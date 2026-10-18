@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+\node[card] (a) {\heading{1}{完全直線系と穴を構成}{Construct full lines and holes}$V=Q^n\setminus O$,\quad $\deg(v)=\ell+1$,\quad $\operatorname{girth}\ge12$};
+\node[card,below=2.2cm of a] (b) {\heading{2}{穴で補間してpairingを得る}{Interpolate at holes to obtain pairings}$\sum_{v\in f}x_vx_v^T=0$,\quad $\sum_{v\in V}x_vx_v^T=-I_m$\\$0<m<t\le m\ell^2$};
+\flow{a}{b}{\Tx{低次数の完全直線和、穴の個数評価}{Low-degree full-line sums and hole-size bounds}\\\Cite{geometry}\\\Cite{pairing}};
+\node[card,below=2.2cm of b] (c) {\heading{3}{埋込み・packing・scalar化}{Embed, pack, and transfer to scalars}$a_{\rm out}b_{\rm out}=1$,\quad $b_{\rm out}a_{\rm out}-1\ne0$\\\Tx{有限表示群、奇素数位数の元を保持}{Finitely presented group retaining odd-prime torsion}};
+\flow{b}{c}{\Tx{incidence criterionに全条件を渡す}{Supply all hypotheses of the incidence criterion}\\\Cite{criterion}};
+\node[result,below=2.1cm of c] (d) {\heading{4}{全選択を停止する有限探索で指定}{Specify all choices by a terminating finite search}$K=\mathbb F_{2^{h(\ell-1)}}$,\quad $G=L\times F$\\\Tx{有限式を指定するが、探索の実行は未実施}{Finite expressions specified; the search has not been executed}};
+\flow{c}{d}{\Tx{十分大きい全ての$h$で成功、word oracle不要}{Success for all sufficiently large $h$; no word oracle}\\\Cite{recipe}};
+\end{tikzpicture}

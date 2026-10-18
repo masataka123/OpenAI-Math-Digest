@@ -1,0 +1,283 @@
+{
+  "catalogId": "197",
+  "paperId": "torsion-free-direct-finiteness",
+  "title": "A Torsion-Free Group Algebra That Is Not Directly Finite",
+  "displayName": "A Torsion-Free Group Algebra That Is Not Directly Finite",
+  "authors": "OpenAI",
+  "version": "October 4, 2026",
+  "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Torsion-Free-Group-Algebra-That-Is-Not-Directly-Finite-October-4-2026/direct-finiteness.pdf",
+  "pdfPages": 31,
+  "sha256": "7950476863f21811aaccb99ab12f24f81741e5077ca290394d029063024aaee8",
+  "checkedOn": "2026-10-18",
+  "worker": {
+    "name": "記事担当A",
+    "model": "gpt-6-astra",
+    "reasoningEffort": "high"
+  },
+  "checkedLocations": [
+    {
+      "printedPage": "1",
+      "pdfPage": 1
+    },
+    {
+      "printedPage": "3",
+      "pdfPage": 3
+    },
+    {
+      "printedPage": "4",
+      "pdfPage": 4
+    },
+    {
+      "printedPage": "5",
+      "pdfPage": 5
+    },
+    {
+      "printedPage": "6",
+      "pdfPage": 6
+    },
+    {
+      "printedPage": "7",
+      "pdfPage": 7
+    },
+    {
+      "printedPage": "8",
+      "pdfPage": 8
+    },
+    {
+      "printedPage": "9",
+      "pdfPage": 9
+    },
+    {
+      "printedPage": "10",
+      "pdfPage": 10
+    },
+    {
+      "printedPage": "11",
+      "pdfPage": 11
+    },
+    {
+      "printedPage": "12",
+      "pdfPage": 12
+    },
+    {
+      "printedPage": "13",
+      "pdfPage": 13
+    },
+    {
+      "printedPage": "14",
+      "pdfPage": 14
+    },
+    {
+      "printedPage": "15",
+      "pdfPage": 15
+    },
+    {
+      "printedPage": "16",
+      "pdfPage": 16
+    },
+    {
+      "printedPage": "17",
+      "pdfPage": 17
+    },
+    {
+      "printedPage": "18",
+      "pdfPage": 18
+    },
+    {
+      "printedPage": "19",
+      "pdfPage": 19
+    },
+    {
+      "printedPage": "20",
+      "pdfPage": 20
+    },
+    {
+      "printedPage": "21",
+      "pdfPage": 21
+    },
+    {
+      "printedPage": "22",
+      "pdfPage": 22
+    },
+    {
+      "printedPage": "23",
+      "pdfPage": 23
+    },
+    {
+      "printedPage": "24",
+      "pdfPage": 24
+    },
+    {
+      "printedPage": "25",
+      "pdfPage": 25
+    },
+    {
+      "printedPage": "26",
+      "pdfPage": 26
+    },
+    {
+      "printedPage": "27",
+      "pdfPage": 27
+    },
+    {
+      "printedPage": "28",
+      "pdfPage": 28
+    },
+    {
+      "printedPage": "29",
+      "pdfPage": 29
+    },
+    {
+      "printedPage": "30",
+      "pdfPage": 30
+    },
+    {
+      "printedPage": "31",
+      "pdfPage": 31
+    }
+  ],
+  "statements": [
+    {
+      "result": "Theorem 1.1",
+      "pages": "1",
+      "checking": "仮定・量化・全結論、§7による接続を照合。存在選択で具体辺表ではない。"
+    },
+    {
+      "result": "Proposition 2.1",
+      "pages": "3–4",
+      "checking": "全parity条件、root protection、scalar sumsと恒等元係数を照合。"
+    },
+    {
+      "result": "Theorem 4.1",
+      "pages": "10–11",
+      "checking": "εの量化順、distinct underlying edges、長さ・本数・比較数の条件。"
+    },
+    {
+      "result": "Theorem 5.2",
+      "pages": "19",
+      "checking": "確率極限と同時存在、pp.22–24の抽出。"
+    },
+    {
+      "result": "Proposition 6.1",
+      "pages": "24–25",
+      "checking": "π2=0、root protection、有限aspherical complex、torsion-freeをpp.25–30で照合。"
+    }
+  ],
+  "proofPassages": [
+    {
+      "pages": "3–9",
+      "scope": "parity、型、word-weight、girth conditioningを読解。diameterの全定数の独立再計算はしていない。"
+    },
+    {
+      "pages": "10–18",
+      "scope": "multiplicity levels、共通grid、weight bins、(4.11)–(4.15)を読解。Lemma4.4の全Diophantine/grid評価の独立再検証は未実施。"
+    },
+    {
+      "pages": "19–24",
+      "scope": "短閉路化、平面interval count、separator、損失総量からclusterを選択する証明を読解。"
+    },
+    {
+      "pages": "24–30",
+      "scope": "cone pictures、同一edgeの4つのsurgery、同じcone liftでのH2加法性、asphericity/torsion obstruction、最終組立。"
+    }
+  ],
+  "externalSources": [
+    {
+      "id": "LT79",
+      "displayName": "A Separator Theorem for Planar Graphs",
+      "authors": "Richard J. Lipton and Robert Endre Tarjan",
+      "version": "SIAM Journal on Applied Mathematics 36(2), 177–189 (1979); publisher abstract checked 2026-10-18",
+      "sourceUrl": "https://epubs.siam.org/doi/10.1137/0136016",
+      "checkedLocations": [],
+      "checking": "出版社Abstractのseparator statement（2√(2n), 2n/3）を本稿Lemma5.5に照合。PDF本文・定理番号・誌面/PDF対応は未確認。"
+    },
+    {
+      "id": "Hat02",
+      "displayName": "Algebraic Topology",
+      "authors": "Allen Hatcher",
+      "version": "2002 book; author-hosted PDF checked 2026-10-18",
+      "sourceUrl": "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf",
+      "pdfPages": 560,
+      "checkedLocations": [
+        {
+          "printedPage": "346",
+          "pdfPage": 355
+        },
+        {
+          "printedPage": "366",
+          "pdfPage": 375
+        }
+      ],
+      "checking": "Theorems4.5/4.32の記述を本稿§6.1/§6.3に照合。証明未検証。"
+    },
+    {
+      "id": "ES04",
+      "displayName": "Sofic groups and direct finiteness",
+      "authors": "Gábor Elek and Endre Szabó",
+      "version": "arXiv:math/0305440v2; PDF header 19 April 2004",
+      "sourceUrl": "https://arxiv.org/pdf/math/0305440v2",
+      "pdfPages": 9,
+      "checkedLocations": [
+        {
+          "printedPage": "8",
+          "pdfPage": 8
+        }
+      ],
+      "checking": "Corollary4.7のsofic/任意division ring/stably finiteの記述と本稿p.1の帰結を照合。証明未検証。"
+    }
+  ],
+  "dependencies": [
+    {
+      "id": "planar-separator",
+      "from": {
+        "source": "LT79",
+        "result": "separator theorem (publisher abstract)",
+        "pages": "PDF mapping unverified"
+      },
+      "to": {
+        "result": "Lemma 5.5; Theorem 5.2",
+        "pages": "22–24"
+      },
+      "kind": "direct",
+      "role": "平面simple graphに適用して再帰的にO(N/√K)個を除去。loop/parallel edgeは先に捨てる。",
+      "checking": "statementと利用箇所を照合、外部PDF本文未確認。"
+    },
+    {
+      "id": "hurewicz-whitehead",
+      "from": {
+        "source": "Hat02",
+        "result": "Theorems 4.5, 4.32",
+        "pages": "346,366"
+      },
+      "to": {
+        "result": "Lemma 6.2; Proposition 6.1",
+        "pages": "25,28–30"
+      },
+      "kind": "direct",
+      "role": "simply connected acyclic CW complexのcontractibilityとπ2≅H2。",
+      "checking": "外部statementと適用条件を照合。"
+    },
+    {
+      "id": "sofic-consequence",
+      "from": {
+        "source": "ES04",
+        "result": "Corollary 4.7",
+        "pages": "8"
+      },
+      "to": {
+        "result": "Introduction consequence of Theorem 1.1",
+        "pages": "1"
+      },
+      "kind": "consequence",
+      "role": "sofic⇒F2[G] stably finite の対偶。逆含意は使わない。",
+      "checking": "statementと利用箇所を照合。"
+    }
+  ],
+  "unresolved": [
+    "Lemma4.4のgrid構成、§3の全確率評価・全定数の独立再計算はしていない。",
+    "LT79の出版社abstractで必要statementは確認したが、外部PDF本文・ページ対応は未確認。",
+    "外部結果の証明を再帰的に検証していない。",
+    "zero-divisors companionは方法の由来として本稿が再証明する範囲を確認したのみで、原典全体との照合は未実施。"
+  ]
+}

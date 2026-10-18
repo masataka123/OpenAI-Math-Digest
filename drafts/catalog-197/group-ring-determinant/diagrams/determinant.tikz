@@ -1,0 +1,7 @@
+\node[card] (a) {\heading{1}{corner環で因子分解を持ち上げる}{Lift the factorization in a corner ring}$q=2^k$, $e=P_q$, $W=e-eu_0v_0e$, $W^k=0$.\\$Q=e+W+\cdots+W^{k-1}$, $e=(Qeu_0)(v_0e)$.};
+\node[card,below=1.5cm of a] (b) {\heading{2}{整数化と有理分解}{Integrality and rational factorization}$\displaystyle A=\begin{pmatrix}qI_r&V\\U&q^{-1}\{UV-P-q(I_m-P)\}\end{pmatrix}=L_1BR_1$.\\$B=\operatorname{diag}(qI_r,-q^{-1}P-(I_m-P))$.};
+\node[card,below=1.5cm of b] (c) {\heading{3}{shearを連続的に除く}{Remove the shears along a path}$M(x)=L_xBR_x$, $\tau(M'M^{-1})=0$.\\$\frac d{dx}\tau\log(M^*M)=2\operatorname{Re}\tau(M'M^{-1})=0$.};
+\node[result,below=1.5cm of c] (d) {\heading{4}{対角射影で計算する}{Compute on the diagonal projection}$\log(B^*B)=2\log q\,\operatorname{diag}(I_r,-P)$.\\$\log\det(T_A)=(r-\tau(P))\log q$.\\$A^{-1}\in M_{r+m}(\mathbb Q[G])\Rightarrow\operatorname{supp}\mu_A\Subset(0,\infty)$.};
+\flow a b {\Tx{$q\equiv1\pmod D$と$UV\equiv P\pmod q$で整数係数を得る}{Use $q\equiv1\pmod D$ and $UV\equiv P\pmod q$ for integrality}\\\Cite{lifting}};
+\flow b c {\Tx{零対角ブロックとtraceの巡回性を使う}{Use zero diagonal blocks and cyclicity of the trace}\\\Cite{trace}};
+\flow c d {\Tx{直交射影の補空間を分け、有界逆元を使う}{Split the orthogonal projection and use the bounded inverse}\\\Cite{formula}};

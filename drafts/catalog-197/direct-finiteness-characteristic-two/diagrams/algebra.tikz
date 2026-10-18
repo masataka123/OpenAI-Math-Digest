@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+\node[card] (a) {\heading{1}{局所群を埋め込み平均を取る}{Embed local groups and take averages}$K_v\hookrightarrow N$,\quad $P_v=\ell^{-2}\sum_{u\in K_v}u$\\$UP=U,\quad PT=T,\quad UT=I_m$};
+\node[card,below=2.3cm of a] (b) {\heading{2}{characterをslotに収納する}{Pack characters into slots}$H=N\times C_\ell\hookrightarrow L$,\quad $J_0C=eP$\\$a_{\rm mat}=UJ_0+(1-e)I_m$,\quad$b_{\rm mat}=CT+(1-e)I_m$};
+\flow{a}{b}{\Tx{$t\le m\ell^2$と直交idempotentsで正方化}{Use $t\le m\ell^2$ and orthogonal idempotents for square factors}\\\Cite{embedding}\\\Cite{packing}};
+\node[card,below=2.2cm of b] (c) {\heading{3}{部分群環に戻して欠損を検出}{Detect the defect inside the subgroup algebra}$\Delta=b_{\rm mat}a_{\rm mat}-I_m$;\quad$J_0\Delta C=e(TU-P)$\\$\epsilon:K[H]\to K$,\quad$\epsilon(e(TU-P))=X^TX-I_t\ne0$};
+\flow{b}{c}{\Tx{$m<t$でrank欠損、特殊化は$K[H]$だけに適用}{Rank defect from $m<t$; specialize only on $K[H]$}\\\Cite{defect}};
+\node[result,below=2.2cm of c] (d) {\heading{4}{有限群のcornerへ埋め込み単位を補う}{Embed into a finite-group corner and complete the identity}$\Phi:\operatorname{Mat}_m(K[L])\hookrightarrow K[L\times F]$,\quad$\Phi(I_m)=f_{\rm blk}$\\$a_{\rm out}=1-f_{\rm blk}+\Phi(a_{\rm mat})$\\$b_{\rm out}=1-f_{\rm blk}+\Phi(b_{\rm mat})$\\$a_{\rm out}b_{\rm out}=1$,\quad$b_{\rm out}a_{\rm out}-1=\Phi(\Delta)\ne0$};
+\flow{c}{d}{\Tx{matrix unitsの線形独立性と補元のannihilation}{Independent matrix units; the complement annihilates the image}\\\Cite{scalar}\\\Cite{finite}};
+\end{tikzpicture}

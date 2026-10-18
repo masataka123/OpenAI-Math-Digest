@@ -1,0 +1,5 @@
+\node[card] (a) {\heading{1}{高次数の列空間}{High-degree column space}$X_j^p=0$, $D=3(p-1)$, $\ell=(p-1)/2$.\\$B$: $\deg\geq D-\ell+1$, $h=\binom{\ell+2}{3}$, $h/p^3>1/48$.};
+\node[card,below=1.5cm of a] (b) {\heading{2}{非退化な重み付きpairingを選ぶ}{Select nondegenerate weighted pairings}$N_\lambda=B^{\mathsf T}D_\lambda^{-1}B$.\\$\det(B^{\mathsf T}\operatorname{diag}(\tau)B)\ne0$; $|\mathcal R|>|A_0|/(2p^3)$.};
+\node[result,below=1.5cm of b] (c) {\heading{3}{Fourier blockへ冪等元を置く}{Place idempotents in Fourier blocks}$T_\lambda=BN_\lambda^{-1}B^{\mathsf T}D_\lambda^{-1}$, $T_\lambda^2=T_\lambda$.\\$d=hp^3|\mathcal R|$, $d/w>1/96$.\\$(u(s)-1)^\ell e=0$, $e(v(s)-1)^\ell=0$ \Tx{（全$s\in P$）}{(every $s\in P$)}.};
+\flow a b {\Tx{次数で両側を消し、grid評価で半分超の指標を残す}{Degree gives annihilation; the grid bound retains more than half the characters}\\\Cite{local}; \Cite{pairing}};
+\flow b c {\Tx{自由orbitの行列単位で実現し、$p^3$本の列のrankを数える}{Use free-orbit matrix units and count the rank of all $p^3$ columns}\\\Cite{local-completion}};

@@ -1,0 +1,48 @@
+{
+  "catalogId": "197",
+  "status": "stage-1-content-check-complete",
+  "reviewer": "reviewer",
+  "model": "gpt-6-astra",
+  "reasoningEffort": "high",
+  "startedAt": "2026-10-18T13:10:43+09:00",
+  "completedAt": "2026-10-18T13:31:50+09:00",
+  "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "reports": [
+    "CONTENT_REVIEW.md",
+    "CONCLUSION_COVERAGE.md",
+    "reviewed-files.json"
+  ],
+  "reviewed": {
+    "articles": 4,
+    "articleLanguages": 2,
+    "majorResults": 6,
+    "proofTargets": 15,
+    "articleTikzDiagrams": 15,
+    "catalogGuides": 2,
+    "catalogTikzDiagrams": 1,
+    "recordedRelationships": 9
+  },
+  "unresolvedCorrectionRequests": [],
+  "limitations": [
+    "LT79 publisher abstract statement checked; external PDF text and pagination unverified.",
+    "No full independent recomputation of all probabilistic constants, grid estimates, topological cases or finite coefficients.",
+    "Finite prescriptions not executed.",
+    "Full external proofs not recursively verified.",
+    "Characteristic-two Corollary 7.4 and type-F-infinity input excluded from checked claims."
+  ],
+  "nextStage": [
+    "Headquarters rendered-page/anchor verification record.",
+    "Stage 2 site integration and Japanese/English booklet PDFs.",
+    "Stage 3 publication only under applicable user authorization."
+  ],
+  "certification": false,
+  "supplementalCheck": {
+    "completedAt": "2026-10-18T13:31:50+09:00",
+    "changes": [
+      "Overview diagram result/half width override correction; math, labels, references and edge directions unchanged.",
+      "Determinant JA/EN article links normalized to article.lang.md; mathematical prose unchanged."
+    ],
+    "unresolvedCorrectionRequests": [],
+    "newResearchPerformed": false
+  }
+}

@@ -1,0 +1,5 @@
+\node[card] (a) {\heading{1}{非零係数を恒等元へ移す}{Translate a nonzero coefficient to the identity}$C=I_d-YX\ne0$, $C^2=C$, $XC=CY=0$.\\$h_0^{-1}C_{ij}=1+\sum_{s\in S}s$, $S\subset H_2\setminus\{1\}$.};
+\node[card,below=1.6cm of a] (b) {\heading{2}{可換な座標射影で分離}{Separate with commuting coordinate projections}$p_h=(1+z_h+z_h^2)/3$, $p=p_1\prod_{s\in S}(1-p_s)$.\\$psp=0$ $(s\in S)$, $\tau(p)=\frac13(\frac23)^{|S|}=\theta>0$.};
+\node[result,below=1.6cm of b] (c) {\heading{3}{実traceと二進列数を分ける}{Separate real trace from binary column count}$fCw=\bar p$, $P=\operatorname{diag}(I_d,p)$,\\$\displaystyle u=\begin{pmatrix}X\\fC\end{pmatrix},\quad v=\begin{pmatrix}Y&Cw\end{pmatrix},\quad uv=\bar P$.\\$\tau(P)=d+\theta>d$; $D=3^{1+|S|}$ \Tx{が分母を払う。}{clears denominators.}};
+\flow a b {\Tx{$sps^{-1}$の$p_s$と$p$の$1-p_s$が積を零にする}{The factors $p_s$ in $sps^{-1}$ and $1-p_s$ in $p$ kill the product}\\\Cite{projection}};
+\flow b c {\Tx{$XC=CY=0$と$C^2=C$により非対角ブロックが消える}{Use $XC=CY=0$ and $C^2=C$ to cancel the off-diagonal blocks}\\\Cite{projection}};

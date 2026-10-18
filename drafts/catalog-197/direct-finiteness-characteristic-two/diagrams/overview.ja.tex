@@ -1,0 +1,72 @@
+\documentclass[border=12pt]{standalone}
+\def\pgfsysdriver{pgfsys-dvisvgm.def}
+\usepackage[dvisvgm]{xcolor}
+\usepackage{xeCJK}
+\setCJKmainfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf]
+\setCJKsansfont{HaranoAjiGothic-Regular.otf}[BoldFont=HaranoAjiGothic-Bold.otf]
+\usepackage{amsmath,amssymb,tikz,lmodern}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
+\renewcommand{\familydefault}{\sfdefault}
+\definecolor{ink}{HTML}{25322F}
+\definecolor{green}{HTML}{246657}
+\definecolor{tint}{HTML}{EEF4F0}
+\definecolor{soft}{HTML}{C6D2CC}
+\definecolor{muted}{HTML}{52615B}
+\newif\ifJapanese
+\newcommand{\Tx}[2]{\ifJapanese #1\else #2\fi}
+\newcommand{\Eff}{\overline{\operatorname{Eff}}}
+\newcommand{\heading}[3]{{\color{green}\bfseries #1\quad\Tx{#2}{#3}}\\[5pt]}
+% A white rectangle makes the complete citation label clickable, including spaces.
+\newcommand{\refurl}[2]{\special{dvisvgm:raw <a xlink:href="#1" target="_blank" rel="noopener noreferrer">}{\setlength{\fboxsep}{0pt}\colorbox{white}{\color{green}\underline{\strut #2}}}\special{dvisvgm:raw </a>}}
+\tikzset{
+ card/.style={draw=soft,fill=white,rounded corners=2pt,align=left,text=ink,font=\fontsize{10.5}{14}\selectfont,inner xsep=12pt,inner ysep=10pt,text width=14.4cm},
+ half/.style={card,text width=6.45cm,minimum height=2.05cm},
+ result/.style={card,draw=green,fill=tint,line width=.9pt},
+ reason/.style={align=left,text=muted,font=\fontsize{9}{12}\selectfont,inner sep=0pt,text width=12.7cm},
+ branchreason/.style={reason,text width=5.95cm},
+ edge/.style={-{Stealth[length=2.4mm]},draw=green,line width=1pt},
+ wire/.style={draw=green,line width=1pt},
+}
+% Keep the arrow in a dedicated left gutter; explanations never cover it.
+\newcommand{\flow}[3]{
+ \coordinate (#2-from) at ($(#1.south)+(-6.9,0)$);
+ \coordinate (#2-to) at ($(#2.north)+(-6.9,0)$);
+ \draw[edge] (#2-from)--(#2-to);
+ \node[reason,anchor=west] (#2-reason) at ($(#2-from)!.5!(#2-to)+(.55,0)$) {#3};
+}
+
+\Japanesetrue
+% Generated from citations.json; do not edit.
+\newcommand{\Cite}[1]{\csname cite-#1\endcsname}
+\expandafter\def\csname cite-main\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-Two-September-23-2026/paper.pdf}{Theorem 1.1 · p. 1}}}
+\expandafter\def\csname cite-ca\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-Two-September-23-2026/paper.pdf}{Corollary 7.3 · p. 26}}}
+\expandafter\def\csname cite-criterion\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-Two-September-23-2026/paper.pdf}{Theorem 3.1 · p. 6}}}
+\expandafter\def\csname cite-pairing\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-Two-September-23-2026/paper.pdf}{Proposition 2.3 · pp. 5–6}}}
+\expandafter\def\csname cite-embedding\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-Two-September-23-2026/paper.pdf}{Lemma 3.2 · pp. 7–9}}}
+\expandafter\def\csname cite-rectangular\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-Two-September-23-2026/paper.pdf}{Section 4.1; Equation (4.4) · p. 10}}}
+\expandafter\def\csname cite-packing\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-Two-September-23-2026/paper.pdf}{Sections 4.2–4.3; Equations (4.5)–(4.13) · pp. 10–12}}}
+\expandafter\def\csname cite-defect\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-Two-September-23-2026/paper.pdf}{Section 4.4; Equations (4.14)–(4.17) · p. 12}}}
+\expandafter\def\csname cite-scalar\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-Two-September-23-2026/paper.pdf}{Section 4.5; Equations (4.18)–(4.25) · pp. 13–14}}}
+\expandafter\def\csname cite-finite\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-Two-September-23-2026/paper.pdf}{Section 4.6 · p. 14}}}
+\expandafter\def\csname cite-geometry\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-Two-September-23-2026/paper.pdf}{Theorem 5.1 · p. 15}}}
+\expandafter\def\csname cite-holes\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-Two-September-23-2026/paper.pdf}{Lemmas 5.2–5.4 · pp. 15–18}}}
+\expandafter\def\csname cite-slabs\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-Two-September-23-2026/paper.pdf}{Lemmas 5.5–5.7 · pp. 19–21}}}
+\expandafter\def\csname cite-trade\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-Two-September-23-2026/paper.pdf}{Lemmas 5.8–5.9; proof of Theorem 5.1 · pp. 21–22}}}
+\expandafter\def\csname cite-recipe\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-Two-September-23-2026/paper.pdf}{Section 6; Equation (6.2) · pp. 22–24}}}
+\expandafter\def\csname cite-action\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-Two-September-23-2026/paper.pdf}{Lemma 7.1 · p. 25}}}
+\expandafter\def\csname cite-image\endcsname{\shortstack[l]{\refurl{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-Two-September-23-2026/paper.pdf}{Proposition 7.2 · p. 26}}}
+\expandafter\def\csname cite-linnik\endcsname{\shortstack[l]{\refurl{https://www.impan.pl/shop/en/publication/transaction/download/product/83078}{[Xyl11, Theorem 1.1, 誌面 p. 66 / PDF p. 2]}}}
+\expandafter\def\csname cite-sofic\endcsname{\shortstack[l]{\refurl{https://arxiv.org/pdf/math/0305440v2\string##page=8}{[ES04, Corollary 4.7, p. 8]}}}
+
+\begin{document}
+\begin{tikzpicture}
+\node[card] (a) {\heading{1}{完全直線系と穴を構成}{Construct full lines and holes}$V=Q^n\setminus O$,\quad $\deg(v)=\ell+1$,\quad $\operatorname{girth}\ge12$};
+\node[card,below=2.2cm of a] (b) {\heading{2}{穴で補間してpairingを得る}{Interpolate at holes to obtain pairings}$\sum_{v\in f}x_vx_v^T=0$,\quad $\sum_{v\in V}x_vx_v^T=-I_m$\\$0<m<t\le m\ell^2$};
+\flow{a}{b}{\Tx{低次数の完全直線和、穴の個数評価}{Low-degree full-line sums and hole-size bounds}\\\Cite{geometry}\\\Cite{pairing}};
+\node[card,below=2.2cm of b] (c) {\heading{3}{埋込み・packing・scalar化}{Embed, pack, and transfer to scalars}$a_{\rm out}b_{\rm out}=1$,\quad $b_{\rm out}a_{\rm out}-1\ne0$\\\Tx{有限表示群、奇素数位数の元を保持}{Finitely presented group retaining odd-prime torsion}};
+\flow{b}{c}{\Tx{incidence criterionに全条件を渡す}{Supply all hypotheses of the incidence criterion}\\\Cite{criterion}};
+\node[result,below=2.1cm of c] (d) {\heading{4}{全選択を停止する有限探索で指定}{Specify all choices by a terminating finite search}$K=\mathbb F_{2^{h(\ell-1)}}$,\quad $G=L\times F$\\\Tx{有限式を指定するが、探索の実行は未実施}{Finite expressions specified; the search has not been executed}};
+\flow{c}{d}{\Tx{十分大きい全ての$h$で成功、word oracle不要}{Success for all sufficiently large $h$; no word oracle}\\\Cite{recipe}};
+\end{tikzpicture}
+
+\end{document}

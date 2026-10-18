@@ -1,0 +1,17 @@
+\node[card] (tf) {\heading{1}{独立構成：Torsion-free direct finiteness}{Independent: torsion-free direct finiteness}$a,b,c\in\mathbb F_2[G]$, $ab=1$, $ac=0$, $c\ne0$.\\\Tx{有限表示・torsion-free・有限2次元分類複体。}{Finitely presented, torsion-free, with a finite two-dimensional classifying complex.}\\\Cite{tf-main}};
+\node[card,below=.55cm of tf] (two) {\heading{2}{Direct finiteness in characteristic two}{Direct finiteness in characteristic two}$a_2b_2=1\ne b_2a_2$ in $K_2[H_2]$, $|K_2|<\infty$, $\operatorname{char}K_2=2$.\\\Tx{$H_2$は有限表示で奇数位数のtorsionを含む。}{The group $H_2$ is finitely presented and contains odd-order torsion.}\\\Cite{two-main}};
+\node[result,text width=6.45cm,minimum height=2.9cm,anchor=north west] (det) at ($(two.south west)+(0,-2.25)$) {\heading{3}{Group-ring determinant}{Group-ring determinant}$A\in M_n(\mathbb Z[G_D])$, $A^{-1}\in M_n(\mathbb Q[G_D])$.\\$0<\det_{\mathcal N(G_D)}(T_A)<1$.\\\Tx{拡大群$G_D$は有限生成、$C_3$を含む。}{The enlarged $G_D$ is finitely generated and contains $C_3$.}\\\Cite{det-main}};
+\node[result,text width=6.45cm,minimum height=2.9cm,anchor=north east] (ca) at ($(two.south east)+(0,-2.25)$) {\heading{}{各構成群の全配置上の帰結}{Consequences on each group's full configuration space}$T_aT_b=\operatorname{id}$, $\operatorname{im}T_b=\operatorname{Fix}(T_{ba})$.\\\Tx{$T_b$は単射・非全射。二つの群を同一視しない。}{$T_b$ is injective, not surjective. The two groups are not identified.}};
+\node[half,below=2.3cm of ca] (odd) {\heading{4}{Direct finiteness in odd characteristic}{Direct finiteness in odd characteristic}$ab=1\ne ba$ in $K[G]$, $|K|=p^4$.\\\Tx{一つの指定奇素数$p$、有限生成群、torsionを含む。}{One specified odd prime $p$; a finitely generated group containing torsion.}\\\Cite{odd-main}};
+\coordinate (dstart) at ($(two.south west)+(.3,0)$);
+\coordinate (dend) at ($(det.north west)+(.3,0)$);
+\draw[edge] (dstart)--(dend);
+\node[branchreason,anchor=west] at ($(dstart)!.5!(dend)+(.4,0)$) {\Tx{直接入力：二進欠損を射影へ}{Direct input: binary defect to projection}\\\Cite{det-input}};
+\coordinate (cstart) at ($(two.south east)+(-6.85,0)$);
+\coordinate (cend) at ($(ca.north west)+(.3,0)$);
+\draw[edge,dashed] (cstart)--(cend);
+\node[branchreason,anchor=west] at ($(cstart)!.5!(cend)+(.4,0)$) {\Tx{帰結：有限体のscalar対を移す}{Consequence: transfer the finite-field scalar pair}\\\Cite{two-ca}};
+\coordinate (ostart) at ($(odd.north west)+(.3,0)$);
+\coordinate (oend) at ($(ca.south west)+(.3,0)$);
+\draw[edge,dashed] (ostart)--(oend);
+\node[branchreason,anchor=west] at ($(ostart)!.5!(oend)+(.4,0)$) {\Tx{帰結：同じ$K$で全配置へ作用}{Consequence: act on all configurations over the same $K$}\\\Cite{odd-ca}};

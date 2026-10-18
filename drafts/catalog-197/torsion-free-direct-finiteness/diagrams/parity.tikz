@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+\node[card] (a) {\heading{1}{同期歩行上で積の項を固定}{Keep each product summand constant}$(g_xt)(g_{x'}t)^{-1}=g_xg_{x'}^{-1}$\\$\deg(x,x')=|S_x\cap S_{x'}|$};
+\node[card,below=2.1cm of a] (b) {\heading{2}{次数の例外を数える}{Count the degree exceptions}$A'\times A':$ \Tx{唯一の偶数次数頂点}{one even-degree vertex} $(x_A,x_A)$\\$A'\times B':$ \Tx{全頂点が奇数次数}{all degrees odd}};
+\flow{a}{b}{\Tx{各成分の奇数次数頂点数は偶数}{Each component has an even number of odd-degree vertices}\\\Cite{parity}};
+\node[card,below=2.1cm of b] (c) {\heading{3}{標数2の打消しを適用}{Apply cancellation in characteristic two}$ab=1,\quad ac=0$;\qquad $[1]c=1\ \Longrightarrow\ c\ne0$};
+\flow{b}{c}{\Tx{例外成分のみ奇数個、根保護で恒等元項は一つ}{Only the exceptional component is odd; root protection isolates $1$}\\\Cite{parity}};
+\node[result,below=1.9cm of c] (d) {\heading{4}{逆向きの恒等式を排除}{Exclude the reverse identity}$ba=1\ \Longrightarrow\ c=(ba)c=b(ac)=0$,\quad\Tx{矛盾}{a contradiction}};
+\flow{c}{d}{\Tx{結合則と非零性}{Associativity and nonvanishing}\\\Cite{main}};
+\end{tikzpicture}

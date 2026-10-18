@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "author-key",
+  "catalogId": "197",
+  "sources": {
+    "P": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "pagination": "same"
+    },
+    "OpenAI26two": {
+      "recordFile": "sources.json",
+      "recordId": "char2",
+      "guideRole": {
+        "ja": "標数2の有限体上のscalar片側逆元対を供給する唯一の外部構成入力",
+        "en": "The sole external construction input: a scalar one-sided inverse pair over a finite field of characteristic two"
+      }
+    },
+    "ES05": {
+      "recordFile": "sources.json",
+      "recordId": "es05",
+      "guideRole": {
+        "ja": "構成後の非sofic性への帰結にのみ使用する行列式下界",
+        "en": "The determinant lower bound used only for the subsequent nonsoficity consequence"
+      }
+    }
+  },
+  "citations": {
+    "main": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "input": {
+      "source": "OpenAI26two",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "restriction": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 2.1",
+          "printed": "3",
+          "pdf": "3"
+        }
+      ]
+    },
+    "projection": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 2.2",
+          "printed": "3–4",
+          "pdf": "3–4"
+        }
+      ]
+    },
+    "lifting": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemmas 3.1–3.2",
+          "printed": "5–6",
+          "pdf": "5–6"
+        }
+      ]
+    },
+    "trace": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemmas 4.1–4.2",
+          "printed": "6–7",
+          "pdf": "6–7"
+        }
+      ]
+    },
+    "formula": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 4.3",
+          "printed": "7",
+          "pdf": "7"
+        }
+      ]
+    },
+    "assembly": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§5; Equations (5.1)–(5.2)",
+          "printed": "8",
+          "pdf": "8"
+        }
+      ]
+    },
+    "convention": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Equations (1.1)–(1.2)",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "sofic": {
+      "source": "ES05",
+      "locations": [
+        {
+          "result": "Theorem 5",
+          "printed": "18",
+          "pdf": "18"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ],
+  "articleGuides": {
+    ".": {
+      "selfSource": "P",
+      "externalSources": [
+        "OpenAI26two",
+        "ES05"
+      ],
+      "mainResults": [
+        "main"
+      ],
+      "proofTargets": [
+        "main",
+        "projection",
+        "formula"
+      ],
+      "statements": {
+        "main": "theorem-1-1",
+        "projection": "proposition-2-2",
+        "formula": "proposition-4-3"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "main",
+          "conclusion": "Finitely generated discrete group with integral matrix and rational group-ring inverse",
+          "anchor": "proof-1-step-1"
+        },
+        {
+          "result": "main",
+          "conclusion": "Strict determinant inequalities and finite negative logarithmic integral",
+          "anchor": "proof-1-step-2"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "projection",
+          "purpose": {
+            "ja": "欠損の一係数を分離し、実traceと二進因子分解の差を作る",
+            "en": "Separate one defect coefficient and create the gap between real trace and binary factorization"
+          }
+        },
+        {
+          "citation": "lifting",
+          "purpose": {
+            "ja": "corner逆元と整数係数の確保を追う",
+            "en": "Follow the corner inverse and the integrality calculation"
+          }
+        },
+        {
+          "citation": "trace",
+          "purpose": {
+            "ja": "非可換な微分をtraceの巡回性で処理する",
+            "en": "Use tracial cyclicity to handle noncommutative differentiation"
+          }
+        },
+        {
+          "citation": "assembly",
+          "purpose": {
+            "ja": "全結論と正規化を照合する",
+            "en": "Check all conclusions and determinant normalization"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+\node[card] (a) {\heading{1}{重複度stageで有界道を評価}{Bound paths through multiplicity stages}$\sum_j(V_j-E_j-k_j)\le0$,\quad $\log\prod_j B_j\le-\delta H/2+a_0b_0+o(L)$};
+\node[card,below=2.1cm of a] (b) {\heading{2}{先に許容損失率を固定}{Fix the loss tolerance first}$\exists\varepsilon>0\ \forall K_0,C,I:$\quad\Tx{有界系の確率}{probability of a bounded system}$=o(1)$};
+\flow{a}{b}{\Tx{word-weight減衰とfirst-moment bound}{Word-weight decay and first-moment bounds}\\\Cite{stages}\\\Cite{bounded}};
+\node[card,below=2.2cm of b] (c) {\heading{3}{任意サイズの球面配置を抽出}{Extract from an arrangement of any size}\Tx{分割・短閉路化・再帰的平面分離}{Split, close by short paths, recursively separate}\\$\varepsilon,D_0,U,\eta,K_0,C,I$\quad\Tx{を固定してから}{fixed before}\quad$n\to\infty$};
+\flow{b}{c}{\Tx{閉路化とseparatorの損失を総和で制御}{Control closure and separator losses in total}\\\Cite{extraction}};
+\node[result,below=2.2cm of c] (d) {\heading{4}{残るclusterが有界評価に反する}{A remaining cluster contradicts the bound}$L\le H_Z\le CL,\quad b_Z\le\varepsilon H_Z,\quad I_Z\le I$\\\Tx{従って縮約された球面配置なし}{Hence no reduced spherical arrangement}};
+\flow{c}{d}{\Tx{悪いclusterを捨てても正の総長が残る}{Discard bad clusters and retain positive total length}\\\Cite{exclude}\\\Cite{extraction}};
+\end{tikzpicture}

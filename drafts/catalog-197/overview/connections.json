@@ -1,0 +1,439 @@
+{
+  "catalogId": "197",
+  "productionVersion": "1.4",
+  "checkingScope": {
+    "description": "Four source statements, the characteristic-two determinant input, two internal CA transfers, and external nonsoficity consequences checked. Article proofs and limitations are recorded separately.",
+    "unrecordedRelationships": "Not investigated; omission does not assert absence.",
+    "notIncluded": [
+      "Characteristic-two Corollary7.4/type F∞ embedding: outside checked guide scope.",
+      "No tf→det author-dependency arrow: the fixed determinant manuscript imports the characteristic-two companion, not the torsion-free paper.",
+      "No char2→odd direct edge: explicitly independent construction."
+    ],
+    "externalArticleInputs": "Planar separator, Hurewicz/Whitehead (torsion-free) and uniform Linnik bound (characteristic two) are recorded in individual sources; guide does not duplicate their full tables."
+  },
+  "omittedSections": [
+    {
+      "section": "classification-cards",
+      "reason": "The official table already distinguishes coefficient field, torsion and proof mechanism; extra fixed-count routes would repeat it."
+    },
+    {
+      "section": "connection-selector-ui",
+      "reason": "One inter-paper direct input and two CA consequence branches fit one diagram and short table."
+    }
+  ],
+  "diagramDecision": {
+    "adopted": true,
+    "whatItShows": "two→det direct dependency and two/odd→their respective CA consequences form a branch and a shared type of conclusion; tf remains an explicitly independent box.",
+    "alternativesConsidered": "A single dependency edge table would hide the distinction between determinant conversion and dynamical consequence. A complete nonsoficity-arrow network would add crossings and duplicate external-result prose.",
+    "divisionOfRoles": "Diagram gives branching, independent construction and relation kinds; table gives results, uses and hypotheses; article links give proofs.",
+    "omittedFromDiagram": "Nonsoficity is explained with ES04/ES05 citations in prose; the two output groups on CA branches are not identified."
+  },
+  "connections": [
+    {
+      "id": "two-scalar-to-determinant",
+      "from": {
+        "paperId": "direct-finiteness-characteristic-two",
+        "result": "Theorem 1.1",
+        "pages": "1",
+        "version": "September 23, 2026",
+        "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-Two-September-23-2026/paper.pdf"
+      },
+      "to": {
+        "paperId": "group-ring-determinant",
+        "result": "Theorem 1.2; Lemma 2.1; §5",
+        "pages": "2–3, 8",
+        "version": "September 23, 2026",
+        "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Counterexample-to-the-Group-Ring-Determinant-Conjecture-September-23-2026/paper.pdf"
+      },
+      "kind": "direct",
+      "role": {
+        "ja": "標数2のscalar対を係数制限し、非零二進欠損からtrace差を作る。",
+        "en": "Restrict coefficients of the characteristic-two scalar pair and turn its nonzero binary defect into a trace gap."
+      },
+      "hypotheses": "Finite field of characteristic two, finitely generated H2, finite-support scalar pair a2 b2=1 != b2 a2. Finite presentation is stronger than needed; K2=F2 is not assumed.",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "by": "author_det_odd (gpt-6-astra / high), with article author and independent reviewer records",
+        "date": "2026-10-18",
+        "records": [
+          "drafts/catalog-197/group-ring-determinant/sources.json",
+          "drafts/catalog-197/overview/sources.json"
+        ],
+        "scope": "Input statement and use compared, not independent verification of the complete external proof."
+      },
+      "articleLinks": {
+        "from": {
+          "ja": "/ja/papers/direct-finiteness-characteristic-two/#theorem-1-1",
+          "en": "/en/papers/direct-finiteness-characteristic-two/#theorem-1-1"
+        },
+        "to": {
+          "ja": "/ja/papers/group-ring-determinant/#proof-1",
+          "en": "/en/papers/group-ring-determinant/#proof-1"
+        }
+      },
+      "unresolved": []
+    },
+    {
+      "id": "two-scalar-to-ca",
+      "from": {
+        "paperId": "direct-finiteness-characteristic-two",
+        "result": "Theorem 1.1",
+        "pages": "1",
+        "version": "September 23, 2026",
+        "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-Two-September-23-2026/paper.pdf"
+      },
+      "to": {
+        "paperId": "direct-finiteness-characteristic-two",
+        "result": "Proposition 7.2; Corollary 7.3",
+        "pages": "26",
+        "version": "September 23, 2026",
+        "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-Two-September-23-2026/paper.pdf"
+      },
+      "kind": "consequence",
+      "role": {
+        "ja": "同じ体と群の全配置上へ移し、単射非全射CAと像の固定点記述を得る。",
+        "en": "Transfer over the same field and group to an injective nonsurjective CA and its fixed-point image on all configurations."
+      },
+      "hypotheses": "K finite; scalar finite sums ab=1 != ba; Tc x(g)=sum cu x(gu).",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "by": "author_det_odd (gpt-6-astra / high), with article author and independent reviewer records",
+        "date": "2026-10-18",
+        "records": [
+          "drafts/catalog-197/direct-finiteness-characteristic-two/sources.json",
+          "drafts/catalog-197/overview/sources.json"
+        ],
+        "scope": "Input statement and use compared, not independent verification of the complete external proof."
+      },
+      "articleLinks": {
+        "from": {
+          "ja": "/ja/papers/direct-finiteness-characteristic-two/#theorem-1-1",
+          "en": "/en/papers/direct-finiteness-characteristic-two/#theorem-1-1"
+        },
+        "to": {
+          "ja": "/ja/papers/direct-finiteness-characteristic-two/#proof-3",
+          "en": "/en/papers/direct-finiteness-characteristic-two/#proof-3"
+        }
+      },
+      "unresolved": []
+    },
+    {
+      "id": "odd-scalar-to-ca",
+      "from": {
+        "paperId": "direct-finiteness-odd-characteristic",
+        "result": "Theorem 1.1",
+        "pages": "1",
+        "version": "September 26, 2026",
+        "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Odd-Characteristic-September-26-2026/paper.pdf"
+      },
+      "to": {
+        "paperId": "direct-finiteness-odd-characteristic",
+        "result": "Proposition 8.1 and its application",
+        "pages": "23",
+        "version": "September 26, 2026",
+        "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Odd-Characteristic-September-26-2026/paper.pdf"
+      },
+      "kind": "consequence",
+      "role": {
+        "ja": "指定されたK、Gの全配置上に同じ代数的転送を行う。",
+        "en": "Apply the same algebraic transfer on all configurations over the specified K and G."
+      },
+      "hypotheses": "K has p^4 elements for the specified prime p; scalar finite sums ab=1 != ba.",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "by": "author_det_odd (gpt-6-astra / high), with article author and independent reviewer records",
+        "date": "2026-10-18",
+        "records": [
+          "drafts/catalog-197/direct-finiteness-odd-characteristic/sources.json",
+          "drafts/catalog-197/overview/sources.json"
+        ],
+        "scope": "Input statement and use compared, not independent verification of the complete external proof."
+      },
+      "articleLinks": {
+        "from": {
+          "ja": "/ja/papers/direct-finiteness-odd-characteristic/#theorem-1-1",
+          "en": "/en/papers/direct-finiteness-odd-characteristic/#theorem-1-1"
+        },
+        "to": {
+          "ja": "/ja/papers/direct-finiteness-odd-characteristic/#proof-4",
+          "en": "/en/papers/direct-finiteness-odd-characteristic/#proof-4"
+        }
+      },
+      "unresolved": []
+    },
+    {
+      "id": "es04-torsion-free-direct-finiteness-nonsofic",
+      "from": {
+        "paperId": "ES04",
+        "result": "Corollary 4.7",
+        "pages": "8",
+        "version": "arXiv:math/0305440v2, 2004-04-19",
+        "sourceUrl": "https://arxiv.org/pdf/math/0305440v2"
+      },
+      "to": {
+        "paperId": "torsion-free-direct-finiteness",
+        "result": "Introduction consequence of Theorem 1.1",
+        "pages": "1–2",
+        "version": "October 4, 2026",
+        "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Torsion-Free-Group-Algebra-That-Is-Not-Directly-Finite-October-4-2026/direct-finiteness.pdf"
+      },
+      "kind": "consequence",
+      "role": {
+        "ja": "sofic群環のstable finitenessの対偶による非sofic性。",
+        "en": "Nonsoficity by contraposition of stable finiteness for sofic group algebras."
+      },
+      "hypotheses": "The coefficient field is a division ring, and a scalar one-sided inverse has nonzero reverse defect.",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "by": "author_det_odd (gpt-6-astra / high), with article author and independent reviewer records",
+        "date": "2026-10-18",
+        "records": [
+          "drafts/catalog-197/torsion-free-direct-finiteness/sources.json",
+          "drafts/catalog-197/overview/sources.json"
+        ],
+        "scope": "Input statement and use compared, not independent verification of the complete external proof."
+      },
+      "articleLinks": {
+        "from": {
+          "source": "https://arxiv.org/pdf/math/0305440v2"
+        },
+        "to": {
+          "ja": "/ja/papers/torsion-free-direct-finiteness/#dependencies",
+          "en": "/en/papers/torsion-free-direct-finiteness/#dependencies"
+        }
+      },
+      "unresolved": []
+    },
+    {
+      "id": "es04-direct-finiteness-characteristic-two-nonsofic",
+      "from": {
+        "paperId": "ES04",
+        "result": "Corollary 4.7",
+        "pages": "8",
+        "version": "arXiv:math/0305440v2, 2004-04-19",
+        "sourceUrl": "https://arxiv.org/pdf/math/0305440v2"
+      },
+      "to": {
+        "paperId": "direct-finiteness-characteristic-two",
+        "result": "Introduction consequence of Theorem 1.1",
+        "pages": "1–2",
+        "version": "September 23, 2026",
+        "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-Two-September-23-2026/paper.pdf"
+      },
+      "kind": "consequence",
+      "role": {
+        "ja": "sofic群環のstable finitenessの対偶による非sofic性。",
+        "en": "Nonsoficity by contraposition of stable finiteness for sofic group algebras."
+      },
+      "hypotheses": "The coefficient field is a division ring, and a scalar one-sided inverse has nonzero reverse defect.",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "by": "author_det_odd (gpt-6-astra / high), with article author and independent reviewer records",
+        "date": "2026-10-18",
+        "records": [
+          "drafts/catalog-197/direct-finiteness-characteristic-two/sources.json",
+          "drafts/catalog-197/overview/sources.json"
+        ],
+        "scope": "Input statement and use compared, not independent verification of the complete external proof."
+      },
+      "articleLinks": {
+        "from": {
+          "source": "https://arxiv.org/pdf/math/0305440v2"
+        },
+        "to": {
+          "ja": "/ja/papers/direct-finiteness-characteristic-two/#dependencies",
+          "en": "/en/papers/direct-finiteness-characteristic-two/#dependencies"
+        }
+      },
+      "unresolved": []
+    },
+    {
+      "id": "es04-direct-finiteness-odd-characteristic-nonsofic",
+      "from": {
+        "paperId": "ES04",
+        "result": "Corollary 4.7",
+        "pages": "8",
+        "version": "arXiv:math/0305440v2, 2004-04-19",
+        "sourceUrl": "https://arxiv.org/pdf/math/0305440v2"
+      },
+      "to": {
+        "paperId": "direct-finiteness-odd-characteristic",
+        "result": "Introduction consequence of Theorem 1.1",
+        "pages": "1–2",
+        "version": "September 26, 2026",
+        "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Odd-Characteristic-September-26-2026/paper.pdf"
+      },
+      "kind": "consequence",
+      "role": {
+        "ja": "sofic群環のstable finitenessの対偶による非sofic性。",
+        "en": "Nonsoficity by contraposition of stable finiteness for sofic group algebras."
+      },
+      "hypotheses": "The coefficient field is a division ring, and a scalar one-sided inverse has nonzero reverse defect.",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "by": "author_det_odd (gpt-6-astra / high), with article author and independent reviewer records",
+        "date": "2026-10-18",
+        "records": [
+          "drafts/catalog-197/direct-finiteness-odd-characteristic/sources.json",
+          "drafts/catalog-197/overview/sources.json"
+        ],
+        "scope": "Input statement and use compared, not independent verification of the complete external proof."
+      },
+      "articleLinks": {
+        "from": {
+          "source": "https://arxiv.org/pdf/math/0305440v2"
+        },
+        "to": {
+          "ja": "/ja/papers/direct-finiteness-odd-characteristic/#dependencies",
+          "en": "/en/papers/direct-finiteness-odd-characteristic/#dependencies"
+        }
+      },
+      "unresolved": []
+    },
+    {
+      "id": "es05-determinant-nonsofic",
+      "from": {
+        "paperId": "ES05",
+        "result": "Theorem 5",
+        "pages": "18",
+        "version": "arXiv:math/0408400v2, 2014-10-07",
+        "sourceUrl": "https://arxiv.org/pdf/math/0408400v2"
+      },
+      "to": {
+        "paperId": "group-ring-determinant",
+        "result": "§5 final paragraph",
+        "pages": "8",
+        "version": "September 23, 2026",
+        "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Counterexample-to-the-Group-Ring-Determinant-Conjecture-September-23-2026/paper.pdf"
+      },
+      "kind": "consequence",
+      "role": {
+        "ja": "正の整数行列A* Aへsofic行列式下界を適用して矛盾。",
+        "en": "Apply the sofic determinant lower bound to the positive integral matrix A* A."
+      },
+      "hypotheses": "A∈Mn(Z[G_D]); A* A positive self-adjoint; computed trace logarithm is strictly negative.",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "by": "author_det_odd (gpt-6-astra / high), with article author and independent reviewer records",
+        "date": "2026-10-18",
+        "records": [
+          "drafts/catalog-197/group-ring-determinant/sources.json",
+          "drafts/catalog-197/overview/sources.json"
+        ],
+        "scope": "Input statement and use compared, not independent verification of the complete external proof."
+      },
+      "articleLinks": {
+        "from": {
+          "source": "https://arxiv.org/pdf/math/0408400v2"
+        },
+        "to": {
+          "ja": "/ja/papers/group-ring-determinant/#dependencies",
+          "en": "/en/papers/group-ring-determinant/#dependencies"
+        }
+      },
+      "unresolved": []
+    },
+    {
+      "id": "two-comparison-torsion-free-direct-finiteness",
+      "from": {
+        "paperId": "direct-finiteness-characteristic-two",
+        "result": "Theorem 1.1",
+        "pages": "1",
+        "version": "September 23, 2026",
+        "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-Two-September-23-2026/paper.pdf"
+      },
+      "to": {
+        "paperId": "torsion-free-direct-finiteness",
+        "result": "Introduction comparison",
+        "pages": "2",
+        "version": "October 4, 2026",
+        "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Torsion-Free-Group-Algebra-That-Is-Not-Directly-Finite-October-4-2026/direct-finiteness.pdf"
+      },
+      "kind": "background",
+      "role": {
+        "ja": "別の係数条件・群・構成法との比較。証明入力ではない。",
+        "en": "Comparison of coefficient hypotheses, groups and constructions; not a proof input."
+      },
+      "hypotheses": "Comparison only: finite characteristic-two field and odd-order torsion versus the prime field F2 and a torsion-free group with finite 2-dimensional classifying complex. No proof-input transfer is asserted.",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "by": "author_det_odd (gpt-6-astra / high), with article author and independent reviewer records",
+        "date": "2026-10-18",
+        "records": [
+          "drafts/catalog-197/torsion-free-direct-finiteness/sources.json",
+          "drafts/catalog-197/overview/sources.json"
+        ],
+        "scope": "Input statement and use compared, not independent verification of the complete external proof."
+      },
+      "articleLinks": {
+        "from": {
+          "ja": "/ja/papers/direct-finiteness-characteristic-two/#theorem-1-1",
+          "en": "/en/papers/direct-finiteness-characteristic-two/#theorem-1-1"
+        },
+        "to": {
+          "ja": "/ja/papers/torsion-free-direct-finiteness/#proof-1",
+          "en": "/en/papers/torsion-free-direct-finiteness/#proof-1"
+        }
+      },
+      "unresolved": []
+    },
+    {
+      "id": "two-comparison-direct-finiteness-odd-characteristic",
+      "from": {
+        "paperId": "direct-finiteness-characteristic-two",
+        "result": "Theorem 1.1",
+        "pages": "1",
+        "version": "September 23, 2026",
+        "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-Two-September-23-2026/paper.pdf"
+      },
+      "to": {
+        "paperId": "direct-finiteness-odd-characteristic",
+        "result": "Introduction comparison",
+        "pages": "2",
+        "version": "September 26, 2026",
+        "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Odd-Characteristic-September-26-2026/paper.pdf"
+      },
+      "kind": "background",
+      "role": {
+        "ja": "別の係数条件・群・構成法との比較。証明入力ではない。",
+        "en": "Comparison of coefficient hypotheses, groups and constructions; not a proof input."
+      },
+      "hypotheses": "Comparison only: finite characteristic-two field versus a field of p^4 elements for one specified odd prime p. Distinct local constructions, no characteristic-two proof input.",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "by": "author_det_odd (gpt-6-astra / high), with article author and independent reviewer records",
+        "date": "2026-10-18",
+        "records": [
+          "drafts/catalog-197/direct-finiteness-odd-characteristic/sources.json",
+          "drafts/catalog-197/overview/sources.json"
+        ],
+        "scope": "Input statement and use compared, not independent verification of the complete external proof."
+      },
+      "articleLinks": {
+        "from": {
+          "ja": "/ja/papers/direct-finiteness-characteristic-two/#theorem-1-1",
+          "en": "/en/papers/direct-finiteness-characteristic-two/#theorem-1-1"
+        },
+        "to": {
+          "ja": "/ja/papers/direct-finiteness-odd-characteristic/#proof-1",
+          "en": "/en/papers/direct-finiteness-odd-characteristic/#proof-1"
+        }
+      },
+      "unresolved": []
+    }
+  ]
+}

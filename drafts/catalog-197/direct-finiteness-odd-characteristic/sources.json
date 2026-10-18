@@ -1,0 +1,207 @@
+{
+  "catalogId": "197",
+  "paperId": "direct-finiteness-odd-characteristic",
+  "title": "A Counterexample to Kaplansky’s Direct-Finiteness Conjecture in Odd Characteristic",
+  "displayName": "A Counterexample to Kaplansky’s Direct-Finiteness Conjecture in Odd Characteristic",
+  "authors": "OpenAI",
+  "version": "September 26, 2026",
+  "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Odd-Characteristic-September-26-2026/paper.pdf",
+  "pdfPages": 25,
+  "sha256": "dc312586744d8d1b4fe49672ee36323fd56328f7ff3b9d8a481ddfb12b6965fe",
+  "checkedOn": "2026-10-18",
+  "checkedLocations": [
+    {
+      "printedPage": "1",
+      "pdfPage": 1
+    },
+    {
+      "printedPage": "2",
+      "pdfPage": 2
+    },
+    {
+      "printedPage": "3",
+      "pdfPage": 3
+    },
+    {
+      "printedPage": "4",
+      "pdfPage": 4
+    },
+    {
+      "printedPage": "5",
+      "pdfPage": 5
+    },
+    {
+      "printedPage": "6",
+      "pdfPage": 6
+    },
+    {
+      "printedPage": "7",
+      "pdfPage": 7
+    },
+    {
+      "printedPage": "8",
+      "pdfPage": 8
+    },
+    {
+      "printedPage": "9",
+      "pdfPage": 9
+    },
+    {
+      "printedPage": "10",
+      "pdfPage": 10
+    },
+    {
+      "printedPage": "11",
+      "pdfPage": 11
+    },
+    {
+      "printedPage": "12",
+      "pdfPage": 12
+    },
+    {
+      "printedPage": "13",
+      "pdfPage": 13
+    },
+    {
+      "printedPage": "14",
+      "pdfPage": 14
+    },
+    {
+      "printedPage": "15",
+      "pdfPage": 15
+    },
+    {
+      "printedPage": "16",
+      "pdfPage": 16
+    },
+    {
+      "printedPage": "17",
+      "pdfPage": 17
+    },
+    {
+      "printedPage": "18",
+      "pdfPage": 18
+    },
+    {
+      "printedPage": "19",
+      "pdfPage": 19
+    },
+    {
+      "printedPage": "20",
+      "pdfPage": 20
+    },
+    {
+      "printedPage": "21",
+      "pdfPage": 21
+    },
+    {
+      "printedPage": "22",
+      "pdfPage": 22
+    },
+    {
+      "printedPage": "23",
+      "pdfPage": 23
+    },
+    {
+      "printedPage": "24",
+      "pdfPage": 24
+    },
+    {
+      "printedPage": "25",
+      "pdfPage": 25
+    }
+  ],
+  "production": {
+    "author": "B",
+    "model": "gpt-6-astra",
+    "reasoningEffort": "high",
+    "originalSourcesOnly": true
+  },
+  "statements": [
+    {
+      "result": "Theorem 1.1",
+      "pages": "1",
+      "checked": "Specified prime, field p^4, finitely generated torsion-containing group, finite formulas, scalar product and nonzero reversal checked."
+    },
+    {
+      "result": "Proposition 3.1",
+      "pages": "5",
+      "checked": "Both directed annihilations, all s, regular rank d/w>1/96, finite prescription checked."
+    },
+    {
+      "result": "Proposition 5.1",
+      "pages": "14",
+      "checked": "General coefficient hypotheses, countability, equal positive integer ranks, central nonzero sector with identity f, both rectangular identities and finite subgroups checked."
+    },
+    {
+      "result": "Proposition 8.1",
+      "pages": "23",
+      "checked": "Finite field, all configurations, injectivity, exact image and every missing delta checked."
+    }
+  ],
+  "proofPassages": [
+    {
+      "sections": "§§2–8",
+      "pages": "3–23",
+      "scope": "Read all proof passages; focus on local idempotents, spherical gluing reductions, modular stabilizer blocks, integer rank comparisons, triangular inverse, faithful scalar encoding and CA order."
+    }
+  ],
+  "externalSources": [
+    {
+      "id": "es04",
+      "displayName": "Sofic groups and direct finiteness",
+      "authors": "Gábor Elek; Endre Szabó",
+      "version": "arXiv:math/0305440v2, 2004-04-19, 9 pages",
+      "sourceUrl": "https://arxiv.org/pdf/math/0305440v2",
+      "pdfPages": 9,
+      "checkedLocations": [
+        {
+          "printedPage": "8",
+          "pdfPage": 8
+        }
+      ],
+      "checked": "Corollary4.7 statement directly read with Web PDF; reviewer independently confirmed. No full external proof verification."
+    }
+  ],
+  "dependencies": [
+    {
+      "id": "es04-odd-nonsofic",
+      "kind": "consequence",
+      "from": {
+        "paperId": "es04",
+        "result": "Corollary 4.7",
+        "pages": "8",
+        "version": "arXiv:math/0305440v2",
+        "sourceUrl": "https://arxiv.org/pdf/math/0305440v2"
+      },
+      "to": {
+        "paperId": "direct-finiteness-odd-characteristic",
+        "result": "§1 after Theorem1.1",
+        "pages": "1–2",
+        "version": "September 26, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Odd-Characteristic-September-26-2026/paper.pdf"
+      },
+      "role": "Sofic stable finiteness contradicts the completed scalar pair.",
+      "hypotheses": "K is a field hence division ring; G is the constructed group.",
+      "checking": "Statement and use checked, external proof not independently checked.",
+      "unresolved": []
+    }
+  ],
+  "background": [
+    {
+      "source": "Characteristic Two companion",
+      "relationship": "Independent comparison; explicitly not a proof input at p.2."
+    },
+    {
+      "sources": "Haviv; Golovnev–Haviv; Schwartz; Prytuła; Clifford; Kaplansky; Dykema–Juschenko",
+      "relationship": "Methodological antecedents. Required special cases proved locally; no additional theorem used without a local proof in the route explained here."
+    }
+  ],
+  "unresolved": [
+    "Spherical-map case analysis read, not independently formalized.",
+    "Finite prescriptions not executed.",
+    "External and background proofs not recursively verified.",
+    "No expert review or formal verification."
+  ]
+}

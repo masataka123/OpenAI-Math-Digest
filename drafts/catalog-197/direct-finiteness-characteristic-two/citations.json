@@ -1,0 +1,335 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "author-key",
+  "catalogId": "197",
+  "sources": {
+    "P": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "pagination": "same"
+    },
+    "Xyl11": {
+      "recordFile": "sources.json",
+      "recordId": "Xyl11",
+      "guideRole": {
+        "ja": "§5の一様な最小素数評価と§6の素数探索の停止",
+        "en": "Uniform least-prime bound in Section 5 and termination of the prime search in Section 6"
+      }
+    },
+    "ES04": {
+      "recordFile": "sources.json",
+      "recordId": "ES04",
+      "guideRole": {
+        "ja": "主定理から非sofic性を得る帰結",
+        "en": "Non-soficity as a consequence of the main theorem"
+      }
+    }
+  },
+  "citations": {
+    "main": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "ca": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Corollary 7.3",
+          "printed": "26",
+          "pdf": "26"
+        }
+      ]
+    },
+    "criterion": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 3.1",
+          "printed": "6",
+          "pdf": "6"
+        }
+      ]
+    },
+    "pairing": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 2.3",
+          "printed": "5–6",
+          "pdf": "5–6"
+        }
+      ]
+    },
+    "embedding": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 3.2",
+          "printed": "7–9",
+          "pdf": "7–9"
+        }
+      ]
+    },
+    "rectangular": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Section 4.1; Equation (4.4)",
+          "printed": "10",
+          "pdf": "10"
+        }
+      ]
+    },
+    "packing": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Sections 4.2–4.3; Equations (4.5)–(4.13)",
+          "printed": "10–12",
+          "pdf": "10–12"
+        }
+      ]
+    },
+    "defect": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Section 4.4; Equations (4.14)–(4.17)",
+          "printed": "12",
+          "pdf": "12"
+        }
+      ]
+    },
+    "scalar": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Section 4.5; Equations (4.18)–(4.25)",
+          "printed": "13–14",
+          "pdf": "13–14"
+        }
+      ]
+    },
+    "finite": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Section 4.6",
+          "printed": "14",
+          "pdf": "14"
+        }
+      ]
+    },
+    "geometry": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 5.1",
+          "printed": "15",
+          "pdf": "15"
+        }
+      ]
+    },
+    "holes": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemmas 5.2–5.4",
+          "printed": "15–18",
+          "pdf": "15–18"
+        }
+      ]
+    },
+    "slabs": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemmas 5.5–5.7",
+          "printed": "19–21",
+          "pdf": "19–21"
+        }
+      ]
+    },
+    "trade": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemmas 5.8–5.9; proof of Theorem 5.1",
+          "printed": "21–22",
+          "pdf": "21–22"
+        }
+      ]
+    },
+    "recipe": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Section 6; Equation (6.2)",
+          "printed": "22–24",
+          "pdf": "22–24"
+        }
+      ]
+    },
+    "action": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 7.1",
+          "printed": "25",
+          "pdf": "25"
+        }
+      ]
+    },
+    "image": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 7.2",
+          "printed": "26",
+          "pdf": "26"
+        }
+      ]
+    },
+    "linnik": {
+      "source": "Xyl11",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "66",
+          "pdf": "2"
+        }
+      ]
+    },
+    "sofic": {
+      "source": "ES04",
+      "locations": [
+        {
+          "result": "Corollary 4.7",
+          "printed": "8",
+          "pdf": "8"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ],
+  "articleGuides": {
+    ".": {
+      "selfSource": "P",
+      "externalSources": [
+        "Xyl11",
+        "ES04"
+      ],
+      "mainResults": [
+        "main",
+        "ca"
+      ],
+      "proofTargets": [
+        "main",
+        "criterion",
+        "geometry",
+        "ca"
+      ],
+      "statements": {
+        "main": "theorem-1-1",
+        "ca": "corollary-7-3",
+        "criterion": "theorem-3-1",
+        "geometry": "theorem-5-1"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "main",
+          "conclusion": "finite characteristic-two field and terminating prescription",
+          "anchor": "proof-overview-step-2"
+        },
+        {
+          "result": "main",
+          "conclusion": "scalar forward identity and nonzero reverse defect",
+          "anchor": "proof-1-step-3"
+        },
+        {
+          "result": "main",
+          "conclusion": "finite presentation and odd prime torsion",
+          "anchor": "proof-1-step-3"
+        },
+        {
+          "result": "ca",
+          "conclusion": "injectivity",
+          "anchor": "proof-3-step-1"
+        },
+        {
+          "result": "ca",
+          "conclusion": "nonsurjectivity and exact image",
+          "anchor": "proof-3-step-2"
+        },
+        {
+          "result": "ca",
+          "conclusion": "non-surjunctivity",
+          "anchor": "proof-3-step-2"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "pairing",
+          "purpose": {
+            "ja": "穴の補間から二つのpairingを得る。",
+            "en": "Obtain both pairings by interpolation at the holes."
+          }
+        },
+        {
+          "citation": "criterion",
+          "purpose": {
+            "ja": "incidence条件とサイズ不等式の役割。",
+            "en": "Separate incidence conditions and the size inequalities."
+          }
+        },
+        {
+          "citation": "defect",
+          "purpose": {
+            "ja": "部分群環に戻して逆積欠損を検出する。",
+            "en": "Return to the subgroup algebra to detect the reverse defect."
+          }
+        },
+        {
+          "citation": "scalar",
+          "purpose": {
+            "ja": "matrix unitsと補助単位元でscalar化する。",
+            "en": "Use matrix units and the complementary identity to obtain scalars."
+          }
+        },
+        {
+          "citation": "geometry",
+          "purpose": {
+            "ja": "正則性を保つtradeとgirth排除。",
+            "en": "Trades preserving degree and exclusion of short cycles."
+          }
+        },
+        {
+          "citation": "recipe",
+          "purpose": {
+            "ja": "有限探索の停止と有限式の指定。",
+            "en": "Termination of finite search and specification of finite expressions."
+          }
+        },
+        {
+          "citation": "image",
+          "purpose": {
+            "ja": "全configuration上の像と欠ける点指示関数。",
+            "en": "The image on all configurations and a missing point indicator."
+          }
+        }
+      ]
+    }
+  }
+}

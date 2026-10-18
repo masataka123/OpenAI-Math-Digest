@@ -1,0 +1,47 @@
+{
+  "requestedModel": "gpt-6-astra",
+  "requestedReasoningEffort": "high",
+  "agents": [
+    {
+      "agent": "author_direct",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "high",
+      "fork_turns": "none",
+      "role": "公式順1・2の執筆"
+    },
+    {
+      "agent": "author_det_odd",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "high",
+      "fork_turns": "none",
+      "role": "公式順3・4とカタログ案内の執筆"
+    },
+    {
+      "agent": "reviewer",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "high",
+      "fork_turns": "none",
+      "role": "全4本と案内の別担当内容点検"
+    }
+  ],
+  "headquarters": "root: 台帳・受領・統一編集管理・機械検査・画面比較・引継ぎ。数学的執筆と内容点検は上記指定担当へ委任。",
+  "recordedAt": "2026-10-18T13:11:00+09:00",
+  "stage2": {
+    "siteHq": "root: integration, execution, UI and artifact consistency checks; no new mathematical exposition",
+    "pdfReview": [
+      {
+        "agent": "reviewer",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "high",
+        "scope": "Japanese final booklet layout and source-to-output consistency"
+      },
+      {
+        "agent": "author_direct",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "high",
+        "scope": "English final booklet layout and source-to-output consistency; not an additional independent mathematical review"
+      }
+    ],
+    "dispatch": "Existing explicitly configured agents resumed with followup_task; model settings retained"
+  }
+}

@@ -1,0 +1,294 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "author-key",
+  "catalogId": "197",
+  "sources": {
+    "P": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "pagination": "same"
+    },
+    "LT79": {
+      "recordFile": "sources.json",
+      "recordId": "LT79",
+      "guideRole": {
+        "ja": "Lemma 5.5の平面分離。必要statementは出版社Abstractで確認、外部PDF本文・ページ対応は未確認",
+        "en": "Planar separation in Lemma 5.5; required statement checked in the publisher abstract, external PDF text and pagination unverified"
+      }
+    },
+    "Hat02": {
+      "recordFile": "sources.json",
+      "recordId": "Hat02",
+      "guideRole": {
+        "ja": "§6のHurewicz・Whiteheadによる可縮性",
+        "en": "Hurewicz and Whitehead for contractibility in Section 6"
+      }
+    },
+    "ES04": {
+      "recordFile": "sources.json",
+      "recordId": "ES04",
+      "guideRole": {
+        "ja": "主定理から非sofic性を導く帰結だけに使用",
+        "en": "Used only to infer non-soficity as a consequence of the main theorem"
+      }
+    }
+  },
+  "citations": {
+    "main": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "parity": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 2.1",
+          "printed": "3–4",
+          "pdf": "3–4"
+        }
+      ]
+    },
+    "types": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 3.1",
+          "printed": "5–6",
+          "pdf": "5–6"
+        }
+      ]
+    },
+    "weights": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 3.2; Lemma 3.3",
+          "printed": "7–9",
+          "pdf": "7–9"
+        }
+      ]
+    },
+    "bounded": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 4.1",
+          "printed": "10–11",
+          "pdf": "10–11"
+        }
+      ]
+    },
+    "stages": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 4.3; Section 4.3–4.4",
+          "printed": "12–18",
+          "pdf": "12–18"
+        }
+      ]
+    },
+    "exclude": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 5.2",
+          "printed": "19",
+          "pdf": "19"
+        }
+      ]
+    },
+    "extraction": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemmas 5.3–5.5; Section 5.4",
+          "printed": "19–24",
+          "pdf": "19–24"
+        }
+      ]
+    },
+    "separator-use": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 5.5",
+          "printed": "22",
+          "pdf": "22"
+        }
+      ]
+    },
+    "cone": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 6.1",
+          "printed": "24–25",
+          "pdf": "24–25"
+        }
+      ]
+    },
+    "surgery": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Section 6.2; Equations (6.1)–(6.3)",
+          "printed": "26–29",
+          "pdf": "26–29"
+        }
+      ]
+    },
+    "aspherical": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Section 6.3",
+          "printed": "29–30",
+          "pdf": "29–30"
+        }
+      ]
+    },
+    "completion": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Section 7",
+          "printed": "30",
+          "pdf": "30"
+        }
+      ]
+    },
+    "hurewicz": {
+      "source": "Hat02",
+      "locations": [
+        {
+          "result": "Theorem 4.32",
+          "printed": "366",
+          "pdf": "375"
+        }
+      ]
+    },
+    "whitehead": {
+      "source": "Hat02",
+      "locations": [
+        {
+          "result": "Theorem 4.5",
+          "printed": "346",
+          "pdf": "355"
+        }
+      ]
+    },
+    "sofic": {
+      "source": "ES04",
+      "locations": [
+        {
+          "result": "Corollary 4.7",
+          "printed": "8",
+          "pdf": "8"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ],
+  "articleGuides": {
+    ".": {
+      "selfSource": "P",
+      "externalSources": [
+        "LT79",
+        "Hat02",
+        "ES04"
+      ],
+      "proofTargets": [
+        "main",
+        "parity",
+        "exclude",
+        "cone"
+      ],
+      "mainResults": [
+        "main"
+      ],
+      "statements": {
+        "main": "theorem-1-1",
+        "parity": "proposition-2-1",
+        "exclude": "theorem-5-2",
+        "cone": "proposition-6-1"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "main",
+          "conclusion": "ab=1",
+          "anchor": "proof-1-step-1"
+        },
+        {
+          "result": "main",
+          "conclusion": "ac=0 and c≠0",
+          "anchor": "proof-1-step-2"
+        },
+        {
+          "result": "main",
+          "conclusion": "ba≠1",
+          "anchor": "proof-overview-step-2"
+        },
+        {
+          "result": "main",
+          "conclusion": "finite presentation and torsion-freeness",
+          "anchor": "proof-3-step-2"
+        },
+        {
+          "result": "main",
+          "conclusion": "finite two-dimensional classifying complex",
+          "anchor": "proof-3-step-2"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "parity",
+          "purpose": {
+            "ja": "同期歩行のparityと恒等元係数の計算。",
+            "en": "Simultaneous-step parity and the identity coefficient."
+          }
+        },
+        {
+          "citation": "bounded",
+          "purpose": {
+            "ja": "εを先に固定する量化と重複edgeの扱い。",
+            "en": "The quantifier order and repeated graph edges."
+          }
+        },
+        {
+          "citation": "extraction",
+          "purpose": {
+            "ja": "任意サイズの球面配置から有界clusterを抽出する。",
+            "en": "Extract a bounded cluster from an arbitrarily large arrangement."
+          }
+        },
+        {
+          "citation": "surgery",
+          "purpose": {
+            "ja": "root endpointsとessential sphereを保つcone surgery。",
+            "en": "Cone surgeries preserving root endpoints and an essential sphere."
+          }
+        },
+        {
+          "citation": "completion",
+          "purpose": {
+            "ja": "選んだ有限matchingから主定理へ組み立てる。",
+            "en": "Assemble the selected finite matching into the theorem."
+          }
+        }
+      ]
+    }
+  }
+}

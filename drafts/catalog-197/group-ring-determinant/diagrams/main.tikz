@@ -1,0 +1,7 @@
+\node[card] (a) {\heading{1}{標数2のscalar入力}{Scalar input in characteristic two}$a_2b_2=1\ne b_2a_2$ in $K_2[H_2]$, $d=[K_2:\mathbb F_2]$.};
+\node[card,below=1.65cm of a] (b) {\heading{2}{二進欠損を実trace差へ}{Binary defect to excess real trace}$G_D=(\bigoplus_{H_2}C_3)\rtimes H_2$, $P\in M_{d+1}(\mathbb Z[1/3][G_D])$.\\$P=P^*=P^2$, $\tau(P)=d+\theta$, $\bar P=uv$ \Tx{（$d$列経由）}{(through $d$ columns)}.};
+\node[card,below=1.65cm of b] (c) {\heading{3}{整数行列と有理逆元}{Integral matrix and rational inverse}$q=2^k\equiv1\pmod{3^{1+|S|}}$, $q>1$.\\$A\in M_{2d+1}(\mathbb Z[G_D])$, $A^{-1}\in M_{2d+1}(\mathbb Q[G_D])$.};
+\node[result,below=1.65cm of c] (d) {\heading{4}{全結論}{All conclusions}$\det_{\mathcal N(G_D)}(T_A)=q^{-\theta}\in(0,1)$, $\theta=\frac13(\frac23)^{|S|}>0$.\\$\displaystyle\int\log t\,d\mu_A=-\frac{2\theta\log q}{2d+1}>-\infty$.\\\Tx{$H_2$の生成系と$z_1$で$G_D$を有限生成。}{A generating set of $H_2$ together with $z_1$ generates $G_D$.}};
+\flow a b {\Tx{係数制限と、巡回座標での一係数分離}{Restrict coefficients and separate one coefficient using cyclic coordinates}\\\Cite{input}; \Cite{restriction}; \Cite{projection}};
+\flow b c {\Tx{mod $q$へ持上げ、分母を消す}{Lift modulo $q$ and cancel denominators}\\\Cite{lifting}};
+\flow c d {\Tx{shearを除き、trace差を計算する}{Remove shears and compute the trace difference}\\\Cite{formula}; \Cite{assembly}};

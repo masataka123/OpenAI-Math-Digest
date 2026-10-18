@@ -1,0 +1,7 @@
+\node[card] (a) {\heading{1}{指定体と二つの厳密な比}{Specified field and two strict ratios}$p=\min\{h>1:h\mid(m!)^2+1\}$, $|K|=p^4$, $m=\binom{1200}{600}$.\\$F=\alpha\beta^{\mathsf T}$, $t/m<1/100$; $e^2=e\in K[H]$, $d/w>1/96$.};
+\node[card,below=1.6cm of a] (b) {\heading{2}{有限群を保持して共通環へ}{Preserve finite groups and pass to one ring}$H_i\hookrightarrow G_0\hookrightarrow G_1$, $S=fK[G_1]$, $f\ne0$.\\$P_iP_j=0$ \Tx{（辺$i<j$のみ）}{(edges $i<j$ only)}, $Y_iJ_i=fI_d$, $J_iY_i=P_iI_w$.};
+\node[card,below=1.6cm of b] (c) {\heading{3}{三角圧縮と非零欠損}{Triangular compression and a nonzero defect}$D^\sharp C^\sharp=fI_{md}$, $r=wt<md$.\\$A_RB_R=I_r$, $(B_RA_R-I_r)v_*=-v_*\ne0$.};
+\node[result,below=1.6cm of c] (d) {\heading{4}{有限群因子でscalar化}{Scalarize using a finite group factor}$\Phi:M_n(K[G_1])\hookrightarrow K[G_1\times\Lambda]$, $g=\Phi(I_n)$.\\$a=1-g+\Phi(\widetilde A_R)$, $b=1-g+\Phi(\widetilde B_R)$: $ab=1\ne ba$.\\\Tx{$G=G_1\times\Lambda$は有限生成でtorsionを含む。}{The group $G=G_1\times\Lambda$ is finitely generated and contains torsion.}};
+\flow a b {\Tx{向き付き消滅、球面接着、central sectorのrank実現}{Directed annihilations, spherical gluing, and central-sector rank realization}\\\Cite{annihilation}; \Cite{gluing}; \Cite{sector}};
+\flow b c {\Tx{厳密下三角部分を有限級数で除き、核ベクトルを取る}{Remove the strictly triangular part by a finite series and use a kernel vector}\\\Cite{compression}};
+\flow c d {\Tx{独立な行列単位と補単位で欠損を保つ}{Independent matrix units and the complementary identity preserve the defect}\\\Cite{scalar}; \Cite{assembly}};

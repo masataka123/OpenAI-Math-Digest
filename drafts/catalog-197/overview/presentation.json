@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-10-18",
+  "rows": [
+    {
+      "paperId": "torsion-free-direct-finiteness",
+      "displayName": "Torsion-free direct finiteness",
+      "result": "Theorem 1.1 · p. 1",
+      "claim": {
+        "ja": "有限表示torsion-free群Gとa,b,c∈F₂[G]でab=1、ac=0、c≠0（従ってba≠1）。有限2次元分類複体を持つ。",
+        "en": "A finitely presented torsion-free G and a,b,c∈F₂[G] satisfy ab=1, ac=0, c≠0, hence ba≠1. G has a finite two-dimensional classifying complex."
+      },
+      "role": {
+        "ja": "同期歩行のparityをcone複体・配置排除と結び、非零係数とtorsion-free性を別々に保証する独立構成。",
+        "en": "An independent construction combining simultaneous-walk parity with cone complexes and arrangement exclusion, separately securing a nonzero coefficient and torsion-freeness."
+      }
+    },
+    {
+      "paperId": "direct-finiteness-characteristic-two",
+      "displayName": "Direct finiteness in characteristic two",
+      "result": "Theorem 1.1 · p. 1; Corollary 7.3 · p. 26",
+      "claim": {
+        "ja": "ある有限標数2体Kと、奇素数位数のtorsionを持つ有限表示群Gでscalar対ab=1≠baを構成。全配置上の単射非全射CAも得る。",
+        "en": "A scalar pair ab=1≠ba over a finite characteristic-two field K and a finitely presented group with odd-prime torsion; also an injective nonsurjective CA on all configurations."
+      },
+      "role": {
+        "ja": "穴あき有限幾何のpairing→埋込み→character packing→scalar化。行列式論文に使われる標数2入力を供給。",
+        "en": "Punctured finite-geometry pairings, embeddings, character packing, and scalarization; supplies the characteristic-two input used by the determinant paper."
+      }
+    },
+    {
+      "paperId": "group-ring-determinant",
+      "displayName": "Group-ring determinant",
+      "result": "Theorem 1.1 · p. 2",
+      "claim": {
+        "ja": "有限生成G_D上の整数群環行列AがQ[G_D]上可逆で、Fuglede–Kadison行列式は0と1の間。対数積分は有限かつ負。",
+        "en": "An integral group-ring matrix over finitely generated G_D is invertible over Q[G_D], has Fuglede–Kadison determinant strictly between 0 and 1, and has a finite negative logarithmic integral."
+      },
+      "role": {
+        "ja": "第2論文のscalar欠損→二進因子分解と実trace差→mod 2^k持上げ→整数行列の行列式。",
+        "en": "Turns paper 2’s scalar defect into a binary factorization/real-trace gap, lifts modulo 2^k, and calculates an integral-matrix determinant."
+      }
+    },
+    {
+      "paperId": "direct-finiteness-odd-characteristic",
+      "displayName": "Direct finiteness in odd characteristic",
+      "result": "Theorem 1.1 · p. 1; Proposition 8.1 · p. 23",
+      "claim": {
+        "ja": "一つの指定された奇素数p、位数p⁴の体K、torsionを含む有限生成群Gにscalar対ab=1≠baを構成。全配置上の単射非全射CAを得る。",
+        "en": "For one specified odd prime p, a field K of order p⁴ and a finitely generated group containing torsion admit a scalar pair ab=1≠ba and an injective nonsurjective CA on all configurations."
+      },
+      "role": {
+        "ja": "高次数modular表現の冪等元→共通central sector→向き付き三角圧縮→有限群因子でscalar化。標数2論文への依存なし。",
+        "en": "High-degree modular idempotents, a common central sector, directed triangular compression, and finite-factor scalarization; does not depend on the characteristic-two paper."
+      }
+    }
+  ]
+}

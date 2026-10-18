@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+\node[card] (a) {\heading{1}{失敗を最短cone pictureで表す}{Represent a failure by a shortest cone picture}$\pi_2(X)\ne0$\quad\Tx{または根保護が失敗}{or root protection fails}};
+\node[card,below=2.1cm of a] (b) {\heading{2}{同じedgeの対をband surgeryで消す}{Remove same-edge pairs by band surgery}\Tx{根の端点を保持、球面のessentialityを保持}{Preserve root endpoints and an essential sphere}\\$[\widetilde f]=[\widetilde f_1]+[\widetilde f_2]\quad\text{in }H_2(\widetilde X)$};
+\flow{a}{b}{\Tx{同じ抽象coneのliftで二つのcapを埋める}{Use the same abstract-cone lift for both caps}\\\Cite{surgery}};
+\node[card,below=2.1cm of b] (c) {\heading{3}{最小性から禁止配置を得る}{Minimality produces a forbidden arrangement}\Tx{各対が異なるunderlying edgeを通る}{Each pair traverses distinct underlying edges}\\\Tx{配置なし}{No arrangement}$\ \Longrightarrow\ \pi_2(X)=0$\quad+\quad\Tx{根保護}{root protection}};
+\flow{b}{c}{\Tx{手術が総長を減らすため同じedgeの対は残れない}{Shortening forbids every same-edge pair}\\\Cite{cone}\\\Cite{surgery}};
+\node[result,below=2.4cm of c] (d) {\heading{4}{可縮普遍被覆と捩れなし性}{Contractible universal cover and torsion-freeness}$\widetilde X\simeq *$;\\$C_\ell\le G\ \Longrightarrow\ H^k(C_\ell;\mathbb F_\ell)=0\ (k>2)$\\\Tx{周期resolutionの非消滅と矛盾}{Contradicts nonvanishing from the periodic resolution}};
+\flow{c}{d}{\Tx{次元高々2、Hurewicz・Whitehead、自由resolution}{Dimension at most two, Hurewicz--Whitehead, free resolution}\\\Cite{aspherical}};
+\end{tikzpicture}

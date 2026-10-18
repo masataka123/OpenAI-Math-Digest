@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+\node[card] (a) {\heading{1}{一様な次元上界を得る}{Obtain a uniform dimension bound}$\ell\equiv-1\pmod{q^{100}}$,\quad$\ell\le Cq^{100L}$\\$s=\lfloor\log_q(\ell+1)\rfloor$,\quad$n=10(s+20)=O(1)$};
+\node[card,below=2.4cm of a] (b) {\heading{2}{両立する穴とdirection spacesを選ぶ}{Choose compatible holes and direction spaces}$2q^n/D^2\le|O|\le7q^n/D^2$\\\Tx{translate内の衝突とreplacement rectangleを排除}{Exclude translate collisions and replacement rectangles}};
+\flow{a}{b}{\Tx{最小素数の一様評価、Vandermonde配置、穴の削除}{Uniform least-prime bound, Vandermonde spaces, deletion of holes}\\\Cite{linnik}\\\Cite{holes}};
+\node[card,below=2.2cm of b] (c) {\heading{3}{ランダムslabで短polygonを排除}{Exclude short polygons with random slabs}\Tx{各eventは高々4変数に依存}{Each event uses at most four variables}\\$\max_{P_{j,C}}\sum_{A\ni P_{j,C}}\Pr(A)=O(q^{-7})<1/16$};
+\flow{b}{c}{\Tx{三角形・四角形・五角形の型分けとlocal lemma}{Classify polygons of lengths three to five and use the local lemma}\\\Cite{slabs}};
+\node[result,below=2.2cm of c] (d) {\heading{4}{fanを平行線へ交換して次数を保存}{Trade fans for parallel lines while preserving degree}$q\ \text{fan lines}\ \longmapsto\ q-1\ \text{parallel lines}$\\\Tx{穴を除き、各点次数$D$とgirth$\ge12$を得る}{Remove holes; retain degree $D$ and girth $\ge12$}};
+\flow{c}{d}{\Tx{非穴点のincidenceは一つずつ減増または不変}{At each non-hole point, one incidence is lost and gained, or neither}\\\Cite{trade}};
+\end{tikzpicture}

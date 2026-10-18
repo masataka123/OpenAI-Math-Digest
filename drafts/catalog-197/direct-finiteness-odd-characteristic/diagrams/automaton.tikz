@@ -1,0 +1,5 @@
+\node[card] (a) {\heading{1}{scalar対から全配置への作用}{From scalar elements to all configurations}$ab=1$, $(T_cx)(g)=\sum_uc_ux(gu)$, $x\in k^L$.};
+\node[card,below=1.5cm of a] (b) {\heading{2}{有限memoryと左逆写像}{Finite memory and a left inverse}$T_cT_d=T_{cd}$, $T_aT_b=\operatorname{id}$.\\\Tx{$T_b$は単射cellular automaton。}{The map $T_b$ is an injective cellular automaton.}};
+\node[result,below=1.5cm of b] (c) {\heading{3}{固定点条件と欠ける配置}{Fixed-point condition and missing configurations}$\operatorname{im}T_b=\{y:T_{ba}y=y\}$.\\$(T_{ba}\delta_h-\delta_h)(1)=(ba-1)_h\ne0\Rightarrow\delta_h\notin\operatorname{im}T_b$.\\\Tx{無限台の原像を許しても像に入らない。}{Even infinitely supported preimages are excluded.}};
+\flow a b {\Tx{有限和を積の順序どおりに展開する}{Expand the finite sums in the actual multiplication order}\\\Cite{automaton}};
+\flow b c {\Tx{$y=T_bx$の必要十分条件を求め、非零係数で検出する}{Characterize $y=T_bx$ and detect failure with a nonzero coefficient}\\\Cite{automaton}};

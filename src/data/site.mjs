@@ -17,6 +17,7 @@ import inventory074 from '../../coordination/catalog-074/inventory.json' with { 
 import inventory087 from '../../coordination/catalog-087/inventory.json' with { type: 'json' };
 import inventory159 from '../../coordination/catalog-159/inventory.json' with { type: 'json' };
 import inventory187 from '../../coordination/catalog-187/inventory.json' with { type: 'json' };
+import inventory197 from '../../coordination/catalog-197/inventory.json' with { type: 'json' };
 import inventory246 from '../../coordination/catalog-246/inventory.json' with { type: 'json' };
 import inventory285 from '../../coordination/catalog-285/inventory.json' with { type: 'json' };
 import inventory287 from '../../coordination/catalog-287/inventory.json' with { type: 'json' };
@@ -71,7 +72,7 @@ const fieldTranslations = [
   {
     "id": "algebra",
     "ja": "代数学",
-    "catalogIds": []
+    "catalogIds": ["197"]
   },
   {
     "id": "probability-statistical-mechanics",
@@ -216,6 +217,10 @@ export const papers = [...inventory004.manuscripts.map(entry => ({
 })), ...inventory187.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '187', sourceCommit: inventory187.sourceCommit,
  title: entry.title, path: entry.sourceUrl.split('/preprints/')[1], version: entry.version,
+ pages: entry.pdfPages, order: entry.order, featured: true,
+})), ...inventory197.manuscripts.map(entry => ({
+ id: entry.paperId, catalogId: '197', sourceCommit: inventory197.sourceCommit,
+ title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
  pages: entry.pdfPages, order: entry.order, featured: true,
 })), ...inventory246.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '246', sourceCommit: inventory246.sourceCommit,
@@ -366,6 +371,13 @@ export const catalogs = [{
   description: text('条件付き勝利局面の合成と有限証明書から、Snakyを高々21回のMaker着手で達成する方策と有限盤への移行を読む。', 'Follow conditional-win composition and a finite certificate to one policy forcing Snaky within 21 Maker claims and its transfer to finite boards.'),
   paperIds: inventory187.manuscripts.map(p => p.paperId),
   overviewSectionIds: ['papers', 'connections', 'sources'],
+}, {
+  id: '197', sourceCommit: inventory197.sourceCommit, mode: 'multi',
+  title: text(inventory197.titleJa, inventory197.overviewTitle),
+  contentsTitle: inventory197.contentsTitle,
+  description: text('非sofic群と群環の反例を扱う4篇の証明概説。', 'Four proof overviews on nonsofic groups and group-ring counterexamples.'),
+  paperIds: inventory197.manuscripts.map(p => p.paperId),
+  overviewSectionIds: ['papers', 'connections', 'reading', 'sources'],
 }, {
   id: '246', sourceCommit: inventory246.sourceCommit, mode: 'single',
   title: text(inventory246.titleJa, inventory246.overviewTitle),
