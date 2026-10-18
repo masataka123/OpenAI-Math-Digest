@@ -1,9 +1,9 @@
-# カタログ197 公開チェックリスト（第2段階完了）
+# カタログ197 公開チェックリスト（第3段階完了）
 
-制作セット1.4 / production/RELEASE_CHECKLIST.md。2026-10-18、root受領。ユーザーの第2段階指示により、公開前まで完了。第1段階時点の本書はstage2/RELEASE_CHECKLIST.stage1.mdへ履歴保存。
+制作セット1.4 / production/RELEASE_CHECKLIST.md。2026-10-18、root受領。ユーザーの第3段階指示により、公開・反映確認まで完了。第1段階時点の本書はstage2/RELEASE_CHECKLIST.stage1.mdへ履歴保存。
 
 - 対象：197、multi、公式順4論文。カタログ本部・サイト本部：root。
-- 最新引継ぎ：stage2/HANDOFF_STAGE3.md。成果物・ハッシュ・ログ・第3段階手順を記載。
+- 最新公開報告：stage3/PUBLICATION_REPORT.md。成果物・ハッシュ・ログ・公開commitを記載。
 - 数学的執筆・内容点検：指定gpt-6-astra/high。第1段階の担当と範囲はmodel-provenance.json / reviews/CONTENT_REVIEW.md。
 - 第2段階紙面：日本語reviewer、英語author_direct。両者同指定設定。点検の独立性・範囲はstage2/PDF_REVIEW_JA.md / PDF_REVIEW_EN.md。
 
@@ -11,7 +11,7 @@
 
 - [x] 第1段階：記事・原典台帳・独立担当の内容点検・日英案内を完了して停止。STAGE1_COMPLETION.json。
 - [x] 第2段階：サイト組込み・日英PDF・公開前検査を完了して停止。STAGE2_COMPLETION.json。
-- [ ] 第3段階：公開指示待ち。commit・push・公開・反映確認は未実施。
+- [x] 第3段階：commit・push・Actions成功・公開反映確認を完了。STAGE3_COMPLETION.json。
 
 ## 内容と形式（第1段階の受領結果を維持）
 
@@ -58,14 +58,14 @@
 
 生成手順と注釈補完の再適用手順はstage2/HANDOFF_STAGE3.md。紙面生成の成功だけを目視点検の代わりにしていない。
 
-## 公開（第3段階・依頼範囲外）
+## 公開（第3段階完了、root、2026-10-18）
 
-- [ ] 公開指示を受け、最新Git状態と197対象差分を確認。
-- [ ] 他担当差分を分離して必要ファイルをcommit/push。
-- [ ] GitHub Actionsのbuild/deploy成功を確認。
-- [ ] 公開サイトで日英案内・4記事・画像・TeX・PDFの今回版を照合。
-- [ ] 公開URL・commit・検査結果・数学的未確認範囲を報告。
+- [x] 公開指示を受け、最新Git状態と197対象差分を確認。stage3/START.json / staged-audit.json。
+- [x] 他担当差分を分離してcommit/push。公開commit 5f9ec8a。
+- [x] GitHub Actionsのbuild/deploy成功を確認。run 39099005744、actions-runs.json / actions-jobs.json。
+- [x] 公開サイトで日英案内・4記事・画像・TeX・PDFの今回版を照合。80件SHA一致、28表示、図操作64回。
+- [x] 公開URL・commit・検査結果・数学的未確認範囲をstage3/PUBLICATION_REPORT.mdに記録。
 
 ## 残作業と限界
 
-制作上の第2段階未完項目はない。第3段階の公開・反映確認は明示指示待ち。LT79本文/頁対応、確率・位相・有限blockの完全独立再計算、有限処方実行、外部証明の再帰検証は未実施のまま。標数2Cor7.4/type-F∞埋込みは確認済み主要結果外。詳細はSITE_HQ_HANDOFF.mdの数学的確認範囲と各記事。専門家査読や全証明の検証を完了したという意味ではない。
+制作・公開の残作業はない。第3段階の公開・反映確認を完了。LT79本文/頁対応、確率・位相・有限blockの完全独立再計算、有限処方実行、外部証明の再帰検証は未実施のまま。標数2Cor7.4/type-F∞埋込みは確認済み主要結果外。詳細はSITE_HQ_HANDOFF.mdの数学的確認範囲と各記事。専門家査読や全証明の検証を完了したという意味ではない。

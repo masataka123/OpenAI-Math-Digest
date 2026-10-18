@@ -1,3 +1,9 @@
+# 最新状態：第3段階完了・公開確認済み
+
+2026-10-18、公開commit `5f9ec8ad432ebcd3745af185c523d83ca390b581`。Actions build/deploy成功、公開80ファイルのハッシュ一致、日英28表示・図拡大64回を確認。日英PDFを含め公開の残作業なし。[公開報告](stage3/PUBLICATION_REPORT.md)と[完了記録](STAGE3_COMPLETION.json)を参照。以下は過去段階の引継ぎ履歴。数学的未確認範囲は維持する。
+
+---
+
 # 最新状態：第2段階完了・公開前で停止
 
 2026-10-18、サイト組込み・日英PDF（日本語51頁／英語54頁、各5章16図）・公開前検査を完了。commit・push・公開は未実施。最新の成果物・検査結果・第3段階再開手順は [stage2/HANDOFF_STAGE3.md](stage2/HANDOFF_STAGE3.md)、状態は [RELEASE_CHECKLIST.md](RELEASE_CHECKLIST.md) を参照。以下は第1段階終了時の引継ぎを履歴として保持する。
