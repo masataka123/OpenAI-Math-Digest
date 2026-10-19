@@ -1,0 +1,22 @@
+\node[card] (a) {\heading{1}{全尺度の開調和座標を作る}{Construct open harmonic coordinates at every scale}
+$u:B_1(p)\overset{\sim}{\longrightarrow}\Omega\subset\mathbb R^n$,\quad $R_i=\frac1{m(B_{r_i})}\int_{B_{r_i}}G>0$,\quad $r_i=2^{-i}$};
+\node[half,anchor=north west] (b) at ($(a.south west)+(0,-2.1)$) {\heading{2A}{累積伸長を測る}{Measure accumulated stretching}
+$H_i=Q_i^{-1}\le H_{i+1}$\\[4pt]
+$I+\sum_{i<k}Z_i\lesssim H_k$\\[4pt]
+$H_k\lesssim I+\sum_{i<k}S_i$};
+\node[half,anchor=north east] (c) at ($(a.south east)+(0,-2.1)$) {\heading{2B}{実際の差に評価する}{Test actual differences}
+$D_{i,y}[u(x)-u(z)]$\\[4pt]
+$\le Cr_i^2(E_i(x)+E_i(z))$,\quad $\sup_x\sum_iE_i(x)\le\varepsilon$};
+\draw[edge] ($(a.south west)+(.25,0)$)--($(b.north west)+(.25,0)$);
+\draw[edge] ($(a.south)+(.7,0)$)--($(c.north west)+(.25,0)$);
+\node[branchreason,anchor=west] at ($(a.south west)+(.6,-1.0)$) {\Tx{熱平均と逆行列増分を比較}{Compare heat averages and inverse increments}\\[3pt]\Cite{cumulative-short}};
+\node[branchreason,anchor=west] at ($(a.south)+(1.0,-1.0)$) {\Tx{二中心の欠損を二乗のまま保つ}{Preserve the squared two-center defect}\\[3pt]\Cite{directional-short}};
+\node[card,anchor=north] (d) at ($(b.south)!.5!(c.south)+(0,-2.0)$) {\heading{3}{座標値空間で補正する}{Correct in coordinate value space}
+$h_{i+1}=h_i+(Dh_i)^{-T}v_i$,\quad $A^{-1}H_i\le (Dh_i)^TDh_i\le AH_i$};
+\draw[edge] ($(b.south west)+(.25,0)$)--($(d.north west)+(.25,0)$);
+\draw[edge] ($(c.south east)+(-.25,0)$)--($(d.north east)+(-.25,0)$);
+\node[reason,anchor=center] at ($(b.south)!.5!(c.south)+(0,-1.0)$) {\Tx{正の累積増分と方向別誤差を統合し、全jet評価も閉じる}{Combine positive increments and directional errors; close all jet bounds}\\[3pt]\Cite{iteration}};
+\node[result,below=2.0cm of d] (e) {\heading{4}{全点対と開像へ移る}{Pass to all pairs and an open image}
+$F=\lim_i h_i\circ u$,\quad $(4\sqrt A)^{-1}d\le|F(x)-F(z)|\le4\sqrt A\,d$\\[4pt]
+\Tx{$U$ は周囲で開、$F(U)$ は $\mathbb R^n$ で開}{$U$ is ambient-open; $F(U)$ is open in $\mathbb R^n$}};
+\flow{d}{e}{\Tx{距離に応じた尺度、Taylor評価、tail、領域不変性}{Distance-adapted scale, Taylor estimate, tails, invariance of domain}\\[3pt]\Cite{limit}};

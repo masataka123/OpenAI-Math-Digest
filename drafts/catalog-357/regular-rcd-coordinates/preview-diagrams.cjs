@@ -1,0 +1,4 @@
+const fs=require('fs');const path=require('path');const {chromium}=require('/Users/iwai/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+(async()=>{const root=__dirname;fs.mkdirSync(path.join(root,'qa'),{recursive:true});const browser=await chromium.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true,args:['--no-sandbox']});const page=await browser.newPage({viewport:{width:1100,height:1000},deviceScaleFactor:1});
+for(const name of fs.readdirSync(path.join(root,'diagrams')).filter(n=>n.endsWith('.svg'))){const svg=fs.readFileSync(path.join(root,'diagrams',name),'utf8');await page.setContent('<html><body style="margin:0;background:white">'+svg+'</body></html>');await page.locator('svg').screenshot({path:path.join(root,'qa',name+'.png')});console.log(name);}
+await browser.close();})();

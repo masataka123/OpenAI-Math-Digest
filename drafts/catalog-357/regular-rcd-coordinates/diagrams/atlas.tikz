@@ -1,0 +1,13 @@
+\node[card] (a) {\heading{1}{各正則点に開chartを置く}{Place an open chart at every regular point}
+$p\in\mathcal R_n\quad\Longrightarrow\quad F_p:U_p\overset{\sim}{\longrightarrow}V_p\subset\mathbb R^n$\\[4pt]
+\Tx{$U_p,V_p$ は開、$F_p$ は $L_n$-bi-Lipschitz}{$U_p,V_p$ are open; $F_p$ is $L_n$-bi-Lipschitz}};
+\node[result,below=1.9cm of a] (b) {\heading{2}{全測度の開領域を取る}{Take an open region of full measure}
+$\mathcal U=\bigcup_{p\in\mathcal R_n}U_p\supset\mathcal R_n$,\quad $\mathcal H^n(X\setminus\mathcal U)=0$};
+\flow{a}{b}{\Tx{非崩壊の全測度正則性をchartの合併へ移す}{Transfer full-measure regularity to the union of chart domains}\\[3pt]\Cite{dpg-regular}};
+\node[card,below=1.9cm of b] (c) {\heading{3}{可算部分被覆を選ぶ}{Choose a countable subcover}
+$\mathcal U=\bigcup_{j\ge1}U_{p_j}$,\quad $\{F_{p_j}:U_{p_j}\to V_{p_j}\}_{j\ge1}$};
+\flow{b}{c}{\Tx{可分距離空間の第二可算性を使い、開定義域を保つ}{Use second countability of a separable metric space; retain open domains}\\[3pt]\Cite{cor}};
+\node[result,below=1.9cm of c] (d) {\heading{4}{遷移写像の定数を掛ける}{Multiply constants for transition maps}
+$F_{p_k}\circ F_{p_j}^{-1}\quad\text{\Tx{は }{is }}L_n^2\text{-bi-Lipschitz}$\\[4pt]
+\Tx{周囲の距離を使用。正則点集合自体の開性は主張しない}{Use ambient distance; no assertion that the exact regular locus is open}};
+\flow{c}{d}{\Tx{chartと逆chartの上下距離評価を合成する}{Compose the two-sided bounds for a chart and an inverse chart}\\[3pt]\Cite{main}};

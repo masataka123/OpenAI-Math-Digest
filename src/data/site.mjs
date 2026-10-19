@@ -23,6 +23,7 @@ import inventory285 from '../../coordination/catalog-285/inventory.json' with { 
 import inventory287 from '../../coordination/catalog-287/inventory.json' with { type: 'json' };
 import inventory338 from '../../coordination/catalog-338/inventory.json' with { type: 'json' };
 import inventory356 from '../../coordination/catalog-356/inventory.json' with { type: 'json' };
+import inventory357 from '../../coordination/catalog-357/inventory.json' with { type: 'json' };
 import subjectSource from './catalog-subjects.json' with { type: 'json' };
 export const text = (ja, en) => ({ ja, en });
 export const languages = ['ja', 'en'];
@@ -113,7 +114,7 @@ const fieldTranslations = [
   {
     "id": "differential-geometry",
     "ja": "微分幾何学",
-    "catalogIds": ["338", "356"]
+    "catalogIds": ["338", "356", "357"]
   },
   {
     "id": "partial-differential-equations",
@@ -242,6 +243,10 @@ export const papers = [...inventory004.manuscripts.map(entry => ({
 })), ...inventory356.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '356', sourceCommit: inventory356.sourceCommit,
  title: entry.title, path: entry.sourceUrl.split('/preprints/')[1], version: entry.version,
+ pages: entry.pdfPages, order: entry.order, featured: true,
+})), ...inventory357.manuscripts.map(entry => ({
+ id: entry.paperId, catalogId: '357', sourceCommit: inventory357.sourceCommit,
+ title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
  pages: entry.pdfPages, order: entry.order, featured: true,
 }))];
 export const catalogs = [{
@@ -418,6 +423,13 @@ export const catalogs = [{
   description: text('Gigliの分布曲率下界とAlexandrovの曲率下界の同値、およびその逆向きで使う弱Hessianの全測地線定理を扱う。', 'The two papers establish the equivalence between Gigli’s distributional curvature lower bound and an Alexandrov lower curvature bound, together with the weak-Hessian theorem used in the converse.'),
   paperIds: inventory356.manuscripts.map(p => p.paperId),
   overviewSectionIds: ['papers', 'diagram-sources', 'connections', 'sources'],
+}, {
+  id: '357', sourceCommit: inventory357.sourceCommit, mode: 'single',
+  title: text(inventory357.titleJa, inventory357.overviewTitle),
+  contentsTitle: inventory357.contentsTitle,
+  description: text('調和座標の尺度ごとの退化を座標値空間で補正し、全点対の距離評価と開像を得る論証を読む。', 'Follow the compensation for scale-dependent degeneration of harmonic coordinates in value space, leading to all-pairs metric bounds and an open image.'),
+  paperIds: inventory357.manuscripts.map(p => p.paperId),
+  overviewSectionIds: ['inventory', 'sources'],
 }];
 export const paperSource = paper => `https://github.com/openai/math/blob/${paper.sourceCommit ?? sourceCommit}/preprints/${paper.path}`;
 export const catalogsForField = id => fields.find(field => field.id === id).catalogIds.map(id => catalogs.find(catalog => catalog.id === id));

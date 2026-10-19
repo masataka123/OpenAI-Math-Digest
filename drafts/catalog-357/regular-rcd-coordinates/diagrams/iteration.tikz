@@ -1,0 +1,14 @@
+\node[card] (a) {\heading{1}{固定patch中心で共変ベクトル場を作る}{Build a covector field with fixed patch centers}
+$v_i(P)=\sum_y\phi_{i,y}(P)D_{i,y}(P-c_{i,y})$,\quad $Dv_i=S_i+e_i$};
+\node[card,below=1.9cm of a] (b) {\heading{2}{逆転置で正の計量増分を得る}{Use the inverse transpose for a positive metric increment}
+$h_{i+1}=h_i+J_i^{-T}v_i$,\quad $J_i=Dh_i$\\[4pt]
+$|J_{i+1}\xi|^2-|J_i\xi|^2=2S_i[\xi]+\text{\Tx{方向別誤差}{directional errors}}$};
+\flow{a}{b}{\Tx{欠損のほぼ最小点と二次形式Cauchy--Schwarz}{Near-minimizers of the defect and quadratic-form Cauchy--Schwarz}\\[3pt]\Cite{field}};
+\node[card,below=2.0cm of b] (c) {\heading{3}{対角二階微分の誤差を和にする}{Sum errors through diagonal second derivatives}
+$b_{i+1}\le\frac12b_i+C_A(\sqrt{Z_i[\xi]}+\sqrt{E_i}q_i)$\\[4pt]
+$\sum_{i<k}b_i^2\lesssim H_k[\xi]$,\quad $\sum_iE_i\le\varepsilon$};
+\flow{b}{c}{\Tx{逆行列の微分を保持し、$\ell^2$畳み込みで制御}{Retain derivatives of the inverse; control them by $\ell^2$ convolution}\\[3pt]\Cite{metric}};
+\node[result,below=2.0cm of c] (d) {\heading{4}{計量と全jetの帰納法を閉じる}{Close the metric and all-jet induction}
+$A^{-1}H_i\le J_i^TJ_i\le AH_i$,\quad $J_i\text{\Tx{ は可逆}{ is invertible}}$\\[4pt]
+$r_i^{m-1}\|D^mh_i\|_{H_i\to\mathbb R^n}\le B^{m-1}(m!)^{1+\sigma}\quad(m\ge2)$};
+\flow{c}{d}{\Tx{累積比較で計量誤差を吸収、階乗評価と$2^{1-m}$でjetを維持}{Absorb metric errors by cumulative comparison; retain jets via factorial bounds and $2^{1-m}$}\\[3pt]\Cite{iteration}\quad\Cite{jets}};

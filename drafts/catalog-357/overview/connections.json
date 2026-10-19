@@ -1,0 +1,309 @@
+{
+  "catalogId": "357",
+  "productionVersion": "1.4",
+  "checkingScope": "本稿の主要結果・核心の帰着と5文献の指定結果の記述/使用を照合。内部全計算・外部全証明の検証ではない。",
+  "catalogInternalConnections": "単論文のため論文間の内部接続は対象外。外部入力は以下に分離。",
+  "crossCatalogStatus": {
+    "356": "未調査。題材の類似を根拠とする辺を作らず、356原稿完成を前提としない。",
+    "otherCatalogs": "未調査。網羅的な依存なしの判定ではない。"
+  },
+  "omittedSections": {
+    "catalogSummaryDiagram": "単論文内部の分岐・合流は記事冒頭の全体図で示す。カタログに同図を複製しても記事選択を助けないため省略。",
+    "classificationAndSelector": "1本なので追加分類と論文選択UIは不要。",
+    "readerFacingDependencyTable": "カタログでは一覧と記事への導線を優先し、外部入力の細部は記事に集約。"
+  },
+  "connections": [
+    {
+      "id": "357-ah-approx",
+      "from": {
+        "paperId": "ah18",
+        "citationKey": "AH18",
+        "result": "Corollary 4.12",
+        "locations": [
+          {
+            "result": "Corollary 4.12",
+            "printed": "20",
+            "pdf": "20"
+          }
+        ],
+        "version": "arXiv:1703.04939v1 (2017); journal publication 2018",
+        "sourceUrl": "https://arxiv.org/pdf/1703.04939v1",
+        "sha256": "3efd8f278f6416123d27d3b1ae5c9c0c92d376a38f6736d44c12f23a2eacee53"
+      },
+      "to": {
+        "paperId": "regular-rcd-coordinates",
+        "result": "Lemma 2.2",
+        "pages": "6",
+        "version": "September 25, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Bi-Lipschitz-Coordinates-at-Regular-Points-of-Noncollapsed-RCD-Spaces-September-25-2026/paper.pdf",
+        "citationId": "coordinates"
+      },
+      "role": "内側の球上でEuclidean座標を調和関数に強H^{1,2}近似する",
+      "hypotheses": "固定K,NのRCD*のmGH収束列、r<R。Cor4.12の第1文を使用し第2文の追加境界条件を混同しない。",
+      "kind": "direct",
+      "checking": {
+        "status": "記述と使用箇所を照合。外部証明全体は未検証",
+        "reviewer": "reviewer357 (gpt-6-astra/high)",
+        "author": "writer357 (gpt-6-astra/high)",
+        "checkedOn": "2026-10-19",
+        "record": "coordination/catalog-357/reviews/independent-review.md"
+      },
+      "articleLinks": {
+        "ja": "/ja/papers/regular-rcd-coordinates/#proof-overview-step-1",
+        "en": "/en/papers/regular-rcd-coordinates/#proof-overview-step-1"
+      },
+      "unresolved": []
+    },
+    {
+      "id": "357-dpg-volume",
+      "from": {
+        "paperId": "dpg18",
+        "citationKey": "DPG18",
+        "result": "Theorems 1.2, 1.3, 1.6",
+        "locations": [
+          {
+            "result": "Theorems 1.2, 1.3, 1.6",
+            "printed": "3–4",
+            "pdf": "3–4"
+          }
+        ],
+        "version": "arXiv:1708.02060v3, 23 June 2025; journal publication 2018",
+        "sourceUrl": "https://arxiv.org/pdf/1708.02060v3",
+        "sha256": "a0d7edd7a3f68111c7109ded117c37f521d208e0d02e5c7ce31e43df7798a612"
+      },
+      "to": {
+        "paperId": "regular-rcd-coordinates",
+        "result": "Lemma 2.2",
+        "pages": "6–7",
+        "version": "September 25, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Bi-Lipschitz-Coordinates-at-Regular-Points-of-Noncollapsed-RCD-Spaces-September-25-2026/paper.pdf",
+        "citationId": "coordinates"
+      },
+      "role": "非崩壊体積収束とalmost rigidityで近傍の全中心・全小尺度のEuclidean近似を得る",
+      "hypotheses": "測度H^n、Euclidean n次元極限。rigidityは半径1から1/2へ失うため固定拡大球を先に選ぶ。",
+      "kind": "direct",
+      "checking": {
+        "status": "記述と使用箇所を照合。外部証明全体は未検証",
+        "reviewer": "reviewer357 (gpt-6-astra/high)",
+        "author": "writer357 (gpt-6-astra/high)",
+        "checkedOn": "2026-10-19",
+        "record": "coordination/catalog-357/reviews/independent-review.md"
+      },
+      "articleLinks": {
+        "ja": "/ja/papers/regular-rcd-coordinates/#proof-overview-step-1",
+        "en": "/en/papers/regular-rcd-coordinates/#proof-overview-step-1"
+      },
+      "unresolved": []
+    },
+    {
+      "id": "357-dpg-density",
+      "from": {
+        "paperId": "dpg18",
+        "citationKey": "DPG18",
+        "result": "Corollary 2.14",
+        "locations": [
+          {
+            "result": "Corollary 2.14",
+            "printed": "17",
+            "pdf": "17"
+          }
+        ],
+        "version": "arXiv:1708.02060v3, 23 June 2025; journal publication 2018",
+        "sourceUrl": "https://arxiv.org/pdf/1708.02060v3",
+        "sha256": "a0d7edd7a3f68111c7109ded117c37f521d208e0d02e5c7ce31e43df7798a612"
+      },
+      "to": {
+        "paperId": "regular-rcd-coordinates",
+        "result": "Lemmas 2.2 and 4.2",
+        "pages": "6–7, 21–22",
+        "version": "September 25, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Bi-Lipschitz-Coordinates-at-Regular-Points-of-Noncollapsed-RCD-Spaces-September-25-2026/paper.pdf",
+        "citationId": "poisson"
+      },
+      "role": "全中心でdensity≤1を使い体積比の比較と欠損のtelescopingを行う",
+      "hypotheses": "非崩壊RCD。density boundはa.e.ではなく全点。",
+      "kind": "direct",
+      "checking": {
+        "status": "記述と使用箇所を照合。外部証明全体は未検証",
+        "reviewer": "reviewer357 (gpt-6-astra/high)",
+        "author": "writer357 (gpt-6-astra/high)",
+        "checkedOn": "2026-10-19",
+        "record": "coordination/catalog-357/reviews/independent-review.md"
+      },
+      "articleLinks": {
+        "ja": "/ja/papers/regular-rcd-coordinates/#proof-1-step-1",
+        "en": "/en/papers/regular-rcd-coordinates/#proof-1-step-1"
+      },
+      "unresolved": []
+    },
+    {
+      "id": "357-heat",
+      "from": {
+        "paperId": "jlz16",
+        "citationKey": "JLZ16",
+        "result": "Theorem 1.2; Corollary 1.2",
+        "locations": [
+          {
+            "result": "Theorem 1.2; Corollary 1.2",
+            "printed": "2–3",
+            "pdf": "2–3"
+          }
+        ],
+        "version": "arXiv:1407.5289v2; journal publication 2016",
+        "sourceUrl": "https://arxiv.org/pdf/1407.5289v2",
+        "sha256": "bd9f902a0a70b090bdae9ff0f90403a2c1e6035d0f51161f285cf88ad06ba123"
+      },
+      "to": {
+        "paperId": "regular-rcd-coordinates",
+        "result": "§3.1; Lemma 3.1",
+        "pages": "10–11",
+        "version": "September 25, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Bi-Lipschitz-Coordinates-at-Regular-Points-of-Noncollapsed-RCD-Spaces-September-25-2026/paper.pdf",
+        "citationId": "heat-internal"
+      },
+      "role": "Gaussian熱核・a.e.勾配評価を全source poleで使える差分評価へ移す",
+      "hypotheses": "固定した負の下限K<0とt≤1、full support。全poleへの延長は本稿が示し、外部gradient theoremの結論ではない。",
+      "kind": "direct",
+      "checking": {
+        "status": "記述と使用箇所を照合。外部証明全体は未検証",
+        "reviewer": "reviewer357 (gpt-6-astra/high)",
+        "author": "writer357 (gpt-6-astra/high)",
+        "checkedOn": "2026-10-19",
+        "record": "coordination/catalog-357/reviews/independent-review.md"
+      },
+      "articleLinks": {
+        "ja": "/ja/papers/regular-rcd-coordinates/#proof-overview-step-2",
+        "en": "/en/papers/regular-rcd-coordinates/#proof-overview-step-2"
+      },
+      "unresolved": []
+    },
+    {
+      "id": "357-hatcher",
+      "from": {
+        "paperId": "hat02",
+        "citationKey": "Hat02",
+        "result": "Theorem 2B.3",
+        "locations": [
+          {
+            "result": "Theorem 2B.3",
+            "printed": "172",
+            "pdf": "181"
+          }
+        ],
+        "version": "Cambridge University Press, 2002; author electronic edition retrieved 2026-10-19",
+        "sourceUrl": "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf",
+        "sha256": "bebb3032bf9021b956da3bd070eb6c67dc662cf849be9cdf6679f677560e5618"
+      },
+      "to": {
+        "paperId": "regular-rcd-coordinates",
+        "result": "Proposition 5.6",
+        "pages": "41",
+        "version": "September 25, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Bi-Lipschitz-Coordinates-at-Regular-Points-of-Noncollapsed-RCD-Spaces-September-25-2026/paper.pdf",
+        "citationId": "openness"
+      },
+      "role": "F∘u^{-1}の連続単射から極限chartの像が開と得る",
+      "hypotheses": "u(B_rho)が同次元Euclidean開集合であることをLemma2.5が供給し、全点対下側評価が単射性を供給。",
+      "kind": "direct",
+      "checking": {
+        "status": "記述と使用箇所を照合。外部証明全体は未検証",
+        "reviewer": "reviewer357 (gpt-6-astra/high)",
+        "author": "writer357 (gpt-6-astra/high)",
+        "checkedOn": "2026-10-19",
+        "record": "coordination/catalog-357/reviews/independent-review.md"
+      },
+      "articleLinks": {
+        "ja": "/ja/papers/regular-rcd-coordinates/#proof-3-step-2",
+        "en": "/en/papers/regular-rcd-coordinates/#proof-3-step-2"
+      },
+      "unresolved": []
+    },
+    {
+      "id": "357-dpg-regular",
+      "from": {
+        "paperId": "dpg18",
+        "citationKey": "DPG18",
+        "result": "Theorem 1.12(ii),(vi)",
+        "locations": [
+          {
+            "result": "Theorem 1.12(ii),(vi)",
+            "printed": "7",
+            "pdf": "7"
+          }
+        ],
+        "version": "arXiv:1708.02060v3, 23 June 2025; journal publication 2018",
+        "sourceUrl": "https://arxiv.org/pdf/1708.02060v3",
+        "sha256": "a0d7edd7a3f68111c7109ded117c37f521d208e0d02e5c7ce31e43df7798a612"
+      },
+      "to": {
+        "paperId": "regular-rcd-coordinates",
+        "result": "Corollary 1.2",
+        "pages": "1",
+        "version": "September 25, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Bi-Lipschitz-Coordinates-at-Regular-Points-of-Noncollapsed-RCD-Spaces-September-25-2026/paper.pdf",
+        "citationId": "cor"
+      },
+      "role": "全正則点のchart domainの合併が全測度であると得る",
+      "hypotheses": "m=H^nならm≪H^n。Thm1.12(ii),(vi)によりn正則集合が全測度。",
+      "kind": "consequence",
+      "checking": {
+        "status": "記述と使用箇所を照合。外部証明全体は未検証",
+        "reviewer": "reviewer357 (gpt-6-astra/high)",
+        "author": "writer357 (gpt-6-astra/high)",
+        "checkedOn": "2026-10-19",
+        "record": "coordination/catalog-357/reviews/independent-review.md"
+      },
+      "articleLinks": {
+        "ja": "/ja/papers/regular-rcd-coordinates/#proof-4-step-1",
+        "en": "/en/papers/regular-rcd-coordinates/#proof-4-step-1"
+      },
+      "unresolved": []
+    },
+    {
+      "id": "357-mn-background",
+      "from": {
+        "paperId": "mn19",
+        "citationKey": "MN19",
+        "result": "Theorem 1.1",
+        "locations": [
+          {
+            "result": "Theorem 1.1",
+            "printed": "3",
+            "pdf": "3"
+          }
+        ],
+        "version": "arXiv:1405.2222v3; journal publication 2019",
+        "sourceUrl": "https://arxiv.org/pdf/1405.2222v3",
+        "sha256": "b031ab651f358cf9f12fccb6504b03d05bfaeffa89fd1643bb4f6501e0ad0a2b"
+      },
+      "to": {
+        "paperId": "regular-rcd-coordinates",
+        "result": "§1.1; Theorem 1.1 comparison",
+        "pages": "1–2",
+        "version": "September 25, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Bi-Lipschitz-Coordinates-at-Regular-Points-of-Noncollapsed-RCD-Spaces-September-25-2026/paper.pdf",
+        "citationId": "main"
+      },
+      "role": "可算整流性の可測片と、各指定正則点の開chartを比較する",
+      "hypotheses": "MN: RCD*(K,N),N>1、可測片→R^{k_j}の可測部分集合。357は非崩壊・整数次元・全正則点・開領域/開像。直接依存ではない。",
+      "kind": "background",
+      "checking": {
+        "status": "記述と使用箇所を照合。外部証明全体は未検証",
+        "reviewer": "reviewer357 (gpt-6-astra/high)",
+        "author": "writer357 (gpt-6-astra/high)",
+        "checkedOn": "2026-10-19",
+        "record": "coordination/catalog-357/reviews/independent-review.md"
+      },
+      "articleLinks": {
+        "ja": "/ja/papers/regular-rcd-coordinates/#dependencies",
+        "en": "/en/papers/regular-rcd-coordinates/#dependencies"
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [
+    "Local Poisson regularity, Hessian calculus, improved Bochner inequality and distance Laplacian comparison: uses read in manuscript, but not every external theorem statement and hypothesis independently cross-checked.",
+    "Long local calculations in §§3.1–3.2 and Lemmas 4.4–4.6 were not independently reconstructed in full.",
+    "External proofs and recursive dependencies, expert peer review and formal verification are outside this first-draft scope."
+  ]
+}

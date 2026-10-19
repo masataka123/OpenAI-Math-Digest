@@ -1,0 +1,74 @@
+{
+  "reviewer": "reviewer357",
+  "model": "gpt-6-astra",
+  "reasoningEffort": "high",
+  "startedJST": "2026-10-19T08:46:08+09:00",
+  "finishedJST": "2026-10-19T09:00:00+09:00",
+  "status": "independent content comparison completed; no unresolved concrete edits",
+  "scope": "Major source statements, core reductions, selected external statements/use sites, bilingual text and TikZ content, conclusion coverage and overview. Not full proof verification or final site/PDF visual QA.",
+  "displayMath": {
+    "ja": 12,
+    "en": 12,
+    "result": "Mathematically equivalent; punctuation and language only"
+  },
+  "inlineMath": {
+    "ja": 160,
+    "en": 155,
+    "result": "Difference due to repeated notation and prose wording; no missing principal hypotheses or formulas"
+  },
+  "files": {
+    "drafts/catalog-357/regular-rcd-coordinates/article.ja.md": "c2fb9cd986a174690ce22b8c70b0247c684e35d6c23625d1c41908dc00c5d207",
+    "drafts/catalog-357/regular-rcd-coordinates/article.en.md": "1a5468ad85eb9b215ec01cee018758c1ffdc080293d805c7d5b14d3be3c3c546",
+    "drafts/catalog-357/regular-rcd-coordinates/citations.json": "911767a798d2d1eede0ffe2f750427bcf8a9f14fb57d30773d9bf96aa616b458",
+    "drafts/catalog-357/regular-rcd-coordinates/sources.json": "61c0dac13c1cd4bf400675293b54b48724e24b08af93623e3aac4e2c4ef0e343",
+    "drafts/catalog-357/regular-rcd-coordinates/conclusion-coverage.json": "ba078c49cd1c69fe7586426e15bb8d2ba513e96f8529c313519098857eec1428",
+    "drafts/catalog-357/regular-rcd-coordinates/diagrams/iteration.tikz": "875eb26f23014d8ff280f92ffed6f74c91d803527495be6e18064b012d38c2aa",
+    "drafts/catalog-357/regular-rcd-coordinates/diagrams/limit.tikz": "068693c3d964c392ab1092b4375c2078ea43bd12464ad91f1dc9f97f22eeb3a9",
+    "drafts/catalog-357/regular-rcd-coordinates/diagrams/overview.tikz": "5cceee7fb540853bbd356f9c0d43d56d8dfd22d573fd55e134cfcc4d6d3d1e7f",
+    "drafts/catalog-357/regular-rcd-coordinates/diagrams/directional.tikz": "bc29eb90cf7a1733634acce9a37037f33ae88c23165444ac8886af895ad0c9ef",
+    "drafts/catalog-357/regular-rcd-coordinates/diagrams/atlas.tikz": "a43ec6be16780992c852e4f805225b8251058a92553e8dd10133bf716951d152",
+    "drafts/catalog-357/overview/article.ja.md": "e82a389ab4ade99af5914c1af925043aeda26ed2e912dbccc1572aaf24656268",
+    "drafts/catalog-357/overview/article.en.md": "2ac6cef0b72a29b9131662c47adccfa70e19957fda140777df2e0c447c144180",
+    "drafts/catalog-357/overview/presentation.json": "2287968f78c7731ffc12df93413ba33fa97d099a2e635f7df670c21b4a75a7c5",
+    "drafts/catalog-357/overview/citations.json": "4fd9ba3a1acc50dd8be0c6cf1ebc1d7f76a7fe5f283aa82e6b76f1a0a21f6538",
+    "drafts/catalog-357/overview/connections.json": "ad5fcf752680f6240863653f1d92341080272d065d3d15cac475787e3942d240"
+  },
+  "followUpReviews": [
+    {
+      "checkedJST": "2026-10-19T09:01:00+09:00",
+      "model": "gpt-6-astra",
+      "reasoningEffort": "high",
+      "scope": "Verified that the only reviewed-file changes move the article navigation paragraph and its main citation above the inventory H2 in both overview languages. Reversing the move exactly reproduces previous SHA-256 hashes; mathematical content and citation values are unchanged. Inventory subject7/display order16 also checked against official overview.tex.",
+      "updates": [
+        {
+          "file": "drafts/catalog-357/overview/article.ja.md",
+          "oldSha256": "6a00745a3a57f3004f0cdaaa3b584ae71fe91d9f3c785139aa602e69673b5afa",
+          "newSha256": "e82a389ab4ade99af5914c1af925043aeda26ed2e912dbccc1572aaf24656268"
+        },
+        {
+          "file": "drafts/catalog-357/overview/article.en.md",
+          "oldSha256": "873cf7d70dcb318d5df4355ba4fd47b815138b41d828f40de0a1d7f65d25a0b0",
+          "newSha256": "2ac6cef0b72a29b9131662c47adccfa70e19957fda140777df2e0c447c144180"
+        }
+      ]
+    },
+    {
+      "checkedJST": "2026-10-19T09:04:00+09:00",
+      "model": "gpt-6-astra",
+      "reasoningEffort": "high",
+      "scope": "Verified exactly one replacement per language of the mean Gram integral by integral divided by m(B_ri(y)). This is precisely the average convention in manuscript §1.3 p4 and equation (2.8) p7. Reversing the notation replacement reproduces the previous hashes. All other reviewed files unchanged.",
+      "updates": [
+        {
+          "file": "drafts/catalog-357/regular-rcd-coordinates/article.ja.md",
+          "oldSha256": "24a8570d95548754570a54133a3aaef15f654818d310919b238ae150e49e5bef",
+          "newSha256": "c2fb9cd986a174690ce22b8c70b0247c684e35d6c23625d1c41908dc00c5d207"
+        },
+        {
+          "file": "drafts/catalog-357/regular-rcd-coordinates/article.en.md",
+          "oldSha256": "ba524f8498c645c769b4dcd8177e688c900c36cb839376f9e9547da3b6c8e252",
+          "newSha256": "1a5468ad85eb9b215ec01cee018758c1ffdc080293d805c7d5b14d3be3c3c546"
+        }
+      ]
+    }
+  ]
+}

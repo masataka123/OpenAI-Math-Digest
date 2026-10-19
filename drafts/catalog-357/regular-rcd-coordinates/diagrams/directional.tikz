@@ -1,0 +1,15 @@
+\node[card] (a) {\heading{1}{正sourceから欠損を作る}{Build defects from positive sources}
+$\mu_i^a=(n+C_0\kappa r_i^2)m-\Delta(d_a^2/2)\ge0$,\quad $\sup_a\sum_iP_i(a)=o(1)$};
+\node[card,below=1.9cm of a] (b) {\heading{2}{二中心の差を調和にする}{Make the two-center difference harmonic}
+$v=(f_i^z-f_i^x)/r_i^2$,\quad $\Delta v=0$,\quad $s^2=E_i(x)+E_i(z)$\\[4pt]
+\Tx{$r_i$ を長さ単位にする}{Use $r_i$ as the length unit}\\[4pt]
+$\sup_a\sum_iE_i(a)=o(1)$};
+\flow{a}{b}{\Tx{共通Laplacianと半径方向affine改善、指数減衰畳み込み}{Common Laplacian, radial affine improvement, exponentially weighted convolution}\\[3pt]\Cite{poisson}};
+\node[card,below=2.0cm of b] (c) {\heading{3}{射影残差を正規化前に制御}{Control the residual before normalization}
+$w=v-c_0-b\cdot U$,\quad $\alpha=\|w\|_{L^2(B_R)}$\\[4pt]
+$\|w\|_{L^2(B_{2R})}\le C(\alpha+s)\quad\Longrightarrow\quad\alpha\le Cs$};
+\flow{b}{c}{\Tx{弱い半径輸送とYoung不等式、affine直交性による矛盾}{Weak radial transport and Young's inequality; contradiction with affine orthogonality}\\[3pt]\Cite{radial}};
+\node[result,below=1.9cm of c] (d) {\heading{4}{質量の二乗評価を元の尺度へ戻す}{Restore the squared mass bound to the original scale}
+$b=\delta+O(s)$,\quad $\mathrm M'(\delta\cdot U)(B_L)\le Cs^2$\\[4pt]
+$D_{i,y}[u(x)-u(z)]\le Cr_i^2(E_i(x)+E_i(z))$};
+\flow{c}{d}{\Tx{正値性が係数誤差を二乗し、式(4.50)で単位を復元}{Positivity squares the coefficient error; (4.50) restores the units}\\[3pt]\Cite{directional}};

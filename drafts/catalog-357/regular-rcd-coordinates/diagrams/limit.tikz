@@ -1,0 +1,15 @@
+\node[card] (a) {\heading{1}{全点対に一つの尺度を選ぶ}{Choose a scale for every pair}
+$t=d(x,z)>0$,\quad $Dt\le r_i<2Dt$,\quad $x,z\in B_\rho(p)$\\[4pt]
+$\Delta=u(z)-u(x)$,\quad $t/2\le|\Delta|_{H_i(x)}\le2t$};
+\node[card,below=1.9cm of a] (b) {\heading{2}{内側の直線分でTaylor展開する}{Apply Taylor on an interior line segment}
+$h_i(u(z))-h_i(u(x))=J_i(u(x))\Delta+R$\\[4pt]
+$|R|\le t/(8\sqrt A)$,\quad $|J_i\Delta|\ge t/(2\sqrt A)$};
+\flow{a}{b}{\Tx{中心楕円体の像包含と二階jet評価を使う}{Use central-ellipsoid inclusion and the second-jet estimate}\\[3pt]\Cite{open-coordinates}\quad\Cite{all-pairs}};
+\node[result,below=2.0cm of b] (c) {\heading{3}{一様極限で上下評価を維持}{Preserve both bounds in the uniform limit}
+$\sup_x|F(x)-h_i(u(x))|\le\tau r_i$,\quad $4D\tau\le(8\sqrt A)^{-1}$\\[4pt]
+$(4\sqrt A)^{-1}d(x,z)\le|F(x)-F(z)|\le4\sqrt A\,d(x,z)$};
+\flow{b}{c}{\Tx{二つのtailを線形項より小さくし、全点対で単射性を得る}{Make both tails smaller than the linear term; obtain injectivity for all pairs}\\[3pt]\Cite{all-pairs}};
+\node[result,below=1.9cm of c] (d) {\heading{4}{領域不変性で像を開にする}{Make the image open by invariance of domain}
+$F\circ u^{-1}:u(B_\rho(p))\longrightarrow\mathbb R^n$\\[4pt]
+\Tx{開集合上の連続単射 $\Longrightarrow F(B_\rho(p))$ は開}{Continuous injection on an open set $\Longrightarrow F(B_\rho(p))$ is open}};
+\flow{c}{d}{\Tx{開性は先に作った調和座標へ移して適用する}{Apply the theorem through the previously constructed open harmonic coordinates}\\[3pt]\Cite{hatcher}};
