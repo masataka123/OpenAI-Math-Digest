@@ -1,4 +1,4 @@
-import {readFile, writeFile, mkdir} from 'node:fs/promises';
+import {readFile, writeFile, mkdir, copyFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {spawnSync} from 'node:child_process';
 import path from 'node:path';
@@ -13,6 +13,7 @@ import {AllPackages} from 'mathjax-full/js/input/tex/AllPackages.js';
 import {catalogs, papers} from '../src/data/site.mjs';
 import config from '../astro.config.mjs';
 import {first,prepare,rewrite} from './pdf/prepare.mjs';
+import {identifySVGs,collectFigureLinks} from './pdf/collect-links.mjs';
 
 const root=process.cwd(), scratch=path.join(root,'tmp/pdfs');
 const base=config.base.replace(/\/$/,'')+'/';
@@ -29,7 +30,13 @@ const languages=selectedLang?[selectedLang]:['ja','en'];
 const site=config.site.replace(/\/$/,'');
 const check=process.argv.includes('--check');
 const css=await readFile('scripts/pdf/booklet.css','utf8');
-const generator=(await Promise.all([import.meta.filename,'scripts/pdf/render.py','scripts/pdf/requirements.txt','scripts/pdf/prepare.mjs'].map(file=>readFile(file,'utf8')))).join('');
+// Frozen legacy source is used only to validate editions generated before SVG-link integration.
+// Current editions hash every rendering/measurement source; changing one requires regeneration.
+const commonSources=['scripts/pdf/render.py','scripts/pdf/requirements.txt','scripts/pdf/prepare.mjs'];
+const sources=async files=>(await Promise.all(files.map(file=>readFile(file,'utf8')))).join('');
+const legacyGenerator=await sources(['scripts/pdf/legacy-generator-v1.txt',...commonSources]);
+const generator=await sources([import.meta.filename,...commonSources,'scripts/pdf/collect-links.mjs','scripts/pdf/render-linked.py','node_modules/playwright-core/package.json']);
+const pipeline='svg-links-v1';
 const esc=s=>s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;');
 const hash=s=>createHash('sha256').update(s).digest('hex');
 const adaptor=liteAdaptor(); RegisterHTMLHandler(adaptor);
@@ -38,6 +45,7 @@ let previous={};try{previous=JSON.parse(await readFile('src/data/pdf-editions.js
 // Accept the pre-multicatalog manifest once, preserving editions outside a selected run.
 if(previous.ja||previous.en)previous={'034':previous};
 const manifest=structuredClone(previous);
+const completed=[];
 for(const c of selected) {
  manifest[c.id]??={};
 for(const lang of languages) {
@@ -55,8 +63,10 @@ for(const lang of languages) {
   chunks.push(`<article class="chapter" id="${item.id}"><p class="chapter-label">${item.label}</p><p class="web-link"><a href="${site+base+item.route}">${en?'Read on the website':'Web版を読む'} ↗</a></p>${toHtml(body)}</article>`);
  }
  const editionCss=css.replaceAll('__CATALOG_ID__',c.id);
- const digest=hash(chunks.join('')+editionCss+generator+JSON.stringify({id:c.id,title:c.title,titlePhrases:c.titlePhrases,sourceCommit:c.sourceCommit,paperIds:c.paperIds}));
  const prior=previous[c.id]?.[lang];
+ if(check&&prior?.pipeline&&prior.pipeline!==pipeline)throw Error(`Unknown PDF pipeline: ${prior.pipeline}`);
+ const fingerprint=check&&!prior?.pipeline?legacyGenerator:generator;
+ const digest=hash(chunks.join('')+editionCss+fingerprint+JSON.stringify({id:c.id,title:c.title,titlePhrases:c.titlePhrases,sourceCommit:c.sourceCommit,paperIds:c.paperIds}));
  const filename=`catalog-${c.id}-${lang}.pdf`;
  if(check){
   if(prior?.contentHash!==digest)throw Error(`PDF ${c.id}/${lang} is stale: run npm run pdf:catalog after building, then rebuild the website.`);
@@ -73,20 +83,27 @@ for(const lang of languages) {
  const input=new TeX({packages:AllPackages,inlineMath:[['$','$']],displayMath:[['$$','$$']],processEscapes:true});
  const doc=mathjax.document(html,{InputJax:input,OutputJax:new SVG({fontCache:'none'})});
  doc.render();
- const rendered='<!doctype html>'+adaptor.outerHTML(adaptor.root(doc.document));
+ const rendered=identifySVGs('<!doctype html>'+adaptor.outerHTML(adaptor.root(doc.document)));
  if(/<g[^>]*data-mml-node="merror"/.test(rendered)) {
   await writeFile(path.join(scratch, `math-errors-${c.id}-${lang}.html`), rendered);
   throw Error(`MathJax errors in ${c.id}/${lang}: ${[...rendered.matchAll(/data-mjx-error="([^"]+)"/g)].map(m=>m[1]).join('; ')}`);
  }
  const htmlPath=path.join(scratch,`catalog-${c.id}-${lang}.html`);
  await writeFile(htmlPath,rendered);
- const output=path.join(root,'public/pdf',filename);
- const result=spawnSync(process.env.PDF_PYTHON??'python3',['scripts/pdf/render.py',htmlPath,output,String(items.length)],{encoding:'utf8',maxBuffer:10*1024*1024});
+ const geometryPath=path.join(scratch,`catalog-${c.id}-${lang}.svg-links.json`);
+ await collectFigureLinks(htmlPath,geometryPath);
+ const output=path.join(scratch,filename);
+ const result=spawnSync(process.env.PDF_PYTHON??'python3',['scripts/pdf/render-linked.py',htmlPath,output,String(items.length),geometryPath],{encoding:'utf8',maxBuffer:10*1024*1024});
  if(result.status!==0)throw Error(result.stderr||result.stdout||'PDF render failed');
  const info=JSON.parse(result.stdout);
  const pdf=await readFile(output);
- manifest[c.id][lang]={file:filename,date,pages:info.pages,bytes:pdf.length,sha256:hash(pdf),contentHash:digest,chapters:items.length,mathExpressions:(rendered.match(/<mjx-container/g)||[]).length,figures:(rendered.match(/class="proof-figure"/g)||[]).length};
+ manifest[c.id][lang]={pipeline,svgLinks:info.svgLinks,file:filename,date,pages:info.pages,bytes:pdf.length,sha256:hash(pdf),contentHash:digest,chapters:items.length,mathExpressions:(rendered.match(/<mjx-container/g)||[]).length,figures:(rendered.match(/class="proof-figure"/g)||[]).length};
+ completed.push({output,filename});
  console.log(`${c.id}/${lang}: ${info.pages} pages · ${manifest[c.id][lang].mathExpressions} formulas · ${manifest[c.id][lang].figures} figures · ${(pdf.length/1048576).toFixed(1)} MB`);
 }
 }
-if(!check)await writeFile('src/data/pdf-editions.json',JSON.stringify(manifest,null,2)+'\n');
+// Only promote PDFs after all selected languages have rendered and passed validation.
+if(!check){
+ for(const {output,filename} of completed)await copyFile(output,path.join(root,'public/pdf',filename));
+ await writeFile('src/data/pdf-editions.json',JSON.stringify(manifest,null,2)+'\n');
+}

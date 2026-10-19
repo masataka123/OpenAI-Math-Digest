@@ -14,7 +14,8 @@
     "diagrams": "node scripts/render-proof-diagrams.mjs",
     "diagrams:catalog": "node scripts/render-catalog-diagrams.mjs",
     "pdf:catalog": "node scripts/build-catalog-pdf.mjs",
-    "check:pdf": "node scripts/build-catalog-pdf.mjs --check"
+    "check:pdf": "node scripts/build-catalog-pdf.mjs --check",
+    "test:pdf": "node --test scripts/pdf/pipeline.test.mjs"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "6.3.6",
@@ -23,6 +24,7 @@
   "devDependencies": {
     "hast-util-from-html": "2.0.3",
     "hast-util-to-html": "9.0.5",
-    "mathjax-full": "3.2.2"
+    "mathjax-full": "3.2.2",
+    "playwright-core": "1.62.1"
   }
 }
