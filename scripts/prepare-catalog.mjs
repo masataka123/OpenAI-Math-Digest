@@ -5,6 +5,7 @@ import {finished} from 'node:stream/promises';
 import path from 'node:path';
 import {pathToFileURL} from 'node:url';
 import {pdfRuntime} from './pdf/runtime.mjs';
+import {gitSnapshot,ensureReviewNotes,collectPreparationArtifacts,renderHandoff} from './preparation-handoff.mjs';
 
 export function parsePreparationArgs(args){
  let catalog,forcePdf=false;
@@ -26,18 +27,19 @@ export function needsPdfGeneration(result,catalog){
  throw Error(`PDF inspection failed; generation was not attempted.\n${diagnostic}`);
 }
 
-export async function runPreparation({catalog,forcePdf=false,browserOutput='tmp/browser-checks/preparation',run,record}){
- const steps=[];
- const state={catalog,status:'running',startedAt:new Date().toISOString(),pdf:'not-checked',steps,
+export async function runPreparation({catalog,forcePdf=false,browserOutput='tmp/browser-checks/preparation',context={},run,record}){
+ const steps=[],started=performance.now();
+ const state={...context,catalog,status:'running',startedAt:new Date().toISOString(),pdf:'not-checked',steps,
   visualReview:'required',browserReport:path.join(browserOutput,'index.html'),resumeCommand:`npm run catalog:prepare -- --catalog ${catalog}`};
  let active;
  const step=async(name,args,{allowFailure=false}={})=>{
   active=name;state.activeStep=name;await record(state);
   const start=performance.now();
-  const result=await run(name,args);
-  steps.push({name,seconds:Number(((performance.now()-start)/1000).toFixed(2)),exitCode:result.code});
+  let result,executionError;
+  try {result=await run(name,args);}catch(error){executionError=error.message;result={code:1,output:executionError};}
+  steps.push({name,seconds:Number(((performance.now()-start)/1000).toFixed(2)),exitCode:result.code,...(executionError?{error:executionError}:{})});
   await record(state);
-  if(result.code!==0&&!allowFailure)throw Error(`${name} failed. See the ${name}.log file.`);
+  if(result.code!==0&&!allowFailure)throw Error(`${name} failed. ${executionError??`See the ${name}.log file.`}`);
   return result;
  };
  try {
@@ -62,7 +64,7 @@ export async function runPreparation({catalog,forcePdf=false,browserOutput='tmp/
   state.status='failed';state.failedStep=active;state.error=error.message;
   throw error;
  } finally {
-  state.finishedAt=new Date().toISOString();await record(state);
+  state.finishedAt=new Date().toISOString();state.totalSeconds=Number(((performance.now()-started)/1000).toFixed(2));await record(state);
  }
  return state;
 }
@@ -78,9 +80,16 @@ export async function prepareCatalogue(args=process.argv.slice(2)){
  const directory=path.join(root,'tmp/catalog-preparation',options.catalog,new Date().toISOString().replaceAll(':','-')+'-'+process.pid);
  await mkdir(directory,{recursive:true});
  const reportPath=path.join(directory,'report.json');
+ const context={workspace:root,gitStart:await gitSnapshot(root),reviewNotes:await ensureReviewNotes(root,options.catalog)};
  const record=async state=>{
+  if(state.finishedAt){
+   state.gitEnd=await gitSnapshot(root);
+   state.artifacts=await collectPreparationArtifacts(root,directory,options.catalog);
+  }
   await writeFile(reportPath+'.tmp',JSON.stringify(state,null,2)+'\n');
   await rename(reportPath+'.tmp',reportPath);
+  // Each execution has its own folder; manual review notes live separately.
+  await writeFile(path.join(directory,'HANDOFF.md'),renderHandoff(state,directory));
  };
  const run=async(name,args)=>{
   console.log(`\n[${name}]`);
@@ -98,10 +107,10 @@ export async function prepareCatalogue(args=process.argv.slice(2)){
  };
  console.log(`Catalogue ${options.catalog}; logs: ${directory}`);
  try {
-  const state=await runPreparation({...options,browserOutput:path.join(directory,'browser'),run,record});
-  console.log(`\nAutomated checks passed; PDF ${state.pdf}. Visual/content review remains required.\n${reportPath}`);
+  const state=await runPreparation({...options,context,browserOutput:path.join(directory,'browser'),run,record});
+  console.log(`\nAutomated checks passed; PDF ${state.pdf}. Visual/content review remains required.\n${reportPath}\nHandoff: ${path.join(directory,'HANDOFF.md')}`);
   return state;
- } catch(error){throw Error(`${error.message}\nReport: ${reportPath}\nRetry: npm run catalog:prepare -- --catalog ${options.catalog}`);}
+ } catch(error){throw Error(`${error.message}\nReport: ${reportPath}\nHandoff: ${path.join(directory,'HANDOFF.md')}\nRetry: npm run catalog:prepare -- --catalog ${options.catalog}`);}
 }
 
 if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href){

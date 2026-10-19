@@ -1,10 +1,12 @@
 # 引用の共通仕様と生成手順
 
-制作セット **1.2（2026-10-09）**。063を初めの適用例とする。033・034は既存表示を保持し、後日必要な範囲で移行する。新しいカタログはこの仕様を採用する。
+制作セット **1.4（2026-10-11）**。今後開始する記事・カタログに適用する。042・051を含む既存記事・図・PDFは変更せず、既存レジストリは従来表示を保持する。進行中の記事も自動移行しない。
 
 ## 読者に見せる書式
 
-- 本稿内の引用は `結果・節番号 · p. / pp. ページ`。外部は `論文の表示名 [定義済みの略号] · 結果・節番号 · p. / pp. ページ`。図の前に略号・著者／論文名・用途・参照版の一覧を必ず置く。
+- 本稿内の引用は `結果・節番号 · p. / pp. ページ`。外部は `[FL13, Theorem 1.1, p. 2]` や `[Ver, Lemma 2.1, pp. 3–4]` のように、著者由来の引用キー・結果番号・ページをリンク表示する。本文・図で著者名やタイトルを毎回併記する必要はない。図の前にはキー・著者・正式タイトル・用途・参照版・原典リンクの一覧を必ず置く。
+- キーは著者の姓の略記または共著者の頭文字を基本とする（例：Huy、Ver、FL13）。年は識別に必要なら付け、同著者・同年の複数文献はa/bで区別する。参照版と出版年を混同せず、未確認の年を作らない。OpenAIなど同一団体著者の文献もOpenAI26a等で一意に定義する。記事内・日英・本文・TeXで同じキーを使い、他記事でも同じ文献の既存キーを確認する。旧記事のキー変更は行わない。
+- 短いキーを使うのは引用表示である。カタログの記事一覧、記事タイトル、論文を選ぶ導線は引き続き読みやすい論文名で示す。
 - 本稿内は論文名を繰り返さず、冒頭の引用案内で本稿を特定する。Theorem / Proposition / Corollary / Lemmaは省略形を混在させない。複数の箇所は `; ` で区切る。
 - 誌面番号とPDF内のページ位置が異なる場合は `誌面 p. 623 / PDF p. 23`、英語は `print p. 623 / PDF p. 23`。一致する場合は `p. 5` のみ。単一ページはp.、複数はpp.、範囲はen dash。
 - PDFへのページ指定には**PDFのページ位置**を使う。誌面623ページだから `#page=623` としない。GitHubのファイル閲覧URLとDOIにはページ移動を仮定したfragmentを付けない。
@@ -29,6 +31,7 @@
 ```json
 {
   "schemaVersion": 1,
+  "citationStyle": "author-key",
   "catalogId": "NNN",
   "sources": {
     "P": {
@@ -37,7 +40,7 @@
       "displayName": "Readable paper name",
       "pagination": "same"
     },
-    "INPUT": {
+    "FL13": {
       "recordFile": "sources.json",
       "recordId": "external-source-id"
     }
@@ -48,7 +51,7 @@
       "locations": [{"result": "Theorem 1.1", "printed": "2", "pdf": "2"}]
     },
     "external-input": {
-      "source": "INPUT",
+      "source": "FL13",
       "locations": [{"result": "Theorem 5.2", "printed": "623", "pdf": "23"}]
     }
   },
@@ -56,6 +59,8 @@
   "diagramDirectories": ["diagrams"]
 }
 ```
+
+`citationStyle: "author-key"` を新規レジストリに必ず指定する。省略または `readable-name` は既存記事の旧表示を維持するための互換設定。略号の意味は文献一覧で定義し、displayNameには文献名を保持する。
 
 `recordFile`・Markdown・図のパスはcitations.jsonからの相対パス。`recordId: self` は出典ファイル自体、その他のIDは `externalSources` の該当項目を指す。公式カタログ出典はinventory.jsonを `recordFile`、`overview` を `recordId` として参照できる。
 
@@ -96,4 +101,4 @@ TeX図の生成時には、生成された `diagrams/citations.ja.tex` または
 
 この検査は引用表示と生成物の整合性を検査するもので、引用元の数学的正しさや入力定理の適用の妥当性を自動で認定するものではない。結果と使用箇所の照合は担当と本部が行う。
 
-形式上の必須ブロックとarticleGuidesの仕様は [FORMAT_CONTRACT.md](FORMAT_CONTRACT.md) を参照。略号だけで案内を完結させず、文献一覧と図の読みやすい表示名を対応させる。
+形式上の必須ブロックとarticleGuidesの仕様は [FORMAT_CONTRACT.md](FORMAT_CONTRACT.md) を参照。引用キーは図前の文献一覧で必ず定義し、本文・図から原典へリンクする。矢印の使用内容の説明は省略しない。
