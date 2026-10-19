@@ -1,6 +1,6 @@
 # カタログ357 公開チェックリスト
 
-制作セット1.4。2026-10-19、本チャット本部。第1段階の版はstage2/stage1-RELEASE_CHECKLIST.mdに保存。今回の指示は第2段階。commit・push・公開は未依頼。
+制作セット1.4。2026-10-19、本チャット本部。第1段階の版はstage2/stage1-RELEASE_CHECKLIST.mdに保存。ユーザーの第3段階指示により、commit・push・公開反映確認まで完了。
 
 ## 内容・案内
 
@@ -41,6 +41,6 @@
 
 - [x] 第1段階：記事・内容点検・案内を受領して停止。
 - [x] 第2段階：最終検査完了をFINAL_STATUS.jsonに記録。結果・再開手順を報告して停止。
-- [ ] 第3段階：公開指示後、対象差分の選別commit・push・Actions・公開日英ページ/図/PDFの反映確認。
+- [x] 第3段階：357のみをcommit/push、Actions build/deploy成功、公開30件SHA一致と8画面条件を確認。公開commit 892cd7b。
 
-公開は現在の依頼範囲外。第3段階の具体的手順はSITE_HQ_HANDOFF.md。原典の全証明検証、局所Poisson/Hessian/Bochner/Laplacian外部全仮定の網羅照合は引き続き未完了であり、機械的検査成功を専門家査読済みと表現しない。
+第3段階完了。結果はstage3/PUBLICATION_REPORT.md。原典の全証明検証、局所Poisson/Hessian/Bochner/Laplacian外部全仮定の網羅照合は引き続き未完了であり、機械的検査成功を専門家査読済みと表現しない。

@@ -8,7 +8,9 @@ rows=data.get('workflow_runs',[])
 Path('coordination/catalog-357/stage3/actions-runs.json').write_text(json.dumps(data,indent=2)+'\n')
 for r in rows:
  print(json.dumps({k:r.get(k) for k in ['id','head_sha','status','conclusion','html_url']},ensure_ascii=False))
- if r['status']=='completed':
+ if r['status'] in ['in_progress','completed']:
   jobs=get(base+'/runs/'+str(r['id'])+'/jobs')
   Path('coordination/catalog-357/stage3/actions-jobs.json').write_text(json.dumps(jobs,indent=2)+'\n')
   print(json.dumps([{'id':j['id'],'name':j['name'],'conclusion':j['conclusion']} for j in jobs['jobs']]))
+
+  print(json.dumps([{'job':j['name'],'runningSteps':[s['name'] for s in j.get('steps',[]) if s['status']=='in_progress']} for j in jobs['jobs']]))

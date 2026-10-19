@@ -1,3 +1,7 @@
+# 最新状態：カタログ357公開確認済み
+
+第3段階まで完了。STAGE3_COMPLETION.jsonとstage3/PUBLICATION_REPORT.mdを参照。以下は制作履歴。
+
 # カタログ357 制作記録
 
 ## 現在：第2段階

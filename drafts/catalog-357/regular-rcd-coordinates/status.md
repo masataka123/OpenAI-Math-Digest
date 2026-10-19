@@ -73,3 +73,7 @@ node drafts/catalog-357/regular-rcd-coordinates/verify.mjs
 ## 第2段階（2026-10-19、本部）
 
 サイト共通ルートへ登録し、20図assetを公開用へ同一コピー。日英冊子PDFを各20頁・案内と記事の2章・5図で生成。本文・図の内容は不変。overviewの未生成PDF予告を除き、表のLₙを同値のTeX表記へ変更した。独立差分点検は同じAstra/highのreviewer357。実サイト・紙面・リンクの結果、再生成手順と公開前停止状態は coordination/catalog-357/stage2/ と SITE_HQ_HANDOFF.md を参照。第1段階の記録は当時の履歴として保持する。
+
+## 第3段階公開（2026-10-19T10:25:34.528491+09:00）
+
+本部が受領本文・図・PDFを変更せずcommit `892cd7baed4cda2326fc67b0d372b2a4b8c499cc` で公開。Actions成功、日英公開ページ・図・PDFの一致と実ブラウザー操作を確認。coordination/catalog-357/stage3/PUBLICATION_REPORT.md参照。数学的未確認範囲は不変。

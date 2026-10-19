@@ -15,3 +15,9 @@
 公開直前に並行356担当が1b9166a26ed02cd6d66c91f95d67d32beb55bdb6をcommit/pushした。HEADガードによりindexへ書く前に検出した。356を除いた当初の候補はtmp/catalog-357-publication-before-356へ保持し、公開候補を新HEAD＋357へ更新した。356の公開物を削除せず、共有作業場は同一バイトで維持。最終基準はRELEASE_BASE.json、最終検査はsnapshot-*.log（当初の検査はbefore-356-*.log）。
 
 生成ログの行末空白とPDF内部の固定幅xrefは保存したまま扱い、git diff --checkはlog/pdf/証跡diffを除く編集ソースで実施して成功。PDFのバイト列はstage2 SHAとindex SHAを照合し、空白除去などの変更は行わない。
+
+## Actionsの監視
+
+初期状態は公開REST APIで確認した。長い全サイトリンク検査の待機中に無認証APIの403利用制限となったため、接続済みGitHubの読み取りfetchへ切替え、同じrun 39182616123の最終run/jobsレスポンスを保存した。処理の再実行・キャンセル・共有workflow改変は行っていない。最終buildは2026-10-19 10:04:35–10:22:11 JST、deployは10:22:14–10:22:33 JSTにsuccess。
+
+公開確認中、356担当の記録専用commit fe537f1（skip ci）がmainへ追加された。公開コンテンツと今回のrunには影響せず、その履歴も保持する。
