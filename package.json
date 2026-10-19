@@ -15,7 +15,9 @@
     "diagrams:catalog": "node scripts/render-catalog-diagrams.mjs",
     "pdf:catalog": "node scripts/build-catalog-pdf.mjs",
     "check:pdf": "node scripts/build-catalog-pdf.mjs --check",
-    "test:pdf": "node --test scripts/pdf/pipeline.test.mjs"
+    "test:pdf": "node --test scripts/pdf/pipeline.test.mjs",
+    "catalog:prepare": "node scripts/prepare-catalog.mjs",
+    "pdf:doctor": "node scripts/pdf/runtime.mjs"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "6.3.6",

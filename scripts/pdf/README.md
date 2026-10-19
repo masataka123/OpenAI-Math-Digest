@@ -5,6 +5,32 @@
 `npm run pdf:catalog -- --catalog NNN` が、日英PDFの生成、図中引用のリンク補完、
 整合性検査、版情報の更新まで行います。
 
+## 第2段階をまとめて実行する（推奨）
+
+記事とカタログ案内をサイトへ登録した後は、次の1コマンドを使います。
+番号の省略・誤記はエラーにし、1カタログずつ処理します。
+
+```sh
+npm run catalog:prepare -- --catalog NNN
+```
+
+引用検査 → テスト → ビルド → 対象PDFの照合 → 必要なら環境確認・日英PDF生成・
+再ビルド・PDF照合 → 内部リンク検査を順番に実行します。
+内容ハッシュとファイルハッシュが一致するPDFは再利用し、Python・Chromeの起動と
+PDF用の再ビルドも省きます。旧方式の検査済みPDFも再利用対象です。
+旧版への図中リンク追加や収録日の更新を意図して再生成する場合は
+`--regenerate-pdf` を付けます。
+
+工程が失敗すると後続を実行せず、
+`tmp/catalog-preparation/NNN/<実行日時-PID>/` に各工程のログと
+`report.json`（成否、所要時間、失敗工程、再実行コマンド）を残します。
+原因を直して同じコマンドを実行すると、新しくビルド・照合したうえで利用可能なPDFを再利用します。
+前回の成功記録だけを根拠に検査を飛ばすことはしません。
+
+この工程は記事の執筆・サイト登録・目視点検・公開を代行しません。
+成功表示は機械検査の成功であり、第2段階の完了判定には画面・紙面・内容の確認が必要です。
+同じ作業場での同時実行はせず、順番に利用してください。
+
 ## 初回の環境準備
 
 Nodeの依存は `npm ci` で導入します。図の位置取得には固定版の
@@ -25,10 +51,31 @@ export XDG_CACHE_HOME="$PWD/tmp/font-cache"
 # export DYLD_FALLBACK_LIBRARY_PATH=/usr/local/lib
 ```
 
+`catalog:prepare` と次の環境診断コマンドは、`tmp/pdf-venv` のPythonを自動で使います。
+
+```sh
+npm run pdf:doctor
+```
+
+Pythonの版、固定パッケージ、Pangoを使った組版、Chromeの起動を確認します。
+PDFは作りません。任意の環境設定はGit対象外の `tmp/pdf-runtime.json` に保存できます。
+設定できるキーは `PDF_PYTHON`、`PDF_BROWSER_PATH`、`DYLD_FALLBACK_LIBRARY_PATH`、
+`XDG_CACHE_HOME`。同名の環境変数がある場合はそちらが優先されます。
+
+たとえばIntel版HomebrewのPangoを使用するmacOSでは、次の設定を使えます。
+他の環境へこのパスをコピーせず、実際のライブラリーの場所に合わせてください。
+
+```json
+{"DYLD_FALLBACK_LIBRARY_PATH":"/usr/local/lib"}
+```
+
+下記の個別コマンド `pdf:catalog` を直接実行するときは従来どおり
+`PDF_PYTHON` などを環境変数で設定してください。
+
 Python依存は `requirements.txt` の版と一致させます。カタログ固有の一時venvを
 次のカタログの必須パスとして引き継がないでください。
 
-## 通常の第2段階
+## 工程を個別に実行する場合
 
 `NNN` を対象の公式カタログ番号に置き換えます。次のコマンドは順番に実行します。
 

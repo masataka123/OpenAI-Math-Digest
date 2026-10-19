@@ -37,6 +37,8 @@ npm run check:pdf
 
 ## カタログPDF
 
+第2段階の機械処理は `npm run catalog:prepare -- --catalog NNN` でまとめて実行できます。引用検査・テスト・ビルド・必要なPDF生成・内部リンク検査を順番に実行し、変更のないPDFは再利用します。準備状況は `npm run pdf:doctor` で確認できます。[環境設定と再実行手順](scripts/pdf/README.md)を参照してください。
+
 033・034・063の各カタログ冒頭から対応言語の `public/pdf/catalog-NNN-{ja,en}.pdf` を開けます。063は案内と記事1本の2章（各16ページ）、033は6章、034は15章です。以下は034の構成です。総括と全14記事を公式順に収録し、目次・しおり・記事間のリンク・原典リンクを保持します。本文はビルド済みのWebページから取り込み、MathJax 3で数式をSVG化してWeasyPrintで組版します。横長の表は項目一覧に変換し、同じ接続を繰り返す監査表と操作用UIは省きます。23件の接続記録は全件収録します。
 
 本文・図・引用を更新したときは、対象のPDFも再生成してください。図中引用のリンク補完は共通生成に含まれます。Chromeの準備・検査記録などは[共通PDF手順](scripts/pdf/README.md)を参照してください。Python 3.12以上、Pango、Fontconfigと日本語フォント（macOSのヒラギノ、またはNoto Serif/Sans CJK JP）が必要です。PythonとPangoのCPUアーキテクチャを合わせます。初回だけ隔離環境を用意します。
