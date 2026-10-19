@@ -1,0 +1,61 @@
+{
+  "catalogId": "356",
+  "productionVersion": "1.4",
+  "checkingScope": "R (gpt-6-astra/high), 2026-10-19: independent statement/application comparison of the two official September 24, 2026 manuscripts; not a proof certification.",
+  "omittedSections": [
+    {
+      "section": "classification and interactive selector",
+      "reason": "Two papers form one direct analytic input to the converse; no additional classification is needed."
+    }
+  ],
+  "connections": [
+    {
+      "id": "weak-hessian-to-alexandrov",
+      "from": {
+        "paperId": "weak-hessian-geodesics",
+        "result": "Theorem 1.1",
+        "printedPages": "2",
+        "pdfPages": "2",
+        "version": "September 24, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Weak-Hessian-bounds-along-every-geodesic-in-RCD-spaces-September-24-2026/weak-hessian-geodesics.pdf"
+      },
+      "to": {
+        "paperId": "gigli-characterization",
+        "result": "Theorem 6.1; Lemma 6.2; Theorem 6.3",
+        "printedPages": "48–50",
+        "pdfPages": "48–50",
+        "version": "September 24, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Giglis-distributional-curvature-characterization-of-Alexandrov-spaces-September-24-2026/main.pdf"
+      },
+      "role": {
+        "ja": "有界大域修正した距離関数の弱Hessian上界を、任意の定速最短測地線上のモデルODEへ移す。",
+        "en": "Converts the weak Hessian bound for a bounded global distance modification into the model ODE along every constant-speed minimizing geodesic."
+      },
+      "hypotheses": {
+        "ja": "m=H^n、K=(n−1)κ、N=n、full support。Lemma6.2がbounded globally Lipschitz F_pとbounded continuous G_pおよび全compact test gradientへの分布上界を供給する。",
+        "en": "m=H^n, K=(n−1)κ, N=n, and full support. Lemma 6.2 supplies bounded globally Lipschitz F_p, bounded continuous G_p, and the distributional upper bound against every compact test gradient."
+      },
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "reviewer": "R / gpt-6-astra / high",
+        "date": "2026-10-19",
+        "record": "../../../coordination/catalog-356/reviews/independent-baseline.md",
+        "scope": "Theorem1.1 of companion agrees with main Theorem6.1; main Lemma6.2 and Theorem6.3 apply it with the same weak-Hessian definition and sign. Companion proof pp.6–10 is independent of characterization."
+      },
+      "articleLinks": {
+        "from": {
+          "ja": "../weak-hessian-geodesics/article.ja.md#proof-overview",
+          "en": "../weak-hessian-geodesics/article.en.md#proof-overview"
+        },
+        "to": {
+          "ja": "../gigli-characterization/article.ja.md#proof-4",
+          "en": "../gigli-characterization/article.en.md#proof-4"
+        }
+      },
+      "unresolved": [
+        "Entire external proofs and the full technical estimates of the 53-page characterization manuscript are not independently verified."
+      ]
+    }
+  ]
+}

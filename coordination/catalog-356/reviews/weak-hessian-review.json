@@ -1,0 +1,133 @@
+{
+  "catalogId": "356",
+  "paperId": "weak-hessian-geodesics",
+  "reviewer": {
+    "role": "independent content checker R",
+    "model": "gpt-6-astra",
+    "reasoningEffort": "high"
+  },
+  "reviewedAt": "2026-10-19T08:53:35.606028+09:00",
+  "author": "B / gpt-6-astra / high",
+  "independence": "Official source read and baseline recorded before reviewing the draft. No existing Sol draft, diagram, interpretation or check reused.",
+  "decision": "Accepted for Stage 1: bilingual statements, core proof connections and direct external applications agree with the originals within the recorded scope; no requested mathematical correction remains. Visual/PDF gates are separate.",
+  "sourceVersion": "September 24, 2026; commit 1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "checks": [
+    {
+      "item": "Theorem 1.1 and all conclusions",
+      "source": "p.2, (1.1)–(1.4)",
+      "draft": "Main result; proof-overview; main.tikz",
+      "status": "checked",
+      "detail": "Full support; unreduced RCD(K,N), 1<N<∞; bounded globally Lipschitz F; bounded continuous G; every compact original test g and nonnegative h in Lip_c; every constant-speed minimizing geodesic; length squared; distribution sign; constant-G concavity; no global F∈L²."
+    },
+    {
+      "item": "Lemma 3.1 full statement and argument",
+      "source": "p.6",
+      "draft": "proof-1; drift.tikz",
+      "status": "checked",
+      "detail": "Weak gradients/Sobolev spaces agree, D(Δ_V)=D(Δ), plus sign drift, graph norms equivalent; resolvent contraction proves multiplier Lipschitz regularity before weighted curvature is assumed."
+    },
+    {
+      "item": "Proposition 4.1 full statement and argument",
+      "source": "pp.7–9",
+      "draft": "proof-2; curvature.tikz",
+      "status": "checked",
+      "detail": "Every λ>0; e^{λF}; K−λG; CD(k,∞) rather than finite-N conclusion. Actual weighted domain obtained by common graph core before differentiation; constant weighted RCD established before BHS variable equivalence."
+    },
+    {
+      "item": "Every-geodesic step",
+      "source": "§5 pp.9–10",
+      "draft": "proof-overview-step-1/2/3; main.tikz",
+      "status": "checked",
+      "detail": "Nonbranching rather than essential nonbranching; strict interior subsegment uniqueness; finite positive ball mass; λ_j dominates endpoint entropies; compact Q and Jensen; min(s,t)−st Green kernel; every interior subinterval yields distribution bound."
+    },
+    {
+      "item": "Japanese-English correspondence",
+      "source": "official source and both articles",
+      "draft": "article.ja.md / article.en.md / three bilingual tikz sources",
+      "status": "checked",
+      "detail": "Hypotheses, displayed formula signs, length normalization, section order, source scope, independent intermediate statements agree."
+    }
+  ],
+  "externalInputs": [
+    {
+      "key": "AGS15",
+      "version": "arXiv:1209.5786v4",
+      "printedPdfPages": [
+        18,
+        33,
+        38,
+        40,
+        57
+      ],
+      "results": "Corollary2.3 Eq2.34; Theorems3.9,3.14,4.17; Definition3.16",
+      "use": "Lemma3.1 reverse Poincaré; Proposition4.1 intrinsic distance and constant weighted RCD. Statements/application checked; proofs not recursively verified."
+    },
+    {
+      "key": "BHS21",
+      "version": "arXiv:1906.09186v1",
+      "printedPdfPages": [
+        3,
+        4
+      ],
+      "results": "Theorem1.1; Definitions1.2,1.4",
+      "use": "Existing weighted RCD prerequisite, bounded continuous k, exact BE2 domain and entropy Green normalization checked."
+    },
+    {
+      "key": "Deng25",
+      "version": "arXiv:2009.07956v2",
+      "printedPdfPages": [
+        2
+      ],
+      "results": "Theorem1.3",
+      "use": "Nonbranching for all geodesics, finite-dimensional 1<N<∞, applied to strict subsegments."
+    },
+    {
+      "key": "Sav14",
+      "version": "arXiv:1304.0643v2",
+      "printedPdfPages": [
+        11,
+        12
+      ],
+      "results": "Lemma3.2; Eqs3.4,3.7–3.9",
+      "use": "Original Test contained in D∞; Bochner measure singular part positive and capacity-zero sets uncharged; nonnegative Lipschitz multipliers via source Lemma2.1."
+    },
+    {
+      "key": "Gig18",
+      "version": "arXiv:1407.0809v1",
+      "printedPdfPages": [
+        110
+      ],
+      "results": "Theorem3.3.8",
+      "use": "Hessian-square estimate for the original Test class; combined with Savaré measure statement."
+    },
+    {
+      "key": "GT21",
+      "version": "arXiv:1802.02463v1",
+      "printedPdfPages": [
+        54,
+        55,
+        56
+      ],
+      "results": "EqA.7; LemmaA.2; EqA.13",
+      "use": "Original heat regularization, exhausting cutoffs and Hessian graph estimate. Unreduced hypothesis implies reduced at unchanged K,N."
+    }
+  ],
+  "findings": [],
+  "limitations": [
+    "Not an independent verification of the complete foundational RCD/Bochner/heat-flow theory or every external proof.",
+    "Only mathematical text and TikZ content checked here; diagram generation, 033/034 display comparison, mobile layout and bilingual booklet PDFs require separate evidence."
+  ],
+  "reviewedFiles": {
+    "drafts/catalog-356/weak-hessian-geodesics/article.ja.md": "1df9e8921a3f70edc8e0084a575ac9f1148afcfd29d878edc9e8b556e4b4447a",
+    "drafts/catalog-356/weak-hessian-geodesics/article.en.md": "cb76bbae3d9a9569fa31ca4769d1c967414bb4f5be47393e6d894610479a5796",
+    "drafts/catalog-356/weak-hessian-geodesics/citations.json": "6acc1e73b573ad063afe7ad4b2cd857caa669d08aff5632834747b6530c23e2a",
+    "drafts/catalog-356/weak-hessian-geodesics/sources.json": "e8bcb4c8a080f9b592637e70803e37d2bf5823c684497e0973aabc2b85ed3b07",
+    "drafts/catalog-356/weak-hessian-geodesics/diagrams/main.tikz": "e1de645db9cb915043e6ce5e3ce5584d1fc76d8b3a993dbb4a3548107abe6b77",
+    "drafts/catalog-356/weak-hessian-geodesics/diagrams/drift.tikz": "9fc5b9bf3d2d4c023f2721b7278901383bdcd85a8524d25d71401a0e6ccbe751",
+    "drafts/catalog-356/weak-hessian-geodesics/diagrams/curvature.tikz": "f51ee1a311e877356690a5d3f9aef4a546c298a360c6a74517e9b3c366630e4c"
+  },
+  "finalizedAt": "2026-10-19T08:57:17.277080+09:00",
+  "finalChecks": [
+    "All reviewed article, citation, source and TikZ hashes remain unchanged at final acceptance."
+  ]
+}

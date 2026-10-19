@@ -1,0 +1,35 @@
+{
+  "catalogId": "356",
+  "paperId": "weak-hessian-geodesics",
+  "mainResult": "Theorem 1.1, p.2",
+  "coverage": [
+    {
+      "result": "main",
+      "conclusion": "Every minimizing geodesic: variable distributional second-derivative bound",
+      "anchor": "proof-overview-step-3"
+    },
+    {
+      "result": "main",
+      "conclusion": "Constant G gives concavity; infinite total mass and no global L² assumption on F",
+      "anchor": "proof-overview-step-3"
+    }
+  ],
+  "intermediateResults": [
+    {
+      "result": "Lemma 3.1",
+      "statementAnchor": "lemma-3-1",
+      "conclusions": {
+        "common Sobolev and generator domains; graph norms": "proof-1-step-1",
+        "Lipschitz multiplier": "proof-1-step-2"
+      }
+    },
+    {
+      "result": "Proposition 4.1",
+      "statementAnchor": "proposition-4-1",
+      "conclusions": {
+        "every lambda, unchanged metric, CD(K-lambda G,infinity)": "proof-2-step-3"
+      }
+    }
+  ],
+  "checked": "原典の全主要結論と日英記事の説明段階を自己照合。独立点検は別担当。"
+}

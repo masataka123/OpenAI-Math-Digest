@@ -1,0 +1,91 @@
+{
+  "reviewer": "R / gpt-6-astra / high",
+  "checkedAt": "2026-10-19T08:54:13.921672+09:00",
+  "scope": "Original statements and applications relevant to the core exposition; not recursive verification of external proofs.",
+  "mainPaperInputs": [
+    {
+      "key": "Gig19",
+      "version": "arXiv:1902.02282v1",
+      "locations": "Definition2.6 p.5; Proposition2.7 p.6",
+      "application": "Main pp.2,6–7,18,21–23: sign of the bracket term, pair symmetry, and Test-coefficient tensoriality. Formula matches exactly.",
+      "status": "checked"
+    },
+    {
+      "key": "GRS16",
+      "version": "arXiv:1305.4849v1",
+      "locations": "Theorems1.1 and1.3 p.2",
+      "application": "Main Lemma4.13 pp.36–37 reverses plans so absolutely continuous terminal density is the source; other endpoint may be singular; mixtures stay calibrated. RCD* input follows from the unreduced assumption without changing K,N.",
+      "status": "checked"
+    },
+    {
+      "key": "GH15",
+      "version": "arXiv:1406.6350v1",
+      "locations": "Definition3.4 / Theorem3.5 p.11",
+      "application": "Main Lemma4.11 pp.34–35 verifies W2-continuity and moment tails before the criterion, extends Lt from W1,2 to S2, and the identity to L1∩S2. Bounded compression only on positive-time intervals.",
+      "status": "checked"
+    },
+    {
+      "key": "JLZ16",
+      "version": "arXiv:1407.5289v2",
+      "locations": "Theorem1.2 p.2",
+      "application": "Main Lemma4.10 pp.33–34 weakens the Ricci bound to K<0 and uses both Gaussian exponents 4±epsilon for the logarithmic heat limit; actual sectional κ is not replaced in the theorem.",
+      "status": "checked"
+    },
+    {
+      "key": "DPG18",
+      "version": "arXiv:1708.02060v3",
+      "locations": "Theorem1.12 p.7; Corollary2.14 p.17",
+      "application": "Main p.8 and §§5.1–5.2: exact H^n and full support give a.e. Euclidean n-tangents/module rank and noncollapsed upper density; lower local ball bounds are separately obtained from Bishop–Gromov/full support.",
+      "status": "checked"
+    },
+    {
+      "key": "BPS21",
+      "version": "arXiv:2001.07911v1",
+      "locations": "Definition1.3 / Proposition1.4 p.5",
+      "application": "Main Proposition5.1 proof p.40 applies product theorem with auxiliary N=n+1, k=n, point residual RCD(0,1), radius 2Ar_k/5, giving output ball B(y,2Ar_k). Actual measure/dimension remains H^n,n.",
+      "status": "checked"
+    },
+    {
+      "key": "GT21",
+      "version": "arXiv:1802.02463v1",
+      "locations": "Theorem5.13 p.50",
+      "application": "Main Proposition5.6 pp.42–44 uses bounded-support optimal test plans, H2,2 compact test potentials, bounded weighted restrictions and affine time reparametrization. The conclusion is a.e. pathwise identity obtained through L2(plan)/Fubini, not an identity for every geodesic.",
+      "status": "checked"
+    },
+    {
+      "key": "KKS23",
+      "version": "arXiv:2003.06242v1",
+      "locations": "Theorem2.9 p.7; Corollary2.10 p.8",
+      "application": "Main Theorem3.1 p.9; unreduced RCD((n−1)κ,n), exact Hausdorff measure, no boundaryless/compactness hypothesis.",
+      "status": "checked"
+    },
+    {
+      "key": "Deng25",
+      "version": "arXiv:2009.07956v2",
+      "locations": "Theorems1.1–1.2 p.2",
+      "application": "Main Lemma5.5 p.42 applies same-rescaling tangent continuity along every geodesic to nearby regular times, then lets those times converge. Endpoints rely on bounded compression.",
+      "status": "checked"
+    },
+    {
+      "key": "AKP24",
+      "version": "author online PDF downloaded by A; verify A source hash for fixed acquisition",
+      "locations": "Theorem8.14 p.86; Theorem8.30 pp.93–94; Theorem8.31 p.95",
+      "application": "Main pp.49–50 derives local four-point comparison explicitly using ambient minimizing segments, then applies local criterion and globalization for complete length space. No convexity of metric balls inferred.",
+      "status": "checked"
+    },
+    {
+      "key": "OpenAI26b",
+      "version": "official September24,2026 fixed commit",
+      "locations": "Theorem1.1 p.2; proof pp.6–10",
+      "application": "Main Theorem6.1 p.48 exact statement; Lemma6.2 supplies admissible global Fp,Gp and all compact test gradients; Theorem6.3 applies with K=(n−1)κ,N=n,m=H^n.",
+      "status": "checked"
+    }
+  ],
+  "companionInputRecord": "weak-hessian-review.json",
+  "unverified": [
+    "Full fourth-order expansion and all constants of heat estimates are not independently rederived.",
+    "Capacity/Newtonian-Sobolev representative identification and all foundational external proofs not recursively verified.",
+    "AKP online file identity with the manuscript’s September 24, 2026 snapshot is unverified; checked statements refer to the retrieved PDF, whose acquisition hash is recorded by A."
+  ],
+  "finalizedAt": "2026-10-19T08:57:17.277080+09:00"
+}

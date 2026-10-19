@@ -1,0 +1,7 @@
+\node[result] (a) {\heading{1}{終端密度を固定する熱因子}{Heat factors with prescribed terminal density}$H_t^c=P_{ct}(e^{-u/(2c)}),\quad J_t^c=P_{c(1-t)}(f/H_1^c)$\\$\rho^c=H^cJ^c,\quad\rho_1^c=f,\quad v^c=\nabla\theta^c,\quad w^c=c\nabla\log\rho^c$};
+\node[card,below=1.9cm of a] (b) {\heading{2}{粘性付き指数不等式}{The viscous index inequality}$H_{\varphi_1^c+c\log f}(Z,Z)(f)\le\int_\delta^1\!\int\rho^c\bigl(|D_cY|^2-\kappa|Y\wedge v^c|^2\bigr)\,dm\,dt+\varepsilon_c$};
+\flow a b {\Tx{$1/c$項を相殺し、非負Bochner測度を下から制御}{Cancel inverse-viscosity terms and bound the positive Bochner measure from below}\\\Cite{riccati}};
+\node[card,below=1.9cm of b] (c) {\heading{3}{作用等号から速度の強収束へ}{Action equality gives strong velocity convergence}$\varphi_t^c\to Q_tu,\qquad\int\!\int\rho^c|v^c-V|^2\,dm\,dt\to0$};
+\flow b c {\Tx{$W_2$連続性・尾部制御の後で作用と双対の評価を等号化}{After $W_2$ continuity and tail control, action and duality estimates become equalities}\\\Cite{action}};
+\node[result,below=2.2cm of c] (d) {\heading{4}{共通経路指定と指数不等式}{Common path prescription and the index inequality}$\pi_f=S_\#(fm),\quad Y_\delta=0,\ Y_1=Z$\\$H_{Q_1u}(Z,Z)(f)\le\int\!\int_\delta^1(|D_tY|^2-\kappa|Y\wedge v|^2)\,dt\,d\pi_f$};
+\flow c d {\Tx{絶対連続終端からの一意性、固定 $\nabla Y$ との積、最後に正の摂動を除去}{Uniqueness from the terminal density, fixed $\nabla Y$ products, then remove the positive perturbation}\\\Cite{grs}\quad\Cite{common-paths}};

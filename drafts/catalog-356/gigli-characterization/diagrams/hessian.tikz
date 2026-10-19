@@ -1,0 +1,7 @@
+\node[result] (a) {\heading{1}{非崩壊性と可算調和枠}{Noncollapse and countable harmonic frames}$m=\mathcal H^n,\quad\operatorname{Cap}_2(N)=0,\quad\mathcal H^{n-1}(S)=0$};
+\node[card,below=2.2cm of a] (b) {\heading{2}{ほとんど全経路の全時刻で枠を得る}{Frames at every time on almost every path}$\gamma([\delta,1])\cap(N\cup S)=\varnothing,\quad D_tv=0$};
+\flow a b {\Tx{圧縮性で例外を避け、接錐連続性と有限次元ODEを使う}{Compression avoids exceptional sets; tangent continuity and finite-dimensional ODEs give frames}\\\Cite{deng}\quad\Cite{gt}\\\Cite{frame-set}};
+\node[card,below=2.1cm of b] (c) {\heading{3}{符号付き測度と可算infimum}{Signed measure and countable infimum}$H_q(Z,Z)=h_Zm+\mu_s,\quad\mu_s\le0$\\$h_Z(x)\le\inf_{Y\in\mathcal Y_{\delta,Z}}E_Y(x),\quad v(1)=\nabla q$};
+\flow b c {\Tx{共通終端経路、固定試験の正値性、可算族の経路ごとの近似}{Common terminal paths, positivity for a fixed trial, and pathwise approximation by a countable family}\\\Cite{frame-ode}\quad\Cite{trace}};
+\node[result,below=2.0cm of c] (d) {\heading{4}{Jacobi試験のエネルギーを評価}{Evaluate the Jacobi trial energy}$\displaystyle H_q(Z,Z)\le\left(|Z_\parallel|^2+r\frac{s_\kappa'(r)}{s_\kappa(r)}|Z_\perp|^2\right)m$};
+\flow c d {\Tx{平行成分は線形、横成分は $s_\kappa$、可算列 $\delta\downarrow0$}{Linear parallel component, $s_\kappa$ transverse component, then a countable $\delta\downarrow0$}\\\Cite{hessian}};

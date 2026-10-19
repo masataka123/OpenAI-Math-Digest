@@ -1,0 +1,526 @@
+{
+  "paperId": "gigli-characterization",
+  "title": "Gigli’s distributional curvature characterization of Alexandrov spaces",
+  "version": "September 24, 2026",
+  "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Giglis-distributional-curvature-characterization-of-Alexandrov-spaces-September-24-2026/main.pdf",
+  "downloadUrl": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Giglis-distributional-curvature-characterization-of-Alexandrov-spaces-September-24-2026/main.pdf",
+  "pdfPages": 53,
+  "sha256": "e104c43128bea2923c4f6d33f911a519f0c0fd2ca6904a2bcdad807ed7a42fd6",
+  "catalogId": "356",
+  "displayName": "Gigli’s distributional curvature characterization of Alexandrov spaces",
+  "authors": "OpenAI",
+  "checkedOn": "2026-10-19",
+  "worker": "A",
+  "model": "gpt-6-astra",
+  "reasoningEffort": "high",
+  "existingContentReuse": "None; original manuscripts read afresh. Common presentation infrastructure only.",
+  "statements": [
+    {
+      "result": "Theorem 1.1; (1.1)–(1.4)",
+      "pages": "2",
+      "statementAnchor": "theorem-1-1",
+      "checking": "原典の仮定・量化・結論を日英主張欄と照合",
+      "hypotheses": "Complete separable (M,d), integer n>=2, kappa real. B uses exact H^n, full support, unreduced RCD((n−1)kappa,n), original global Test and TestV.",
+      "conclusions": "A iff B; both directions, curvature and dimension."
+    },
+    {
+      "result": "Theorem 3.1",
+      "pages": "9",
+      "statementAnchor": "theorem-3-1",
+      "checking": "原典の仮定・量化・結論を日英主張欄と照合",
+      "hypotheses": "Complete n-dimensional CBB(kappa), exact H^n.",
+      "conclusions": "Full support, unreduced RCD, and inequality for every global X,Y and nonnegative global f."
+    },
+    {
+      "result": "Theorem 4.1",
+      "pages": "24",
+      "statementAnchor": "theorem-4-1",
+      "checking": "原典の仮定・量化・結論を日英主張欄と照合",
+      "hypotheses": "B; bounded global Lipschitz u constant off compact set; every nonnegative compact Lipschitz f; compact test gradient Z; 0<delta<1; smooth finite temporal combinations with global endpoints.",
+      "conclusions": "Common Borel calibrated path prescription independent of f,Z,trial; bounded speed and positive-time compression; index inequality."
+    },
+    {
+      "result": "Theorem 5.10",
+      "pages": "46–47",
+      "statementAnchor": "theorem-5-10",
+      "checking": "原典の仮定・量化・結論を日英主張欄と照合",
+      "hypotheses": "B; each p; R_kappa sqrt(kappa)<pi/2 for kappa>0; each compact test gradient.",
+      "conclusions": "Signed Radon Hessian measure, nonpositive singular part, radial/transverse comparison, |grad q|=r a.e., center-independent radius."
+    },
+    {
+      "result": "Theorem 6.3",
+      "pages": "49–50",
+      "statementAnchor": "theorem-6-3",
+      "checking": "原典の仮定・量化・結論を日英主張欄と照合",
+      "hypotheses": "B.",
+      "conclusions": "Global CBB(kappa) and Hausdorff dimension n."
+    }
+  ],
+  "proofPassages": [
+    {
+      "section": "§3.1–3.4",
+      "pages": "9–19",
+      "read": "Short-flow equations, configuration inequality, density variation, dual energy identity, square completion and order of endpoint-correction limit."
+    },
+    {
+      "section": "§§3.5–3.6",
+      "pages": "19–23",
+      "read": "Finite local gradient approximation, signed coefficient measures, local strong second derivatives, global cutoff tail."
+    },
+    {
+      "section": "§§4.1–4.3",
+      "pages": "24–33",
+      "read": "Positive terminal data, heat factors, density/lower Laplacian estimates, weighted second order estimates, exact inverse-viscosity cancellation, singular Bochner measure treatment."
+    },
+    {
+      "section": "§4.4",
+      "pages": "33–37",
+      "read": "Logarithmic heat limit, W2 continuity before continuity-equation criterion, moment tails, action sandwich, weighted strong velocity convergence and terminal-density-independent path prescription."
+    },
+    {
+      "section": "§§5.1–5.2",
+      "pages": "38–45",
+      "read": "Splitting maps, rank-defect content, polar and H^(n−1)-null avoidance, Deng tangent continuity, finite-dimensional ODE, parallel velocity and countable global trials."
+    },
+    {
+      "section": "§§5.3–5.4",
+      "pages": "45–47",
+      "read": "Radial Hopf–Lax data, terminal gradient trace, Riesz measure extraction, countable infimum, Jacobi energy, delta limit."
+    },
+    {
+      "section": "§§6–7",
+      "pages": "48–50",
+      "read": "Companion hypotheses, bounded monotone distance modification, model ODE, local four-point and global CBB, dimension."
+    }
+  ],
+  "externalSources": [
+    {
+      "id": "kks",
+      "displayName": "On gluing Alexandrov spaces with lower Ricci curvature bounds",
+      "title": "On gluing Alexandrov spaces with lower Ricci curvature bounds",
+      "authors": "Vitali Kapovitch, Christian Ketterer, Karl-Theodor Sturm",
+      "version": "arXiv:2003.06242v1 (2020); published 2023",
+      "sourceUrl": "https://arxiv.org/pdf/2003.06242v1",
+      "sha256": "d497584903233d64000108c29918a8ba10950a1555e46c61a2318f66d713fdc2",
+      "localFile": "external/kks20.pdf",
+      "checkedOn": "2026-10-19",
+      "checking": "指定版の下記結果の記述と本稿の適用を照合。外部結果の全証明は検証していない。"
+    },
+    {
+      "id": "gigli",
+      "displayName": "Riemann curvature tensor on RCD spaces and possible applications",
+      "title": "Riemann curvature tensor on RCD spaces and possible applications",
+      "authors": "Nicola Gigli",
+      "version": "arXiv:1902.02282v1 (2019)",
+      "sourceUrl": "https://arxiv.org/pdf/1902.02282v1",
+      "sha256": "d97c5733c0dc5e39dc5c4ff2de2a62896a5e3717db88ccda05bd171844033006",
+      "localFile": "external/gigli19.pdf",
+      "checkedOn": "2026-10-19",
+      "checking": "指定版の下記結果の記述と本稿の適用を照合。外部結果の全証明は検証していない。"
+    },
+    {
+      "id": "grs",
+      "displayName": "Optimal maps and exponentiation on finite-dimensional spaces with Ricci curvature bounded from below",
+      "title": "Optimal maps and exponentiation on finite-dimensional spaces with Ricci curvature bounded from below",
+      "authors": "Nicola Gigli, Tapio Rajala, Karl-Theodor Sturm",
+      "version": "arXiv:1305.4849v1 (2013); published 2016",
+      "sourceUrl": "https://arxiv.org/pdf/1305.4849v1",
+      "sha256": "4b407a793ddaaf80c150af6a2d92dcc3cdac9f110c74ddca54d3324cf04417d1",
+      "localFile": "external/grs13.pdf",
+      "checkedOn": "2026-10-19",
+      "checking": "指定版の下記結果の記述と本稿の適用を照合。外部結果の全証明は検証していない。"
+    },
+    {
+      "id": "gh",
+      "displayName": "The continuity equation on metric measure spaces",
+      "title": "The continuity equation on metric measure spaces",
+      "authors": "Nicola Gigli, Bang-Xian Han",
+      "version": "arXiv:1406.6350v1 (2014); published 2015",
+      "sourceUrl": "https://arxiv.org/pdf/1406.6350v1",
+      "sha256": "592e0d92c8958d43248ac465ad51d2faee121f71ead1986e795a91d94aee2ac6",
+      "localFile": "external/gh14.pdf",
+      "checkedOn": "2026-10-19",
+      "checking": "指定版の下記結果の記述と本稿の適用を照合。外部結果の全証明は検証していない。"
+    },
+    {
+      "id": "jlz",
+      "displayName": "Heat kernel bounds on metric measure spaces and some applications",
+      "title": "Heat kernel bounds on metric measure spaces and some applications",
+      "authors": "Renjin Jiang, Huaiqian Li, Huichun Zhang",
+      "version": "arXiv:1407.5289v2 (2015); published 2016",
+      "sourceUrl": "https://arxiv.org/pdf/1407.5289v2",
+      "sha256": "bd9f902a0a70b090bdae9ff0f90403a2c1e6035d0f51161f285cf88ad06ba123",
+      "localFile": "external/jlz14.pdf",
+      "checkedOn": "2026-10-19",
+      "checking": "指定版の下記結果の記述と本稿の適用を照合。外部結果の全証明は検証していない。"
+    },
+    {
+      "id": "dpg",
+      "displayName": "Non-collapsed spaces with Ricci curvature bounded from below",
+      "title": "Non-collapsed spaces with Ricci curvature bounded from below",
+      "authors": "Guido De Philippis, Nicola Gigli",
+      "version": "arXiv:1708.02060v3 (2018)",
+      "sourceUrl": "https://arxiv.org/pdf/1708.02060v3",
+      "sha256": "a0d7edd7a3f68111c7109ded117c37f521d208e0d02e5c7ce31e43df7798a612",
+      "localFile": "external/dpg18.pdf",
+      "checkedOn": "2026-10-19",
+      "checking": "指定版の下記結果の記述と本稿の適用を照合。外部結果の全証明は検証していない。"
+    },
+    {
+      "id": "bps",
+      "displayName": "Rectifiability of RCD(K, N) spaces via δ-splitting maps",
+      "title": "Rectifiability of RCD(K, N) spaces via δ-splitting maps",
+      "authors": "Elia Bruè, Enrico Pasqualetto, Daniele Semola",
+      "version": "arXiv:2001.07911v1 (2020); published 2021",
+      "sourceUrl": "https://arxiv.org/pdf/2001.07911v1",
+      "sha256": "e1ae5c5ec1c75943fb0c4402b760a54297ce73131962e17cff5d2009ec09df59",
+      "localFile": "external/bps20.pdf",
+      "checkedOn": "2026-10-19",
+      "checking": "指定版の下記結果の記述と本稿の適用を照合。外部結果の全証明は検証していない。"
+    },
+    {
+      "id": "deng",
+      "displayName": "Hölder continuity of tangent cones in RCD(K, N) spaces and applications to non-branching",
+      "title": "Hölder continuity of tangent cones in RCD(K, N) spaces and applications to non-branching",
+      "authors": "Qin Deng",
+      "version": "arXiv:2009.07956v2; published 2025",
+      "sourceUrl": "https://arxiv.org/pdf/2009.07956v2",
+      "sha256": "5456b24de171b8577a5435a9f460ca10897054d21d05c98cbada1d4e7b90c7be",
+      "localFile": "external/deng20.pdf",
+      "checkedOn": "2026-10-19",
+      "checking": "指定版の下記結果の記述と本稿の適用を照合。外部結果の全証明は検証していない。"
+    },
+    {
+      "id": "gt",
+      "displayName": "Second order differentiation formula on RCD∗(K, N) spaces",
+      "title": "Second order differentiation formula on RCD∗(K, N) spaces",
+      "authors": "Nicola Gigli, Luca Tamanini",
+      "version": "arXiv:1802.02463v1 (2018); published 2021",
+      "sourceUrl": "https://arxiv.org/pdf/1802.02463v1",
+      "sha256": "8b523c0608078a15645df17b63091d51a418e42ec07eaf3791a3fa2a5801a67d",
+      "localFile": "external/gt18.pdf",
+      "checkedOn": "2026-10-19",
+      "checking": "指定版の下記結果の記述と本稿の適用を照合。外部結果の全証明は検証していない。"
+    },
+    {
+      "id": "akp",
+      "displayName": "Alexandrov Geometry: Foundations",
+      "title": "Alexandrov Geometry: Foundations",
+      "authors": "Stephanie Alexander, Vitali Kapovitch, Anton Petrunin",
+      "version": "Updated online PDF, retrieved 2026-10-19; book published 2024. Numbering matches the manuscript’s cited 2026-09-24 online version.",
+      "sourceUrl": "https://anton-petrunin.github.io/book/arXiv.pdf",
+      "sha256": "1ba6f6f011a8333d9a20bdbf49d36d68b61bf1aababb19296ed48ecea37248ed",
+      "localFile": "external/akp.pdf",
+      "checkedOn": "2026-10-19",
+      "checking": "指定版の下記結果の記述と本稿の適用を照合。外部結果の全証明は検証していない。"
+    },
+    {
+      "id": "companion",
+      "displayName": "Weak Hessian bounds along every geodesic in RCD spaces",
+      "title": "Weak Hessian bounds along every geodesic in RCD spaces",
+      "authors": "OpenAI",
+      "version": "September 24, 2026",
+      "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Weak-Hessian-bounds-along-every-geodesic-in-RCD-spaces-September-24-2026/weak-hessian-geodesics.pdf",
+      "sha256": "eb34f06c23632a5745015f9e4ef363b9074540a400f95ed3de7aa9dc10aaecc2",
+      "pdfPages": 11,
+      "checkedOn": "2026-10-19",
+      "checking": "Theorem 1.1 p.2の全仮定と本稿Theorem 6.1/Lemma 6.2の適用を照合。証明全体は担当Bが別記事化。"
+    }
+  ],
+  "dependencies": [
+    {
+      "source": "KKS23",
+      "kind": "direct",
+      "locations": [
+        {
+          "result": "Theorem 2.9; Corollary 2.10",
+          "printed": "7–8",
+          "pdf": "7–8"
+        }
+      ],
+      "role": {
+        "ja": "Alexandrov空間からunreduced RCDへの入力",
+        "en": "Alexandrov-to-unreduced-RCD input"
+      },
+      "checking": "入力結果の記述と本稿内の使用箇所を照合。外部結果の証明全体は対象外。",
+      "usedIn": {
+        "paperId": "gigli-characterization",
+        "result": "Theorem 3.1",
+        "printed": "9",
+        "pdf": "9"
+      },
+      "hypothesesAndApplication": "Complete n-dimensional Alexandrov with exact H^n; no compactness or finite total mass assumption.",
+      "withinCatalog": false
+    },
+    {
+      "source": "Gig19",
+      "kind": "direct",
+      "locations": [
+        {
+          "result": "Definition 2.6; Proposition 2.7",
+          "printed": "5–6",
+          "pdf": "5–6"
+        }
+      ],
+      "role": {
+        "ja": "曲率の符号・対称性・テスト関数上のテンソル性",
+        "en": "Curvature sign, symmetries, and tensoriality over test functions"
+      },
+      "checking": "入力結果の記述と本稿内の使用箇所を照合。外部結果の証明全体は対象外。",
+      "usedIn": {
+        "paperId": "gigli-characterization",
+        "result": "Lemma 2.3; Lemma 3.11",
+        "printed": "6–7, 21–22",
+        "pdf": "6–7, 21–22"
+      },
+      "hypothesesAndApplication": "Original global Test and TestV; products admitted by test algebra; extension to compact Lipschitz weights is proved internally.",
+      "withinCatalog": false
+    },
+    {
+      "source": "GRS16",
+      "kind": "direct",
+      "locations": [
+        {
+          "result": "Theorems 1.1, 1.3",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ],
+      "role": {
+        "ja": "絶対連続端点からの最適経路の一意性",
+        "en": "Uniqueness of optimal paths from an absolutely continuous endpoint"
+      },
+      "checking": "入力結果の記述と本稿内の使用箇所を照合。外部結果の証明全体は対象外。",
+      "usedIn": {
+        "paperId": "gigli-characterization",
+        "result": "Lemma 3.4; Lemma 4.13",
+        "printed": "13–15, 36–37",
+        "pdf": "13–15, 36–37"
+      },
+      "hypothesesAndApplication": "Reverse calibrated plans start from absolutely continuous finite-second-moment terminal densities; the other endpoint may be singular.",
+      "withinCatalog": false
+    },
+    {
+      "source": "GH15",
+      "kind": "direct",
+      "locations": [
+        {
+          "result": "Theorem 3.5",
+          "printed": "11",
+          "pdf": "11"
+        }
+      ],
+      "role": {
+        "ja": "有界圧縮のWasserstein曲線と連続の方程式・作用",
+        "en": "Continuity equation and action for bounded-compression Wasserstein curves"
+      },
+      "checking": "入力結果の記述と本稿内の使用箇所を照合。外部結果の証明全体は対象外。",
+      "usedIn": {
+        "paperId": "gigli-characterization",
+        "result": "Lemmas 4.11–4.12",
+        "printed": "34–36",
+        "pdf": "34–36"
+      },
+      "hypothesesAndApplication": "W2 continuity is proved first using tightness and uniform moment tails; bounded compression and S^2 continuity functional then give action estimates.",
+      "withinCatalog": false
+    },
+    {
+      "source": "JLZ16",
+      "kind": "direct",
+      "locations": [
+        {
+          "result": "Theorem 1.2",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ],
+      "role": {
+        "ja": "負のRicci下界へ弱めたGaussian熱核評価",
+        "en": "Gaussian heat bounds after weakening the Ricci parameter to a negative value"
+      },
+      "checking": "入力結果の記述と本稿内の使用箇所を照合。外部結果の証明全体は対象外。",
+      "usedIn": {
+        "paperId": "gigli-characterization",
+        "result": "Lemma 4.2; Lemma 4.10",
+        "printed": "24–25, 33–34",
+        "pdf": "24–25, 33–34"
+      },
+      "hypothesesAndApplication": "Weaken K to a strictly negative Ricci bound; finite N and full support; bounded non-Lp data handled by local cutoffs and Gaussian tails.",
+      "withinCatalog": false
+    },
+    {
+      "source": "DPG18",
+      "kind": "direct",
+      "locations": [
+        {
+          "result": "Theorem 1.12; Corollary 2.14",
+          "printed": "7, 17",
+          "pdf": "7, 17"
+        }
+      ],
+      "role": {
+        "ja": "非崩壊性からEuclid接錐・次元・体積評価",
+        "en": "Euclidean tangents, dimension, and volume control from noncollapse"
+      },
+      "checking": "入力結果の記述と本稿内の使用箇所を照合。外部結果の証明全体は対象外。",
+      "usedIn": {
+        "paperId": "gigli-characterization",
+        "result": "§2.3(i); Proposition 5.1",
+        "printed": "8, 38–41",
+        "pdf": "8, 38–41"
+      },
+      "hypothesesAndApplication": "Exact H^n and RCD(K,n), n integer; normalized Euclidean tangents a.e. and n-dimensional tangent module.",
+      "withinCatalog": false
+    },
+    {
+      "source": "BPS21",
+      "kind": "direct",
+      "locations": [
+        {
+          "result": "Proposition 1.4",
+          "printed": "5",
+          "pdf": "5"
+        }
+      ],
+      "role": {
+        "ja": "Euclid拡大近傍の調和splitting map",
+        "en": "Harmonic splitting maps near Euclidean rescalings"
+      },
+      "checking": "入力結果の記述と本稿内の使用箇所を照合。外部結果の証明全体は対象外。",
+      "usedIn": {
+        "paperId": "gigli-characterization",
+        "result": "Proposition 5.1",
+        "printed": "40",
+        "pdf": "40"
+      },
+      "hypothesesAndApplication": "Use auxiliary N=n+1, k=n, point residual RCD(0,1), radius 2Ar_k/5; curvature scale tends to zero and Euclidean rescalings occur at regular points.",
+      "withinCatalog": false
+    },
+    {
+      "source": "Deng25",
+      "kind": "direct",
+      "locations": [
+        {
+          "result": "Theorems 1.1–1.2",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ],
+      "role": {
+        "ja": "全測地線上で同じ拡大列に沿う接錐の連続性",
+        "en": "Continuity of tangents from the same rescaling sequence along every geodesic"
+      },
+      "checking": "入力結果の記述と本稿内の使用箇所を照合。外部結果の証明全体は対象外。",
+      "usedIn": {
+        "paperId": "gigli-characterization",
+        "result": "Lemma 5.5",
+        "printed": "42",
+        "pdf": "42"
+      },
+      "hypothesesAndApplication": "Every geodesic; compare tangents along the same rescaling sequence at dense regular times; constants uniform on compact interior time intervals.",
+      "withinCatalog": false
+    },
+    {
+      "source": "GT21",
+      "kind": "direct",
+      "locations": [
+        {
+          "result": "Theorem 5.13",
+          "printed": "50",
+          "pdf": "50"
+        }
+      ],
+      "role": {
+        "ja": "有界台最適測地線計画の2階微分公式",
+        "en": "Second-order differentiation along bounded-support optimal geodesic test plans"
+      },
+      "checking": "入力結果の記述と本稿内の使用箇所を照合。外部結果の証明全体は対象外。",
+      "usedIn": {
+        "paperId": "gigli-characterization",
+        "result": "Proposition 5.6",
+        "printed": "43–44",
+        "pdf": "43–44"
+      },
+      "hypothesesAndApplication": "Bounded-support optimal geodesic test plan on positive-time interval; compact test potentials are H^(2,2); bounded restrictions preserve optimality; rescale time factors explicitly.",
+      "withinCatalog": false
+    },
+    {
+      "source": "AKP24",
+      "kind": "direct",
+      "locations": [
+        {
+          "result": "Theorems 8.14, 8.30, 8.31",
+          "printed": "86, 93–95",
+          "pdf": "86, 93–95"
+        }
+      ],
+      "role": {
+        "ja": "辺上比較・局所四点条件・完備長さ空間の大域化",
+        "en": "Point-on-side comparison, local four-point criterion, and globalization for complete length spaces"
+      },
+      "checking": "入力結果の記述と本稿内の使用箇所を照合。外部結果の証明全体は対象外。",
+      "usedIn": {
+        "paperId": "gigli-characterization",
+        "result": "Theorem 6.3",
+        "printed": "49–50",
+        "pdf": "49–50"
+      },
+      "hypothesesAndApplication": "Short point-on-side comparisons first produce local four-point inequality; ambient minimizing segments suffice; M is complete and length.",
+      "withinCatalog": false
+    },
+    {
+      "source": "OpenAI26b",
+      "kind": "direct",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ],
+      "role": {
+        "ja": "有界関数の弱Hessian上界から全測地線の2階微分不等式へ",
+        "en": "From weak Hessian upper bounds for bounded functions to second-derivative inequalities along every geodesic"
+      },
+      "checking": "入力結果の記述と本稿内の使用箇所を照合。外部結果の証明全体は対象外。",
+      "usedIn": {
+        "paperId": "gigli-characterization",
+        "result": "Theorem 6.1; Lemma 6.2; Theorem 6.3",
+        "printed": "48–50",
+        "pdf": "48–50"
+      },
+      "hypothesesAndApplication": "N=n>=2; unreduced full-support RCD; F_p bounded globally Lipschitz, G_p bounded continuous; inequality for all compact test gradients and nonnegative compact Lipschitz weights.",
+      "fromPaperId": "weak-hessian-geodesics",
+      "withinCatalog": true
+    }
+  ],
+  "unresolved": [
+    "No independent rederivation of all fourth-order algebra or all heat-kernel constants.",
+    "Capacity/Sobolev representative identifications and all foundational RCD citations not recursively verified.",
+    "The AKP online file is mutable; the retrieved hash is recorded, and relevant numbering/statements match; exact identity with its 2026-09-24 snapshot is not established."
+  ],
+  "conclusionCoverage": [
+    {
+      "result": "main",
+      "conclusion": "(A) ⇒ full support and unreduced RCD with exact H^n",
+      "anchor": "proof-overview-step-1"
+    },
+    {
+      "result": "main",
+      "conclusion": "(A) ⇒ sectional inequality for all global TestV and nonnegative global Test weights",
+      "anchor": "proof-1-step-3"
+    },
+    {
+      "result": "main",
+      "conclusion": "(B) ⇒ global CBB(kappa)",
+      "anchor": "proof-4-step-2"
+    },
+    {
+      "result": "main",
+      "conclusion": "(B) ⇒ Hausdorff dimension n",
+      "anchor": "proof-4-step-2"
+    }
+  ]
+}

@@ -22,6 +22,7 @@ import inventory246 from '../../coordination/catalog-246/inventory.json' with { 
 import inventory285 from '../../coordination/catalog-285/inventory.json' with { type: 'json' };
 import inventory287 from '../../coordination/catalog-287/inventory.json' with { type: 'json' };
 import inventory338 from '../../coordination/catalog-338/inventory.json' with { type: 'json' };
+import inventory356 from '../../coordination/catalog-356/inventory.json' with { type: 'json' };
 import subjectSource from './catalog-subjects.json' with { type: 'json' };
 export const text = (ja, en) => ({ ja, en });
 export const languages = ['ja', 'en'];
@@ -112,7 +113,7 @@ const fieldTranslations = [
   {
     "id": "differential-geometry",
     "ja": "微分幾何学",
-    "catalogIds": ["338"]
+    "catalogIds": ["338", "356"]
   },
   {
     "id": "partial-differential-equations",
@@ -236,6 +237,10 @@ export const papers = [...inventory004.manuscripts.map(entry => ({
  pages: entry.pdfPages, order: entry.order, featured: true,
 })), ...inventory338.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '338', sourceCommit: inventory338.sourceCommit,
+ title: entry.title, path: entry.sourceUrl.split('/preprints/')[1], version: entry.version,
+ pages: entry.pdfPages, order: entry.order, featured: true,
+})), ...inventory356.manuscripts.map(entry => ({
+ id: entry.paperId, catalogId: '356', sourceCommit: inventory356.sourceCommit,
  title: entry.title, path: entry.sourceUrl.split('/preprints/')[1], version: entry.version,
  pages: entry.pdfPages, order: entry.order, featured: true,
 }))];
@@ -406,6 +411,13 @@ export const catalogs = [{
   description: text('正の正則二断面曲率から双正則一意化へ至る解析・縮小座標・全射性の接続を読む。', 'Follow the analytic estimates, shrinking coordinates, and surjectivity argument toward biholomorphic uniformization under positive bisectional curvature.'),
   paperIds: inventory338.manuscripts.map(p => p.paperId),
   overviewSectionIds: ['papers', 'guide', 'sources'],
+}, {
+  id: '356', sourceCommit: inventory356.sourceCommit, mode: 'multi',
+  title: text(inventory356.titleJa, inventory356.overviewTitle),
+  contentsTitle: inventory356.contentsTitle,
+  description: text('Gigliの分布曲率下界とAlexandrovの曲率下界の同値、およびその逆向きで使う弱Hessianの全測地線定理を扱う。', 'The two papers establish the equivalence between Gigli’s distributional curvature lower bound and an Alexandrov lower curvature bound, together with the weak-Hessian theorem used in the converse.'),
+  paperIds: inventory356.manuscripts.map(p => p.paperId),
+  overviewSectionIds: ['papers', 'diagram-sources', 'connections', 'sources'],
 }];
 export const paperSource = paper => `https://github.com/openai/math/blob/${paper.sourceCommit ?? sourceCommit}/preprints/${paper.path}`;
 export const catalogsForField = id => fields.find(field => field.id === id).catalogIds.map(id => catalogs.find(catalog => catalog.id === id));

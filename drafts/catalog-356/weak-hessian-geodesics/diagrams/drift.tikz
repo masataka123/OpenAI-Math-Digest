@@ -1,0 +1,18 @@
+\node[card] (a) {\heading{1}{有界な測度変更}{A bounded change of measure}
+$V\in\mathrm{Lip}(M)\cap L^\infty,\quad m_V=e^Vm$\\[3pt]
+$D(\Delta_V)=D(\Delta),\quad\Delta_Vu=\Delta u+\Gamma(V,u)$\\
+\Tx{弱勾配は共通、両graph normは同値。}{Common weak gradients and equivalent generator graph norms.}};
+\node[card,below=1.8cm of a] (b) {\heading{2}{元のresolventの勾配評価}{Gradient bounds for the original resolvent}
+$R_a=(a-\Delta)^{-1}=\int_0^\infty e^{-at}P_t\,dt$\\[3pt]
+$\|R_ah\|_p\le a^{-1}\|h\|_p,\quad\|\nabla R_ah\|_p\le C_pa^{-1/2}\|h\|_p$
+\quad$(p=2,\infty)$};
+\flow{a}{b}{\Tx{重み付き曲率を仮定せず、元の熱流のreverse-Poincaré評価を積分。}{Integrate the original reverse-Poincaré bound without assuming weighted curvature.}\\[3pt]\Cite{ags-heat}};
+\node[card,below=1.8cm of b] (c) {\heading{3}{縮小写像で有界勾配を得る}{A contraction yields a bounded gradient}
+$E=\{z\in W^{1,2}:z,|\nabla z|\in L^\infty\}$\\[3pt]
+$z\longmapsto R_a\bigl(h+\Gamma(V,z)\bigr),\quad (a-\Delta_V)z=h$\\
+\Tx{$a$ を大きくして $L^2,L^\infty$ の両勾配を同時に制御。}{Large $a$ controls both the $L^2$ and $L^\infty$ gradient norms.}};
+\flow{b}{c}{\Tx{有界driftと $a^{-1/2}$ の減衰が縮小性を与える。}{Bounded drift and the $a^{-1/2}$ decay give a contraction.}\\[3pt]\Cite{drift}};
+\node[result,below=1.7cm of c] (d) {\heading{4}{Bochner乗数のLipschitz代表}{A Lipschitz representative for Bochner multipliers}
+$\xi\in D(\Delta_V),\quad\xi,\Delta_V\xi\in L^\infty$\\[3pt]
+$h=(a-\Delta_V)\xi\quad\Longrightarrow\quad z=\xi\in\mathrm{Lip}(M)$};
+\flow{c}{d}{\Tx{重み付きエネルギーによる一意性と元のSobolev-to-Lipschitz性。}{Uniqueness by weighted energy, followed by original Sobolev-to-Lipschitz.}\\[3pt]\Cite{drift}};

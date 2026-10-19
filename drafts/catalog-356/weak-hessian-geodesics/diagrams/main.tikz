@@ -1,0 +1,20 @@
+\node[result] (a) {\heading{1}{分布的Hessian上界}{Distributional Hessian upper bound}
+$H_F(\nabla g,\nabla g)(h)\le\int hG\Gamma(g)\,dm$\\
+\Tx{$F$ は有界大域Lipschitz、$G$ は有界連続。}{$F$ bounded globally Lipschitz; $G$ bounded continuous.}};
+\node[card,below=1.7cm of a] (b) {\heading{2}{指数重みの曲率下界}{Curvature of the exponential weight}
+$m_\lambda=e^{\lambda F}m,\qquad \mathrm{CD}(K-\lambda G,\infty)$\\
+\Tx{共通generator domainでBochner不等式を閉じる。}{Close the Bochner inequality in the common generator domain.}};
+\flow{a}{b}{\Tx{元のresolventで乗数を正則化し、Hessian項を取り出す。}{The original resolvent regularizes multipliers; isolate the Hessian term.}\\[3pt]\Cite{curvature}};
+\node[card,below=1.9cm of b] (c) {\heading{3}{指定した内部区間へ集中}{Concentrate on a prescribed interior segment}
+$\mu_i^j=\dfrac{m|_{B_{\varepsilon_j}(\tau_i)}}{m(B_{\varepsilon_j}(\tau_i))},\qquad \pi_j\rightharpoonup\delta_\tau$\\[3pt]
+\Tx{非分岐性 $\Rightarrow$ strict subsegment $\tau$ の一意性。}{Nonbranching $\Rightarrow$ uniqueness of the strict subsegment $\tau$.}};
+\flow{b}{c}{\Tx{有限次元の非分岐性とpropernessで全輸送経路を固定する。}{Finite-dimensional nonbranching and properness pin down all transport paths.}\\[3pt]\Cite{deng}};
+\node[card,below=1.8cm of c] (d) {\heading{4}{エントロピー誤差を消す}{Eliminate the entropy error}
+$\lambda_j\ge j(1+|E_0^j|+|E_1^j|),\quad E_t^j\ge-\log m(Q)$\\[3pt]
+$F(\tau_t)\ge(1-t)F(\tau_0)+tF(\tau_1)
+-|\dot\tau|^2\!\int_0^1\!\mathsf g(s,t)G(\tau_s)\,ds$};
+\flow{c}{d}{\Tx{有界な経路長と連続な $F,G$ でGreen核の項を極限へ移す。}{Bounded path lengths and continuous $F,G$ pass the Green term to the limit.}\\[3pt]\Cite{entropy}};
+\node[result,below=1.7cm of d] (e) {\heading{5}{任意の測地線上の二階微分}{Second derivative on every geodesic}
+$a''=\ell^2G\circ\sigma,\quad F\circ\sigma-a\ \Tx{\text{は凹}}{\text{is concave}}$\\[3pt]
+$(F\circ\sigma)''\le\ell^2G\circ\sigma\quad\text{in }\mathcal D'(0,1)$};
+\flow{d}{e}{\Tx{すべての内部区間の弦不等式をGreen公式で読み替える。}{Use the Green formula on every interior interval to obtain concavity.}\\[3pt]\Cite{finish}};

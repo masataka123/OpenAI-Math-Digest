@@ -1,0 +1,7 @@
+\node[result] (a) {\heading{1}{距離を有界に変形する}{Make a bounded distance modification}$F_p=\chi(r^2/2),\quad\chi'(q)=\theta(q)\frac{s_\kappa(\sqrt{2q})}{\sqrt{2q}}$\\$H_{F_p}\le G_pm,\qquad G_p=\theta(r^2/2)s_\kappa'(r)$};
+\node[card,below=2.1cm of a] (b) {\heading{2}{全測地線上のモデル不等式}{The model inequality along every geodesic}$y=m_\kappa(d(p,\sigma_t)),\qquad y''+\kappa\ell^2y\le\ell^2$\\\Tx{$\sigma\subset B_a(p)$、分布の意味}{For $\sigma\subset B_a(p)$, in distributions}};
+\flow a b {\Tx{非増加cutoffで余分な放射項は非正、有界性・連続性を満たす}{The decreasing cutoff adds a nonpositive radial term; boundedness and continuity hold}\\\Cite{bounded-distance}\quad\Cite{companion}};
+\node[card,below=1.9cm of b] (c) {\heading{3}{モデル三角形と比較する}{Compare with the model triangle}$y\ge\bar y\quad\Longrightarrow\quad d(p,\sigma_t)\ge d(\bar p,\bar\sigma_t)$};
+\flow b c {\Tx{負部分を試験し、$\kappa>0$ では $\kappa\ell^2<\pi^2$ を使う}{Test the negative part; for $\kappa>0$ use $\kappa\ell^2<\pi^2$}\\\Cite{comparison}};
+\node[result,below=2.1cm of c] (d) {\heading{4}{局所四点比較から大域化と次元へ}{Local four-point comparison, globalization, dimension}$\mathrm{CBB}(\kappa),\qquad0<\mathcal H^n(B)<\infty\ \Longrightarrow\ \dim_HM=n$};
+\flow c d {\Tx{完備長さ空間の局所大域定理。球の凸性は仮定しない}{Apply globalization for complete length spaces; no ball convexity is assumed}\\\Cite{akp}};

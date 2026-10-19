@@ -1,0 +1,96 @@
+{
+  "catalogId": "356",
+  "paperId": "gigli-characterization",
+  "checkedOn": "2026-10-19",
+  "model": "gpt-6-astra",
+  "reasoningEffort": "high",
+  "mainResults": [
+    {
+      "result": "main",
+      "conclusion": "(A) ⇒ full support and unreduced RCD with exact H^n",
+      "anchor": "proof-overview-step-1"
+    },
+    {
+      "result": "main",
+      "conclusion": "(A) ⇒ sectional inequality for all global TestV and nonnegative global Test weights",
+      "anchor": "proof-1-step-3"
+    },
+    {
+      "result": "main",
+      "conclusion": "(B) ⇒ global CBB(kappa)",
+      "anchor": "proof-4-step-2"
+    },
+    {
+      "result": "main",
+      "conclusion": "(B) ⇒ Hausdorff dimension n",
+      "anchor": "proof-4-step-2"
+    }
+  ],
+  "intermediateResults": [
+    {
+      "result": "Theorem 3.1",
+      "sourcePages": "9, 21–23",
+      "statement": "theorem-3-1",
+      "conclusions": [
+        {
+          "name": "Full support and unreduced RCD",
+          "anchor": "proof-overview-step-1"
+        },
+        {
+          "name": "Inequality for all original global test fields and nonnegative global weights",
+          "anchor": "proof-1-step-3"
+        }
+      ]
+    },
+    {
+      "result": "Theorem 4.1",
+      "sourcePages": "24, 33–37",
+      "statement": "theorem-4-1",
+      "conclusions": [
+        {
+          "name": "Common Borel calibrated path prescription, bounded speed, positive-time compression",
+          "anchor": "proof-2-step-2"
+        },
+        {
+          "name": "Index inequality for every admissible global-endpoint trial and compact Lipschitz weight",
+          "anchor": "proof-2-step-2"
+        }
+      ]
+    },
+    {
+      "result": "Theorem 5.10",
+      "sourcePages": "46–47",
+      "statement": "theorem-5-10",
+      "conclusions": [
+        {
+          "name": "Signed Radon measure with nonpositive singular part",
+          "anchor": "proof-3-step-2"
+        },
+        {
+          "name": "Radial/transverse comparison, zero-radius convention and center-independent radius",
+          "anchor": "proof-3-step-2"
+        },
+        {
+          "name": "Terminal velocity equals gradient and |grad q|=r a.e.",
+          "anchor": "proof-3-step-2"
+        }
+      ]
+    },
+    {
+      "result": "Theorem 6.3",
+      "sourcePages": "49–50",
+      "statement": "theorem-6-3",
+      "conclusions": [
+        {
+          "name": "Every-geodesic comparison and global CBB(kappa)",
+          "anchor": "proof-4-step-2"
+        },
+        {
+          "name": "Hausdorff dimension n",
+          "anchor": "proof-4-step-2"
+        }
+      ]
+    }
+  ],
+  "verification": "原典の主張・各結論と日英記述の接続を確認。全証明の独立再証明とは区別。"
+}

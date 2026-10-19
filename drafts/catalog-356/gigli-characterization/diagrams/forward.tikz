@@ -1,0 +1,7 @@
+\node[result] (a) {\heading{1}{小さな配置の比較}{Compare small configurations}$\displaystyle\liminf_{h\downarrow0}h^{-4}(2\mathbb EJ_{0A}^h-\mathbb EJ_{AB}^h)\ge\frac\kappa6\int f\mathbb E|A\wedge B|^2\,dm$};
+\node[card,below=2.0cm of a] (b) {\heading{2}{密度変分と4次項の同定}{Identify the density variation and fourth-order term}$\displaystyle \frac16\mathbb E\mathcal R(A,B,B,A)(f)+\frac12\mathbb E\int f|\nabla q_{AB}+\nabla_A(B-A)|^2\,dm$};
+\flow a b {\Tx{符号平均で低次項を相殺、先に $h\downarrow0$、次に加速度を補正}{Sign averaging cancels lower orders; first $h\downarrow0$, then correct acceleration}\\\Cite{density}\quad\Cite{square}};
+\node[card,below=1.9cm of b] (c) {\heading{3}{局所勾配で平方誤差を消す}{Remove the square with local gradients}$\sum_\ell\alpha_\ell=1,\quad\nabla q_{AB,\ell}\simeq-\nabla_A(B-A)$\\$\mathcal R(U,V,V,U)(f)\ge\kappa\int f|U\wedge V|^2\,dm$};
+\flow b c {\Tx{重みの線形性で分割微分も再結合、4方向の有限法則を使う}{Linearity recombines differentiated weights; use the four-direction finite law}\\\Cite{localization}};
+\node[result,below=1.9cm of c] (d) {\heading{4}{元のglobal quantifiersを回復}{Recover the original global quantifiers}$X,Y\in\mathrm{TestV}(M),\qquad0\le f\in\mathrm{Test}(M)$};
+\flow c d {\Tx{係数測度の非負性、強 $L^2$ 場近似、最後に $f\chi_R\to f$}{Positive coefficient measures, strong $L^2$ field approximation, finally $f\chi_R\to f$}\\\Cite{global-tests}};

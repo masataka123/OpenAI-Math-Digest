@@ -1,0 +1,22 @@
+\node[card] (a) {\heading{1}{Lipschitz乗数で元のBochner式を使う}{Use original Bochner with a Lipschitz multiplier}
+$V=\lambda F,\quad w=e^V,\quad k=K-\lambda G$\\[3pt]
+$B_0(g,w\xi)\ge K\int w\xi\Gamma(g)\,dm$\\
+\Tx{$g$ は元のコンパクトtest関数、$\xi$ はLemma 3.1の乗数。}{$g$ is an original compact test function; $\xi$ is a Lemma 3.1 multiplier.}};
+\node[card,below=2cm of a] (b) {\heading{2}{弱Hessianの符号を取り出す}{Isolate the signed weak Hessian}
+$B_V(g,\xi)-B_0(g,w\xi)=-H_V(\nabla g,\nabla g)(w\xi)$\\[3pt]
+$B_V(g,\xi)\ge\int k\xi\Gamma(g)\,dm_V$};
+\flow{a}{b}{\Tx{容量を考慮したBochner測度と積の法則。弱Hessian上界を適用する。}{Use the capacity-aware Bochner measure and product rule; apply the weak upper bound.}\\[3pt]\Cite{sav-measure}\quad\Cite{bochner}};
+\node[card,below=2cm of b] (c) {\heading{3}{driftを微分せずgraph閉包}{Graph closure without differentiating the drift}
+$B_V=\tfrac12\!\int(\Delta_V\xi)\Gamma(g)\,dm_V
++\int(\Delta_Vg)\Gamma(\xi,g)\,dm_V
++\int\xi(\Delta_Vg)^2\,dm_V$\\[4pt]
+\Tx{共通compact coreから全 $D(\Delta_V)$ へ。その後に $\Delta_Vg\in W^{1,2}$。}{From the common compact core to all $D(\Delta_V)$; only then impose $\Delta_Vg\in W^{1,2}$.}};
+\flow{b}{c}{\Tx{有界な $\xi,\Delta_V\xi,|\nabla\xi|,k$ で各積分が連続。}{Bounded $\xi,\Delta_V\xi,|\nabla\xi|,k$ make each integral graph-continuous.}\\[3pt]\Cite{closure}};
+\node[card,below=1.8cm of c] (d) {\heading{4}{定数曲率で基礎RCD構造を得る}{Obtain the underlying RCD structure}
+$K_V=\inf_M k> -\infty,\quad d_{\mathcal E_V}=d$\\[3pt]
+$\mathrm{BE}(K_V,\infty)\quad\Longrightarrow\quad\mathrm{RCD}(K_V,\infty)$};
+\flow{c}{d}{\Tx{共通弱勾配・Sobolev-to-Lipschitz・Gaussian体積増大を確認。}{Check common gradients, Sobolev-to-Lipschitz, and Gaussian volume growth.}\\[3pt]\Cite{ags-rcd}};
+\node[result,below=1.8cm of d] (e) {\heading{5}{変動曲率のエントロピー不等式}{Variable-curvature entropy inequality}
+$\mathrm{BE}_2(k,\infty)\quad\Longrightarrow\quad\mathrm{CD}(k,\infty)$\\[3pt]
+$k=K-\lambda G,\qquad m_\lambda=e^{\lambda F}m\quad(\lambda>0)$};
+\flow{d}{e}{\Tx{$k$ は有界連続。BHSのweighted domainは閉包後に満たされる。}{$k$ is bounded continuous; graph closure supplies the actual BHS domain.}\\[3pt]\Cite{bhs-equivalence}\quad\Cite{bhs-be}};

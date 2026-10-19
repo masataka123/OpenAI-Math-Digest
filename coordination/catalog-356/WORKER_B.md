@@ -1,0 +1,14 @@
+# 担当B
+- model: gpt-6-astra
+- reasoning_effort: high
+- 公式順: 2
+- 正式タイトル: Weak Hessian bounds along every geodesic in RCD spaces
+- paper ID: weak-hessian-geodesics
+- 版: September 24, 2026 / 11 pages
+- 台帳: inventory.json
+- 編集可能: drafts/catalog-356/weak-hessian-geodesics/ のみ
+- 原典: coordination/catalog-356/sources/weak-hessian-geodesics.pdf
+- 成果物: 日英本文・図TeX/SVG・sources.json・citations.json・主張/結論対応・status.md
+- 制作セット1.4とWORKER_TEMPLATE適用。実開始・60分締切・終了を記録。独立点検R、本部統一編集。
+- 原典から新規制作。全主結論、同値両向き、局所/大域、測度と距離の仮定、弱い意味と量化を照合。
+- 共有ファイル・他担当・ブランチ・commit・push・公開を変更しない。

@@ -1,0 +1,115 @@
+{
+  "catalogId": "356",
+  "paperId": "gigli-characterization",
+  "reviewer": {
+    "role": "independent content checker R",
+    "model": "gpt-6-astra",
+    "reasoningEffort": "high"
+  },
+  "reviewedAt": "2026-10-19T08:55:04.143889+09:00",
+  "author": "A / gpt-6-astra / high",
+  "independence": "Official source read and baseline recorded before reviewing either draft. Existing Sol content not reused.",
+  "decision": "Accepted for Stage 1: bilingual statements, core proof connections and direct external applications agree with the originals within the recorded scope; all three requested corrections verified resolved. Visual/PDF gates are separate.",
+  "sourceVersion": "September 24, 2026; commit 1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "checks": [
+    {
+      "item": "Theorem1.1 equivalence and scope",
+      "source": "p.2",
+      "draft": "Main result, proof-overview, overview.tikz",
+      "status": "checked",
+      "detail": "Integer n≥2, arbitrary κ; complete separable; exact H_d^n; full support; unreduced RCD((n−1)κ,n); global original Test and TestV; curvature sign and all quantified fields/weights agree."
+    },
+    {
+      "item": "Forward implication",
+      "source": "Theorem3.1 p.9, Lemmas3.3–3.6 pp.12–18, Proposition3.7 p.19, localization/globalization pp.19–23",
+      "draft": "proof-1; forward.tikz",
+      "status": "checked",
+      "detail": "Geometric quartic lower bound and dual upper bound concern the same energy difference; 1/6 curvature and 1/2 square coefficients agree; sequential limits remove acceleration then local square error; tensoriality, field approximation and final exhaustion recover global classes."
+    },
+    {
+      "item": "Index inequality",
+      "source": "Theorem4.1 p.24; heat factors p.26; Riccati identity p.30; Proposition4.9 p.33; action and common paths pp.35–37",
+      "draft": "proof-2; index.tikz",
+      "status": "checked",
+      "detail": "Compact-exterior constant u, common Borel terminal prescription, global endpoint identities Yδ=0,Y1=Z, positive-time compression only; singular acceleration error is one-sided; weighted strong velocity convergence permits quadratic-energy limit."
+    },
+    {
+      "item": "Weak Hessian comparison",
+      "source": "Theorem5.10 pp.46–47; Proposition5.1 p.38 and proof p.40; Lemmas5.4–5.5 pp.41–42; Proposition5.6 pp.42–44; Lemma5.7 pp.44–45",
+      "draft": "proof-3; hessian.tikz",
+      "status": "checked",
+      "detail": "Signed Radon measure and nonpositive singular part, correct radial/transverse coefficients, |∇q|=r a.e., zero-speed interpretation, κ>0 radius restriction, uniformity in p. Every-time frames concern almost every appropriate plan path; countable global trials and common terminal prescription justify density infimum without measurable selection."
+    },
+    {
+      "item": "All-geodesic and global comparison",
+      "source": "Theorem6.1/Lemma6.2 pp.48–49; Theorem6.3 pp.49–50",
+      "draft": "proof-4; comparison.tikz",
+      "status": "checked",
+      "detail": "Bounded global Fp and continuous bounded Gp built before companion application; monotone cutoff preserves singular/radial signs; model ODE, all chosen short triangle sides, local four-point comparison, complete-length globalization and dimension n are all covered."
+    },
+    {
+      "item": "Japanese-English and five diagrams",
+      "source": "official statements and proof passages listed above",
+      "draft": "both article languages and all five bilingual TikZ sources",
+      "status": "checked",
+      "detail": "Hypotheses, equations, proof order, external roles and checking limits agree between languages. Independent intermediate theorem statements precede their diagrams."
+    }
+  ],
+  "externalInputsRecord": "external-input-checks.json",
+  "findings": [
+    {
+      "id": "R-A-01",
+      "priority": "format-required",
+      "status": "resolved-and-verified",
+      "location": "Both articles: principal curvature formula; weak-Hessian inline definition; weighted strong convergence display",
+      "issue": "The source text contains double-backslash before comma in several math expressions (\\\\,dm). This denotes a line break rather than a thin space.",
+      "requested": "Replace with the intended single-backslash thin space \\,dm.",
+      "verifiedAt": "2026-10-19T08:57:17.277080+09:00",
+      "resolution": "Verified intended single-backslash thin spaces in the curvature functional, weak-Hessian definition and weighted strong convergence display in both languages."
+    },
+    {
+      "id": "R-A-02",
+      "priority": "precision",
+      "status": "resolved-and-verified",
+      "location": "Both articles, proof-4 step1, companion theorem conclusion",
+      "issue": "The second derivative inequality is stated without explicitly specifying distributions in this explanatory paragraph, although the diagram has it.",
+      "requested": "Add “in distributions on (0,1)” / “(0,1)上の分布の意味で”.",
+      "verifiedAt": "2026-10-19T08:57:17.277080+09:00",
+      "resolution": "Both proof-4 companion-application paragraphs explicitly say distributions on (0,1)."
+    },
+    {
+      "id": "R-A-03",
+      "priority": "completeness-in-diagram",
+      "status": "resolved-and-verified",
+      "location": "diagrams/overview.tikz B node",
+      "issue": "The B node lists exact H^n and RCD, but omits full support displayed in the theorem.",
+      "requested": "Add supp(m)=M to keep the full metric-measure conclusion visible.",
+      "verifiedAt": "2026-10-19T08:57:17.277080+09:00",
+      "resolution": "The overview TikZ B node now explicitly contains supp(m)=M."
+    }
+  ],
+  "limitations": [
+    "This is source statement/application and core proof-text comparison, not a proof certification.",
+    "Not every quartic algebraic term, heat-kernel constant, capacity representative argument or external proof was independently rederived.",
+    "Diagram rendering, reference-style comparison against 033/034, mobile display and booklet PDF layout require separate visual evidence.",
+    "AKP online-PDF result statements and their application were checked; exact file identity with the manuscript’s September 24, 2026 snapshot remains unverified and is disclosed in both articles and sources.json."
+  ],
+  "reviewedFiles": {
+    "drafts/catalog-356/gigli-characterization/article.ja.md": "a6bd20bc88751f7e7d4ba36b8296866e863944af717d3eec8955f5920c5a0c08",
+    "drafts/catalog-356/gigli-characterization/article.en.md": "7cd725a75b68ca80319917b60bc4befc4b6ca36414e6fa78a067133d8628759c",
+    "drafts/catalog-356/gigli-characterization/citations.json": "267397b2a0c5f5208a3bc55d829d885eb6516f90056631c4fcf75a5149cd2f81",
+    "drafts/catalog-356/gigli-characterization/sources.json": "463c1466451f1f371c3380d2b46113667854ac41e4b8dcbaa13fd7d967514e2a",
+    "drafts/catalog-356/gigli-characterization/diagrams/overview.tikz": "fd749561c7d6936a482adf0d00f11381e20b5f201b1d2500f97661b64f1c1ab5",
+    "drafts/catalog-356/gigli-characterization/diagrams/forward.tikz": "25f8c3851bb36adbc6ba31042ff8dce02781dde9cfcb7a1e64ed38597774e449",
+    "drafts/catalog-356/gigli-characterization/diagrams/index.tikz": "fd47f97a3b9dd9b8005b8c9ccfc20eb709635476c958d4544e35d248f7631e92",
+    "drafts/catalog-356/gigli-characterization/diagrams/hessian.tikz": "cc939195a2d43c9980dc748593a4e17f38c0b59a519c96e826b0c8a6c04ef988",
+    "drafts/catalog-356/gigli-characterization/diagrams/comparison.tikz": "40f2206c95711ea4f93577ec4bdeed2f83f70758b7318861dc8b6776fb3073c3"
+  },
+  "finalizedAt": "2026-10-19T08:59:20.864001+09:00",
+  "finalChecks": [
+    "Final display-math changes preserve the formulas and quantifiers.",
+    "AKP snapshot limitation is present in both languages and source records.",
+    "No unresolved mathematical correction is required for Stage 1 acceptance.",
+    "After A’s 08:58:09 handoff, re-read both languages of the calibration identity, weak-Hessian functional, weighted strong convergence and Jacobi trial/energy passages. Display extraction preserves all signs, factors, endpoints, quantifiers and conclusions; no mathematical change. Final article hashes rechecked; reviewer editing stopped."
+  ]
+}

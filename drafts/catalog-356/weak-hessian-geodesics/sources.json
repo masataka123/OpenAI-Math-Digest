@@ -1,0 +1,319 @@
+{
+  "paperId": "weak-hessian-geodesics",
+  "title": "Weak Hessian bounds along every geodesic in RCD spaces",
+  "displayName": "Weak Hessian bounds along every geodesic in RCD spaces",
+  "version": "September 24, 2026",
+  "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Weak-Hessian-bounds-along-every-geodesic-in-RCD-spaces-September-24-2026/weak-hessian-geodesics.pdf",
+  "pdfPages": 11,
+  "sha256": "eb34f06c23632a5745015f9e4ef363b9074540a400f95ed3de7aa9dc10aaecc2",
+  "catalogId": "356",
+  "authors": "OpenAI",
+  "checkedOn": "2026-10-19",
+  "authorModel": "gpt-6-astra",
+  "reasoningEffort": "high",
+  "productionVersion": "1.4",
+  "freshReading": true,
+  "reusedMathematicalDrafts": [],
+  "checkedLocations": [
+    {
+      "printedPage": "1",
+      "pdfPage": 1
+    },
+    {
+      "printedPage": "2",
+      "pdfPage": 2
+    },
+    {
+      "printedPage": "3",
+      "pdfPage": 3
+    },
+    {
+      "printedPage": "4",
+      "pdfPage": 4
+    },
+    {
+      "printedPage": "5",
+      "pdfPage": 5
+    },
+    {
+      "printedPage": "6",
+      "pdfPage": 6
+    },
+    {
+      "printedPage": "7",
+      "pdfPage": 7
+    },
+    {
+      "printedPage": "8",
+      "pdfPage": 8
+    },
+    {
+      "printedPage": "9",
+      "pdfPage": 9
+    },
+    {
+      "printedPage": "10",
+      "pdfPage": 10
+    },
+    {
+      "printedPage": "11",
+      "pdfPage": 11
+    }
+  ],
+  "statements": [
+    {
+      "result": "Theorem 1.1",
+      "printedPage": "2",
+      "pdfPage": 2,
+      "hypotheses": "Complete separable full-support RCD(K,N), unreduced CD, finite on bounded sets, K real, 1<N<infinity; F bounded globally Lipschitz; G bounded continuous; inequality for every compactly supported original g in Test and every nonnegative compactly supported Lipschitz h.",
+      "conclusions": [
+        "For every constant-speed minimizing geodesic of length ell, (F∘sigma)'' <= ell² G∘sigma in D'(0,1).",
+        "For G=c, F∘sigma-c ell²t²/2 is concave; no global L²(m) assumption on F and no finite total mass required."
+      ],
+      "checked": "Full statement, (1.1)–(1.4), and proof pp.9–10 compared."
+    },
+    {
+      "result": "Lemma 3.1",
+      "printedPage": "6",
+      "pdfPage": 6,
+      "hypotheses": "Same space; V bounded globally Lipschitz.",
+      "conclusions": [
+        "Same Sobolev space and weak gradients; D(Delta_V)=D(Delta); drift formula; equivalent graph norms.",
+        "Every xi in weighted generator domain with xi and Delta_V xi bounded has globally Lipschitz representative."
+      ],
+      "checked": "Statement and complete proof read; original heat resolvent estimate compared with AGS15 Corollary 2.3."
+    },
+    {
+      "result": "Proposition 4.1",
+      "printedPage": "7",
+      "pdfPage": 7,
+      "hypotheses": "Same quantified assumptions as Theorem 1.1.",
+      "conclusions": [
+        "For all lambda>0, unchanged metric d and m_lambda=exp(lambda F)m satisfy CD(K-lambda G,infinity)."
+      ],
+      "checked": "Statement and proof pp.7–8 including exact identity, graph closure, constant and variable equivalence read."
+    }
+  ],
+  "proofPassages": [
+    {
+      "location": "§2, Lemma 2.1, pp.4–5",
+      "scope": "Compact core via original heat regularization and cutoffs; local Hessian and nonnegative Lipschitz multiplier approximations; capacity measure argument."
+    },
+    {
+      "location": "§3, Lemma 3.1, p.6",
+      "scope": "Both generator-domain inclusions, graph-norm equivalence, resolvent contraction in E and uniqueness."
+    },
+    {
+      "location": "§4, Proposition 4.1, pp.7–8; Remark 4.2, p.9",
+      "scope": "(4.2)–(4.4) identity with negative Hessian; (4.6) graph closure before (4.7); metric prerequisites for AGS and BHS."
+    },
+    {
+      "location": "§5, pp.9–10",
+      "scope": "Nonbranching to strict-subsegment uniqueness; shrinking endpoint balls; lambda dominates endpoint entropies; compactness; Green formula and distributional conclusion."
+    }
+  ],
+  "externalSources": [
+    {
+      "id": "AGS15",
+      "authors": "Luigi Ambrosio, Nicola Gigli, Giuseppe Savaré",
+      "displayName": "Bakry–Émery curvature-dimension condition and Riemannian Ricci curvature bounds",
+      "title": "Bakry–Émery curvature-dimension condition and Riemannian Ricci curvature bounds",
+      "version": "arXiv:1209.5786v4",
+      "sourceUrl": "https://arxiv.org/pdf/1209.5786v4",
+      "pdfPages": 70,
+      "sha256": "b606d1639091253bebcc45d9cfa654f5f0b2f0d85021e48e2099dad96a72ba9b",
+      "localFile": "sources/AGS15.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "18",
+          "pdfPage": 18
+        },
+        {
+          "printedPage": "33",
+          "pdfPage": 33
+        },
+        {
+          "printedPage": "38",
+          "pdfPage": 38
+        },
+        {
+          "printedPage": "40",
+          "pdfPage": 40
+        },
+        {
+          "printedPage": "57",
+          "pdfPage": 57
+        }
+      ],
+      "checking": "指定版の入力記述と本稿の適用箇所を照合。外部結果の証明全体は未検証。"
+    },
+    {
+      "id": "BHS21",
+      "authors": "Mathias Braun, Karen Habermann, Karl-Theodor Sturm",
+      "displayName": "Optimal transport, gradient estimates, and pathwise Brownian coupling on spaces with variable Ricci bounds",
+      "title": "Optimal transport, gradient estimates, and pathwise Brownian coupling on spaces with variable Ricci bounds",
+      "version": "arXiv:1906.09186v1",
+      "sourceUrl": "https://arxiv.org/pdf/1906.09186v1",
+      "pdfPages": 38,
+      "sha256": "025751ca4c9fe3c2b68c309400c351a23c123e014e3c4ecab6c048c077e4eb09",
+      "localFile": "sources/BHS21.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "3",
+          "pdfPage": 3
+        },
+        {
+          "printedPage": "4",
+          "pdfPage": 4
+        }
+      ],
+      "checking": "指定版の入力記述と本稿の適用箇所を照合。外部結果の証明全体は未検証。"
+    },
+    {
+      "id": "Deng25",
+      "authors": "Qin Deng",
+      "displayName": "Hölder continuity of tangent cones in RCD(K,N) spaces and applications to non-branching",
+      "title": "Hölder continuity of tangent cones in RCD(K,N) spaces and applications to non-branching",
+      "version": "arXiv:2009.07956v2",
+      "sourceUrl": "https://arxiv.org/pdf/2009.07956v2",
+      "pdfPages": 64,
+      "sha256": "5456b24de171b8577a5435a9f460ca10897054d21d05c98cbada1d4e7b90c7be",
+      "localFile": "sources/Deng25.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "2",
+          "pdfPage": 2
+        }
+      ],
+      "checking": "指定版の入力記述と本稿の適用箇所を照合。外部結果の証明全体は未検証。"
+    },
+    {
+      "id": "Sav14",
+      "authors": "Giuseppe Savaré",
+      "displayName": "Self-improvement of the Bakry–Émery condition and Wasserstein contraction of the heat flow in RCD(K,∞) metric measure spaces",
+      "title": "Self-improvement of the Bakry–Émery condition and Wasserstein contraction of the heat flow in RCD(K,∞) metric measure spaces",
+      "version": "arXiv:1304.0643v2",
+      "sourceUrl": "https://arxiv.org/pdf/1304.0643v2",
+      "pdfPages": 23,
+      "sha256": "bfc7f67cf364012ff8bef5f5f538e20fbaca4e81f686e0c63a23d48a82757a52",
+      "localFile": "sources/Sav14.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "9",
+          "pdfPage": 9
+        },
+        {
+          "printedPage": "10",
+          "pdfPage": 10
+        },
+        {
+          "printedPage": "11",
+          "pdfPage": 11
+        },
+        {
+          "printedPage": "12",
+          "pdfPage": 12
+        }
+      ],
+      "checking": "指定版の入力記述と本稿の適用箇所を照合。外部結果の証明全体は未検証。"
+    },
+    {
+      "id": "Gig18",
+      "authors": "Nicola Gigli",
+      "displayName": "Nonsmooth differential geometry—an approach tailored for spaces with Ricci curvature bounded from below",
+      "title": "Nonsmooth differential geometry—an approach tailored for spaces with Ricci curvature bounded from below",
+      "version": "arXiv:1407.0809v1",
+      "sourceUrl": "https://arxiv.org/pdf/1407.0809v1",
+      "pdfPages": 161,
+      "sha256": "88d8aa2f49863573935d8f1e3533322c2da3ab2d088f2382d8b88d1c8f851727",
+      "localFile": "sources/Gig18.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "98",
+          "pdfPage": 98
+        },
+        {
+          "printedPage": "110",
+          "pdfPage": 110
+        }
+      ],
+      "checking": "指定版の入力記述と本稿の適用箇所を照合。外部結果の証明全体は未検証。"
+    },
+    {
+      "id": "GT21",
+      "authors": "Nicola Gigli, Luca Tamanini",
+      "displayName": "Second order differentiation formula on RCD∗(K,N) spaces",
+      "title": "Second order differentiation formula on RCD∗(K,N) spaces",
+      "version": "arXiv:1802.02463v1",
+      "sourceUrl": "https://arxiv.org/pdf/1802.02463v1",
+      "pdfPages": 64,
+      "sha256": "8b523c0608078a15645df17b63091d51a418e42ec07eaf3791a3fa2a5801a67d",
+      "localFile": "sources/GT21.pdf",
+      "checkedLocations": [
+        {
+          "printedPage": "54",
+          "pdfPage": 54
+        },
+        {
+          "printedPage": "55",
+          "pdfPage": 55
+        },
+        {
+          "printedPage": "56",
+          "pdfPage": 56
+        }
+      ],
+      "checking": "指定版の入力記述と本稿の適用箇所を照合。外部結果の証明全体は未検証。"
+    }
+  ],
+  "dependencies": [
+    {
+      "from": "AGS15",
+      "kind": "direct",
+      "role": "元の熱流のreverse-Poincaré評価、intrinsic distance・定数BEとRCDの同値",
+      "use": "Lemma 3.1 p.6 and Proposition 4.1 p.8",
+      "checking": "原典の結果記述・定義域・適用箇所を照合。証明全体の検証は行わない。"
+    },
+    {
+      "from": "BHS21",
+      "kind": "direct",
+      "role": "既存RCD空間上の変動曲率BE₂とCDの同値、およびGreen核エントロピー式",
+      "use": "Proposition 4.1 p.8 and §5 pp.9–10",
+      "checking": "原典の結果記述・定義域・適用箇所を照合。証明全体の検証は行わない。"
+    },
+    {
+      "from": "Deng25",
+      "kind": "direct",
+      "role": "有限次元RCD空間の全測地線の非分岐性",
+      "use": "§5 p.9",
+      "checking": "原典の結果記述・定義域・適用箇所を照合。証明全体の検証は行わない。"
+    },
+    {
+      "from": "Sav14",
+      "kind": "direct",
+      "role": "測度値Bochner不等式と容量零集合を除く乗数の評価",
+      "use": "§2.2 p.5, Proposition 4.1 pp.7–8",
+      "checking": "原典の結果記述・定義域・適用箇所を照合。証明全体の検証は行わない。"
+    },
+    {
+      "from": "Gig18",
+      "kind": "direct",
+      "role": "元のtest classのHessian二乗評価",
+      "use": "§2.2 p.5, Proposition 4.1 p.7",
+      "checking": "原典の結果記述・定義域・適用箇所を照合。証明全体の検証は行わない。"
+    },
+    {
+      "from": "GT21",
+      "kind": "direct",
+      "role": "元の熱流の正則化、良いcutoff、Laplacian領域のHessian評価",
+      "use": "Lemma 2.1 pp.4–5, Proposition 4.1 p.8",
+      "checking": "原典の結果記述・定義域・適用箇所を照合。証明全体の検証は行わない。"
+    }
+  ],
+  "unresolved": [
+    "外部入力6文献の証明全体と依存文献の再帰的検証は実施していない。",
+    "カタログ内他原稿への利用先接続は本部と独立点検担当が別記録で照合する。",
+    "共通サイトでの画面比較・日英冊子PDF・公開確認は第2段階以降。"
+  ]
+}

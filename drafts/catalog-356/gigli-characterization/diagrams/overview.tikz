@@ -1,0 +1,9 @@
+\node[result] (a) {\heading{A}{Alexandrov曲率の下界}{Alexandrov lower curvature bound}$\dim_HM=n,\quad \mathrm{CBB}(\kappa),\quad n\ge2$};
+\node[card,below=2.1cm of a] (b) {\heading{B}{正確な測度と大域テスト類}{Exact measure and global test classes}$m=\mathcal H^n,\quad\operatorname{supp}m=M,\quad\mathrm{RCD}((n-1)\kappa,n)$ \Tx{（unreduced）}{(unreduced)}\\$\mathcal R(X,Y,Y,X)(f)\ge\kappa\int f|X\wedge Y|^2\,dm$};
+\flow a b {\Tx{RCDを供給し、4次展開・局所化・台の尽くしで曲率を得る}{Supply RCD; fourth-order expansion, localization, and exhaustion give curvature}\\\Cite{kks}\quad\Cite{forward}};
+\node[card,below=1.9cm of b] (c) {\heading{1}{共通の校正経路上の指数不等式}{Index inequality on common calibrated paths}$H_{Q_1u}(Z,Z)(f)\le\int I_\kappa(Y)\,d\pi_f$};
+\flow b c {\Tx{熱のRiccati恒等式、終端評価、作用等号から強収束}{Heat Riccati identity, terminal control, and strong convergence from action equality}\\\Cite{index}};
+\node[card,below=1.9cm of c] (d) {\heading{2}{距離のHessian比較}{Hessian comparison for distance}$H_{r^2/2}(Z,Z)\le (|Z_\parallel|^2+r\,s_\kappa'/s_\kappa\,|Z_\perp|^2)m$};
+\flow c d {\Tx{非崩壊の経路枠と可算Jacobi試験で測度上界を得る}{Noncollapsed path frames and countable Jacobi trials give the measure bound}\\\Cite{hessian}};
+\node[result,below=2.2cm of d] (e) {\heading{A}{全測地線の比較から大域Alexandrovへ}{Every-geodesic comparison gives global Alexandrov}$\mathrm{CBB}(\kappa),\qquad\dim_HM=n$};
+\flow d e {\Tx{有界距離変形、全測地線のモデルODE、局所から大域へ}{Bounded distance modification, model ODE on every geodesic, local to global}\\\Cite{companion}\\\Cite{comparison}};
