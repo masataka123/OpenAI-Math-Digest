@@ -22,17 +22,17 @@ test('requires one explicit registered-format catalogue and rejects mistyped opt
  for(const args of [[],['--catalog','35'],['--catlog','357'],['--catalog','357','--catalog','356'],['--catalog','357','--force']])
   assert.throws(()=>parsePreparationArgs(args));
 });
-test('current PDF is reused without Python, Chrome, regeneration or a second build',async()=>{
+test('current PDF is reused without PDF rendering or a second build; browser inspection still runs',async()=>{
  const r=await simulate();
  assert.equal(r.failure,undefined);
- assert.deepEqual(r.names,['citations','tests','build','pdf-status','links']);
+ assert.deepEqual(r.names,['citations','tests','build','pdf-status','links','browser']);
  assert.equal(r.state.pdf,'reused');
  assert.equal(r.state.status,'automated-checks-passed');
  assert.equal(r.state.visualReview,'required');
 });
 test('stale PDF generation, second build and final check always run sequentially',async()=>{
  const r=await simulate({'pdf-status':{code:1,output:'PDF 357/ja is stale: run generation'}});
- assert.deepEqual(r.names,['citations','tests','build','pdf-status','pdf-environment','pdf-generation','build-pdf','pdf-final','links']);
+ assert.deepEqual(r.names,['citations','tests','build','pdf-status','pdf-environment','pdf-generation','build-pdf','pdf-final','links','browser']);
  assert.equal(r.state.pdf,'generated');
  assert.equal(r.state.status,'automated-checks-passed');
 });
@@ -73,4 +73,12 @@ test('PDF runtime uses project venv/settings and respects explicit environment o
   await writeFile(path.join(root,'tmp/pdf-runtime.json'),'{bad');
   await assert.rejects(pdfRuntime(root,{}),/Invalid tmp\/pdf-runtime/);
  } finally {await rm(root,{recursive:true,force:true});}
+});
+
+test('browser failure prevents approval and records the gallery location',async()=>{
+ const r=await simulate({browser:{code:1,output:'Document overflows'}});
+ assert.equal(r.state.failedStep,'browser');
+ assert.equal(r.state.status,'failed');
+ assert.match(r.state.browserReport,/index.html$/);
+ assert.ok(r.calls.at(-1).args.includes('--references'));
 });

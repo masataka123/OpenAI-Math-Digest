@@ -17,7 +17,9 @@
     "check:pdf": "node scripts/build-catalog-pdf.mjs --check",
     "test:pdf": "node --test scripts/pdf/pipeline.test.mjs",
     "catalog:prepare": "node scripts/prepare-catalog.mjs",
-    "pdf:doctor": "node scripts/pdf/runtime.mjs"
+    "pdf:doctor": "node scripts/pdf/runtime.mjs",
+    "check:browser": "node scripts/check-browser.mjs",
+    "test:browser": "node --test scripts/browser/browser.test.mjs"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "6.3.6",

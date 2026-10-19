@@ -26,10 +26,10 @@ export function needsPdfGeneration(result,catalog){
  throw Error(`PDF inspection failed; generation was not attempted.\n${diagnostic}`);
 }
 
-export async function runPreparation({catalog,forcePdf=false,run,record}){
+export async function runPreparation({catalog,forcePdf=false,browserOutput='tmp/browser-checks/preparation',run,record}){
  const steps=[];
  const state={catalog,status:'running',startedAt:new Date().toISOString(),pdf:'not-checked',steps,
-  visualReview:'required',resumeCommand:`npm run catalog:prepare -- --catalog ${catalog}`};
+  visualReview:'required',browserReport:path.join(browserOutput,'index.html'),resumeCommand:`npm run catalog:prepare -- --catalog ${catalog}`};
  let active;
  const step=async(name,args,{allowFailure=false}={})=>{
   active=name;state.activeStep=name;await record(state);
@@ -56,6 +56,7 @@ export async function runPreparation({catalog,forcePdf=false,run,record}){
    await step('pdf-final',['scripts/build-catalog-pdf.mjs','--check','--catalog',catalog]);
   } else state.pdf='reused';
   await step('links',['scripts/check-links.mjs']);
+  await step('browser',['scripts/check-browser.mjs','--catalog',catalog,'--references','--output',browserOutput]);
   state.status='automated-checks-passed';state.activeStep=null;
  } catch(error){
   state.status='failed';state.failedStep=active;state.error=error.message;
@@ -97,7 +98,7 @@ export async function prepareCatalogue(args=process.argv.slice(2)){
  };
  console.log(`Catalogue ${options.catalog}; logs: ${directory}`);
  try {
-  const state=await runPreparation({...options,run,record});
+  const state=await runPreparation({...options,browserOutput:path.join(directory,'browser'),run,record});
   console.log(`\nAutomated checks passed; PDF ${state.pdf}. Visual/content review remains required.\n${reportPath}`);
   return state;
  } catch(error){throw Error(`${error.message}\nReport: ${reportPath}\nRetry: npm run catalog:prepare -- --catalog ${options.catalog}`);}
