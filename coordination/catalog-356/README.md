@@ -21,3 +21,6 @@
 
 ## 第2段階完了（2026-10-19）
 サイト組込み・日英PDF・公開前検査を完了して停止。日本語34頁／英語36頁、各3章9図。詳細はstage2/REPORT.mdと現行SITE_HQ_HANDOFF.md。公開・commit/pushは未実施。
+
+## 第3段階完了（2026-10-19）
+公開commit 1b9166a26ed02cd6d66c91f95d67d32beb55bdb6、build/deploy成功、公開ページ・全図・日英PDFの一致を確認。最新状態はSITE_HQ_HANDOFF.mdとSTAGE3_RELEASE.md。数学的留保は維持。
