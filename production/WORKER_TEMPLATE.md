@@ -1,11 +1,13 @@
 # 記事担当指示書の雛形
 
-カタログ本部が以下の `{{...}}` を埋め、`coordination/catalog-NNN/WORKER_A.md` 等へ保存する。1本を本部が担当する場合はREADMEに同じ項目を記録すればよく、WORKERファイルや別窓口は不要。
+Sol本部が以下の `{{...}}` を埋め、`coordination/catalog-NNN/WORKER_A.md` 等へ保存する。単論文はREADMEに担当範囲をまとめてもよいが、数学の執筆と別担当の内容点検にはAstraを用いる。[MODEL_ROLES.md](MODEL_ROLES.md)に従い、サブエージェントは生成時にモデル・思考量を明示指定する。
 
 ## 担当
 
 - 制作セット版：{{仕様版}}
 - カタログ／担当：{{NNN}}／{{担当名}}
+- 指定：`gpt-6-astra` / `high`（高）。本部のSol / xhighを継承しない。
+- 担当種別：執筆／執筆者とは別の内容点検
 - 編集可能範囲：{{担当するdraftsの絶対パス}}
 - 担当順：{{公式順とは別に記す作業順}}
 - 原典台帳：{{inventory.jsonのパス}}
@@ -46,8 +48,20 @@ drafts/catalog-NNN/<paper-id>/
 ```text
 OpenAI Math Digest のカタログ{{NNN}}、担当{{担当名}}をお願いします。
 作業先は /Users/iwai/Desktop/GitHub/OpenAI-Math-Digest です。
+数学の執筆担当としてgpt-6-astra / highを明示指定します。production/MODEL_ROLES.mdに従い、指定できない場合は代替で進めず報告してください。実際の指定を制作記録に残してください。
 production/FORMAT_CONTRACT.mdの4項目を必須として、AGENTS.md、PROJECT_PLAN.md、production/README.md、coordination/catalog-{{NNN}}/README.mdと、この指示書{{パス}}を読み、割り当てられた全記事を順次作成してください。
 日英本文・図・出典・状態記録を担当フォルダへ保存してください。初稿は1本最大60分で区切り、次の担当記事へ進んでください。1本ごとに成果物、確認範囲、未完成、本部への申し送りをこのチャットへ報告してください。
+```
+
+## 内容点検担当への貼り付け用プロンプト
+
+```text
+OpenAI Math Digest のカタログ{{NNN}}、執筆者とは別の数学的内容点検を担当してください。
+作業先：/Users/iwai/Desktop/GitHub/OpenAI-Math-Digest
+指定：gpt-6-astra / high。指定できなければ代替で進めず報告してください。
+AGENTS.md、production/README.md、production/MODEL_ROLES.md、production/FORMAT_CONTRACT.mdと担当指示書{{パス}}を読み、{{対象原稿・原典台帳のパス}}を確認してください。
+公式原典から主要結果の仮定・量化・全結論、独立した証明節の主張、帰着、直接入力の記述と適用条件、日英・図・カタログ案内の数学的対応を照合してください。外部結果の証明の再帰検証や記事全文の再執筆は行わず、修正点を執筆担当へ返してください。
+確認した原稿版・原典箇所・修正点・未確認範囲と実際のモデル指定を{{点検記録のパス}}へ記録してください。修正後は影響する主張・接続を確認してください。共通の機械検査と公開はSol本部へ引き継いでください。
 ```
 
 ## 制作セット1.4の必須形式
@@ -59,5 +73,5 @@ production/FORMAT_CONTRACT.mdの4項目を必須として、AGENTS.md、PROJECT_
 - 主要結果の全結論に証明概略と説明先を対応させる。必要な全体図を詳細節より前へ置く。
 - 独立して証明を解説する命題は、図より前に原典の仮定・結論・番号・ページを記す。番号だけの「証明対象」で代用しない。
 - 主張欄、mainResults、statements、conclusionCoverageをFORMAT_CONTRACT.mdに従い用意し、日英を揃える。
-- 本部は原典の仮定・量化と主定理への接続を照合する。受領記録には各主張の原典ページ、各結論の説明先、確認済み／未確認を残す。
+- Astraの内容点検担当が原典の仮定・量化と主定理への接続を照合する。Sol本部は各主張の原典ページ、各結論の説明先、確認済み／未確認の記録を受領する。
 - 自動検査に加え、Schnell・Orbifold Iitakaとの主張欄→図→直後の説明の画面比較、日英PDFへの反映を確認する。

@@ -5,7 +5,7 @@ import {finished} from 'node:stream/promises';
 import path from 'node:path';
 import {pathToFileURL} from 'node:url';
 import {pdfRuntime} from './pdf/runtime.mjs';
-import {gitSnapshot,ensureReviewNotes,collectPreparationArtifacts,renderHandoff} from './preparation-handoff.mjs';
+import {gitSnapshot,ensureReviewNotes,collectPreparationArtifacts,renderHandoff,renderReviewEntry} from './preparation-handoff.mjs';
 
 export function parsePreparationArgs(args){
  let catalog,forcePdf=false;
@@ -30,7 +30,7 @@ export function needsPdfGeneration(result,catalog){
 export async function runPreparation({catalog,forcePdf=false,browserOutput='tmp/browser-checks/preparation',context={},run,record}){
  const steps=[],started=performance.now();
  const state={...context,catalog,status:'running',startedAt:new Date().toISOString(),pdf:'not-checked',steps,
-  visualReview:'required',browserReport:path.join(browserOutput,'index.html'),resumeCommand:`npm run catalog:prepare -- --catalog ${catalog}`};
+  visualReview:'required',browserReport:path.join(browserOutput,'index.html'),resumeCommand:context.resumeCommand??`npm run catalog:prepare -- --catalog ${catalog}`};
  let active;
  const step=async(name,args,{allowFailure=false}={})=>{
   active=name;state.activeStep=name;await record(state);
@@ -80,7 +80,10 @@ export async function prepareCatalogue(args=process.argv.slice(2)){
  const directory=path.join(root,'tmp/catalog-preparation',options.catalog,new Date().toISOString().replaceAll(':','-')+'-'+process.pid);
  await mkdir(directory,{recursive:true});
  const reportPath=path.join(directory,'report.json');
- const context={workspace:root,gitStart:await gitSnapshot(root),reviewNotes:await ensureReviewNotes(root,options.catalog)};
+ const quote=value=>"'"+value.replaceAll("'","'\\''")+"'";
+ const context={workspace:root,gitStart:await gitSnapshot(root),reviewNotes:await ensureReviewNotes(root,options.catalog),
+  runtime:{node:process.execPath,nodeVersion:process.version,python:env.PDF_PYTHON,browser:env.PDF_BROWSER_PATH??'installed Google Chrome (channel: chrome)',settingsFile:path.join(root,'tmp/pdf-runtime.json')},
+  resumeCommand:`${quote(process.execPath)} scripts/prepare-catalog.mjs --catalog ${options.catalog}`};
  const record=async state=>{
   if(state.finishedAt){
    state.gitEnd=await gitSnapshot(root);
@@ -90,6 +93,7 @@ export async function prepareCatalogue(args=process.argv.slice(2)){
   await rename(reportPath+'.tmp',reportPath);
   // Each execution has its own folder; manual review notes live separately.
   await writeFile(path.join(directory,'HANDOFF.md'),renderHandoff(state,directory));
+  if(state.finishedAt)await writeFile(path.join(directory,'REVIEW_ENTRY.md'),renderReviewEntry(state,directory));
  };
  const run=async(name,args)=>{
   console.log(`\n[${name}]`);
@@ -110,7 +114,7 @@ export async function prepareCatalogue(args=process.argv.slice(2)){
   const state=await runPreparation({...options,context,browserOutput:path.join(directory,'browser'),run,record});
   console.log(`\nAutomated checks passed; PDF ${state.pdf}. Visual/content review remains required.\n${reportPath}\nHandoff: ${path.join(directory,'HANDOFF.md')}`);
   return state;
- } catch(error){throw Error(`${error.message}\nReport: ${reportPath}\nHandoff: ${path.join(directory,'HANDOFF.md')}\nRetry: npm run catalog:prepare -- --catalog ${options.catalog}`);}
+ } catch(error){throw Error(`${error.message}\nReport: ${reportPath}\nHandoff: ${path.join(directory,'HANDOFF.md')}\nRetry: ${context.resumeCommand}`);}
 }
 
 if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href){

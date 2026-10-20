@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {mkdtemp,mkdir,readFile,writeFile,rm} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import path from 'node:path';
-import {ensureReviewNotes,collectPreparationArtifacts,renderHandoff,gitSnapshot} from './preparation-handoff.mjs';
+import {ensureReviewNotes,collectPreparationArtifacts,renderHandoff,renderReviewEntry,gitSnapshot} from './preparation-handoff.mjs';
 import {runPreparation} from './prepare-catalog.mjs';
 
 test('reruns preserve manual notes and old handoffs, while new failure is never marked approved',async()=>{
@@ -17,7 +17,7 @@ test('reruns preserve manual notes and old handoffs, while new failure is never 
    const directory=path.join(root,id);await mkdir(directory);
    try{await runPreparation({catalog:'357',context:{workspace:root,reviewNotes:notes},
     run:async name=>({code:fail&&name==='links'?1:0,output:''}),
-    record:async state=>{if(state.finishedAt){snapshots.push(structuredClone(state));await writeFile(path.join(directory,'HANDOFF.md'),renderHandoff(state,directory));}}
+    record:async state=>{if(state.finishedAt){snapshots.push(structuredClone(state));await writeFile(path.join(directory,'HANDOFF.md'),renderHandoff(state,directory));await writeFile(path.join(directory,'REVIEW_ENTRY.md'),renderReviewEntry(state,directory));}}
    });}catch(error){assert.equal(fail,true);assert.match(error.message,/links failed/);}
    await ensureReviewNotes(root,'357');
   }
@@ -29,8 +29,25 @@ test('reruns preserve manual notes and old handoffs, while new failure is never 
   assert.doesNotMatch(second,/機械検査成功/);
   assert.match(second,/npm run catalog:prepare -- --catalog 357/);
   assert.match(second,/画面検査記録：未取得/);
+  const oldEntry=await readFile(path.join(root,'first/REVIEW_ENTRY.md'),'utf8');
+  const failedEntry=await readFile(path.join(root,'second/REVIEW_ENTRY.md'),'utf8');
+  assert.match(oldEntry,/first\/report.json/);assert.match(oldEntry,/成功（目視・内容確認は未記入）/);
+  assert.match(failedEntry,/second\/report.json/);assert.match(failedEntry,/未完了／失敗（公開準備完了にしない）/);
+  assert.match(failedEntry,/第2段階の判定・根拠：未記入/);assert.doesNotMatch(failedEntry,/成功（目視/);
   assert.ok(snapshots.every(s=>s.totalSeconds>=0));
  }finally{await rm(root,{recursive:true,force:true});}
+});
+test('handoff retains the selected runtime and runnable retry without inventing model or human review approval',async()=>{
+ let final;
+ const context={runtime:{node:'/known/node',nodeVersion:'v22',python:'/known/python',browser:'known Chrome',settingsFile:'/workspace/tmp/pdf-runtime.json'},resumeCommand:"'/known/node' scripts/prepare-catalog.mjs --catalog 357"};
+ await assert.rejects(runPreparation({catalog:'357',context,run:async()=>({code:1,output:'fail'}),record:async state=>{final=structuredClone(state);}}),/citations failed/);
+ assert.deepEqual(final.runtime,context.runtime);assert.equal(final.resumeCommand,context.resumeCommand);
+ const md=renderHandoff(final,'/execution');
+ assert.match(md,/Node：\/known\/node/);assert.match(md,/Pythonの選択値：\/known\/python/);
+ assert.match(md,/本コマンドはモデル設定を取得・変更しません/);assert.match(md,/REVIEW_ENTRY.md/);
+ const entry=renderReviewEntry(final,'/execution');
+ assert.match(entry,/実担当・モデル指定の記録先：未記入/);assert.match(entry,/Astra執筆・別担当点検/);
+ assert.equal(final.visualReview,'required');
 });
 test('artifact summaries use selected bilingual edition and actual browser outcomes; absent evidence stays absent',async()=>{
  const root=await mkdtemp(path.join(tmpdir(),'digest-artifacts-'));
