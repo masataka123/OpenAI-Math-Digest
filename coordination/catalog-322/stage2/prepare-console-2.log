@@ -1,0 +1,863 @@
+
+> openai-math-digest@0.1.0 catalog:prepare
+> node scripts/prepare-catalog.mjs --catalog 322
+
+Catalogue 322; logs: /Users/iwai/Desktop/GitHub/OpenAI-Math-Digest/tmp/catalog-preparation/322/2026-10-20T10-33-46.620Z-72123
+
+[citations]
+Citations checked: 81 catalogue(s), 292 files.
+
+[tests]
+TAP version 13
+# Subtest: nef route does not incorrectly require the separate volume branch
+ok 1 - nef route does not incorrectly require the separate volume branch
+  ---
+  duration_ms: 1.538834
+  ...
+# Subtest: the final claim requires both branches in prerequisite order
+ok 2 - the final claim requires both branches in prerequisite order
+  ---
+  duration_ms: 0.319167
+  ...
+# Subtest: unknown inputs and cyclic logical dependencies fail visibly
+ok 3 - unknown inputs and cyclic logical dependencies fail visibly
+  ---
+  duration_ms: 0.362542
+  ...
+# Subtest: bilingual entries and cited references stay connected
+ok 4 - bilingual entries and cited references stay connected
+  ---
+  duration_ms: 0.360625
+  ...
+# Subtest: 033 registers five papers in official order without moving the 034 source snapshot
+ok 5 - 033 registers five papers in official order without moving the 034 source snapshot
+  ---
+  duration_ms: 2.057875
+  ...
+# Subtest: retained connection records distinguish 12 inputs and one premise from alternatives
+ok 6 - retained connection records distinguish 12 inputs and one premise from alternatives
+  ---
+  duration_ms: 0.278042
+  ...
+# Subtest: 033 bilingual sections, 44 retained article figures and relative article links survive rendering
+ok 7 - 033 bilingual sections, 44 retained article figures and relative article links survive rendering
+  ---
+  duration_ms: 984.462958
+  ...
+# Subtest: 033 guide uses the common inventory and retains each result-use record once
+ok 8 - 033 guide uses the common inventory and retains each result-use record once
+  ---
+  duration_ms: 0.799375
+  ...
+# Subtest: catalogue summaries cover the official inventory once, in order, in both languages
+ok 9 - catalogue summaries cover the official inventory once, in order, in both languages
+  ---
+  duration_ms: 2.025916
+  ...
+# Subtest: every connection resolves to a source, application and reading record
+ok 10 - every connection resolves to a source, application and reading record
+  ---
+  duration_ms: 1.357875
+  ...
+# Subtest: 063 uses its pinned single manuscript and preserves official field order
+ok 11 - 063 uses its pinned single manuscript and preserves official field order
+  ---
+  duration_ms: 1.765792
+  ...
+# Subtest: 063 overview, article and external-input records resolve to the same bilingual anchors and assets
+ok 12 - 063 overview, article and external-input records resolve to the same bilingual anchors and assets
+  ---
+  duration_ms: 435.020084
+  ...
+# Subtest: synthesis explains every recorded connection and covers all 14 papers in linked diagrams
+ok 13 - synthesis explains every recorded connection and covers all 14 papers in linked diagrams
+  ---
+  duration_ms: 5.7925
+  ...
+# Subtest: published overview diagrams have matching bilingual link targets with accessible labels
+ok 14 - published overview diagrams have matching bilingual link targets with accessible labels
+  ---
+  duration_ms: 14.422667
+  ...
+# Subtest: browser inspection requires an explicit three-digit catalogue
+ok 15 - browser inspection requires an explicit three-digit catalogue
+  ---
+  duration_ms: 2.436333
+  ...
+# Subtest: registered papers determine bilingual desktop/mobile coverage without fixed paper counts
+ok 16 - registered papers determine bilingual desktop/mobile coverage without fixed paper counts
+  ---
+  duration_ms: 0.696625
+  ...
+# Subtest: cached scan matches legacy links, Unicode anchors, SVG glyphs, assets and language switches
+ok 17 - cached scan matches legacy links, Unicode anchors, SVG glyphs, assets and language switches
+  ---
+  duration_ms: 107.643875
+  ...
+# Subtest: failure diagnostics and duplicate broken references are preserved
+ok 18 - failure diagnostics and duplicate broken references are preserved
+  ---
+  duration_ms: 7.047583
+  ...
+# Subtest: a second invocation detects removed anchors and deleted assets (no persistent cache)
+ok 19 - a second invocation detects removed anchors and deleted assets (no persistent cache)
+  ---
+  duration_ms: 5.703292
+  ...
+# Subtest: CLI used by GitHub Actions exits nonzero for a broken link
+ok 20 - CLI used by GitHub Actions exits nonzero for a broken link
+  ---
+  duration_ms: 1030.609125
+  ...
+# Subtest: author-key citations stay compact in both languages and TeX without changing legacy output
+ok 21 - author-key citations stay compact in both languages and TeX without changing legacy output
+  ---
+  duration_ms: 3.687917
+  ...
+# Subtest: printed page numbers are distinguished from PDF destinations
+ok 22 - printed page numbers are distinguished from PDF destinations
+  ---
+  duration_ms: 10.60425
+  ...
+# Subtest: ranges and unknown citations fail rather than silently produce plausible references
+ok 23 - ranges and unknown citations fail rather than silently produce plausible references
+  ---
+  duration_ms: 1.861167
+  ...
+# Subtest: managed citation markers preserve shared source-line and article structure
+ok 24 - managed citation markers preserve shared source-line and article structure
+  ---
+  duration_ms: 215.411416
+  ...
+# Subtest: every registered new catalogue uses checked citations and fresh diagram outputs
+ok 25 - every registered new catalogue uses checked citations and fresh diagram outputs
+  ---
+  duration_ms: 782.441
+  ...
+# Subtest: Japanese and English cite the same records and TeX shares their readable names
+ok 26 - Japanese and English cite the same records and TeX shares their readable names
+  ---
+  duration_ms: 1.944041
+  ...
+# Subtest: generated SVG links keep PDF page positions and the source sets declared on each diagram
+ok 27 - generated SVG links keep PDF page positions and the source sets declared on each diagram
+  ---
+  duration_ms: 4.265666
+  ...
+# Subtest: publication registry discovery excludes unregistered drafts but explicit discovery retains them
+ok 28 - publication registry discovery excludes unregistered drafts but explicit discovery retains them
+  ---
+  duration_ms: 85.660458
+  ...
+# Subtest: new and revised catalogues have official inventories and bilingual guides for every owned article
+ok 29 - new and revised catalogues have official inventories and bilingual guides for every owned article
+  ---
+  duration_ms: 2664.469875
+  ...
+# Subtest: missing roles, reference lists, reading purposes and proof targets are rejected
+ok 30 - missing roles, reference lists, reading purposes and proof targets are rejected
+  ---
+  duration_ms: 1.644542
+  ...
+# Subtest: one-paper inventory retains all columns and rejects incomplete rows or wrong official order
+ok 31 - one-paper inventory retains all columns and rejects incomplete rows or wrong official order
+  ---
+  duration_ms: 0.507125
+  ...
+# Subtest: internal references are unprefixed; external references carry defined keys and readable names
+ok 32 - internal references are unprefixed; external references carry defined keys and readable names
+  ---
+  duration_ms: 0.298584
+  ...
+# Subtest: main-theorem proofs and the statements of proof targets cannot be omitted
+ok 33 - main-theorem proofs and the statements of proof targets cannot be omitted
+  ---
+  duration_ms: 1.233209
+  ...
+# Subtest: booklets internalize only the current catalogue and its papers, preserving cross-catalogue source links
+ok 34 - booklets internalize only the current catalogue and its papers, preserving cross-catalogue source links
+  ---
+  duration_ms: 10.049
+  ...
+# Subtest: booklet print view retains every connection and removes controls and duplicate audit only
+ok 35 - booklet print view retains every connection and removes controls and duplicate audit only
+  ---
+  duration_ms: 6.618583
+  ...
+# Subtest: official-order table rows retain article anchors in print entries
+ok 36 - official-order table rows retain article anchors in print entries
+  ---
+  duration_ms: 1.338917
+  ...
+# Subtest: reruns preserve manual notes and old handoffs, while new failure is never marked approved
+ok 37 - reruns preserve manual notes and old handoffs, while new failure is never marked approved
+  ---
+  duration_ms: 69.870666
+  ...
+# Subtest: artifact summaries use selected bilingual edition and actual browser outcomes; absent evidence stays absent
+ok 38 - artifact summaries use selected bilingual edition and actual browser outcomes; absent evidence stays absent
+  ---
+  duration_ms: 84.51575
+  ...
+# Subtest: unexpected runner exception is timed and recorded as a failed step
+ok 39 - unexpected runner exception is timed and recorded as a failed step
+  ---
+  duration_ms: 0.969
+  ...
+# Subtest: requires one explicit registered-format catalogue and rejects mistyped options
+ok 40 - requires one explicit registered-format catalogue and rejects mistyped options
+  ---
+  duration_ms: 1.560291
+  ...
+# Subtest: current PDF is reused without PDF rendering or a second build; browser inspection still runs
+ok 41 - current PDF is reused without PDF rendering or a second build; browser inspection still runs
+  ---
+  duration_ms: 94.950583
+  ...
+# Subtest: stale PDF generation, second build and final check always run sequentially
+ok 42 - stale PDF generation, second build and final check always run sequentially
+  ---
+  duration_ms: 1.720166
+  ...
+# Subtest: build and environment failures stop dependent work and record a retry command
+ok 43 - build and environment failures stop dependent work and record a retry command
+  ---
+  duration_ms: 1.948375
+  ...
+# Subtest: unexpected PDF check failures never trigger destructive regeneration, even with force
+ok 44 - unexpected PDF check failures never trigger destructive regeneration, even with force
+  ---
+  duration_ms: 3.560542
+  ...
+# Subtest: explicit regeneration runs when current, while link failures leave a failed report
+ok 45 - explicit regeneration runs when current, while link failures leave a failed report
+  ---
+  duration_ms: 2.076916
+  ...
+# Subtest: PDF runtime uses project venv/settings and respects explicit environment overrides
+ok 46 - PDF runtime uses project venv/settings and respects explicit environment overrides
+  ---
+  duration_ms: 47.1765
+  ...
+# Subtest: browser failure prevents approval and records the gallery location
+ok 47 - browser failure prevents approval and records the gallery location
+  ---
+  duration_ms: 1.684291
+  ...
+# Subtest: Schnell structure preserves mathematical statements and source links
+ok 48 - Schnell structure preserves mathematical statements and source links
+  ---
+  duration_ms: 42.170167
+  ...
+# Subtest: Japanese and English headings share section anchors
+ok 49 - Japanese and English headings share section anchors
+  ---
+  duration_ms: 15.701667
+  ...
+# Subtest: public article links remain local in previews and print editions
+ok 50 - public article links remain local in previews and print editions
+  ---
+  duration_ms: 5.335042
+  ...
+# Subtest: multiple inline TeX figures have unique IDs and intact citations
+ok 51 - multiple inline TeX figures have unique IDs and intact citations
+  ---
+  duration_ms: 4.837709
+  ...
+# Subtest: older introductions and both math syntaxes are retained
+ok 52 - older introductions and both math syntaxes are retained
+  ---
+  duration_ms: 4.758042
+  ...
+# Subtest: missing diagrams stop the build instead of publishing an empty figure
+ok 53 - missing diagrams stop the build instead of publishing an empty figure
+  ---
+  duration_ms: 4.028166
+  ...
+# Subtest: proof-overview navigation retains the result number from the heading
+ok 54 - proof-overview navigation retains the result number from the heading
+  ---
+  duration_ms: 1.247625
+  ...
+# Subtest: field, catalogue and manuscript references resolve without duplicate records
+ok 55 - field, catalogue and manuscript references resolve without duplicate records
+  ---
+  duration_ms: 0.742
+  ...
+# Subtest: the first reading route connects both ways and supports shared catalogues
+ok 56 - the first reading route connects both ways and supports shared catalogues
+  ---
+  duration_ms: 0.225625
+  ...
+1..56
+# tests 56
+# suites 0
+# pass 56
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3146.821125
+
+[build]
+19:33:51 [content] Syncing content
+19:33:51 [content] Synced content
+19:33:51 [types] Generated 33ms
+19:33:51 [build] output: "static"
+19:33:51 [build] mode: "static"
+19:33:51 [build] directory: /Users/iwai/Desktop/GitHub/OpenAI-Math-Digest/dist/
+19:33:51 [build] Collecting build info...
+19:33:51 [build] ✓ Completed in 44ms.
+19:33:51 [build] Building static entrypoints...
+19:33:57 [vite] ✓ built in 5.52s
+19:33:57 [build] ✓ Completed in 5.56s.
+
+ building client (vite) 
+19:33:57 [vite] transforming...
+19:33:57 [vite] ✓ 4 modules transformed.
+19:33:57 [vite] rendering chunks...
+19:33:57 [vite] ✓ built in 35ms
+
+ generating static routes 
+19:33:57 ▶ src/pages/[lang]/catalog/[id].astro
+19:33:57   ├─ /ja/catalog/004/index.html (+46ms) 
+19:33:57   ├─ /ja/catalog/033/index.html (+36ms) 
+19:33:57   ├─ /ja/catalog/034/index.html (+8ms) 
+19:33:57   ├─ /ja/catalog/036/index.html (+11ms) 
+19:33:57   ├─ /ja/catalog/037/index.html (+9ms) 
+19:33:57   ├─ /ja/catalog/038/index.html (+5ms) 
+19:33:57   ├─ /ja/catalog/039/index.html (+13ms) 
+19:33:57   ├─ /ja/catalog/042/index.html (+5ms) 
+19:33:57   ├─ /ja/catalog/046/index.html (+9ms) 
+19:33:57   ├─ /ja/catalog/051/index.html (+5ms) 
+19:33:57   ├─ /ja/catalog/052/index.html (+9ms) 
+19:33:57   ├─ /ja/catalog/057/index.html (+10ms) 
+19:33:57   ├─ /ja/catalog/063/index.html (+3ms) 
+19:33:57   ├─ /ja/catalog/067/index.html (+3ms) 
+19:33:57   ├─ /ja/catalog/068/index.html (+19ms) 
+19:33:57   ├─ /ja/catalog/074/index.html (+8ms) 
+19:33:57   ├─ /ja/catalog/087/index.html (+9ms) 
+19:33:57   ├─ /ja/catalog/159/index.html (+2ms) 
+19:33:57   ├─ /ja/catalog/187/index.html (+2ms) 
+19:33:57   ├─ /ja/catalog/197/index.html (+11ms) 
+19:33:57   ├─ /ja/catalog/246/index.html (+3ms) 
+19:33:57   ├─ /ja/catalog/285/index.html (+6ms) 
+19:33:57   ├─ /ja/catalog/287/index.html (+3ms) 
+19:33:57   ├─ /ja/catalog/322/index.html (+2ms) 
+19:33:57   ├─ /ja/catalog/338/index.html (+3ms) 
+19:33:57   ├─ /ja/catalog/356/index.html (+10ms) 
+19:33:57   ├─ /ja/catalog/357/index.html (+3ms) 
+19:33:57   ├─ /en/catalog/004/index.html (+11ms) 
+19:33:57   ├─ /en/catalog/033/index.html (+21ms) 
+19:33:57   ├─ /en/catalog/034/index.html (+3ms) 
+19:33:57   ├─ /en/catalog/036/index.html (+9ms) 
+19:33:57   ├─ /en/catalog/037/index.html (+7ms) 
+19:33:57   ├─ /en/catalog/038/index.html (+3ms) 
+19:33:57   ├─ /en/catalog/039/index.html (+10ms) 
+19:33:57   ├─ /en/catalog/042/index.html (+3ms) 
+19:33:57   ├─ /en/catalog/046/index.html (+6ms) 
+19:33:57   ├─ /en/catalog/051/index.html (+3ms) 
+19:33:57   ├─ /en/catalog/052/index.html (+8ms) 
+19:33:57   ├─ /en/catalog/057/index.html (+8ms) 
+19:33:57   ├─ /en/catalog/063/index.html (+3ms) 
+19:33:57   ├─ /en/catalog/067/index.html (+3ms) 
+19:33:57   ├─ /en/catalog/068/index.html (+17ms) 
+19:33:57   ├─ /en/catalog/074/index.html (+7ms) 
+19:33:57   ├─ /en/catalog/087/index.html (+10ms) 
+19:33:57   ├─ /en/catalog/159/index.html (+2ms) 
+19:33:57   ├─ /en/catalog/187/index.html (+2ms) 
+19:33:57   ├─ /en/catalog/197/index.html (+11ms) 
+19:33:57   ├─ /en/catalog/246/index.html (+3ms) 
+19:33:57   ├─ /en/catalog/285/index.html (+5ms) 
+19:33:57   ├─ /en/catalog/287/index.html (+3ms) 
+19:33:57   ├─ /en/catalog/322/index.html (+3ms) 
+19:33:57   ├─ /en/catalog/338/index.html (+3ms) 
+19:33:57   ├─ /en/catalog/356/index.html (+10ms) 
+19:33:57   └─ /en/catalog/357/index.html (+4ms) 
+19:33:57 ▶ src/pages/[lang]/character.astro
+19:33:57   ├─ /ja/character/index.html (+2ms) 
+19:33:57   └─ /en/character/index.html (+2ms) 
+19:33:57 ▶ src/pages/[lang]/fields/[id].astro
+19:33:57   ├─ /ja/fields/number-theory/index.html (+2ms) 
+19:33:57   ├─ /ja/fields/algebraic-complex-geometry/index.html (+2ms) 
+19:33:57   ├─ /ja/fields/real-complex-analysis/index.html (+1ms) 
+19:33:57   ├─ /ja/fields/convex-metric-geometry/index.html (+1ms) 
+19:33:57   ├─ /ja/fields/combinatorics/index.html (+1ms) 
+19:33:57   ├─ /ja/fields/algebra/index.html (+1ms) 
+19:33:57   ├─ /ja/fields/group-theory/index.html (+1ms) 
+19:33:57   ├─ /ja/fields/operator-algebras/index.html (+1ms) 
+19:33:57   ├─ /ja/fields/functional-analysis/index.html (+1ms) 
+19:33:57   ├─ /ja/fields/differential-geometry/index.html (+1ms) 
+19:33:57   ├─ /en/fields/number-theory/index.html (+1ms) 
+19:33:57   ├─ /en/fields/algebraic-complex-geometry/index.html (+1ms) 
+19:33:57   ├─ /en/fields/real-complex-analysis/index.html (+1ms) 
+19:33:57   ├─ /en/fields/convex-metric-geometry/index.html (+1ms) 
+19:33:57   ├─ /en/fields/combinatorics/index.html (+1ms) 
+19:33:57   ├─ /en/fields/algebra/index.html (+1ms) 
+19:33:57   ├─ /en/fields/group-theory/index.html (+1ms) 
+19:33:57   ├─ /en/fields/operator-algebras/index.html (+0ms) 
+19:33:57   ├─ /en/fields/functional-analysis/index.html (+0ms) 
+19:33:57   └─ /en/fields/differential-geometry/index.html (+1ms) 
+19:33:57 ▶ src/pages/[lang]/index.astro
+19:33:57   ├─ /ja/index.html (+1ms) 
+19:33:57   └─ /en/index.html (+1ms) 
+19:33:58 ▶ src/pages/[lang]/papers/[id].astro
+19:33:58   ├─ /ja/papers/hilbert-tenth-rationals/index.html (+35ms) 
+19:33:58   ├─ /ja/papers/pointwise-2-converse-rational-two-torsion/index.html (+28ms) 
+19:33:58   ├─ /ja/papers/orbifold-logarithmic-iitaka/index.html (+32ms) 
+19:33:58   ├─ /ja/papers/whole-fiber-variation/index.html (+47ms) 
+19:33:58   ├─ /ja/papers/reverse-logarithmic-additivity/index.html (+31ms) 
+19:33:58   ├─ /ja/papers/projective-hodge-lines/index.html (+24ms) 
+19:33:58   ├─ /ja/papers/kahler-b-semiampleness/index.html (+31ms) 
+19:33:58   ├─ /ja/papers/kahler-log-abundance/index.html (+33ms) 
+19:33:58   ├─ /ja/papers/uniform-slc-indices/index.html (+19ms) 
+19:33:58   ├─ /ja/papers/conditional-kahler-fourfolds/index.html (+23ms) 
+19:33:58   ├─ /ja/papers/log-abundance-characteristic-zero/index.html (+6ms) 
+19:33:58   ├─ /ja/papers/minimal-metrics-injectivity/index.html (+19ms) 
+19:33:58   ├─ /ja/papers/fourfold-nonvanishing/index.html (+19ms) 
+19:33:58   ├─ /ja/papers/lifting-adjoint-sections/index.html (+16ms) 
+19:33:58   ├─ /ja/papers/schnell-fiber-spaces/index.html (+4ms) 
+19:33:58   ├─ /ja/papers/uniform-log-iitaka/index.html (+22ms) 
+19:33:58   ├─ /ja/papers/uniform-pluricanonical-iitaka/index.html (+25ms) 
+19:33:58   ├─ /ja/papers/relative-denominators/index.html (+19ms) 
+19:33:58   ├─ /ja/papers/arithmetic-stein-degree/index.html (+21ms) 
+19:33:58   ├─ /ja/papers/effective-log-iitaka-fourfolds/index.html (+15ms) 
+19:33:58   ├─ /ja/papers/abundance-after-nonvanishing/index.html (+21ms) 
+19:33:58   ├─ /ja/papers/kahler-numerical-semiampleness/index.html (+33ms) 
+19:33:59   ├─ /ja/papers/projective-numerical-semiampleness/index.html (+32ms) 
+19:33:59   ├─ /ja/papers/generalized-lc-minimal-models/index.html (+26ms) 
+19:33:59   ├─ /ja/papers/minimal-models-numerical-dimension-one/index.html (+14ms) 
+19:33:59   ├─ /ja/papers/ordinary-double-point-gap/index.html (+36ms) 
+19:33:59   ├─ /ja/papers/normalized-volume-gap-four/index.html (+25ms) 
+19:33:59   ├─ /ja/papers/fujita-freeness/index.html (+29ms) 
+19:33:59   ├─ /ja/papers/nagata-plane-curves/index.html (+19ms) 
+19:33:59   ├─ /ja/papers/maximal-seshadri-surfaces/index.html (+29ms) 
+19:33:59   ├─ /ja/papers/maximal-seshadri-higher-dimensions/index.html (+19ms) 
+19:33:59   ├─ /ja/papers/maximal-seshadri-positive-characteristic/index.html (+20ms) 
+19:33:59   ├─ /ja/papers/every-complex-k3-oka/index.html (+40ms) 
+19:33:59   ├─ /ja/papers/large-fundamental-group-non-stein/index.html (+27ms) 
+19:33:59   ├─ /ja/papers/surface-shafarevich-counterexample/index.html (+27ms) 
+19:33:59   ├─ /ja/papers/canonical-ampleness/index.html (+42ms) 
+19:33:59   ├─ /ja/papers/universal-cover-splitting/index.html (+20ms) 
+19:33:59   ├─ /ja/papers/split-tangent-integrability/index.html (+26ms) 
+19:33:59   ├─ /ja/papers/special-kahler-abelianity/index.html (+38ms) 
+19:33:59   ├─ /ja/papers/two-step-monodromy/index.html (+33ms) 
+19:33:59   ├─ /ja/papers/half-weight-fourfold-abelianity/index.html (+21ms) 
+19:33:59   ├─ /ja/papers/generalized-mukai/index.html (+38ms) 
+19:33:59   ├─ /ja/papers/campana-peternell-six/index.html (+35ms) 
+19:33:59   ├─ /ja/papers/anticanonical-smooth-semipositivity/index.html (+25ms) 
+19:33:59   ├─ /ja/papers/invariant-anticanonical-indices/index.html (+23ms) 
+19:33:59   ├─ /ja/papers/bounded-anticanonical-metrics/index.html (+18ms) 
+19:33:59   ├─ /ja/papers/cohomological-transfer/index.html (+29ms) 
+19:33:59   ├─ /ja/papers/metric-descent-contractions/index.html (+28ms) 
+19:33:59   ├─ /ja/papers/integrable-metrics-controlled-boundary/index.html (+28ms) 
+19:33:59   ├─ /ja/papers/exact-orders-anticanonical/index.html (+40ms) 
+19:33:59   ├─ /ja/papers/kakeya-maximal-three/index.html (+29ms) 
+19:33:59   ├─ /ja/papers/kakeya-hausdorff-four/index.html (+21ms) 
+19:33:59   ├─ /ja/papers/symmetric-mahler/index.html (+42ms) 
+19:33:59   ├─ /ja/papers/general-mahler/index.html (+25ms) 
+19:33:59   ├─ /ja/papers/symplectic-polar-products/index.html (+29ms) 
+19:33:59   ├─ /ja/papers/quasipolynomial-arithmetic-progressions/index.html (+20ms) 
+19:33:59   ├─ /ja/papers/snaky-in-21-maker-moves/index.html (+29ms) 
+19:34:00   ├─ /ja/papers/torsion-free-direct-finiteness/index.html (+20ms) 
+19:34:00   ├─ /ja/papers/direct-finiteness-characteristic-two/index.html (+23ms) 
+19:34:00   ├─ /ja/papers/group-ring-determinant/index.html (+16ms) 
+19:34:00   ├─ /ja/papers/direct-finiteness-odd-characteristic/index.html (+24ms) 
+19:34:00   ├─ /ja/papers/modulus-cannon/index.html (+34ms) 
+19:34:00   ├─ /ja/papers/baum-connes-injectivity/index.html (+24ms) 
+19:34:00   ├─ /ja/papers/kadison-kaplansky-projection/index.html (+22ms) 
+19:34:00   ├─ /ja/papers/baum-connes-irrational-trace/index.html (+20ms) 
+19:34:00   ├─ /ja/papers/free-group-factor-isomorphism/index.html (+25ms) 
+19:34:00   ├─ /ja/papers/tingley-positive-solution/index.html (+20ms) 
+19:34:00   ├─ /ja/papers/yau-uniformization/index.html (+29ms) 
+19:34:00   ├─ /ja/papers/gigli-characterization/index.html (+35ms) 
+19:34:00   ├─ /ja/papers/weak-hessian-geodesics/index.html (+23ms) 
+19:34:00   ├─ /ja/papers/regular-rcd-coordinates/index.html (+29ms) 
+19:34:00   ├─ /en/papers/hilbert-tenth-rationals/index.html (+25ms) 
+19:34:00   ├─ /en/papers/pointwise-2-converse-rational-two-torsion/index.html (+28ms) 
+19:34:00   ├─ /en/papers/orbifold-logarithmic-iitaka/index.html (+32ms) 
+19:34:00   ├─ /en/papers/whole-fiber-variation/index.html (+51ms) 
+19:34:00   ├─ /en/papers/reverse-logarithmic-additivity/index.html (+43ms) 
+19:34:00   ├─ /en/papers/projective-hodge-lines/index.html (+32ms) 
+19:34:00   ├─ /en/papers/kahler-b-semiampleness/index.html (+38ms) 
+19:34:00   ├─ /en/papers/kahler-log-abundance/index.html (+35ms) 
+19:34:00   ├─ /en/papers/uniform-slc-indices/index.html (+20ms) 
+19:34:00   ├─ /en/papers/conditional-kahler-fourfolds/index.html (+31ms) 
+19:34:00   ├─ /en/papers/log-abundance-characteristic-zero/index.html (+6ms) 
+19:34:00   ├─ /en/papers/minimal-metrics-injectivity/index.html (+21ms) 
+19:34:00   ├─ /en/papers/fourfold-nonvanishing/index.html (+20ms) 
+19:34:00   ├─ /en/papers/lifting-adjoint-sections/index.html (+19ms) 
+19:34:00   ├─ /en/papers/schnell-fiber-spaces/index.html (+3ms) 
+19:34:00   ├─ /en/papers/uniform-log-iitaka/index.html (+23ms) 
+19:34:00   ├─ /en/papers/uniform-pluricanonical-iitaka/index.html (+25ms) 
+19:34:00   ├─ /en/papers/relative-denominators/index.html (+21ms) 
+19:34:00   ├─ /en/papers/arithmetic-stein-degree/index.html (+23ms) 
+19:34:00   ├─ /en/papers/effective-log-iitaka-fourfolds/index.html (+17ms) 
+19:34:00   ├─ /en/papers/abundance-after-nonvanishing/index.html (+20ms) 
+19:34:00   ├─ /en/papers/kahler-numerical-semiampleness/index.html (+34ms) 
+19:34:00   ├─ /en/papers/projective-numerical-semiampleness/index.html (+32ms) 
+19:34:00   ├─ /en/papers/generalized-lc-minimal-models/index.html (+27ms) 
+19:34:00   ├─ /en/papers/minimal-models-numerical-dimension-one/index.html (+17ms) 
+19:34:00   ├─ /en/papers/ordinary-double-point-gap/index.html (+38ms) 
+19:34:01   ├─ /en/papers/normalized-volume-gap-four/index.html (+27ms) 
+19:34:01   ├─ /en/papers/fujita-freeness/index.html (+33ms) 
+19:34:01   ├─ /en/papers/nagata-plane-curves/index.html (+21ms) 
+19:34:01   ├─ /en/papers/maximal-seshadri-surfaces/index.html (+26ms) 
+19:34:01   ├─ /en/papers/maximal-seshadri-higher-dimensions/index.html (+22ms) 
+19:34:01   ├─ /en/papers/maximal-seshadri-positive-characteristic/index.html (+22ms) 
+19:34:01   ├─ /en/papers/every-complex-k3-oka/index.html (+41ms) 
+19:34:01   ├─ /en/papers/large-fundamental-group-non-stein/index.html (+28ms) 
+19:34:01   ├─ /en/papers/surface-shafarevich-counterexample/index.html (+29ms) 
+19:34:01   ├─ /en/papers/canonical-ampleness/index.html (+42ms) 
+19:34:01   ├─ /en/papers/universal-cover-splitting/index.html (+22ms) 
+19:34:01   ├─ /en/papers/split-tangent-integrability/index.html (+26ms) 
+19:34:01   ├─ /en/papers/special-kahler-abelianity/index.html (+43ms) 
+19:34:01   ├─ /en/papers/two-step-monodromy/index.html (+30ms) 
+19:34:01   ├─ /en/papers/half-weight-fourfold-abelianity/index.html (+21ms) 
+19:34:01   ├─ /en/papers/generalized-mukai/index.html (+38ms) 
+19:34:01   ├─ /en/papers/campana-peternell-six/index.html (+38ms) 
+19:34:01   ├─ /en/papers/anticanonical-smooth-semipositivity/index.html (+23ms) 
+19:34:01   ├─ /en/papers/invariant-anticanonical-indices/index.html (+25ms) 
+19:34:01   ├─ /en/papers/bounded-anticanonical-metrics/index.html (+20ms) 
+19:34:01   ├─ /en/papers/cohomological-transfer/index.html (+35ms) 
+19:34:01   ├─ /en/papers/metric-descent-contractions/index.html (+29ms) 
+19:34:01   ├─ /en/papers/integrable-metrics-controlled-boundary/index.html (+29ms) 
+19:34:01   ├─ /en/papers/exact-orders-anticanonical/index.html (+41ms) 
+19:34:01   ├─ /en/papers/kakeya-maximal-three/index.html (+30ms) 
+19:34:01   ├─ /en/papers/kakeya-hausdorff-four/index.html (+21ms) 
+19:34:01   ├─ /en/papers/symmetric-mahler/index.html (+37ms) 
+19:34:01   ├─ /en/papers/general-mahler/index.html (+26ms) 
+19:34:01   ├─ /en/papers/symplectic-polar-products/index.html (+29ms) 
+19:34:01   ├─ /en/papers/quasipolynomial-arithmetic-progressions/index.html (+24ms) 
+19:34:01   ├─ /en/papers/snaky-in-21-maker-moves/index.html (+30ms) 
+19:34:01   ├─ /en/papers/torsion-free-direct-finiteness/index.html (+20ms) 
+19:34:01   ├─ /en/papers/direct-finiteness-characteristic-two/index.html (+24ms) 
+19:34:01   ├─ /en/papers/group-ring-determinant/index.html (+32ms) 
+19:34:02   ├─ /en/papers/direct-finiteness-odd-characteristic/index.html (+31ms) 
+19:34:02   ├─ /en/papers/modulus-cannon/index.html (+35ms) 
+19:34:02   ├─ /en/papers/baum-connes-injectivity/index.html (+25ms) 
+19:34:02   ├─ /en/papers/kadison-kaplansky-projection/index.html (+25ms) 
+19:34:02   ├─ /en/papers/baum-connes-irrational-trace/index.html (+22ms) 
+19:34:02   ├─ /en/papers/free-group-factor-isomorphism/index.html (+26ms) 
+19:34:02   ├─ /en/papers/tingley-positive-solution/index.html (+23ms) 
+19:34:02   ├─ /en/papers/yau-uniformization/index.html (+29ms) 
+19:34:02   ├─ /en/papers/gigli-characterization/index.html (+34ms) 
+19:34:02   ├─ /en/papers/weak-hessian-geodesics/index.html (+23ms) 
+19:34:02   └─ /en/papers/regular-rcd-coordinates/index.html (+29ms) 
+19:34:02 ▶ src/pages/index.astro
+19:34:02   └─ /index.html (+1ms) 
+19:34:02 ✓ Completed in 5.06s.
+
+19:34:02 [build] 221 page(s) built in 10.96s
+19:34:02 [build] Complete!
+
+[pdf-status]
+file:///Users/iwai/Desktop/GitHub/OpenAI-Math-Digest/scripts/build-catalog-pdf.mjs:72
+  if(prior?.contentHash!==digest)throw Error(`PDF ${c.id}/${lang} is stale: run npm run pdf:catalog after building, then rebuild the website.`);
+                                       ^
+
+Error: PDF 322/ja is stale: run npm run pdf:catalog after building, then rebuild the website.
+    at file:///Users/iwai/Desktop/GitHub/OpenAI-Math-Digest/scripts/build-catalog-pdf.mjs:72:40
+
+Node.js v20.20.2
+
+[pdf-environment]
+{
+  "python": "/Users/iwai/Desktop/GitHub/OpenAI-Math-Digest/tmp/pdf-venv/bin/python",
+  "pythonVersion": "3.12.11",
+  "packages": {
+    "weasyprint": "68.1",
+    "pypdf": "6.19.0"
+  },
+  "browser": "155.0.8059.85"
+}
+
+[pdf-generation]
+322/ja: 16 pages · 204 formulas · 3 figures · 1.0 MB
+322/en: 17 pages · 194 formulas · 3 figures · 0.7 MB
+
+[build-pdf]
+19:34:25 [content] Syncing content
+19:34:25 [content] Synced content
+19:34:25 [types] Generated 30ms
+19:34:25 [build] output: "static"
+19:34:25 [build] mode: "static"
+19:34:25 [build] directory: /Users/iwai/Desktop/GitHub/OpenAI-Math-Digest/dist/
+19:34:25 [build] Collecting build info...
+19:34:25 [build] ✓ Completed in 40ms.
+19:34:25 [build] Building static entrypoints...
+19:34:30 [vite] ✓ built in 5.11s
+19:34:30 [build] ✓ Completed in 5.15s.
+
+ building client (vite) 
+19:34:30 [vite] transforming...
+19:34:30 [vite] ✓ 4 modules transformed.
+19:34:30 [vite] rendering chunks...
+19:34:30 [vite] ✓ built in 25ms
+
+ generating static routes 
+19:34:30 ▶ src/pages/[lang]/catalog/[id].astro
+19:34:30   ├─ /ja/catalog/004/index.html (+45ms) 
+19:34:30   ├─ /ja/catalog/033/index.html (+34ms) 
+19:34:30   ├─ /ja/catalog/034/index.html (+7ms) 
+19:34:30   ├─ /ja/catalog/036/index.html (+11ms) 
+19:34:30   ├─ /ja/catalog/037/index.html (+9ms) 
+19:34:30   ├─ /ja/catalog/038/index.html (+4ms) 
+19:34:30   ├─ /ja/catalog/039/index.html (+12ms) 
+19:34:30   ├─ /ja/catalog/042/index.html (+3ms) 
+19:34:30   ├─ /ja/catalog/046/index.html (+8ms) 
+19:34:30   ├─ /ja/catalog/051/index.html (+5ms) 
+19:34:30   ├─ /ja/catalog/052/index.html (+8ms) 
+19:34:30   ├─ /ja/catalog/057/index.html (+10ms) 
+19:34:30   ├─ /ja/catalog/063/index.html (+3ms) 
+19:34:30   ├─ /ja/catalog/067/index.html (+3ms) 
+19:34:30   ├─ /ja/catalog/068/index.html (+20ms) 
+19:34:30   ├─ /ja/catalog/074/index.html (+8ms) 
+19:34:30   ├─ /ja/catalog/087/index.html (+9ms) 
+19:34:30   ├─ /ja/catalog/159/index.html (+2ms) 
+19:34:30   ├─ /ja/catalog/187/index.html (+2ms) 
+19:34:30   ├─ /ja/catalog/197/index.html (+13ms) 
+19:34:30   ├─ /ja/catalog/246/index.html (+3ms) 
+19:34:30   ├─ /ja/catalog/285/index.html (+6ms) 
+19:34:30   ├─ /ja/catalog/287/index.html (+3ms) 
+19:34:30   ├─ /ja/catalog/322/index.html (+3ms) 
+19:34:30   ├─ /ja/catalog/338/index.html (+3ms) 
+19:34:30   ├─ /ja/catalog/356/index.html (+11ms) 
+19:34:30   ├─ /ja/catalog/357/index.html (+3ms) 
+19:34:30   ├─ /en/catalog/004/index.html (+12ms) 
+19:34:30   ├─ /en/catalog/033/index.html (+21ms) 
+19:34:30   ├─ /en/catalog/034/index.html (+4ms) 
+19:34:30   ├─ /en/catalog/036/index.html (+9ms) 
+19:34:30   ├─ /en/catalog/037/index.html (+7ms) 
+19:34:30   ├─ /en/catalog/038/index.html (+3ms) 
+19:34:30   ├─ /en/catalog/039/index.html (+10ms) 
+19:34:30   ├─ /en/catalog/042/index.html (+3ms) 
+19:34:30   ├─ /en/catalog/046/index.html (+7ms) 
+19:34:30   ├─ /en/catalog/051/index.html (+3ms) 
+19:34:30   ├─ /en/catalog/052/index.html (+7ms) 
+19:34:30   ├─ /en/catalog/057/index.html (+8ms) 
+19:34:30   ├─ /en/catalog/063/index.html (+2ms) 
+19:34:30   ├─ /en/catalog/067/index.html (+3ms) 
+19:34:30   ├─ /en/catalog/068/index.html (+19ms) 
+19:34:30   ├─ /en/catalog/074/index.html (+7ms) 
+19:34:31   ├─ /en/catalog/087/index.html (+10ms) 
+19:34:31   ├─ /en/catalog/159/index.html (+2ms) 
+19:34:31   ├─ /en/catalog/187/index.html (+3ms) 
+19:34:31   ├─ /en/catalog/197/index.html (+11ms) 
+19:34:31   ├─ /en/catalog/246/index.html (+3ms) 
+19:34:31   ├─ /en/catalog/285/index.html (+5ms) 
+19:34:31   ├─ /en/catalog/287/index.html (+2ms) 
+19:34:31   ├─ /en/catalog/322/index.html (+2ms) 
+19:34:31   ├─ /en/catalog/338/index.html (+2ms) 
+19:34:31   ├─ /en/catalog/356/index.html (+9ms) 
+19:34:31   └─ /en/catalog/357/index.html (+3ms) 
+19:34:31 ▶ src/pages/[lang]/character.astro
+19:34:31   ├─ /ja/character/index.html (+1ms) 
+19:34:31   └─ /en/character/index.html (+1ms) 
+19:34:31 ▶ src/pages/[lang]/fields/[id].astro
+19:34:31   ├─ /ja/fields/number-theory/index.html (+1ms) 
+19:34:31   ├─ /ja/fields/algebraic-complex-geometry/index.html (+1ms) 
+19:34:31   ├─ /ja/fields/real-complex-analysis/index.html (+1ms) 
+19:34:31   ├─ /ja/fields/convex-metric-geometry/index.html (+1ms) 
+19:34:31   ├─ /ja/fields/combinatorics/index.html (+1ms) 
+19:34:31   ├─ /ja/fields/algebra/index.html (+1ms) 
+19:34:31   ├─ /ja/fields/group-theory/index.html (+1ms) 
+19:34:31   ├─ /ja/fields/operator-algebras/index.html (+1ms) 
+19:34:31   ├─ /ja/fields/functional-analysis/index.html (+1ms) 
+19:34:31   ├─ /ja/fields/differential-geometry/index.html (+1ms) 
+19:34:31   ├─ /en/fields/number-theory/index.html (+1ms) 
+19:34:31   ├─ /en/fields/algebraic-complex-geometry/index.html (+1ms) 
+19:34:31   ├─ /en/fields/real-complex-analysis/index.html (+1ms) 
+19:34:31   ├─ /en/fields/convex-metric-geometry/index.html (+0ms) 
+19:34:31   ├─ /en/fields/combinatorics/index.html (+1ms) 
+19:34:31   ├─ /en/fields/algebra/index.html (+0ms) 
+19:34:31   ├─ /en/fields/group-theory/index.html (+1ms) 
+19:34:31   ├─ /en/fields/operator-algebras/index.html (+1ms) 
+19:34:31   ├─ /en/fields/functional-analysis/index.html (+0ms) 
+19:34:31   └─ /en/fields/differential-geometry/index.html (+1ms) 
+19:34:31 ▶ src/pages/[lang]/index.astro
+19:34:31   ├─ /ja/index.html (+1ms) 
+19:34:31   └─ /en/index.html (+1ms) 
+19:34:31 ▶ src/pages/[lang]/papers/[id].astro
+19:34:31   ├─ /ja/papers/hilbert-tenth-rationals/index.html (+34ms) 
+19:34:31   ├─ /ja/papers/pointwise-2-converse-rational-two-torsion/index.html (+29ms) 
+19:34:31   ├─ /ja/papers/orbifold-logarithmic-iitaka/index.html (+32ms) 
+19:34:31   ├─ /ja/papers/whole-fiber-variation/index.html (+49ms) 
+19:34:31   ├─ /ja/papers/reverse-logarithmic-additivity/index.html (+33ms) 
+19:34:31   ├─ /ja/papers/projective-hodge-lines/index.html (+25ms) 
+19:34:31   ├─ /ja/papers/kahler-b-semiampleness/index.html (+37ms) 
+19:34:31   ├─ /ja/papers/kahler-log-abundance/index.html (+35ms) 
+19:34:32   ├─ /ja/papers/uniform-slc-indices/index.html (+21ms) 
+19:34:32   ├─ /ja/papers/conditional-kahler-fourfolds/index.html (+25ms) 
+19:34:32   ├─ /ja/papers/log-abundance-characteristic-zero/index.html (+6ms) 
+19:34:32   ├─ /ja/papers/minimal-metrics-injectivity/index.html (+20ms) 
+19:34:32   ├─ /ja/papers/fourfold-nonvanishing/index.html (+21ms) 
+19:34:32   ├─ /ja/papers/lifting-adjoint-sections/index.html (+16ms) 
+19:34:32   ├─ /ja/papers/schnell-fiber-spaces/index.html (+4ms) 
+19:34:32   ├─ /ja/papers/uniform-log-iitaka/index.html (+21ms) 
+19:34:32   ├─ /ja/papers/uniform-pluricanonical-iitaka/index.html (+23ms) 
+19:34:32   ├─ /ja/papers/relative-denominators/index.html (+22ms) 
+19:34:32   ├─ /ja/papers/arithmetic-stein-degree/index.html (+20ms) 
+19:34:32   ├─ /ja/papers/effective-log-iitaka-fourfolds/index.html (+15ms) 
+19:34:32   ├─ /ja/papers/abundance-after-nonvanishing/index.html (+19ms) 
+19:34:32   ├─ /ja/papers/kahler-numerical-semiampleness/index.html (+32ms) 
+19:34:32   ├─ /ja/papers/projective-numerical-semiampleness/index.html (+33ms) 
+19:34:32   ├─ /ja/papers/generalized-lc-minimal-models/index.html (+25ms) 
+19:34:32   ├─ /ja/papers/minimal-models-numerical-dimension-one/index.html (+13ms) 
+19:34:32   ├─ /ja/papers/ordinary-double-point-gap/index.html (+35ms) 
+19:34:32   ├─ /ja/papers/normalized-volume-gap-four/index.html (+25ms) 
+19:34:32   ├─ /ja/papers/fujita-freeness/index.html (+27ms) 
+19:34:32   ├─ /ja/papers/nagata-plane-curves/index.html (+19ms) 
+19:34:32   ├─ /ja/papers/maximal-seshadri-surfaces/index.html (+24ms) 
+19:34:32   ├─ /ja/papers/maximal-seshadri-higher-dimensions/index.html (+20ms) 
+19:34:32   ├─ /ja/papers/maximal-seshadri-positive-characteristic/index.html (+21ms) 
+19:34:32   ├─ /ja/papers/every-complex-k3-oka/index.html (+43ms) 
+19:34:32   ├─ /ja/papers/large-fundamental-group-non-stein/index.html (+28ms) 
+19:34:32   ├─ /ja/papers/surface-shafarevich-counterexample/index.html (+27ms) 
+19:34:32   ├─ /ja/papers/canonical-ampleness/index.html (+41ms) 
+19:34:32   ├─ /ja/papers/universal-cover-splitting/index.html (+22ms) 
+19:34:32   ├─ /ja/papers/split-tangent-integrability/index.html (+32ms) 
+19:34:32   ├─ /ja/papers/special-kahler-abelianity/index.html (+42ms) 
+19:34:32   ├─ /ja/papers/two-step-monodromy/index.html (+37ms) 
+19:34:32   ├─ /ja/papers/half-weight-fourfold-abelianity/index.html (+20ms) 
+19:34:32   ├─ /ja/papers/generalized-mukai/index.html (+44ms) 
+19:34:32   ├─ /ja/papers/campana-peternell-six/index.html (+36ms) 
+19:34:32   ├─ /ja/papers/anticanonical-smooth-semipositivity/index.html (+45ms) 
+19:34:32   ├─ /ja/papers/invariant-anticanonical-indices/index.html (+22ms) 
+19:34:32   ├─ /ja/papers/bounded-anticanonical-metrics/index.html (+18ms) 
+19:34:32   ├─ /ja/papers/cohomological-transfer/index.html (+40ms) 
+19:34:33   ├─ /ja/papers/metric-descent-contractions/index.html (+52ms) 
+19:34:33   ├─ /ja/papers/integrable-metrics-controlled-boundary/index.html (+31ms) 
+19:34:33   ├─ /ja/papers/exact-orders-anticanonical/index.html (+42ms) 
+19:34:33   ├─ /ja/papers/kakeya-maximal-three/index.html (+32ms) 
+19:34:33   ├─ /ja/papers/kakeya-hausdorff-four/index.html (+20ms) 
+19:34:33   ├─ /ja/papers/symmetric-mahler/index.html (+40ms) 
+19:34:33   ├─ /ja/papers/general-mahler/index.html (+27ms) 
+19:34:33   ├─ /ja/papers/symplectic-polar-products/index.html (+28ms) 
+19:34:33   ├─ /ja/papers/quasipolynomial-arithmetic-progressions/index.html (+21ms) 
+19:34:33   ├─ /ja/papers/snaky-in-21-maker-moves/index.html (+26ms) 
+19:34:33   ├─ /ja/papers/torsion-free-direct-finiteness/index.html (+19ms) 
+19:34:33   ├─ /ja/papers/direct-finiteness-characteristic-two/index.html (+21ms) 
+19:34:33   ├─ /ja/papers/group-ring-determinant/index.html (+16ms) 
+19:34:33   ├─ /ja/papers/direct-finiteness-odd-characteristic/index.html (+23ms) 
+19:34:33   ├─ /ja/papers/modulus-cannon/index.html (+32ms) 
+19:34:33   ├─ /ja/papers/baum-connes-injectivity/index.html (+22ms) 
+19:34:33   ├─ /ja/papers/kadison-kaplansky-projection/index.html (+21ms) 
+19:34:33   ├─ /ja/papers/baum-connes-irrational-trace/index.html (+18ms) 
+19:34:33   ├─ /ja/papers/free-group-factor-isomorphism/index.html (+23ms) 
+19:34:33   ├─ /ja/papers/tingley-positive-solution/index.html (+21ms) 
+19:34:33   ├─ /ja/papers/yau-uniformization/index.html (+28ms) 
+19:34:33   ├─ /ja/papers/gigli-characterization/index.html (+32ms) 
+19:34:33   ├─ /ja/papers/weak-hessian-geodesics/index.html (+22ms) 
+19:34:33   ├─ /ja/papers/regular-rcd-coordinates/index.html (+28ms) 
+19:34:33   ├─ /en/papers/hilbert-tenth-rationals/index.html (+24ms) 
+19:34:33   ├─ /en/papers/pointwise-2-converse-rational-two-torsion/index.html (+27ms) 
+19:34:33   ├─ /en/papers/orbifold-logarithmic-iitaka/index.html (+30ms) 
+19:34:33   ├─ /en/papers/whole-fiber-variation/index.html (+47ms) 
+19:34:33   ├─ /en/papers/reverse-logarithmic-additivity/index.html (+34ms) 
+19:34:33   ├─ /en/papers/projective-hodge-lines/index.html (+25ms) 
+19:34:33   ├─ /en/papers/kahler-b-semiampleness/index.html (+32ms) 
+19:34:33   ├─ /en/papers/kahler-log-abundance/index.html (+33ms) 
+19:34:33   ├─ /en/papers/uniform-slc-indices/index.html (+19ms) 
+19:34:33   ├─ /en/papers/conditional-kahler-fourfolds/index.html (+25ms) 
+19:34:33   ├─ /en/papers/log-abundance-characteristic-zero/index.html (+4ms) 
+19:34:33   ├─ /en/papers/minimal-metrics-injectivity/index.html (+19ms) 
+19:34:33   ├─ /en/papers/fourfold-nonvanishing/index.html (+19ms) 
+19:34:34   ├─ /en/papers/lifting-adjoint-sections/index.html (+17ms) 
+19:34:34   ├─ /en/papers/schnell-fiber-spaces/index.html (+3ms) 
+19:34:34   ├─ /en/papers/uniform-log-iitaka/index.html (+22ms) 
+19:34:34   ├─ /en/papers/uniform-pluricanonical-iitaka/index.html (+23ms) 
+19:34:34   ├─ /en/papers/relative-denominators/index.html (+20ms) 
+19:34:34   ├─ /en/papers/arithmetic-stein-degree/index.html (+23ms) 
+19:34:34   ├─ /en/papers/effective-log-iitaka-fourfolds/index.html (+17ms) 
+19:34:34   ├─ /en/papers/abundance-after-nonvanishing/index.html (+20ms) 
+19:34:34   ├─ /en/papers/kahler-numerical-semiampleness/index.html (+42ms) 
+19:34:34   ├─ /en/papers/projective-numerical-semiampleness/index.html (+37ms) 
+19:34:34   ├─ /en/papers/generalized-lc-minimal-models/index.html (+27ms) 
+19:34:34   ├─ /en/papers/minimal-models-numerical-dimension-one/index.html (+18ms) 
+19:34:34   ├─ /en/papers/ordinary-double-point-gap/index.html (+42ms) 
+19:34:34   ├─ /en/papers/normalized-volume-gap-four/index.html (+31ms) 
+19:34:34   ├─ /en/papers/fujita-freeness/index.html (+37ms) 
+19:34:34   ├─ /en/papers/nagata-plane-curves/index.html (+23ms) 
+19:34:34   ├─ /en/papers/maximal-seshadri-surfaces/index.html (+27ms) 
+19:34:34   ├─ /en/papers/maximal-seshadri-higher-dimensions/index.html (+22ms) 
+19:34:34   ├─ /en/papers/maximal-seshadri-positive-characteristic/index.html (+22ms) 
+19:34:34   ├─ /en/papers/every-complex-k3-oka/index.html (+43ms) 
+19:34:34   ├─ /en/papers/large-fundamental-group-non-stein/index.html (+28ms) 
+19:34:34   ├─ /en/papers/surface-shafarevich-counterexample/index.html (+29ms) 
+19:34:34   ├─ /en/papers/canonical-ampleness/index.html (+43ms) 
+19:34:34   ├─ /en/papers/universal-cover-splitting/index.html (+22ms) 
+19:34:34   ├─ /en/papers/split-tangent-integrability/index.html (+27ms) 
+19:34:34   ├─ /en/papers/special-kahler-abelianity/index.html (+41ms) 
+19:34:34   ├─ /en/papers/two-step-monodromy/index.html (+30ms) 
+19:34:34   ├─ /en/papers/half-weight-fourfold-abelianity/index.html (+22ms) 
+19:34:34   ├─ /en/papers/generalized-mukai/index.html (+35ms) 
+19:34:34   ├─ /en/papers/campana-peternell-six/index.html (+37ms) 
+19:34:34   ├─ /en/papers/anticanonical-smooth-semipositivity/index.html (+23ms) 
+19:34:34   ├─ /en/papers/invariant-anticanonical-indices/index.html (+23ms) 
+19:34:34   ├─ /en/papers/bounded-anticanonical-metrics/index.html (+19ms) 
+19:34:34   ├─ /en/papers/cohomological-transfer/index.html (+31ms) 
+19:34:34   ├─ /en/papers/metric-descent-contractions/index.html (+28ms) 
+19:34:34   ├─ /en/papers/integrable-metrics-controlled-boundary/index.html (+29ms) 
+19:34:34   ├─ /en/papers/exact-orders-anticanonical/index.html (+40ms) 
+19:34:35   ├─ /en/papers/kakeya-maximal-three/index.html (+27ms) 
+19:34:35   ├─ /en/papers/kakeya-hausdorff-four/index.html (+21ms) 
+19:34:35   ├─ /en/papers/symmetric-mahler/index.html (+36ms) 
+19:34:35   ├─ /en/papers/general-mahler/index.html (+26ms) 
+19:34:35   ├─ /en/papers/symplectic-polar-products/index.html (+29ms) 
+19:34:35   ├─ /en/papers/quasipolynomial-arithmetic-progressions/index.html (+23ms) 
+19:34:35   ├─ /en/papers/snaky-in-21-maker-moves/index.html (+30ms) 
+19:34:35   ├─ /en/papers/torsion-free-direct-finiteness/index.html (+20ms) 
+19:34:35   ├─ /en/papers/direct-finiteness-characteristic-two/index.html (+22ms) 
+19:34:35   ├─ /en/papers/group-ring-determinant/index.html (+19ms) 
+19:34:35   ├─ /en/papers/direct-finiteness-odd-characteristic/index.html (+48ms) 
+19:34:35   ├─ /en/papers/modulus-cannon/index.html (+59ms) 
+19:34:35   ├─ /en/papers/baum-connes-injectivity/index.html (+26ms) 
+19:34:35   ├─ /en/papers/kadison-kaplansky-projection/index.html (+28ms) 
+19:34:35   ├─ /en/papers/baum-connes-irrational-trace/index.html (+25ms) 
+19:34:35   ├─ /en/papers/free-group-factor-isomorphism/index.html (+28ms) 
+19:34:35   ├─ /en/papers/tingley-positive-solution/index.html (+27ms) 
+19:34:35   ├─ /en/papers/yau-uniformization/index.html (+29ms) 
+19:34:35   ├─ /en/papers/gigli-characterization/index.html (+37ms) 
+19:34:35   ├─ /en/papers/weak-hessian-geodesics/index.html (+25ms) 
+19:34:35   └─ /en/papers/regular-rcd-coordinates/index.html (+31ms) 
+19:34:35 ▶ src/pages/index.astro
+19:34:35   └─ /index.html (+1ms) 
+19:34:35 ✓ Completed in 5.12s.
+
+19:34:35 [build] 221 page(s) built in 10.54s
+19:34:35 [build] Complete!
+
+[pdf-final]
+PDF 322/ja: current (16 pages, 2 chapters).
+PDF 322/en: current (17 pages, 2 chapters).
+
+[links]
+Checked 272665 internal links/assets across 221 HTML pages (including anchors and language switches).
+Link check: 1.45s; 221 HTML reads; 1499 distinct target checks.
+
+[browser]
+PASS ja 1280px catalog/322/
+PASS ja 375px catalog/322/
+PASS en 1280px catalog/322/
+PASS en 375px catalog/322/
+PASS ja 1280px papers/tingley-positive-solution/
+PASS ja 375px papers/tingley-positive-solution/
+PASS en 1280px papers/tingley-positive-solution/
+PASS en 375px papers/tingley-positive-solution/
+PASS ja 1280px catalog/034/
+PASS en 1280px catalog/034/
+PASS ja 1280px papers/schnell-fiber-spaces/
+PASS en 1280px papers/schnell-fiber-spaces/
+PASS ja 1280px papers/orbifold-logarithmic-iitaka/
+PASS en 1280px papers/orbifold-logarithmic-iitaka/
+Report: /Users/iwai/Desktop/GitHub/OpenAI-Math-Digest/tmp/catalog-preparation/322/2026-10-20T10-33-46.620Z-72123/browser/index.html
+
+Automated checks passed; PDF generated. Visual/content review remains required.
+/Users/iwai/Desktop/GitHub/OpenAI-Math-Digest/tmp/catalog-preparation/322/2026-10-20T10-33-46.620Z-72123/report.json
+Handoff: /Users/iwai/Desktop/GitHub/OpenAI-Math-Digest/tmp/catalog-preparation/322/2026-10-20T10-33-46.620Z-72123/HANDOFF.md
+npm notice
+npm notice New major version of npm available! 10.8.2 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

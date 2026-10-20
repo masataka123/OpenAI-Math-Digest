@@ -1,0 +1,20 @@
+\node[card] (a) {\heading{1}{反対端点を経由する帰還写像}{Return through the opposite endpoint}
+$x(v)=ty+p(v)v$,\quad $f(x(v))=tb+s(v)w$,\\
+$f(z)=tb-u(v)w$,\quad $g(v)=(ty-z)/r(v)$.\\
+$E=\{v:s(v)-p(v)=M\}\ne\varnothing$,\quad $1-t\le p,r,s,u\le1+t$.};
+\node[card,below=1.9cm of a] (b) {\heading{2}{等号から共通支持と極値の伝播へ}{Propagate extremality using a common support}
+$r=u+M$,\quad $\|pv+rg(v)\|=p+r$.\\
+\Tx{$g(v)$と共通支持をもつ単位方向$\ell$は$E$に属する}{Every unit direction $\ell$ sharing a support with $g(v)$ lies in $E$}.};
+\flow a b {\Tx{球面の距離保存と大域欠損上界で三角不等式が等号になる}{Sphere distances and the global defect bound force equality in the triangle inequality}\\[3pt]\Cite{return-support}};
+\node[card,below=1.65cm of b] (c) {\heading{3}{閉凸不変集合を構成}{Construct an invariant closed convex set}
+$a_n=\sum_{i=0}^n\lambda_i v_i$,\quad $\lambda_i>0$,\quad $\sum_{i=0}^n\lambda_i=1$,\quad $v_{n+1}=g(a_n)$.\\
+$C=\overline{\operatorname{conv}}\{v_0,v_1,\ldots\}\subset E\subset S_X$,\quad $g(C)\subset C$.};
+\flow b c {\Tx{正係数で各頂点へ支持を伝播し、稠密な凸結合と連続性を使う}{Positive coefficients propagate supports to all vertices; use dense combinations and continuity}\\[3pt]\Cite{invariant-set}};
+\node[card,below=1.75cm of c] (d) {\heading{4}{半径で被覆を細分して非コンパクト度を縮める}{Refine covers by radii to decrease noncompactness}
+$\displaystyle\|g(v)-g(v')\|\le\frac{up}{rs}\|v-v'\|+\frac{2|u-u'|}{r}+\frac{2u|p-p'|}{rs}$.\\[5pt]
+$\chi(g(H))\le\gamma\chi(H)$,\quad $\gamma=\left(1-\frac{M}{1+t}\right)^2<1$.};
+\flow c d {\Tx{$p,u$の幅を$\eta$に分け、誤差$4\eta/(1-t)$を零にする}{Partition $p,u$ into intervals of width $\eta$; send the error $4\eta/(1-t)$ to zero}\\[3pt]\Cite{noncompactness}};
+\node[result,below=2cm of d] (e) {\heading{5}{不動点が弦の整列を与える}{A fixed point aligns both chords}
+$g(v)=v\quad\Longrightarrow\quad z=ty-rv$,\quad $f(z)=tb-uw$.\\
+$s-p=r-u=M$,\quad $p+r=s+u=\|x-z\|\le2$.};
+\flow d e {\Tx{非空・閉・有界・凸な$C$と連続自己写像にDarboを適用}{Apply Darbo to continuous $g:C\to C$ on nonempty closed bounded convex $C$}\\[3pt]\Cite{darbo}};

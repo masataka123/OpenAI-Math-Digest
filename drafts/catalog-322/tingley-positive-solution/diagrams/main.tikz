@@ -1,0 +1,21 @@
+\node[card] (a) {\heading{1}{全半径の距離欠損}{Distance defect over all radii}
+$f:S_X\to S_Y$ \Tx{は全射等長写像}{is a surjective isometry}.\\
+$D_q(x,y)=\|f(x)-qf(y)\|-\|x-qy\|$, \quad $M=\sup|D_q|$.\\
+\Tx{$M>0$と仮定する。}{$M>0$ is assumed for contradiction.}};
+\node[card,below=1.65cm of a] (b) {\heading{2}{別の空間で最大欠損を達成}{Attain the maximum in new spaces}
+$|D_q(a,c)|\le M$ \Tx{（すべての単位対・半径比）}{for every unit pair and radius ratio}.\\
+$D_t(x_0,y)=M>0$, \quad $0<t<1$.};
+\flow a b {\Tx{逆写像で符号を選び、ultrapowerと完備化で上界を保つ}{Choose the sign using the inverse; preserve the bound through ultrapowers and completion}\\[3pt]\Cite{attainment}};
+\node[card,below=1.65cm of b] (c) {\heading{3}{極値方向の不動点で二つの弦を整列}{Align the chords at a fixed extremal direction}
+$x=ty+pv$,\quad $z=ty-rv$,\quad $b=f(y)$,\\
+$f(x)=tb+sw$,\quad $f(z)=tb-uw$,\\
+$s-p=r-u=M$,\quad $d=p+r=s+u\le2$.};
+\flow b c {\Tx{共通支持で閉凸集合を作り、非コンパクト度を縮める}{Build a closed convex set via common supports; decrease noncompactness}\\[3pt]\Cite{alignment}};
+\node[result,below=1.65cm of c] (d) {\heading{4}{整列配置を排除して元の欠損を消す}{Exclude alignment and remove the original defect}
+\Tx{半径摂動と凸性の矛盾}{Radial perturbation and a convexity contradiction}\\
+$M>0$ \Tx{は不可能}{is impossible};\quad $M=0$ \Tx{（元の写像）}{for the original map}.};
+\flow c d {\Tx{支持の割線評価から比率を制限し、保存距離の上下界を衝突させる}{Restrict ratios by support secants; contradict bounds on one preserved distance}\\[3pt]\Cite{contradiction}};
+\node[result,below=2.4cm of d] (e) {\heading{5}{放射状延長を実線形化}{Linearize the radial extension}
+$T(0)=0$,\quad $T(x)=\|x\|f(x/\|x\|)$\quad$(x\ne0)$.\\
+\Tx{全半径で距離保存・全射 $\Longrightarrow$ 実線形、一意}{Distance preservation and surjectivity $\Longrightarrow$ real linearity and uniqueness}.};
+\flow d e {\Tx{距離復元の後、中点欠損の反復倍化で中点保存を得る}{Recover all distances; iterated doubling eliminates the midpoint defect}\\[3pt]\Cite{linear-extension}\\[3pt]\Cite{nica}};

@@ -1,0 +1,258 @@
+{
+  "paperId": "tingley-positive-solution",
+  "title": "A positive solution to Tingley’s problem",
+  "displayName": "A positive solution to Tingley’s problem",
+  "version": "September 23, 2026",
+  "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-positive-solution-to-Tingleys-problem-September-23-2026/paper.pdf",
+  "downloadUrl": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-positive-solution-to-Tingleys-problem-September-23-2026/paper.pdf",
+  "pdfPages": 12,
+  "sha256": "6b4ae2372e8f56539f55cd0678357248520fc7b7b095b1812690968f68e6f6ae",
+  "catalogId": "322",
+  "authors": "OpenAI",
+  "checkedOn": "2026-10-20",
+  "checkedLocations": [
+    {
+      "printedPage": "1",
+      "pdfPage": 1
+    },
+    {
+      "printedPage": "2",
+      "pdfPage": 2
+    },
+    {
+      "printedPage": "3",
+      "pdfPage": 3
+    },
+    {
+      "printedPage": "4",
+      "pdfPage": 4
+    },
+    {
+      "printedPage": "5",
+      "pdfPage": 5
+    },
+    {
+      "printedPage": "6",
+      "pdfPage": 6
+    },
+    {
+      "printedPage": "7",
+      "pdfPage": 7
+    },
+    {
+      "printedPage": "8",
+      "pdfPage": 8
+    },
+    {
+      "printedPage": "9",
+      "pdfPage": 9
+    },
+    {
+      "printedPage": "10",
+      "pdfPage": 10
+    },
+    {
+      "printedPage": "11",
+      "pdfPage": 11
+    },
+    {
+      "printedPage": "12",
+      "pdfPage": 12
+    }
+  ],
+  "statements": [
+    {
+      "result": "Theorem 1.1",
+      "printedPage": "1",
+      "pdfPage": 1,
+      "hypotheses": "Nonzero real Banach spaces; surjective sphere isometry.",
+      "conclusions": [
+        "radial extension preserves all distances",
+        "surjective",
+        "real-linear",
+        "unique linear extension"
+      ],
+      "checking": "Statement read and matched to §6; no dimensional/separability/reflexivity/smoothness/strict-convexity hypotheses; no complex linearity claim."
+    },
+    {
+      "result": "Proposition 4.2",
+      "printedPage": "4",
+      "pdfPage": 4,
+      "hypotheses": "Attainment (4): global |D_q|≤M for all unit pairs and q∈[0,1], with D_t(x0,y)=M>0 and t∈(0,1).",
+      "conclusions": [
+        "aligned endpoint formulas (5)",
+        "s−p=r−u=M",
+        "p+r=s+u=distance≤2",
+        "all radii in [1−t,1+t]"
+      ],
+      "checking": "Statement and proof pp.4–6 read; closed hull overline in p.5 and exponent in gamma checked visually."
+    },
+    {
+      "result": "Proposition 5.3",
+      "printedPage": "8",
+      "pdfPage": 8,
+      "hypotheses": "Attained positive maximum as in (4).",
+      "conclusions": [
+        "No such attained configuration exists"
+      ],
+      "checking": "Full two-regime proof via Lemmas 5.1–5.2 and convexity read, pp.7–9."
+    }
+  ],
+  "proofPassages": [
+    {
+      "location": "§2, Lemmas 2.1–2.2",
+      "pages": "2–3",
+      "scope": "Finite-dimensional norming support extension and common supports; continuous unique radial contact and radius bounds."
+    },
+    {
+      "location": "§3, Lemma 3.1, (1)–(4)",
+      "pages": "3–4",
+      "scope": "Inverse sign change, uniform q Lipschitz estimate, unit representatives, ultrapower quotient, completion, global bounds and attained maximum."
+    },
+    {
+      "location": "§4, Proposition 4.2, (5)–(9)",
+      "pages": "4–6",
+      "scope": "Return map, support propagation, positive coefficients, dense combinations, invariant closed convex C, radius-refined finite covers and uniform chi contraction."
+    },
+    {
+      "location": "§5, Lemmas 5.1–5.2, Proposition 5.3, (10)–(17)",
+      "pages": "6–9",
+      "scope": "Secant and every-support bounds; both cases, explicit inverse configuration, compact finite-dimensional support limit, final convexity/sphere-distance contradiction."
+    },
+    {
+      "location": "§6",
+      "pages": "9",
+      "scope": "All-radius metric extension, onto property, midpoint defect doubling, additivity, real homogeneity, uniqueness."
+    },
+    {
+      "location": "Appendix A, Lemmas A.1–A.3 and proof of Theorem 4.1",
+      "pages": "9–11",
+      "scope": "Read the stated auxiliary route and application to Theorem 4.1; not an independent full verification of all combinatorial and approximation details."
+    }
+  ],
+  "externalSources": [
+    {
+      "id": "darbo1955",
+      "displayName": "Punti uniti in trasformazioni a codominio non compatto",
+      "authors": "Gabriele Darbo",
+      "version": "Rendiconti del Seminario Matematico della Università di Padova 24 (1955), 84–92; NUMDAM scan with a cover page",
+      "sourceUrl": "https://www.numdam.org/item/RSMUP_1955__24__84_0/",
+      "pdfPages": 10,
+      "sha256": "b52ae24fb81df16f71c3a4430c4ca837a4c9d391f743e004494c9b6335e28e55",
+      "checkedLocations": [
+        {
+          "printedPage": "86",
+          "pdfPage": 4
+        },
+        {
+          "printedPage": "90",
+          "pdfPage": 8
+        },
+        {
+          "printedPage": "91",
+          "pdfPage": 9
+        }
+      ],
+      "checking": "§2 uniform alpha-contraction definition and §4 unnumbered Teorema compared to manuscript Theorem 4.1 and Proposition 4.2. Statement pages visually inspected by separate Astra reviewer. Bounded C implies bounded image. External complete proof not independently verified."
+    },
+    {
+      "id": "nica",
+      "displayName": "The Mazur–Ulam theorem",
+      "authors": "Bogdan Nica",
+      "version": "Downloaded from arXiv:1306.2380v1; margin: 10 Jun 2013; internal Date: November 27, 2024 (discrepancy retained)",
+      "sourceUrl": "https://arxiv.org/pdf/1306.2380v1",
+      "pdfPages": 2,
+      "sha256": "d27ebc5ec3289f15e1f17778f5e10307dda06392fda06615734df48b053c1076",
+      "checkedLocations": [
+        {
+          "printedPage": "1",
+          "pdfPage": 1
+        }
+      ],
+      "checking": "Unnumbered Theorem (Mazur–Ulam 1932) and reflection proof p.1 compared to manuscript §6. Version-date discrepancy not resolved by inference."
+    }
+  ],
+  "dependencies": [
+    {
+      "id": "darbo-to-alignment",
+      "from": {
+        "paperId": "darbo1955",
+        "result": "§2; §4, Teorema (unnumbered)",
+        "printedPages": "86, 90–91",
+        "pdfPages": "4, 8–9",
+        "version": "1955 NUMDAM scan",
+        "sourceUrl": "https://www.numdam.org/item/RSMUP_1955__24__84_0/"
+      },
+      "to": {
+        "paperId": "tingley-positive-solution",
+        "result": "Theorem 4.1; Proposition 4.2",
+        "pages": "4–6",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-positive-solution-to-Tingleys-problem-September-23-2026/paper.pdf"
+      },
+      "role": "The classical fixed-point input supplies a fixed direction; the manuscript also proves its required form in Appendix A.",
+      "hypotheses": "C is nonempty closed bounded convex in Banach X, g continuous and g(C)⊂C, chi(g(H))≤gamma chi(H) for all H⊂C, gamma<1; established pp.5–6.",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-compared",
+        "author": "astra322_hq_writer; separate cross-check astra322_content_review",
+        "model": "gpt-6-astra",
+        "date": "2026-10-20",
+        "source": "sources.json; coordination/catalog-322/CONTENT_REVIEW.md"
+      },
+      "articleLinks": {
+        "ja": "/ja/papers/tingley-positive-solution/#proof-2-step-3",
+        "en": "/en/papers/tingley-positive-solution/#proof-2-step-3"
+      },
+      "unresolved": [
+        "Independent verification of the external proof is outside scope."
+      ]
+    },
+    {
+      "id": "nica-to-linear-extension",
+      "from": {
+        "paperId": "nica",
+        "result": "Theorem (Mazur–Ulam 1932), unnumbered; reflection proof",
+        "printedPages": "1",
+        "pdfPages": "1",
+        "version": "arXiv URL v1; margin 2013 / internal Date 2024 discrepancy retained",
+        "sourceUrl": "https://arxiv.org/pdf/1306.2380v1"
+      },
+      "to": {
+        "paperId": "tingley-positive-solution",
+        "result": "§6, proof of Theorem 1.1",
+        "pages": "9",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-positive-solution-to-Tingleys-problem-September-23-2026/paper.pdf"
+      },
+      "role": "Reflection proof of midpoint preservation and affine extension, reproduced in the manuscript after establishing a whole-space onto metric isometry.",
+      "hypotheses": "Real normed spaces and bijective isometry. T is onto and isometric and fixes 0; hence affine implies real-linear.",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-compared",
+        "author": "astra322_hq_writer; separate cross-check astra322_content_review",
+        "model": "gpt-6-astra",
+        "date": "2026-10-20",
+        "source": "sources.json; coordination/catalog-322/CONTENT_REVIEW.md"
+      },
+      "articleLinks": {
+        "ja": "/ja/papers/tingley-positive-solution/#proof-1-step-3",
+        "en": "/en/papers/tingley-positive-solution/#proof-1-step-3"
+      },
+      "unresolved": [
+        "The fetched file has conflicting printed dates; the exact bytes and both dates are recorded."
+      ]
+    }
+  ],
+  "unresolved": [
+    "No complete independent proof verification, expert peer review, or formal verification is claimed.",
+    "External proofs are not recursively checked.",
+    "Prior results in the introduction are not all compared with their original sources.",
+    "Nica fetched PDF: margin 10 Jun 2013 but internal Date November 27, 2024; both retained, no inferred correction."
+  ],
+  "priorMaterial": {
+    "reuse": "Official primary sources, production templates, common citation/diagram infrastructure and designated presentation references only.",
+    "solContentReuse": false
+  }
+}

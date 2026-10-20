@@ -1,0 +1,23 @@
+\node[card] (a) {\heading{1}{整列配置の比率と割線評価}{Ratios and secant bounds for aligned chords}
+$A=p/d$,\quad $B=u/d$,\quad $\varepsilon=1-t$,\quad $A+B=1-M/d<1$.\\
+$h=\min(t/s,\varepsilon/u)$,\quad $\theta=hs/p$.\\
+$\displaystyle\frac{\varepsilon}{p}\le\varphi(v)\le K\le
+\begin{cases}1-B&(B\le\varepsilon),\\B&(B>\varepsilon).\end{cases}$};
+\node[card,below=2.1cm of a] (b) {\heading{2}{大きい比率を半径摂動で排除}{Exclude large ratios by radial perturbation}
+$A>\varepsilon$ \Tx{または}{or} $B>\varepsilon$\\
+$\Longrightarrow$ \Tx{全支持が$L_v(y)<0$, $L_w(b)>0$を満たす}{every support satisfies $L_v(y)<0$, $L_w(b)>0$}\\
+$\Longrightarrow\ \|sw+\eta b\|>s$,\quad $\|pv+\eta y\|<p$\quad$(0<\eta\ll1)$\\
+$\Longrightarrow\ D_{t-\eta}(x,y)>M$ \Tx{で矛盾}{contradicts maximality}.};
+\flow a b {\Tx{すべての支持への評価と逆配置 $(A',B')=(B,A)$ を使う}{Use the estimate for every support and the inverse configuration $(A',B')=(B,A)$}\\[3pt]\Cite{secant}\\[3pt]\Cite{perturbation}};
+\node[card,below=1.75cm of b] (c) {\heading{3}{残る比率を二つの配置で制限}{Bound the remaining ratios in both configurations}
+$A,B\le\varepsilon$,\quad
+$\varepsilon\le dA(1-B),\ dB(1-A)$.\\
+$A+B<1$,\quad $d\le2\quad\Longrightarrow\quad\varepsilon<1/2$.\\
+$\displaystyle p/t<r/\varepsilon$,\quad $\displaystyle s/t\ge u/\varepsilon$.};
+\flow b c {\Tx{元と逆の割線評価により、残る場合の半径の順序を得る}{Apply the secant estimate to both configurations to order the remaining radii}\\[3pt]\Cite{final-convexity}};
+\node[result,below=1.8cm of c] (d) {\heading{4}{同じ球面距離の評価が衝突}{Bounds on the same sphere distance conflict}
+$F(\lambda)=\|y+\lambda v\|$,\quad $G(\lambda)=\|b+\lambda w\|$.\\
+$F(0)=G(0)=1$,\quad $F(p/t)=G(s/t)=1/t$.\\
+$F(r/\varepsilon)>1/t\ge G(u/\varepsilon)$,\\
+\Tx{しかし}{but}\quad $\varepsilon F(r/\varepsilon)=\|y-z\|=\|b-f(z)\|=\varepsilon G(u/\varepsilon)$.};
+\flow c d {\Tx{割線勾配の単調性と凸性を、球面距離の保存と比較する}{Compare monotone secant slopes and convexity with preservation of sphere distance}\\[3pt]\Cite{contradiction}};

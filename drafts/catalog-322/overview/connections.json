@@ -1,0 +1,91 @@
+{
+  "catalogId": "322",
+  "productionVersion": "1.4",
+  "checkingScope": "One official paper. No possible inter-paper edge within this catalogue. Two classical external inputs are recorded as reproduced proof tools; statements and uses compared. Historical citations and other catalogues have not been exhaustively audited.",
+  "omittedSections": [
+    {
+      "section": "classification",
+      "reason": "A single paper and a single principal theorem; categories would not help choose a reading route."
+    },
+    {
+      "section": "catalogue overview diagram",
+      "reason": "The convergence of attainment, alignment, contradiction and affine extension is already shown in the article’s main proof diagram. A catalogue diagram would duplicate it, not connect different papers."
+    },
+    {
+      "section": "paper selector and internal dependency table",
+      "reason": "No within-catalogue pair of distinct papers. External detail is in the article and this record."
+    }
+  ],
+  "connections": [
+    {
+      "id": "darbo-to-alignment",
+      "from": {
+        "paperId": "darbo1955",
+        "result": "§2; §4, Teorema (unnumbered)",
+        "printedPages": "86, 90–91",
+        "pdfPages": "4, 8–9",
+        "version": "1955 NUMDAM scan",
+        "sourceUrl": "https://www.numdam.org/item/RSMUP_1955__24__84_0/"
+      },
+      "to": {
+        "paperId": "tingley-positive-solution",
+        "result": "Theorem 4.1; Proposition 4.2",
+        "pages": "4–6",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-positive-solution-to-Tingleys-problem-September-23-2026/paper.pdf"
+      },
+      "role": "The classical fixed-point input supplies a fixed direction; the manuscript also proves its required form in Appendix A.",
+      "hypotheses": "C is nonempty closed bounded convex in Banach X, g continuous and g(C)⊂C, chi(g(H))≤gamma chi(H) for all H⊂C, gamma<1; established pp.5–6.",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-compared",
+        "author": "astra322_hq_writer; separate cross-check astra322_content_review",
+        "model": "gpt-6-astra",
+        "date": "2026-10-20",
+        "source": "sources.json; coordination/catalog-322/CONTENT_REVIEW.md"
+      },
+      "articleLinks": {
+        "ja": "/ja/papers/tingley-positive-solution/#proof-2-step-3",
+        "en": "/en/papers/tingley-positive-solution/#proof-2-step-3"
+      },
+      "unresolved": [
+        "Independent verification of the external proof is outside scope."
+      ]
+    },
+    {
+      "id": "nica-to-linear-extension",
+      "from": {
+        "paperId": "nica",
+        "result": "Theorem (Mazur–Ulam 1932), unnumbered; reflection proof",
+        "printedPages": "1",
+        "pdfPages": "1",
+        "version": "arXiv URL v1; margin 2013 / internal Date 2024 discrepancy retained",
+        "sourceUrl": "https://arxiv.org/pdf/1306.2380v1"
+      },
+      "to": {
+        "paperId": "tingley-positive-solution",
+        "result": "§6, proof of Theorem 1.1",
+        "pages": "9",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-positive-solution-to-Tingleys-problem-September-23-2026/paper.pdf"
+      },
+      "role": "Reflection proof of midpoint preservation and affine extension, reproduced in the manuscript after establishing a whole-space onto metric isometry.",
+      "hypotheses": "Real normed spaces and bijective isometry. T is onto and isometric and fixes 0; hence affine implies real-linear.",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-compared",
+        "author": "astra322_hq_writer; separate cross-check astra322_content_review",
+        "model": "gpt-6-astra",
+        "date": "2026-10-20",
+        "source": "sources.json; coordination/catalog-322/CONTENT_REVIEW.md"
+      },
+      "articleLinks": {
+        "ja": "/ja/papers/tingley-positive-solution/#proof-1-step-3",
+        "en": "/en/papers/tingley-positive-solution/#proof-1-step-3"
+      },
+      "unresolved": [
+        "The fetched file has conflicting printed dates; the exact bytes and both dates are recorded."
+      ]
+    }
+  ]
+}

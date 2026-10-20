@@ -1,0 +1,19 @@
+✔ reruns preserve manual notes and old handoffs, while new failure is never marked approved (33.164083ms)
+✔ artifact summaries use selected bilingual edition and actual browser outcomes; absent evidence stays absent (51.511792ms)
+✔ unexpected runner exception is timed and recorded as a failed step (0.9675ms)
+✔ requires one explicit registered-format catalogue and rejects mistyped options (1.469958ms)
+✔ current PDF is reused without PDF rendering or a second build; browser inspection still runs (15.917667ms)
+✔ stale PDF generation, second build and final check always run sequentially (4.134833ms)
+✔ build and environment failures stop dependent work and record a retry command (1.76875ms)
+✔ unexpected PDF check failures never trigger destructive regeneration, even with force (2.336541ms)
+✔ explicit regeneration runs when current, while link failures leave a failed report (1.040834ms)
+✔ PDF runtime uses project venv/settings and respects explicit environment overrides (7.756708ms)
+✔ browser failure prevents approval and records the gallery location (1.045666ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 451.128417

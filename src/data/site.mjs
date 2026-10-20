@@ -21,6 +21,7 @@ import inventory197 from '../../coordination/catalog-197/inventory.json' with { 
 import inventory246 from '../../coordination/catalog-246/inventory.json' with { type: 'json' };
 import inventory285 from '../../coordination/catalog-285/inventory.json' with { type: 'json' };
 import inventory287 from '../../coordination/catalog-287/inventory.json' with { type: 'json' };
+import inventory322 from '../../coordination/catalog-322/inventory.json' with { type: 'json' };
 import inventory338 from '../../coordination/catalog-338/inventory.json' with { type: 'json' };
 import inventory356 from '../../coordination/catalog-356/inventory.json' with { type: 'json' };
 import inventory357 from '../../coordination/catalog-357/inventory.json' with { type: 'json' };
@@ -109,7 +110,7 @@ const fieldTranslations = [
   {
     "id": "functional-analysis",
     "ja": "関数解析",
-    "catalogIds": []
+    "catalogIds": ["322"]
   },
   {
     "id": "differential-geometry",
@@ -235,6 +236,10 @@ export const papers = [...inventory004.manuscripts.map(entry => ({
 })), ...inventory287.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '287', sourceCommit: inventory287.sourceCommit,
  title: entry.title, path: entry.path, version: entry.version,
+ pages: entry.pdfPages, order: entry.order, featured: true,
+})), ...inventory322.manuscripts.map(entry => ({
+ id: entry.paperId, catalogId: '322', sourceCommit: inventory322.sourceCommit,
+ title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
  pages: entry.pdfPages, order: entry.order, featured: true,
 })), ...inventory338.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '338', sourceCommit: inventory338.sourceCommit,
@@ -409,6 +414,13 @@ export const catalogs = [{
   description: text('自由Haarユニタリの構成と生成性から階数低下を得て、増幅公式と二者択一定理による帰結へ進む論証を読む。', 'Follow the construction and generation of free Haar unitaries to rank reduction, then the consequences of amplification formulas and the dichotomy theorem.'),
   paperIds: inventory287.manuscripts.map(p => p.paperId),
   overviewSectionIds: ['inventory', 'connections', 'sources'],
+}, {
+  id: '322', sourceCommit: inventory322.sourceCommit, mode: 'single',
+  title: text(inventory322.titleJa, inventory322.overviewTitle),
+  contentsTitle: inventory322.contentsTitle,
+  description: text("本カタログは、実Banach空間の単位球面間の全射等長写像について、空間全体への一意な実線形等長延長を主張する1本の原稿を収録する。概説は、異なる半径の距離欠損を極値化し、弦の整列と凸性の矛盾で消す証明を追う。", "This catalogue contains one manuscript claiming that a surjective isometry between unit spheres of real Banach spaces extends uniquely to a real-linear isometry of the spaces. The overview follows its proof by maximizing the distance defect between different radii, aligning chords, and eliminating the defect through convexity."),
+  paperIds: inventory322.manuscripts.map(p => p.paperId),
+  overviewSectionIds: ['inventory', 'guide', 'sources'],
 }, {
   id: '338', sourceCommit: inventory338.sourceCommit, mode: 'single',
   title: text(inventory338.titleJa, inventory338.overviewTitle),

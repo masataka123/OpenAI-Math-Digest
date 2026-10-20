@@ -1,0 +1,290 @@
+TAP version 13
+# Subtest: nef route does not incorrectly require the separate volume branch
+ok 1 - nef route does not incorrectly require the separate volume branch
+  ---
+  duration_ms: 2.330458
+  ...
+# Subtest: the final claim requires both branches in prerequisite order
+ok 2 - the final claim requires both branches in prerequisite order
+  ---
+  duration_ms: 1.210291
+  ...
+# Subtest: unknown inputs and cyclic logical dependencies fail visibly
+ok 3 - unknown inputs and cyclic logical dependencies fail visibly
+  ---
+  duration_ms: 0.379
+  ...
+# Subtest: bilingual entries and cited references stay connected
+ok 4 - bilingual entries and cited references stay connected
+  ---
+  duration_ms: 0.358125
+  ...
+# Subtest: 033 registers five papers in official order without moving the 034 source snapshot
+ok 5 - 033 registers five papers in official order without moving the 034 source snapshot
+  ---
+  duration_ms: 1.45825
+  ...
+# Subtest: retained connection records distinguish 12 inputs and one premise from alternatives
+ok 6 - retained connection records distinguish 12 inputs and one premise from alternatives
+  ---
+  duration_ms: 0.2395
+  ...
+# Subtest: 033 bilingual sections, 44 retained article figures and relative article links survive rendering
+ok 7 - 033 bilingual sections, 44 retained article figures and relative article links survive rendering
+  ---
+  duration_ms: 929.562459
+  ...
+# Subtest: 033 guide uses the common inventory and retains each result-use record once
+ok 8 - 033 guide uses the common inventory and retains each result-use record once
+  ---
+  duration_ms: 0.696417
+  ...
+# Subtest: catalogue summaries cover the official inventory once, in order, in both languages
+ok 9 - catalogue summaries cover the official inventory once, in order, in both languages
+  ---
+  duration_ms: 1.998792
+  ...
+# Subtest: every connection resolves to a source, application and reading record
+ok 10 - every connection resolves to a source, application and reading record
+  ---
+  duration_ms: 0.974833
+  ...
+# Subtest: 063 uses its pinned single manuscript and preserves official field order
+ok 11 - 063 uses its pinned single manuscript and preserves official field order
+  ---
+  duration_ms: 1.558417
+  ...
+# Subtest: 063 overview, article and external-input records resolve to the same bilingual anchors and assets
+ok 12 - 063 overview, article and external-input records resolve to the same bilingual anchors and assets
+  ---
+  duration_ms: 397.797417
+  ...
+# Subtest: synthesis explains every recorded connection and covers all 14 papers in linked diagrams
+ok 13 - synthesis explains every recorded connection and covers all 14 papers in linked diagrams
+  ---
+  duration_ms: 3.277083
+  ...
+# Subtest: published overview diagrams have matching bilingual link targets with accessible labels
+ok 14 - published overview diagrams have matching bilingual link targets with accessible labels
+  ---
+  duration_ms: 12.757917
+  ...
+# Subtest: browser inspection requires an explicit three-digit catalogue
+ok 15 - browser inspection requires an explicit three-digit catalogue
+  ---
+  duration_ms: 1.763833
+  ...
+# Subtest: registered papers determine bilingual desktop/mobile coverage without fixed paper counts
+ok 16 - registered papers determine bilingual desktop/mobile coverage without fixed paper counts
+  ---
+  duration_ms: 0.402125
+  ...
+# Subtest: cached scan matches legacy links, Unicode anchors, SVG glyphs, assets and language switches
+ok 17 - cached scan matches legacy links, Unicode anchors, SVG glyphs, assets and language switches
+  ---
+  duration_ms: 102.706
+  ...
+# Subtest: failure diagnostics and duplicate broken references are preserved
+ok 18 - failure diagnostics and duplicate broken references are preserved
+  ---
+  duration_ms: 7.289333
+  ...
+# Subtest: a second invocation detects removed anchors and deleted assets (no persistent cache)
+ok 19 - a second invocation detects removed anchors and deleted assets (no persistent cache)
+  ---
+  duration_ms: 4.590875
+  ...
+# Subtest: CLI used by GitHub Actions exits nonzero for a broken link
+ok 20 - CLI used by GitHub Actions exits nonzero for a broken link
+  ---
+  duration_ms: 914.02075
+  ...
+# Subtest: author-key citations stay compact in both languages and TeX without changing legacy output
+ok 21 - author-key citations stay compact in both languages and TeX without changing legacy output
+  ---
+  duration_ms: 7.505958
+  ...
+# Subtest: printed page numbers are distinguished from PDF destinations
+ok 22 - printed page numbers are distinguished from PDF destinations
+  ---
+  duration_ms: 0.760959
+  ...
+# Subtest: ranges and unknown citations fail rather than silently produce plausible references
+ok 23 - ranges and unknown citations fail rather than silently produce plausible references
+  ---
+  duration_ms: 0.900209
+  ...
+# Subtest: managed citation markers preserve shared source-line and article structure
+ok 24 - managed citation markers preserve shared source-line and article structure
+  ---
+  duration_ms: 171.714125
+  ...
+# Subtest: every registered new catalogue uses checked citations and fresh diagram outputs
+ok 25 - every registered new catalogue uses checked citations and fresh diagram outputs
+  ---
+  duration_ms: 716.473375
+  ...
+# Subtest: Japanese and English cite the same records and TeX shares their readable names
+ok 26 - Japanese and English cite the same records and TeX shares their readable names
+  ---
+  duration_ms: 1.962333
+  ...
+# Subtest: generated SVG links keep PDF page positions and the source sets declared on each diagram
+ok 27 - generated SVG links keep PDF page positions and the source sets declared on each diagram
+  ---
+  duration_ms: 5.295291
+  ...
+# Subtest: publication registry discovery excludes unregistered drafts but explicit discovery retains them
+ok 28 - publication registry discovery excludes unregistered drafts but explicit discovery retains them
+  ---
+  duration_ms: 70.184542
+  ...
+# Subtest: new and revised catalogues have official inventories and bilingual guides for every owned article
+ok 29 - new and revised catalogues have official inventories and bilingual guides for every owned article
+  ---
+  duration_ms: 2538.23425
+  ...
+# Subtest: missing roles, reference lists, reading purposes and proof targets are rejected
+ok 30 - missing roles, reference lists, reading purposes and proof targets are rejected
+  ---
+  duration_ms: 1.840916
+  ...
+# Subtest: one-paper inventory retains all columns and rejects incomplete rows or wrong official order
+ok 31 - one-paper inventory retains all columns and rejects incomplete rows or wrong official order
+  ---
+  duration_ms: 0.647625
+  ...
+# Subtest: internal references are unprefixed; external references carry defined keys and readable names
+ok 32 - internal references are unprefixed; external references carry defined keys and readable names
+  ---
+  duration_ms: 0.381375
+  ...
+# Subtest: main-theorem proofs and the statements of proof targets cannot be omitted
+ok 33 - main-theorem proofs and the statements of proof targets cannot be omitted
+  ---
+  duration_ms: 1.452333
+  ...
+# Subtest: booklets internalize only the current catalogue and its papers, preserving cross-catalogue source links
+ok 34 - booklets internalize only the current catalogue and its papers, preserving cross-catalogue source links
+  ---
+  duration_ms: 17.827
+  ...
+# Subtest: booklet print view retains every connection and removes controls and duplicate audit only
+ok 35 - booklet print view retains every connection and removes controls and duplicate audit only
+  ---
+  duration_ms: 8.399333
+  ...
+# Subtest: official-order table rows retain article anchors in print entries
+ok 36 - official-order table rows retain article anchors in print entries
+  ---
+  duration_ms: 1.251
+  ...
+# Subtest: reruns preserve manual notes and old handoffs, while new failure is never marked approved
+ok 37 - reruns preserve manual notes and old handoffs, while new failure is never marked approved
+  ---
+  duration_ms: 18.55125
+  ...
+# Subtest: artifact summaries use selected bilingual edition and actual browser outcomes; absent evidence stays absent
+ok 38 - artifact summaries use selected bilingual edition and actual browser outcomes; absent evidence stays absent
+  ---
+  duration_ms: 59.922
+  ...
+# Subtest: unexpected runner exception is timed and recorded as a failed step
+ok 39 - unexpected runner exception is timed and recorded as a failed step
+  ---
+  duration_ms: 0.773958
+  ...
+# Subtest: requires one explicit registered-format catalogue and rejects mistyped options
+ok 40 - requires one explicit registered-format catalogue and rejects mistyped options
+  ---
+  duration_ms: 1.56175
+  ...
+# Subtest: current PDF is reused without PDF rendering or a second build; browser inspection still runs
+ok 41 - current PDF is reused without PDF rendering or a second build; browser inspection still runs
+  ---
+  duration_ms: 5.488917
+  ...
+# Subtest: stale PDF generation, second build and final check always run sequentially
+ok 42 - stale PDF generation, second build and final check always run sequentially
+  ---
+  duration_ms: 2.834416
+  ...
+# Subtest: build and environment failures stop dependent work and record a retry command
+ok 43 - build and environment failures stop dependent work and record a retry command
+  ---
+  duration_ms: 2.067292
+  ...
+# Subtest: unexpected PDF check failures never trigger destructive regeneration, even with force
+ok 44 - unexpected PDF check failures never trigger destructive regeneration, even with force
+  ---
+  duration_ms: 1.753
+  ...
+# Subtest: explicit regeneration runs when current, while link failures leave a failed report
+ok 45 - explicit regeneration runs when current, while link failures leave a failed report
+  ---
+  duration_ms: 0.782917
+  ...
+# Subtest: PDF runtime uses project venv/settings and respects explicit environment overrides
+ok 46 - PDF runtime uses project venv/settings and respects explicit environment overrides
+  ---
+  duration_ms: 15.525042
+  ...
+# Subtest: browser failure prevents approval and records the gallery location
+ok 47 - browser failure prevents approval and records the gallery location
+  ---
+  duration_ms: 0.984375
+  ...
+# Subtest: Schnell structure preserves mathematical statements and source links
+ok 48 - Schnell structure preserves mathematical statements and source links
+  ---
+  duration_ms: 62.07
+  ...
+# Subtest: Japanese and English headings share section anchors
+ok 49 - Japanese and English headings share section anchors
+  ---
+  duration_ms: 15.942834
+  ...
+# Subtest: public article links remain local in previews and print editions
+ok 50 - public article links remain local in previews and print editions
+  ---
+  duration_ms: 6.689209
+  ...
+# Subtest: multiple inline TeX figures have unique IDs and intact citations
+ok 51 - multiple inline TeX figures have unique IDs and intact citations
+  ---
+  duration_ms: 19.717416
+  ...
+# Subtest: older introductions and both math syntaxes are retained
+ok 52 - older introductions and both math syntaxes are retained
+  ---
+  duration_ms: 8.41875
+  ...
+# Subtest: missing diagrams stop the build instead of publishing an empty figure
+ok 53 - missing diagrams stop the build instead of publishing an empty figure
+  ---
+  duration_ms: 8.359042
+  ...
+# Subtest: proof-overview navigation retains the result number from the heading
+ok 54 - proof-overview navigation retains the result number from the heading
+  ---
+  duration_ms: 1.460834
+  ...
+# Subtest: field, catalogue and manuscript references resolve without duplicate records
+ok 55 - field, catalogue and manuscript references resolve without duplicate records
+  ---
+  duration_ms: 0.858792
+  ...
+# Subtest: the first reading route connects both ways and supports shared catalogues
+ok 56 - the first reading route connects both ways and supports shared catalogues
+  ---
+  duration_ms: 0.264083
+  ...
+1..56
+# tests 56
+# suites 0
+# pass 56
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3024.353042
