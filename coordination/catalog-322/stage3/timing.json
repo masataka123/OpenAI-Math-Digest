@@ -1,0 +1,130 @@
+{
+  "contentCommit": "206b46aba110bf652052ffa134770b86f2070ec7",
+  "actionsRun": 39411551999,
+  "actionsUrl": "https://github.com/masataka123/OpenAI-Math-Digest/actions/runs/39411551999",
+  "runAttempt": 1,
+  "conclusion": "success",
+  "workflowStart": "2026-10-20T10:57:24Z",
+  "lastJobCompletedAt": "2026-10-20T10:59:30Z",
+  "statusUpdatedAt": "2026-10-20T10:59:31Z",
+  "startToLastJobSeconds": 126.0,
+  "startToStatusUpdateSeconds": 127.0,
+  "jobs": [
+    {
+      "name": "build",
+      "startedAt": "2026-10-20T10:57:27Z",
+      "completedAt": "2026-10-20T10:58:38Z",
+      "seconds": 71.0,
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "seconds": 1.0,
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v7",
+          "seconds": 21.0,
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-node@v7",
+          "seconds": 2.0,
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm ci",
+          "seconds": 3.0,
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm test",
+          "seconds": 4.0,
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm run check:citations",
+          "seconds": 0.0,
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm run build",
+          "seconds": 10.0,
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm run check:links",
+          "seconds": 2.0,
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm run check:pdf",
+          "seconds": 19.0,
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/upload-pages-artifact@v5",
+          "seconds": 7.0,
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-node@v7",
+          "seconds": 0.0,
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v7",
+          "seconds": 0.0,
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "seconds": 0.0,
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "name": "deploy",
+      "startedAt": "2026-10-20T10:58:42Z",
+      "completedAt": "2026-10-20T10:59:30Z",
+      "seconds": 48.0,
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "seconds": 1.0,
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/configure-pages@v6",
+          "seconds": 0.0,
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/deploy-pages@v5",
+          "seconds": 45.0,
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "seconds": 0.0,
+          "conclusion": "success"
+        }
+      ]
+    }
+  ],
+  "localReleaseChecksSeconds": 48.949999999999996,
+  "liveHashCheckSeconds": 3.1,
+  "liveBrowserSeconds": 10.631,
+  "manualVisualReview": "2026-10-20 20:01–20:02 JST頃、約1分（概数）。公開画面4枚、確認済み同一HTML版。",
+  "pdfDisposition": "reuse stage2 PDFs without regeneration",
+  "articleReadingWritingSecondsThisStage": 0,
+  "publicationFailures": 0,
+  "publicationReruns": 0,
+  "localAuxiliaryIssues": [
+    "Raw diff text decoding encountered non-UTF-8 PDF bytes; saved bytes instead. Source-only diff check passed.",
+    "Python urllib lacked a local CA issuer; switched to system curl with certificate verification enabled."
+  ],
+  "checkedAt": "2026-10-20T20:03:01.253591+09:00"
+}

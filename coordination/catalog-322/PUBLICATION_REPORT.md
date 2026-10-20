@@ -20,7 +20,41 @@
 
 ## 公開・反映確認
 
-公開実行中。commit、GitHub Actionsの実測時間、公開URLの照合結果は完了後に追記する。これらの実行後記録はローカル作業場所に保存する。
+公開確認済み（2026-10-20 JST）。サイト内容commit：`206b46aba110bf652052ffa134770b86f2070ec7`。
+
+- [日本語カタログ](https://masataka123.github.io/OpenAI-Math-Digest/ja/catalog/322/) ／ [English catalogue](https://masataka123.github.io/OpenAI-Math-Digest/en/catalog/322/)
+- [日本語記事](https://masataka123.github.io/OpenAI-Math-Digest/ja/papers/tingley-positive-solution/) ／ [English article](https://masataka123.github.io/OpenAI-Math-Digest/en/papers/tingley-positive-solution/)
+- [日本語PDF・16ページ](https://masataka123.github.io/OpenAI-Math-Digest/pdf/catalog-322-ja.pdf) ／ [English PDF・17ページ](https://masataka123.github.io/OpenAI-Math-Digest/pdf/catalog-322-en.pdf)
+- [GitHub Actions run 39411551999](https://github.com/masataka123/OpenAI-Math-Digest/actions/runs/39411551999)：attempt 1、build/deployとも成功。失敗・再実行なし。
+
+公開された8 HTML（日英トップ・分野・カタログ・記事）、12図ファイル（6SVG＋6TeX）、2PDFの計22件がHTTP 200で、すべて公開候補のSHA-256と一致。カタログ・記事HTMLは第2段階で目視した版とも一致。stage3/live-resources.jsonに全URL・ハッシュを記録。
+
+共通 `scripts/browser/inspect-page.mjs` のready/inspectPage/checkViewers/checkLanguageを公開サイトでも使用。日英カタログ1280px・記事375pxの4条件で、数式・画像・横幅・全3図の拡大/全体表示/引用維持・スクロール後の言語切替/アンカーを確認し、エラー0。公開画面4枚をrootが目視し、カタログのPDF導線、記事タイトル、日英表示、注意書き、右上言語切替に問題なし。証拠はstage3/live-browser/。第2段階の本文・全33ページPDFの目視記録は、同一版であることをハッシュで確認したうえで参照する。
+
+## 第3段階の時間と処理
+
+Actionsは19:57:24 JST開始、最終ジョブ19:59:30完了（126秒）、成功状態の更新19:59:31（127秒）。build 71秒、deploy 48秒、ジョブ間等7秒。秒単位API時刻による。詳細はstage3/timing.json / actions-jobs.json。
+
+| ビルド工程 | 秒 |
+|---|---:|
+| checkout | 21 |
+| Node設定 | 2 |
+| npm ci | 3 |
+| テスト | 4 |
+| 引用確認 | 0（秒未満を区別できないAPI精度） |
+| サイトビルド | 10 |
+| 内部リンク | 2 |
+| PDF台帳確認 | 19 |
+| 配信用成果物アップロード | 7 |
+
+公開候補のローカル最終検査48.95秒、公開22件の取得/ハッシュ照合3.10秒。公開ブラウザー検査時間はtiming.json参照。目視は20:01–20:02頃、約1分（概数）。Git送信は画面資料を含み約3分、正確な開始/終了の個別計測なし。補助処理の文字コード・Python CA設定の問題は、バイト保存・証明書検証有効なsystem curlへ変更して解消（全体の手修正時間は未分離）。公開・Actions自体の失敗/再実行は0。本文の読解・執筆追加は0、PDF再生成0。第1段階の読解/執筆・第2段階の機械処理とは分離した記録であり、他カタログとの単純比較による高速化判定はしない。
+
+## 保全と完了記録
+
+322以外のGit状態9594項目は開始時と一致。既存pdf-editions.json作業ファイルはバイト単位で保持し、コミットには322追加のみを含めた。stage3/preservation.json参照。原典複製・未追跡成果物を削除していない。
+
+公開後の確認記録だけを別の記録用コミット（`[skip ci]`）で保存する。サイト本文・図・PDF・共通コードの変更は含めず、再配信は不要。配信済みのサイト内容は上記206b46a。必須の残作業なし。今後本文・図・PDFを変える場合は共通catalog:prepareで新版を検査し、新たなPREPARATION_REVIEWを記録する。
+
 
 ## 数学的確認の範囲
 

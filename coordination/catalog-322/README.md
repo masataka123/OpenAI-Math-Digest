@@ -1,6 +1,6 @@
 # カタログ322：第1段階の制作本部
 
-> 現在の状態（2026-10-20）：ユーザーの「第３段階お願いします」により公開作業中。第2段階の確認済み版を使用。下記の停止・未依頼の記述は過去の段階の記録。今回の公開結果は PUBLICATION_REPORT.md に追記する。
+> 現在の状態（2026-10-20）：第3段階・公開反映確認まで完了。サイト内容commit 206b46a、Actions 39411551999成功。日英ページ・図・PDFの公開版を照合済み。詳細は PUBLICATION_REPORT.md。下記の停止・未依頼の記述は過去の段階の記録。
 
 現在は第2段階完了・公開前で停止。サイト登録・日英冊子PDF・公開前検査を完了。今回の版・目視・所要時間は `PREPARATION_REVIEW.md`。以下の第1段階記録と `SITE_HQ_HANDOFF.md` は内容引継ぎの履歴。公開は未実施。
 
@@ -25,3 +25,7 @@
 共通処理導入commit `b284533abcd0fad49f279bfd64482e91d185e80d`（Standardize catalogue preparation and generate handoff records）。`package.json` のcatalog:prepare、`scripts/prepare-catalog.mjs`、`scripts/preparation-handoff.mjs`、共通PDF/画面検査を確認。導入確認の記録は `COMMON_PIPELINE_CHECK.md`。第1段階では実行しない。
 
 第2段階の再開指示後、登録・対象図配置を終えて `npm run catalog:prepare -- --catalog 322` を使う。専用PDF・リンク・画面スクリプトを複製しない。実行ごとのHANDOFF.mdと画像一覧を読み、PREPARATION_REVIEW.mdに実行ID・対象版・担当・今回の目視結果・残作業を追記する。第2段階も報告して停止する。
+
+## 第3段階の完了（2026-10-20）
+
+ユーザーの公開指示に基づき、322のみをcommit/push。Actions成功（開始から最終ジョブ完了126秒、成功状態更新まで127秒）。公開22件のHTTP/SHA-256照合、日英4表示条件の共通ブラウザー検査と画面目視を完了。PDFは第2段階の16/17ページ版を再利用。公開後記録はPUBLICATION_REPORT.mdとstage3/。既存作業を保持。公開に必要な残作業なし。数学的確認範囲はCONTENT_REVIEW.mdのとおり維持する。
