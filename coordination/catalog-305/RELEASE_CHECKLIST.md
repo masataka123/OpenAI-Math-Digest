@@ -7,18 +7,18 @@
 - カタログ本部／サイト本部：/root（Sol指定。本部設定の取得限界はMODEL_PROVENANCE参照）
 - MODEL_PROVENANCEの場所（本部Sol 6.1 / xhigh、数学執筆・別担当点検Astra 6 / high）：MODEL_PROVENANCE.json
 - 構成：multi（3本）
-- 現在のユーザー依頼範囲：第2段階まで（2026-10-21「では第二段階をお願いします.」）。第3段階は次の指示待ち。
-- 状態：公開準備完了（第2段階）。公開確認は未実施。根拠はPREPARATION_REVIEW.md。
+- 現在のユーザー依頼範囲：第3段階まで（2026-10-21「第３段階をしてください.」）。
+- 状態：公開確認済み（第3段階）。根拠はPUBLICATION_REPORT.md。
 
 ## 段階と停止の記録
 
-- 現在の段階：第2（サイト組込み・日英PDF・公開前検査）を完了して停止。第3は未実施。
-- 運用：段階ごとに停止。今回は第2段階まで。
+- 現在の段階：第3（公開・反映確認）まで完了。
+- 運用：第1・第2段階の報告後、今回の指示で第3段階まで実施。
 - 記事ごとの執筆担当／照合担当・確認範囲：MODEL_PROVENANCE.json、CONTENT_REVIEW.md、受領版manifestを参照。第2段階の同一性はstage2/FINAL_IDENTITY_CHECK.json。
 - [x] Astra生成時の明示指定と担当境界をMODEL_PROVENANCE.jsonへ記録。本部は希望指定を記録し、取得できない正確な実行情報はnullで区別。Sol本部は数学制作を兼任していない。
 - [x] 第1段階：CONTENT_REVIEW.md、FORMAT_REVIEW.md、SITE_HQ_HANDOFF.mdへ受領・確認範囲・未確認・再開手順を記録して報告し停止。
 - [x] 第2段階：日英サイト・PDFと必要な検査・目視を完了。PREPARATION_REVIEW.mdへ公開準備の結果と再開手順を記録し、結果を報告して停止する。
-- [ ] 第3段階：現在の公開指示を確認し、対象変更の公開と反映確認を記録した。
+- [x] 第3段階：現在の公開指示を確認し、対象変更の公開と反映確認を記録した。
 
 ## 内容と成果物（記事担当・カタログ本部）
 
@@ -85,13 +85,13 @@ npm run catalog:prepare -- --catalog NNN
 
 ## 公開（現在のユーザー依頼の範囲でサイト本部が実施）
 
-**依頼範囲外。** 第3段階の公開指示後に実施する。今回commit・pushは行っていない。
+**完了（2026-10-21 /root）。** PUBLICATION_REPORTとstage3のActions・公開リソース・公開ブラウザー記録を参照。数学本文・図・PDFは第2段階と同一版。
 
-- [ ] 公開する差分・最新Git状態を確認し、通常のcommit・pushで反映。他担当の成果物を消していない。
-- [ ] 同一版の内容・目視記録とPDFを照合して参照。公開だけを理由に再執筆・再生成・同じ記録の転記をしていない。変更した範囲は再検査した。
-- [ ] GitHub Actionsのbuild/deploy成功を確認。
-- [ ] 公開URLで日英カタログ・記事・画像・PDFが今回の版に更新されたことを確認。
-- [ ] 公開URL・commit・確認結果・残る数学的未確認を報告。
+- [x] 公開する差分・最新Git状態を確認し、通常のcommit・pushで反映。他担当の成果物を消していない。
+- [x] 同一版の内容・目視記録とPDFを照合して参照。公開だけを理由に再執筆・再生成・同じ記録の転記をしていない。変更した範囲は再検査した。
+- [x] GitHub Actionsのbuild/deploy成功を確認。
+- [x] 公開URLで日英カタログ・記事・画像・PDFが今回の版に更新されたことを確認。
+- [x] 公開URL・commit・確認結果・残る数学的未確認を報告。
 
 公開が未依頼ならこの節は「依頼範囲外」と明記し、公開前の作業まで完了させる。機械的検査の成功を全証明の独立検証や専門家査読済みと表現しない。
 
@@ -99,7 +99,7 @@ npm run catalog:prepare -- --catalog NNN
 
 | 項目 | 担当 | 状態・理由 | 次の操作／証拠 |
 |---|---|---|---|
-| 公開・反映確認 | サイト本部 | 第3段階の指示待ち | 今回の同一版と検査記録を照合し、対象差分を選別してcommit・push、Actions／公開URL確認 |
+| 公開・反映確認 | サイト本部 | 完了 | PUBLICATION_REPORT.md、stage3の原記録。必須残作業なし |
 | 原典未照合の外部入力 | Astra / high | CONTENT_REVIEWと記事末尾に明記。第2段階では変更なし | 追加の数学調査が指示された場合に担当へ戻す |
 
 ## 制作セット1.4の必須形式
@@ -133,4 +133,4 @@ npm run catalog:prepare -- --catalog NNN
 
 第1段階のチェックはCONTENT_REVIEW.md、REVIEW_IDENTITY_CHECK.json、FORMAT_REVIEW.md、stage1-checks.json、citation-check.log、shared-tests.logを参照。公式原典の書誌と同一性はinventory.jsonとSOURCE_CHECK.json。
 
-第2段階の証拠はPREPARATION_REVIEW.mdを入口とする。2026-10-21、/rootサイト本部が共通catalog:prepareのHANDOFF/report・画像一覧、日英PDFの全ページ画像と全図を確認した。指定モデル・取得限界はMODEL_PROVENANCEのstageActivitiesを参照。対象版の原記録・画像・PDFリンク中間記録はstage2/preparation-evidence.tar.gzにも保存。第1段階の数学的点検はCONTENT_REVIEWとmanifest同一性から参照し、Solによる新しい内容承認としていない。第3段階の公開・反映確認は未実施。
+第2段階の証拠はPREPARATION_REVIEW.mdを入口とする。2026-10-21、/rootサイト本部が共通catalog:prepareのHANDOFF/report・画像一覧、日英PDFの全ページ画像と全図を確認した。指定モデル・取得限界はMODEL_PROVENANCEのstageActivitiesを参照。対象版の原記録・画像・PDFリンク中間記録はstage2/preparation-evidence.tar.gzにも保存。第1段階の数学的点検はCONTENT_REVIEWとmanifest同一性から参照し、Solによる新しい内容承認としていない。第3段階の公開・反映確認も完了。PUBLICATION_REPORT.mdを参照。

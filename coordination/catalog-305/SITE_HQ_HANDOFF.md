@@ -1,6 +1,6 @@
 # カタログ305 第1段階・サイト本部への引継ぎ
 
-**最新状況（2026-10-21）：第2段階は公開準備完了。** [PREPARATION_REVIEW.md](PREPARATION_REVIEW.md) が今回の組込み・冊子・検査・目視と第3段階への再開記録。以下の第1段階の内容引継ぎは履歴として維持する。数学本文・図・確認範囲は同一版のまま。commit・push・公開反映確認は未実施。
+**最新状況（2026-10-21）：第3段階・公開確認済み。** [PUBLICATION_REPORT.md](PUBLICATION_REPORT.md) がcommit・push・Actions・公開日英本文／図／PDF反映確認の記録。[PREPARATION_REVIEW.md](PREPARATION_REVIEW.md) と同一版を再利用した。以下の第1段階の内容引継ぎは履歴として維持し、数学的な確認範囲・未確認事項は変更していない。
 
 ## 現在の状態と依頼範囲
 

@@ -1,0 +1,68 @@
+{
+  "checkedAt": "2026-10-21T12:28:34.926458+00:00",
+  "sharedInspector": "scripts/browser/inspect-page.mjs",
+  "initialReport": "live-browser/report.json",
+  "recheckReport": "live-browser-recheck/report.json",
+  "initialIssue": "Japanese catalog: initial guide image not complete at inspection time; no HTTP/JavaScript error. Same image succeeded in seven other cases.",
+  "resolution": "Waited for image completion for affected case only; all checks pass; guide-image-check.json also matches deployed image bytes. No production change.",
+  "acceptedCases": [
+    {
+      "lang": "ja",
+      "route": "catalog/305/",
+      "width": 1280,
+      "status": "pass",
+      "source": "live-browser-recheck"
+    },
+    {
+      "lang": "ja",
+      "route": "papers/boundary-only-disk-embedding/",
+      "width": 375,
+      "status": "pass",
+      "source": "live-browser"
+    },
+    {
+      "lang": "ja",
+      "route": "papers/marked-tensor-disk-embedding/",
+      "width": 375,
+      "status": "pass",
+      "source": "live-browser"
+    },
+    {
+      "lang": "ja",
+      "route": "papers/pd4-no-aspherical-model/",
+      "width": 375,
+      "status": "pass",
+      "source": "live-browser"
+    },
+    {
+      "lang": "en",
+      "route": "catalog/305/",
+      "width": 1280,
+      "status": "pass",
+      "source": "live-browser"
+    },
+    {
+      "lang": "en",
+      "route": "papers/boundary-only-disk-embedding/",
+      "width": 375,
+      "status": "pass",
+      "source": "live-browser"
+    },
+    {
+      "lang": "en",
+      "route": "papers/marked-tensor-disk-embedding/",
+      "width": 375,
+      "status": "pass",
+      "source": "live-browser"
+    },
+    {
+      "lang": "en",
+      "route": "papers/pd4-no-aspherical-model/",
+      "width": 375,
+      "status": "pass",
+      "source": "live-browser"
+    }
+  ],
+  "status": "pass",
+  "manualVisualReview": "All eight accepted screenshots viewed by /root; no clipping or overlap in title, notice, guide, language switch or PDF entry. Full-page detailed and PDF review reused from identical Stage 2 version."
+}

@@ -1,6 +1,6 @@
 # カタログ305 制作記録
 
-**現在：第2段階・公開準備完了（2026-10-21）。** ユーザーの「では第二段階をお願いします.」に基づき、サイト登録・確認済み図の公開コピー・日英冊子・共通検査と目視を完了した。結果と同一版の再利用、証拠、残作業は [PREPARATION_REVIEW.md](PREPARATION_REVIEW.md) を参照。commit・push・公開確認は未実施で、第3段階の指示を待つ。
+**現在：第3段階・公開確認済み（2026-10-21）。** サイト内容commitは`4c2dfb8943c209fb6b13b328fed1d23d7f541589`。Actionsのbuild/deploy成功と日英本文・全図・PDFの反映を確認した。[PUBLICATION_REPORT.md](PUBLICATION_REPORT.md) が最新の完了記録。第2段階の対象版・紙面目視は[PREPARATION_REVIEW.md](PREPARATION_REVIEW.md)を参照し、数学本文・図・冊子は再生成していない。
 
 以下は第1段階の担当・制作時の記録。第2段階で数学的内容は変更していない。
 
