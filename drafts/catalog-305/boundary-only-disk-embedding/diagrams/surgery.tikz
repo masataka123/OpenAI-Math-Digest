@@ -1,0 +1,9 @@
+\node[card] (a) {\heading{1}{二つの無制限主張を仮定する}{Assume both unrestricted assertions}
+\Tx{四次元topological surgeryと五次元topological $s$-cobordism}{Four-dimensional topological surgery and five-dimensional topological $s$-cobordism}};
+\node[card,below=1.8cm of a] (b) {\heading{2}{円板埋込みへ帰着する}{Reduce to disc embedding}
+\Tx{基本群の制限のない円板埋込みが成立する。}{Disc embedding holds without a fundamental-group restriction.}};
+\flow a b {\Tx{capped gropeとlinkの同値を通す}{Use the capped-grope and link equivalences}\\\Cite{kpt-input}};
+\node[result,below=1.6cm of b] (c) {\heading{3}{有限配置で矛盾する}{Contradict the finite configuration}
+\Tx{Theorem 1.1の境界が充填されるため、同時成立は不可能。}{The boundary in Theorem 1.1 would be filled, excluding simultaneous validity.}\\
+\Tx{どちらの主張が単独で失敗するかは決めない。}{This does not determine which assertion fails individually.}};
+\flow b c {\Tx{構成した円板・双対球面は必要な仮定を満たす}{The constructed discs and dual spheres satisfy the hypotheses}\\\Cite{main}};

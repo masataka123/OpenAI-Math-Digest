@@ -1,0 +1,16 @@
+\node[card] (a) {\heading{1}{外側に残る双曲平面}{Hyperbolic planes remaining outside}
+$\partial Z=S,\quad\pi_1Z=H,\quad H_2(\widetilde Z)=\!\bigoplus_{R<|v|\le L}\!\text{\Tx{標識付き双曲平面}{marked hyperbolic planes}}$\\
+\Tx{中心の境界標識を保持；他の被約ホモロジーは消える}{Central boundary marking retained; other reduced homology vanishes}};
+\node[card,below=1.8cm of a] (b) {\heading{2}{準備の伝播を一様に抑える}{Uniform propagation during preparation}
+\Tx{geometric duals、高さ8のWhitney gropes、保護したClifford双対}{Geometric duals, height-eight Whitney gropes, protected Clifford duals}\\
+\Tx{有限templateにより $R$ に独立な距離 bound}{Finite templates give a propagation bound independent of $R$}};
+\flow a b {\Tx{元の対の標識とchamber内の群環交叉計算を用いる}{Use the original pair marking and chamber group-ring pairings}\\\Cite{peeling}\\\Cite{preparation}};
+\node[card,below=2.1cm of b] (c) {\heading{3}{全loop systemを一つのpatchへ}{Put each whole loop system in one patch}
+\Tx{有限個のcollectionを分離し、その近傍内でupper componentsを分離}{Separate finitely many collections, then upper components inside their neighborhoods}\\
+\Tx{全方向像が可縮patchに入る $\Rightarrow$ cap loopsはnull}{Entire direction image in a contractible patch $\Rightarrow$ cap loops are null}};
+\flow b c {\Tx{遠方のradial directionsと、中心因子への写像の同定}{Small radial directions far out and identification of the central-factor map}\\\Cite{directions}\\\Cite{fq-separation}};
+\node[result,below=2.1cm of c] (d) {\heading{4}{towerから球面手術へ}{From towers to sphere surgery}
+$\pi_1(M')\cong\pi_1Z\ ;\quad H_i(V;\mathbb ZH)=0\ (i>0)$\\
+\Tx{双対が基本群を保存し、acyclicな普遍被覆は可縮となる}{Duals preserve the group; the acyclic universal cover is contractible}\\
+\Tx{$V\simeq BH$ は元の境界標識を延長する}{The equivalence $V\simeq BH$ extends the original boundary marking}};
+\flow c d {\Tx{goodness使用後のnull-loop入力へ接続；以後の径制御は不要}{Enter the null-loop stage after the use of goodness; no later diameter control is required}\\\Cite{prt-towers}\\\Cite{removal}};

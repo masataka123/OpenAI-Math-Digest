@@ -1,0 +1,29 @@
+\node[card,text width=6.2cm,minimum height=4.6cm] (a) at (0,0) {
+{\color{green}\bfseries A boundary-only obstruction}\par
+\smallskip
+\Tx{境界円周だけを固定した充填を排除}{Excludes fillings fixing only the boundary circles}\\
+\Tx{出力framing・相対類は指定しない}{No output framing or relative class prescribed}\\[5pt]
+\Cite{boundary-main}\\[7pt]
+\Tx{帰結：$F_2$ のnongoodness、無制限surgeryと$s$-cobordismの両立否定}{Consequences: nongoodness of $F_2$; unrestricted surgery and $s$-cobordism cannot both hold}};
+\node[card,text width=6.2cm,minimum height=4.6cm] (b) at (8.7,0) {
+{\color{green}\bfseries A marked tensor obstruction}\par
+\smallskip
+\Tx{境界写像と誘導framingを保つ置換を排除}{Excludes replacements preserving boundary maps and induced framings}\\
+\Tx{相対ホモトピー類は指定しない}{No relative homotopy class prescribed}\\[5pt]
+\Cite{marked-main}\\[7pt]
+\Tx{他稿への入力：marked bodies・代数的potential・有限tensor定理}{Exported inputs: marked bodies, algebraic potentials, finite tensor theorem}};
+\draw[dashed,draw=muted,line width=.8pt] (a.east)--(b.west);
+\node[align=center,text=muted,font=\fontsize{9}{12}\selectfont,text width=2cm,anchor=south] at (4.35,0.15) {\Tx{出力条件の比較}{Compare output conditions}};
+\node[result,text width=14.4cm] (c) at (4.35,-7.2) {
+{\color{green}\bfseries A PD4 group without an aspherical manifold model}\par
+\smallskip
+\Tx{標識付きchamberの充填障害 $\longrightarrow$ 反射 $\longrightarrow$ 閉多様体の非実現性}{Marked chamber obstruction $\longrightarrow$ reflection $\longrightarrow$ closed manifold nonrealization}\\
+\Tx{有限な向き付けPoincaré $4$ 複体 $Q\simeq BG$ を持つが、閉aspherical位相 $4$ 多様体模型を持たない}{A finite oriented Poincaré $4$-complex $Q\simeq BG$, but no closed aspherical topological $4$-manifold model}\\[5pt]
+\Cite{pd4-main}};
+\draw[edge] (b.south)--(b.south |- c.north);
+\node[reason,text width=10.6cm,anchor=west] at (-2.9,-4.2) {
+\Tx{実線：構成・中間結果を直接使う。主nonembedding定理だけの適用ではない}{Solid arrow: direct use of constructions and intermediate results, not merely the main nonembedding theorem}\\[4pt]
+\Tx{標識付き幾何と代数化 $+$ 全active triplesのtensor障害}{Marked geometry and algebraization $+$ the tensor obstruction for all active triples}\\[4pt]
+\Cite{marked-tensor}\qquad\Cite{pd4-chamber}};
+\node[reason,text width=14.4cm,anchor=north] at ($(c.south)+(0,-.45)$) {
+\Tx{破線は別構成の比較。boundary-only稿からPD4稿への直接入力は記録していない。}{The dashed line compares different constructions. No direct input from the boundary-only paper to the PD4 paper is recorded.}};

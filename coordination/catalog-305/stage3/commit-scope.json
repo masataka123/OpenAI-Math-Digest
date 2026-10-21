@@ -1,0 +1,862 @@
+{
+  "head": "aaf346ab97a1f029180d97b7e1a5abe5a930463f",
+  "included": [
+    "coordination/catalog-305/CONTENT_REVIEW.md",
+    "coordination/catalog-305/FORMAT_REVIEW.md",
+    "coordination/catalog-305/MODEL_PROVENANCE.json",
+    "coordination/catalog-305/PREPARATION_REVIEW.md",
+    "coordination/catalog-305/README.md",
+    "coordination/catalog-305/RELEASE_CHECKLIST.md",
+    "coordination/catalog-305/REVIEW_IDENTITY_CHECK.json",
+    "coordination/catalog-305/SITE_HQ_HANDOFF.md",
+    "coordination/catalog-305/SOURCE_CHECK.json",
+    "coordination/catalog-305/SOURCE_VISUAL_CHECK.json",
+    "coordination/catalog-305/VALIDATION_TOOLS.json",
+    "coordination/catalog-305/WORKER_DISKS.md",
+    "coordination/catalog-305/WORKER_PD4.md",
+    "coordination/catalog-305/WORKER_REVIEW.md",
+    "coordination/catalog-305/build-preview.mjs",
+    "coordination/catalog-305/capture-preview.mjs",
+    "coordination/catalog-305/citation-check.log",
+    "coordination/catalog-305/fetch-external.py",
+    "coordination/catalog-305/fetch-sources.py",
+    "coordination/catalog-305/inventory.json",
+    "coordination/catalog-305/make-reference-preview.mjs",
+    "coordination/catalog-305/preview-checks.json",
+    "coordination/catalog-305/preview-generation.log",
+    "coordination/catalog-305/review/artin-input.png",
+    "coordination/catalog-305/review/bbj-input.png",
+    "coordination/catalog-305/review/boundary-reviewed-manifest.json",
+    "coordination/catalog-305/review/boundary-thm.png",
+    "coordination/catalog-305/review/calaque-input.png",
+    "coordination/catalog-305/review/dsgj-input.png",
+    "coordination/catalog-305/review/getzler-input.png",
+    "coordination/catalog-305/review/kl-input.png",
+    "coordination/catalog-305/review/marked-reviewed-manifest.json",
+    "coordination/catalog-305/review/marked-thm.png",
+    "coordination/catalog-305/review/overview-reviewed-manifest.json",
+    "coordination/catalog-305/review/pd4-reviewed-manifest.json",
+    "coordination/catalog-305/review/pd4-thm-cont.png",
+    "coordination/catalog-305/review/pd4-thm.png",
+    "coordination/catalog-305/review/prt-theorem.png",
+    "coordination/catalog-305/review/ptvv-input.png",
+    "coordination/catalog-305/review/ptvv-v4-input.png",
+    "coordination/catalog-305/screen-checks.json",
+    "coordination/catalog-305/screens/boundary-only-disk-embedding.en-1280-diagram-sources.png",
+    "coordination/catalog-305/screens/boundary-only-disk-embedding.en-1280-figure-1.png",
+    "coordination/catalog-305/screens/boundary-only-disk-embedding.en-1280-figure-2.png",
+    "coordination/catalog-305/screens/boundary-only-disk-embedding.en-1280-figure-3.png",
+    "coordination/catalog-305/screens/boundary-only-disk-embedding.en-1280-proof-1.png",
+    "coordination/catalog-305/screens/boundary-only-disk-embedding.en-1280-results.png",
+    "coordination/catalog-305/screens/boundary-only-disk-embedding.en-1280-top.png",
+    "coordination/catalog-305/screens/boundary-only-disk-embedding.en-375-diagram-sources.png",
+    "coordination/catalog-305/screens/boundary-only-disk-embedding.en-375-proof-1.png",
+    "coordination/catalog-305/screens/boundary-only-disk-embedding.en-375-results.png",
+    "coordination/catalog-305/screens/boundary-only-disk-embedding.en-375-top.png",
+    "coordination/catalog-305/screens/boundary-only-disk-embedding.ja-1280-diagram-sources.png",
+    "coordination/catalog-305/screens/boundary-only-disk-embedding.ja-1280-figure-1.png",
+    "coordination/catalog-305/screens/boundary-only-disk-embedding.ja-1280-figure-2.png",
+    "coordination/catalog-305/screens/boundary-only-disk-embedding.ja-1280-figure-3.png",
+    "coordination/catalog-305/screens/boundary-only-disk-embedding.ja-1280-proof-1.png",
+    "coordination/catalog-305/screens/boundary-only-disk-embedding.ja-1280-results.png",
+    "coordination/catalog-305/screens/boundary-only-disk-embedding.ja-1280-top.png",
+    "coordination/catalog-305/screens/boundary-only-disk-embedding.ja-375-diagram-sources.png",
+    "coordination/catalog-305/screens/boundary-only-disk-embedding.ja-375-proof-1.png",
+    "coordination/catalog-305/screens/boundary-only-disk-embedding.ja-375-results.png",
+    "coordination/catalog-305/screens/boundary-only-disk-embedding.ja-375-top.png",
+    "coordination/catalog-305/screens/marked-tensor-disk-embedding.en-1280-dependencies.png",
+    "coordination/catalog-305/screens/marked-tensor-disk-embedding.en-1280-diagram-sources.png",
+    "coordination/catalog-305/screens/marked-tensor-disk-embedding.en-1280-figure-1.png",
+    "coordination/catalog-305/screens/marked-tensor-disk-embedding.en-1280-figure-2.png",
+    "coordination/catalog-305/screens/marked-tensor-disk-embedding.en-1280-figure-3.png",
+    "coordination/catalog-305/screens/marked-tensor-disk-embedding.en-1280-proof-1.png",
+    "coordination/catalog-305/screens/marked-tensor-disk-embedding.en-1280-results.png",
+    "coordination/catalog-305/screens/marked-tensor-disk-embedding.en-1280-top.png",
+    "coordination/catalog-305/screens/marked-tensor-disk-embedding.en-375-dependencies.png",
+    "coordination/catalog-305/screens/marked-tensor-disk-embedding.en-375-diagram-sources.png",
+    "coordination/catalog-305/screens/marked-tensor-disk-embedding.en-375-proof-1.png",
+    "coordination/catalog-305/screens/marked-tensor-disk-embedding.en-375-results.png",
+    "coordination/catalog-305/screens/marked-tensor-disk-embedding.en-375-top.png",
+    "coordination/catalog-305/screens/marked-tensor-disk-embedding.ja-1280-dependencies.png",
+    "coordination/catalog-305/screens/marked-tensor-disk-embedding.ja-1280-diagram-sources.png",
+    "coordination/catalog-305/screens/marked-tensor-disk-embedding.ja-1280-figure-1.png",
+    "coordination/catalog-305/screens/marked-tensor-disk-embedding.ja-1280-figure-2.png",
+    "coordination/catalog-305/screens/marked-tensor-disk-embedding.ja-1280-figure-3.png",
+    "coordination/catalog-305/screens/marked-tensor-disk-embedding.ja-1280-proof-1.png",
+    "coordination/catalog-305/screens/marked-tensor-disk-embedding.ja-1280-results.png",
+    "coordination/catalog-305/screens/marked-tensor-disk-embedding.ja-1280-top.png",
+    "coordination/catalog-305/screens/marked-tensor-disk-embedding.ja-375-dependencies.png",
+    "coordination/catalog-305/screens/marked-tensor-disk-embedding.ja-375-diagram-sources.png",
+    "coordination/catalog-305/screens/marked-tensor-disk-embedding.ja-375-proof-1.png",
+    "coordination/catalog-305/screens/marked-tensor-disk-embedding.ja-375-results.png",
+    "coordination/catalog-305/screens/marked-tensor-disk-embedding.ja-375-top.png",
+    "coordination/catalog-305/screens/overview.en-1280-connections.png",
+    "coordination/catalog-305/screens/overview.en-1280-dependencies.png",
+    "coordination/catalog-305/screens/overview.en-1280-diagram-sources.png",
+    "coordination/catalog-305/screens/overview.en-1280-figure-1.png",
+    "coordination/catalog-305/screens/overview.en-1280-inventory.png",
+    "coordination/catalog-305/screens/overview.en-1280-papers.png",
+    "coordination/catalog-305/screens/overview.en-1280-top.png",
+    "coordination/catalog-305/screens/overview.en-375-connections.png",
+    "coordination/catalog-305/screens/overview.en-375-dependencies.png",
+    "coordination/catalog-305/screens/overview.en-375-diagram-sources.png",
+    "coordination/catalog-305/screens/overview.en-375-inventory.png",
+    "coordination/catalog-305/screens/overview.en-375-papers.png",
+    "coordination/catalog-305/screens/overview.en-375-top.png",
+    "coordination/catalog-305/screens/overview.ja-1280-connections.png",
+    "coordination/catalog-305/screens/overview.ja-1280-dependencies.png",
+    "coordination/catalog-305/screens/overview.ja-1280-diagram-sources.png",
+    "coordination/catalog-305/screens/overview.ja-1280-figure-1.png",
+    "coordination/catalog-305/screens/overview.ja-1280-inventory.png",
+    "coordination/catalog-305/screens/overview.ja-1280-papers.png",
+    "coordination/catalog-305/screens/overview.ja-1280-top.png",
+    "coordination/catalog-305/screens/overview.ja-375-connections.png",
+    "coordination/catalog-305/screens/overview.ja-375-dependencies.png",
+    "coordination/catalog-305/screens/overview.ja-375-diagram-sources.png",
+    "coordination/catalog-305/screens/overview.ja-375-inventory.png",
+    "coordination/catalog-305/screens/overview.ja-375-papers.png",
+    "coordination/catalog-305/screens/overview.ja-375-top.png",
+    "coordination/catalog-305/screens/pd4-no-aspherical-model.en-1280-diagram-sources.png",
+    "coordination/catalog-305/screens/pd4-no-aspherical-model.en-1280-figure-1.png",
+    "coordination/catalog-305/screens/pd4-no-aspherical-model.en-1280-figure-2.png",
+    "coordination/catalog-305/screens/pd4-no-aspherical-model.en-1280-figure-3.png",
+    "coordination/catalog-305/screens/pd4-no-aspherical-model.en-1280-proof-1.png",
+    "coordination/catalog-305/screens/pd4-no-aspherical-model.en-1280-results.png",
+    "coordination/catalog-305/screens/pd4-no-aspherical-model.en-1280-top.png",
+    "coordination/catalog-305/screens/pd4-no-aspherical-model.en-375-diagram-sources.png",
+    "coordination/catalog-305/screens/pd4-no-aspherical-model.en-375-proof-1.png",
+    "coordination/catalog-305/screens/pd4-no-aspherical-model.en-375-results.png",
+    "coordination/catalog-305/screens/pd4-no-aspherical-model.en-375-top.png",
+    "coordination/catalog-305/screens/pd4-no-aspherical-model.ja-1280-diagram-sources.png",
+    "coordination/catalog-305/screens/pd4-no-aspherical-model.ja-1280-figure-1.png",
+    "coordination/catalog-305/screens/pd4-no-aspherical-model.ja-1280-figure-2.png",
+    "coordination/catalog-305/screens/pd4-no-aspherical-model.ja-1280-figure-3.png",
+    "coordination/catalog-305/screens/pd4-no-aspherical-model.ja-1280-proof-1.png",
+    "coordination/catalog-305/screens/pd4-no-aspherical-model.ja-1280-results.png",
+    "coordination/catalog-305/screens/pd4-no-aspherical-model.ja-1280-top.png",
+    "coordination/catalog-305/screens/pd4-no-aspherical-model.ja-375-diagram-sources.png",
+    "coordination/catalog-305/screens/pd4-no-aspherical-model.ja-375-proof-1.png",
+    "coordination/catalog-305/screens/pd4-no-aspherical-model.ja-375-results.png",
+    "coordination/catalog-305/screens/pd4-no-aspherical-model.ja-375-top.png",
+    "coordination/catalog-305/screens/reference-catalog-034.en-1280-manuscripts.png",
+    "coordination/catalog-305/screens/reference-catalog-034.en-1280-top.png",
+    "coordination/catalog-305/screens/reference-catalog-034.en-375-manuscripts.png",
+    "coordination/catalog-305/screens/reference-catalog-034.en-375-top.png",
+    "coordination/catalog-305/screens/reference-catalog-034.ja-1280-manuscripts.png",
+    "coordination/catalog-305/screens/reference-catalog-034.ja-1280-top.png",
+    "coordination/catalog-305/screens/reference-catalog-034.ja-375-manuscripts.png",
+    "coordination/catalog-305/screens/reference-catalog-034.ja-375-top.png",
+    "coordination/catalog-305/screens/reference-papers-orbifold-logarithmic-iitaka.en-1280-diagram-sources.png",
+    "coordination/catalog-305/screens/reference-papers-orbifold-logarithmic-iitaka.en-1280-proof-1.png",
+    "coordination/catalog-305/screens/reference-papers-orbifold-logarithmic-iitaka.en-1280-results.png",
+    "coordination/catalog-305/screens/reference-papers-orbifold-logarithmic-iitaka.en-1280-top.png",
+    "coordination/catalog-305/screens/reference-papers-orbifold-logarithmic-iitaka.en-375-diagram-sources.png",
+    "coordination/catalog-305/screens/reference-papers-orbifold-logarithmic-iitaka.en-375-proof-1.png",
+    "coordination/catalog-305/screens/reference-papers-orbifold-logarithmic-iitaka.en-375-results.png",
+    "coordination/catalog-305/screens/reference-papers-orbifold-logarithmic-iitaka.en-375-top.png",
+    "coordination/catalog-305/screens/reference-papers-orbifold-logarithmic-iitaka.ja-1280-diagram-sources.png",
+    "coordination/catalog-305/screens/reference-papers-orbifold-logarithmic-iitaka.ja-1280-proof-1.png",
+    "coordination/catalog-305/screens/reference-papers-orbifold-logarithmic-iitaka.ja-1280-results.png",
+    "coordination/catalog-305/screens/reference-papers-orbifold-logarithmic-iitaka.ja-1280-top.png",
+    "coordination/catalog-305/screens/reference-papers-orbifold-logarithmic-iitaka.ja-375-diagram-sources.png",
+    "coordination/catalog-305/screens/reference-papers-orbifold-logarithmic-iitaka.ja-375-proof-1.png",
+    "coordination/catalog-305/screens/reference-papers-orbifold-logarithmic-iitaka.ja-375-results.png",
+    "coordination/catalog-305/screens/reference-papers-orbifold-logarithmic-iitaka.ja-375-top.png",
+    "coordination/catalog-305/screens/reference-papers-schnell-fiber-spaces.en-1280-diagram-sources.png",
+    "coordination/catalog-305/screens/reference-papers-schnell-fiber-spaces.en-1280-results.png",
+    "coordination/catalog-305/screens/reference-papers-schnell-fiber-spaces.en-1280-top.png",
+    "coordination/catalog-305/screens/reference-papers-schnell-fiber-spaces.en-375-diagram-sources.png",
+    "coordination/catalog-305/screens/reference-papers-schnell-fiber-spaces.en-375-results.png",
+    "coordination/catalog-305/screens/reference-papers-schnell-fiber-spaces.en-375-top.png",
+    "coordination/catalog-305/screens/reference-papers-schnell-fiber-spaces.ja-1280-diagram-sources.png",
+    "coordination/catalog-305/screens/reference-papers-schnell-fiber-spaces.ja-1280-results.png",
+    "coordination/catalog-305/screens/reference-papers-schnell-fiber-spaces.ja-1280-top.png",
+    "coordination/catalog-305/screens/reference-papers-schnell-fiber-spaces.ja-375-diagram-sources.png",
+    "coordination/catalog-305/screens/reference-papers-schnell-fiber-spaces.ja-375-results.png",
+    "coordination/catalog-305/screens/reference-papers-schnell-fiber-spaces.ja-375-top.png",
+    "coordination/catalog-305/shared-tests.log",
+    "coordination/catalog-305/sources/CONTENTS.md",
+    "coordination/catalog-305/sources/README.md",
+    "coordination/catalog-305/sources/external/acquisition.json",
+    "coordination/catalog-305/sources/official-reference.json",
+    "coordination/catalog-305/stage1-checks.json",
+    "coordination/catalog-305/stage1-validation.log",
+    "coordination/catalog-305/stage2/ASSET_REUSE.json",
+    "coordination/catalog-305/stage2/FINAL_IDENTITY_CHECK.json",
+    "coordination/catalog-305/stage2/PDF_VISUAL_INDEX.json",
+    "coordination/catalog-305/stage2/pdf-en-01.png",
+    "coordination/catalog-305/stage2/pdf-en-02.png",
+    "coordination/catalog-305/stage2/pdf-en-03.png",
+    "coordination/catalog-305/stage2/pdf-en-04.png",
+    "coordination/catalog-305/stage2/pdf-en-05.png",
+    "coordination/catalog-305/stage2/pdf-en-06.png",
+    "coordination/catalog-305/stage2/pdf-en-07.png",
+    "coordination/catalog-305/stage2/pdf-en-08.png",
+    "coordination/catalog-305/stage2/pdf-en-09.png",
+    "coordination/catalog-305/stage2/pdf-en-10.png",
+    "coordination/catalog-305/stage2/pdf-en-11.png",
+    "coordination/catalog-305/stage2/pdf-en-12.png",
+    "coordination/catalog-305/stage2/pdf-en-13.png",
+    "coordination/catalog-305/stage2/pdf-en-14.png",
+    "coordination/catalog-305/stage2/pdf-en-15.png",
+    "coordination/catalog-305/stage2/pdf-en-16.png",
+    "coordination/catalog-305/stage2/pdf-en-17.png",
+    "coordination/catalog-305/stage2/pdf-en-18.png",
+    "coordination/catalog-305/stage2/pdf-en-19.png",
+    "coordination/catalog-305/stage2/pdf-en-20.png",
+    "coordination/catalog-305/stage2/pdf-en-21.png",
+    "coordination/catalog-305/stage2/pdf-en-22.png",
+    "coordination/catalog-305/stage2/pdf-en-23.png",
+    "coordination/catalog-305/stage2/pdf-en-24.png",
+    "coordination/catalog-305/stage2/pdf-en-25.png",
+    "coordination/catalog-305/stage2/pdf-en-26.png",
+    "coordination/catalog-305/stage2/pdf-en-27.png",
+    "coordination/catalog-305/stage2/pdf-en-28.png",
+    "coordination/catalog-305/stage2/pdf-en-29.png",
+    "coordination/catalog-305/stage2/pdf-en-30.png",
+    "coordination/catalog-305/stage2/pdf-en-31.png",
+    "coordination/catalog-305/stage2/pdf-en-32.png",
+    "coordination/catalog-305/stage2/pdf-en-33.png",
+    "coordination/catalog-305/stage2/pdf-en-34.png",
+    "coordination/catalog-305/stage2/pdf-en-35.png",
+    "coordination/catalog-305/stage2/pdf-en-36.png",
+    "coordination/catalog-305/stage2/pdf-en-37.png",
+    "coordination/catalog-305/stage2/pdf-en-38.png",
+    "coordination/catalog-305/stage2/pdf-en-39.png",
+    "coordination/catalog-305/stage2/pdf-en-40.png",
+    "coordination/catalog-305/stage2/pdf-en-41.png",
+    "coordination/catalog-305/stage2/pdf-en-contact-01.png",
+    "coordination/catalog-305/stage2/pdf-en-contact-13.png",
+    "coordination/catalog-305/stage2/pdf-en-contact-25.png",
+    "coordination/catalog-305/stage2/pdf-en-contact-37.png",
+    "coordination/catalog-305/stage2/pdf-ja-01.png",
+    "coordination/catalog-305/stage2/pdf-ja-02.png",
+    "coordination/catalog-305/stage2/pdf-ja-03.png",
+    "coordination/catalog-305/stage2/pdf-ja-04.png",
+    "coordination/catalog-305/stage2/pdf-ja-05.png",
+    "coordination/catalog-305/stage2/pdf-ja-06.png",
+    "coordination/catalog-305/stage2/pdf-ja-07.png",
+    "coordination/catalog-305/stage2/pdf-ja-08.png",
+    "coordination/catalog-305/stage2/pdf-ja-09.png",
+    "coordination/catalog-305/stage2/pdf-ja-10.png",
+    "coordination/catalog-305/stage2/pdf-ja-11.png",
+    "coordination/catalog-305/stage2/pdf-ja-12.png",
+    "coordination/catalog-305/stage2/pdf-ja-13.png",
+    "coordination/catalog-305/stage2/pdf-ja-14.png",
+    "coordination/catalog-305/stage2/pdf-ja-15.png",
+    "coordination/catalog-305/stage2/pdf-ja-16.png",
+    "coordination/catalog-305/stage2/pdf-ja-17.png",
+    "coordination/catalog-305/stage2/pdf-ja-18.png",
+    "coordination/catalog-305/stage2/pdf-ja-19.png",
+    "coordination/catalog-305/stage2/pdf-ja-20.png",
+    "coordination/catalog-305/stage2/pdf-ja-21.png",
+    "coordination/catalog-305/stage2/pdf-ja-22.png",
+    "coordination/catalog-305/stage2/pdf-ja-23.png",
+    "coordination/catalog-305/stage2/pdf-ja-24.png",
+    "coordination/catalog-305/stage2/pdf-ja-25.png",
+    "coordination/catalog-305/stage2/pdf-ja-26.png",
+    "coordination/catalog-305/stage2/pdf-ja-27.png",
+    "coordination/catalog-305/stage2/pdf-ja-28.png",
+    "coordination/catalog-305/stage2/pdf-ja-29.png",
+    "coordination/catalog-305/stage2/pdf-ja-30.png",
+    "coordination/catalog-305/stage2/pdf-ja-31.png",
+    "coordination/catalog-305/stage2/pdf-ja-32.png",
+    "coordination/catalog-305/stage2/pdf-ja-33.png",
+    "coordination/catalog-305/stage2/pdf-ja-34.png",
+    "coordination/catalog-305/stage2/pdf-ja-35.png",
+    "coordination/catalog-305/stage2/pdf-ja-36.png",
+    "coordination/catalog-305/stage2/pdf-ja-37.png",
+    "coordination/catalog-305/stage2/pdf-ja-contact-01.png",
+    "coordination/catalog-305/stage2/pdf-ja-contact-13.png",
+    "coordination/catalog-305/stage2/pdf-ja-contact-25.png",
+    "coordination/catalog-305/stage2/pdf-ja-contact-37.png",
+    "coordination/catalog-305/stage2/preparation-evidence.tar.gz",
+    "coordination/catalog-305/stage2/prepare-console.log",
+    "coordination/catalog-305/stage2/screen-review/en-articles-full.png",
+    "coordination/catalog-305/stage2/screen-review/en-catalog-full.png",
+    "coordination/catalog-305/stage2/screen-review/en-citations-detail.png",
+    "coordination/catalog-305/stage2/screen-review/en-mobile-y0.png",
+    "coordination/catalog-305/stage2/screen-review/en-mobile-y1600.png",
+    "coordination/catalog-305/stage2/screen-review/en-mobile-y3200.png",
+    "coordination/catalog-305/stage2/screen-review/en-references-full.png",
+    "coordination/catalog-305/stage2/screen-review/en-statement-proof-detail.png",
+    "coordination/catalog-305/stage2/screen-review/en-table-detail.png",
+    "coordination/catalog-305/stage2/screen-review/ja-articles-full.png",
+    "coordination/catalog-305/stage2/screen-review/ja-catalog-full.png",
+    "coordination/catalog-305/stage2/screen-review/ja-citations-detail.png",
+    "coordination/catalog-305/stage2/screen-review/ja-mobile-y0.png",
+    "coordination/catalog-305/stage2/screen-review/ja-mobile-y1600.png",
+    "coordination/catalog-305/stage2/screen-review/ja-mobile-y3200.png",
+    "coordination/catalog-305/stage2/screen-review/ja-references-full.png",
+    "coordination/catalog-305/stage2/screen-review/ja-statement-proof-detail.png",
+    "coordination/catalog-305/stage2/screen-review/ja-table-detail.png",
+    "coordination/catalog-305/stage3/commit-scope.json",
+    "coordination/catalog-305/stage3/release-build.log",
+    "coordination/catalog-305/stage3/release-checks.json",
+    "coordination/catalog-305/stage3/release-citations.log",
+    "coordination/catalog-305/stage3/release-html.json",
+    "coordination/catalog-305/stage3/release-links.log",
+    "coordination/catalog-305/stage3/release-pdf.log",
+    "coordination/catalog-305/stage3/release-tests.log",
+    "coordination/catalog-305/stage3/same-version.json",
+    "coordination/catalog-305/validate-stage1.mjs",
+    "drafts/catalog-305/boundary-only-disk-embedding/article.en.md",
+    "drafts/catalog-305/boundary-only-disk-embedding/article.ja.md",
+    "drafts/catalog-305/boundary-only-disk-embedding/catalog-changes.md",
+    "drafts/catalog-305/boundary-only-disk-embedding/citations.json",
+    "drafts/catalog-305/boundary-only-disk-embedding/diagrams/citation-build.json",
+    "drafts/catalog-305/boundary-only-disk-embedding/diagrams/citations.en.tex",
+    "drafts/catalog-305/boundary-only-disk-embedding/diagrams/citations.ja.tex",
+    "drafts/catalog-305/boundary-only-disk-embedding/diagrams/free.en.svg",
+    "drafts/catalog-305/boundary-only-disk-embedding/diagrams/free.en.tex",
+    "drafts/catalog-305/boundary-only-disk-embedding/diagrams/free.ja.svg",
+    "drafts/catalog-305/boundary-only-disk-embedding/diagrams/free.ja.tex",
+    "drafts/catalog-305/boundary-only-disk-embedding/diagrams/free.tikz",
+    "drafts/catalog-305/boundary-only-disk-embedding/diagrams/main.en.svg",
+    "drafts/catalog-305/boundary-only-disk-embedding/diagrams/main.en.tex",
+    "drafts/catalog-305/boundary-only-disk-embedding/diagrams/main.ja.svg",
+    "drafts/catalog-305/boundary-only-disk-embedding/diagrams/main.ja.tex",
+    "drafts/catalog-305/boundary-only-disk-embedding/diagrams/main.tikz",
+    "drafts/catalog-305/boundary-only-disk-embedding/diagrams/preamble.tex",
+    "drafts/catalog-305/boundary-only-disk-embedding/diagrams/render.py",
+    "drafts/catalog-305/boundary-only-disk-embedding/diagrams/surgery.en.svg",
+    "drafts/catalog-305/boundary-only-disk-embedding/diagrams/surgery.en.tex",
+    "drafts/catalog-305/boundary-only-disk-embedding/diagrams/surgery.ja.svg",
+    "drafts/catalog-305/boundary-only-disk-embedding/diagrams/surgery.ja.tex",
+    "drafts/catalog-305/boundary-only-disk-embedding/diagrams/surgery.tikz",
+    "drafts/catalog-305/boundary-only-disk-embedding/sources.json",
+    "drafts/catalog-305/boundary-only-disk-embedding/status.md",
+    "drafts/catalog-305/marked-tensor-disk-embedding/article.en.md",
+    "drafts/catalog-305/marked-tensor-disk-embedding/article.ja.md",
+    "drafts/catalog-305/marked-tensor-disk-embedding/catalog-changes.md",
+    "drafts/catalog-305/marked-tensor-disk-embedding/citations.json",
+    "drafts/catalog-305/marked-tensor-disk-embedding/diagrams/algebraic.en.svg",
+    "drafts/catalog-305/marked-tensor-disk-embedding/diagrams/algebraic.en.tex",
+    "drafts/catalog-305/marked-tensor-disk-embedding/diagrams/algebraic.ja.svg",
+    "drafts/catalog-305/marked-tensor-disk-embedding/diagrams/algebraic.ja.tex",
+    "drafts/catalog-305/marked-tensor-disk-embedding/diagrams/algebraic.tikz",
+    "drafts/catalog-305/marked-tensor-disk-embedding/diagrams/citation-build.json",
+    "drafts/catalog-305/marked-tensor-disk-embedding/diagrams/citations.en.tex",
+    "drafts/catalog-305/marked-tensor-disk-embedding/diagrams/citations.ja.tex",
+    "drafts/catalog-305/marked-tensor-disk-embedding/diagrams/main.en.svg",
+    "drafts/catalog-305/marked-tensor-disk-embedding/diagrams/main.en.tex",
+    "drafts/catalog-305/marked-tensor-disk-embedding/diagrams/main.ja.svg",
+    "drafts/catalog-305/marked-tensor-disk-embedding/diagrams/main.ja.tex",
+    "drafts/catalog-305/marked-tensor-disk-embedding/diagrams/main.tikz",
+    "drafts/catalog-305/marked-tensor-disk-embedding/diagrams/preamble.tex",
+    "drafts/catalog-305/marked-tensor-disk-embedding/diagrams/render.py",
+    "drafts/catalog-305/marked-tensor-disk-embedding/diagrams/tensor.en.svg",
+    "drafts/catalog-305/marked-tensor-disk-embedding/diagrams/tensor.en.tex",
+    "drafts/catalog-305/marked-tensor-disk-embedding/diagrams/tensor.ja.svg",
+    "drafts/catalog-305/marked-tensor-disk-embedding/diagrams/tensor.ja.tex",
+    "drafts/catalog-305/marked-tensor-disk-embedding/diagrams/tensor.tikz",
+    "drafts/catalog-305/marked-tensor-disk-embedding/sources.json",
+    "drafts/catalog-305/marked-tensor-disk-embedding/status.md",
+    "drafts/catalog-305/overview/article.en.md",
+    "drafts/catalog-305/overview/article.ja.md",
+    "drafts/catalog-305/overview/citations.json",
+    "drafts/catalog-305/overview/connections.json",
+    "drafts/catalog-305/overview/diagrams/citation-build.json",
+    "drafts/catalog-305/overview/diagrams/citations.en.tex",
+    "drafts/catalog-305/overview/diagrams/citations.ja.tex",
+    "drafts/catalog-305/overview/diagrams/connections.en.svg",
+    "drafts/catalog-305/overview/diagrams/connections.en.tex",
+    "drafts/catalog-305/overview/diagrams/connections.ja.svg",
+    "drafts/catalog-305/overview/diagrams/connections.ja.tex",
+    "drafts/catalog-305/overview/diagrams/connections.tikz",
+    "drafts/catalog-305/overview/diagrams/preamble.tex",
+    "drafts/catalog-305/overview/diagrams/render.py",
+    "drafts/catalog-305/overview/presentation.json",
+    "drafts/catalog-305/overview/sources.json",
+    "drafts/catalog-305/overview/status.md",
+    "drafts/catalog-305/pd4-no-aspherical-model/article.en.md",
+    "drafts/catalog-305/pd4-no-aspherical-model/article.ja.md",
+    "drafts/catalog-305/pd4-no-aspherical-model/citations.json",
+    "drafts/catalog-305/pd4-no-aspherical-model/diagrams/chamber.en.svg",
+    "drafts/catalog-305/pd4-no-aspherical-model/diagrams/chamber.en.tex",
+    "drafts/catalog-305/pd4-no-aspherical-model/diagrams/chamber.ja.svg",
+    "drafts/catalog-305/pd4-no-aspherical-model/diagrams/chamber.ja.tex",
+    "drafts/catalog-305/pd4-no-aspherical-model/diagrams/chamber.tikz",
+    "drafts/catalog-305/pd4-no-aspherical-model/diagrams/citation-build.json",
+    "drafts/catalog-305/pd4-no-aspherical-model/diagrams/citations.en.tex",
+    "drafts/catalog-305/pd4-no-aspherical-model/diagrams/citations.ja.tex",
+    "drafts/catalog-305/pd4-no-aspherical-model/diagrams/main.en.svg",
+    "drafts/catalog-305/pd4-no-aspherical-model/diagrams/main.en.tex",
+    "drafts/catalog-305/pd4-no-aspherical-model/diagrams/main.ja.svg",
+    "drafts/catalog-305/pd4-no-aspherical-model/diagrams/main.ja.tex",
+    "drafts/catalog-305/pd4-no-aspherical-model/diagrams/main.tikz",
+    "drafts/catalog-305/pd4-no-aspherical-model/diagrams/preamble.tex",
+    "drafts/catalog-305/pd4-no-aspherical-model/diagrams/removal.en.svg",
+    "drafts/catalog-305/pd4-no-aspherical-model/diagrams/removal.en.tex",
+    "drafts/catalog-305/pd4-no-aspherical-model/diagrams/removal.ja.svg",
+    "drafts/catalog-305/pd4-no-aspherical-model/diagrams/removal.ja.tex",
+    "drafts/catalog-305/pd4-no-aspherical-model/diagrams/removal.tikz",
+    "drafts/catalog-305/pd4-no-aspherical-model/diagrams/render.py",
+    "drafts/catalog-305/pd4-no-aspherical-model/sources.json",
+    "drafts/catalog-305/pd4-no-aspherical-model/status.md",
+    "public/diagrams/catalog-305/boundary-only-disk-embedding/free.en.svg",
+    "public/diagrams/catalog-305/boundary-only-disk-embedding/free.en.tex",
+    "public/diagrams/catalog-305/boundary-only-disk-embedding/free.ja.svg",
+    "public/diagrams/catalog-305/boundary-only-disk-embedding/free.ja.tex",
+    "public/diagrams/catalog-305/boundary-only-disk-embedding/main.en.svg",
+    "public/diagrams/catalog-305/boundary-only-disk-embedding/main.en.tex",
+    "public/diagrams/catalog-305/boundary-only-disk-embedding/main.ja.svg",
+    "public/diagrams/catalog-305/boundary-only-disk-embedding/main.ja.tex",
+    "public/diagrams/catalog-305/boundary-only-disk-embedding/surgery.en.svg",
+    "public/diagrams/catalog-305/boundary-only-disk-embedding/surgery.en.tex",
+    "public/diagrams/catalog-305/boundary-only-disk-embedding/surgery.ja.svg",
+    "public/diagrams/catalog-305/boundary-only-disk-embedding/surgery.ja.tex",
+    "public/diagrams/catalog-305/marked-tensor-disk-embedding/algebraic.en.svg",
+    "public/diagrams/catalog-305/marked-tensor-disk-embedding/algebraic.en.tex",
+    "public/diagrams/catalog-305/marked-tensor-disk-embedding/algebraic.ja.svg",
+    "public/diagrams/catalog-305/marked-tensor-disk-embedding/algebraic.ja.tex",
+    "public/diagrams/catalog-305/marked-tensor-disk-embedding/main.en.svg",
+    "public/diagrams/catalog-305/marked-tensor-disk-embedding/main.en.tex",
+    "public/diagrams/catalog-305/marked-tensor-disk-embedding/main.ja.svg",
+    "public/diagrams/catalog-305/marked-tensor-disk-embedding/main.ja.tex",
+    "public/diagrams/catalog-305/marked-tensor-disk-embedding/tensor.en.svg",
+    "public/diagrams/catalog-305/marked-tensor-disk-embedding/tensor.en.tex",
+    "public/diagrams/catalog-305/marked-tensor-disk-embedding/tensor.ja.svg",
+    "public/diagrams/catalog-305/marked-tensor-disk-embedding/tensor.ja.tex",
+    "public/diagrams/catalog-305/overview/connections.en.svg",
+    "public/diagrams/catalog-305/overview/connections.en.tex",
+    "public/diagrams/catalog-305/overview/connections.ja.svg",
+    "public/diagrams/catalog-305/overview/connections.ja.tex",
+    "public/diagrams/catalog-305/pd4-no-aspherical-model/chamber.en.svg",
+    "public/diagrams/catalog-305/pd4-no-aspherical-model/chamber.en.tex",
+    "public/diagrams/catalog-305/pd4-no-aspherical-model/chamber.ja.svg",
+    "public/diagrams/catalog-305/pd4-no-aspherical-model/chamber.ja.tex",
+    "public/diagrams/catalog-305/pd4-no-aspherical-model/main.en.svg",
+    "public/diagrams/catalog-305/pd4-no-aspherical-model/main.en.tex",
+    "public/diagrams/catalog-305/pd4-no-aspherical-model/main.ja.svg",
+    "public/diagrams/catalog-305/pd4-no-aspherical-model/main.ja.tex",
+    "public/diagrams/catalog-305/pd4-no-aspherical-model/removal.en.svg",
+    "public/diagrams/catalog-305/pd4-no-aspherical-model/removal.en.tex",
+    "public/diagrams/catalog-305/pd4-no-aspherical-model/removal.ja.svg",
+    "public/diagrams/catalog-305/pd4-no-aspherical-model/removal.ja.tex",
+    "public/pdf/catalog-305-en.pdf",
+    "public/pdf/catalog-305-ja.pdf",
+    "src/data/pdf-editions.json",
+    "src/data/site.mjs"
+  ],
+  "indexOnlyReplacement": {
+    "path": "src/data/pdf-editions.json",
+    "source": "coordination/catalog-305/stage3/pdf-editions-release.json",
+    "purpose": "Add only 305 to HEAD order; preserve working-file order separately"
+  },
+  "excluded": [
+    {
+      "path": "drafts/catalog-305/overview/review/connections.en.pdf",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/overview/review/connections.ja.pdf",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/overview/review/connections.ja.png",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/overview/review/connections.en.png",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/overview/review/connections.ja.tex",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/overview/review/connections.en.tex",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/overview/review/connections.en.aux",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/overview/review/connections.ja.aux",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/overview/review/connections.ja.log",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/overview/review/connections.en.log",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/pd4-no-aspherical-model/review/main.en.aux",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/pd4-no-aspherical-model/review/main.ja.aux",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/pd4-no-aspherical-model/review/main.ja.log",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/pd4-no-aspherical-model/review/main.en.log",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/pd4-no-aspherical-model/review/removal.en.tex",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/pd4-no-aspherical-model/review/removal.ja.tex",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/pd4-no-aspherical-model/review/chamber.ja.aux",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/pd4-no-aspherical-model/review/chamber.en.aux",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/pd4-no-aspherical-model/review/chamber.en.log",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/pd4-no-aspherical-model/review/chamber.ja.log",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/pd4-no-aspherical-model/review/removal.en.png",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/pd4-no-aspherical-model/review/removal.ja.png",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/pd4-no-aspherical-model/review/removal.ja.pdf",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/pd4-no-aspherical-model/review/removal.en.pdf",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/pd4-no-aspherical-model/review/main.ja.tex",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/pd4-no-aspherical-model/review/main.en.tex",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/pd4-no-aspherical-model/review/removal.en.log",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/pd4-no-aspherical-model/review/removal.ja.log",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/pd4-no-aspherical-model/review/removal.ja.aux",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/pd4-no-aspherical-model/review/removal.en.aux",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/pd4-no-aspherical-model/review/chamber.en.tex",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/pd4-no-aspherical-model/review/chamber.ja.tex",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/pd4-no-aspherical-model/review/chamber.ja.pdf",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/pd4-no-aspherical-model/review/main.ja.png",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/pd4-no-aspherical-model/review/chamber.en.pdf",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/pd4-no-aspherical-model/review/main.en.png",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/pd4-no-aspherical-model/review/chamber.en.png",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/pd4-no-aspherical-model/review/main.en.pdf",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/pd4-no-aspherical-model/review/chamber.ja.png",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/pd4-no-aspherical-model/review/main.ja.pdf",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/boundary-only-disk-embedding/review/source-p03.png",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/boundary-only-disk-embedding/review/source-p39.png",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/boundary-only-disk-embedding/review/kpt-p08.png",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/marked-tensor-disk-embedding/review/source-p02.png",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "drafts/catalog-305/marked-tensor-disk-embedding/review/source-p30.png",
+      "reason": "temporary TeX review build; canonical reviewed SVG and review evidence retained"
+    },
+    {
+      "path": "coordination/catalog-305/GIT_FINAL.txt",
+      "reason": "workspace/global baseline or temporary diagnostic"
+    },
+    {
+      "path": "coordination/catalog-305/GIT_BASELINE.txt",
+      "reason": "workspace/global baseline or temporary diagnostic"
+    },
+    {
+      "path": "coordination/catalog-305/SHARED_FILES_BASELINE.json",
+      "reason": "workspace/global baseline or temporary diagnostic"
+    },
+    {
+      "path": "coordination/catalog-305/GIT_HEAD.txt",
+      "reason": "workspace/global baseline or temporary diagnostic"
+    },
+    {
+      "path": "coordination/catalog-305/sources/marked-tensor-disk-embedding.txt",
+      "reason": "downloaded original/extract; source URL/version/hash ledger retained"
+    },
+    {
+      "path": "coordination/catalog-305/sources/overview.txt",
+      "reason": "downloaded original/extract; source URL/version/hash ledger retained"
+    },
+    {
+      "path": "coordination/catalog-305/sources/overview.tex",
+      "reason": "downloaded original/extract; source URL/version/hash ledger retained"
+    },
+    {
+      "path": "coordination/catalog-305/sources/marked-tensor-disk-embedding.pdf",
+      "reason": "downloaded original/extract; source URL/version/hash ledger retained"
+    },
+    {
+      "path": "coordination/catalog-305/sources/overview.pdf",
+      "reason": "downloaded original/extract; source URL/version/hash ledger retained"
+    },
+    {
+      "path": "coordination/catalog-305/sources/boundary-only-disk-embedding.pdf",
+      "reason": "downloaded original/extract; source URL/version/hash ledger retained"
+    },
+    {
+      "path": "coordination/catalog-305/sources/pd4-no-aspherical-model.txt",
+      "reason": "downloaded original/extract; source URL/version/hash ledger retained"
+    },
+    {
+      "path": "coordination/catalog-305/sources/boundary-only-disk-embedding.txt",
+      "reason": "downloaded original/extract; source URL/version/hash ledger retained"
+    },
+    {
+      "path": "coordination/catalog-305/sources/pd4-no-aspherical-model.pdf",
+      "reason": "downloaded original/extract; source URL/version/hash ledger retained"
+    },
+    {
+      "path": "coordination/catalog-305/sources/overview-p33.png",
+      "reason": "downloaded original/extract; source URL/version/hash ledger retained"
+    },
+    {
+      "path": "coordination/catalog-305/preview/pd4-no-aspherical-model.en.html",
+      "reason": "temporary Stage 1 preview HTML; original screen evidence retained"
+    },
+    {
+      "path": "coordination/catalog-305/preview/overview.en.html",
+      "reason": "temporary Stage 1 preview HTML; original screen evidence retained"
+    },
+    {
+      "path": "coordination/catalog-305/preview/boundary-only-disk-embedding.en.html",
+      "reason": "temporary Stage 1 preview HTML; original screen evidence retained"
+    },
+    {
+      "path": "coordination/catalog-305/preview/overview.ja.html",
+      "reason": "temporary Stage 1 preview HTML; original screen evidence retained"
+    },
+    {
+      "path": "coordination/catalog-305/preview/pd4-no-aspherical-model.ja.html",
+      "reason": "temporary Stage 1 preview HTML; original screen evidence retained"
+    },
+    {
+      "path": "coordination/catalog-305/preview/boundary-only-disk-embedding.ja.html",
+      "reason": "temporary Stage 1 preview HTML; original screen evidence retained"
+    },
+    {
+      "path": "coordination/catalog-305/preview/reference-catalog-034.ja.html",
+      "reason": "temporary Stage 1 preview HTML; original screen evidence retained"
+    },
+    {
+      "path": "coordination/catalog-305/preview/marked-tensor-disk-embedding.en.html",
+      "reason": "temporary Stage 1 preview HTML; original screen evidence retained"
+    },
+    {
+      "path": "coordination/catalog-305/preview/reference-papers-schnell-fiber-spaces.en.html",
+      "reason": "temporary Stage 1 preview HTML; original screen evidence retained"
+    },
+    {
+      "path": "coordination/catalog-305/preview/reference-papers-orbifold-logarithmic-iitaka.ja.html",
+      "reason": "temporary Stage 1 preview HTML; original screen evidence retained"
+    },
+    {
+      "path": "coordination/catalog-305/preview/reference-catalog-034.en.html",
+      "reason": "temporary Stage 1 preview HTML; original screen evidence retained"
+    },
+    {
+      "path": "coordination/catalog-305/preview/marked-tensor-disk-embedding.ja.html",
+      "reason": "temporary Stage 1 preview HTML; original screen evidence retained"
+    },
+    {
+      "path": "coordination/catalog-305/preview/reference-papers-orbifold-logarithmic-iitaka.en.html",
+      "reason": "temporary Stage 1 preview HTML; original screen evidence retained"
+    },
+    {
+      "path": "coordination/catalog-305/preview/reference-papers-schnell-fiber-spaces.ja.html",
+      "reason": "temporary Stage 1 preview HTML; original screen evidence retained"
+    },
+    {
+      "path": "coordination/catalog-305/stage2/site.mjs",
+      "reason": "workspace/global baseline or temporary diagnostic"
+    },
+    {
+      "path": "coordination/catalog-305/stage2/page15-bbox.html",
+      "reason": "workspace/global baseline or temporary diagnostic"
+    },
+    {
+      "path": "coordination/catalog-305/stage2/GIT_START.txt",
+      "reason": "workspace/global baseline or temporary diagnostic"
+    },
+    {
+      "path": "coordination/catalog-305/stage2/pdf-editions.json",
+      "reason": "workspace/global baseline or temporary diagnostic"
+    },
+    {
+      "path": "coordination/catalog-305/stage3/same-version.json",
+      "reason": "stage3 records are selected separately"
+    },
+    {
+      "path": "coordination/catalog-305/stage3/preserve-start.json",
+      "reason": "stage3 records are selected separately"
+    },
+    {
+      "path": "coordination/catalog-305/stage3/pdf-editions-release.json",
+      "reason": "stage3 records are selected separately"
+    },
+    {
+      "path": "coordination/catalog-305/stage3/git-start.bin",
+      "reason": "stage3 records are selected separately"
+    },
+    {
+      "path": "coordination/catalog-305/sources/external/KPT21.txt",
+      "reason": "downloaded original/extract; source URL/version/hash ledger retained"
+    },
+    {
+      "path": "coordination/catalog-305/sources/external/KL-v3.txt",
+      "reason": "downloaded original/extract; source URL/version/hash ledger retained"
+    },
+    {
+      "path": "coordination/catalog-305/sources/external/BBJ-v4.pdf",
+      "reason": "downloaded original/extract; source URL/version/hash ledger retained"
+    },
+    {
+      "path": "coordination/catalog-305/sources/external/Getzler09.pdf",
+      "reason": "downloaded original/extract; source URL/version/hash ledger retained"
+    },
+    {
+      "path": "coordination/catalog-305/sources/external/DSGJ-v3.pdf",
+      "reason": "downloaded original/extract; source URL/version/hash ledger retained"
+    },
+    {
+      "path": "coordination/catalog-305/sources/external/Calaque-v2.txt",
+      "reason": "downloaded original/extract; source URL/version/hash ledger retained"
+    },
+    {
+      "path": "coordination/catalog-305/sources/external/KL-v3.pdf",
+      "reason": "downloaded original/extract; source URL/version/hash ledger retained"
+    },
+    {
+      "path": "coordination/catalog-305/sources/external/BBJ-v4.txt",
+      "reason": "downloaded original/extract; source URL/version/hash ledger retained"
+    },
+    {
+      "path": "coordination/catalog-305/sources/external/Getzler09.txt",
+      "reason": "downloaded original/extract; source URL/version/hash ledger retained"
+    },
+    {
+      "path": "coordination/catalog-305/sources/external/KPT21.pdf",
+      "reason": "downloaded original/extract; source URL/version/hash ledger retained"
+    },
+    {
+      "path": "coordination/catalog-305/sources/external/Calaque-v2.pdf",
+      "reason": "downloaded original/extract; source URL/version/hash ledger retained"
+    },
+    {
+      "path": "coordination/catalog-305/sources/external/DSGJ-v3.txt",
+      "reason": "downloaded original/extract; source URL/version/hash ledger retained"
+    },
+    {
+      "path": "coordination/catalog-305/sources/external/PTVV-v4.pdf",
+      "reason": "downloaded original/extract; source URL/version/hash ledger retained"
+    },
+    {
+      "path": "coordination/catalog-305/sources/external/PRT25.txt",
+      "reason": "downloaded original/extract; source URL/version/hash ledger retained"
+    },
+    {
+      "path": "coordination/catalog-305/sources/external/FQ2013.pdf",
+      "reason": "downloaded original/extract; source URL/version/hash ledger retained"
+    },
+    {
+      "path": "coordination/catalog-305/sources/external/PTVV13.txt",
+      "reason": "downloaded original/extract; source URL/version/hash ledger retained"
+    },
+    {
+      "path": "coordination/catalog-305/sources/external/Artin69.pdf",
+      "reason": "downloaded original/extract; source URL/version/hash ledger retained"
+    },
+    {
+      "path": "coordination/catalog-305/sources/external/FQ2013.txt",
+      "reason": "downloaded original/extract; source URL/version/hash ledger retained"
+    },
+    {
+      "path": "coordination/catalog-305/sources/external/PTVV13.pdf",
+      "reason": "downloaded original/extract; source URL/version/hash ledger retained"
+    },
+    {
+      "path": "coordination/catalog-305/sources/external/PTVV-v4.txt",
+      "reason": "downloaded original/extract; source URL/version/hash ledger retained"
+    },
+    {
+      "path": "coordination/catalog-305/sources/external/PRT25.pdf",
+      "reason": "downloaded original/extract; source URL/version/hash ledger retained"
+    },
+    {
+      "path": "coordination/catalog-305/sources/external/Artin69.txt",
+      "reason": "downloaded original/extract; source URL/version/hash ledger retained"
+    }
+  ],
+  "authorization": "2026-10-21 user: 第３段階をしてください."
+}

@@ -1,0 +1,16 @@
+\node[result] (a) {\heading{1}{標識付きchamber}{Marked chamber}
+$(D,S)\longrightarrow(P,S),\quad P\simeq BH$\quad ($H$ \Tx{自由群}{free})\\
+\Tx{$S\to BH$ を延長するグラフ型多様体充填は存在しない}{No manifold filling of graph type extends the marking $S\to BH$}};
+\node[card,below=1.8cm of a] (b) {\heading{2}{反射して有限分類空間を作る}{Reflect to a finite classifying space}
+$N=\Delta\backslash U(C,D)\longrightarrow Q=\Delta\backslash U(C,P)\simeq BG$\\
+$H^i(G;\mathbb ZG)=0\ (i\ne4),\quad H^4(G;\mathbb ZG)=\mathbb Z$\\
+\Tx{有限な向き付けPoincaré 4複体；普遍被覆の鎖は有限自由分解}{Finite oriented Poincaré 4-complex; cover chains give a finite free resolution}};
+\flow a b {\Tx{descent panelの球で可縮性を保ち、中間双曲加群を消す}{Attach along descent-panel balls and kill the middle hyperbolic module}\\\Cite{reflection}};
+\node[card,below=2.1cm of b] (c) {\heading{3}{多様体模型があると仮定}{Assume a manifold model exists}
+$M\simeq Q,\quad N\#k(S^2\times S^2)\cong M\#(b+k)(S^2\times S^2)$\\
+\Tx{指定された全双曲対が、標識を保って同時に標準化される}{Every prescribed hyperbolic pair becomes standard with its marking retained}};
+\flow b c {\Tx{別のCAT(0)模型から組立；指定同値と相対安定積}{Assembly from a separate CAT(0) model; marked equivalence and relative stable product}\\\Cite{cat-model}\\\Cite{marked-stable}};
+\node[result,below=1.8cm of c] (d) {\heading{4}{禁止された充填へ帰着}{Obtain the forbidden filling}
+$\partial V=S,\quad \pi_1V=H,\quad\widetilde V\simeq *,\quad V\simeq BH$\\
+\Tx{境界標識を保持するためProposition 2.1と矛盾}{The retained boundary marking contradicts Proposition 2.1}};
+\flow c d {\Tx{有限chamber和を塞ぐ；内側の対を除き、外側を方向制御で手術}{Cap a finite chamber union; peel inner pairs and operate on outer pairs using direction control}\\\Cite{removal}};

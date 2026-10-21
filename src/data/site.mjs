@@ -21,6 +21,7 @@ import inventory197 from '../../coordination/catalog-197/inventory.json' with { 
 import inventory246 from '../../coordination/catalog-246/inventory.json' with { type: 'json' };
 import inventory285 from '../../coordination/catalog-285/inventory.json' with { type: 'json' };
 import inventory287 from '../../coordination/catalog-287/inventory.json' with { type: 'json' };
+import inventory305 from '../../coordination/catalog-305/inventory.json' with { type: 'json' };
 import inventory322 from '../../coordination/catalog-322/inventory.json' with { type: 'json' };
 import inventory338 from '../../coordination/catalog-338/inventory.json' with { type: 'json' };
 import inventory356 from '../../coordination/catalog-356/inventory.json' with { type: 'json' };
@@ -105,7 +106,7 @@ const fieldTranslations = [
   {
     "id": "topology",
     "ja": "トポロジー",
-    "catalogIds": []
+    "catalogIds": ["305"]
   },
   {
     "id": "functional-analysis",
@@ -236,6 +237,10 @@ export const papers = [...inventory004.manuscripts.map(entry => ({
 })), ...inventory287.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '287', sourceCommit: inventory287.sourceCommit,
  title: entry.title, path: entry.path, version: entry.version,
+ pages: entry.pdfPages, order: entry.order, featured: true,
+})), ...inventory305.manuscripts.map(entry => ({
+ id: entry.paperId, catalogId: '305', sourceCommit: inventory305.sourceCommit,
+ title: entry.title, path: entry.sourcePath.replace(/^preprints\//, ''), version: entry.version,
  pages: entry.pdfPages, order: entry.order, featured: true,
 })), ...inventory322.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '322', sourceCommit: inventory322.sourceCommit,
@@ -414,6 +419,13 @@ export const catalogs = [{
   description: text('自由Haarユニタリの構成と生成性から階数低下を得て、増幅公式と二者択一定理による帰結へ進む論証を読む。', 'Follow the construction and generation of free Haar unitaries to rank reduction, then the consequences of amplification formulas and the dichotomy theorem.'),
   paperIds: inventory287.manuscripts.map(p => p.paperId),
   overviewSectionIds: ['inventory', 'connections', 'sources'],
+}, {
+  id: '305', sourceCommit: inventory305.sourceCommit, mode: 'multi',
+  title: text(inventory305.titleJa, inventory305.overviewTitle),
+  contentsTitle: inventory305.contentsTitle,
+  description: text("4次元の円板埋め込みについて、境界円周だけを固定する障害と、誘導normal framingも保持する障害を扱う。後者の標識付き幾何構成・代数的potential・有限tensor定理は、有限表示の整係数PD4群を閉aspherical位相4多様体で実現する問題へ直接使われる。以下は原稿が主張する結果とその証明の接続を案内する。", "The catalogue treats two four-dimensional disk obstructions: one fixing only the boundary circles, and another also retaining induced normal framings. The latter paper's marked geometry, algebraic potentials, and finite tensor theorem feed directly into the realization problem for finitely presented integral PD4 groups as groups of closed aspherical topological four-manifolds. This guide follows the manuscripts' claims and the connections between their proofs."),
+  paperIds: inventory305.manuscripts.map(p => p.paperId),
+  overviewSectionIds: ['inventory', 'connections', 'dependencies', 'sources'],
 }, {
   id: '322', sourceCommit: inventory322.sourceCommit, mode: 'single',
   title: text(inventory322.titleJa, inventory322.overviewTitle),

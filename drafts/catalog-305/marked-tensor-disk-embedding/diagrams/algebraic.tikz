@@ -1,0 +1,15 @@
+\node[card] (a) {\heading{1}{球面境界をもつ充填}{A filling with sphere boundary}
+$Z=Y\cup_{T^2}(\text{punctured solid torus}),\quad\partial Z=S^2$\\
+$\mathcal X=\operatorname{Loc}_{SL_2}(Z)^{\rm fr}$};
+\node[card,below=2.7cm of a] (b) {\heading{2}{代数的Darboux chart}{Algebraic Darboux chart}
+$\mathcal X:\ (-1)\text{-shifted},\qquad F\in(x)^3$\\
+\Tx{based holonomyの行列成分はcritical quotientから代数的にliftできる。}{Based holonomy matrix entries admit algebraic lifts from the critical quotient.}};
+\flow a b {\Tx{transgression・相対orientation・Lagrangian交叉・最小chart}{Transgression, relative orientation, Lagrangian intersection, and a minimal chart}\\\Cite{ptvv-transgression}\\\Cite{calaque}\\\Cite{ptvv-intersection}\\\Cite{bbj}};
+\node[card,below=1.8cm of b] (c) {\heading{3}{全closed-form classを比較}{Compare full closed-form classes}
+$f'=F\circ x,\quad J=\operatorname{Jac}(f),\quad f'-f\in J^2$\\
+\Tx{相対積分のhomotopyも比較し、completed Cartan計算を使う。}{Include the relative integration homotopy and use the completed Cartan calculation.}};
+\flow b c {\Tx{接空間pairingだけでなく全relative traceを運ぶ}{Transport the full relative trace, beyond the tangent pairing}\\\Cite{comparison}};
+\node[result,below=1.7cm of c] (d) {\heading{4}{markingを固定して誤差を除く}{Remove the error while fixing markings}
+$\Phi\equiv\mathrm{id}\pmod J,\qquad(f+e)\circ\Phi=f,\qquad f=F\circ\phi$\\
+\Tx{全critical scheme上でholonomyを保持する。}{Holonomy is retained on the entire critical scheme.}};
+\flow c d {\Tx{$J$に値をもつvector fieldの形式flowを使う}{Use the formal flow of a vector field with coefficients in $J$}\\\Cite{flow}};

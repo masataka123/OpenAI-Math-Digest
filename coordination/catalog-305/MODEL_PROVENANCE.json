@@ -1,0 +1,89 @@
+{
+  "catalogId": "305",
+  "operatingPolicy": "2026-10-20",
+  "selectionBasis": [
+    "User request 2026-10-21",
+    "AGENTS.md",
+    "production/MODEL_ROLES.md"
+  ],
+  "assignments": [
+    {
+      "role": "hq",
+      "agent": "/root",
+      "requestedModel": "gpt-6.1-sol",
+      "requestedReasoningEffort": "xhigh",
+      "actualModel": null,
+      "actualReasoningEffort": null,
+      "selectionEvidence": "User explicitly requested HQ gpt-6.1-sol / xhigh; this active chat has no exposed exact runtime model/effort readback or setting API. Requested values are not copied into actual fields.",
+      "scope": [
+        "coordination/catalog-305/",
+        "mechanical citation/diagram/format validation"
+      ]
+    },
+    {
+      "role": "author",
+      "agent": "/root/author_disks",
+      "requestedModel": "gpt-6-astra",
+      "requestedReasoningEffort": "high",
+      "actualModel": null,
+      "actualReasoningEffort": null,
+      "selectionEvidence": "collaboration.spawn_agent accepted fork_turns=none, model=gpt-6-astra, reasoning_effort=high and returned /root/author_disks. Runtime metadata beyond selection is not exposed.",
+      "scope": [
+        "drafts/catalog-305/boundary-only-disk-embedding/",
+        "drafts/catalog-305/marked-tensor-disk-embedding/"
+      ]
+    },
+    {
+      "role": "author-and-catalog-guide",
+      "agent": "/root/author_pd4",
+      "requestedModel": "gpt-6-astra",
+      "requestedReasoningEffort": "high",
+      "actualModel": null,
+      "actualReasoningEffort": null,
+      "selectionEvidence": "collaboration.spawn_agent accepted fork_turns=none, model=gpt-6-astra, reasoning_effort=high and returned /root/author_pd4. Runtime metadata beyond selection is not exposed.",
+      "scope": [
+        "drafts/catalog-305/pd4-no-aspherical-model/",
+        "drafts/catalog-305/overview/"
+      ]
+    },
+    {
+      "role": "content-review",
+      "agent": "/root/content_review",
+      "requestedModel": "gpt-6-astra",
+      "requestedReasoningEffort": "high",
+      "actualModel": null,
+      "actualReasoningEffort": null,
+      "selectionEvidence": "collaboration.spawn_agent accepted fork_turns=none, model=gpt-6-astra, reasoning_effort=high and returned /root/content_review; independent from both authors. Runtime metadata beyond selection is not exposed.",
+      "scope": [
+        "coordination/catalog-305/CONTENT_REVIEW.md",
+        "coordination/catalog-305/review/"
+      ]
+    }
+  ],
+  "stageActivities": [
+    {
+      "stage": 2,
+      "agent": "/root",
+      "role": "site-hq",
+      "requestedModel": "gpt-6.1-sol",
+      "requestedReasoningEffort": "xhigh",
+      "actualModel": null,
+      "actualReasoningEffort": null,
+      "authorization": "User 2026-10-21: では第二段階をお願いします.",
+      "scope": "Registration, verified figure reuse, common preparation, bilingual PDF, visual/format checks. No new mathematical writing or public deployment.",
+      "selectionEvidence": "Same HQ chat; precise runtime model/effort readback remains unavailable. Stage 1 Astra-reviewed mathematical content is reused unchanged."
+    },
+    {
+      "stage": 3,
+      "agent": "/root",
+      "role": "site-hq-publication",
+      "requestedModel": "gpt-6.1-sol",
+      "requestedReasoningEffort": "xhigh",
+      "actualModel": null,
+      "actualReasoningEffort": null,
+      "authorization": "User: 第３段階をしてください.",
+      "scope": "Same-version identity, scoped Git commit/push, GitHub Actions and live resource verification. No mathematical editing or figure/PDF regeneration.",
+      "selectionEvidence": "Same HQ chat; runtime model/effort readback unavailable as previously recorded."
+    }
+  ]
+}

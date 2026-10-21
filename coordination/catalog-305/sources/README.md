@@ -1,0 +1,9 @@
+# カタログ305の共通原典
+
+公式収録・順序・版・PDFページ数・SHA-256の台帳は上位のinventory.json、公式mainの固定参照根拠はofficial-reference.json。各記事から同じ原典を参照する。CONTENTSとoverviewの見出し差も台帳に保持した。
+
+PDFは取得用URLからそのまま保存した。txtはpdftotext -layoutによる読解補助で、改頁はフォームフィード。原稿のページ・式の配置や抽出が曖昧な箇所はPDF画像を確認する。overview-p33.pngは書誌・掲載順の目視用であり、数学的内容点検ではない。
+
+external/内の共通ファイルとacquisition.jsonはAstraが指定した直接入力の確認用。取得しただけでは定理の記述・適用箇所を確認済みとしない。実際の照合範囲と誌面/PDF対応は各記事のsources.jsonおよびCONTENT_REVIEW.mdを参照。Quinn83は書誌のみ確認し本文未取得。
+
+公式原典の取得はfetch-sources.py、外部文献の初回取得はfetch-external.py。同一版を再取得する必要はない。再取得時は既存台帳との同一性を確認してから利用する。

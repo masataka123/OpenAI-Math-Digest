@@ -1,0 +1,21 @@
+\node[card] (a) {\heading{1}{有限の幾何配置}{Finite geometric configuration}
+$\lambda(f_i,g_j)=\delta_{ij}1,\quad \lambda(g_i,g_j)=0,\quad\widetilde\mu(g_i)=0$\\
+\Tx{各 $g_i$ はframed埋込み球面。仮に境界円周が互いに素な円板を張るとする。}{Each $g_i$ is framed and embedded. Assume a disjoint filling of the boundary circles.}};
+\node[card,below=1.9cm of a] (b) {\heading{2}{実像を避けた切断と変形}{Cuts away from disc images and their deformations}
+$G\simeq\Gamma,\quad J_i\subset G,\quad\partial J_i=T^2,\quad\mathfrak n^3=0$\\
+\Tx{二重被覆の制限写像が相補的接空間を与える。}{Paired restrictions in a double cover give complementary tangent spaces.}};
+\flow a b {\Tx{境界だけを固定してグラフ写像を動かし、端holonomyに三次則を課す}{Move the graph map with boundary fixed; impose the cubic end-holonomy law}\\\Cite{cuts}\\\Cite{deformation}};
+\node[card,below=2.0cm of b] (c) {\heading{3}{全defect idealを保持する}{Retain the full defect ideal}
+$v=(\partial_C\Psi)(a,Y),\quad(v)=\mathfrak r,\quad\Psi(a,Y)\in\mathfrak r^2$\\
+$a_{i,1}a_{j,1}a_{k,1},\ p_i(Y_i^-)p_j(Y_j^-)p_k(Y_k^-)\in(v)$};
+\flow b c {\Tx{双対性で勾配生成を、Stokesで二乗イデアルを得る}{Duality gives gradient generation; Stokes gives the square-ideal identity}\\\Cite{ideals}};
+\node[card,below=2.0cm of c] (d) {\heading{4}{補正した零グラフを正標数へ}{Correct to a zero graph and specialize}
+$\Psi(a,\widetilde Y)=0,\quad\operatorname{char}k=\ell>2$\\
+\Tx{相補的接空間と両方の三次所属、その係数を保持。}{Preserve complementary tangents, both cubic memberships, and their witnesses.}};
+\flow c d {\Tx{代数化と可逆な勾配変換。補正グラフの幾何的実現は不要}{Algebraic replacement and invertible gradient change; no geometric realization needed}\\\Cite{replacement}\\\Cite{specialization}};
+\node[result,below=1.8cm of d] (e) {\heading{5}{単元との積による矛盾}{Contradiction from multiplication by a unit}
+$B=k[s_1,s_2,s_3]/(s_1^2,s_2^2,s_3^2),\quad w=s_1s_2s_3\ne0$\\
+$\delta_s\eta_s=w\alpha_s,\quad\delta_s\kappa_s=0,\quad
+ b_s=\operatorname{Res}(\alpha_s\wedge\kappa_s)\in B^\times$\\
+$0=wb_s\ \Longrightarrow\ w=0$};
+\flow d e {\Tx{$p_i$則でtensor cycle、$a_i$則でambient primitiveを作る}{$p_i$ law gives a tensor cycle; $a_i$ law gives an ambient primitive}\\\Cite{obstruction}};

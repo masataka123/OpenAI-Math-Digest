@@ -1,0 +1,11 @@
+\node[card] (a) {\heading{1}{goodnessを仮定する}{Assume goodness}
+$F_2\ \text{good},\qquad F_r\hookrightarrow F_2,\qquad F_r\twoheadrightarrow\pi_1(M)$\\
+\Tx{$M$はコンパクト滑らかなので基本群は有限生成。}{Compact smooth $M$ has finitely generated fundamental group.}};
+\node[card,below=1.7cm of a] (b) {\heading{2}{構成した群へ渡す}{Pass to the constructed group}
+$\pi_1(M)\ \text{good}$\\
+\Tx{Theorem 1.1の入力円板と双対球面に埋込み定理を適用する。}{Apply disc embedding to the discs and dual spheres of Theorem 1.1.}};
+\flow a b {\Tx{good群の部分群・商はgood}{Subgroups and quotients of good groups are good}\\\Cite{prt-closure}};
+\node[result,below=1.9cm of b] (c) {\heading{3}{禁止された充填}{The forbidden filling}
+\Tx{互いに素な局所平坦円板が存在し、Theorem 1.1に反する。}{Disjoint locally flat filling discs contradict Theorem 1.1.}\\
+\Tx{したがって $F_2$ はnongood。これを含む群も部分群閉性でnongood。}{Thus $F_2$ is not good; neither is any overgroup, by subgroup closure.}};
+\flow b c {\Tx{代数的双対条件から境界充填を得る}{Algebraic dual data supply a boundary filling}\\\Cite{prt-theorem}\\\Cite{main}};

@@ -1,0 +1,16 @@
+\node[card] (a) {\heading{1}{共役路を記録した幾何入力}{Geometry with recorded conjugating paths}
+\Tx{marked grope bodies、外部の円板 $f_j$ と双対球面 $g_j$}{Marked grope bodies, exterior disks $f_j$, and dual spheres $g_j$}\\
+$\lambda(f_i,g_j)=\delta_{ij},\quad\lambda(g_i,g_j)=0$};
+\node[card,below=1.9cm of a] (b) {\heading{2}{圧縮bodyを貼り、基底をcellで消す}{Attach compression bodies and kill the basis by cells}
+$D=E\cup_{\coprod F_j\times S^1}\coprod(V_j\times S^1),\quad P\simeq BH$\\
+\Tx{$\pi_2D$ の指定双曲基底；$(P,S)$ のPoincaré双対性}{Prescribed hyperbolic basis of $\pi_2D$; Poincaré duality for $(P,S)$}};
+\flow a b {\Tx{tube sideのhomotopy pushoutと交叉形式の計算}{Homotopy pushout retaining tube sides and the intersection-form calculation}\\\Cite{marked-geometry}\\\Cite{chamber-build}};
+\node[card,below=1.8cm of b] (c) {\heading{3}{仮想的な位相充填を切断}{Cut a hypothetical topological filling}
+$D'\simeq BH\ \Longrightarrow\ W\ \Longrightarrow\ A,\,B,\,Y_i$\\
+\Tx{穿孔平滑化；filled cohomologyを計算する形式代数}{Punctured smoothing; a form algebra computing filled cohomology}};
+\flow b c {\Tx{標識が逆手術のcocoreと全境界法則を保持する}{The marking retains inverse-surgery cocores and every boundary law}\\\Cite{topological-transfer}};
+\node[result,below=2.1cm of c] (d) {\heading{4}{tensor入力の不可能性}{Impossible tensor input}
+$T=K[t_i]/(t_i^2),\quad S_t(H_L)=S_0(H_R)=0$\\
+$t_it_jt_k\in (\partial S_t)(H_L),\quad(b_ib_jb_k)(H_R)\in(\partial S_0)(H_R)$\\
+\Tx{相補的接空間、代数的potential、$m\ge5$；radicalには移らない}{Complementary tangents, algebraic potentials, $m\ge5$; actual ideals, not radicals}};
+\flow c d {\Tx{全共役付き法則からVertex dataを作り、有限tensor定理へ}{All conjugated laws produce Vertex data excluded by the finite tensor theorem}\\\Cite{vertex}\\\Cite{tensor}};

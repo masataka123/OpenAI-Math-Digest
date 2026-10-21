@@ -1,0 +1,16 @@
+\node[card] (a) {\heading{1}{解を選ぶ前に円板問題を固定}{Fix the disc problem before choosing a solution}
+$E=X\setminus\bigcup_j\operatorname{int}\nu(S_j),\quad
+\lambda(f_i,g_j)=\delta_{ij},\quad\lambda(g_i,g_j)=\widetilde\mu(g_i)=0$\\
+\Tx{仮定：同じ境界写像と誘導normal framingをもつdisjoint replacements。}{Assume disjoint replacements with the same boundary maps and induced normal framings.}};
+\node[card,below=1.9cm of a] (b) {\heading{2}{二つの頂点とactive辺}{Two vertices and active edges}
+$A,\ B,\ Y_1,\ldots,Y_{2m},\qquad m\geq5$\\
+\Tx{framed圧縮から滑らかな切断へ。内部接空間は相補的。}{Framed compression gives smooth cuts and complementary internal tangents.}};
+\flow a b {\Tx{未使用capで群環相殺を確認し、実像を避けて切断する}{Retained caps cancel group labels; cut away from the actual images}\\\Cite{geometry}\\\Cite{cuts}};
+\node[card,below=1.9cm of b] (c) {\heading{3}{markedな代数的辺モデル}{Marked algebraic edge models}
+$f_i=F_i\circ\phi_i,\qquad F_i\ \text{algebraic}$\\
+\Tx{based holonomyを非被約critical scheme全体で保つ。}{Preserve based holonomy on the entire nonreduced critical scheme.}};
+\flow b c {\Tx{Chern--Simonsとfull relative trace比較を接続する}{Connect Chern--Simons to the full relative trace comparison}\\\Cite{edge}\\\Cite{algebraic}};
+\node[result,below=2cm of c] (d) {\heading{4}{両側の三次則が両立しない}{The two triple laws are incompatible}
+$S_t(H_L)=S_0(H_R)=0,\quad t_it_jt_k\in J_L,\quad (b_ib_jb_k)(H_R)\in J_R$\\
+\Tx{$J_L,J_R$ は制限した全gradient ideal。混合parameter項も保持。}{Here $J_L,J_R$ are full restricted gradient ideals; mixed parameter terms remain.}};
+\flow c d {\Tx{残差を固定する補正とBrunnian lawsから有限tensor障害へ}{Fixed-residual corrections and Brunnian laws feed the finite tensor obstruction}\\\Cite{triple}\\\Cite{tensor}};

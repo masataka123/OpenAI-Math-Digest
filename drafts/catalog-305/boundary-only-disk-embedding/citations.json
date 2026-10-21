@@ -1,0 +1,293 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "author-key",
+  "catalogId": "305",
+  "sources": {
+    "P": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "pagination": "same"
+    },
+    "PRT25": {
+      "recordFile": "sources.json",
+      "recordId": "PRT25",
+      "guideRole": {
+        "ja": "good群の円板埋込み定理と部分群・商に関する閉性をCorollary 1.2で使う",
+        "en": "Good-group disc embedding and closure under subgroups and quotients in Corollary 1.2"
+      }
+    },
+    "KPT21": {
+      "recordFile": "sources.json",
+      "recordId": "KPT21",
+      "guideRole": {
+        "ja": "surgeryとs-cobordismの同時成立から円板埋込みへの帰着をCorollary 1.3で使う",
+        "en": "Reduction from surgery together with s-cobordism to disc embedding in Corollary 1.3"
+      }
+    },
+    "DSGJ-v3": {
+      "recordFile": "sources.json",
+      "recordId": "DSGJ-v3",
+      "guideRole": {
+        "ja": "Lemma 5.3で微分作用素によるsymbolic power判定を使う",
+        "en": "Differential-operator test for symbolic powers in Lemma 5.3"
+      }
+    },
+    "Stacks": {
+      "recordFile": "sources.json",
+      "recordId": "Stacks",
+      "guideRole": {
+        "ja": "Lemma 5.3でTaylor tupleを完備化から降下する。タグはページ番号を持たない",
+        "en": "Descent of the Taylor tuple from completion in Lemma 5.3; tags have no page numbering"
+      }
+    }
+  },
+  "citations": {
+    "main": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "3",
+          "pdf": "3"
+        }
+      ]
+    },
+    "free": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Corollary 1.2",
+          "printed": "4",
+          "pdf": "4"
+        }
+      ]
+    },
+    "surgery": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Corollary 1.3",
+          "printed": "5",
+          "pdf": "5"
+        }
+      ]
+    },
+    "geometry": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemmas 2.4–2.5; Corollary 2.6",
+          "printed": "12–14",
+          "pdf": "12–14"
+        }
+      ]
+    },
+    "cuts": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 2.7; Proposition 2.8",
+          "printed": "14–16",
+          "pdf": "14–16"
+        }
+      ]
+    },
+    "deformation": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemmas 3.1–3.2; Proposition 3.8",
+          "printed": "17–22",
+          "pdf": "17–22"
+        }
+      ]
+    },
+    "ideals": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Propositions 4.6, 4.8; Corollary 4.11",
+          "printed": "25–31",
+          "pdf": "25–31"
+        }
+      ]
+    },
+    "replacement": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 5.3; Theorem 5.8",
+          "printed": "33–38",
+          "pdf": "33–38"
+        }
+      ]
+    },
+    "specialization": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Corollary 5.10",
+          "printed": "38",
+          "pdf": "38"
+        }
+      ]
+    },
+    "obstruction": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 6.1; §§6.3–6.6; §7",
+          "printed": "39–47",
+          "pdf": "39–47"
+        }
+      ]
+    },
+    "prt-theorem": {
+      "source": "PRT25",
+      "locations": [
+        {
+          "result": "Theorem A",
+          "printed": "3",
+          "pdf": "3"
+        }
+      ]
+    },
+    "prt-closure": {
+      "source": "PRT25",
+      "locations": [
+        {
+          "result": "§1.1",
+          "printed": "4",
+          "pdf": "4"
+        }
+      ]
+    },
+    "kpt-input": {
+      "source": "KPT21",
+      "locations": [
+        {
+          "result": "§3",
+          "printed": "7–8",
+          "pdf": "8–9"
+        }
+      ]
+    },
+    "dsgj-input": {
+      "source": "DSGJ-v3",
+      "locations": [
+        {
+          "result": "Theorem 3.6",
+          "printed": "7",
+          "pdf": "7"
+        }
+      ]
+    },
+    "dsgj-operators": {
+      "source": "DSGJ-v3",
+      "locations": [
+        {
+          "result": "Lemma 2.3",
+          "printed": "3",
+          "pdf": "3"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ],
+  "articleGuides": {
+    ".": {
+      "selfSource": "P",
+      "externalSources": [
+        "PRT25",
+        "KPT21",
+        "DSGJ-v3",
+        "Stacks"
+      ],
+      "mainResults": [
+        "main",
+        "free",
+        "surgery"
+      ],
+      "proofTargets": [
+        "main",
+        "free",
+        "surgery"
+      ],
+      "statements": {
+        "main": "theorem-1-1",
+        "free": "corollary-1-2",
+        "surgery": "corollary-1-3"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "main",
+          "conclusion": "存在する滑らかなMと入力円板、framedかつ個別embeddedな双対球面、全交点条件",
+          "anchor": "proof-1-step-1"
+        },
+        {
+          "result": "main",
+          "conclusion": "境界像だけを指定した任意の局所平坦充填の非存在",
+          "anchor": "proof-1-step-4"
+        },
+        {
+          "result": "free",
+          "conclusion": "F2のnongoodness",
+          "anchor": "proof-2-step-2"
+        },
+        {
+          "result": "free",
+          "conclusion": "F2を含むすべての群のnongoodness",
+          "anchor": "proof-2-step-2"
+        },
+        {
+          "result": "surgery",
+          "conclusion": "無制限surgeryとs-cobordismの同時成立の否定",
+          "anchor": "proof-3-step-1"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "geometry",
+          "purpose": {
+            "ja": "外部の群環ラベルとframingを確認する",
+            "en": "Check exterior group-ring labels and framings"
+          }
+        },
+        {
+          "citation": "cuts",
+          "purpose": {
+            "ja": "境界像だけを使う切断の構成を読む",
+            "en": "Read the construction of cuts using only boundary images"
+          }
+        },
+        {
+          "citation": "ideals",
+          "purpose": {
+            "ja": "二つのイデアル等式と三次則を追う",
+            "en": "Track the two ideal identities and cubic laws"
+          }
+        },
+        {
+          "citation": "replacement",
+          "purpose": {
+            "ja": "代数化と補正による係数の保存を読む",
+            "en": "Follow coefficient control through replacement and correction"
+          }
+        },
+        {
+          "citation": "obstruction",
+          "purpose": {
+            "ja": "同じ有限複体での矛盾と主定理への適用を読む",
+            "en": "Read the contradiction in one finite complex and its application"
+          }
+        }
+      ]
+    }
+  }
+}
