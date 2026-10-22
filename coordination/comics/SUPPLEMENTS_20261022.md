@@ -20,4 +20,6 @@
 
 ## 公開
 
-公開前検査済み。公開commit・Actions・公開先の確認結果を追記する。
+公開確認済み。公開commitは `a2c0be8b9408337b9e290e78cf9613df3552a552`。[GitHub Actions](https://github.com/masataka123/OpenAI-Math-Digest/actions/runs/39756203265)はbuild / deployともsuccess。[公開記録](supplements-20261022/deployment.json)。
+
+[公開先の確認](supplements-20261022/public-checks.json)は38件すべて成功。トップ、分野一覧、全36漫画ページを取得し、補足本文が承認された文章に一致することと、準備中表示が残らないことを確認した。046は提供時の原文とも照合して一致。公開041の補足を実際のブラウザーで読み、[画面](supplements-20261022/041-public-1280.jpg)を保存した。トップの紹介文も公開URLで確認した。
