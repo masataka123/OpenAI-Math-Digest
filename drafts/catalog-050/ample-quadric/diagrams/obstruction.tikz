@@ -1,0 +1,16 @@
+\node[card] (a) {\heading{1}{二次psh関数が非零と仮定}{Assume a nonzero quadratic psh function}
+$q:G^\vee\to[0,\infty),\qquad q(x,v)=H_x(v,v),\quad H_x\ge0$.\\
+$\iota_i:L_i^{-1}\hookrightarrow G^\vee,\qquad \iota_2\alpha=\iota_1\text{ on }D$.};
+\node[card,below=1.8cm of a] (b) {\heading{2}{rulingで降下し、三つのグラフで同一視}{Descend along rulings and identify on three graphs}
+$a_\bullet:\mathcal O_{\mathbf P^1}(-b)\to[0,\infty),\qquad a_\bullet\not\equiv0$.\\
+$a_\bullet(Mx,M^{\otimes b}v)=a_\bullet(x,v)\quad(M=A,B)$.};
+\node[card,below=1.8cm of b] (c) {\heading{3}{零点も含む正の曲率測度}{A positive curvature measure including zeros}
+$a_\bullet(z,we)=u_e(z)|w|^2,\quad\log u_e\in L^1_{\rm loc}$.\\
+$\mu=i\partial\bar\partial\log u_e\ge0,\quad \mu(\mathbf P^1)=2\pi b>0,\quad A^*\mu=B^*\mu=\mu$.};
+\node[result,below=2.0cm of c] (d) {\heading{4}{測度の台への作用が矛盾}{The action on the support is impossible}
+$AB:z\mapsto\lambda z,\quad|\lambda|>1\ \Longrightarrow\ \operatorname{Supp}\mu\subset\{0,\infty\}$.\\
+\Tx{$A,B$の射影位数3 $\Longrightarrow$ 高々二点の台を各点固定}{Projective order three $\Longrightarrow$ each fixes every point of the support}.\\
+\Tx{共通固有直線は存在しない。従って$q=0$}{There is no common eigenline. Therefore $q=0$}.};
+\flow{a}{b}{\Tx{補方向の$\mathbf P^1$上の最大値原理と半正定値性}{Use the maximum principle on the other $\mathbf P^1$ and semidefiniteness}\\\Cite{seminorm}};
+\flow{b}{c}{\Tx{対数の可積分性、基準計量との比較、等長性}{Use logarithmic integrability, a reference metric, and isometries}\\\Cite{measure}};
+\flow{c}{d}{\Tx{半開円環は等測度、有限性で質量は二固定点に集中}{Half-open annuli have equal mass; finiteness concentrates it at two fixed points}\\\Cite{dynamics}\quad\Cite{graph-lemmas}};

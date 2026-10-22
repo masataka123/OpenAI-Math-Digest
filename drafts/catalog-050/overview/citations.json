@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "author-key",
+  "catalogId": "050",
+  "sources": {
+    "P": {
+      "recordFile": "../ample-quadric/sources.json",
+      "recordId": "self",
+      "pagination": "same"
+    },
+    "OVERVIEW": {
+      "recordFile": "../../../coordination/catalog-050/inventory.json",
+      "recordId": "overview"
+    }
+  },
+  "citations": {
+    "main": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "proof": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§§2–6",
+          "printed": "4–16",
+          "pdf": "4–16"
+        }
+      ]
+    },
+    "catalog": {
+      "source": "OVERVIEW",
+      "locations": [
+        {
+          "result": "Algebraic and complex geometry, 050",
+          "printed": "7",
+          "pdf": "7"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": []
+}

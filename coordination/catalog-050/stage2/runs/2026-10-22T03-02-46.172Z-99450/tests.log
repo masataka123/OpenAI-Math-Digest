@@ -1,0 +1,157 @@
+✔ nef route does not incorrectly require the separate volume branch (2.250459ms)
+✔ the final claim requires both branches in prerequisite order (0.271ms)
+✔ unknown inputs and cyclic logical dependencies fail visibly (0.339875ms)
+✔ bilingual entries and cited references stay connected (1.20475ms)
+✖ 033 registers five papers in official order without moving the 034 source snapshot (2.375958ms)
+✔ retained connection records distinguish 12 inputs and one premise from alternatives (0.453459ms)
+✔ 033 bilingual sections, 44 retained article figures and relative article links survive rendering (711.476458ms)
+✔ 033 guide uses the common inventory and retains each result-use record once (0.696125ms)
+✔ catalogue summaries cover the official inventory once, in order, in both languages (1.124375ms)
+✔ every connection resolves to a source, application and reading record (0.500625ms)
+✖ 063 uses its pinned single manuscript and preserves official field order (2.699166ms)
+✔ 063 overview, article and external-input records resolve to the same bilingual anchors and assets (263.672416ms)
+✔ synthesis explains every recorded connection and covers all 14 papers in linked diagrams (2.336375ms)
+✔ published overview diagrams have matching bilingual link targets with accessible labels (15.225458ms)
+✔ browser inspection requires an explicit three-digit catalogue (1.360542ms)
+✔ registered papers determine bilingual desktop/mobile coverage without fixed paper counts (0.70125ms)
+✔ cached scan matches legacy links, Unicode anchors, SVG glyphs, assets and language switches (71.832834ms)
+✔ failure diagnostics and duplicate broken references are preserved (5.503792ms)
+✔ a second invocation detects removed anchors and deleted assets (no persistent cache) (7.1975ms)
+✔ CLI used by GitHub Actions exits nonzero for a broken link (749.901875ms)
+✔ author-key citations stay compact in both languages and TeX without changing legacy output (2.722125ms)
+✔ printed page numbers are distinguished from PDF destinations (0.32975ms)
+✔ ranges and unknown citations fail rather than silently produce plausible references (1.388542ms)
+✔ managed citation markers preserve shared source-line and article structure (141.414458ms)
+✔ every registered new catalogue uses checked citations and fresh diagram outputs (620.677167ms)
+✔ Japanese and English cite the same records and TeX shares their readable names (1.214875ms)
+✔ generated SVG links keep PDF page positions and the source sets declared on each diagram (3.037791ms)
+✔ publication registry discovery excludes unregistered drafts but explicit discovery retains them (57.453958ms)
+✔ new and revised catalogues have official inventories and bilingual guides for every owned article (1999.341209ms)
+✔ missing roles, reference lists, reading purposes and proof targets are rejected (1.543291ms)
+✔ one-paper inventory retains all columns and rejects incomplete rows or wrong official order (0.320167ms)
+✔ internal references are unprefixed; external references carry defined keys and readable names (0.276875ms)
+✔ main-theorem proofs and the statements of proof targets cannot be omitted (1.159708ms)
+✔ booklets internalize only the current catalogue and its papers, preserving cross-catalogue source links (6.654375ms)
+✔ booklet print view retains every connection and removes controls and duplicate audit only (2.887583ms)
+✔ official-order table rows retain article anchors in print entries (1.527875ms)
+✔ reruns preserve manual notes and old handoffs, while new failure is never marked approved (27.559958ms)
+✔ handoff retains the selected runtime and runnable retry without inventing model or human review approval (1.356125ms)
+✔ artifact summaries use selected bilingual edition and actual browser outcomes; absent evidence stays absent (65.090125ms)
+✔ unexpected runner exception is timed and recorded as a failed step (0.4595ms)
+✔ requires one explicit registered-format catalogue and rejects mistyped options (2.548458ms)
+✔ current PDF is reused without PDF rendering or a second build; browser inspection still runs (5.013084ms)
+✔ stale PDF generation, second build and final check always run sequentially (1.451625ms)
+✔ build and environment failures stop dependent work and record a retry command (1.023041ms)
+✔ unexpected PDF check failures never trigger destructive regeneration, even with force (1.604ms)
+✔ explicit regeneration runs when current, while link failures leave a failed report (1.180375ms)
+✔ PDF runtime uses project venv/settings and respects explicit environment overrides (10.283625ms)
+✔ browser failure prevents approval and records the gallery location (0.801167ms)
+✔ Schnell structure preserves mathematical statements and source links (37.8545ms)
+✔ Japanese and English headings share section anchors (32.699958ms)
+✔ public article links remain local in previews and print editions (4.941ms)
+✔ multiple inline TeX figures have unique IDs and intact citations (5.063083ms)
+✔ older introductions and both math syntaxes are retained (2.999042ms)
+✔ missing diagrams stop the build instead of publishing an empty figure (4.405709ms)
+✔ proof-overview navigation retains the result number from the heading (0.979292ms)
+✔ field, catalogue and manuscript references resolve without duplicate records (0.6515ms)
+✔ the first reading route connects both ways and supports shared catalogues (0.533833ms)
+ℹ tests 57
+ℹ suites 0
+ℹ pass 55
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2368.855542
+
+✖ failing tests:
+
+test at scripts/catalog-033.test.mjs:10:1
+✖ 033 registers five papers in official order without moving the 034 source snapshot (2.375958ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  ... Skipped lines
+  
+    [
+      '033',
+      '034',
+      '036',
+      '037',
+  ...
+      '046',
+  +   '050',
+      '051',
+      '052',
+      '057',
+      '063',
+      '067',
+  
+      at TestContext.<anonymous> (file:///Users/iwai/Desktop/GitHub/OpenAI-Math-Digest/scripts/catalog-033.test.mjs:13:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [
+      '033', '034', '036',
+      '037', '038', '039',
+      '042', '046', '050',
+      '051', '052', '057',
+      '063', '067', '068'
+    ],
+    expected: [
+      '033', '034', '036',
+      '037', '038', '039',
+      '042', '046', '051',
+      '052', '057', '063',
+      '067', '068'
+    ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at scripts/catalog-063.test.mjs:10:1
+✖ 063 uses its pinned single manuscript and preserves official field order (2.699166ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  ... Skipped lines
+  
+    [
+      '033',
+      '034',
+      '036',
+      '037',
+  ...
+      '046',
+  +   '050',
+      '051',
+      '052',
+      '057',
+      '063',
+      '067',
+  
+      at TestContext.<anonymous> (file:///Users/iwai/Desktop/GitHub/OpenAI-Math-Digest/scripts/catalog-063.test.mjs:16:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [
+      '033', '034', '036',
+      '037', '038', '039',
+      '042', '046', '050',
+      '051', '052', '057',
+      '063', '067', '068'
+    ],
+    expected: [
+      '033', '034', '036',
+      '037', '038', '039',
+      '042', '046', '051',
+      '052', '057', '063',
+      '067', '068'
+    ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

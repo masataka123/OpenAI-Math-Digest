@@ -1,0 +1,53 @@
+{
+  "retrievedOn": "2026-10-22",
+  "scope": "downloaded primary files; mathematical checking belongs to Astra records",
+  "files": [
+    {
+      "file": "paper.pdf",
+      "retrievalUrl": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/ample-rank-two-bundles-on-the-quadric-surface-without-griffiths-positive-metrics-September-24-2026/paper.pdf",
+      "fileIdentity": "inventory.json#manuscripts/0",
+      "method": "curl authorized network read; GitHub connector does not support binary downloads"
+    },
+    {
+      "file": "overview.pdf",
+      "retrievalUrl": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/overview.pdf",
+      "fileIdentity": "inventory.json#overview",
+      "method": "curl authorized network read; GitHub connector does not support binary downloads"
+    },
+    {
+      "file": "demailly-cadg-2012.pdf",
+      "retrievalUrl": "https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/agbook.pdf",
+      "fileIdentity": "drafts/catalog-050/ample-quadric/sources.json#externalSources/demailly",
+      "method": "curl authorized network read; GitHub connector does not support binary downloads"
+    },
+    {
+      "file": "stacks-coherent.pdf",
+      "retrievalUrl": "https://stacks.math.columbia.edu/download/coherent.pdf",
+      "fileIdentity": "drafts/catalog-050/ample-quadric/sources.json#externalSources/stacks-coherent",
+      "method": "official tag page PDF link; curl authorized read"
+    },
+    {
+      "file": "stacks-constructions.pdf",
+      "retrievalUrl": "https://stacks.math.columbia.edu/download/constructions.pdf",
+      "fileIdentity": "drafts/catalog-050/ample-quadric/sources.json#externalSources/stacks-constructions",
+      "method": "official tag page PDF link; curl authorized read"
+    },
+    {
+      "file": "stacks-varieties.pdf",
+      "retrievalUrl": "https://stacks.math.columbia.edu/download/varieties.pdf",
+      "fileIdentity": "drafts/catalog-050/ample-quadric/sources.json#externalSources/stacks-varieties",
+      "method": "official tag page PDF link; curl authorized read"
+    }
+  ],
+  "unsuccessfulUrls": {
+    "template": "https://stacks.math.columbia.edu/download/{TAG}.pdf",
+    "tags": [
+      "01XD",
+      "0BED",
+      "01OA",
+      "01N1",
+      "01WD"
+    ],
+    "result": "404; replaced by PDF links observed on official tag pages"
+  }
+}

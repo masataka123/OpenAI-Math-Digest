@@ -1,0 +1,231 @@
+{
+  "catalogId": "050",
+  "productionVersion": "1.4",
+  "checkingScope": "単論文のためカタログ内の論文間接続は対象がない。外部直接入力7件の記述・適用条件を照合。導入の他の反例との比較は未調査であり依存なしとは判定しない。",
+  "omittedSections": [
+    {
+      "section": "classification",
+      "reason": "1論文の二つの論証を分類へ重複展開する必要がない。"
+    },
+    {
+      "section": "catalog-overview-diagram",
+      "reason": "主要接続をまとめるとGからample性と解析的矛盾への分岐・合流があるが、これは個別論文内の主定理図で表示済。カタログに重複する全体図を置かず、その記事へ案内する（FORMAT_CONTRACT §6）。"
+    },
+    {
+      "section": "internal-dependency-table-and-selector",
+      "reason": "単論文に論文間の選択UI・空表を作らない。外部入力は記事表に集約。"
+    }
+  ],
+  "connections": [
+    {
+      "id": "dem-removal",
+      "from": {
+        "paperId": "demailly",
+        "result": "Chapter I, Theorem 5.24",
+        "pages": "45",
+        "version": "Version of 21 June 2012",
+        "sourceUrl": "https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/agbook.pdf"
+      },
+      "to": {
+        "paperId": "ample-quadric",
+        "location": "Proposition 4.1, p.10",
+        "version": "September 24, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/ample-rank-two-bundles-on-the-quadric-surface-without-griffiths-positive-metrics-September-24-2026/paper.pdf"
+      },
+      "role": "psh延長",
+      "hypotheses": "分岐集合の逆像が閉pluripolar、平均が連続かつ局所有界",
+      "kind": "direct",
+      "checking": {
+        "scope": "入力結果の記述と利用箇所の照合。外部結果の全証明は未検証。",
+        "by": "astra_author; independent check: astra_review",
+        "date": "2026-10-22",
+        "record": "../ample-quadric/sources.json"
+      },
+      "articleLinks": {
+        "ja": "/ja/papers/ample-quadric/#dependencies",
+        "en": "/en/papers/ample-quadric/#dependencies"
+      },
+      "unresolved": []
+    },
+    {
+      "id": "dem-decrease",
+      "from": {
+        "paperId": "demailly",
+        "result": "Chapter I, Theorem 5.4",
+        "pages": "39",
+        "version": "Version of 21 June 2012",
+        "sourceUrl": "https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/agbook.pdf"
+      },
+      "to": {
+        "paperId": "ample-quadric",
+        "location": "Proposition 4.1, p.12",
+        "version": "September 24, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/ample-rank-two-bundles-on-the-quadric-surface-without-griffiths-positive-metrics-September-24-2026/paper.pdf"
+      },
+      "role": "減少psh極限",
+      "hypotheses": "畳み込み二次形式の減少性と有限な局所有界極限",
+      "kind": "direct",
+      "checking": {
+        "scope": "入力結果の記述と利用箇所の照合。外部結果の全証明は未検証。",
+        "by": "astra_author; independent check: astra_review",
+        "date": "2026-10-22",
+        "record": "../ample-quadric/sources.json"
+      },
+      "articleLinks": {
+        "ja": "/ja/papers/ample-quadric/#dependencies",
+        "en": "/en/papers/ample-quadric/#dependencies"
+      },
+      "unresolved": []
+    },
+    {
+      "id": "stacks-cech",
+      "from": {
+        "paperId": "stacks-coherent",
+        "result": "Tag 01XD, Lemma 2.6",
+        "pages": "3",
+        "version": "Version ed88ff78, compiled 14 July 2026; consulted 22 October 2026",
+        "sourceUrl": "https://stacks.math.columbia.edu/download/coherent.pdf"
+      },
+      "to": {
+        "paperId": "ample-quadric",
+        "location": "Proposition 3.1, p.8",
+        "version": "September 24, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/ample-rank-two-bundles-on-the-quadric-surface-without-griffiths-positive-metrics-September-24-2026/paper.pdf"
+      },
+      "role": "Čech比較",
+      "hypotheses": "標準被覆の全交わりがアフィン、準連接線束",
+      "kind": "direct",
+      "checking": {
+        "scope": "入力結果の記述と利用箇所の照合。外部結果の全証明は未検証。",
+        "by": "astra_author; independent check: astra_review",
+        "date": "2026-10-22",
+        "record": "../ample-quadric/sources.json"
+      },
+      "articleLinks": {
+        "ja": "/ja/papers/ample-quadric/#dependencies",
+        "en": "/en/papers/ample-quadric/#dependencies"
+      },
+      "unresolved": []
+    },
+    {
+      "id": "stacks-kunneth",
+      "from": {
+        "paperId": "stacks-varieties",
+        "result": "Tag 0BED, Lemma 29.1",
+        "pages": "54",
+        "version": "Version ed88ff78, compiled 14 July 2026; consulted 22 October 2026",
+        "sourceUrl": "https://stacks.math.columbia.edu/download/varieties.pdf"
+      },
+      "to": {
+        "paperId": "ample-quadric",
+        "location": "Proposition 3.1, p.8",
+        "version": "September 24, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/ample-rank-two-bundles-on-the-quadric-surface-without-griffiths-positive-metrics-September-24-2026/paper.pdf"
+      },
+      "role": "積のH1消滅",
+      "hypotheses": "P1が準コンパクトかつ分離的、線束の準連接性",
+      "kind": "direct",
+      "checking": {
+        "scope": "入力結果の記述と利用箇所の照合。外部結果の全証明は未検証。",
+        "by": "astra_author; independent check: astra_review",
+        "date": "2026-10-22",
+        "record": "../ample-quadric/sources.json"
+      },
+      "articleLinks": {
+        "ja": "/ja/papers/ample-quadric/#dependencies",
+        "en": "/en/papers/ample-quadric/#dependencies"
+      },
+      "unresolved": []
+    },
+    {
+      "id": "stacks-projective",
+      "from": {
+        "paperId": "stacks-constructions",
+        "result": "Tag 01OA, §21",
+        "pages": "45–46",
+        "version": "Version ed88ff78, compiled 14 July 2026; consulted 22 October 2026",
+        "sourceUrl": "https://stacks.math.columbia.edu/download/constructions.pdf"
+      },
+      "to": {
+        "paperId": "ample-quadric",
+        "location": "Proposition 3.1, p.8",
+        "version": "September 24, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/ample-rank-two-bundles-on-the-quadric-surface-without-griffiths-positive-metrics-September-24-2026/paper.pdf"
+      },
+      "role": "一次元商と射影束",
+      "hypotheses": "局所自由束と全射評価写像",
+      "kind": "direct",
+      "checking": {
+        "scope": "入力結果の記述と利用箇所の照合。外部結果の全証明は未検証。",
+        "by": "astra_author; independent check: astra_review",
+        "date": "2026-10-22",
+        "record": "../ample-quadric/sources.json"
+      },
+      "articleLinks": {
+        "ja": "/ja/papers/ample-quadric/#dependencies",
+        "en": "/en/papers/ample-quadric/#dependencies"
+      },
+      "unresolved": []
+    },
+    {
+      "id": "stacks-immersion",
+      "from": {
+        "paperId": "stacks-constructions",
+        "result": "Tag 01N1, Lemma 11.5",
+        "pages": "22",
+        "version": "Version ed88ff78, compiled 14 July 2026; consulted 22 October 2026",
+        "sourceUrl": "https://stacks.math.columbia.edu/download/constructions.pdf"
+      },
+      "to": {
+        "paperId": "ample-quadric",
+        "location": "Proposition 3.1, p.8",
+        "version": "September 24, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/ample-rank-two-bundles-on-the-quadric-surface-without-griffiths-positive-metrics-September-24-2026/paper.pdf"
+      },
+      "role": "閉埋込みとtautological twist",
+      "hypotheses": "次数1生成の対称代数と次数毎の全射",
+      "kind": "direct",
+      "checking": {
+        "scope": "入力結果の記述と利用箇所の照合。外部結果の全証明は未検証。",
+        "by": "astra_author; independent check: astra_review",
+        "date": "2026-10-22",
+        "record": "../ample-quadric/sources.json"
+      },
+      "articleLinks": {
+        "ja": "/ja/papers/ample-quadric/#dependencies",
+        "en": "/en/papers/ample-quadric/#dependencies"
+      },
+      "unresolved": []
+    },
+    {
+      "id": "stacks-segre",
+      "from": {
+        "paperId": "stacks-constructions",
+        "result": "Tag 01WD, Lemma 13.6",
+        "pages": "29",
+        "version": "Version ed88ff78, compiled 14 July 2026; consulted 22 October 2026",
+        "sourceUrl": "https://stacks.math.columbia.edu/download/constructions.pdf"
+      },
+      "to": {
+        "paperId": "ample-quadric",
+        "location": "Proposition 3.1, p.8",
+        "version": "September 24, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/ample-rank-two-bundles-on-the-quadric-surface-without-griffiths-positive-metrics-September-24-2026/paper.pdf"
+      },
+      "role": "最後のPを加えたvery ampleness",
+      "hypotheses": "P=O(1,1)がSを埋め込む",
+      "kind": "direct",
+      "checking": {
+        "scope": "入力結果の記述と利用箇所の照合。外部結果の全証明は未検証。",
+        "by": "astra_author; independent check: astra_review",
+        "date": "2026-10-22",
+        "record": "../ample-quadric/sources.json"
+      },
+      "articleLinks": {
+        "ja": "/ja/papers/ample-quadric/#dependencies",
+        "en": "/en/papers/ample-quadric/#dependencies"
+      },
+      "unresolved": []
+    }
+  ]
+}

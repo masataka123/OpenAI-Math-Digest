@@ -1,0 +1,2774 @@
+                             CONSTRUCTIONS OF SCHEMES
+
+
+01LE
+
+                                                Contents
+         1. Introduction                                                                          1
+         2. Relative glueing                                                                      1
+         3. Relative spectrum via glueing                                                         4
+         4. Relative spectrum as a functor                                                        5
+         5. Affine n-space                                                                        8
+         6. Vector bundles                                                                        8
+         7. Cones                                                                                 9
+         8. Proj of a graded ring                                                                10
+         9. Quasi-coherent sheaves on Proj                                                       16
+         10. Invertible sheaves on Proj                                                          17
+         11. Functoriality of Proj                                                               20
+         12. Morphisms into Proj                                                                 24
+         13. Projective space                                                                    28
+         14. Invertible sheaves and morphisms into Proj                                          32
+         15. Relative Proj via glueing                                                           33
+         16. Relative Proj as a functor                                                          35
+         17. Quasi-coherent sheaves on relative Proj                                             40
+         18. Functoriality of relative Proj                                                      42
+         19. Invertible sheaves and morphisms into relative Proj                                 43
+         20. Twisting by invertible sheaves and relative Proj                                    44
+         21. Projective bundles                                                                  45
+         22. Grassmannians                                                                       48
+         23. Other chapters                                                                      50
+         References                                                                              51
+
+
+
+                                            1. Introduction
+01LF   In this chapter we introduce ways of constructing schemes out of others. A basic
+       reference is [DG67].
+
+                                         2. Relative glueing
+01LG   The following lemma is relevant in case we are trying to construct a scheme X over
+       S, and we already know how to construct the restriction of X to the affine opens
+       of S. The actual result is completely general and works in the setting of (locally)
+       ringed spaces, although our proof is written in the language of schemes.
+
+          This is a chapter of the Stacks Project, version ed88ff78, compiled on Jul 14, 2026.
+                                                      1
+                                       CONSTRUCTIONS OF SCHEMES                                    2
+
+
+01LH   Lemma 2.1. Let S be a scheme. Let B be a basis for the topology of S. Suppose
+       given the following data:
+            (1) For every U ∈ B a scheme fU : XU → U over U .
+            (2) For U, V ∈ B with V ⊂ U a morphism ρU V : XV → XU over U .
+       Assume that
+                                                        −1
+            (a) each ρU
+                      V induces an isomorphism XV → fU (V ) of schemes over V ,
+           (b) whenever W, V, U ∈ B, with W ⊂ V ⊂ U we have ρU        U   V
+                                                                W = ρV ◦ ρW .
+       Then there exists a morphism f : X → S of schemes and isomorphisms iU :
+       f −1 (U ) → XU over U ∈ B such that for V, U ∈ B with V ⊂ U the composition
+                                 i−1
+                         XV
+                                  V
+                                       / f −1 (V )   inclusion   / f −1 (U ) iU   / XU
+
+       is the morphism ρU
+                        V . Moreover X is unique up to unique isomorphism over S.
+
+       Proof. To prove this we will use Schemes, Lemma 15.4. First we define a con-
+       travariant functor F from the category of schemes to the category of sets. Namely,
+       for a scheme T we set
+                              (g, {hU }U ∈B ), g : T → S, hU : g −1 (U ) → XU ,
+                                                                                      
+            F (T ) =                                                                     .
+                       fU ◦ hU = g|g−1 (U ) , hU |g−1 (V ) = ρU
+                                                              V ◦ hV ∀ V, U ∈ B, V ⊂ U
+
+       The restriction mapping F (T ) → F (T ′ ) given a morphism T ′ → T is just gotten
+       by composition. For any W ∈ B we consider the subfunctor FW ⊂ F consisting of
+       those systems (g, {hU }) such that g(T ) ⊂ W .
+       First we show F satisfies S the sheaf property for the Zariski topology. Suppose that
+       T is a scheme, T = Vi is an open covering, and ξi ∈ F (Vi ) is an element such
+       that ξi |Vi ∩Vj = ξj |Vi ∩Vj . Say ξi = (gi , {hi,U }). Then we immediately see that the
+       morphisms gi glue S to a unique global morphism g : T → S. Moreover, it is clear
+       that g −1 (U ) = gi−1 (U ). Hence the morphisms hi,U : gi−1 (U ) → XU glue to a
+       unique morphism hU : g −1 (U ) → XU . It is easy to verify that the system (g, {hU })
+       is an element of F (T ). Hence F satisfies the sheaf property for the Zariski topology.
+       Next we verify that each FW , W ∈ B is representable. Namely, we claim that the
+       transformation of functors
+                              FW −→ Mor(−, XW ), (g, {hU }) 7−→ hW
+       is an isomorphism. To see this suppose that T is a scheme and α : T → XW is
+       a morphism. Set g = fW ◦ α. For any U ∈ B such that U ⊂ W we can define
+       hU : g −1 (U ) → XU be the composition (ρW      U )
+                                                          −1
+                                                               ◦ α|g−1 (U ) . This works because
+                      −1                          −1
+       the image α(g (U )) is contained in fW (U ) and condition (a) of the lemma. It
+       is clear that fU ◦ hU = g|g−1 (U ) for such a U . Moreover, if also V ∈ B and
+       V ⊂ U ⊂ W , then ρU      V ◦ hV = hU |g −1 (V ) by property (b) of the lemma. We
+       still have to define hU for an arbitrary element U ∈ B. Since           S B is a basis for
+       the topology on S we can find an open covering U ∩ WS = Ui with Ui ∈ B.
+       Since g maps into W we have g −1 (U ) = g −1 (U ∩ W ) = g −1 (Ui ). Consider the
+                                       −1
+       morphisms hi = ρU  Ui ◦ hUi : g    (Ui ) → XU . It is a simple matter to use condition
+       (b) of the lemma to prove that hi |g−1 (Ui )∩g−1 (Uj ) = hj |g−1 (Ui )∩g−1 (Uj ) . Hence these
+       morphisms glue to give the desired morphism hU : g −1 (U ) → XU . We omit the
+       (easy) verification that the system (g, {hU }) is an element of FW (T ) which maps
+       to α under the displayed arrow above.
+                                     CONSTRUCTIONS OF SCHEMES                                    3
+
+
+       Next, we verify each FW ⊂ F is representable by open immersions. This is clear
+       from the definitions.
+       Finally we have to verify the collection (FW )W ∈B covers F . This is clear by con-
+       struction and the fact that B is a basis for the topology of S.
+       Let X be a scheme representing the functor F . Let (f, {iU }) ∈ F (X) be a “universal
+       family”. Since each FW is representable by XW (via the morphism of functors
+       displayed above) we see that iW : f −1 (W ) → XW is an isomorphism as desired.
+       The lemma is proved.                                                               □
+01LI   Lemma 2.2. Let S be a scheme. Let B be a basis for the topology of S. Suppose
+       given the following data:
+           (1) For every U ∈ B a scheme fU : XU → U over U .
+           (2) For every U ∈ B a quasi-coherent sheaf FU over XU .
+           (3) For every pair U, V ∈ B such that V ⊂ U a morphism ρU V : XV → XU .
+                                                                             ∗
+           (4) For every pair U, V ∈ B such that V ⊂ U a morphism θVU : (ρU
+                                                                          V ) FU → FV .
+       Assume that
+                                                        −1
+           (a) each ρUV induces an isomorphism XV → fU (V ) of schemes over V ,
+           (b) each θVU is an isomorphism,
+           (c) whenever W, V, U ∈ B, with W ⊂ V ⊂ U we have ρU         U
+                                                                W = ρV ◦ ρW ,
+                                                                             V
+
+           (d) whenever W, V, U ∈ B, with W ⊂ V ⊂ U we have θW = θW ◦ (ρVW )∗ θVU .
+                                                                U      V
+
+       Then there exists a morphism of schemes f : X → S together with a quasi-coherent
+       sheaf F on X and isomorphisms iU : f −1 (U ) → XU and θU : i∗U FU → F|f −1 (U )
+       over U ∈ B such that for V, U ∈ B with V ⊂ U the composition
+                               i−1
+                        XV
+                                V
+                                     / f −1 (V )   inclusion   / f −1 (U ) iU      / XU
+
+       is the morphism ρU
+                        V , and the composition
+
+                      ∗       −1 ∗   ∗
+                                                          θU |f −1 (V )
+                                                                  −1 ∗                    θ −1
+01LJ   (2.2.1)   (ρU                                                                  V
+                   V ) FU = (iV ) ((iU FU )|f −1 (V ) ) −−−−−−→ (iV ) (F|f −1 (V ) ) −−→ FV
+
+       is equal to θVU . Moreover (X, F) is unique up to unique isomorphism over S.
+       Proof. By Lemma 2.1 we get the scheme X over S and the isomorphisms iU . Set
+       FU′ = i∗U FU for U ∈ B. This is a quasi-coherent Of −1 (U ) -module. The maps
+                                                                          i∗ θ U
+                   FU′ |f −1 (V ) = i∗U FU |f −1 (V ) = i∗V (ρU  ∗    V V  ∗       ′
+                                                              V ) FU −−−→ iV FV = FV
+
+       define isomorphisms (θ′ )U    ′               ′
+                                V : FU |f −1 (V ) → FV whenever V ⊂ U are elements of
+       B. Condition (d) says exactly that this is compatible in case we have a triple of
+       elements W ⊂ V ⊂ U of B. This allows us to get well defined isomorphisms
+                            φ12 : FU′ 1 |f −1 (U1 ∩U2 ) −→ FU′ 2 |f −1 (U1 ∩U2 )
+                                                                              S
+       whenever U1 , U2 ∈ B by covering the intersection U1 ∩ U2 = Vj by elements Vj of
+       B and taking
+                                                         −1
+                                  φ12 |Vj = (θ′ )U    Vj
+                                                        2
+                                                              ◦ (θ′ )U
+                                                                     Vj .
+                                                                      1
+
+
+
+       We omit the verification that these maps do indeed glue to a φ12 and we omit the
+       verification of the cocycle condition of a glueing datum for sheaves (as in Sheaves,
+       Section 33). By Sheaves, Lemma 33.2 we get our F on X. We omit the verification
+       of (2.2.1).                                                                       □
+                                   CONSTRUCTIONS OF SCHEMES                                  4
+
+
+01LK    Remark 2.3. There is a functoriality property for the constructions explained in
+        Lemmas 2.1 and 2.2. Namely, suppose given two collections of data (fU : XU →
+        U, ρU                         U
+            V ) and (gU : YU → U, σV ) as in Lemma 2.1. Suppose for every U ∈ B given
+        a morphism hU : XU → YU over U compatible with the restrictions ρU               U
+                                                                                V and σV .
+        Functoriality means that this gives rise to a morphism of schemes h : X → Y over S
+        restricting back to the morphisms hU , where f : X → S is obtained from the datum
+        (fU : XU → U, ρU                                                               U
+                         V ) and g : Y → S is obtained from the datum (gU : YU → U, σV ).
+
+        Similarly, suppose given two collections of data (fU : XU → U, FU , ρU     U
+                                                                             V , θV ) and
+                             U   U
+        (gU : YU → U, GU , σV , ηV ) as in Lemma 2.2. Suppose for every U ∈ B given a
+        morphism hU : XU → YU over U compatible with the restrictions ρU           U
+                                                                         V and σV , and
+                          ∗                                      U      U
+        a morphism τU : hU GU → FU compatible with the maps θV and ηV . Functoriality
+        means that these give rise to a morphism of schemes h : X → Y over S restricting
+        back to the morphisms hU , and a morphism h∗ G → F restricting back to the maps
+        hU where (f : X → S, F) is obtained from the datum (fU : XU → U, FU , ρU         U
+                                                                                    V , θV )
+                                                                                 U    U
+        and where (g : Y → S, G) is obtained from the datum (gU : YU → U, GU , σV , ηV ).
+        We omit the verifications and we omit a suitable formulation of “equivalence of
+        categories” between relative glueing data and relative objects.
+
+                               3. Relative spectrum via glueing
+ 01LL
+01LM    Situation 3.1. Here S is a scheme, and A is a quasi-coherent OS -algebra. This
+        means that A is a sheaf of OS -algebras which is quasi-coherent as an OS -module.
+        In this section we outline how to construct a morphism of schemes
+                                          SpecS (A) −→ S
+
+        by glueing the spectra Spec(Γ(U, A)) where U ranges over the affine opens of S. We
+        first show that the spectra of the values of A over affines form a suitable collection
+        of schemes, as in Lemma 2.1.
+01LN    Lemma 3.2. In Situation 3.1. Suppose U ⊂ U ′ ⊂ S are affine opens. Let
+        A = A(U ) and A′ = A(U ′ ). The map of rings A′ → A induces a morphism
+        Spec(A) → Spec(A′ ), and the diagram
+
+                                      Spec(A)        / Spec(A′ )
+
+
+                                                          
+                                         U              / U′
+
+        is cartesian.
+        Proof. Let R = OS (U ) and R′ = OS (U ′ ). Note that the map R ⊗R′ A′ → A is an
+        isomorphism as A is quasi-coherent (see Schemes, Lemma 7.3 for example). The
+        result follows from the description of the fibre product of affine schemes in Schemes,
+        Lemma 6.7.                                                                          □
+
+        In particular the morphism Spec(A) → Spec(A′ ) of the lemma is an open immer-
+        sion.
+                                         CONSTRUCTIONS OF SCHEMES                                            5
+
+
+01LO   Lemma 3.3. In Situation 3.1. Suppose U ⊂ U ′ ⊂ U ′′ ⊂ S are affine opens.
+       Let A = A(U ), A′ = A(U ′ ) and A′′ = A(U ′′ ). The composition of the morphisms
+       Spec(A) → Spec(A′ ), and Spec(A′ ) → Spec(A′′ ) of Lemma 3.2 gives the morphism
+       Spec(A) → Spec(A′′ ) of Lemma 3.2.
+       Proof. This follows as the map A′′ → A is the composition of A′′ → A′ and
+       A′ → A (because A is a sheaf).                                          □
+01LP   Lemma 3.4. In Situation 3.1. There exists a morphism of schemes
+                                             π : SpecS (A) −→ S
+       with the following properties:
+           (1) for every affine open U ⊂ S there exists an isomorphism iU : π −1 (U ) →
+               Spec(A(U )) over U , and
+           (2) for U ⊂ U ′ ⊂ S affine open the composition
+                               i−1                                                  iU ′
+                 Spec(A(U ))
+                                U
+                                     / π −1 (U )    inclusion       / π −1 (U ′ )          / Spec(A(U ′ ))
+
+              is the open immersion of Lemma 3.2 above.
+       Moreover, SpecS (A) is unique up to unique isomorphism over S.
+       Proof. Follows immediately from Lemmas 2.1, 3.2, and 3.3. Uniqueness is stated
+       in the last sentence of Lemma 2.1.                                           □
+
+                                4. Relative spectrum as a functor
+01LQ   We place ourselves in Situation 3.1, i.e., S is a scheme and A is a quasi-coherent
+       sheaf of OS -algebras.
+       For any f : T → S the pullback f ∗ A is a quasi-coherent sheaf of OT -algebras. We
+       are going to consider pairs (f : T → S, φ) where f is a morphism of schemes and
+       φ : f ∗ A → OT is a morphism of OT -algebras. Note that this is the same as giving
+       a f −1 OS -algebra homomorphism φ : f −1 A → OT , see Sheaves, Lemma 20.2. This
+       is also the same as giving an OS -algebra map φ : A → f∗ OT , see Sheaves, Lemma
+       24.7. We will use all three ways of thinking about φ, without further mention.
+       Given such a pair (f : T → S, φ) and a morphism a : T ′ → T we get a second pair
+       (f ′ = f ◦ a, φ′ = a∗ φ) which we call the pullback of (f, φ). One way to describe
+       φ′ = a∗ φ is as the composition A → f∗ OT → f∗′ OT ′ where the second map is f∗ a♯
+       with a♯ : OT → a∗ OT ′ . In this way we have defined a functor
+01LR   (4.0.1)           F : Sch opp      −→       Sets
+                                     T    7−→      F (T ) = {pairs (f, φ) as above}
+01LS   Lemma 4.1. In Situation 3.1. Let F be the functor associated to (S, A) above.
+       Let g : S ′ → S be a morphism of schemes. Set A′ = g ∗ A. Let F ′ be the functor
+       associated to (S ′ , A′ ) above. Then there is a canonical isomorphism
+                                            F′ ∼
+                                               = hS ′ ×h F      S
+
+       of functors.
+       Proof. A pair (f ′ : T → S ′ , φ′ : (f ′ )∗ A′ → OT ) is the same as a pair (f, φ : f ∗ A →
+       OT ) together with a factorization of f as f = g ◦ f ′ . Namely with this notation we
+       have (f ′ )∗ A′ = (f ′ )∗ g ∗ A = f ∗ A. Hence the lemma.                                 □
+                                    CONSTRUCTIONS OF SCHEMES                                    6
+
+
+01LT   Lemma 4.2. In Situation 3.1. Let F be the functor associated to (S, A) above. If
+       S is affine, then F is representable by the affine scheme Spec(Γ(S, A)).
+       Proof. Write S = Spec(R) and A = Γ(S, A). Then A is an R-algebra and A = A.
+                                                                                e
+       The ring map R → A gives rise to a canonical map
+                                 funiv : Spec(A) −→ S = Spec(R).
+                   ∗
+       We have funiv   A = A^   ⊗R A by Schemes, Lemma 7.3. Hence there is a canonical
+       map
+                                       ∗
+                              φuniv : funiv A = A^⊗R A −→ A  e = OSpec(A)
+       coming from the A-module map A ⊗R A → A, a ⊗ a′ 7→ aa′ . We claim that the
+       pair (funiv , φuniv ) represents F in this case. In other words we claim that for any
+       scheme T the map
+                 Mor(T, Spec(A)) −→ {pairs (f, φ)},        a 7−→ (funiv ◦ a, a∗ φuniv )
+       is bijective.
+       Let us construct the inverse map. For any pair (f : T → S, φ) we get the induced
+       ring map
+                                          f∗
+                           A = Γ(S, A)         / Γ(T, f ∗ A)   φ
+                                                                   / Γ(T, OT )
+       This induces a morphism of schemes T → Spec(A) by Schemes, Lemma 6.4.
+       The verification that this map is inverse to the map displayed above is omitted.        □
+01LU   Lemma 4.3. In Situation 3.1. The functor F is representable by a scheme.
+       Proof. We are going to use Schemes, Lemma 15.4.
+       First we check that F satisfies the sheaf S property for the Zariski topology. Namely,
+       suppose that T is a scheme, that T = i∈I Ui is an open covering, and that (fi , φi ) ∈
+       F (Ui ) such that (fi , φi )|Ui ∩Uj = (fj , φj )|Ui ∩Uj . This implies that the morphisms
+       fi : Ui → S glue to a morphism of schemes f : T → S such that f |Ui = fi , see
+       Schemes, Section 14. Thus fi∗ A = f ∗ A|Ui and by assumption the morphisms φi
+       agree on Ui ∩ Uj . Hence by Sheaves, Section 33 these glue to a morphism of OT -
+       algebras f ∗ A → OT . This proves that F satisfies the sheaf condition with respect
+       to the Zariski topology.
+                 S
+       Let S = i∈I Ui be an affine open covering. Let Fi ⊂ F be the subfunctor consisting
+       of those pairs (f : T → S, φ) such that f (T ) ⊂ Ui .
+       We have to show each Fi is representable. This is the case because Fi is identified
+       with the functor associated to Ui equipped with the quasi-coherent OUi -algebra
+       A|Ui , by Lemma 4.1. Thus the result follows from Lemma 4.2.
+       Next we show that Fi ⊂ F is representable by open immersions. Let (f : T →
+       S, φ) ∈ F (T ). Consider Vi = f −1 (Ui ). It follows from the definition of Fi that
+       given a : T ′ → T we have a∗ (f, φ) ∈ Fi (T ′ ) if and only if a(T ′ ) ⊂ Vi . This is what
+       we were required to show.
+
+                                                     Si )i∈I covers F . Let (f : T → S, φ) ∈
+       Finally, we have to show that the collection (F
+                                 −1
+       F (T ). Consider
+                      S  V i = f    (Ui ). Since S =   i∈I Ui is an open covering of S we
+       see that T = i∈I Vi is an open covering of T . Moreover (f, φ)|Vi ∈ Fi (Vi ). This
+       finishes the proof of the lemma.                                                    □
+                                   CONSTRUCTIONS OF SCHEMES                                   7
+
+
+01LV   Lemma 4.4. In Situation 3.1. The scheme π : SpecS (A) → S constructed in
+       Lemma 3.4 and the scheme representing the functor F are canonically isomorphic
+       as schemes over S.
+       Proof. Let X → S be the scheme representing the functor F . Consider the sheaf of
+       OS -algebras R = π∗ OSpec (A) . By construction of SpecS (A) we have isomorphisms
+                                 S
+       A(U ) → R(U ) for every affine open U ⊂ S; this follows from Lemma 3.4 part (1).
+       For U ⊂ U ′ ⊂ S open these isomorphisms are compatible with the restriction
+       mappings; this follows from Lemma 3.4 part (2). Hence by Sheaves, Lemma 30.13
+       these isomorphisms result from an isomorphism of OS -algebras φ : A → R. Hence
+       this gives an element (π, φ) ∈ F (SpecS (A)). Since X represents the functor F we
+       get a corresponding morphism of schemes can : SpecS (A) → X over S.
+       Let U ⊂ S be any affine open. Let FU ⊂ F be the subfunctor of F corresponding to
+       pairs (f, φ) over schemes T with f (T ) ⊂ U . Clearly the base change XU represents
+       FU . Moreover, FU is represented by Spec(A(U )) = π −1 (U ) according to Lemma
+       4.2. In other words XU ∼= π −1 (U ). We omit the verification that this identification
+       is brought about by the base change of the morphism can to U .                       □
+01LW   Definition 4.5. Let S be a scheme. Let A be a quasi-coherent sheaf of OS -
+       algebras. The relative spectrum of A over S, or simply the spectrum of A over S is
+       the scheme constructed in Lemma 3.4 which represents the functor F (4.0.1), see
+       Lemma 4.4. We denote it π : SpecS (A) → S. The “universal family” is a morphism
+       of OS -algebras
+                                       A −→ π∗ OSpec (A)
+                                                        S
+
+       The following lemma says among other things that forming the relative spectrum
+       commutes with base change.
+01LX   Lemma 4.6. Let S be a scheme. Let A be a quasi-coherent sheaf of OS -algebras.
+       Let π : SpecS (A) → S be the relative spectrum of A over S.
+           (1) For every affine open U ⊂ S the inverse image π −1 (U ) is affine.
+           (2) For every morphism g : S ′ → S we have S ′ ×S SpecS (A) = SpecS ′ (g ∗ A).
+           (3) The universal map
+                                      A −→ π∗ OSpec (A)
+                                                        S
+
+               is an isomorphism of OS -algebras.
+       Proof. Part (1) comes from the description of the relative spectrum by glueing, see
+       Lemma 3.4. Part (2) follows immediately from Lemma 4.1. Part (3) follows because
+       it is local on S and it is clear in case S is affine by Lemma 4.2 for example.   □
+01LY   Lemma 4.7. Let f : X → S be a quasi-compact and quasi-separated morphism
+       of schemes. By Schemes, Lemma 24.1 the sheaf f∗ OX is a quasi-coherent sheaf of
+       OS -algebras. There is a canonical morphism
+                                     can : X −→ SpecS (f∗ OX )
+       of schemes over S. For any affine open U ⊂ S the restriction can|f −1 (U ) is identified
+       with the canonical morphism
+                                f −1 (U ) −→ Spec(Γ(f −1 (U ), OX ))
+       coming from Schemes, Lemma 6.4.
+                                       CONSTRUCTIONS OF SCHEMES                                          8
+
+
+       Proof. The morphism comes, via the definition of Spec as the scheme representing
+       the functor F , from the canonical map φ : f ∗ f∗ OX → OX (which by adjointness
+       of push and pull corresponds to id : f∗ OX → f∗ OX ). The statement on the
+       restriction to f −1 (U ) follows from the description of the relative spectrum over
+       affines, see Lemma 4.2.                                                          □
+
+                                             5. Affine n-space
+01LZ   As an application of the relative spectrum we define affine n-space over a base
+       scheme S as follows. For any integer n ≥ 0 we can consider the quasi-coherent
+       sheaf of OS -algebras OS [T1 , . . . , Tn ]. It is quasi-coherent because as a sheaf of
+       OS -modules it is just the direct sum of copies of OS indexed by multi-indices.
+01M0   Definition 5.1. Let S be a scheme and n ≥ 0. The scheme
+                                       AnS = SpecS (OS [T1 , . . . , Tn ])
+       over S is called affine n-space over S. If S = Spec(R) is affine then we also call
+       this affine n-space over R and we denote it AnR .
+       Note that AnR = Spec(R[T1 , . . . , Tn ]). For any morphism g : S ′ → S of schemes
+       we have g ∗ OS [T1 , . . . , Tn ] = OS ′ [T1 , . . . , Tn ] and hence AnS ′ = S ′ ×S AnS is the base
+       change. Therefore an alternative definition of affine n-space is the formula
+                                            AnS = S ×Spec(Z) AnZ .
+       Also, a morphism from an S-scheme f : X → S to AnS is given by a homomorphism
+       of OS -algebras OS [T1 , . . . , Tn ] → f∗ OX . This is clearly the same thing as giving
+       the images of the Ti . In other words, a morphism from X to AnS over S is the same
+       as giving n elements h1 , . . . , hn ∈ Γ(X, OX ).
+
+                                            6. Vector bundles
+01M1   Let S be a scheme. Let E be a quasi-coherent sheaf of OS -modules. By Modules,
+       Lemma 21.6 the symmetric algebra Sym(E) of E over OS is a quasi-coherent sheaf
+       of OS -algebras. Hence it makes sense to apply the relative spectrum.
+01M2   Definition 6.1. Let S be a scheme. Let E be a quasi-coherent OS -module1. The
+       vector bundle associated to E is
+                                          V(E) = SpecS (Sym(E)).
+       The vector bundle associated to E comes with a bit of extra structure. Namely, we
+       have a grading                       M
+                                 π∗ OV(E) =        Symn (E).
+                                                         n≥0
+       which turns π∗ OV(E) into a graded OS -algebra. Conversely, we can recover E from
+       the degree 1 part of this. Thus we define an abstract vector bundle as follows.
+062M   Definition 6.2. Let S be a scheme. A vector bundle π : V → S over S is an affine
+       morphism of schemesLsuch that π∗ OV is endowed with the structure of a graded
+       OS -algebra π∗ OV = n≥0 En such that E0 = OS and such that the maps
+                                              Symn (E1 ) −→ En
+          1The reader may expect here the condition that E is finite locally free. We do not do so in
+       order to be consistent with [DG67, II, Definition 1.7.8].
+                                   CONSTRUCTIONS OF SCHEMES                                  9
+
+
+       are isomorphisms for all n ≥ 0. A morphism of vector bundles over S is a morphism
+       f : V → V ′ such that the induced map
+
+                                       f ∗ : π∗′ OV ′ −→ π∗ OV
+
+       is compatible with the given gradings.
+
+       An example of a vector bundle over S is affine n-space AnS over S, see Definition
+       5.1. This is true because OS [T1 , . . . , Tn ] = Sym(OS⊕n ).
+
+062N   Lemma 6.3. The category of vector bundles over a scheme S is anti-equivalent
+       to the category of quasi-coherent OS -modules.
+
+       Proof. Omitted. Hint: In one direction one uses the functor SpecS (Sym∗OS (−))
+       and in the other the functor (π : V → S) ⇝ (π∗ OV )1 where the subscript indicates
+       we take the degree 1 part.                                                      □
+
+
+                                             7. Cones
+062P   In algebraic geometry cones correspond to graded algebras.
+                                                          L       By our conventions a
+       graded ring or algebra A comes with a grading A = d≥0 Ad by the nonnegative
+       integers, see Algebra, Section 56.
+
+062Q   Definition 7.1. Let S be a scheme. Let A be a quasi-coherent graded OS -algebra.
+       Assume that OS → A0 is an isomorphism2. The cone associated to A or the affine
+       cone associated to A is
+                                        C(A) = SpecS (A).
+
+       The cone associated to a graded sheaf of OS -algebras comes with a bit of extra
+       structure. Namely, we obtain a grading
+                                               M
+                                    π∗ OC(A) =        An
+                                                       n≥0
+
+       Thus we can define an abstract cone as follows.
+
+062R   Definition 7.2. Let S be a scheme. A cone π : C → S over S is an affine
+       morphism of schemes L   such that π∗ OC is endowed with the structure of a graded
+       OS -algebra π∗ OC =       n≥0 An such that A0 = OS . A morphism of cones from
+       π : C → S to π ′ : C ′ → S is a morphism f : C → C ′ such that the induced map
+
+                                       f ∗ : π∗′ OC ′ −→ π∗ OC
+
+       is compatible with the given gradings.
+
+       Any vector bundle is an example of a cone. In fact the category of vector bundles
+       over S is a full subcategory of the category of cones over S.
+
+
+          2Often one imposes the assumption that A is generated by A over O . We do not assume
+                                                                    1      S
+       this in order to be consistent with [DG67, II, (8.3.1)].
+                                      CONSTRUCTIONS OF SCHEMES                                          10
+
+
+                                      8. Proj of a graded ring
+01M3   In this section we construct Proj of a graded ring following [DG67, II, Section 2].
+       Let S be a graded ring. Consider the topological space Proj(S) associated to S, see
+       Algebra, Section 57. We will endow this space with a sheaf of rings OProj(S) such
+       that the resulting pair (Proj(S), OProj(S) ) will be a scheme.
+       Recall that Proj(S) has a basis of open sets D+ (f ), f ∈ Sd , d ≥ 1 which we call
+       standard opens, see Algebra, Section 57. This terminology will always imply that
+       f is homogeneous of positive degree even if we forget to mention it. In addition,
+       the intersection of two standard opens is another: D+ (f ) ∩ D+ (g) = D+ (f g), for
+       f, g ∈ S homogeneous of positive degree.
+01M4   Lemma 8.1. Let S be a graded ring. Let f ∈ S homogeneous of positive degree.
+          (1) If g ∈ S homogeneous of positive degree and D+ (g) ⊂ D+ (f ), then
+               (a) f is invertible in Sg , and f deg(g) /g deg(f ) is invertible in S(g) ,
+               (b) g e = af for some e ≥ 1 and a ∈ S homogeneous,
+               (c) there is a canonical S-algebra map Sf → Sg ,
+               (d) there is a canonical S0 -algebra map S(f ) → S(g) compatible with the
+                   map Sf → Sg ,
+               (e) the map S(f ) → S(g) induces an isomorphism
+                                    (S(f ) ) deg(f ) deg(g) ∼
+                                               g      /f    = S(g) ,
+                (f) these maps induce a commutative diagram of topological spaces
+                     D+ (g) o         {Z-graded primes of Sg }              / Spec(S(g) )
+
+
+                                                                                 
+                     D+ (f ) o        {Z-graded primes of Sf }              / Spec(S(f ) )
+
+                   where the horizontal maps are homeomorphisms and the vertical maps
+                   are open immersions,
+               (g) there are compatible canonical Sf and S(f ) -module maps Mf → Mg
+                   and M(f ) → M(g) for any graded S-module M , and
+               (h) the map M(f ) → M(g) induces an isomorphism
+                                  (M(f ) ) deg(f ) deg(g) ∼
+                                               g      /f  = M(g) .
+          (2) Any open covering   Sn of D+ (f ) can be refined to a finite open covering of the
+              form D+ (f ) = i=1 D+ (gi ).
+          (3) Let g1 , . . . , gn ∈ S be homogeneous of positive degree. Then D+ (f ) ⊂
+                                            deg(f )                        deg(f )
+                                                    /f deg(g1 ) , . . . , gn       /f deg(gn ) generate the
+              S
+                D+ (gi ) if and only if g1
+              unit ideal in S(f ) .
+       Proof. Recall that D+ (g) = Spec(S(g) ) with identification given by the ring maps
+       S → Sg ← S(g) , see Algebra, Lemma 57.3. Thus f deg(g) /g deg(f ) is an element of
+       S(g) which is not contained in any prime ideal, and hence invertible, see Algebra,
+       Lemma 17.2. We conclude that (a) holds. Write the inverse of f in Sg as a/g d . We
+       may replace a by its homogeneous part of degree d deg(g) − deg(f ). This means
+       g d −af is annihilated by a power of g, whence g e = af for some a ∈ S homogeneous
+       of degree e deg(g) − deg(f ). This proves (b). For (c), the map Sf → Sg exists by
+       (a) from the universal property of localization, or we can define it by mapping
+                                   CONSTRUCTIONS OF SCHEMES                                  11
+
+
+       b/f n to an b/g ne . This clearly induces a map of the subrings S(f ) → S(g) of degree
+       zero elements as well. We can similarly define Mf → Mg and M(f ) → M(g) by
+       mapping x/f n to an x/g ne . The statements writing S(g) resp. M(g) as principal
+       localizations of S(f ) resp. M(f ) are clear from the formulas above. The maps in
+       the commutative diagram of topological spaces correspond to the ring maps given
+       above. The horizontal arrows are homeomorphisms by Algebra, Lemma 57.3. The
+       vertical arrows are open immersions since the left one is the inclusion of an open
+       subset.
+       The open D+ (f ) is quasi-compact because it is homeomorphic to Spec(S(f ) ), see
+       Algebra, Lemma 17.8. Hence the second statement follows directly from the fact
+       that the standard opens form a basis for the topology.
+       The third statement follows directly from Algebra, Lemma 17.2.                        □
+
+       In Sheaves, Section 30 we defined the notion of a sheaf on a basis, and we showed
+       that it is essentially equivalent to the notion of a sheaf on the space, see Sheaves,
+       Lemmas 30.6 and 30.9. Moreover, we showed in Sheaves, Lemma 30.4 that it is
+       sufficient to check the sheaf condition on a cofinal system of open coverings for each
+       standard open. By the lemma above it suffices to check on the finite coverings by
+       standard opens.
+01M5   Definition 8.2. Let S be a graded ring. Suppose that D+ (f ) ⊂ Proj(S) is a stan-
+                                                                             Sn
+       dard open. A standard open covering of D+ (f ) is a covering D+ (f ) = i=1 D+ (gi ),
+       where g1 , . . . , gn ∈ S are homogeneous of positive degree.
+       Let S be a graded ring. Let M be a graded S-module. We will define a presheaf
+       f on the basis of standard opens. Suppose that U ⊂ Proj(S) is a standard open.
+       M
+       If f, g ∈ S are homogeneous of positive degree such that D+ (f ) = D+ (g), then by
+       Lemma 8.1 above there are canonical maps M(f ) → M(g) and M(g) → M(f ) which
+       are mutually inverse. Hence we may choose any f such that U = D+ (f ) and define
+                                           M
+                                           f(U ) = M(f ) .
+
+       Note that if D+ (g) ⊂ D+ (f ), then by Lemma 8.1 above we have a canonical map
+                            f(D+ (f )) = M(f ) −→ M(g) = M
+                            M                            f(D+ (g)).
+
+       Clearly, this defines a presheaf of abelian groups on the basis of standard opens.
+       If M = S, then Se is a presheaf of rings on the basis of standard opens. And for
+       general M we see that M f is a presheaf of S-modules
+                                                  e         on the basis of standard opens.
+                                   f at a point x ∈ Proj(S). Suppose that x corresponds
+       Let us compute the stalk of M
+       to the homogeneous prime ideal p ⊂ S. By definition of the stalk we see that
+                                   M
+                                   fx = colimf ∈S ,d>0,f ̸∈p M(f )
+                                                 d
+
+
+       Here the set {f ∈ Sd , d > 0, f ̸∈ p} is preordered by the rule f ≥ f ′ ⇔ D+ (f ) ⊂
+       D+ (f ′ ). If f1 , f2 ∈ S \p are homogeneous of positive degree, then we have f1 f2 ≥ f1
+       in this ordering. In Algebra, Section 57 we defined M(p) as the module whose el-
+       ements are fractions x/f with x, f homogeneous, deg(x) = deg(f ), f ̸∈ p. Since
+       p ∈ Proj(S) there exists at least one f0 ∈ S homogeneous of positive degree with
+       f0 ̸∈ p. Hence x/f = f0 x/f f0 and we see that we may always assume the denom-
+       inator of an element in M(p) has positive degree. From these remarks it follows
+                                        CONSTRUCTIONS OF SCHEMES                              12
+
+
+       easily that
+                                                    M
+                                                    fx = M(p) .
+
+       Next, we check the sheaf condition for the standard open coverings. If D+ (f ) =
+       S n
+         i=1 D+ (gi ), then the sheaf condition for this covering is equivalent with the ex-
+       actness of the sequence
+                                            M             M
+                               0 → M(f ) →      M(gi ) →     M(gi gj ) .
+       Note that D+ (gi ) = D+ (f gi ), and hence we can rewrite this sequence as the se-
+       quence
+                                          M              M
+                            0 → M(f ) →       M(f gi ) →   M(f gi gj ) .
+                                          deg(f )                 deg(f )
+       By Lemma 8.1 we see that g1        /f deg(g1 ) , . . . , gn /f deg(gn ) generate the unit
+       ideal in S(f ) , and that the modules M(f gi ) , M(f gi gj ) are the principal localiza-
+       tions of the S(f ) -module M(f ) at these elements and their products. Thus we
+       may apply Algebra, Lemma 24.1 to the module M(f ) over S(f ) and the elements
+        deg(f )               deg(f )
+       g1    /f deg(g1 ) , . . . , gn /f deg(gn ) . We conclude that the sequence is exact. By
+       the remarks made above, we see that M        f is a sheaf on the basis of standard opens.
+
+       Thus we conclude from the material in Sheaves, Section 30 that there exists a
+       unique sheaf of rings OProj(S) which agrees with Se on the standard opens. Note
+       that by our computation of stalks above and Algebra, Lemma 57.5 the stalks of
+       this sheaf of rings are all local rings.
+       Similarly, for any graded S-module M there exists a unique sheaf of OProj(S) -
+       modules F which agrees with M
+                                   f on the standard opens, see Sheaves, Lemma 30.12.
+
+01M6   Definition 8.3. Let S be a graded ring.
+          (1) The structure sheaf OProj(S) of the homogeneous spectrum of S is the unique
+              sheaf of rings OProj(S) which agrees with Se on the basis of standard opens.
+          (2) The locally ringed space (Proj(S), OProj(S) ) is called the homogeneous spec-
+              trum of S and denoted Proj(S).
+          (3) The sheaf of OProj(S) -modules extending Mf to all opens of Proj(S) is called
+              the sheaf of OProj(S) -modules associated to M . This sheaf is denoted Mf as
+              well.
+       We summarize the results obtained so far.
+01M7   Lemma 8.4. Let S be a graded ring. Let M be a graded S-module. Let M
+                                                                          f be the
+       sheaf of OProj(S) -modules associated to M .
+           (1) For every f ∈ S homogeneous of positive degree we have
+                                        Γ(D+ (f ), OProj(S) ) = S(f ) .
+
+           (2) For every f ∈ S homogeneous of positive degree we have Γ(D+ (f ), Mf) =
+               M(f ) as an S(f ) -module.
+           (3) Whenever D+ (g) ⊂ D+ (f ) the restriction mappings on OProj(S) and M
+                                                                                  f are
+               the maps S(f ) → S(g) and M(f ) → M(g) from Lemma 8.1.
+           (4) Let p be a homogeneous prime of S not containing S+ , and let x ∈ Proj(S)
+               be the corresponding point. We have OProj(S),x = S(p) .
+                                      CONSTRUCTIONS OF SCHEMES                                        13
+
+
+           (5) Let p be a homogeneous prime of S not containing S+ , and let x ∈ Proj(S)
+               be the corresponding point. We have (Mf)x = M(p) as an S(p) -module.
+01M8       (6) There is a canonical ring map S0 −→ Γ(Proj(S), S)   e and a canonical S0 -
+               module map M0 −→ Γ(Proj(S), M   f) compatible with the descriptions of sec-
+               tions over standard opens and stalks above.
+       Moreover, all these identifications are functorial in the graded S-module M . In
+       particular, the functor M 7→ M f is an exact functor from the category of graded
+       S-modules to the category of OProj(S) -modules.
+       Proof. Assertions (1) - (5) are clear from the discussion above. We see (6) since
+       there are canonical maps M0 → M(f ) , x 7→ x/1 compatible with the restriction
+       maps described in (3). The exactness of the functor M 7→ Mf follows from the fact
+       that the functor M 7→ M(p) is exact (see Algebra, Lemma 57.5) and the fact that
+       exactness of short exact sequences may be checked on stalks, see Modules, Lemma
+       3.1.                                                                           □
+01M9   Remark 8.5. The map from M0 to the global sections of M     f is generally far from
+       being an isomorphism. A trivial example is to take S = k[x, y, z] with 1 = deg(x) =
+       deg(y) = deg(z) (or any number of variables) and to take M = S/(x100 , y 100 , z 100 ).
+       It is easy to see that M
+                              f = 0, but M0 = k.
+
+01MA   Lemma 8.6. Let S be a graded ring. Let f ∈ S be homogeneous of positive degree.
+       Suppose that D(g) ⊂ Spec(S(f ) ) is a standard open. Then there exists an h ∈ S
+       homogeneous of positive degree such that D(g) corresponds to D+ (h) ⊂ D+ (f ) via
+       the homeomorphism of Algebra, Lemma 57.3. In fact we can take h such that
+       g = h/f n for some n.
+       Proof. Write g = h/f n for some h homogeneous of positive degree and some n ≥ 1.
+       If D+ (h) is not contained in D+ (f ) then we replace h by hf and n by n + 1. Then h
+       has the required shape and D+ (h) ⊂ D+ (f ) corresponds to D(g) ⊂ Spec(S(f ) ). □
+01MB   Lemma 8.7. Let S be a graded ring. The locally ringed space Proj(S) is a scheme.
+       The standard opens D+ (f ) are affine opens. For any graded S-module M the sheaf
+       f is a quasi-coherent sheaf of OProj(S) -modules.
+       M
+       Proof. Consider a standard open D+ (f ) ⊂ Proj(S). By Lemmas 8.1 and 8.4 we
+       have Γ(D+ (f ), OProj(S) ) = S(f ) , and we have a homeomorphism φ : D+ (f ) →
+       Spec(S(f ) ). For any standard open D(g) ⊂ Spec(S(f ) ) we may pick an h ∈ S+ as
+       in Lemma 8.6. Then φ−1 (D(g)) = D+ (h), and by Lemmas 8.4 and 8.1 we see
+        Γ(D+ (h), OProj(S) ) = S(h) = (S(f ) )hdeg(f ) /f deg(h) = (S(f ) )g = Γ(D(g), OSpec(S(f ) ) ).
+       Thus the restriction of OProj(S) to D+ (f ) corresponds via the homeomorphism φ
+       exactly to the sheaf OSpec(S(f ) ) as defined in Schemes, Section 5. We conclude that
+       D+ (f ) is an affine scheme isomorphic to Spec(S(f ) ) via φ and hence that Proj(S)
+       is a scheme.
+       In exactly the same way we show that M       f is a quasi-coherent sheaf of OProj(S) -
+       modules. Namely, the argument above will show that
+                                                               
+                                        M         ∼ φ∗ M
+                                         f|D (f ) =       ](f )
+                                              +
+
+
+       which shows that M
+                        f is quasi-coherent.                                                          □
+                                    CONSTRUCTIONS OF SCHEMES                                   14
+
+
+01MC   Lemma 8.8. Let S be a graded ring. The scheme Proj(S) is separated.
+
+       Proof. We have to show that the canonical morphism Proj(S) → Spec(Z) is sepa-
+       rated. We will use Schemes, Lemma 21.7. Thus it suffices to show given any pair of
+       standard opens D+ (f ) and D+ (g) that D+ (f ) ∩ D+ (g) = D+ (f g) is affine (clear)
+       and that the ring map
+                                        S(f ) ⊗Z S(g) −→ S(f g)
+       is surjective. Any element s in S(f g) is of the form s = h/(f n g m ) with h ∈ S
+       homogeneous of degree n deg(f ) + m deg(g). We may multiply h by a suitable
+       monomial f i g j and assume that n = n′ deg(g), and m = m′ deg(f ). Then we can
+                              ′  ′              ′           ′
+       rewrite s as s = h/f (n +m ) deg(g) · f m deg(g) /g m deg(f ) . So s is indeed in the image
+       of the displayed arrow.                                                                  □
+
+01MD   Lemma 8.9. Let S be a graded ring. The scheme Proj(S) is quasi-compact if and
+       only ifpthere exist finitely many homogeneous elements f1 , . . . , fn ∈ S+ such that
+       S+ ⊂ (f1 , . . . , fn ). In this case Proj(S) = D+ (f1 ) ∪ . . . ∪ D+ (fn ).
+
+       Proof. Given such a collection of elements the standard affine opens D+ (fi ) cover
+       Proj(S) by Algebra, Lemma 57.3. Conversely, if Proj(S) is quasi-compact, then we
+            p it by finitely many standard opens D+ (fi ), i = 1, . . . , n and we see that
+       may cover
+       S+ ⊂ (f1 , . . . , fn ) by the lemma referenced above.                            □
+
+01ME   Lemma 8.10. Let S be a graded ring. The scheme Proj(S) has a canonical
+       morphism towards the affine scheme Spec(S0 ), agreeing with the map on topological
+       spaces coming from Algebra, Definition 57.1.
+
+       Proof. We saw above that our construction of S,      e resp. Mf gives a sheaf of S0 -
+       algebras, resp. S0 -modules. Hence we get a morphism by Schemes, Lemma 6.4. This
+       morphism, when restricted to D+ (f ) comes from the canonical ring map S0 → S(f ) .
+       The maps S → Sf , S(f ) → Sf are S0 -algebra maps, see Lemma 8.1. Hence if the
+       homogeneous prime p ⊂ S corresponds to the Z-graded prime p′ ⊂ Sf and the
+       (usual) prime p′′ ⊂ S(f ) , then each of these has the same inverse image in S0 . □
+
+01MF   Lemma 8.11. Let S be a graded ring. If S is finitely generated as an algebra over
+       S0 , then the morphism Proj(S) → Spec(S0 ) satisfies the existence and uniqueness
+       parts of the valuative criterion, see Schemes, Definition 20.3.
+
+       Proof. The uniqueness part follows from the fact that Proj(S) is separated (Lemma
+       8.8 and Schemes, Lemma 22.1). Choose xi ∈ S+ homogeneous, i = 1, . . . , n which
+       generate S over S0 . Let di = deg(xi ) and set d = lcm{di }. Suppose we are given a
+       diagram
+                                       Spec(K)          / Proj(S)
+
+
+                                                            
+                                       Spec(A)         / Spec(S0 )
+
+       as in Schemes, Definition 20.3. Denote v : K ∗ → Γ the valuation of A, see Algebra,
+       Definition 50.13. We may choose an f ∈ S+ homogeneous such that Spec(K) maps
+                                         CONSTRUCTIONS OF SCHEMES                                              15
+
+
+       into D+ (f ). Then we get a commutative diagram of ring maps
+                                                   KO o        S(f )
+                                                          φ      O
+
+
+                                                   Ao           S0
+                                                                deg(f )
+       After renumbering we may assume that φ(xi                /f di ) is nonzero for i = 1, . . . , r
+       and zero for i = r + 1, . . . , n. Since the open sets D+ (xi ) cover Proj(S) we see that
+                                                                                    deg(f )
+       r ≥ 1. Let i0 ∈ {1, . . . , r} be an index minimizing γi = (d/di )v(φ(xi             /f di )) in
+       Γ. For convenience set x0 = xi0 and d0 = di0 . The ring map φ factors though a
+       map φ′ : S(f x0 ) → K which gives a ring map S(x0 ) → S(f x0 ) →P          K. The algebra
+       S(x0 ) is generated over S0 by the elements xe11 . . . xenn /xe00 , where    ei di = e0 d0 . If
+       ei > 0 for some i > r, then φ′ (xe11 . . . xenn /xe00 ) = 0. If ei = 0 for i > r, then we
+       have
+                                                           e deg(f )                    e deg(f )
+        d deg(f )v(φ′ (xe11 . . . xerr /xe00 )) = dv(φ′ (x11        . . . xrer deg(f ) /x00      ))
+                                                                 deg(f   )                      deg(f )
+                                                   X
+                                                =d     ei v(φ′ (xi         /f di )) − e0 v(φ′ (x0       /f d0 ))
+                                                  X
+                                                =    ei di γi − e0 d0 γ0
+                                                  X
+                                                ≥    ei di γ0 − e0 d0 γ0 = 0
+       because γ0 is minimal among the γi . This implies that S(x0 ) maps into A via φ′ . The
+       corresponding morphism of schemes Spec(A) → Spec(S(x0 ) ) = D+ (x0 ) ⊂ Proj(S)
+       provides the morphism fitting into the first commutative diagram of this proof. □
+       We saw in the proof of Lemma 8.11 that, under the hypotheses of that lemma,
+       the morphism Proj(S) → Spec(S0 ) is quasi-compact as well. Hence (by Schemes,
+       Proposition 20.6) we see that Proj(S) → Spec(S0 ) is universally closed in the
+       situation of the lemma. We give several examples showing these results do not hold
+       without some assumption on the graded ring S.
+01MG   Example 8.12. Let C[X1 , X2 , X3 , . . .] be the graded C-algebra with each Xi in
+       degree 1. Consider the ring map
+                                   C[X1 , X2 , X3 , . . .] −→ C[tα ; α ∈ Q≥0 ]
+       which maps Xi to t1/i . The right hand side becomes a valuation ring A upon
+       localization at the ideal m = (tα ; α > 0). Let K be the fraction field of A. The
+       above gives a morphism Spec(K) → Proj(C[X1 , X2 , X3 , . . .]) which does not extend
+       to a morphism defined on all of Spec(A). The reason is that the image of Spec(A)
+       would be contained in one of the D+ (Xi ) but then Xi+1 /Xi would map to an
+       element of A which it doesn’t since it maps to t1/(i+1)−1/i .
+01MH   Example 8.13. Let R = C[t] and
+                                   S = R[X1 , X2 , X3 , . . .]/(Xi2 − tXi+1 ).
+       The grading is such that R = S0 and deg(Xi ) = 2i−1 . Note that if p ∈ Proj(S)
+       then t ̸∈ p (otherwise p has to contain all of the Xi which is not allowed for an
+       element of the homogeneous spectrum). Thus we see that D+ (Xi ) = D+ (Xi+1 )
+       for all i. Hence Proj(S) is quasi-compact; in fact it is affine since it is equal to
+       D+ (X1 ). It is easy to see that the image of Proj(S) → Spec(R) is D(t). Hence the
+                                     CONSTRUCTIONS OF SCHEMES                                     16
+
+
+       morphism Proj(S) → Spec(R) is not closed. Thus the valuative criterion cannot
+       apply because it would imply that the morphism is closed (see Schemes, Proposition
+       20.6 ).
+01MI   Example 8.14. Let A be a ring. Let S = A[T ] as a graded A algebra with T in
+       degree 1. Then the canonical morphism Proj(S) → Spec(A) (see Lemma 8.10) is
+       an isomorphism.
+0G5W   Example 8.15. Let X = Spec(A) be an affine scheme, and let U ⊂ X be an open
+       subscheme. Grade A[T ] by setting deg T = 1. Define S to be the subring of A[T ]
+       generated by A and all f T i , where i ≥ 0 and where f ∈ A is such that D(f ) ⊂ U .
+       We claim that S is a graded ring with S0 = A such that Proj(S) ∼    = U , and this
+       isomorphism identifies the canonical morphism Proj(S) → Spec(A) of Lemma 8.10
+       with the inclusion U ⊂ X.
+       Suppose p ∈ Proj(S) is such that every f T ∈ S1 is in p. Then every generator f T i
+       with i ≥ 1 is in p because (f T i )2 = (f T )(f T 2i−1 ) ∈ p and p is radical. But then
+       p ⊃ S+ , which is impossible. Consequently Proj(S) is covered by the standard open
+       affine subsets {D+ (f T )}f T ∈S1 .
+       Observe that, if f T ∈ S1 , then the inclusion S ⊂ A[T ] induces a graded isomorphism
+       of S[(f T )−1 ] with A[T, T −1 , f −1 ]. Hence the standard open subset D+ (f T ) ∼          =
+       Spec(S(f T ) ) is isomorphic to Spec(A[T, T −1 , f −1 ]0 ) = Spec(A[f −1 ]). It is clear that
+       this isomorphism is a restriction of the canonical morphism Proj(S) → Spec(A).
+       If in addition gT ∈ S1 , then S[(f T )−1 , (gT )−1 ] ∼   = A[T, T −1 , f −1 , g −1 ] as graded
+       rings, so D+ (f T ) ∩ D+ (gT ) ∼           −1    −1
+                                      = Spec(A[f , g ]). Therefore Proj(S) is the union of
+       open subschemes D+ (f T ) which are isomorphic to the open subschemes D(f ) ⊂ X
+       under the canonical morphism, and these open subschemes intersect in Proj(S)
+       in the same way they do in X. We conclude that the canonical morphism is an
+       isomorphism of Proj(S) with the union of all D(f ) ⊂ U , which is U .
+
+                               9. Quasi-coherent sheaves on Proj
+01MJ   Let S be a graded ring. Let M be a graded S-module. We saw in Lemma 8.4 how
+       to construct a quasi-coherent sheaf of modules M
+                                                      f on Proj(S) and a map
+
+0AG1   (9.0.1)                           M0 −→ Γ(Proj(S), M
+                                                          f)
+
+       of the degree 0 part of M to the global sections of M
+                                                           f. The degree 0 part of the
+       nth twist M (n) of the graded module M (see Algebra, Section 56) is equal to Mn .
+       Hence we can get maps
+0AG2   (9.0.2)                                         ^
+                                      Mn −→ Γ(Proj(S), M (n)).
+       We would like to be able to perform this operation for any quasi-coherent sheaf F
+       on Proj(S). We will do this by tensoring with the nth twist of the structure sheaf,
+       see Definition 10.1. In order to relate the two notions we will use the following
+       lemma.
+01MK   Lemma 9.1. Let S be a graded ring. Let (X, OX ) = (Proj(S), OProj(S) ) be the
+       scheme of Lemma 8.7. Let f ∈ S+ be homogeneous. Let x ∈ X be a point corre-
+       sponding to the homogeneous prime p ⊂ S. Let M , N be graded S-modules. There
+       is a canonical map of OProj(S) -modules
+                                        f ⊗O N
+                                        M     e −→ M^
+                                                    ⊗S N
+                                            X
+                                    CONSTRUCTIONS OF SCHEMES                               17
+
+
+       which induces the canonical map M(f ) ⊗S(f ) N(f ) → (M ⊗S N )(f ) on sections over
+       D+ (f ) and the canonical map M(p) ⊗S(p) N(p) → (M ⊗S N )(p) on stalks at x.
+       Moreover, the following diagram
+                                   M0 ⊗S0 N0              / (M ⊗S N )0
+
+
+                                                                
+                                    f ⊗O N
+                               Γ(X, M     e)             / Γ(X, M^ ⊗S N )
+                                        X
+
+
+       is commutative where the vertical maps are given by (9.0.1).
+       Proof. To construct a morphism as displayed is the same as constructing a OX -
+       bilinear map
+                                        f×N
+                                        M      e −→ M^    ⊗S N
+       see Modules, Section 16. It suffices to define this on sections over the opens D+ (f )
+       compatible with restriction mappings. On D+ (f ) we use the S(f ) -bilinear map
+       M(f ) × N(f ) → (M ⊗S N )(f ) , (x/f n , y/f m ) 7→ (x ⊗ y)/f n+m . Details omitted. □
+01ML   Remark 9.2. In general the map constructed in Lemma 9.1 above is not an
+       isomorphism. Here is an example. Let k be a field. Let S = k[x, y, z] with k in
+       degree 0 and deg(x) = 1, deg(y) = 2, deg(z) = 3. Let M = S(1) and N = S(2),
+       see Algebra, Section 56 for notation. Then M ⊗S N = S(3). Note that
+                         Sz    = k[x, y, z, 1/z]
+                        S(z)                               ∼ k[u, v, w]/(uw − v 3 )
+                               = k[x3 /z, xy/z, y 3 /z 2 ] =
+                       M(z)    =    S(z) · x + S(z) · y 2 /z ⊂ Sz
+                       N(z)    =    S(z) · y + S(z) · x2 ⊂ Sz
+                    S(3)(z)    =    S(z) · z ⊂ Sz
+       Consider the maximal ideal m = (u, v, w) ⊂ S(z) . It is not hard to see that both
+       M(z) /mM(z) and N(z) /mN(z) have dimension 2 over κ(m). But S(3)(z) /mS(3)(z)
+       has dimension 1. Thus the map M(z) ⊗ N(z) → S(3)(z) is not an isomorphism.
+
+                                10. Invertible sheaves on Proj
+01MM   Recall from Algebra, Section 56 the construction of the twisted module M (n) as-
+       sociated to a graded module over a graded ring.
+01MN   Definition 10.1. Let S be a graded ring. Let X = Proj(S).
+                                   ] This is called the nth twist of the structure sheaf
+           (1) We define OX (n) = S(n).
+               of Proj(S).
+           (2) For any sheaf of OX -modules F we set F(n) = F ⊗OX OX (n).
+       We are going to use Lemma 9.1 to construct some canonical maps. Since S(n) ⊗S
+       S(m) = S(n + m) we see that there are canonical maps
+01MO   (10.1.1)                OX (n) ⊗OX OX (m) −→ OX (n + m).
+       These maps are not isomorphisms in general, see the example in Remark 9.2. The
+       same example shows that OX (n) is not an invertible sheaf on X in general. Ten-
+       soring with an arbitrary OX -module F we get maps
+03GJ   (10.1.2)                    OX (n) ⊗OX F(m) −→ F(n + m).
+                                     CONSTRUCTIONS OF SCHEMES                                18
+
+
+       The maps (9.0.2) on global sections give a map of graded rings
+                                        M
+01MP   (10.1.3)                  S −→           Γ(X, OX (n)).
+                                                 n≥0
+
+       And for an arbitrary OX -module F the maps (10.1.2) give a graded module struc-
+       ture
+                 M                      M                       M
+03GK   (10.1.4)          Γ(X, OX (n)) ×       Γ(X, F(m)) −→             Γ(X, F(m))
+                        n≥0                      m∈Z                       m∈Z
+
+       and via (10.1.3) also a S-module structure. More generally, given any graded S-
+       module M we have M (n) = M ⊗S S(n). Hence we get maps
+01MQ   (10.1.5)                  M                     ^
+                                        f ⊗O OX (n) −→ M
+                                 f(n) = M                (n).
+                                            X
+
+       On global sections (9.0.2) defines a map of graded S-modules
+                                           M
+01MR   (10.1.6)                    M −→                ^
+                                                  Γ(X, M (n)).
+                                                 n∈Z
+       Here is an important fact which follows basically immediately from the definitions.
+01MS   Lemma 10.2. Let S be a graded ring. Set X = Proj(S). Let f ∈ S be homogeneous
+       of degree d > 0. The sheaves OX (nd)|D+ (f ) are invertible, and in fact trivial for all
+       n ∈ Z (see Modules, Definition 25.1). The maps (10.1.1) restricted to D+ (f )
+                    OX (nd)|D+ (f ) ⊗OD+ (f ) OX (m)|D+ (f ) −→ OX (nd + m)|D+ (f ) ,
+       the maps (10.1.2) restricted to D+ (f )
+                      OX (nd)|D+ (f ) ⊗OD+ (f ) F(m)|D+ (f ) −→ F(nd + m)|D+ (f ) ,
+       and the maps (10.1.5) restricted to D+ (f )
+                  M              f|D (f ) ⊗O
+                  f(nd)|D (f ) = M                                      ^
+                                                     OX (nd)|D+ (f ) −→ M (nd)|D+ (f )
+                         +          +        D+ (f )
+
+       are isomorphisms for all n, m ∈ Z.
+       Proof. The graded S-module maps S → S(nd), and M → M (nd), given by x 7→
+       f n x become isomorphisms after inverting f . The first shows that S(f ) ∼
+                                                                                = S(nd)(f )
+       which gives an isomorphism OD+ (f ) ∼ = OX (nd)|D+ (f ) . The second shows that the
+       map S(nd)(f ) ⊗S(f ) M(f ) → M (nd)(f ) is an isomorphism. The case of the map
+       (10.1.2) is a consequence of the case of the map (10.1.1).                       □
+01MT   Lemma 10.3. Let S be a graded ring. Let M be a graded S-module. Set X =
+       Proj(S). Assume X is covered by the standard opens D+ (f ) with f ∈ S1 , e.g., if S
+       is generated by S1 over S0 . Then the sheaves OX (n) are invertible and the maps
+       (10.1.1), (10.1.2), and (10.1.5) are isomorphisms. In particular, these maps induce
+       isomorphisms
+                     OX (1)⊗n ∼
+                              = OX (n)     and                  f(n) ∼
+                                                  f ⊗O OX (n) = M
+                                                  M   X              =M^(n)
+       Thus (9.0.2) becomes a map
+0AG3   (10.3.1)                          Mn −→ Γ(X, M
+                                                    f(n))
+       and (10.1.6) becomes a map
+                                             M
+0AG4   (10.3.2)                      M −→              Γ(X, M
+                                                            f(n)).
+                                                 n∈Z
+
+       Proof. Under the assumptions of the lemma X is covered by the open subsets
+       D+ (f ) with f ∈ S1 and the lemma is a consequence of Lemma 10.2 above. □
+                                    CONSTRUCTIONS OF SCHEMES                                   19
+
+
+01MU   Lemma 10.4. Let S be a graded ring. Set X = Proj(S). Fix d ≥ 1 an integer.
+       The following open subsets of X are equal:
+           (1) The largest open subset W = Wd ⊂ X such that each OX (dn)|W is in-
+               vertible and all the multiplication maps OX (nd)|W ⊗OW OX (md)|W →
+               OX (nd + md)|W (see 10.1.1) are isomorphisms.
+           (2) The union of the open subsets D+ (f g) with f, g ∈ S homogeneous and
+               deg(f ) = deg(g) + d.
+       Moreover, all the maps M                            ^
+                                        f|W ⊗O OX (nd)|W → M
+                              f(nd)|W = M                    (nd)|W (see 10.1.5)
+                                              W
+       are isomorphisms.
+       Proof. If x ∈ D+ (f g) with deg(f ) = deg(g) + d then on D+ (f g) the sheaves
+       OX (dn) are generated by the element (f /g)n = f 2n /(f g)n . This implies x is in the
+       open subset W defined in (1) by arguing as in the proof of Lemma 10.2.
+       Conversely, suppose that OX (dn) is free of rank 1 for all n in an open neighbourhood
+       V of x ∈ X and all the multiplication maps OX (nd)|V ⊗OV OX (md)|V → OX (nd +
+       md)|V are isomorphisms. We may choose h ∈ S+ homogeneous such that x ∈
+       D+ (h) ⊂ V . By the definition of the twists of the structure sheaf we conclude there
+       exists an element s of (Sh )d such that sn is a basis of (Sh )nd as a module over S(h) for
+       all n ∈ Z. We may write s = f /hm for some m ≥ 1 and f ∈ Sd+m deg(h) . Set g = hm
+       so s = f /g. Note that x ∈ D+ (g) by construction. Note that g d ∈ (Sh )d deg(g) .
+       By assumption we can write this as a multiple of sdeg(g) = f deg(g) /g deg(g) , say
+       g d = a/g e · f deg(g) /g deg(g) . Then we conclude that g d+e+deg(g) = af deg(g) and hence
+       also x ∈ D+ (f ). So x is an element of the set defined in (2).
+       The existence of the generating section s = f /g over the affine open D+ (f g) whose
+       powers freely generate the sheaves of modules OX (nd) easily implies that the mul-
+       tiplication maps Mf(nd)|W = M  f|W ⊗O OX (nd)|W → M        ^ (nd)|W (see 10.1.5) are
+                                               W
+       isomorphisms. Compare with the proof of Lemma 10.2.                               □
+
+       Recall from Modules, Lemma 25.10 that given an invertible sheaf L on a locally
+       ringed space X, and given a global section s of L the set Xs = {x ∈ X | s ̸∈ mx Lx }
+       is open.
+01MV   Lemma 10.5. Let S be a graded ring. Set X = Proj(S). Fix d ≥ 1 an integer.
+       Let W = Wd ⊂ X be the open subscheme defined in Lemma 10.4. Let n ≥ 1 and
+       f ∈ Snd . Denote s ∈ Γ(W, OW (nd)) the section which is the image of f via (10.1.3)
+       restricted to W . Then
+                                          Ws = D+ (f ) ∩ W.
+       Proof. Let D+ (ab) ⊂ W be a standard affine open with a, b ∈ S homogeneous and
+       deg(a) = deg(b) + d. Note that D+ (ab) ∩ D+ (f ) = D+ (abf ). On the other hand
+       the restriction of s to D+ (ab) corresponds to the element f /1 = bn f /an (a/b)n ∈
+       (Sab )nd . We have seen in the proof of Lemma 10.4 that (a/b)n is a generator
+       for OW (nd) over D+ (ab). We conclude that Ws ∩ D+ (ab) is the principal open
+       associated to bn f /an ∈ OX (D+ (ab)). Thus the result of the lemma is clear.     □
+
+       The following lemma states the properties that we will later use to characterize
+       schemes with an ample invertible sheaf.
+                                    CONSTRUCTIONS OF SCHEMES                                  20
+
+
+01MW    Lemma 10.6. Let S be a graded ring. Let X = Proj(S). Let Y ⊂ X be a quasi-
+        compact open subscheme. Denote OY (n) the restriction of OX (n) to Y . There
+        exists an integer d ≥ 1 such that
+            (1) the subscheme Y is contained in the open Wd defined in Lemma 10.4,
+            (2) the sheaf OY (dn) is invertible for all n ∈ Z,
+            (3) all the maps OY (nd) ⊗OY OY (m) −→ OY (nd + m) of Equation (10.1.1)
+                are isomorphisms,
+            (4) all the maps M f(nd)|Y = M f|Y ⊗O OX (nd)|Y → M    ^ (nd)|Y (see 10.1.5) are
+                                                   Y
+                isomorphisms,
+            (5) given f ∈ Snd denote s ∈ Γ(Y, OY (nd)) the image of f via (10.1.3) re-
+                stricted to Y , then D+ (f ) ∩ Y = Ys ,
+            (6) a basis for the topology on Y is given by the collection of opens Ys , where
+                s ∈ Γ(Y, OY (nd)), n ≥ 1, and
+            (7) a basis for the topology of Y is given by those opens Ys ⊂ Y , for s ∈
+                Γ(Y, OY (nd)), n ≥ 1 which are affine.
+        Proof. Since Y is quasi-compact there exist finitely many homogeneous fi ∈ S+ ,
+        i = 1, . . . , n such that the standard opens D+ (fi ) give an open covering of Y . Let
+                                                                          d/d
+        di = deg(fi ) and set d = d1 . . . dn . Note that D+ (fi ) = D+ (fi i ) and hence we see
+        immediately that Y ⊂ Wd , by characterization (2) in Lemma 10.4 or by (1) using
+        Lemma 10.2. Note that (1) implies (2), (3) and (4) by Lemma 10.4. (Note that
+        (3) is a special case of (4).) Assertion (5) follows from Lemma 10.5. Assertions (6)
+        and (7) follow because the open subsets D+ (f ) form a basis for the topology of X
+        and are affine.                                                                       □
+ 0B5I   Lemma 10.7. Let S be  La graded ring. Set X = Proj(S). Let F be a quasi-coherent
+        OX -module. Set M = n∈Z Γ(X, F(n)) as a graded S-module, using (10.1.4) and
+        (10.1.3). Then there is a canonical OX -module map
+                                               f −→ F
+                                               M
+        functorial in F such that the induced map M0 → Γ(X, F) is the identity.
+        Proof. Let f ∈ S be homogeneous of degree d > 0. Recall that M     f|D (f ) corre-
+                                                                              +
+        sponds to the S(f ) -module M(f ) by Lemma 8.4. Thus we can define a canonical
+        map
+                     M(f ) −→ Γ(D+ (f ), F), m/f n 7−→ m|D+ (f ) ⊗ f |−n
+                                                                      D+ (f )
+        which makes sense because f |D+ (f ) is a trivializing section of the invertible sheaf
+        OX (d)|D+ (f ) , see Lemma 10.2 and its proof. Since Mf is quasi-coherent, this leads
+        to a canonical map
+                                        f|D (f ) −→ F|D (f )
+                                        M   +             +
+
+        via Schemes, Lemma 7.1. We obtain a global map if we prove that the displayed
+        maps glue on overlaps. Proof of this is omitted. We also omit the proof of the final
+        statement.                                                                          □
+
+                                    11. Functoriality of Proj
+01MX    A graded ring map ψ : A → B does not always give rise to a morphism of associated
+        projective homogeneous spectra. The reason is that the inverse image ψ −1 (q) of a
+        homogeneous prime q ⊂ B may contain the irrelevant prime A+ even if q does not
+        contain B+ . The correct result is stated as follows.
+                                    CONSTRUCTIONS OF SCHEMES                                21
+
+
+01MY   Lemma 11.1. Let A, B be two graded rings. Set X = Proj(A) and Y = Proj(B).
+       Let ψ : A → B be a graded ring map. Set
+                                  [
+                          U (ψ) =                D+ (ψ(f )) ⊂ Y.
+                                        f ∈A+ homogeneous
+
+       Then there is a canonical morphism of schemes
+                                           rψ : U (ψ) −→ X
+       and a map of Z-graded OU (ψ) -algebras
+                                  M                M
+                                ∗
+                      θ = θψ : rψ          OX (d) −→                    OU (ψ) (d).
+                                           d∈Z                    d∈Z
+       The triple (U (ψ), rψ , θ) is characterized by the following properties:
+          (1) For every d ≥ 0 the diagram
+                           Ad                                               / Bd
+                                                    ψ
+
+
+                                                                             
+                      Γ(X, OX (d))
+                                       θ   / Γ(U (ψ), OY (d)) o         Γ(Y, OY (d))
+               is commutative.
+                                                          −1
+           (2) For any f ∈ A+ homogeneous we have rψ         (D+ (f )) = D+ (ψ(f )) and the
+               restriction of rψ to D+ (ψ(f )) corresponds to the ring map A(f ) → B(ψ(f ))
+               induced by ψ.
+       Proof. Clearly condition (2) uniquely determines the morphism of schemes and the
+       open subset U (ψ). Pick f ∈ Ad with d ≥ 1. Note that OX (n)|D+ (f ) corresponds to
+       the A(f ) -module (Af )n and that OY (n)|D+ (ψ(f )) corresponds to the B(ψ(f )) -module
+       (Bψ(f ) )n . In other words θ when restricted to D+ (ψ(f )) corresponds to a map of
+       Z-graded B(ψ(f )) -algebras
+                                     Af ⊗A(f ) B(ψ(f )) −→ Bψ(f )
+       Condition (1) determines the images of all elements of A. Since f is an invertible
+       element which is mapped to ψ(f ) we see that 1/f m is mapped to 1/ψ(f )m . It easily
+       follows from this that θ is uniquely determined, namely it is given by the rule
+                                a/f m ⊗ b/ψ(f )e 7−→ ψ(a)b/ψ(f )m+e .
+       To show existence we remark that the proof of uniqueness above gave a well defined
+       prescription for the morphism r and the map θ when restricted to every standard
+       open of the form D+ (ψ(f )) ⊂ U (ψ) into D+ (f ). Call these rf and θf . Hence we
+       only need to verify that if D+ (f ) ⊂ D+ (g) for some f, g ∈ A+ homogeneous, then
+       the restriction of rg to D+ (ψ(f )) matches rf . This is clear from the formulas given
+       for r and θ above.                                                                  □
+01MZ   Lemma 11.2. Let A, B, and C be graded rings. Set X = Proj(A), Y = Proj(B)
+       and Z = Proj(C). Let φ : A → B, ψ : B → C be graded ring maps. Then we have
+                                   −1
+                      U (ψ ◦ φ) = rψ  (U (φ))     and    rψ◦φ = rφ ◦ rψ |U (ψ◦φ) .
+       In addition we have
+                                                 ∗
+                                           θψ ◦ rψ θφ = θψ◦φ
+       with obvious notation.
+       Proof. Omitted.                                                                      □
+                                  CONSTRUCTIONS OF SCHEMES                                22
+
+
+01N0   Lemma 11.3. With hypotheses and notation as in Lemma 11.1 above. Assume
+       Ad → Bd is surjective for all d ≫ 0. Then
+          (1) U (ψ) = Y ,
+          (2) rψ : Y → X is a closed immersion, and
+                              ∗
+          (3) the maps θ : rψ   OX (n) → OY (n) are surjective but not isomorphisms in
+              general (even if A → B is surjective).
+       Proof. Part (1) follows from the definition of U (ψ) and the fact that D+ (f ) =
+       D+ (f n ) for any n > 0. For f ∈ A+ homogeneous we see that A(f ) → B(ψ(f )) is
+       surjective because any element of B(ψ(f )) can be represented by a fraction b/ψ(f )n
+       with n arbitrarily large (which forces the degree of b ∈ B to be large). This proves
+       (2). The same argument shows the map
+                                           Af → Bψ(f )
+       is surjective which proves the surjectivity of θ. For an example where this map
+       is not an isomorphism consider the graded ring A = k[x, y] where k is a field and
+       deg(x) = 1, deg(y) = 2. Set I = (x), so that B = k[y]. Note that OY (1) = 0
+                                                 ∗
+       in this case. But it is easy to see that rψ OX (1) is not zero. (There are less silly
+       examples.)                                                                         □
+07ZE   Lemma 11.4. With hypotheses and notation as in Lemma 11.1 above. Assume
+       Ad → Bd is an isomorphism for all d ≫ 0. Then
+          (1) U (ψ) = Y ,
+          (2) rψ : Y → X is an isomorphism, and
+                            ∗
+          (3) the maps θ : rψ OX (n) → OY (n) are isomorphisms.
+       Proof. We have (1) by Lemma 11.3. Let f ∈ A+ be homogeneous. The assumption
+       on ψ implies that Af → Bf is an isomorphism (details omitted). Thus it is clear
+       that rψ and θ restrict to isomorphisms over D+ (f ). The lemma follows.      □
+01N1   Lemma 11.5. With hypotheses and notation as in Lemma 11.1 above. Assume
+       Ad → Bd is surjective for d ≫ 0 and that A is generated by A1 over A0 . Then
+          (1) U (ψ) = Y ,
+          (2) rψ : Y → X is a closed immersion, and
+                            ∗
+          (3) the maps θ : rψ OX (n) → OY (n) are isomorphisms.
+       Proof. By Lemmas 11.4 and 11.2 we may replace B by the image of A → B without
+       changing X or the sheaves OX (n). Thus we may assume that A → B is surjective.
+       By Lemma 11.3 we get (1) and (2) and surjectivity in (3). By Lemma 10.3 we see
+       that both OX (n) and OY (n) are invertible. Hence θ is an isomorphism.      □
+01N2   Lemma 11.6. With hypotheses and notation as in Lemma 11.1 above. Assume                 [DG67, II,
+       there exists a ring map R → A0 and a ring map R → R′ such that B = R′ ⊗R A.             Proposition 2.8.10]
+       Then
+           (1) U (ψ) = Y ,
+           (2) the diagram
+                                Y = Proj(B)          / Proj(A) = X
+                                                rψ
+
+
+                                                           
+                                  Spec(R′ )            / Spec(R)
+                                    CONSTRUCTIONS OF SCHEMES                                   23
+
+
+               is a fibre product square, and
+                              ∗
+           (3) the maps θ : rψ  OX (n) → OY (n) are isomorphisms.
+       Proof. This follows immediately by looking at what happens over the standard
+       opens D+ (f ) for f ∈ A+ .                                                □
+01N3   Lemma 11.7. With hypotheses and notation as in Lemma 11.1 above. Assume
+       there exists a g ∈ A0 such that ψ induces an isomorphism Ag → B. Then U (ψ) =
+       Y , rψ : Y → X is an open immersion which induces an isomorphism of Y with the
+       inverse image of D(g) ⊂ Spec(A0 ). Moreover the map θ is an isomorphism.
+       Proof. This is a special case of Lemma 11.6 above.                                      □
+0B5J   Lemma 11.8. Let S be a graded ring. Let d ≥ 1. Set S ′ = S (d) with notation as
+       in Algebra, Section 56. Set X = Proj(S) and X ′ = Proj(S ′ ). There is a canonical
+       isomorphism i : X → X ′ of schemes such that
+           (1) for any graded S-module M setting M ′ = M (d) , we have a canonical iso-
+               morphism M  f → i∗ Mf′ ,
+           (2) we have canonical isomorphisms OX (nd) → i∗ OX ′ (n)
+       and these isomorphisms are compatible with the multiplication maps of Lemma
+       9.1 and hence with the maps (10.1.1), (10.1.2), (10.1.3), (10.1.4), (10.1.5), and
+       (10.1.6) (see proof for precise statements.
+       Proof. The injective ring map S ′ → S (which is not a homomorphism of graded
+       rings due to our conventions), induces a map j : Spec(S) → Spec(S ′ ). Given a
+       graded prime ideal p ⊂ S we see that p′ = j(p) = S ′ ∩ p is a graded prime ideal
+       of S ′ . Moreover, if f ∈ S+ is homogeneous and f ̸∈ p, then f d ∈ S+   ′
+                                                                                  and f d ̸∈ p′ .
+                        ′      ′
+       Conversely, if p ⊂ S is a graded prime ideal not containing some homogeneous
+                       ′
+       element f ∈ S+     , then p = {g ∈ S | g d ∈ p′ } is a graded prime ideal of S not
+       containing f whose image under j is p′ . To see that p is an ideal, note that if
+       g, h ∈ p, then (g + h)2d ∈ p′ by the binomial formula and hence g + h ∈ p′ as p′ is a
+       prime. In this way we see that j induces a homeomorphism i : X → X ′ . Moreover,
+       given f ∈ S+ homogeneous, then we have S(f ) ∼       ′
+                                                        = S(f d ) . Since these isomorphisms
+
+       are compatible with the restrictions mappings of Lemma 8.1, we see that there
+       exists an isomorphism i♯ : i−1 OX ′ → OX of structure sheaves on X and X ′ , hence
+       i is an isomorphism of schemes.
+       Let M be a graded S-module. Given f ∈ S+ homogeneous, we have M(f ) =         ∼ M′ d ,
+                                                                                            (f )
+       hence in exactly the same manner as above we obtain the isomorphism in (1). The
+       isomorphisms in (2) are a special case of (1) for M = S(nd) which gives M ′ = S ′ (n).
+       Let M and N be graded S-modules. Then we have
+                             M ′ ⊗S ′ N ′ = (M ⊗S N )(d) = (M ⊗S N )′
+       as can be verified directly from the definitions. Having said this the compatibility
+       with the multiplication maps of Lemma 9.1 is the commutativity of the diagram
+                                  f ⊗O N
+                                  M     e                 / M^
+                                                             ⊗S N
+                                      X
+
+
+                                 (1)⊗(1)                         (1)
+                                                               
+                               i∗ (M
+                                   f′ ⊗O ′ N
+                                           f′ )        / i∗ (M ′^
+                                                                ⊗S ′ N ′ )
+                                         X
+                                      CONSTRUCTIONS OF SCHEMES                                 24
+
+
+       This can be seen by looking at the construction of the maps over the open D+ (f ) =
+       D+ (f d ) where the top horizontal arrow is given by the map M(f ) × N(f ) → (M ⊗S
+                                                            ′           ′           ′      ′
+       N )(f ) and the lower horizontal arrow by the map M(f  d ) × N(f d ) → (M ⊗S ′ N )(f d ) .
+                                                                  ′
+       Since these maps agree via the identifications M(f ) = M(f   d ) , etc, we get the desired
+
+       compatibility. We omit the proof of the other compatibilities.                          □
+
+                                       12. Morphisms into Proj
+01N4   Let S be a graded ring. Let X = Proj(S) be the homogeneous spectrum of S. Let
+       d ≥ 1 be an integer. Consider the open subscheme
+                                 [
+01N5   (12.0.1)             Ud =          D+ (f ) ⊂ X = Proj(S)
+                                    f ∈Sd
+
+       Note that d|d′ ⇒ Ud ⊂ Ud′ and X = d Ud . Neither X nor Ud need be quasi-
+                                                S
+       compact, see Algebra, Lemma 57.3. Let us write OUd (n) = OX (n)|Ud . By Lemma
+       10.2 we know that OUd (nd), n ∈ Z is an invertible OUd -module and that all the
+       multiplication maps OUd (nd) ⊗OUd OUd (m) → OUd (nd + m) of (10.1.1) are isomor-
+       phisms. In particular we have OUd (nd) ∼= OUd (d)⊗n . The graded ring map (10.1.3)
+       on global sections combined with restriction to Ud give a homomorphism of graded
+       rings
+01N6   (12.0.2)                       ψ d : S (d) −→ Γ∗ (Ud , OUd (d)).
+       For the notation S (d) , see Algebra, Section 56. For the notation Γ∗ see Modules,
+       Definition 25.7. Moreover, since Ud is covered by the opens D+ (f ), f ∈ Sd we see
+                                                                                 (d)
+       that OUd (d) is globally generated by the sections in the image of ψ1d : S1 = Sd →
+       Γ(Ud , OUd (d)), see Modules, Definition 4.1.
+       Let Y be a scheme, and let φ : Y → X be a morphism of schemes. Assume
+       the image φ(Y ) is contained in the open subscheme Ud of X. By the discussion
+       following Modules, Definition 25.7 we obtain a homomorphism of graded rings
+                                   Γ∗ (Ud , OUd (d)) −→ Γ∗ (Y, φ∗ OX (d)).
+       The composition of this and ψ d gives a graded ring homomorphism
+01N7   (12.0.3)                       ψφd : S (d) −→ Γ∗ (Y, φ∗ OX (d))
+       which has the property that the invertible sheaf φ∗ OX (d) is globally generated by
+       the sections in the image of (S (d) )1 = Sd → Γ(Y, φ∗ OX (d)).
+01N8   Lemma 12.1. Let S be a graded ring, and X = Proj(S). Let d ≥ 1 and Ud ⊂ X
+       as above. Let Y be a scheme. Let L be an invertible sheaf on Y . Let ψ : S (d) →
+       Γ∗ (Y, L) be a graded ring homomorphism such that L is generated by the sections
+       in the image of ψ|Sd : Sd → Γ(Y, L). Then there exist a morphism φ : Y → X such
+       that φ(Y ) ⊂ Ud and an isomorphism α : φ∗ OUd (d) → L such that ψφd agrees with
+       ψ via α:
+                      Γ∗ (Y, L) o α Γ∗ (Y, φ∗ OUd (d)) o ∗ Γ∗ (Ud , OUd (d))
+                           O                      i      φ          O
+                         ψ                                                ψd
+                                                              d
+                                                             ψφ
+                         S (d) o
+                                                   id
+                                                                          S (d)
+       commutes. Moreover, the pair (φ, α) is unique.
+                                CONSTRUCTIONS OF SCHEMES                                 25
+
+
+Proof. Pick f ∈ Sd . Denote s = ψ(f ) ∈ Γ(Y, L). On the open set Ys where s does
+not vanish multiplication by s induces an isomorphism OYs → L|Ys , see Modules,
+Lemma 25.10. We will denote the inverse of this map x 7→ x/s, and similarly
+for powers of L. Using this we define a ring map ψ(f ) : S(f ) → Γ(Ys , OY ) by
+mapping the fraction a/f n to ψ(a)/sn . By Schemes, Lemma 6.4 this corresponds
+to a morphism φf : Ys → Spec(S(f ) ) = D+ (f ). We also introduce the isomorphism
+αf : φ∗f OD+ (f ) (d) → L|Ys which maps the pullback of the trivializing section f over
+D+ (f ) to the trivializing section s over Ys . With this choice the commutativity of
+the diagram in the lemma holds with Y replaced by Ys , φ replaced by φf , and α
+replaced by αf ; verification omitted.
+Suppose that f ′ ∈ Sd is a second element, and denote s′ = ψ(f ′ ) ∈ Γ(Y, L). Then
+Ys ∩ Ys′ = Yss′ and similarly D+ (f ) ∩ D+ (f ′ ) = D+ (f f ′ ). In Lemma 10.6 we saw
+that D+ (f ′ ) ∩ D+ (f ) is the same as the set of points of D+ (f ) where the section
+of OX (d) defined by f ′ does not vanish. Hence φ−1             ′
+                                                     f (D+ (f ) ∩ D+ (f )) = Ys ∩ Ys =
+                                                                                       ′
+
+  −1        ′                                 ′                   ′
+φf ′ (D+ (f )∩D+ (f )). On D+ (f )∩D+ (f ) the fraction f /f is an invertible section
+of the structure sheaf with inverse f ′ /f . Note that ψ(f ′ ) (f /f ′ ) = ψ(f )/s′ = s/s′
+and ψ(f ) (f ′ /f ) = ψ(f ′ )/s = s′ /s. We claim there is a unique ring map S(f f ′ ) →
+Γ(Yss′ , OY ) making the following diagram commute
+                    Γ(Ys , OY )       / Γ(Yss′ , OY ) o    Γ(Ys,′ OY )
+                          O                   O                 O
+                     ψ(f )                                  ψ(f ′ )
+
+
+                        S(f )            / S(f f ′ ) o          S(f ′ )
+
+It exists because we may use the rule x/(f f ′ )n 7→ ψ(x)/(ss′ )n , which “works” by
+the formulas above. Uniqueness follows as Proj(S) is separated, see Lemma 8.8
+and its proof. This shows that the morphisms φf and φf ′ agree over Ys ∩ Ys′ . The
+restrictions of αf and αf ′ agree over Ys ∩ Ys′ because the regular functions s/s′ and
+ψ(f ′ ) (f /f ′ ) agree. This proves that the morphisms ψf glue to a global morphism
+from Y into Ud ⊂ X, and that the maps αf glue to an isomorphism satisfying the
+conditions of the lemma.
+We still have to show the pair (φ, α) is unique. Suppose (φ′ , α′ ) is a second such
+pair. Let f ∈ Sd . By the commutativity of the diagrams in the lemma we have
+that the inverse images of D+ (f ) under both φ and φ′ are equal to Yψ(f ) . Since the
+opens D+ (f ) are a basis for the topology on X, and since X is a sober topological
+space (see Schemes, Lemma 11.1) this means the maps φ and φ′ are the same on
+underlying topological spaces. Let us use s = ψ(f ) to trivialize the invertible sheaf
+L over Yψ(f ) . By the commutativity of the diagrams we have that α⊗n (ψφd (x)) =
+ψ(x) = (α′ )⊗n (ψφd ′ (x)) for all x ∈ Snd . By construction of ψφd and ψφd ′ we have
+ψφd (x) = φ♯ (x/f n )ψφd (f n ) over Yψ(f ) , and similarly for ψφd ′ . By the commutativity
+of the diagrams of the lemma we deduce that φ♯ (x/f n ) = (φ′ )♯ (x/f n ). This proves
+that φ and φ′ induce the same morphism from Yψ(f ) into the affine scheme D+ (f ) =
+Spec(S(f ) ). Hence φ and φ′ are the same as morphisms. Finally, it remains to show
+that the commutativity of the diagram of the lemma singles out, given φ, a unique
+α. We omit the verification.                                                              □
+We continue the discussion from above the lemma. Let S be a graded ring. Let Y
+be a scheme. We will consider triples (d, L, ψ) where
+                                    CONSTRUCTIONS OF SCHEMES                                   26
+
+
+           (1) d ≥ 1 is an integer,
+           (2) L is an invertible OY -module, and
+           (3) ψ : S (d) → Γ∗ (Y, L) is a graded ring homomorphism such that L is gener-
+               ated by the global sections ψ(f ), with f ∈ Sd .
+       Given a morphism h : Y ′ → Y and a triple (d, L, ψ) over Y we can pull it back
+       to the triple (d, h∗ L, h∗ ◦ ψ). Given two triples (d, L, ψ) and (d, L′ , ψ ′ ) with the
+       same integer d we say they are strictly equivalent if there exists an isomorphism
+       β : L → L′ such that β ◦ ψ = ψ ′ as graded ring maps S (d) → Γ∗ (Y, L′ ).
+       For each integer d ≥ 1 we define
+           Fd : Sch opp   −→    Sets,
+                     Y    7−→   {strict equivalence classes of triples (d, L, ψ) as above}
+       with pullbacks as defined above.
+01N9   Lemma 12.2. Let S be a graded ring. Let X = Proj(S). The open subscheme
+       Ud ⊂ X (12.0.1) represents the functor Fd and the triple (d, OUd (d), ψ d ) defined
+       above is the universal family (see Schemes, Section 15).
+       Proof. This is a reformulation of Lemma 12.1                                            □
+01NA   Lemma 12.3. Let S be a graded ring generated as an S0 -algebra by the elements
+       of S1 . In this case the scheme X = Proj(S) represents the functor which associates
+       to a scheme Y the set of pairs (L, ψ), where
+           (1) L is an invertible OY -module, and
+           (2) ψ : S → Γ∗ (Y, L) is a graded ring homomorphism such that L is generated
+                by the global sections ψ(f ), with f ∈ S1
+       up to strict equivalence as above.
+       Proof. Under the assumptions of the lemma we have X = U1 and the lemma is a
+       reformulation of Lemma 12.2 above.                                       □
+       We end this section with a discussion of a functor corresponding to Proj(S) for a
+       general graded ring S. We advise the reader to skip the rest of this section.
+       Fix an arbitrary graded ring S. Let T be a scheme. We will say two triples (d, L, ψ)
+       and (d′ , L′ , ψ ′ ) over T with possibly different integers d, d′ are equivalent if there
+                                               ′
+       exists an isomorphism β : L⊗d → (L′ )⊗d of invertible sheaves over T such that
+                                                                       ′                   ′
+       β ◦ ψ|S (dd′ ) and ψ ′ |S (dd′ ) agree as graded ring maps S (dd ) → Γ∗ (Y, (L′ )⊗dd ).
+01NB   Lemma 12.4. Let S be a graded ring. Set X = Proj(S). Let T be a scheme. Let
+       (d, L, ψ) and (d′ , L′ , ψ ′ ) be two triples over T . The following are equivalent:
+            (1) Let n = lcm(d, d′ ). Write n = ad = a′ d′ . There exists an isomorphism
+                                         ′
+                β : L⊗a → (L′ )⊗a with the property that β ◦ ψ|S (n) and ψ ′ |S (n) agree as
+                graded ring maps S (n) → Γ∗ (Y, (L′ )⊗n ).
+            (2) The triples (d, L, ψ) and (d′ , L′ , ψ ′ ) are equivalent.
+            (3) For some positive integer n = ad = a′ d′ there exists an isomorphism β :
+                                    ′
+                L⊗a → (L′ )⊗a with the property that β ◦ ψ|S (n) and ψ ′ |S (n) agree as graded
+                ring maps S (n) → Γ∗ (Y, (L′ )⊗n ).
+            (4) The morphisms φ : T → X and φ′ : T → X associated to (d, L, ψ) and
+                (d′ , L′ , ψ ′ ) are equal.
+                                     CONSTRUCTIONS OF SCHEMES                                   27
+
+
+       Proof. Clearly (1) implies (2) and (2) implies (3) by restricting to more divisible
+       degrees and powers of invertible sheaves. Also (3) implies (4) by the uniqueness
+       statement in Lemma 12.1. Thus we have to prove that (4) implies (1). Assume (4),
+       in other words φ = φ′ . Note that this implies that we may write L = φ∗ OX (d) and
+       L′ = φ∗ OX (d′ ). Moreover, via these identifications we have that the graded ring
+       maps ψ and ψ ′ correspond to the restriction of the canonical graded ring map
+                                          M
+                                   S −→          Γ(X, OX (n))
+                                                 n≥0
+            (d)       (d′ )
+       to S    and S     composed with pullback by φ (by Lemma 12.1 again). Hence
+       taking β to be the isomorphism
+                                                                              ′
+                              (φ∗ OX (d))⊗a = φ∗ OX (n) = (φ∗ OX (d′ ))⊗a
+       works.                                                                                    □
+       Let S be a graded ring. Let X = Proj(S). Over the open subscheme scheme
+       Ud ⊂ X = Proj(S) (12.0.1) we have the triple (d, OUd (d), ψ d ). Clearly, if d|d′
+                                                               ′
+       the triples (d, OUd (d), ψ d ) and (d′ , OUd′ (d′ ), ψ d ) are equivalent when restricted to
+       the open Ud (which is a subset of Ud′ ). This, combined with Lemma 12.1 shows
+       that morphisms Y → X correspond roughly to equivalence classes of triples over
+       Y . This is not quite true since if Y is not quasi-compact, then there may not be
+       a single triple which works. Thus we have to be slightly careful in defining the
+       corresponding functor.
+       Here is one possible way to do this. Suppose d′ = ad. Consider the transforma-
+       tion of functors Fd → Fd′ which assigns to the triple (d, L, ψ) over T the triple
+       (d′ , L⊗a , ψ|S (d′ ) ). One of the implications of Lemma 12.4 is that the transformation
+       Fd → Fd′ is injective! For a quasi-compact scheme T we define
+                                                      [
+                                             F (T ) =       Fd (T )
+                                                       d∈N
+       with transition maps as explained above. This clearly defines a contravariant func-
+       tor on the category of quasi-compact schemes with values in sets. For a general
+       scheme T we define
+                                F (T ) = limV ⊂T quasi-compact open F (V ).
+       In other words, an element ξ of F (T ) corresponds to a compatible system of choices
+       of elements ξV ∈ F (V ) where V ranges over the quasi-compact opens of T . We
+       omit the definition of the pullback map F (T ) → F (T ′ ) for a morphism T ′ → T of
+       schemes. Thus we have defined our functor
+                                        F : Sch opp    −→    Sets
+01NC   Lemma 12.5. Let S be a graded ring. Let X = Proj(S). The functor F defined
+       above is representable by the scheme X.
+       Proof. We have seen above that the functor Fd corresponds to the open subscheme
+       Ud ⊂ X. Moreover the transformation of functors Fd → Fd′ (if d|d′ ) defined above
+       corresponds to the inclusion morphism Ud → Ud′ (see discussion above). Hence to
+       show that F is represented by X it suffices to show that T → X for a quasi-compact
+       scheme T ends up in some Ud , and that for a general scheme T we have
+                         Mor(T, X) = limV ⊂T quasi-compact open Mor(V, X).
+       These verifications are omitted.                                                          □
+                                      CONSTRUCTIONS OF SCHEMES                                        28
+
+
+                                          13. Projective space
+01ND   Projective space is one of the fundamental objects studied in algebraic geometry.
+       In this section we just give its construction as Proj of a polynomial ring. Later we
+       will discover many of its beautiful properties.
+01NE   Lemma 13.1. Let S = Z[T0 , . . . , Tn ] with deg(Ti ) = 1. The scheme
+                                               PnZ = Proj(S)
+       represents the functor which associates to a scheme Y the pairs (L, (s0 , . . . , sn ))
+       where
+           (1) L is an invertible OY -module, and
+           (2) s0 , . . . , sn are global sections of L which generate L
+       up to the following equivalence: (L, (s0 , . . . , sn )) ∼ (N , (t0 , . . . , tn )) ⇔ there exists
+       an isomorphism β : L → N with β(si ) = ti for i = 0, . . . , n.
+       Proof. This is a special case of Lemma 12.3 above. Namely, for any graded ring
+       A we have
+                     Morgradedrings (Z[T0 , . . . , Tn ], A)    =    A1 × . . . × A1
+                                                          ψ     7→ (ψ(T0 ), . . . , ψ(Tn ))
+       and the degree 1 part of Γ∗ (Y, L) is just Γ(Y, L).                                            □
+01NF   Definition 13.2. The scheme PnZ = Proj(Z[T0 , . . . , Tn ]) is called projective n-
+       space over Z. Its base change PnS to a scheme S is called projective n-space over
+       S. If R is a ring the base change to Spec(R) is denoted PnR and called projective
+       n-space over R.
+       Given a scheme Y over S and a pair (L, (s0 , . . . , sn )) as in Lemma 13.1 the induced
+       morphism to PnS is denoted
+                                         φ(L,(s0 ,...,sn )) : Y −→ PnS
+       This makes sense since the pair defines a morphism into PnZ and we already have
+       the structure morphism into S so combined we get a morphism into PnS = PnZ × S.
+       Via Lemma 16.10 we can identify PnS with a relative Proj of the graded OS -algebra
+       OS [T0 , . . . , Tn ] and we can characterize φ(L,(s0 ,...,sn )) as the unique S-morphism
+       such that
+                            L = φ∗(L,(s0 ,...,sn )) OPnS (1) and si = φ∗(L,(s0 ,...,sn )) Ti
+       where we think of Ti as a global section of OPnS (1) via the map ψ of Lemma 15.5;
+       details omitted.
+01NG   Lemma 13.3. Projective n-space over Z is covered by n + 1 standard opens
+                                      [
+                                PnZ =           D+ (Ti )
+                                                    i=0,...,n
+
+       where each D+ (Ti ) is isomorphic to AnZ affine n-space over Z.
+       Proof. This is true because Z[T0 , . . . , Tn ]+ = (T0 , . . . , Tn ) and since
+                                                         
+                                             T0         Tn     ∼
+                                Spec Z            ,...,        = AnZ
+                                             Ti         Ti
+       in an obvious way.                                                                             □
+01NH   Lemma 13.4. Let S be a scheme. The structure morphism PnS → S is
+                                      CONSTRUCTIONS OF SCHEMES                                          29
+
+
+           (1) separated,
+           (2) quasi-compact,
+           (3) satisfies the existence and uniqueness parts of the valuative criterion, and
+           (4) universally closed.
+       Proof. All these properties are stable under base change (this is clear for the last
+       two and for the other two see Schemes, Lemmas 21.12 and 19.3). Hence it suffices to
+       prove them for the morphism PnZ → Spec(Z). Separatedness is Lemma 8.8. Quasi-
+       compactness follows from Lemma 13.3. Existence and uniqueness of the valuative
+       criterion follow from Lemma 8.11. Universally closed follows from the above and
+       Schemes, Proposition 20.6.                                                        □
+01NI   Remark 13.5. What’s missing in the list of properties above? Well to be sure the
+       property of being of finite type. The reason we do not list this here is that we have
+       not yet defined the notion of finite type at this point. (Another property which is
+       missing is “smoothness”. And I’m sure there are many more you can think of.)
+01WD   Lemma 13.6 (Segre embedding). Let S be a scheme. There exists a closed im-
+       mersion
+                                                 nm+n+m
+                                   PnS ×S Pm
+                                           S −→ PS
+       called the Segre embedding.
+       Proof. It suffices to prove this when S = Spec(Z). Hence we will drop the index
+       S and work in the absolute setting. Write Pn = Proj(Z[X0 , . . . , Xn ]), Pm =
+       Proj(Z[Y0 , . . . , Ym ]), and Pnm+n+m = Proj(Z[Z0 , . . . , Znm+n+m ]). In order to map
+       into Pnm+n+m we have to write down an invertible sheaf L on the left hand side
+       and (n + 1)(m + 1) sections si which generate it. See Lemma 13.1. The invertible
+       sheaf we take is
+                                       L = pr∗1 OPn (1) ⊗ pr∗2 OPm (1)
+       The sections we take are
+        s0 = X0 Y0 , s1 = X1 Y0 , . . . , sn = Xn Y0 , sn+1 = X0 Y1 , . . . , snm+n+m = Xn Ym .
+       These generate L since the sections Xi generate OPn (1) and the sections Yj generate
+       OPm (1). The induced morphism φ has the property that
+                              φ−1 (D+ (Zi+(n+1)j )) = D+ (Xi ) × D+ (Yj ).
+       Hence it is an affine morphism. The corresponding ring map in case (i, j) = (0, 0)
+       is the map
+            Z[Z1 /Z0 , . . . , Znm+n+m /Z0 ] −→ Z[X1 /X0 , . . . , Xn /X0 , Y1 /Y0 , . . . , Yn /Y0 ]
+       which maps Zi /Z0 to the element Xi /X0 for i ≤ n and the element Z(n+1)j /Z0 to
+       the element Yj /Y0 . Hence it is surjective. A similar argument works for the other
+       affine open subsets. Hence the morphism φ is a closed immersion (see Schemes,
+       Lemma 4.2 and Example 8.1.)                                                      □
+       The following two lemmas are special cases of more general results later, but perhaps
+       it makes sense to prove these directly here now. The first one is a special case of
+       Divisors, Lemma 32.1.
+03GL   Lemma 13.7. Let R be a ring. Let Z ⊂ PnR be a closed subscheme. Let
+                                                                          
+                       Id = Ker R[T0 , . . . , Tn ]d −→ Γ(Z, OPnR (d)|Z )
+                L
+       Then I =   Id ⊂ R[T0 , . . . , Tn ] is a graded ideal and Z = Proj(R[T0 , . . . , Tn ]/I).
+                                    CONSTRUCTIONS OF SCHEMES                                   30
+
+
+       Proof. It is clear that I is a graded ideal. Set Z ′ = Proj(R[T0 , . . . , Tn ]/I). By
+       Lemma 11.5 we see that Z ′ is a closed subscheme of PnR . To see the equality
+       Z = Z ′ it suffices to check on an standard affine open D+ (Ti ). By renumbering the
+       homogeneous coordinates we may assume i = 0. Say Z ∩ D+ (T0 ), resp. Z ′ ∩ D+ (T0 )
+       is cut out by the ideal J, resp. J ′ of R[T1 /T0 , . . . , Tn /T0 ]. Then J ′ is the ideal
+                                         deg(F )
+       generated by the elements F/T0            where F ∈ I is homogeneous. Suppose the
+       degree of F ∈ I is d. Since F vanishes as a section of OPnR (d) restricted to Z we
+       see that F/T0d is an element of J. Thus J ′ ⊂ J.
+       Conversely, suppose that f ∈ J. If f has total degree d in T1 /T0 , . . . , Tn /T0 , then
+       we can write f = F/T0d for some F ∈ R[T0 , . . . , Tn ]d . Pick i ∈ {1, . . . , n}. Then
+       Z ∩ D+ (Ti ) is cut out by some ideal Ji ⊂ R[T0 /Ti , . . . , Tn /Ti ]. Moreover,
+                                                                                     
+                        T1       Tn T0     Tn              T1           Tn T0       Tn
+               J ·R        ,...,   , ,...,      = Ji · R       ,...,       , ,...,
+                        T0       T0 Ti     Ti              T0           T0 Ti        Ti
+       The left hand side is the localization of J with respect to the element Ti /T0 and
+       the right hand side is the localization of Ji with respect to the element T0 /Ti . It
+       follows that T0di F/Tid+di is an element of Ji for some di sufficiently large. This
+                     max(di )
+       proves that T0         F is an element of I, because its restriction to each standard
+       affine open D+ (Ti ) vanishes on the closed subscheme Z ∩ D+ (Ti ). Hence f ∈ J ′
+       and we conclude J ⊂ J ′ as desired.                                                □
+       The following lemma is a special case of the more general Properties, Lemmas 29.3
+       or 29.5.
+03GM   Lemma 13.8. Let R be a ring. Let F be a quasi-coherent sheaf on PnR . For d ≥ 0
+       set
+                       Md = Γ(PnR , F ⊗OPn OPnR (d)) = Γ(PnR , F(d))
+                                         R
+                  L
+       Then M =     d≥0 Md is a graded R[T0 , . . . , Rn ]-module and there is a canonical
+       isomorphism F = Mf.
+       Proof. The multiplication maps
+                                   R[T0 , . . . , Rn ]e × Md −→ Md+e
+       come from the natural isomorphisms
+                                  OPnR (e) ⊗OPn F(d) −→ F(e + d)
+                                               R
+
+
+       see Equation (10.1.4). Let us construct the map c : Mf → F. On each of the stan-
+       dard affines Ui = D+ (Ti ) we see that Γ(Ui , M
+                                                     f) = (M [1/Ti ])0 where the subscript
+       0 means  degree  0 part. An element  of this can be written as m/Tid with m ∈ Md .
+       Since Ti is a generator of O(1) over Ui we can always write m|Ui = mi ⊗ Tid where
+       mi ∈ Γ(Ui , F) is a unique section. Thus a natural guess is c(m/Tid ) = mi . A
+       small argument, which is omitted here, shows that this gives a well defined map
+       c:Mf → F if we can show that
+                                   (Ti /Tj )d mi |Ui ∩Uj = mj |Ui ∩Uj
+       in M [1/Ti Tj ]. But this is clear since on the overlap the generators Ti and Tj of
+       O(1) differ by the invertible function Ti /Tj .
+       Injectivity of c. We may check for injectivity over the affine opens Ui . Let i ∈
+       {0, . . . , n} and let s be an element s = m/Tid ∈ Γ(Ui , M
+                                                                 f) such that c(m/T d ) = 0.
+                                                                                   i
+                                       CONSTRUCTIONS OF SCHEMES                                    31
+
+
+       By the description of c above this means that mi = 0, hence m|Ui = 0. Hence
+       Tie m = 0 in M for some e. Hence s = m/Tid = Tie /Tie+d = 0 as desired.
+       Surjectivity of c. We may check for surjectivity over the affine opens Ui . By
+       renumbering it suffices to check it over U0 . Let s ∈ F(U0 ). Let us write F|Ui =
+       fi for some R[T0 /Ti , . . . , T0 /Ti ]-module Ni , which is possible because F is quasi-
+       N
+       coherent. So s corresponds to an element x ∈ N0 . Then we have that
+                                            (Ni )Tj /Ti ∼
+                                                        = (Nj )Ti /Tj
+       (where the subscripts mean “principal localization at”) as modules over the ring
+                                                            
+                                     T0       Tn T0      Tn
+                                R       ,...,   , ,...,        .
+                                     Ti       Ti Tj       Tj
+       This means that for some large integer d there exist elements si ∈ Ni , i = 1, . . . , n
+       such that
+                                        s = (Ti /T0 )d si
+       on U0 ∩ Ui . Next, we look at the difference
+                                             tij = si − (Tj /Ti )d sj
+       on Ui ∩ Uj , 0 < i < j. By our choice of si we know that tij |U0 ∩Ui ∩Uj = 0. Hence
+       there exists a large integer e such that (T0 /Ti )e tij = 0. Set s′i = (T0 /Ti )e si , and
+       s′0 = s. Then we will have
+                                        s′a = (Tb /Ta )e+d s′b
+       on Ua ∩ Ub for all a, b. This is exactly the condition that the elements s′a glue to a
+       global section m ∈ Γ(PnR , F(e+d)). And moreover c(m/T0e+d ) = s by construction.
+       Hence c is surjective and we win.                                                   □
+
+0B3B   Lemma 13.9. Let X be a scheme. Let L be an invertible sheaf and let s0 , . . . , sn
+       be global sections of L which generate it. Let F be the kernel of the induced map
+         ⊕n+1
+       OX      → L. Then F ⊗ L is globally generated.
+       Proof. In fact the result is true if X is any locally ringed space. The sheaf F is a
+       finite locally free OX -module of rank n. The elements
+                      sij = (0, . . . , 0, sj , 0, . . . , 0, −si , 0, . . . , 0) ∈ Γ(X, L⊕n+1 )
+       with sj in the ith spot and −si in the jth spot map to zero in L⊗2 . Hence sij ∈
+       Γ(X, F ⊗OX L). A local computation shows that these sections generate F ⊗ L.
+       Alternative proof. Consider the morphism φ : X → PnZ associated to the pair
+       (L, (s0 , . . . , sn )). Since the pullback of O(1) is L and since the pullback of Ti is si ,
+       it suffices to prove the lemma in the case of PnZ . In this case the sheaf F corresponds
+       to the graded S = Z[T0 , . . . , Tn ] module M which fits into the short exact sequence
+                                      0 → M → S ⊕n+1 → S(1) → 0
+       where the second map is given by T0 , . . . , Tn . In this case the statement above
+       translates into the statement that the elements
+                         Tij = (0, . . . , 0, Tj , 0, . . . , 0, −Ti , 0, . . . , 0) ∈ M (1)0
+       generate the graded module M (1) over S. We omit the details.                               □
+                                   CONSTRUCTIONS OF SCHEMES                                32
+
+
+                     14. Invertible sheaves and morphisms into Proj
+01NJ   Let T be a scheme and let L be an invertible sheaf on T . For a section s ∈ Γ(T, L) we
+       denote Ts the open subset of points where s does not vanish. See Modules, Lemma
+       25.10. We can view the following lemma as a slight generalization of Lemma 12.3.
+       It also is a generalization of Lemma 11.1.
+01NK   Lemma 14.1. Let A be a graded ring. Set X = Proj(A). Let T be a scheme. Let
+       L be an invertible OT -module. Let ψ : A → Γ∗ (T, L) be a homomorphism of graded
+       rings. Set                       [
+                                U (ψ) =                    Tψ(f )
+                                                 f ∈A+ homogeneous
+       The morphism ψ induces a canonical morphism of schemes
+                                            rL,ψ : U (ψ) −→ X
+       together with a map of Z-graded OT -algebras
+                                 M                M
+                             ∗
+                        θ : rL,ψ        OX (d) −→                       L⊗d |U (ψ) .
+                                           d∈Z                    d∈Z
+
+       The triple (U (ψ), rL,ψ , θ) is characterized by the following properties:
+                                               −1
+           (1) For f ∈ A+ homogeneous we have rL,ψ (D+ (f )) = Tψ(f ) .
+           (2) For every d ≥ 0 the diagram
+
+                                       Ad                   / Γ(T, L⊗d )
+                                                      ψ
+
+                                (10.1.3)                           restrict
+                                                                 
+                                 Γ(X, OX (d))
+                                                      θ   / Γ(U (ψ), L⊗d )
+
+                is commutative.
+       Moreover, for any d ≥ 1 and any open subscheme V ⊂ T such that the sections
+       in ψ(Ad ) generate L⊗d |V the morphism rL,ψ |V agrees with the morphism φ : V →
+       Proj(A) and the map θ|V agrees with the map α : φ∗ OX (d) → L⊗d |V where (φ, α)
+       is the pair of Lemma 12.1 associated to ψ|A(d) : A(d) → Γ∗ (V, L⊗d ).
+       Proof. Suppose that we have two triples (U, r : U → X, θ) and (U ′ , r′ : U ′ →
+       X, θ′ ) satisfying (1) and (2). Property (1) implies that U = U ′ = U (ψ) and that
+       r = r′ as maps of underlying topological spaces, since the opens D+ (f ) form a
+       basis for the topology on X, and since X is a sober topological space (see Algebra,
+       Section 57Land Schemes, Lemma 11.1). Let f ∈ A+ be homogeneous. Note that
+       Γ(D+ (f ), n∈Z OX (n)) = Af as a Z-graded algebra. Consider the two Z-graded
+       ring maps                                           M
+                                  θ, θ′ : Af −→ Γ(Tψ(f ) ,   L⊗n ).
+       We know that multiplication by f (resp. ψ(f )) is an isomorphism on the left (resp.
+       right) hand side. We also know that θ(x/1) = θ′ (x/1) = ψ(x)|Tψ(f ) by (2) for all
+       x ∈ A. Hence we deduce easily that θ = θ′ as desired. Considering the degree 0
+       parts we deduce that r♯ = (r′ )♯ , i.e., that r = r′ as morphisms of schemes. This
+       proves the uniqueness.
+       Now we come to existence. By the uniqueness just proved, it is enough to construct
+       the pair (r, θ) locally on T . Hence we may assume that T = Spec(R) is affine,
+       that L = OT and that for some f ∈ A+ homogeneous we have ψ(f ) generates
+                                  CONSTRUCTIONS OF SCHEMES                                33
+
+               ⊗ deg(f )
+       OT = OT         . In other words, ψ(f ) = u ∈ R∗ is a unit. In this case the map ψ
+       is a graded ring map
+                                    A −→ R[x] = Γ∗ (T, OT )
+       which maps f to uxdeg(f ) . Clearly this extends (uniquely) to a Z-graded ring map
+       θ : Af → R[x, x−1 ] by mapping 1/f to u−1 x− deg(f ) . This map in degree zero gives
+       the ring map A(f ) → R which gives the morphism r : T = Spec(R) → Spec(A(f ) ) =
+       D+ (f ) ⊂ X. Hence we have constructed (r, θ) in this special case.
+       Let us show the last statement of the lemma. According to Lemma 12.1 the mor-
+       phism constructed there is the unique one such that the displayed diagram in its
+       statement commutes. The commutativity of the diagram in the lemma implies the
+       commutativity when restricted to V and A(d) . Whence the result.              □
+01NL   Remark 14.2. Assumptions as in Lemma 14.1 above. The image of the morphism
+       rL,ψ need not be contained in the locus where the sheaf OX (1) is invertible. Here is
+       an example. Let k be a field. Let S = k[A, B, C] graded by deg(A) = 1, deg(B) = 2,
+       deg(C) = 3. Set X = Proj(S). Let T = P2k = Proj(k[X0 , X1 , X2 ]). Recall that
+       L = OT (1) is invertible and that OT (n) = L⊗n . Consider the composition ψ of the
+       maps
+                                  S → k[X0 , X1 , X2 ] → Γ∗ (T, L).
+       Here the first map is A 7→ X0 , B 7→ X12 , C 7→ X23 and the second map is (10.1.3).
+       By the lemma this corresponds to a morphism rL,ψ : T → X = Proj(S) which is
+       easily seen to be surjective. On the other hand, in Remark 9.2 we showed that the
+       sheaf OX (1) is not invertible at all points of X.
+
+                                15. Relative Proj via glueing
+01NM
+01NN   Situation 15.1. Here S is a scheme, and A is a quasi-coherent graded OS -algebra.
+       In this section we outline how to construct a morphism of schemes
+                                         ProjS (A) −→ S
+       by glueing the homogeneous spectra Proj(Γ(U, A)) where U ranges over the affine
+       opens of S. We first show that the homogeneous spectra of the values of A over
+       affines form a suitable collection of schemes, as in Lemma 2.1.
+01NO   Lemma 15.2. In Situation 15.1. Suppose U ⊂ U ′ ⊂ S are affine opens. Let
+       A = A(U ) and A′ = A(U ′ ). The map of graded rings A′ → A induces a morphism
+       r : Proj(A) → Proj(A′ ), and the diagram
+                                     Proj(A)        / Proj(A′ )
+
+
+                                                         
+                                        U              / U′
+       is cartesian. Moreover there are canonical isomorphisms θ : r∗ OProj(A′ ) (n) →
+       OProj(A) (n) compatible with multiplication maps.
+       Proof. Let R = OS (U ) and R′ = OS (U ′ ). Note that the map R ⊗R′ A′ → A is an
+       isomorphism as A is quasi-coherent (see Schemes, Lemma 7.3 for example). Hence
+       the lemma follows from Lemma 11.6.                                            □
+                                        CONSTRUCTIONS OF SCHEMES                                           34
+
+
+       In particular the morphism Proj(A) → Proj(A′ ) of the lemma is an open immersion.
+01NP   Lemma 15.3. In Situation 15.1. Suppose U ⊂ U ′ ⊂ U ′′ ⊂ S are affine opens.
+       Let A = A(U ), A′ = A(U ′ ) and A′′ = A(U ′′ ). The composition of the morphisms
+       r : Proj(A) → Proj(A′ ), and r′ : Proj(A′ ) → Proj(A′′ ) of Lemma 15.2 gives the
+       morphism r′′ : Proj(A) → Proj(A′′ ) of Lemma 15.2. A similar statement holds for
+       the isomorphisms θ.
+       Proof. This follows from Lemma 11.2 since the map A′′ → A is the composition
+       of A′′ → A′ and A′ → A.                                                    □
+01NQ   Lemma 15.4. In Situation 15.1. There exists a morphism of schemes
+                                               π : ProjS (A) −→ S
+       with the following properties:
+           (1) for every affine open U ⊂ S there exists an isomorphism iU : π −1 (U ) →
+               Proj(A) with A = A(U ), and
+           (2) for U ⊂ U ′ ⊂ S affine open the composition
+                                 i−1                                                  iU ′
+                   Proj(A)
+                                  U
+                                       / π −1 (U )       inclusion    / π −1 (U ′ )          / Proj(A′ )
+
+               with A = A(U ), A′ = A(U ′ ) is the open immersion of Lemma 15.2 above.
+       Proof. Follows immediately from Lemmas 2.1, 15.2, and 15.3.                                         □
+01NR   Lemma 15.5. In Situation 15.1. The morphism π : ProjS (A) → S of Lemma
+       15.4 comes with the following additional
+                                           L structure. There exists a quasi-coherent Z-
+       graded sheaf of OProj (A) -algebras   n∈Z OProjS (A) (n), and a morphism of graded
+                            S
+       OS -algebras                                               
+                                         M
+                               ψ : A −→         π∗ OProj (A) (n)
+                                                         n≥0               S
+
+       uniquely determined by the following property: For every affine open U ⊂ S with
+       A = A(U ) there is an isomorphism
+                         M                     M                    
+                θU : i∗U        OProj(A) (n) −→           OProj (A) (n) |π−1 (U )
+                                 n∈Z                                   n∈Z            S
+
+       of Z-graded Oπ−1 (U ) -algebras such that
+
+                An                                                      / Γ(π −1 (U ), OProj (A) (n))
+                                                     ψ                        4             S
+
+
+                      (10.1.3)
+                                  '                              θU
+
+                           Γ(Proj(A), OProj(A) (n))
+       is commutative.
+       Proof. We are going to use Lemma 2.2 to glue the sheaves of Z-graded algebras
+       L
+         n∈Z OProj(A) (n) for A = A(U ), U ⊂ S affine open over the scheme ProjS (A). We
+       have constructed the data necessary for this in Lemma 15.2 and we have checked
+       condition (d) of Lemma
+                           L 2.2 in Lemma 15.3. Hence we get the sheaf of Z-graded
+       OProj (A) -algebras    n∈Z OProjS (A) (n) together with the isomorphisms θU for all
+            S
+       U ⊂ S affine open and all n ∈ Z.LFor every affine open U ⊂ S with A = A(U )
+       we have a map A → Γ(Proj(A), n≥0 OProj(A) (n)). Hence the map ψ exists by
+                                        CONSTRUCTIONS OF SCHEMES                                     35
+
+
+       functoriality of relative glueing, see Remark 2.3. The diagram of the lemma com-
+       mutes by construction. This characterizes the sheaf of Z-graded OProj (A) -algebras
+       L                                                                    S
+          OProj (A) (n) because the proof of Lemma 11.1 shows that having these diagrams
+               S
+       commute uniquely determines the maps θU . Some details omitted.                  □
+
+                                   16. Relative Proj as a functor
+                                                                          L
+01NS   We place ourselves in Situation 15.1. So S is a scheme and A =        d≥0 Ad is a
+       quasi-coherent graded OS -algebra. In this section we relativize the construction
+       of Proj by constructing a functor which the relative homogeneous spectrum will
+       represent. As a result we will construct a morphism of schemes
+                                              ProjS (A) −→ S
+       which above affine opens of S will look like the homogeneous spectrum of a graded
+       ring. The discussion will be modeled after our discussion of the relative spectrum
+       in Section 4. The easier method using glueing schemes of the form Proj(A), A =
+       Γ(U, A), U ⊂ S affine open, is explained in Section 15, and the result in this section
+       will be shown to be isomorphic to that one.
+       Fix for the moment an integer d ≥ 1. We denote A(d) = n≥0 And similarly to the
+                                                                      L
+       notation in Algebra, Section 56. Let T be a scheme. Let us consider quadruples
+       (d, f : T → S, L, ψ) over T where
+            (1) d is the integer we fixed above,
+            (2) f : T → S is a morphism of schemes,
+            (3) L is an invertible   L OT -module, and
+            (4) ψ : f ∗ A(d) → n≥0 L⊗n is a homomorphism of graded OT -algebras such
+                that f ∗ Ad → L is surjective.
+       Given a morphism h : T ′ → T and a quadruple (d, f, L, ψ) over T we can pull it
+       back to the quadruple (d, f ◦ h, h∗ L, h∗ ψ) over T ′ . Given two quadruples (d, f, L, ψ)
+       and (d, f ′ , L′ , ψ ′ ) over T with the same integer d we say they are strictly equivalent
+       if f = f ′ and there exists an isomorphism         β : L → L′ such that β ◦ ψ = ψ ′ as
+                                         ∗ (d)            ′ ⊗n
+                                                  L
+       graded OT -algebra maps f A → n≥0 (L ) .
+       For each integer d ≥ 1 we define
+         Fd : Sch opp     −→    Sets,
+                      T   7−→   {strict equivalence classes of (d, f : T → S, L, ψ) as above}
+       with pullbacks as defined above.
+01NT   Lemma 16.1. In Situation 15.1. Let d ≥ 1. Let Fd be the functor associated to
+       (S, A) above. Let g : S ′ → S be a morphism of schemes. Set A′ = g ∗ A. Let Fd′ be
+       the functor associated to (S ′ , A′ ) above. Then there is a canonical isomorphism
+                                            F′ ∼
+                                               = hS ′ ×h Fd
+                                               d            S
+
+
+       of functors.
+       Proof. A quadruple (d, f ′ : T → S ′ , L′ , ψ ′ : (f ′ )∗ (A′ )(d) →                ′ ⊗n
+                                                                                  L
+                                                                                     n≥0 (L )   ) is the
+                                              ∗ (d)                  ⊗n
+                                                           L
+       same as a quadruple (d, f, L, ψ : f A → n≥0 L ) together with a factorization
+       of f as f = g ◦ f ′ . Namely, the correspondence is f = g ◦ f ′ , L = L′ and ψ = ψ ′ via
+       the identifications (f ′ )∗ (A′ )(d) = (f ′ )∗ g ∗ (A(d) ) = f ∗ A(d) . Hence the lemma.       □
+                                       CONSTRUCTIONS OF SCHEMES                                        36
+
+
+01NU   Lemma 16.2. In Situation 15.1. Let Fd be the functor associated to (d, S, A)
+       above. If S is affine, then Fd is representable by the open subscheme Ud (12.0.1)
+       of the scheme Proj(Γ(S, A)).
+       Proof. Write S = Spec(R) and A = Γ(S, A). Then A is a graded R-algebra and
+       A = A.e To prove the lemma we have to identify the functor Fd with the functor
+        triples
+       Fd       of triples defined in Section 12.
+                     → S, L, ψ) be a quadruple. We may think of ψ as a OS -module
+       Let (d, f : T L
+       map A → n≥0 f∗ L⊗n . Since A(d) is quasi-coherent this is the same thing as
+               (d)
+
+       an R-linear homomorphism of graded rings A(d) → Γ(S, n≥0 f∗ L⊗n ). Clearly,
+                                                               L
+
+       Γ(S, n≥0 f∗ L⊗n ) = Γ∗ (T, L). Thus we may associate to the quadruple the triple
+            L
+
+       (d, L, ψ).
+       Conversely, let (d, L, ψ) be a triple. The composition R → A0 → Γ(T, OT ) deter-
+       mines a morphism f : T →L   S = Spec(R), see Schemes, Lemma 6.4. With this choice
+       of f the map A(d) → Γ(S, n≥0 f∗ L⊗n ) is R-linear, and hence corresponds to a ψ
+       which we can use for a quadruple (d, f : T → S, L, ψ). We omit the verification
+       that this establishes an isomorphism of functors Fd = Fdtriples .              □
+
+01NV   Lemma 16.3. In Situation 15.1. The functor Fd is representable by a scheme.
+       Proof. We are going to use Schemes, Lemma 15.4.
+       First we check that Fd satisfies the sheaf property
+                                                         S          for the Zariski topology. Namely,
+       suppose that T is a scheme, that T = i∈I Ui is an open covering, and that
+       (d, fi , Li , ψi ) ∈ Fd (Ui ) such that (d, fi , Li , ψi )|Ui ∩Uj and (d, fj , Lj , ψj )|Ui ∩Uj are
+       strictly equivalent. This implies that the morphisms fi : Ui → S glue to a mor-
+       phism of schemes f : T → S such that f |Ii = fi , see Schemes, Section 14. Thus
+       fi∗ A(d) = f ∗ A(d) |Ui . It also implies there exist isomorphisms βij : Li |Ui ∩Uj →
+       Lj |Ui ∩Uj such that βij ◦ ψi = ψj on Ui ∩ Uj . Note that the isomorphisms βij are
+       uniquely determined by this requirement because the maps fi∗ Ad → Li are surjec-
+       tive. In particular we see that βjk ◦ βij = βik on Ui ∩ Uj ∩ Uk . Hence by Sheaves,
+       Section 33 the invertible sheaves Li glue to an invertible OT -module                   L and the
+       morphisms ψi glue to morphism of OT -algebras ψ : f ∗ A(d) →                             ⊗n
+                                                                                     L
+                                                                                        n≥0 L       . This
+       proves that Fd satisfies the sheaf condition with respect to the Zariski topology.
+                     S
+       Let S = i∈I Ui be an affine open covering. Let Fd,i ⊂ Fd be the subfunctor
+       consisting of those pairs (f : T → S, φ) such that f (T ) ⊂ Ui .
+       We have to show each Fd,i is representable. This is the case because Fd,i is identified
+       with the functor associated to Ui equipped with the quasi-coherent graded OUi -
+       algebra A|Ui by Lemma 16.1. Thus the result follows from Lemma 16.2.
+       Next we show that Fd,i ⊂ Fd is representable by open immersions. Let (f : T →
+       S, φ) ∈ Fd (T ). Consider Vi = f −1 (Ui ). It follows from the definition of Fd,i that
+       given a : T ′ → T we have a∗ (f, φ) ∈ Fd,i (T ′ ) if and only if a(T ′ ) ⊂ Vi . This is what
+       we were required to show.
+       Finally, we have to show that the collection (Fd,i )S  i∈I covers Fd . Let (f : T →
+                                          −1
+       S, φ) ∈ Fd (T ). Consider
+                           S      Vi =  f    (Ui ). Since S =   i∈I Ui is an open covering of
+       S we see that T = i∈I Vi is an open covering of T . Moreover (f, φ)|Vi ∈ Fd,i (Vi ).
+       This finishes the proof of the lemma.                                               □
+                                    CONSTRUCTIONS OF SCHEMES                                    37
+
+
+       At this point we can redo the material at the end of Section 12 in the current
+       relative setting and define a functor which is representable by ProjS (A). To do this
+       we introduce the notion of equivalence between two quadruples (d, f : T → S, L, ψ)
+       and (d′ , f ′ : T → S, L′ , ψ ′ ) with possibly different values of the integers d, d′ .
+       Namely, we say these are equivalent if f = f ′ , and there exists an isomorphism
+                ′
+       β : L⊗d → (L′ )⊗d such that β ◦ ψ|f ∗ A(dd′ ) = ψ ′ |f ∗ A(dd′ ) . The following lemma
+       implies that this defines an equivalence relation. (This is not a complete triviality.)
+01NW   Lemma 16.4. In Situation 15.1. Let T be a scheme. Let (d, f, L, ψ), (d′ , f ′ , L′ , ψ ′ )
+       be two quadruples over T . The following are equivalent:
+           (1) Let m = lcm(d, d′ ). Write m = ad = a′ d′ . We have f = f ′ and there exists
+                                                    ′
+               an isomorphism β : L⊗a → (L′ )⊗a with the property that β ◦ ψ|f ∗ A(m) and
+               ψ ′ |f ∗ A(m) agree as graded ring maps f ∗ A(m) → n≥0 (L′ )⊗mn .
+                                                                        L
+
+           (2) The quadruples (d, f, L, ψ) and (d′ , f ′ , L′ , ψ ′ ) are equivalent.
+           (3) We have f = f ′ and for some positive integer m = ad = a′ d′ there exists
+                                                    ′
+               an isomorphism β : L⊗a → (L′ )⊗a with the property that β ◦ ψ|f ∗ A(m) and
+               ψ ′ |f ∗ A(m) agree as graded ring maps f ∗ A(m) → n≥0 (L′ )⊗mn .
+                                                                        L
+
+       Proof. Clearly (1) implies (2) and (2) implies (3) by restricting to more divisible
+       degrees and powers of invertible sheaves. Assume (3) for some integer m = ad =
+       a′ d′ . Let m0 = lcm(d, d′ ) and write it as m0 = a0 d = a′0 d′ . We are given an
+                                        ′
+       isomorphism β : L⊗a → (L′ )⊗a with the property described in (3). We want to
+                                                 ′
+       find an isomorphism β0 : L⊗a0 → (L′ )⊗a0 having that property as well. Since by
+       assumption the maps ψ : f ∗ Ad → L and ψ ′ : (f ′ )∗ Ad′ → L′ are surjective the same
+       is true for the maps ψ : f ∗ Am0 → L⊗a0 and ψ ′ : (f ′ )∗ Am0 → (L′ )⊗a0 . Hence if
+       β0 exists it is uniquely determined by the condition that β0 ◦ ψ = ψ ′ . This means
+       that we may work locally on T . Hence we may assume that f = f ′ : T → S maps
+       into an affine open, in other words we may assume that S is affine. In this case
+       the result follows from the corresponding result for triples (see Lemma 12.4) and
+       the fact that triples and quadruples correspond in the affine base case (see proof of
+       Lemma 16.2).                                                                        □
+
+       Suppose d′ = ad. Consider the transformation of functors Fd → Fd′ which assigns
+       to the quadruple (d, f, L, ψ) over T the quadruple (d′ , f, L⊗a , ψ|f ∗ A(d′ ) ). One of the
+       implications of Lemma 16.4 is that the transformation Fd → Fd′ is injective! For a
+       quasi-compact scheme T we define
+                                                [
+                                       F (T ) =       Fd (T )
+                                                     d∈N
+
+       with transition maps as explained above. This clearly defines a contravariant func-
+       tor on the category of quasi-compact schemes with values in sets. For a general
+       scheme T we define
+                               F (T ) = limV ⊂T quasi-compact open F (V ).
+       In other words, an element ξ of F (T ) corresponds to a compatible system of choices
+       of elements ξV ∈ F (V ) where V ranges over the quasi-compact opens of T . We
+       omit the definition of the pullback map F (T ) → F (T ′ ) for a morphism T ′ → T of
+       schemes. Thus we have defined our functor
+01NX   (16.4.1)                           F : Sch opp −→ Sets
+                                    CONSTRUCTIONS OF SCHEMES                                   38
+
+
+01NY   Lemma 16.5.        In Situation 15.1. The functor F above is representable by a
+       scheme.
+       Proof. Let Ud → SL    be the scheme representing the functor Fd defined above. Let
+       Ld , ψ d : πd∗ A(d) → n≥0 L⊗nd  be the universal object. If d|d′ , then we may con-
+                                     ⊗d′ /d
+       sider the quadruple (d′ , πd , Ld , ψ d |A(d′ ) ) which determines a canonical morphism
+       Ud → Ud′ over S. By construction this morphism corresponds to the transformation
+       of functors Fd → Fd′ defined above.
+       For every affine open Spec(R) = V ⊂ S setting A = Γ(V, A) we have a canonical
+       identification of the base change Ud,V with the corresponding open subscheme of
+       Proj(A), see Lemma 16.2. Moreover, the morphisms Ud,V → Ud′ ,V constructed
+       above correspond to the inclusions of opens in Proj(A). Thus we conclude that
+       Ud → Ud′ is an open immersion.
+       This allows us to construct X by glueing the schemes Ud along the open immersions
+       Ud → Ud′ . Technically, it is convenient to choose a sequence d1 |d2 |dS
+                                                                              3 | . . . such that
+       every positive integer divides one of the di and to simply take X = Udi using the
+       open immersions above. It is then a simple matter to prove that X represents the
+       functor F .                                                                             □
+
+01NZ   Lemma 16.6. In Situation 15.1. The scheme π : ProjS (A) → S constructed in
+       Lemma 15.4 and the scheme representing the functor F are canonically isomorphic
+       as schemes over S.
+       Proof. Let X be the scheme representing the functor F . Note that X is a scheme
+       over S since the functor F comes equipped with a natural transformation F → hS .
+       Write Y = ProjS (A). We have to show that X ∼   = Y as S-schemes. We give two
+       arguments.
+       The first argument uses the construction of X as the union of the schemes Ud
+       representing Fd in the proof of Lemma 16.5. Over each affine open of S we can
+       identify X with the homogeneous spectrum of the sections of A over that open, since
+       this was true for the opens Ud . Moreover, these identifications are compatible with
+       further restrictions to smaller affine opens. On the other hand, Y was constructed
+       by glueing these homogeneous spectra. Hence we can glue these isomorphisms to
+       an isomorphism between X and ProjS (A) as desired. Details omitted.
+       Here is the second argument. Lemma 15.5 shows that there exists a morphism of
+       graded algebras
+                                              M
+                                 ψ : π ∗ A −→      OY (n)
+                                                       n≥0
+
+       over Y which on sections over affine opens of S agrees with (10.1.3). Hence for
+       every y ∈ Y there exists an open neighbourhood V ⊂ Y of y and an integer
+       d ≥ 1 such that for d|n the sheaf OY (n)|V is invertible and the multiplication maps
+       OY (n)|V ⊗OV OY (m)|V → OY (n + m)|V are isomorphisms. Thus ψ restricted to
+       the sheaf π ∗ A(d) |V gives an element of Fd (V ). Since the opens V cover Y we see
+       “ψ” gives rise to an element of F (Y ). Hence a canonical morphism Y → X over S.
+       Because this construction is completely canonical to see that it is an isomorphism
+       we may work locally on S. Hence we reduce to the case S affine where the result
+       is clear.                                                                         □
+                                     CONSTRUCTIONS OF SCHEMES                                          39
+
+
+01O0   Definition 16.7. Let S be a scheme. Let A be a quasi-coherent sheaf of graded
+       OS -algebras. The relative homogeneous spectrum of A over S, or the homogeneous
+       spectrum of A over S, or the relative Proj of A over S is the scheme constructed in
+       Lemma 15.4 which represents the functor F (16.4.1), see Lemma 16.6. We denote
+       it π : ProjS (A) → S.
+       The relative Proj comes equipped with a quasi-coherent sheaf of Z-graded algebras
+       L
+         n∈Z OProjS (A) (n) (the twists of the structure sheaf) and a “universal” homomor-
+       phism of graded algebras
+                                                M                   
+                              ψuniv : A −→ π∗           OProj (A) (n)
+                                                         n≥0       S
+
+
+       see Lemma 15.5. We may also think of this as a homomorphism
+                                            M
+                           ψuniv : π ∗ A −→         OProj (A) (n)
+                                                         n≥0       S
+
+
+       if we like. The following lemma is a formulation of the universality of this object.
+01O1   Lemma 16.8. In Situation 15.1. Let (f : T → S, d, L, ψ) be a quadruple. Let
+       rd,L,ψ : T → ProjS (A) be the associated S-morphism. There exists an isomorphism
+       of Z-graded OT -algebras
+                                  M                       M
+                            ∗
+                       θ : rd,L,ψ         OProj (A) (nd) −→         L⊗n
+                                           n∈Z       S                            n∈Z
+
+       such that the following diagram commutes
+                                                                       / f∗                   ⊗n
+                                                                                                   
+                   A(d)
+                                                                                  L
+                                                                                      n∈Z L
+                                                 ψ                            5
+                           ψuniv
+                                    L '
+                                                               θ
+                                                        
+                               π∗         O
+                                       n≥0 Proj (A) (nd)
+                                                     S
+
+
+       The commutativity of this diagram uniquely determines θ.
+       Proof. Note that the quadruple (f : T → S, d, L, ψ) defines an element of Fd (T ).
+       Let Ud ⊂ ProjS (A) be the locus where the sheaf OProj (A) (d) is invertible and
+                                                                   S
+       generated by the image of ψuniv : π ∗ Ad → OProj (A) (d). Recall that Ud represents
+                                                         S
+       the functor Fd , see the proof of Lemma 16.5. Hence the result will follow if we
+       can show the quadruple (Ud → S, d, OUd (d), ψuniv |A(d) ) is the universal family, i.e.,
+       the representing object in Fd (Ud ). We may do this after restricting to an affine
+       open of S because (a) the formation ofL  the functors Fd commutes with base change
+       (see Lemma 16.1), and (b) the pair ( n∈Z OProj (A) (n), ψuniv ) is constructed by
+                                                           S
+       glueing over affine opens in S (see Lemma 15.5). Hence we may assume that S is
+       affine. In this case the functor of quadruples Fd and the functor of triples Fd agree
+       (see proof of Lemma 16.2) and moreover Lemma 12.2 shows that (d, OUd (d), ψ d )
+       is the universal triple over Ud . Going backwards through the identifications in the
+       proof of Lemma 16.2 shows that (Ud → S, d, OUd (d), ψuniv |A(d) ) is the universal
+       quadruple as desired.                                                                □
+
+01O2   Lemma 16.9. Let S be a scheme and A be a quasi-coherent sheaf of graded OS -
+       algebras. The morphism π : ProjS (A) → S is separated.
+                                    CONSTRUCTIONS OF SCHEMES                            40
+
+
+       Proof. To prove a morphism is separated we may work locally on the base, see
+       Schemes, Section 21. By construction ProjS (A) is over any affine U ⊂ S isomorphic
+       to Proj(A) with A = A(U ). By Lemma 8.8 we see that Proj(A) is separated. Hence
+       Proj(A) → U is separated (see Schemes, Lemma 21.13) as desired.                 □
+01O3   Lemma 16.10. Let S be a scheme and A be a quasi-coherent sheaf of graded OS -
+       algebras. Let g : S ′ → S be any morphism of schemes. Then there is a canonical
+       isomorphism
+                               r : ProjS ′ (g ∗ A) −→ S ′ ×S ProjS (A)
+       as well as a corresponding isomorphism
+                               M                    M
+                   θ : r∗ pr∗2       OProj (A) (d) −→           OProj ′ (g∗ A) (d)
+                                  d∈Z          S          d∈Z         S
+
+       of Z-graded OProj ′ (g∗ A) -algebras.
+                          S
+
+
+       Proof. This follows from Lemma 16.1 and the construction of ProjS (A) in Lemma
+       16.5 as the union of the schemes Ud representing the functors Fd . In terms of
+       the construction of relative Proj via glueing this isomorphism is given by the iso-
+       morphisms constructed in Lemma 11.6 which provides us with the isomorphism θ.
+       Some details omitted.                                                            □
+01O4   Lemma 16.11. Let S be a scheme. Let A be a quasi-coherent sheaf of graded OS -
+       modules generated as an A0 -algebra by A1 . In this case the scheme X = ProjS (A)
+       represents the functor F1 which associates to a scheme f : T → S over S the set of
+       pairs (L, ψ), where
+           (1) L is an invertible
+                            L OT⊗n   -module, and
+           (2) ψ : f ∗ A →     n≥0 L    is a graded OT -algebra homomorphism such that
+               f ∗ A1 → L is surjective
+       up to strict equivalence as above. Moreover, in this case all the quasi-coherent
+       sheaves OProj(A) (n) are invertible OProj(A) -modules and the multiplication maps
+       induce isomorphisms OProj(A) (n) ⊗OProj(A) OProj(A) (m) = OProj(A) (n + m).
+
+       Proof. Under the assumptions of the lemma the sheaves OProj(A) (n) are invertible
+       and the multiplication maps isomorphisms by Lemma 16.5 and Lemma 12.3 over
+       affine opens of S. Thus X actually represents the functor F1 , see proof of Lemma
+       16.5.                                                                           □
+
+                        17. Quasi-coherent sheaves on relative Proj
+01O5   We briefly discuss how to deal with graded modules in the relative setting.
+                                       15.1. So S is a scheme, and A is a quasi-coherent
+       We place ourselves in Situation L
+       graded OS -algebra. Let M =       n∈Z Mn be a graded A-module, quasi-coherent
+       as an OS -module. We are going to describe the associated quasi-coherent sheaf
+       of modules on ProjS (A). We first describe the value of this sheaf on schemes T
+       mapping into the relative Proj.
+       Let T be a scheme. Let (d, f : T → S, L, ψ) be a quadruple over T , as in Section
+       16. We define a quasi-coherent sheaf M
+                                            fT of OT -modules as follows
+                                                  M          
+01O6   (17.0.1)           MfT = f ∗ M(d) ⊗f ∗ A(d)         L⊗n
+                                                         n∈Z          0
+                                   CONSTRUCTIONS OF SCHEMES                                 41
+
+
+          fT is the degree 0 part of the tensor product of the graded f ∗ A(d) -modules M(d)
+       So M
+       and n∈Z L⊗n . Note that the sheaf M
+           L                                   fT depends on the quadruple even though
+       we suppressed this in the notation. This construction has the pleasing property
+       that given any morphism g : T ′ → T we have M    fT ′ = g ∗ M
+                                                                   fT where M    fT ′ denotes
+       the quasi-coherent sheaf associated to the pullback quadruple (d, f ◦ g, g ∗ L, g ∗ ψ).
+       Since all sheaves in (17.0.1) are quasi-coherent we can spell out the construction
+       over an affine open Spec(C) = V ⊂ T which maps into an affine open Spec(R) =
+       U ⊂ S. Namely, suppose that A|U corresponds to the graded R-algebra A, that
+       M|U corresponds to the graded A-module M , and that L|V corresponds to the
+       invertible C-module L. The map ψ gives rise to a graded R-algebra map γ : A(d) →
+                ⊗n
+       L
+          n≥0 L    . (Tensor powers of L over C.) Then (M
+                                                        fT )|V is the quasi-coherent sheaf
+       associated to the C-module
+                                                     M            
+                          NR,C,A,M,γ = M (d) ⊗A(d) ,γ          L⊗n
+                                                              n∈Z        0
+       By assumption we may even cover T by affine opens V such that there exists some
+       a ∈ Ad such that γ(a) ∈ L is a C-basisPfor the module L. In that case any element
+       of NR,C,A,M,γ is a sum of pure tensors   mi ⊗ γ(a)−ni with mi ∈ Mni d . In fact we
+       may multiply each mi with a suitable positive power of a and collect terms to see
+       that each element of NR,C,A,M,γ can be written as m ⊗ γ(a)−n with m ∈ Mnd and
+       n ≫ 0. In other words we see that in this case
+                                    NR,C,A,M,γ = M(a) ⊗A(a) C
+       where the map A(a) → C is the map x/an 7→ γ(x)/γ(a)n . In other words, this
+                       f on D+ (a) ⊂ Proj(A) pulled back to Spec(C) via the morphism
+       is the value of M
+       Spec(C) → D+ (a) coming from γ.
+01O7   Lemma 17.1. In Situation 15.1. For any quasi-coherent sheaf of graded A-
+       modules M on S, there exists a canonical associated sheaf of OProj (A) -modules
+                                                                         S
+
+       M
+       f with the following properties:
+           (1) Given a scheme T and a quadruple (T → S, d, L, ψ) over T corresponding
+               to a morphism h : T → ProjS (A) there is a canonical isomorphism M
+                                                                                fT =
+                ∗ f
+               h M where M  fT is defined by (17.0.1).
+           (2) The isomorphisms of (1) are compatible with pullbacks.
+           (3) There is a canonical map
+                                        π ∗ M0 −→ M.
+                                                   f
+           (4) The construction M →7 Mf is functorial in M.
+           (5) The construction M 7→ Mf is exact.
+           (6) There are canonical maps
+                                  M
+                                  f ⊗O
+                                       Proj (A)
+                                                N
+                                                e −→ M^
+                                                      ⊗A N
+                                            S
+
+               as in Lemma 9.1.
+           (7) There exist canonical maps
+                                                 M
+                                      π ∗ M −→             ^
+                                                           M(n)
+                                                     n∈Z
+               generalizing (10.1.6).
+           (8) The formation of M f commutes with base change.
+                                    CONSTRUCTIONS OF SCHEMES                                    42
+
+
+       Proof. Omitted. We should split this lemma into parts and prove the parts sepa-
+       rately.                                                                      □
+
+                                18. Functoriality of relative Proj
+07ZF   This section is the analogue of Section 11 for the relative Proj. Let S be a scheme.
+       A graded OS -algebra map ψ : A → B does not always give rise to a morphism of
+       associated relative Proj. The correct result is stated as follows.
+07ZG   Lemma 18.1. Let S be a scheme. Let A, B be two graded quasi-coherent OS -
+       algebras. Set p : X = ProjS (A) → S and q : Y = ProjS (B) → S. Let ψ : A → B be
+       a homomorphism of graded OS -algebras. There is a canonical open U (ψ) ⊂ Y and
+       a canonical morphism of schemes
+                                          rψ : U (ψ) −→ X
+       over S and a map of Z-graded OU (ψ) -algebras
+                                 M                 M
+                               ∗
+                     θ = θψ : rψ         OX (d) −→                    OU (ψ) (d).
+                                          d∈Z                   d∈Z
+       The triple (U (ψ), rψ , θ) is characterized by the property that for any affine open
+       W ⊂ S the triple
+           (U (ψ) ∩ p−1 W,      rψ |U (ψ)∩p−1 W : U (ψ) ∩ p−1 W → q −1 W,     θ|U (ψ)∩p−1 W )
+       is equal to the triple associated to ψ : A(W ) → B(W ) in Lemma 11.1 via the
+       identifications p−1 W = Proj(A(W )) and q −1 W = Proj(B(W )) of Section 15.
+       Proof. This lemma proves itself by glueing the local triples.                            □
+07ZH   Lemma 18.2. Let S be a scheme. Let A, B, and C be quasi-coherent graded
+       OS -algebras. Set X = ProjS (A), Y = ProjS (B) and Z = ProjS (C). Let φ : A → B,
+       ψ : B → C be graded OS -algebra maps. Then we have
+                      U (ψ ◦ φ) = rφ−1 (U (ψ))   and    rψ◦φ = rφ ◦ rψ |U (ψ◦φ) .
+       In addition we have
+                                                ∗
+                                          θψ ◦ rψ θφ = θψ◦φ
+       with obvious notation.
+       Proof. Omitted.                                                                          □
+07ZI   Lemma 18.3. With hypotheses and notation as in Lemma 18.1 above. Assume
+       Ad → Bd is surjective for d ≫ 0. Then
+          (1) U (ψ) = Y ,
+          (2) rψ : Y → X is a closed immersion, and
+                              ∗
+          (3) the maps θ : rψ   OX (n) → OY (n) are surjective but not isomorphisms in
+              general (even if A → B is surjective).
+       Proof. Follows on combining Lemma 18.1 with Lemma 11.3.                                  □
+07ZJ   Lemma 18.4. With hypotheses and notation as in Lemma 18.1 above. Assume
+       Ad → Bd is an isomorphism for all d ≫ 0. Then
+          (1) U (ψ) = Y ,
+          (2) rψ : Y → X is an isomorphism, and
+                            ∗
+          (3) the maps θ : rψ OX (n) → OY (n) are isomorphisms.
+                                   CONSTRUCTIONS OF SCHEMES                            43
+
+
+       Proof. Follows on combining Lemma 18.1 with Lemma 11.4.                         □
+07ZK   Lemma 18.5. With hypotheses and notation as in Lemma 18.1 above. Assume
+       Ad → Bd is surjective for d ≫ 0 and that A is generated by A1 over A0 . Then
+          (1) U (ψ) = Y ,
+          (2) rψ : Y → X is a closed immersion, and
+                            ∗
+          (3) the maps θ : rψ OX (n) → OY (n) are isomorphisms.
+       Proof. Follows on combining Lemma 18.1 with Lemma 11.5.                         □
+
+               19. Invertible sheaves and morphisms into relative Proj
+01O8   It seems that we may need the following lemma somewhere. The situation is the
+       following:
+            (1) Let S be a scheme.
+            (2) Let A be a quasi-coherent graded OS -algebra.
+            (3) Denote π : ProjS (A) → S the relative homogeneous spectrum over S.
+            (4) Let f : X → S be a morphism of schemes.
+            (5) Let L be an invertible OX -module.
+            (6) Let ψ : f ∗ A → d≥0 L⊗d be a homomorphism of graded OX -algebras.
+                               L
+
+       Given this data set                    [
+                                      U (ψ) =          Uψ(a)
+                                                  (U,V,a)
+       where (U, V, a) satisfies:
+           (1) V ⊂ S affine open,
+           (2) U = f −1 (V ), and
+           (3) a ∈ A(V )+ is homogeneous.
+       Namely, then ψ(a) ∈ Γ(U, L⊗ deg(a) ) and Uψ(a) is the corresponding open (see Mod-
+       ules, Lemma 25.10).
+01O9   Lemma 19.1. With assumptions and notation as above. The morphism ψ induces
+       a canonical morphism of schemes over S
+                                    rL,ψ : U (ψ) −→ ProjS (A)
+       together with a map of graded OU (ψ) -algebras
+                                M                    M
+                            ∗
+                       θ : rL,ψ       OProj (A) (d) −→                   L⊗d |U (ψ)
+                                    d≥0      S                     d≥0
+       characterized by the following properties:
+           (1) For every open V ⊂ S and every d ≥ 0 the diagram
+                             Ad (V )                        / Γ(f −1 (V ), L⊗d )
+                                                  ψ
+
+                               ψ                                         restrict
+                                                                    
+                    Γ(π −1 (V ), OProj (A) (d))
+                                                  θ   / Γ(f −1 (V ) ∩ U (ψ), L⊗d )
+                                       S
+
+              is commutative.
+          (2) For any d ≥ 1 and any open subscheme W ⊂ X such that ψ|W : f ∗ Ad |W →
+              L⊗d |W is surjective the restriction of the morphism rL,ψ agrees with the
+              morphism W → ProjS (A) which exists by the construction of the relative
+              homogeneous spectrum, see Definition 16.7.
+                                    CONSTRUCTIONS OF SCHEMES                                     44
+
+
+          (3) For any affine open V ⊂ S, the restriction
+                        (U (ψ) ∩ f −1 (V ), rL,ψ |U (ψ)∩f −1 (V ) , θ|U (ψ)∩f −1 (V ) )
+               agrees via iV (see Lemma 15.4) with the triple (U (ψ ′ ), rL,ψ′ , θ′ ) of Lemma
+               14.1 associated to the map ψ ′ : A = A(V ) → Γ∗ (f −1 (V ), L|f −1 (V ) ) induced
+               by ψ.
+       Proof. Use characterization (3) to construct the morphism rL,ψ and θ locally over
+       S. Use the uniqueness of Lemma 14.1 to show that the construction glues. Details
+       omitted.                                                                       □
+
+                  20. Twisting by invertible sheaves and relative Proj
+                                   L
+02NB   Let S be a scheme. Let A = d≥0 Ad be a quasi-coherent graded OS -algebra. Let
+       L be an invertible sheaf on S. In this situation we obtain another quasi-coherent
+       graded OS -algebra, namely
+                                        M
+                                   B=           Ad ⊗OS L⊗d
+                                                    d≥0
+
+       It turns out that A and B have isomorphic relative homogeneous spectra.
+02NC   Lemma 20.1.       With notation S, A, L and B as above. There is a canonical
+       isomorphism
+                           P = ProjS (A)                            / Proj (B) = P ′
+                                                          g               S
+
+                                            π                        π′
+                                                      %       y
+                                                          S
+       with the following properties
+          (1) There are isomorphisms θn : g ∗ OP ′ (n) → OP (n)⊗π ∗ L⊗n which fit together
+              to give an isomorphism of Z-graded algebras
+                             M                    M
+                      θ : g∗       OP ′ (n) −→            OP (n) ⊗ π ∗ L⊗n
+                                   n∈Z                             n∈Z
+
+          (2) For every open V ⊂ S the diagrams
+
+                            An (V ) ⊗ L⊗n (V )                                 / Bn (V )
+                                                              multiply
+
+                                         ψ⊗π ∗
+                                      
+                   Γ(π −1 V, OP (n)) ⊗ Γ(π −1 V, π ∗ L⊗n )                          ψ
+
+                                         multiply
+                                                                                   
+                        Γ(π −1 V, OP (n) ⊗ π ∗ L⊗n ) o
+                                                                   θn
+                                                                          Γ(π ′−1 V, OP ′ (n))
+              are commutative.
+          (3) Add more here as necessary.
+       Proof. This is the identity map when L ∼ = OS . In general choose an open covering
+       of S such that L is trivialized over the pieces and glue the corresponding maps.
+       Details omitted.                                                                □
+                                     CONSTRUCTIONS OF SCHEMES                                     45
+
+
+                                       21. Projective bundles
+01OA   Let S be a scheme. Let E be a quasi-coherent sheaf of OS -modules. By Modules,
+       Lemma 21.6 the symmetric algebra Sym(E) of E over OS is a quasi-coherent sheaf
+       of OS -algebras. Note that it is generated in degree 1 over OS . Hence it makes
+       sense to apply the construction of the previous section to it, specifically Lemmas
+       16.5 and 16.11.
+01OB   Definition 21.1. Let S be a scheme. Let E be a quasi-coherent OS -module3. We
+       denote
+                             π : P(E) = ProjS (Sym(E)) −→ S
+       and we call it the projective bundle associated to E. The symbol OP(E) (n) indicates
+       the invertible OP(E) -module of Lemma 16.11 and is called the nth twist of the
+       structure sheaf.
+       According to Lemma 15.5 there are canonical OS -module homomorphisms
+               Symn (E) −→ π∗ OP(E) (n) equivalently           π ∗ Symn (E) −→ OP(E) (n)
+       for all n ≥ 0. In particular, for n = 1 we have
+                        E −→ π∗ OP(E) (1) equivalently         π ∗ E −→ OP(E) (1)
+       and the map π ∗ E → OP(E) (1) is a surjection by Lemma 16.11. This is a good way
+       to remember how we have normalized our construction of P(E).
+       Warning: In some references the scheme P(E) is only defined for E finite locally
+       free on S. Moreover sometimes P(E) is actually defined as our P(E ∨ ) where E ∨ is
+       the dual of E (and this is done only when E is finite locally free).
+       Let S, E, P(E) → S be as in Definition 21.1. Let f : T → S be a scheme over S.
+       Let ψ : f ∗ E → L be a surjection where L is an invertible OT -module. The induced
+       graded OT -algebra map
+                                                               M
+                        f ∗ Sym(E) = Sym(f ∗ E) → Sym(L) =            L⊗n
+                                                                        n≥0
+       corresponds to a morphism
+                                        φL,ψ : T −→ P(E)
+       over S by our construction of the relative Proj as the scheme representing the
+       functor F in Section 16. On the other hand, given a morphism φ : T → P(E) over
+       S we can set L = φ∗ OP(E) (1) and ψ : f ∗ E → L equal to the pullback by φ of
+       the canonical surjection π ∗ E → OP(E) (1). By Lemma 16.11 these constructions are
+       inverse bijections between the set of isomorphism classes of pairs (L, ψ) and the set
+       of morphisms φ : T → P(E) over S. Thus we see that P(E) represents the functor
+       which associates to f : T → S the set of OT -module quotients of f ∗ E which are
+       locally free of rank 1.
+0FCY   Example 21.2 (Projective space of a vector space). Let k be a field. Let V be a
+       k-vector space. The corresponding projective space is the k-scheme
+                                         P(V ) = Proj(Sym(V ))
+       where Sym(V ) is the symmetric algebra on V over k. Of course we have P(V ) ∼
+                                                                                   = Pnk
+       if dim(V ) = n + 1 because then the symmetric algebra on V is isomorphic to a
+          3The reader may expect here the condition that E is finite locally free. We do not do so in
+       order to be consistent with [DG67, II, Definition 4.1.1].
+                                    CONSTRUCTIONS OF SCHEMES                                   46
+
+
+       polynomial ring in n + 1 variables. If we think of V as a quasi-coherent module
+       on Spec(k), then P(V ) is the corresponding projective space bundle over Spec(k).
+       By the discussion above a k-valued point p of P(V ) corresponds to a surjection of
+       k-vector spaces V → Lp with dim(Lp ) = 1. More generally, let X be a scheme over
+       k, let L be an invertible OX -module, and let ψ : V → Γ(X, L) be a k-linear map
+       such that L is generated as an OX -module by the sections in the image of ψ. Then
+       the discussion above gives a canonical morphism
+                                          φL,ψ : X −→ P(V )
+       of schemes over k such that there is an isomorphism θ : φ∗L,ψ OP(V ) (1) → L and
+       such that ψ agrees with the composition
+                   V → Γ(P(V ), OP(V ) (1)) → Γ(X, φ∗L,ψ OP(V ) (1)) → Γ(X, L)
+       See Lemma 14.1. If V ⊂ Γ(X, L) is a subspace, then we will denote the morphism
+       constructed above simply as φL,V . If dim(V ) = n + 1 and we choose a basis
+       v0 , . . . , vn of V then the diagram
+                                        X                   / P(V )
+                                                  φL,ψ
+
+                                                                  ∼
+                                                                  =
+                                          φ(L,(s0 ,...,sn ))    
+                                        X                    / Pn
+                                                                  k
+
+       is commutative, where si = ψ(vi ) ∈ Γ(X, L), where φ(L,(s0 ,...,sn )) is as in Section 13,
+       and where the right vertical arrow corresponds to the isomorphism k[T0 , . . . , Tn ] →
+       Sym(V ) sending Ti to vi .
+01OC   Example 21.3. The map Symn (E) → π∗ (OP(E) (n)) is an isomorphism if E is
+       locally free, but in general need not be an isomorphism. In fact we will give an
+       example where this map is not injective for n = 1. Set S = Spec(A) with
+                                      A = k[u, v, s1 , s2 , t1 , t2 ]/I
+       where k is a field and
+                         I = (−us1 + vt1 + ut2 , vs1 + us2 − vt2 , vs2 , ut1 ).
+       Denote u the class of u in A and similarly for the other variables. Let M =
+       (Ax ⊕ Ay)/A(ux + vy) so that
+                    Sym(M ) = A[x, y]/(ux + vy) = k[x, y, u, v, s1 , s2 , t1 , t2 ]/J
+       where
+                    J = (−us1 + vt1 + ut2 , vs1 + us2 − vt2 , vs2 , ut1 , ux + vy).
+       In this case the projective bundle associated to the quasi-coherent sheaf E = M
+                                                                                     f on
+       S = Spec(A) is the scheme
+                                         P = Proj(Sym(M )).
+       Note that this scheme as an affine open covering P = D+ (x) ∪ D+ (y). Consider
+       the element m ∈ M which is the image of the element us1 x + vt2 y. Note that
+                           x(us1 x + vt2 y) = (s1 x + s2 y)(ux + vy) mod I
+       and
+                           y(us1 x + vt2 y) = (t1 x + t2 y)(ux + vy) mod I.
+                                     CONSTRUCTIONS OF SCHEMES                                      47
+
+
+       The first equation implies that m maps to zero as a section of OP (1) on D+ (x)
+       and the second that it maps to zero as a section of OP (1) on D+ (y). This shows
+       that m maps to zero in Γ(P, OP (1)). On the other hand we claim that m ̸= 0,
+       so that m gives an example of a nonzero global section of E mapping to zero in
+       Γ(P, OP (1)). Assume m = 0 to get a contradiction. In this case there exists an
+       element f ∈ k[u, v, s1 , s2 , t1 , t2 ] such that
+                                   us1 x + vt2 y = f (ux + vy) mod I
+       Since I is generated by homogeneous polynomials of degree 2 we may decompose
+       f into its homogeneous components and take the degree 1 component. In other
+       words we may assume that
+                               f = au + bv + α1 s1 + α2 s2 + β1 t1 + β2 t2
+       for some a, b, α1 , α2 , β1 , β2 ∈ k. The resulting conditions are that
+                         us1 − u(au + bv + α1 s1 + α2 s2 + β1 t1 + β2 t2 ) ∈ I
+                         vt2 − v(au + bv + α1 s1 + α2 s2 + β1 t1 + β2 t2 ) ∈ I
+       There are no terms u2 , uv, v 2 in the generators of I and hence we see a = b = 0.
+       Thus we get the relations
+                               us1 − u(α1 s1 + α2 s2 + β1 t1 + β2 t2 ) ∈ I
+                               vt2 − v(α1 s1 + α2 s2 + β1 t1 + β2 t2 ) ∈ I
+       We may use the first generator of I to replace any occurrence of us1 by vt1 + ut2 ,
+       the second generator of I to replace any occurrence of vs1 by −us2 + vt2 , the third
+       generator to remove occurrences of vs2 and the third to remove occurrences of ut1 .
+       Then we get the relations
+                           (1 − α1 )vt1 + (1 − α1 )ut2 − α2 us2 − β2 ut2 = 0
+                              (1 − α1 )vt2 + α1 us2 − β1 vt1 − β2 vt2 = 0
+       This implies that α1 should be both 0 and 1 which is a contradiction as desired.
+01OD   Lemma 21.4. Let S be a scheme. The structure morphism P(E) → S of a
+       projective bundle over S is separated.
+       Proof. Immediate from Lemma 16.9.                                                           □
+01OE   Lemma 21.5. Let S be a scheme. Let n ≥ 0. Then PnS is a projective bundle
+       over S.
+       Proof. Note that
+                                                                                     
+                      PnZ = Proj(Z[T0 , . . . , Tn ]) = ProjSpec(Z) Z[T0^
+                                                                        , . . . , Tn ]
+
+       where the grading on the ring Z[T0 , . . . , Tn ] is given by deg(Ti ) = 1 and the elements
+       of Z are in degree 0. Recall that PnS is defined as PnZ ×Spec(Z) S. Moreover, forming
+       the relative homogeneous spectrum commutes with base change, see Lemma 16.10.
+       For any scheme g : S → Spec(Z) we have g ∗ OSpec(Z) [T0 , . . . , Tn ] = OS [T0 , . . . , Tn ].
+       Combining the above we see that
+                                     PnS = ProjS (OS [T0 , . . . , Tn ]).
+       Finally, note that OS [T0 , . . . , Tn ] = Sym(OS⊕n+1 ). Hence we see that PnS is a
+       projective bundle over S.                                                        □
+                                      CONSTRUCTIONS OF SCHEMES                                  48
+
+
+                                           22. Grassmannians
+089R   In this section we introduce the standard Grassmannian functors and we show that
+       they are represented by schemes. Pick integers k, n with 0 < k < n. We will
+       construct a functor
+089S   (22.0.1)                            G(k, n) : Sch −→ Sets
+       which will loosely speaking parametrize k-dimensional subspaces of n-space. How-
+       ever, for technical reasons it is more convenient to parametrize (n − k)-dimensional
+       quotients and this is what we will do.
+       More precisely, G(k, n) associates to a scheme S the set G(k, n)(S) of isomorphism
+       classes of surjections
+                                           q : OS⊕n −→ Q
+       where Q is a finite locally free OS -module of rank n − k. Note that this is indeed a
+       set, for example by Modules, Lemma 9.8 or by the observation that the isomorphism
+       class of the surjection q is determined by the kernel of q (and given a sheaf there is
+       a set of subsheaves). Given a morphism of schemes f : T → S we let G(k, n)(f ) :
+       G(k, n)(S) → G(k, n)(T ) which sends the isomorphism class of q : OS⊕n −→ Q to the
+       isomorphism class of f ∗ q : OT⊕n −→ f ∗ Q. This makes sense since (1) f ∗ OS = OT ,
+       (2) f ∗ is additive, (3) f ∗ preserves locally free modules (Modules, Lemma 14.3),
+       and (4) f ∗ is right exact (Modules, Lemma 3.3).
+089T   Lemma 22.1. Let 0 < k < n. The functor G(k, n) of (22.0.1) is representable by
+       a scheme.
+       Proof. Set F = G(k, n). To prove the lemma we will use the criterion of Schemes,
+       Lemma 15.4. The reason F satisfies the sheaf property for the Zariski topology is
+       that we can glue sheaves, see Sheaves, Section 33 (some details omitted).
+       The family of subfunctors Fi . Let I be the set of subsets of {1, . . . , n} of cardinality
+       n − k. Given a scheme S and j ∈ {1, . . . , n} we denote ej the global section
+                             ej = (0, . . . , 0, 1, 0, . . . , 0)   (1 in jth spot)
+       of OS⊕n . Of course these sections freely generate OS⊕n . Similarly, for j ∈ {1, . . . , n −
+       k} we denote fj the global section of OS⊕n−k which is zero in all summands except
+       the jth where we put a 1. For i ∈ I we let
+                                            si : OS⊕n−k −→ OS⊕n
+       which is the direct sum of the coprojections OS → OS⊕n corresponding to elements
+       of I. More precisely, if i = {i1 , . . . , in−k } with i1 < i2 < . . . < in−k then si maps
+       fj to eij for j ∈ {1, . . . , n − k}. With this notation we can set
+                   Fi (S) = {q : OS⊕n → Q ∈ F (S) | q ◦ si is surjective} ⊂ F (S)
+       Given a morphism f : T → S of schemes the pullback f ∗ si is the corresponding
+       map over T . Since f ∗ is right exact (Modules, Lemma 3.3) we conclude that Fi is
+       a subfunctor of F .
+       Representability of Fi . To prove this we may assume (after renumbering) that
+       i = {1, . . . , n − k}. This means si is the inclusion of the first n − k summands.
+       Observe that if q ◦ si is surjective, then q ◦ si is an isomorphism as a surjective map
+       between finite locally free modules of the same rank (Modules, Lemma 14.5). Thus
+                                    CONSTRUCTIONS OF SCHEMES                                   49
+
+
+       if q : OS⊕n → Q is an element of Fi (S), then we can use q ◦ si to identify Q with
+       OS⊕n−k . After doing so we obtain
+                                         q : OS⊕n −→ OS⊕n−k
+       mapping ej to fj (notation as above) for j = 1, . . . , n−k. To determine q completely
+       we have to fix the images q(en−k+1 ), . . . , q(en ) in Γ(S, OS⊕n−k ). It follows that Fi
+       is isomorphic to the functor
+                                      Y
+                               S 7−→                     Γ(S, OS⊕n−k )
+                                           j=n−k+1,...,n
+
+       This functor is isomorphic to the k(n − k)-fold self product of the functor S 7→
+       Γ(S, OS ). By Schemes, Example 15.2 the latter is representable by A1Z . It follows
+                                k(n−k)
+       Fi is representable by AZ       since fibred product over Spec(Z) is the product in
+       the category of schemes.
+       The inclusion Fi ⊂ F is representable by open immersions. Let S be a scheme
+       and let q : OS⊕n → Q be an element of F (S). By Modules, Lemma 9.4. the set
+       Ui = {s ∈ S | (q ◦ si )s surjective} is open in S. Since OS,s is a local ring and Qs a
+       finite OS,s -module by Nakayama’s lemma (Algebra, Lemma 20.1) we have
+           s ∈ Ui ⇔ the map κ(s)⊕n−k → Qs /ms Qs induced by (q ◦ si )s is surjective
+                                                                                         
+
+       Let f : T → S be a morphism of schemes and let t ∈ T be a point mapping to
+       s ∈ S. We have (f ∗ Q)t = Qs ⊗OS,s OT,t (Sheaves, Lemma 26.4) and so on. Thus
+       the map
+                                        κ(t)⊕n−k → (f ∗ Q)t /mt (f ∗ Q)t
+       induced by (f ∗ q ◦ f ∗ si )t is the base change of the map κ(s)⊕n−k → Qs /ms Qs above
+       by the field extension κ(t)/κ(s). It follows that s ∈ Ui if and only if t is in the
+       corresponding open for f ∗ q. In particular T → S factors through Ui if and only if
+       f ∗ q ∈ Fi (T ) as desired.
+       The collection Fi , i ∈ I covers F . Let q : OS⊕n → Q be an element of F (S). We have
+       to show that for every point s of S there exists an i ∈ I such that si is surjective
+       in a neighbourhood of s. Thus we have to show that one of the compositions
+                                             s
+                                 κ(s)⊕n−k −→
+                                           i
+                                             κ(s)⊕n → Qs /ms Qs
+       is surjective (see previous paragraph). As Qs /ms Qs is a vector space of dimension
+       n − k this follows from the theory of vector spaces.                              □
+089U   Definition 22.2. Let 0 < k < n. The scheme G(k, n) representing the functor
+       G(k, n) is called Grassmannian over Z. Its base change G(k, n)S to a scheme S is
+       called Grassmannian over S. If R is a ring the base change to Spec(R) is denoted
+       G(k, n)R and called Grassmannian over R.
+       The definition makes sense as we’ve shown in Lemma 22.1 that these functors are
+       indeed representable.
+089V   Lemma 22.3. Let n ≥ 1. There is a canonical isomorphism G(n, n + 1) = PnZ .
+       Proof. According to Lemma 13.1 the scheme PnZ represents the functor which
+       assigns to a scheme S the set of isomorphisms classes of pairs (L, (s0 , . . . , sn )) con-
+       sisting of an invertible module L and an (n + 1)-tuple of global sections generating
+       L. Given such a pair we obtain a quotient
+                                                                 X
+                             OS⊕n+1 −→ L, (h0 , . . . , hn ) 7−→   hi si .
+                              CONSTRUCTIONS OF SCHEMES                                    50
+
+
+Conversely, given an element q : OS⊕n+1 → Q of G(n, n + 1)(S) we obtain such a
+pair, namely (Q, (q(e1 ), . . . , q(en+1 ))). Here ei , i = 1, . . . , n + 1 are the standard
+generating sections of the free module OS⊕n+1 . We omit the verification that these
+constructions define mutually inverse transformations of functors.                         □
+
+                                  23. Other chapters
+
+Preliminaries                                    (40) More on Groupoid Schemes
+    (1) Introduction                             (41) Étale Morphisms of Schemes
+    (2) Conventions                            Topics in Scheme Theory
+    (3) Set Theory                               (42) Chow Homology
+    (4) Categories                               (43) Intersection Theory
+    (5) Topology                                 (44) Picard Schemes of Curves
+    (6) Sheaves on Spaces                        (45) Weil Cohomology Theories
+    (7) Sites and Sheaves                        (46) Adequate Modules
+    (8) Stacks                                   (47) Dualizing Complexes
+    (9) Fields                                   (48) Duality for Schemes
+   (10) Commutative Algebra                      (49) Discriminants and Differents
+   (11) Brauer Groups                            (50) de Rham Cohomology
+   (12) Homological Algebra                      (51) Local Cohomology
+   (13) Derived Categories                       (52) Algebraic and Formal Geometry
+   (14) Simplicial Methods                       (53) Algebraic Curves
+   (15) More on Algebra                          (54) Resolution of Surfaces
+   (16) Smoothing Ring Maps                      (55) Semistable Reduction
+   (17) Sheaves of Modules                       (56) Functors and Morphisms
+   (18) Modules on Sites                         (57) Derived Categories of Varieties
+   (19) Injectives                               (58) Fundamental Groups of Schemes
+   (20) Cohomology of Sheaves                    (59) Étale Cohomology
+   (21) Cohomology on Sites                      (60) Crystalline Cohomology
+   (22) Differential Graded Algebra              (61) Pro-étale Cohomology
+   (23) Divided Power Algebra                    (62) Relative Cycles
+   (24) Differential Graded Sheaves              (63) More Étale Cohomology
+   (25) Hypercoverings                           (64) The Trace Formula
+Schemes                                        Algebraic Spaces
+   (26) Schemes                                  (65) Algebraic Spaces
+   (27) Constructions of Schemes                 (66) Properties of Algebraic Spaces
+   (28) Properties of Schemes                    (67) Morphisms of Algebraic Spaces
+   (29) Morphisms of Schemes                     (68) Decent Algebraic Spaces
+   (30) Cohomology of Schemes                    (69) Cohomology of Algebraic Spaces
+   (31) Divisors                                 (70) Limits of Algebraic Spaces
+   (32) Limits of Schemes                        (71) Divisors on Algebraic Spaces
+   (33) Varieties                                (72) Algebraic Spaces over Fields
+   (34) Topologies on Schemes                    (73) Topologies on Algebraic Spaces
+   (35) Descent                                  (74) Descent and Algebraic Spaces
+   (36) Derived Categories of Schemes            (75) Derived Categories of Spaces
+   (37) More on Morphisms                        (76) More on Morphisms of Spaces
+   (38) More on Flatness                         (77) Flatness on Algebraic Spaces
+   (39) Groupoid Schemes                         (78) Groupoids in Algebraic Spaces
+                            CONSTRUCTIONS OF SCHEMES                                   51
+
+
+  (79) More on Groupoids in Spaces             (98) Artin’s Axioms
+  (80) Bootstrap                               (99) Quot and Hilbert Spaces
+  (81) Pushouts of Algebraic Spaces           (100) Properties of Algebraic Stacks
+Topics in Geometry                            (101) Morphisms of Algebraic Stacks
+                                              (102) Limits of Algebraic Stacks
+  (82) Chow Groups of Spaces
+                                              (103) Cohomology of Algebraic Stacks
+  (83) Quotients of Groupoids
+                                              (104) Derived Categories of Stacks
+  (84) More on Cohomology of Spaces
+                                              (105) Introducing Algebraic Stacks
+  (85) Simplicial Spaces
+                                              (106) More on Morphisms of Stacks
+  (86) Duality for Spaces
+                                              (107) The Geometry of Stacks
+  (87) Formal Algebraic Spaces
+  (88) Algebraization of Formal Spaces       Topics in Moduli Theory
+  (89) Resolution of Surfaces Revisited       (108) Moduli Stacks
+                                              (109) Moduli of Curves
+Deformation Theory
+                                             Miscellany
+  (90) Formal Deformation Theory
+                                              (110) Examples
+  (91) Deformation Theory
+                                              (111) Exercises
+  (92) The Cotangent Complex
+                                              (112) Guide to Literature
+  (93) Deformation Problems
+                                              (113) Desirables
+Algebraic Stacks                              (114) Coding Style
+  (94) Algebraic Stacks                       (115) Obsolete
+  (95) Examples of Stacks                     (116) GNU Free Documentation Li-
+  (96) Sheaves on Algebraic Stacks                   cense
+  (97) Criteria for Representability          (117) Auto Generated Index
+
+                                     References
+[DG67] Jean Dieudonné and Alexander Grothendieck, Éléments de géométrie algébrique, Inst.
+       Hautes Études Sci. Publ. Math. 4, 8, 11, 17, 20, 24, 28, 32 (1961–1967).
+

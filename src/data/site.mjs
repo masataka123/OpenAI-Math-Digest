@@ -7,6 +7,8 @@ import inventory038 from '../../coordination/catalog-038/inventory.json' with { 
 import inventory039 from '../../coordination/catalog-039/inventory.json' with { type: 'json' };
 import inventory042 from '../../coordination/catalog-042/inventory.json' with { type: 'json' };
 import inventory046 from '../../coordination/catalog-046/inventory.json' with { type: 'json' };
+import inventory050 from '../../coordination/catalog-050/inventory.json' with { type: 'json' };
+import presentation050 from '../../drafts/catalog-050/overview/presentation.json' with { type: 'json' };
 import inventory051 from '../../coordination/catalog-051/inventory.json' with { type: 'json' };
 import inventory052 from '../../coordination/catalog-052/inventory.json' with { type: 'json' };
 import inventory057 from '../../coordination/catalog-057/inventory.json' with { type: 'json' };
@@ -45,7 +47,7 @@ const fieldTranslations = [
     "id": "algebraic-complex-geometry",
     "ja": "代数幾何学・複素幾何学",
     "catalogIds": [
-      "033", "034", "036", "037", "038", "039", "042", "046", "051", "052", "057", "063", "067", "068"
+      "033", "034", "036", "037", "038", "039", "042", "046", "050", "051", "052", "057", "063", "067", "068"
     ]
   },
   {
@@ -180,6 +182,10 @@ export const papers = [...inventory004.manuscripts.map(entry => ({
  pages: entry.pdfPages, order: entry.order, featured: true,
 })), ...inventory046.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '046', sourceCommit: inventory046.sourceCommit,
+ title: entry.title, path: entry.sourceUrl.split('/preprints/')[1], version: entry.version,
+ pages: entry.pdfPages, order: entry.order, featured: true,
+})), ...inventory050.manuscripts.map(entry => ({
+ id: entry.paperId, catalogId: '050', sourceCommit: inventory050.sourceCommit,
  title: entry.title, path: entry.sourceUrl.split('/preprints/')[1], version: entry.version,
  pages: entry.pdfPages, order: entry.order, featured: true,
 })), ...inventory051.manuscripts.map(entry => ({
@@ -321,6 +327,14 @@ export const catalogs = [{
   description: text('largeな基本群をもつ射影四次元多様体と有理曲線の連鎖をもつ射影曲面を構成し、普遍被覆の非正則凸性を示す二つの証明を読む。', 'Follow two constructions of projective varieties whose universal covers fail holomorphic convexity: a fourfold with large fundamental group and a surface with chains of rational curves.'),
   paperIds: inventory046.manuscripts.map(p => p.paperId),
   overviewSectionIds: ['papers', 'diagram-sources', 'connections', 'sources'],
+}, {
+  id: '050', sourceCommit: inventory050.sourceCommit, mode: 'single',
+  title: text(inventory050.titleJa, inventory050.overviewTitle),
+  markdownTitlePhrases: {ja: ['Griffithsの', '正値性予想への', '反例']},
+  contentsTitle: inventory050.contentsTitle,
+  description: text(presentation050.rows[0].role.ja, presentation050.rows[0].role.en),
+  paperIds: inventory050.manuscripts.map(p => p.paperId),
+  overviewSectionIds: ['papers', 'guide', 'sources'],
 }, {
   id: '051', sourceCommit: inventory051.sourceCommit, mode: 'single',
   title: text(inventory051.titleJa, inventory051.overviewTitle),

@@ -1,0 +1,25 @@
+\node[card] (a) {\heading{1}{グラフに沿って明示的な束$G$を構成}{Construct the explicit graph-defined bundle $G$}
+$S=\mathbf P^1\times\mathbf P^1,\quad P=\mathcal O_S(1,1),\quad E_m=f_m^*G\otimes P$.\\
+\Tx{二つの商列と、双対包含のグラフ恒等式を同時に得る}{Obtain both quotient sequences and the dual graph identities}.};
+\node[half,below=2.1cm of a.south west,anchor=north west] (b) {\heading{2a}{代数側}{Algebraic side}
+$m\ge1,\quad n\text{ even},\quad n-1\ge3m$.\\
+$\mathcal O_{\mathbf P(E_m)}(n)$\ \Tx{はvery ample}{is very ample}.\\
+\Tx{従って全$m$で$E_m$はample}{Hence $E_m$ is ample for all $m$}.};
+\node[half,anchor=north east] (c) at (a.south east |- b.north) {\heading{2b}{解析側の背理法}{Analytic contradiction}
+\Tx{無限個の$m$で厳密正値計量があると仮定}{Assume strictly positive metrics for infinitely many $m$}.\\
+$q:G^\vee\to[0,\infty),\quad q\not\equiv0$.\\
+\Tx{pshかつ全ファイバーで二次}{Psh and quadratic on every fiber}.};
+\draw[edge] ($(a.south west)+(0.2,0)$)--($(b.north west)+(0.2,0)$);
+\draw[edge] (a.south -| c.north west)--(c.north west);
+\node[branchreason,text width=5.4cm,anchor=west] at ($(a.south west)+(0.7,-1.0)$) {\Tx{二つの商から交互フィルトレーション}{Alternate the two quotient sequences}\\\Cite{ample}};
+\node[branchreason,text width=5.4cm,anchor=west] at ($(a.south)+(0.9,-1.0)$) {\Tx{双対ノルムの平均と非消失}{Average dual norms and prevent collapse}\\\Cite{limit}};
+\node[card,below=2.0cm of b.south west,anchor=north west] (d) {\heading{3}{解析側の極限をグラフ恒等式で排除}{Exclude the analytic limit using the graph identities}
+$q\not\equiv0\ \Longrightarrow\ \mu\ge0,\quad\mu(\mathbf P^1)=2\pi b>0,\quad A^*\mu=B^*\mu=\mu$.\\
+\Tx{膨張する$AB$と位数3の$A,B$に共通不変測度はない}{The expanding $AB$ and order-three $A,B$ admit no common invariant measure}.};
+\draw[edge] ($(c.south east)+(-0.2,0)$)--($(d.north east)+(-0.2,0)$);
+\node[reason,anchor=west] at ($(b.south west)+(0.4,-1.0)$) {\Tx{rulingで降下した半ノルムの対数から測度を得る}{Logarithmic weights of the descended seminorm produce the measure}\\\Cite{seminorm}\quad\Cite{obstruction}};
+\node[result,below=1.8cm of d] (e) {\heading{4}{主定理の量化へ戻る}{Recover the quantifiers of the main theorem}
+$\forall m\ge1:\ E_m$ \Tx{はample（2aより）}{is ample (from 2a)}.\\
+$\exists m_0\ge1\ \forall m\ge m_0:$ \Tx{滑らかな厳密Griffiths正値Hermitian計量なし}{no smooth strictly Griffiths-positive Hermitian metric}.\\
+\Tx{$m_0$は非有効。半正値計量の排除は主張しない}{The threshold is ineffective; semipositive metrics are not excluded}.};
+\flow{d}{e}{\Tx{正値計量を持つ$m$は有限個、その最大値より先を取る}{Only finitely many $m$ admit positive metrics; take a threshold beyond them}\\\Cite{assembly}};

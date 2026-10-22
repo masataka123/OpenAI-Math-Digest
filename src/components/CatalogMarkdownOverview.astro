@@ -27,7 +27,7 @@ if(article.html.includes('CATALOGINVENTORYTOKEN'))throw Error('Inventory must be
  <div class="paper-article catalog-page catalog-markdown-overview">
   <nav class="breadcrumbs" aria-label={en?'Breadcrumb':'現在位置'}><a href={base+lang+'/'}>{en?'Fields':'分野一覧'}</a><span>/</span>{fields.map(field=><><a href={`${base}${lang}/fields/${field.id}/`}>{field.title[lang]}</a><span>/</span></>)}<span>{catalog.id}</span></nav>
   <header class="family-header catalog-intro">
-   <p class="eyebrow">CATALOGUE {catalog.id}</p><h1 lang={lang}>{catalog.title[lang]}</h1>
+   <p class="eyebrow">CATALOGUE {catalog.id}</p><h1 lang={lang}>{catalog.markdownTitlePhrases?.[lang] ? catalog.markdownTitlePhrases[lang].map(phrase=><span class="title-phrase">{phrase}</span>) : catalog.title[lang]}</h1>
    {!en&&<p class="official" lang="en">{catalog.title.en}</p>}
    <p class="lede" set:html={article.ledeHtml}/>
   </header>

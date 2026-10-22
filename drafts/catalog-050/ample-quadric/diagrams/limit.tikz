@@ -1,0 +1,16 @@
+\node[card] (a) {\heading{1}{無限個の正値計量から双対ノルムを平均}{Trace dual norms from infinitely many positive metrics}
+$m\to\infty,\quad (f_m^*G\otimes P)^\vee=f_m^*F\otimes P^{-1}$.\\
+$q_{m,t}=m^{-2}\!\sum_{y\in f_m^{-1}(x)}\|v\otimes(f_m^*t)^{1/m}(y)\|_{m,y}^{2}$.};
+\node[card,below=2.0cm of a] (b) {\heading{2}{正規化と係数の分布極限}{Normalize and take a distributional coefficient limit}
+$q_{m,gt}=|g|^{2/m}q_{m,t},\qquad |g|^{2/m}\longrightarrow1$.\\
+$\max_{|v|_0=1}N_m=1,\quad q_{m,t}=v^*H_mv,\quad H_m\longrightarrow H$.};
+\node[card,below=1.8cm of b] (c) {\heading{3}{弱極限の消失を防ぐ}{Prevent collapse of the weak limit}
+$\displaystyle\int\chi\,c^*H_mc\ge\tfrac12\operatorname{Vol}(B(0,\varrho))>0$.\\
+$H\not\equiv0,\qquad H\ge0$ \Tx{ほとんど至る所}{almost everywhere}.};
+\node[result,below=2.2cm of c] (d) {\heading{4}{全ての点で二次なpsh代表}{A psh representative quadratic at every point}
+$q_\delta=v^*(H*\rho_\delta)v\downarrow q_U$.\\
+\Tx{偏極で各点の行列を回復、psh代表の一意性で接合}{Polarize at each point and glue by uniqueness of psh representatives}.\\
+$q:F\to[0,\infty),\quad q\not\equiv0,\quad q(x,v)=H_x(v,v)\ \ (\forall x\in S)$.};
+\flow{a}{b}{\Tx{分岐集合を越えてpshを延長し、局所有界性を得る}{Extend psh across ramification and obtain local bounds}\\\Cite{dem-removal}\quad\Cite{trace}};
+\flow{b}{c}{\Tx{最大点の近くで固定ベクトルに劣平均不等式を適用}{Apply the submean inequality to a fixed vector near maxima}\\\Cite{noncollapse}};
+\flow{c}{d}{\Tx{放射対称畳み込みを減少させ、有限個の値で偏極する}{Decrease radial convolutions and polarize finitely many values}\\\Cite{dem-decrease}\\\Cite{representative}};

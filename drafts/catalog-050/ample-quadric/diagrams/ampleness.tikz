@@ -1,0 +1,17 @@
+\node[card] (a) {\heading{1}{二つの商列を交互に使う}{Alternate the two quotient sequences}
+$V=f_m^*G,\quad K_1=\mathcal O_S(21m,-3m),\quad K_2=\mathcal O_S(-3m,21m)$.\\
+$K=K_1K_2=\mathcal O_S(18m,18m),\qquad\widetilde D=f_m^*D$.};
+\node[card,below=1.8cm of a] (b) {\heading{2}{対称冪の線束因子}{Line factors of the symmetric power}
+$K^j\widetilde L_2^{n-2j},\quad K^j\widetilde L_1^{n-2j}(-\widetilde D)\quad(0\le j<n/2),\quad K^{n/2}$.\\
+\Tx{核のファイバーが一致しても、各商列は局所分裂}{Each quotient sequence locally splits even where the kernels coincide}.};
+\node[card,below=1.8cm of b] (c) {\heading{3}{捻りにより切断を持ち上げる}{Twist and lift sections}
+$m\ge1,\quad n\in2\mathbf Z_{>0},\quad n-1\ge3m$.\\
+$W=\operatorname{Sym}^nV\otimes P^{n-1}$: \Tx{全線束因子の双次数が非負}{all line factors have nonnegative bidegrees}.\\
+\Tx{大域生成と$H^1=0$から$W$の大域生成へ}{Global generation and $H^1=0$ imply global generation of $W$}.};
+\node[result,below=2.3cm of c] (d) {\heading{4}{VeroneseとSegreでvery ampleへ}{Veronese and Segre give very ampleness}
+$\mathbf P(V)\hookrightarrow\mathbf P(H^0(S,W))\times S\hookrightarrow\mathbf P^N$.\\
+$\mathcal O_{\mathbf P(V)}(n)\otimes\pi^*P^{n-1}\otimes\pi^*P=\mathcal O_{\mathbf P(E_m)}(n)$.\\
+\Tx{全ての$m\ge1$について$E_m$はample}{Thus $E_m$ is ample for every $m\ge1$}.};
+\flow{a}{b}{\Tx{2段ごとに正の積$K$を取り出す}{Each pair of steps extracts the positive product $K$}\\\Cite{filtration}};
+\flow{b}{c}{\Tx{残る$-3m$を$n-1$で相殺し、$H^1$消滅を使う}{Offset the remaining $-3m$ by $n-1$ and use $H^1$ vanishing}\\\Cite{stacks-cech}\quad\Cite{stacks-kunneth}};
+\flow{c}{d}{\Tx{商射影化と相対埋込み、最後の$P$で底を埋め込む}{Use quotient projectivization; the final $P$ embeds the base}\\\Cite{embedding}\\\Cite{stacks-segre}};

@@ -1,0 +1,16 @@
+\node[card] (a) {\heading{1}{有限位数と六つの節点}{Finite orders and six nodes}
+$\operatorname{ord}(A)=\operatorname{ord}(B)=6,\quad\operatorname{ord}(A^{-1}B)=8,\quad b=24$.\\
+$D=\Gamma_I\cup\Gamma_A\cup\Gamma_B\in|\mathcal O_S(3,3)|$; \Tx{三重点なし}{no triple points}.};
+\node[card,below=1.8cm of a] (b) {\heading{2}{交点で一致する持ち上げを接合}{Glue the compatible lifts}
+$Nv=\lambda Mv\ \Longrightarrow\ \lambda^{24}=1\ \Longrightarrow\ (Nv)^{\otimes24}=(Mv)^{\otimes24}$.\\
+$\alpha:L_1^{-1}|_D\xrightarrow{\sim}L_2^{-1}|_D,\qquad\beta=(\alpha^\vee)^{-1}$.};
+\node[card,below=1.8cm of b] (c) {\heading{3}{局所基底を持つ階数2の束}{A rank-two bundle with a local basis}
+$G=\{(u_1,u_2):u_2|_D=\beta(u_1|_D)\}$.\\
+$e=(1,h),\quad f=(0,d),\qquad h\in\mathcal O_S^\times$.};
+\node[result,below=1.8cm of c] (d) {\heading{4}{二つの商と双対のグラフ恒等式}{Two quotients and the dual graph identity}
+$0\to L_i(-D)\to G\xrightarrow{\rho_j}L_j\to0,\quad\{i,j\}=\{1,2\}$.\\
+$\iota_i=\rho_i^\vee:L_i^{-1}\hookrightarrow G^\vee,\quad \iota_2\alpha=\iota_1\text{ on }D$.\\
+\Tx{$S\setminus D$では二つの直線がファイバーを張る}{The two lines span each fiber over $S\setminus D$}.};
+\flow{a}{b}{\Tx{相対行列の固有値の24乗は1}{The relative eigenvalues have 24th power one}\\\Cite{graph-lemmas}};
+\flow{b}{c}{\Tx{節点の局所環で降下し、単元$h$を持ち上げる}{Descend in the nodal local ring and lift the unit $h$}\\\Cite{construction}};
+\flow{c}{d}{\Tx{射影の全射性と核を基底で読み、双対化する}{Read surjectivity and kernels in the basis, then dualize}\\\Cite{construction}};

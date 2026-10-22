@@ -1,0 +1,81 @@
+{
+  "catalogId": "050",
+  "operatingPolicy": "2026-10-20",
+  "recordedOn": "2026-10-22",
+  "instructionBasis": [
+    "2026-10-22 user request",
+    "AGENTS.md 2026-10-20 instruction",
+    "production/MODEL_ROLES.md"
+  ],
+  "assignments": [
+    {
+      "role": "hq",
+      "agent": "/root",
+      "requestedModel": "gpt-6.1-sol",
+      "requestedReasoningEffort": "xhigh",
+      "actualModel": null,
+      "actualReasoningEffort": null,
+      "selectionEvidence": "ユーザーが本チャットの本部モデルとして指定。現在チャットの内部モデル/思考量を確認するAPIはなく、文章指定を設定変更の証拠としない。",
+      "scope": "coordination/catalog-050; mechanical processing limited to catalog-050",
+      "completionEvidence": "SITE_HQ_HANDOFF.md"
+    },
+    {
+      "role": "author",
+      "agent": "/root/astra_author",
+      "requestedModel": "gpt-6-astra",
+      "requestedReasoningEffort": "high",
+      "actualModel": null,
+      "actualReasoningEffort": null,
+      "selectionEvidence": "collaboration.spawn_agent(fork_turns='none', model='gpt-6-astra', reasoning_effort='high') accepted; task_name=/root/astra_author。追加の実モデル情報は未取得。",
+      "scope": "drafts/catalog-050",
+      "completionEvidence": "drafts/catalog-050/ample-quadric/status.md"
+    },
+    {
+      "role": "content-review",
+      "agent": "/root/astra_review",
+      "requestedModel": "gpt-6-astra",
+      "requestedReasoningEffort": "high",
+      "actualModel": null,
+      "actualReasoningEffort": null,
+      "selectionEvidence": "collaboration.spawn_agent(fork_turns='none', model='gpt-6-astra', reasoning_effort='high') accepted; task_name=/root/astra_review。初回turnはSelected model is at capacityで失敗。モデルを変更せずfollowup_taskで再試行。追加の実モデル情報は未取得。 followup_task後、list_agentsでrunningを確認。",
+      "scope": "coordination/catalog-050/CONTENT_REVIEW.md; reviews; source acquisition",
+      "attempts": [
+        {
+          "result": "capacity error",
+          "message": "Selected model is at capacity. Please try a different model."
+        },
+        {
+          "result": "completed after same-model retry",
+          "modelChange": false
+        }
+      ],
+      "completionEvidence": "CONTENT_REVIEW.md"
+    }
+  ],
+  "stages": [
+    {
+      "stage": 1,
+      "evidence": "CONTENT_REVIEW.md; validation/stage1-receipt.json"
+    },
+    {
+      "stage": 2,
+      "agent": "/root",
+      "requestedModel": "gpt-6.1-sol",
+      "requestedReasoningEffort": "xhigh",
+      "selectionEvidence": "同じ本部チャットでユーザーが第2段階を依頼。既存のhq指定・確認限界を維持。",
+      "scope": "050の登録・確認済み図の配置・共通PDF生成・形式/画面/紙面検査・引継ぎ。公開なし。",
+      "mathematicalWork": "第1段階のAstra内容確定版を再利用。数学的変更が必要なら指定Astraへ返す。",
+      "completionEvidence": "PREPARATION_REVIEW.md; stage2/final-integrity.json"
+    },
+    {
+      "stage": 3,
+      "agent": "/root",
+      "requestedModel": "gpt-6.1-sol",
+      "requestedReasoningEffort": "xhigh",
+      "selectionEvidence": "同じ本部チャットでユーザーが第3段階を明示依頼。既存のhq指定・確認限界を維持。",
+      "scope": "050の対象差分のcommit/push・Actions確認・公開反映照合。",
+      "mathematicalWork": "第1段階Astra確定版と第2段階検査済みPDFを同一性照合して再利用。新規執筆・数学的修正なし。",
+      "completionEvidence": "PUBLICATION.md; stage3/"
+    }
+  ]
+}
