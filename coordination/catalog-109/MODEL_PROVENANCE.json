@@ -1,0 +1,79 @@
+{
+  "catalogId": "109",
+  "operatingPolicy": "2026-10-20",
+  "assignments": [
+    {
+      "role": "hq",
+      "agent": "/root",
+      "requestedModel": "gpt-6.1-sol",
+      "requestedReasoningEffort": "xhigh",
+      "actualModel": null,
+      "actualReasoningEffort": null,
+      "selectionEvidence": "User explicitly designated this HQ chat as gpt-6.1-sol / xhigh. No runtime model/effort attestation API is available; requested settings are not treated as measured actual values.",
+      "scope": [
+        "coordination/catalog-109/",
+        "mechanical checks of drafts/catalog-109/"
+      ]
+    },
+    {
+      "role": "author",
+      "agent": "/root/author_109",
+      "requestedModel": "gpt-6-astra",
+      "requestedReasoningEffort": "high",
+      "actualModel": null,
+      "actualReasoningEffort": null,
+      "selectionEvidence": "collaboration.spawn_agent accepted task_name=author_109, fork_turns=none, model=gpt-6-astra, reasoning_effort=high, and returned /root/author_109. Separate runtime attestation unavailable.",
+      "scope": [
+        "drafts/catalog-109/integer-multiplication-below-n-log-n/",
+        "drafts/catalog-109/overview/"
+      ]
+    },
+    {
+      "role": "content-review",
+      "agent": "/root/reviewer_109",
+      "requestedModel": "gpt-6-astra",
+      "requestedReasoningEffort": "high",
+      "actualModel": null,
+      "actualReasoningEffort": null,
+      "selectionEvidence": "collaboration.spawn_agent accepted task_name=reviewer_109, fork_turns=none, model=gpt-6-astra, reasoning_effort=high, and returned /root/reviewer_109. Separate runtime attestation unavailable.",
+      "scope": [
+        "coordination/catalog-109/CONTENT_REVIEW.md",
+        "coordination/catalog-109/review/"
+      ]
+    }
+  ],
+  "stageExecutions": [
+    {
+      "stage": 2,
+      "agent": "/root",
+      "role": "site-hq",
+      "requestedModel": "gpt-6.1-sol",
+      "requestedReasoningEffort": "xhigh",
+      "actualModel": null,
+      "actualReasoningEffort": null,
+      "selectionEvidence": "Continuation of the user-designated HQ chat. The user explicitly requested Stage 2. No runtime attestation is available; no model-setting change is inferred from prose.",
+      "work": "Site registration using Astra presentation data; checked diagram copy; common catalog preparation; PDF/browser visual QA; records. No mathematical authorship or edits.",
+      "contentReviewReuse": "review/content-manifest.json, checked unchanged in stage2/preservation.json",
+      "mechanicalRun": "stage2/runs/2026-10-22T04-32-56.674Z-15511/report.json",
+      "scope": [
+        "src/data/site.mjs (catalog 109 registration)",
+        "public/diagrams/catalog-109/",
+        "public/pdf/catalog-109-{ja,en}.pdf",
+        "src/data/pdf-editions.json (109 only)",
+        "coordination/catalog-109/"
+      ],
+      "newMathAgentsNeeded": false
+    },
+    {
+      "stage": 3,
+      "agent": "/root",
+      "role": "site-hq",
+      "requestedModel": "gpt-6.1-sol",
+      "requestedReasoningEffort": "xhigh",
+      "actualModel": null,
+      "actualReasoningEffort": null,
+      "selectionEvidence": "Continuation of the explicitly designated HQ chat; user requested Stage 3 publication. No runtime attestation API is available.",
+      "work": "Scoped publication, same-version verification, Actions and deployed-site checks. No mathematical edits or PDF regeneration."
+    }
+  ]
+}

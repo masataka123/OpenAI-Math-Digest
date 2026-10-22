@@ -17,6 +17,8 @@ import inventory067 from '../../coordination/catalog-067/inventory.json' with { 
 import inventory068 from '../../coordination/catalog-068/inventory.json' with { type: 'json' };
 import inventory074 from '../../coordination/catalog-074/inventory.json' with { type: 'json' };
 import inventory087 from '../../coordination/catalog-087/inventory.json' with { type: 'json' };
+import inventory109 from '../../coordination/catalog-109/inventory.json' with { type: 'json' };
+import presentation109 from '../../drafts/catalog-109/overview/presentation.json' with { type: 'json' };
 import inventory159 from '../../coordination/catalog-159/inventory.json' with { type: 'json' };
 import inventory187 from '../../coordination/catalog-187/inventory.json' with { type: 'json' };
 import inventory197 from '../../coordination/catalog-197/inventory.json' with { type: 'json' };
@@ -63,7 +65,7 @@ const fieldTranslations = [
   {
     "id": "theoretical-computer-science",
     "ja": "理論計算機科学",
-    "catalogIds": []
+    "catalogIds": ["109"]
   },
   {
     "id": "dynamical-systems-ergodic-theory",
@@ -219,6 +221,10 @@ export const papers = [...inventory004.manuscripts.map(entry => ({
 })), ...inventory087.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '087', sourceCommit: inventory087.sourceCommit,
  title: entry.title, path: entry.sourceUrl.split('/preprints/')[1], version: '2026-09-22',
+ pages: entry.pdfPages, order: entry.order, featured: true,
+})), ...inventory109.manuscripts.map(entry => ({
+ id: entry.paperId, catalogId: '109', sourceCommit: inventory109.sourceCommit,
+ title: entry.title, path: entry.sourceUrl.split('/preprints/')[1], version: entry.version,
  pages: entry.pdfPages, order: entry.order, featured: true,
 })), ...inventory159.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '159', sourceCommit: inventory159.sourceCommit,
@@ -391,6 +397,13 @@ export const catalogs = [{
   description: text('対称版・一般版の体積積と等号分類、極体積のGromov幅を、3篇の証明と評価の接続から読む。', 'Follow three proofs concerning symmetric and general volume products, equality cases, and the Gromov width of polar products.'),
   paperIds: inventory087.manuscripts.map(p => p.paperId),
   overviewSectionIds: ['papers', 'connections', 'consequences', 'sources'],
+}, {
+  id: '109', sourceCommit: inventory109.sourceCommit, mode: 'single',
+  title: text(inventory109.titleJa, inventory109.overviewTitle),
+  contentsTitle: inventory109.contentsTitle,
+  description: text(presentation109.rows[0].claim.ja, presentation109.rows[0].claim.en),
+  paperIds: inventory109.manuscripts.map(p => p.paperId),
+  overviewSectionIds: ['papers', 'connections', 'sources'],
 }, {
   id: '159', sourceCommit: inventory159.sourceCommit, mode: 'single',
   title: text(inventory159.titleJa, inventory159.overviewTitle),

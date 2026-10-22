@@ -1,0 +1,33 @@
+\node[result] (input) {
+\heading{1}{基数桁を正確に符号化する}{Encode the radix digits exactly}
+$x\#y,\quad b=\lceil\log_2n\rceil,\ p=6b,\quad a_j\mapsto a_j2^{-b-2}$\\
+$q=\lceil n/b\rceil,\quad 2q-2<S,\quad T/2<S<T,\quad Tp=\Theta(n)$
+};
+\node[card,below=2.3cm of input] (source) {
+\heading{2}{素数軸上の畳込みを保つ}{Preserve convolution on prime axes}
+$\Phi:\mathbb C[x]/(x^S-1)\simeq
+\mathbb C[x_1,\ldots,x_d]/(x_i^{s_i}-1)_i$\\
+\Tx{三角形の制御シフトと零paddingを可逆に実行}{Triangular controlled shifts and reversible zero padding}
+};
+\flow{input}{source}{\Tx{巻き戻りを避け、同じ係数をCRT順へ置く}{Avoid wraparound; place the same coefficients in CRT order}\\[4pt]\Cite{input-crt}};
+\node[card,below=2.3cm of source] (resample) {
+\heading{3}{置換を残した変換を畳込みへ移す}{Retain permutations inside the transforms}
+$RF_s=2^\gamma B_0QF_tA,\qquad
+QF_tz=\overline a\cdot\bigl(a*(\overline a\cdot z)\bigr)/T$\\
+\Tx{$A,B_0$は縮小写像。$Q$の別ソートを避ける}{$A,B_0$ are contractions; no separate sort for $Q$}
+};
+\flow{source}{resample}{\Tx{Gaussian写像とchirpの恒等式を使う}{Use the Gaussian maps and the chirp identity}\\[4pt]\Cite{resampling-identity}};
+\node[card,below=2.3cm of resample] (ring) {
+\heading{4}{合成変換と独立した整数乗算器を使う}{Use synthetic transforms and an independent multiplier}
+$R_r=\mathbb C[y]/(y^r+1),\quad x_d\mapsto e^{\pi i/r}y$\\
+$LBF_t^-\ \longrightarrow\ \text{\Tx{符号付きpacking積}{signed packed products}}\
+\longrightarrow\ F_t^+B^{-1}L^{-1}$
+};
+\flow{resample}{ring}{\Tx{twistで最後の軸を係数列にし、同じ$LB$順で積を取る}{Twist the last axis into coefficients; multiply in common $LB$ order}\\[4pt]\Cite{twist}\\[3pt]\Cite{packing}};
+\node[result,below=2.3cm of ring] (out) {
+\heading{5}{正規化を戻して厳密な積を出力する}{Undo scales and output the exact product}
+$\dfrac{u*v}{S^2}\ \xrightarrow{\ \times S\ }\ 
+w=\dfrac{u*v}{S}\ \xrightarrow{\ \times 2^{2b+4}S\ }\ \text{\Tx{整数係数}{integer coefficients}}$\\
+\Tx{誤差$<1/2$で丸め、$\Phi^{-1}$、carry、正確に$2n$ bits}{Round at error $<1/2$; apply $\Phi^{-1}$, carries, and exactly $2n$ output bits}
+};
+\flow{ring}{out}{\Tx{$R$の相殺、既知の倍率、最近接整数復元を使う}{Cancel $R$ and use known scales and nearest-integer recovery}\\[4pt]\Cite{recovery}};

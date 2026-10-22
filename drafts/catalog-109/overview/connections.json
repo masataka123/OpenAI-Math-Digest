@@ -1,0 +1,123 @@
+{
+  "catalogId": "109",
+  "productionVersion": "1.4",
+  "checkingScope": "Single manuscript. Direct uses of HvH21 in Theorem 1 were checked at statement/application level. This is not a complete proof audit. No within-catalogue inter-paper edges exist because the official catalogue has one manuscript; external relations beyond the listed inputs remain uninvestigated.",
+  "omittedSections": [
+    {
+      "section": "classification",
+      "reason": "One article and one multiplication theorem; classification would duplicate the article guide."
+    },
+    {
+      "section": "catalogue-overview-diagram",
+      "reason": "The combined dependencies and branching were considered. The useful convergence is inside one proof, shown in the article pipeline/network/recovery diagrams. Repeating it in the single-paper entrance would add no article-selection information."
+    },
+    {
+      "section": "within-catalogue-dependency-table-and-selector",
+      "reason": "Only one manuscript. A blank table would conflate single-paper structure with absence of external inputs."
+    }
+  ],
+  "connections": [
+    {
+      "id": "hvh-multiplier",
+      "from": {
+        "paperId": "HvH21",
+        "result": "Theorem 1.1",
+        "pages": "print 1 / PDF 2",
+        "version": "HAL hal-02070778v2, submitted 28 November 2020; repository cover sheet plus 45-page manuscript",
+        "sourceUrl": "https://hal.science/hal-02070778v2/file/nlogn.pdf"
+      },
+      "to": {
+        "paperId": "integer-multiplication-below-n-log-n",
+        "result": "Theorem 1",
+        "use": "Lemma 17; Sections 9.5 and 9.8, pp. 44–46, 59–60, 65–66",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Integer-multiplication-below-n-log-n-September-23-2026/paper.pdf"
+      },
+      "role": "Established independent O(N log N) exact multiplier on short signed encodings after magnitude conversion.",
+      "hypotheses": "Lengths O(rp) or O(p); signs and record conversions paid for in Lemma 17.",
+      "kind": "direct",
+      "checking": {
+        "author": "author_109",
+        "checkedOn": "2026-10-22",
+        "record": "../integer-multiplication-below-n-log-n/sources.json",
+        "scope": "Primary-source statements and application checked; complete external proof unverified."
+      },
+      "articleLinks": {
+        "ja": "/ja/papers/integer-multiplication-below-n-log-n/#dependencies",
+        "en": "/en/papers/integer-multiplication-below-n-log-n/#dependencies"
+      },
+      "unresolved": [
+        "Byte identity with inaccessible author-hosted file specified in reference [15] is unconfirmed.",
+        "Complete external proofs and further dependencies not verified."
+      ]
+    },
+    {
+      "id": "hvh-resampling",
+      "from": {
+        "paperId": "HvH21",
+        "result": "Theorem 4.2; Lemma 4.6; Proposition 4.7; Lemmas 4.8–4.12",
+        "pages": "print 24, 28–33 / PDF 25, 29–34",
+        "version": "HAL hal-02070778v2, submitted 28 November 2020; repository cover sheet plus 45-page manuscript",
+        "sourceUrl": "https://hal.science/hal-02070778v2/file/nlogn.pdf"
+      },
+      "to": {
+        "paperId": "integer-multiplication-below-n-log-n",
+        "result": "Theorem 1",
+        "use": "Lemmas 19–20, pp. 48–52",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Integer-multiplication-below-n-log-n-September-23-2026/paper.pdf"
+      },
+      "role": "Gaussian identity, contractions, ordered grid routines. The current manuscript retains the two permutations instead of executing the sorting term in the original Proposition 4.7.",
+      "hypotheses": "gcd(s,t)=1, 2<=s<t<2^p, 2<=alpha<sqrt(p), theta>p/alpha^4; supplied by Section 9.2.",
+      "kind": "direct",
+      "checking": {
+        "author": "author_109",
+        "checkedOn": "2026-10-22",
+        "record": "../integer-multiplication-below-n-log-n/sources.json",
+        "scope": "Primary-source statements and application checked; complete external proof unverified."
+      },
+      "articleLinks": {
+        "ja": "/ja/papers/integer-multiplication-below-n-log-n/#dependencies",
+        "en": "/en/papers/integer-multiplication-below-n-log-n/#dependencies"
+      },
+      "unresolved": [
+        "Byte identity with inaccessible author-hosted file specified in reference [15] is unconfirmed.",
+        "Complete external proofs and further dependencies not verified."
+      ]
+    },
+    {
+      "id": "hvh-phase-primes",
+      "from": {
+        "paperId": "HvH21",
+        "result": "Lemmas 2.12 and 5.1",
+        "pages": "print 17, 37–38 / PDF 18, 38–39",
+        "version": "HAL hal-02070778v2, submitted 28 November 2020; repository cover sheet plus 45-page manuscript",
+        "sourceUrl": "https://hal.science/hal-02070778v2/file/nlogn.pdf"
+      },
+      "to": {
+        "paperId": "integer-multiplication-below-n-log-n",
+        "result": "Theorem 1",
+        "use": "Sections 9.2, 9.4–9.5, pp. 55–56, 58–60",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Integer-multiplication-below-n-log-n-September-23-2026/paper.pdf"
+      },
+      "role": "Prepared disk-grid phases and enough prime source lengths.",
+      "hypotheses": "O(p)-bit exponential arguments; eta=1/(4d), x=r/2 or r, log x>2/eta eventually.",
+      "kind": "direct",
+      "checking": {
+        "author": "author_109",
+        "checkedOn": "2026-10-22",
+        "record": "../integer-multiplication-below-n-log-n/sources.json",
+        "scope": "Primary-source statements and application checked; complete external proof unverified."
+      },
+      "articleLinks": {
+        "ja": "/ja/papers/integer-multiplication-below-n-log-n/#dependencies",
+        "en": "/en/papers/integer-multiplication-below-n-log-n/#dependencies"
+      },
+      "unresolved": [
+        "Byte identity with inaccessible author-hosted file specified in reference [15] is unconfirmed.",
+        "Complete external proofs and further dependencies not verified."
+      ]
+    }
+  ]
+}

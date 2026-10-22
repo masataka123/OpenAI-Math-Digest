@@ -1,0 +1,161 @@
+{
+  "paperId": "integer-multiplication-below-n-log-n",
+  "title": "Integer multiplication below n log n",
+  "displayName": "Integer multiplication below n log n",
+  "version": "September 23, 2026",
+  "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Integer-multiplication-below-n-log-n-September-23-2026/paper.pdf",
+  "sha256": "834f644c3ce67932b9f7357d3615fb8fea4a7ff198d90e4f6883a15ba9df7129",
+  "pdfPages": 73,
+  "catalogId": "109",
+  "authors": "OpenAI",
+  "checkedOn": "2026-10-22",
+  "inventory": "../../../coordination/catalog-109/inventory.json",
+  "statements": [
+    {
+      "result": "Theorem 1",
+      "printed": "3",
+      "pdf": "3",
+      "status": "statement and model checked",
+      "hypotheses": "Every n>=1; x,y binary strings of the same length n, leading zeroes allowed. One fixed deterministic finite-alphabet, fixed-finite-tape TM.",
+      "conclusions": [
+        "Exact 2n-bit padded product for every promised input",
+        "Worst-case O(n(lg n)^(1-2^-182)) through all lengths",
+        "One uniform machine, with all setup charged"
+      ]
+    }
+  ],
+  "proofPassages": [
+    {
+      "pages": "8–10",
+      "scope": "machine, stream order, counters, controlled shifts"
+    },
+    {
+      "pages": "11–20",
+      "scope": "restored auxiliaries; frame invariant; labels and residual/rank counts; rational exponents; not an independent exhaustive edge recount"
+    },
+    {
+      "pages": "20–25",
+      "scope": "lower triangular shear factorization, volume-normalized swap recurrence, row padding, fixed-tape stack scheduling, arbitrary binary widths"
+    },
+    {
+      "pages": "26–38",
+      "scope": "phase frame connection, packed selected-bit interface and repair mechanism, layer recurrence, guard-depth estimate, Proposition 14; guard boundary enumeration not independently exhausted"
+    },
+    {
+      "pages": "38–47",
+      "scope": "synthetic character cancellation, retained LB order, Lemma 16 cost/error, signed packing/extraction, normalized convolution"
+    },
+    {
+      "pages": "48–53",
+      "scope": "Gaussian identities and direct inputs; tensorization, chirp and R cancellation; equation (36) conjugates verified against page image"
+    },
+    {
+      "pages": "54–67",
+      "scope": "all fixed parameters and setup; CRT/padding, formats, twist, transforms, exact scales, disk margins, nearest integer recovery, carry invariant, full cost exponents, small-input cutoff"
+    }
+  ],
+  "externalSources": [
+    {
+      "id": "HvH21",
+      "displayName": "Integer multiplication in time O(n log n)",
+      "title": "Integer multiplication in time O(n log n)",
+      "authors": "David Harvey and Joris van der Hoeven",
+      "version": "HAL hal-02070778v2, submitted 28 November 2020; repository cover sheet plus 45-page manuscript",
+      "sourceUrl": "https://hal.science/hal-02070778v2/file/nlogn.pdf",
+      "pdfPages": 46,
+      "sha256": "5b41f1b9828b50ac00e8aa680775c27b6aab2f74dee8ae4e306fc01bd04137fc",
+      "checkedLocations": [
+        {
+          "printedPage": "1",
+          "pdfPage": 2
+        },
+        {
+          "printedPage": "17",
+          "pdfPage": 18
+        },
+        {
+          "printedPage": "24",
+          "pdfPage": 25
+        },
+        {
+          "printedPage": "28",
+          "pdfPage": 29
+        },
+        {
+          "printedPage": "29",
+          "pdfPage": 30
+        },
+        {
+          "printedPage": "30",
+          "pdfPage": 31
+        },
+        {
+          "printedPage": "31",
+          "pdfPage": 32
+        },
+        {
+          "printedPage": "32",
+          "pdfPage": 33
+        },
+        {
+          "printedPage": "33",
+          "pdfPage": 34
+        },
+        {
+          "printedPage": "37",
+          "pdfPage": 38
+        },
+        {
+          "printedPage": "38",
+          "pdfPage": 39
+        }
+      ],
+      "sourceSelection": "The main manuscript specifies the author-hosted 45-page file, which was inaccessible. This HAL author-deposited v2 was used as an alternative primary source. The author independently checked the cited result numbering, statements and relevant algorithm boundary passages in this file on 2026-10-22. Byte identity with the inaccessible author-hosted file is unconfirmed.",
+      "checkedResults": [
+        "Theorem 1.1",
+        "Lemma 2.12",
+        "Theorem 4.2",
+        "Lemma 4.6",
+        "Proposition 4.7",
+        "Lemmas 4.8–4.12",
+        "Lemma 5.1"
+      ],
+      "checking": "Statements and relevant algorithm boundary passages checked; author-hosted file byte identity and complete external proofs not verified."
+    }
+  ],
+  "dependencies": [
+    {
+      "id": "hvh-multiplier",
+      "source": "HvH21",
+      "result": "Theorem 1.1",
+      "use": "Lemma 17 and Sections 9.5, 9.8",
+      "kind": "direct",
+      "role": "Established O(N log N) exact fixed-tape multiplier on O(rp)-bit/O(p)-bit integers; independent of the new construction."
+    },
+    {
+      "id": "hvh-resampling",
+      "source": "HvH21",
+      "result": "Theorem 4.2, Lemma 4.6, Proposition 4.7, Lemmas 4.8–4.12",
+      "use": "Lemmas 19–20",
+      "kind": "direct",
+      "role": "Gaussian identity, contractions and ordered disk-grid routines; the new Lemma 19 retains two permutations and removes the separate sorting term."
+    },
+    {
+      "id": "hvh-phase-primes",
+      "source": "HvH21",
+      "result": "Lemmas 2.12, 5.1",
+      "use": "Sections 9.2, 9.4–9.5",
+      "kind": "direct",
+      "role": "Prepared phases and sufficiently many primes in specified intervals."
+    }
+  ],
+  "unresolved": [
+    "Complete finite-network edge recount not performed.",
+    "All guard-boundary cases in Lemma 13 not independently exhausted.",
+    "Low-level descriptor programs and an executable multiplier have not been verified or run.",
+    "External proofs, their recursive dependencies, Corollary 2 and Section 11 are outside scope.",
+    "Byte identity of HAL v2 with inaccessible author-hosted 45-page file remains unconfirmed; result numbering and statements were checked."
+  ],
+  "priorWorkReuse": "Official primary sources and common diagram/rendering infrastructure only; no existing Sol mathematical prose, interpretations, or review reused."
+}

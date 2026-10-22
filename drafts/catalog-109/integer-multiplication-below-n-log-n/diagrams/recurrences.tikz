@@ -1,0 +1,36 @@
+\node[result] (network) {
+\heading{1}{固定ネットワークの端点を揃える}{Align the endpoints of fixed networks}
+$D_{\rm out}S_\Omega D_{\rm in}^{-1},\qquad m=10^6$\\
+$s_b<W_bm,\quad s_c<W_cm,\quad
+s_b/W_b<m^\tau,\ s_c/W_c<m^\sigma$\\
+\Tx{全役割・任意の補助初期値で恒等式を成立させる}{The identity covers every role and arbitrary auxiliary inputs}
+};
+\node[card,below=2.4cm of network] (split) {
+\heading{2}{rowを役割へ均等に分配する}{Split whole rows equally among roles}
+\Tx{親の体積$V$、$s$個の子、各子の体積$V/W$}{Parent volume $V$; $s$ children, each of volume $V/W$}\\
+$\text{\Tx{再帰費用}{recursive cost}}=s(V/W)F(e/m)$
+};
+\flow{network}{split}{\Tx{完全な共通suffixを保持してpointwise gateを適用}{Keep the same complete suffix to apply pointwise gates}\\[4pt]\Cite{rank-deficit}};
+\node[card,below=2.4cm of split] (swap) {
+\heading{3a}{アドレス交換の再帰}{Address-interchange recurrence}
+$F_k\le(s_b/W_b)F_{k-1}+O(1)$\\
+\Tx{ランク$a$のshear $\Rightarrow$ $a$個の小さい交換}{A rank-$a$ shear requires $a$ smaller interchanges}\\
+$\text{\Tx{一般の二進幅}{arbitrary binary width}}\ u:\quad O(Vu^\tau)$
+};
+\flow{split}{swap}{\Tx{下三角分解、row padding、幅の分割を使う}{Use lower-triangular factorization, row padding, and width splitting}\\[4pt]\Cite{swap}};
+\node[card,below=2.4cm of swap] (layer) {
+\heading{3b}{数値層では基底変更の費用も払う}{Pay for basis changes in numerical layers}
+$F(e)\le(s_c/W_c)F(e/m)+O((eK)^\tau+1)$\\
+$F(e)=O(e)\ (e<d^\beta)
+\quad\Longrightarrow\quad O(Vd^{\lambda'})$\\
+\Tx{packed XORの例外アドレスはすべて決定的に修正}{Every exceptional address in packed XOR is repaired deterministically}
+};
+\flow{swap}{layer}{\Tx{chunk交換をpacked基底変更に使い、数値再帰へ接続}{Use chunk interchanges in packed basis changes for the numerical recurrence}\\[4pt]\Cite{packed-basis}};
+\node[result,below=2.4cm of layer] (exact) {
+\heading{4}{精度と固定テープを別に管理する}{Control precision and fixed-tape scheduling}
+$\Delta=\lceil C_0d^{20}\rceil=o(p),\quad
+H_0=\frac12\begin{pmatrix}1&1\\1&-1\end{pmatrix}$\\
+\Tx{層全体を厳密に評価して一度だけ切り捨てる}{Evaluate the entire layer exactly, then truncate once}\\
+$\|Q_p(H_0^{\otimes D}z)-H_0^{\otimes D}z\|_\infty<\sqrt2\,2^{-p}$
+};
+\flow{layer}{exact}{\Tx{演算深さには$1/W_c$を入れずguardを確保する}{Guard widths use arithmetic depth without a factor $1/W_c$}\\[4pt]\Cite{diagram-layer}};
