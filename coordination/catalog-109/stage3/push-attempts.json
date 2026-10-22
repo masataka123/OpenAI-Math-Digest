@@ -1,0 +1,18 @@
+{
+  "attempts": [
+    {
+      "command": "git push origin main",
+      "result": "HTTP 408; remote main remained at baseCommit"
+    },
+    {
+      "command": "git -c http.version=HTTP/1.1 push --progress origin main",
+      "result": "HTTP 408; transfer pack 54.47 MiB; no successful push reported"
+    },
+    {
+      "command": "git -c http.version=HTTP/1.1 -c http.postBuffer=1048576 push --progress origin main",
+      "result": "HTTP 400; remote unchanged",
+      "log": "push-chunked.log"
+    }
+  ],
+  "successfulStrategy": "Batched normal fast-forward pushes preserving the original tree; see batched-pushes.json"
+}

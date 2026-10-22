@@ -23,3 +23,7 @@
 
 
 実行フォルダを `stage2/runs/2026-10-22T04-32-56.674Z-15511/` に同内容で保存した。リンクは保存先へ向けた。原機械記録の数値・ハッシュ・ログは重複記述せず参照する。PNGの切り出しはstage2/screen-reviewにあり、元の共通検査画像は保存実行のbrowser/を正本とする。
+
+## 第3段階での同一版の再利用
+
+公開対象と内容点検manifest・原図/公開コピー・PDF版の照合はstage3/preflight.json、preservation.json。公開HTMLと図/PDFのバイト一致はstage3/live-resources.json。数学と組版に変更がないことを確認した上で本書の同一版の確認を再利用し、公開先の操作を追加検査した。最新の結果はPUBLICATION.mdとstage3/final-state.jsonを参照。

@@ -1,5 +1,8 @@
 # カタログ109 — 第1段階
 
+現在は第3段階の公開・反映確認まで完了。[PUBLICATION.md](PUBLICATION.md) が最新の結果と再開案内。本書の段階終了時の記述は履歴として保持する。
+
+
 制作セット1.4と2026-10-20のモデル分担を適用する。現在の依頼は日英記事・TeX/SVG・引用記録・別担当による内容点検・短い日英カタログ案内まで。サイト組込み・日英冊子PDF・公開は次の指示で進める。
 
 作業先は `/Users/iwai/Desktop/GitHub/OpenAI-Math-Digest`。開始時のHEAD・ブランチ・変更は `validation/base-commit.txt`、`validation/branch.txt`、`validation/git-status-start.txt` を参照する。共有作業場のブランチを切り替えず、今回の保存範囲は `drafts/catalog-109/` と `coordination/catalog-109/`。既存ファイルの同一性の基準は `validation/preserved-start.json`。

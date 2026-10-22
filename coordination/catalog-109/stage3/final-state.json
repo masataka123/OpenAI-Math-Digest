@@ -1,0 +1,37 @@
+{
+  "stage": 3,
+  "status": "published-and-verified",
+  "completedAt": "2026-10-22T15:28:59.256348+09:00",
+  "publicationCommitFile": "publication-commit.txt",
+  "actionsEvidence": [
+    "actions-final.json",
+    "actions-jobs-final.json"
+  ],
+  "deployedResources": "live-resources.json",
+  "deployedBrowser": "live-browser.json",
+  "sameVersionReuse": [
+    "preflight.json",
+    "preservation.json",
+    "../PREPARATION_REVIEW.md"
+  ],
+  "scopeAndTransport": [
+    "commit-scope.json",
+    "batched-pushes.json",
+    "push-attempts.json"
+  ],
+  "concurrentWork": "concurrent-working-changes.json",
+  "newMathEdits": false,
+  "pdfRegenerated": false,
+  "errors": [],
+  "remainingWork": [],
+  "mathematicalLimitations": "../CONTENT_REVIEW.md and original article sources/status; unchanged",
+  "visualReview": {
+    "reviewer": "/root",
+    "when": "2026-10-22T15:28:59.256348+09:00",
+    "inspected": [
+      "screens/ja-catalog-1280.png",
+      "screens/en-article-375.png"
+    ],
+    "result": "Live catalog PDF entry, Japanese title/formula, sticky language selector, English mobile proof/diagram presentation visible without clipping at the page level. Full diagram/page visual QA reused only after exact live HTML/assets matching; see Stage 2 PREPARATION_REVIEW."
+  }
+}
