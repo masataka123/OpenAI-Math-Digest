@@ -1,0 +1,12 @@
+{
+  "node": "/Users/iwai/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+  "python": "/Users/iwai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "diagramBinDirectory": "/Library/TeX/texbin",
+  "browser": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+  "pdfRuntimeConfig": "tmp/pdf-runtime.json",
+  "scope": "Stage 1 source/diagram/preview environment. No booklet PDF generated. On resume, check these paths exist; only rediscover if unavailable.",
+  "stage2Command": [
+    "npm run catalog:prepare -- --catalog 109",
+    "node scripts/prepare-catalog.mjs --catalog 109"
+  ]
+}

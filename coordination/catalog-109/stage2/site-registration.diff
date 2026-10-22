@@ -1,0 +1,45 @@
+--- coordination/catalog-109/stage2/site.mjs	2026-10-22 13:30:52
++++ src/data/site.mjs	2026-10-22 13:31:26
+@@ -17,6 +17,8 @@
+ import inventory068 from '../../coordination/catalog-068/inventory.json' with { type: 'json' };
+ import inventory074 from '../../coordination/catalog-074/inventory.json' with { type: 'json' };
+ import inventory087 from '../../coordination/catalog-087/inventory.json' with { type: 'json' };
++import inventory109 from '../../coordination/catalog-109/inventory.json' with { type: 'json' };
++import presentation109 from '../../drafts/catalog-109/overview/presentation.json' with { type: 'json' };
+ import inventory159 from '../../coordination/catalog-159/inventory.json' with { type: 'json' };
+ import inventory187 from '../../coordination/catalog-187/inventory.json' with { type: 'json' };
+ import inventory197 from '../../coordination/catalog-197/inventory.json' with { type: 'json' };
+@@ -63,7 +65,7 @@
+   {
+     "id": "theoretical-computer-science",
+     "ja": "理論計算機科学",
+-    "catalogIds": []
++    "catalogIds": ["109"]
+   },
+   {
+     "id": "dynamical-systems-ergodic-theory",
+@@ -220,6 +222,10 @@
+  id: entry.paperId, catalogId: '087', sourceCommit: inventory087.sourceCommit,
+  title: entry.title, path: entry.sourceUrl.split('/preprints/')[1], version: '2026-09-22',
+  pages: entry.pdfPages, order: entry.order, featured: true,
++})), ...inventory109.manuscripts.map(entry => ({
++ id: entry.paperId, catalogId: '109', sourceCommit: inventory109.sourceCommit,
++ title: entry.title, path: entry.sourceUrl.split('/preprints/')[1], version: entry.version,
++ pages: entry.pdfPages, order: entry.order, featured: true,
+ })), ...inventory159.manuscripts.map(entry => ({
+  id: entry.paperId, catalogId: '159', sourceCommit: inventory159.sourceCommit,
+  title: entry.title, path: entry.sourceUrl.split('/preprints/')[1], version: entry.version,
+@@ -392,6 +398,13 @@
+   paperIds: inventory087.manuscripts.map(p => p.paperId),
+   overviewSectionIds: ['papers', 'connections', 'consequences', 'sources'],
+ }, {
++  id: '109', sourceCommit: inventory109.sourceCommit, mode: 'single',
++  title: text(inventory109.titleJa, inventory109.overviewTitle),
++  contentsTitle: inventory109.contentsTitle,
++  description: text(presentation109.rows[0].claim.ja, presentation109.rows[0].claim.en),
++  paperIds: inventory109.manuscripts.map(p => p.paperId),
++  overviewSectionIds: ['papers', 'connections', 'sources'],
++}, {
+   id: '159', sourceCommit: inventory159.sourceCommit, mode: 'single',
+   title: text(inventory159.titleJa, inventory159.overviewTitle),
+   contentsTitle: inventory159.contentsTitle,

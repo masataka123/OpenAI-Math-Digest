@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-10-22T04:13:17.344711+00:00",
+  "contentReviewManifest": "review/content-manifest.json",
+  "contentReviewChangedFiles": [],
+  "previewSourceOrHtmlMismatches": [],
+  "visualHtmlMismatches": [],
+  "bilingualSectionIdsMatch": true,
+  "connectionAnchorErrors": [],
+  "preservation": {
+    "baseline": "validation/preserved-start.json",
+    "filesChecked": 18455,
+    "changedOutsideCatalog109": [
+      "coordination/comics/MODEL_PROVENANCE.json",
+      "coordination/comics/README.md",
+      "production/COMICS.md",
+      "public/images/comics/catalog-069/v1/page-001.webp",
+      "src/data/comics.json",
+      "src/data/comics.mjs"
+    ],
+    "interpretation": "The HQ and both assigned agents wrote only drafts/catalog-109/ and coordination/catalog-109/. The listed outside-scope changes occurred during parallel work; their attribution is not established by a hash comparison. They were retained without reset or modification. A whole-workspace immutability assertion is intentionally not made."
+  },
+  "machineEvidence": {
+    "commonTests": "validation/common-tests.log",
+    "citationsTextOnly": "validation/citations-text.log",
+    "diagramAndSourceCheck": "validation/artifact-check.json",
+    "preview": "validation/preview-report.json",
+    "visual": "validation/visual-report.json"
+  },
+  "stage1Only": true,
+  "stage1ContentAndFormatChecksPassed": true,
+  "completedAt": "2026-10-22T04:21:57.861620+00:00",
+  "finalRecordErrors": [],
+  "stage": "1-complete-content-edited",
+  "nextStage": "2: site registration, bilingual booklet PDF, shared catalog:prepare and visual review; await user instruction"
+}
