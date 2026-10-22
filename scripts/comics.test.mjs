@@ -48,10 +48,18 @@ test('broken catalogue, target-source, image path and duplicate registrations fa
  assert.throws(()=>resolveComics([entry,entry]),/Duplicate comic catalogue/);
 });
 
-test('all registered source and optimized image files exist, and supplements remain pending',async()=>{
+test('an author supplement can be added without being required for other comics',()=>{
+ const records=structuredClone(entries.slice(0,2));
+ const received=JSON.parse('{"status":"approved","author":"岩井雅崇","text":"第一段落。\\n\\n第二段落。","receivedOn":"2026-10-22"}');
+ records[0].supplement=received;
+ records[1].supplement={status:'awaiting-author',author:'岩井雅崇',text:null,receivedOn:null};
+ const result=resolveComics(records);
+ assert.equal(result[0].supplement.text,received.text);
+ assert.equal(result[1].supplement.text,null);
+});
+
+test('all registered source and optimized image files exist',async()=>{
  for(const entry of entries){
-  assert.equal(entry.supplement.status,'awaiting-author');
-  assert.equal(entry.supplement.text,null);
   await access(entry.original.path);
   for(const page of entry.pages)await Promise.all([access(`public/${page.webp}`),access(`public/${page.png}`)]);
  }
