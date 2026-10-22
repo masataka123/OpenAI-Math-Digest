@@ -1,0 +1,186 @@
+{
+  "ja": [
+    {
+      "page": 1,
+      "textStart": "OpenAI Math Digest\nCATALOGUE 109\nn log n未満の整数乗算\nカタログ案内と1篇の証明概説\n独立した非公式の読解ガイド · 日本語版\n収録版: 2026-10-22\n制作: Masataka Iwai · 大阪大学\nAI生成の解説には誤りや不正確な説明が含まれる可能性があります。重要な主張・証明は原論\n文でご確認ください。本冊子はWebサイトの解説をまとめたもので、原論文そのものではあり\nません。専門家",
+      "sourceReferences": 0
+    },
+    {
+      "page": 2,
+      "textStart": "目次\nカタログ案内に続き、収録論文1篇の解説を掲載しています。目次・引用はクリックできます。横長の表\nは紙面向けの項目一覧に組み直し、主張と参照先を保持しています。\n原論文の参照版: 1581d4cbdd69a0faf34b2089614fe2a814316a6a\n00 · カタログ109 案内 3\n01 · Integer multiplication below n log n 5\nOpenAI Math Digest · 109\n",
+      "sourceReferences": 4
+    },
+    {
+      "page": 3,
+      "textStart": "カタログ109 · 案内\nWeb版を読む ↗\nCATALOGUE 109\nn log n未満の整数乗算\nInteger multiplication below n log n\n固定有限アルファベット・固定有限本数の一次元テープをもつ一台の決定性Turing機械で、二つの-bit\n整数を最悪時 、  で厳密に掛けるとする原稿を収録する。線形ネットワークに\nよるアドレス交換と同時バタフライの節約を、近似変換からの正確な整数回収へ接続する。",
+      "sourceReferences": 5
+    },
+    {
+      "page": 4,
+      "textStart": "証明の入口\n個別記事では、入力の基数桁からCRT・Gaussian resampling・合成多項式変換へ至る構成、体積で正\n規化した二つの再帰、精度と全費用の評価を順に説明する。Harvey–van der Hoevenの既存の整数乗\n算器とresamplingの解析を直接入力として使う。構成中の高速乗算器を多項式積へ再帰的に呼び出すわ\nけではない。\nすべての入力長に対する漸近評価であり、原稿は定数と閾値が極めて大きいことを明記する。",
+      "sourceReferences": 3
+    },
+    {
+      "page": 5,
+      "textStart": "109 / 01\nWeb版を読む ↗\nCATALOGUE 109 · PAPER 01 / 1 概説\nInteger multiplication below n log n\n有限線形ネットワークでデータ移動と同時バタフライを節約し、誤差を管理\nして厳密な積へ戻す。\n本原稿は、整数乗算を多次元の正規化畳込みへ移し、そのテープ上の配置変更と算術層の両方を高速化\nする。核心は、固定された線形ネットワークのランクの不足を、配列のビット体積で正",
+      "sourceReferences": 4
+    },
+    {
+      "page": 6,
+      "textStart": "この評価は全入力長を通じた漸近評価である。各固定乗算機械に最終的な  下界を課す\n予想に対し、本定理の機械では  となる。原稿は定数と閾値が極めて大きい\nことを明記しており、実用的な高速化を主張していない。中間でXOR計算を許すため、データの\n移動だけを許す転置モデルの下界とも区別が必要である。\nSections 1.7 and 2 · pp. 7–8\n図の矢印に付した引用\n略号のない定理・補題・節・式番号は本原稿 Integer mu",
+      "sourceReferences": 4
+    },
+    {
+      "page": 7,
+      "textStart": "入力から厳密な積への帰着と復元\n図を拡大 ↗TeXソース ↓\nOpenAI Math Digest · 109\n109 / 01 7",
+      "sourceReferences": 7
+    },
+    {
+      "page": 8,
+      "textStart": "1. 基数桁と畳込みを保存するアドレス写像\n十分大きな  について 、精度 、桁数  とする。  を2冪\nに取り、相異なる奇素数  を2冪  の直下に選ぶ。 、  は \n を満たす。各入力を  と書けば積の次数は  なので、  によ\nる巡回畳込みに巻き戻りは生じない。係数は  である。\n、  とすると、\nは基底単項式を置換する代数同型である。混合基数の添字  は \n へ移る。この三角形の更新を下位の制御座標がまだ変わらない順に\n行う。無",
+      "sourceReferences": 3
+    },
+    {
+      "page": 9,
+      "textStart": "Lemma 16の順変換は 、反対向き変換は  を実装する。 は周波数のbit reversal、\n は同時層に適した配置である。二つの順変換を同じ  順のまま成分積へ渡すと、反対向き変換が\nその順序を直接受け取る。追加の全配列ソートを挟む必要がない。\n成分となる多項式積はLemma 17で処理する。分母  を除いた実部・虚部の整数係数をpacking基数 \n（この段落ではcompression写像とは別の記号）に詰め、4個の整数積から",
+      "sourceReferences": 4
+    },
+    {
+      "page": 10,
+      "textStart": "有限ネットワークから二つの体積正規化再帰への接続\n図を拡大 ↗TeXソース ↓\nOpenAI Math Digest · 109\n109 / 01 10",
+      "sourceReferences": 6
+    },
+    {
+      "page": 11,
+      "textStart": "1. 任意の補助値を復元しながら表現を変える\n§3は  の3元部分集合の三つ組から、二つの固定ネットワークを直接構成する。gather/scatterによ\nり生じる交差数の係数をside wireで消し、三段階でデータの二つのbankを交換する。補助wireの初期\n値は任意であり、最初にその寄与を引き、計算後に元へ戻す。Lemma 5はこの値の復元、Lemma 6は\n隣接頂点の部分空間ラベルの包含と次元損失を与える。\n頂点  における論",
+      "sourceReferences": 4
+    },
+    {
+      "page": 12,
+      "textStart": "3. 同時バタフライと固定本数テープでの再帰\ncomplex networkでは 、  のtensor kernelを作り、対角位相\nとdyadic scaleで  の同時層へ変える。 個の軸を扱う体積正規化時間は\n内部費用とleaf費用を分け、 、  を取ると、 進の群\n分けを含めて層全体が  になる。\n中間のframeは縮小写像とは限らない。精度のための演算依存深さは  で評価\nし、体積による  はここには入らない。§5.4は分母と",
+      "sourceReferences": 3
+    },
+    {
+      "page": 13,
+      "textStart": "精度から整数の正確復元、総費用から主定理への接続\n図を拡大 ↗TeXソース ↓\n1. 計算可能なパラメータと各呼出しの適用条件\n§9.1の固定有理数をそのまま用いる：\nOpenAI Math Digest · 109\n109 / 01 13",
+      "sourceReferences": 6
+    },
+    {
+      "page": 14,
+      "textStart": "、 、 、  とし、 軸を  と  から選んで積を 、最後の\n軸を  にする。すると\n、  とし、  の相異なる奇素数を選ぶ。\n[HvH21, Lemma 5.1]により十分大きい入力では各区間に必要な数の素数がある。これが \n、 、  を保証し、resamplingの仮定を満たす。全候補へ\nの試し割りでも素数探索は 。固定有理冪の比較、逆元、descriptorも\n機械自身が計算する。前処理を助言や無料の表として除外していない。\nSe",
+      "sourceReferences": 3
+    },
+    {
+      "page": 15,
+      "textStart": "3. 支配費用と  の導出\n で割った主要費用は、配置prefixと個別roundの 、chunk交換の 、同時層\nの 、CRTと軸配置の 、Gaussian写像の 、chirp等の 、多項式積の \nである。これらの  の指数と1との差は\n最小値は  である。従って残る固定冪の  を  へ吸収して \n を得る。特に支配的な余裕は、chunk交換をまとめるための小さい  と、交換自体の小さ\nい指数改善の積から来る。\nこの費用には入力・pa",
+      "sourceReferences": 1
+    },
+    {
+      "page": 16,
+      "textStart": "供給結果\n[HvH21] Theorem 4.2、Lemma 4.6、Proposition 4.7、Lemmas 4.8–4.12\n本稿の使用箇所\nLemma 19、Lemma 20\n使用内容と適用条件\nGaussian恒等式、逆作用素の収束、disk-grid近似と一軸費用。、  を本稿§9.2で\n確保\n確認範囲\n引用する記述・アルゴリズム境界と本稿の接続を照合。Gaussian解析の全証明は未検証\n供給結果\n[HvH21] Lem",
+      "sourceReferences": 9
+    },
+    {
+      "page": 17,
+      "textStart": "Section 9.7.2; equation (44) · pp. 63–64 — 二度のS、誤差1/2未満、carry不変量を確認する\nSection 9.8; Table 1; equation (45) · pp. 64–67 — 全費用、κの余裕、単一の小入力閾値を見\nる\n[HvH21]は著者がHALへ登録した2020年11月28日版で照合した。本文は45ページ、HAL表紙により\nPDF位置は誌面より1ページ後ろにある。本稿[",
+      "sourceReferences": 2
+    }
+  ],
+  "en": [
+    {
+      "page": 1,
+      "textStart": "OpenAI Math Digest\nCATALOGUE 109\nInteger multiplication below n\nlog n\nCatalogue guide & one proof overview\nIndependent reading guide · English edition\nEdition: 2026-10-22\nCreated by: Masataka Iwai · Osaka University\nAI-g",
+      "sourceReferences": 0
+    },
+    {
+      "page": 2,
+      "textStart": "Contents\nThe catalogue guide is followed by the article. The contents and citations are clickable. Wide\ntables are arranged as entries for print; the claims and source references are retained.\nOriginal-manuscript snapsho",
+      "sourceReferences": 4
+    },
+    {
+      "page": 3,
+      "textStart": "Catalogue 109 · Guide\nRead on the website ↗\nCATALOGUE 109\nInteger multiplication below n log n\nThis catalogue contains a manuscript claiming exact multiplication of two -bit integers in worst-\ncase time , with , on one d",
+      "sourceReferences": 1
+    },
+    {
+      "page": 4,
+      "textStart": "Catalogue 109 · 2026-10-22 checked source snapshot\n#\n01\nManuscript and overview\nInteger multiplication below n log n →\nShort name: Integer multiplication below n log n\nSeptember 23, 2026 · 73 pages\nOriginal paper (GitHub",
+      "sourceReferences": 5
+    },
+    {
+      "page": 5,
+      "textStart": "Sources and checking scope\nThe official subject is Theoretical computer science. We use official catalogue 109 and the\nmanuscript dated 23 September 2026. The article checks the main theorem's input/output\ncontract, recu",
+      "sourceReferences": 2
+    },
+    {
+      "page": 6,
+      "textStart": "109 / 01\nRead on the website ↗\nCATALOGUE 109 · PAPER 01 / 1 Overview\nInteger multiplication below n log n\nFixed linear networks save on both data movement and simultaneous\nbutterflies; controlled errors are then removed ",
+      "sourceReferences": 3
+    },
+    {
+      "page": 7,
+      "textStart": "Leading zeroes are allowed. Including the separator, the input has length , and the\noutput has exactly  bits. One step reads and writes at most one cell on each tape and\nmoves each head by at most one cell. The statement",
+      "sourceReferences": 5
+    },
+    {
+      "page": 8,
+      "textStart": "evaluate the convolution. Known scales are then removed to recover integer coefficients and the\nproduct. The next section explains the recurrences responsible for the saving; Section 4 treats\nerrors and total cost.\nReduc",
+      "sourceReferences": 7
+    },
+    {
+      "page": 9,
+      "textStart": "1. Radix digits and a convolution-preserving address map\nFor sufficiently large , set , precision , and digit count . Choose a\npower of two  and distinct odd primes  just below power-of-two lengths \n. Then  and  satisfy ",
+      "sourceReferences": 3
+    },
+    {
+      "page": 10,
+      "textStart": "3. Synthetic transforms, retained order, and polynomial products\nThe substitution , with , moves the last cyclic axis into . Since , this\ntwist carries cyclic multiplication exactly into negacyclic polynomial multiplicat",
+      "sourceReferences": 4
+    },
+    {
+      "page": 11,
+      "textStart": "Two volume-normalized recurrences supplied by fixed networks\nOpen figure ↗TeX source ↓\nOpenAI Math Digest · 109\n109 / 01 11",
+      "sourceReferences": 6
+    },
+    {
+      "page": 12,
+      "textStart": "1. Changing frames while restoring arbitrary auxiliary values\nSection 3 directly constructs two fixed networks from triples of three-element subsets of .\nSide wires cancel unwanted intersection-size coefficients created ",
+      "sourceReferences": 2
+    },
+    {
+      "page": 13,
+      "textStart": "is repaired deterministically, independently of payload values; there is no allowed failure\nprobability. The conditions  and a long polynomial payload absorb the extra repair\nand address-computation costs.\nProposition 11",
+      "sourceReferences": 5
+    },
+    {
+      "page": 14,
+      "textStart": "Proof route. At precision , preserve the disk conditions of every numerical call and undo\nboth normalization factors and the input scales exactly. Error below  uniquely recovers\ninteger coefficients; a carry invariant th",
+      "sourceReferences": 6
+    },
+    {
+      "page": 15,
+      "textStart": "1. Computable parameters and the hypotheses of each call\nUse the fixed rational choices of Section 9.1:\nSet , , , and . Choose the  axes from  so that\ntheir product is  and the last axis has length . Then\nTake  and , and",
+      "sourceReferences": 1
+    },
+    {
+      "page": 16,
+      "textStart": "The bounds  and the invariant  ensure bounded\ncarry width and exactness. One final reverse copy, removing only redundant zero padding,\nproduces exactly  bits in most-significant-first order. Zero inputs and leading zeroe",
+      "sourceReferences": 3
+    },
+    {
+      "page": 17,
+      "textStart": "Supplied result\n[HvH21] Theorem 1.1\nUse in this manuscript\nLemma 17, Sections 9.5 and 9.8\nContent and hypotheses\nEstablished fixed-tape  multiplication on -bit or -bit integers\nChecking scope\nStatement and application ch",
+      "sourceReferences": 1
+    },
+    {
+      "page": 18,
+      "textStart": "[HvH21, Theorem 4.2; Lemma 4.6; Proposition 4.7; Lemmas 4.8–4.12, print pp. 24, 28–33 / PDF pp. 25, 29–\n34]\n[HvH21, Lemmas 2.12 and 5.1, print pp. 17, 37–38 / PDF pp. 18, 38–39]\n6. Return to the sources\nTheorem 1 · p. 3 ",
+      "sourceReferences": 10
+    },
+    {
+      "page": 19,
+      "textStart": "Corollary 2 on division and square roots, Section 11 on matrix transposition, and the separate\nmanuscript's exact DFT application are outside this article's proof scope. Results in a different\ncomputational model are not",
+      "sourceReferences": 0
+    }
+  ]
+}
