@@ -1,0 +1,40 @@
+---
+import '../styles/digest.css';
+import '../styles/atlas.css';
+import '../styles/home.css';
+import '../styles/typography.css';
+import '../styles/comics.css';
+import ComicViewer from '../components/ComicViewer.astro';
+const {title, description, prototype=false, pageKind='catalog'}=Astro.props;
+const base=import.meta.env.BASE_URL;
+const home=`${base}comics/`;
+---
+<!doctype html>
+<html lang="ja">
+<head>
+ <meta charset="utf-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1"/>
+ <meta name="description" content={description}/>
+ {prototype&&<meta name="robots" content="noindex, nofollow"/>}
+ <title>{title} · 漫画版 · OpenAI Math Digest</title>
+</head>
+<body class="comics-site">
+ <a class="skip" href="#content">本文へ</a>
+ <div class="site-chrome"><header class="masthead comics-header">
+  <a class="brand" href={home}>OpenAI <em>Math Digest</em></a>
+  <nav class="main-nav" aria-label="漫画版の案内"><a href={pageKind==='home'?'#fields':`${home}#fields`}>分野一覧</a></nav>
+  <nav class="comics-editions" aria-label="版を選ぶ">
+   <a href={`${base}ja/`} lang="ja">日本語</a>
+   <a href={`${base}en/`} lang="en">English</a>
+   <a href={home} class="active" aria-current={pageKind==='home'?'page':undefined}>漫画版</a>
+  </nav>
+ </header></div>
+ <div class="ai-notice"><span class="ai-label">AI生成の解説</span><p>このサイトの解説には、誤りや不正確な説明が含まれる可能性があります。重要な主張・証明は原論文でご確認ください。</p></div>
+ <main id="content"><slot/></main>
+ {pageKind==='catalog'&&<ComicViewer/>}
+ <footer class="footer">
+  <p>OpenAI Math Digest <span>·</span> 独立した非公式の読解プロジェクト。OpenAI とは関係ありません。</p>
+  <p>デザインの基盤：<a href="https://masataka123.github.io/geometry-paper-digest/">Geometry Paper Digest</a> (MIT) · <a href="https://github.com/openai/math">原論文集</a> · <a href="https://github.com/masataka123/OpenAI-Math-Digest">GitHub</a></p>
+ </footer>
+</body>
+</html>

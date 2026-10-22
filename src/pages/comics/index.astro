@@ -1,0 +1,47 @@
+---
+import ComicsLayout from '../../layouts/ComicsLayout.astro';
+import CharacterIntro from '../../components/CharacterIntro.astro';
+import {comicFields, activeComicFields, comicsForBuild} from '../../data/comics.mjs';
+import {officialOverview, overviewTitle} from '../../data/site.mjs';
+const base=import.meta.env.BASE_URL;
+const prototype=!comicsForBuild.length||comicsForBuild.some(comic=>comic.status!=='published');
+---
+<ComicsLayout title="漫画で読む、数学のカタログ" description="OpenAI Math Digest の漫画版。分野とカタログ番号から、掲載中の漫画へ進めます。" pageKind="home" prototype={prototype}>
+ <div class="home-hero comics-home-hero">
+  <div class="hero">
+   <p class="eyebrow">OPENAI MATH DIGEST · COMICS</p>
+   <h1>漫画で読む、<br/><em>数学のカタログ。</em></h1>
+   <p class="lede">分野とカタログ番号から、漫画を探せます。各漫画ページから、関連する通常記事や原論文にも進めます。</p>
+   <a class="button primary" href="#fields">分野から漫画を探す <span aria-hidden="true">↓</span></a>
+   <p class="creator-credit">制作者：<a href="https://masataka123.github.io/blog3/" rel="author">岩井 雅崇</a><span class="creator-affiliation">（大阪大学）</span></p>
+  </div>
+  <aside class="reading-guide guide-home" aria-label="漫画版の案内役">
+   <img src={`${base}images/guide-portrait.png`} width="446" height="520" alt="白と緑の大きな耳の案内役" loading="eager"/>
+   <div class="guide-speech"><p class="eyebrow">漫画から、原典へ。</p><p>分野を選ぶと、掲載中の漫画を探せます。画像はタップすると拡大して読めます。</p></div>
+  </aside>
+ </div>
+ <section id="fields" aria-labelledby="comic-fields-heading">
+  <div class="section-head"><div><p class="eyebrow">EXPLORE BY FIELD</p><h2 id="comic-fields-heading">分野から、漫画へ。</h2></div><span class="small muted">{activeComicFields.length}分野・{comicsForBuild.length}カタログの漫画</span></div>
+  <p class="section-intro">公式 OpenAI Research Catalog の分野名・順序・カタログ番号に沿って案内します。漫画を掲載している分野から、カタログ一覧へ進めます。</p>
+  <p class="catalog-source"><a href={officialOverview} target="_blank" rel="noopener noreferrer">{overviewTitle} ↗</a><span class="small muted">2026年10月6日版・別タブで開きます</span></p>
+  <div class="field-grid">
+   {comicFields.map(field=><article class:list={['field-card',{'field-active':field.comics.length>0}]}>
+    <div class="field-top"><span class="ordinal">{field.range}</span><span class="badge">{field.comics.length?`漫画 ${field.comics.length}件`:'今後追加'}</span></div>
+    <h3>{field.comics.length?<a href={`${base}comics/fields/${field.id}/`}>{field.title.ja} <span aria-hidden="true">↗</span></a>:field.title.ja}</h3>
+    <p class="field-english" lang="en">{field.title.en}</p>
+    <p>{field.comics.length?'掲載中の漫画を、カタログ番号から探せます。':'漫画は順次追加します。'}</p>
+    <div class="field-bottom"><a href={`${officialOverview}#page=${field.page}`} target="_blank" rel="noopener noreferrer">公式カタログ · p. {field.page} ↗</a>{field.comics.length>0&&<span>漫画：{field.comics.map(comic=>comic.catalogId).join(' / ')}</span>}</div>
+   </article>)}
+  </div>
+ </section>
+ <aside id="citation-note" class="citation-note" aria-labelledby="citation-heading">
+  <h2 id="citation-heading">論文群を支える先行研究</h2>
+  <p><a href="https://citedbyagi.com/" target="_blank" rel="noopener noreferrer">Cited by AGI</a> の集計によると、OpenAI math の722本の論文で、参考文献の引用件数が最も多い著者は Osamu Fujino です。</p>
+  <p class="small muted">2026年10月6日のリポジトリに基づく集計：37本の論文で120件。文中の言及回数ではなく、参考文献項目を数えています。</p>
+ </aside>
+ <CharacterIntro lang="ja"/>
+ <section id="about-comics" class="comic-about" aria-labelledby="about-comics-heading">
+  <h2 id="about-comics-heading">漫画版について</h2>
+  <div class="comic-about-body"></div>
+ </section>
+</ComicsLayout>

@@ -1,0 +1,52 @@
+---
+const {comic}=Astro.props;
+const base=import.meta.env.BASE_URL;
+const field=comic.fields[0];
+---
+<div class="comic-heading">
+ <nav class="breadcrumbs" aria-label="現在位置"><a href={`${base}comics/`}>漫画版</a><span aria-hidden="true">/</span>{field&&<><a href={`${base}comics/fields/${field.id}/`}>{field.title.ja}</a><span aria-hidden="true">/</span></>}<span aria-current="page">カタログ{comic.catalogId}</span></nav>
+ <header class="family-header comic-intro">
+  <p class="eyebrow">COMICS · CATALOGUE {comic.catalogId}{comic.status==='prototype'&&<span class="comic-prototype">試作</span>}</p>
+  <h1>{comic.title.ja}</h1>
+  <p class="official" lang="en">{comic.title.en}</p>
+  <p class="comic-scope">{comic.scope}</p>
+  <div class="comic-meta"><span>日本語の漫画</span><span>{comic.pages.length}枚</span></div>
+  {comic.editorialNote&&<aside class="comic-editorial-note" aria-label="掲載画像の確認状況"><strong>確認中の事項</strong><p>{comic.editorialNote}</p></aside>}
+ </header>
+ <nav class="comic-contents" aria-label="このページの内容"><a href="#comic">漫画を読む</a><a href="#iwai-notes">岩井の補足</a><a href="#related">通常記事・原典</a></nav>
+</div>
+
+<section id="comic" class="comic-reader" aria-label={`カタログ${comic.catalogId}の漫画`}>
+ {comic.pages.map((page,index)=><figure class="comic-page" id={`comic-page-${index+1}`}>
+  <figcaption class="comic-image-tools">
+   <span class="comic-page-number">{comic.pages.length>1?`${index+1} / ${comic.pages.length}`:'漫画'}<span class="comic-reading-hint">タップして拡大できます</span></span>
+   <span class="comic-tool-links"><a href={`${base}${page.png}`} data-comic-trigger>拡大して読む ↗</a><a href={`${base}${page.png}`} target="_blank" rel="noopener noreferrer">画像を直接開く ↗</a></span>
+  </figcaption>
+  <a class="comic-image-link" href={`${base}${page.png}`} data-comic-trigger aria-label={`漫画${index+1}枚目を拡大して読む`}>
+   <picture>
+    <source type="image/webp" srcset={`${base}${page.webp}`}/>
+    <img src={`${base}${page.png}`} width={page.width} height={page.height} loading={index===0?'eager':'lazy'} decoding="async" alt={page.alt}/>
+   </picture>
+  </a>
+ </figure>)}
+</section>
+
+<div class="comic-afterword">
+ <section id="iwai-notes" class="comic-section">
+  <div class="section-head"><h2>岩井の補足</h2>{comic.supplement.status!=='approved'&&<span class="badge">準備中</span>}</div>
+  {comic.supplement.status==='approved'&&comic.supplement.text
+   ?<div class="comic-author-note">{comic.supplement.text.split('\n\n').map(paragraph=><p>{paragraph}</p>)}</div>
+   :<p class="comic-pending">岩井による補足文は、まだ提供されていません。</p>}
+ </section>
+ <section id="related" class="comic-section">
+  <h2>関連する通常記事・原典</h2>
+  {comic.normalCatalog&&<div class="comic-related-catalog"><h3>カタログ{comic.catalogId}の通常版</h3><p>{comic.title.ja}</p><div class="comic-related-links"><a href={`${base}ja/catalog/${comic.catalogId}/`}>日本語の通常版 →</a><a href={`${base}en/catalog/${comic.catalogId}/`}>English edition →</a></div></div>}
+  {comic.targetPapers.map(paper=><div class="comic-related-paper">
+   <p class="eyebrow">この漫画の主な対象論文</p><h3 lang="en">{paper.title}</h3>
+   <div class="comic-related-links">{paper.normalPaperId&&<><a href={`${base}ja/papers/${paper.normalPaperId}/`}>日本語の記事 →</a><a href={`${base}en/papers/${paper.normalPaperId}/`}>English article →</a></>}<a href={paper.sourceUrl} target="_blank" rel="noopener noreferrer">原論文（GitHub・参照版固定）↗</a></div>
+  </div>)}
+  {comic.relatedManuscripts.length>0&&<details class="comic-source-list"><summary>カタログ{comic.catalogId}に収録された関連原稿（{comic.relatedManuscripts.length}件）</summary><p class="small muted">公式カタログの収録順です。漫画がすべての原稿・結果を扱うことを意味しません。</p><ol>{comic.relatedManuscripts.map(paper=><li><a href={paper.sourceUrl} target="_blank" rel="noopener noreferrer" lang="en">{paper.title} ↗</a></li>)}</ol></details>}
+ </section>
+ <aside class="comic-verification" aria-label="確認範囲"><h2>原典を読むときに</h2><p>{comic.verificationNote} <a href={comic.officialCatalogUrl} target="_blank" rel="noopener noreferrer">公式カタログの原典一覧 ↗</a></p></aside>
+ <nav class="comic-back-links" aria-label="漫画版内の移動">{field&&<a href={`${base}comics/fields/${field.id}/`}>← {field.title.ja}の漫画一覧</a>}<a href={`${base}comics/`}>漫画トップへ →</a></nav>
+</div>

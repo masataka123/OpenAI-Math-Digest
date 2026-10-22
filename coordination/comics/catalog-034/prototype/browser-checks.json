@@ -1,0 +1,144 @@
+{
+  "method": "cua_repl / in-app browser",
+  "checks": [
+    {
+      "case": "375-page",
+      "result": {
+        "mainImage": {
+          "complete": true,
+          "currentSrc": "http://127.0.0.1:59599/OpenAI-Math-Digest/images/comics/catalog-034/v1/page-001.webp",
+          "naturalWidth": 1024
+        },
+        "scrollWidth": 375,
+        "supplement": "岩井の補足\n準備中\n\n岩井による補足文は、まだ提供されていません。",
+        "width": 375
+      }
+    },
+    {
+      "case": "375-fit",
+      "result": {
+        "availableHeight": 597,
+        "availableWidth": 327,
+        "imageHeight": 454.5,
+        "imageWidth": 303,
+        "open": true
+      }
+    },
+    {
+      "case": "375-actual",
+      "result": {
+        "left": 0,
+        "scrollHeight": 1560,
+        "scrollWidth": 1048,
+        "top": 0,
+        "zoom": "100%"
+      }
+    },
+    {
+      "case": "375-zoom-cycle",
+      "zoom": "100%"
+    },
+    {
+      "case": "375-keyboard-scroll",
+      "result": {
+        "left": 0,
+        "top": 7.5
+      }
+    },
+    {
+      "case": "375-escape-close",
+      "result": {
+        "dialogOpen": false,
+        "focus": "漫画1枚目を拡大して読む",
+        "overflow": ""
+      }
+    },
+    {
+      "case": "375-sticky-header",
+      "result": {
+        "editionLinks": [
+          {
+            "right": 216.4453125,
+            "text": "日本語",
+            "top": 46.3984375
+          },
+          {
+            "right": 287,
+            "text": "English",
+            "top": 46.3984375
+          },
+          {
+            "right": 353,
+            "text": "漫画版",
+            "top": 46.3984375
+          }
+        ],
+        "headerTop": 0,
+        "scrollY": 1132
+      }
+    },
+    {
+      "case": "320-horizontal-scroll",
+      "result": {
+        "clientWidth": 272,
+        "left": 40,
+        "scrollWidth": 1048
+      }
+    },
+    {
+      "case": "320-vertical-scroll",
+      "result": {
+        "top": 527
+      }
+    },
+    {
+      "case": "320-page",
+      "result": {
+        "dialogOpen": false,
+        "focus": "拡大して読む ↗",
+        "scrollWidth": 320,
+        "width": 320
+      }
+    },
+    {
+      "case": "1280-page",
+      "result": {
+        "mainImageWidth": 1022,
+        "scrollWidth": 1280,
+        "width": 1280
+      }
+    },
+    {
+      "case": "1280-fit",
+      "result": {
+        "availableHeight": 698,
+        "availableWidth": 1220,
+        "imageHeight": 673.9921875,
+        "imageWidth": 449.328125,
+        "open": true
+      }
+    },
+    {
+      "case": "normal-ja-link",
+      "result": {
+        "comicEditionLinks": 0,
+        "lang": "ja",
+        "languageLinks": 2,
+        "route": "/OpenAI-Math-Digest/ja/catalog/034/"
+      }
+    },
+    {
+      "case": "normal-en-link",
+      "result": {
+        "comicEditionLinks": 0,
+        "lang": "en",
+        "languageLinks": 2,
+        "route": "/OpenAI-Math-Digest/en/catalog/034/"
+      }
+    }
+  ],
+  "limitations": [
+    "Desktop browser at responsive widths; no physical iPhone/Safari testing.",
+    "Image/source scope precheck only; full-proof and prepublication mathematical review incomplete."
+  ]
+}

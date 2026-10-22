@@ -1,0 +1,147 @@
+{
+  "method": "cua_repl / in-app browser",
+  "status": "passed-after-mobile-hit-area-adjustment",
+  "checks": [
+    {
+      "case": "1280-home",
+      "result": {
+        "brokenImages": [],
+        "fieldLinks": [
+          "/OpenAI-Math-Digest/comics/fields/algebraic-complex-geometry/"
+        ],
+        "fields": 17,
+        "scrollWidth": 1280,
+        "width": 1280
+      }
+    },
+    {
+      "case": "1280-home-to-field",
+      "result": {
+        "catalogs": [
+          "034"
+        ],
+        "path": "/OpenAI-Math-Digest/comics/fields/algebraic-complex-geometry/",
+        "scrollWidth": 1280,
+        "width": 1280
+      }
+    },
+    {
+      "case": "1280-field-to-034",
+      "result": {
+        "breadcrumbLinks": [
+          "/OpenAI-Math-Digest/comics/",
+          "/OpenAI-Math-Digest/comics/fields/algebraic-complex-geometry/"
+        ],
+        "path": "/OpenAI-Math-Digest/comics/catalog/034/",
+        "scrollWidth": 1280,
+        "width": 1280
+      }
+    },
+    {
+      "case": "1280-034-to-field",
+      "path": "http://127.0.0.1:59599/OpenAI-Math-Digest/comics/fields/algebraic-complex-geometry/"
+    },
+    {
+      "case": "1280-field-to-home",
+      "path": "http://127.0.0.1:59599/OpenAI-Math-Digest/comics/"
+    },
+    {
+      "case": "375-home",
+      "result": {
+        "fields": 17,
+        "scrollWidth": 375,
+        "width": 375
+      }
+    },
+    {
+      "case": "375-initial-inline-link-attempt",
+      "result": {
+        "catalogs": [],
+        "path": "/OpenAI-Math-Digest/comics/",
+        "scrollWidth": 375,
+        "width": 375
+      },
+      "status": "superseded-by-block-hit-area-fix"
+    },
+    {
+      "case": "375-field",
+      "result": {
+        "catalogs": [
+          "034"
+        ],
+        "path": "/OpenAI-Math-Digest/comics/fields/algebraic-complex-geometry/",
+        "scrollWidth": 375,
+        "width": 375
+      }
+    },
+    {
+      "case": "375-034",
+      "result": {
+        "breadcrumbLinks": [
+          "/OpenAI-Math-Digest/comics/",
+          "/OpenAI-Math-Digest/comics/fields/algebraic-complex-geometry/"
+        ],
+        "path": "/OpenAI-Math-Digest/comics/catalog/034/",
+        "scrollWidth": 375,
+        "width": 375
+      }
+    },
+    {
+      "case": "375-footer-home",
+      "path": "http://127.0.0.1:59599/OpenAI-Math-Digest/comics/"
+    },
+    {
+      "case": "375-home-to-field-retest",
+      "path": "http://127.0.0.1:59599/OpenAI-Math-Digest/comics/fields/algebraic-complex-geometry/"
+    },
+    {
+      "case": "320-home",
+      "result": {
+        "fields": 17,
+        "scrollWidth": 320,
+        "width": 320
+      }
+    },
+    {
+      "case": "320-field",
+      "result": {
+        "path": "/OpenAI-Math-Digest/comics/fields/algebraic-complex-geometry/",
+        "scrollWidth": 320,
+        "width": 320
+      }
+    },
+    {
+      "case": "320-034",
+      "result": {
+        "path": "/OpenAI-Math-Digest/comics/catalog/034/",
+        "scrollWidth": 320,
+        "width": 320
+      }
+    },
+    {
+      "case": "320-home-final",
+      "result": {
+        "headingPhrase": "数学のカタログ。",
+        "lineHeight": "37.888px",
+        "phraseHeight": 37.8828125,
+        "phraseWidth": 222.890625,
+        "scrollWidth": 320,
+        "width": 320
+      }
+    },
+    {
+      "case": "375-field-final",
+      "result": {
+        "catalogs": [
+          "034"
+        ],
+        "path": "/OpenAI-Math-Digest/comics/fields/algebraic-complex-geometry/",
+        "scrollWidth": 375,
+        "width": 375
+      }
+    }
+  ],
+  "limitations": [
+    "Desktop browser at responsive widths; no physical iPhone/Safari testing."
+  ]
+}

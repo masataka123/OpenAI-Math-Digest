@@ -1,0 +1,33 @@
+---
+import ComicsLayout from '../../../layouts/ComicsLayout.astro';
+import {activeComicFields} from '../../../data/comics.mjs';
+import {officialOverview} from '../../../data/site.mjs';
+export function getStaticPaths(){
+ return activeComicFields.map(field=>({params:{id:field.id},props:{field}}));
+}
+const {field}=Astro.props;
+const base=import.meta.env.BASE_URL;
+const prototype=field.comics.some(comic=>comic.status!=='published');
+---
+<ComicsLayout title={`${field.title.ja}の漫画`} description={`${field.title.ja}の漫画を、公式カタログ番号の順に掲載しています。`} pageKind="field" prototype={prototype}>
+ <nav class="breadcrumbs" aria-label="現在位置"><a href={`${base}comics/`}>漫画版・分野一覧</a><span aria-hidden="true">/</span><span aria-current="page">{field.title.ja}</span></nav>
+ <header class="family-header comic-field-intro">
+  <p class="eyebrow">COMICS · FIELD GUIDE</p><h1>{field.title.ja}</h1>
+  <p class="official" lang="en">{field.title.en}</p>
+  <p class="lede">この分野の漫画を、公式カタログ番号の順に掲載しています。</p>
+  <a href={`${officialOverview}#page=${field.page}`} target="_blank" rel="noopener noreferrer">公式カタログ · p. {field.page} ↗</a>
+ </header>
+ <section class="comic-catalog-list" aria-labelledby="comic-catalog-heading">
+  <div class="section-head"><h2 id="comic-catalog-heading">この分野の漫画</h2><span class="small muted">{field.comics.length}カタログ</span></div>
+  {field.comics.map(comic=><article class="catalog-row comic-catalog-row" data-comic-catalog={comic.catalogId}>
+   <a class="catalog-number" href={`${base}comics/catalog/${comic.catalogId}/`} aria-label={`カタログ${comic.catalogId}の漫画`}>{comic.catalogId}</a>
+   <div class="comic-catalog-intro">
+    <h3><a href={`${base}comics/catalog/${comic.catalogId}/`}>{comic.title.ja}</a></h3>
+    <p class="official" lang="en">{comic.title.en}</p>
+    <p class="comic-catalog-meta">日本語の漫画・{comic.pages.length}枚</p>
+    <a class="button primary" href={`${base}comics/catalog/${comic.catalogId}/`}>漫画を読む <span aria-hidden="true">→</span></a>
+   </div>
+  </article>)}
+ </section>
+ <nav class="comic-back-links" aria-label="漫画版内の移動"><a href={`${base}comics/`}>← 漫画トップ・分野一覧へ</a></nav>
+</ComicsLayout>

@@ -1,0 +1,66 @@
+<dialog class="comic-viewer" aria-labelledby="comic-viewer-title">
+ <div class="comic-viewer-bar"><h2 id="comic-viewer-title">漫画の拡大表示</h2><button type="button" data-comic-close autofocus>閉じる ×</button></div>
+ <div class="comic-viewer-controls" aria-label="画像の拡大率">
+  <button type="button" data-comic-zoom="out" aria-label="縮小">−</button><output aria-live="polite"></output><button type="button" data-comic-zoom="in" aria-label="拡大">＋</button>
+  <button type="button" data-comic-fit>全体表示</button><button type="button" data-comic-actual>100%</button>
+ </div>
+ <p class="comic-viewer-hint">拡大した画像は、上下左右にスクロールして読めます。</p>
+ <div class="comic-viewer-scroll" role="region" aria-label="拡大した漫画。スクロールして移動できます" tabindex="0"><div class="comic-viewer-canvas"><img class="comic-viewer-image" alt=""/></div></div>
+</dialog>
+
+<script>
+ const dialog=document.querySelector<HTMLDialogElement>('.comic-viewer');
+ if(dialog && typeof dialog.showModal==='function'){
+  const image=dialog.querySelector<HTMLImageElement>('.comic-viewer-image')!;
+  const scroller=dialog.querySelector<HTMLElement>('.comic-viewer-scroll')!;
+  const canvas=dialog.querySelector<HTMLElement>('.comic-viewer-canvas')!;
+  const output=dialog.querySelector<HTMLOutputElement>('output')!;
+  const minus=dialog.querySelector<HTMLButtonElement>('[data-comic-zoom="out"]')!;
+  const plus=dialog.querySelector<HTMLButtonElement>('[data-comic-zoom="in"]')!;
+  let origin:HTMLAnchorElement|null=null;
+  let width=1024, naturalWidth=1024, naturalHeight=1536, previousOverflow='', fitted=true;
+  const minimum=()=>Math.min(160,scroller.clientWidth-24);
+  function setWidth(value:number,center=true){
+   const old=width;
+   const x=(scroller.scrollLeft+scroller.clientWidth/2)/old;
+   const y=(scroller.scrollTop+scroller.clientHeight/2)/old;
+   width=Math.max(minimum(),Math.min(naturalWidth*3,value));
+   canvas.style.width=`${width}px`;
+   output.value=`${Math.round(width/naturalWidth*100)}%`;
+   minus.disabled=width<=minimum();plus.disabled=width>=naturalWidth*3;
+   if(center){scroller.scrollLeft=x*width-scroller.clientWidth/2;scroller.scrollTop=y*width-scroller.clientHeight/2;}
+  }
+  function fit(){
+   fitted=true;
+   setWidth(Math.min(naturalWidth,scroller.clientWidth-24,(scroller.clientHeight-24)*naturalWidth/naturalHeight),false);
+   scroller.scrollTo(0,0);
+  }
+  for(const trigger of document.querySelectorAll<HTMLAnchorElement>('[data-comic-trigger]')){
+   trigger.setAttribute('aria-haspopup','dialog');
+   trigger.addEventListener('click',event=>{
+    if(event.ctrlKey||event.metaKey||event.shiftKey||event.altKey||event.button!==0)return;
+    const source=trigger.closest('figure')?.querySelector('img');
+    if(!source||dialog.open)return;
+    event.preventDefault();origin=trigger;
+    naturalWidth=Number(source.getAttribute('width'))||source.naturalWidth;
+    naturalHeight=Number(source.getAttribute('height'))||source.naturalHeight;
+    image.src=source.currentSrc||source.src;image.alt=source.alt;
+    image.width=naturalWidth;image.height=naturalHeight;
+    previousOverflow=document.documentElement.style.overflow;
+    document.documentElement.style.overflow='hidden';
+    dialog.showModal();fit();
+   });
+  }
+  dialog.querySelector('[data-comic-close]')!.addEventListener('click',()=>dialog.close());
+  dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
+  dialog.addEventListener('close',()=>{
+   document.documentElement.style.overflow=previousOverflow;
+   image.removeAttribute('src');origin?.focus({preventScroll:true});
+  });
+  minus.addEventListener('click',()=>{fitted=false;setWidth(width/1.3);});
+  plus.addEventListener('click',()=>{fitted=false;setWidth(width*1.3);});
+  dialog.querySelector('[data-comic-fit]')!.addEventListener('click',fit);
+  dialog.querySelector('[data-comic-actual]')!.addEventListener('click',()=>{fitted=false;setWidth(naturalWidth,false);scroller.scrollTo(0,0);});
+  window.addEventListener('resize',()=>{if(dialog.open&&fitted)fit();});
+ }
+</script>

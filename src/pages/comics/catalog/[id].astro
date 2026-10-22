@@ -1,0 +1,12 @@
+---
+import ComicsLayout from '../../../layouts/ComicsLayout.astro';
+import ComicPage from '../../../components/ComicPage.astro';
+import {comicsForBuild} from '../../../data/comics.mjs';
+export function getStaticPaths(){
+ return comicsForBuild.map(comic=>({params:{id:comic.catalogId},props:{comic}}));
+}
+const {comic}=Astro.props;
+---
+<ComicsLayout title={`カタログ${comic.catalogId} — ${comic.title.ja}`} description={comic.scope} prototype={comic.status!=='published'}>
+ <ComicPage comic={comic}/>
+</ComicsLayout>
