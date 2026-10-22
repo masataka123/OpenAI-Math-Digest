@@ -1,0 +1,432 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Integer multiplication below n log n</title><style>:root {
+  color-scheme: light;
+  --paper: #f4f1ea;
+  --ink: #18232d;
+  --muted: #52606b;
+  --accent: #984526;
+  --link: #17617d;
+  --card: #ffffff;
+  --line: #d5cdbf;
+  --soft-line: #c9c1b4;
+  font-family: Georgia, "Times New Roman", "Yu Mincho", "Hiragino Mincho ProN", serif;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); }
+main { width: min(920px, calc(100% - 32px)); margin: 0 auto; padding: 42px 0 56px; }
+a { color: var(--link); text-underline-offset: .18em; }
+
+.site-header { border-bottom: 2px solid var(--ink); margin-bottom: 28px; padding-bottom: 20px; }
+.landing-header { max-width: 790px; }
+h1 { font-size: clamp(2.25rem, 7vw, 4rem); line-height: 1.04; margin: 0 0 14px; letter-spacing: -.02em; }
+h2, h3 { line-height: 1.3; }
+p { line-height: 1.75; }
+.eyebrow, .topic-count {
+  color: var(--accent);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+  font-size: .78rem;
+  font-weight: 750;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.topic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+.topic-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: inherit;
+  display: block;
+  min-height: 250px;
+  padding: 24px;
+  text-decoration: none;
+  transition: border-color 120ms ease, transform 120ms ease, box-shadow 120ms ease;
+}
+.topic-card:hover, .topic-card:focus-visible {
+  border-color: var(--accent);
+  box-shadow: 0 8px 24px rgba(24, 35, 45, .08);
+  transform: translateY(-2px);
+}
+.topic-card h2 { font-size: 1.65rem; margin: 18px 0 2px; }
+.topic-card p { color: var(--muted); margin: 0 0 20px; }
+.topic-card .topic-english { font-style: italic; margin-bottom: 12px; }
+.topic-open { color: var(--link); font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-weight: 700; }
+.heading-subtitle { color: var(--muted); font-style: italic; margin: -6px 0 6px; }
+
+.notice-card {
+  background: rgba(255,255,255,.55);
+  border-top: 1px solid var(--line);
+  margin-top: 34px;
+  padding: 16px 2px 0;
+}
+
+.notice-card h2 {
+  margin: 0 0 4px;
+}
+
+.topic-nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 30px; }
+.topic-nav a {
+  border: 1px solid var(--soft-line);
+  border-radius: 999px;
+  color: #34434e;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+  font-size: .88rem;
+  padding: 7px 12px;
+  text-decoration: none;
+}
+.topic-nav a:hover, .topic-nav a:focus-visible, .topic-nav a[aria-current="page"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+
+.digest-list { max-width: 790px; }
+.digest { background: var(--card); border: 1px solid var(--line); border-radius: 6px; margin: 0 0 18px; padding: 20px 22px; }
+.dates { display: flex; flex-wrap: wrap; gap: 5px 18px; margin: 0 0 6px; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-size: .8rem; }
+.dates div { display: flex; gap: 6px; }
+.dates dt { color: var(--accent); font-weight: 700; letter-spacing: .04em; }
+.dates dd { color: var(--muted); font-variant-numeric: tabular-nums; margin: 0; }
+.digest h2 { font-size: 1.35rem; margin: 5px 0 7px; }
+.title-link { color: var(--ink); text-decoration: none; }
+.title-link:hover { color: var(--link); }
+.authors { color: var(--muted); font-style: italic; }
+.abstracts { max-width: 100%; overflow-wrap: anywhere; word-break: normal; }
+.abstract h3, .paper-header .abstract h2 { font-size: 1rem; margin: 1.25rem 0 .35rem; }
+.abstract p { margin: 0; }
+.abstract-en { line-height: 1.8; }
+.abstract-en p[lang="en"] { line-height: 1.8; overflow-wrap: anywhere; }
+.abstract-source { font-size: .86rem; margin-top: .65rem !important; }
+.abstract-source a { color: var(--muted); }
+.abstract-ja { margin-top: 1.75rem; }
+.links { display: flex; flex-wrap: wrap; gap: 16px; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-weight: 650; }
+.empty { background: var(--card); border: 1px dashed var(--soft-line); border-radius: 6px; color: var(--muted); padding: 22px; }
+
+.paper-page { max-width: 790px; }
+.paper-header { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: clamp(22px, 5vw, 38px); }
+.paper-header h1 { font-size: clamp(2rem, 6vw, 3.25rem); }
+.paper-summary { font-size: 1.08rem; }
+.paper-meta { border-top: 1px solid var(--line); display: grid; gap: 8px; margin: 24px 0 0; padding-top: 18px; }
+.paper-meta div { display: grid; grid-template-columns: minmax(120px, .35fr) 1fr; gap: 16px; }
+.paper-meta dt { color: var(--accent); font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-size: .85rem; font-weight: 700; }
+.paper-meta dd { margin: 0; }
+.paper-links { margin-top: 22px; }
+.paper-content { background: var(--card); border: 1px solid var(--line); border-radius: 8px; margin-top: 18px; padding: clamp(22px, 5vw, 40px); }
+.paper-content h2 { border-bottom: 1px solid var(--line); font-size: 1.55rem; margin: 2.2em 0 .8em; padding-bottom: .35em; }
+.paper-content h2:first-child { margin-top: 0; }
+.paper-content h3 { font-size: 1.2rem; margin-top: 1.7em; }
+.paper-content blockquote { border-left: 4px solid var(--accent); color: #35434e; margin: 1.5em 0; padding: .15em 0 .15em 1.2em; }
+.paper-content code { background: #eee9df; border-radius: 3px; padding: .1em .3em; }
+.paper-content mjx-container[display="true"],
+.paper-content .MathJax { max-width: 100%; overflow-x: auto; overflow-y: hidden; }
+
+.site-footer { border-top: 1px solid var(--line); color: var(--muted); font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; font-size: .82rem; margin-top: 42px; padding-top: 18px; }
+.site-footer p { line-height: 1.6; }
+
+@media (max-width: 560px) {
+  main { padding-top: 24px; }
+  .topic-card { min-height: 0; }
+  .digest { padding: 17px; }
+  .paper-meta div { grid-template-columns: 1fr; gap: 2px; }
+  .abstract-ja { margin-top: 1.4rem; }
+}
+
+:root{--paper:#f7f5ef;--accent:#855337;--link:#246657;--ink:#25322f;--muted:#626b65;--line:#d8dcd2}
+html{scroll-padding-top:24px}main{width:min(1200px,calc(100% - 64px));padding:32px 0 70px}a,button,input{touch-action:manipulation}button,input{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #b68345;outline-offset:4px}button{border-radius:3px}h1{font-weight:500;line-height:1.28}h1 em{font-style:normal;color:var(--link)}h2{font-size:1.6rem;font-weight:500}h3{font-weight:500}.masthead{width:min(1320px,calc(100% - 64px));margin:auto;padding:26px 0;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--ink);gap:24px}.brand{font-size:1.25rem;color:var(--ink);text-decoration:none;white-space:nowrap}.brand em{font-style:italic}.masthead nav{display:flex;gap:26px;font:14px -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif}.masthead nav a{color:var(--ink);text-decoration:none}.masthead nav a:hover{text-decoration:underline}.hero{max-width:950px;padding:35px 0 55px}.hero h1{font-size:clamp(2.5rem,5.4vw,4.75rem);margin:28px 0}.lede{max-width:710px;font-size:1.12rem;line-height:1.9;color:var(--muted)}.button{display:inline-flex;align-items:center;justify-content:space-between;gap:36px;padding:15px 23px;text-decoration:none;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif;font-size:14px;margin-top:16px}.primary{background:var(--ink);color:#fff}.how{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:65px;gap:35px;padding:28px 0}.how h2{font-size:1.2rem;margin:9px 0}.how p{font-size:.95rem;margin:0;color:var(--muted)}.ordinal{font:12px monospace;color:var(--accent)}.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px}.muted{color:var(--muted)}.small{font:12px/1.65 -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif}.search-label{display:block;font:13px -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif;margin:12px 0 8px}input[type=search]{width:100%;padding:15px 18px;background:transparent;border:1px solid #aeb6ad;border-radius:3px;font-size:16px}.catalog-row{display:grid;grid-template-columns:84px 1fr auto;gap:24px;align-items:start;border-top:1px solid var(--line);padding:28px 0}.catalog-row[hidden]{display:none}.catalog-number{font-size:2.6rem;text-decoration:none;font-variant-numeric:tabular-nums;font-style:italic}.catalog-row h3{margin:7px 0;font-size:1.5rem}.catalog-row h3 a{color:var(--ink);text-decoration:none}.catalog-row h3 a:hover{text-decoration:underline}.catalog-row p{margin:8px 0;color:var(--muted)}.catalog-row .eyebrow{font-size:.69rem;color:var(--accent)}.badge{display:inline-block;border:1px solid var(--line);padding:4px 9px;font:11px/1.5 -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif;color:var(--muted);white-space:normal;letter-spacing:0;text-transform:none}.catalog-row>.badge{margin-top:12px;max-width:200px}.footer{width:min(1320px,calc(100% - 64px));margin:auto;border-top:1px solid var(--line);padding:20px 0 35px;color:var(--muted);font:12px/1.7 -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif}.footer p{margin:5px 0}.footer span{padding:0 8px}.back{font:13px -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif;text-decoration:none}.family-header{max-width:960px;padding:28px 0 20px}.family-header h1{font-size:clamp(2rem,4vw,3.4rem);margin:18px 0}.family-header .badge{margin-left:15px}.official{font-style:italic;color:var(--muted)}.contents{display:flex;flex-wrap:wrap;gap:10px 30px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:17px 0;font:14px -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif}.contents a{text-decoration:none}.claim{font-size:1.15rem;max-width:900px;line-height:1.95}.formula{overflow-x:auto;background:#eeeee6;padding:12px 18px;margin:25px 0}.scope{padding:18px 22px;background:#eeeee6;max-width:100%;font-size:.9rem;line-height:1.8}.scope p{margin:5px 0 0;color:var(--muted)}section{scroll-margin-top:25px}#claim{padding-top:25px}#proof,#map,#references,#manuscripts{margin-top:60px}#proof>p,#map>p,#references>p{max-width:870px;color:var(--muted)}.table-wrap{overflow-x:auto;border-top:2px solid var(--ink);margin-top:24px}.proof-table{width:100%;border-collapse:collapse;font:13px/1.85 -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif}.proof-table th,.proof-table td{padding:19px 15px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}.proof-table th{font-weight:500}.proof-table thead{background:#eeeee6;font-size:12px}.proof-table thead th{white-space:nowrap}.proof-table th:first-child{width:16%}.proof-table td:nth-child(2){width:25%}.proof-table td:nth-child(3){width:23%}.proof-table td:nth-child(4){width:23%}.proof-table td:last-child{font-size:11px;min-width:140px;overflow-wrap:anywhere}.proof-table td:last-child span{display:block;margin-top:8px}.proof-table tbody th span{display:block;margin-top:9px}.step-button{color:var(--link);font:italic 24px Georgia,serif;border:0;padding:0 8px 0 0;background:none;min-height:34px}.chosen{background:#e7eee5}.map-layout{display:grid;grid-template-columns:minmax(330px,1.2fr) minmax(270px,1fr);gap:40px;align-items:start;margin-top:30px}.graph{position:relative;display:flex;flex-direction:column;gap:38px;padding:20px 10px;min-width:0}.graph-level{display:flex;gap:18px;justify-content:center;position:relative;z-index:1}.node{min-height:66px;max-width:250px;width:100%;padding:13px 14px;background:var(--paper);border:1px solid #94a397;color:var(--ink);font:14px/1.65 -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif;text-align:left;transition:opacity .15s}.node span{display:block;font:italic 17px Georgia,serif;color:var(--link);margin-bottom:3px}.node[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}.node[aria-pressed=true] span{color:#d0e4d2}.node.dimmed{opacity:.38}.connectors{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;color:var(--link)}.connectors path{fill:none;stroke:currentColor;stroke-width:1.5}.connectors .inactive-edge{opacity:.2}.selection{border-top:2px solid var(--link);padding:20px 0}.selection h3{font-size:1.5rem;margin:15px 0}.selection p,.selection li{font-size:.92rem;line-height:1.8}.selection h4{font:13px -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif;color:var(--muted);margin:28px 0 10px}.selection ol,.selection ul{padding-left:22px}.selection li{padding:3px 0}.text-button{font:inherit;text-align:left;background:none;color:var(--link);border:0;padding:0;text-decoration:underline;text-underline-offset:3px}.reference-row{display:grid;grid-template-columns:1fr 230px;gap:30px;border-top:1px solid var(--line);padding:24px 0}.reference-row h3{margin:12px 0;font-size:1.1rem}.reference-row p{font-size:.93rem;margin:8px 0}.reference-row a{font-size:.88rem}.reference-targets{display:flex;flex-direction:column;justify-content:center;gap:12px}.manuscripts article{border-top:1px solid var(--line);padding:20px 0}.manuscripts h3{font-size:1.12rem;line-height:1.6}.manuscripts dl{display:grid;grid-template-columns:180px 1fr;gap:12px;font-size:.93rem;line-height:1.85}.manuscripts dt{color:var(--muted)}.manuscripts dd{margin:0}.prose{max-width:820px;font-size:1.05rem;line-height:1.9}.prose h2{margin-top:40px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.skip{position:absolute;top:-100px;background:var(--ink);color:white;padding:15px;z-index:10}.skip:focus{top:0}
+@media(max-width:800px){.catalog-row{grid-template-columns:65px 1fr}.catalog-row>.badge{grid-column:2;margin-top:0}.map-layout{grid-template-columns:1fr}.selection{padding-top:10px}.graph{max-width:600px}.reference-row{grid-template-columns:1fr;gap:10px}.how{gap:18px}.masthead{align-items:flex-start;flex-direction:column;gap:18px}.proof-table{min-width:850px}}
+@media(max-width:520px){main,.masthead,.footer{width:calc(100% - 36px)}.hero{padding-top:14px}.hero h1{font-size:2.7rem}.lede{font-size:1rem}.how{grid-template-columns:1fr;gap:18px;padding:25px 0;margin-bottom:35px}.how>div{display:grid;grid-template-columns:30px 1fr}.how h2{margin:0 0 4px}.how p{grid-column:2}.ordinal{padding-top:6px}.catalog-row{gap:12px;grid-template-columns:52px 1fr}.catalog-number{font-size:2rem}.catalog-row h3{font-size:1.2rem}.family-header h1{font-size:2rem}.masthead nav{gap:20px;flex-wrap:wrap}.section-head{align-items:flex-start}.section-head h2{font-size:1.35rem}.graph{padding-left:0;padding-right:0}.graph-level{gap:10px}.node{font-size:12px;padding:10px;min-height:70px}.manuscripts dl{grid-template-columns:1fr;gap:3px}.manuscripts dd{margin-bottom:12px}.small code{overflow-wrap:anywhere}.button{gap:20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.node{transition:none}}
+
+.home-hero{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(280px,1fr);gap:70px;align-items:center;padding:15px 0 36px}.home-hero .hero{padding:30px 0}.home-hero .hero h1{font-size:clamp(2.6rem,4.6vw,4.25rem);letter-spacing:-.035em}.home-hero .lede{max-width:650px}.first-reading{border-left:1px solid var(--line);padding:10px 0 10px 38px}.first-reading .issue-number{font:italic 6rem/1.15 Georgia,serif;color:var(--link);letter-spacing:-.055em}.first-reading h2{font-size:1.5rem;line-height:1.55;margin:12px 0}.first-reading p{font-size:.91rem;color:var(--muted)}.first-reading .eyebrow{font-size:.7rem;color:var(--accent)}.first-reading .feature-field{font-size:.8rem;margin:10px 0}.first-reading>a{display:block;margin:20px 0;font-size:.92rem}#fields .section-head h2{font-size:2rem;margin:12px 0}.section-intro{max-width:800px;color:var(--muted);font-size:1rem;margin-bottom:30px}.field-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}.field-card{padding:27px 30px 22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-width:0}.field-active{background:#edf0e8}.field-top{display:flex;align-items:center;justify-content:space-between;gap:15px}.field-active .badge{border-color:#9dab98;color:var(--link)}.field-card h3{margin:23px 0 7px;line-height:1.5}.field-card h3 a{color:var(--ink);text-decoration:none}.field-card h3 a:hover{text-decoration:underline}.field-card h3 a span{color:var(--link)}.field-card p{font-size:1rem;color:var(--muted);margin:12px 0}.field-card .field-english{font-size:1rem;font-style:italic;margin:0 0 15px}.field-bottom{margin-top:26px;font:12px/1.7 -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif;color:var(--muted)}.field-active .field-bottom{color:var(--link)}.breadcrumbs{display:flex;flex-wrap:wrap;gap:8px 14px;font:12px/1.8 -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif;color:var(--muted);margin:0 0 15px}.breadcrumbs a{text-decoration:none}.breadcrumbs a:hover{text-decoration:underline}.source-note{margin-top:35px}.source-note code,.source-meta code{overflow-wrap:anywhere}.source-meta{border-top:1px solid var(--line);margin:20px 0 30px;padding:18px 0;font-size:.9rem}.source-meta>div{display:grid;grid-template-columns:180px minmax(0,1fr);gap:20px;padding:8px 0}.source-meta dt{color:var(--muted)}.source-meta dd{margin:0}.planned-sections{padding-left:1.5em}.planned-sections li{padding:10px 0}.family-header h1{overflow-wrap:anywhere}.footer{margin-top:20px}
+@media(max-width:950px){.home-hero{gap:30px;grid-template-columns:minmax(0,1.5fr) minmax(240px,1fr)}.first-reading{padding-left:25px}.home-hero .hero h1{font-size:3rem}}
+@media(max-width:700px){.home-hero{grid-template-columns:1fr;gap:5px;padding-bottom:35px}.home-hero .hero{padding:15px 0 25px}.home-hero .hero h1{font-size:clamp(2.2rem,7.6vw,3.5rem)}.first-reading{border-left:0;border-top:1px solid var(--line);padding:22px 0 0}.first-reading .issue-number{font-size:4rem}.first-reading h2{font-size:1.35rem}.field-grid{grid-template-columns:1fr}.field-card{padding:24px}#fields .section-head{flex-direction:column;gap:0}#fields .section-head h2{font-size:1.65rem}.source-meta>div{grid-template-columns:1fr;gap:4px}.brand{font-size:1.2rem}}
+/* Keep language controls at the upper right, including narrow screens. */
+.site-chrome{position:sticky;top:0;z-index:20;background:var(--paper)}
+.masthead{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:20px;padding:19px 0;align-items:center}
+.masthead .main-nav{gap:24px}
+.masthead .language-switch{display:flex;gap:0;border:1px solid var(--line);padding:3px;border-radius:6px;justify-self:end;white-space:nowrap;font-size:12px}
+.language-switch a{padding:8px 11px;min-height:34px;border-radius:3px}
+.masthead .language-switch a.active{background:var(--ink);color:var(--paper)}
+.ai-notice{width:min(1200px,calc(100% - 64px));margin:18px auto 0;display:flex;gap:15px;align-items:baseline;color:var(--muted);font:12px/1.85 -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif}
+.ai-notice p{margin:0;line-height:1.85}.ai-label{color:var(--accent);flex-shrink:0;font-size:10px;letter-spacing:.06em;font-weight:600}
+html{scroll-padding-top:130px}
+.home-hero{grid-template-columns:minmax(0,1.4fr) minmax(300px,1fr);gap:60px;padding-top:5px}
+.reading-guide{display:flex;gap:22px;align-items:center;background:#edf0e8;border:1px solid #d4ddce;padding:18px 22px;margin:0 0 28px;border-radius:8px}
+.reading-guide img{display:block;width:116px;height:88px;object-fit:cover;border-radius:5px;flex-shrink:0}
+.guide-speech .eyebrow{font-size:.65rem;color:var(--link);margin:0 0 9px}
+.guide-speech p{font-size:1rem;line-height:1.9;margin:0;color:var(--ink)}
+.guide-speech a{display:inline-block;margin-top:14px;font-size:.9rem}
+.guide-home{display:block;position:relative;padding:0;margin:20px 0;background:transparent;border:0;border-radius:0}
+.guide-home img{width:188px;height:198px;object-position:center 42%;margin:0 30px -14px auto;border:5px solid var(--paper);border-radius:50% 50% 12px 12px;position:relative;z-index:1}
+.guide-home .guide-speech{background:#edf0e8;border:1px solid #cbd5c4;border-radius:10px;padding:27px 25px 22px;position:relative}
+.guide-home .guide-speech:before{content:'';position:absolute;right:62px;top:-9px;width:16px;height:16px;transform:rotate(45deg);background:#edf0e8;border-top:1px solid #cbd5c4;border-left:1px solid #cbd5c4}
+.catalog-source{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;margin-bottom:25px}.catalog-source>a{font-size:.95rem}
+.field-card{padding:23px 26px 19px}.field-card h3{font-size:clamp(1.65rem,2.5vw,2rem);margin-top:18px}.field-card .field-english{font-size:1rem;line-height:1.65}.field-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:20px}.field-top .ordinal{font-size:14px;letter-spacing:.05em}
+@media(max-width:800px){.masthead{grid-template-columns:minmax(0,1fr) auto;gap:12px 16px}.masthead .main-nav{grid-row:2;grid-column:1 / -1;font-size:12px}.masthead .language-switch{grid-column:2;grid-row:1}.home-hero{gap:25px;grid-template-columns:minmax(0,1.2fr) minmax(260px,1fr)}.ai-notice{display:block}.ai-label{display:block;margin-bottom:4px}}
+@media(max-width:700px){.home-hero{grid-template-columns:1fr}.guide-home{display:grid;grid-template-columns:100px minmax(0,1fr);gap:0;align-items:start;margin-top:0}.guide-home img{width:100px;height:126px;margin:12px -8px 0 0;border:3px solid var(--paper);border-radius:8px;object-position:center}.guide-home .guide-speech{padding:18px 17px 18px 20px}.guide-home .guide-speech:before{display:none}.reading-guide:not(.guide-home){align-items:flex-start;gap:13px;padding:15px}.reading-guide:not(.guide-home) img{width:70px;height:70px}.guide-speech p{font-size:1rem}.guide-speech a{font-size:.82rem}.ai-notice{width:calc(100% - 36px);font-size:11px}.home-hero .hero{padding-top:5px}.field-card{padding:22px}.brand{white-space:normal;font-size:1.1rem;line-height:1.4}.brand em{display:inline-block}.masthead .language-switch a{padding:7px 8px}.masthead .language-switch{font-size:11px}.masthead{padding:12px 0}.guide-home .guide-speech .eyebrow{font-size:.6rem}}
+@media(max-width:380px){.brand{max-width:135px;font-size:1rem}.guide-home{grid-template-columns:76px minmax(0,1fr)}.guide-home img{width:76px;height:102px}.guide-home .guide-speech{padding:15px}.reading-guide:not(.guide-home){flex-direction:column}.reading-guide:not(.guide-home) img{width:92px;height:60px}}
+.family-header h1{text-wrap:balance}
+.citation-note{margin-top:42px;padding-top:24px;border-top:1px solid var(--line);max-width:900px}.citation-note h2{font-size:1.15rem;margin:0 0 12px}.citation-note p{font-size:1rem;line-height:1.85;margin:9px 0}.citation-note .small{font-size:12px}
+
+.creator-credit{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 .25em;margin:22px 0 0;color:var(--muted);font-size:.85rem;line-height:1.8}.creator-credit a,.creator-affiliation{white-space:nowrap}
+
+/* Shared reading sizes. Keep the same scale on desktop and mobile;
+   rem units respect the reader's browser font preference. */
+:root { --font-body: 1rem; --font-meta: .875rem; }
+body { font-size: var(--font-body); }
+.lede, .paper-article .lede, .prose, .scope,
+.first-reading p, .first-reading > a, .catalog-source > a,
+.source-meta, .button, .guide-speech a {
+  font-size: var(--font-body);
+}
+.small, .badge, .ordinal, .eyebrow, .footer, .breadcrumbs, .source-note,
+.field-bottom, .creator-credit, .ai-notice,
+.ai-label, .guide-speech .eyebrow, .guide-home .guide-speech .eyebrow,
+.masthead .main-nav, .masthead .language-switch,
+.citation-note .small, .first-reading .eyebrow, .first-reading .feature-field,
+.connection-node-label, .connection-kind, .theorem-statement .theorem-name,
+.draft-body code {
+  font-size: var(--font-meta);
+}
+.family-header h1 { overflow-wrap: break-word; }
+/* Explicit phrase boundaries keep Japanese mathematical terms together. */
+.family-header.catalog-intro { max-width: 1200px; }
+.catalog-intro h1:lang(ja) { text-wrap: wrap; }
+.title-phrase { display: inline-block; }
+.catalog-pdf {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px;
+  margin: 12px 0 28px; padding: 20px 24px;
+  border: 1px solid #c3cfbc; background: #edf0e8;
+}
+.catalog-pdf a { font-size: var(--font-body); font-weight: 600; }
+.catalog-pdf p { margin: 0; font-size: var(--font-meta); color: var(--muted); }
+
+.print-only { display: none; }
+
+.paper-article{font-size:16px;line-height:1.9;min-width:0}
+.paper-article .family-header{max-width:1050px}
+.paper-subtitle{font-size:1.45rem;line-height:1.65;color:var(--link);margin:20px 0 12px}
+.paper-byline{font:14px/1.8 -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif;color:var(--muted)}
+.paper-article .lede{max-width:880px;font-size:var(--font-body)}
+.paper-section{margin-top:55px;scroll-margin-top:12px}
+.paper-section h2{margin:0 0 22px}
+.article-prose{max-width:900px;line-height:1.95}
+.article-prose p{margin:18px 0}
+.article-prose h3{font-size:1.15rem;margin:24px 0 10px;line-height:1.7}
+.input-note{border-left:3px solid var(--link);padding:14px 22px;margin:6px 0 30px;background:#edf0e8;font-size:1rem;max-width:980px}
+.input-note p{margin:4px 0 0}
+.input-note strong{font-weight:600;color:var(--link)}
+.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:25px 0}
+.result-card{border-top:2px solid var(--link);padding:18px 24px 22px;background:#eeeee6;min-width:0}
+.result-card h3{font-size:1.1rem;margin:0 0 12px}
+.result-card p{font-size:1rem;margin:12px 0}
+.math-display{overflow-x:auto;max-width:100%;padding:4px 2px}
+.math-display mjx-container[display="true"]{margin:.8em 0!important}
+.source-link,.source-line{font:14px/1.7 -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif}
+.source-line span{padding:0 12px}
+.table-hint{font:14px/1.6 -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif;color:var(--muted);margin:15px 0 0}
+.digest-table-wrap{overflow-x:auto;max-width:100%;margin:22px 0 30px}
+.digest-table{width:100%;min-width:1000px;border-collapse:collapse;table-layout:fixed;font:16px/1.85 -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif}
+.digest-table caption{text-align:left;font-size:14px;font-weight:600;letter-spacing:.02em;padding:0 0 13px;color:var(--link)}
+.digest-table td,.digest-table th{padding:18px 16px;vertical-align:top;text-align:left;border-bottom:1px solid var(--line);overflow-wrap:break-word}
+.digest-table th{font-weight:500}
+.digest-table thead{background:#eeeee6;border-top:2px solid var(--ink);font-size:14px}
+.digest-table tbody tr:nth-child(even){background:#f0f1eb}
+.digest-table tbody th{font-weight:600}
+.digest-table a{overflow-wrap:anywhere}
+.digest-table .table-detail{display:block;font-size:14px;color:var(--muted);margin-top:8px}
+.argument-table th:nth-child(1){width:14%}.argument-table th:nth-child(2){width:21%}.argument-table th:nth-child(3){width:28%}.argument-table th:nth-child(4){width:23%}.argument-table th:nth-child(5){width:14%}
+.argument-table td:last-child{font-size:14px}
+.step-number{display:block;font:italic 22px/1.4 Georgia,serif;color:var(--link);margin-bottom:10px}
+.dependency-table th:nth-child(1){width:28%}.dependency-table th:nth-child(2){width:19%}.dependency-table th:nth-child(3){width:31%}.dependency-table th:nth-child(4){width:22%}
+.dependency-table td:last-child{font-size:14px;color:var(--muted)}
+.key-argument{border-left:2px solid var(--link);padding-left:24px;margin-top:32px}
+.reduction-step+.reduction-step{margin-top:30px}
+.related-work{margin-top:35px}
+.reading-list{padding-left:22px}.reading-list li{margin:12px 0}
+.paper-article .source-note{font-size:14px;overflow-wrap:anywhere}
+.paper-article .source-note code{font-size:14px}
+.inventory-table{min-width:780px}.inventory-table th:nth-child(1){width:6%}.inventory-table th:nth-child(2){width:49%}.inventory-table th:nth-child(3){width:10%}.inventory-table th:nth-child(4){width:35%}
+.inventory-table .featured-row{background:#e8eee4}
+.inventory-table .badge{margin-bottom:8px}
+.inventory-table td p{margin:4px 0;font-size:16px}
+@media(max-width:700px){.result-grid{grid-template-columns:1fr}.paper-subtitle{font-size:1.15rem}.paper-section{margin-top:38px}.paper-article{font-size:16px}.paper-section h2{font-size:1.35rem}.result-card{padding:18px}.key-argument{padding-left:16px}.input-note{padding:13px 16px}.paper-article .contents{gap:12px 22px;font-size:14px}.paper-article .family-header h1{font-size:1.9rem}.math-display{font-size:1em}}
+/* Theorem statements and TeX proof diagrams are the primary reading path. */
+.theorem-statement{margin:28px 0;padding:20px 26px;border-left:3px solid var(--link);background:#f0f1eb;scroll-margin-top:15px}
+.theorem-statement h3{margin:0 0 15px;font-size:1.12rem;line-height:1.75}
+.theorem-statement h3>a{font-weight:600;text-decoration:none}
+.theorem-name{font-size:.95rem;font-weight:400}
+.theorem-statement p{margin:14px 0}
+.statement-note{font-size:1rem;color:var(--muted)}
+.figure-key{max-width:960px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0;margin:40px 0;font:14px/1.8 -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif}
+.figure-key p{margin:8px 0}.figure-key ul{padding-left:20px;margin:10px 0 0}.figure-key li{margin:6px 0}
+.proof-figure{margin:24px 0 34px;max-width:1000px}
+.proof-diagram{overflow-x:auto;border:1px solid var(--line);border-radius:3px;background:#fff;padding:22px}
+.proof-diagram svg{display:block;width:100%;height:auto;min-width:0;max-width:100%}
+.proof-diagram svg a{cursor:pointer}.proof-diagram svg a:focus{outline:2px solid #855337;outline-offset:3px}.proof-diagram svg a:hover{opacity:.65}
+.proof-figure figcaption{font-size:1rem;line-height:1.8;margin:12px 0 8px;color:var(--ink)}
+.diagram-tools{display:flex;flex-wrap:wrap;gap:8px 20px;font:14px/1.8 -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif;color:var(--muted)}
+.diagram-tools span{flex:1 1 460px}
+.proof-explanation>section{margin-top:28px}
+@media(max-width:700px){.theorem-statement{padding:16px 18px}.theorem-statement h3{font-size:1rem}.theorem-name{display:block;font-size:.86rem}.proof-diagram{padding:12px}.proof-diagram svg{min-width:0;max-width:100%}.proof-figure figcaption{font-size:1rem}}
+
+.catalog-overviews{display:flex;flex-wrap:wrap;gap:14px;margin:24px 0}
+
+/* Article typography and proof figures share Schnell's paper.css. */
+.draft-body .paper-section>p,.draft-body .paper-section>ul,.draft-body .paper-section>ol{max-width:900px;line-height:1.95}
+.draft-body .paper-section>p{margin:18px 0}
+.draft-body code,.draft-intro code{font-size:var(--font-meta);overflow-wrap:anywhere}
+.draft-body .digest-table:not(.catalog-inventory){min-width:850px;table-layout:auto}
+.draft-body .math-display{max-width:900px}
+.draft-body mjx-container[display=true]{overflow-x:auto;overflow-y:hidden;padding:5px 0;max-width:100%}
+.draft-body blockquote,.draft-intro blockquote{margin:24px 0;padding:14px 22px;border-left:3px solid var(--link);background:#edf0e8;font-size:1rem;max-width:900px}
+.draft-body blockquote p,.draft-intro blockquote p{margin:4px 0}
+.draft-body .figure-key h2{font:600 14px/1.8 -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif;margin:0 0 12px}
+.draft-body .legacy-anchor{display:block;scroll-margin-top:110px}
+.draft-body .paper-section,.draft-body h3{scroll-margin-top:110px}
+.draft-body .source-line a+a{margin-left:12px}
+
+.catalog-intro{max-width:900px}.catalog-stats{display:flex;flex-wrap:wrap;gap:12px 26px;margin:26px 0;color:var(--muted);font:14px/1.7 -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif}.catalog-stats strong{font:italic 24px/1 Georgia,serif;color:var(--link);margin-right:7px}.catalog-nav{display:flex;flex-wrap:wrap;gap:12px 25px;padding:18px 0;border-block:1px solid var(--line);font-size:14px;margin:25px 0 38px}.catalog-themes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.catalog-theme{border-top:3px solid var(--link);padding:22px;background:#edf0e8;min-width:0}.catalog-theme h3{font-size:1.2rem;margin:0 0 14px;line-height:1.55}.catalog-theme .theme-aim{font-size:1rem;color:var(--link)}.catalog-theme p{font-size:1rem;line-height:1.85}.catalog-theme ul{padding:15px 0 0;margin:18px 0 0;border-top:1px solid #ccd6c5;list-style:none}.catalog-theme li{margin:9px 0;font:14px/1.65 -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif}.catalog-theme li span{display:inline-block;color:var(--muted);min-width:27px}.catalog-reading-note{max-width:940px;font-size:1rem;line-height:1.9}.dependency-explorer{margin:26px 0 30px;border:1px solid var(--line);padding:26px;background:#fbfaf7}.dependency-controls{display:grid;grid-template-columns:2fr 1fr;gap:18px}.dependency-controls label{min-width:0;font:14px/1.7 -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif;color:var(--muted)}.dependency-controls select{display:block;width:100%;margin-top:6px;padding:11px 34px 11px 12px;border:1px solid #aaa99e;background:#fff;color:var(--ink);border-radius:4px;font:14px/1.5 -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif}.dependency-controls select:focus-visible{outline:2px solid var(--link);outline-offset:3px}.connection-count{font:14px/1.75 -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif;color:var(--muted);margin:20px 0}.connection-list{list-style:none;margin:0;padding:0}.connection{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr) minmax(0,1fr);gap:23px;align-items:center;margin-top:24px}.connection+.connection{padding-top:24px;border-top:1px solid #e0ded6}.connection-node{padding:19px 18px;border:1px solid #c8cbbf;border-radius:5px;background:#fff;min-width:0}.connection-target{background:#eaf0e6;border-color:#aabc9e}.connection-node-label{font:12px/1.6 -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif;letter-spacing:.07em;color:var(--muted)}.connection-node h3{font:600 18px/1.5 Georgia,"Yu Mincho",serif;margin:8px 0 15px;overflow-wrap:anywhere}.connection-node h3 a{text-decoration:none;color:var(--ink)}.connection-node h3 a:hover{text-decoration:underline}.connection-citation{display:block;font:14px/1.75 -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif}.connection-arrow p{font:16px/1.9 -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif;margin:10px 0 7px}.connection-arrow svg{display:block;width:100%;height:16px;overflow:visible;stroke:var(--link);stroke-width:1.6;fill:none}.connection-kind{font:12px/1.5 -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif;color:var(--link);border:1px solid #b9c8b1;padding:3px 7px;border-radius:3px}.connection-kind.tool{color:#81512d;border-color:#cdbda9}.connection-kind.consequence,.connection-kind.premise{color:#71556f;border-color:#cfc0ce}.connection-empty{padding:20px;background:#f0eee8;font-size:1rem}.dependency-controls[hidden],.connection[hidden],.connection-empty[hidden]{display:none}.catalog-audit summary{cursor:pointer;padding:15px 0;font-size:1rem;color:var(--link)}.catalog-audit summary:hover{text-decoration:underline}.catalog-inventory{min-width:900px}.catalog-inventory th:nth-child(1){width:56px}.catalog-inventory th:nth-child(2){width:28%}.catalog-inventory th:nth-child(3){width:39%}.catalog-inventory th:nth-child(4){width:28%}.catalog-inventory .table-detail{font-weight:400}.catalog-inventory .claim-source{margin-top:10px;display:block;font-size:14px}.catalog-inventory td p{margin:0 0 12px}.catalog-inventory .badge{font-size:14px}.catalog-scope{max-width:960px}.catalog-scope li{margin:14px 0;line-height:1.85}.catalog-scope code{overflow-wrap:anywhere}.catalog-external{display:grid;grid-template-columns:1fr 1fr;gap:22px}.catalog-external>div{padding:20px 24px;border-left:2px solid var(--link);background:#f0f1eb;min-width:0}.catalog-external h3{font-size:1rem;margin:0 0 10px}.catalog-external p{font-size:1rem;line-height:1.85}.catalog-external a{font-size:.875rem}
+@media(max-width:900px){.catalog-themes{grid-template-columns:1fr}.catalog-theme ul{display:flex;flex-wrap:wrap;gap:5px 20px}.catalog-theme li{margin:0}.catalog-theme p{max-width:750px}.connection{gap:15px}.dependency-explorer{padding:20px}.connection-node{padding:14px}.catalog-external{grid-template-columns:1fr}}
+@media(max-width:600px){.dependency-controls{grid-template-columns:1fr;gap:12px}.dependency-explorer{padding:16px}.connection{grid-template-columns:1fr;gap:14px;margin-top:20px}.connection-node{padding:16px}.connection-node h3{margin:6px 0 10px}.connection-arrow{position:relative;padding:0 0 27px 22px;border-left:1px solid #bfccb7;margin-left:18px}.connection-arrow svg{position:absolute;bottom:6px;left:-12px;width:24px;height:16px;transform:rotate(90deg)}.connection+.connection{margin-top:28px;padding-top:28px}.catalog-theme{padding:19px}.catalog-nav{gap:10px 18px}.catalog-stats{gap:10px 18px}.catalog-external>div{padding:18px}.catalog-inventory{font-size:16px}}
+
+.catalog-theme h3 a{color:inherit;text-decoration:none}.catalog-theme h3 a:hover{text-decoration:underline}
+.catalog-crossings{border-left:3px solid var(--link);padding:18px 24px;margin-top:24px;max-width:960px;background:#f4f3ec;line-height:1.9;font-size:1rem}.catalog-crossings p{margin:8px 0 0}
+.catalog-strand{scroll-margin-top:90px}.catalog-strand .proof-figure{max-width:1100px}.catalog-strand .proof-diagram svg{min-width:0}.catalog-strand .proof-explanation{max-width:920px}
+.catalog-step-links{display:flex;flex-wrap:wrap;gap:6px 16px;font:14px/1.8 -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif;margin:15px 0 8px}.catalog-step-links span{color:var(--muted)}
+.catalog-strand .source-line{display:flex;flex-wrap:wrap;gap:8px 20px}.connection-reading{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px 20px;font:14px/1.8 -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif;color:var(--muted)}
+.connection{scroll-margin-top:100px}.connection:target{outline:2px solid #b1c3a4;outline-offset:10px;background:#f1f5ed}.connection:focus-visible{outline:2px solid var(--link);outline-offset:10px}
+@media(max-width:600px){.catalog-crossings{padding:15px 18px}.catalog-step-links{display:block}.catalog-step-links a{display:block;margin:7px 0}.connection-reading{gap:8px 14px}.connection-reading span{flex-basis:100%}}
+
+/* The manuscript title is the main route into its proof overview. */
+.catalog-inventory .manuscript-title{display:block;font-size:1.25rem;line-height:1.6;font-weight:600;text-decoration:none}
+.catalog-inventory .manuscript-title:hover{text-decoration:underline;text-underline-offset:.2em}
+.catalog-inventory .manuscript-source{display:inline-block;margin-top:14px;font-size:14px;font-weight:400}
+.catalog-inventory .overview-link{display:inline-flex;align-items:center;min-height:44px;padding:9px 14px;border:1px solid var(--link);background:#edf0e8;font-size:16px;line-height:1.65;font-weight:600;text-decoration:none}
+.catalog-inventory .overview-link:hover{background:var(--link);color:var(--paper)}
+
+.catalog-inventory td:first-child{white-space:nowrap;font-variant-numeric:tabular-nums}
+</style><style id="MJX-SVG-styles">
+mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+  min-height: 1px;
+  min-width: 1px;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line], svg[data-table] > g > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame], svg[data-table] > g > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed, svg[data-table] > g > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted, svg[data-table] > g > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > g > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
+  stroke-width: 3;
+}
+</style></head><body><div class="site-chrome"><header class="masthead"><a class="brand" href="overview.ja.html">OpenAI <em>Math Digest</em></a><nav class="language-switch"><a href="overview.ja.html">日本語</a><a href="overview.en.html">English</a></nav></header></div><main><article class="paper-article catalog-page catalog-markdown-overview"><header class="family-header"><p class="eyebrow">CATALOGUE 109 · 第1段階・未公開プレビュー</p><h1>Integer multiplication below n log n</h1><p class="ai-notice">AI生成の解説です。誤りや不正確な説明が含まれる可能性があります。重要な主張・証明は原論文で確認してください。</p><p class="paper-subtitle">カタログ109 — n log n未満の整数乗算</p><p class="lede">固定有限アルファベット・固定有限本数の一次元テープをもつ一台の決定性Turing機械で、二つの<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="1.357ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 600 453"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g></g></g></svg></mjx-container>-bit整数を最悪時 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="13.253ex" height="2.452ex" role="img" focusable="false" viewBox="0 -833.9 5857.6 1083.9"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D442" d="M740 435Q740 320 676 213T511 42T304 -22Q207 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435ZM637 476Q637 565 591 615T476 665Q396 665 322 605Q242 542 200 428T157 216Q157 126 200 73T314 19Q404 19 485 98T608 313Q637 408 637 476Z"></path></g><g data-mml-node="mo" transform="translate(763,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(1152,0)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mo" transform="translate(1752,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(2141,0)"><path data-c="6C" d="M42 46H56Q95 46 103 60V68Q103 77 103 91T103 124T104 167T104 217T104 272T104 329Q104 366 104 407T104 482T104 542T103 586T103 603Q100 622 89 628T44 637H26V660Q26 683 28 683L38 684Q48 685 67 686T104 688Q121 689 141 690T171 693T182 694H185V379Q185 62 186 60Q190 52 198 49Q219 46 247 46H263V0H255L232 1Q209 2 183 2T145 3T107 3T57 1L34 0H26V46H42Z"></path><path data-c="67" d="M329 409Q373 453 429 453Q459 453 472 434T485 396Q485 382 476 371T449 360Q416 360 412 390Q410 404 415 411Q415 412 416 414V415Q388 412 363 393Q355 388 355 386Q355 385 359 381T368 369T379 351T388 325T392 292Q392 230 343 187T222 143Q172 143 123 171Q112 153 112 133Q112 98 138 81Q147 75 155 75T227 73Q311 72 335 67Q396 58 431 26Q470 -13 470 -72Q470 -139 392 -175Q332 -206 250 -206Q167 -206 107 -175Q29 -140 29 -75Q29 -39 50 -15T92 18L103 24Q67 55 67 108Q67 155 96 193Q52 237 52 292Q52 355 102 398T223 442Q274 442 318 416L329 409ZM299 343Q294 371 273 387T221 404Q192 404 171 388T145 343Q142 326 142 292Q142 248 149 227T179 192Q196 182 222 182Q244 182 260 189T283 207T294 227T299 242Q302 258 302 292T299 343ZM403 -75Q403 -50 389 -34T348 -11T299 -2T245 0H218Q151 0 138 -6Q118 -15 107 -34T95 -74Q95 -84 101 -97T122 -127T170 -155T250 -167Q319 -167 361 -139T403 -75Z" transform="translate(278,0)"></path></g><g data-mml-node="mo" transform="translate(2919,0)"><path data-c="2061" d=""></path></g><g data-mml-node="mi" transform="translate(3085.7,0)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="msup" transform="translate(3685.7,0)"><g data-mml-node="mo"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g><g data-mml-node="TeXAtom" transform="translate(422,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g><g data-mml-node="mo" transform="translate(500,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mi" transform="translate(1278,0)"><path data-c="1D705" d="M83 -11Q70 -11 62 -4T51 8T49 17Q49 30 96 217T147 414Q160 442 193 442Q205 441 213 435T223 422T225 412Q225 401 208 337L192 270Q193 269 208 277T235 292Q252 304 306 349T396 412T467 431Q489 431 500 420T512 391Q512 366 494 347T449 327Q430 327 418 338T405 368Q405 370 407 380L397 375Q368 360 315 315L253 266L240 257H245Q262 257 300 251T366 230Q422 203 422 150Q422 140 417 114T411 67Q411 26 437 26Q484 26 513 137Q516 149 519 151T535 153Q554 153 554 144Q554 121 527 64T457 -7Q447 -10 431 -10Q386 -10 360 17T333 90Q333 108 336 122T339 146Q339 170 320 186T271 209T222 218T185 221H180L155 122Q129 22 126 16Q113 -11 83 -11Z"></path></g></g></g><g data-mml-node="mo" transform="translate(5468.6,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg></mjx-container>、<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="9.284ex" height="2.072ex" role="img" focusable="false" viewBox="0 -833.9 4103.3 915.9"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D705" d="M83 -11Q70 -11 62 -4T51 8T49 17Q49 30 96 217T147 414Q160 442 193 442Q205 441 213 435T223 422T225 412Q225 401 208 337L192 270Q193 269 208 277T235 292Q252 304 306 349T396 412T467 431Q489 431 500 420T512 391Q512 366 494 347T449 327Q430 327 418 338T405 368Q405 370 407 380L397 375Q368 360 315 315L253 266L240 257H245Q262 257 300 251T366 230Q422 203 422 150Q422 140 417 114T411 67Q411 26 437 26Q484 26 513 137Q516 149 519 151T535 153Q554 153 554 144Q554 121 527 64T457 -7Q447 -10 431 -10Q386 -10 360 17T333 90Q333 108 336 122T339 146Q339 170 320 186T271 209T222 218T185 221H180L155 122Q129 22 126 16Q113 -11 83 -11Z"></path></g><g data-mml-node="mo" transform="translate(853.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="msup" transform="translate(1909.6,0)"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="TeXAtom" transform="translate(533,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mo"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(778,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="38" d="M70 417T70 494T124 618T248 666Q319 666 374 624T429 515Q429 485 418 459T392 417T361 389T335 371T324 363L338 354Q352 344 366 334T382 323Q457 264 457 174Q457 95 399 37T249 -22Q159 -22 101 29T43 155Q43 263 172 335L154 348Q133 361 127 368Q70 417 70 494ZM286 386L292 390Q298 394 301 396T311 403T323 413T334 425T345 438T355 454T364 471T369 491T371 513Q371 556 342 586T275 624Q268 625 242 625Q201 625 165 599T128 534Q128 511 141 492T167 463T217 431Q224 426 228 424L286 386ZM250 21Q308 21 350 55T392 137Q392 154 387 169T375 194T353 216T330 234T301 253T274 270Q260 279 244 289T218 306L210 311Q204 311 181 294T133 239T107 157Q107 98 150 60T250 21Z" transform="translate(500,0)"></path><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" transform="translate(1000,0)"></path></g></g></g></g></g></svg></mjx-container> で厳密に掛けるとする原稿を収録する。線形ネットワークによるアドレス交換と同時バタフライの節約を、近似変換からの正確な整数回収へ接続する。</p></header><nav class="contents"><a href="#papers">収録論文</a><a href="#connections">証明の入口</a><a href="#sources">原典・確認範囲</a></nav><div class="draft-body"><span class="legacy-anchor" id="収録論文" aria-hidden="true"></span><span class="legacy-anchor" id="section-1" aria-hidden="true"></span><section id="papers" class="paper-section proof-section"><h2>収録論文</h2><p class="article-prose">主結果の範囲を短くまとめています。正確な仮定と定式化は併記した原典の結果を参照してください。</p><p class="table-hint">ページ数は参考文献を含みます。狭い画面では表を横にスクロールできます。</p><div class="digest-table-wrap" role="region" aria-label="論文一覧と役割" tabindex="0"><table class="digest-table catalog-inventory"><caption>カタログ 109 · 2026-10-22 確認の固定参照版</caption><thead><tr><th scope="col">#</th><th scope="col">論文・概説</th><th scope="col">主に何を主張するか</th><th scope="col">議論の役割・概説</th></tr></thead><tbody><tr id="paper-integer-multiplication-below-n-log-n" class="featured-row"><td>01</td><th scope="row"><a class="manuscript-title" href="integer-multiplication-below-n-log-n.ja.html" lang="en">Integer multiplication below n log n →</a><span class="table-detail">図中の略称: Integer multiplication below n log n</span><span class="table-detail">September 23, 2026 · 73 ページ</span><a class="manuscript-source" href="https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Integer-multiplication-below-n-log-n-September-23-2026/paper.pdf">原論文（GitHub） ↗</a></th><td><p>一台の決定性・固定有限テープTuring機械が、すべてのn-bit入力対の積を最悪時O(n(lg n)^(1−κ)), κ=2^-182で厳密に出力する。</p><a class="claim-source" href="https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Integer-multiplication-below-n-log-n-September-23-2026/paper.pdf">Theorem 1 · p. 3 ↗</a></td><td><p>有限線形ネットワークのランク不足を、アドレス交換と同時バタフライの体積正規化再帰へ移す。保持した置換、精度評価、整数係数の回収で主定理へつなぐ。</p><a class="overview-link" href="integer-multiplication-below-n-log-n.ja.html">証明概説を読む →</a></td></tr></tbody></table></div></section>
+<span class="legacy-anchor" id="証明の入口" aria-hidden="true"></span><span class="legacy-anchor" id="section-2" aria-hidden="true"></span><section id="connections" class="paper-section proof-section"><h2>証明の入口</h2><div class="article-prose proof-explanation">
+<p>個別記事では、入力の基数桁からCRT・Gaussian resampling・合成多項式変換へ至る構成、体積で正規化した二つの再帰、精度と全費用の評価を順に説明する。Harvey–van der Hoevenの既存の整数乗算器とresamplingの解析を直接入力として使う。構成中の高速乗算器を多項式積へ再帰的に呼び出すわけではない。</p>
+<p>すべての入力長に対する漸近評価であり、原稿は定数と閾値が極めて大きいことを明記する。実用的な実装の性能評価は含まれない。</p>
+<p class="source-line"><a href="https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Integer-multiplication-below-n-log-n-September-23-2026/paper.pdf">Theorem 1 · p. 3</a></p>
+</div></section>
+<span class="legacy-anchor" id="原典確認範囲" aria-hidden="true"></span><span class="legacy-anchor" id="section-3" aria-hidden="true"></span><section id="sources" class="paper-section article-prose"><h2>原典・確認範囲</h2>
+<p>公式の分野は <em>Theoretical computer science</em>。公式一覧のカタログ109、2026年9月23日原稿を使用する。記事は主定理の入力・出力、有限テープでの再帰、誤差からの厳密復元、<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="1.303ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 576 453"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D705" d="M83 -11Q70 -11 62 -4T51 8T49 17Q49 30 96 217T147 414Q160 442 193 442Q205 441 213 435T223 422T225 412Q225 401 208 337L192 270Q193 269 208 277T235 292Q252 304 306 349T396 412T467 431Q489 431 500 420T512 391Q512 366 494 347T449 327Q430 327 418 338T405 368Q405 370 407 380L397 375Q368 360 315 315L253 266L240 257H245Q262 257 300 251T366 230Q422 203 422 150Q422 140 417 114T411 67Q411 26 437 26Q484 26 513 137Q516 149 519 151T535 153Q554 153 554 144Q554 121 527 64T457 -7Q447 -10 431 -10Q386 -10 360 17T333 90Q333 108 336 122T339 146Q339 170 320 186T271 209T222 218T185 221H180L155 122Q129 22 126 16Q113 -11 83 -11Z"></path></g></g></g></svg></mjx-container>の導出を原典の証明本文と照合した概説である。全証明の独立検証、実装による検証、除算・平方根・行列転置への帰結は対象外。外部原典の版と未確認範囲は個別記事に記載する。</p>
+<p class="source-line"><a href="https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/overview.pdf">OpenAI Research Catalog · Theoretical computer science; catalogue 109 · p. 13</a></p>
+<p class="source-line"><a href="https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Integer-multiplication-below-n-log-n-September-23-2026/paper.pdf">Sections 3–9 · pp. 11–67</a></p></section></div></article><footer>Design adapted from Geometry Paper Digest (MIT).</footer></main></body></html>
