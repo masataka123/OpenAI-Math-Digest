@@ -1,0 +1,175 @@
+Catalogue 060; logs: /Users/iwai/Desktop/GitHub/OpenAI-Math-Digest/tmp/catalog-preparation/060/2026-10-22T07-05-08.847Z-26225
+
+[citations]
+Citations checked: 91 catalogue(s), 326 files.
+
+[tests]
+✔ nef route does not incorrectly require the separate volume branch (2.506791ms)
+✔ the final claim requires both branches in prerequisite order (0.263167ms)
+✔ unknown inputs and cyclic logical dependencies fail visibly (0.650917ms)
+✔ bilingual entries and cited references stay connected (1.404208ms)
+✖ 033 registers five papers in official order without moving the 034 source snapshot (3.145583ms)
+✔ retained connection records distinguish 12 inputs and one premise from alternatives (0.541291ms)
+✔ 033 bilingual sections, 44 retained article figures and relative article links survive rendering (937.500584ms)
+✔ 033 guide uses the common inventory and retains each result-use record once (0.732375ms)
+✔ catalogue summaries cover the official inventory once, in order, in both languages (2.153208ms)
+✔ every connection resolves to a source, application and reading record (0.721375ms)
+✖ 063 uses its pinned single manuscript and preserves official field order (2.531375ms)
+✔ 063 overview, article and external-input records resolve to the same bilingual anchors and assets (449.956709ms)
+✔ synthesis explains every recorded connection and covers all 14 papers in linked diagrams (2.080458ms)
+✔ published overview diagrams have matching bilingual link targets with accessible labels (13.020709ms)
+✔ browser inspection requires an explicit three-digit catalogue (96.055459ms)
+✔ registered papers determine bilingual desktop/mobile coverage without fixed paper counts (0.590209ms)
+✔ cached scan matches legacy links, Unicode anchors, SVG glyphs, assets and language switches (82.144417ms)
+✔ failure diagnostics and duplicate broken references are preserved (6.272833ms)
+✔ a second invocation detects removed anchors and deleted assets (no persistent cache) (5.616417ms)
+✔ CLI used by GitHub Actions exits nonzero for a broken link (854.929875ms)
+✔ author-key citations stay compact in both languages and TeX without changing legacy output (2.915875ms)
+✔ printed page numbers are distinguished from PDF destinations (0.25375ms)
+✔ ranges and unknown citations fail rather than silently produce plausible references (2.731708ms)
+✔ managed citation markers preserve shared source-line and article structure (224.97025ms)
+✔ every registered new catalogue uses checked citations and fresh diagram outputs (748.139333ms)
+✔ Japanese and English cite the same records and TeX shares their readable names (1.265125ms)
+✔ generated SVG links keep PDF page positions and the source sets declared on each diagram (3.407792ms)
+✔ publication registry discovery excludes unregistered drafts but explicit discovery retains them (60.772083ms)
+✔ all supplied comics work without any normal catalogue or article (1.070541ms)
+✔ official subject membership orders the 36 supplied comics without adding omitted numbers (0.697625ms)
+✔ only existing normal articles receive corresponding article links (0.120083ms)
+✔ unpublished comics are absent unless preview is explicitly enabled (0.120042ms)
+✔ registration supports ordered image arrays and prevents false author attribution (2.001833ms)
+✔ broken catalogue, target-source, image path and duplicate registrations fail early (0.38ms)
+✔ an author supplement can be added without being required for other comics (0.173834ms)
+✔ all registered source and optimized image files exist (10.605875ms)
+✔ new and revised catalogues have official inventories and bilingual guides for every owned article (2421.42375ms)
+✔ missing roles, reference lists, reading purposes and proof targets are rejected (1.590417ms)
+✔ one-paper inventory retains all columns and rejects incomplete rows or wrong official order (0.345958ms)
+✔ internal references are unprefixed; external references carry defined keys and readable names (0.2715ms)
+✔ main-theorem proofs and the statements of proof targets cannot be omitted (1.239292ms)
+✔ booklets internalize only the current catalogue and its papers, preserving cross-catalogue source links (7.47625ms)
+✔ booklet print view retains every connection and removes controls and duplicate audit only (4.915542ms)
+✔ official-order table rows retain article anchors in print entries (7.817208ms)
+✔ reruns preserve manual notes and old handoffs, while new failure is never marked approved (44.213459ms)
+✔ handoff retains the selected runtime and runnable retry without inventing model or human review approval (5.066041ms)
+✔ artifact summaries use selected bilingual edition and actual browser outcomes; absent evidence stays absent (120.510375ms)
+✔ unexpected runner exception is timed and recorded as a failed step (0.476875ms)
+✔ requires one explicit registered-format catalogue and rejects mistyped options (24.932375ms)
+✔ current PDF is reused without PDF rendering or a second build; browser inspection still runs (42.769458ms)
+✔ stale PDF generation, second build and final check always run sequentially (1.936375ms)
+✔ build and environment failures stop dependent work and record a retry command (1.338375ms)
+✔ unexpected PDF check failures never trigger destructive regeneration, even with force (5.919292ms)
+✔ explicit regeneration runs when current, while link failures leave a failed report (0.805958ms)
+✔ PDF runtime uses project venv/settings and respects explicit environment overrides (14.84ms)
+✔ browser failure prevents approval and records the gallery location (2.847084ms)
+✔ Schnell structure preserves mathematical statements and source links (65.584583ms)
+✔ Japanese and English headings share section anchors (47.566625ms)
+✔ public article links remain local in previews and print editions (9.919ms)
+✔ multiple inline TeX figures have unique IDs and intact citations (5.492041ms)
+✔ older introductions and both math syntaxes are retained (1.462125ms)
+✔ missing diagrams stop the build instead of publishing an empty figure (5.443875ms)
+✔ proof-overview navigation retains the result number from the heading (1.455542ms)
+✔ field, catalogue and manuscript references resolve without duplicate records (1.176916ms)
+✔ the first reading route connects both ways and supports shared catalogues (0.314125ms)
+ℹ tests 65
+ℹ suites 0
+ℹ pass 63
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2844.539792
+
+✖ failing tests:
+
+test at scripts/catalog-033.test.mjs:10:1
+✖ 033 registers five papers in official order without moving the 034 source snapshot (3.145583ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  ... Skipped lines
+  
+    [
+      '033',
+      '034',
+      '036',
+      '037',
+  ...
+      '057',
+  +   '060',
+      '063',
+      '067',
+      '068'
+    ]
+  
+      at TestContext.<anonymous> (file:///Users/iwai/Desktop/GitHub/OpenAI-Math-Digest/scripts/catalog-033.test.mjs:13:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [
+      '033', '034', '036',
+      '037', '038', '039',
+      '042', '046', '050',
+      '051', '052', '057',
+      '060', '063', '067',
+      '068'
+    ],
+    expected: [
+      '033', '034', '036',
+      '037', '038', '039',
+      '042', '046', '050',
+      '051', '052', '057',
+      '063', '067', '068'
+    ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at scripts/catalog-063.test.mjs:10:1
+✖ 063 uses its pinned single manuscript and preserves official field order (2.531375ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  ... Skipped lines
+  
+    [
+      '033',
+      '034',
+      '036',
+      '037',
+  ...
+      '057',
+  +   '060',
+      '063',
+      '067',
+      '068'
+    ]
+  
+      at TestContext.<anonymous> (file:///Users/iwai/Desktop/GitHub/OpenAI-Math-Digest/scripts/catalog-063.test.mjs:16:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [
+      '033', '034', '036',
+      '037', '038', '039',
+      '042', '046', '050',
+      '051', '052', '057',
+      '060', '063', '067',
+      '068'
+    ],
+    expected: [
+      '033', '034', '036',
+      '037', '038', '039',
+      '042', '046', '050',
+      '051', '052', '057',
+      '063', '067', '068'
+    ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+tests failed. See the tests.log file.
+Report: /Users/iwai/Desktop/GitHub/OpenAI-Math-Digest/tmp/catalog-preparation/060/2026-10-22T07-05-08.847Z-26225/report.json
+Handoff: /Users/iwai/Desktop/GitHub/OpenAI-Math-Digest/tmp/catalog-preparation/060/2026-10-22T07-05-08.847Z-26225/HANDOFF.md
+Retry: '/Users/iwai/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node' scripts/prepare-catalog.mjs --catalog 060

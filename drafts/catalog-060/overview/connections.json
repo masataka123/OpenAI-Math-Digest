@@ -1,0 +1,169 @@
+{
+  "catalogId": "060",
+  "productionVersion": "1.4",
+  "checkedOn": "2026-10-22",
+  "checkingScope": {
+    "ja": "球殻を与える2つの主要外部判定と042系への明示的利用を記録。単論文のためカタログ内部の論文間辺はない。他の外部入力は個別記事に記録し、未確認を依存なしとは扱わない。",
+    "en": "Records the two main external shell criteria and the explicit downstream use in catalogue042. There are no inter-paper edges inside this single-paper catalogue. Other inputs and unverified statements are recorded in the article, not treated as absent dependencies."
+  },
+  "omittedSections": [
+    {
+      "section": "classification",
+      "reason": "One paper and one main theorem; no reader-relevant partition beyond the proof branches already explained in its article."
+    },
+    {
+      "section": "catalogue relationship diagram",
+      "reason": "Considered the combined flow of two external shell criteria into the one paper and its downstream class-VII consequence. The nontrivial branching and convergence occur within the article’s proof and are covered by its proof diagram; a catalogue diagram would repeat that account and the single short outgoing connection without adding a useful scale of structure."
+    },
+    {
+      "section": "dependency table / selection UI",
+      "reason": "A single official table row and a short outgoing-connection paragraph suffice; detailed external uses stay in the article and the shared connection record. No empty table or selection UI."
+    }
+  ],
+  "connections": [
+    {
+      "id": "enoki-to-gss",
+      "from": {
+        "paperId": "Eno81",
+        "result": "Main Theorem; note (3)",
+        "printedPage": "454",
+        "pdfPage": 2,
+        "version": "Tohoku Math. J. (2) 33 (1981), 453–492; publisher PDF",
+        "sourceUrl": "https://www.jstage.jst.go.jp/article/tmj1949/33/4/33_4_453/_pdf/-char/en"
+      },
+      "to": {
+        "paperId": "global-spherical-shells",
+        "result": "Proposition 2.1(i); proof of Theorem 1.1",
+        "printedPage": "5, 37",
+        "pdfPage": [
+          5,
+          37
+        ],
+        "version": "September 24, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Global-Spherical-Shells-on-Minimal-Surfaces-of-Class-VII-September-24-2026/paper.pdf"
+      },
+      "role": {
+        "ja": "平方零因子を持つ枝を球殻を持つ既知の系列へ帰着する。Teleman p.1758の球殻による定式化も併照。",
+        "en": "Resolve the square-zero-divisor branch by the classified shell family; also compare Teleman’s shell formulation on p.1758."
+      },
+      "hypotheses": "Connected minimal compact class VII; b2>0; nonzero effective divisor of square zero. This is precisely the first branch of Proposition2.1.",
+      "kind": "direct",
+      "checking": {
+        "status": "source statements and application compared; external full proofs not checked",
+        "date": "2026-10-22",
+        "author": "gpt-6-astra / high; author agent",
+        "independentReview": "coordination/catalog-060/reviews/CONTENT_REVIEW.md",
+        "sourceRecord": "../global-spherical-shells/sources.json"
+      },
+      "articleLinks": {
+        "ja": {
+          "from": "https://www.jstage.jst.go.jp/article/tmj1949/33/4/33_4_453/_pdf/-char/en",
+          "to": "/ja/papers/global-spherical-shells/#proof-1-step-1"
+        },
+        "en": {
+          "from": "https://www.jstage.jst.go.jp/article/tmj1949/33/4/33_4_453/_pdf/-char/en",
+          "to": "/en/papers/global-spherical-shells/#proof-1-step-1"
+        }
+      },
+      "unresolved": [
+        "Original Enoki proof not independently verified."
+      ]
+    },
+    {
+      "id": "dot-to-gss",
+      "from": {
+        "paperId": "DOT03",
+        "result": "Main Theorem; GSS definition",
+        "printedPage": "283–284",
+        "pdfPage": [
+          1,
+          2
+        ],
+        "version": "Tohoku Math. J. (2) 55 (2003), 283–309; publisher PDF",
+        "sourceUrl": "https://www.jstage.jst.go.jp/article/tmj/55/2/55_2_283/_pdf/-char/en"
+      },
+      "to": {
+        "paperId": "global-spherical-shells",
+        "result": "Proposition 2.1(ii); proof of Theorem 1.1",
+        "printedPage": "5, 37",
+        "pdfPage": [
+          5,
+          37
+        ],
+        "version": "September 24, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Global-Spherical-Shells-on-Minimal-Surfaces-of-Class-VII-September-24-2026/paper.pdf"
+      },
+      "role": {
+        "ja": "正確にb2本の有理曲線から、正則球殻と連結補集合を供給する。",
+        "en": "Supply a holomorphic shell with connected complement from exactly b2 rational curves."
+      },
+      "hypotheses": "Original connected minimal compact class VII hypotheses and b2>0; exactly b2 rational curves provided by Proposition7.3 and Lemma7.4.",
+      "kind": "direct",
+      "checking": {
+        "status": "source statements and application compared; external full proofs not checked",
+        "date": "2026-10-22",
+        "author": "gpt-6-astra / high; author agent",
+        "independentReview": "coordination/catalog-060/reviews/CONTENT_REVIEW.md",
+        "sourceRecord": "../global-spherical-shells/sources.json"
+      },
+      "articleLinks": {
+        "ja": {
+          "from": "https://www.jstage.jst.go.jp/article/tmj/55/2/55_2_283/_pdf/-char/en",
+          "to": "/ja/papers/global-spherical-shells/#proof-1-step-6"
+        },
+        "en": {
+          "from": "https://www.jstage.jst.go.jp/article/tmj/55/2/55_2_283/_pdf/-char/en",
+          "to": "/en/papers/global-spherical-shells/#proof-1-step-6"
+        }
+      },
+      "unresolved": [
+        "Original DOT proof not independently verified."
+      ]
+    },
+    {
+      "id": "gss-to-oka-class-vii",
+      "from": {
+        "paperId": "global-spherical-shells",
+        "result": "Theorem 1.1",
+        "printedPage": "1",
+        "pdfPage": 1,
+        "version": "September 24, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Global-Spherical-Shells-on-Minimal-Surfaces-of-Class-VII-September-24-2026/paper.pdf"
+      },
+      "to": {
+        "paperId": "every-complex-k3-oka",
+        "result": "Corollary 10.2, class VII proof",
+        "printedPage": "54",
+        "pdfPage": 54,
+        "version": "September 23, 2026; fixed commit 1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+        "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Every-complex-K3-surface-is-Oka-September-23-2026/paper.pdf"
+      },
+      "role": {
+        "ja": "b2>0の極小class VII曲面をKato曲面へ移す。既知の分類・Oka判定を併用する系への入力であり、K3主定理への入力ではない。",
+        "en": "Place minimal class VII surfaces with b2>0 in the Kato class; input to the consequence together with established classification/Oka criteria, not to the K3 theorem."
+      },
+      "hypotheses": "Receiving corollary assumes connected minimal compact class VII. It explicitly separates b2>0, hence b1=1 and kappa=-infinity satisfy Theorem1.1.",
+      "kind": "consequence",
+      "checking": {
+        "status": "source statements and application compared; external full proofs not checked",
+        "date": "2026-10-22",
+        "author": "gpt-6-astra / high; author agent",
+        "independentReview": "coordination/catalog-060/reviews/CONTENT_REVIEW.md",
+        "sourceRecord": "../global-spherical-shells/sources.json"
+      },
+      "articleLinks": {
+        "ja": {
+          "from": "/ja/papers/global-spherical-shells/#theorem-1-1",
+          "to": "/ja/papers/every-complex-k3-oka/#proof-4-step-4"
+        },
+        "en": {
+          "from": "/en/papers/global-spherical-shells/#theorem-1-1",
+          "to": "/en/papers/every-complex-k3-oka/#proof-4-step-4"
+        }
+      },
+      "unresolved": [
+        "The separate established Oka classification theorem is not reverified in this catalogue."
+      ]
+    }
+  ]
+}

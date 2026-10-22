@@ -1,0 +1,90 @@
+{
+  "catalogId": "060",
+  "operatingPolicy": "2026-10-20",
+  "specificationBasis": [
+    "Current user request, 2026-10-22",
+    "AGENTS.md",
+    "production/MODEL_ROLES.md"
+  ],
+  "assignments": [
+    {
+      "role": "hq",
+      "agent": "/root",
+      "requestedModel": "gpt-6.1-sol",
+      "requestedReasoningEffort": "xhigh",
+      "actualModel": null,
+      "actualReasoningEffort": null,
+      "selectionEvidence": "Current user selected the headquarters role and requested settings. No tool exposes the root chat runtime model/effort; do not infer that prompt text changed settings.",
+      "scope": "source acquisition, inventory, coordination, formal/visual checks, stage-1 handoff; no mathematical authorship"
+    },
+    {
+      "role": "author",
+      "agent": "/root/astra_author_060",
+      "requestedModel": "gpt-6-astra",
+      "requestedReasoningEffort": "high",
+      "actualModel": null,
+      "actualReasoningEffort": null,
+      "selectionEvidence": {
+        "tool": "collaboration.spawn_agent",
+        "acceptedArguments": {
+          "task_name": "astra_author_060",
+          "fork_turns": "none",
+          "model": "gpt-6-astra",
+          "reasoning_effort": "high"
+        },
+        "result": {
+          "task_name": "/root/astra_author_060"
+        },
+        "limit": "Explicit model and effort selection accepted; independent backend telemetry is not exposed."
+      },
+      "scope": "WORKER_AUTHOR.md"
+    },
+    {
+      "role": "content-review",
+      "agent": "/root/astra_review_060",
+      "requestedModel": "gpt-6-astra",
+      "requestedReasoningEffort": "high",
+      "actualModel": null,
+      "actualReasoningEffort": null,
+      "selectionEvidence": {
+        "tool": "collaboration.spawn_agent",
+        "acceptedArguments": {
+          "task_name": "astra_review_060",
+          "fork_turns": "none",
+          "model": "gpt-6-astra",
+          "reasoning_effort": "high"
+        },
+        "result": {
+          "task_name": "/root/astra_review_060"
+        },
+        "limit": "Explicit model and effort selection accepted; independent backend telemetry is not exposed."
+      },
+      "scope": "WORKER_REVIEW.md; separate agent from author"
+    }
+  ],
+  "stage2": {
+    "role": "site-hq",
+    "agent": "/root",
+    "requestedModel": "gpt-6.1-sol",
+    "requestedReasoningEffort": "xhigh",
+    "selectionEvidence": "Current Stage 2 user instruction resumes the headquarters assignment; no runtime model telemetry is exposed. No new mathematical author/reviewer needed while reviewed content is unchanged.",
+    "scope": "registration, existing diagram placement, bilingual booklet generation, automated and visual checks, Stage 2 handoff; no publication",
+    "figureRevision": {
+      "reason": "Tall single-column proof diagram is too small in the A4 booklet; improve geometry/readability while retaining the mathematical route.",
+      "authorAgent": "/root/astra_author_060",
+      "reviewAgent": "/root/astra_review_060",
+      "selectionEvidence": "Reuse agents explicitly spawned in Stage 1 with model gpt-6-astra, reasoning_effort high; followup_task preserves their settings.",
+      "scope": "Astra author adjusts figure layout and necessary labels; separate Astra checks changed figure meaning and consistency only. No repeated full source reading."
+    }
+  },
+  "stage3": {
+    "role": "site-hq",
+    "agent": "/root",
+    "requestedModel": "gpt-6.1-sol",
+    "requestedReasoningEffort": "xhigh",
+    "actualModel": null,
+    "actualReasoningEffort": null,
+    "selectionEvidence": "Current user instruction: 第3段階をお願いします. Continues the explicit headquarters assignment; runtime model/effort telemetry is not exposed.",
+    "scope": "identity checks, scoped commit/push, Actions and live publication verification; reuse reviewed mathematical text, figures and PDFs unchanged"
+  }
+}

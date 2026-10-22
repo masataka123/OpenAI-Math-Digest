@@ -1,0 +1,646 @@
+OpenAI Math Digest
+
+
+
+CATALOGUE 060
+
+
+
+
+The Global Spherical Shell
+conjecture
+
+Catalogue guide & one proof overview
+
+
+Independent reading guide · English edition
+
+
+
+
+Edition: 2026-10-22
+Created by: Masataka Iwai · Osaka University
+
+
+
+
+   AI-generated explanations may contain errors. Check important claims and proofs against
+   the original manuscripts. This booklet collects the website’s explanations, not the original
+   papers. Expert review and formal verification have not been performed.
+
+
+
+
+                                                                                                  1
+OpenAI Math Digest · 060
+
+
+
+
+ Contents
+ The catalogue guide is followed by the article. The contents and citations are clickable. Wide
+ tables are arranged as entries for print; the claims and source references are retained.
+
+ 00 · Catalogue guide                                                                             3
+
+
+ 01 · Global Spherical Shells on Minimal Surfaces of Class VII                                    5
+
+
+ Original-manuscript snapshot: 1581d4cbdd69a0faf34b2089614fe2a814316a6a
+
+
+
+
+                                                                                                      2
+OpenAI Math Digest · 060
+
+
+
+ Catalogue 060 · Guide
+
+ Read on the website ↗
+
+
+
+ CATALOGUE 060
+
+
+
+
+ The Global Spherical Shell conjecture
+ This catalogue concerns the claim that every minimal class VII surface with positive second Betti
+ number contains a global spherical shell. Its single manuscript constructs rational curves through
+ weighted analysis on a cyclic cover and reduces the conclusion to established curve criteria.
+
+
+
+
+ 1. Paper in this catalogue
+ These summaries give the principal scope; consult the cited original results for the complete
+ hypotheses and statements.
+
+
+ Catalogue 060 · 2026-10-22 checked source snapshot
+
+
+ #
+
+ 01
+
+ Manuscript and overview
+
+ Global Spherical Shells on Minimal Surfaces of Class VII →
+ Short name: Global Spherical Shells
+ September 24, 2026 · 39 pages
+
+ Original paper (GitHub) ↗
+
+ Principal claim
+
+
+ Claims that a connected minimal compact class VII surface with          admits a holomorphically
+ embedded neighborhood of the standard        with connected complement.
+
+ Theorem 1.1 · p. 1 ↗
+
+ Role and available overview
+
+
+ After the square-zero-divisor case, passes from relative Chern classes on the cyclic cover through
+ sections and compact components to a rational-curve count and a shell criterion.
+
+ Read the proof overview →
+
+
+
+
+Catalogue 060 · Guide                                                                                 3
+OpenAI Math Digest · 060
+
+
+
+
+ 2. Connection to another catalogue
+ Theorem 1.1 of Global Spherical Shells on Minimal Surfaces of Class VII is used in the class VII
+ step of Every complex K3 surface is Oka. Corollary 10.2 of the latter manuscript uses it to place
+ minimal class VII surfaces with          in the Kato classification and then applies established Oka
+ criteria. The input is confined to the class VII part of that corollary; it does not enter the K3
+ theorem or the Enriques and Kodaira-dimension-zero parts.
+
+ Theorem 1.1 · p. 1
+
+ [OpenAI26k3, Corollary 10.2, p. 54]
+
+
+
+
+ 3. Sources and checking scope
+ The official heading for 060 is The Global Spherical Shell conjecture, in Algebraic and complex
+ geometry. The consulted overview places that subject in the catalogue-number range 032–069
+ and lists 060 on PDF p.8. Actual entries follow the official list without filling gaps in the
+ numbering.
+
+ OpenAI Research Catalog · 060 · p. 8
+
+
+ The manuscript is the September 24, 2026 version, with 39 pages. Comparisons cover the
+ hypotheses and every conclusion of Theorem 1.1, its route through §§2–7, the main external
+ shell-criterion statements, and the use in Corollary 10.2 of catalogue 042. Independent
+ verification of all analytic estimates and original-source comparison of some external inputs
+ remain open, as specified in the article’s checking scope. Describing the manuscript’s claim is
+ distinct from certifying the complete proof.
+
+
+
+
+Catalogue 060 · Guide                                                                                   4
+OpenAI Math Digest · 060
+
+
+
+ 060 / 01
+
+ Read on the website ↗
+
+
+
+ CATALOGUE 060 · PAPER 01 / 1 Overview
+
+
+
+
+ Global Spherical Shells on Minimal
+ Surfaces of Class VII
+
+ Proving compactness of divisor components on a cyclic cover, then
+ recovering a shell from the number of rational curves.
+
+ The manuscript claims a proof of the Global Spherical Shell conjecture for minimal class VII
+ surfaces with positive second Betti number. Its central step excludes noncompact components of
+ effective divisors constructed from compactly supported Chern classes, using weighted Dolbeault
+ cohomology and a cylinder estimate. This article follows that argument; it does not certify the
+ correctness of the complete proof.
+
+ Manuscript author: OpenAI · September 24, 2026 · 39 pages, including references
+
+
+ Read the manuscript on GitHub ↗
+
+
+
+ 1. Main results
+
+     Theorem 1.1 — A global spherical shell
+
+     Let      be a connected compact complex surface with
+
+
+
+
+     Assume also that      is minimal: it contains no smooth rational curve of self-intersection
+           . Then there are an open neighborhood       of
+
+
+
+
+     in           , an open set        , and a biholomorphism                      such that   is
+     connected.
+
+     Theorem 1.1 · p. 1
+
+
+
+
+060 / 01                                                                                            5
+OpenAI Math Digest · 060
+
+
+
+
+ References on the arrows
+ Unprefixed theorem, lemma, section and equation numbers refer to Global Spherical Shells. External inputs use
+ the following keys.
+
+      • Eno81 Ichiro Enoki — Surfaces of class VII₀ with curves: Classify the square-zero-divisor case and link the
+           family to shells in note (3); statement compared. Tohoku Math. J. (2) 33 (1981), 453–492; publisher PDF.
+
+      • DOT03 Georges Dloussky, Karl Oeljeklaus and Matei Toma — Class VII₀ surfaces with b₂ curves: Final
+           input from      rational curves to a shell; main theorem and shell definition compared. Tohoku Math. J. (2)
+           55 (2003), 283–309; publisher PDF.
+
+      • Tel10 Andrei Teleman — Instantons and curves on class VII surfaces: Cross-check the shell formulation of
+           Enoki’s result and the canonical basis. Annals of Mathematics 172 (2010), 1749–1804; publisher PDF with
+           front matter.
+
+      • Hem11 Gollakota V. V. Hemasundar — Koebe’s general uniformisation theorem for planar Riemann
+           surfaces: Theorem 1.1 embeds a planar open normalization into the sphere; statement compared. Annales
+           Polonici Mathematici 100.1 (2011), 77–85; publisher PDF.
+
+      • Don87 Simon K. Donaldson — The orientation of Yang–Mills moduli spaces and 4-manifold topology:
+           Negative definite intersection input in Lemma 2.2; original theorem unchecked, application formulation
+           checked in Teleman. Journal of Differential Geometry 26 (1987), 397–428; bibliographic record from
+           manuscript.
+
+      • HS74 Reese Harvey and Bernard Shiffman — A characterization of holomorphic chains: Analytic-cycle
+           graph limit in Lemma 6.1; complete external statement comparison remains open. Annals of Mathematics
+           99 (1974), 553–587; bibliographic record from manuscript.
+
+      • Tru67 Neil S. Trudinger — On imbeddings into Orlicz spaces and some applications: Exponential
+           integrability in Lemma 6.5; original-source comparison of the strip formulation remains open. Journal of
+           Mathematics and Mechanics 17 (1967), 473–483; bibliographic record from manuscript.
+
+      • OpenAI26k3 OpenAI — Every complex K3 surface is Oka: Downstream use: the shell theorem enters only
+           the class VII part of Corollary 10.2. September 23, 2026; fixed commit
+           1581d4cbdd69a0faf34b2089614fe2a814316a6a.
+
+ Each citation gives the result and pages. When printed pagination differs from the PDF position, both are shown.
+ GitHub previews do not automatically jump to the cited page.
+
+
+
+
+ 2. Proof of Theorem 1.1 — Divisors, compact components,
+ and curve counting
+ Proof target：Theorem 1.1 · p. 1
+
+
+
+
+060 / 01                                                                                                                 6
+OpenAI Math Digest · 060
+
+
+
+ Proof route. A nonzero effective divisor of square zero is handled by an established shell
+ criterion. In the remaining case, the negative definite intersection forms of finite cyclic quotients
+ supply many compactly supported Chern classes, which are realized by zero divisors of
+ holomorphic sections on the infinite cyclic cover. Residue independence and a cylinder estimate
+ force every component to be compact rational. An intersection argument over a Laurent
+ polynomial ring then yields         rational curves downstairs. The final curve criterion supplies
+ both the holomorphic shell and its connected-complement condition.
+
+ Write             , let           be the infinite cyclic cover associated with a primitive generator
+ of            , and let   generate the deck group. The manuscript also uses     for the second
+ weight parameter; we denote that parameter alone by        below.
+
+ In the diagram,     is a proper height with               and          , and                            .
+ The map                               forgets the support condition,    denotes a component
+ normalization, and           .
+
+
+
+
+060 / 01                                                                                                     7
+OpenAI Math Digest · 060
+
+
+
+
+ Proof overview from Chern classes through rational curves to a global spherical shell
+
+ Open figure ↗   TeX source ↓
+
+
+
+ 1. Remove the square-zero case and construct many classes
+
+ Under negative definiteness, a nonzero effective divisor       with          gives a shell by the Enoki
+ criterion in Proposition 2.1(i). The remaining branch assumes               for every nonzero effective
+ divisor. Together with minimality, this gives                for every curve     by Lemma 2.2. In
+ particular, effective divisors cannot have negative canonical degree.
+
+
+
+
+060 / 01                                                                                                   8
+OpenAI Math Digest · 060
+
+
+
+ The height is chosen with                        and               . Each finite cyclic quotient
+                  is again minimal class VII, with                    . Donaldson diagonalization supplies
+ a canonical basis of                         with                  and                              . Choose
+ integral cohomology lifts of the        . Restrictions to a fixed cutting hypersurface      lie in a finite
+ torsion group. Sums of distinct basis elements having the same restriction therefore supply
+ sufficiently many classes trivial on        . Cutting and extending with the prescribed end frames gives
+
+
+
+
+ where       is independent of      . Using sums of distinct basis elements preserves precisely this
+ intersection identity.
+
+ [Eno81, Main Theorem; note (3), print p. 454 / PDF p. 2]
+
+ [Tel10, Enoki surfaces, print p. 1758 / PDF p. 11]
+
+ Proposition 2.1; Lemmas 2.2–2.5 · pp. 5–8
+
+ [Tel10, §1.1 (canonical basis), print p. 1756 / PDF p. 9]
+
+ Lemma 3.1 · pp. 8–9
+
+
+ 2. Use index one to obtain sections with different end limits
+
+ The absence of square-zero effective divisors makes the nontrivial character bundles                 and
+            acyclic. Fourier–Laplace transformation in the deck variable transfers this input to
+ Dolbeault complexes with exponential conditions at both ends. Continuing across the trivial
+ character leaves only a scalar constant term. Positive-tail uniqueness, using                   , determines a
+ holomorphic section from its positive constant              and makes canonical-valued holomorphic
+ sections vanish on a positive tail.
+
+ Each      admits a holomorphic structure with any prescribed finite decay rate , and its weighted
+        vanishes. In weighted spaces allowing positive growth rates at both ends, compact excision
+ and Riemann–Roch give
+
+
+
+
+ Thus                  , and a section       can be normalized by            . A nonzero negative constant
+ would make its zero divisor          compact. Homotopies comparing the section with the prescribed
+ end frames identify its relative class itself with          . Its effective pushforward would then satisfy
+                            , a contradiction. Consequently               at the negative end.
+
+ What has been obtained at this point is a locally finite divisor                        bounded above in
+ height, with                  in ordinary cohomology. Neither compactness of its components nor
+ compactness of the whole divisor follows yet.
+
+
+
+
+060 / 01                                                                                                          9
+OpenAI Math Digest · 060
+
+
+
+ Propositions 4.8, 4.10–4.11 · pp. 17–20
+
+
+ 3. Use the scalar residue obstruction to restrict open normalizations
+
+ Lemma 5.1 bounds the area on negative unit height slabs                                          by
+                              . The exponent      depends only on fixed geometry; the holomorphic
+ correction rate is then chosen with                     . The constants          may vary, while the exponent
+ is common.
+
+ A holomorphic differential        on the normalization                   of a component defines a
+       -current      . For         and         , a mass exponent smaller than            places it in the space
+ with fixed weights             . Scalar        vanishes, whereas Proposition 5.3 makes nonzero residue
+ classes on distinct curves linearly independent. A primitive of an exact current first vanishes on
+ the positive tail; analytic continuation then confines its support to the curves. A normal
+ derivative of a distribution supported on a curve cannot produce the required order-zero delta
+ term. This local contradiction is the residue obstruction.
+
+ An        holomorphic differential has admissible mass growth by the area estimate and therefore
+ cannot exist. The manuscript constructs such a differential from a handle to prove genus zero,
+ and applies planar uniformization to place an open            inside      . If     omits two points, it lies in
+      and carries          . The cylinder estimate of Proposition 6.3 bounds the corresponding residue
+ mass with the same exponent           , contradicting the scalar obstruction. Any remaining
+ noncompact normalization must therefore be             .
+
+ Theorem 5.2; Propositions 5.3–5.4 · pp. 23–26
+
+ [Hem11, Theorem 1.1, print p. 77 / PDF p. 1]
+
+ Proposition 6.3; Corollary 6.4 · pp. 30–32
+
+
+ 4. Apply the cylinder estimate again to exclude plane components
+
+ The cylinder estimate separates nonflat strips with a fixed energy cost from arbitrarily long chains
+ of flat strips whose images lie in small coordinate charts. On the latter, the derivative of a
+ periodic holomorphic map has zero constant angular Fourier mode. The sum of derivative
+ bounds, and hence target-height variation, is controlled independently of chain length. For a
+ multiplier     with uniformly bounded           norms on unit strips, this bounds                 over a target
+ height slab by area over a fixed enlargement of that slab.
+
+ If a plane component          existed, then for all sufficiently large    the curves                  would be
+ distinct and not contained in         . On their normalizations                     ,
+
+
+
+
+060 / 01                                                                                                           10
+OpenAI Math Digest · 060
+
+
+
+ is a nonzero holomorphic differential valued in                      . Properness and the upper height bound
+ send               to the negative end. A periodic gauge              makes the section coefficient       into an
+ ordinary holomorphic function                      . The stripwise         bound for         and          imply
+                   on unit strips         of the logarithmic cylinder; the mean-value estimate then gives
+ uniform convergence                    . It therefore extends with value zero at infinity, so                              ,
+ canceling the growth in                          . Exponential integrability in Lemma 6.5 bounds                      in
+       on unit strips. A second application of the cylinder estimate gives all currents                          the
+ common mass exponent               .
+
+ Fixing                     puts their classes in the same finite-dimensional space with the same
+ coefficient bundle,                        . Residue independence applies to every finite subfamily,
+ contradicting the infinitely many              . Their individual constants need not be uniformly bounded
+ in . Every component of every                 is therefore compact with rational normalization.
+
+ Lemma 6.5; Theorem 6.6 · pp. 32–34
+
+
+ 5. Recover the curve count from the Laurent intersection form
+
+ Put           ,                 , and               , with       translating supports in the       direction.
+ Organize compact-support intersections as
+
+
+
+
+ The sum is finite. Evaluating at                recovers the negative definite Gram matrix on the finite
+ cyclic quotient, so                    is nonsingular over       .
+
+ If there were only           rational curves downstairs, their compact lifts would give at most
+ orbits under      . For large      , one has                           , leaving a nonzero     -linear combination
+   orthogonal to every orbit. All components of each                     lie in those orbits, so     is also orthogonal
+ to every          . This pairs a compactly supported test class with a locally finite divisor; only
+ finitely many components contribute. Nonsingularity gives a contradiction, hence                            .
+
+ Conversely, Lemma 7.4 shows that distinct curve classes are independent when there is no
+ square-zero effective divisor. There are at most             curves in total. Thus there are exactly            rational
+ curves.
+
+ Lemmas 7.1–7.2; Proposition 7.3; Lemma 7.4 · pp. 34–37
+
+
+ 6. Obtain the holomorphic shell and connected complement
+
+ Connectedness, compactness, minimality,                      ,            , and          are the original
+ hypotheses on        . With the curve count, every hypothesis of the Dloussky–Oeljeklaus–Toma Main
+ Theorem is satisfied, giving a global spherical shell. The cited definition includes a holomorphic
+
+
+
+060 / 01                                                                                                                    11
+OpenAI Math Digest · 060
+
+
+
+ embedding and a nonseparating condition. The manuscript explains that, if necessary, one
+ shrinks to a small annular neighborhood and pushes the complement of the core sphere onto the
+ complement of that open collar, preserving connectedness. The output is therefore the stated
+           with connected           , rather than merely a topological sphere.
+
+ [DOT03, Main Theorem; §1 (GSS definition), print pp. 283–284 / PDF pp. 1–2]
+
+ Proof of Theorem 1.1 · p. 37
+
+
+
+
+ 3. Which papers supply which steps
+
+
+ Source and result
+
+ Enoki's square-zero-divisor criterion, also stated by Teleman
+
+ Used at
+
+ Proposition 2.1(i), step 1
+
+ Role and required hypotheses
+
+ Minimal class VII,             , and a nonzero effective divisor of square zero give a shell
+
+ Checking scope
+
+ Enoki’s Main Theorem and note (3), and Teleman’s formulation, compared; full proofs outside
+ scope
+
+
+
+
+ Source and result
+
+ Dloussky–Oeljeklaus–Toma, Main Theorem
+
+ Used at
+
+ Proposition 2.1(ii), step 6
+
+ Role and required hypotheses
+
+ Exactly     rational curves give a holomorphic global spherical shell
+
+ Checking scope
+
+ Conclusion, definition, and application hypotheses compared; the full input proof is outside
+ scope
+
+
+
+
+060 / 01                                                                                         12
+OpenAI Math Digest · 060
+
+
+
+
+ Source and result
+
+ Donaldson diagonalization
+
+ Used at
+
+ Lemma 2.2 and Lemma 2.5 on finite cyclic quotients
+
+ Role and required hypotheses
+
+ Diagonalize the integral intersection lattice of a negative definite closed four-manifold
+
+ Checking scope
+
+ Application formulation compared in Teleman §1.1; original Donaldson theorem unchecked
+
+
+
+
+ Source and result
+
+ Planar uniformization, analytic-cycle compactness, and Trudinger exponential integrability
+
+ Used at
+
+ Proposition 5.4, Lemma 6.1, Lemma 6.5
+
+ Role and required hypotheses
+
+ Planarity of open normalizations, graph limits, and the periodic-gauge multiplier estimate
+
+ Checking scope
+
+ Uniformization Theorem 1.1 source-compared; complete statements of the other two inputs
+ remain unchecked
+
+
+
+
+ Taubes and Mrowka–Ruberman–Saveliev provide background for periodic-end methods. The
+ Dolbeault Fredholm, continuation, and excision arguments required here are presented in §4; a
+ background citation alone is not represented as direct application of a theorem from those
+ papers.
+
+ Input to a consequence in catalogue 042. The relevant section of Every complex K3 surface is
+ Oka explicitly uses the present Theorem 1.1 in the class VII part of Corollary 10.2. It brings
+ minimal class VII surfaces with          into the Kato classification and combines this with
+ established Oka criteria. This is not an input to the K3 theorem, nor to the Enriques or Kodaira-
+ dimension-zero parts of the corollary.
+
+ [OpenAI26k3, Corollary 10.2, p. 54]
+
+
+
+
+060 / 01                                                                                             13
+OpenAI Math Digest · 060
+
+
+
+
+ 4. Return to the sources
+      • Theorem 1.1 · p. 1 — Hypotheses and every shell conclusion
+
+      • Lemma 3.1 · pp. 8–9 — Torsion at the seam and many relative classes
+
+      • Propositions 4.8, 4.10–4.11 · pp. 17–20 — Index one, end frames, and the zero negative
+           coefficient
+
+      • Theorem 5.2; Propositions 5.3–5.4 · pp. 23–26 — Fixed weighted spaces and residue
+           obstruction
+
+      • Proposition 6.3; Corollary 6.4 · pp. 30–32 — The target-height-slab estimate
+
+      • Lemma 6.5; Theorem 6.6 · pp. 32–34 — Excluding planes with one fixed coefficient bundle
+
+      • Lemmas 7.1–7.2; Proposition 7.3; Lemma 7.4 · pp. 34–37 — Locally finite divisors and
+           compact test classes
+
+      • Proof of Theorem 1.1 · p. 37 — Final passage to a holomorphic shell and connected
+           complement
+
+ External comparisons cover Enoki’s Main Theorem and note (3) (print p.454 / PDF p.2), the DOT
+ Main Theorem and shell definition (print pp.283–284 / PDF pp.1–2), Teleman’s formulations
+ (print pp.1756, 1758 / PDF pp.9, 11), and Hemasundar Theorem 1.1 (print p.77 / PDF p.1).
+ Complete original-source comparison remains open for Donaldson’s theorem, Harvey–Shiffman
+ cycle convergence, and the bounded-strip Trudinger formulation.
+
+ The hypotheses and every conclusion of the main theorem, the route above through §§2–7, and
+ the use in Corollary 10.2 of catalogue 042 were read and compared in the manuscript bodies.
+ The account distinguishes the relative class   from its ordinary image       , compactness of
+ components from compactness of a whole divisor, and fixed weights and coefficient bundles from
+ individual mass constants. The complete analytic estimates and proofs of external inputs have
+ not been independently verified; no expert peer review or formal verification is claimed.
+ Corollaries 1.2–1.3 are not included among this article's main results, and an overview of all their
+ conclusions is outside its scope.
+
+
+
+
+060 / 01                                                                                            14
+

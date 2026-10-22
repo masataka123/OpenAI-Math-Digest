@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "author-key",
+  "catalogId": "060",
+  "sources": {
+    "P": {
+      "recordFile": "../global-spherical-shells/sources.json",
+      "recordId": "self",
+      "pagination": "same"
+    },
+    "OpenAI26k3": {
+      "recordFile": "../global-spherical-shells/sources.json",
+      "recordId": "OpenAI26k3"
+    },
+    "OVERVIEW": {
+      "recordFile": "../../../coordination/catalog-060/inventory.json",
+      "recordId": "overview"
+    }
+  },
+  "citations": {
+    "gss": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "oka": {
+      "source": "OpenAI26k3",
+      "locations": [
+        {
+          "result": "Corollary 10.2",
+          "printed": "54",
+          "pdf": "54"
+        }
+      ]
+    },
+    "catalog": {
+      "source": "OVERVIEW",
+      "locations": [
+        {
+          "result": "060",
+          "printed": "8",
+          "pdf": "8"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": []
+}

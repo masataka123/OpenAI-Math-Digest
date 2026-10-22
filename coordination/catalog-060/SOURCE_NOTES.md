@@ -1,0 +1,11 @@
+# 060 原典・公式収録の固定
+
+公式リポジトリのmainをGitHubコネクターで照会し、そのcommitへ公式CONTENTS.md、overview.tex/pdf、060論文PDF・README、042論文PDFを固定した。参照commit・URL・ページ数・SHA-256はinventory.jsonとSOURCE_MANIFEST.jsonを参照する。GitHubコネクターのbinary非対応により、PDFの取得には公開raw URLを用いた。
+
+公式overviewの060は「Algebraic and complex geometry」に属し、同分野の掲載順はoverview.texから抽出したinventory.jsonのsubjectCatalogIdsに保持した。公式名称はCONTENTSとoverviewで一致し、060には対象論文1本が掲載されている。overview紙面の060と1本のリンク、および頁フッターはsources/overview-p8.pngで本部が目視確認した。
+
+042が引用した固定版と今回の版の違いは、旧commitから両方の論文PDFを改めて取得して直接比較した。比較結果はSOURCE_MANIFEST.jsonのcomparisonsを参照する。版のファイル同一性は本部の確認であり、引用結果・用途・適用条件はAstraの内容点検記録を参照する。
+
+本部で取得したDOTとTelemanの出版社PDF・テキストはsources/external/、取得の原記録はEXTERNAL_ACQUISITION.json。Astraが独自に取得した外部文献は担当のsources.jsonまたはreviewsの取得記録を参照し、複数の文書へ数値・ハッシュを転記しない。
+
+数学の読解・適用条件・版ごとの確認範囲は、記事sources.json、status.md、reviews/CONTENT_REVIEW.mdを参照する。取得できたことを数学的照合済みと扱わない。

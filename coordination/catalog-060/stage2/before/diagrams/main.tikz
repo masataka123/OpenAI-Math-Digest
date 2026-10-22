@@ -1,0 +1,56 @@
+\node[result] (start) at (0,0) {
+ \heading{1}{球殻判定で場合を分ける}{Separate the known shell case}
+ $X$ \Tx{連結・極小・コンパクト複素曲面}{connected, minimal, compact complex surface},
+ $b_1=1,\ \kappa=-\infty,\ b=b_2>0$.\\[4pt]
+ \Tx{非零有効因子 $C$ に $C^2=0$}{An effective $C\ne0$ has $C^2=0$}
+ $\ \Longrightarrow\ $\Tx{大域球殻}{global spherical shell}.\\[4pt]
+ {\fontsize{9}{12}\selectfont\Cite{teleman}}\\[4pt]
+ \Tx{以下はすべての非零有効因子に $C^2<0$ の枝。}{Continue below when every nonzero effective divisor has $C^2<0$.}
+};
+\node[card,below=1.8cm of start] (classes) {
+ \heading{2}{切断して多数の相対類を保つ}{Cut and retain many relative classes}
+ $Y\to X,\quad X_n=Y/\langle T^n\rangle,\quad d\ge nb-C_0$,\\[3pt]
+ $e_i\in H_c^2(Y;\mathbf Z),\qquad e_i^2=K_Y\cdot e_i=-m_i<0$.
+};
+\flow{start}{classes}{\Tx{負定値格子の基底元の和を切断面上で自明化する}{Trivialize sums from the negative definite lattice at the seam}\\[3pt]\Cite{classes}};
+\node[card,below=2cm of classes] (sections) {
+ \heading{3}{指数1から零因子へ}{Pass from index one to a zero divisor}
+ $\operatorname{ind}\bar\partial_{E_i}=1,\quad s_i\to1\ (h\to+\infty),\quad s_i\to0\ (h\to-\infty)$.\\[3pt]
+ $D_i=(s_i=0),\quad [D_i]=j(e_i),\quad \sup_{D_i}h<\infty$.\\[3pt]
+ \Tx{因子は局所有限。成分のコンパクト性はまだ未確定。}{The divisor is locally finite; component compactness is still to be proved.}
+};
+\flow{classes}{sections}{\Tx{重み付き消滅・正端一意性と切除を使う}{Use weighted vanishing, positive-tail uniqueness, and excision}\\[3pt]\Cite{index}};
+\node[card,below=2.4cm of sections] (residue) {
+ \heading{4}{スカラー留数で開正規化を制限する}{Restrict open normalizations by scalar residues}
+ $\operatorname{Area}(D_i\cap Y_\ell)\le C_i e^{A\ell},\qquad \gamma>2A+10$.\\[3pt]
+ $H^{2,1}_{-\varepsilon,\beta}(Y,\mathcal O)=0$
+ \Tx{と留数独立性}{and residue independence}\\[3pt]
+ $\Longrightarrow\quad R\subset\mathbf P^1,\quad
+ R\text{ \Tx{非コンパクト}{noncompact}}\Longrightarrow R\simeq\mathbf C$.
+};
+\flow{sections}{residue}{\Tx{$L^2$ 微分を排除し、円筒評価で $dz/z$ も排除する}{Exclude $L^2$ differentials, then use the cylinder estimate on $dz/z$}\\[3pt]\Cite{residues}\\[3pt]\Cite{cylinder}};
+\node[card,below=2.3cm of residue] (compact) {
+ \heading{5}{同じ束・同じ重みで平面を排除する}{Exclude planes in one fixed weighted bundle}
+ $B_k=T^kB\not\subset D_i,\quad \alpha_k=(f_k^*s_i)\,dz$.\\[3pt]
+ $H=e^g\sigma=O(|z|^{-1}),\quad
+ \operatorname{Mass}((f_k)_*\alpha_k;Y_\ell)\le C_k e^{A\ell}$.\\[3pt]
+ \Tx{固定した有限次元}{One fixed finite-dimensional}
+ $H^{2,1}_{-\varepsilon,\beta}(Y,E_i)$\\[3pt]\Tx{に無限独立族は入らない。}{Infinitely many independent residue classes are impossible.}\\[3pt]
+ $\Longrightarrow\quad$\Tx{各成分はコンパクトで有理正規化を持つ}{every component is compact rational}.
+};
+\flow{residue}{compact}{\Tx{周期ゲージと2度目の円筒評価。$\varepsilon>0$, $\beta>\max(A,\varepsilon)$を固定}{Periodic gauge and a second cylinder estimate; fix $\varepsilon>0$, $\beta>\max(A,\varepsilon)$}\\[3pt]\Cite{compactness}};
+\node[card,below=2cm of compact] (count) {
+ \heading{6}{Laurent交点形式で曲線を数える}{Count curves by the Laurent intersection form}
+ $\Lambda=\mathbf Q[t,t^{-1}],\quad P(t)=(\sum_k\langle e_i,S_!^ke_j\rangle t^k)_{ij}$.\\[3pt]
+ $\det P(1)\ne0,\quad d\ge nb-C_0,\quad r<b\Longrightarrow nr<d\ (n\gg0)$.\\[3pt]
+ \Tx{軌道数不足が非退化性に矛盾。曲線類の独立性も併用。}{Too few lift orbits contradict nonsingularity; also use curve-class independence.}\\[3pt]
+ $\Longrightarrow\quad$\Tx{有理曲線がちょうど $b$ 本}{exactly $b$ rational curves}.
+};
+\flow{compact}{count}{\Tx{コンパクト試験類を局所有限因子と交差させる}{Pair compact test classes with locally finite divisors}\\[3pt]\Cite{count}};
+\node[result,below=2.8cm of count] (shell) {
+ \heading{7}{正則球殻と補集合条件を回収する}{Recover the holomorphic shell and its complement}
+ $S^3\subset U\subset\mathbf C^2\setminus\{0\},\quad
+ \varphi:U\overset{\sim}{\longrightarrow}\Sigma\subset X$.\\[3pt]
+ $U,\Sigma$ \Tx{は開集合、$X\setminus\Sigma$ は連結}{are open, and $X\setminus\Sigma$ is connected}.
+};
+\flow{count}{shell}{\Tx{曲線判定の全仮定を満たし、球殻の定義まで使う}{Apply the curve criterion, including the full shell definition}\\[3pt]\Cite{dot}\\[3pt]\Cite{finish}};

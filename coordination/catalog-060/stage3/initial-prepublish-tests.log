@@ -1,0 +1,88 @@
+✔ nef route does not incorrectly require the separate volume branch (5.08375ms)
+✔ the final claim requires both branches in prerequisite order (0.303417ms)
+✔ unknown inputs and cyclic logical dependencies fail visibly (1.491625ms)
+✔ bilingual entries and cited references stay connected (2.206459ms)
+✔ 033 registers five papers in official order without moving the 034 source snapshot (2.861584ms)
+✔ retained connection records distinguish 12 inputs and one premise from alternatives (0.430208ms)
+✔ 033 bilingual sections, 44 retained article figures and relative article links survive rendering (706.705917ms)
+✔ 033 guide uses the common inventory and retains each result-use record once (0.738083ms)
+✔ catalogue summaries cover the official inventory once, in order, in both languages (1.355291ms)
+✔ every connection resolves to a source, application and reading record (1.79975ms)
+✔ 063 uses its pinned single manuscript and preserves official field order (1.261209ms)
+✔ 063 overview, article and external-input records resolve to the same bilingual anchors and assets (272.500458ms)
+✔ synthesis explains every recorded connection and covers all 14 papers in linked diagrams (4.561875ms)
+✔ published overview diagrams have matching bilingual link targets with accessible labels (9.152166ms)
+✔ browser inspection requires an explicit three-digit catalogue (1.306875ms)
+✔ registered papers determine bilingual desktop/mobile coverage without fixed paper counts (7.472125ms)
+✔ cached scan matches legacy links, Unicode anchors, SVG glyphs, assets and language switches (75.225ms)
+✔ failure diagnostics and duplicate broken references are preserved (5.336375ms)
+✔ a second invocation detects removed anchors and deleted assets (no persistent cache) (4.5745ms)
+✔ CLI used by GitHub Actions exits nonzero for a broken link (829.072625ms)
+✔ author-key citations stay compact in both languages and TeX without changing legacy output (4.581958ms)
+✔ printed page numbers are distinguished from PDF destinations (0.223583ms)
+✔ ranges and unknown citations fail rather than silently produce plausible references (0.8475ms)
+✔ managed citation markers preserve shared source-line and article structure (129.93975ms)
+✔ every registered new catalogue uses checked citations and fresh diagram outputs (999.797708ms)
+✔ Japanese and English cite the same records and TeX shares their readable names (1.27425ms)
+✔ generated SVG links keep PDF page positions and the source sets declared on each diagram (3.259791ms)
+✔ publication registry discovery excludes unregistered drafts but explicit discovery retains them (51.832959ms)
+✔ all supplied comics work without any normal catalogue or article (1.459834ms)
+✔ official subject membership orders the 36 supplied comics without adding omitted numbers (0.70125ms)
+✔ only existing normal articles receive corresponding article links (0.119083ms)
+✔ unpublished comics are absent unless preview is explicitly enabled (0.122292ms)
+✔ registration supports ordered image arrays and prevents false author attribution (1.557125ms)
+✔ broken catalogue, target-source, image path and duplicate registrations fail early (0.46925ms)
+✔ an author supplement can be added without being required for other comics (0.170541ms)
+✖ all registered source and optimized image files exist (6.27225ms)
+✔ new and revised catalogues have official inventories and bilingual guides for every owned article (2163.473959ms)
+✔ missing roles, reference lists, reading purposes and proof targets are rejected (1.727375ms)
+✔ one-paper inventory retains all columns and rejects incomplete rows or wrong official order (0.375625ms)
+✔ internal references are unprefixed; external references carry defined keys and readable names (0.304208ms)
+✔ main-theorem proofs and the statements of proof targets cannot be omitted (1.186708ms)
+✔ booklets internalize only the current catalogue and its papers, preserving cross-catalogue source links (9.180625ms)
+✔ booklet print view retains every connection and removes controls and duplicate audit only (2.5385ms)
+✔ official-order table rows retain article anchors in print entries (1.469083ms)
+✔ reruns preserve manual notes and old handoffs, while new failure is never marked approved (20.273625ms)
+✔ handoff retains the selected runtime and runnable retry without inventing model or human review approval (1.428917ms)
+✔ artifact summaries use selected bilingual edition and actual browser outcomes; absent evidence stays absent (150.356667ms)
+✔ unexpected runner exception is timed and recorded as a failed step (0.537208ms)
+✔ requires one explicit registered-format catalogue and rejects mistyped options (1.522792ms)
+✔ current PDF is reused without PDF rendering or a second build; browser inspection still runs (4.19725ms)
+✔ stale PDF generation, second build and final check always run sequentially (1.810875ms)
+✔ build and environment failures stop dependent work and record a retry command (1.427084ms)
+✔ unexpected PDF check failures never trigger destructive regeneration, even with force (1.686292ms)
+✔ explicit regeneration runs when current, while link failures leave a failed report (0.702208ms)
+✔ PDF runtime uses project venv/settings and respects explicit environment overrides (8.227208ms)
+✔ browser failure prevents approval and records the gallery location (2.125083ms)
+✔ Schnell structure preserves mathematical statements and source links (39.446167ms)
+✔ Japanese and English headings share section anchors (26.496792ms)
+✔ public article links remain local in previews and print editions (12.042417ms)
+✔ multiple inline TeX figures have unique IDs and intact citations (5.91275ms)
+✔ older introductions and both math syntaxes are retained (2.608084ms)
+✔ missing diagrams stop the build instead of publishing an empty figure (4.476042ms)
+✔ proof-overview navigation retains the result number from the heading (1.315375ms)
+✔ field, catalogue and manuscript references resolve without duplicate records (1.240083ms)
+✔ the first reading route connects both ways and supports shared catalogues (0.433584ms)
+ℹ tests 65
+ℹ suites 0
+ℹ pass 64
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2583.136834
+
+✖ failing tests:
+
+test at scripts/comics.test.mjs:61:1
+✖ all registered source and optimized image files exist (6.27225ms)
+  Error: ENOENT: no such file or directory, access 'assets/comics/catalog-032/original/Catalog_032.png'
+      at async access (node:internal/fs/promises:664:10)
+      at async TestContext.<anonymous> (file:///private/tmp/catalog060-release-ob3ek0fc/scripts/comics.test.mjs:63:3)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'access',
+    path: 'assets/comics/catalog-032/original/Catalog_032.png'
+  }
