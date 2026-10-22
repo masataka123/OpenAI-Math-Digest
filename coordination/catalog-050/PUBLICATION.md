@@ -24,4 +24,16 @@
 
 ## 公開・配信の結果
 
-実施中。公開commit、Actions、実配信の同一性、画面確認と保全結果を完了後に追記する。
+第3段階完了。公開commitは[`61634a438452ab557ddff68820bf7edb6d24d3e1`](https://github.com/masataka123/OpenAI-Math-Digest/commit/61634a438452ab557ddff68820bf7edb6d24d3e1)。[GitHub Actions](https://github.com/masataka123/OpenAI-Math-Digest/actions/runs/39716123634)のbuild・deployがともに成功。原記録はstage3/actions-run.json・actions-jobs.json・actions-build.json。
+
+公開したcommitをgit archiveで別フォルダに展開し、共通のAstro構成でビルドした。配信HTML、参照するスタイル、対象TeX/SVG、日英PDFの応答が、そのビルドと検査済み公開資産に一致した。照合対象と結果はstage3/live-resources.json。PDFは第2段階で全紙面を確認した版と同じで、再生成していない。
+
+日英PC/375pxのカタログ・記事、034・Schnell・033 Orbifold Iitakaの見本画面を確認。数式・画像・横幅、公式順の共通表、PDF導線、図の拡大・全体表示・閉じる操作・引用リンク、スクロール後の言語切替とアンカー保持、トップ→分野→050→記事の導線が成功した。対象画面と見本の全ページ画像は、第2段階の目視確認済み画像とRGB画素が一致。stage3/live-browser.json・render-comparison.json・screens/を参照。本部rootはlive-review-contact.jpgも目視し、見出し、PDF入口、主張・引用欄の表示を受領した。
+
+最初の手元ビルドとの照合では、未公開の漫画試作を含む共有作業場と公開commitでスタイルの配置・資産名が異なった。公開commitだけのビルドへ基準を分け、対象HTML本文とスタイル以外のheadが一致し、適用するスタイルの宣言集合も一致することを確認した。初回結果はstage3/live-resources-initial-workspace.json、切り分けはbuild-comparison.json・style-comparison.json。数学本文や公開資産の修正は不要だった。
+
+画像保存名をページごとに整理した再検査では、案内役の遅延読込み画像をロード完了前に欠落と判定した回がある。stage3/live-browser-before-image-ready.jsonに保存し、スクロールと画像デコードを待ってから判定するよう今回の検査側を修正した。最終回は全条件で成功し、その画像を採用した。サイトの画像を差し替えた記録ではない。
+
+公開差分はstage3/commit-scope.json、他作業の保全はstage3/preservation.json。共有作業場の漫画用スタイルに並行変更を観測したが、今回の処理では読取のみで、変更・stage・commit対象に含めていない。PDF版情報の既存値と作業場の書式差分も保持した。
+
+公開確認記録は別の`[skip ci]` commitで保存する。記録だけのcommitでサイト内容を変えず、配信確認の対象は上記公開commitである。公開工程の残作業はない。追加改訂時は、最新Git状態と本書・CONTENT_REVIEW.mdを確認し、数学的変更は指定Astraへ戻す。

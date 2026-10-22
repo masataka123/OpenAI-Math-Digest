@@ -1,0 +1,14 @@
+{
+  "baseline": "unrelated-baseline.json",
+  "changedOrMissing": [
+    "src/styles/comics.css"
+  ],
+  "preexistingPdfFormattingRetained": true,
+  "baselineComparisonOnly": true,
+  "observation": "共有作業場のsrc/styles/comics.cssに並行変更を観測。今回の処理は同ファイルを読取・照合のみ行い、変更・stage・commit対象に含めていない。バイト一致とは報告しない。",
+  "outsideScopeCommitted": [],
+  "ownPublicationScopePreserved": true,
+  "allBaselineFilesUnchanged": false,
+  "passed": true,
+  "passedMeaning": "今回の公開差分が担当範囲内であり、他作業を上書きせず、既存PDF版情報の値と作業場差分を保持"
+}
