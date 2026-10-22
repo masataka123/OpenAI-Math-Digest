@@ -50,3 +50,7 @@
 ## 後続の第2段階（2026-10-22）
 
 ユーザーの再開指示を受け、第2段階の組込み・日英PDF・公開前検査を完了した。最新の図はAstraの配置改訂と別担当点検を受領。第1段階の本文・確認範囲を維持し、公開前で停止。最新の再開先は[STAGE2_HANDOFF.md](STAGE2_HANDOFF.md)とPREPARATION_REVIEW.mdを参照する。本書の第1段階時点の記録は履歴として保持する。
+# 後続第3段階の完了案内
+
+2026-10-22、ユーザーの公開指示により公開・反映確認を完了した。最新状態は[PUBLICATION.md](PUBLICATION.md)と[stage3/final-state.json](stage3/final-state.json)。以下の第1段階・第2段階の引継ぎ本文は履歴として保持する。
+

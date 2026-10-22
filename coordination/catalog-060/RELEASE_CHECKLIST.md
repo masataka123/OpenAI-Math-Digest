@@ -8,17 +8,17 @@
 - MODEL_PROVENANCEの場所（本部Sol 6.1 / xhigh、数学執筆・別担当点検Astra 6 / high）：MODEL_PROVENANCE.json
 - 構成：single
 - 現在のユーザー依頼範囲：第3段階。検査済み版の公開・反映確認。
-- 状態：第3段階進行中。第2段階の確認済み版を同一性照合して使用。公開結果はPUBLICATION.mdへ記録する。
+- 状態：第3段階完了・公開確認済み。第2段階の同一版を公開し、Actionsと公開URLを確認。PUBLICATION.mdとstage3/final-state.jsonを参照。
 
 ## 段階と停止の記録
 
-- 現在の段階：第3段階（公開・反映確認）。
+- 現在の段階：第3段階完了（公開・反映確認済み）。
 - 運用：第1・第2段階をそれぞれ報告して停止後、今回の公開指示を受領して再開。
 - 記事ごとの執筆担当／照合担当・確認範囲：MODEL_PROVENANCE.json、reviews/CONTENT_REVIEW.md、reviews/REVIEWED_FILES.json参照。
 - [x] 本部と数学担当のモデル・思考量を明示指定し、根拠を記録。単論文でも数学制作をSol本部が兼任していない。
 - [x] 第1段階：内容と成果物を確認し、未確認事項・作業場所・残作業・再開手順を記録して報告。標準運用では停止した。
 - [x] 第2段階：日英サイト・PDFと必要な検査を完了。軽微な体裁調整を際限なく追加せず、公開準備の結果と再開手順を報告。標準運用では停止した。
-- [ ] 第3段階：現在の公開指示を確認し、対象変更の公開と反映確認を記録した。
+- [x] 第3段階：現在の公開指示を確認し、対象変更の公開と反映確認を記録した。PUBLICATION.md、stage3/receipt.jsonとfinal-state.json参照。
 
 ## 内容と成果物（記事担当・カタログ本部）
 
@@ -81,11 +81,11 @@ npm run catalog:prepare -- --catalog NNN
 
 ## 公開（現在のユーザー依頼の範囲でサイト本部が実施）
 
-- [ ] 公開する差分・最新Git状態を確認し、通常のcommit・pushで反映。他担当の成果物を消していない。
-- [ ] 同一版の内容・目視記録とPDFを照合して参照。公開だけを理由に再執筆・再生成・同じ記録の転記をしていない。変更した範囲は再検査した。
-- [ ] GitHub Actionsのbuild/deploy成功を確認。
-- [ ] 公開URLで日英カタログ・記事・画像・PDFが今回の版に更新されたことを確認。
-- [ ] 公開URL・commit・確認結果・残る数学的未確認を報告。
+- [x] 公開する差分・最新Git状態を確認し、通常のcommit・pushで反映。他担当の成果物を消していない。stage3/commit-scope.json、evidence-pushes.json、preservation.json参照。
+- [x] 同一版の内容・目視記録とPDFを照合して参照。公開だけを理由に再執筆・再生成・同じ記録の転記をしていない。stage3/preflight.json、candidate-page-identity.json、release-checks.json参照。
+- [x] GitHub Actionsのbuild/deploy成功を確認。stage3/actions-final.json、actions-jobs-final.json参照。
+- [x] 公開URLで日英カタログ・記事・画像・PDFが今回の版に更新されたことを確認。stage3/live-resources.json、live-browser.json、visual-review.json参照。
+- [x] 公開URL・commit・確認結果・残る数学的未確認を報告。PUBLICATION.mdとstage3/final-state.json参照。
 
 公開が未依頼ならこの節は「依頼範囲外」と明記し、公開前の作業まで完了させる。機械的検査の成功を全証明の独立検証や専門家査読済みと表現しない。
 
@@ -95,7 +95,7 @@ npm run catalog:prepare -- --catalog NNN
 |---|---|---|---|
 | サイト登録・公開用図配置 | 第2段階サイト本部 | 完了 | STAGE2_HANDOFFとPREPARATION_REVIEW |
 | 日英冊子PDF・共通公開前検査 | 第2段階サイト本部 | 完了 | PREPARATION_REVIEWの最終受領回、stage2/runsの原記録 |
-| 公開・反映確認 | 第3段階サイト本部 | 今回依頼範囲外 | 公開指示後に対象差分を反映 |
+| 公開・反映確認 | 第3段階サイト本部 | 完了 | PUBLICATION.md、stage3/の公開・配信・保全記録 |
 | 明記した外部原典照合の保留 | 数学担当Astra | Donaldson、Harvey–Shiffman、Trudingerの指定箇所 | CONTENT_REVIEWと記事sourcesを参照。確認範囲を過大表示しない |
 
 ## 制作セット1.4の必須形式
@@ -133,4 +133,4 @@ npm run catalog:prepare -- --catalog NNN
 
 組込み、全引用検査、既存テスト、ビルド、リンク、日英PC/375pxと指定見本、日英PDFの生成・リンク・全紙面を確認した。共通実行と目視の判定はPREPARATION_REVIEWの最終回、対象版はstage2/FINAL_IDENTITY.jsonと参照元を使用する。図の配置改訂はAstra執筆と別Astra点検の記録に基づく。独立中間命題を証明対象とする別節はなく、主定理の一証明節を持つ。
 
-未チェックの公開節は第3段階で実施する。第1段階からの数学的未照合範囲は継続する。公開準備完了は証明の正しさの認定や公開確認済みを意味しない。
+第2段階で保留した公開節は、その後の第3段階で実施・確認した。PUBLICATION.mdとstage3/の原記録を参照。第1段階からの数学的未照合範囲は継続し、公開確認の成功を証明の正しさの認定と扱わない。
