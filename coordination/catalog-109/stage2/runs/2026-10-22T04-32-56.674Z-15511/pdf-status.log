@@ -1,0 +1,8 @@
+file:///Users/iwai/Desktop/GitHub/OpenAI-Math-Digest/scripts/build-catalog-pdf.mjs:72
+  if(prior?.contentHash!==digest)throw Error(`PDF ${c.id}/${lang} is stale: run npm run pdf:catalog after building, then rebuild the website.`);
+                                       ^
+
+Error: PDF 109/ja is stale: run npm run pdf:catalog after building, then rebuild the website.
+    at file:///Users/iwai/Desktop/GitHub/OpenAI-Math-Digest/scripts/build-catalog-pdf.mjs:72:40
+
+Node.js v24.19.0
