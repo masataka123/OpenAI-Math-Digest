@@ -1,0 +1,780 @@
+{
+  "startedAt": "2026-10-23T11:15:26.674391+00:00",
+  "userScope": "第二段階をお願いします. — integration, bilingual PDFs and prepublication checks; stop before commit/push",
+  "branch": "main",
+  "head": "a79dee8ad7d57986194c37bdfec10f1eaafec3da",
+  "trackedChanges": [],
+  "reviewManifestsMatch": true,
+  "sharedFileBaseline": {
+    "src/data/site.mjs": "3ffccd2e2b88dc912a29a2d508a5e342ab66f175e1180f75bc72c287cbaedd57",
+    "src/data/pdf-editions.json": "2af9820cae2d0bf3bfa07d659924fa113798ce30a51c6435e7d094a3cc98e001",
+    "src/data/catalog-subjects.json": "5a2e1691ed7f20422c721f917bfcf1fdf7e7eb8107ed551c9a12572fcb78e217",
+    "src/components/CatalogMarkdownOverview.astro": "3ae553426bed71125f644e166ee1ed3561534eff066cfe2a6716c39120889cc9"
+  },
+  "pdfEditionBaseline": {
+    "338": {
+      "ja": {
+        "file": "catalog-338-ja.pdf",
+        "date": "2026-10-12",
+        "pages": 18,
+        "bytes": 1206051,
+        "sha256": "ad1ab83ab81efa601f5d9023d77ad0e448f799b5be1e5e1c95a4831f0faca523",
+        "contentHash": "6b904f258825b96301d28f61cbd1c69e9e633eba1b9412a48ff7b2a44d169b32",
+        "chapters": 2,
+        "mathExpressions": 184,
+        "figures": 3
+      },
+      "en": {
+        "file": "catalog-338-en.pdf",
+        "date": "2026-10-12",
+        "pages": 20,
+        "bytes": 858783,
+        "sha256": "f8ff99d4ec0fee9459c783d885be78fd5aa8fca4f7844f751af4bf768ca94d10",
+        "contentHash": "6f9782837e55cc00e1af8426598dd1d5735237f896da2876fd0d8ba072b03901",
+        "chapters": 2,
+        "mathExpressions": 184,
+        "figures": 3
+      }
+    },
+    "034": {
+      "ja": {
+        "file": "catalog-034-ja.pdf",
+        "date": "2026-10-11",
+        "pages": 204,
+        "bytes": 10277705,
+        "sha256": "72dd63619b44288f8cbe268b56fc13c11841724f74dc129f9222ac96d75ff693",
+        "contentHash": "0f9b65f8dc4b761abfd1d7f060212eba45dd39946f34e7bf342cb91796c6e94f",
+        "chapters": 15,
+        "mathExpressions": 1922,
+        "figures": 54
+      },
+      "en": {
+        "file": "catalog-034-en.pdf",
+        "date": "2026-10-11",
+        "pages": 228,
+        "bytes": 8235546,
+        "sha256": "0ac9b5a247f10980e97b7b6a8449204178aab3369935ee5b619043d82cb7bc04",
+        "contentHash": "6acfb46f117ca8e2a73bd03c6b00b16a029aed28ab52698a6eeef87bebe84500",
+        "chapters": 15,
+        "mathExpressions": 1875,
+        "figures": 54
+      }
+    },
+    "033": {
+      "ja": {
+        "file": "catalog-033-ja.pdf",
+        "date": "2026-10-11",
+        "pages": 93,
+        "bytes": 5236349,
+        "sha256": "0a90361c03cb36e9dedb806aa7e4c58d582e95f383fadec72fe247e717d4e802",
+        "contentHash": "4154f64e0994eb8c1cbde002f3bacc143f79d8baf552ab4a6bda41f817660396",
+        "chapters": 6,
+        "mathExpressions": 915,
+        "figures": 22
+      },
+      "en": {
+        "file": "catalog-033-en.pdf",
+        "date": "2026-10-11",
+        "pages": 106,
+        "bytes": 4186595,
+        "sha256": "f164201502ef88de008659a6d3310e2ffd992f7f86eafcf4a1a21ebee6d30910",
+        "contentHash": "db8c1ffa3aef2cb4155a5edb0a03ac66bb69e0f1eade03c2575a7bae84e401cf",
+        "chapters": 6,
+        "mathExpressions": 904,
+        "figures": 22
+      }
+    },
+    "063": {
+      "ja": {
+        "file": "catalog-063-ja.pdf",
+        "date": "2026-10-09",
+        "pages": 22,
+        "bytes": 1264118,
+        "sha256": "037f648e12c86f849ebbff94d94119ef0d372c4f21696b682dcacd78cb81bc9a",
+        "contentHash": "4e91ae52821b2061e501f75271fb76b7febdbbb2f416c2a60ebef32d8ea7f5cd",
+        "chapters": 2,
+        "mathExpressions": 173,
+        "figures": 5
+      },
+      "en": {
+        "file": "catalog-063-en.pdf",
+        "date": "2026-10-09",
+        "pages": 23,
+        "bytes": 878494,
+        "sha256": "50f89a45daf0c610db1670df6e92ed55c5bb497eee87085f59259715601f2e38",
+        "contentHash": "5313f522ac328b4d543a810b78fbeffff98ddb94c20d92d510adfa5a7da4203d",
+        "chapters": 2,
+        "mathExpressions": 174,
+        "figures": 5
+      }
+    },
+    "038": {
+      "ja": {
+        "file": "catalog-038-ja.pdf",
+        "date": "2026-10-10",
+        "pages": 18,
+        "bytes": 1200167,
+        "sha256": "671f32ac0fd64f1e6ef2714e455e582a526601e1f8bc93d797b2ee03beeb015b",
+        "contentHash": "d78d1729e7989ee36b5d0b1abc5ad6b5c913b71b7c20fa06ecf0ccb46eca9a58",
+        "chapters": 2,
+        "mathExpressions": 257,
+        "figures": 4
+      },
+      "en": {
+        "file": "catalog-038-en.pdf",
+        "date": "2026-10-10",
+        "pages": 22,
+        "bytes": 871015,
+        "sha256": "24105f42b58547a3c35882fb63ed5e07ee4ac68cecc55aa90888e2fd4b498f51",
+        "contentHash": "48334980d80f01e89f30265a58a324e6f826d1d29da4f4053050a95193f08dfd",
+        "chapters": 2,
+        "mathExpressions": 256,
+        "figures": 4
+      }
+    },
+    "051": {
+      "ja": {
+        "file": "catalog-051-ja.pdf",
+        "date": "2026-10-10",
+        "pages": 23,
+        "bytes": 1294846,
+        "sha256": "ef362fd9c3b534ebb2ab5c98f88dc2221263833ba662159dcc2e968ead4f1b06",
+        "contentHash": "d0d39c2cdd807c0a03346e58ebde7f92d11cd20b1e3f490f0ee77973e87c07f6",
+        "chapters": 2,
+        "mathExpressions": 193,
+        "figures": 7
+      },
+      "en": {
+        "file": "catalog-051-en.pdf",
+        "date": "2026-10-10",
+        "pages": 24,
+        "bytes": 914818,
+        "sha256": "58578ae8f2456c8170307b77bf94400b8509d4538485316a0ed78e2e72a9e461",
+        "contentHash": "a3380f5ffeb8251c6076e469bac52b1ad6c32a8f57fb57284f3a583a1f946a41",
+        "chapters": 2,
+        "mathExpressions": 192,
+        "figures": 7
+      }
+    },
+    "042": {
+      "ja": {
+        "file": "catalog-042-ja.pdf",
+        "date": "2026-10-10",
+        "pages": 24,
+        "bytes": 1219672,
+        "sha256": "f6d174aa8b21e6a7f1b010b36a3e6d5f3d6a0d9635616d108fbd14fd0d4d3dc7",
+        "contentHash": "b97aad753fc3ca40b786c3633e6129bd08b5b0f03a71df85811dec59ca337b2c",
+        "chapters": 2,
+        "mathExpressions": 165,
+        "figures": 6
+      },
+      "en": {
+        "file": "catalog-042-en.pdf",
+        "date": "2026-10-10",
+        "pages": 24,
+        "bytes": 775414,
+        "sha256": "ef4a8c8d1d1ee8a7e1667ac50a0eda8cf7a9594ca3560d9a7c8697d40e35afba",
+        "contentHash": "5f773a4d098f2b84b893e60231db7f1ead5d2c43e5f1c7634231c70dbdd11f88",
+        "chapters": 2,
+        "mathExpressions": 163,
+        "figures": 6
+      }
+    },
+    "057": {
+      "ja": {
+        "file": "catalog-057-ja.pdf",
+        "date": "2026-10-12",
+        "pages": 47,
+        "bytes": 2618830,
+        "sha256": "9935b8c8c40a0d400b4e527d4d9494b5b61c4bef011fa304191dad946db78cb4",
+        "contentHash": "bf5f207bafe89749f8442eac163739576f9cd6a022cf5eda4fadf4de6a6e706e",
+        "chapters": 4,
+        "mathExpressions": 466,
+        "figures": 16
+      },
+      "en": {
+        "file": "catalog-057-en.pdf",
+        "date": "2026-10-12",
+        "pages": 52,
+        "bytes": 1983570,
+        "sha256": "6a6549266760b31c54615b7676069b9883f32e08052392b4aaa1594be67d2ad4",
+        "contentHash": "e62bb714a5b070e6444516ab3c61b734d0ba18c91f9b3bc32e7a5d330cf8f287",
+        "chapters": 4,
+        "mathExpressions": 455,
+        "figures": 16
+      }
+    },
+    "068": {
+      "ja": {
+        "file": "catalog-068-ja.pdf",
+        "date": "2026-10-12",
+        "pages": 111,
+        "bytes": 5311961,
+        "sha256": "44bf796bfe91db7e3b59c86c9bef6c24ba43769487a36cb0da77b7c5c48950d1",
+        "contentHash": "195a5c0e202820368ffe7e924399d8a2f4d2dc88b19b04506504f1e5177152e8",
+        "chapters": 8,
+        "mathExpressions": 1238,
+        "figures": 36
+      },
+      "en": {
+        "file": "catalog-068-en.pdf",
+        "date": "2026-10-12",
+        "pages": 119,
+        "bytes": 4491503,
+        "sha256": "a60f5a9f9f111a138b981b72f2ffd8b40798bb215e26354aaa11a6d2e5147397",
+        "contentHash": "a1e0a73f2d91ad0c2dd28945959771706a30e35b889b93b1f256aff05652eed1",
+        "chapters": 8,
+        "mathExpressions": 1205,
+        "figures": 36
+      }
+    },
+    "037": {
+      "ja": {
+        "file": "catalog-037-ja.pdf",
+        "date": "2026-10-12",
+        "pages": 35,
+        "bytes": 2070502,
+        "sha256": "9ec6acbce3439b8f61420b553b25c49a6dd5754f943ed29a3ae75bca8102ca3b",
+        "contentHash": "f25ee3b5e45e65a1426933c144f0aa4227c906a5c5c1fa19a2594fcfae790a3b",
+        "chapters": 3,
+        "mathExpressions": 412,
+        "figures": 8
+      },
+      "en": {
+        "file": "catalog-037-en.pdf",
+        "date": "2026-10-12",
+        "pages": 41,
+        "bytes": 1606273,
+        "sha256": "bed4a2dcd6d9408692defe9f7a8c7f843e5abd29c89260f86510c7098a42ed28",
+        "contentHash": "cfb10342a744fb5f65eb6434db48128c381892eea5a03e58d58bd0b72a61b5f7",
+        "chapters": 3,
+        "mathExpressions": 401,
+        "figures": 8
+      }
+    },
+    "052": {
+      "ja": {
+        "file": "catalog-052-ja.pdf",
+        "date": "2026-10-13",
+        "pages": 28,
+        "bytes": 1654961,
+        "sha256": "b60422d72dcf52dc38c4ebad4d5b1ebd422b1019a5bef8f6f76cb850996be139",
+        "contentHash": "1286f84775d84f2be2c8f3f64b2a1ecbf287c23ee21a983b30a1a31842d04be6",
+        "chapters": 3,
+        "mathExpressions": 247,
+        "figures": 8
+      },
+      "en": {
+        "file": "catalog-052-en.pdf",
+        "date": "2026-10-13",
+        "pages": 32,
+        "bytes": 1170927,
+        "sha256": "627da28ece074863dc4dcc356baaf9ce6e3317872895728375a5d74d4d580803",
+        "contentHash": "f0b6527507dc08169fa5806d43a9a4503b6ae5c4506e43e127f50aed79c3085b",
+        "chapters": 3,
+        "mathExpressions": 247,
+        "figures": 8
+      }
+    },
+    "036": {
+      "ja": {
+        "file": "catalog-036-ja.pdf",
+        "date": "2026-10-13",
+        "pages": 56,
+        "bytes": 3102608,
+        "sha256": "da149dbb982db77cfd385cb3442c52f7d9957bb12fb3fe9cde99fa59e3cbb3dc",
+        "contentHash": "d2dec8c44c5d140ec0960a6b585511e53980b24417116a9f21f830c9714e4254",
+        "chapters": 5,
+        "mathExpressions": 681,
+        "figures": 16
+      },
+      "en": {
+        "file": "catalog-036-en.pdf",
+        "date": "2026-10-13",
+        "pages": 62,
+        "bytes": 2422806,
+        "sha256": "2fe690afc7c011b2d678a2cac73b5c5a1551e445c49233edc5232c2f0b9e53bf",
+        "contentHash": "2863528ff97cfe044b6e26a401d96f050c6a7252b7df89b467707848f658919e",
+        "chapters": 5,
+        "mathExpressions": 677,
+        "figures": 16
+      }
+    },
+    "046": {
+      "ja": {
+        "file": "catalog-046-ja.pdf",
+        "date": "2026-10-13",
+        "pages": 36,
+        "bytes": 1916952,
+        "sha256": "4a91c2a2eb56c7dbaff2409eacbef81c48aba568144bd223b32292bea39fb5b1",
+        "contentHash": "e2d93a979feea30984d9f57c6af8c52e81eb5cc22cf03aaf2bafca9f5f87fb31",
+        "chapters": 3,
+        "mathExpressions": 292,
+        "figures": 10
+      },
+      "en": {
+        "file": "catalog-046-en.pdf",
+        "date": "2026-10-13",
+        "pages": 37,
+        "bytes": 1315298,
+        "sha256": "86a3051618c7e5167621c9aa34c327432e0391678a873b9fed65a1fc5eba965a",
+        "contentHash": "2695f8037338307ed34b44a1a2c31fd663fd7bebb36e6ba9a0d6eb67552b06da",
+        "chapters": 3,
+        "mathExpressions": 282,
+        "figures": 10
+      }
+    },
+    "067": {
+      "ja": {
+        "file": "catalog-067-ja.pdf",
+        "date": "2026-10-13",
+        "pages": 20,
+        "bytes": 1260073,
+        "sha256": "13ed538970c23165ce063c5738799a1229ee80f88a8e290d9124f05eabfc80ba",
+        "contentHash": "9a129cd5a7b6c64c8b467d6899fa8d763f17db1e05bc709c45ea90485dd2789d",
+        "chapters": 2,
+        "mathExpressions": 263,
+        "figures": 6
+      },
+      "en": {
+        "file": "catalog-067-en.pdf",
+        "date": "2026-10-13",
+        "pages": 23,
+        "bytes": 863946,
+        "sha256": "c1c574616751e4730bfa64bdd7307be8f6e0242c3c28abbc37c056dbc4d37fb7",
+        "contentHash": "97087227ddf254d3f792df55b82b1099c5b974f625b7e301156717b9bb9aadab",
+        "chapters": 2,
+        "mathExpressions": 262,
+        "figures": 6
+      }
+    },
+    "039": {
+      "ja": {
+        "file": "catalog-039-ja.pdf",
+        "date": "2026-10-15",
+        "pages": 52,
+        "bytes": 2967073,
+        "sha256": "05ad9097646538d020efa2cfb01aaa4ac33c5bf8fa142688098c2dad49bcc8da",
+        "contentHash": "55107c3c2a91fbd65f68131bfac0e99ae38ee4a7c43363475ae1d5e2b9cd4193",
+        "chapters": 5,
+        "mathExpressions": 680,
+        "figures": 13
+      },
+      "en": {
+        "file": "catalog-039-en.pdf",
+        "date": "2026-10-15",
+        "pages": 57,
+        "bytes": 2377581,
+        "sha256": "9d4756ab85533d9e19d3eea28f4a9b0bd2be212a4000bea27ff314bf5b5ae57b",
+        "contentHash": "71e45487b0a19dd172151137d0e1ad37487ac1662c400d0a36e1ea5bdd9a37a5",
+        "chapters": 5,
+        "mathExpressions": 670,
+        "figures": 13
+      }
+    },
+    "004": {
+      "ja": {
+        "file": "catalog-004-ja.pdf",
+        "date": "2026-10-15",
+        "pages": 32,
+        "bytes": 1993857,
+        "sha256": "ac6bd45d03359d9ea00b8920f37e435d24ea7c83d865348df40d77e06b30027a",
+        "contentHash": "7a9e14e751b17bc55feee2d31b21ea18820637ab623184a5d3c94ed1596e3434",
+        "chapters": 3,
+        "mathExpressions": 318,
+        "figures": 8
+      },
+      "en": {
+        "file": "catalog-004-en.pdf",
+        "date": "2026-10-15",
+        "pages": 36,
+        "bytes": 1446792,
+        "sha256": "8c2aa11d0ef5f6603191a8f97e89a1191b61e45f6b7200a537a30dcb5369791b",
+        "contentHash": "84c6400f1fe6ecd9089c9b7bbe23846db1482ab5408c5567eaf42efba6699f95",
+        "chapters": 3,
+        "mathExpressions": 312,
+        "figures": 8
+      }
+    },
+    "246": {
+      "ja": {
+        "file": "catalog-246-ja.pdf",
+        "date": "2026-10-15",
+        "pages": 22,
+        "bytes": 1406791,
+        "sha256": "d2c6bb918f09dd78ee4b81915e6146a6e567b538fa54c759bc5137c751dfda3d",
+        "contentHash": "450ba6d2f08f3ff154370322d51cae309f1e625ff5b5b528aaff0f8e8313cfc0",
+        "chapters": 2,
+        "mathExpressions": 211,
+        "figures": 6
+      },
+      "en": {
+        "file": "catalog-246-en.pdf",
+        "date": "2026-10-15",
+        "pages": 24,
+        "bytes": 985932,
+        "sha256": "afcc0a2a6679162cb56d9ffb93a55dc72899f5b0a8ceef2343afd5a4709ccc80",
+        "contentHash": "a95636560f0ee414dbf042552b980c2189942c79d62b0177b288fd9e849632d8",
+        "chapters": 2,
+        "mathExpressions": 208,
+        "figures": 6
+      }
+    },
+    "187": {
+      "ja": {
+        "file": "catalog-187-ja.pdf",
+        "date": "2026-10-15",
+        "pages": 21,
+        "bytes": 1066487,
+        "sha256": "3e11cb065db9135352ab8714434594f8d8af0db924845a84769724177a9f8fc2",
+        "contentHash": "5876d5a2920acf5de0e2a8df040248cf7de24877155df5e6757cc30356e7263d",
+        "chapters": 2,
+        "mathExpressions": 120,
+        "figures": 4
+      },
+      "en": {
+        "file": "catalog-187-en.pdf",
+        "date": "2026-10-15",
+        "pages": 22,
+        "bytes": 628795,
+        "sha256": "a3362c1538b6e121e96f8ee96f94ec7a722dc5c01d168bf0a46277d9c45dc4f2",
+        "contentHash": "aec4283fd572d8b81dee9aecb76ebc70af236c16f439c8549558b76f18794c81",
+        "chapters": 2,
+        "mathExpressions": 120,
+        "figures": 4
+      }
+    },
+    "159": {
+      "ja": {
+        "file": "catalog-159-ja.pdf",
+        "date": "2026-10-15",
+        "pages": 14,
+        "bytes": 1037078,
+        "sha256": "397c8c7972e73c09d0ba818f6f5210dc13cfde6ee41a524ebe81ea2ad13a846a",
+        "contentHash": "806d824143eaf21a25399fc5a6bffa96862be4466339060f4803e913674c6a6b",
+        "chapters": 2,
+        "mathExpressions": 158,
+        "figures": 3
+      },
+      "en": {
+        "file": "catalog-159-en.pdf",
+        "date": "2026-10-15",
+        "pages": 15,
+        "bytes": 695653,
+        "sha256": "548f728ad33c0360adf26cbdef833618d8c6792c53f88cf8c90cbb570ea1f80f",
+        "contentHash": "08699ec56a0ac0b01bf41b6ee4c95906e07217a0dbd7290748b20f0e6ce9fab2",
+        "chapters": 2,
+        "mathExpressions": 157,
+        "figures": 3
+      }
+    },
+    "287": {
+      "ja": {
+        "file": "catalog-287-ja.pdf",
+        "date": "2026-10-15",
+        "pages": 16,
+        "bytes": 1093602,
+        "sha256": "b39bb37fb73de73496107f4708435d2fe3510d7d8c5e5117f25ad05b198cfb35",
+        "contentHash": "622aae4092e49f4dfb3322ed6c4b5a2c12ae4ee69f534ae261ce4cf2f1f851d2",
+        "chapters": 2,
+        "mathExpressions": 179,
+        "figures": 4
+      },
+      "en": {
+        "file": "catalog-287-en.pdf",
+        "date": "2026-10-15",
+        "pages": 18,
+        "bytes": 800719,
+        "sha256": "c72f4478482ef8eebcca60775b85a9c7683764c85b4a4dbbf2eba403c07bf46f",
+        "contentHash": "818a8445710aa94a148d559f4e6cce60be8232b9729aa983f455bae15d3cbea9",
+        "chapters": 2,
+        "mathExpressions": 177,
+        "figures": 4
+      }
+    },
+    "087": {
+      "ja": {
+        "file": "catalog-087-ja.pdf",
+        "date": "2026-10-15",
+        "pages": 53,
+        "bytes": 3381126,
+        "sha256": "e5f989e39f70c879f4c80e1413576a7dca762e8ff660d0bd9bc0a8a329c2189d",
+        "contentHash": "4ff981a9aa3f266a552a5dcf539a41b760fc34ded157eca778b5f246ddbf6a72",
+        "chapters": 4,
+        "mathExpressions": 661,
+        "figures": 16
+      },
+      "en": {
+        "file": "catalog-087-en.pdf",
+        "date": "2026-10-15",
+        "pages": 56,
+        "bytes": 2743049,
+        "sha256": "f23d82a045494f5a10658bb1430ded96bfa68703c86e6c08e6156df2742a23d2",
+        "contentHash": "337cd9f8d7497d5a197099ac6dfb5282e08623f1ff845e33997bb4fdda1ca4c2",
+        "chapters": 4,
+        "mathExpressions": 647,
+        "figures": 16
+      }
+    },
+    "285": {
+      "ja": {
+        "file": "catalog-285-ja.pdf",
+        "date": "2026-10-15",
+        "pages": 37,
+        "bytes": 2255571,
+        "sha256": "7ac34ce2c3aa4b760cb8001d061706308e954896b61b09ffa1a79aaa9685d2ad",
+        "contentHash": "4145ad95a7d4fb4036d06a6cbaa4f28150f8e552c1d29260c11745e55feb5309",
+        "chapters": 4,
+        "mathExpressions": 371,
+        "figures": 8
+      },
+      "en": {
+        "file": "catalog-285-en.pdf",
+        "date": "2026-10-15",
+        "pages": 43,
+        "bytes": 1693123,
+        "sha256": "1a462002b439c3fb4593bdc11c70ee2c3b18a252f48a8ff398d7b95ffe0ca539",
+        "contentHash": "09a1dbbf5b81cda200ead347e3f9507a65cefb047b3dbb318413dd900754372e",
+        "chapters": 4,
+        "mathExpressions": 370,
+        "figures": 8
+      }
+    },
+    "074": {
+      "ja": {
+        "file": "catalog-074-ja.pdf",
+        "date": "2026-10-16",
+        "pages": 30,
+        "bytes": 2119066,
+        "sha256": "f217c78966bcf9028141eb37d782e66d247d527a4afcb3786550e0c4703c5844",
+        "contentHash": "a26229405c7c6f3bad825c4306f41dddd8729a6b4ccef1d2b4644ae3fa9aaa2e",
+        "chapters": 3,
+        "mathExpressions": 349,
+        "figures": 7
+      },
+      "en": {
+        "file": "catalog-074-en.pdf",
+        "date": "2026-10-16",
+        "pages": 32,
+        "bytes": 1626620,
+        "sha256": "843f40257cbb20e681642f7c98718cb111946b91d866f015335d92d08dd4c2de",
+        "contentHash": "c10bf807c4cb71a5b4fd2261f3c71376a5cab9a65f4b3779f585bb285575a0af",
+        "chapters": 3,
+        "mathExpressions": 338,
+        "figures": 7
+      }
+    },
+    "197": {
+      "ja": {
+        "file": "catalog-197-ja.pdf",
+        "date": "2026-10-18",
+        "pages": 51,
+        "bytes": 3180641,
+        "sha256": "be8a039fbc1f4ba93499f52fd26388d83f9404c44a1cf178131db407f1440263",
+        "contentHash": "23ae75f9c19875ebbfc1a2568a83038246dc194239b14669e96728a0ebf3ef25",
+        "chapters": 5,
+        "mathExpressions": 685,
+        "figures": 16
+      },
+      "en": {
+        "file": "catalog-197-en.pdf",
+        "date": "2026-10-18",
+        "pages": 54,
+        "bytes": 2579765,
+        "sha256": "fd84cbe8ceb27a2a8529c958d8422e76a4dbff3b50110259bc7feb3cf493b936",
+        "contentHash": "a5720826ccde64b6bdad763be107ede04e3fa473152ec09aaf8d02e1a77e2690",
+        "chapters": 5,
+        "mathExpressions": 656,
+        "figures": 16
+      }
+    },
+    "356": {
+      "ja": {
+        "file": "catalog-356-ja.pdf",
+        "date": "2026-10-19",
+        "pages": 34,
+        "bytes": 2292539,
+        "sha256": "09ecfa8a9441528945d890658e09f4a5bdd63a2205580bed3c8cec4dbfe8f69b",
+        "contentHash": "d22b2611f24d43bd9efec309b8186bc164e1ae25a5844a96bfc54648434b11b6",
+        "chapters": 3,
+        "mathExpressions": 340,
+        "figures": 9
+      },
+      "en": {
+        "file": "catalog-356-en.pdf",
+        "date": "2026-10-19",
+        "pages": 36,
+        "bytes": 1805705,
+        "sha256": "4821af19ce7e158210f6faffa3239078d88b95955585c1df9444490781a22691",
+        "contentHash": "4cc202173bdab10e82ebdfb95eb997329a835ed996a69b571c342f1fe030d0c9",
+        "chapters": 3,
+        "mathExpressions": 339,
+        "figures": 9
+      }
+    },
+    "357": {
+      "ja": {
+        "file": "catalog-357-ja.pdf",
+        "date": "2026-10-19",
+        "pages": 20,
+        "bytes": 1313064,
+        "sha256": "ab673f28e15aeb9d4e82b2ea03abe5c7a7c86426cb2a4a7ff8dcd90471c0f5f0",
+        "contentHash": "25489d4bf7bea069c1232e0c43d0def7d392309dc55fc015fc3d08a62a0749e1",
+        "chapters": 2,
+        "mathExpressions": 176,
+        "figures": 5
+      },
+      "en": {
+        "file": "catalog-357-en.pdf",
+        "date": "2026-10-19",
+        "pages": 20,
+        "bytes": 959714,
+        "sha256": "865d2dada1c0eab087d16384e591a8a8c2593612b1edea716a671ffd254982f0",
+        "contentHash": "d44d66b4f7e5524a998342be8a1f03008b5affc660d18200136d5c9fd2182589",
+        "chapters": 2,
+        "mathExpressions": 171,
+        "figures": 5
+      }
+    },
+    "305": {
+      "ja": {
+        "pipeline": "svg-links-v1",
+        "svgLinks": 48,
+        "file": "catalog-305-ja.pdf",
+        "date": "2026-10-21",
+        "pages": 37,
+        "bytes": 2160256,
+        "sha256": "dba7059075a18a167efff37dbd964e13ad2aae4244ca70e087218cd06b7090cc",
+        "contentHash": "f90d813dfdc395df61c0208a80f4a3235db583830fcaac328d841f691a85f4ce",
+        "chapters": 4,
+        "mathExpressions": 308,
+        "figures": 10
+      },
+      "en": {
+        "pipeline": "svg-links-v1",
+        "svgLinks": 48,
+        "file": "catalog-305-en.pdf",
+        "date": "2026-10-21",
+        "pages": 41,
+        "bytes": 1507354,
+        "sha256": "cafbfe543c227ef2159ed94dbe56ed57487fbebfcfac9d26913638311fb8b2e7",
+        "contentHash": "2912c0d9583a80a06d77162cc0cc0f845111d5cc827547561b10e12f59e3075b",
+        "chapters": 4,
+        "mathExpressions": 300,
+        "figures": 10
+      }
+    },
+    "322": {
+      "ja": {
+        "pipeline": "svg-links-v1",
+        "svgLinks": 13,
+        "file": "catalog-322-ja.pdf",
+        "date": "2026-10-20",
+        "pages": 16,
+        "bytes": 1066651,
+        "sha256": "a6b0d36da84144df1182b77bae9a3b9649af6be337ed70a5140d9b5a9a361603",
+        "contentHash": "fab880852b4116d2fb27401c1d4b09e37e8bb3b948fbe06c02cd454d5f15a1dd",
+        "chapters": 2,
+        "mathExpressions": 204,
+        "figures": 3
+      },
+      "en": {
+        "pipeline": "svg-links-v1",
+        "svgLinks": 13,
+        "file": "catalog-322-en.pdf",
+        "date": "2026-10-20",
+        "pages": 17,
+        "bytes": 748963,
+        "sha256": "68a2e62d1cd518597ae172e4cb1949526c15a80423a7f6ea49ea8d3d78706b91",
+        "contentHash": "2b7ad98f85c32bffc48f1b33350920e30c3c7c2ad6a7665b5531bb64ed8ab126",
+        "chapters": 2,
+        "mathExpressions": 194,
+        "figures": 3
+      }
+    },
+    "050": {
+      "ja": {
+        "pipeline": "svg-links-v1",
+        "svgLinks": 22,
+        "file": "catalog-050-ja.pdf",
+        "date": "2026-10-22",
+        "pages": 20,
+        "bytes": 1327467,
+        "sha256": "65da8eab49a03b3211562a57cc8e0c3a27e44d3a40e8db384430d901815018e3",
+        "contentHash": "3926bfa00629a39f2103ce494dae1ba68bd1ac957c727a20aa6b33c6f9108d04",
+        "chapters": 2,
+        "mathExpressions": 206,
+        "figures": 5
+      },
+      "en": {
+        "pipeline": "svg-links-v1",
+        "svgLinks": 22,
+        "file": "catalog-050-en.pdf",
+        "date": "2026-10-22",
+        "pages": 21,
+        "bytes": 943244,
+        "sha256": "00982956e0b4face97a5c284a2fbf9496925398463fe16cecfc0d4dcd6e06012",
+        "contentHash": "394dc441be2beda023120c53b84f097102507edbcc9be662fae00c39b10f3b6b",
+        "chapters": 2,
+        "mathExpressions": 201,
+        "figures": 5
+      }
+    },
+    "109": {
+      "ja": {
+        "pipeline": "svg-links-v1",
+        "svgLinks": 13,
+        "file": "catalog-109-ja.pdf",
+        "date": "2026-10-22",
+        "pages": 17,
+        "bytes": 1194230,
+        "sha256": "11b9839fe795fb01ec43e76f28a89e7a22c082b837f482ba9a33cc8e782d70e9",
+        "contentHash": "c55c2a5b9f3a335fa4ffa8700bb83de0f53d0a5388e6e5fbaf9300fe28db0f94",
+        "chapters": 2,
+        "mathExpressions": 201,
+        "figures": 3
+      },
+      "en": {
+        "pipeline": "svg-links-v1",
+        "svgLinks": 13,
+        "file": "catalog-109-en.pdf",
+        "date": "2026-10-22",
+        "pages": 19,
+        "bytes": 828230,
+        "sha256": "79fa772923f411d4c8394c6f2682152eb1dbfb6d4a7c9a9133f24d966385a454",
+        "contentHash": "ae48f26c341d93e929c442e9f4cdcfd532dfd3f7cc82dd9ed655d8d5b0ef733d",
+        "chapters": 2,
+        "mathExpressions": 197,
+        "figures": 3
+      }
+    },
+    "060": {
+      "ja": {
+        "pipeline": "svg-links-v1",
+        "svgLinks": 10,
+        "file": "catalog-060-ja.pdf",
+        "date": "2026-10-22",
+        "pages": 14,
+        "bytes": 859829,
+        "sha256": "b7db28a47f94558c4f78787364aecbb512eed3e66125b5ad227fae80bf03790e",
+        "contentHash": "b42f641426ec96789e0052bf9ca54f2041ff3e1e2f45bab07883c30248a25b13",
+        "chapters": 2,
+        "mathExpressions": 154,
+        "figures": 1
+      },
+      "en": {
+        "pipeline": "svg-links-v1",
+        "svgLinks": 10,
+        "file": "catalog-060-en.pdf",
+        "date": "2026-10-22",
+        "pages": 14,
+        "bytes": 577315,
+        "sha256": "ea666ea0b739bff031e0493694adb4196711a9962415c6f8932f8433ea321b3e",
+        "contentHash": "2b575769782b7c5dbdafbfb9d88de5528274cef0297ac9ac3d3dc807e86b1668",
+        "chapters": 2,
+        "mathExpressions": 149,
+        "figures": 1
+      }
+    }
+  }
+}

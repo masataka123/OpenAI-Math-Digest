@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "author-key",
+  "catalogId": "003",
+  "sources": {
+    "OpenAI26QR78": {
+      "recordFile": "sources.json",
+      "recordId": "quasi-riemann-seven-eighths",
+      "pagination": "same",
+      "guideRole": {
+        "ja": "Theorem 1.1の7/8半平面と内部11/12段階を比較する",
+        "en": "Compare the 7/8 half-plane in Theorem 1.1 and its internal 11/12 stage"
+      }
+    },
+    "OpenAI26QR1112": {
+      "recordFile": "sources.json",
+      "recordId": "quasi-riemann-eleven-twelfths",
+      "pagination": "same",
+      "guideRole": {
+        "ja": "Theorem 1.1の11/12半平面と別構成の平均二乗法を示す",
+        "en": "Identify the 11/12 half-plane in Theorem 1.1 and the alternative mean-square method"
+      }
+    },
+    "OpenAI26LS": {
+      "recordFile": "sources.json",
+      "recordId": "uniform-landau-siegel",
+      "pagination": "same",
+      "guideRole": {
+        "ja": "Theorem 1の実零点の対数間隔と行列式による別経路を示す",
+        "en": "Identify the logarithmic real-zero gap in Theorem 1 and its separate determinant route"
+      }
+    },
+    "OVERVIEW": {
+      "recordFile": "../../../coordination/catalog-003/inventory.json",
+      "recordId": "overview"
+    }
+  },
+  "citations": {
+    "qr78-result": {
+      "source": "OpenAI26QR78",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "4",
+          "pdf": "4"
+        }
+      ]
+    },
+    "qr78-stages": {
+      "source": "OpenAI26QR78",
+      "locations": [
+        {
+          "result": "Proof overview; Theorem 3.1",
+          "printed": "5–6, 10",
+          "pdf": "5–6, 10"
+        }
+      ]
+    },
+    "qr1112-result": {
+      "source": "OpenAI26QR1112",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "qr1112-route": {
+      "source": "OpenAI26QR1112",
+      "locations": [
+        {
+          "result": "§3; Proposition 5.1",
+          "printed": "11–12, 18",
+          "pdf": "11–12, 18"
+        }
+      ]
+    },
+    "qr1112-comparison": {
+      "source": "OpenAI26QR1112",
+      "locations": [
+        {
+          "result": "§1, comparison with the 7/8 manuscript",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "ls-result": {
+      "source": "OpenAI26LS",
+      "locations": [
+        {
+          "result": "Theorem 1",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "ls-route": {
+      "source": "OpenAI26LS",
+      "locations": [
+        {
+          "result": "§§4–6",
+          "printed": "5–8",
+          "pdf": "5–8"
+        }
+      ]
+    },
+    "official-overview": {
+      "source": "OVERVIEW",
+      "locations": [
+        {
+          "result": "Catalogue 003; Number theory",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ]
+}

@@ -1,0 +1,19 @@
+\node[card] (a) {\heading{1}{Dirichlet族の零点を開帯へ入れる}{Place the Dirichlet zeros in an open strip}
+$1/8\le\Re\rho\le7/8\quad\Longrightarrow\quad1/16<\Re\rho<15/16$\\
+\Tx{Theorem 1.1と共役指標の関数等式。}{Use Theorem 1.1 and the functional equation for conjugate characters.}};
+\node[card,below=2cm of a] (b) {\heading{2}{最小二次非剰余の対数冪評価}{A logarithmic-power least-nonresidue bound}
+$\epsilon=7/16,\qquad \frac4{1-2\epsilon}=32,\qquad n(p)\ll(\log p)^{32}$\\
+\Tx{すべての奇素数$p$に共通の絶対定数。}{An absolute constant valid for every odd prime $p$.}};
+\flow{a}{b}{\Tx{少し広げた開帯がweak-GRHの仮定を満たす。}{The enlarged open strip meets the weak-GRH hypothesis.}\\
+\Cite{weak-grh}};
+\node[card,below=1.9cm of b] (c) {\heading{3}{任意の冪上界と決定的な探索}{Every positive power and deterministic search}
+$n(p)\ll_\delta p^\delta\quad(\delta>0)$\\
+\Tx{$2,3,\ldots$をLegendre記号で検査し、多項式回で非剰余を得る。}{Test $2,3,\ldots$ by Legendre symbols; find a nonresidue in polynomially many trials.}};
+\flow{b}{c}{\Tx{固定対数冪の成長と最初の非剰余までの逐次探索を使う。}{Use the growth of a fixed logarithmic power and sequential search.}\\
+\Cite{main-corollary}};
+\node[result,below=1.9cm of c] (d) {\heading{4}{平方根を返すか不存在を判定する}{Return a square root or report nonexistence}
+\Tx{$a=0$を処理し、Eulerの規準で平方か判定する。}{Handle $a=0$ and test squareness by Euler's criterion.}\\
+\Tx{非剰余をTonelli--Shanksへ渡す。残りは決定的で$\log p$の多項式時間。}{Supply the nonresidue to Tonelli--Shanks; the rest is deterministic and polynomial in $\log p$.}\\
+$p-1=2^e u\ (u\ \text{odd})$\quad\Tx{$u$の素因数分解は不要。}{requires no factorization of $u$.}};
+\flow{c}{d}{\Tx{非剰余探索が唯一の乱択箇所を置き換える。}{Nonresidue search replaces the only randomized step.}\\
+\Cite{square-root}};

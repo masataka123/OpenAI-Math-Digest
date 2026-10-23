@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "author-key",
+  "catalogId": "003",
+  "sources": {
+    "P": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "pagination": "same"
+    },
+    "D80": {
+      "recordFile": "sources.json",
+      "recordId": "d80",
+      "guideRole": {
+        "ja": "原始指標の対数微分を零点和で評価し、Lemma 2で実零点の項を残す",
+        "en": "Bound the logarithmic derivative for primitive characters by a zero sum; retain the real zero in Lemma 2"
+      }
+    }
+  },
+  "citations": {
+    "main-result": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "prime-bias": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 2; (2.3)–(2.4)",
+          "printed": "2–3",
+          "pdf": "2–3"
+        }
+      ]
+    },
+    "interpolation": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 3",
+          "printed": "3",
+          "pdf": "3"
+        }
+      ]
+    },
+    "interpolation-proof": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§3, proof of Lemma 3; Corollary 4",
+          "printed": "3–5",
+          "pdf": "3–5"
+        }
+      ]
+    },
+    "determinant": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§4; Lemma 6",
+          "printed": "5–6",
+          "pdf": "5–6"
+        }
+      ]
+    },
+    "divisibility": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 7; (5.2)–(5.6)",
+          "printed": "7",
+          "pdf": "7"
+        }
+      ]
+    },
+    "norm-bounds": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "(5.1), (5.7)",
+          "printed": "7–8",
+          "pdf": "7–8"
+        }
+      ]
+    },
+    "completion": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§6; (6.1)–(6.2)",
+          "printed": "8",
+          "pdf": "8"
+        }
+      ]
+    },
+    "log-derivative": {
+      "source": "D80",
+      "locations": [
+        {
+          "result": "§14, (2)",
+          "printed": "89",
+          "pdf": "2"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ],
+  "articleGuides": {
+    ".": {
+      "selfSource": "P",
+      "externalSources": [
+        "D80"
+      ],
+      "proofTargets": [
+        "main-result",
+        "interpolation"
+      ],
+      "mainResults": [
+        "main-result"
+      ],
+      "statements": {
+        "main-result": "theorem-1",
+        "interpolation": "lemma-3"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "main-result",
+          "conclusion": "Absolute c for every q>=3, every primitive nonprincipal real character and every beta in (0,1); fixed d=2 removed",
+          "anchor": "proof-1-step-4"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "prime-bias",
+          "purpose": {
+            "ja": "零点の仮定を素数和の下界へ変換する。",
+            "en": "Convert the hypothetical zero into a prime-sum lower bound."
+          }
+        },
+        {
+          "citation": "interpolation-proof",
+          "purpose": {
+            "ja": "写像や体に依存しない補間の次数条件。",
+            "en": "Interpolation degree bounds independent of the map and field."
+          }
+        },
+        {
+          "citation": "determinant",
+          "purpose": {
+            "ja": "重み付き選択と次数の偏り。",
+            "en": "Weighted selection and concentration of degree."
+          }
+        },
+        {
+          "citation": "divisibility",
+          "purpose": {
+            "ja": "行列式を保ったまま素数冪を取り出す。",
+            "en": "Extract prime powers while preserving the determinant."
+          }
+        },
+        {
+          "citation": "completion",
+          "purpose": {
+            "ja": "絶対定数と例外体を扱う極限の順序。",
+            "en": "Order the limits to obtain absolute constants and remove the exceptional field."
+          }
+        }
+      ]
+    }
+  }
+}

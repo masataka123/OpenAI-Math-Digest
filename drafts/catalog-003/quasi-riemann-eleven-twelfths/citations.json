@@ -1,0 +1,241 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "author-key",
+  "catalogId": "003",
+  "sources": {
+    "P": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "pagination": "same"
+    },
+    "GL13": {
+      "recordFile": "sources.json",
+      "recordId": "gl13",
+      "guideRole": {
+        "ja": "二次Hecke族のlarge sieve。Lemma 6.5で平方因子のない行・列に適用",
+        "en": "Quadratic Hecke-family large sieve, applied to squarefree rows and columns in Lemma 6.5"
+      }
+    },
+    "DR24": {
+      "recordFile": "sources.json",
+      "recordId": "dr24",
+      "guideRole": {
+        "ja": "三次theta係数とcube補完の入力。GRHを仮定する素数上の主定理は使わない",
+        "en": "Cubic theta coefficients and cube completion; the GRH-conditional prime asymptotic is not an input"
+      }
+    },
+    "D00": {
+      "recordFile": "sources.json",
+      "recordId": "davenport",
+      "guideRole": {
+        "ja": "Corollary 1.2が引用する明示公式。外部本文・定数管理は未確認",
+        "en": "Explicit formula cited for Corollary 1.2; external text and constants remain unchecked"
+      }
+    }
+  },
+  "citations": {
+    "main-result": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "main-corollary": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Corollary 1.2",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "mobius": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 3.1; (3.2)–(3.3)",
+          "printed": "11–12",
+          "pdf": "11–12"
+        }
+      ]
+    },
+    "mellin": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§3, proof of Theorem 1.1",
+          "printed": "12",
+          "pdf": "12"
+        }
+      ]
+    },
+    "poisson": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 4.1; Proposition 4.5",
+          "printed": "13–18",
+          "pdf": "13–18"
+        }
+      ]
+    },
+    "iteration": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 5.1; Lemma 5.3; Proposition 5.4",
+          "printed": "18–22",
+          "pdf": "18–22"
+        }
+      ]
+    },
+    "completed": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 5.2",
+          "printed": "19",
+          "pdf": "19"
+        }
+      ]
+    },
+    "theta": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 6.2; Lemmas 6.3–6.5",
+          "printed": "24–26",
+          "pdf": "24–26"
+        }
+      ]
+    },
+    "transfer": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "§7, Lemmas 7.1–7.3",
+          "printed": "29–34",
+          "pdf": "29–34"
+        }
+      ]
+    },
+    "gl-input": {
+      "source": "GL13",
+      "locations": [
+        {
+          "result": "Definition 1; Theorem 1.1",
+          "printed": "1–2",
+          "pdf": "1–2"
+        }
+      ]
+    },
+    "dr-coefficients": {
+      "source": "DR24",
+      "locations": [
+        {
+          "result": "(5.6)–(5.8)",
+          "printed": "17",
+          "pdf": "17"
+        }
+      ]
+    },
+    "dr-inversion": {
+      "source": "DR24",
+      "locations": [
+        {
+          "result": "Lemma 5.4",
+          "printed": "28",
+          "pdf": "28"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ],
+  "articleGuides": {
+    ".": {
+      "selfSource": "P",
+      "externalSources": [
+        "GL13",
+        "DR24",
+        "D00"
+      ],
+      "proofTargets": [
+        "main-result",
+        "main-corollary"
+      ],
+      "mainResults": [
+        "main-result",
+        "main-corollary"
+      ],
+      "statements": {
+        "main-result": "theorem-1-1",
+        "main-corollary": "corollary-1-2"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "main-result",
+          "conclusion": "All finite-order Hecke characters over K, every height",
+          "anchor": "proof-1-step-3"
+        },
+        {
+          "result": "main-result",
+          "conclusion": "All Dirichlet L-functions including zeta; s=1 handled",
+          "anchor": "proof-1-step-4"
+        },
+        {
+          "result": "main-corollary",
+          "conclusion": "Uniform q<=x and absolute effective error; external input pending",
+          "anchor": "proof-2-step-1"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "mobius",
+          "purpose": {
+            "ja": "平均二乗から11/12を取り出す。",
+            "en": "Extract the exponent 11/12 from the mean square."
+          }
+        },
+        {
+          "citation": "iteration",
+          "purpose": {
+            "ja": "cube逆変換の残余を閉じる有限反復。",
+            "en": "Close cube-inversion remainders by finite iteration."
+          }
+        },
+        {
+          "citation": "theta",
+          "purpose": {
+            "ja": "六次指標が二次指標になる変換と一様性。",
+            "en": "The sextic-to-quadratic transform and its uniformity."
+          }
+        },
+        {
+          "citation": "transfer",
+          "purpose": {
+            "ja": "二度のPoisson変換によるパラメータ縮小。",
+            "en": "Parameter contraction through two Poisson transformations."
+          }
+        },
+        {
+          "citation": "main-corollary",
+          "purpose": {
+            "ja": "原稿が主張する等差数列の素数定理と引用範囲。",
+            "en": "The claimed prime-number estimate and its cited input."
+          }
+        }
+      ]
+    }
+  }
+}

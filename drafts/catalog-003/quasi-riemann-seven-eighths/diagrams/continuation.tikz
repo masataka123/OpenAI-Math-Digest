@@ -1,0 +1,23 @@
+\node[card] (a) {\heading{1}{信号への二つの評価}{Two estimates for the signal}
+$\Delta_0=\beta_*-\sigma_0>0,\quad C(s)=s+c$\\
+$|J_\eta|\ll_\eta Z^{C(\sigma_0)+\omega},\quad |J_\eta-f_\eta|\ll_\eta Z^{C(\beta_*)-\sigma}$\\
+$0<\omega<\Delta_0,\quad\sigma>0\quad$\Tx{は指標に共通。}{are common to all targets.}};
+\node[card,below=1.9cm of a] (b) {\heading{2}{両端でMellin積分を収束させる}{Make the Mellin integral converge at both ends}
+$\epsilon_* =\min\{\Delta_0-\omega,\sigma\}>0$\\
+$f_\eta(Z)\ll_\eta Z^{C(\beta_*)-\epsilon_*}\ (Z\to\infty),\quad
+f_\eta(Z)\ll_{\eta,B}Z^{B+c}\ (Z\downarrow0)$\\
+$F_\eta(s)=\displaystyle\int_0^\infty f_\eta(Z)Z^{-C(s)}\frac{dZ}{Z}$\quad
+\Tx{が$\Re s>\beta_*-\epsilon_*$で正則。}{is holomorphic for $\Re s>\beta_*-\epsilon_*$.}};
+\flow{a}{b}{\Tx{三角不等式と、零点のない右半面への積分路移動を使う。}{Use the triangle inequality and shift right into absolute convergence.}\\
+\Cite{continuation}};
+\node[card,below=1.9cm of b] (c) {\heading{3}{逆数を同定する}{Identify the reciprocal}
+$F_\eta(s)=e^{(s-5/6)^2}H_\eta(s)/L_F^S(s,\eta)\quad(\Re s>1)$\\
+$|H_\eta-1|\le1/2\ \Longrightarrow\ |H_\eta|\ge1/2$\\
+\Tx{従って$1/L_F^S$が$\Re s>\beta_*-\epsilon_*$へ正則に延長する。}{Thus $1/L_F^S$ continues holomorphically to $\Re s>\beta_*-\epsilon_*$.}};
+\flow{b}{c}{\Tx{$Z=e^u$でFourier反転し、一致の定理を用いる。}{Set $Z=e^u$, apply Fourier inversion, then the identity theorem.}\\
+\Cite{continuation}};
+\node[result,below=1.9cm of c] (d) {\heading{4}{上限の定義と矛盾}{Contradict the definition of the supremum}
+\Tx{共通の$\epsilon_*$に対し、ある指標の零点は$\Re\rho>\beta_*-\epsilon_*$。}{For the common $\epsilon_*$, some target has a zero with $\Re\rho>\beta_*-\epsilon_*$.}\\
+\Tx{その逆数の極と正則延長が矛盾する。$\beta_*$の達成は不要。}{Its reciprocal pole contradicts continuation; attainment of $\beta_*$ is unnecessary.}};
+\flow{c}{d}{\Tx{有限除去因子は非零。主指標の極は逆数では零となる。}{Deleted factors are nonzero; a principal pole becomes a reciprocal zero.}\\
+\Cite{continuation}};

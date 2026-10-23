@@ -1,0 +1,28 @@
+\node[card] (a) {\heading{1}{完成した添字を保つ}{Retain the completed index}
+$F=\mathbf Q(\sqrt{-3}),\quad cn^3\ (c\ \text{squarefree})$\\
+\Tx{指標は積全体に作用し、非単元での零を保つ。}{Characters act on the whole product and retain zeros on nonunits.}};
+\node[card,below=2.1cm of a] (b) {\heading{2}{均衡した和から最初の境界へ}{Balanced sum: the first boundary}
+$C_{\mathrm I}(s)=s-2/3,\qquad X=Y=Z^{1/2}$\\
+$|J_{\mathrm I,\eta}|\ll_\eta Z^{1/4+\omega},\quad
+|J_{\mathrm I,\eta}-f_{\mathrm I,\eta}|\ll_\eta Z^{C_{\mathrm I}(\beta_*)-1/4800}$\\
+\Tx{本稿内の結論：}{Internal conclusion: }$\beta_*\le11/12$.};
+\flow{a}{b}{\Tx{反射エネルギー・加法大篩と、Poisson行の零点検出を比較。}{Compare reflected/additive energy with zero detection in Poisson rows.}\\
+\Cite{balanced-low}\quad\Cite{balanced-high}};
+\node[card,below=3.0cm of b] (c) {\heading{3}{素数補償と非対称な尺度}{Prime compensation and unequal scales}
+$0<\Delta=\beta_*-7/8\le1/24,\quad \kappa=2\beta_*-1$\\
+$X=Z^{17/48},\ Y=Z^{23/48},\quad J_{\mathrm{II},\eta}=I_{\eta,\mathrm{modified}}/(c_S A_T)$\\
+$C_{\mathrm{II}}(s)=s-11/16,\qquad A_T(Z)\asymp(\log Z)^{-K}$};
+\flow{b}{c}{\Tx{印付き反射とGram評価。固定ray classの素数和で正規化。}{Use marked reflection and the Gram bound; normalize by fixed-ray prime sums.}\\
+\Cite{compensated-low}\\
+\Cite{normalization}};
+\node[card,below=2.2cm of c] (d) {\heading{4}{同じ和と信号の二つの評価}{Two bounds for the same sum and signal}
+$|J_{\mathrm{II},\eta}|\ll_\eta Z^{3/16+\omega},\qquad 0<\omega<\Delta$\\
+$|J_{\mathrm{II},\eta}-f_{\mathrm{II},\eta}|\ll_\eta Z^{C_{\mathrm{II}}(\beta_*)-\sigma},\qquad\sigma>0$\\
+\Tx{$\omega,\sigma$は指標に共通。定数・高さ・下限は指標依存でよい。}{The margins $\omega,\sigma$ are common; constants, heights and thresholds may depend on $\eta$.}};
+\flow{c}{d}{\Tx{逆数二乗平均とplain四乗平均で行数を抑え、損失を配分する。}{Count rows using inverse second and plain fourth moments; allocate losses.}\\
+\Cite{row-counts}\quad\Cite{final-high}};
+\node[result,below=2.0cm of d] (e) {\heading{5}{共通の逆数継続から全族へ}{Common reciprocal continuation and transfer}
+$\beta_*\le7/8\quad\Longrightarrow\quad L_F(s,\eta)\ne0,\quad L(s,\chi)\ne0\quad(\Re s>7/8)$\\
+\Tx{非原始指標を含む。全虚部で成立し、主指標の$s=1$の極を許す。}{Includes imprimitive characters and all heights; allows the principal pole at $s=1$.}};
+\flow{d}{e}{\Tx{共通幅で上限に矛盾。有限Euler因子と二次分解で移す。}{Contradict the supremum with a common width; transfer by Euler factors and quadratic factorization.}\\
+\Cite{continuation}\quad\Cite{transfer}};

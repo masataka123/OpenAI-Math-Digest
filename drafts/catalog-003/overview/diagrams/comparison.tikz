@@ -1,0 +1,14 @@
+\node[card] (a) {\heading{1}{7/8版：同じ完成和の二つの表示}{7/8 manuscript: two representations of one completed sum}
+\Tx{有限位数Hecke/$K=\mathbf Q(\sqrt{-3})$、全Dirichlet}{Finite-order Hecke/$K=\mathbf Q(\sqrt{-3})$; all Dirichlet}\\
+$\Re s>7/8:\quad L(s)\ne0$\quad\Tx{主指標の $s=1$ の極を許す}{principal pole at $s=1$ allowed}\\
+\Tx{内部11/12段階から素数補償・追加モーメントで改善}{Strengthen an internal 11/12 stage using prime compensation and moments}};
+\node[card,below=2.05cm of a] (b) {\heading{2}{11/12版：Möbius平均二乗とcube逆変換}{11/12 manuscript: Möbius mean squares and cube inversion}
+\Tx{同じ指標族、全高さ}{The same character families, every height}\\
+$\Re s>11/12:\quad L(s)\ne0$\quad\Tx{主指標の $s=1$ の極を許す}{principal pole at $s=1$ allowed}\\
+\Tx{素数の六乗行で指数を取り出し、Mellin変換へ}{Extract the exponent from prime sixth-power rows, then use Mellin}};
+\flow{a}{b}{\Tx{結論の包含（証明入力ではない）：$7/8<11/12$}{Inclusion of conclusions (not a proof input): $7/8<11/12$}\\\Cite{qr78-result}\\\Cite{qr1112-result}};
+\node[result,below=2.05cm of b] (c) {\heading{3}{Landau--Siegel版：実零点の対数尺度}{Landau--Siegel manuscript: logarithmic real-zero gaps}
+$\exists c>0:\quad(1-\beta)\log q\ge c$\\
+\Tx{$q\ge3$、原始非主実指標、全実零点 $0<\beta<1$}{$q\ge3$, primitive nonprincipal real characters; every real zero $0<\beta<1$}\\
+\Tx{本文の別経路：素数の偏り＋補間行列式のノルム比較}{Separate proof route: prime bias plus interpolation determinant norms}};
+\flow{b}{c}{\Tx{結論からの帰結（本文の入力ではない）：$c=(\log3)/12$ を選べる}{Consequence of the conclusion (not an imported input): one may take $c=(\log3)/12$}\\\Cite{qr1112-result}\\\Cite{ls-result}};

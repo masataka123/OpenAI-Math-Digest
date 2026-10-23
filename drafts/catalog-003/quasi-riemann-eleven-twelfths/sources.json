@@ -1,0 +1,157 @@
+{
+  "order": 2,
+  "paperId": "quasi-riemann-eleven-twelfths",
+  "title": "The Quasi-Riemann Hypothesis",
+  "catalogListedTitle": "The Quasi-Riemann Hypothesis (alternate 11/12 proof)",
+  "displayName": "The Quasi-Riemann Hypothesis (alternate 11/12 proof)",
+  "citationKey": "OpenAI26QR1112",
+  "authors": [
+    "OpenAI"
+  ],
+  "version": "October 5, 2026 (PDF title page)",
+  "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "pdfPages": 49,
+  "sha256": "f919b57829b178c8e60e7c17b018cf773e7907cf642ef5a3347d8a826e8dbf18",
+  "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/paper2.pdf",
+  "downloadUrl": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/paper2.pdf",
+  "repositoryPath": "preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/paper2.pdf",
+  "localPdf": "coordination/catalog-003/sources/quasi-riemann-eleven-twelfths.pdf",
+  "localText": "coordination/catalog-003/sources/quasi-riemann-eleven-twelfths.txt",
+  "existingArticle": null,
+  "draftDirectory": "drafts/catalog-003/quasi-riemann-eleven-twelfths",
+  "worker": "astra_author_companions",
+  "articleStatus": "assigned",
+  "versionRelation": "Distinct companion manuscripts; no supersession inferred from dates.",
+  "catalogId": "003",
+  "checkedOn": "2026-10-23",
+  "owner": "astra_author_companions",
+  "checkingScope": "公式本文§3、§§4–7の主要な帰着・反復、外部GL13の定理とDR24の係数式を照合。全証明の独立検証ではない。",
+  "statements": [
+    {
+      "result": "Theorem 1.1",
+      "pages": "2",
+      "hypotheses": "K=Q(sqrt(-3)); every finite-order Hecke character, arbitrary conductor.",
+      "conclusion": "No zeros for Re(s)>11/12 at every height; hence all Dirichlet L-functions, including zeta."
+    },
+    {
+      "result": "Corollary 1.2",
+      "pages": "2",
+      "hypotheses": "x>=2; 1<=q<=x; gcd(a,q)=1.",
+      "conclusion": "sup |pi(x;q,a)-Li(x)/phi(q)| << x^(11/12) log x, absolute effective constant."
+    }
+  ],
+  "proofPassages": [
+    {
+      "pages": "11–12",
+      "section": "§3",
+      "read": "Sixth-power prime rows, smoothed Mobius estimate, Mellin contradiction, base change and s=1."
+    },
+    {
+      "pages": "13–22",
+      "section": "§§4–5",
+      "read": "Gauss identities and exclusions; exact dual family; cube inversion; transfer bounds and finite induction."
+    },
+    {
+      "pages": "23–29",
+      "section": "§6",
+      "read": "Theta coefficients, transformed exponent, ray-class uniformity, squarefree and repeated rows; key applications."
+    },
+    {
+      "pages": "29–34",
+      "section": "§7",
+      "read": "Two Poisson reductions and transfer parameter inequalities; detailed every-term arithmetic not independently recomputed."
+    }
+  ],
+  "dependencies": [
+    {
+      "source": "gl13",
+      "result": "Definition 1; Theorem 1.1",
+      "usedAt": "Lemma 6.5 and Lemma 6.6",
+      "checking": "Primitive quadratic Hecke family, finite reciprocity classes, squarefree row/column requirements compared."
+    },
+    {
+      "source": "dr24",
+      "result": "(5.6)–(5.8), Lemma 5.4",
+      "usedAt": "§6.1; Appendix A.2; cube completion",
+      "checking": "Theta coefficient support and cube completion checked. General sextic twisted transform is proved internally, not a direct application of the primitive cubic statement."
+    },
+    {
+      "source": "davenport",
+      "result": "Chapters 19–20",
+      "usedAt": "Corollary 1.2, p.2",
+      "checking": "Original paper invokes explicit formula without a separate proof; textbook body and uniform effective constants not independently checked."
+    }
+  ],
+  "unresolved": [
+    "Appendix A.2: full cusp calculation and Lemma 6.3 uniformity not independently recomputed.",
+    "All common-factor terms of §7 and all smooth-weight derivative estimates not independently recomputed.",
+    "Davenport Chapters 19–20 explicit-formula input and its absolute effective constants remain unverified against that external source.",
+    "Standard prime-ideal theorem and Hecke continuation/nonvanishing inputs read at the application in §3, not their external proofs."
+  ],
+  "externalSources": [
+    {
+      "id": "gl13",
+      "authors": "Leo Goldmakher and Benoît Louvel",
+      "title": "A quadratic large sieve inequality over number fields",
+      "displayName": "A quadratic large sieve inequality over number fields",
+      "version": "arXiv:1112.1642v2, 31 May 2012 (published 2013)",
+      "sourceUrl": "https://arxiv.org/pdf/1112.1642v2",
+      "pdfPages": 21,
+      "sha256": "5cc5f03388d3996b4333f07be51f989f60779fe172f8bd24c7aa6ddad64dd304",
+      "checkedLocations": [
+        {
+          "printedPage": "1",
+          "pdfPage": 1
+        },
+        {
+          "printedPage": "2",
+          "pdfPage": 2
+        },
+        {
+          "printedPage": "3",
+          "pdfPage": 3
+        },
+        {
+          "printedPage": "4",
+          "pdfPage": 4
+        }
+      ],
+      "checking": "Definition 1 and Theorem 1.1 read; external proof not checked."
+    },
+    {
+      "id": "dr24",
+      "authors": "Alexander Dunn and Maksym Radziwiłł",
+      "title": "Bias in cubic Gauss sums: Patterson’s conjecture",
+      "displayName": "Bias in cubic Gauss sums: Patterson’s conjecture",
+      "version": "arXiv:2109.07463v3, 14 May 2024; preprint pagination",
+      "sourceUrl": "https://arxiv.org/pdf/2109.07463v3",
+      "pdfPages": 79,
+      "sha256": "df888f8527b3647a3428d6677a3e3070aab7439f79f737f3e894218fb64cfef0",
+      "checkedLocations": [
+        {
+          "printedPage": "17",
+          "pdfPage": 17
+        },
+        {
+          "printedPage": "18",
+          "pdfPage": 18
+        },
+        {
+          "printedPage": "28",
+          "pdfPage": 28
+        }
+      ],
+      "checking": "(5.6)–(5.8), (5.13)–(5.14), Lemma 5.4 checked; no use of GRH-conditional prime asymptotic."
+    },
+    {
+      "id": "davenport",
+      "authors": "Harold Davenport; revised by Hugh L. Montgomery",
+      "title": "Multiplicative Number Theory",
+      "displayName": "Multiplicative Number Theory",
+      "version": "Third edition, Springer, 2000; external chapter text not checked",
+      "sourceUrl": "https://link.springer.com/book/9780387950976",
+      "checkedLocations": [],
+      "checking": "Only the manuscript’s reference to Chapters 19–20 was checked."
+    }
+  ]
+}

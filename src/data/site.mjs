@@ -1,3 +1,4 @@
+import inventory003 from '../../coordination/catalog-003/inventory.json' with { type: 'json' };
 import inventory004 from '../../coordination/catalog-004/inventory.json' with { type: 'json' };
 import inventory033 from '../../coordination/catalog-033/inventory.json' with { type: 'json' };
 import inventory034 from '../../research/catalog-034-inventory.json' with { type: 'json' };
@@ -45,7 +46,7 @@ const fieldTranslations = [
   {
     "id": "number-theory",
     "ja": "数論",
-    "catalogIds": ["004"]
+    "catalogIds": ["003", "004"]
   },
   {
     "id": "algebraic-complex-geometry",
@@ -156,7 +157,11 @@ const papers034 = inventory034.manuscripts.map((entry, index) => {
     pages: entry.pdfPages, order: entry.order, featured: ['schnell-fiber-spaces', 'log-abundance-characteristic-zero', 'arithmetic-stein-degree', 'relative-denominators', 'uniform-log-iitaka', 'kahler-log-abundance', 'minimal-metrics-injectivity', 'fourfold-nonvanishing', 'uniform-slc-indices', 'conditional-kahler-fourfolds', 'uniform-pluricanonical-iitaka', 'lifting-adjoint-sections', 'effective-log-iitaka-fourfolds', 'abundance-after-nonvanishing'].includes(manuscriptIds034[index]),
   };
 });
-export const papers = [...inventory004.manuscripts.map(entry => ({
+export const papers = [...inventory003.manuscripts.map(entry => ({
+ id: entry.paperId, catalogId: '003', sourceCommit: inventory003.sourceCommit,
+ title: entry.title, path: entry.repositoryPath.replace(/^preprints\//, ''), version: entry.version,
+ pages: entry.pdfPages, order: entry.order, featured: true,
+})), ...inventory004.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '004', sourceCommit: inventory004.sourceCommit,
  title: entry.title, path: entry.path.replace(/^preprints\//, ''), version: entry.version,
  pages: entry.pdfPages, order: entry.order, featured: true,
@@ -278,6 +283,13 @@ export const papers = [...inventory004.manuscripts.map(entry => ({
  pages: entry.pdfPages, order: entry.order, featured: true,
 }))];
 export const catalogs = [{
+ id: '003', sourceCommit: inventory003.sourceCommit, mode: 'multi',
+ title: text(inventory003.titleJa, inventory003.overviewTitle),
+ contentsTitle: inventory003.contentsTitle,
+ description: text("公式カタログ003は、固定幅の無零半平面を主張する二つの原稿と、実零点の対数尺度の間隔を補間行列式で扱う一つの原稿を収録する。対象となる指標族、境界の強さ、証明の入力を区別して案内する。", "Official catalogue 003 contains two manuscripts claiming zero-free half-planes of fixed width and one treating logarithmic gaps for real zeros through interpolation determinants. The guide distinguishes character families, the strength of the boundaries, and proof inputs."),
+ paperIds: inventory003.manuscripts.map(p => p.paperId),
+ overviewSectionIds: ['inventory', 'connections', 'guide', 'sources'],
+}, {
  id: '004', sourceCommit: inventory004.sourceCommit, mode: 'multi',
  title: text(inventory004.titleJa, inventory004.overviewTitle),
  titlePhrases: {ja: ['ℚ上のHilbertの', '第10問題']},

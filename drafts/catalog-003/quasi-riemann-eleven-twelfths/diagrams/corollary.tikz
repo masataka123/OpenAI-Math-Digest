@@ -1,0 +1,11 @@
+\node[card] (a) {\heading{1}{一様な零点の上限}{A uniform bound on real parts of zeros}
+$\Re\rho\le11/12$\quad\Tx{すべてのDirichlet指標、高さの制限なし}{all Dirichlet characters, every height}};
+\node[card,below=1.8cm of a] (b) {\heading{2}{明示公式と指標直交性}{Explicit formula and character orthogonality}
+$\psi(x;q,a)=x/\varphi(q)+O(x^{11/12}\log^2(qx))$\\
+\Tx{明示公式の定数の外部照合は保留}{External checking of explicit-formula constants is pending}};
+\flow{a}{b}{\Tx{原稿が引用するDavenport Chapters 19--20への帰着}{Reduction to Davenport Chapters 19--20 cited by the manuscript}\\\Cite{main-corollary}};
+\node[result,below=1.8cm of b] (c) {\heading{3}{素数冪を除き、部分積分}{Remove prime powers and apply partial summation}
+$\sup_{q\le x,\,(a,q)=1}|\pi(x;q,a)-\operatorname{Li}(x)/\varphi(q)|$
+$\hfill\ll x^{11/12}\log x$\\
+\Tx{原稿の主張：絶対的かつ有効な定数}{Manuscript claim: an absolute, effective constant}};
+\flow{b}{c}{\Tx{$q\le x$ と小さい積分変数の自明評価を使う}{Use $q\le x$ and trivial estimates for small integration variables}\\\Cite{main-corollary}};

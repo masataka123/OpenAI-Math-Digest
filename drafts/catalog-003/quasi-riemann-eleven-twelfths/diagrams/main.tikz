@@ -1,0 +1,26 @@
+\node[card] (a) {\heading{1}{六次の族を三次Gauss係数へ}{Convert the sextic family to cubic Gauss coefficients}
+$A_u(D)=\sum\mu(n)\nu(n)\chi_n(u)W(Nn/D)$\\
+$E(\mathcal H,X,F)$: \Tx{共通因子を補助変数 $f$ に保持}{retain common factors in the auxiliary variable $f$}};
+\node[card,below=2.05cm of a] (b) {\heading{2}{cube補完と二次large sieve}{Cube completion and the quadratic large sieve}
+$-1-2\equiv3\pmod6$\quad\Tx{変換後の指標は二次}{the transformed character is quadratic}\\
+$\sum_k|T(X;k,f)|^2\ll D^\varepsilon\|W\|_{C^J}^2(\mathcal H+\mathcal H^2Nf/X)$};
+\flow{a}{b}{\Tx{Poisson・係数恒等式の後、固定ray classでtheta変換}{After Poisson and Gauss identities, transform theta in fixed ray classes}\\\Cite{poisson}\quad\Cite{theta}\\\Cite{dr-coefficients}\quad\Cite{gl-input}};
+\node[card,below=2.05cm of b] (c) {\heading{3}{cubeを逆変換し、残余の行を縮める}{Invert cube completion and contract remaining rows}
+$\Sigma=XF,\quad \mathcal H\le\Sigma D^{-\kappa}$\\
+$\mathcal H'<D^{-2\kappa}\mathcal H,\quad\mathcal H'/\Sigma'\le\mathcal H/\Sigma$\\
+$E(\mathcal H,X,F)\ll D^\varepsilon\Sigma\|W\|_{C^J}^2$};
+\flow{b}{c}{\Tx{短いcube因子を直接評価、長い因子は二度のPoisson変換}{Bound short cube divisors directly; use two Poisson transforms for the rest}\\\Cite{completed}\quad\Cite{iteration}};
+\node[card,below=1.65cm of c] (d) {\heading{4}{素イデアルの六乗行から指数を取り出す}{Extract the exponent from prime sixth-power rows}
+$\sum_{0<Nu\le D^{1+\vartheta}}|A_u(D)|^2\ll D^{2+\vartheta+\varepsilon}$\\
+$Y=D^{(1+\vartheta)/6},\quad A_{p^6}=A_1+O_W(D/Y)$\\
+$A_1(D)\ll_{\nu,S,W,\varepsilon}D^{11/12+\varepsilon}$};
+\flow{c}{d}{\Tx{元の平均二乗へ戻し、約 $Y/\log Y$ 本の行を平均}{Return to the original mean square and average about $Y/\log Y$ rows}\\\Cite{mobius}};
+\node[card,below=1.65cm of d] (e) {\heading{5}{零点に合わせたMellin重みで矛盾}{A Mellin weight adapted to a hypothetical zero}
+$\Re\rho>11/12,\ W(y)=y^{-\rho}\phi(y),\quad \phi\ge0,\ \phi\ne0$\\
+$L_K^S(s,\nu)M_W(s)=\widehat W(s)$\\
+$s=\rho:\quad 0=\widehat W(\rho)=\int\phi(y)\,dy/y>0$};
+\flow{d}{e}{\Tx{各指標で正則なMellin積分を得る。定数は $\nu$ に依存してよい}{Obtain a holomorphic Mellin integral for each character; constants may depend on $\nu$}\\\Cite{mellin}};
+\node[result,below=1.65cm of e] (f) {\heading{6}{すべてのDirichlet関数へ降下}{Descend to every Dirichlet L-function}
+$L_K(s,\chi\circ N)=L(s,\chi)L(s,\chi\chi_{-3})$\\
+\Tx{$\Re s>11/12$ に零点なし。$s=1$ の主指標の極を区別}{No zeros in $\Re s>11/12$; retain the principal pole at $s=1$}};
+\flow{e}{f}{\Tx{有限Euler因子は非零、$L(1,\chi_{-3})>0$ で極との相殺を除く}{Finite Euler factors are nonzero; $L(1,\chi_{-3})>0$ excludes pole--zero cancellation}\\\Cite{mellin}};

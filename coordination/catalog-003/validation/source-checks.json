@@ -1,0 +1,36 @@
+{
+  "input": "../inventory.json and ../sources/acquisition.json",
+  "checks": [
+    {
+      "paperId": "quasi-riemann-seven-eighths",
+      "pdfPresent": true,
+      "hashMatchesLedger": true,
+      "sourceCommitMatches": true,
+      "fixedSourceUrl": true,
+      "existingArticleSearch": "No title/path hit in src/data or existing drafts at start; new stable IDs assigned"
+    },
+    {
+      "paperId": "quasi-riemann-eleven-twelfths",
+      "pdfPresent": true,
+      "hashMatchesLedger": true,
+      "sourceCommitMatches": true,
+      "fixedSourceUrl": true,
+      "existingArticleSearch": "No title/path hit in src/data or existing drafts at start; new stable IDs assigned"
+    },
+    {
+      "paperId": "uniform-landau-siegel",
+      "pdfPresent": true,
+      "hashMatchesLedger": true,
+      "sourceCommitMatches": true,
+      "fixedSourceUrl": true,
+      "existingArticleSearch": "No title/path hit in src/data or existing drafts at start; new stable IDs assigned"
+    }
+  ],
+  "officialOrderMatches": true,
+  "overviewVisualReview": {
+    "image": "official-overview-p2.png",
+    "result": "Viewed: Number theory; 003 title and three manuscripts in recorded order. Printed page and PDF page are 2.",
+    "scope": "Bibliographic and catalogue mapping only; mathematical claims are assigned to Astra."
+  },
+  "pending": "Article/diagram/guide checks await Astra deliverables; public copies and booklet PDFs are Stage 2."
+}

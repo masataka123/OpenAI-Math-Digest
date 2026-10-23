@@ -1,0 +1,24 @@
+\node[card] (a) {\heading{1}{零点の反例列を素数の偏りへ}{A zero counterexample forces prime bias}
+$\ell=\log q,\quad\delta=(1-\beta)\ell\longrightarrow0$\\
+$\displaystyle\sum_{\substack{H<p\le U\\p\nmid2q,\ \chi(p)=-1}}\frac{\log p}{p}
+\ge\log U-C\ell-C\delta(\log U)^2/\ell-C_H$};
+\node[card,below=1.85cm of a] (b) {\heading{2}{共役の行を重み順に選ぶ}{Select conjugate rows in weighted order}
+$\theta_n=n_1+n_2\sqrt d+n_3\sqrt2+n_4\sqrt{2d}$\\
+$\Delta=\det(\theta_n^{\alpha_1}\sigma(\theta_n)^{\alpha_2}\sigma\tau(\theta_n)^{\alpha_3})\ne0$\\
+$1\le H\le N,\quad M=N^4=U^3,\quad S_2/S_1\ll H^{-1}$\\
+\Tx{$H$ 固定、$N$ は $H$ に対し十分大}{Fix $H$; take $N$ sufficiently large in terms of $H$}};
+\flow{a}{b}{\Tx{素数和と独立に補間を準備し、後で二つを合流させる}{Prepare interpolation independently, then combine the two inputs}\\\Cite{prime-bias}\quad\Cite{log-derivative}\\\Cite{interpolation}\quad\Cite{determinant}};
+\node[card,below=1.8cm of b] (c) {\heading{3}{Frobenius合同式が可除性を与える}{Frobenius congruence gives divisibility}
+$\theta^p\equiv g_p(\theta)\pmod{pR},\quad g_p\in\{\sigma,\sigma\tau\}$\\
+$w(\alpha-pme_1+me_j)=w(\alpha)-m(p-H)$\\
+$\Delta\in p^{E_p}R,\quad E_p=\sum_{\alpha}\lfloor\alpha_1/p\rfloor$};
+\flow{b}{c}{\Tx{$p>H$ なら補正行は先行行の張る空間に入り、行列式は不変}{For $p>H$, corrections lie in the earlier span and preserve the determinant}\\\Cite{divisibility}};
+\node[card,below=1.8cm of c] (d) {\heading{4}{非零整数ノルムの上下界を比較}{Compare bounds for the nonzero integer norm}
+$\tfrac14\log|\mathrm N\Delta|\ge S_1\log U-\text{\Tx{誤差}{errors}}$\\
+$\tfrac14\log|\mathrm N\Delta|\le(S_1+S_2)(\tfrac34\log U+\tfrac12\ell+\log8)+\tfrac M2\log M$};
+\flow{c}{d}{\Tx{素数の対数質量を合算し、複素埋込みでHadamard上界を得る}{Sum logarithmic prime mass and apply Hadamard at all complex embeddings}\\\Cite{norm-bounds}};
+\node[result,below=1.8cm of d] (e) {\heading{5}{固定する順序が絶対的な下限を与える}{The order of choices gives an absolute lower bound}
+$H\gg1\ \longrightarrow\ N=\lceil q^\gamma\rceil,\ \gamma\gg1\ \longrightarrow\ q\to\infty$\\
+$1\le13/16+1/16=7/8\quad\text{\Tx{矛盾}{contradiction}}$\\
+$\exists c>0:\ (1-\beta)\log q\ge c$};
+\flow{d}{e}{\Tx{$L(1,\chi)\ne0$ で $q\to\infty$ とし、固定例外 $d=2$ を除く}{Use $L(1,\chi)\ne0$ to force $q\to\infty$ and remove the fixed exception $d=2$}\\\Cite{completion}};

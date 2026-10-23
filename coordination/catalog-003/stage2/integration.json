@@ -1,0 +1,61 @@
+{
+  "recordedAt": "2026-10-23T11:16:10.736967+00:00",
+  "changes": [
+    "Register catalogue 003 and its three reviewed article IDs in official Number theory order",
+    "Use the existing catalogue/article components and reviewed Astra introduction verbatim for the catalogue description",
+    "Preserve the Stage-1 mathematical body and theorem/step anchors",
+    "Copy existing bilingual TeX/SVG without recompiling"
+  ],
+  "editorialChanges": [
+    {
+      "file": "drafts/catalog-003/overview/article.ja.md",
+      "baseline": "coordination/catalog-003/stage2/stage1-overview/article.ja.md",
+      "change": "Remove only the obsolete Stage-1 PDF-pending paragraph; common catalogue component supplies language-specific generated PDF link.",
+      "removedParagraph": "日英の解説冊子PDFは第2段階で生成し、この位置に各言語のリンクを配置する。現在は未生成である。",
+      "mathematicalTextUnchanged": true
+    },
+    {
+      "file": "drafts/catalog-003/overview/article.en.md",
+      "baseline": "coordination/catalog-003/stage2/stage1-overview/article.en.md",
+      "change": "Remove only the obsolete Stage-1 PDF-pending paragraph; common catalogue component supplies language-specific generated PDF link.",
+      "removedParagraph": "Japanese and English explanatory booklet PDFs will be generated in Stage 2 and linked here in the respective languages. They have not yet been generated.",
+      "mathematicalTextUnchanged": true
+    }
+  ],
+  "copiedAssets": [
+    "public/diagrams/catalog-003/quasi-riemann-seven-eighths/nonresidue.ja.tex",
+    "public/diagrams/catalog-003/quasi-riemann-seven-eighths/nonresidue.en.tex",
+    "public/diagrams/catalog-003/quasi-riemann-seven-eighths/nonresidue.en.svg",
+    "public/diagrams/catalog-003/quasi-riemann-seven-eighths/nonresidue.ja.svg",
+    "public/diagrams/catalog-003/quasi-riemann-seven-eighths/continuation.en.svg",
+    "public/diagrams/catalog-003/quasi-riemann-seven-eighths/continuation.ja.svg",
+    "public/diagrams/catalog-003/quasi-riemann-seven-eighths/continuation.ja.tex",
+    "public/diagrams/catalog-003/quasi-riemann-seven-eighths/continuation.en.tex",
+    "public/diagrams/catalog-003/quasi-riemann-seven-eighths/main.ja.tex",
+    "public/diagrams/catalog-003/quasi-riemann-seven-eighths/main.en.tex",
+    "public/diagrams/catalog-003/quasi-riemann-seven-eighths/main.en.svg",
+    "public/diagrams/catalog-003/quasi-riemann-seven-eighths/main.ja.svg",
+    "public/diagrams/catalog-003/quasi-riemann-eleven-twelfths/main.ja.tex",
+    "public/diagrams/catalog-003/quasi-riemann-eleven-twelfths/main.en.tex",
+    "public/diagrams/catalog-003/quasi-riemann-eleven-twelfths/corollary.ja.tex",
+    "public/diagrams/catalog-003/quasi-riemann-eleven-twelfths/corollary.en.tex",
+    "public/diagrams/catalog-003/quasi-riemann-eleven-twelfths/corollary.en.svg",
+    "public/diagrams/catalog-003/quasi-riemann-eleven-twelfths/corollary.ja.svg",
+    "public/diagrams/catalog-003/quasi-riemann-eleven-twelfths/main.en.svg",
+    "public/diagrams/catalog-003/quasi-riemann-eleven-twelfths/main.ja.svg",
+    "public/diagrams/catalog-003/uniform-landau-siegel/main.ja.tex",
+    "public/diagrams/catalog-003/uniform-landau-siegel/main.en.tex",
+    "public/diagrams/catalog-003/uniform-landau-siegel/main.en.svg",
+    "public/diagrams/catalog-003/uniform-landau-siegel/main.ja.svg",
+    "public/diagrams/catalog-003/uniform-landau-siegel/interpolation.ja.tex",
+    "public/diagrams/catalog-003/uniform-landau-siegel/interpolation.en.tex",
+    "public/diagrams/catalog-003/uniform-landau-siegel/interpolation.en.svg",
+    "public/diagrams/catalog-003/uniform-landau-siegel/interpolation.ja.svg",
+    "public/diagrams/catalog-003/overview/comparison.ja.tex",
+    "public/diagrams/catalog-003/overview/comparison.en.tex",
+    "public/diagrams/catalog-003/overview/comparison.en.svg",
+    "public/diagrams/catalog-003/overview/comparison.ja.svg"
+  ],
+  "mathematicalChanges": [],
+  "otherCatalogues": "No content/diagram/PDF changes requested"
+}

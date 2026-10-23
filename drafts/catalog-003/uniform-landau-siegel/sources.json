@@ -1,0 +1,105 @@
+{
+  "order": 3,
+  "paperId": "uniform-landau-siegel",
+  "title": "Uniform exclusion of Landau–Siegel zeros",
+  "catalogListedTitle": "Uniform exclusion of Landau–Siegel zeros",
+  "displayName": "Uniform exclusion of Landau–Siegel zeros",
+  "citationKey": "OpenAI26LS",
+  "authors": [
+    "OpenAI"
+  ],
+  "version": "October 1, 2026 (PDF p. 1 date footnote)",
+  "sourceCommit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "pdfPages": 9,
+  "sha256": "fab9f6e84ece2a37d834b2c031d8eb14e81413d9f6270791e7b5468b295214ef",
+  "sourceUrl": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Uniform-exclusion-of-Landau-Siegel-zeros-October-1-2026/paper.pdf",
+  "downloadUrl": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Uniform-exclusion-of-Landau-Siegel-zeros-October-1-2026/paper.pdf",
+  "repositoryPath": "preprints/Uniform-exclusion-of-Landau-Siegel-zeros-October-1-2026/paper.pdf",
+  "localPdf": "coordination/catalog-003/sources/uniform-landau-siegel.pdf",
+  "localText": "coordination/catalog-003/sources/uniform-landau-siegel.txt",
+  "existingArticle": null,
+  "draftDirectory": "drafts/catalog-003/uniform-landau-siegel",
+  "worker": "astra_author_companions",
+  "articleStatus": "assigned",
+  "versionRelation": "Distinct companion manuscripts; no supersession inferred from dates.",
+  "catalogId": "003",
+  "checkedOn": "2026-10-23",
+  "owner": "astra_author_companions",
+  "checkingScope": "全証明本文pp.2–8の帰着・主張・入力を読解。全計算の独立検証ではない。",
+  "statements": [
+    {
+      "result": "Theorem 1",
+      "pages": "1",
+      "hypotheses": "Every primitive nonprincipal real Dirichlet character, conductor q>=3; every real zero beta in (0,1).",
+      "conclusion": "There exists an absolute c>0 with (1-beta)log q>=c. No numeric or effective c explicitly stated."
+    },
+    {
+      "result": "Lemma 3",
+      "pages": "3",
+      "hypotheses": "Surjective A:C^4->C^3; ker A=Cc with four Q-independent coordinates; N>=1 and separate degree product condition (3.1).",
+      "conclusion": "Evaluation onto C^{E_N} is surjective."
+    }
+  ],
+  "proofPassages": [
+    {
+      "section": "§2, Lemma 2, (2.3)–(2.4)",
+      "pages": "2–3",
+      "read": "Real zero retained in nonnegative zero sum; positive Euler coefficients; Mertens transition."
+    },
+    {
+      "section": "§3, Lemma 3 and Corollary 4",
+      "pages": "3–5",
+      "read": "Dimension count; nearest lattice point; supporting face; rational hyperplane and Lagrange selection; aspect-ratio uniformity."
+    },
+    {
+      "section": "§4, Lemma 6",
+      "pages": "5–6",
+      "read": "Biquadratic map and kernel, greedy row selection, degree-mass bounds and coefficient independence."
+    },
+    {
+      "section": "§5, Lemma 7",
+      "pages": "7–8",
+      "read": "Frobenius congruence, triangular replacement over K, divisibility from entries, integer norm comparison."
+    },
+    {
+      "section": "§6",
+      "pages": "8",
+      "read": "Negation sequence; bounded-conductor nonvanishing; d=2 exclusion; H then gamma then limit; constants and error terms."
+    }
+  ],
+  "dependencies": [
+    {
+      "source": "d80",
+      "result": "§14, (2), printed p.89",
+      "usedAt": "Lemma 2, (2.3)–(2.4), p.3",
+      "checking": "Publisher preview PDF p.2 gives any primitive character and sigma>1, nonnegative real parts of zero terms; t=0 specializes to required bound."
+    }
+  ],
+  "unresolved": [
+    "No recursive independent proof verification of Davenport Hadamard product, Mertens/Chebyshev, or Dirichlet nonvanishing.",
+    "All auxiliary arithmetic and interpolation calculations were read, not formally or independently exhaustively verified."
+  ],
+  "externalSources": [
+    {
+      "id": "d80",
+      "authors": "Harold Davenport; revised by Hugh L. Montgomery",
+      "title": "Multiplicative Number Theory",
+      "displayName": "Multiplicative Number Theory",
+      "version": "Second edition, Springer, 1980; publisher preview of §14, printed pp.88–89",
+      "sourceUrl": "https://page-one.springer.com/pdf/preview/10.1007/978-1-4757-5927-3_14",
+      "pdfPages": 2,
+      "sha256": "80befb5fac09afd28bb7b495167365d07dd98ae195688dc065d31fa3bb26179a",
+      "checkedLocations": [
+        {
+          "printedPage": "88",
+          "pdfPage": 1
+        },
+        {
+          "printedPage": "89",
+          "pdfPage": 2
+        }
+      ],
+      "checking": "§14 equation (2) and primitive-character scope checked; proof of product formula not inspected in full."
+    }
+  ]
+}

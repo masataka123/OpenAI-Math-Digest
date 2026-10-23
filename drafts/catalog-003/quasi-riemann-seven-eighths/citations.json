@@ -1,0 +1,479 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "author-key",
+  "catalogId": "003",
+  "sources": {
+    "P": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "pagination": "same"
+    },
+    "DR24": {
+      "recordFile": "sources.json",
+      "recordId": "dr24",
+      "guideRole": {
+        "ja": "固定cuspの三次テータ係数と変換公式",
+        "en": "Cubic-theta coefficients and transformations at fixed cusps"
+      }
+    },
+    "GL13": {
+      "recordFile": "sources.json",
+      "recordId": "gl13",
+      "guideRole": {
+        "ja": "二次Hecke族の大篩",
+        "en": "Large sieve for quadratic Hecke families"
+      }
+    },
+    "TZ19": {
+      "recordFile": "sources.json",
+      "recordId": "tz19",
+      "guideRole": {
+        "ja": "固定ray classの素数漸近と正規化",
+        "en": "Prime asymptotic in a fixed ray class and normalization"
+      }
+    },
+    "BIMS17": {
+      "recordFile": "sources.json",
+      "recordId": "bims17",
+      "guideRole": {
+        "ja": "weak-GRHから最小非剰余への帰結",
+        "en": "Least nonresidues under weak GRH"
+      }
+    },
+    "Gal18": {
+      "recordFile": "sources.json",
+      "recordId": "gal18",
+      "guideRole": {
+        "ja": "非剰余取得後のTonelli–Shanks",
+        "en": "Tonelli–Shanks after obtaining a nonresidue"
+      }
+    }
+  },
+  "citations": {
+    "main-result": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "4",
+          "pdf": "4"
+        }
+      ]
+    },
+    "main-corollary": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Corollary 1.2",
+          "printed": "7",
+          "pdf": "7"
+        }
+      ]
+    },
+    "continuation": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 2.1",
+          "printed": "8–9",
+          "pdf": "8–9"
+        }
+      ]
+    },
+    "reflection": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 5.1",
+          "printed": "24–27",
+          "pdf": "24–27"
+        },
+        {
+          "result": "Equation (5.26)",
+          "printed": "36",
+          "pdf": "36"
+        }
+      ]
+    },
+    "balanced": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 6.3",
+          "printed": "49",
+          "pdf": "49"
+        },
+        {
+          "result": "Lemma 9.1",
+          "printed": "61",
+          "pdf": "61"
+        },
+        {
+          "result": "Proposition 11.2",
+          "printed": "83–84",
+          "pdf": "83–84"
+        },
+        {
+          "result": "Theorem 3.1, proof",
+          "printed": "85",
+          "pdf": "85"
+        }
+      ]
+    },
+    "balanced-low": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 6.3",
+          "printed": "49",
+          "pdf": "49"
+        }
+      ]
+    },
+    "balanced-high": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 11.2",
+          "printed": "83–84",
+          "pdf": "83–84"
+        }
+      ]
+    },
+    "first-halfplane": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 3.1",
+          "printed": "10",
+          "pdf": "10"
+        }
+      ]
+    },
+    "compensated-low": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Equation (12.5)",
+          "printed": "86",
+          "pdf": "86"
+        },
+        {
+          "result": "Proposition 15.3",
+          "printed": "107",
+          "pdf": "107"
+        }
+      ]
+    },
+    "normalization": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Equation (16.3)",
+          "printed": "108",
+          "pdf": "108"
+        },
+        {
+          "result": "Section 20.1",
+          "printed": "187–188",
+          "pdf": "187–188"
+        }
+      ]
+    },
+    "moments": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 17.1",
+          "printed": "114–115",
+          "pdf": "114–115"
+        },
+        {
+          "result": "Lemma 18.1",
+          "printed": "152–154",
+          "pdf": "152–154"
+        }
+      ]
+    },
+    "moment-reductions": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Sections 17.5–17.6",
+          "printed": "121, 142",
+          "pdf": "121, 142"
+        },
+        {
+          "result": "Section 18.3",
+          "printed": "159",
+          "pdf": "159"
+        },
+        {
+          "result": "Section 18.8",
+          "printed": "178–180",
+          "pdf": "178–180"
+        },
+        {
+          "result": "Section 19.2",
+          "printed": "182–183",
+          "pdf": "182–183"
+        }
+      ]
+    },
+    "row-counts": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 19.2",
+          "printed": "183",
+          "pdf": "183"
+        }
+      ]
+    },
+    "high-exponents": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 20.1",
+          "printed": "189–190",
+          "pdf": "189–190"
+        },
+        {
+          "result": "Lemma 20.2",
+          "printed": "192–193",
+          "pdf": "192–193"
+        },
+        {
+          "result": "Sections 20.3–20.5",
+          "printed": "191–194",
+          "pdf": "191–194"
+        }
+      ]
+    },
+    "choice-order": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 11.1",
+          "printed": "82–83",
+          "pdf": "82–83"
+        },
+        {
+          "result": "Proposition 20.3",
+          "printed": "194–197",
+          "pdf": "194–197"
+        }
+      ]
+    },
+    "final-high": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 20.3",
+          "printed": "194–197",
+          "pdf": "194–197"
+        }
+      ]
+    },
+    "transfer": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 11.3",
+          "printed": "84–85",
+          "pdf": "84–85"
+        }
+      ]
+    },
+    "weak-grh": {
+      "source": "BIMS17",
+      "locations": [
+        {
+          "result": "Conjecture 6.3",
+          "printed": "7",
+          "pdf": "7"
+        },
+        {
+          "result": "Theorem 6.7",
+          "printed": "8",
+          "pdf": "8"
+        }
+      ]
+    },
+    "square-root": {
+      "source": "Gal18",
+      "locations": [
+        {
+          "result": "Algorithm 3 and Lemma 2.9.5",
+          "printed": "59",
+          "pdf": "59"
+        }
+      ]
+    },
+    "external-theta": {
+      "source": "DR24",
+      "locations": [
+        {
+          "result": "Sections 5.1–5.2",
+          "printed": "17–19",
+          "pdf": "17–19"
+        },
+        {
+          "result": "Appendix A",
+          "printed": "78",
+          "pdf": "78"
+        }
+      ]
+    },
+    "external-sieve": {
+      "source": "GL13",
+      "locations": [
+        {
+          "result": "Definition 1",
+          "printed": "1–2",
+          "pdf": "1–2"
+        },
+        {
+          "result": "Theorem 1.1",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "external-primes": {
+      "source": "TZ19",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ],
+  "articleGuides": {
+    ".": {
+      "selfSource": "P",
+      "externalSources": [
+        "DR24",
+        "GL13",
+        "TZ19",
+        "BIMS17",
+        "Gal18"
+      ],
+      "proofTargets": [
+        "main-result",
+        "continuation",
+        "main-corollary"
+      ],
+      "mainResults": [
+        "main-result",
+        "main-corollary"
+      ],
+      "statements": {
+        "main-result": "theorem-1-1",
+        "main-corollary": "corollary-1-2",
+        "continuation": "proposition-2-1"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "main-result",
+          "conclusion": "Finite-order Hecke family over F, all conductors/heights, strict half-plane and principal pole",
+          "anchor": "proof-1-step-4"
+        },
+        {
+          "result": "main-result",
+          "conclusion": "All Dirichlet characters including zeta, strict boundary and pole-zero cancellation at one",
+          "anchor": "proof-1-step-4"
+        },
+        {
+          "result": "main-corollary",
+          "conclusion": "Absolute polylogarithmic least nonresidue bound",
+          "anchor": "proof-3-step-1"
+        },
+        {
+          "result": "main-corollary",
+          "conclusion": "For every delta>0, n(p) is O_delta(p^delta)",
+          "anchor": "proof-3-step-1"
+        },
+        {
+          "result": "main-corollary",
+          "conclusion": "Deterministic polynomial-time square-root algorithm or nonexistence report",
+          "anchor": "proof-3-step-2"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "main-result",
+          "purpose": {
+            "ja": "対象となる族、厳密な半平面、主極を確認する",
+            "en": "Check the families, strict boundary, and principal pole"
+          }
+        },
+        {
+          "citation": "continuation",
+          "purpose": {
+            "ja": "共通の指数幅から逆数の解析接続へ進む",
+            "en": "Follow the common exponent margin into reciprocal continuation"
+          }
+        },
+        {
+          "citation": "balanced",
+          "purpose": {
+            "ja": "最初の低評価・高評価と原稿内部の11/12の終結",
+            "en": "Read the first low/high bounds and internal 11/12 conclusion"
+          }
+        },
+        {
+          "citation": "compensated-low",
+          "purpose": {
+            "ja": "有限の補償操作と同じ物理和の低評価",
+            "en": "Read the finite compensation and low bound for the same physical sum"
+          }
+        },
+        {
+          "citation": "moments",
+          "purpose": {
+            "ja": "二つのモーメントの長さ・指標族・一様性条件",
+            "en": "Compare length, character-family, and uniformity conditions for the moments"
+          }
+        },
+        {
+          "citation": "high-exponents",
+          "purpose": {
+            "ja": "行数から高い側の指数へ進む端点・周波数の処理",
+            "en": "Follow row counts through the endpoint and frequency estimates"
+          }
+        },
+        {
+          "citation": "choice-order",
+          "purpose": {
+            "ja": "指標に共通の実パラメータと指標依存の高さの選択順",
+            "en": "Separate common real parameters from target-dependent height choices"
+          }
+        },
+        {
+          "citation": "transfer",
+          "purpose": {
+            "ja": "非原始指標への移行とs=1の極の別処理",
+            "en": "Check imprimitive transfer and the separate treatment of poles at one"
+          }
+        },
+        {
+          "citation": "main-corollary",
+          "purpose": {
+            "ja": "非剰余評価と決定的アルゴリズムへの全結論",
+            "en": "Follow all nonresidue and deterministic-algorithm conclusions"
+          }
+        }
+      ]
+    }
+  }
+}

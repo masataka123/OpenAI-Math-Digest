@@ -1,0 +1,17 @@
+\node[card] (a) {\heading{1}{全射でない評価写像から関係を取る}{Assume a nontrivial evaluation relation}
+$\sum_{n\in E_N}v_nB(An)=0,\quad v\ne0$\\
+$S_0=\{n\in E_N:v_n\ne0\},\quad P=\operatorname{conv}S_0$};
+\node[card,below=1.7cm of a] (b) {\heading{2}{次元計数と最近点で支持面を選ぶ}{Dimension counting and a nearest point select a face}
+$R(A(4P\cap\mathbf Z^4))=0,\quad R\ne0$\\
+$R(Am)\ne0,\quad y\in4P,\quad h=m-y$\\
+$u\in G,\quad y-u\in3P$};
+\flow{a}{b}{\Tx{次数の積が格子点数を超える。$m$ は $4P$ に最も近い非消滅点}{The degree product exceeds the lattice count; choose a nearest nonvanishing $m$}\\\Cite{interpolation}\quad\Cite{interpolation-proof}};
+\node[card,below=1.7cm of b] (c) {\heading{3}{面の外を消し、面では一頂点を残す}{Kill points off the face and select one vertex on it}
+$n\in S_0\setminus G:\ R(A(m+n-u))=0$\\
+$A|_{\mathcal H}:\mathcal H\xrightarrow{\sim}\mathbf C^3,\quad Q(An)=1_{n=u}\ (n\in S_0\cap G)$};
+\flow{b}{c}{\Tx{距離の厳密減少と、核の有理一次独立性によるLagrange補間}{Use strict distance decrease and Lagrange interpolation from rational kernel independence}\\\Cite{interpolation-proof}};
+\node[result,below=1.7cm of c] (d) {\heading{4}{許された次数で矛盾する}{Reach a contradiction within the degree bounds}
+$B(z)=Q(z)R(z+A(m-u)),\quad\deg_{z_j}B\le t_j$\\
+$0=v_uR(Am)\ne0$\\
+\Tx{次数条件は写像 $A$ の係数の大きさによらない}{The degree criterion is independent of the size of the coefficients of $A$}};
+\flow{c}{d}{\Tx{$Q$ の総次数 $\le3(N-1)$ を各座標の予備次数へ収める}{Fit the total degree $\le3(N-1)$ of $Q$ into the reserved degrees}\\\Cite{interpolation-proof}};

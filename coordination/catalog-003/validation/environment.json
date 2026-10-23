@@ -1,0 +1,45 @@
+{
+  "scope": "Stage 1 generation and local preview; no site registration or booklet generation",
+  "executables": {
+    "node": {
+      "path": "/Users/iwai/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "version": [
+        "v24.19.0"
+      ]
+    },
+    "python3": {
+      "path": "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "version": [
+        "Python 3.13.6"
+      ]
+    },
+    "pdftotext": {
+      "path": "/usr/local/bin/pdftotext",
+      "version": [
+        "pdftotext version 25.08.0"
+      ]
+    },
+    "xelatex": {
+      "path": "/Library/TeX/texbin/xelatex",
+      "version": [
+        "XeTeX 3.141592653-2.6-0.999996 (TeX Live 2024)"
+      ]
+    },
+    "dvisvgm": {
+      "path": "/Library/TeX/texbin/dvisvgm",
+      "version": [
+        "dvisvgm 3.2.2"
+      ]
+    },
+    "chrome": {
+      "path": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "version": [
+        "Google Chrome 155.0.8059.85 "
+      ]
+    }
+  },
+  "stage2Command": "npm run catalog:prepare -- --catalog 003",
+  "pdfRuntimeConfiguration": "tmp/pdf-runtime.json; check existence before reuse",
+  "sharedPreview": "renderDraft, renderCatalogInventory, articleStructure, current src/styles and scripts/browser/inspect-page.mjs",
+  "networkAcquisition": "GitHub text connector; binary PDFs via TLS-verified system curl"
+}
