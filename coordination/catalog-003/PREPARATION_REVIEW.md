@@ -24,3 +24,7 @@
 保存先：実行フォルダをstage2/runs/へ原記録と画像ごと保存し、元tmp実行とファイル同一性を照合。機械の数値・ハッシュ・工程表はこの保存済みHANDOFF/reportと元リンク記録を参照する。
 
 PDF版台帳は共通生成後に既存カタログのキー順だけを復元した。値は一切変えず、003以外は開始時点と同一。変更後の対象PDF照合はstage2/pdf-status-after-manifest-order.logで成功。
+
+## 第3段階の同一版照合・公開確認（2026-10-23）
+
+担当：/root、Solサイト本部。指定根拠はMODEL_PROVENANCE.json#/stage3。第2段階の本文・TeX/SVG・対象HTML・PDFと現行版の一致をstage3/prepublication-identity.jsonで照合し、本記録の画面・全PDFページの確認を同一版へ再利用した。PDF再生成と数学的編集はない。公開URLのHTML・図・冊子も同一で、公開時の画面・図拡大・言語切替を追加確認した。原記録はstage3/live-verification.jsonから参照する。公開の採否・commit・Actionsと残る確認範囲はPUBLICATION.md。公開前照合から公開確認・記録までの本部作業は概ね15分（Git送信・Actions待ちを含む）。

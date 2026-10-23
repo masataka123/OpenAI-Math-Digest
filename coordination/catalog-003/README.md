@@ -1,8 +1,10 @@
-# カタログ003 — 第1段階本部
+# カタログ003 — 制作・公開記録
 
 制作セット1.4および2026-10-20モデル運用を適用する。公式記録はinventory.json、取得記録はsources/acquisition.json、担当指定はMODEL_PROVENANCE.jsonを参照する。
 
-## 依頼範囲と保護
+現在は第3段階まで完了し、公開確認済み。最新の入口は[公開記録](PUBLICATION.md)と[第3段階受領](STAGE3_RECEIPT.json)。以下の第1・第2段階の停止記録は履歴として保持する。
+
+## 第1段階の依頼範囲と保護
 
 日英記事・TeX/SVG・引用記録・独立内容点検・日英カタログ案内まで制作して停止する。サイト登録、public資産、PDF版台帳、冊子PDF、commit/pushは今回扱わない。main上の既存作業を保持する。開始時Git情報はgit-baseline.json。数値やハッシュを報告書へ再転記しない。
 
@@ -34,3 +36,7 @@ Nodeはload_workspace_dependenciesで確認した /Users/iwai/.cache/codex-runti
 ## 第2段階の現在位置
 
 第2段階はサイト組込み・日英冊子PDF・公開前検査を完了し、公開準備完了として停止。[担当者確認](PREPARATION_REVIEW.md)と[第3段階への引継ぎ](STAGE2_HANDOFF.md)を参照する。数学本文と図は第1段階の確認版を再利用し、公開は未実施。
+
+## 第3段階の現在位置
+
+第3段階のcommit/push、Actions成功、公開ページ・図・日英PDFの反映確認を完了。[公開記録](PUBLICATION.md)を参照する。第2段階と同一版の本文・図・PDFを使用し、数学的な内容変更・PDF再生成は行っていない。未追跡の外部文献・画像キャッシュおよび無関係な作業は保持した。

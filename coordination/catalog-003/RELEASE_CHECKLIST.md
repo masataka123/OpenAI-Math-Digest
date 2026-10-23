@@ -7,18 +7,18 @@
 - カタログ本部／サイト本部：/root（Sol本部）。第2段階の組込み・PDF・公開前検査を受領。
 - MODEL_PROVENANCEの場所（本部Sol 6.1 / xhigh、数学執筆・別担当点検Astra 6 / high）：MODEL_PROVENANCE.json
 - 構成：multi（公式順3本）
-- 現在のユーザー依頼範囲：第2段階。サイト登録・日英冊子PDF・公開前検査まで。公開は次の指示。
-- 状態：公開準備完了。数学的確認範囲は第1段階の記載を維持。公開は未実施。
+- 現在のユーザー依頼範囲：第3段階。ユーザーの「第3段階をお願いします.」により公開と反映確認まで実施。
+- 状態：公開確認済み。数学的確認範囲は第1段階の記載を維持。証拠はPUBLICATION.mdとSTAGE3_RECEIPT.json。
 
 ## 段階と停止の記録
 
-- 現在の段階：第2（組込み・PDF・公開前検査）完了
-- 運用：第2段階の結果報告で停止。第3段階は次の公開指示。
+- 現在の段階：第3（公開・反映確認）完了
+- 運用：第1・第2段階で停止後、今回の第3段階指示を受けて公開完了。
 - 記事ごとの執筆担当／照合担当・確認範囲：MODEL_PROVENANCE.json、reviews/CONTENT_REVIEW.mdと個別点検、各記事status/sources。
 - [x] 本部と数学担当のモデル・思考量を明示指定し、根拠を記録。単論文でも数学制作をSol本部が兼任していない。 根拠：MODEL_PROVENANCE.json / inventory.json / validation/source-checks.json。
 - [x] 第1段階：内容と成果物を確認し、未確認事項・作業場所・残作業・再開手順を記録して報告。標準運用では停止した。 根拠：reviews/CONTENT_REVIEW.md、validation/FORMAL_REVIEW.md、SITE_HQ_HANDOFF.md。
 - [x] 第2段階：日英サイト・PDFと必要な検査を完了。軽微な体裁調整を際限なく追加せず、公開準備の結果と再開手順を報告。標準運用では停止した。
-- [ ] 第3段階：現在の公開指示を確認し、対象変更の公開と反映確認を記録した。
+- [x] 第3段階：現在の公開指示を確認し、対象変更の公開と反映確認を記録した。
 
 ## 内容と成果物（記事担当・カタログ本部）
 
@@ -81,11 +81,11 @@ npm run catalog:prepare -- --catalog NNN
 
 ## 公開（現在のユーザー依頼の範囲でサイト本部が実施）
 
-- [ ] 公開する差分・最新Git状態を確認し、通常のcommit・pushで反映。他担当の成果物を消していない。
-- [ ] 同一版の内容・目視記録とPDFを照合して参照。公開だけを理由に再執筆・再生成・同じ記録の転記をしていない。変更した範囲は再検査した。
-- [ ] GitHub Actionsのbuild/deploy成功を確認。
-- [ ] 公開URLで日英カタログ・記事・画像・PDFが今回の版に更新されたことを確認。
-- [ ] 公開URL・commit・確認結果・残る数学的未確認を報告。
+- [x] 公開する差分・最新Git状態を確認し、通常のcommit・pushで反映。他担当の成果物を消していない。
+- [x] 同一版の内容・目視記録とPDFを照合して参照。公開だけを理由に再執筆・再生成・同じ記録の転記をしていない。変更した範囲は再検査した。
+- [x] GitHub Actionsのbuild/deploy成功を確認。
+- [x] 公開URLで日英カタログ・記事・画像・PDFが今回の版に更新されたことを確認。
+- [x] 公開URL・commit・確認結果・残る数学的未確認を報告。
 
 公開が未依頼ならこの節は「依頼範囲外」と明記し、公開前の作業まで完了させる。機械的検査の成功を全証明の独立検証や専門家査読済みと表現しない。
 
@@ -95,7 +95,7 @@ npm run catalog:prepare -- --catalog NNN
 |---|---|---|---|
 | サイト登録・公開図配置・日英冊子PDF | Solサイト本部 | 完了 | PREPARATION_REVIEW / STAGE2_HANDOFF |
 | 完全な引用/サイト/冊子/画面検査 | Solサイト本部 | 完了 | 保存済み共通実行とPREPARATION_REVIEW |
-| commit/push・Actions・公開反映 | Solサイト本部 | 第3段階待ち・今回範囲外 | 第3段階指示後 |
+| commit/push・Actions・公開反映 | Solサイト本部 | 完了 | PUBLICATION.md / STAGE3_RECEIPT.json / stage3/ |
 | 記載した数学的保留 | Astra（必要な追加依頼時） | 本文・sources・独立点検に明記 | 表示処理で解消扱いにしない |
 
 ## 制作セット1.4の必須形式
@@ -132,3 +132,7 @@ npm run catalog:prepare -- --catalog NNN
 ## 第2段階の受領記録
 
 2026-10-23、Sol本部 /root が今回版を公開準備完了として受領。機械結果・環境・数値・ハッシュ・ログはstage2/runs/の共通HANDOFF/report、画面/見本/PDF紙面の目視はPREPARATION_REVIEW、確認版の同一性はstage2/final-identity、再開手順はSTAGE2_HANDOFFを参照する。上記の第1段階記録は履歴として維持する。公開節と第3段階は今回の範囲外で未実施。
+
+## 第3段階の受領記録
+
+2026-10-23、Solサイト本部 /root が公開と反映確認を完了。現在の許可、対象commit、Actions、公開URL、同一版の再利用、公開画面・資産照合、残る数学的確認範囲はPUBLICATION.mdを参照する。機械の数値・ハッシュはstage3の原記録を参照し、転記しない。
