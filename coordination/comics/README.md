@@ -4,6 +4,14 @@
 
 このチャットは漫画版の掲載・更新を管理する。サイト全体の方針は別の総本部が管理する。現在の成果物と検査は [導線の制作記録](NAVIGATION.md)、追加・更新は [共通運用](../../production/COMICS.md)を参照する。
 
+## 2026-10-24：トップ紹介文の追記
+
+本人が `src/pages/comics/index.astro` に追記した「漫画版について」の2段落を公開確認済み。「コマ割→コマ割り」「Chat GPT→ChatGPT」（2か所）と「道のり注意深く→道のりを注意深く」を整え、既存の1段落とともに `comic-about-body` 内へ配置した。数学的内容の新規執筆・照合は行っていない。
+
+[検査ログ](home-about-20261024/tests.log)：65件成功。[ビルド](home-about-20261024/build.log)：291ページ生成。[内部リンク](home-about-20261024/links.json)：313,899参照、エラーなし。公開処理の引用・既存PDF検査も成功。公開後に3段落が保存済み原稿と一致すること、1280px・375pxで横はみ出しがないことを確認した。[画面検査](home-about-20261024/browser-checks.json)、[PC画面](home-about-20261024/public-1280.jpg)、[狭幅画面](home-about-20261024/public-375.jpg)。実機端末の検査は行っていない。
+
+公開commitは `0f4000d35f074af33ff95ef6e878a1a7756aedda`。[公開記録](home-about-20261024/deployment.json)と[Actions](https://github.com/masataka123/OpenAI-Math-Digest/actions/runs/39979440698)を参照。今回の表示変更は漫画トップだけで、通常の日英記事・冊子PDF・補足・漫画画像は変更していない。
+
 ## 現在のユーザー指定
 
 - 漫画版は通常の日英版とは独立した `/comics/` 配下。漫画の日英UIを作らず、既存の日英版の一覧・リンクを書き換えない。
