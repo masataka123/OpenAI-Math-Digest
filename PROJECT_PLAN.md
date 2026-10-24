@@ -1,5 +1,9 @@
 # OpenAI Math Digest の制作計画
 
+## 漫画掲載の入口（2026-10-24）
+
+漫画の追加・更新は [production/COMICS.md](production/COMICS.md) と [scripts/comics/README.md](scripts/comics/README.md) の共通処理を使う。取込み・登録・検査・画面確認・公開反映・記録をrun単位で管理し、一時スクリプトを毎回作り直さない。対象範囲の判断と目視は担当者が行う。漫画だけの追加では、通常記事の制作や冊子PDFの再生成を行わない。
+
 ## 新規カタログの現在の制作手順（2026-10-09）
 
 新しいカタログは [production/README.md](production/README.md) の制作セット1.4と2026-10-20の[モデル分担](production/MODEL_ROLES.md)を使用する。以下の過去の実施記録にある固定担当数・3分類・当時の公開範囲を新しい制作へコピーしない。本部はSol 6.1 極高、数学の執筆・内容点検はAstra 6 高。単論文はAstra記事担当が短い案内も担当する。日英PDFは単論文でも必須とし、サイト本部が組込みと生成を担当する。過去の兼任記録より現在の分担指定を優先する。

@@ -4,7 +4,9 @@ import argparse
 from concurrent.futures import ThreadPoolExecutor
 import hashlib
 import json
+import os
 from pathlib import Path
+import re
 import shutil
 import subprocess
 
@@ -17,11 +19,16 @@ def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def prepare(original):
+def prepare(original, page_number=1, edition='v1'):
     catalog = original.parent.parent.name
-    output = ROOT / 'public/images/comics' / catalog / 'v1'
+    if page_number < 1 or not re.fullmatch(r'v[1-9][0-9]*', edition):
+        raise ValueError('Use a positive page number and a version such as v1.')
+    output = ROOT / 'public/images/comics' / catalog / edition
     output.mkdir(parents=True, exist_ok=True)
-    png, webp = output / 'page-001.png', output / 'page-001.webp'
+    stem = f'page-{page_number:03d}'
+    png, webp = output / f'{stem}.png', output / f'{stem}.webp'
+    work = ROOT / 'tmp/comics-image-work' / catalog / edition
+    work.mkdir(parents=True, exist_ok=True)
     with Image.open(original) as image:
         pixels = image.convert('RGBA').tobytes()
         dimensions = image.size
@@ -29,16 +36,20 @@ def prepare(original):
         # conversion, while a PNG re-save may discard the original gAMA chunk.
         png_only = 'gamma' in image.info and abs(image.info['gamma'] - 0.45455) > 0.00001
         if not png.exists():
+            temporary = work / f'{png.name}.{os.getpid()}.tmp'
             if png_only:
-                shutil.copyfile(original, png)
+                shutil.copyfile(original, temporary)
             else:
                 options = {'icc_profile': image.info['icc_profile']} if image.info.get('icc_profile') else {}
-                image.save(png, optimize=True, compress_level=9, **options)
+                image.save(temporary, format='PNG', optimize=True, compress_level=9, **options)
+            temporary.replace(png)
     if png_only and png.read_bytes() != original.read_bytes():
         raise RuntimeError(f'Gamma-tagged PNG differs from original: {png}')
     if not png_only and not webp.exists():
+        temporary = work / f'{webp.name}.{os.getpid()}.tmp'
         subprocess.run([CWEBP, '-quiet', '-lossless', '-exact', '-z', '9', '-mt', '-metadata', 'icc',
-                        str(original), '-o', str(webp)], check=True)
+                        str(original), '-o', str(temporary)], check=True)
+        temporary.replace(webp)
     assets = []
     for path in [original, png] + ([] if png_only else [webp]):
         with Image.open(path) as image:
@@ -47,7 +58,8 @@ def prepare(original):
             raise RuntimeError(f'Pixels differ: {path}. Use a new edition directory for changed images.')
         assets.append({'path': str(path.relative_to(ROOT)), 'size': path.stat().st_size,
                        'dimensions': list(dimensions), 'sha256': digest(path), 'pixelsIdentical': True})
-    record = ROOT / 'coordination/comics' / catalog / 'IMAGE_BUILD.json'
+    record_name = 'IMAGE_BUILD.json' if page_number == 1 and edition == 'v1' else f'IMAGE_BUILD-{edition}-{stem}.json'
+    record = ROOT / 'coordination/comics' / catalog / record_name
     record.parent.mkdir(parents=True, exist_ok=True)
     # Existing verified records (including the 034 prototype) remain intact.
     if not record.exists():

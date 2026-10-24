@@ -79,7 +79,18 @@
     "091",
     "103",
     "107",
-    "109"
+    "109",
+    "157",
+    "158",
+    "159",
+    "187",
+    "197",
+    "246",
+    "285",
+    "287",
+    "305",
+    "320",
+    "322"
   ],
   "operatingPolicy": "2026-10-20",
   "recordedOn": "2026-10-22",
@@ -198,6 +209,38 @@
       "record": "mixed-20261024/",
       "publicationStatus": "publicly-verified",
       "publicationCommit": "c059ff6dc7b7933ee9af187fad00f597364ee92d"
+    },
+    {
+      "id": "2026-10-25-eleven-new-eighteen-notes",
+      "requestedModel": "gpt-6.1-sol",
+      "requestedReasoningEffort": "xhigh",
+      "actualModel": null,
+      "actualReasoningEffort": null,
+      "subagentsStarted": false,
+      "catalogIds": [
+        "071",
+        "074",
+        "087",
+        "091",
+        "103",
+        "107",
+        "109",
+        "157",
+        "158",
+        "159",
+        "187",
+        "197",
+        "246",
+        "285",
+        "287",
+        "305",
+        "320",
+        "322"
+      ],
+      "work": "Common pipeline intake of 18 PNGs from user ZIP; reuse seven images, add eleven comics, proofread and publish eighteen author-provided supplements. Visible-image scope recording only; no new proof writing or independent mathematical/factual verification.",
+      "record": "runs/comics-20261025/report.json",
+      "publicationStatus": "publicly-verified",
+      "publicationCommit": "d47a404e7bbf25e18ce973a6ed388f7fa3567e85"
     }
   ],
   "publicationUpdates": [
@@ -240,6 +283,19 @@
       "subagentsStarted": false,
       "work": "User-supplied introduction and 36 author supplements, explicitly approved spelling corrections, publication and display/link checks. No new mathematical writing or verification.",
       "record": "SUPPLEMENTS_20261022.md"
+    }
+  ],
+  "automationWork": [
+    {
+      "id": "2026-10-24-comics-pipeline",
+      "requestedModel": "gpt-6.1-sol",
+      "requestedReasoningEffort": "xhigh",
+      "actualModel": null,
+      "actualReasoningEffort": null,
+      "subagentsStarted": false,
+      "work": "Shared intake, registration, checks, CUA review helper, publication/resume/verification and generated handoff. Existing seven comics used for verification; no republication and no new mathematical writing.",
+      "record": "automation-20261024/REVIEW.md",
+      "evidence": "User explicitly authorized implementing all five agreed workflow improvements. Root backend settings are not asserted as observed."
     }
   ]
 }

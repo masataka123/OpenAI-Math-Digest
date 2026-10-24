@@ -19,7 +19,14 @@
     "catalog:prepare": "node scripts/prepare-catalog.mjs",
     "pdf:doctor": "node scripts/pdf/runtime.mjs",
     "check:browser": "node scripts/check-browser.mjs",
-    "test:browser": "node --test scripts/browser/browser.test.mjs"
+    "test:browser": "node --test scripts/browser/browser.test.mjs",
+    "comics:plan": "node scripts/comics/run.mjs plan",
+    "comics:prepare": "node scripts/comics/run.mjs prepare",
+    "comics:serve": "node scripts/comics/run.mjs serve",
+    "comics:review": "node scripts/comics/run.mjs review",
+    "comics:publish": "node scripts/comics/run.mjs publish",
+    "comics:verify": "node scripts/comics/run.mjs verify",
+    "comics:status": "node scripts/comics/run.mjs status"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "6.3.6",

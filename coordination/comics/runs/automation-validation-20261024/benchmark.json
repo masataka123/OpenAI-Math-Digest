@@ -1,0 +1,38 @@
+{
+  "scope": "Existing seven-image verification; no new image encoding, no publication. Human judgement, visual review and AI interaction time are excluded.",
+  "preparationWithChecks": {
+    "startedAt": "2026-10-24T14:06:19.666Z",
+    "finishedAt": "2026-10-24T14:07:17.421Z",
+    "durationMs": 57755,
+    "reusedStages": [
+      "registration"
+    ]
+  },
+  "browserReview": {
+    "startedAt": "2026-10-24T14:09:10.580Z",
+    "finishedAt": "2026-10-24T14:09:33.749Z",
+    "conditions": 33
+  },
+  "sameVersionReplay": {
+    "startedAt": "2026-10-24T14:11:47.896Z",
+    "finishedAt": "2026-10-24T14:11:53.184Z",
+    "durationMs": 5288,
+    "reusedStages": [
+      "registration",
+      "tests",
+      "citations",
+      "build",
+      "links",
+      "pdf",
+      "image-tests"
+    ]
+  },
+  "publicReadOnlyVerification": {
+    "checks": 25,
+    "durationMs": 6769
+  },
+  "noPublication": {
+    "dryRun": true,
+    "willCommit": false
+  }
+}
