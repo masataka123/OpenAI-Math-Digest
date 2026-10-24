@@ -20,7 +20,7 @@
 
 [対象範囲](dg-20261024/scopes.json)は画像の見出し・話題を読んだ掲載上の記録。数学的な新規解説・証明検証ではない。対象33原稿と関連原稿を区別し、[原典パス](dg-20261024/source-links.json)49件の実在を固定版の公式Gitツリーで確認。公式原資料の保存済みコピーもGit blob SHAで照合した。画像に書かれた原稿日付と参照版の同一性や全主張の数学的正しさは未照合で、確認済みとして表示しない。
 
-登録は既存の共通台帳とひな形へ追加。漫画トップから微分幾何学の一覧、各カタログへ進める。通常版がある338・356・357には既存記事へのリンクも表示する。29件の補足は全件 `awaiting-author`・本文nullで、本人提供後に追加する。
+登録は既存の共通台帳とひな形へ追加。漫画トップから微分幾何学の一覧、各カタログへ進める。通常版がある338・356・357には既存記事へのリンクも表示する。画像の初回公開時は29件の補足を全件 `awaiting-author`・本文nullとし、その後の本人提供文の掲載は次節に記録する。
 
 テスト66件、画像処理の回帰検査2件、引用95カタログ・342ファイル、321ページのビルド、314,560件の[内部参照](dg-20261024/links.json)、既存PDF検査が成功。[通常版252ページ](dg-20261024/normal-pages.json)は以前のビルドと同じHTML。[保護対象の照合](dg-20261024/protection.json)で既存36件の登録本文・画像・通常記事等を変更していないことを確認した。
 
@@ -28,9 +28,19 @@
 
 公開確認済み。公開commitは `070c12b7fdc0931ad9bb88bc4bbe625047ec5f2d`。[Actions](https://github.com/masataka123/OpenAI-Math-Digest/actions/runs/40069955804)のbuild / deployともsuccess。[公開記録](dg-20261024/deployment.json)と[公開先検査](dg-20261024/public-checks.json)：トップ・分野一覧・全29漫画ページ・全掲載PNGの容量・優先表示される全29画像のSHAを確認し、89件すべて成功した。原画像を含む大容量pushは、前回確認済みのHTTP/1.1・postBufferを今回のコマンドだけ指定して完了。恒久的なGit設定は変更していない。
 
-公開された[微分幾何学の一覧](https://masataka123.github.io/OpenAI-Math-Digest/comics/fields/differential-geometry/)をブラウザーでも確認し、[公開画面](dg-20261024/screens/public-field-1280.jpg)を保存した。既存36件の漫画HTMLも[変更前と一致](dg-20261024/existing-comics.json)。1536px幅の355で原寸表示とEsc終了も[追加確認](dg-20261024/large-image-viewer.json)した。次の操作は本人による補足文の提供・記入で、今回は公開を待つ未提供文はない。
+公開された[微分幾何学の一覧](https://masataka123.github.io/OpenAI-Math-Digest/comics/fields/differential-geometry/)をブラウザーでも確認し、[公開画面](dg-20261024/screens/public-field-1280.jpg)を保存した。既存36件の漫画HTMLも[変更前と一致](dg-20261024/existing-comics.json)。1536px幅の355で原寸表示とEsc終了も[追加確認](dg-20261024/large-image-viewer.json)した。画像公開後に本人から補足29件を受領し、次節の更新で掲載した。
 
 公開358のPNGを375px幅で拡大し、画像の読込完了と補足待ち表示、横はみ出しなしを[ブラウザーで確認](dg-20261024/public-browser.json)。[公開画像の全体表示](dg-20261024/screens/public-358-fit-375.jpg)も保存した。
+
+## 2026-10-24：微分幾何学の補足29件
+
+本人が `src/data/comics.json` に記入した333〜361の[補足29件の原文](dg-supplements-20261024/provided.json)を受領。校正表の5か所と、356の「ノリで描けた」を修正し、公開時に `approved` へ変更する明示指示を受けた。[修正一覧](dg-supplements-20261024/corrections.json)：338のChatGPT、344の構造定理っぽい、348のなんでしょうかね、350のOpenAI、356のノリで描けた、358の微分幾何で聞いたことがある。指定外の本文・著者名・本人記入の受領日・漫画の登録情報は維持した。数学の新規執筆・内容照合は行っておらず、Astra・サブエージェントは使用していない。
+
+補足29件を `approved` に変更し、[生成・リンク検査](dg-supplements-20261024/checks.json)で本文一致と準備中表示の解消を確認。321ページ・314,560参照でエラーなし。対象外292ページは画像公開時のHTMLと一致する。[テスト](dg-supplements-20261024/tests.log)66件、[引用検査](dg-supplements-20261024/citations.log)95カタログ・342ファイル、[ビルド](dg-supplements-20261024/build.log)が成功した。漫画画像・日英記事・冊子PDFの改訂や再生成は行っていない。
+
+[画面検査](dg-supplements-20261024/browser-checks.json)は29件×1280・375・320pxの87条件で本文一致・補足欄の表示・横はみ出しなしを確認。公開後も[全29件](dg-supplements-20261024/public-checks.json)で本文が修正後の原稿と一致し、準備中表示がないことを確認した。[公開356のPC画面](dg-supplements-20261024/screens/356-public-1280.jpg)・[375px画面](dg-supplements-20261024/screens/356-public-375.jpg)と[ブラウザー記録](dg-supplements-20261024/public-browser.json)を保存。実機端末の検査ではない。
+
+公開確認済み。公開commitは `65faeb8064946eb856ad1381f8fb013eef98b07c`。[Actions](https://github.com/masataka123/OpenAI-Math-Digest/actions/runs/40077343080)のbuild / deployともsuccessで、公開時の既存PDF検査も成功。[公開記録](dg-supplements-20261024/deployment.json)を参照する。
 
 ## 現在のユーザー指定
 
@@ -38,7 +48,7 @@
 - 見た目、公式分野名・順序・番号、書誌情報だけを既存の共通基盤から利用する。
 - 担当指定は `gpt-6.1-sol` / `xhigh`。ユーザーの「Astra不要」の指示を、この漫画掲載作業に適用する。今回の追加制作ではサブエージェントを起動していない。
 - 過去のAstraによる034の予備照合・短文制作は履歴として保存する。今回の新規実施とは区別し、同一画像の照合・執筆を繰り返さない。
-- 最初のZIPの全36件と本人提供の補足・トップ紹介文は公開確認済み。微分幾何学の29件は漫画を先に公開し、補足を後から追加する。
+- 最初のZIPの全36件と本人提供の補足・トップ紹介文は公開確認済み。微分幾何学29件も、漫画を先に公開した後、本人提供の補足29件を追加・公開確認済み。
 
 ## ページと遷移
 
