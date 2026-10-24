@@ -29,7 +29,7 @@ const result = records.map(entry => {
   if (!entry.pages.length) throw new Error(`Comic ${entry.catalogId} has no images`);
   for (const page of entry.pages) {
     if (!(page.width>0 && page.height>0) || !page.alt ||
-      ![page.png,page.webp].every(path => /^images\/comics\/[a-zA-Z0-9_./-]+$/.test(path) && !path.split('/').includes('..'))) {
+      ![page.png,...(page.webp===undefined?[]:[page.webp])].every(path => /^images\/comics\/[a-zA-Z0-9_./-]+$/.test(path) && !path.split('/').includes('..'))) {
       throw new Error(`Invalid comic image: ${entry.catalogId}`);
     }
   }

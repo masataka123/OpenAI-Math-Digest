@@ -24,7 +24,7 @@ const field=comic.fields[0];
   </figcaption>
   <a class="comic-image-link" href={`${base}${page.png}`} data-comic-trigger aria-label={`漫画${index+1}枚目を拡大して読む`}>
    <picture>
-    <source type="image/webp" srcset={`${base}${page.webp}`}/>
+    {page.webp&&<source type="image/webp" srcset={`${base}${page.webp}`}/>}
     <img src={`${base}${page.png}`} width={page.width} height={page.height} loading={index===0?'eager':'lazy'} decoding="async" alt={page.alt}/>
    </picture>
   </a>

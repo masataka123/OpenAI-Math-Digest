@@ -6,15 +6,17 @@ import {resolveComics,visibleComics,comics,comicFields} from '../src/data/comics
 
 test('all supplied comics work without any normal catalogue or article',()=>{
  const independent=resolveComics(entries,[],[]);
- assert.equal(independent.length,36);
+ assert.equal(independent.length,entries.length);
  assert.ok(independent.every(c=>c.normalCatalog===null&&c.targetPapers.length>0));
  assert.ok(independent.flatMap(c=>c.manuscripts).every(p=>p.normalPaperId===null&&p.sourceUrl.includes('/adc7f1241b42e322a6451854ab7e4b4c146bf78a/')));
 });
 
-test('official subject membership orders the 36 supplied comics without adding omitted numbers',()=>{
- const field=comicFields.find(f=>f.id==='algebraic-complex-geometry');
- assert.deepEqual(field.comics.map(c=>c.catalogId),field.officialIds);
- assert.ok(!field.comics.some(c=>['045','061'].includes(c.catalogId)));
+test('official subject membership orders the supplied fields without adding omitted numbers',()=>{
+ for(const id of ['algebraic-complex-geometry','differential-geometry']){
+  const field=comicFields.find(f=>f.id===id);
+  assert.deepEqual(field.comics.map(c=>c.catalogId),field.officialIds);
+ }
+ assert.ok(!comics.some(c=>['045','061'].includes(c.catalogId)));
 });
 
 test('only existing normal articles receive corresponding article links',()=>{
@@ -49,6 +51,14 @@ test('broken catalogue, target-source, image path and duplicate registrations fa
  assert.throws(()=>resolveComics([entry,entry]),/Duplicate comic catalogue/);
 });
 
+test('a gamma-preserving PNG-only comic needs no WebP source',()=>{
+ const entry=structuredClone(entries[0]);
+ delete entry.pages[0].webp;
+ assert.equal(resolveComics([entry])[0].pages[0].webp,undefined);
+ entry.pages[0].webp='images/comics/../missing.webp';
+ assert.throws(()=>resolveComics([entry]),/Invalid comic image/);
+});
+
 test('an author supplement can be added without being required for other comics',()=>{
  const records=structuredClone(entries.slice(0,2));
  const received=JSON.parse('{"status":"approved","author":"岩井雅崇","text":"第一段落。\\n\\n第二段落。","receivedOn":"2026-10-22"}');
@@ -62,6 +72,6 @@ test('an author supplement can be added without being required for other comics'
 test('all registered source and optimized image files exist',async()=>{
  for(const entry of entries){
   await access(entry.original.path);
-  for(const page of entry.pages)await Promise.all([access(`public/${page.webp}`),access(`public/${page.png}`)]);
+  for(const page of entry.pages)await Promise.all([page.webp&&access(`public/${page.webp}`),access(`public/${page.png}`)]);
  }
 });
