@@ -1,6 +1,6 @@
 # 漫画掲載本部
 
-2026-10-24。状態：**既存36件を公開確認済み、微分幾何学29件を追加・公開準備済み**。既存分の受領・検査・公開状況は [36件の制作記録](BATCH_20261022.md)を参照。
+2026-10-24。状態：**2分野・65件の漫画を公開確認済み**。既存分の受領・検査・公開状況は [36件の制作記録](BATCH_20261022.md)を参照。
 
 このチャットは漫画版の掲載・更新を管理する。サイト全体の方針は別の総本部が管理する。現在の成果物と検査は [導線の制作記録](NAVIGATION.md)、追加・更新は [共通運用](../../production/COMICS.md)を参照する。
 
@@ -26,7 +26,11 @@
 
 [画面検査](dg-20261024/browser-checks.json)：29ページ×1280・375・320pxの87条件で画像読込と横はみ出しなし、補足待ち表示を確認。358のPNGで全体表示・100%・拡大・閉じるとフォーカス復帰を操作し、[記録](dg-20261024/viewer-checks.json)を保存した。実機Safari検査ではない。検査ログと代表画面は `dg-20261024/` に保存する。
 
-公開準備済み。公開処理と公開先の反映確認は次の工程。
+公開確認済み。公開commitは `070c12b7fdc0931ad9bb88bc4bbe625047ec5f2d`。[Actions](https://github.com/masataka123/OpenAI-Math-Digest/actions/runs/40069955804)のbuild / deployともsuccess。[公開記録](dg-20261024/deployment.json)と[公開先検査](dg-20261024/public-checks.json)：トップ・分野一覧・全29漫画ページ・全掲載PNGの容量・優先表示される全29画像のSHAを確認し、89件すべて成功した。原画像を含む大容量pushは、前回確認済みのHTTP/1.1・postBufferを今回のコマンドだけ指定して完了。恒久的なGit設定は変更していない。
+
+公開された[微分幾何学の一覧](https://masataka123.github.io/OpenAI-Math-Digest/comics/fields/differential-geometry/)をブラウザーでも確認し、[公開画面](dg-20261024/screens/public-field-1280.jpg)を保存した。既存36件の漫画HTMLも[変更前と一致](dg-20261024/existing-comics.json)。1536px幅の355で原寸表示とEsc終了も[追加確認](dg-20261024/large-image-viewer.json)した。次の操作は本人による補足文の提供・記入で、今回は公開を待つ未提供文はない。
+
+公開358のPNGを375px幅で拡大し、画像の読込完了と補足待ち表示、横はみ出しなしを[ブラウザーで確認](dg-20261024/public-browser.json)。[公開画像の全体表示](dg-20261024/screens/public-358-fit-375.jpg)も保存した。
 
 ## 現在のユーザー指定
 
