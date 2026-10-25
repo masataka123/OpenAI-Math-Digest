@@ -36,7 +36,7 @@ test('unpublished comics are absent unless preview is explicitly enabled',()=>{
 
 test('registration supports ordered image arrays and prevents false author attribution',()=>{
  const entry=structuredClone(entries[0]);
- entry.pages.push({...entry.pages[0],id:'page-002'});
+ entry.pages=[{...entry.pages[0],id:'page-001'},{...entry.pages[0],id:'page-002'}];
  assert.deepEqual(resolveComics([entry])[0].pages.map(p=>p.id),['page-001','page-002']);
  entry.supplement.status='awaiting-author';
  entry.supplement.text='This was not provided by the author.';
