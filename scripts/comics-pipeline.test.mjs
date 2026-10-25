@@ -7,7 +7,7 @@ import {createHash} from 'node:crypto';
 import {parseCatalogues,catalogIndex} from './comics/catalog-index.mjs';
 import {registration,validateManifest,runDirectory} from './comics/pipeline.mjs';
 import {parseArgs} from './comics/run.mjs';
-import {withLock,writeJSON,hash,readJSON,directoryHash} from './comics/common.mjs';
+import {withLock,writeJSON,hash,readJSON,directoryHash,command} from './comics/common.mjs';
 import {publish,verifyPublic,assertRegistryScope,repository} from './comics/release.mjs';
 
 const source='a'.repeat(40),manuscript={title:'Paper',path:'preprints/Paper/paper.pdf'};
@@ -15,6 +15,13 @@ const index={sourceCommit:source,catalogs:[{id:'071',title:{en:'Circle domains'}
 const manifest={version:1,sourceCommit:source,catalogs:[{catalogId:'071',edition:'v1',title:{ja:'円領域',en:'Circle domains'},scope:'Provided image scope',targetSourcePaths:[manuscript.path],pages:[{input:{file:'/provided/Catalog_071.png'},sha256:'b'.repeat(64),width:2,height:3}]}]};
 const images=[{catalogId:'071',page:1,images:[{path:'assets/comics/catalog-071/original/Catalog_071.png',sha256:'b'.repeat(64)},{path:'public/images/comics/catalog-071/v1/page-001.png',dimensions:[2,3]},{path:'public/images/comics/catalog-071/v1/page-001.webp',dimensions:[2,3]}]}];
 async function temporary(t){const root=await mkdtemp(path.join(os.tmpdir(),'comic-pipeline-'));t.after(()=>rm(root,{recursive:true,force:true}));return root;}
+
+test('subprocess reads preserve Japanese characters split across byte chunks',async()=>{
+ for(const stream of ['stdout','stderr']){
+  const result=await command(process.execPath,['-e',`const b=Buffer.from('岩井の補足');process.${stream}.write(b.subarray(0,1));setTimeout(()=>process.${stream}.write(b.subarray(1)),30);`]);
+  assert.equal(result.output,'岩井の補足');
+ }
+});
 
 test('official source cache checks blob hashes before reusing an index',async t=>{
  const root=await temporary(t),dir=path.join(root,'coordination/comics/source');await mkdir(dir,{recursive:true});

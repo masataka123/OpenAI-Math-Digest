@@ -28,6 +28,7 @@ export async function command(executable,args,{root,log,env={},timeout=300000}={
  const startedAt=new Date().toISOString(),start=performance.now();let output='';
  await new Promise((resolve,reject)=>{
   const child=spawn(executable,args,{cwd:root,env:{...process.env,...env},stdio:['ignore','pipe','pipe']});
+  child.stdout.setEncoding('utf8');child.stderr.setEncoding('utf8');
   const timer=setTimeout(()=>{child.kill('SIGTERM');reject(Error('Command timed out: '+executable));},timeout);timer.unref();
   child.stdout.on('data',chunk=>{output+=chunk;});child.stderr.on('data',chunk=>{output+=chunk;});
   child.on('error',error=>{clearTimeout(timer);reject(error);});child.on('close',async code=>{clearTimeout(timer);try{if(log)await atomic(log,output.split(/\r?\n/).map(s=>s.trimEnd()).join('\n'));}catch(error){reject(error);return;}if(code===0)resolve();else reject(Error(`${executable} exited ${code}: ${output.slice(-1800)}`));});
