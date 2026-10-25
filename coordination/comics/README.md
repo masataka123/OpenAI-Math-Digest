@@ -174,3 +174,9 @@ COMICS_PREVIEW=1 npm run dev -- --host 127.0.0.1
 155・156・164・165・173・180・182・189・191を追加し、本人提供の補足を校正して掲載。新規9件は各1枚、既存の作り直し版を含む漫画と補足は維持する。組合せ論は13件、全体は99カタログとなる。165は完全グラフの原稿、182は一般多項式差と平方差の原稿2本を主対象とし、残りの収録原稿は関連原稿として区別した。
 
 校正・担当・確認範囲は [編集記録](runs/comics-20261025-combinatorics/EDITORIAL_REVIEW.md)、今回の公開状態と再開手順は [実行記録](runs/comics-20261025-combinatorics/HANDOFF.md)、[画面確認](runs/comics-20261025-combinatorics/review.json)、[公開照合](runs/comics-20261025-combinatorics/public-checks.json)を参照。
+
+## 2026-10-25：さらに7件の作り直し版を先頭に追加
+
+002・032・034・074・087・107・109は、本人の公開指示に従い今回の作り直し版を1枚目、これまでの掲載画像を2枚目に配置し、公開反映まで確認済み。既存の補足・旧原本・旧掲載画像のURLと対象原稿の登録を保持し、共通の版名・移動リンク・拡大機能を使う。総数は99カタログのまま。
+
+今回の状態は [実行記録](runs/comics-20261025-revisions-seven/HANDOFF.md)、担当と目視の範囲は [編集記録](runs/comics-20261025-revisions-seven/EDITORIAL_REVIEW.md)、既存内容の保持は [照合記録](runs/comics-20261025-revisions-seven/preservation.json)を参照。
