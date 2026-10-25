@@ -16,11 +16,19 @@ export async function runBrowserReview({tab,viewport,runDirectory,origin,widths=
     await tab.goto(origin.replace(/\/$/,'')+'/OpenAI-Math-Digest/'+target.route);
     await tab.playwright.waitForLoadState({state:'load',timeoutMs:30000});
     await tab.getAXState({emit:false});
+    if(target.kind==='catalog'&&target.pages.some(page=>page.label)){
+     for(const page of target.pages){await tab.playwright.getByRole('link',{name:page.label,exact:true}).click();await tab.getAXState({emit:false});await tab.playwright.waitForLoadState({state:'networkidle',timeoutMs:30000});}
+     if(width===1280){
+      await tab.playwright.getByRole('link',{name:'漫画2枚目を拡大して読む',exact:true}).click();await tab.getAXState({emit:false});await tab.playwright.waitForLoadState({state:'networkidle',timeoutMs:30000});
+      await tab.pressKey(null,'Escape');await tab.getAXState({emit:false});
+     }
+     await tab.playwright.getByRole('link',{name:target.pages[0].label,exact:true}).click();await tab.getAXState({emit:false});
+    }
     // The browser's load wait includes the displayed image requests. Evaluation only reads DOM state.
     const actual=await tab.playwright.evaluate(()=>{
      const images=[...document.querySelectorAll('.comic-page picture img')];
      return {width:innerWidth,scrollWidth:document.documentElement.scrollWidth,title:document.querySelector('h1')?.textContent,
-      images:images.map(i=>({complete:i.complete,width:i.naturalWidth,height:i.naturalHeight})),
+      images:images.map(i=>({complete:i.complete,width:i.naturalWidth,height:i.naturalHeight,src:i.getAttribute('src')})),labels:[...document.querySelectorAll('.comic-page-number')].map(e=>e.textContent),
       ids:[...document.querySelectorAll('[data-comic-catalog]')].map(e=>e.getAttribute('data-comic-catalog')),
       pending:!!document.querySelector('.comic-pending'),author:[...document.querySelectorAll('.comic-author-note p')].map(p=>p.textContent).join('\n\n').trim(),
       summary:document.querySelector('#fields .section-head')?.textContent,
@@ -29,6 +37,8 @@ export async function runBrowserReview({tab,viewport,runDirectory,origin,widths=
     const issues=[];if(actual.scrollWidth>width)issues.push('Horizontal overflow');
     if(target.kind==='catalog'){
      if(actual.images.length!==target.pages.length||actual.images.some((i,n)=>!i.complete||i.width!==target.pages[n].width||i.height!==target.pages[n].height))issues.push('Image load/dimensions differ');
+     if(actual.images.some((image,n)=>image.src!==`/OpenAI-Math-Digest/${target.pages[n].png}`))issues.push('Image order differs');
+     if(target.pages.some((page,n)=>page.label&&(!actual.labels[n]?.includes(`${n+1}枚目：${page.label}`)||!actual.links.includes(`#comic-page-${n+1}`))))issues.push('Edition labels/navigation differ');
      if(target.supplement.status==='approved'){if(actual.author!==target.supplement.text.trim()||actual.pending)issues.push('Author supplement differs');}
      else if(!actual.pending||actual.author)issues.push('Author pending state differs');
     }
@@ -51,6 +61,15 @@ export async function runBrowserReview({tab,viewport,runDirectory,origin,widths=
   await tab.playwright.getByRole('button',{name:'拡大',exact:true}).click();await tab.getAXState({emit:false});record.viewer.push(await tab.playwright.evaluate(()=>({step:'zoom',percent:document.querySelector('dialog output')?.textContent})));
   await tab.playwright.getByRole('button',{name:'全体表示',exact:true}).click();await tab.getAXState({emit:false});
   await tab.pressKey(null,'Escape');await tab.getAXState({emit:false});record.viewer.push(await tab.playwright.evaluate(()=>({step:'closed',closed:!document.querySelector('dialog[open]'),focusRestored:document.activeElement?.getAttribute('data-comic-trigger')!==null})));
+  if(first.pages.length>1){
+   await tab.playwright.getByRole('link',{name:'漫画2枚目を拡大して読む',exact:true}).click();await tab.getAXState({emit:false});await tab.playwright.waitForLoadState({state:'networkidle',timeoutMs:30000});
+   const second=await tab.playwright.evaluate(()=>{const image=document.querySelector('.comic-viewer-image');return {step:'second-page',loaded:image.complete&&image.naturalWidth>0,src:image.getAttribute('src')};});record.viewer.push(second);
+   if(!second.loaded||![first.pages[1].png,first.pages[1].webp].filter(Boolean).some(file=>second.src.endsWith(file)))throw Error('Second image viewer differs');
+   await tab.playwright.getByRole('button',{name:'100%',exact:true}).click();await tab.getAXState({emit:false});
+   await tab.playwright.getByRole('button',{name:'拡大',exact:true}).click();await tab.getAXState({emit:false});
+   const zoom=await tab.playwright.evaluate(()=>({step:'second-page-zoom',percent:document.querySelector('dialog output')?.textContent}));record.viewer.push(zoom);if(zoom.percent!=='130%')throw Error('Second image zoom failed');
+   await tab.pressKey(null,'Escape');await tab.getAXState({emit:false});
+  }
   if(record.conditions.some(r=>r.issues.length)||!record.viewer[0].loaded||record.viewer[1].percent!=='100%'||record.viewer[2].percent!=='130%'||!record.viewer[3].closed||!record.viewer[3].focusRestored)throw Error('Browser checks failed; inspect review.json.');
   record.status='passed';
  }catch(error){record.status='failed';record.error=error.message;throw error;}

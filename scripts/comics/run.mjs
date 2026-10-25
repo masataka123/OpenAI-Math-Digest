@@ -11,12 +11,13 @@ export function parseArgs(argv){
  const [command,...args]=argv,options={inputs:[],catalogs:[]};
  if(!['plan','prepare','serve','review','publish','verify','status'].includes(command))throw Error('Use plan | prepare | serve | review | publish | verify | status');
  for(let i=0;i<args.length;i++){
-  const key=args[i];if(['--authorized','--dry-run'].includes(key)){options[key.slice(2).replace(/-([a-z])/g,(_,c)=>c.toUpperCase())]=true;continue;}
+  const key=args[i];if(['--authorized','--dry-run','--prepend'].includes(key)){options[key.slice(2).replace(/-([a-z])/g,(_,c)=>c.toUpperCase())]=true;continue;}
   if(!['--run','--input','--catalogs','--edition','--reviewer','--notes','--base'].includes(key)||!args[i+1]||args[i+1].startsWith('--'))throw Error('Unknown/incomplete argument: '+key);
   const value=args[++i];if(key==='--input')options.inputs.push(value);else if(key==='--catalogs'){options.catalogs=value.split(',');if(options.catalogs.some(n=>!/^\d{3}$/.test(n)))throw Error('Use three-digit catalogue numbers');}else options[key.slice(2)]=value;
  }
  if(!options.run)throw Error('Specify --run NAME');
- if(command!=='publish'&&(options.authorized||options.dryRun))throw Error('Publication flags belong only to publish');return {command,options};
+ if(command!=='publish'&&(options.authorized||options.dryRun))throw Error('Publication flags belong only to publish');
+ if(options.prepend&&command!=='plan')throw Error('--prepend belongs only to plan');return {command,options};
 }
 export async function main(argv=process.argv.slice(2)){
  const {command,options}=parseArgs(argv),root=process.cwd(),directory=runDirectory(root,options.run);let result;

@@ -13,13 +13,13 @@ const field=comic.fields[0];
   <div class="comic-meta"><span>日本語の漫画</span><span>{comic.pages.length}枚</span></div>
   {comic.editorialNote&&<aside class="comic-editorial-note" aria-label="掲載画像の確認状況"><strong>確認中の事項</strong><p>{comic.editorialNote}</p></aside>}
  </header>
- <nav class="comic-contents" aria-label="このページの内容"><a href="#comic">漫画を読む</a><a href="#iwai-notes">岩井の補足</a><a href="#related">通常記事・原典</a></nav>
+ <nav class="comic-contents" aria-label="このページの内容">{comic.pages.some(page=>page.label)?comic.pages.map((page,index)=><a href={`#comic-page-${index+1}`}>{page.label??`${index+1}枚目`}</a>):<a href="#comic">漫画を読む</a>}<a href="#iwai-notes">岩井の補足</a><a href="#related">通常記事・原典</a></nav>
 </div>
 
 <section id="comic" class="comic-reader" aria-label={`カタログ${comic.catalogId}の漫画`}>
  {comic.pages.map((page,index)=><figure class="comic-page" id={`comic-page-${index+1}`}>
   <figcaption class="comic-image-tools">
-   <span class="comic-page-number">{comic.pages.length>1?`${index+1} / ${comic.pages.length}`:'漫画'}<span class="comic-reading-hint">タップして拡大できます</span></span>
+   <span class="comic-page-number">{page.label?`${index+1}枚目：${page.label}`:comic.pages.length>1?`${index+1} / ${comic.pages.length}`:'漫画'}<span class="comic-reading-hint">タップして拡大できます</span></span>
    <span class="comic-tool-links"><a href={`${base}${page.png}`} data-comic-trigger>拡大して読む ↗</a><a href={`${base}${page.png}`} target="_blank" rel="noopener noreferrer">画像を直接開く ↗</a></span>
   </figcaption>
   <a class="comic-image-link" href={`${base}${page.png}`} data-comic-trigger aria-label={`漫画${index+1}枚目を拡大して読む`}>

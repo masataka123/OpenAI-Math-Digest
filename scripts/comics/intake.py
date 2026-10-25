@@ -32,7 +32,7 @@ def read_source(source):
     return file.read_bytes()
 
 
-def inventory(inputs):
+def inventory(inputs, renumber=False):
     candidates = []
     for value in inputs:
         file = Path(value).resolve(strict=True)
@@ -75,12 +75,20 @@ def inventory(inputs):
         raise ValueError('No named comic PNGs found')
     for number in {r['catalogId'] for r in rows}:
         pages = sorted(r['page'] for r in rows if r['catalogId'] == number)
-        if pages != list(range(1, len(pages) + 1)):
+        if not renumber and pages != list(range(1, len(pages) + 1)):
             raise ValueError(f'Page sequence must start at 1 without gaps: {number}')
-    return sorted(rows, key=lambda r: (r['catalogId'], r['page']))
+    rows = sorted(rows, key=lambda r: (r['catalogId'], r['page']))
+    if renumber:
+        counters = {}
+        for row in rows:
+            row['suppliedPage'] = row['page']
+            counters[row['catalogId']] = counters.get(row['catalogId'], 0) + 1
+            row['page'] = counters[row['catalogId']]
+    return rows
 
 
 def prepare(manifest, root):
+    root = root.resolve()
     spec = importlib.util.spec_from_file_location('comic_images', Path(__file__).with_name('prepare-images.py'))
     images = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(images)
@@ -100,6 +108,12 @@ def prepare(manifest, root):
             with Image.open(io.BytesIO(data)) as image:
                 if image.format != 'PNG' or image.size != (page['width'], page['height']):
                     raise ValueError(f'Input format/dimensions differ: {comic["catalogId"]}/{page_number}')
+            if page.get('reuse'):
+                original = Path(page['input']['file']).resolve()
+                if not original.is_relative_to(root / f'assets/comics/catalog-{comic["catalogId"]}/original'):
+                    raise ValueError('Reused original must belong to this catalogue')
+                sources.append((comic, page_number, original, data))
+                continue
             suffix = '' if page_number == 1 else f'_{page_number:03d}'
             edition = comic.get('edition', 'v1')
             if not re.fullmatch(r'v[1-9][0-9]*', edition):
@@ -111,6 +125,20 @@ def prepare(manifest, root):
             sources.append((comic, page_number, original, data))
     def prepare_one(source):
         comic, number, original, data = source
+        page = comic['pages'][number - 1]
+        if page.get('reuse'):
+            with Image.open(io.BytesIO(data)) as image:
+                pixels = image.convert('RGBA').tobytes()
+            assets = []
+            for file in [original] + [root / 'public' / page['reuse'][key] for key in ['png', 'webp'] if page['reuse'].get(key)]:
+                if file != original and not file.resolve().is_relative_to(root / f'public/images/comics/catalog-{comic["catalogId"]}'):
+                    raise ValueError('Reused asset must belong to this catalogue')
+                with Image.open(file) as image:
+                    if image.size != (page['width'], page['height']) or image.convert('RGBA').tobytes() != pixels:
+                        raise ValueError('Reused published image differs from its original')
+                assets.append({'path': str(file.relative_to(root)), 'size': file.stat().st_size,
+                               'dimensions': [page['width'], page['height']], 'sha256': images.digest(file), 'pixelsIdentical': True})
+            return {'catalogId': comic['catalogId'], 'images': assets, 'page': number, 'originalReused': True, 'publishedAssetsReused': True}
         original.parent.mkdir(parents=True, exist_ok=True)
         reused = original.exists()
         if not reused:
@@ -127,11 +155,12 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('command', choices=['inventory', 'prepare'])
     parser.add_argument('--input', action='append', default=[])
+    parser.add_argument('--renumber', action='store_true', help='Order supplied images before preserved existing pages.')
     parser.add_argument('--manifest')
     parser.add_argument('--root', default=str(Path(__file__).resolve().parents[2]))
     parser.add_argument('--output', required=True)
     args = parser.parse_args()
-    result = inventory(args.input) if args.command == 'inventory' else prepare(
+    result = inventory(args.input, renumber=args.renumber) if args.command == 'inventory' else prepare(
         json.loads(Path(args.manifest).read_text()), Path(args.root).resolve())
     output = Path(args.output)
     output.parent.mkdir(parents=True, exist_ok=True)

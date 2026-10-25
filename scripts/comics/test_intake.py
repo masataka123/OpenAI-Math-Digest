@@ -53,6 +53,26 @@ class IntakeTest(unittest.TestCase):
             intake.prepare({'catalogs': [{'catalogId': '071', 'pages': [row]}]}, self.root)
         self.assertFalse((self.root / 'assets').exists())
 
+    def test_prepend_renumbers_supplied_filename_and_reuses_published_pixels(self):
+        supplied = self.root / 'Catalog_071_2.png'
+        supplied.write_bytes(self.png)
+        row = intake.inventory([str(supplied)], renumber=True)[0]
+        self.assertEqual((row['page'], row['suppliedPage']), (1, 2))
+        original = self.root / 'assets/comics/catalog-071/original/Catalog_071.png'
+        published = self.root / 'public/images/comics/catalog-071/v1/page-001.png'
+        for file in [original, published]:
+            file.parent.mkdir(parents=True, exist_ok=True)
+            file.write_bytes(self.png)
+        row['input'] = {'file': str(original)}
+        row['reuse'] = {'png': str(published.relative_to(self.root / 'public'))}
+        result = intake.prepare({'catalogs': [{'catalogId': '071', 'edition': 'v2', 'pages': [row]}]}, self.root)
+        self.assertTrue(result[0]['publishedAssetsReused'])
+        self.assertFalse((published.parent.parent / 'v2').exists())
+        self.assertEqual(published.read_bytes(), self.png)
+        published.write_bytes(b'changed')
+        with self.assertRaises(Exception):
+            intake.prepare({'catalogs': [{'catalogId': '071', 'pages': [row]}]}, self.root)
+
 
 if __name__ == '__main__':
     unittest.main()

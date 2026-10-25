@@ -23,12 +23,13 @@ export function validateManifest(manifest,index){
   if(entry.supplement&&(entry.supplement.status!=='approved'||!entry.supplement.author?.trim()||!entry.supplement.text?.trim()||!/^\d{4}-\d{2}-\d{2}$/.test(entry.supplement.receivedOn??'')))throw Error('Invalid author-provided supplement: '+entry.catalogId);
  }
 }
-export async function plan(root,{run,inputs=[],catalogs=[],edition}){
+export async function plan(root,{run,inputs=[],catalogs=[],edition,prepend=false}){
  const directory=runDirectory(root,run);if(await exists(path.join(directory,'manifest.json')))throw Error('Run already exists; resume it instead of replacing its manifest.');
  const env=await runtime(root),index=await catalogIndex(root),entries=await readJSON(path.join(root,'src/data/comics.json')),metadata=await readJSON(path.join(root,'src/data/comic-catalogs.json'));
  if(metadata.sourceCommit!==index.sourceCommit)throw Error('Comic metadata uses a different source commit');
  let inventory=[];
- if(inputs.length){await command(env.python,['scripts/comics/intake.py','inventory','--output',path.join(directory,'intake.json'),...inputs.flatMap(p=>['--input',path.resolve(p)])],{root});inventory=await readJSON(path.join(directory,'intake.json'));}
+ if(prepend&&(!inputs.length||catalogs.length))throw Error('--prepend requires supplied images for existing comics');
+ if(inputs.length){await command(env.python,['scripts/comics/intake.py','inventory','--output',path.join(directory,'intake.json'),...(prepend?['--renumber']:[]),...inputs.flatMap(p=>['--input',path.resolve(p)])],{root});inventory=await readJSON(path.join(directory,'intake.json'));}
  if(catalogs.length){if(inputs.length)throw Error('Use inputs or existing catalogue numbers, not both.');for(const n of catalogs){const e=entries.find(e=>e.catalogId===n);if(!e)throw Error('No registered comic: '+n);for(const [i,p] of e.pages.entries()){
    // Existing IMAGE_BUILD records preserve the source for every selected page.
    const first=i===0?e.original:e.originalPages?.[i];if(!first)throw Error('Missing original-page record for '+n+'/'+(i+1));
@@ -41,6 +42,11 @@ export async function plan(root,{run,inputs=[],catalogs=[],edition}){
   const cat=index.catalogs.find(e=>e.id===n);if(!cat)throw Error('Unknown official number: '+n);
   const old=entries.find(e=>e.catalogId===n),known=metadata.catalogs.find(e=>e.id===n),normalCat=normal.catalogs.find(c=>c.id===n);
   manifest.catalogs.push({catalogId:n,edition:edition??(old?.pages[0]?.png.match(/\/(v\d+)\//)?.[1]??'v1'),title:known?.title??{ja:normalCat?.title.ja??null,en:cat.titleNeedsReview?null:cat.title.en},scope:old?.scope??null,targetSourcePaths:old?.targetSourcePaths??(cat.manuscripts.length===1?[cat.manuscripts[0].path]:[]),pages:inventory.filter(e=>e.catalogId===n).sort((a,b)=>a.page-b.page).map(({input,sha256,width,height})=>({input,sha256,width,height}))});
+  if(prepend){
+   const entry=manifest.catalogs.at(-1);if(!old||old.pages.length!==1||entry.pages.length!==1)throw Error('--prepend currently requires one supplied image and one existing image per comic');
+   entry.edition=edition??`v${Number(old.pages[0].png.match(/\/v(\d+)\//)?.[1]??1)+1}`;
+   entry.pages[0].label='作り直し版';entry.pages.push({input:{file:path.join(root,old.original.path)},sha256:old.original.sha256,width:old.pages[0].width,height:old.pages[0].height,label:'これまでの掲載版',reuse:structuredClone(old.pages[0])});
+  }
  }
  await writeJSON(path.join(directory,'manifest.json'),manifest);await writeJSON(path.join(directory,'runtime.json'),env);
  await atomic(path.join(directory,'HANDOFF.md'),`# 漫画掲載の受付\n\n対象: ${manifest.catalogs.map(e=>e.catalogId).join('・')}\n\nmanifest.json の題名・対象論文・scopeを確認し、準備を実行してください。補足文は自動生成しません。\n\n再開: ${env.node} scripts/comics/run.mjs prepare --run ${JSON.stringify(relative(root,directory))}\n`);
@@ -53,10 +59,12 @@ export function registration(oldEntries,oldMetadata,manifest,index,images){
   const existing=entries.find(e=>e.catalogId===entry.catalogId),official=index.catalogs.find(e=>e.id===entry.catalogId),edition=entry.edition??'v1';
   const known=metadata.catalogs.find(c=>c.id===entry.catalogId);if(known&&JSON.stringify(known.title)!==JSON.stringify(entry.title))throw Error('Existing title differs; make a separate explicit metadata edit.');
   if(!known)metadata.catalogs.push({id:entry.catalogId,title:entry.title,manuscripts:official.manuscripts});
-  const pages=entry.pages.map((p,i)=>{const row=images.find(r=>r.catalogId===entry.catalogId&&r.page===i+1);if(!row)throw Error('Missing image result');const png=row.images.find(a=>a.path.endsWith('.png')&&a.path.startsWith('public/')),webp=row.images.find(a=>a.path.endsWith('.webp'));if(!png||png.dimensions[0]!==p.width||png.dimensions[1]!==p.height)throw Error('Input image dimensions changed');return {id:`page-${String(i+1).padStart(3,'0')}`,width:p.width,height:p.height,...(webp?{webp:webp.path.slice(7)}:{}),png:png.path.slice(7),alt:existing?.pages[i]?.alt??`カタログ${entry.catalogId}「${entry.title.ja}」を紹介する日本語の漫画`};});
+  const pages=entry.pages.map((p,i)=>{const row=images.find(r=>r.catalogId===entry.catalogId&&r.page===i+1);if(!row)throw Error('Missing image result');const png=row.images.find(a=>a.path.endsWith('.png')&&a.path.startsWith('public/')),webp=row.images.find(a=>a.path.endsWith('.webp'));if(!png||png.dimensions[0]!==p.width||png.dimensions[1]!==p.height)throw Error('Input image dimensions changed');
+   if(p.reuse&&!existing?.pages.some(old=>old.png===p.reuse.png&&old.webp===p.reuse.webp))throw Error('Reused image is not a registered page');
+   return {id:`page-${String(i+1).padStart(3,'0')}`,width:p.width,height:p.height,...(webp?{webp:webp.path.slice(7)}:{}),png:png.path.slice(7),...(p.label?{label:p.label}:{}),alt:p.reuse?.alt??existing?.pages[i]?.alt??`カタログ${entry.catalogId}「${entry.title.ja}」を紹介する日本語の漫画`};});
   const originals=images.filter(r=>r.catalogId===entry.catalogId).sort((a,b)=>a.page-b.page).map(r=>({path:r.images[0].path,sha256:r.images[0].sha256}));
   if(existing){
-   if(existing.original.sha256===originals[0].sha256&&JSON.stringify(existing.pages.map(p=>({png:p.png,webp:p.webp})))===JSON.stringify(pages.map(p=>({png:p.png,webp:p.webp})))){
+   if(existing.original.sha256===originals[0].sha256&&JSON.stringify(existing.pages)===JSON.stringify(pages)){
     if(existing.scope!==entry.scope||JSON.stringify(existing.targetSourcePaths)!==JSON.stringify(entry.targetSourcePaths))throw Error('Existing scope differs; edit it explicitly outside an image-only replay.');
     if(entry.supplement&&JSON.stringify(existing.supplement)!==JSON.stringify(entry.supplement)){existing.supplement=structuredClone(entry.supplement);existing.updatedOn=entry.supplement.receivedOn;changed.push(entry.catalogId);}
     continue;
@@ -135,6 +143,7 @@ export async function prepare(root,{run}){return withLock(root,async()=>{
   const changed=report.changedCatalogIds;
   report.managedFiles=[...new Set(images.flatMap(r=>r.images.map(i=>i.path)))];
   for(const entry of manifest.catalogs)for(let i=0;i<entry.pages.length;i++){
+   if(entry.pages[i].reuse)continue;
    const edition=entry.edition??'v1',name=i===0&&edition==='v1'?'IMAGE_BUILD.json':`IMAGE_BUILD-${edition}-page-${String(i+1).padStart(3,'0')}.json`;
    report.managedFiles.push(`coordination/comics/catalog-${entry.catalogId}/${name}`);
   }

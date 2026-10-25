@@ -20,6 +20,8 @@ npm run comics:prepare -- --run batch-name
 
 画像だけの差替えは `plan --edition v2` など明示した新しい版を使う。旧原本・旧掲載画像は保持する。差替えでも本人の補足は保持する。新規登録の補足は `awaiting-author` / 本文null。補足をAIで埋めない。
 
+作り直し版を既存の1枚より前に追加する場合は `plan --input /absolute/path/images.zip --prepend` を使う。各番号の今回画像1枚を「作り直し版」、既存画像を「これまでの掲載版」として並べる。ファイル名の末尾 `_2` 等は今回の入力内の順序だけに使い、掲載順はこの指定を優先する。新画像は次の版へ保存し、既存の原本・掲載画像は再変換せず、画素照合してそのまま参照する。補足は保持する。3枚以上への追加・数学的な対象範囲の変更はこのモードの対象外。
+
 NodeがPATHにない場合は `runtime.json` / `HANDOFF.md` の実行可能なNodeを使い、例えば `NODE_PATH_TO_BINARY scripts/comics/run.mjs prepare --run batch-name` と実行する。Python/Pillow/cwebpは初回に探して `tmp/comics-runtime.json` へ記録する。環境を変える場合は `COMICS_PYTHON` を明示する。
 
 ## 画面検査

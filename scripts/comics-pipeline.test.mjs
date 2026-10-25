@@ -45,6 +45,14 @@ test('changed image editions preserve supplements and require a new version',()=
  const next=registration(first.entries,first.metadata,nextManifest,index,input);assert.equal(next.entries[0].original.sha256,'c'.repeat(64));assert.deepEqual(next.entries[0].supplement,first.entries[0].supplement);assert.equal(first.entries[0].original.sha256,'b'.repeat(64));
 });
 
+test('a new first image preserves the old published image as second and keeps author notes',()=>{
+ const first=registration([],{sourceCommit:source,catalogs:[]},manifest,index,images),old=first.entries[0];old.supplement={status:'approved',author:'岩井雅崇',text:'元の補足をそのまま保持。',receivedOn:'2026-10-24'};
+ const input=structuredClone(manifest);input.catalogs[0].edition='v2';input.catalogs[0].pages[0].label='作り直し版';input.catalogs[0].pages.push({...structuredClone(input.catalogs[0].pages[0]),label:'これまでの掲載版',reuse:structuredClone(old.pages[0])});
+ const newImages=structuredClone(images);newImages[0].images[0].sha256='c'.repeat(64);for(const asset of newImages[0].images)asset.path=asset.path.replace('/v1/','/v2/');newImages.push({...structuredClone(images[0]),page:2,publishedAssetsReused:true});
+ const next=registration(first.entries,first.metadata,input,index,newImages);assert.deepEqual(next.entries[0].pages.map(p=>p.png),['images/comics/catalog-071/v2/page-001.png',old.pages[0].png]);assert.deepEqual(next.entries[0].supplement,old.supplement);assert.equal(next.entries[0].originalPages[1].sha256,old.original.sha256);assert.deepEqual(registration(next.entries,next.metadata,input,index,newImages).changed,[]);
+ assert.equal(parseArgs(['plan','--run','test','--input','images.zip','--prepend']).options.prepend,true);
+});
+
 test('unconfirmed scopes, invalid sources and duplicate catalogues stop before registration',()=>{
  const clone=structuredClone(manifest);clone.catalogs[0].scope=null;assert.throws(()=>validateManifest(clone,index),/scope/);
  clone.catalogs[0].scope='visible scope';clone.catalogs[0].targetSourcePaths=['preprints/other.pdf'];assert.throws(()=>validateManifest(clone,index),/Unknown target/);
