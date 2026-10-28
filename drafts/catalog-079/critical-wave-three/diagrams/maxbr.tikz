@@ -1,0 +1,5 @@
+\node[card] (n0) {\textbf{\Tx{外部含意の仮定を満たす}{Meet the external implication hypothesis}}\\[5pt]$n=3,\quad p\ge3,\quad 1/p-\ \text{\Tx{局所平滑化}{local smoothing}}$};
+\node[card,below=1.9cm of n0] (n1) {\textbf{\Tx{全半径の最大Bochner--Riesz評価}{Maximal Bochner--Riesz estimate over all radii}}\\[5pt]$\|B_*^\delta f\|_p\lesssim\|f\|_p,\qquad\delta>1-3/p$};
+\flow{n0}{n1}{\Tx{最大BRへの含意と二乗半径への滑らかな因子移送}{Maximal BR implication; smooth-factor transfer to squared radii}\\ \Cite{bhs-maxbr}\quad\Cite{maxbr-proof}};
+\node[result,below=1.9cm of n1] (n2) {\textbf{\Tx{$L^p$上の拡張と概収束}{$L^p$ extension and almost-everywhere convergence}}\\[5pt]$B_R^\delta f\longrightarrow f\ \text{a.e.}\quad(R\to\infty)$};
+\flow{n1}{n2}{\Tx{最大差の可算和と稠密性}{Summable maximal differences and density}\\ \Cite{maxbr-proof}};

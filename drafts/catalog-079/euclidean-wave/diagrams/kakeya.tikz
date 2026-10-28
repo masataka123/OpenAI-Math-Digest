@@ -1,0 +1,5 @@
+\node[card] (n0) {\heading{1}{集束で球面extensionを取り出す}{Recover spherical extension at a focus}$\|Eg\|_{L^{p_c}(B_R)}\lesssim(\log R)^A\|g\|_{p_c},\quad A=2/p_c$};
+\node[card,below=2.1cm of n0] (n1) {\heading{2}{capの二乗和から管の重なりへ}{From cap squares to tube overlap}$q=p_c/2=n/(n-1),\qquad \|K_\delta f\|_n\lesssim[\log(2/\delta)]^{2A}\|f\|_n$};
+\flow{n0}{n1}{\Tx{無作為符号で交差項を消し、管上の下界と双対性を使う}{Remove cross terms by random signs; use tube lower bounds and duality}\\[4pt]\Cite{tubes}};
+\node[result,below=2.1cm of n1] (n2) {\heading{3}{集合次元とNikodymへ分岐する}{Pass to dimension and to Nikodym estimates}$\dim_H F=n,\qquad \|N_\delta f\|_n\lesssim[\log(2/\delta)]^{2A}\|f\|_n$};
+\flow{n1}{n2}{\Tx{可変半径被覆は次元へ、射影変換はNikodym最大評価へ}{Varying-radius covers give dimension; a projective map gives Nikodym}\\[4pt]\Cite{dimension-nikodym}};

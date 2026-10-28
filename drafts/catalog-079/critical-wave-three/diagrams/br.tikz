@@ -1,0 +1,5 @@
+\node[card] (n0) {\textbf{\Tx{線形Bochner--Riesz評価}{Linear Bochner--Riesz bounds}}\\[5pt]$3\le p<\infty,\qquad\delta>1-3/p$};
+\node[card,below=1.9cm of n0] (n1) {\textbf{\Tx{補間・双対性・可積分核}{Interpolation, duality, integrable kernels}}\\[5pt]$2\le p\le3:\ \delta>0;\quad1<p<2:\ p^\prime;\quad p=1,\infty:\ \delta>1$};
+\flow{n0}{n1}{\Tx{線形の外部含意とPlancherel、実偶乗数の双対性}{Linear implication, Plancherel, duality of a real even multiplier}\\ \Cite{bhs-br}\quad\Cite{br}};
+\node[result,below=1.9cm of n1] (n2) {\textbf{\Tx{全strict範囲と$L^p$収束}{Full strict range and $L^p$ convergence}}\\[5pt]$\delta>\max\{3|1/p-1/2|-1/2,0\};\quad B_R^\delta f\to f\ \text{in }L^p\ (p<\infty)$};
+\flow{n1}{n2}{\Tx{拡大で半径一様性、稠密性でノルム収束}{Dilation gives uniformity in radius; density gives norm convergence}\\ \Cite{br}};

@@ -1,0 +1,101 @@
+{
+  "catalogId": "079",
+  "operatingPolicy": "2026-10-20",
+  "assignments": [
+    {
+      "role": "hq",
+      "agent": "/root",
+      "requestedModel": "gpt-6.1-sol",
+      "requestedReasoningEffort": "xhigh",
+      "actualModel": null,
+      "actualReasoningEffort": null,
+      "selectionEvidence": "ユーザーが本部gpt-6.1-sol/xhighを指定。現在チャットの実行モデル/思考量を取得するAPIはないため実測値は未記入。"
+    },
+    {
+      "role": "author",
+      "agent": "/root/author_euclidean_wave",
+      "requestedModel": "gpt-6-astra",
+      "requestedReasoningEffort": "high",
+      "actualModel": null,
+      "actualReasoningEffort": null,
+      "selectionEvidence": "collaboration.spawn_agentにmodel=\"gpt-6-astra\", reasoning_effort=\"high\", fork_turns=\"none\"を明示し、task_nameが返された。実行モデルの追加メタデータは未提供。",
+      "scope": "drafts/catalog-079/euclidean-wave/ および overview/"
+    },
+    {
+      "role": "author",
+      "agent": "/root/author_critical_wave_three",
+      "requestedModel": "gpt-6-astra",
+      "requestedReasoningEffort": "high",
+      "actualModel": null,
+      "actualReasoningEffort": null,
+      "selectionEvidence": "collaboration.spawn_agentにmodel=\"gpt-6-astra\", reasoning_effort=\"high\", fork_turns=\"none\"を明示し、task_nameが返された。実行モデルの追加メタデータは未提供。",
+      "scope": "drafts/catalog-079/critical-wave-three/"
+    },
+    {
+      "role": "content-review",
+      "agent": "/root/reviewer",
+      "requestedModel": "gpt-6-astra",
+      "requestedReasoningEffort": "high",
+      "actualModel": null,
+      "actualReasoningEffort": null,
+      "selectionEvidence": "collaboration.spawn_agentにmodel=\"gpt-6-astra\", reasoning_effort=\"high\", fork_turns=\"none\"を明示し、task_nameが返された。実行モデルの追加メタデータは未提供。",
+      "scope": "coordination/catalog-079/reviews/"
+    },
+    {
+      "stage": 2,
+      "role": "site-hq",
+      "agent": "/root",
+      "requestedModel": "gpt-6.1-sol",
+      "requestedReasoningEffort": "xhigh",
+      "actualModel": "gpt-6.1-sol",
+      "actualReasoningEffort": null,
+      "selectionEvidence": "第2段階開始時のdeveloper model_instructionsがcurrent model=gpt-6.1-solを明示。思考量の実行値を取得するAPIはないためnullを維持。",
+      "scope": "サイト組込み、確認済み図の配置、日英冊子PDF、形式/画面/紙面検査、公開前引継ぎ"
+    },
+    {
+      "stage": 2,
+      "role": "pdf-layout-review",
+      "agent": "/root/stage2_pdf_layout_review",
+      "requestedModel": "gpt-6.1-sol",
+      "requestedReasoningEffort": "xhigh",
+      "actualModel": null,
+      "actualReasoningEffort": null,
+      "selectionEvidence": "MODEL_ROLESのサイト本部（生成・形式/画面/PDF検査）指定に従い、collaboration.spawn_agentへmodel=gpt-6.1-sol, reasoning_effort=xhigh, fork_turns=noneを明示し起動成功。実行モデルの追加メタデータは未提供。",
+      "scope": "stage2/pdf-review/内の紙面画像目視・組版確認記録のみ。数学内容とPDF本体は編集しない。"
+    },
+    {
+      "stage": 3,
+      "role": "publication-hq",
+      "agent": "/root",
+      "requestedModel": "gpt-6.1-sol",
+      "requestedReasoningEffort": "xhigh",
+      "actualModel": "gpt-6.1-sol",
+      "actualReasoningEffort": null,
+      "selectionEvidence": "現在のdeveloper model_instructionsがgpt-6.1-solを明示。思考量の実行値は取得APIなし。",
+      "scope": "確定版の公開対象選択、候補再現検査、commit/push、Actionsと公開記事・図・PDFの反映確認。数学の再制作なし。"
+    }
+  ],
+  "executionEvents": [
+    {
+      "agent": "/root/author_euclidean_wave",
+      "event": "Selected model is at capacityでターン失敗",
+      "action": "collaboration.followup_taskで同一エージェントを再開。モデル変更・代替なし。",
+      "result": "担当から15:54 JSTに継続と保存済成果物の状態を受信",
+      "initialDraftDeadlineUnchanged": true
+    },
+    {
+      "agent": "/root/author_euclidean_wave",
+      "event": "案内制作中に2回目のSelected model is at capacity",
+      "action": "同一agentへfollowup_taskで再開。モデル変更なし。",
+      "result": "同一指定Astraで再開し、記事後続編集・日英案内・最終引渡しまで完了。代替モデル使用なし。"
+    },
+    {
+      "stage": 2,
+      "agent": "/root",
+      "role": "site-hq",
+      "scope": "サイト登録・同一図コピー・日英冊子PDF・共通検査・目視・引継ぎ",
+      "authorization": "ユーザー「第二段階をお願いします.」",
+      "mathematicalEditing": "実施なし。PDF配置予定の非数学文だけ除去し、共通部品の実リンクへ移行。"
+    }
+  ]
+}

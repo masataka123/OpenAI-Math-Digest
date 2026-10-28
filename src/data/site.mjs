@@ -19,6 +19,7 @@ import inventory063 from '../../coordination/catalog-063/inventory.json' with { 
 import inventory067 from '../../coordination/catalog-067/inventory.json' with { type: 'json' };
 import inventory068 from '../../coordination/catalog-068/inventory.json' with { type: 'json' };
 import inventory074 from '../../coordination/catalog-074/inventory.json' with { type: 'json' };
+import inventory079 from '../../coordination/catalog-079/inventory.json' with { type: 'json' };
 import inventory087 from '../../coordination/catalog-087/inventory.json' with { type: 'json' };
 import inventory109 from '../../coordination/catalog-109/inventory.json' with { type: 'json' };
 import presentation109 from '../../drafts/catalog-109/overview/presentation.json' with { type: 'json' };
@@ -58,7 +59,7 @@ const fieldTranslations = [
   {
     "id": "real-complex-analysis",
     "ja": "実解析・複素解析",
-    "catalogIds": ["074"]
+    "catalogIds": ["074", "079"]
   },
   {
     "id": "convex-metric-geometry",
@@ -227,6 +228,10 @@ export const papers = [...inventory003.manuscripts.map(entry => ({
  pages: entry.pdfPages, order: entry.order, featured: true,
 })), ...inventory074.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '074', sourceCommit: inventory074.sourceCommit,
+ title: entry.title, path: entry.sourceUrl.split('/preprints/')[1], version: entry.version,
+ pages: entry.pdfPages, order: entry.order, featured: true,
+})), ...inventory079.manuscripts.map(entry => ({
+ id: entry.paperId, catalogId: '079', sourceCommit: inventory079.sourceCommit,
  title: entry.title, path: entry.sourceUrl.split('/preprints/')[1], version: entry.version,
  pages: entry.pdfPages, order: entry.order, featured: true,
 })), ...inventory087.manuscripts.map(entry => ({
@@ -415,6 +420,14 @@ export const catalogs = [{
   description: text('三次元の最大関数評価と四次元のHausdorff次元を、共有するplank入力と異なる証明経路から読む。', 'Follow the shared plank input and distinct proof routes to the three-dimensional maximal estimate and four-dimensional Hausdorff dimension.'),
   paperIds: inventory074.manuscripts.map(p => p.paperId),
   overviewSectionIds: ['papers', 'diagram-sources', 'connections', 'sources'],
+}, {
+  id: '079', sourceCommit: inventory079.sourceCommit, mode: 'multi', overviewHasDiagram: false,
+  title: text(inventory079.titleJa, inventory079.overviewTitle),
+  titlePhrases: {ja: ['ユークリッド波動方程式の', '局所平滑化']},
+  contentsTitle: inventory079.contentsTitle,
+  description: text("公式カタログ079 Local smoothing for the Euclidean wave equation は、全次元の行列式エネルギーによる原稿と、三次元の波束・エントロピーによる原稿の2本を収録する。同じ三次元局所平滑化の結論へ異なる方法で到達し、第1論文は定量的な対数評価と多くの解析的・幾何学的帰結も主張する。", "Official catalogue 079 contains two manuscripts: an all-dimensional determinant-energy argument and a three-dimensional wave-packet and entropy argument. They reach a common three-dimensional local-smoothing conclusion by different methods. The first also claims a quantitative logarithmic estimate and a broad family of analytic and geometric consequences."),
+  paperIds: inventory079.manuscripts.map(p => p.paperId),
+  overviewSectionIds: ['papers', 'comparison', 'consequences', 'connections', 'sources'],
 }, {
   id: '087', sourceCommit: inventory087.sourceCommit, mode: 'multi',
   title: text(inventory087.titleJa, inventory087.overviewTitle),

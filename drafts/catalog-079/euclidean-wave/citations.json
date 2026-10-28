@@ -1,0 +1,538 @@
+{
+  "schemaVersion": 1,
+  "citationStyle": "author-key",
+  "catalogId": "079",
+  "sources": {
+    "P": {
+      "recordFile": "sources.json",
+      "recordId": "self",
+      "pagination": "same"
+    },
+    "Tao99": {
+      "recordFile": "sources.json",
+      "recordId": "tao99",
+      "guideRole": {
+        "ja": "球面の局所restrictionから大域評価への微小損失除去",
+        "en": "Epsilon removal from local spherical restriction to global estimates"
+      }
+    },
+    "Kim17": {
+      "recordFile": "sources.json",
+      "recordId": "kim17",
+      "guideRole": {
+        "ja": "Fourier減衰を持つコンパクト曲面の微小損失除去",
+        "en": "Epsilon removal on compact hypersurfaces with Fourier decay"
+      }
+    },
+    "LRS13": {
+      "recordFile": "sources.json",
+      "recordId": "lrs13",
+      "guideRole": {
+        "ja": "対角extensionから正確なBesov次数の混合ノルム評価",
+        "en": "Diagonal extension implies mixed-norm bounds at the exact Besov order"
+      }
+    },
+    "GT01": {
+      "recordFile": "sources.json",
+      "recordId": "GT01",
+      "guideRole": {
+        "ja": "周期fiberのDirichlet可逆性と境界/内部正則性への直接入力。Theorems 6.14（誌面107頁）、6.19（111頁）、17.14（461頁）、17.26′（481頁）と構造条件（456頁）を初稿後の別担当が照合。外部証明自体は未検証",
+        "en": "Direct input for periodic-fiber Dirichlet invertibility and boundary/interior regularity. Theorems 6.14 (printed p. 107), 6.19 (p. 111), 17.14 (p. 461), 17.26′ (p. 481), and structural conditions (p. 456) were independently checked after the draft; the external proofs were not verified"
+      }
+    }
+  },
+  "citations": {
+    "main-wave": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.1",
+          "printed": "1",
+          "pdf": "1"
+        }
+      ]
+    },
+    "main-annulus": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 1.2",
+          "printed": "4",
+          "pdf": "4"
+        }
+      ]
+    },
+    "obstructions": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Propositions 8.1–8.2",
+          "printed": "26–27",
+          "pdf": "26–27"
+        }
+      ]
+    },
+    "main-kakeya": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Corollary 9.1",
+          "printed": "27",
+          "pdf": "27"
+        }
+      ]
+    },
+    "main-restriction": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Corollary 9.3",
+          "printed": "28–29",
+          "pdf": "28–29"
+        }
+      ]
+    },
+    "main-br": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 10.1",
+          "printed": "32",
+          "pdf": "32"
+        }
+      ]
+    },
+    "main-square": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Theorem 11.1",
+          "printed": "34",
+          "pdf": "34"
+        }
+      ]
+    },
+    "main-schrodinger": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Corollary 12.1",
+          "printed": "37",
+          "pdf": "37"
+        }
+      ]
+    },
+    "interpolation": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Section 7.2, (7.3)",
+          "printed": "24–25",
+          "pdf": "24–25"
+        }
+      ]
+    },
+    "sobolev-sum": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Section 7.2, Corollary 7.1",
+          "printed": "25–26",
+          "pdf": "25–26"
+        }
+      ]
+    },
+    "current": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 2.2, (2.15), Lemma 4.1",
+          "printed": "9–10, 14",
+          "pdf": "9–10, 14"
+        }
+      ]
+    },
+    "dirichlet": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Section 4.2, Theorem A.1",
+          "printed": "15, 38–41",
+          "pdf": "15, 38–41"
+        }
+      ]
+    },
+    "balance": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 4.2, Lemma 4.3",
+          "printed": "16–18",
+          "pdf": "16–18"
+        }
+      ]
+    },
+    "fiber-estimate": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proposition 5.1, (5.11)–(5.12)",
+          "printed": "18–21",
+          "pdf": "18–21"
+        }
+      ]
+    },
+    "propagation": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 6.1, Proposition 6.3",
+          "printed": "21–23",
+          "pdf": "21–23"
+        }
+      ]
+    },
+    "period-removal": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Section 7.1",
+          "printed": "24",
+          "pdf": "24"
+        }
+      ]
+    },
+    "local-extension": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 9.2",
+          "printed": "28",
+          "pdf": "28"
+        }
+      ]
+    },
+    "tubes": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 9.4, Section 9.3",
+          "printed": "29–30",
+          "pdf": "29–30"
+        }
+      ]
+    },
+    "dimension-nikodym": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Sections 9.3–9.4, (9.6)–(9.7)",
+          "printed": "30–32",
+          "pdf": "30–32"
+        }
+      ]
+    },
+    "epsilon-removal": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Section 9.1, proof of Corollary 9.3",
+          "printed": "29",
+          "pdf": "29"
+        }
+      ]
+    },
+    "shell-maximal": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 10.2, (10.3)",
+          "printed": "32–33",
+          "pdf": "32–33"
+        }
+      ]
+    },
+    "br-proof": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proof of Theorem 10.1",
+          "printed": "33",
+          "pdf": "33"
+        }
+      ]
+    },
+    "shell-square": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 11.2",
+          "printed": "34",
+          "pdf": "34"
+        }
+      ]
+    },
+    "combine-square": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Lemma 11.3, proof of Theorem 11.1",
+          "printed": "35–36",
+          "pdf": "35–36"
+        }
+      ]
+    },
+    "paraboloid-proof": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proof of Corollary 12.1, (12.4)",
+          "printed": "36–37",
+          "pdf": "36–37"
+        }
+      ]
+    },
+    "fresnel-proof": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proof of (12.2)",
+          "printed": "37–38",
+          "pdf": "37–38"
+        }
+      ]
+    },
+    "mixed-proof": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Proof of (12.3)",
+          "printed": "38",
+          "pdf": "38"
+        }
+      ]
+    },
+    "comparisons": {
+      "source": "P",
+      "locations": [
+        {
+          "result": "Sections 9–9.1",
+          "printed": "27–29",
+          "pdf": "27–29"
+        }
+      ]
+    },
+    "tao-removal": {
+      "source": "Tao99",
+      "locations": [
+        {
+          "result": "Theorem 1.2",
+          "printed": "2",
+          "pdf": "2"
+        }
+      ]
+    },
+    "kim-removal": {
+      "source": "Kim17",
+      "locations": [
+        {
+          "result": "Theorem 5.3",
+          "printed": "10",
+          "pdf": "10"
+        }
+      ]
+    },
+    "lrs-mixed": {
+      "source": "LRS13",
+      "locations": [
+        {
+          "result": "Corollary 1.2",
+          "printed": "3",
+          "pdf": "3"
+        }
+      ]
+    }
+  },
+  "markdownFiles": [
+    "article.ja.md",
+    "article.en.md"
+  ],
+  "diagramDirectories": [
+    "diagrams"
+  ],
+  "articleGuides": {
+    ".": {
+      "selfSource": "P",
+      "externalSources": [
+        "Tao99",
+        "Kim17",
+        "LRS13",
+        "GT01"
+      ],
+      "proofTargets": [
+        "main-wave",
+        "main-annulus",
+        "main-kakeya",
+        "main-restriction",
+        "main-br",
+        "main-square",
+        "main-schrodinger"
+      ],
+      "mainResults": [
+        "main-wave",
+        "main-annulus",
+        "main-kakeya",
+        "main-restriction",
+        "main-br",
+        "main-square",
+        "main-schrodinger"
+      ],
+      "statements": {
+        "main-wave": "theorem-1-1",
+        "main-annulus": "theorem-1-2",
+        "main-kakeya": "corollary-9-1",
+        "main-restriction": "corollary-9-3",
+        "main-br": "theorem-10-1",
+        "main-square": "theorem-11-1",
+        "main-schrodinger": "corollary-12-1"
+      },
+      "conclusionCoverage": [
+        {
+          "result": "main-wave",
+          "conclusion": "全pの正の損失・p=2の無損失",
+          "anchor": "proof-1-step-2"
+        },
+        {
+          "result": "main-annulus",
+          "conclusion": "臨界全annulus log^(2/pc)、定数一様性",
+          "anchor": "proof-2-step-4"
+        },
+        {
+          "result": "main-kakeya",
+          "conclusion": "局所球面extension",
+          "anchor": "proof-3-step-1"
+        },
+        {
+          "result": "main-kakeya",
+          "conclusion": "Kakeya最大関数 log^(4/pc)",
+          "anchor": "proof-3-step-2"
+        },
+        {
+          "result": "main-kakeya",
+          "conclusion": "Hausdorff全次元とNikodym最大評価・次元",
+          "anchor": "proof-3-step-3"
+        },
+        {
+          "result": "main-restriction",
+          "conclusion": "球面の有限出力指数・a=∞を含む内点",
+          "anchor": "proof-4-step-1"
+        },
+        {
+          "result": "main-restriction",
+          "conclusion": "切断円錐の同範囲と両曲面のb=∞",
+          "anchor": "proof-4-step-2"
+        },
+        {
+          "result": "main-br",
+          "conclusion": "固定半径1≤p≤∞と最大関数2≤p<∞",
+          "anchor": "proof-5-step-2"
+        },
+        {
+          "result": "main-br",
+          "conclusion": "p<∞のLp収束、最大範囲のAE収束",
+          "anchor": "proof-5-step-2"
+        },
+        {
+          "result": "main-square",
+          "conclusion": "p>2の平方関数",
+          "anchor": "proof-6-step-2"
+        },
+        {
+          "result": "main-square",
+          "conclusion": "p=2とLpへの拡張",
+          "anchor": "proof-6-step-2"
+        },
+        {
+          "result": "main-schrodinger",
+          "conclusion": "コンパクト放物面の内点extension",
+          "anchor": "proof-7-step-1"
+        },
+        {
+          "result": "main-schrodinger",
+          "conclusion": "周波数球のcritical log estimate・任意コンパクトI",
+          "anchor": "proof-7-step-2"
+        },
+        {
+          "result": "main-schrodinger",
+          "conclusion": "p>pcのexact Besov/Sobolev mixed norm・r=pとr=∞",
+          "anchor": "proof-7-step-3"
+        }
+      ],
+      "readingList": [
+        {
+          "citation": "main-annulus",
+          "purpose": {
+            "ja": "主定理の定量的な核心と対数損失",
+            "en": "The quantitative core and its logarithmic loss"
+          }
+        },
+        {
+          "citation": "balance",
+          "purpose": {
+            "ja": "不定符号の全行列式の相殺と境界flux",
+            "en": "Cancellation of the indefinite full determinant and boundary flux"
+          }
+        },
+        {
+          "citation": "fiber-estimate",
+          "purpose": {
+            "ja": "壁でのGaussian減衰と内部での波の回収",
+            "en": "Gaussian decay at the wall versus interior wave recovery"
+          }
+        },
+        {
+          "citation": "propagation",
+          "purpose": {
+            "ja": "二つの円環通過が費やす二対数",
+            "en": "The two logarithms from two annular passages"
+          }
+        },
+        {
+          "citation": "dimension-nikodym",
+          "purpose": {
+            "ja": "最大関数とHausdorff次元の接続を区別して読む",
+            "en": "Separate the maximal estimates from the Hausdorff-dimension argument"
+          }
+        },
+        {
+          "citation": "main-br",
+          "purpose": {
+            "ja": "固定半径・最大関数・収束の異なる指数範囲",
+            "en": "The distinct ranges for fixed radii, the maximal function and convergence"
+          }
+        },
+        {
+          "citation": "combine-square",
+          "purpose": {
+            "ja": "半径を平方ノルム内でまとめる接続",
+            "en": "Combining radius intervals inside the square norm"
+          }
+        },
+        {
+          "citation": "main-schrodinger",
+          "purpose": {
+            "ja": "放物面・臨界対数・正確な混合ノルムの三結論",
+            "en": "Paraboloid extension, the critical logarithm and exact mixed norms"
+          }
+        },
+        {
+          "citation": "dirichlet",
+          "purpose": {
+            "ja": "周期fiberのDirichlet問題と、初稿後に入力条件を照合した外部正則性",
+            "en": "The periodic-fiber Dirichlet problem and external regularity whose input hypotheses were checked after the draft"
+          }
+        }
+      ]
+    }
+  }
+}

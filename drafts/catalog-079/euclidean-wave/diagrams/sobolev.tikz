@@ -1,0 +1,5 @@
+\node[card] (n0) {\heading{1}{臨界annulusを入力する}{Input the critical annular bound}$p_c=2n/(n-1),\quad \|UP_N\|_{p_c\to p_c}\lesssim (\log N)^{2/p_c}$};
+\node[card,below=2.1cm of n0] (n1) {\heading{2}{両端から補間する}{Interpolate from both ends}$\|UP_h\|_{p\to p}\lesssim h^{-s_+(p)}[\log(2/h)]^{\beta(p)}$};
+\flow{n0}{n1}{\Tx{Plancherelと核の $L^1$ 評価}{Plancherel and the kernel $L^1$ bound}\\[4pt]\Cite{interpolation}};
+\node[result,below=2.1cm of n1] (n2) {\heading{3}{周波数を加える}{Sum the frequency annuli}$\|Uf\|_{L^p_{T,X}}\lesssim\|J^{s_+(p)+\varepsilon}f\|_p$};
+\flow{n1}{n2}{\Tx{$2^{-j\varepsilon}(1+j)^{\beta(p)}$ を可算和にする}{Sum the coefficients $2^{-j\varepsilon}(1+j)^{\beta(p)}$}\\[4pt]\Cite{sobolev-sum}};

@@ -1,0 +1,5 @@
+\node[card] (n0) {\textbf{\Tx{環状帯の三つの作用素評価}{Three operator bounds on an annulus}}\\[5pt]$L^2:\ O(1),\qquad L^3:\ O_\delta(\lambda^\delta),\qquad L^\infty:\ O(\lambda)$};
+\node[card,below=1.9cm of n0] (n1) {\textbf{\Tx{臨界点の両側で補間}{Interpolate on both sides of the critical point}}\\[5pt]$2<p\le3:\ \lambda^{0+};\qquad p>3:\ \lambda^{1-3/p+3\delta/p}$};
+\flow{n0}{n1}{\Tx{エネルギー評価・臨界評価・放射核の$L^1$評価}{Energy, critical smoothing, and radial-kernel $L^1$ bounds}\\ \Cite{range-proof}};
+\node[result,below=1.9cm of n1] (n2) {\textbf{\Tx{Sobolev指数との差で総和}{Sum using the gap to the Sobolev exponent}}\\[5pt]$\|Uf\|_{L^p_{x,t}}\lesssim\|J^\alpha f\|_p,\quad\alpha>\max(0,1-3/p)$};
+\flow{n1}{n2}{\Tx{$\delta$を小さく選び、$J^{-\alpha}$を環状乗数に挿入}{$\delta$ small; insert $J^{-\alpha}$ into annular symbols}\\ \Cite{range-proof}};

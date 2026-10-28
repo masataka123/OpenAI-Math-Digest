@@ -1,0 +1,179 @@
+{
+  "catalogId": "079",
+  "productionVersion": "1.4",
+  "checkingScope": "Primary result ranges and the actual citation roles in EW/CW compared. No direct dependency between the two 079 manuscripts found in the checked text/references. The GT regularity statements and application hypotheses into EW Theorem A.1 were independently checked after the draft, resolving U-EW-GT; see coordination/catalog-079/reviews/GT_INPUT_REVIEW.md. External proofs and all boundary calculations were not independently reverified.",
+  "omittedSections": [
+    {
+      "section": "classification cards and selection UI",
+      "reason": "Only two independent proof routes; the official rows and comparison table distinguish dimensions, regularity and methods without duplicating categories."
+    },
+    {
+      "section": "catalogue summary diagram",
+      "reason": "Considered an all-dimensional node branching to analytic/geometric consequences and a parallel 3D entropy route converging on the shared n=3 conclusion. There is no checked inter-paper proof chain; arrows would mostly reproduce internal consequence diagrams or result containment. The compact comparison table and cited paragraphs convey these distinct roles more precisely without suggesting proof dependence."
+    },
+    {
+      "section": "public direct-dependency table",
+      "reason": "No direct079 inter-paper input is recorded; background/comparison relations remain in prose and this record. Unresolved external inputs are retained in article records."
+    }
+  ],
+  "diagramDecision": {
+    "adopted": false,
+    "purposeConsidered": "Show branches to analysis and geometry, two methods and the common3D result.",
+    "combinedConnectionsConsidered": true,
+    "detailLocation": "Article proof sections and connections.json",
+    "reason": "For this two-paper catalogue a comparison table distinguishes containment from direct proof input; internal branches already have target-specific diagrams in the first article."
+  },
+  "connections": [
+    {
+      "id": "all-dimensions-contains-three",
+      "from": {
+        "paperId": "euclidean-wave",
+        "result": "Theorem 1.1",
+        "pages": "1",
+        "version": "October 25, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a/preprints/Local-smoothing-for-the-Euclidean-wave-equation-October-25-2026/paper.pdf"
+      },
+      "to": {
+        "paperId": "critical-wave-three",
+        "result": "Theorem 1.1; Corollary 10.6",
+        "pages": "1, 158",
+        "version": "September 24, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a/preprints/Critical-local-smoothing-for-the-three-dimensional-wave-equation-September-24-2026/paper.pdf"
+      },
+      "role": {
+        "ja": "n=3で局所平滑化の結論を包含。証明の直接入力ではない。",
+        "en": "At n=3 the local-smoothing conclusions are included; this is not a direct proof input."
+      },
+      "hypotheses": "Same Euclidean spatial domain, [1,2], positive Sobolev loss; half-wave signs identified by complex conjugation.",
+      "kind": "generalization",
+      "checking": {
+        "checkedOn": "2026-10-28",
+        "by": "author_euclidean_wave / gpt-6-astra / high",
+        "scope": "Both primary statements compared. No use of CW as an input found in EW text/references."
+      },
+      "articleLinks": {
+        "ja": {
+          "from": "../euclidean-wave/article.ja.md#results",
+          "to": "../critical-wave-three/article.ja.md#results"
+        },
+        "en": {
+          "from": "../euclidean-wave/article.en.md#results",
+          "to": "../critical-wave-three/article.en.md#results"
+        }
+      },
+      "unresolved": []
+    },
+    {
+      "id": "074-three-dimensional-comparison",
+      "from": {
+        "paperId": "kakeya-maximal-three",
+        "result": "Theorem 1.1",
+        "pages": "2",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a/preprints/The-Kakeya-maximal-conjecture-in-three-dimensions-September-23-2026/paper.pdf"
+      },
+      "to": {
+        "paperId": "euclidean-wave",
+        "result": "Section 9, comparison after Corollary 9.1",
+        "pages": "27",
+        "version": "October 25, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a/preprints/Local-smoothing-for-the-Euclidean-wave-equation-October-25-2026/paper.pdf"
+      },
+      "role": "EW cites the 3D epsilon-loss maximal theorem for comparison; its own n=3 conclusion has fixed logarithmic power 4/3.",
+      "hypotheses": "Unit tubes, input L3(R3), output L3(S2); 0<delta<1. Tube conventions have uniformly comparable volumes.",
+      "kind": "background",
+      "checking": {
+        "checkedOn": "2026-10-28",
+        "by": "author_euclidean_wave / gpt-6-astra / high",
+        "scope": "Source theorem statements and the comparison passage checked. The 074 proofs are not inputs to the EW wave theorem and were not reverified."
+      },
+      "articleLinks": {},
+      "unresolved": []
+    },
+    {
+      "id": "074-four-dimensional-comparison",
+      "from": {
+        "paperId": "kakeya-hausdorff-four",
+        "result": "Theorem 1.1",
+        "pages": "3",
+        "version": "September 24, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a/preprints/Every-four-dimensional-Kakeya-set-has-full-Hausdorff-dimension-September-24-2026/paper.pdf"
+      },
+      "to": {
+        "paperId": "euclidean-wave",
+        "result": "Section 9, comparison after Corollary 9.1",
+        "pages": "27",
+        "version": "October 25, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a/preprints/Local-smoothing-for-the-Euclidean-wave-equation-October-25-2026/paper.pdf"
+      },
+      "role": "EW cites the full Hausdorff-dimension theorem for comparison; its own Corollary9.1 yields the n=4 conclusion.",
+      "hypotheses": "Arbitrary subset of R4 containing a unit segment in every direction; no measurability hypothesis on the set.",
+      "kind": "background",
+      "checking": {
+        "checkedOn": "2026-10-28",
+        "by": "author_euclidean_wave / gpt-6-astra / high",
+        "scope": "Source theorem statements and the comparison passage checked. The 074 proofs are not inputs to the EW wave theorem and were not reverified."
+      },
+      "articleLinks": {},
+      "unresolved": []
+    },
+    {
+      "id": "077-comparison",
+      "from": {
+        "paperId": "elliptic-capacity",
+        "result": "Sections 9.1–9.2 (as cited by EW)",
+        "pages": "not independently mapped in this overview",
+        "version": "September 24, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a/preprints/Elliptic-capacity-propagation-and-Fourier-restriction-to-the-sphere-September-24-2026/Elliptic-capacity-propagation-and-Fourier-restriction-to-the-sphere-September-24-2026.pdf"
+      },
+      "to": {
+        "paperId": "euclidean-wave",
+        "result": "Section 9.1, comparison with [64]",
+        "pages": "29",
+        "version": "October 25, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a/preprints/Local-smoothing-for-the-Euclidean-wave-equation-October-25-2026/paper.pdf"
+      },
+      "role": "Comparison with prior S2 extension and L3 Kakeya epsilon-loss conclusions; not a proof input.",
+      "hypotheses": "Three-dimensional sphere and tube maximal conclusions.",
+      "kind": "background",
+      "checking": {
+        "checkedOn": "2026-10-28",
+        "by": "author_euclidean_wave / gpt-6-astra / high",
+        "scope": "Citation role read in EW. Detailed statement checks belong to the separate 077 article."
+      },
+      "articleLinks": {},
+      "unresolved": [
+        "077 full statements and proofs not independently verified here."
+      ]
+    },
+    {
+      "id": "078-alternative",
+      "from": {
+        "result": "Theorem 1.1; Corollary 12.4 (as cited by CW)",
+        "pages": "not independently checked",
+        "version": "September 24, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a/preprints/Bochner-Riesz-Multipliers-in-Three-Dimensions-September-24-2026/Bochner-Riesz-Multipliers-in-Three-Dimensions-September-24-2026.pdf",
+        "bibliographyId": "OpenAI26BR3"
+      },
+      "to": {
+        "paperId": "critical-wave-three",
+        "result": "Proof of Corollary 11.2, comparison with [20]",
+        "pages": "162",
+        "version": "September 24, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a/preprints/Critical-local-smoothing-for-the-three-dimensional-wave-equation-September-24-2026/paper.pdf"
+      },
+      "role": "An alternative proof of positive-order L3 BR and the strict nonmaximal range, explicitly not an input.",
+      "hypotheses": "Fixed-radius BR in R3; no inference of a maximal range from the comparison.",
+      "kind": "alternative",
+      "checking": {
+        "checkedOn": "2026-10-28",
+        "by": "author_euclidean_wave / gpt-6-astra / high",
+        "scope": "CW comparison and official catalogue078 identity checked by the CW author; original078 theorem statements not reverified."
+      },
+      "articleLinks": {},
+      "unresolved": [
+        "078 proof and original page mapping are outside this catalogue overview."
+      ]
+    }
+  ]
+}

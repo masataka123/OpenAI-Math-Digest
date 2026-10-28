@@ -1,0 +1,7 @@
+\node[card] (n0) {\textbf{\Tx{過大なround指数を仮定}{Assume excessive round growth}}\\[5pt]$\Gamma>100\eta,\quad w=r^4f^{1-\eta},\quad rf\ge(H/\ell)^{1/2}$};
+\node[card,below=1.9cm of n0] (n1) {\textbf{\Tx{薄い終端を円筒へ移送・排除}{Transfer thin endings to cylinders and exclude them}}\\[5pt]$\Gamma\le\max(\Gamma_{\rm cl},\Gamma_{\rm hyb})\le\eta/2$};
+\flow{n0}{n1}{\Tx{共形平坦化・容量移送・法線量子発展の保持}{Conformal flattening, capacity transfer, retained normal evolution}\\ \Cite{thin}\quad\Cite{cylinder-result}};
+\node[card,below=1.9cm of n1] (n2) {\textbf{\Tx{残る厚い配置の出射エントロピー}{Outgoing entropy of the remaining thick configurations}}\\[5pt]$f=s^{o(1)},\quad o_T\ge4d+\min(1-d,m/2)$};
+\flow{n1}{n2}{\Tx{平面集中を除き、時間分散と条件付き入射を使う}{Remove plane concentration; use time spread and conditional incidence}\\ \Cite{round-profiles}\quad\Cite{round-close}};
+\node[result,below=1.9cm of n2] (n3) {\textbf{\Tx{古典は積分、波動は二方向の降下}{Integrate classically; use two-direction descent for waves}}\\[5pt]$\mathcal E_t+\frac12\mathcal E_v\le-2\Gamma\ (m\le q),\quad\mathcal E_t\le-2\Gamma\ (m\ge q)$\\ $q=2-2d,\qquad\Gamma_{\rm cl,round},\Gamma_{\rm wav,round}\le100\eta$};
+\flow{n2}{n3}{\Tx{境界の零値と非負性が負の減少を禁じる}{Zero boundary trace and nonnegativity forbid strict descent}\\ \Cite{round-close}};

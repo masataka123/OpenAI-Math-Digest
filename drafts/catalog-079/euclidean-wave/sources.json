@@ -1,0 +1,239 @@
+{
+  "paperId": "euclidean-wave",
+  "title": "Local smoothing for the Euclidean wave equation",
+  "version": "October 25, 2026",
+  "sourceCommit": "7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a",
+  "sourceUrl": "https://github.com/openai/math/blob/7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a/preprints/Local-smoothing-for-the-Euclidean-wave-equation-October-25-2026/paper.pdf",
+  "sha256": "9ca156c552f2d940528f7131716326ef0d67a5829e723e1d294d74560c8636ff",
+  "pdfPages": 59,
+  "catalogId": "079",
+  "displayName": "Local smoothing for the Euclidean wave equation",
+  "checkedOn": "2026-10-28",
+  "authors": "OpenAI",
+  "statements": [
+    {
+      "citation": "main-wave",
+      "result": "Theorem 1.1",
+      "pages": "1",
+      "checking": "主張と条件を固定版で照合"
+    },
+    {
+      "citation": "main-annulus",
+      "result": "Theorem 1.2",
+      "pages": "4",
+      "checking": "主張と条件を固定版で照合"
+    },
+    {
+      "citation": "main-kakeya",
+      "result": "Corollary 9.1",
+      "pages": "27",
+      "checking": "主張と条件を固定版で照合"
+    },
+    {
+      "citation": "main-restriction",
+      "result": "Corollary 9.3",
+      "pages": "28–29",
+      "checking": "主張と条件を固定版で照合"
+    },
+    {
+      "citation": "main-br",
+      "result": "Theorem 10.1",
+      "pages": "32",
+      "checking": "主張と条件を固定版で照合"
+    },
+    {
+      "citation": "main-square",
+      "result": "Theorem 11.1",
+      "pages": "34",
+      "checking": "主張と条件を固定版で照合"
+    },
+    {
+      "citation": "main-schrodinger",
+      "result": "Corollary 12.1",
+      "pages": "37",
+      "checking": "主張と条件を固定版で照合"
+    }
+  ],
+  "proofPassages": [
+    {
+      "pages": "6–25",
+      "scope": "保存流・cofactor・Dirichlet potential・境界flux・fiber比較・二円環伝播・周期除去・補間を読解。成分計算の全独立再現ではない。"
+    },
+    {
+      "pages": "26–38",
+      "scope": "集束例、球面extension、管無作為化、最大関数と可変半径被覆、Nikodym、BR、平方関数、放物面とSchrödingerの記載された帰着を読解。"
+    },
+    {
+      "pages": "38–41",
+      "scope": "Theorem A.1の記述・連続法・境界評価・正則性を読解。初稿後の独立点検で外部GT定理の記述・適用仮定との対応を照合済み。GT証明そのものと全境界計算の独立再現は対象外。"
+    }
+  ],
+  "externalSources": [
+    {
+      "id": "tao99",
+      "displayName": "The Bochner-Riesz conjecture implies the restriction conjecture",
+      "authors": "Terence Tao",
+      "version": "Author-hosted undated preprint; accessed October 28, 2026 (DVI converted to PDF)",
+      "sourceUrl": "https://www.math.ucla.edu/~tao/preprints/restriction.dvi",
+      "pdfPages": 12,
+      "checkedLocations": [
+        {
+          "printedPage": "2",
+          "pdfPage": 2
+        }
+      ],
+      "localFile": "external/tao99.pdf",
+      "sha256": "72d234ae2a1d87c1c41db5ef169da2b2fa9f57282eb96e0b03dee772c25ad549",
+      "checking": "結果記述と本稿の適用を照合。外部証明自体は未検証。"
+    },
+    {
+      "id": "kim17",
+      "displayName": "Some remarks on Fourier restriction estimates",
+      "authors": "Jongchon Kim",
+      "version": "arXiv:1702.01231v2, February 9, 2017",
+      "sourceUrl": "https://arxiv.org/pdf/1702.01231v2",
+      "pdfPages": 13,
+      "checkedLocations": [
+        {
+          "printedPage": "10",
+          "pdfPage": 10
+        }
+      ],
+      "localFile": "external/kim17.pdf",
+      "sha256": "c801e567b9651ed883fdce55f1c1b75f5dbe2cf7948feba3a49a8f9175cf46da",
+      "checking": "結果記述と本稿の適用を照合。外部証明自体は未検証。"
+    },
+    {
+      "id": "lrs13",
+      "displayName": "On space-time estimates for the Schrödinger operator",
+      "authors": "Sanghyuk Lee, Keith M. Rogers, Andreas Seeger",
+      "version": "arXiv:1108.1518v2, March 19, 2012; published 2013",
+      "sourceUrl": "https://arxiv.org/pdf/1108.1518v2",
+      "pdfPages": 25,
+      "checkedLocations": [
+        {
+          "printedPage": "3",
+          "pdfPage": 3
+        }
+      ],
+      "localFile": "external/lrs13.pdf",
+      "sha256": "9f891162b3a0914b34b7d016b23294bb1e66afbc882dcb424417ca36e80e678b",
+      "checking": "結果記述と本稿の適用を照合。外部証明自体は未検証。"
+    },
+    {
+      "id": "GT01",
+      "displayName": "Elliptic Partial Differential Equations of Second Order",
+      "authors": "David Gilbarg, Neil S. Trudinger",
+      "version": "Classics in Mathematics, Springer, 2001; reprint of the 1998 edition (bibliography [31] of the manuscript)",
+      "sourceUrl": "https://doi.org/10.1007/978-3-642-61798-0",
+      "checkedLocations": [],
+      "checking": "初稿後に別担当reviewer / gpt-6-astra / highが原書誌面画像とEW Appendix A pp.39–40を照合し、外部定理の記述・適用仮定の未確認U-EW-GTを解消。GT定理の証明自体や全境界計算の再検証ではない。",
+      "retrievalAttempt": {
+        "url": "https://unina2.on-line.it/sebina/repository/catalogazione/documenti/Gilbarg%2C%20Trudinger%20-%20Elliptic%20partial%20differential%20equations%20of%20second%20order.pdf",
+        "localFile": "external/gt.pdf",
+        "pdfPages": 7,
+        "scope": "bibliographic excerpt only"
+      },
+      "printedLocations": [
+        {
+          "result": "Theorem 6.14",
+          "printedPage": 107
+        },
+        {
+          "result": "Theorem 6.19",
+          "printedPage": 111
+        },
+        {
+          "result": "Conditions (i)′ and (ii)′",
+          "printedPage": 456
+        },
+        {
+          "result": "Theorem 17.14",
+          "printedPage": 461
+        },
+        {
+          "result": "Theorem 17.26′",
+          "printedPage": 481
+        }
+      ],
+      "pageMapping": "Printed-page images checked; full PDF not acquired and PDF page positions not inferred.",
+      "sourceEvidence": {
+        "textMirror": "https://djvu.online/file/jxRRleAzbYjsl",
+        "imageManifest": "coordination/catalog-079/reviews/GT_SOURCE_IMAGES.json",
+        "independentReview": "coordination/catalog-079/reviews/GT_INPUT_REVIEW.md"
+      }
+    }
+  ],
+  "dependencies": [
+    {
+      "from": "Tao99",
+      "result": "Theorem 1.2",
+      "pages": 2,
+      "to": "Corollary 9.3",
+      "role": "Epsilon removal from local spherical restriction to global estimates",
+      "kind": "consequence",
+      "checking": "statement and exponent substitution checked; external proof not checked"
+    },
+    {
+      "from": "Kim17",
+      "result": "Theorem 5.3",
+      "pages": 10,
+      "to": "Corollary 12.1",
+      "role": "Epsilon removal on compact hypersurfaces with Fourier decay",
+      "kind": "consequence",
+      "checking": "statement and exponent substitution checked; external proof not checked"
+    },
+    {
+      "from": "LRS13",
+      "result": "Corollary 1.2",
+      "pages": 3,
+      "to": "Corollary 12.1",
+      "role": "Diagonal extension implies mixed-norm bounds at the exact Besov order",
+      "kind": "consequence",
+      "checking": "statement and exponent substitution checked; external proof not checked"
+    },
+    {
+      "id": "gt-to-periodic-dirichlet",
+      "from": {
+        "bibliographyId": "GT01",
+        "results": [
+          "Theorem 6.14",
+          "Theorem 6.19",
+          "Theorem 17.14",
+          "Theorem 17.26′"
+        ],
+        "pages": "107, 111, 456, 461, 481 (printed pages)",
+        "pageStatus": "printed-page images verified; PDF positions not acquired"
+      },
+      "to": {
+        "paperId": "euclidean-wave",
+        "result": "Theorem A.1 → Section 4.2 → Theorem 1.2",
+        "pages": "39–41; 15; 4"
+      },
+      "kind": "direct",
+      "role": "Linear Dirichlet invertibility and boundary/interior elliptic regularity in the continuity method on periodic fibers.",
+      "hypotheses": "Linearized operator has zero zeroth-order coefficient, smooth data/boundary and strict real ellipticity. The prior C2 bound and det Q lower bound give uniform ellipticity and Hessian concavity on the compact convex solution range K; the cutoff leaves a neighborhood of K unchanged. Existing smooth solutions meet the regularity prerequisites of 17.14/17.26′; the primed theorem does not require (17.85). Finite local charts and uniform barriers justify the periodic-fiber reduction.",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "by": "reviewer / gpt-6-astra / high",
+        "checkedOn": "2026-10-28",
+        "scope": "Post-draft independent comparison of theorem statements and all application hypotheses against printed-page images; not a reproof of GT or all boundary calculations.",
+        "evidence": "coordination/catalog-079/reviews/GT_INPUT_REVIEW.md"
+      },
+      "unresolved": []
+    }
+  ],
+  "unresolved": [
+    "GT定理自体の証明とTheorem A.1の全境界計算の独立再検証は対象外",
+    "保存流座標変換・cofactorの全成分の独立再計算",
+    "Appendices B–Eの全証明、曲線族の派生結論の詳説",
+    "全証明の正しさの認定・形式検証は行っていない"
+  ],
+  "reuse": "公式原典と共通図スタイルのみ。既存Sol数学原稿・解釈は不使用。",
+  "postDraftReview": {
+    "resolved": "U-EW-GT",
+    "reviewer": "reviewer / gpt-6-astra / high",
+    "incorporatedAt": "2026-10-28 16:15 JST",
+    "record": "coordination/catalog-079/reviews/GT_INPUT_REVIEW.md"
+  }
+}

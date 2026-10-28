@@ -1,0 +1,5 @@
+\node[card] (n0) {\heading{1}{一半径区間のHilbert値評価}{A Hilbert-valued bound on one radius interval}$H=L^2([1,2],ds),\quad\|T_\delta\|_{p\to p(H)}\lesssim\delta^{1/2-\sigma}$};
+\node[card,below=2.1cm of n0] (n1) {\heading{2}{全dyadic半径を平方内で統合}{Combine dyadic radii inside the square}$\text{cost}\lesssim[1+\log(1/\delta)]^{1/2-1/p}$};
+\flow{n0}{n1}{\Tx{中間尺度のみ $L^p$、残りは核減衰・$L^2$}{Use $L^p$ only at intermediate scales, kernel decay and $L^2$ elsewhere}\\[4pt]\Cite{combine-square}};
+\node[result,below=2.1cm of n1] (n2) {\heading{3}{厳密な次数でshellを加える}{Sum shells at the strict order}$\alpha>1/2+s_+(p),\qquad \|G^\alpha f\|_p\lesssim\|f\|_p$};
+\flow{n1}{n2}{\Tx{$\delta^{\alpha-1/2-\sigma}$ が対数を吸収、$p=2$ はPlancherel}{The power $\delta^{\alpha-1/2-\sigma}$ absorbs the log; Plancherel for $p=2$}\\[4pt]\Cite{main-square}};

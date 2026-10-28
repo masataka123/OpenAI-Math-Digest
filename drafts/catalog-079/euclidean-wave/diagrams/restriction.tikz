@@ -1,0 +1,5 @@
+\node[card] (n0) {\heading{1}{局所対角restriction}{Local diagonal restriction}$p_c^\prime=2n/(n+1),\quad [\log(2+R)]^A\lesssim_\varepsilon R^\varepsilon$};
+\node[card,below=2.1cm of n0] (n1) {\heading{2}{球面の大域内点範囲}{The global interior range for the sphere}$E:L^a\to L^b,\quad b>p_c,\quad b>\frac{n+1}{n-1}a^\prime$};
+\flow{n0}{n1}{\Tx{微小損失を除去し、$L^1\to L^\infty$ と補間する}{Remove the epsilon loss and interpolate with $L^1\to L^\infty$}\\[4pt]\Cite{tao-removal}};
+\node[result,below=2.1cm of n1] (n2) {\heading{3}{切断円錐を球面切片で積分する}{Integrate spherical slices of the truncated cone}$E_\Sigma G=\sqrt2\int_1^2e^{it\rho}\rho^{n-1}E(G_\rho)(\rho x)\,d\rho$};
+\flow{n1}{n2}{\Tx{Hausdorff--Young、Minkowski、$a>b^\prime$ のHölder}{Hausdorff--Young, Minkowski, and Hölder with $a>b^\prime$}\\[4pt]\Cite{epsilon-removal}};

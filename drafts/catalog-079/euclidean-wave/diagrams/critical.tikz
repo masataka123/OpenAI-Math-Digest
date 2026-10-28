@@ -1,0 +1,9 @@
+\node[card] (n0) {\heading{1}{干渉を保持した保存流}{A conserved current retaining interference}$A_0=\chi\chi^*\ge0,\quad\operatorname{div} A_0^{\mathbb R}=0,\quad(\partial\Phi)A_0=0$};
+\node[card,below=2.1cm of n0] (n1) {\heading{2}{rank 1背景で密度から深さへ}{A rank-one background converts density to depth}$\det H_{\rm fib}(\lambda|\Phi|^2+u)=\lambda\mu,\quad u|_{\partial}=0$};
+\flow{n0}{n1}{\Tx{正の定義Hessianと密度gapでDirichlet問題を解く}{Solve the Dirichlet problem using positive defining Hessian and density gap}\\[4pt]\Cite{dirichlet}};
+\node[card,below=2.1cm of n1] (n2) {\heading{3}{全行列式を相殺する}{Cancel the full determinant}$F\asymp\int(-u)\mu,\qquad \Delta F\le\Tx{\text{境界flux}}{\text{boundary flux}}$};
+\flow{n1}{n2}{\Tx{流とcofactorの保存則、境界のnull lineを使う}{Use current/cofactor conservation and the boundary null line}\\[4pt]\Cite{balance}};
+\node[card,below=2.1cm of n2] (n3) {\heading{4}{境界減衰を内部回収より強くする}{Make wall decay dominate interior recovery}$\Delta F\le Cs^{-2}e^{-cs/h}F,\quad F\ \Tx{\text{が検出する}}{\text{detects}}\ a^2\|U(T)f\|_{p_c}^{p_c}$};
+\flow{n2}{n3}{\Tx{cap幅を先に小さくし、比較関数で上下から抑える}{Fix a small cap aperture and compare the Dirichlet potentials}\\[4pt]\Cite{fiber-estimate}};
+\node[result,below=2.1cm of n3] (n4) {\heading{5}{二円環を通してannulus評価へ}{Pass through two annuli to the frequency bound}$H(0,4a)\gtrsim [\log(1/h)]^{-2}\int_1^2H(T,2a)\,dT$};
+\flow{n3}{n4}{\Tx{二つの逆対数、$p_c$ 乗根、有限cap和、周期除去}{Two inverse logarithms, a $p_c$th root, finite cap sum, period removal}\\[4pt]\Cite{propagation}\\[4pt]\Cite{period-removal}};

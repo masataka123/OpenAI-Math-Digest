@@ -1,0 +1,7 @@
+\node[card] (n0) {\heading{1}{球面capから局所放物面へ}{From a spherical cap to the local paraboloid}$\|\mathcal Eg\|_{L^{p_c}(B_R)}\lesssim(\log R)^{2/p_c}\|g\|_{p_c},\ p_c=2(d+1)/d$};
+\node[card,below=2.2cm of n0] (n1) {\heading{2}{大域extensionの内点範囲}{The interior range of global extension}$\mathcal E:L^a\to L^b,\quad b>p_c,\quad b>(d+2)a^\prime/d$};
+\flow{n0}{n1}{\Tx{滑らかなpatchのFourier減衰と微小損失除去}{Fourier decay on a smooth patch and epsilon removal}\\[4pt]\Cite{kim-removal}};
+\node[result,below=2.2cm of n1] (n2) {\heading{3}{大域評価から正確な混合ノルム}{Exact mixed norms from the global estimate}$p>p_c,\ p\le r\le\infty,\quad s=d(1-2/p)-2/r$};
+\flow{n1}{n2}{\Tx{対角extension指数 $a<p$ を選ぶ}{Choose a diagonal extension exponent $a<p$}\\[4pt]\Cite{lrs-mixed}};
+\node[result,below=1.0cm of n2] (n3) {\heading{4}{局所評価から直接：臨界周波数球}{Directly from the local bound: the critical frequency ball}$\|e^{it\Delta}P_Nf\|_{L^{p_c}_{x,t}}\lesssim[\log(2+N)]^{2/p_c}\|f\|_{p_c}$\\[5pt]\Tx{1の局所評価にFresnel核と空間局所化を適用}{Apply the Fresnel kernel and spatial localization to step 1}\\[4pt]\Cite{fresnel-proof}};
+\draw[edge] (n0.east)--++(.65,0)|-(n3.east);

@@ -1,0 +1,7 @@
+\node[card] (n0) {\textbf{\Tx{物理的初期面からの入力}{Input from the physical initial slice}}\\[5pt]$|\xi|\asymp H^{-1},\quad y=-t,\quad e\lesssim\|g\|_2^2,\quad B=\|g\|_\infty$};
+\node[card,below=1.9cm of n0] (n1) {\textbf{\Tx{全試験の初期正則性}{Initial regularity for all tests}}\\[5pt]$\mu(Q)\le\kappa r^4f^{1-\eta},\qquad\kappa=C_{\eta,\gamma}H^{-\gamma}B^2$};
+\flow{n0}{n1}{\Tx{一様核切断と初期点集合の体積}{Uniform kernel truncation and predecessor volume}\\ \Cite{physical}};
+\node[card,below=1.9cm of n1] (n2) {\textbf{\Tx{終端質量から物理ノルムへ}{From terminal masses to the physical norm}}\\[5pt]$\displaystyle\int|v|^3\lesssim H^{-100\eta-\zeta-\gamma/2-C_4\sigma}B\|g\|_2^2$};
+\flow{n1}{n2}{\Tx{round模型の指数上限と終端合成}{Round-model exponent bound and terminal synthesis}\\ \Cite{round-result}\quad\Cite{synthesis}};
+\node[result,below=1.9cm of n2] (n3) {\textbf{\Tx{正の損失で周波数を総和}{Sum frequencies using a positive loss}}\\[5pt]$\|Uf\|_{L^3_{x,t}}\le C_\varepsilon\|J^\varepsilon f\|_3,\quad\varepsilon>0$};
+\flow{n2}{n3}{\Tx{振幅分解の対数を吸収し、$2^{-n\varepsilon/2}$を総和}{Absorb amplitude logarithms; sum $2^{-n\varepsilon/2}$}\\ \Cite{summation}};

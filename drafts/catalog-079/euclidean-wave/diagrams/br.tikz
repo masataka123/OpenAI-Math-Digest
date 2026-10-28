@@ -1,0 +1,5 @@
+\node[card] (n0) {\heading{1}{波を長時間へ拡大縮小する}{Rescale the wave to long times}$\|Ug\|_{L^p_{X,t}(R\le|t|\le2R)}\lesssim R^{1/p+\sigma}\|g\|_p,\quad\sigma>s_+(p)$};
+\node[card,below=2.1cm of n0] (n1) {\heading{2}{shell厚の費用を得る}{Obtain the cost of a thin shell}$\|\sup_{r>0}|\psi((1-|D|/r)/\delta)f|\|_p\lesssim\delta^{-\sigma}\|f\|_p$};
+\flow{n0}{n1}{\Tx{時間平均・Hölder・周波数octaveのLittlewood--Paley}{Time averaging, Hölder, and Littlewood--Paley over octaves}\\[4pt]\Cite{shell-maximal}};
+\node[result,below=2.1cm of n1] (n2) {\heading{3}{平均・最大関数・収束を導く}{Obtain means, the maximal bound and convergence}$\sum_j2^{-j(\alpha-\sigma)}<\infty,\qquad s_+(p)<\sigma<\alpha$};
+\flow{n1}{n2}{\Tx{shell和、固定半径の双対性、可積分核、稠密性}{Sum shells; use fixed-radius duality, integrable kernels and density}\\[4pt]\Cite{br-proof}};

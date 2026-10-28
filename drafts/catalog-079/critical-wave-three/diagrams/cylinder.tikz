@@ -1,0 +1,7 @@
+\node[card] (n0) {\textbf{\Tx{円筒実験の過大な成長を仮定}{Assume excessive cylinder growth}}\\[5pt]$\Gamma>\eta/2,\quad w=r^{3+\eta}f^{1-\eta}$};
+\node[card,below=2.1cm of n0] (n1) {\textbf{\Tx{飽和配置と整合するshear}{Saturated configurations with compatible shears}}\\[5pt]$\displaystyle B_s=\frac{s^{-1/2}}{e\sqrt\kappa}\sum_\lambda\frac{m_\lambda^{3/2}}{\sqrt{w_\lambda}}$};
+\flow{n0}{n1}{\Tx{極値を保つ分割・最小コスト・アフィン幅}{Preserving splits, minimal costs, affine widths}\\ \Cite{extremal}};
+\node[card,below=2.1cm of n1] (n2) {\textbf{\Tx{零コストを排除し、位相記録を作る}{Exclude zero costs and build phase records}}\\[5pt]$\mathcal E(a,v)=\mathcal H(a,v)-D_0-(p_0+d)a-W(a,v)\ge0$};
+\flow{n1}{n2}{\Tx{波の包絡と平面入射を模型用に拡張}{Adapt wave envelopes and planar incidences}\\ \Cite{gwz}\quad\Cite{rw}\\ \Cite{lower-inputs}};
+\node[result,below=2.1cm of n2] (n3) {\textbf{\Tx{境界からの降下が非負性に矛盾}{Descent from the boundary contradicts nonnegativity}}\\[5pt]$\mathcal E=0\ \text{\Tx{（指定境界）}{(specified boundary)}},\qquad\Gamma_{\rm cl},\Gamma_{\rm hyb}\le\eta/2$};
+\flow{n2}{n3}{\Tx{同じ記録を回復し、許容領域内の経路で減少}{Recover the same name; descend within admissible domains}\\ \Cite{entropy}\quad\Cite{cylinder-close}};

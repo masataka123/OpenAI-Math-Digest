@@ -1,0 +1,5 @@
+\node[card] (n0) {\textbf{\Tx{局所平滑化の利得}{Local smoothing gain}}\\[5pt]$p\ge3,\qquad (1-2/p)-(1-3/p+\varepsilon)=1/p-\varepsilon$};
+\node[card,below=1.9cm of n0] (n1) {\textbf{\Tx{時間最大評価}{Time maximal estimate}}\\[5pt]$\|\sup_{0<t<1}|Uf(\cdot,t)|\|_p\lesssim\|J^sf\|_p,\quad s>1-2/p$};
+\flow{n0}{n1}{\Tx{時間Sobolev埋込みの$1/p+$と零時刻への尺度変更}{Time Sobolev cost $1/p+$ and scaling towards time zero}\\ \Cite{bhs-wave}};
+\node[result,below=1.9cm of n1] (n2) {\textbf{\Tx{最大拡張と初期値への概収束}{Maximal extension and almost-everywhere initial convergence}}\\[5pt]$f\in W^{s,p}\quad\Longrightarrow\quad Uf(x,t)\to f(x)\ \text{a.e.}\ (t\downarrow0)$};
+\flow{n1}{n2}{\Tx{Schwartz近似の誤差を最大評価で抑える}{Control Schwartz-approximation errors by the maximal bound}\\ \Cite{maxwave}};
