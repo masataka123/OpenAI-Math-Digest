@@ -1,3 +1,7 @@
+# 現在の状態：第3段階完了・公開確認済み（2026-10-28）
+
+[日本語カタログ](https://masataka123.github.io/OpenAI-Math-Digest/ja/catalog/079/) / [English](https://masataka123.github.io/OpenAI-Math-Digest/en/catalog/079/)。日英記事・図・PDFの公開反映を確認。[公開記録](stage3/PUBLICATION.md)。以下は各段階の履歴。
+
 # 現在の状態：第3段階の公開作業中（2026-10-28）
 
 ユーザーの第3段階指示を受領。検査済み版の公開と反映確認を進める。[公開記録](stage3/PUBLICATION.md)。以下は過去の段階の記録。

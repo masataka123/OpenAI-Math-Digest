@@ -1,0 +1,43 @@
+{
+  "candidate": {
+    "tree": "20738336cd9adfd3d278abafec3d8a012d5091d4",
+    "directory": "/private/tmp/catalog-079-release-20261028-170613",
+    "filesManifest": "release-files.json",
+    "base": "c14c38c0013905dc1ed4c1379c7a336ba20b816c"
+  },
+  "startedAt": "2026-10-28T08:07:21.731195+00:00",
+  "steps": [
+    {
+      "step": "tests",
+      "exitCode": 0,
+      "seconds": 2.69,
+      "log": "logs/candidate-tests.log"
+    },
+    {
+      "step": "citations",
+      "exitCode": 0,
+      "seconds": 0.55,
+      "log": "logs/candidate-citations.log"
+    },
+    {
+      "step": "build",
+      "exitCode": 0,
+      "seconds": 12.54,
+      "log": "logs/candidate-build.log"
+    },
+    {
+      "step": "pdf",
+      "exitCode": 0,
+      "seconds": 31.61,
+      "log": "logs/candidate-pdf.log"
+    },
+    {
+      "step": "links",
+      "exitCode": 0,
+      "seconds": 2.04,
+      "log": "logs/candidate-links.log"
+    }
+  ],
+  "finishedAt": "2026-10-28T08:08:11.164219+00:00",
+  "passed": true
+}
