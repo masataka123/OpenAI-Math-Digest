@@ -1,7 +1,7 @@
 ---
 import ComicsLayout from '../../layouts/ComicsLayout.astro';
 import CharacterIntro from '../../components/CharacterIntro.astro';
-import {comicFields, activeComicFields, comicsForBuild} from '../../data/comics.mjs';
+import {comicFields, activeComicFields, comicsForBuild, additionalComicSources} from '../../data/comics.mjs';
 import {officialOverview, overviewTitle} from '../../data/site.mjs';
 const base=import.meta.env.BASE_URL;
 const prototype=!comicsForBuild.length||comicsForBuild.some(comic=>comic.status!=='published');
@@ -24,13 +24,14 @@ const prototype=!comicsForBuild.length||comicsForBuild.some(comic=>comic.status!
   <div class="section-head"><div><p class="eyebrow">EXPLORE BY FIELD</p><h2 id="comic-fields-heading">分野から、漫画へ。</h2></div><span class="small muted">{activeComicFields.length}分野・{comicsForBuild.length}カタログの漫画</span></div>
   <p class="section-intro">公式 OpenAI Research Catalog の分野名・順序・カタログ番号に沿って案内します。漫画を掲載している分野から、カタログ一覧へ進めます。</p>
   <p class="catalog-source"><a href={officialOverview} target="_blank" rel="noopener noreferrer">{overviewTitle} ↗</a><span class="small muted">2026年10月6日版・別タブで開きます</span></p>
+  {additionalComicSources.map(source=><p class="catalog-source"><a href={source.overview} target="_blank" rel="noopener noreferrer">追加分の公式カタログ ↗</a><span class="small muted">{source.date}版・各漫画の原典リンクは参照版を固定しています</span></p>)}
   <div class="field-grid">
    {comicFields.map(field=><article class:list={['field-card',{'field-active':field.comics.length>0}]}>
     <div class="field-top"><span class="ordinal">{field.range}</span><span class="badge">{field.comics.length?`漫画 ${field.comics.length}件`:'今後追加'}</span></div>
     <h3>{field.comics.length?<a href={`${base}comics/fields/${field.id}/`}>{field.title.ja} <span aria-hidden="true">↗</span></a>:field.title.ja}</h3>
     <p class="field-english" lang="en">{field.title.en}</p>
     <p>{field.comics.length?'掲載中の漫画を、カタログ番号から探せます。':'漫画は順次追加します。'}</p>
-    <div class="field-bottom"><a href={`${officialOverview}#page=${field.page}`} target="_blank" rel="noopener noreferrer">公式カタログ · p. {field.page} ↗</a>{field.comics.length>0&&<span>漫画：{field.comics.map(comic=>comic.catalogId).join(' / ')}</span>}</div>
+    <div class="field-bottom"><a href={`${field.officialOverview??officialOverview}#page=${field.page}`} target="_blank" rel="noopener noreferrer">公式カタログ · p. {field.page} ↗</a>{field.comics.length>0&&<span>漫画：{field.comics.map(comic=>comic.catalogId).join(' / ')}</span>}</div>
    </article>)}
   </div>
  </section>

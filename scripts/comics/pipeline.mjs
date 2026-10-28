@@ -23,10 +23,10 @@ export function validateManifest(manifest,index){
   if(entry.supplement&&(entry.supplement.status!=='approved'||!entry.supplement.author?.trim()||!entry.supplement.text?.trim()||!/^\d{4}-\d{2}-\d{2}$/.test(entry.supplement.receivedOn??'')))throw Error('Invalid author-provided supplement: '+entry.catalogId);
  }
 }
-export async function plan(root,{run,inputs=[],catalogs=[],edition,prepend=false}){
+export async function plan(root,{run,inputs=[],catalogs=[],edition,prepend=false,source}){
  const directory=runDirectory(root,run);if(await exists(path.join(directory,'manifest.json')))throw Error('Run already exists; resume it instead of replacing its manifest.');
- const env=await runtime(root),index=await catalogIndex(root),entries=await readJSON(path.join(root,'src/data/comics.json')),metadata=await readJSON(path.join(root,'src/data/comic-catalogs.json'));
- if(metadata.sourceCommit!==index.sourceCommit)throw Error('Comic metadata uses a different source commit');
+ const env=await runtime(root),index=await catalogIndex(root,source),entries=await readJSON(path.join(root,'src/data/comics.json')),metadata=await readJSON(path.join(root,'src/data/comic-catalogs.json'));
+ if(metadata.sourceCommit!==index.sourceCommit&&!source)throw Error('Comic metadata uses a different source commit');
  let inventory=[];
  if(prepend&&(!inputs.length||catalogs.length))throw Error('--prepend requires supplied images for existing comics');
  if(inputs.length){await command(env.python,['scripts/comics/intake.py','inventory','--output',path.join(directory,'intake.json'),...(prepend?['--renumber']:[]),...inputs.flatMap(p=>['--input',path.resolve(p)])],{root});inventory=await readJSON(path.join(directory,'intake.json'));}
@@ -37,7 +37,7 @@ export async function plan(root,{run,inputs=[],catalogs=[],edition,prepend=false
   }}}
  if(!inventory.length)throw Error('Supply --input PNG/DIRECTORY/ZIP or --catalogs NNN,NNN');
  const normal=await import(pathToFileURL(path.join(root,'src/data/site.mjs')).href);
- const manifest={version:1,createdAt:new Date().toISOString(),sourceCommit:index.sourceCommit,catalogs:[]};
+ const manifest={version:1,createdAt:new Date().toISOString(),sourceCommit:index.sourceCommit,...(source?{sourceDirectory:relative(root,inside(root,source))}:{}),catalogs:[]};
  for(const n of [...new Set(inventory.map(e=>e.catalogId))].sort()){
   const cat=index.catalogs.find(e=>e.id===n);if(!cat)throw Error('Unknown official number: '+n);
   const old=entries.find(e=>e.catalogId===n),known=metadata.catalogs.find(e=>e.id===n),normalCat=normal.catalogs.find(c=>c.id===n);
@@ -58,7 +58,7 @@ export function registration(oldEntries,oldMetadata,manifest,index,images){
  for(const entry of manifest.catalogs){
   const existing=entries.find(e=>e.catalogId===entry.catalogId),official=index.catalogs.find(e=>e.id===entry.catalogId),edition=entry.edition??'v1';
   const known=metadata.catalogs.find(c=>c.id===entry.catalogId);if(known&&JSON.stringify(known.title)!==JSON.stringify(entry.title))throw Error('Existing title differs; make a separate explicit metadata edit.');
-  if(!known)metadata.catalogs.push({id:entry.catalogId,title:entry.title,manuscripts:official.manuscripts});
+  if(!known)metadata.catalogs.push({id:entry.catalogId,title:entry.title,manuscripts:official.manuscripts,...(index.sourceCommit!==metadata.sourceCommit?{sourceCommit:index.sourceCommit,sourceDate:index.sourceDate,...(official.subject?{subject:structuredClone(official.subject)}:{})}:{})});
   const pages=entry.pages.map((p,i)=>{const row=images.find(r=>r.catalogId===entry.catalogId&&r.page===i+1);if(!row)throw Error('Missing image result');const png=row.images.find(a=>a.path.endsWith('.png')&&a.path.startsWith('public/')),webp=row.images.find(a=>a.path.endsWith('.webp'));if(!png||png.dimensions[0]!==p.width||png.dimensions[1]!==p.height)throw Error('Input image dimensions changed');
    if(p.reuse&&!existing?.pages.some(old=>old.png===p.reuse.png&&old.webp===p.reuse.webp))throw Error('Reused image is not a registered page');
    return {id:`page-${String(i+1).padStart(3,'0')}`,width:p.width,height:p.height,...(webp?{webp:webp.path.slice(7)}:{}),png:png.path.slice(7),...(p.label?{label:p.label}:{}),alt:p.reuse?.alt??existing?.pages[i]?.alt??`カタログ${entry.catalogId}「${entry.title.ja}」を紹介する日本語の漫画`};});
@@ -102,16 +102,16 @@ async function saveReport(directory,report){
 }
 export async function prepare(root,{run}){return withLock(root,async()=>{
  const invocationStarted=new Date().toISOString(),invocationClock=performance.now();
- const directory=runDirectory(root,run),manifestFile=path.join(directory,'manifest.json'),manifest=await readJSON(manifestFile),index=await catalogIndex(root);validateManifest(manifest,index);
+ const directory=runDirectory(root,run),manifestFile=path.join(directory,'manifest.json'),manifest=await readJSON(manifestFile),index=await catalogIndex(root,manifest.sourceDirectory);validateManifest(manifest,index);
  const env=await runtime(root),signature=hash(await readFile(manifestFile)),report=await exists(path.join(directory,'report.json'))?await readJSON(path.join(directory,'report.json')):{version:1,createdAt:new Date().toISOString(),run:relative(root,directory),catalogIds:manifest.catalogs.map(e=>e.catalogId),steps:{}};
  if(report.manifestHash&&report.manifestHash!==signature)throw Error('Manifest changed after preparation. Use a new run to preserve its previous evidence.');
- Object.assign(report,{manifestHash:signature,runtime:env,status:'preparing',error:null});
+ Object.assign(report,{manifestHash:signature,sourceFingerprint:index.sourceFingerprint,runtime:env,status:'preparing',error:null});
  async function step(name,key,work,artifacts=[]){const previous=report.steps[name];if(previous?.status==='passed'&&previous.key===key&&(await Promise.all(artifacts.map(exists))).every(Boolean)){previous.reused=true;return previous.result;}
   const start=performance.now();report.steps[name]={status:'running',key,startedAt:new Date().toISOString()};await saveReport(directory,report);
   try{const result=await work();report.steps[name]={...report.steps[name],status:'passed',durationMs:Math.round(performance.now()-start),result,reused:false};await saveReport(directory,report);return result;}catch(error){report.steps[name]={...report.steps[name],status:'failed',durationMs:Math.round(performance.now()-start),error:error.message};throw error;}}
  try{
   const currentEntries=await readJSON(path.join(root,'src/data/comics.json')),currentMeta=await readJSON(path.join(root,'src/data/comic-catalogs.json'));
-  if(currentMeta.sourceCommit!==index.sourceCommit)throw Error('Registry/source commit mismatch');
+  if(currentMeta.sourceCommit!==index.sourceCommit&&!manifest.sourceDirectory)throw Error('Registry/source commit mismatch');
   report.changedCatalogIds=[...new Set([...(report.changedCatalogIds??[]),...(report.steps.registration?.result?.changed??[])])];
   const owned=file=>['src/data/comics.json','src/data/comic-catalogs.json'].includes(file)||manifest.catalogs.some(c=>file.startsWith(`public/images/comics/catalog-${c.catalogId}/`));
   const protectedBefore=await fingerprint(root,{exclude:owned});
@@ -159,6 +159,7 @@ export async function prepare(root,{run}){return withLock(root,async()=>{
 
 export async function assertReady(root,directory){
  const report=await readJSON(path.join(directory,'report.json')),review=await readJSON(path.join(directory,'review.json'));
+ if(report.sourceFingerprint){const manifest=await readJSON(path.join(directory,'manifest.json')),index=await catalogIndex(root,manifest.sourceDirectory);if(index.sourceFingerprint!==report.sourceFingerprint||index.sourceCommit!==manifest.sourceCommit)throw Error('Official source changed after checks');}
  if(report.siteFingerprint!==await fingerprint(root)||report.manifestHash!==hash(await readFile(path.join(directory,'manifest.json'))))throw Error('Inputs changed after checks; prepare/review again.');
  if(Object.values(report.steps).some(s=>s.status!=='passed'))throw Error('Preparation has incomplete checks');
  if(review.status!=='passed'||review.siteFingerprint!==report.siteFingerprint||review.manifestHash!==report.manifestHash||review.manualReview?.approved!==true)throw Error('Current browser checks and explicit visual review are required');

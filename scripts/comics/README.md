@@ -66,6 +66,8 @@ npm run comics:publish -- --run batch-name --authorized
 
 公式の参照版は `coordination/comics/source/PROVENANCE.json` のblob SHAで検証する。固定版が同じならネットワークから取り直さない。参照版の更新は、原資料と出典記録を明示的に更新して別作業として扱う。
 
+新しい公式版の番号・原稿を追加するときは旧版を保持し、`source/YYYYMMDD/`へ検証したoverview.tex・CONTENTS.md・公式PDFとPROVENANCE.jsonを保存する。PDF目次から確認した分野のページを`subjectPages`に記録し、`plan --source coordination/comics/source/YYYYMMDD`で明示する。今回追加するカタログだけに原典のcommitと分野・公式順を保存し、既存のカタログの原典リンクは変えない。`prepare`と公開直前の確認は同じ原資料のfingerprintを照合する。複数の提供画像はmanifestのpagesを希望する掲載順に並べ、各ページのlabelに「導入版」「詳細版」等を記録できる。
+
 ## 検査
 
 ```sh

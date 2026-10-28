@@ -12,7 +12,7 @@ export function parseArgs(argv){
  if(!['plan','prepare','serve','review','publish','verify','status'].includes(command))throw Error('Use plan | prepare | serve | review | publish | verify | status');
  for(let i=0;i<args.length;i++){
   const key=args[i];if(['--authorized','--dry-run','--prepend'].includes(key)){options[key.slice(2).replace(/-([a-z])/g,(_,c)=>c.toUpperCase())]=true;continue;}
-  if(!['--run','--input','--catalogs','--edition','--reviewer','--notes','--base'].includes(key)||!args[i+1]||args[i+1].startsWith('--'))throw Error('Unknown/incomplete argument: '+key);
+  if(!['--run','--input','--catalogs','--edition','--reviewer','--notes','--base','--source'].includes(key)||!args[i+1]||args[i+1].startsWith('--'))throw Error('Unknown/incomplete argument: '+key);
   const value=args[++i];if(key==='--input')options.inputs.push(value);else if(key==='--catalogs'){options.catalogs=value.split(',');if(options.catalogs.some(n=>!/^\d{3}$/.test(n)))throw Error('Use three-digit catalogue numbers');}else options[key.slice(2)]=value;
  }
  if(!options.run)throw Error('Specify --run NAME');

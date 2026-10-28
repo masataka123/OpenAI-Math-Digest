@@ -15,7 +15,7 @@ const prototype=field.comics.some(comic=>comic.status!=='published');
   <p class="eyebrow">COMICS · FIELD GUIDE</p><h1>{field.title.ja}</h1>
   <p class="official" lang="en">{field.title.en}</p>
   <p class="lede">この分野の漫画を、公式カタログ番号の順に掲載しています。</p>
-  <a href={`${officialOverview}#page=${field.page}`} target="_blank" rel="noopener noreferrer">公式カタログ · p. {field.page} ↗</a>
+  <a href={`${field.officialOverview??officialOverview}#page=${field.page}`} target="_blank" rel="noopener noreferrer">公式カタログ · p. {field.page} ↗</a>
  </header>
  <section class="comic-catalog-list" aria-labelledby="comic-catalog-heading">
   <div class="section-head"><h2 id="comic-catalog-heading">この分野の漫画</h2><span class="small muted">{field.comics.length}カタログ</span></div>

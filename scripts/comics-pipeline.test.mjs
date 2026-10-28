@@ -35,6 +35,12 @@ test('registration is idempotent and retains approved author text exactly',()=>{
  validateManifest(manifest,index);const first=registration([],{sourceCommit:source,catalogs:[]},manifest,index,images);first.entries[0].supplement={status:'approved',author:'岩井雅崇',text:'本人の文章。  \n\n引用文を保持。',receivedOn:'2026-10-24'};
  const next=registration(first.entries,first.metadata,manifest,index,images);assert.deepEqual(next.changed,[]);assert.deepEqual(next.entries,first.entries);assert.deepEqual(next.metadata,first.metadata);
 });
+
+test('new catalogue source editions never replace the registry base edition',()=>{
+ const newer='c'.repeat(40),newIndex={...index,sourceCommit:newer,sourceDate:'2026-10-26',catalogs:[{...index.catalogs[0],subject:{name:'Real and complex analysis',ids:['071'],page:9,sourceCommit:newer,sourceDate:'2026-10-26'}}]};
+ const base={sourceCommit:source,catalogs:[{id:'034',title:{ja:'既存',en:'Existing'},manuscripts:[]}]};
+ const result=registration([],base,{...manifest,sourceCommit:newer},newIndex,images);assert.equal(result.metadata.sourceCommit,source);assert.deepEqual(result.metadata.catalogs[0],base.catalogs[0]);assert.equal(result.metadata.catalogs[1].sourceCommit,newer);assert.equal(result.metadata.catalogs[1].subject.page,9);
+});
 test('registration can resume if the previous registry write preceded the bibliography write',()=>{
  const first=registration([],{sourceCommit:source,catalogs:[]},manifest,index,images);
  const resumed=registration(first.entries,{sourceCommit:source,catalogs:[]},manifest,index,images);

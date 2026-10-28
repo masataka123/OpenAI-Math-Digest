@@ -1,7 +1,7 @@
 import {readFile} from 'node:fs/promises';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
-import {hash,readJSON,writeJSON,exists} from './common.mjs';
+import {hash,readJSON,writeJSON,exists,inside} from './common.mjs';
 
 function group(text,start){
  if(text[start]!=='{')throw Error('Expected a TeX group');let depth=1,i=start+1;
@@ -26,14 +26,19 @@ export function parseCatalogues(tex,contents){
  }
  if(!result.length||new Set(result.map(c=>c.id)).size!==result.length)throw Error('Empty/duplicate catalogue index');return result;
 }
-export async function catalogIndex(root){
- const directory=path.join(root,'coordination/comics/source'),provenance=await readJSON(path.join(directory,'PROVENANCE.json'));
+export async function catalogIndex(root,sourceDirectory='coordination/comics/source'){
+ const directory=inside(root,sourceDirectory),provenance=await readJSON(path.join(directory,'PROVENANCE.json'));
  const contents={};for(const [name,expected] of Object.entries(provenance.files)){
   const data=await readFile(path.join(directory,name));const actual=createHash('sha1').update(`blob ${data.length}\0`).update(data).digest('hex');
   if(actual!==expected)throw Error(`Official source changed: ${name}. Refresh provenance explicitly.`);contents[name]=data.toString('utf8');
  }
- const digest=hash(JSON.stringify({version:1,provenance,contents})),file=path.join(root,'tmp/comics-cache/catalog-index-'+digest+'.json');
+ const digest=hash(JSON.stringify({version:2,provenance,contents})),file=path.join(root,'tmp/comics-cache/catalog-index-'+digest+'.json');
  if(await exists(file))return {...await readJSON(file),cacheReused:true};
  const result={sourceCommit:provenance.sourceCommit,sourceDate:provenance.sourceDate,sourceFingerprint:digest,catalogs:parseCatalogues(contents['overview.tex'],contents['CONTENTS.md'])};
+ if(provenance.subjectPages){
+  const headings=[...contents['overview.tex'].matchAll(/^\\cataloguesection\{([^}]+)\}\{\d+\}/gm)];
+  const subjects=headings.map((m,i)=>({name:m[1],ids:[...contents['overview.tex'].slice(m.index,headings[i+1]?.index).matchAll(/\\resultentry\{(\d{3})\}/g)].map(x=>x[1]),page:provenance.subjectPages[m[1]],sourceCommit:provenance.sourceCommit,sourceDate:provenance.sourceDate}));
+  for(const catalog of result.catalogs){catalog.subject=subjects.find(s=>s.ids.includes(catalog.id));if(!catalog.subject?.page)throw Error('Missing verified subject/PDF page: '+catalog.id);}
+ }
  await writeJSON(file,result);return {...result,cacheReused:false};
 }
