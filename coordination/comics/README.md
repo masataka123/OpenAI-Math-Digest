@@ -1,8 +1,14 @@
 # 漫画掲載本部
 
-2026-11-01。状態：**16分野・117件の漫画と、全件の本人提供の補足を公開確認済み**。既存分の受領・検査・公開状況は [36件の制作記録](BATCH_20261022.md)を参照。
+2026-11-01。状態：**16分野・125件の漫画と、全件の本人提供の補足を公開確認済み**。既存分の受領・検査・公開状況は [36件の制作記録](BATCH_20261022.md)を参照。
 
 このチャットは漫画版の掲載・更新を管理する。サイト全体の方針は別の総本部が管理する。現在の成果物と検査は [導線の制作記録](NAVIGATION.md)、追加・更新は [共通運用](../../production/COMICS.md)を参照する。
+
+## 2026-11-01：8件と090の2枚構成
+
+025・028・090・097・124・128・167・238を新規公開した。090は提供ファイルの `_2.png` を1枚目（一般向け版）、`.png` を2枚目（院生向け版）とし、本人補足を両画像の下へ置く。残り7件は各1枚。124は本人の削除指示と掲載本文の確認に従い、未完の末尾文だけを削除して2文を残した。025の助詞と128の表記・空白も承認済みの修正のみ適用。
+
+[実行記録](runs/comics-20261101-eight/README.md)、[原文](runs/comics-20261101-eight/provided-supplements.json)、[修正一覧](runs/comics-20261101-eight/corrections.json)、[公開記録](runs/comics-20261101-eight/deployment.json)を参照。既存117件と通常記事は保持し、公開サイトは16分野・125件。
 
 ## 2026-11-01：15件の漫画と本人補足
 
@@ -122,15 +128,15 @@
 | 公開パス（baseを除く） | ページ |
 |---|---|
 | `/comics/` | 漫画トップ。公式17分野を同じ順序で表示 |
-| `/comics/fields/number-theory/` | 数論・7件 |
+| `/comics/fields/number-theory/` | 数論・9件 |
 | `/comics/fields/algebraic-complex-geometry/` | 代数幾何学・複素幾何学・36件 |
 | `/comics/fields/real-complex-analysis/` | 実解析・複素解析・3件 |
-| `/comics/fields/convex-metric-geometry/` | 凸幾何学・距離幾何学・2件 |
-| `/comics/fields/theoretical-computer-science/` | 理論計算機科学・5件 |
+| `/comics/fields/convex-metric-geometry/` | 凸幾何学・距離幾何学・4件 |
+| `/comics/fields/theoretical-computer-science/` | 理論計算機科学・7件 |
 | `/comics/fields/dynamical-systems-ergodic-theory/` | 力学系・エルゴード理論・1件 |
-| `/comics/fields/combinatorics/` | 組合せ論・13件 |
+| `/comics/fields/combinatorics/` | 組合せ論・14件 |
 | `/comics/fields/algebra/` | 代数学・4件 |
-| `/comics/fields/probability-statistical-mechanics/` | 確率論・統計力学・1件 |
+| `/comics/fields/probability-statistical-mechanics/` | 確率論・統計力学・2件 |
 | `/comics/fields/group-theory/` | 群論・3件 |
 | `/comics/fields/mathematical-physics/` | 数理物理学・1件 |
 | `/comics/fields/operator-algebras/` | 作用素環・4件 |
@@ -140,7 +146,7 @@
 | `/comics/fields/partial-differential-equations/` | 偏微分方程式・2件 |
 | `/comics/catalog/NNN/` | 各漫画、岩井の補足、通常記事・原典へのリンク |
 
-漫画トップ → 分野 → 各カタログの漫画、と進む。上表の16分野・計117件を登録。分野・漫画のパンくず、ヘッダーのブランドと漫画版入口、ページ末尾から漫画トップや分野一覧へ戻れる。
+漫画トップ → 分野 → 各カタログの漫画、と進む。上表の16分野・計125件を登録。分野・漫画のパンくず、ヘッダーのブランドと漫画版入口、ページ末尾から漫画トップや分野一覧へ戻れる。
 
 漫画のある分野だけに漫画一覧へのリンクを作る。漫画のないカタログ番号を一覧へ並べない。複数分野が同じ漫画を参照する場合も、漫画ページ自体は1つとする。存在しない漫画や分野のページは生成しない。
 
