@@ -22,4 +22,8 @@
 
 ブラウザーの画面寸法を変えた検査であり、実機iPhoneでの検査は未実施。開発用プレビューの再起動中に接続が切れたため、既存の共通サーバーで公開用ビルドを表示して検査を継続した。
 
-公開結果は反映確認後に追記する。
+## 公開確認
+
+公開commitは `e658d05c38717e9cb87717598aa1b65081efdeef`。[Actions 41266642545](https://github.com/masataka123/OpenAI-Math-Digest/actions/runs/41266642545)のbuild・deploy成功。[公開照合](deployment.json)で漫画トップ・分野・034のHTMLと表示用CSSがローカルの確認済みビルドと一致した。
+
+[公開034](https://masataka123.github.io/OpenAI-Math-Digest/comics/catalog/034/)の375×812でもヘッダー49px・横はみ出しなし・画像読込完了を確認。[公開画面](screens/public-reading-375.jpg)と[画面の寸法](public-browser.json)を保存した。
