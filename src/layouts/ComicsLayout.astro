@@ -10,7 +10,7 @@ const base=import.meta.env.BASE_URL;
 const home=`${base}comics/`;
 ---
 <!doctype html>
-<html lang="ja">
+<html lang="ja" class="comics-document">
 <head>
  <meta charset="utf-8"/>
  <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -28,10 +28,31 @@ const home=`${base}comics/`;
    <a href={`${base}en/`} lang="en">English</a>
    <a href={home} class="active" aria-current={pageKind==='home'?'page':undefined}>漫画版</a>
   </nav>
+  <details class="comics-mobile-menu">
+   <summary>メニュー <span aria-hidden="true">☰</span></summary>
+   <nav aria-label="漫画版のメニュー">
+    <a href={pageKind==='home'?'#fields':`${home}#fields`}>分野一覧</a>
+    <a href={`${base}ja/`} lang="ja">日本語</a>
+    <a href={`${base}en/`} lang="en">English</a>
+    <a href={home} aria-current={pageKind==='home'?'page':undefined}>漫画版トップ</a>
+   </nav>
+  </details>
  </header></div>
  <div class="ai-notice"><span class="ai-label">AI生成の解説</span><p>このサイトの解説には、誤りや不正確な説明が含まれる可能性があります。重要な主張・証明は原論文でご確認ください。</p></div>
  <main id="content"><slot/></main>
  {pageKind==='catalog'&&<ComicViewer/>}
+ <script>
+  const menu=document.querySelector<HTMLDetailsElement>('.comics-mobile-menu');
+  if(menu){
+   menu.addEventListener('keydown',event=>{
+    if(event.key==='Escape'&&menu.open){menu.open=false;menu.querySelector('summary')?.focus({preventScroll:true});event.preventDefault();}
+   });
+   document.addEventListener('click',event=>{
+    if(event.target instanceof Node&&!menu.contains(event.target))menu.open=false;
+   });
+   menu.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{menu.open=false;}));
+  }
+ </script>
  <footer class="footer">
   <p>OpenAI Math Digest <span>·</span> 独立した非公式の読解プロジェクト。OpenAI とは関係ありません。</p>
   <p>デザインの基盤：<a href="https://masataka123.github.io/geometry-paper-digest/">Geometry Paper Digest</a> (MIT) · <a href="https://github.com/openai/math">原論文集</a> · <a href="https://github.com/masataka123/OpenAI-Math-Digest">GitHub</a></p>
