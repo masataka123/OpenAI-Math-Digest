@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Inventory PNG attachments/ZIPs and prepare only the selected comic pages."""
+"""Inventory PNG-named attachments/ZIPs and prepare selected PNG or JPEG images."""
 import argparse
 from concurrent.futures import ThreadPoolExecutor
 import hashlib
@@ -64,13 +64,13 @@ def inventory(inputs, renumber=False):
         seen.add((number, page))
         data = read_source(source)
         with Image.open(io.BytesIO(data)) as image:
-            if image.format != 'PNG':
-                raise ValueError(f'Not a PNG: {name}')
+            if image.format not in ('PNG', 'JPEG'):
+                raise ValueError(f'Not a PNG or JPEG: {name}')
             image.load()
             rows.append({'catalogId': number, 'page': page, 'input': source,
                          'sha256': hashlib.sha256(data).hexdigest(), 'bytes': len(data),
                          'width': image.width, 'height': image.height,
-                         'mode': image.mode, 'gamma': image.info.get('gamma')})
+                         'mode': image.mode, 'sourceFormat': image.format, 'gamma': image.info.get('gamma')})
     if not rows:
         raise ValueError('No named comic PNGs found')
     for number in {r['catalogId'] for r in rows}:
@@ -106,7 +106,7 @@ def prepare(manifest, root):
             if hashlib.sha256(data).hexdigest() != page['sha256']:
                 raise ValueError(f'Input changed: {comic["catalogId"]}/{page_number}')
             with Image.open(io.BytesIO(data)) as image:
-                if image.format != 'PNG' or image.size != (page['width'], page['height']):
+                if image.format not in ('PNG', 'JPEG') or image.size != (page['width'], page['height']):
                     raise ValueError(f'Input format/dimensions differ: {comic["catalogId"]}/{page_number}')
             if page.get('reuse'):
                 original = Path(page['input']['file']).resolve()

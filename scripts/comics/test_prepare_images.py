@@ -51,6 +51,23 @@ class PrepareImagesTest(unittest.TestCase):
                 images.prepare(self.original)
         self.assertFalse((images.ROOT / 'public/images/comics/catalog-999/v1/page-001.png').exists())
 
+    def test_jpeg_original_is_kept_and_display_assets_preserve_decoded_pixels(self):
+        if not images.CWEBP:
+            self.skipTest('cwebp is required')
+        image = Image.new('RGB', (7, 9))
+        image.putdata([(x * 31, y * 23, (x + y) * 15) for y in range(9) for x in range(7)])
+        image.save(self.original, format='JPEG')
+        supplied = self.original.read_bytes()
+        result = images.prepare(self.original)
+        self.assertEqual(self.original.read_bytes(), supplied)
+        with Image.open(self.original) as original:
+            expected = original.convert('RGBA').tobytes()
+        for item in result['images'][1:]:
+            with Image.open(images.ROOT / item['path']) as decoded:
+                self.assertEqual(decoded.convert('RGBA').tobytes(), expected)
+        with Image.open(images.ROOT / result['images'][1]['path']) as png:
+            self.assertEqual(png.format, 'PNG')
+
     def test_new_edition_and_second_page_preserve_the_previous_files(self):
         if not images.CWEBP:
             self.skipTest('cwebp is required')

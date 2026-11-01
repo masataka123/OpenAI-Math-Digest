@@ -10,6 +10,8 @@ npm run comics:plan -- --run batch-name --input /absolute/path/to/images.zip
 
 個別PNGは `--input` を複数指定でき、画像フォルダーも受け取る。ファイル名は `Catalog_071.png`。複数枚なら `Catalog_071.png`、`Catalog_071_002.png` の順。ZIPのREADMEやFinder付随物は実行・掲載しない。欠番・重複・不正パスは停止する。
 
+PNGというファイル名でも実体がJPEGの場合は原本のバイト列をそのまま保持し、デコード後の同一画素から掲載用PNG・可逆WebPを作る。画像の実体は受付と画像記録へ残す。JPEGを再圧縮せず、PNG/JPEG以外の偽装形式は受け付けない。
+
 `coordination/comics/runs/batch-name/manifest.json` に受付結果ができる。公式番号・英語題名・原典一覧は固定版のキャッシュから得る。担当者は日本語題名、画像に見える `scope`、主な対象 `targetSourcePaths` を確認・補完する。これらは数学の証明検証でも岩井本人の補足でもない。複数原稿を自動で「すべて対象」としない。既存番号は登録済みの内容を再利用する。
 
 ```sh

@@ -44,6 +44,16 @@ class IntakeTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'Duplicate'):
             intake.inventory([str(image), str(image)])
 
+    def test_jpeg_with_png_filename_is_recorded_but_other_formats_are_refused(self):
+        image = self.root / 'Catalog_362.png'
+        Image.new('RGB', (3, 4), (10, 50, 25)).save(image, format='JPEG')
+        row = intake.inventory([str(image)])[0]
+        self.assertEqual(row['sourceFormat'], 'JPEG')
+        self.assertEqual((row['width'], row['height']), (3, 4))
+        Image.new('RGB', (3, 4)).save(image, format='BMP')
+        with self.assertRaisesRegex(ValueError, 'Not a PNG or JPEG'):
+            intake.inventory([str(image)])
+
     def test_changed_source_fails_before_copying_originals(self):
         image = self.root / 'Catalog_071.png'
         image.write_bytes(self.png)

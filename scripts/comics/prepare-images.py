@@ -30,6 +30,7 @@ def prepare(original, page_number=1, edition='v1'):
     work = ROOT / 'tmp/comics-image-work' / catalog / edition
     work.mkdir(parents=True, exist_ok=True)
     with Image.open(original) as image:
+        source_format = image.format
         pixels = image.convert('RGBA').tobytes()
         dimensions = image.size
         # Keep unusual PNG transfer curves intact. cwebp may apply gamma
@@ -48,7 +49,7 @@ def prepare(original, page_number=1, edition='v1'):
     if not png_only and not webp.exists():
         temporary = work / f'{webp.name}.{os.getpid()}.tmp'
         subprocess.run([CWEBP, '-quiet', '-lossless', '-exact', '-z', '9', '-mt', '-metadata', 'icc',
-                        str(original), '-o', str(temporary)], check=True)
+                        str(png if source_format == 'JPEG' else original), '-o', str(temporary)], check=True)
         temporary.replace(webp)
     assets = []
     for path in [original, png] + ([] if png_only else [webp]):
@@ -63,7 +64,7 @@ def prepare(original, page_number=1, edition='v1'):
     record.parent.mkdir(parents=True, exist_ok=True)
     # Existing verified records (including the 034 prototype) remain intact.
     if not record.exists():
-        record.write_text(json.dumps({'sourceSha256': digest(original), 'tool': TOOL,
+        record.write_text(json.dumps({'sourceSha256': digest(original), 'sourceFormat': source_format, 'tool': TOOL,
             'webpArguments': None if png_only else ['-lossless', '-exact', '-z', '9', '-mt', '-metadata', 'icc'],
             'pngTool': 'original-byte-copy' if png_only else 'Pillow',
             'pngOptions': {} if png_only else {'optimize': True, 'compress_level': 9},
