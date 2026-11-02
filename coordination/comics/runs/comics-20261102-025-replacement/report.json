@@ -1,0 +1,259 @@
+{
+  "version": 1,
+  "createdAt": "2026-11-01T23:58:08.163Z",
+  "run": "coordination/comics/runs/comics-20261102-025-replacement",
+  "catalogIds": [
+    "025"
+  ],
+  "steps": {
+    "images": {
+      "status": "passed",
+      "key": "59d22b41d5b33102b1a43b8ea4c0fadf01426ba4ad2fd0b398c6eaccc668c2ea:1793577688815",
+      "startedAt": "2026-11-02T00:01:28.815Z",
+      "durationMs": 322,
+      "result": [
+        {
+          "catalogId": "025",
+          "images": [
+            {
+              "path": "assets/comics/catalog-025/original/Catalog_025-v2.png",
+              "size": 2818284,
+              "dimensions": [
+                1024,
+                1536
+              ],
+              "sha256": "5242630f1d4506c881169ca7f9d1b9d81364ffb8490482fddccf40716350515e",
+              "pixelsIdentical": true
+            },
+            {
+              "path": "public/images/comics/catalog-025/v2/page-001.png",
+              "size": 2789213,
+              "dimensions": [
+                1024,
+                1536
+              ],
+              "sha256": "2e8f361f16353429f9bedb62f0e7c4102b93eabb161224f62daa8e4b57744be8",
+              "pixelsIdentical": true
+            },
+            {
+              "path": "public/images/comics/catalog-025/v2/page-001.webp",
+              "size": 2170846,
+              "dimensions": [
+                1024,
+                1536
+              ],
+              "sha256": "a289736d9c90c4175ec042ba438e78e2799b884c9760d766ed6ae47f4e02a697",
+              "pixelsIdentical": true
+            }
+          ],
+          "page": 1,
+          "originalReused": true
+        }
+      ],
+      "reused": false
+    },
+    "registration": {
+      "status": "passed",
+      "key": "59d22b41d5b33102b1a43b8ea4c0fadf01426ba4ad2fd0b398c6eaccc668c2ea:0a96b2eeba1cc9d86d107eea60c0cb6fd4883059675985c3e71d0d3dbd1283df",
+      "startedAt": "2026-11-02T00:01:29.140Z",
+      "durationMs": 3,
+      "result": {
+        "changed": []
+      },
+      "reused": false
+    },
+    "tests": {
+      "status": "passed",
+      "key": "89c7a20cb6e042afd9be0833ba21ce75aa0a34d8cfbacb392122d9af68e5e1cc",
+      "startedAt": "2026-11-02T00:01:30.204Z",
+      "durationMs": 2752,
+      "result": {
+        "log": "tests.log"
+      },
+      "reused": false
+    },
+    "image-tests": {
+      "status": "passed",
+      "key": "89c7a20cb6e042afd9be0833ba21ce75aa0a34d8cfbacb392122d9af68e5e1cc",
+      "startedAt": "2026-11-02T00:01:32.957Z",
+      "durationMs": 408,
+      "result": {
+        "log": "image-tests.log"
+      },
+      "reused": false
+    },
+    "citations": {
+      "status": "passed",
+      "key": "89c7a20cb6e042afd9be0833ba21ce75aa0a34d8cfbacb392122d9af68e5e1cc",
+      "startedAt": "2026-11-02T00:01:33.366Z",
+      "durationMs": 548,
+      "result": {
+        "log": "citations.log"
+      },
+      "reused": false
+    },
+    "build": {
+      "status": "passed",
+      "key": "89c7a20cb6e042afd9be0833ba21ce75aa0a34d8cfbacb392122d9af68e5e1cc",
+      "startedAt": "2026-11-02T00:01:35.722Z",
+      "durationMs": 14906,
+      "result": {
+        "dist": "tmp/comics-pipeline/comics-20261102-025-replacement/dist",
+        "outputHash": "32adcdf26b4f3db9c5c9b60b005b64493cc11e854ab14f03991572366e5aaa00"
+      },
+      "reused": false
+    },
+    "links": {
+      "status": "passed",
+      "key": "89c7a20cb6e042afd9be0833ba21ce75aa0a34d8cfbacb392122d9af68e5e1cc",
+      "startedAt": "2026-11-02T00:01:50.629Z",
+      "durationMs": 1867,
+      "result": {
+        "pages": 401,
+        "checked": 327267
+      },
+      "reused": false
+    },
+    "pdf": {
+      "status": "passed",
+      "key": "89c7a20cb6e042afd9be0833ba21ce75aa0a34d8cfbacb392122d9af68e5e1cc",
+      "startedAt": "2026-11-02T00:01:52.497Z",
+      "durationMs": 32057,
+      "result": {
+        "log": "pdf.log"
+      },
+      "reused": false
+    }
+  },
+  "manifestHash": "59d22b41d5b33102b1a43b8ea4c0fadf01426ba4ad2fd0b398c6eaccc668c2ea",
+  "sourceFingerprint": "cd2094e6dc1a1f8e5e25392c3d26163f37eb95adb0d511a94f1f5987b5708196",
+  "runtime": {
+    "node": "/Users/iwai/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "nodeVersion": "v24.22.1",
+    "python": "/Users/iwai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "cwebp": "/usr/local/bin/cwebp"
+  },
+  "status": "ready",
+  "error": null,
+  "changedCatalogIds": [
+    "025"
+  ],
+  "updatedAt": "2026-11-02T00:09:24.086Z",
+  "siteFingerprint": "89c7a20cb6e042afd9be0833ba21ce75aa0a34d8cfbacb392122d9af68e5e1cc",
+  "dist": "tmp/comics-pipeline/comics-20261102-025-replacement/dist",
+  "routes": [
+    {
+      "route": "comics/",
+      "kind": "home",
+      "count": 125,
+      "fields": 16
+    },
+    {
+      "route": "comics/fields/number-theory/",
+      "kind": "field",
+      "ids": [
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "013",
+        "017",
+        "025",
+        "028"
+      ]
+    },
+    {
+      "route": "comics/catalog/025/",
+      "kind": "catalog",
+      "catalogId": "025",
+      "pages": [
+        {
+          "id": "page-001",
+          "width": 1024,
+          "height": 1536,
+          "webp": "images/comics/catalog-025/v2/page-001.webp",
+          "png": "images/comics/catalog-025/v2/page-001.png",
+          "alt": "カタログ025「エルデシュの短いエジプト分数予想」を紹介する日本語の漫画"
+        }
+      ],
+      "supplement": {
+        "status": "approved",
+        "author": "岩井雅崇",
+        "text": "一般向けの漫画のみ制作. 子供の頃, 算数おもしろ大事典をよく読んでいた. 最初の2コマのエジプト分数の話はこの事典に載っていたはずで, それを思い出して無理やり入れた. この事典にはトポロジーなどが載っていた気がする. 読んだことある人はいるんじゃないですかね？",
+        "receivedOn": "2026-11-01"
+      },
+      "targetUrls": [
+        "https://github.com/openai/math/blob/7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a/preprints/Short-Egyptian-fractions-September-25-2026/Short-Egyptian-fractions-September-25-2026.pdf"
+      ]
+    }
+  ],
+  "htmlHashes": {
+    "comics/": "4d1358b4c9be3531648e64f1c5a1ca87f586b1fef92ada39c4080603268b766a",
+    "comics/fields/number-theory/": "21c55801419860b91fb950622497003e173626a7ee969c96b235824b4c9ec3df",
+    "comics/catalog/025/": "d4e743f369a9cfe5bd76b3cb07e5b7172f01e37b7025cdc5402be3372eca5302"
+  },
+  "checks": [
+    {
+      "route": "comics/",
+      "ok": true
+    },
+    {
+      "route": "comics/fields/number-theory/",
+      "ok": true
+    },
+    {
+      "route": "comics/catalog/025/",
+      "ok": true
+    }
+  ],
+  "managedFiles": [
+    "assets/comics/catalog-025/original/Catalog_025-v2.png",
+    "public/images/comics/catalog-025/v2/page-001.png",
+    "public/images/comics/catalog-025/v2/page-001.webp",
+    "coordination/comics/catalog-025/IMAGE_BUILD-v2-page-001.json"
+  ],
+  "protection": {
+    "unrelatedSiteFilesUnchanged": true,
+    "unrelatedComicsUnchanged": true,
+    "existingBibliographyUnchanged": true
+  },
+  "next": "公開指示があれば publish --authorized。既存版の確認だけなら verify。",
+  "lastInvocation": {
+    "startedAt": "2026-11-02T00:01:27.642Z",
+    "finishedAt": "2026-11-02T00:02:27.204Z",
+    "durationMs": 59563,
+    "reusedStages": []
+  },
+  "release": {
+    "stagingFiles": [
+      "src/data/comics.json",
+      "assets/comics/catalog-025/original/Catalog_025-v2.png",
+      "coordination/comics/catalog-025/IMAGE_BUILD-v2-page-001.json",
+      "coordination/comics/runs/comics-20261102-025-replacement/HANDOFF.md",
+      "coordination/comics/runs/comics-20261102-025-replacement/baseline.json",
+      "coordination/comics/runs/comics-20261102-025-replacement/build.log",
+      "coordination/comics/runs/comics-20261102-025-replacement/citations.log",
+      "coordination/comics/runs/comics-20261102-025-replacement/editorial.json",
+      "coordination/comics/runs/comics-20261102-025-replacement/image-tests.log",
+      "coordination/comics/runs/comics-20261102-025-replacement/images.json",
+      "coordination/comics/runs/comics-20261102-025-replacement/images.log",
+      "coordination/comics/runs/comics-20261102-025-replacement/intake.json",
+      "coordination/comics/runs/comics-20261102-025-replacement/links.json",
+      "coordination/comics/runs/comics-20261102-025-replacement/manifest.json",
+      "coordination/comics/runs/comics-20261102-025-replacement/pdf.log",
+      "coordination/comics/runs/comics-20261102-025-replacement/preservation.json",
+      "coordination/comics/runs/comics-20261102-025-replacement/report.json",
+      "coordination/comics/runs/comics-20261102-025-replacement/review.json",
+      "coordination/comics/runs/comics-20261102-025-replacement/runtime.json",
+      "coordination/comics/runs/comics-20261102-025-replacement/screens/comics-375.jpg",
+      "coordination/comics/runs/comics-20261102-025-replacement/screens/comics-catalog-025-1280.jpg",
+      "coordination/comics/runs/comics-20261102-025-replacement/screens/comics-catalog-025-375.jpg",
+      "coordination/comics/runs/comics-20261102-025-replacement/screens/comics-fields-number-theory-1280.jpg",
+      "coordination/comics/runs/comics-20261102-025-replacement/screens/viewer-fit-375.jpg",
+      "coordination/comics/runs/comics-20261102-025-replacement/tests.log",
+      "public/images/comics/catalog-025/v2/page-001.png",
+      "public/images/comics/catalog-025/v2/page-001.webp"
+    ]
+  }
+}
