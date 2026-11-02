@@ -206,3 +206,7 @@ COMICS_PREVIEW=1 npm run dev -- --host 127.0.0.1
 本人の編集・公開指示に従い、3件とも提供された `_2.png` を1枚目「導入版」、`.png` を2枚目「詳細版」として登録し、公開反映まで確認済み。079・102の補足は原文のまま、378のみ合意された6点の誤字・表記を修正し、内容・語尾・句読点は保持した。全102カタログとなる。
 
 今回の原典と2分野の公式順・PDFページには10月26日版を使い、既存99件は従来の原典参照版を保持する。原稿の証明の独立検証を行ったものではない。[編集・原典確認の範囲](runs/comics-20261028-three-pairs/EDITORIAL_REVIEW.md)、[原文](runs/comics-20261028-three-pairs/provided-supplements.json)、[6点の修正](runs/comics-20261028-three-pairs/corrections.json)、[既存内容の保持](runs/comics-20261028-three-pairs/preservation.json)、[実行・公開記録](runs/comics-20261028-three-pairs/HANDOFF.md)を参照。
+
+## 2026-11-02：025の漫画を新版1枚に差し替え
+
+本人の公開指示に従い、025を今回提供された画像1枚へ置換。岩井の補足・題名・原典参照版・URLを保持し、旧原本とv1の掲載画像は履歴として残した。スマートフォン・PC・拡大操作と公開反映を確認済み。全125カタログのまま。[実行・公開記録](runs/comics-20261102-025-replacement/HANDOFF.md)、[編集範囲](runs/comics-20261102-025-replacement/README.md)、[保持の照合](runs/comics-20261102-025-replacement/preservation.json)を参照。
