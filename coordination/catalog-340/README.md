@@ -1,6 +1,6 @@
-# カタログ340 — 第1段階
+# カタログ340 — 制作・公開記録
 
-2026-11-04追記：第2段階のサイト組込み・日英PDF・公開前検査を完了し、公開前で停止。PREPARATION_REVIEW.mdとSITE_HQ_HANDOFF.mdの現在状態を参照する。以下は第1段階開始時の制作範囲と記録。
+2026-11-04現在：**第3段階の公開・反映確認を完了。** 日英カタログ・記事・TeX/SVG・PDFを公開し、Actionsと公開サイトで同一版を確認した。公開結果はstage3/PUBLICATION_REPORT.md、現在の引継ぎはSITE_HQ_HANDOFF.mdを参照する。以下は第1段階開始時の制作範囲と記録。
 
 制作セット1.4、MODEL_ROLES.md（2026-10-20）を適用する。現在の依頼は日英記事・TeX/SVG・引用記録・独立したAstra内容点検・短い日英カタログ案内まで。サイト登録、publicへの配置、冊子PDF生成、PDF版情報更新、commit/pushは次段階。
 
@@ -15,4 +15,4 @@
 - PDF計画：第2段階に案内1章＋記事1章の日本語・英語冊子をサイト本部が生成し、カタログ冒頭・公式順表の前に共通PDF導線を置く。今回存在しないPDFへのリンクを完成扱いにしない。
 - 実行環境：validation/environment.json。Nodeは通常PATHにないため記録先のbinを追加する。
 
-第1段階の内容編集・独立Astra点検・本部形式受領を完了し、停止。確定版、確認範囲、検査証拠、残作業、再開手順はSITE_HQ_HANDOFF.md、FORMAT_REVIEW.md、RELEASE_CHECKLIST.mdを参照する。第2段階は未開始。
+第1段階では内容編集・独立Astra点検・本部形式受領を完了して停止し、後続の個別指示により第2・第3段階を実施した。確定版、確認範囲、検査証拠、残作業、再開手順はSITE_HQ_HANDOFF.md、FORMAT_REVIEW.md、PREPARATION_REVIEW.md、RELEASE_CHECKLIST.mdを参照する。

@@ -1,0 +1,197 @@
+{
+  "total_count": 2,
+  "jobs": [
+    {
+      "id": 126440133565,
+      "run_id": 41789756729,
+      "workflow_name": "Build and deploy OpenAI Math Digest",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/masataka123/OpenAI-Math-Digest/actions/runs/41789756729",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVANv7M8AAAAdcGtTvQ",
+      "head_sha": "000a88b18a1749e4cd9f2697f3c90120c9548028",
+      "url": "https://api.github.com/repos/masataka123/OpenAI-Math-Digest/actions/jobs/126440133565",
+      "html_url": "https://github.com/masataka123/OpenAI-Math-Digest/actions/runs/41789756729/job/126440133565",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-04T07:04:45Z",
+      "started_at": "2026-11-04T07:04:47Z",
+      "completed_at": "2026-11-04T07:08:35Z",
+      "name": "build",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-04T07:04:48Z",
+          "completed_at": "2026-11-04T07:04:49Z"
+        },
+        {
+          "name": "Run actions/checkout@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-04T07:04:49Z",
+          "completed_at": "2026-11-04T07:06:38Z"
+        },
+        {
+          "name": "Run actions/setup-node@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-04T07:06:38Z",
+          "completed_at": "2026-11-04T07:06:42Z"
+        },
+        {
+          "name": "Run npm ci",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-04T07:06:42Z",
+          "completed_at": "2026-11-04T07:06:48Z"
+        },
+        {
+          "name": "Run npm test",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-04T07:06:48Z",
+          "completed_at": "2026-11-04T07:06:56Z"
+        },
+        {
+          "name": "Run npm run check:citations",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-04T07:06:56Z",
+          "completed_at": "2026-11-04T07:06:56Z"
+        },
+        {
+          "name": "Run npm run build",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-04T07:06:56Z",
+          "completed_at": "2026-11-04T07:07:16Z"
+        },
+        {
+          "name": "Run npm run check:links",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-11-04T07:07:16Z",
+          "completed_at": "2026-11-04T07:07:20Z"
+        },
+        {
+          "name": "Run npm run check:pdf",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-11-04T07:07:20Z",
+          "completed_at": "2026-11-04T07:07:58Z"
+        },
+        {
+          "name": "Run actions/upload-pages-artifact@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-11-04T07:07:58Z",
+          "completed_at": "2026-11-04T07:08:31Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-11-04T07:08:31Z",
+          "completed_at": "2026-11-04T07:08:32Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20,
+          "started_at": "2026-11-04T07:08:32Z",
+          "completed_at": "2026-11-04T07:08:33Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21,
+          "started_at": "2026-11-04T07:08:33Z",
+          "completed_at": "2026-11-04T07:08:33Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/masataka123/OpenAI-Math-Digest/check-runs/126440133565",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000003759,
+      "runner_name": "GitHub Actions 1000003759",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 126441560622,
+      "run_id": 41789756729,
+      "workflow_name": "Build and deploy OpenAI Math Digest",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/masataka123/OpenAI-Math-Digest/actions/runs/41789756729",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVANv7M8AAAAdcIEaLg",
+      "head_sha": "000a88b18a1749e4cd9f2697f3c90120c9548028",
+      "url": "https://api.github.com/repos/masataka123/OpenAI-Math-Digest/actions/jobs/126441560622",
+      "html_url": "https://github.com/masataka123/OpenAI-Math-Digest/actions/runs/41789756729/job/126441560622",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-04T07:08:36Z",
+      "started_at": "2026-11-04T07:08:40Z",
+      "completed_at": "2026-11-04T07:09:33Z",
+      "name": "deploy",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-04T07:08:41Z",
+          "completed_at": "2026-11-04T07:08:42Z"
+        },
+        {
+          "name": "Run actions/configure-pages@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-04T07:08:42Z",
+          "completed_at": "2026-11-04T07:08:43Z"
+        },
+        {
+          "name": "Run actions/deploy-pages@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-04T07:08:43Z",
+          "completed_at": "2026-11-04T07:09:31Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-04T07:09:31Z",
+          "completed_at": "2026-11-04T07:09:31Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/masataka123/OpenAI-Math-Digest/check-runs/126441560622",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000003760,
+      "runner_name": "GitHub Actions 1000003760",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    }
+  ]
+}
