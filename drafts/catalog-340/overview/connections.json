@@ -1,0 +1,420 @@
+{
+  "catalogId": "340",
+  "productionVersion": "1.4",
+  "checkingScope": "公式順1本。外部直接入力11件の所要記述と適用箇所を照合。WJRは出版前原稿を参照し2013年出版版との逐語比較は未実施。外部証明全体を検証した意味ではない。カタログ内の別論文間の辺は対象なし。他カタログ全関係は未調査。",
+  "omittedSections": [
+    {
+      "section": "catalogue classification and relationship diagram",
+      "reason": "公式順1本。記事内全体図がkernel類・実現・消滅・輸送の分岐合流をまとめるため、入口での重複図は読書選択を助けず省略。"
+    },
+    {
+      "section": "paper selector and intra-catalogue dependency table",
+      "reason": "論文選択は1本の共通4列表で足りる。外部接続は記事の入力表へ案内し、空の表を設けない。"
+    }
+  ],
+  "connections": [
+    {
+      "id": "ais26-input",
+      "from": {
+        "paperId": "AIS26",
+        "external": true,
+        "displayName": "Legendrian and Lagrangian higher torsion",
+        "result": "Theorem 3.30; Remark 3.34",
+        "pages": "25–26",
+        "version": "arXiv:2603.28007v2, 19 August 2026",
+        "sourceUrl": "https://arxiv.org/pdf/2603.28007v2"
+      },
+      "to": {
+        "paperId": "nearby-lagrangian-counterexample",
+        "result": "Theorem 2.1; Proposition 2.2",
+        "pages": "5–6",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/A-counterexample-to-the-nearby-Lagrangian-conjecture-September-23-2026/paper.pdf"
+      },
+      "role": "安定tube fibrationとquadratic rigid mapのBJとの同一視",
+      "hypotheses": "安定模型。同一模型への比較全体の独立検証は未完了。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "astra_author / astra_review",
+        "date": "2026-11-04",
+        "record": "../nearby-lagrangian-counterexample/sources.json",
+        "scope": "記述と適用箇所を照合。外部証明自体は未検証。"
+      },
+      "articleLinks": {
+        "ja": "../nearby-lagrangian-counterexample/article.ja.md#proof-overview-step-1",
+        "en": "../nearby-lagrangian-counterexample/article.en.md#proof-overview-step-1"
+      },
+      "unresolved": [
+        "外部結果の全証明は未検証。"
+      ]
+    },
+    {
+      "id": "ad66-input",
+      "from": {
+        "paperId": "Ad66",
+        "external": true,
+        "displayName": "On the groups J(X). IV",
+        "result": "Theorem 9.5",
+        "pages": "51 (PDF 31)",
+        "version": "Topology 5 (1966), 21–71; published version",
+        "sourceUrl": "https://www.sas.rochester.edu/mth/sites/doug-ravenel/otherpapers/Adams-JX4.pdf"
+      },
+      "to": {
+        "paperId": "nearby-lagrangian-counterexample",
+        "result": "Proposition 2.2; §3.1",
+        "pages": "6, 9",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/A-counterexample-to-the-nearby-Lagrangian-conjecture-September-23-2026/paper.pdf"
+      },
+      "role": "J9で境界写像の像を制限し、J8で負固有束を自明化",
+      "hypotheses": "r=8,9はr>1かつr≡0,1 mod8。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "astra_author / astra_review",
+        "date": "2026-11-04",
+        "record": "../nearby-lagrangian-counterexample/sources.json",
+        "scope": "記述と適用箇所を照合。外部証明自体は未検証。"
+      },
+      "articleLinks": {
+        "ja": "../nearby-lagrangian-counterexample/article.ja.md#proof-overview-step-1",
+        "en": "../nearby-lagrangian-counterexample/article.en.md#proof-overview-step-1"
+      },
+      "unresolved": [
+        "外部結果の全証明は未検証。"
+      ]
+    },
+    {
+      "id": "iwx23-input",
+      "from": {
+        "paperId": "IWX23",
+        "external": true,
+        "displayName": "Stable homotopy groups of spheres: from dimension 0 to 90",
+        "result": "Table 1, degree 9",
+        "pages": "113 (PDF 7)",
+        "version": "Publications Mathématiques de l’IHÉS 137 (2023), 107–243; published version",
+        "sourceUrl": "https://www.numdam.org/item/10.1007/s10240-023-00139-1.pdf"
+      },
+      "to": {
+        "paperId": "nearby-lagrangian-counterexample",
+        "result": "Proposition 2.2",
+        "pages": "6",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/A-counterexample-to-the-nearby-Lagrangian-conjecture-September-23-2026/paper.pdf"
+      },
+      "role": "π9^S=(Z/2)^3の位数8を用いる",
+      "hypotheses": "表の2-primary v1-torsionとv1-periodic部分を合わせる。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "astra_author / astra_review",
+        "date": "2026-11-04",
+        "record": "../nearby-lagrangian-counterexample/sources.json",
+        "scope": "記述と適用箇所を照合。外部証明自体は未検証。"
+      },
+      "articleLinks": {
+        "ja": "../nearby-lagrangian-counterexample/article.ja.md#proof-overview-step-1",
+        "en": "../nearby-lagrangian-counterexample/article.en.md#proof-overview-step-1"
+      },
+      "unresolved": [
+        "外部結果の全証明は未検証。"
+      ]
+    },
+    {
+      "id": "rog14-input",
+      "from": {
+        "paperId": "Rog14",
+        "external": true,
+        "displayName": "Algebraic K-theory of strict ring spectra",
+        "result": "Theorem 3.3",
+        "pages": "8",
+        "version": "arXiv:1403.5998v1, 24 March 2014",
+        "sourceUrl": "https://arxiv.org/pdf/1403.5998v1"
+      },
+      "to": {
+        "paperId": "nearby-lagrangian-counterexample",
+        "result": "Proposition 2.2",
+        "pages": "6",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/A-counterexample-to-the-nearby-Lagrangian-conjecture-September-23-2026/paper.pdf"
+      },
+      "role": "π10Whdiff(*)の2-primary部分の位数32",
+      "hypotheses": "使用するのは2-primary部分のみ。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "astra_author / astra_review",
+        "date": "2026-11-04",
+        "record": "../nearby-lagrangian-counterexample/sources.json",
+        "scope": "記述と適用箇所を照合。外部証明自体は未検証。"
+      },
+      "articleLinks": {
+        "ja": "../nearby-lagrangian-counterexample/article.ja.md#proof-overview-step-1",
+        "en": "../nearby-lagrangian-counterexample/article.en.md#proof-overview-step-1"
+      },
+      "unresolved": [
+        "外部結果の全証明は未検証。"
+      ]
+    },
+    {
+      "id": "cp25-input",
+      "from": {
+        "paperId": "CP25",
+        "external": true,
+        "displayName": "On the parametrised Whitehead torsion of families of nearby Lagrangian submanifolds",
+        "result": "Proposition 2.11; Definition 2.15; Theorems 2.16–2.17",
+        "pages": "7–9",
+        "version": "arXiv:2506.06110v1, 6 June 2025",
+        "sourceUrl": "https://arxiv.org/pdf/2506.06110v1"
+      },
+      "to": {
+        "paperId": "nearby-lagrangian-counterexample",
+        "result": "Proposition 4.5; §4.3",
+        "pages": "15–16",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/A-counterexample-to-the-nearby-Lagrangian-conjecture-September-23-2026/paper.pdf"
+      },
+      "role": "安定化・延長がπ9を検出し、零classから族の積構造を得る",
+      "hypotheses": "B=S9 compact、k,l≥20、dimΣ≥38、r=10の下界35、collar埋込みの連結性。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "astra_author / astra_review",
+        "date": "2026-11-04",
+        "record": "../nearby-lagrangian-counterexample/sources.json",
+        "scope": "記述と適用箇所を照合。外部証明自体は未検証。"
+      },
+      "articleLinks": {
+        "ja": "../nearby-lagrangian-counterexample/article.ja.md#proof-2-step-3",
+        "en": "../nearby-lagrangian-counterexample/article.en.md#proof-2-step-3"
+      },
+      "unresolved": [
+        "外部結果の全証明は未検証。"
+      ]
+    },
+    {
+      "id": "bpt25-input",
+      "from": {
+        "paperId": "BPT25",
+        "external": true,
+        "displayName": "Link concordance implies link homotopy",
+        "result": "Theorem 2.3.4; Corollary 2.3.5(iii)",
+        "pages": "16–17",
+        "version": "arXiv:2503.04348v1, 6 March 2025",
+        "sourceUrl": "https://arxiv.org/pdf/2503.04348v1"
+      },
+      "to": {
+        "paperId": "nearby-lagrangian-counterexample",
+        "result": "§4.4",
+        "pages": "17",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/A-counterexample-to-the-nearby-Lagrangian-conjecture-September-23-2026/paper.pdf"
+      },
+      "role": "core homotopyの二重点とrank欠損の回避",
+      "hypotheses": "parameter次元10、l>k+9。compact parameterと端点相対化は本原稿の追加説明。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "astra_author / astra_review",
+        "date": "2026-11-04",
+        "record": "../nearby-lagrangian-counterexample/sources.json",
+        "scope": "記述と適用箇所を照合。外部証明自体は未検証。"
+      },
+      "articleLinks": {
+        "ja": "../nearby-lagrangian-counterexample/article.ja.md#proof-2-step-3",
+        "en": "../nearby-lagrangian-counterexample/article.en.md#proof-2-step-3"
+      },
+      "unresolved": [
+        "外部結果の全証明は未検証。"
+      ]
+    },
+    {
+      "id": "hat02-input",
+      "from": {
+        "paperId": "Hat02",
+        "external": true,
+        "displayName": "Algebraic Topology",
+        "result": "Corollary 4.33",
+        "pages": "367 (PDF 376)",
+        "version": "2002 book; author-hosted PDF accessed 4 November 2026",
+        "sourceUrl": "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf"
+      },
+      "to": {
+        "paperId": "nearby-lagrangian-counterexample",
+        "result": "Lemmas 3.2, 4.2",
+        "pages": "9, 12–13",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/A-counterexample-to-the-nearby-Lagrangian-conjecture-September-23-2026/paper.pdf"
+      },
+      "role": "homology同値からhomotopy同値へ",
+      "hypotheses": "単連結・CW型。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "astra_author / astra_review",
+        "date": "2026-11-04",
+        "record": "../nearby-lagrangian-counterexample/sources.json",
+        "scope": "記述と適用箇所を照合。外部証明自体は未検証。"
+      },
+      "articleLinks": {
+        "ja": "../nearby-lagrangian-counterexample/article.ja.md#proof-2-step-2",
+        "en": "../nearby-lagrangian-counterexample/article.en.md#proof-2-step-2"
+      },
+      "unresolved": [
+        "外部結果の全証明は未検証。"
+      ]
+    },
+    {
+      "id": "bott59-input",
+      "from": {
+        "paperId": "Bott59",
+        "external": true,
+        "displayName": "The stable homotopy of the classical groups",
+        "result": "Corollary to Theorem II, equation (1.5)",
+        "pages": "314–315 (PDF 3–4)",
+        "version": "1959 published article scan, Annals of Mathematics 70(2), 313–337; one repository cover page",
+        "sourceUrl": "https://webhomes.maths.ed.ac.uk/~v1ranick/papers/bott4.pdf"
+      },
+      "to": {
+        "paperId": "nearby-lagrangian-counterexample",
+        "result": "Proposition 2.2",
+        "pages": "6",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/A-counterexample-to-the-nearby-Lagrangian-conjecture-September-23-2026/paper.pdf"
+      },
+      "role": "π8Oとπ9Oの計算",
+      "hypotheses": "安定直交群。8周期性と次数0,1の群列を用いπ8O=π9O=Z/2。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "astra_author / astra_review",
+        "date": "2026-11-04",
+        "record": "../nearby-lagrangian-counterexample/sources.json",
+        "scope": "Corollary to Theorem II, equation (1.5), and following group list; manuscript Proposition 2.2 checked."
+      },
+      "articleLinks": {
+        "ja": "../nearby-lagrangian-counterexample/article.ja.md#proof-overview-step-1",
+        "en": "../nearby-lagrangian-counterexample/article.en.md#proof-overview-step-1"
+      },
+      "unresolved": [
+        "外部結果の全証明は未検証。"
+      ]
+    },
+    {
+      "id": "wjr13-input",
+      "from": {
+        "paperId": "WJR13",
+        "external": true,
+        "displayName": "Spaces of PL Manifolds and Categories of Simple Maps",
+        "result": "Theorems 0.1, 0.3; Definitions 1.1.1, 1.1.3, 1.3.4",
+        "pages": "2, 4, 7–8, 18",
+        "version": "Undated prepublication manuscript hosted at Rochester, 166 PDF pages; PDF metadata creation 2012-02-29. The manuscript cites the 2013 published book; no word-for-word comparison with that edition.",
+        "sourceUrl": "https://www.sas.rochester.edu/mth/sites/doug-ravenel/otherpapers/WJR.pdf"
+      },
+      "to": {
+        "paperId": "nearby-lagrangian-counterexample",
+        "result": "§§2.2, 4.2–4.3",
+        "pages": "5, 13–16",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/A-counterexample-to-the-nearby-Lagrangian-conjecture-September-23-2026/paper.pdf"
+      },
+      "role": "安定parametrized h-cobordismとWhdiff、自然性、区間積の模型",
+      "hypotheses": "compact DIFF manifold。collared区間積の出側を(N×J)∪(W×∂J)とする模型で、codimension-zero extensionの自然性を用いる。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "astra_author / astra_review",
+        "date": "2026-11-04",
+        "record": "../nearby-lagrangian-counterexample/sources.json",
+        "scope": "Theorems 0.1, 0.3, Definitions 1.1.1, 1.1.3, 1.3.4 and manuscript uses at pp.5,13–16 checked. Published 2013 text not compared word for word."
+      },
+      "articleLinks": {
+        "ja": "../nearby-lagrangian-counterexample/article.ja.md#proof-2-step-3",
+        "en": "../nearby-lagrangian-counterexample/article.en.md#proof-2-step-3"
+      },
+      "unresolved": [
+        "外部結果の全証明は未検証。",
+        "参照した出版前原稿と2013年出版版の逐語比較は未実施。"
+      ]
+    },
+    {
+      "id": "mil65-input",
+      "from": {
+        "paperId": "Mil65",
+        "external": true,
+        "displayName": "Lectures on the h-Cobordism Theorem",
+        "result": "Theorem 9.1",
+        "pages": "107 (PDF 112)",
+        "version": "1965 Princeton University Press edition scan; title and copyright pages checked",
+        "sourceUrl": "https://webhomes.maths.ed.ac.uk/~v1ranick/surgery/hcobord.pdf"
+      },
+      "to": {
+        "paperId": "nearby-lagrangian-counterexample",
+        "result": "§4.2",
+        "pages": "13",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/A-counterexample-to-the-nearby-Lagrangian-conjecture-September-23-2026/paper.pdf"
+      },
+      "role": "各fiberのh-cobordismの積性",
+      "hypotheses": "W,Σ,出側境界は単連結、相対homology零、dimW≥39≥6。incoming固定は本稿の補正で行う。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "astra_author / astra_review",
+        "date": "2026-11-04",
+        "record": "../nearby-lagrangian-counterexample/sources.json",
+        "scope": "Theorem 9.1 and hypotheses at manuscript §4.2 checked: simply connected triad, relative homology zero, dimension at least six."
+      },
+      "articleLinks": {
+        "ja": "../nearby-lagrangian-counterexample/article.ja.md#proof-2-step-2",
+        "en": "../nearby-lagrangian-counterexample/article.en.md#proof-2-step-2"
+      },
+      "unresolved": [
+        "外部結果の全証明は未検証。"
+      ]
+    },
+    {
+      "id": "aack25-input",
+      "from": {
+        "paperId": "AACK25",
+        "external": true,
+        "displayName": "Normal invariant of nearby Lagrangians via twisted derivative",
+        "result": "Definitions 3.10, 3.36; §4.1, Definition 4.3, Propositions 4.4, 4.6, 4.7, Remark 4.5",
+        "pages": "14, 23, 26–28",
+        "version": "arXiv:2505.12515v2, stamp 22 October 2025; manuscript date 23 October 2025",
+        "sourceUrl": "https://arxiv.org/pdf/2505.12515v2"
+      },
+      "to": {
+        "paperId": "nearby-lagrangian-counterexample",
+        "result": "§2.1; Theorem 2.1",
+        "pages": "4–5",
+        "version": "September 23, 2026",
+        "sourceUrl": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/A-counterexample-to-the-nearby-Lagrangian-conjecture-September-23-2026/paper.pdf"
+      },
+      "role": "関数・領域・negative-domain frame模型とγの球面束分類写像の同定",
+      "hypotheses": "指定の安定成分。負領域へのhomotopy frameのprincipal G^u_k bundleと、安定frame空間の各成分可縮性を使う。",
+      "kind": "direct",
+      "checking": {
+        "status": "statement-and-application-checked",
+        "owner": "astra_author / astra_review",
+        "date": "2026-11-04",
+        "record": "../nearby-lagrangian-counterexample/sources.json",
+        "scope": "Definitions 3.10/3.36、Definition 4.3、Propositions 4.4/4.6/4.7とRemark 4.5の記述・本原稿pp.4–5の使用を照合。模型比較の全技術・外部証明は未検証。"
+      },
+      "articleLinks": {
+        "ja": "../nearby-lagrangian-counterexample/article.ja.md#proof-overview-step-1",
+        "en": "../nearby-lagrangian-counterexample/article.en.md#proof-overview-step-1"
+      },
+      "unresolved": [
+        "smooth/domain/partition模型の全比較技術と外部結果の証明は独立検証していない。"
+      ]
+    }
+  ],
+  "unresolved": [
+    "WJRは所要定理番号が一致するRochester掲載の出版前原稿で照合。原稿が引用する2013年出版版との逐語比較は未実施。",
+    "tubeの関数・領域・frame模型比較、corner roundingと遷移写像、相対multijet議論、輸送cutoffの全技術を独立再構成していない。",
+    "外部定理の証明全体とその先の依存文献の再帰検証は未実施。",
+    "他カタログとの全依存関係は未調査。"
+  ]
+}

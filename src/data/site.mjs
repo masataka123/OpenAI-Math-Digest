@@ -32,6 +32,8 @@ import inventory287 from '../../coordination/catalog-287/inventory.json' with { 
 import inventory305 from '../../coordination/catalog-305/inventory.json' with { type: 'json' };
 import inventory322 from '../../coordination/catalog-322/inventory.json' with { type: 'json' };
 import inventory338 from '../../coordination/catalog-338/inventory.json' with { type: 'json' };
+import inventory340 from '../../coordination/catalog-340/inventory.json' with { type: 'json' };
+import presentation340 from '../../drafts/catalog-340/overview/presentation.json' with { type: 'json' };
 import inventory356 from '../../coordination/catalog-356/inventory.json' with { type: 'json' };
 import inventory357 from '../../coordination/catalog-357/inventory.json' with { type: 'json' };
 import subjectSource from './catalog-subjects.json' with { type: 'json' };
@@ -124,7 +126,7 @@ const fieldTranslations = [
   {
     "id": "differential-geometry",
     "ja": "微分幾何学",
-    "catalogIds": ["338", "356", "357"]
+    "catalogIds": ["338", "340", "356", "357"]
   },
   {
     "id": "partial-differential-equations",
@@ -276,6 +278,10 @@ export const papers = [...inventory003.manuscripts.map(entry => ({
  pages: entry.pdfPages, order: entry.order, featured: true,
 })), ...inventory338.manuscripts.map(entry => ({
  id: entry.paperId, catalogId: '338', sourceCommit: inventory338.sourceCommit,
+ title: entry.title, path: entry.sourceUrl.split('/preprints/')[1], version: entry.version,
+ pages: entry.pdfPages, order: entry.order, featured: true,
+})), ...inventory340.manuscripts.map(entry => ({
+ id: entry.paperId, catalogId: '340', sourceCommit: inventory340.sourceCommit,
  title: entry.title, path: entry.sourceUrl.split('/preprints/')[1], version: entry.version,
  pages: entry.pdfPages, order: entry.order, featured: true,
 })), ...inventory356.manuscripts.map(entry => ({
@@ -505,6 +511,13 @@ export const catalogs = [{
   description: text('正の正則二断面曲率から双正則一意化へ至る解析・縮小座標・全射性の接続を読む。', 'Follow the analytic estimates, shrinking coordinates, and surjectivity argument toward biholomorphic uniformization under positive bisectional curvature.'),
   paperIds: inventory338.manuscripts.map(p => p.paperId),
   overviewSectionIds: ['papers', 'guide', 'sources'],
+}, {
+  id: '340', sourceCommit: inventory340.sourceCommit, mode: 'single',
+  title: text(inventory340.titleJa, inventory340.overviewTitle),
+  contentsTitle: inventory340.contentsTitle,
+  description: presentation340.rows[0].role,
+  paperIds: inventory340.manuscripts.map(p => p.paperId),
+  overviewSectionIds: ['papers', 'sources'],
 }, {
   id: '356', sourceCommit: inventory356.sourceCommit, mode: 'multi',
   title: text(inventory356.titleJa, inventory356.overviewTitle),

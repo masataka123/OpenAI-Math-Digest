@@ -1,0 +1,36 @@
+\node[card] (a) {
+\heading{1}{球面類が零の非零tube類}{A nonzero tube class with zero spherical class}
+$H^s(*)\longrightarrow\mathcal T\xrightarrow{\gamma}BG,\qquad
+0\ne a\in\pi_9\mathcal T,\quad\gamma_*a=0$.\\[5pt]
+\Cite{kernel}
+};
+\node[card,below=2.3cm of a] (b) {
+\heading{2}{無限遠データを生成族へ実現}{Realize the infinity data by a generating family}
+$B=S^9,\quad N=2m,\quad Q=B\times S^{N-1}$;\quad
+$F=g_b$ \Tx{（十分遠方）}{outside a fixed vertical ball}.\\[3pt]
+$\operatorname{Crit}(F)\cong Q,\qquad \Gamma_F^*\lambda=d(F|_{\operatorname{Crit}(F)})$.
+};
+\flow a b {\Tx{有限段階で代表を選び、線形結合とcutoffを加える}{Choose a finite-stage representative and add a cutoff linear coupling}\\[3pt]\Cite{representative}\\[2pt]\Cite{realization}};
+\node[result,below=2.3cm of b] (c) {
+\heading{3}{二つの運動量で埋込みを保証}{Two momentum tests guarantee an embedding}
+$p_{S^{N-1}}=p'_{S^{N-1}}\Rightarrow w-w'=tv$;\quad
+$p_B=p'_B\Rightarrow t=0$.\\[3pt]
+\Tx{コンパクトな単射immersion}{Compact injective immersion}
+$\ \Rightarrow\ L\subset T^*Q$ \Tx{は閉exact埋込み、$L\cong Q$}{is closed, exact, embedded, and $L\cong Q$}.
+};
+\flow b c {\Tx{極近傍では固定二次形式、外側では変動scaleを使う}{Use the fixed quadratic form near the poles and the varying scale elsewhere}\\[3pt]\Cite{separation}};
+\node[card,below=2.3cm of c] (d) {
+\heading{4}{零切断への仮想的なHamiltonian輸送}{Hypothetical Hamiltonian transport to the zero section}
+$g_b\longmapsto g_b\oplus q_{d,d}\longmapsto\cdots$\quad
+\Tx{自由安定tube類 $[a]$ を保つ}{preserves the free stable tube class $[a]$}.\\[3pt]
+\Tx{零切断上の射影が微分同相}{Projection over the zero section is a diffeomorphism}
+$\Rightarrow$ \Tx{各fiberに唯一の非退化臨界点}{one nondegenerate critical point per fiber}.
+};
+\flow c d {\Tx{逆同位を延長し、小さいステップを有限回合成する}{Extend the reverse isotopy and compose finitely many small steps}\\[3pt]\Cite{extension}\\[2pt]\Cite{transport-step}};
+\node[result,below=2.3cm of d] (e) {
+\heading{5}{固定 $S^9$ sliceで矛盾}{Contradiction on a fixed $S^9$ slice}
+$p\ge20,\quad \gamma_*[a]=0$,\quad
+\Tx{一臨界点族}{one-critical-point family} $\Rightarrow [a]=0$.\\[3pt]
+$[a]\ne0\Rightarrow$ \Tx{$L$ は零切断とHamiltonian同位でない}{$L$ is not Hamiltonian isotopic to the zero section}.
+};
+\flow d e {\Tx{Proposition 3.1の全仮定を確認して消滅を適用}{Check every hypothesis and apply Proposition 3.1}\\[3pt]\Cite{one-critical}\\[2pt]\Cite{final}};

@@ -1,0 +1,38 @@
+\node[card] (a) {
+\heading{1}{斉次族と変動scaleを選ぶ}{Choose homogeneous data and a varying scale}
+$c\|w\|\le\|\nabla g_b(w)\|,\quad
+\|d_wd_bg_b(w)\|\le C_1\|w\|,\quad
+R(b)=\Lambda e^{K\theta(b)}$.\\[3pt]
+$g_b=q_{m,m}$ \Tx{（極近傍 $U_0$）}{near the poles $U_0$};\quad
+$\delta_0=\min_{B\setminus U_0}\|d\theta\|>0,\quad K\delta_0>C_1/c$.
+};
+\node[card,below=2.3cm of a] (b) {
+\heading{2}{原点と外側に臨界点を作らない}{Exclude critical points near zero and at infinity}
+$F(b,v,w)=G_b(w)-R(b)\beta(\|w\|/T)\langle v,w\rangle$.\\[3pt]
+$d_wF=0\iff\nabla g_b(w)=R(b)v,\qquad1<\|w\|<T$.
+};
+\flow a b {\Tx{$K,\Lambda,T$ の順に選び、cutoff誤差を勾配下界で抑える}{Choose $K,\Lambda,T$ in order; dominate cutoff errors by the gradient bound}\\[3pt]\Cite{critical}};
+\node[card,below=2.3cm of b] (c) {
+\heading{3}{臨界集合をパラメータ化しimmersionを得る}{Parametrize the critical locus and obtain an immersion}
+$(b,u)\mapsto\left(b,\frac{\nabla g_b(u)}{\|\nabla g_b(u)\|},
+\frac{R(b)u}{\|\nabla g_b(u)\|}\right),\quad u\in S^{N-1}$.\\[4pt]
+$-R\delta v\ (\delta v\perp v),\quad Rv\ (\delta w=w)$
+\Tx{が $\mathbb R^N$ を張る}{span $\mathbb R^N$};\quad
+$\Gamma_F^*\lambda=d(F|_{\operatorname{Crit}(F)})$.
+};
+\flow b c {\Tx{斉次性と全垂直勾配方程式の正則性を使う}{Use homogeneity and regularity of the full vertical-gradient equation}\\[3pt]\Cite{critical}\\[2pt]\Cite{morse}};
+\node[card,below=2.3cm of c] (d) {
+\heading{4}{同じ像を持つ二点を分離する}{Separate two points with the same generated image}
+$\Delta p_{S^{N-1}}=0\Rightarrow w-w'=tv$.\\[3pt]
+$b\notin U_0:\quad\|\Delta p_B\|\ge R|t|(K\delta_0-C_1/c)>0\quad(t\ne0)$.\\[3pt]
+$b\in U_0:$ \Tx{固定非退化二次形式の方程式が一意解を持つ}{the fixed nondegenerate quadratic equation has a unique solution}.
+};
+\flow c d {\Tx{球面運動量で候補を直線へ絞り、底運動量で残りを除く}{Sphere momenta reduce the difference to a line; base momenta eliminate it}\\[3pt]\Cite{separation}};
+\node[result,below=2.3cm of d] (e) {
+\heading{5}{閉exact埋込みと無限遠類}{Closed exact embedding and infinity class}
+$\operatorname{Crit}(F)\cong Q$ \Tx{はコンパクト・境界なし}{is compact without boundary}.\\[3pt]
+\Tx{単射immersion}{Injective immersion}$\Rightarrow L\hookrightarrow T^*Q,\quad L\cong Q$;\quad
+$F|_{\operatorname{Crit}(F)}=-g_b(w)$.\\[3pt]
+$F=g_b\ (\|w\|\ge2T)\Rightarrow$ \Tx{各 $B\times\{v_0\}$ の無限遠類は $a$}{the infinity class on every $B\times\{v_0\}$ is $a$}.
+};
+\flow d e {\Tx{コンパクトな単射immersionをembeddingへ、primitiveでexact性へ}{Use compactness for embedding and the primitive for exactness}\\[3pt]\Cite{realization}};

@@ -1,0 +1,76 @@
+{
+  "catalogId": "340",
+  "operatingPolicy": "2026-10-20",
+  "requestedBy": "2026-11-04 current user instruction",
+  "assignments": [
+    {
+      "role": "hq",
+      "agent": "/root",
+      "requestedModel": "gpt-6.1-sol",
+      "requestedReasoningEffort": "xhigh",
+      "actualModel": null,
+      "actualReasoningEffort": null,
+      "selectionEvidence": {
+        "requestedBy": "2026-11-04 user instruction; production/MODEL_ROLES.md",
+        "method": "existing parent chat; model/effort are not changeable through spawn_agent for root",
+        "limitation": "Current parent execution model and effort were not exposed by a runtime metadata tool; requested settings are not recorded as measured settings.",
+        "stage2Authorization": "2026-11-04 user: 第二段階をお願いします",
+        "stage3Authorization": "2026-11-04 user: 第３段階をお願いします."
+      },
+      "scope": [
+        "coordination/catalog-340",
+        "formal verification and stage-1 handoff",
+        "stage-2 site registration, existing asset placement, bilingual booklet PDF generation, screen/paper validation and handoff",
+        "stage-3 scoped commit/push, Actions and public-site verification"
+      ]
+    },
+    {
+      "role": "author",
+      "agent": "/root/astra_author",
+      "requestedModel": "gpt-6-astra",
+      "requestedReasoningEffort": "high",
+      "actualModel": null,
+      "actualReasoningEffort": null,
+      "selectionEvidence": {
+        "method": "collaboration.spawn_agent",
+        "arguments": {
+          "task_name": "astra_author",
+          "fork_turns": "none",
+          "model": "gpt-6-astra",
+          "reasoning_effort": "high"
+        },
+        "result": "accepted; task_name /root/astra_author",
+        "limitation": "Spawn API accepted explicit model and reasoning_effort, but did not return separate measured runtime model metadata."
+      },
+      "scope": [
+        "drafts/catalog-340/nearby-lagrangian-counterexample",
+        "drafts/catalog-340/overview"
+      ],
+      "instructions": "AUTHOR_TASK.md"
+    },
+    {
+      "role": "content-review",
+      "agent": "/root/astra_review",
+      "requestedModel": "gpt-6-astra",
+      "requestedReasoningEffort": "high",
+      "actualModel": null,
+      "actualReasoningEffort": null,
+      "selectionEvidence": {
+        "method": "collaboration.spawn_agent",
+        "arguments": {
+          "task_name": "astra_review",
+          "fork_turns": "none",
+          "model": "gpt-6-astra",
+          "reasoning_effort": "high"
+        },
+        "result": "accepted; task_name /root/astra_review",
+        "limitation": "Spawn API accepted explicit model and reasoning_effort, but did not return separate measured runtime model metadata."
+      },
+      "scope": [
+        "coordination/catalog-340/CONTENT_REVIEW.md",
+        "coordination/catalog-340/review"
+      ],
+      "instructions": "REVIEW_TASK.md"
+    }
+  ]
+}

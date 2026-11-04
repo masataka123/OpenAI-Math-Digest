@@ -1,0 +1,9 @@
+file:///Users/iwai/Desktop/GitHub/OpenAI-Math-Digest/coordination/catalog-340/build-preview.mjs:31
+ if(overview){article.html=article.html.replace(/<div class="article-prose proof-explanation">\s*<p>CATALOGINVENTORYTOKEN<\/p>\s*<\/div>/,renderCatalogInventory(catalog,papers,JSON.parse(read(`${dir}/presentation.json`)),lang,'/'));if(article.html.includes('CATALOGINVENTORYTOKEN'))throw Error('Inventory token not replaced');}
+                                                                                                                                                                                                                                                                                                ^
+
+Error: Inventory token not replaced
+    at file:///Users/iwai/Desktop/GitHub/OpenAI-Math-Digest/coordination/catalog-340/build-preview.mjs:31:289
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Node.js v24.22.1

@@ -1,0 +1,34 @@
+\node[card] (a) {
+\heading{1}{Proposition 3.1の入力}{Hypotheses of Proposition 3.1}
+$B=S^9,\quad p\ge20,\quad f_b:\mathbb R^{2p}\to\mathbb R$.\\[3pt]
+\Tx{唯一の非退化臨界点、$T_{p,p}$ 型の一様斉次無限遠}{One nondegenerate critical point; uniform homogeneous infinity of type $T_{p,p}$};\quad
+$\gamma[g_\infty]=0$.
+};
+\node[card,below=2.3cm of a] (b) {
+\heading{2}{固定局所モデルへ正規化}{Normalize to a fixed local model}
+$S(E^-)\simeq_B D(h_b)\Rightarrow BJ[E^-]=0\Rightarrow[E^-]=0$.\\[3pt]
+$f_b=q_{k,l}$ \Tx{（原点近傍）}{near zero};\quad $k=p,\ l>k+9$.
+};
+\flow a b {\Tx{負球面束を同定し、$J_8$ の単射性を用いる。正の平方も加える}{Identify the negative sphere bundle, use injectivity of $J_8$, and add positive squares}\\[3pt]\Cite{normalization}\\[2pt]\Cite{adams}};
+\node[card,below=2.3cm of b] (c) {
+\heading{3}{零レベルを $h$-cobordism族へ}{Make the zero level a family of $h$-cobordisms}
+$Y=S^{k+l-1},\quad\Sigma=S^{k-1}\times S^{l-1},\quad
+C_b=\{f_b/r^2=0\}$.\\[3pt]
+$C_b\times J\ \longmapsto\ W_b=(Y\times[-1,0])\cup(C_b\times J)$.
+};
+\flow b c {\Tx{符号領域のflowで負tubeと補領域を同定し、一回安定化して延長}{Identify the tube and its complement by flow; stabilize once and extend}\\[3pt]\Cite{cobordism}};
+\node[card,below=2.3cm of c] (d) {
+\heading{4}{積補空間から族全体の積を得る}{A product complement detects a product family}
+\Tx{補空間 $\cong E_b\times I$}{Complement $\cong E_b\times I$}
+$\Rightarrow[W]=0\Rightarrow[C]=0$.\\[3pt]
+$\dim\Sigma\ge38>35=\max(2\cdot10+8,3\cdot10+5)$;\quad
+\Tx{$\pi_9$ 上の同型で検出}{detection by an isomorphism on $\pi_9$}.
+};
+\flow c d {\Tx{変動する出側境界束上の積を用い、安定範囲で元の族を回復}{Use a product over the varying outgoing bundle, then recover the original family}\\[3pt]\Cite{detect}\\[2pt]\Cite{cp-stability}};
+\node[result,below=3.0cm of d] (e) {
+\heading{5}{collarを縮め、core族を固定する}{Shrink collars and straighten the core family}
+$10+2(k-1)<k+l-1$\quad\Tx{によりdouble pointを回避}{excludes double points}.\\[3pt]
+\Tx{固定coreの法近傍へ変形}{Deform to a normal neighborhood of the fixed core}
+$\Rightarrow[g_\infty]=0\in[S^9,\mathcal T]$.
+};
+\flow d e {\Tx{族の分類、相対multijet議論、領域から定義関数への持上げ}{Classify the family, apply relative multijet arguments, and lift domains to defining functions}\\[3pt]\Cite{cp-classification}\\[2pt]\Cite{cores}\\[2pt]\Cite{multijet}};

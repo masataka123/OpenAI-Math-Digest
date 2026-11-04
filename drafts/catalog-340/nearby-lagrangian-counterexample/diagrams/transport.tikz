@@ -1,0 +1,38 @@
+\node[card] (a) {
+\heading{1}{仮想的な逆同位を近傍へ延長}{Extend the hypothetical reverse isotopy}
+$Q\subset\mathbb R^d,\quad d=10+N,\quad U\cong Q\times(-\nu,\nu)^2$.\\[3pt]
+$F^{(0)}(x,w)=F(r_Q(x),w)$;\quad
+\Tx{中央 $U_c$ 上で最終像は零切断}{the final image over central $U_c$ is the zero section}.
+};
+\node[card,below=2.3cm of a] (b) {
+\heading{2}{小さいステップのgraphと合成する}{Compose with the graph of a small step}
+$x=X+\sigma_p,\quad P=p+\sigma_X$,\qquad
+$\widetilde F=F_o(X+\kappa z,w)+\sigma(X,p)-z\cdot p$.\\[3pt]
+\Tx{臨界点近傍では}{Near critical points}:\quad $V:$ \Tx{cutoffは1}{cutoffs are one};\quad
+$U\setminus D:\ z=0$ \Tx{が空間cutoffの微分項を消す}{kills spatial-cutoff derivative terms}.
+};
+\flow a b {\Tx{固定コンパクト台、空間buffer、全臨界方程式で大域的に処理}{Use common compact support, a spatial buffer, and the full critical equations}\\[3pt]\Cite{extension}\\[2pt]\Cite{transport-step}};
+\node[card,below=2.3cm of b] (c) {
+\heading{3}{split安定化後も同じ無限遠類}{The same infinity class after split stabilization}
+$G_0=g_o(X,w)-z\cdot p,\qquad\operatorname{sign}(-z\cdot p)=(d,d)$.\\[3pt]
+\Tx{有界な値・垂直微分誤差を平滑化}{Smooth bounded value and vertical-derivative errors}
+$\Rightarrow[g_\infty]_{\rm free}=[a]_{\rm free}\ne0$.
+};
+\flow b c {\Tx{臨界集合近傍を保ち、正則斉次関数のhomotopyで無限遠を戻す}{Keep the critical-locus neighborhood and restore infinity through regular homogeneous data}\\[3pt]\Cite{normalization}\\[2pt]\Cite{transport-step}};
+\node[card,below=2.3cm of c] (d) {
+\heading{4}{零切断上の射影で一意性と非退化性}{Projection over the zero section gives uniqueness and nondegeneracy}
+$\operatorname{Crit}(F^{(s)})|_{U_c}\xrightarrow{\cong}U_c$,\qquad $p=m+ds\ge20$.\\[3pt]
+$\ker F^{(s)}_{WW}\ne0\Rightarrow$
+\Tx{臨界集合に非零の垂直接ベクトル}{a nonzero vertical tangent vector to the critical locus}
+\Tx{（射影の微分同相性に反する）}{(contradicting the projection diffeomorphism)}.
+};
+\flow c d {\Tx{正則臨界集合の微分同相パラメータ化を各ステップで維持}{Preserve the regular critical-locus parametrization at each step}\\[3pt]\Cite{final}};
+\node[result,below=2.3cm of d] (e) {
+\heading{5}{固定sliceへ消滅命題を適用して矛盾}{Apply vanishing on a fixed slice to reach a contradiction}
+$b\mapsto((b,v_0),0):\quad
+\gamma[g_\infty]=0$.\\[3pt]
+\Tx{$f_b$ は唯一の非退化臨界点を持つ}{$f_b$ has one nondegenerate critical point}.\\[3pt]
+\Tx{Proposition 3.1}{Proposition 3.1}$\Rightarrow[g_\infty]=0\ne[a]$;\quad
+\Tx{仮定したHamiltonian同位は存在しない}{the assumed Hamiltonian isotopy cannot exist}.
+};
+\flow d e {\Tx{$T_{p,p}$ 型と一様斉次性も確認する。基点の移動は零類を変えない}{Also check type $T_{p,p}$ and uniform homogeneity; basepoint changes preserve zero}\\[3pt]\Cite{one-critical}\\[2pt]\Cite{final}};
